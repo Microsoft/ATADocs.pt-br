@@ -6,14 +6,14 @@
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [ATADocs\Understand\ata-architecture.md](https://github.com/Microsoft/ATADocs-pr/blob/5d2b6ec1321e6d0db6618aa49b59358b69e0aee6/ATADocs/Understand/ata-architecture.md) | HandedOffSuccess | [Details](#dbcd5e1523120a52a9af5d7fa4c46a3c14573af8174)
+ [ATADocs\DeployUse\install-ata-step5.md](https://github.com/Microsoft/ATADocs-pr/blob/7e1c4b2af65ded0da9144edad475e78fd43ac1e7/ATADocs/DeployUse/install-ata-step5.md) | HandedOffSuccess | [Details](#b111e86b9c3a670391379a1d342eafe3511744bc14)
 
 ## Item Details
-##### <a name='dbcd5e1523120a52a9af5d7fa4c46a3c14573af8174'></a> Source: [ATADocs\Understand\ata-architecture.md](https://github.com/Microsoft/ATADocs-pr/blob/5d2b6ec1321e6d0db6618aa49b59358b69e0aee6/ATADocs/Understand/ata-architecture.md)
+##### <a name='b111e86b9c3a670391379a1d342eafe3511744bc14'></a> Source: [ATADocs\DeployUse\install-ata-step5.md](https://github.com/Microsoft/ATADocs-pr/blob/7e1c4b2af65ded0da9144edad475e78fd43ac1e7/ATADocs/DeployUse/install-ata-step5.md)
 * Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [ata-architecture.76065513a13eb83d520e84ffefc28e530ce0a9fd.pt-br.xlf](https://github.com/Microsoft/EM.handoff/blob/af9ac994651e7ac58fd9ab6ec86709f3da20ddb0/ol-handoff/Microsoft/ATADocs-pr.pt-br/master/ata-architecture.76065513a13eb83d520e84ffefc28e530ce0a9fd.pt-br.xlf)
-* Handoff Datetime: 2016-04-11 18:09:37
+* Handoff File: [install-ata-step5.939491200e7347138888e6ccb69a84737be3bec2.pt-br.xlf](https://github.com/Microsoft/EM.handoff/blob/5ae4a0144d9e11124c2d20988e28db64216d3806/ol-handoff/Microsoft/ATADocs-pr.pt-br/master/install-ata-step5.939491200e7347138888e6ccb69a84737be3bec2.pt-br.xlf)
+* Handoff Datetime: 2016-04-12 15:09:20
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
