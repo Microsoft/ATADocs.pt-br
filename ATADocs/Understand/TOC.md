@@ -1,8 +1,12 @@
-# [Understand and Explore](what-is-ata.md)
-## [What is Microsoft Advanced Threat Analytics?](what-is-ata.md)
-## [ATA Architecture](ata-architecture.md)
-## [Working with the ATA console](working-with-ata-console.md)
-## [Commonly asked questions about ATA](ata-common-questions.md)
-# [Plan and Design](/advanced-threat-analytics/plan-design/ata-capacity-planning)
-# [Deploy and Use](/advanced-threat-analytics/deploy-use/install-ata)
-# [Troubleshoot](/advanced-threat-analytics/troubleshoot/troubleshooting-ata-using-logs)
+# [Entender e explorar](what-is-ata.md)
+## [O que é o Microsoft Advanced Threat Analytics?](what-is-ata.md)
+## [Arquitetura do ATA](ata-architecture.md)
+## [Trabalhando com o Console do ATA](working-with-ata-console.md)
+# [Plano e design](/advanced-threat-analytics/plandesign/ata-capacity-planning)
+# [Implantar e usar](/advanced-threat-analytics/deployuse/install-ata)
+# [Solução de problemas](/advanced-threat-analytics/troubleshoot/troubleshooting-ata-using-logs)
+
+
+<!--HONumber=Apr16_HO2-->
+
+
