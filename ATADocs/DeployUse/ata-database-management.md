@@ -29,10 +29,10 @@ ms.suite: ems
 Se você precisar mover, fazer backup ou restaurar o banco de dados do ATA, use estes procedimentos para trabalhar com o MongoDB.
 
 ## Fazendo backup do banco de dados de ATA
-Consulte a [documentação relevante do MongoDB](http://docs.mongodb.org/manual/administration/backup/).
+Consulte a [documentação pertinente do MongoDB](http://docs.mongodb.org/manual/administration/backup/).
 
 ## Restaurando o banco de dados do ATA
-Consulte a [documentação relevante do MongoDB](http://docs.mongodb.org/manual/administration/backup/).
+Consulte a [documentação pertinente do MongoDB](http://docs.mongodb.org/manual/administration/backup/).
 
 ## Movendo o banco de dados do ATA para outra unidade
 
@@ -52,20 +52,23 @@ Consulte a [documentação relevante do MongoDB](http://docs.mongodb.org/manual/
 
 6.  Inicie o serviço **MongoDB**.
 
-7.  Abra um prompt de comando e execute o shell Mongo executando `mongo.exe ATA`.
+7.  Abra um prompt de comando e execute o shell Mongo executando `mongo.exe ATA` .
 
     Por padrão, o mongo.exe está localizado em C:\Arquivos de Programas\Microsoft Advanced Threat Analytics\Center\MongoDB\bin
 
-8.  Execute o seguinte comando: `db.SystemProfiles.update( {_t: "CenterSystemProfile"} , {$set:{"Configuration.CenterDatabaseClientConfiguration.DataPath" : "<New DB Location>"}}) Instead of <New DB Location>`, onde &lt;New DB Location&gt; é o novo caminho da pasta.
+8.  Execute o seguinte comando: `db.SystemProfiles.update( {_t: "CenterSystemProfile"} , {$set:{"Configuration.CenterDatabaseClientConfiguration.DataPath" : "<New DB Location>"}}) Instead of <New DB Location>`, em que &lt;Novo local do Banco de Dados&gt; é o novo caminho da pasta.
+
+9.  Atualize HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft Advanced Threat Analytics\Center\DatabaseDataPath com o novo caminho de pasta.
 
 9. Inicie o serviço **Centro do Microsoft Advanced Threat Analytics**.
 
 ## Consulte também
-- [Arquitetura do ATA](/advanced-threat-analytics/understand/ata-architecture)
-- [Pré-requisitos do ATA](/advanced-threat-analytics/plandesign/ata-prerequisites)
-- [Para obter suporte, confira nosso fórum!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+- [Arquitetura do ATA](/advanced-threat-analytics/plan-design/ata-architecture)
+- [Pré-requisitos do ATA](/advanced-threat-analytics/plan-design/ata-prerequisites)
+- [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
 
 
-<!--HONumber=Apr16_HO2-->
+
+<!--HONumber=May16_HO1-->
 
 

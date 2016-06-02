@@ -48,11 +48,11 @@ Os Gateways do ATA armazenam localmente o endereço IP do Centro do ATA ao qual 
 
 1.  Abra o Console do ATA.
 
-2.  Selecione a opção de configurações na barra de ferramentas e escolha **Configuração**.
+2.  Selecione a opção de configurações na barra de ferramentas e selecione **Configuração**.
 
     ![Ícone Definições de configuração do ATA](media/ATA-config-icon.JPG)
 
-3.  Selecione **Centro do ATA**.
+3.  Selecione **Geral**.
 
 4.  Em **Endereço IP do Serviço do Centro do ATA: porta**, escolha um dos endereços IP existentes ou selecione **Adicionar endereço IP personalizado** e digite um endereço IP.
 
@@ -61,6 +61,12 @@ Os Gateways do ATA armazenam localmente o endereço IP do Centro do ATA ao qual 
 6.  Você verá uma notificação indicando quantos Gateways do ATA foram sincronizados com a configuração mais recente.
 
     ![Imagem de gateways sincronizados no Centro do ATA](media/ATA-chge-IP-after-clicking-save.png)
+
+    >[!IMPORTANT]
+    >Antes de ativar a nova configuração, valide se todos os Gateways do ATA estão sincronizados com a configuração mais recente. A ativação da nova configuração antes de todos os Gateways do ATA estarem sincronizados pode fazer com que o Gateway do ATA pare de funcionar conforme o esperado. Se algum Gateway do ATA não estiver sincronizado, você receberá este erro ao clicar em Ativar:
+    >
+    >    ![Erro de sincronização de Gateway do ATA](media/ataGW-not-synced.png)
+
 
 7.  Após a sincronização de todos os Gateways do ATA, clique em **Ativar** para ativar o novo endereço IP.
 
@@ -74,11 +80,11 @@ Os Gateways do ATA armazenam localmente o endereço IP do Centro do ATA ao qual 
 
 
 ## Consulte também
-- [Trabalhando com o Console do ATA](/advanced-threat-analytics/understand/working-with-ata-console)
+- [Trabalhando com o Console do ATA](working-with-ata-console.md)
 - [Instalar o ATA](install-ata.md)
-- [Para obter suporte, confira nosso fórum!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+- [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
 
 
-<!--HONumber=Apr16_HO2-->
+<!--HONumber=May16_HO1-->
 
 

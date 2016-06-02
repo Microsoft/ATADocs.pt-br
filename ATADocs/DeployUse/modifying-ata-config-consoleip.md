@@ -36,7 +36,7 @@ Por padrão, a URL do Console do ATA é o endereço IP selecionado como o endere
 
 A URL é usada nos seguintes cenários:
 
--   Instalação de Gateways do ATA – Quando um Gateway do ATA é instalado, ele registra ai próprio no Centro do ATA. Esse processo de registro é realizado pela conexão com o Console do ATA. Se você digitar um FQDN para a URL do Console do ATA, será necessário garantir que o Gateway do ATA possa resolver o FQDN para o endereço IP ao qual o Console do ATA está vinculado a um IIS. Além disso, a URL é usada para criar o atalho até o Console do ATA em Gateways do ATA.
+-   Instalação de Gateways do ATA – Quando um Gateway do ATA é instalado, ele registra ai próprio no Centro do ATA. Esse processo de registro é realizado pela conexão com o Console do ATA. Se você digitar um FQDN para a URL do Console do ATA, será necessário garantir que o Gateway do ATA possa resolver o FQDN para o endereço IP ao qual o Console do ATA está vinculado em um IIS. Além disso, a URL é usada para criar o atalho até o Console do ATA em Gateways do ATA.
 
 -   Alertas – Quando o ATA envia um SIEM ou alerta de email, ele inclui um link para a atividade suspeita. A parte de host do link é a configuração de URL do Console do ATA.
 
@@ -83,11 +83,11 @@ Se você precisar modificar o endereço IP usado pelo IIS para o Console do ATA,
 
 
 ## Consulte também
-- [Trabalhando com o Console do ATA](/advanced-threat-analytics/understand/working-with-ata-console)
+- [Trabalhando com o Console do ATA](working-with-ata-console.md)
 - [Instalar o ATA](install-ata.md)
-- [Para obter suporte, confira nosso fórum!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+- [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
 
 
-<!--HONumber=Apr16_HO2-->
+<!--HONumber=May16_HO1-->
 
 

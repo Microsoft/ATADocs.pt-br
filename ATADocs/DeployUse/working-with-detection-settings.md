@@ -44,9 +44,9 @@ Você pode excluir endereços IP das seguintes detecções. Se você inserir um 
 ## Consulte também
 - [Trabalhando com atividades suspeitas](working-with-suspicious-activities.md)
 - [Modificando a configuração do ATA](modifying-ata-configuration.md)
-- [Para obter suporte, confira nosso fórum!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+- [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
 
 
-<!--HONumber=Apr16_HO2-->
+<!--HONumber=May16_HO1-->
 
 

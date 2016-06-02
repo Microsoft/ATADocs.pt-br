@@ -42,7 +42,7 @@ Cada atividade suspeita tem as seguintes informações:
 
 -   Capacidade de
 
-    -   Enviar a atividade suspeita para outras pessoas de sua organização por email. Isso requer um cliente de email que deverá ser instalado no computador no qual você está pesquisando.
+    -   Compartilhar a atividade suspeita com outras pessoas na organização por email.
 
     -   Exportar a atividade suspeita para o Excel.
 
@@ -63,7 +63,7 @@ Para filtrar a lista de atividades suspeitas:
 
 1.  No painel **Filtrar por** no lado esquerdo da tela, selecione um dos seguintes: **Todos**, **Abrir**, **Resolvido** ou **Descartado**.
 
-2.  Para filtrar a lista ainda mais, selecione **Alta**, **Média** ou **Baixa**.
+2.  Para filtrar a lista ainda mais, selecione **Alta**, **Média** ou **Baixa**..
 
 **Severidade da atividade suspeita**
 
@@ -97,7 +97,7 @@ Para filtrar a lista de atividades suspeitas:
     São atividades que você descartou manualmente. Se o ATA detectar uma atividade suspeita semelhante, será criada uma nova detecção.
 
 ## Fornecer comentários sobre uma atividade suspeita
-Para permitir que o ATA saiba mais sobre a sua rede com você, algumas atividades suspeitas (reconhecimento de DNS, passagem de tíquete, comportamento anormal e execução remota) solicitam informações suas para melhorar a detecção de atividades suspeitas no futuro.
+Para permitir que o ATA saiba mais sobre a sua rede com você, algumas atividades suspeitas (reconhecimento de DNS, passagem de tíquete, enumeração de sessão SMB, comportamento anormal e execução remota) solicitam informações suas para melhorar a detecção de atividades suspeitas no futuro.
 
 1.  Para atividades suspeitas que permitem a você fornecer informações, a pergunta de entrada é aberta automaticamente. Você será solicitado a responder perguntas sobre as atividades em sua rede e se elas devem ser consideradas suspeitas. No exemplo abaixo, você deve responder se é permitido executar ferramentas de verificação em um computador específico.
 
@@ -107,17 +107,17 @@ Para permitir que o ATA saiba mais sobre a sua rede com você, algumas atividade
 
 3.  No entanto, se você responder sim, a atividade suspeita poderá ser descartada e as atividades futuras deste tipo no computador não poderão gerar uma atividade suspeita ou vão gerar uma atividade que será automaticamente descartada.
 
-4.  Se você não souber, você pode clicar em **Cancelar**.
+4.  Se não souber, você poderá clicar em **Cancelar**.
 
 ## Alterar o status de uma atividade suspeita
-Você pode alterar o status de uma atividade suspeita clicando no status atual da atividade suspeita e selecionando **Abrir**, **Resolvido** ou **Descartado**.
+Você pode alterar o status de uma atividade suspeita clicando no status atual da atividade suspeita e selecionando **Aberto**, **Resolvido** ou **Descartado**.
 
 ## Consulte também
-- [Para obter suporte, confira nosso fórum!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+- [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
 - [Trabalhando com as configurações de detecção do ATA](working-with-detection-settings.md)
 - [Modificando a configuração do ATA](modifying-ata-configuration.md)
 
 
-<!--HONumber=Apr16_HO2-->
+<!--HONumber=May16_HO1-->
 
 

@@ -39,14 +39,12 @@ Se você precisar atualizar ou alterar sua configuração após a instalação i
 
 -   [Alterar a senha de conectividade do domínio](modifying-ata-config-dcpassword.md)
 
--   [Alterar o nome do adaptador de captura de rede](modifying-ata-config-nicname.md)
-
 ## Consulte também
-- [Trabalhando com o Console do ATA](/advanced-threat-analytics/understand/working-with-ata-console)
+- [Trabalhando com o Console do ATA](working-with-ata-console.md)
 - [Instalar o ATA](install-ata.md)
-- [Para obter suporte, confira nosso fórum!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+- [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
 
 
-<!--HONumber=Apr16_HO2-->
+<!--HONumber=May16_HO1-->
 
 

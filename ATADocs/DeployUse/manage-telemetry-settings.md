@@ -26,20 +26,20 @@ ms.suite: ems
 ---
 
 # Gerenciamento das configurações de telemetria
-O ATA (Advanced Threat Analytics) coleta dados de telemetria anônimas sobre o ATA e os transmite por uma conexão HTTPS para os servidores Microsoft.  Esses dados são usados pela Microsoft para ajudar a melhorar as versões futuras do ATA.
+O ATA (Advanced Threat Analytics) coleta dados de telemetria anônimos sobre o ATA e os transmite por uma conexão HTTPS para os servidores Microsoft.  Esses dados são usados pela Microsoft para ajudar a melhorar as versões futuras do ATA.
 
 ## Dados coletados
-Entre os dados coletados estão os seguintes:
+Os dados anônimos coletados incluem o seguinte:
 
--   Contadores de desempenho do Centro do ATA... e do Gateway do ATA
+-   Contadores de desempenho do Centro do ATA e do Gateway do ATA
 
--   ID do produto após o licenciamento do ATA
+-   ID do produto de cópias licenciadas do ATA
 
 -   Data da implantação do Centro do ATA
 
 -   Número de Gateways do ATA implantados
 
--   As seguintes informações do Active Directory:
+-   As seguintes informações anônimas do Active Directory:
 
     -   ID de Domínio do domínio cujo nome seria o primeiro domínio quando classificado em ordem alfabética
 
@@ -55,7 +55,7 @@ Entre os dados coletados estão os seguintes:
 
     -   Número de usuários
 
--   Atividades suspeitas – os dados a seguir são coletados para cada atividade suspeita:
+-   Atividades suspeitas – os dados anônimos a seguir são coletados para cada atividade suspeita:
 
     (Os nomes de computador, nomes de usuário e endereços IP **não** são coletados)
 
@@ -70,18 +70,17 @@ Entre os dados coletados estão os seguintes:
     -   Entrada fornecida
 
 ### Desabilitar coleta de dados
-Para deixar de coletar e enviar dados de telemetria à Microsoft, execute estas etapas.
+Execute as etapas a seguir para interromper a coleta e o envio de dados de telemetria à Microsoft:
 
 1.  Faça logon no Console do ATA, clique nos três pontos na barra de ferramentas e escolha **Sobre**.
 
 2.  Desmarque a caixa para **Envie informações de uso para ajudar a melhorar a experiência do cliente no futuro**.
 
 ## Consulte também
-- [Novidades na versão 1.5](whats-new-version-1.5.md)
-- [Novidades na versão 1.4](whats-new-version-1.4.md)
-- [Para obter suporte, confira nosso fórum!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+- [Novidades na versão 1.6](/advanced-threat-analytics/understand-explore/whats-new-version-1.6)
+- [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
 
 
-<!--HONumber=Apr16_HO2-->
+<!--HONumber=May16_HO3-->
 
 

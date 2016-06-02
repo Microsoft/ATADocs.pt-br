@@ -29,10 +29,10 @@ ms.suite: ems
 
 >[!div class="step-by-step"]
 [« Certificado IIS](modifying-ata-config-iiscert.md)
-[Nome do adaptador de captura de rede »](modifying-ata-config-nicname.md)
+
 
 ## Alterar a senha de conectividade do domínio
-Se você modificar a senha de conectividade do domínio, certifique-se de que a senha digitada esteja correta. Se não estiver, o Serviço do ATA deixará de executar em Gateways do ATA.
+Se você modificar a senha de conectividade do domínio, certifique-se de que a senha digitada esteja correta. Se não estiver, o serviço do Gateway do ATA deixará de ser executado em Gateways do ATA.
 
 Se você suspeitar que isso aconteceu, no Gateway do ATA, examine o arquivo Microsoft.Tri.Gateway-Errors.log em busca do seguinte:
 `The supplied credential is invalid.`
@@ -41,15 +41,15 @@ Para corrigir isso, siga este procedimento e atualize a Senha de conectividade d
 
 1.  Abra o Console do ATA no Gateway do ATA.
 
-2.  Selecione a opção de configurações na barra de ferramentas e escolha **Configuração**.
+2.  Selecione a opção de configurações na barra de ferramentas e selecione **Configuração**.
 
     ![Ícone Definições de configuração do ATA](media/ATA-config-icon.JPG)
 
-3.  Selecione **Gateway do ATA**.
+3.  Selecione **Geral**.
 
     ![Imagem da mudança de senha no Gateway do ATA](media/ATA-GW-change-DC-password.JPG)
 
-4.  Em **Configurações de Conectividade do Domínio**, altere a senha.
+4.  Em **Geral**, altere a senha.
 
 5.  Clique em **Salvar**.
 
@@ -57,14 +57,13 @@ Para corrigir isso, siga este procedimento e atualize a Senha de conectividade d
 
 >[!div class="step-by-step"]
 [« Certificado IIS](modifying-ata-config-iiscert.md)
-[Nome do adaptador de captura de rede »](modifying-ata-config-nicname.md)
 
 ## Consulte também
-- [Trabalhando com o Console do ATA](/advanced-threat-analytics/understand/working-with-ata-console)
+- [Trabalhando com o Console do ATA](working-with-ata-console.md)
 - [Instalar o ATA](install-ata.md)
-- [Para obter suporte, confira nosso fórum!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+- [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
 
 
-<!--HONumber=Apr16_HO2-->
+<!--HONumber=May16_HO1-->
 
 

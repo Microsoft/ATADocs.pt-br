@@ -27,43 +27,44 @@ ms.suite: ems
 
 # Instalação do ATA - Etapa 2
 
->[!div class="step-by-step"]
-[« Etapa 1](install-ata-step1.md)
+>[!div class="step-by-step"] [« Etapa 1](install-ata-step1.md)
 [Etapa 3 »](install-ata-step3.md)
 
-## Etapa 2. Definição das configurações de conectividade de domínio do Gateway do ATA
-As definições na seção de configurações de conectividade do domínio se aplicam a todos os Gateways do ATA gerenciados pelo Centro do ATA.
+## Etapa 2. Definir configurações gerais do Gateway do ATA
+As definições na guia de configurações **Gerais** se aplicam a todos os Gateways do ATA gerenciados pelo Centro do ATA.
 
-Para definir as configurações de conectividade do Domínio, faça o seguinte no servidor do Centro do ATA.
+Para definir as configurações gerais do Gateway do ATA, siga este procedimento:
 
-1.  Abra o Console do ATA e faça logon. Para obter instruções, confira [Como trabalhar com o Console do ATA](/advanced-threat-analytics/understand/working-with-ata-console).
+1.  Abra o Console do ATA e faça logon. Para obter instruções, confira [Working with the ATA Console](working-with-ata-console.md) (Como trabalhar com o Console do ATA).
 
-2.  Na primeira vez que você faz logon no Console do ATA após a instalação do Centro do ATA, você será levado automaticamente à página de configuração de Gateways do ATA. Se você precisar modificar qualquer uma das configurações depois, clique no ícone Configurações e escolha **Configuração**.
+2.  Clique no ícone Configurações e selecione **Configuração**.
 
     ![Definições de configuração do Gateway do ATA](media/ATA-config-icon.JPG)
 
-3.  Na página **Gateways**, clique em **Configurações de conectividade do domínio**, insira as seguintes informações e clique em **Salvar**.
+3.  Na guia **Geral**, em **Gateways do ATA**, insira as informações a seguir e clique em **Salvar**.
 
     |Campo|Comentários|
     |---------|------------|
     |**Nome de usuário** (obrigatório)|Insira o nome de usuário somente leitura, por exemplo: **usuário1**.|
     |**Senha** (obrigatório)|Digite a senha para o usuário somente leitura, por exemplo: **Lápis1**. **Observação:** certifique-se de que essa senha esteja correta. Se você salvar a senha incorreta, o Serviço do ATA interromperá a execução nos servidores de Gateway do ATA.|
     |**Domínio** (obrigatório)|Digite o domínio para o usuário somente leitura, por exemplo: **contoso.com**. **Observação:** é importante que você insira o FQDN completo do domínio onde o usuário está localizado. Por exemplo, se a conta do usuário estiver no domínio corp.contoso.com, você precisará inserir `corp.contoso.com` e não contoso.com|
-    ![Imagem configurações de conectividade do Domínio do ATA](media/ATA-Domain-Connectivity-User.JPG)
+    |Atualizar todos os Gateways do ATA automaticamente |Se você habilitar essa configuração, nos lançamentos de versões futuras, quando você atualizar o Centro do ATA, todos os Gateways do ATA serão automaticamente atualizados.|
+
+    ![Imagem configurações de conectividade do Domínio do ATA](media/ata-domain-connectivity-user.jpg)
 
 
->[!div class="step-by-step"]
-[« Etapa 1](install-ata-step1.md)
+
+>[!div class="step-by-step"] [« Etapa 1](install-ata-step1.md)
 [Etapa 3 »](install-ata-step3.md)
 
 
 ## Consulte também
 
-- [Para obter suporte, confira nosso fórum!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
-- [Configurar coleta de eventos](/advanced-threat-analytics/plandesign/configure-event-collection)
-- [Pré-requisitos do ATA](/advanced-threat-analytics/plandesign/ata-prerequisites)
+- [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+- [Configurar coleta de eventos](configure-event-collection.md)
+- [Pré-requisitos do ATA](/advanced-threat-analytics/plan-design/ata-prerequisites)
 
 
-<!--HONumber=Apr16_HO2-->
+<!--HONumber=May16_HO3-->
 
 

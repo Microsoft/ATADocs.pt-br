@@ -33,7 +33,7 @@ ms.suite: ems
 ## Etapa 6. Configurar as sub-redes de concessão de curto prazo e o usuário Honeytoken
 Sub-redes de concessão de curto prazo são sub-redes nas quais a atribuição de endereço IP muda muito rapidamente, em questão de segundos ou minutos. Por exemplo, endereços IP usados para suas VPNs endereços IP de Wi-Fi . Para inserir a lista de sub-redes de concessão de curto prazo usadas em sua organização, execute estas etapas:
 
-1.  No Console do ATA na máquina do Gateway do ATA, clique no ícone de configurações e escolha **Configuração**.
+1.  No Console do ATA no computador do Gateway do ATA, clique no ícone de configurações e escolha **Configuração**.
 
     ![Definições de configurações do ATA](media/ATA-config-icon.JPG)
 
@@ -42,7 +42,7 @@ Sub-redes de concessão de curto prazo são sub-redes nas quais a atribuição d
 3.  Para os SIDs da conta do Honeytoken, insira o SID da conta de usuário que não terá qualquer atividade de rede e clique no sinal de adição. Por exemplo: `S-1-5-21-72081277-1610778489-2625714895-10511`.
 
     > [!NOTE]
-    > Para localizar o SID de um usuário, execute o seguinte cmdlet do Windows PowerShell `Get-ADUser UserName`.
+    > Para localizar o SID de um usuário, pesquise o usuário no Console do ATA e clique na guia **Informações da Conta**. 
 
 4.  Configurar exclusões: você pode configurar os endereços IP a serem excluídos de atividades suspeitas específicas. Confira [Como trabalhar com configurações de detecção do ATA](working-with-detection-settings.md) para saber mais.
 
@@ -54,7 +54,7 @@ Parabéns, você implantou com êxito o Microsoft Advanced Threat Analytics!
 
 Verifique a linha de tempo do ataque para exibir atividades suspeitas detectadas e pesquisar por usuários ou computadores e exibir seus perfis.
 
-Lembre-se de que demora no mínimo três semanas para o ATA criar perfis comportamentais, portanto, durante as três primeiras semanas, você não verá quaisquer atividades comportamentais suspeitas.
+O ATA iniciará a verificação de atividades suspeitas imediatamente. Algumas atividades, como algumas atividades de comportamento suspeito, não estarão disponíveis até que o ATA tenha tempo de criar perfis de comportamentos (três semanas, no mínimo).
 
 
 >[!div class="step-by-step"]
@@ -63,11 +63,12 @@ Lembre-se de que demora no mínimo três semanas para o ATA criar perfis comport
 
 ## Consulte também
 
-- [Para obter suporte, confira nosso fórum!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
-- [Configurar coleta de eventos](/advanced-threat-analytics/plandesign/configure-event-collection)
-- [Pré-requisitos do ATA](/advanced-threat-analytics/plandesign/ata-prerequisites)
+- [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+- [Configurar coleta de eventos](configure-event-collection.md)
+- [Pré-requisitos do ATA](/advanced-threat-analytics/plan-design/ata-prerequisites)
 
 
-<!--HONumber=Apr16_HO2-->
+
+<!--HONumber=May16_HO1-->
 
 

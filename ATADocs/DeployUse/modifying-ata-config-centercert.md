@@ -45,11 +45,11 @@ Se os seus certificados expiram e precisam ser renovados ou substituídos após 
 
 1.  Abra o Console do ATA.
 
-2.  Selecione a opção de configurações na barra de ferramentas e escolha **Configuração**.
+2.  Selecione a opção de configurações na barra de ferramentas e selecione **Configuração**.
 
     ![Ícone Definições de configuração do ATA](media/ATA-config-icon.JPG)
 
-3.  Selecione **Centro do ATA**.
+3.  Selecione **Central do ATA**..
 
 4.  Em **Certificado**, escolha um dos certificados na lista.
 
@@ -58,6 +58,10 @@ Se os seus certificados expiram e precisam ser renovados ou substituídos após 
 6.  Você verá uma notificação indicando quantos Gateways do ATA foram sincronizados com a configuração mais recente.
 
 7.  Após a sincronização de todos os Gateways do ATA, clique em **Ativar** para ativar o novo certificado.
+    >[!IMPORTANT]
+    >Antes de ativar a nova configuração, valide se todos os Gateways do ATA estão sincronizados com a configuração mais recente. A ativação da nova configuração antes de todos os Gateways do ATA estarem sincronizados pode fazer com que o Gateway do ATA pare de funcionar conforme o esperado. Se algum Gateway do ATA não estiver sincronizado, você receberá este erro ao clicar em Ativar:
+    >
+    >    ![Erro de sincronização de Gateway do ATA](media/ataGW-not-synced.png)
 
 8.  Verifique se todos os Gateways do ATA são capazes de sincronizar suas configurações após a ativação da alteração.
 
@@ -66,11 +70,11 @@ Se os seus certificados expiram e precisam ser renovados ou substituídos após 
 [Endereço IP do Console do ATA »](modifying-ata-config-consoleip.md)
 
 ## Consulte também
-- [Trabalhando com o Console do ATA](/advanced-threat-analytics/understand/working-with-ata-console)
+- [Trabalhando com o Console do ATA](working-with-ata-console.md)
 - [Instalar o ATA](install-ata.md)
-- [Para obter suporte, confira nosso fórum!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+- [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
 
 
-<!--HONumber=Apr16_HO2-->
+<!--HONumber=May16_HO1-->
 
 

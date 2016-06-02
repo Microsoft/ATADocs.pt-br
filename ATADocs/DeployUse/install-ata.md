@@ -31,7 +31,6 @@ Veja a seguir as etapas necessárias para implantar, configurar e executar o ATA
 
 Para configurar o ATA, execute estas etapas:
 
--   [Etapas pré-instalação](install-ata-preinstall.md)
 
 -   [Etapa 1. Baixar e instalar o Centro do ATA](install-ata-step1.md)
 
@@ -48,11 +47,12 @@ Para configurar o ATA, execute estas etapas:
 
 ## Consulte também
 
-- [Para obter suporte, confira nosso fórum!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
-- [Configurar coleta de eventos](/advanced-threat-analytics/plandesign/configure-event-collection)
-- [Pré-requisitos do ATA](/advanced-threat-analytics/plandesign/ata-prerequisites)
+- [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+- [Configurar coleta de eventos](configure-event-collection.md)
+- [Pré-requisitos do ATA](/advanced-threat-analytics/plan-design/ata-prerequisites)
 
 
-<!--HONumber=Apr16_HO2-->
+
+<!--HONumber=May16_HO1-->
 
 

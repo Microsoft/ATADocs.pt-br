@@ -32,7 +32,9 @@ ms.suite: ems
 [Etapa 5 »](install-ata-step5.md)
 
 ## Etapa 4. Instalar o Gateway do ATA
-Antes de instalar o Gateway do ATA, verifique se o espelhamento de porta está configurado corretamente, e se o Gateway do ATA pode ver o tráfego chegando e saindo dos controladores de domínio. Confira [Validar o espelhamento de porta](/advanced-threat-analytics/plandesign/validate-port-mirroring) para saber mais.
+
+Antes de instalar o Gateway do ATA, verifique se o espelhamento de porta está configurado corretamente e se o Gateway do ATA pode ver o tráfego chegando e saindo dos controladores de domínio. Confira [Validar o espelhamento de porta](validate-port-mirroring.md) para saber mais.
+
 
 > [!IMPORTANT]
 > Verifique se o [KB2919355](http://support.microsoft.com/kb/2919355/) foi instalado.  Execute o seguinte cmdlet do PowerShell para verificar se o hotfix foi instalado:
@@ -41,11 +43,12 @@ Antes de instalar o Gateway do ATA, verifique se o espelhamento de porta está c
 
 Execute as seguintes etapas no servidor do Gateway do ATA.
 
-1.  Extraia os arquivos do arquivo zip.
+1.  Extraia os arquivos do arquivo zip. 
+> [!NOTE] A instalação diretamente do arquivo zip falhará.
 
-2.  Em um prompt de comando elevado, execute o arquivo Microsoft ATA Gateway Setup.exe e siga o assistente de instalação.
+2.  Em um prompt de comando elevado, execute o arquivo **Microsoft ATA Gateway Setup.exe** e siga o assistente de instalação.
 
-3.  Na página **Boas-vindas**, selecione seu idioma e clique em **Avançar**.
+3.  Na página **Inicial**, selecione o seu idioma e clique em **Avançar**.
 
 4.  Na página **Configuração do Gateway do ATA** insira as informações a seguir com base em seu ambiente:
 
@@ -61,7 +64,7 @@ Execute as seguintes etapas no servidor do Gateway do ATA.
     -   KB 3047154
 
         > [!IMPORTANT]
-        > -   Não instale a Base de dados de conhecimento 3047154 em um host de virtualização. Isso pode fazer com que o espelhamento de porta pare de funcionar corretamente.
+        > -   Não instale o KB 3047154 em um host de virtualização (o host que está executando a virtualização; não há problema em executá-lo em uma máquina virtual). Isso pode fazer com que o espelhamento de porta pare de funcionar corretamente. 
         > -   Não instale o Message Analyzer, o Wireshark ou qualquer outro software de captura de rede no Gateway do ATA. Se você precisa capturar o tráfego de rede, instale e use o Microsoft Network Monitor 3.4.
 
     -   Serviço do Gateway do ATA
@@ -70,7 +73,7 @@ Execute as seguintes etapas no servidor do Gateway do ATA.
 
     -   Conjunto de coleta de dados do Monitor de Desempenho Personalizado
 
-5.  Após a conclusão da instalação, clique em **Iniciar** para abrir o navegador e faça logon Console do ATA.
+5.  Após a conclusão da instalação, para o Gateway do ATA, clique em **Iniciar** para abrir o navegador e entrar no Console do ATA. Para o Gateway Lightweight do ATA, clique em **Concluir**.
 
 
 >[!div class="step-by-step"]
@@ -79,11 +82,12 @@ Execute as seguintes etapas no servidor do Gateway do ATA.
 
 ## Consulte também
 
-- [Para obter suporte, confira nosso fórum!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
-- [Configurar coleta de eventos](/advanced-threat-analytics/plandesign/configure-event-collection)
-- [Pré-requisitos do ATA](/advanced-threat-analytics/plandesign/ata-prerequisites)
+- [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+- [Configurar coleta de eventos](configure-event-collection.md)
+- [Pré-requisitos do ATA](/advanced-threat-analytics/plan-design/ata-prerequisites)
 
 
-<!--HONumber=Apr16_HO2-->
+
+<!--HONumber=May16_HO1-->
 
 

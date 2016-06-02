@@ -31,10 +31,10 @@ A Central de Integridade de ATA permite saber como seu serviço ATA está sendo 
 ## Trabalhando com a Central de Integridade de ATA
 A Central de Integridade de ATA permite que você saiba se há um problema gerando um alerta (um ponto vermelho) acima do ícone Central de Integridade na barra de menus.
 
-![Imagem do ponto vermelho do Centro de integridade de ATA](media/ATA-Health-Center-Alert-red-dot.png)
+![Barra de ferramentas do ponto vermelho da Central de Integridade do ATA](media/ATA-Health-Center-Alert-red-dot.png)
 
 ### Gerenciando a Integridade de ATA
-Para verificar a integridade geral do sistema, clique no ícone Central de Integridade na barra de menus ![Ícone Central de Integridade de ATA](media/ATA-red-dot.png).
+Para verificar a integridade geral do sistema, clique no ícone Central de Integridade na barra de menus ![Ícone Central de Integridade de ATA](media/ATA-red-dot.png)
 
 -   Todos os alertas abertos podem ser gerenciados definindo-os como **Resolvido** ou **Ignorado**. No Alerta, clique em **Abrir** e role para baixo até **Resolvido** ou **Ignorado**.
 
@@ -47,9 +47,9 @@ Para verificar a integridade geral do sistema, clique no ícone Central de Integ
 ## Consulte também
 - [Trabalhando com as configurações de detecção do ATA](working-with-detection-settings.md)
 - [Trabalhando com atividades suspeitas](working-with-suspicious-activities.md)
-- [Para obter suporte, confira nosso fórum!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+- [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
 
 
-<!--HONumber=Apr16_HO2-->
+<!--HONumber=May16_HO3-->
 
 
