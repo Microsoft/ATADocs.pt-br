@@ -32,7 +32,7 @@ As etapas a seguir devem ser concluídas antes de instalar o ATA:
 1. [Configurar o espelhamento de porta](configure-port-mirroring.md)
 2. [Validação do espelhamento de porta](validate-port-mirroring.md)
 3. [Configurar coleta de eventos](configure-event-collection.md)
-4. [Configurar software em seus servidores](install-ata-preinstall-software.md)
+
 
 
 ## Consulte também
@@ -43,6 +43,6 @@ As etapas a seguir devem ser concluídas antes de instalar o ATA:
 
 
 
-<!--HONumber=May16_HO2-->
+<!--HONumber=May16_HO4-->
 
 

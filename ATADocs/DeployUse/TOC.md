@@ -5,7 +5,6 @@
 ### [Configurar o espelhamento de porta](configure-port-mirroring.md)
 ### [Validação do espelhamento de porta](validate-port-mirroring.md)
 ### [Configurar coleta de eventos](configure-event-collection.md)
-### [Configurar software em seus servidores](install-ata-preinstall-software.md)
 ## [Instalar o ATA](install-ata.md)
 ### [Etapa 1](install-ata-step1.md)
 ### [Etapa 2](install-ata-step2.md)
@@ -32,6 +31,6 @@
 # [Solução de problemas](/advanced-threat-analytics/troubleshoot/troubleshooting-ata-using-logs)
 
 
-<!--HONumber=May16_HO3-->
+<!--HONumber=May16_HO4-->
 
 
