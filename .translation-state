@@ -1,5 +1,5 @@
 {
-  "LastProcessedCommit": "51b6e578f9367b1baef0f6fb47165aabff6f8045",
+  "LastProcessedCommit": "d18867c1864e16088ee1167bb588e8d4abc7f1bb",
   "LastTranslatedCommit": "a72340d94d1ab19f5e20a857a77c265bcbd184e1",
   "Items": {
     "19ffcb31b9fc0f69362ca0b4fd2e2fdb06dc11d6": {
@@ -23221,6 +23221,40 @@
       "ArchiveFilePath": "ol-handoff\\Microsoft\\ATADocs-pr.pt-br\\master\\archive\\TOC.d272a951086c3fc033212846ba52cf9d255d1bc5.pt-br.xlf",
       "ArchiveFileCommit": "b525dbdf9acb28db1ecf9b2bc398960d1585cb04",
       "ArchiveFileDateTime": "2016-06-02T02:40:14.6942333Z",
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
+    },
+    "6fc3c03e0933203437b0b3885f0b9f19539fed05": {
+      "FileHash": "6fc3c03e0933203437b0b3885f0b9f19539fed05",
+      "SourceFileCommit": "3e8caf366d7121e83e5726375c8e1eb9a49b0b12",
+      "SourceFilePath": "ATADocs\\DeployUse\\setting-ata-alerts.md",
+      "HandoffReason": 1,
+      "DependencyFrom": null,
+      "TokenReference": null,
+      "FilePathList": [
+        "ATADocs\\DeployUse\\setting-ata-alerts.md"
+      ],
+      "HasMetadata": true,
+      "HandoffFilePath": "ol-handoff\\Microsoft\\ATADocs-pr.pt-br\\master\\setting-ata-alerts.451097ef44392d0ea58f76d60633ef3a1b47ee2d.pt-br.xlf",
+      "HandoffFileCommit": "0313b8ffe3acbe8758d8bc8786b1eb3b12f3edb8",
+      "HandoffDateTime": "2016-06-07T23:07:54.2795553Z",
+      "HandoffPriority": "",
+      "HandoffException": null,
+      "HandoffFailureTimes": 0,
+      "TargetFileCommit": null,
+      "TargetFilePath": null,
+      "HandbackFilePath": null,
+      "HandbackFileCommit": null,
+      "HandbackDateTime": "0001-01-01T00:00:00",
+      "HandbackException": null,
+      "HandbackFailureTimes": 0,
+      "UpdatedDateTime": "0001-01-01T00:00:00",
+      "ArchiveFilePath": null,
+      "ArchiveFileCommit": null,
+      "ArchiveFileDateTime": "0001-01-01T00:00:00",
       "ArchiveException": null,
       "BilingualFilePath": null,
       "BilingualFileCommit": null,
