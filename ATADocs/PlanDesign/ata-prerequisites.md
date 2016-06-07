@@ -55,6 +55,7 @@ Esta seção lista as informações que você deve obter, as contas e entidades 
     > [!NOTE] Se você tiver definido ACLs personalizadas em várias UOs (Unidades Organizacionais) em seu domínio, verifique se o usuário selecionado tem permissões de leitura para essas UOs.
 
 -   Ter uma lista de todas as sub-redes usadas em sua rede para a VPN e o Wi-Fi, que reatribui endereços IP entre os dispositivos em um período muito curto de tempo (em segundos ou minutos).  Convém identificar essas sub-redes de concessão de curto prazo para que o ATA possa reduzir seu tempo de vida do cache para aceitar a reatribuição rápida entre os dispositivos. Confira [Instalar o ATA](/advanced-threat-analytics/deploy-use/install-ata) para uma configuração de sub-rede de concessão de curto prazo.
+-   Verifique se o Analisador de Mensagem e o Wire Shark não estão instalados no Gateway do ATA ou na Central do ATA.
 -    Opcional: O usuário deve ter permissões de leitura somente no contêiner de Objetos Excluídos. Isso permitirá que o ATA detecte a exclusão em massa de objetos no domínio. Para obter informações sobre como configurar permissões de leitura somente no contêiner de Objetos Excluídos, confira a seção **Alterar permissões em um contêiner de objetos excluídos** no tópico [Exibir ou Definir Permissões em um Objeto de Diretório](https://technet.microsoft.com/library/cc816824%28v=ws.10%29.aspx).
 
 -   Opcional: uma conta de usuário que não tem nenhuma atividade de rede. Essa conta será configurada como o usuário Honeytoken do ATA. Para configurar o usuário Honeytoken, será necessário a SID da conta de usuário, não o nome de usuário.
@@ -253,6 +254,6 @@ O acesso ao Console do ATA é por meio de um navegador com suporte para o seguin
 
 
 
-<!--HONumber=May16_HO3-->
+<!--HONumber=May16_HO4-->
 
 

@@ -48,24 +48,19 @@ A atualização 1.6 do ATA fornece melhorias nas seguintes áreas:
 ### Novas detecções
 
 
-- **Solicitação de informações privadas para proteção contra dados mal-intencionados**
-A DPAPI (API de Proteção de Dados) é um serviço de proteção de dados baseado em senha. Esse serviço de proteção é usado por vários aplicativos que armazenam segredos do usuário, como senhas de site e as credenciais de compartilhamento de arquivos. Para dar suporte a cenários de perda de senha, os usuários poderão descriptografar os dados protegidos usando uma chave de recuperação que não envolva a senha deles. Em um ambiente de domínio, os invasores podem roubar a chave de recuperação remotamente e usá-la para descriptografar os dados protegidos em todos os computadores ingressados no domínio.
+- A API de Proteção de Dados (DPAPI) da **Solicitação de Informações Particulares de Proteção de Dados Mal-intencionados** é um serviço de proteção de dados baseado em senha. Esse serviço de proteção é usado por vários aplicativos que armazenam segredos do usuário, como senhas de site e as credenciais de compartilhamento de arquivos. Para dar suporte a cenários de perda de senha, os usuários poderão descriptografar os dados protegidos usando uma chave de recuperação que não envolva a senha deles. Em um ambiente de domínio, os invasores podem roubar a chave de recuperação remotamente e usá-la para descriptografar os dados protegidos em todos os computadores ingressados no domínio.
 
 
-- **Enumeração da sessão Net**
-O reconhecimento é um importante estágio na cadeia avançada de eliminação de ataque. Os DCs (Controladores de Domínio) funcionam como servidores de arquivos para fins de distribuição do Objeto de Política de Grupo, usando o protocolo SMB. Como parte da fase de reconhecimento, os invasores podem consultar o DC de todas as sessões SMB ativas no servidor, o que permite que eles obtenham acesso a todos os usuários e endereços IP associados a essas sessões SMB. A enumeração da sessão SMB pode ser usada pelos invasores para acessar contas confidenciais, o que os ajuda a se mover lateralmente na rede.
+- O Reconhecimento por **Enumeração de Sessão de Rede** é um estágio chave na cadeia avançada de encerramento de ataques. Os DCs (Controladores de Domínio) funcionam como servidores de arquivos para fins de distribuição do Objeto de Política de Grupo, usando o protocolo SMB. Como parte da fase de reconhecimento, os invasores podem consultar o DC de todas as sessões SMB ativas no servidor, o que permite que eles obtenham acesso a todos os usuários e endereços IP associados a essas sessões SMB. A enumeração da sessão SMB pode ser usada pelos invasores para acessar contas confidenciais, o que os ajuda a se mover lateralmente na rede.
 
 
-- **Solicitações de replicação mal-intencionada**
-Em ambientes do Active Directory, a replicação ocorre regularmente entre Controladores de Domínio. Um invasor pode falsificar uma solicitação de replicação do Active Directory (às vezes representando um Controlador de Domínio), permitindo que o invasor recupere os dados armazenados no Active Directory, incluindo hashes de senha, sem utilizar técnicas mais invasivas como a Cópia de Sombra de Volume.
+- **Solicitações de replicação mal-intencionadas** Em ambientes do Active Directory a replicação ocorre regularmente entre Controladores de Domínio. Um invasor pode falsificar uma solicitação de replicação do Active Directory (às vezes representando um Controlador de Domínio), permitindo que o invasor recupere os dados armazenados no Active Directory, incluindo hashes de senha, sem utilizar técnicas mais invasivas como a Cópia de Sombra de Volume.
 
 
-- **Detecção de vulnerabilidade MS11-013**
-Há uma vulnerabilidade de elevação de privilégio no Kerberos que permite que determinados aspectos de um tíquete do serviço Kerberos sejam forjados. Um usuário mal-intencionado ou um invasor que explore com êxito essa vulnerabilidade pode obter um token com privilégios elevados no controlador de domínio.
+- **Detecção da vulnerabilidade MS11-013** Há uma elevação da vulnerabilidade de privilégio no Kerberos que permite que determinados aspectos de um tíquete do serviço Kerberos sejam forjados. Um usuário mal-intencionado ou um invasor que explore com êxito essa vulnerabilidade pode obter um token com privilégios elevados no controlador de domínio.
 
 
-- **Implementação de protocolo incomum**
-As solicitações de autenticação (Kerberos ou NTLM) normalmente são executadas usando um conjunto padrão de protocolos e métodos. No entanto, para autenticar com êxito, a solicitação deve atender apenas a um conjunto específico de requisitos. Os invasores podem implementar esses protocolos com pequenos desvios da implementação padrão no ambiente. Esses desvios podem indicar a presença de um invasor tentando executar ataques como Pass-The-Hash, Força Bruta, entre outros.
+- **Implementação de protocolo incomum** As solicitações de autenticação (Kerberos ou NTLM) normalmente são executadas usando um conjunto padrão de métodos e protocolos. No entanto, para autenticar com êxito, a solicitação deve atender apenas a um conjunto específico de requisitos. Os invasores podem implementar esses protocolos com pequenos desvios da implementação padrão no ambiente. Esses desvios podem indicar a presença de um invasor tentando executar ataques como Pass-The-Hash, Força Bruta, entre outros.
 
 
 ### Aprimoramentos nas detecções existentes
@@ -108,11 +103,13 @@ Antes de atualizar o ATA para a versão 1.6, atualize a seguinte chave do Regist
 ### Falha na migração ao atualizar do ATA 1.5
 Ao atualizar para o ATA 1.6, o processo de atualização pode falhar com o seguinte código de erro:
 
-![Erro ao atualizar o ATA para 1.6](http://i.imgur.com/QrLSApr.png)
-Caso esse erro seja exibido, revise o log de implantação em: **C:\Users\<Usuário>\AppData\Local\Temp** e procure a seguinte exceção:
+![Erro ao atualizar para o ATA 1.6](http://i.imgur.com/QrLSApr.png) Se você ver esse erro, examine o log de implantação em: **C:\Users\<User>\AppData\Local\Temp** e procure pela seguinte exceção:
 
     System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> MongoDB.Driver.MongoWriteException: A write operation resulted in an error. E11000 duplicate key error index: ATA.UniqueEntityProfile.$_id_ dup key: { : "<guid>" } ---> MongoDB.Driver.MongoBulkWriteException`1: A bulk write operation resulted in one or more errors.  E11000 duplicate key error index: ATA.UniqueEntityProfile.$_id_ dup key: { : " <guid> " }
 
+Você também pode ver este erro: System.ArgumentNullException: o valor não pode ser nulo.
+    
+Se você ver algum desses erros, execute a seguinte solução alternativa.
 
 **Solução alternativa**: 
 
@@ -130,7 +127,14 @@ Caso esse erro seja exibido, revise o log de implantação em: **C:\Users\<Usuá
 7.  Revise os logs para verificar se o produto está sendo executado sem erros.
 8.  [Baixe](http://aka.ms/ataremoveduplicateprofiles "Baixe") a ferramenta "RemoveDuplicateProfiles.exe" e copie-a para o caminho de instalação principal (%ProgramFiles%\Microsoft Advanced Threat Analytics\Center)
 9.  Em um prompt de comando elevado, execute "RemoveDuplicateProfiles.exe" e aguarde até que ela seja concluída com êxito.
-10. Atualize o ATA para o v1.6.
+10. Do diretório: …\Microsoft Advanced Threat Analytics\Center\MongoDB\bin: **Mongo ATA**, digite o seguinte comando:
+
+    db.SuspiciousActivities.remove({ "_t" : "RemoteExecutionSuspiciousActivity", "DetailsRecords" : { "$elemMatch" : { "ReturnCode" : null } } }, { "_id" : 1 });
+
+![Solução alternativa de atualização](http://i.imgur.com/Nj99X2f.png)
+
+Isso deve retornar um WriteResult({ "nRemoved" : XX }) em que "XX" é o número de Atividades Suspeitas que foram excluídas. Se o número for maior que 0, saia do prompt de comando e continue o processo de atualização.
+
 
 ### O NET Framework 4.6.1 requer a reinicialização do servidor
 
@@ -147,6 +151,6 @@ O procedimento de atualização do ATA exporta os dados, caso você os queira pa
 
 [Atualizar o ATA para a versão 1.6 — guia de migração](ata-update-1.6-migration-guide.md)
 
-<!--HONumber=May16_HO2-->
+<!--HONumber=May16_HO4-->
 
 

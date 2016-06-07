@@ -31,12 +31,16 @@ ms.suite: ems
 
 [Etapa 2 »](install-ata-step2.md)
 
+O procedimento de instalação fornece instruções para executar uma nova instalação do ATA 1.6. Para saber mais sobre como atualizar uma implantação do ATA existente de uma versão anterior, confira [Guia de migração do ATA versão 1.6](/advanced-threat-analytics/understand-explore/ata-update-1.6-migration-guide).
+
+> [!IMPORTANT] Instale o KB2934520 no servidor do Centro do ATA e nos servidores do Gateway do ATA antes de começar a instalação, caso contrário a instalação do ATA instalar essa atualização e exigirá uma reinicialização no meio do processo.
+
 ## Etapa 1. Baixar e instalar o Centro do ATA
 Depois de verificar que o servidor atende aos requisitos, você pode prosseguir com a instalação do Centro do ATA.
 
 Execute as seguintes etapas no servidor do Centro do ATA.
 
-1.  Baixe o ATA do [Microsoft Volume Licensing Service Center](https://www.microsoft.com/Licensing/servicecenter/default.aspx) ou do [Centro de avaliação TechNet](http://www.microsoft.com/en-us/evalcenter/) ou do [MSDN](https://msdn.microsoft.com/en-us/subscriptions/downloads).
+1.  Baixe o ATA no [Centro de Serviços de Licenciamento por Volume da Microsoft](https://www.microsoft.com/Licensing/servicecenter/default.aspx), no [Centro de avaliação TechNet](http://www.microsoft.com/en-us/evalcenter/) ou no [MSDN](https://msdn.microsoft.com/en-us/subscriptions/downloads).
 
 2.  Entre no computador no qual você está instalando o Centro do ATA como um usuário que seja membro do grupo Administradores local.
 
@@ -45,7 +49,7 @@ Execute as seguintes etapas no servidor do Centro do ATA.
 4.  Se o Microsoft .NET Framework não estiver instalado, você precisará instalá-lo ao iniciar a instalação. Você pode ter que reinicializar após a instalação do .NET Framework.
 5.  Na página de **Boas-vindas**, selecione o idioma a ser usado nas telas de instalação do ATA e clique em **Avançar**.
 
-6.  Leia os Termos de licença de software da Microsoft e, se aceitá-los, clique na caixa de seleção e em **Próximo**.
+6.  Leia os Termos de Licença para Software Microsoft e, se aceitá-los, clique na caixa de seleção e em **Avançar**.
 
 7.  É recomendável que você defina o ATA para atualizar automaticamente. Se o Windows não estiver configurado para fazer isso no seu computador, você verá a tela **Utilizar o Microsoft Update para ajudar a manter seu computador protegido e atualizado**. 
     ![Imagem Mantenha o ATA atualizado](media/ata_ms_update.png)
@@ -81,7 +85,7 @@ Execute as seguintes etapas no servidor do Centro do ATA.
 
 11.  Após a conclusão da instalação, clique em **Iniciar** para se conectar ao Console do ATA.
 Neste ponto, você será levado automaticamente para a página de configuração **Geral** a fim de continuar a configuração e a implantação dos Gateways do ATA.
-Como você está entrando no site usando um endereço IP, recebe um aviso relacionado ao certificado; isso é normal. Clique em **Continuar neste site**.
+Como você está fazendo logon no site usando um endereço IP, você recebe um aviso relacionado ao certificado e isso é normal. Clique em **Continuar neste site**.
 
 ### Validar a instalação
 
@@ -90,8 +94,7 @@ Como você está entrando no site usando um endereço IP, recebe um aviso relaci
 
 
 
->[!div class="step-by-step"]
-[« Pré-instalação](preinstall-ata.md)
+>[!div class="step-by-step"] [« Pré-Instalação](preinstall-ata.md)
 [Etapa 2 »](install-ata-step2.md)
 
 ## Consulte também
@@ -102,6 +105,6 @@ Como você está entrando no site usando um endereço IP, recebe um aviso relaci
 
 
 
-<!--HONumber=May16_HO1-->
+<!--HONumber=May16_HO4-->
 
 
