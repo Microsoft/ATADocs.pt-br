@@ -2,7 +2,7 @@
 # required metadata
 
 title: Configurando notificações do ATA | Microsoft Advanced Threat Analytics
-description: Descreve como fazer o ATA notificar você (por email ou por encaminhamento de eventos do ATA) quando ele detectar atividades suspeitas 
+description: Descreve como definir alertas do ATA para que você seja notificado quando atividades suspeitas forem detectadas.
 keywords:
 author: rkarlin
 manager: stevenpo
@@ -76,6 +76,6 @@ Para receber notificações por Syslog, defina o seguinte:
 [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
 
 
-<!--HONumber=May16_HO3-->
+<!--HONumber=Jun16_HO1-->
 
 
