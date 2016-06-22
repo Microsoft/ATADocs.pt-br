@@ -1,26 +1,11 @@
 # <a name='report-top'></a> Localization Handback Report
 
 ## Summary
- Total Files | 1
+ Total Files | 0
 
 ## File List
- Source File | Status | Details 
- ----------- | ------ | ------- 
- [ATADocs\DeployUse\install-ata-step5.md](https://github.com/Microsoft/ATADocs-pr/blob/283d8383a6e7674e3a9fba06f3a8f73dcb038ea2/ATADocs/DeployUse/install-ata-step5.md) | InSyncHandedBackSuccess | [Details](#88999409ef976d50b6bb80803213b82146cee1fe16)
 
 ## Item Details
-##### <a name='88999409ef976d50b6bb80803213b82146cee1fe16'></a> Source: [ATADocs\DeployUse\install-ata-step5.md](https://github.com/Microsoft/ATADocs-pr/blob/283d8383a6e7674e3a9fba06f3a8f73dcb038ea2/ATADocs/DeployUse/install-ata-step5.md)
-* Status: InSyncHandedBackSuccess
-* Target File: [ATADocs\DeployUse\install-ata-step5.md](https://github.com/Microsoft/ATADocs-pr.pt-br/blob/d4fa93bee1ef0212c4e7d0778ccf71a99c07238a/ATADocs/DeployUse/install-ata-step5.md)
-* Handoff File: [install-ata-step5.939491200e7347138888e6ccb69a84737be3bec2.pt-br.xlf](https://github.com/Microsoft/EM.handoff/blob/fc15f7cd01cc542850c52235587b21b5f5084d93/ol-handoff/Microsoft/ATADocs-pr.pt-br/master/install-ata-step5.939491200e7347138888e6ccb69a84737be3bec2.pt-br.xlf)
-* Handoff Datetime: 2016-05-18 17:40:02
-* Handoff Reason: Include
-* Archive File: [install-ata-step5.939491200e7347138888e6ccb69a84737be3bec2.pt-br.xlf](https://github.com/Microsoft/EM.handoff/blob/501262242962595ccff4c8176a3c4ba3bf6a3c93/ol-handoff/Microsoft/ATADocs-pr.pt-br/master/archive/install-ata-step5.939491200e7347138888e6ccb69a84737be3bec2.pt-br.xlf)
-* Archive Datetime: 2016-05-20 00:35:02
-* Handback File: [install-ata-step5.939491200e7347138888e6ccb69a84737be3bec2.pt-br.xlf](https://github.com/Microsoft/EM.handback/blob/222db9877396447a08370a630491ce2370ab1749/ol-handback/Microsoft/ATADocs-pr.pt-br/master/install-ata-step5.939491200e7347138888e6ccb69a84737be3bec2.pt-br.xlf)
-* Handback Datetime: 2016-06-22 22:18:30
-* [Back to Top](#report-top)
-
 
 ## Error Details
 
