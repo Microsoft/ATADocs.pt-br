@@ -1,11 +1,26 @@
 # <a name='report-top'></a> Localization Handback Report
 
 ## Summary
- Total Files | 0
+ Total Files | 1
 
 ## File List
+ Source File | Status | Details 
+ ----------- | ------ | ------- 
+ [ATADocs\index.md](https://github.com/Microsoft/ATADocs-pr/blob/b2baf22d6ec0d0c2453e850b7f34f084138ccd01/ATADocs/index.md) | InSyncHandedBackSuccess | [Details](#2a191da2646d91c3740c2f6fa8f638baf346e0f2221)
 
 ## Item Details
+##### <a name='2a191da2646d91c3740c2f6fa8f638baf346e0f2221'></a> Source: [ATADocs\index.md](https://github.com/Microsoft/ATADocs-pr/blob/b2baf22d6ec0d0c2453e850b7f34f084138ccd01/ATADocs/index.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [ATADocs\index.md](https://github.com/Microsoft/ATADocs-pr.pt-br/blob/82b19682c345382ced3ca928b411eec28e42625b/ATADocs/index.md)
+* Handoff File: [index.cc3e62ac6c9901731450d753a0ecebc990048809.pt-br.xlf](https://github.com/Microsoft/EM.handoff/blob/6f4738ae49ae68c35697bd0fdc5507c379810ac3/ol-handoff/Microsoft/ATADocs-pr.pt-br/master/index.cc3e62ac6c9901731450d753a0ecebc990048809.pt-br.xlf)
+* Handoff Datetime: 2016-06-23 22:52:12
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [index.cc3e62ac6c9901731450d753a0ecebc990048809.pt-br.xlf](https://github.com/Microsoft/EM.handback/blob/fe5d569513909834dc256d93a1a6055643a93c62/ol-handback/Microsoft/ATADocs-pr.pt-br/master/index.cc3e62ac6c9901731450d753a0ecebc990048809.pt-br.xlf)
+* Handback Datetime: 2016-06-24 16:57:56
+* [Back to Top](#report-top)
+
 
 ## Error Details
 
