@@ -1,5 +1,5 @@
 {
-  "LastProcessedCommit": "fc0ccc3839ca6caa92bf17daa07d1b9350cf1bcb",
+  "LastProcessedCommit": "1187aef13781f8d67f780a3fe8fe32786c857672",
   "LastTranslatedCommit": "82b19682c345382ced3ca928b411eec28e42625b",
   "Items": {
     "19ffcb31b9fc0f69362ca0b4fd2e2fdb06dc11d6": {
@@ -23717,6 +23717,40 @@
       "HandoffFilePath": "ol-handoff\\Microsoft\\ATADocs-pr.pt-br\\master\\ata-update-1.6-migration-guide.fe715980eb0702f6dda7862931a6921ccd723d15.pt-br.xlf",
       "HandoffFileCommit": "f8e7e7342f8fb8ca3e0717d87501d95e2e9419c6",
       "HandoffDateTime": "2016-06-25T00:23:24.9938361Z",
+      "HandoffPriority": "",
+      "HandoffException": null,
+      "HandoffFailureTimes": 0,
+      "TargetFileCommit": null,
+      "TargetFilePath": null,
+      "HandbackFilePath": null,
+      "HandbackFileCommit": null,
+      "HandbackDateTime": "0001-01-01T00:00:00",
+      "HandbackException": null,
+      "HandbackFailureTimes": 0,
+      "UpdatedDateTime": "0001-01-01T00:00:00",
+      "ArchiveFilePath": null,
+      "ArchiveFileCommit": null,
+      "ArchiveFileDateTime": "0001-01-01T00:00:00",
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
+    },
+    "cef84b3fc6189b49a57a4b24308dff8fa24e707e": {
+      "FileHash": "cef84b3fc6189b49a57a4b24308dff8fa24e707e",
+      "SourceFileCommit": "4e567f7a1890ae9365c45af45ebb86f59884ed5f",
+      "SourceFilePath": "ATADocs\\Understand\\ata-update-1.6-migration-guide.md",
+      "HandoffReason": 1,
+      "DependencyFrom": null,
+      "TokenReference": null,
+      "FilePathList": [
+        "ATADocs\\Understand\\ata-update-1.6-migration-guide.md"
+      ],
+      "HasMetadata": true,
+      "HandoffFilePath": "ol-handoff\\Microsoft\\ATADocs-pr.pt-br\\master\\ata-update-1.6-migration-guide.fe715980eb0702f6dda7862931a6921ccd723d15.pt-br.xlf",
+      "HandoffFileCommit": "c3c211edf71715e949a46440235fa5fbecdf5827",
+      "HandoffDateTime": "2016-06-25T01:14:50.592545Z",
       "HandoffPriority": "",
       "HandoffException": null,
       "HandoffFailureTimes": 0,
