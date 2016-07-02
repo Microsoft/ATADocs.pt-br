@@ -643,8 +643,8 @@
 * Handoff File: [ata-database-management.a56f4c673b1abb517456517d2a5886e745fd1a90.pt-br.xlf](https://github.com/Microsoft/EM.handoff/blob/a27de79b00be97fcd5cb6ff0e5b8723871c32c61/ol-handoff/Microsoft/ATADocs-pr.pt-br/master/ata-database-management.a56f4c673b1abb517456517d2a5886e745fd1a90.pt-br.xlf)
 * Handoff Datetime: 2016-06-27 16:00:14
 * Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
+* Archive File: [ata-database-management.a56f4c673b1abb517456517d2a5886e745fd1a90.pt-br.xlf](https://github.com/Microsoft/EM.handoff/blob/bcb846ad38c8ff1ea4845a6fc92510b864805748/ol-handoff/Microsoft/ATADocs-pr.pt-br/master/archive/ata-database-management.a56f4c673b1abb517456517d2a5886e745fd1a90.pt-br.xlf)
+* Archive Datetime: 2016-07-02 01:39:28
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * Current Target File: [ATADocs\DeployUse\ata-database-management.md](https://github.com/Microsoft/ATADocs-pr.pt-br/blob/71e3819cd1c11cc04c0ec7e039ad7b0b71529ab4/ATADocs/DeployUse/ata-database-management.md)
@@ -658,8 +658,8 @@
 * Handoff File: [ata-health-center.57b81f1003786f30d809cae62862a88289e1f7e4.pt-br.xlf](https://github.com/Microsoft/EM.handoff/blob/a27de79b00be97fcd5cb6ff0e5b8723871c32c61/ol-handoff/Microsoft/ATADocs-pr.pt-br/master/ata-health-center.57b81f1003786f30d809cae62862a88289e1f7e4.pt-br.xlf)
 * Handoff Datetime: 2016-06-27 16:00:14
 * Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
+* Archive File: [ata-health-center.57b81f1003786f30d809cae62862a88289e1f7e4.pt-br.xlf](https://github.com/Microsoft/EM.handoff/blob/bcb846ad38c8ff1ea4845a6fc92510b864805748/ol-handoff/Microsoft/ATADocs-pr.pt-br/master/archive/ata-health-center.57b81f1003786f30d809cae62862a88289e1f7e4.pt-br.xlf)
+* Archive Datetime: 2016-07-02 01:39:28
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * Current Target File: [ATADocs\DeployUse\ata-health-center.md](https://github.com/Microsoft/ATADocs-pr.pt-br/blob/71e3819cd1c11cc04c0ec7e039ad7b0b71529ab4/ATADocs/DeployUse/ata-health-center.md)
@@ -673,8 +673,8 @@
 * Handoff File: [ata-silent-installation.c7999e6e550c9bfcd0d2992e016db6840458d398.pt-br.xlf](https://github.com/Microsoft/EM.handoff/blob/129bdcb6c1507d2cbdd35a73e26c4aa317f348a4/ol-handoff/Microsoft/ATADocs-pr.pt-br/master/ata-silent-installation.c7999e6e550c9bfcd0d2992e016db6840458d398.pt-br.xlf)
 * Handoff Datetime: 2016-06-28 16:53:47
 * Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
+* Archive File: [ata-silent-installation.c7999e6e550c9bfcd0d2992e016db6840458d398.pt-br.xlf](https://github.com/Microsoft/EM.handoff/blob/bcb846ad38c8ff1ea4845a6fc92510b864805748/ol-handoff/Microsoft/ATADocs-pr.pt-br/master/archive/ata-silent-installation.c7999e6e550c9bfcd0d2992e016db6840458d398.pt-br.xlf)
+* Archive Datetime: 2016-07-02 01:39:28
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * Current Target File: [ATADocs\DeployUse\ata-silent-installation.md](https://github.com/Microsoft/ATADocs-pr.pt-br/blob/71e3819cd1c11cc04c0ec7e039ad7b0b71529ab4/ATADocs/DeployUse/ata-silent-installation.md)
@@ -688,8 +688,8 @@
 * Handoff File: [configure-event-collection.76d422c1eaa8e04689ce451d7a7bb84d119fda52.pt-br.xlf](https://github.com/Microsoft/EM.handoff/blob/129bdcb6c1507d2cbdd35a73e26c4aa317f348a4/ol-handoff/Microsoft/ATADocs-pr.pt-br/master/configure-event-collection.76d422c1eaa8e04689ce451d7a7bb84d119fda52.pt-br.xlf)
 * Handoff Datetime: 2016-06-28 16:53:47
 * Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
+* Archive File: [configure-event-collection.76d422c1eaa8e04689ce451d7a7bb84d119fda52.pt-br.xlf](https://github.com/Microsoft/EM.handoff/blob/bcb846ad38c8ff1ea4845a6fc92510b864805748/ol-handoff/Microsoft/ATADocs-pr.pt-br/master/archive/configure-event-collection.76d422c1eaa8e04689ce451d7a7bb84d119fda52.pt-br.xlf)
+* Archive Datetime: 2016-07-02 01:39:28
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * Current Target File: [ATADocs\DeployUse\configure-event-collection.md](https://github.com/Microsoft/ATADocs-pr.pt-br/blob/71e3819cd1c11cc04c0ec7e039ad7b0b71529ab4/ATADocs/DeployUse/configure-event-collection.md)
@@ -703,8 +703,8 @@
 * Handoff File: [configure-port-mirroring.e622298bb90efd1f6be9ed80b0b2c691da7ec043.pt-br.xlf](https://github.com/Microsoft/EM.handoff/blob/d06e1215f0298c2235b2ff489c297c01fe4be631/ol-handoff/Microsoft/ATADocs-pr.pt-br/master/configure-port-mirroring.e622298bb90efd1f6be9ed80b0b2c691da7ec043.pt-br.xlf)
 * Handoff Datetime: 2016-06-29 18:22:20
 * Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
+* Archive File: [configure-port-mirroring.e622298bb90efd1f6be9ed80b0b2c691da7ec043.pt-br.xlf](https://github.com/Microsoft/EM.handoff/blob/bcb846ad38c8ff1ea4845a6fc92510b864805748/ol-handoff/Microsoft/ATADocs-pr.pt-br/master/archive/configure-port-mirroring.e622298bb90efd1f6be9ed80b0b2c691da7ec043.pt-br.xlf)
+* Archive Datetime: 2016-07-02 01:39:28
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * Current Target File: [ATADocs\DeployUse\configure-port-mirroring.md](https://github.com/Microsoft/ATADocs-pr.pt-br/blob/71e3819cd1c11cc04c0ec7e039ad7b0b71529ab4/ATADocs/DeployUse/configure-port-mirroring.md)
@@ -730,8 +730,8 @@
 * Handoff File: [install-ata.ebb339fe6f06fe279a930dbf42e95a14d812c2f3.pt-br.xlf](https://github.com/Microsoft/EM.handoff/blob/a27de79b00be97fcd5cb6ff0e5b8723871c32c61/ol-handoff/Microsoft/ATADocs-pr.pt-br/master/install-ata.ebb339fe6f06fe279a930dbf42e95a14d812c2f3.pt-br.xlf)
 * Handoff Datetime: 2016-06-27 16:00:14
 * Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
+* Archive File: [install-ata.ebb339fe6f06fe279a930dbf42e95a14d812c2f3.pt-br.xlf](https://github.com/Microsoft/EM.handoff/blob/bcb846ad38c8ff1ea4845a6fc92510b864805748/ol-handoff/Microsoft/ATADocs-pr.pt-br/master/archive/install-ata.ebb339fe6f06fe279a930dbf42e95a14d812c2f3.pt-br.xlf)
+* Archive Datetime: 2016-07-02 01:39:28
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * Current Target File: [ATADocs\DeployUse\install-ata.md](https://github.com/Microsoft/ATADocs-pr.pt-br/blob/71e3819cd1c11cc04c0ec7e039ad7b0b71529ab4/ATADocs/DeployUse/install-ata.md)
@@ -745,8 +745,8 @@
 * Handoff File: [install-ata-step1.be25407df296fc13c33daad4579bcbd3e4664b05.pt-br.xlf](https://github.com/Microsoft/EM.handoff/blob/129bdcb6c1507d2cbdd35a73e26c4aa317f348a4/ol-handoff/Microsoft/ATADocs-pr.pt-br/master/install-ata-step1.be25407df296fc13c33daad4579bcbd3e4664b05.pt-br.xlf)
 * Handoff Datetime: 2016-06-28 16:53:47
 * Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
+* Archive File: [install-ata-step1.be25407df296fc13c33daad4579bcbd3e4664b05.pt-br.xlf](https://github.com/Microsoft/EM.handoff/blob/bcb846ad38c8ff1ea4845a6fc92510b864805748/ol-handoff/Microsoft/ATADocs-pr.pt-br/master/archive/install-ata-step1.be25407df296fc13c33daad4579bcbd3e4664b05.pt-br.xlf)
+* Archive Datetime: 2016-07-02 01:39:28
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * Current Target File: [ATADocs\DeployUse\install-ata-step1.md](https://github.com/Microsoft/ATADocs-pr.pt-br/blob/a08def95841c390eadd41bda2037c8867714b0d5/ATADocs/DeployUse/install-ata-step1.md)
@@ -760,8 +760,8 @@
 * Handoff File: [install-ata-step2.3d45321e7748ee948f41c47ba8a2385044872617.pt-br.xlf](https://github.com/Microsoft/EM.handoff/blob/a27de79b00be97fcd5cb6ff0e5b8723871c32c61/ol-handoff/Microsoft/ATADocs-pr.pt-br/master/install-ata-step2.3d45321e7748ee948f41c47ba8a2385044872617.pt-br.xlf)
 * Handoff Datetime: 2016-06-27 16:00:14
 * Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
+* Archive File: [install-ata-step2.3d45321e7748ee948f41c47ba8a2385044872617.pt-br.xlf](https://github.com/Microsoft/EM.handoff/blob/bcb846ad38c8ff1ea4845a6fc92510b864805748/ol-handoff/Microsoft/ATADocs-pr.pt-br/master/archive/install-ata-step2.3d45321e7748ee948f41c47ba8a2385044872617.pt-br.xlf)
+* Archive Datetime: 2016-07-02 01:39:28
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * Current Target File: [ATADocs\DeployUse\install-ata-step2.md](https://github.com/Microsoft/ATADocs-pr.pt-br/blob/71e3819cd1c11cc04c0ec7e039ad7b0b71529ab4/ATADocs/DeployUse/install-ata-step2.md)
@@ -775,8 +775,8 @@
 * Handoff File: [install-ata-step3.82c3e0752e5bb0305f5acc701171b2086e5820d9.pt-br.xlf](https://github.com/Microsoft/EM.handoff/blob/a27de79b00be97fcd5cb6ff0e5b8723871c32c61/ol-handoff/Microsoft/ATADocs-pr.pt-br/master/install-ata-step3.82c3e0752e5bb0305f5acc701171b2086e5820d9.pt-br.xlf)
 * Handoff Datetime: 2016-06-27 16:00:14
 * Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
+* Archive File: [install-ata-step3.82c3e0752e5bb0305f5acc701171b2086e5820d9.pt-br.xlf](https://github.com/Microsoft/EM.handoff/blob/bcb846ad38c8ff1ea4845a6fc92510b864805748/ol-handoff/Microsoft/ATADocs-pr.pt-br/master/archive/install-ata-step3.82c3e0752e5bb0305f5acc701171b2086e5820d9.pt-br.xlf)
+* Archive Datetime: 2016-07-02 01:39:28
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * Current Target File: [ATADocs\DeployUse\install-ata-step3.md](https://github.com/Microsoft/ATADocs-pr.pt-br/blob/71e3819cd1c11cc04c0ec7e039ad7b0b71529ab4/ATADocs/DeployUse/install-ata-step3.md)
@@ -790,8 +790,8 @@
 * Handoff File: [install-ata-step4.2f79a925ca23bf573e0a526a5c2cb4eda0d405e8.pt-br.xlf](https://github.com/Microsoft/EM.handoff/blob/129bdcb6c1507d2cbdd35a73e26c4aa317f348a4/ol-handoff/Microsoft/ATADocs-pr.pt-br/master/install-ata-step4.2f79a925ca23bf573e0a526a5c2cb4eda0d405e8.pt-br.xlf)
 * Handoff Datetime: 2016-06-28 16:53:47
 * Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
+* Archive File: [install-ata-step4.2f79a925ca23bf573e0a526a5c2cb4eda0d405e8.pt-br.xlf](https://github.com/Microsoft/EM.handoff/blob/bcb846ad38c8ff1ea4845a6fc92510b864805748/ol-handoff/Microsoft/ATADocs-pr.pt-br/master/archive/install-ata-step4.2f79a925ca23bf573e0a526a5c2cb4eda0d405e8.pt-br.xlf)
+* Archive Datetime: 2016-07-02 01:39:28
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * Current Target File: [ATADocs\DeployUse\install-ata-step4.md](https://github.com/Microsoft/ATADocs-pr.pt-br/blob/71e3819cd1c11cc04c0ec7e039ad7b0b71529ab4/ATADocs/DeployUse/install-ata-step4.md)
@@ -805,8 +805,8 @@
 * Handoff File: [install-ata-step5.939491200e7347138888e6ccb69a84737be3bec2.pt-br.xlf](https://github.com/Microsoft/EM.handoff/blob/129bdcb6c1507d2cbdd35a73e26c4aa317f348a4/ol-handoff/Microsoft/ATADocs-pr.pt-br/master/install-ata-step5.939491200e7347138888e6ccb69a84737be3bec2.pt-br.xlf)
 * Handoff Datetime: 2016-06-28 16:53:47
 * Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
+* Archive File: [install-ata-step5.939491200e7347138888e6ccb69a84737be3bec2.pt-br.xlf](https://github.com/Microsoft/EM.handoff/blob/bcb846ad38c8ff1ea4845a6fc92510b864805748/ol-handoff/Microsoft/ATADocs-pr.pt-br/master/archive/install-ata-step5.939491200e7347138888e6ccb69a84737be3bec2.pt-br.xlf)
+* Archive Datetime: 2016-07-02 01:39:28
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * Current Target File: [ATADocs\DeployUse\install-ata-step5.md](https://github.com/Microsoft/ATADocs-pr.pt-br/blob/d4fa93bee1ef0212c4e7d0778ccf71a99c07238a/ATADocs/DeployUse/install-ata-step5.md)
@@ -820,8 +820,8 @@
 * Handoff File: [install-ata-step6.cfd714775f8ca0497152aded917d1a1b0b009143.pt-br.xlf](https://github.com/Microsoft/EM.handoff/blob/a27de79b00be97fcd5cb6ff0e5b8723871c32c61/ol-handoff/Microsoft/ATADocs-pr.pt-br/master/install-ata-step6.cfd714775f8ca0497152aded917d1a1b0b009143.pt-br.xlf)
 * Handoff Datetime: 2016-06-27 16:00:14
 * Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
+* Archive File: [install-ata-step6.cfd714775f8ca0497152aded917d1a1b0b009143.pt-br.xlf](https://github.com/Microsoft/EM.handoff/blob/bcb846ad38c8ff1ea4845a6fc92510b864805748/ol-handoff/Microsoft/ATADocs-pr.pt-br/master/archive/install-ata-step6.cfd714775f8ca0497152aded917d1a1b0b009143.pt-br.xlf)
+* Archive Datetime: 2016-07-02 01:39:28
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * Current Target File: [ATADocs\DeployUse\install-ata-step6.md](https://github.com/Microsoft/ATADocs-pr.pt-br/blob/71e3819cd1c11cc04c0ec7e039ad7b0b71529ab4/ATADocs/DeployUse/install-ata-step6.md)
@@ -835,8 +835,8 @@
 * Handoff File: [manage-telemetry-settings.8695a3cab69c52f730f24c0a5aa69539621393a8.pt-br.xlf](https://github.com/Microsoft/EM.handoff/blob/a27de79b00be97fcd5cb6ff0e5b8723871c32c61/ol-handoff/Microsoft/ATADocs-pr.pt-br/master/manage-telemetry-settings.8695a3cab69c52f730f24c0a5aa69539621393a8.pt-br.xlf)
 * Handoff Datetime: 2016-06-27 16:00:14
 * Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
+* Archive File: [manage-telemetry-settings.8695a3cab69c52f730f24c0a5aa69539621393a8.pt-br.xlf](https://github.com/Microsoft/EM.handoff/blob/bcb846ad38c8ff1ea4845a6fc92510b864805748/ol-handoff/Microsoft/ATADocs-pr.pt-br/master/archive/manage-telemetry-settings.8695a3cab69c52f730f24c0a5aa69539621393a8.pt-br.xlf)
+* Archive Datetime: 2016-07-02 01:39:28
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * Current Target File: [ATADocs\DeployUse\manage-telemetry-settings.md](https://github.com/Microsoft/ATADocs-pr.pt-br/blob/71e3819cd1c11cc04c0ec7e039ad7b0b71529ab4/ATADocs/DeployUse/manage-telemetry-settings.md)
@@ -2002,8 +2002,8 @@
 * Handoff File: [modifying-ata-config-centercert.47a5010003ff67ec899123c54e6c8b85b9066f2c.pt-br.xlf](https://github.com/Microsoft/EM.handoff/blob/a27de79b00be97fcd5cb6ff0e5b8723871c32c61/ol-handoff/Microsoft/ATADocs-pr.pt-br/master/modifying-ata-config-centercert.47a5010003ff67ec899123c54e6c8b85b9066f2c.pt-br.xlf)
 * Handoff Datetime: 2016-06-27 16:00:14
 * Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
+* Archive File: [modifying-ata-config-centercert.47a5010003ff67ec899123c54e6c8b85b9066f2c.pt-br.xlf](https://github.com/Microsoft/EM.handoff/blob/bcb846ad38c8ff1ea4845a6fc92510b864805748/ol-handoff/Microsoft/ATADocs-pr.pt-br/master/archive/modifying-ata-config-centercert.47a5010003ff67ec899123c54e6c8b85b9066f2c.pt-br.xlf)
+* Archive Datetime: 2016-07-02 01:39:28
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * Current Target File: [ATADocs\DeployUse\modifying-ata-config-centercert.md](https://github.com/Microsoft/ATADocs-pr.pt-br/blob/71e3819cd1c11cc04c0ec7e039ad7b0b71529ab4/ATADocs/DeployUse/modifying-ata-config-centercert.md)
@@ -2017,8 +2017,8 @@
 * Handoff File: [modifying-ata-config-centerip.95510f0562110a9a517b1f38b65d31e2b365e77e.pt-br.xlf](https://github.com/Microsoft/EM.handoff/blob/a27de79b00be97fcd5cb6ff0e5b8723871c32c61/ol-handoff/Microsoft/ATADocs-pr.pt-br/master/modifying-ata-config-centerip.95510f0562110a9a517b1f38b65d31e2b365e77e.pt-br.xlf)
 * Handoff Datetime: 2016-06-27 16:00:14
 * Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
+* Archive File: [modifying-ata-config-centerip.95510f0562110a9a517b1f38b65d31e2b365e77e.pt-br.xlf](https://github.com/Microsoft/EM.handoff/blob/bcb846ad38c8ff1ea4845a6fc92510b864805748/ol-handoff/Microsoft/ATADocs-pr.pt-br/master/archive/modifying-ata-config-centerip.95510f0562110a9a517b1f38b65d31e2b365e77e.pt-br.xlf)
+* Archive Datetime: 2016-07-02 01:39:28
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * Current Target File: [ATADocs\DeployUse\modifying-ata-config-centerip.md](https://github.com/Microsoft/ATADocs-pr.pt-br/blob/71e3819cd1c11cc04c0ec7e039ad7b0b71529ab4/ATADocs/DeployUse/modifying-ata-config-centerip.md)
@@ -2032,8 +2032,8 @@
 * Handoff File: [modifying-ata-config-consoleip.3efd9bc263cf92cf6d203c60252021215caa7ec0.pt-br.xlf](https://github.com/Microsoft/EM.handoff/blob/a27de79b00be97fcd5cb6ff0e5b8723871c32c61/ol-handoff/Microsoft/ATADocs-pr.pt-br/master/modifying-ata-config-consoleip.3efd9bc263cf92cf6d203c60252021215caa7ec0.pt-br.xlf)
 * Handoff Datetime: 2016-06-27 16:00:14
 * Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
+* Archive File: [modifying-ata-config-consoleip.3efd9bc263cf92cf6d203c60252021215caa7ec0.pt-br.xlf](https://github.com/Microsoft/EM.handoff/blob/bcb846ad38c8ff1ea4845a6fc92510b864805748/ol-handoff/Microsoft/ATADocs-pr.pt-br/master/archive/modifying-ata-config-consoleip.3efd9bc263cf92cf6d203c60252021215caa7ec0.pt-br.xlf)
+* Archive Datetime: 2016-07-02 01:39:28
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * Current Target File: [ATADocs\DeployUse\modifying-ata-config-consoleip.md](https://github.com/Microsoft/ATADocs-pr.pt-br/blob/71e3819cd1c11cc04c0ec7e039ad7b0b71529ab4/ATADocs/DeployUse/modifying-ata-config-consoleip.md)
@@ -2047,8 +2047,8 @@
 * Handoff File: [modifying-ata-config-dcpassword.71593ec491df4d6ace15d09e924eb8cbd0ca77a8.pt-br.xlf](https://github.com/Microsoft/EM.handoff/blob/a27de79b00be97fcd5cb6ff0e5b8723871c32c61/ol-handoff/Microsoft/ATADocs-pr.pt-br/master/modifying-ata-config-dcpassword.71593ec491df4d6ace15d09e924eb8cbd0ca77a8.pt-br.xlf)
 * Handoff Datetime: 2016-06-27 16:00:14
 * Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
+* Archive File: [modifying-ata-config-dcpassword.71593ec491df4d6ace15d09e924eb8cbd0ca77a8.pt-br.xlf](https://github.com/Microsoft/EM.handoff/blob/bcb846ad38c8ff1ea4845a6fc92510b864805748/ol-handoff/Microsoft/ATADocs-pr.pt-br/master/archive/modifying-ata-config-dcpassword.71593ec491df4d6ace15d09e924eb8cbd0ca77a8.pt-br.xlf)
+* Archive Datetime: 2016-07-02 01:39:28
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * Current Target File: [ATADocs\DeployUse\modifying-ata-config-dcpassword.md](https://github.com/Microsoft/ATADocs-pr.pt-br/blob/71e3819cd1c11cc04c0ec7e039ad7b0b71529ab4/ATADocs/DeployUse/modifying-ata-config-dcpassword.md)
@@ -2062,8 +2062,8 @@
 * Handoff File: [modifying-ata-config-iiscert.d586053e78c311e016ef2b6cd8440e3e6387fabc.pt-br.xlf](https://github.com/Microsoft/EM.handoff/blob/a27de79b00be97fcd5cb6ff0e5b8723871c32c61/ol-handoff/Microsoft/ATADocs-pr.pt-br/master/modifying-ata-config-iiscert.d586053e78c311e016ef2b6cd8440e3e6387fabc.pt-br.xlf)
 * Handoff Datetime: 2016-06-27 16:00:14
 * Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
+* Archive File: [modifying-ata-config-iiscert.d586053e78c311e016ef2b6cd8440e3e6387fabc.pt-br.xlf](https://github.com/Microsoft/EM.handoff/blob/bcb846ad38c8ff1ea4845a6fc92510b864805748/ol-handoff/Microsoft/ATADocs-pr.pt-br/master/archive/modifying-ata-config-iiscert.d586053e78c311e016ef2b6cd8440e3e6387fabc.pt-br.xlf)
+* Archive Datetime: 2016-07-02 01:39:28
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * Current Target File: [ATADocs\DeployUse\modifying-ata-config-iiscert.md](https://github.com/Microsoft/ATADocs-pr.pt-br/blob/71e3819cd1c11cc04c0ec7e039ad7b0b71529ab4/ATADocs/DeployUse/modifying-ata-config-iiscert.md)
@@ -2077,8 +2077,8 @@
 * Handoff File: [modifying-ata-configuration.373a9ee4d26d894405af0398021da33e811bd7aa.pt-br.xlf](https://github.com/Microsoft/EM.handoff/blob/a27de79b00be97fcd5cb6ff0e5b8723871c32c61/ol-handoff/Microsoft/ATADocs-pr.pt-br/master/modifying-ata-configuration.373a9ee4d26d894405af0398021da33e811bd7aa.pt-br.xlf)
 * Handoff Datetime: 2016-06-27 16:00:14
 * Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
+* Archive File: [modifying-ata-configuration.373a9ee4d26d894405af0398021da33e811bd7aa.pt-br.xlf](https://github.com/Microsoft/EM.handoff/blob/bcb846ad38c8ff1ea4845a6fc92510b864805748/ol-handoff/Microsoft/ATADocs-pr.pt-br/master/archive/modifying-ata-configuration.373a9ee4d26d894405af0398021da33e811bd7aa.pt-br.xlf)
+* Archive Datetime: 2016-07-02 01:39:28
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * Current Target File: [ATADocs\DeployUse\modifying-ata-configuration.md](https://github.com/Microsoft/ATADocs-pr.pt-br/blob/71e3819cd1c11cc04c0ec7e039ad7b0b71529ab4/ATADocs/DeployUse/modifying-ata-configuration.md)
@@ -2092,8 +2092,8 @@
 * Handoff File: [operate-ata.9fb8be5f31f851cb5a21bb843445e9b55c735f08.pt-br.xlf](https://github.com/Microsoft/EM.handoff/blob/a27de79b00be97fcd5cb6ff0e5b8723871c32c61/ol-handoff/Microsoft/ATADocs-pr.pt-br/master/operate-ata.9fb8be5f31f851cb5a21bb843445e9b55c735f08.pt-br.xlf)
 * Handoff Datetime: 2016-06-27 16:00:14
 * Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
+* Archive File: [operate-ata.9fb8be5f31f851cb5a21bb843445e9b55c735f08.pt-br.xlf](https://github.com/Microsoft/EM.handoff/blob/bcb846ad38c8ff1ea4845a6fc92510b864805748/ol-handoff/Microsoft/ATADocs-pr.pt-br/master/archive/operate-ata.9fb8be5f31f851cb5a21bb843445e9b55c735f08.pt-br.xlf)
+* Archive Datetime: 2016-07-02 01:39:28
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * Current Target File: [ATADocs\DeployUse\operate-ata.md](https://github.com/Microsoft/ATADocs-pr.pt-br/blob/71e3819cd1c11cc04c0ec7e039ad7b0b71529ab4/ATADocs/DeployUse/operate-ata.md)
@@ -2107,8 +2107,8 @@
 * Handoff File: [preinstall-ata.ad944ebc907cddb617baa953f8edd06ddc17f70a.pt-br.xlf](https://github.com/Microsoft/EM.handoff/blob/a27de79b00be97fcd5cb6ff0e5b8723871c32c61/ol-handoff/Microsoft/ATADocs-pr.pt-br/master/preinstall-ata.ad944ebc907cddb617baa953f8edd06ddc17f70a.pt-br.xlf)
 * Handoff Datetime: 2016-06-27 16:00:14
 * Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
+* Archive File: [preinstall-ata.ad944ebc907cddb617baa953f8edd06ddc17f70a.pt-br.xlf](https://github.com/Microsoft/EM.handoff/blob/bcb846ad38c8ff1ea4845a6fc92510b864805748/ol-handoff/Microsoft/ATADocs-pr.pt-br/master/archive/preinstall-ata.ad944ebc907cddb617baa953f8edd06ddc17f70a.pt-br.xlf)
+* Archive Datetime: 2016-07-02 01:39:28
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * Current Target File: [ATADocs\DeployUse\preinstall-ata.md](https://github.com/Microsoft/ATADocs-pr.pt-br/blob/a72340d94d1ab19f5e20a857a77c265bcbd184e1/ATADocs/DeployUse/preinstall-ata.md)
@@ -2122,8 +2122,8 @@
 * Handoff File: [setting-ata-alerts.451097ef44392d0ea58f76d60633ef3a1b47ee2d.pt-br.xlf](https://github.com/Microsoft/EM.handoff/blob/a27de79b00be97fcd5cb6ff0e5b8723871c32c61/ol-handoff/Microsoft/ATADocs-pr.pt-br/master/setting-ata-alerts.451097ef44392d0ea58f76d60633ef3a1b47ee2d.pt-br.xlf)
 * Handoff Datetime: 2016-06-27 16:00:14
 * Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
+* Archive File: [setting-ata-alerts.451097ef44392d0ea58f76d60633ef3a1b47ee2d.pt-br.xlf](https://github.com/Microsoft/EM.handoff/blob/bcb846ad38c8ff1ea4845a6fc92510b864805748/ol-handoff/Microsoft/ATADocs-pr.pt-br/master/archive/setting-ata-alerts.451097ef44392d0ea58f76d60633ef3a1b47ee2d.pt-br.xlf)
+* Archive Datetime: 2016-07-02 01:39:28
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * Current Target File: [ATADocs\DeployUse\setting-ata-alerts.md](https://github.com/Microsoft/ATADocs-pr.pt-br/blob/fa1e13759542fbdb249adf0e354d874dae4c82ab/ATADocs/DeployUse/setting-ata-alerts.md)
@@ -2137,8 +2137,8 @@
 * Handoff File: [setting-syslog-email-server-settings.d464a4d838651c67c76c3a67ff324b8b6e9967e6.pt-br.xlf](https://github.com/Microsoft/EM.handoff/blob/a27de79b00be97fcd5cb6ff0e5b8723871c32c61/ol-handoff/Microsoft/ATADocs-pr.pt-br/master/setting-syslog-email-server-settings.d464a4d838651c67c76c3a67ff324b8b6e9967e6.pt-br.xlf)
 * Handoff Datetime: 2016-06-27 16:00:14
 * Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
+* Archive File: [setting-syslog-email-server-settings.d464a4d838651c67c76c3a67ff324b8b6e9967e6.pt-br.xlf](https://github.com/Microsoft/EM.handoff/blob/bcb846ad38c8ff1ea4845a6fc92510b864805748/ol-handoff/Microsoft/ATADocs-pr.pt-br/master/archive/setting-syslog-email-server-settings.d464a4d838651c67c76c3a67ff324b8b6e9967e6.pt-br.xlf)
+* Archive Datetime: 2016-07-02 01:39:28
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * Current Target File: [ATADocs\DeployUse\setting-syslog-email-server-settings.md](https://github.com/Microsoft/ATADocs-pr.pt-br/blob/71e3819cd1c11cc04c0ec7e039ad7b0b71529ab4/ATADocs/DeployUse/setting-syslog-email-server-settings.md)
@@ -2152,8 +2152,8 @@
 * Handoff File: [TOC.d272a951086c3fc033212846ba52cf9d255d1bc5.pt-br.xlf](https://github.com/Microsoft/EM.handoff/blob/e4ceb01ed9059f9945dac7d75a3d2927037bdfbf/ol-handoff/Microsoft/ATADocs-pr.pt-br/master/TOC.d272a951086c3fc033212846ba52cf9d255d1bc5.pt-br.xlf)
 * Handoff Datetime: 2016-06-21 17:50:52
 * Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
+* Archive File: [TOC.d272a951086c3fc033212846ba52cf9d255d1bc5.pt-br.xlf](https://github.com/Microsoft/EM.handoff/blob/bcb846ad38c8ff1ea4845a6fc92510b864805748/ol-handoff/Microsoft/ATADocs-pr.pt-br/master/archive/TOC.d272a951086c3fc033212846ba52cf9d255d1bc5.pt-br.xlf)
+* Archive Datetime: 2016-07-02 01:39:28
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * Current Target File: [ATADocs\DeployUse\TOC.md](https://github.com/Microsoft/ATADocs-pr.pt-br/blob/a72340d94d1ab19f5e20a857a77c265bcbd184e1/ATADocs/DeployUse/TOC.md)
@@ -2167,8 +2167,8 @@
 * Handoff File: [validate-port-mirroring.efb9ffcfc3a0f0dbd2cf5317e76edadca57c4d9d.pt-br.xlf](https://github.com/Microsoft/EM.handoff/blob/129bdcb6c1507d2cbdd35a73e26c4aa317f348a4/ol-handoff/Microsoft/ATADocs-pr.pt-br/master/validate-port-mirroring.efb9ffcfc3a0f0dbd2cf5317e76edadca57c4d9d.pt-br.xlf)
 * Handoff Datetime: 2016-06-28 16:53:47
 * Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
+* Archive File: [validate-port-mirroring.efb9ffcfc3a0f0dbd2cf5317e76edadca57c4d9d.pt-br.xlf](https://github.com/Microsoft/EM.handoff/blob/bcb846ad38c8ff1ea4845a6fc92510b864805748/ol-handoff/Microsoft/ATADocs-pr.pt-br/master/archive/validate-port-mirroring.efb9ffcfc3a0f0dbd2cf5317e76edadca57c4d9d.pt-br.xlf)
+* Archive Datetime: 2016-07-02 01:39:28
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * Current Target File: [ATADocs\DeployUse\validate-port-mirroring.md](https://github.com/Microsoft/ATADocs-pr.pt-br/blob/71e3819cd1c11cc04c0ec7e039ad7b0b71529ab4/ATADocs/DeployUse/validate-port-mirroring.md)
@@ -2182,8 +2182,8 @@
 * Handoff File: [working-with-ata-console.3cae6c5a1945b7c0d2da65952fc41d520e9ae029.pt-br.xlf](https://github.com/Microsoft/EM.handoff/blob/a27de79b00be97fcd5cb6ff0e5b8723871c32c61/ol-handoff/Microsoft/ATADocs-pr.pt-br/master/working-with-ata-console.3cae6c5a1945b7c0d2da65952fc41d520e9ae029.pt-br.xlf)
 * Handoff Datetime: 2016-06-27 16:00:14
 * Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
+* Archive File: [working-with-ata-console.3cae6c5a1945b7c0d2da65952fc41d520e9ae029.pt-br.xlf](https://github.com/Microsoft/EM.handoff/blob/bcb846ad38c8ff1ea4845a6fc92510b864805748/ol-handoff/Microsoft/ATADocs-pr.pt-br/master/archive/working-with-ata-console.3cae6c5a1945b7c0d2da65952fc41d520e9ae029.pt-br.xlf)
+* Archive Datetime: 2016-07-02 01:39:28
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * Current Target File: [ATADocs\DeployUse\working-with-ata-console.md](https://github.com/Microsoft/ATADocs-pr.pt-br/blob/71e3819cd1c11cc04c0ec7e039ad7b0b71529ab4/ATADocs/DeployUse/working-with-ata-console.md)
@@ -2197,8 +2197,8 @@
 * Handoff File: [working-with-detection-settings.a0ede837b20ea8c02f6b21da44651b71c1ac9257.pt-br.xlf](https://github.com/Microsoft/EM.handoff/blob/a27de79b00be97fcd5cb6ff0e5b8723871c32c61/ol-handoff/Microsoft/ATADocs-pr.pt-br/master/working-with-detection-settings.a0ede837b20ea8c02f6b21da44651b71c1ac9257.pt-br.xlf)
 * Handoff Datetime: 2016-06-27 16:00:14
 * Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
+* Archive File: [working-with-detection-settings.a0ede837b20ea8c02f6b21da44651b71c1ac9257.pt-br.xlf](https://github.com/Microsoft/EM.handoff/blob/bcb846ad38c8ff1ea4845a6fc92510b864805748/ol-handoff/Microsoft/ATADocs-pr.pt-br/master/archive/working-with-detection-settings.a0ede837b20ea8c02f6b21da44651b71c1ac9257.pt-br.xlf)
+* Archive Datetime: 2016-07-02 01:39:28
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * Current Target File: [ATADocs\DeployUse\working-with-detection-settings.md](https://github.com/Microsoft/ATADocs-pr.pt-br/blob/71e3819cd1c11cc04c0ec7e039ad7b0b71529ab4/ATADocs/DeployUse/working-with-detection-settings.md)
@@ -2212,8 +2212,8 @@
 * Handoff File: [working-with-suspicious-activities.ab7855486c33fccaacaae9897e5481968f71807f.pt-br.xlf](https://github.com/Microsoft/EM.handoff/blob/a27de79b00be97fcd5cb6ff0e5b8723871c32c61/ol-handoff/Microsoft/ATADocs-pr.pt-br/master/working-with-suspicious-activities.ab7855486c33fccaacaae9897e5481968f71807f.pt-br.xlf)
 * Handoff Datetime: 2016-06-27 16:00:14
 * Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
+* Archive File: [working-with-suspicious-activities.ab7855486c33fccaacaae9897e5481968f71807f.pt-br.xlf](https://github.com/Microsoft/EM.handoff/blob/bcb846ad38c8ff1ea4845a6fc92510b864805748/ol-handoff/Microsoft/ATADocs-pr.pt-br/master/archive/working-with-suspicious-activities.ab7855486c33fccaacaae9897e5481968f71807f.pt-br.xlf)
+* Archive Datetime: 2016-07-02 01:39:28
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * Current Target File: [ATADocs\DeployUse\working-with-suspicious-activities.md](https://github.com/Microsoft/ATADocs-pr.pt-br/blob/71e3819cd1c11cc04c0ec7e039ad7b0b71529ab4/ATADocs/DeployUse/working-with-suspicious-activities.md)
@@ -3403,8 +3403,8 @@
 * Handoff File: [index.cc3e62ac6c9901731450d753a0ecebc990048809.pt-br.xlf](https://github.com/Microsoft/EM.handoff/blob/d06e1215f0298c2235b2ff489c297c01fe4be631/ol-handoff/Microsoft/ATADocs-pr.pt-br/master/index.cc3e62ac6c9901731450d753a0ecebc990048809.pt-br.xlf)
 * Handoff Datetime: 2016-06-29 18:22:20
 * Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
+* Archive File: [index.cc3e62ac6c9901731450d753a0ecebc990048809.pt-br.xlf](https://github.com/Microsoft/EM.handoff/blob/bcb846ad38c8ff1ea4845a6fc92510b864805748/ol-handoff/Microsoft/ATADocs-pr.pt-br/master/archive/index.cc3e62ac6c9901731450d753a0ecebc990048809.pt-br.xlf)
+* Archive Datetime: 2016-07-02 01:39:28
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * Current Target File: [ATADocs\index.md](https://github.com/Microsoft/ATADocs-pr.pt-br/blob/82b19682c345382ced3ca928b411eec28e42625b/ATADocs/index.md)
@@ -3430,8 +3430,8 @@
 * Handoff File: [ata-architecture.f3061a537234611f48c7c71f24b061804ad31b68.pt-br.xlf](https://github.com/Microsoft/EM.handoff/blob/a27de79b00be97fcd5cb6ff0e5b8723871c32c61/ol-handoff/Microsoft/ATADocs-pr.pt-br/master/ata-architecture.f3061a537234611f48c7c71f24b061804ad31b68.pt-br.xlf)
 * Handoff Datetime: 2016-06-27 16:00:14
 * Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
+* Archive File: [ata-architecture.f3061a537234611f48c7c71f24b061804ad31b68.pt-br.xlf](https://github.com/Microsoft/EM.handoff/blob/bcb846ad38c8ff1ea4845a6fc92510b864805748/ol-handoff/Microsoft/ATADocs-pr.pt-br/master/archive/ata-architecture.f3061a537234611f48c7c71f24b061804ad31b68.pt-br.xlf)
+* Archive Datetime: 2016-07-02 01:39:28
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * Current Target File: [ATADocs\PlanDesign\ata-architecture.md](https://github.com/Microsoft/ATADocs-pr.pt-br/blob/71e3819cd1c11cc04c0ec7e039ad7b0b71529ab4/ATADocs/PlanDesign/ata-architecture.md)
@@ -3445,8 +3445,8 @@
 * Handoff File: [ata-capacity-planning.7dded00c6a8ca713a36c240993fc56aa469bbb4b.pt-br.xlf](https://github.com/Microsoft/EM.handoff/blob/129bdcb6c1507d2cbdd35a73e26c4aa317f348a4/ol-handoff/Microsoft/ATADocs-pr.pt-br/master/ata-capacity-planning.7dded00c6a8ca713a36c240993fc56aa469bbb4b.pt-br.xlf)
 * Handoff Datetime: 2016-06-28 16:53:47
 * Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
+* Archive File: [ata-capacity-planning.7dded00c6a8ca713a36c240993fc56aa469bbb4b.pt-br.xlf](https://github.com/Microsoft/EM.handoff/blob/bcb846ad38c8ff1ea4845a6fc92510b864805748/ol-handoff/Microsoft/ATADocs-pr.pt-br/master/archive/ata-capacity-planning.7dded00c6a8ca713a36c240993fc56aa469bbb4b.pt-br.xlf)
+* Archive Datetime: 2016-07-02 01:39:28
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * Current Target File: [ATADocs\PlanDesign\ata-capacity-planning.md](https://github.com/Microsoft/ATADocs-pr.pt-br/blob/71e3819cd1c11cc04c0ec7e039ad7b0b71529ab4/ATADocs/PlanDesign/ata-capacity-planning.md)
@@ -3460,8 +3460,8 @@
 * Handoff File: [ata-prerequisites.79e9e750461cccf39f17f01df458a3eb6f3e6c8b.pt-br.xlf](https://github.com/Microsoft/EM.handoff/blob/280894cf7c6158b245487cbf12af39ae4a7ef724/ol-handoff/Microsoft/ATADocs-pr.pt-br/master/ata-prerequisites.79e9e750461cccf39f17f01df458a3eb6f3e6c8b.pt-br.xlf)
 * Handoff Datetime: 2016-06-30 15:18:21
 * Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
+* Archive File: [ata-prerequisites.79e9e750461cccf39f17f01df458a3eb6f3e6c8b.pt-br.xlf](https://github.com/Microsoft/EM.handoff/blob/bcb846ad38c8ff1ea4845a6fc92510b864805748/ol-handoff/Microsoft/ATADocs-pr.pt-br/master/archive/ata-prerequisites.79e9e750461cccf39f17f01df458a3eb6f3e6c8b.pt-br.xlf)
+* Archive Datetime: 2016-07-02 01:39:28
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * Current Target File: [ATADocs\PlanDesign\ata-prerequisites.md](https://github.com/Microsoft/ATADocs-pr.pt-br/blob/a08def95841c390eadd41bda2037c8867714b0d5/ATADocs/PlanDesign/ata-prerequisites.md)
@@ -4639,8 +4639,8 @@
 * Handoff File: [TOC.f85b55eb3e40dff28191e34a95d45cd87b0e99f7.pt-br.xlf](https://github.com/Microsoft/EM.handoff/blob/2419c69a6235523f8d414d666c6706bf8439406a/ol-handoff/Microsoft/ATADocs-pr.pt-br/master/TOC.f85b55eb3e40dff28191e34a95d45cd87b0e99f7.pt-br.xlf)
 * Handoff Datetime: 2016-06-27 09:24:57
 * Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
+* Archive File: [TOC.f85b55eb3e40dff28191e34a95d45cd87b0e99f7.pt-br.xlf](https://github.com/Microsoft/EM.handoff/blob/bcb846ad38c8ff1ea4845a6fc92510b864805748/ol-handoff/Microsoft/ATADocs-pr.pt-br/master/archive/TOC.f85b55eb3e40dff28191e34a95d45cd87b0e99f7.pt-br.xlf)
+* Archive Datetime: 2016-07-02 01:39:28
 * Handback File: [TOC.f85b55eb3e40dff28191e34a95d45cd87b0e99f7.pt-br.xlf](https://github.com/Microsoft/EM.handback/blob/21e4bb18d84218ffd34958baa6301a375bf48199/ol-handback/Microsoft/ATADocs-pr.pt-br/master/TOC.f85b55eb3e40dff28191e34a95d45cd87b0e99f7.pt-br.xlf)
 * Handback Datetime: 2016-05-20 12:49:17
 * [Back to Top](#report-top)
@@ -4651,8 +4651,8 @@
 * Handoff File: [template.5bdcb9582e246047532a26eee5064c933576bdd2.pt-br.xlf](https://github.com/Microsoft/EM.handoff/blob/2419c69a6235523f8d414d666c6706bf8439406a/ol-handoff/Microsoft/ATADocs-pr.pt-br/master/template.5bdcb9582e246047532a26eee5064c933576bdd2.pt-br.xlf)
 * Handoff Datetime: 2016-06-27 09:24:57
 * Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
+* Archive File: [template.5bdcb9582e246047532a26eee5064c933576bdd2.pt-br.xlf](https://github.com/Microsoft/EM.handoff/blob/bcb846ad38c8ff1ea4845a6fc92510b864805748/ol-handoff/Microsoft/ATADocs-pr.pt-br/master/archive/template.5bdcb9582e246047532a26eee5064c933576bdd2.pt-br.xlf)
+* Archive Datetime: 2016-07-02 01:39:28
 * Handback File: [template.5bdcb9582e246047532a26eee5064c933576bdd2.pt-br.xlf](https://github.com/Microsoft/EM.handback/blob/9f7e6b12b09e7c927352e6aa37967d105bd2495c/ol-handback/Microsoft/ATADocs-pr.pt-br/master/template.5bdcb9582e246047532a26eee5064c933576bdd2.pt-br.xlf)
 * Handback Datetime: 2016-06-02 23:53:00
 * [Back to Top](#report-top)
@@ -4663,8 +4663,8 @@
 * Handoff File: [TOC.7ddc5acfa39575166941fca3973fc59ee376add6.pt-br.xlf](https://github.com/Microsoft/EM.handoff/blob/2419c69a6235523f8d414d666c6706bf8439406a/ol-handoff/Microsoft/ATADocs-pr.pt-br/master/TOC.7ddc5acfa39575166941fca3973fc59ee376add6.pt-br.xlf)
 * Handoff Datetime: 2016-06-27 09:24:57
 * Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
+* Archive File: [TOC.7ddc5acfa39575166941fca3973fc59ee376add6.pt-br.xlf](https://github.com/Microsoft/EM.handoff/blob/bcb846ad38c8ff1ea4845a6fc92510b864805748/ol-handoff/Microsoft/ATADocs-pr.pt-br/master/archive/TOC.7ddc5acfa39575166941fca3973fc59ee376add6.pt-br.xlf)
+* Archive Datetime: 2016-07-02 01:39:28
 * Handback File: [TOC.7ddc5acfa39575166941fca3973fc59ee376add6.pt-br.xlf](https://github.com/Microsoft/EM.handback/blob/21e4bb18d84218ffd34958baa6301a375bf48199/ol-handback/Microsoft/ATADocs-pr.pt-br/master/TOC.7ddc5acfa39575166941fca3973fc59ee376add6.pt-br.xlf)
 * Handback Datetime: 2016-05-20 12:49:17
 * [Back to Top](#report-top)
@@ -4675,8 +4675,8 @@
 * Handoff File: [ATA.802427cdba72b53cf44827c94a4e390a41905ad3.pt-br.xlf](https://github.com/Microsoft/EM.handoff/blob/2419c69a6235523f8d414d666c6706bf8439406a/ol-handoff/Microsoft/ATADocs-pr.pt-br/master/ATA.802427cdba72b53cf44827c94a4e390a41905ad3.pt-br.xlf)
 * Handoff Datetime: 2016-06-27 09:24:57
 * Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
+* Archive File: [ATA.802427cdba72b53cf44827c94a4e390a41905ad3.pt-br.xlf](https://github.com/Microsoft/EM.handoff/blob/bcb846ad38c8ff1ea4845a6fc92510b864805748/ol-handoff/Microsoft/ATADocs-pr.pt-br/master/archive/ATA.802427cdba72b53cf44827c94a4e390a41905ad3.pt-br.xlf)
+* Archive Datetime: 2016-07-02 01:39:28
 * Handback File: [ATA.802427cdba72b53cf44827c94a4e390a41905ad3.pt-br.xlf](https://github.com/Microsoft/EM.handback/blob/ff3feb62e4198e3aa8d171fda51577863803066d/ol-handback/Microsoft/ATADocs-pr.pt-br/master/ATA.802427cdba72b53cf44827c94a4e390a41905ad3.pt-br.xlf)
 * Handback Datetime: 2016-04-28 20:11:14
 * [Back to Top](#report-top)
@@ -5863,8 +5863,8 @@
 * Handoff File: [TOC.60a4d3a4143fbc945b04636bebe37bf6bc2b2b81.pt-br.xlf](https://github.com/Microsoft/EM.handoff/blob/2419c69a6235523f8d414d666c6706bf8439406a/ol-handoff/Microsoft/ATADocs-pr.pt-br/master/TOC.60a4d3a4143fbc945b04636bebe37bf6bc2b2b81.pt-br.xlf)
 * Handoff Datetime: 2016-06-27 09:24:57
 * Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
+* Archive File: [TOC.60a4d3a4143fbc945b04636bebe37bf6bc2b2b81.pt-br.xlf](https://github.com/Microsoft/EM.handoff/blob/bcb846ad38c8ff1ea4845a6fc92510b864805748/ol-handoff/Microsoft/ATADocs-pr.pt-br/master/archive/TOC.60a4d3a4143fbc945b04636bebe37bf6bc2b2b81.pt-br.xlf)
+* Archive Datetime: 2016-07-02 01:39:28
 * Handback File: [TOC.60a4d3a4143fbc945b04636bebe37bf6bc2b2b81.pt-br.xlf](https://github.com/Microsoft/EM.handback/blob/9f7e6b12b09e7c927352e6aa37967d105bd2495c/ol-handback/Microsoft/ATADocs-pr.pt-br/master/TOC.60a4d3a4143fbc945b04636bebe37bf6bc2b2b81.pt-br.xlf)
 * Handback Datetime: 2016-06-02 23:53:00
 * [Back to Top](#report-top)
@@ -5875,8 +5875,8 @@
 * Handoff File: [troubleshooting-ata-known-errors.09d3985d5b8120ee3069cc21c8701940c07afcce.pt-br.xlf](https://github.com/Microsoft/EM.handoff/blob/a27de79b00be97fcd5cb6ff0e5b8723871c32c61/ol-handoff/Microsoft/ATADocs-pr.pt-br/master/troubleshooting-ata-known-errors.09d3985d5b8120ee3069cc21c8701940c07afcce.pt-br.xlf)
 * Handoff Datetime: 2016-06-27 16:00:14
 * Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
+* Archive File: [troubleshooting-ata-known-errors.09d3985d5b8120ee3069cc21c8701940c07afcce.pt-br.xlf](https://github.com/Microsoft/EM.handoff/blob/bcb846ad38c8ff1ea4845a6fc92510b864805748/ol-handoff/Microsoft/ATADocs-pr.pt-br/master/archive/troubleshooting-ata-known-errors.09d3985d5b8120ee3069cc21c8701940c07afcce.pt-br.xlf)
+* Archive Datetime: 2016-07-02 01:39:28
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * Current Target File: [ATADocs\Troubleshoot\troubleshooting-ata-known-errors.md](https://github.com/Microsoft/ATADocs-pr.pt-br/blob/a08def95841c390eadd41bda2037c8867714b0d5/ATADocs/Troubleshoot/troubleshooting-ata-known-errors.md)
@@ -5890,8 +5890,8 @@
 * Handoff File: [troubleshooting-ata-using-ata-database.59180de16ff041e4081a27aa3918a2ea95a29245.pt-br.xlf](https://github.com/Microsoft/EM.handoff/blob/a27de79b00be97fcd5cb6ff0e5b8723871c32c61/ol-handoff/Microsoft/ATADocs-pr.pt-br/master/troubleshooting-ata-using-ata-database.59180de16ff041e4081a27aa3918a2ea95a29245.pt-br.xlf)
 * Handoff Datetime: 2016-06-27 16:00:14
 * Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
+* Archive File: [troubleshooting-ata-using-ata-database.59180de16ff041e4081a27aa3918a2ea95a29245.pt-br.xlf](https://github.com/Microsoft/EM.handoff/blob/bcb846ad38c8ff1ea4845a6fc92510b864805748/ol-handoff/Microsoft/ATADocs-pr.pt-br/master/archive/troubleshooting-ata-using-ata-database.59180de16ff041e4081a27aa3918a2ea95a29245.pt-br.xlf)
+* Archive Datetime: 2016-07-02 01:39:28
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * Current Target File: [ATADocs\Troubleshoot\troubleshooting-ata-using-ata-database.md](https://github.com/Microsoft/ATADocs-pr.pt-br/blob/71e3819cd1c11cc04c0ec7e039ad7b0b71529ab4/ATADocs/Troubleshoot/troubleshooting-ata-using-ata-database.md)
@@ -5905,8 +5905,8 @@
 * Handoff File: [troubleshooting-ata-using-logs.c237c8cdfd616baa4c8e47acb7d766c2f4de3c38.pt-br.xlf](https://github.com/Microsoft/EM.handoff/blob/a27de79b00be97fcd5cb6ff0e5b8723871c32c61/ol-handoff/Microsoft/ATADocs-pr.pt-br/master/troubleshooting-ata-using-logs.c237c8cdfd616baa4c8e47acb7d766c2f4de3c38.pt-br.xlf)
 * Handoff Datetime: 2016-06-27 16:00:14
 * Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
+* Archive File: [troubleshooting-ata-using-logs.c237c8cdfd616baa4c8e47acb7d766c2f4de3c38.pt-br.xlf](https://github.com/Microsoft/EM.handoff/blob/bcb846ad38c8ff1ea4845a6fc92510b864805748/ol-handoff/Microsoft/ATADocs-pr.pt-br/master/archive/troubleshooting-ata-using-logs.c237c8cdfd616baa4c8e47acb7d766c2f4de3c38.pt-br.xlf)
+* Archive Datetime: 2016-07-02 01:39:28
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * Current Target File: [ATADocs\Troubleshoot\troubleshooting-ata-using-logs.md](https://github.com/Microsoft/ATADocs-pr.pt-br/blob/71e3819cd1c11cc04c0ec7e039ad7b0b71529ab4/ATADocs/Troubleshoot/troubleshooting-ata-using-logs.md)
@@ -5920,8 +5920,8 @@
 * Handoff File: [troubleshooting-ata-using-perf-counters.79e76fbe5bcf01cc8ac0bd412963c88b4d09ccfe.pt-br.xlf](https://github.com/Microsoft/EM.handoff/blob/a27de79b00be97fcd5cb6ff0e5b8723871c32c61/ol-handoff/Microsoft/ATADocs-pr.pt-br/master/troubleshooting-ata-using-perf-counters.79e76fbe5bcf01cc8ac0bd412963c88b4d09ccfe.pt-br.xlf)
 * Handoff Datetime: 2016-06-27 16:00:14
 * Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
+* Archive File: [troubleshooting-ata-using-perf-counters.79e76fbe5bcf01cc8ac0bd412963c88b4d09ccfe.pt-br.xlf](https://github.com/Microsoft/EM.handoff/blob/bcb846ad38c8ff1ea4845a6fc92510b864805748/ol-handoff/Microsoft/ATADocs-pr.pt-br/master/archive/troubleshooting-ata-using-perf-counters.79e76fbe5bcf01cc8ac0bd412963c88b4d09ccfe.pt-br.xlf)
+* Archive Datetime: 2016-07-02 01:39:28
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * Current Target File: [ATADocs\Troubleshoot\troubleshooting-ata-using-perf-counters.md](https://github.com/Microsoft/ATADocs-pr.pt-br/blob/71e3819cd1c11cc04c0ec7e039ad7b0b71529ab4/ATADocs/Troubleshoot/troubleshooting-ata-using-perf-counters.md)
@@ -5935,8 +5935,8 @@
 * Handoff File: [ata-release-notes.cd5912fb95129b60636ef4e9612fe0740d0ee2db.pt-br.xlf](https://github.com/Microsoft/EM.handoff/blob/a27de79b00be97fcd5cb6ff0e5b8723871c32c61/ol-handoff/Microsoft/ATADocs-pr.pt-br/master/ata-release-notes.cd5912fb95129b60636ef4e9612fe0740d0ee2db.pt-br.xlf)
 * Handoff Datetime: 2016-06-27 16:00:14
 * Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
+* Archive File: [ata-release-notes.cd5912fb95129b60636ef4e9612fe0740d0ee2db.pt-br.xlf](https://github.com/Microsoft/EM.handoff/blob/bcb846ad38c8ff1ea4845a6fc92510b864805748/ol-handoff/Microsoft/ATADocs-pr.pt-br/master/archive/ata-release-notes.cd5912fb95129b60636ef4e9612fe0740d0ee2db.pt-br.xlf)
+* Archive Datetime: 2016-07-02 01:39:28
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * Current Target File: [ATADocs\Understand\ata-release-notes.md](https://github.com/Microsoft/ATADocs-pr.pt-br/blob/71e3819cd1c11cc04c0ec7e039ad7b0b71529ab4/ATADocs/Understand/ata-release-notes.md)
@@ -5950,8 +5950,8 @@
 * Handoff File: [ata-technical-faq.938a847200169f6a473355460f812f482e6eb068.pt-br.xlf](https://github.com/Microsoft/EM.handoff/blob/a27de79b00be97fcd5cb6ff0e5b8723871c32c61/ol-handoff/Microsoft/ATADocs-pr.pt-br/master/ata-technical-faq.938a847200169f6a473355460f812f482e6eb068.pt-br.xlf)
 * Handoff Datetime: 2016-06-27 16:00:14
 * Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
+* Archive File: [ata-technical-faq.938a847200169f6a473355460f812f482e6eb068.pt-br.xlf](https://github.com/Microsoft/EM.handoff/blob/bcb846ad38c8ff1ea4845a6fc92510b864805748/ol-handoff/Microsoft/ATADocs-pr.pt-br/master/archive/ata-technical-faq.938a847200169f6a473355460f812f482e6eb068.pt-br.xlf)
+* Archive Datetime: 2016-07-02 01:39:28
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * Current Target File: [ATADocs\Understand\ata-technical-faq.md](https://github.com/Microsoft/ATADocs-pr.pt-br/blob/71e3819cd1c11cc04c0ec7e039ad7b0b71529ab4/ATADocs/Understand/ata-technical-faq.md)
@@ -5965,8 +5965,8 @@
 * Handoff File: [ata-update-1.5-migration-guide.67f35ccbe2b021acd909074d85359f05c4a001cb.pt-br.xlf](https://github.com/Microsoft/EM.handoff/blob/a27de79b00be97fcd5cb6ff0e5b8723871c32c61/ol-handoff/Microsoft/ATADocs-pr.pt-br/master/ata-update-1.5-migration-guide.67f35ccbe2b021acd909074d85359f05c4a001cb.pt-br.xlf)
 * Handoff Datetime: 2016-06-27 16:00:14
 * Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
+* Archive File: [ata-update-1.5-migration-guide.67f35ccbe2b021acd909074d85359f05c4a001cb.pt-br.xlf](https://github.com/Microsoft/EM.handoff/blob/bcb846ad38c8ff1ea4845a6fc92510b864805748/ol-handoff/Microsoft/ATADocs-pr.pt-br/master/archive/ata-update-1.5-migration-guide.67f35ccbe2b021acd909074d85359f05c4a001cb.pt-br.xlf)
+* Archive Datetime: 2016-07-02 01:39:28
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * Current Target File: [ATADocs\Understand\ata-update-1.5-migration-guide.md](https://github.com/Microsoft/ATADocs-pr.pt-br/blob/71e3819cd1c11cc04c0ec7e039ad7b0b71529ab4/ATADocs/Understand/ata-update-1.5-migration-guide.md)
@@ -5980,8 +5980,8 @@
 * Handoff File: [ata-update-1.6-migration-guide.fe715980eb0702f6dda7862931a6921ccd723d15.pt-br.xlf](https://github.com/Microsoft/EM.handoff/blob/129bdcb6c1507d2cbdd35a73e26c4aa317f348a4/ol-handoff/Microsoft/ATADocs-pr.pt-br/master/ata-update-1.6-migration-guide.fe715980eb0702f6dda7862931a6921ccd723d15.pt-br.xlf)
 * Handoff Datetime: 2016-06-28 16:53:47
 * Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
+* Archive File: [ata-update-1.6-migration-guide.fe715980eb0702f6dda7862931a6921ccd723d15.pt-br.xlf](https://github.com/Microsoft/EM.handoff/blob/bcb846ad38c8ff1ea4845a6fc92510b864805748/ol-handoff/Microsoft/ATADocs-pr.pt-br/master/archive/ata-update-1.6-migration-guide.fe715980eb0702f6dda7862931a6921ccd723d15.pt-br.xlf)
+* Archive Datetime: 2016-07-02 01:39:28
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * Current Target File: [ATADocs\Understand\ata-update-1.6-migration-guide.md](https://github.com/Microsoft/ATADocs-pr.pt-br/blob/a08def95841c390eadd41bda2037c8867714b0d5/ATADocs/Understand/ata-update-1.6-migration-guide.md)
@@ -7194,8 +7194,8 @@
 * Handoff File: [TOC.602662a4c6e9c6b6819467b610eac5b1ea8b47e7.pt-br.xlf](https://github.com/Microsoft/EM.handoff/blob/2419c69a6235523f8d414d666c6706bf8439406a/ol-handoff/Microsoft/ATADocs-pr.pt-br/master/TOC.602662a4c6e9c6b6819467b610eac5b1ea8b47e7.pt-br.xlf)
 * Handoff Datetime: 2016-06-27 09:24:57
 * Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
+* Archive File: [TOC.602662a4c6e9c6b6819467b610eac5b1ea8b47e7.pt-br.xlf](https://github.com/Microsoft/EM.handoff/blob/bcb846ad38c8ff1ea4845a6fc92510b864805748/ol-handoff/Microsoft/ATADocs-pr.pt-br/master/archive/TOC.602662a4c6e9c6b6819467b610eac5b1ea8b47e7.pt-br.xlf)
+* Archive Datetime: 2016-07-02 01:39:28
 * Handback File: [TOC.602662a4c6e9c6b6819467b610eac5b1ea8b47e7.pt-br.xlf](https://github.com/Microsoft/EM.handback/blob/9f7e6b12b09e7c927352e6aa37967d105bd2495c/ol-handback/Microsoft/ATADocs-pr.pt-br/master/TOC.602662a4c6e9c6b6819467b610eac5b1ea8b47e7.pt-br.xlf)
 * Handback Datetime: 2016-06-02 23:53:00
 * [Back to Top](#report-top)
@@ -7206,8 +7206,8 @@
 * Handoff File: [what-is-ata.26e22f3b3bdc705961558ab294bf44dabd1ee498.pt-br.xlf](https://github.com/Microsoft/EM.handoff/blob/a27de79b00be97fcd5cb6ff0e5b8723871c32c61/ol-handoff/Microsoft/ATADocs-pr.pt-br/master/what-is-ata.26e22f3b3bdc705961558ab294bf44dabd1ee498.pt-br.xlf)
 * Handoff Datetime: 2016-06-27 16:00:14
 * Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
+* Archive File: [what-is-ata.26e22f3b3bdc705961558ab294bf44dabd1ee498.pt-br.xlf](https://github.com/Microsoft/EM.handoff/blob/bcb846ad38c8ff1ea4845a6fc92510b864805748/ol-handoff/Microsoft/ATADocs-pr.pt-br/master/archive/what-is-ata.26e22f3b3bdc705961558ab294bf44dabd1ee498.pt-br.xlf)
+* Archive Datetime: 2016-07-02 01:39:28
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * Current Target File: [ATADocs\Understand\what-is-ata.md](https://github.com/Microsoft/ATADocs-pr.pt-br/blob/71e3819cd1c11cc04c0ec7e039ad7b0b71529ab4/ATADocs/Understand/what-is-ata.md)
@@ -7221,8 +7221,8 @@
 * Handoff File: [whats-new-version-1.4.18129e66e996839697a22f71aaa38c1401497e01.pt-br.xlf](https://github.com/Microsoft/EM.handoff/blob/a27de79b00be97fcd5cb6ff0e5b8723871c32c61/ol-handoff/Microsoft/ATADocs-pr.pt-br/master/whats-new-version-1.4.18129e66e996839697a22f71aaa38c1401497e01.pt-br.xlf)
 * Handoff Datetime: 2016-06-27 16:00:14
 * Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
+* Archive File: [whats-new-version-1.4.18129e66e996839697a22f71aaa38c1401497e01.pt-br.xlf](https://github.com/Microsoft/EM.handoff/blob/bcb846ad38c8ff1ea4845a6fc92510b864805748/ol-handoff/Microsoft/ATADocs-pr.pt-br/master/archive/whats-new-version-1.4.18129e66e996839697a22f71aaa38c1401497e01.pt-br.xlf)
+* Archive Datetime: 2016-07-02 01:39:28
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * Current Target File: [ATADocs\Understand\whats-new-version-1.4.md](https://github.com/Microsoft/ATADocs-pr.pt-br/blob/71e3819cd1c11cc04c0ec7e039ad7b0b71529ab4/ATADocs/Understand/whats-new-version-1.4.md)
@@ -7236,8 +7236,8 @@
 * Handoff File: [whats-new-version-1.5.ba2a9f8802670c08962d29771ae25ae6abc76477.pt-br.xlf](https://github.com/Microsoft/EM.handoff/blob/a27de79b00be97fcd5cb6ff0e5b8723871c32c61/ol-handoff/Microsoft/ATADocs-pr.pt-br/master/whats-new-version-1.5.ba2a9f8802670c08962d29771ae25ae6abc76477.pt-br.xlf)
 * Handoff Datetime: 2016-06-27 16:00:14
 * Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
+* Archive File: [whats-new-version-1.5.ba2a9f8802670c08962d29771ae25ae6abc76477.pt-br.xlf](https://github.com/Microsoft/EM.handoff/blob/bcb846ad38c8ff1ea4845a6fc92510b864805748/ol-handoff/Microsoft/ATADocs-pr.pt-br/master/archive/whats-new-version-1.5.ba2a9f8802670c08962d29771ae25ae6abc76477.pt-br.xlf)
+* Archive Datetime: 2016-07-02 01:39:28
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * Current Target File: [ATADocs\Understand\whats-new-version-1.5.md](https://github.com/Microsoft/ATADocs-pr.pt-br/blob/71e3819cd1c11cc04c0ec7e039ad7b0b71529ab4/ATADocs/Understand/whats-new-version-1.5.md)
@@ -7251,8 +7251,8 @@
 * Handoff File: [whats-new-version-1.6.f3eab62daa4f485c10b62d2b219fb992c9802a70.pt-br.xlf](https://github.com/Microsoft/EM.handoff/blob/a27de79b00be97fcd5cb6ff0e5b8723871c32c61/ol-handoff/Microsoft/ATADocs-pr.pt-br/master/whats-new-version-1.6.f3eab62daa4f485c10b62d2b219fb992c9802a70.pt-br.xlf)
 * Handoff Datetime: 2016-06-27 16:00:14
 * Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
+* Archive File: [whats-new-version-1.6.f3eab62daa4f485c10b62d2b219fb992c9802a70.pt-br.xlf](https://github.com/Microsoft/EM.handoff/blob/bcb846ad38c8ff1ea4845a6fc92510b864805748/ol-handoff/Microsoft/ATADocs-pr.pt-br/master/archive/whats-new-version-1.6.f3eab62daa4f485c10b62d2b219fb992c9802a70.pt-br.xlf)
+* Archive Datetime: 2016-07-02 01:39:28
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * Current Target File: [ATADocs\Understand\whats-new-version-1.6.md](https://github.com/Microsoft/ATADocs-pr.pt-br/blob/a08def95841c390eadd41bda2037c8867714b0d5/ATADocs/Understand/whats-new-version-1.6.md)
