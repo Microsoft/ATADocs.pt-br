@@ -6,21 +6,21 @@
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [ATADocs\PlanDesign\ata-prerequisites.md](https://github.com/Microsoft/ATADocs-pr/blob/1f85b9a0f51bd18edaa91ea208d6e6c7c7de56cc/ATADocs/PlanDesign/ata-prerequisites.md) | OutofSyncHandedBackSuccess | [Details](#da887431d8e63a7ae8ceeb3e7e22011d356e3590225)
+ [ATADocs\Troubleshoot\troubleshooting-ata-known-errors.md](https://github.com/Microsoft/ATADocs-pr/blob/e0745079465aecefd26571eea894d19b82cbc216/ATADocs/Troubleshoot/troubleshooting-ata-known-errors.md) | OutofSyncHandedBackSuccess | [Details](#c72bca3cb1eef1f3fb59f666c6143cf5c095bde9418)
 
 ## Item Details
-##### <a name='da887431d8e63a7ae8ceeb3e7e22011d356e3590225'></a> Source: [ATADocs\PlanDesign\ata-prerequisites.md](https://github.com/Microsoft/ATADocs-pr/blob/1f85b9a0f51bd18edaa91ea208d6e6c7c7de56cc/ATADocs/PlanDesign/ata-prerequisites.md)
+##### <a name='c72bca3cb1eef1f3fb59f666c6143cf5c095bde9418'></a> Source: [ATADocs\Troubleshoot\troubleshooting-ata-known-errors.md](https://github.com/Microsoft/ATADocs-pr/blob/e0745079465aecefd26571eea894d19b82cbc216/ATADocs/Troubleshoot/troubleshooting-ata-known-errors.md)
 * Status: OutofSyncHandedBackSuccess
 * Target File: 
-* Handoff File: [ata-prerequisites.79e9e750461cccf39f17f01df458a3eb6f3e6c8b.pt-br.xlf](https://github.com/Microsoft/EM.handoff/blob/280894cf7c6158b245487cbf12af39ae4a7ef724/ol-handoff/Microsoft/ATADocs-pr.pt-br/master/ata-prerequisites.79e9e750461cccf39f17f01df458a3eb6f3e6c8b.pt-br.xlf)
-* Handoff Datetime: 2016-06-30 15:18:21
+* Handoff File: [troubleshooting-ata-known-errors.09d3985d5b8120ee3069cc21c8701940c07afcce.pt-br.xlf](https://github.com/Microsoft/EM.handoff/blob/e0aa0d33650f1bf93ca45aafff4bc3f93bb9dbe3/ol-handoff/Microsoft/ATADocs-pr.pt-br/master/troubleshooting-ata-known-errors.09d3985d5b8120ee3069cc21c8701940c07afcce.pt-br.xlf)
+* Handoff Datetime: 2016-07-06 00:54:39
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [ATADocs\PlanDesign\ata-prerequisites.md](https://github.com/Microsoft/ATADocs-pr.pt-br/blob/a08def95841c390eadd41bda2037c8867714b0d5/ATADocs/PlanDesign/ata-prerequisites.md)
-* Current Handback File: [ata-prerequisites.79e9e750461cccf39f17f01df458a3eb6f3e6c8b.pt-br.xlf](https://github.com/Microsoft/EM.handback/blob/ca8351428a8b68a0236a524d7e6cd7cbdd7e2261/ol-handback/Microsoft/ATADocs-pr.pt-br/master/ata-prerequisites.79e9e750461cccf39f17f01df458a3eb6f3e6c8b.pt-br.xlf)
+* Current Target File: [ATADocs\Troubleshoot\troubleshooting-ata-known-errors.md](https://github.com/Microsoft/ATADocs-pr.pt-br/blob/a08def95841c390eadd41bda2037c8867714b0d5/ATADocs/Troubleshoot/troubleshooting-ata-known-errors.md)
+* Current Handback File: [troubleshooting-ata-known-errors.09d3985d5b8120ee3069cc21c8701940c07afcce.pt-br.xlf](https://github.com/Microsoft/EM.handback/blob/ca8351428a8b68a0236a524d7e6cd7cbdd7e2261/ol-handback/Microsoft/ATADocs-pr.pt-br/master/troubleshooting-ata-known-errors.09d3985d5b8120ee3069cc21c8701940c07afcce.pt-br.xlf)
 * Current Handback Datetime: 2016-06-07 23:25:12
 * [Back to Top](#report-top)
 
