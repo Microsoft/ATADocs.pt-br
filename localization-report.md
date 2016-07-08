@@ -9,8 +9,8 @@
 [ Archive Failed Files ](#archive-failed-list)| 0
 [ Archive Success Files ](#archive-success-list)| 0
 [ Handback Failed Files ](#handback-failed-list)| 0
-[ Out Of Sync Handback Files ](#outofsync-handback-success-list)| 31
-[ In Sync Handback Files ](#insync-handback-success-list)| 18
+[ Out Of Sync Handback Files ](#outofsync-handback-success-list)| 26
+[ In Sync Handback Files ](#insync-handback-success-list)| 23
 [ Ignored Files ](#ignored-list)| 240
 
 ## <a name='handoff-failed-list'></a> Handoff Failed File List
@@ -268,8 +268,6 @@
  Source File | Status | Details 
  ----------- | ------ | ------- 
  [ATADocs\DeployUse\ata-database-management.md](https://github.com/Microsoft/ATADocs-pr/blob/8d1dedaf86031e8585cca23241aead58f7f3db4e/ATADocs/DeployUse/ata-database-management.md) | OutofSyncHandedBackSuccess | [Details](#6c0e2abe43da5351568cf8db4e6ffe6fa919d8356)
- [ATADocs\DeployUse\ata-health-center.md](https://github.com/Microsoft/ATADocs-pr/blob/8d1dedaf86031e8585cca23241aead58f7f3db4e/ATADocs/DeployUse/ata-health-center.md) | OutofSyncHandedBackSuccess | [Details](#b38b96f0b2e6061e97d8b46163a04d23107094917)
- [ATADocs\DeployUse\ata-silent-installation.md](https://github.com/Microsoft/ATADocs-pr/blob/d6e7d7bef97bfc4ffde07959dd9256f0319d685f/ATADocs/DeployUse/ata-silent-installation.md) | OutofSyncHandedBackSuccess | [Details](#2e51bc9cac43ff90000ca74cccd158e119cc6ec08)
  [ATADocs\DeployUse\configure-event-collection.md](https://github.com/Microsoft/ATADocs-pr/blob/d6e7d7bef97bfc4ffde07959dd9256f0319d685f/ATADocs/DeployUse/configure-event-collection.md) | OutofSyncHandedBackSuccess | [Details](#17f30cbe478a868f3b6887bf48d80849346241919)
  [ATADocs\DeployUse\configure-port-mirroring.md](https://github.com/Microsoft/ATADocs-pr/blob/121f54e6d8da8220f1827188039e9a89c038f7ac/ATADocs/DeployUse/configure-port-mirroring.md) | OutofSyncHandedBackSuccess | [Details](#a4befce4003951b18a5e1a9d8bc1addf9e7ea25510)
  [ATADocs\DeployUse\install-ata.md](https://github.com/Microsoft/ATADocs-pr/blob/8d1dedaf86031e8585cca23241aead58f7f3db4e/ATADocs/DeployUse/install-ata.md) | OutofSyncHandedBackSuccess | [Details](#697da5ddc701c353ab1cc1b39c15939af996449718)
@@ -277,14 +275,11 @@
  [ATADocs\DeployUse\install-ata-step2.md](https://github.com/Microsoft/ATADocs-pr/blob/8d1dedaf86031e8585cca23241aead58f7f3db4e/ATADocs/DeployUse/install-ata-step2.md) | OutofSyncHandedBackSuccess | [Details](#73e2eb84e1e21cbc5afcb7a100f9a67da63c66a513)
  [ATADocs\DeployUse\install-ata-step3.md](https://github.com/Microsoft/ATADocs-pr/blob/8d1dedaf86031e8585cca23241aead58f7f3db4e/ATADocs/DeployUse/install-ata-step3.md) | OutofSyncHandedBackSuccess | [Details](#0209d8352704fef6caf059d152d6bde6127d3d5514)
  [ATADocs\DeployUse\install-ata-step4.md](https://github.com/Microsoft/ATADocs-pr/blob/d6e7d7bef97bfc4ffde07959dd9256f0319d685f/ATADocs/DeployUse/install-ata-step4.md) | OutofSyncHandedBackSuccess | [Details](#f12e43a6918c0c02bb59e4a093720a805b7dbcfc15)
- [ATADocs\DeployUse\install-ata-step5.md](https://github.com/Microsoft/ATADocs-pr/blob/d6e7d7bef97bfc4ffde07959dd9256f0319d685f/ATADocs/DeployUse/install-ata-step5.md) | OutofSyncHandedBackSuccess | [Details](#6400a0eabefac91b418e00eb670b1329fa1b5fb516)
  [ATADocs\DeployUse\modifying-ata-config-centercert.md](https://github.com/Microsoft/ATADocs-pr/blob/8d1dedaf86031e8585cca23241aead58f7f3db4e/ATADocs/DeployUse/modifying-ata-config-centercert.md) | OutofSyncHandedBackSuccess | [Details](#0cfeb67e663489d7264c88aafe04e77fcb63377f112)
  [ATADocs\DeployUse\modifying-ata-config-centerip.md](https://github.com/Microsoft/ATADocs-pr/blob/8d1dedaf86031e8585cca23241aead58f7f3db4e/ATADocs/DeployUse/modifying-ata-config-centerip.md) | OutofSyncHandedBackSuccess | [Details](#373eb5722a5450bca87cf66933990249286138ab113)
- [ATADocs\DeployUse\modifying-ata-config-consoleip.md](https://github.com/Microsoft/ATADocs-pr/blob/8d1dedaf86031e8585cca23241aead58f7f3db4e/ATADocs/DeployUse/modifying-ata-config-consoleip.md) | OutofSyncHandedBackSuccess | [Details](#ee775e66de1a56b5270b0d32c7d5ca33d4d7980c114)
  [ATADocs\DeployUse\modifying-ata-config-dcpassword.md](https://github.com/Microsoft/ATADocs-pr/blob/8d1dedaf86031e8585cca23241aead58f7f3db4e/ATADocs/DeployUse/modifying-ata-config-dcpassword.md) | OutofSyncHandedBackSuccess | [Details](#df1dbed75ad0c88de5a6c51d2e5d7e521a2577c4115)
  [ATADocs\DeployUse\modifying-ata-config-iiscert.md](https://github.com/Microsoft/ATADocs-pr/blob/8d1dedaf86031e8585cca23241aead58f7f3db4e/ATADocs/DeployUse/modifying-ata-config-iiscert.md) | OutofSyncHandedBackSuccess | [Details](#07888a46e26a7f87dc3b6424d97aba0813b43d02116)
  [ATADocs\DeployUse\setting-syslog-email-server-settings.md](https://github.com/Microsoft/ATADocs-pr/blob/8d1dedaf86031e8585cca23241aead58f7f3db4e/ATADocs/DeployUse/setting-syslog-email-server-settings.md) | OutofSyncHandedBackSuccess | [Details](#66194d89c3e937923e576004a3ab4b7177f179c4121)
- [ATADocs\DeployUse\TOC.md](https://github.com/Microsoft/ATADocs-pr/blob/df98a12a558a1247a5f4c4c9950ade55aad69f7b/ATADocs/DeployUse/TOC.md) | OutofSyncHandedBackSuccess | [Details](#7007fdee78565b7e29f15b05d430887c5d9bd268122)
  [ATADocs\DeployUse\validate-port-mirroring.md](https://github.com/Microsoft/ATADocs-pr/blob/d6e7d7bef97bfc4ffde07959dd9256f0319d685f/ATADocs/DeployUse/validate-port-mirroring.md) | OutofSyncHandedBackSuccess | [Details](#e1ce20c48323e1fca04211c2691f6dfb6fa57fe5123)
  [ATADocs\DeployUse\working-with-ata-console.md](https://github.com/Microsoft/ATADocs-pr/blob/8d1dedaf86031e8585cca23241aead58f7f3db4e/ATADocs/DeployUse/working-with-ata-console.md) | OutofSyncHandedBackSuccess | [Details](#7f9ca7dcb227f5dde1225c55150fd1c737722ce1124)
  [ATADocs\PlanDesign\ata-architecture.md](https://github.com/Microsoft/ATADocs-pr/blob/8d1dedaf86031e8585cca23241aead58f7f3db4e/ATADocs/PlanDesign/ata-architecture.md) | OutofSyncHandedBackSuccess | [Details](#2d753060f30cbcc7d16959355b86d64fdaa2ecd8223)
@@ -302,12 +297,17 @@
 ## <a name='insync-handback-success-list'></a> In Sync Handback File Success List
  Source File | Status | Details 
  ----------- | ------ | ------- 
+ [ATADocs\DeployUse\ata-health-center.md](https://github.com/Microsoft/ATADocs-pr/blob/8d1dedaf86031e8585cca23241aead58f7f3db4e/ATADocs/DeployUse/ata-health-center.md) | InSyncHandedBackSuccess | [Details](#b38b96f0b2e6061e97d8b46163a04d23107094917)
+ [ATADocs\DeployUse\ata-silent-installation.md](https://github.com/Microsoft/ATADocs-pr/blob/d6e7d7bef97bfc4ffde07959dd9256f0319d685f/ATADocs/DeployUse/ata-silent-installation.md) | InSyncHandedBackSuccess | [Details](#2e51bc9cac43ff90000ca74cccd158e119cc6ec08)
+ [ATADocs\DeployUse\install-ata-step5.md](https://github.com/Microsoft/ATADocs-pr/blob/d6e7d7bef97bfc4ffde07959dd9256f0319d685f/ATADocs/DeployUse/install-ata-step5.md) | InSyncHandedBackSuccess | [Details](#6400a0eabefac91b418e00eb670b1329fa1b5fb516)
  [ATADocs\DeployUse\install-ata-step6.md](https://github.com/Microsoft/ATADocs-pr/blob/8d1dedaf86031e8585cca23241aead58f7f3db4e/ATADocs/DeployUse/install-ata-step6.md) | InSyncHandedBackSuccess | [Details](#76305bc5f55e956c787fe3e8bd954a56f40fc56f17)
  [ATADocs\DeployUse\manage-telemetry-settings.md](https://github.com/Microsoft/ATADocs-pr/blob/8d1dedaf86031e8585cca23241aead58f7f3db4e/ATADocs/DeployUse/manage-telemetry-settings.md) | InSyncHandedBackSuccess | [Details](#c6b3196f6093b909e8d97f9a9ac230e35807eb7219)
+ [ATADocs\DeployUse\modifying-ata-config-consoleip.md](https://github.com/Microsoft/ATADocs-pr/blob/8d1dedaf86031e8585cca23241aead58f7f3db4e/ATADocs/DeployUse/modifying-ata-config-consoleip.md) | InSyncHandedBackSuccess | [Details](#ee775e66de1a56b5270b0d32c7d5ca33d4d7980c114)
  [ATADocs\DeployUse\modifying-ata-configuration.md](https://github.com/Microsoft/ATADocs-pr/blob/8d1dedaf86031e8585cca23241aead58f7f3db4e/ATADocs/DeployUse/modifying-ata-configuration.md) | InSyncHandedBackSuccess | [Details](#02598258f063e65767164334c995ab87d7ad0270117)
  [ATADocs\DeployUse\operate-ata.md](https://github.com/Microsoft/ATADocs-pr/blob/8d1dedaf86031e8585cca23241aead58f7f3db4e/ATADocs/DeployUse/operate-ata.md) | InSyncHandedBackSuccess | [Details](#44c755364a08b2aab9739b5a219e01f21d441b07118)
  [ATADocs\DeployUse\preinstall-ata.md](https://github.com/Microsoft/ATADocs-pr/blob/8d1dedaf86031e8585cca23241aead58f7f3db4e/ATADocs/DeployUse/preinstall-ata.md) | InSyncHandedBackSuccess | [Details](#b4fc459fbab3d63de12efebb125762c18946bbdc119)
  [ATADocs\DeployUse\setting-ata-alerts.md](https://github.com/Microsoft/ATADocs-pr/blob/8d1dedaf86031e8585cca23241aead58f7f3db4e/ATADocs/DeployUse/setting-ata-alerts.md) | InSyncHandedBackSuccess | [Details](#a32799b68d9a8b2949033ab5d1fc5910cff71258120)
+ [ATADocs\DeployUse\TOC.md](https://github.com/Microsoft/ATADocs-pr/blob/df98a12a558a1247a5f4c4c9950ade55aad69f7b/ATADocs/DeployUse/TOC.md) | InSyncHandedBackSuccess | [Details](#7007fdee78565b7e29f15b05d430887c5d9bd268122)
  [ATADocs\DeployUse\working-with-detection-settings.md](https://github.com/Microsoft/ATADocs-pr/blob/8d1dedaf86031e8585cca23241aead58f7f3db4e/ATADocs/DeployUse/working-with-detection-settings.md) | InSyncHandedBackSuccess | [Details](#3840a5f7abdd496ad245a3f1c2589ad1855fddb5125)
  [ATADocs\DeployUse\working-with-suspicious-activities.md](https://github.com/Microsoft/ATADocs-pr/blob/8d1dedaf86031e8585cca23241aead58f7f3db4e/ATADocs/DeployUse/working-with-suspicious-activities.md) | InSyncHandedBackSuccess | [Details](#1214560096227e00af36ff7cb1a0a95988a2ad40126)
  [ATADocs\index.md](https://github.com/Microsoft/ATADocs-pr/blob/121f54e6d8da8220f1827188039e9a89c038f7ac/ATADocs/index.md) | InSyncHandedBackSuccess | [Details](#91fe130cb37f40efd90d7e8023b93075f76a5ba4221)
@@ -654,33 +654,27 @@
 * [Back to Top](#report-top)
 
 ##### <a name='b38b96f0b2e6061e97d8b46163a04d23107094917'></a> Source: [ATADocs\DeployUse\ata-health-center.md](https://github.com/Microsoft/ATADocs-pr/blob/8d1dedaf86031e8585cca23241aead58f7f3db4e/ATADocs/DeployUse/ata-health-center.md)
-* Status: OutofSyncHandedBackSuccess
-* Target File: 
+* Status: InSyncHandedBackSuccess
+* Target File: [ATADocs\DeployUse\ata-health-center.md](https://github.com/Microsoft/ATADocs-pr.pt-br/blob/6ecefe192d75409afa5af3b49ada57e9128aa6f1/ATADocs/DeployUse/ata-health-center.md)
 * Handoff File: [ata-health-center.57b81f1003786f30d809cae62862a88289e1f7e4.pt-br.xlf](https://github.com/Microsoft/EM.handoff/blob/a27de79b00be97fcd5cb6ff0e5b8723871c32c61/ol-handoff/Microsoft/ATADocs-pr.pt-br/master/ata-health-center.57b81f1003786f30d809cae62862a88289e1f7e4.pt-br.xlf)
 * Handoff Datetime: 2016-06-27 16:00:14
 * Handoff Reason: Include
 * Archive File: [ata-health-center.57b81f1003786f30d809cae62862a88289e1f7e4.pt-br.xlf](https://github.com/Microsoft/EM.handoff/blob/bcb846ad38c8ff1ea4845a6fc92510b864805748/ol-handoff/Microsoft/ATADocs-pr.pt-br/master/archive/ata-health-center.57b81f1003786f30d809cae62862a88289e1f7e4.pt-br.xlf)
 * Archive Datetime: 2016-07-02 01:39:28
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [ATADocs\DeployUse\ata-health-center.md](https://github.com/Microsoft/ATADocs-pr.pt-br/blob/71e3819cd1c11cc04c0ec7e039ad7b0b71529ab4/ATADocs/DeployUse/ata-health-center.md)
-* Current Handback File: [ata-health-center.57b81f1003786f30d809cae62862a88289e1f7e4.pt-br.xlf](https://github.com/Microsoft/EM.handback/blob/9f7e6b12b09e7c927352e6aa37967d105bd2495c/ol-handback/Microsoft/ATADocs-pr.pt-br/master/ata-health-center.57b81f1003786f30d809cae62862a88289e1f7e4.pt-br.xlf)
-* Current Handback Datetime: 2016-06-02 23:53:00
+* Handback File: [ata-health-center.57b81f1003786f30d809cae62862a88289e1f7e4.pt-br.xlf](https://github.com/Microsoft/EM.handback/blob/256054f51f0db77b76a00fe919c5640a8e9bff36/ol-handback/Microsoft/ATADocs-pr.pt-br/master/ata-health-center.57b81f1003786f30d809cae62862a88289e1f7e4.pt-br.xlf)
+* Handback Datetime: 2016-07-08 21:42:12
 * [Back to Top](#report-top)
 
 ##### <a name='2e51bc9cac43ff90000ca74cccd158e119cc6ec08'></a> Source: [ATADocs\DeployUse\ata-silent-installation.md](https://github.com/Microsoft/ATADocs-pr/blob/d6e7d7bef97bfc4ffde07959dd9256f0319d685f/ATADocs/DeployUse/ata-silent-installation.md)
-* Status: OutofSyncHandedBackSuccess
-* Target File: 
+* Status: InSyncHandedBackSuccess
+* Target File: [ATADocs\DeployUse\ata-silent-installation.md](https://github.com/Microsoft/ATADocs-pr.pt-br/blob/6ecefe192d75409afa5af3b49ada57e9128aa6f1/ATADocs/DeployUse/ata-silent-installation.md)
 * Handoff File: [ata-silent-installation.c7999e6e550c9bfcd0d2992e016db6840458d398.pt-br.xlf](https://github.com/Microsoft/EM.handoff/blob/129bdcb6c1507d2cbdd35a73e26c4aa317f348a4/ol-handoff/Microsoft/ATADocs-pr.pt-br/master/ata-silent-installation.c7999e6e550c9bfcd0d2992e016db6840458d398.pt-br.xlf)
 * Handoff Datetime: 2016-06-28 16:53:47
 * Handoff Reason: Include
 * Archive File: [ata-silent-installation.c7999e6e550c9bfcd0d2992e016db6840458d398.pt-br.xlf](https://github.com/Microsoft/EM.handoff/blob/bcb846ad38c8ff1ea4845a6fc92510b864805748/ol-handoff/Microsoft/ATADocs-pr.pt-br/master/archive/ata-silent-installation.c7999e6e550c9bfcd0d2992e016db6840458d398.pt-br.xlf)
 * Archive Datetime: 2016-07-02 01:39:28
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [ATADocs\DeployUse\ata-silent-installation.md](https://github.com/Microsoft/ATADocs-pr.pt-br/blob/71e3819cd1c11cc04c0ec7e039ad7b0b71529ab4/ATADocs/DeployUse/ata-silent-installation.md)
-* Current Handback File: [ata-silent-installation.c7999e6e550c9bfcd0d2992e016db6840458d398.pt-br.xlf](https://github.com/Microsoft/EM.handback/blob/9f7e6b12b09e7c927352e6aa37967d105bd2495c/ol-handback/Microsoft/ATADocs-pr.pt-br/master/ata-silent-installation.c7999e6e550c9bfcd0d2992e016db6840458d398.pt-br.xlf)
-* Current Handback Datetime: 2016-06-02 23:53:00
+* Handback File: [ata-silent-installation.c7999e6e550c9bfcd0d2992e016db6840458d398.pt-br.xlf](https://github.com/Microsoft/EM.handback/blob/256054f51f0db77b76a00fe919c5640a8e9bff36/ol-handback/Microsoft/ATADocs-pr.pt-br/master/ata-silent-installation.c7999e6e550c9bfcd0d2992e016db6840458d398.pt-br.xlf)
+* Handback Datetime: 2016-07-08 21:42:12
 * [Back to Top](#report-top)
 
 ##### <a name='17f30cbe478a868f3b6887bf48d80849346241919'></a> Source: [ATADocs\DeployUse\configure-event-collection.md](https://github.com/Microsoft/ATADocs-pr/blob/d6e7d7bef97bfc4ffde07959dd9256f0319d685f/ATADocs/DeployUse/configure-event-collection.md)
@@ -801,18 +795,15 @@
 * [Back to Top](#report-top)
 
 ##### <a name='6400a0eabefac91b418e00eb670b1329fa1b5fb516'></a> Source: [ATADocs\DeployUse\install-ata-step5.md](https://github.com/Microsoft/ATADocs-pr/blob/d6e7d7bef97bfc4ffde07959dd9256f0319d685f/ATADocs/DeployUse/install-ata-step5.md)
-* Status: OutofSyncHandedBackSuccess
-* Target File: 
+* Status: InSyncHandedBackSuccess
+* Target File: [ATADocs\DeployUse\install-ata-step5.md](https://github.com/Microsoft/ATADocs-pr.pt-br/blob/6ecefe192d75409afa5af3b49ada57e9128aa6f1/ATADocs/DeployUse/install-ata-step5.md)
 * Handoff File: [install-ata-step5.939491200e7347138888e6ccb69a84737be3bec2.pt-br.xlf](https://github.com/Microsoft/EM.handoff/blob/129bdcb6c1507d2cbdd35a73e26c4aa317f348a4/ol-handoff/Microsoft/ATADocs-pr.pt-br/master/install-ata-step5.939491200e7347138888e6ccb69a84737be3bec2.pt-br.xlf)
 * Handoff Datetime: 2016-06-28 16:53:47
 * Handoff Reason: Include
 * Archive File: [install-ata-step5.939491200e7347138888e6ccb69a84737be3bec2.pt-br.xlf](https://github.com/Microsoft/EM.handoff/blob/bcb846ad38c8ff1ea4845a6fc92510b864805748/ol-handoff/Microsoft/ATADocs-pr.pt-br/master/archive/install-ata-step5.939491200e7347138888e6ccb69a84737be3bec2.pt-br.xlf)
 * Archive Datetime: 2016-07-02 01:39:28
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [ATADocs\DeployUse\install-ata-step5.md](https://github.com/Microsoft/ATADocs-pr.pt-br/blob/d4fa93bee1ef0212c4e7d0778ccf71a99c07238a/ATADocs/DeployUse/install-ata-step5.md)
-* Current Handback File: [install-ata-step5.939491200e7347138888e6ccb69a84737be3bec2.pt-br.xlf](https://github.com/Microsoft/EM.handback/blob/222db9877396447a08370a630491ce2370ab1749/ol-handback/Microsoft/ATADocs-pr.pt-br/master/install-ata-step5.939491200e7347138888e6ccb69a84737be3bec2.pt-br.xlf)
-* Current Handback Datetime: 2016-06-22 22:18:30
+* Handback File: [install-ata-step5.939491200e7347138888e6ccb69a84737be3bec2.pt-br.xlf](https://github.com/Microsoft/EM.handback/blob/256054f51f0db77b76a00fe919c5640a8e9bff36/ol-handback/Microsoft/ATADocs-pr.pt-br/master/install-ata-step5.939491200e7347138888e6ccb69a84737be3bec2.pt-br.xlf)
+* Handback Datetime: 2016-07-08 21:42:12
 * [Back to Top](#report-top)
 
 ##### <a name='76305bc5f55e956c787fe3e8bd954a56f40fc56f17'></a> Source: [ATADocs\DeployUse\install-ata-step6.md](https://github.com/Microsoft/ATADocs-pr/blob/8d1dedaf86031e8585cca23241aead58f7f3db4e/ATADocs/DeployUse/install-ata-step6.md)
@@ -2022,18 +2013,15 @@
 * [Back to Top](#report-top)
 
 ##### <a name='ee775e66de1a56b5270b0d32c7d5ca33d4d7980c114'></a> Source: [ATADocs\DeployUse\modifying-ata-config-consoleip.md](https://github.com/Microsoft/ATADocs-pr/blob/8d1dedaf86031e8585cca23241aead58f7f3db4e/ATADocs/DeployUse/modifying-ata-config-consoleip.md)
-* Status: OutofSyncHandedBackSuccess
-* Target File: 
+* Status: InSyncHandedBackSuccess
+* Target File: [ATADocs\DeployUse\modifying-ata-config-consoleip.md](https://github.com/Microsoft/ATADocs-pr.pt-br/blob/6ecefe192d75409afa5af3b49ada57e9128aa6f1/ATADocs/DeployUse/modifying-ata-config-consoleip.md)
 * Handoff File: [modifying-ata-config-consoleip.3efd9bc263cf92cf6d203c60252021215caa7ec0.pt-br.xlf](https://github.com/Microsoft/EM.handoff/blob/a27de79b00be97fcd5cb6ff0e5b8723871c32c61/ol-handoff/Microsoft/ATADocs-pr.pt-br/master/modifying-ata-config-consoleip.3efd9bc263cf92cf6d203c60252021215caa7ec0.pt-br.xlf)
 * Handoff Datetime: 2016-06-27 16:00:14
 * Handoff Reason: Include
 * Archive File: [modifying-ata-config-consoleip.3efd9bc263cf92cf6d203c60252021215caa7ec0.pt-br.xlf](https://github.com/Microsoft/EM.handoff/blob/bcb846ad38c8ff1ea4845a6fc92510b864805748/ol-handoff/Microsoft/ATADocs-pr.pt-br/master/archive/modifying-ata-config-consoleip.3efd9bc263cf92cf6d203c60252021215caa7ec0.pt-br.xlf)
 * Archive Datetime: 2016-07-02 01:39:28
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [ATADocs\DeployUse\modifying-ata-config-consoleip.md](https://github.com/Microsoft/ATADocs-pr.pt-br/blob/71e3819cd1c11cc04c0ec7e039ad7b0b71529ab4/ATADocs/DeployUse/modifying-ata-config-consoleip.md)
-* Current Handback File: [modifying-ata-config-consoleip.3efd9bc263cf92cf6d203c60252021215caa7ec0.pt-br.xlf](https://github.com/Microsoft/EM.handback/blob/9f7e6b12b09e7c927352e6aa37967d105bd2495c/ol-handback/Microsoft/ATADocs-pr.pt-br/master/modifying-ata-config-consoleip.3efd9bc263cf92cf6d203c60252021215caa7ec0.pt-br.xlf)
-* Current Handback Datetime: 2016-06-02 23:53:00
+* Handback File: [modifying-ata-config-consoleip.3efd9bc263cf92cf6d203c60252021215caa7ec0.pt-br.xlf](https://github.com/Microsoft/EM.handback/blob/256054f51f0db77b76a00fe919c5640a8e9bff36/ol-handback/Microsoft/ATADocs-pr.pt-br/master/modifying-ata-config-consoleip.3efd9bc263cf92cf6d203c60252021215caa7ec0.pt-br.xlf)
+* Handback Datetime: 2016-07-08 21:42:12
 * [Back to Top](#report-top)
 
 ##### <a name='df1dbed75ad0c88de5a6c51d2e5d7e521a2577c4115'></a> Source: [ATADocs\DeployUse\modifying-ata-config-dcpassword.md](https://github.com/Microsoft/ATADocs-pr/blob/8d1dedaf86031e8585cca23241aead58f7f3db4e/ATADocs/DeployUse/modifying-ata-config-dcpassword.md)
@@ -2130,18 +2118,15 @@
 * [Back to Top](#report-top)
 
 ##### <a name='7007fdee78565b7e29f15b05d430887c5d9bd268122'></a> Source: [ATADocs\DeployUse\TOC.md](https://github.com/Microsoft/ATADocs-pr/blob/df98a12a558a1247a5f4c4c9950ade55aad69f7b/ATADocs/DeployUse/TOC.md)
-* Status: OutofSyncHandedBackSuccess
-* Target File: 
+* Status: InSyncHandedBackSuccess
+* Target File: [ATADocs\DeployUse\TOC.md](https://github.com/Microsoft/ATADocs-pr.pt-br/blob/6ecefe192d75409afa5af3b49ada57e9128aa6f1/ATADocs/DeployUse/TOC.md)
 * Handoff File: [TOC.d272a951086c3fc033212846ba52cf9d255d1bc5.pt-br.xlf](https://github.com/Microsoft/EM.handoff/blob/e4ceb01ed9059f9945dac7d75a3d2927037bdfbf/ol-handoff/Microsoft/ATADocs-pr.pt-br/master/TOC.d272a951086c3fc033212846ba52cf9d255d1bc5.pt-br.xlf)
 * Handoff Datetime: 2016-06-21 17:50:52
 * Handoff Reason: Include
 * Archive File: [TOC.d272a951086c3fc033212846ba52cf9d255d1bc5.pt-br.xlf](https://github.com/Microsoft/EM.handoff/blob/bcb846ad38c8ff1ea4845a6fc92510b864805748/ol-handoff/Microsoft/ATADocs-pr.pt-br/master/archive/TOC.d272a951086c3fc033212846ba52cf9d255d1bc5.pt-br.xlf)
 * Archive Datetime: 2016-07-02 01:39:28
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [ATADocs\DeployUse\TOC.md](https://github.com/Microsoft/ATADocs-pr.pt-br/blob/a72340d94d1ab19f5e20a857a77c265bcbd184e1/ATADocs/DeployUse/TOC.md)
-* Current Handback File: [TOC.d272a951086c3fc033212846ba52cf9d255d1bc5.pt-br.xlf](https://github.com/Microsoft/EM.handback/blob/d4870c7d18300f93394d468da2869fbecade2dcf/ol-handback/Microsoft/ATADocs-pr.pt-br/master/TOC.d272a951086c3fc033212846ba52cf9d255d1bc5.pt-br.xlf)
-* Current Handback Datetime: 2016-06-03 08:56:13
+* Handback File: [TOC.d272a951086c3fc033212846ba52cf9d255d1bc5.pt-br.xlf](https://github.com/Microsoft/EM.handback/blob/256054f51f0db77b76a00fe919c5640a8e9bff36/ol-handback/Microsoft/ATADocs-pr.pt-br/master/TOC.d272a951086c3fc033212846ba52cf9d255d1bc5.pt-br.xlf)
+* Handback Datetime: 2016-07-08 21:42:12
 * [Back to Top](#report-top)
 
 ##### <a name='e1ce20c48323e1fca04211c2691f6dfb6fa57fe5123'></a> Source: [ATADocs\DeployUse\validate-port-mirroring.md](https://github.com/Microsoft/ATADocs-pr/blob/d6e7d7bef97bfc4ffde07959dd9256f0319d685f/ATADocs/DeployUse/validate-port-mirroring.md)

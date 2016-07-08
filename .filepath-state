@@ -8,9 +8,6 @@
   "b38b96f0b2e6061e97d8b46163a04d2310709491": [
     "ATADocs\\DeployUse\\ata-health-center.md"
   ],
-  "cc7428be2b81d2c93e0dd4c45ac9c0c2ffac534a": [
-    "ATADocs\\DeployUse\\ata-health-center.md"
-  ],
   "697da5ddc701c353ab1cc1b39c15939af9964497": [
     "ATADocs\\DeployUse\\install-ata.md"
   ],
@@ -27,9 +24,6 @@
     "ATADocs\\DeployUse\\setting-ata-alerts.md"
   ],
   "7007fdee78565b7e29f15b05d430887c5d9bd268": [
-    "ATADocs\\DeployUse\\TOC.md"
-  ],
-  "76dd524dd48e6d79029e308c6c77440b0e4e0b27": [
     "ATADocs\\DeployUse\\TOC.md"
   ],
   "1214560096227e00af36ff7cb1a0a95988a2ad40": [
@@ -146,12 +140,6 @@
   "6400a0eabefac91b418e00eb670b1329fa1b5fb5": [
     "ATADocs\\DeployUse\\install-ata-step5.md"
   ],
-  "c56276aff0db626a03f7ce382ba1349ab6d638d8": [
-    "ATADocs\\DeployUse\\install-ata-step5.md"
-  ],
-  "88999409ef976d50b6bb80803213b82146cee1fe": [
-    "ATADocs\\DeployUse\\install-ata-step5.md"
-  ],
   "76305bc5f55e956c787fe3e8bd954a56f40fc56f": [
     "ATADocs\\DeployUse\\install-ata-step6.md"
   ],
@@ -173,9 +161,6 @@
   "ee775e66de1a56b5270b0d32c7d5ca33d4d7980c": [
     "ATADocs\\DeployUse\\modifying-ata-config-consoleip.md"
   ],
-  "d757c9721c38ba4752f5005bc5e89e21a874ff5b": [
-    "ATADocs\\DeployUse\\modifying-ata-config-consoleip.md"
-  ],
   "df1dbed75ad0c88de5a6c51d2e5d7e521a2577c4": [
     "ATADocs\\DeployUse\\modifying-ata-config-dcpassword.md"
   ],
@@ -192,12 +177,6 @@
     "ATADocs\\index.md"
   ],
   "2e51bc9cac43ff90000ca74cccd158e119cc6ec0": [
-    "ATADocs\\DeployUse\\ata-silent-installation.md"
-  ],
-  "e8e66a82e3ef2767dc9bc2842200ebd8576cd1e0": [
-    "ATADocs\\DeployUse\\ata-silent-installation.md"
-  ],
-  "715208b1bc4b665ef3fd0bf7a73a011640e33f65": [
     "ATADocs\\DeployUse\\ata-silent-installation.md"
   ],
   "66194d89c3e937923e576004a3ab4b7177f179c4": [
