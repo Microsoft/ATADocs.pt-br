@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: Instalação do ATA - Etapa 5 | Microsoft Advanced Threat Analytics
-description: A Etapa cinco da instalação do ATA ajuda você a definir as configurações de seu Gateway do ATA.
-keywords:
+title: "Instalação do ATA - Etapa 5 | Microsoft Advanced Threat Analytics"
+description: "A Etapa cinco da instalação do ATA ajuda você a definir as configurações de seu Gateway do ATA."
+keywords: 
 author: rkarlin
 manager: stevenpo
 ms.date: 04/28/2016
@@ -12,22 +10,19 @@ ms.prod: identity-ata
 ms.service: advanced-threat-analytics
 ms.technology: security
 ms.assetid: 2a5b6652-2aef-464c-ac17-c7e5f12f920f
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: bennyl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: d6e7d7bef97bfc4ffde07959dd9256f0319d685f
+ms.openlocfilehash: 6400a0eabefac91b418e00eb670b1329fa1b5fb5
+
 
 ---
 
 # Instalação do ATA - Etapa 5
 
->[!div class="step-by-step"] [« Etapa 4](install-ata-step4.md)
+>[!div class="step-by-step"]
+[« Etapa 4](install-ata-step4.md)
 [Etapa 6 »](install-ata-step6.md)
 
 
@@ -53,8 +48,9 @@ As informações a seguir se aplicam aos servidores que você insere na lista **
  - **Candidato ao sincronizador de domínio**<br>
 Qualquer Gateway do ATA definido para ser um candidato ao sincronizador de domínio pode ser responsável pela sincronização entre o ATA e o domínio do Active Directory. Dependendo do tamanho do domínio, a sincronização inicial pode ser demorada e consumir muitos recursos. Por padrão, somente Gateways do ATA são definidos como candidatos ao sincronizador do domínio. <br>É recomendável impedir os Gateways do ATA do site remoto de serem candidatos ao sincronizador do domínio.<br>Se o controlador de domínio for somente leitura, não o defina como um candidato ao sincronizador do domínio. Para saber mais, confira [ATA architecture](/advanced-threat-analytics/plan-design/ata-architecture#ata-lightweight-gateway-features) (Arquitetura do ATA).
 
-> [!NOTE] Levará alguns minutos para que o serviço do Gateway do ATA inicie pela primeira vez, pois ele cria o cache dos analisadores de captura de rede.<br>
-As alterações de configuração serão aplicadas ao Gateway do ATA na próxima sincronização agendada entre o ele e o Centro do ATA.
+> [!NOTE] 
+> Levará alguns minutos para que o serviço do Gateway do ATA inicie pela primeira vez, pois ele cria o cache dos analisadores de captura de rede.<br>
+> As alterações de configuração serão aplicadas ao Gateway do ATA na próxima sincronização agendada entre o ele e o Centro do ATA.
 
 
 
@@ -83,17 +79,19 @@ Para validar a implantação bem-sucedida do Gateway do ATA, verifique o seguint
     ![Adicionar imagem dos contadores de desempenho](media/ATA-performance-monitoring-add-counters.png)
 
 
->[!div class="step-by-step"] [« Etapa 4](install-ata-step4.md)
+>[!div class="step-by-step"]
+[« Etapa 4](install-ata-step4.md)
 [Etapa 6 »](install-ata-step6.md)
 
 ## Consulte também
 
-- [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+- [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Configurar coleta de eventos](configure-event-collection.md)
 - [Pré-requisitos do ATA](/advanced-threat-analytics/plan-design/ata-prerequisites)
 
 
 
-<!--HONumber=May16_HO3-->
+
+<!--HONumber=Jun16_HO4-->
 
 
