@@ -5822,8 +5822,8 @@
 * Handoff File: [troubleshooting-ata-known-errors.09d3985d5b8120ee3069cc21c8701940c07afcce.pt-br.xlf](https://github.com/Microsoft/EM.handoff/blob/e0aa0d33650f1bf93ca45aafff4bc3f93bb9dbe3/ol-handoff/Microsoft/ATADocs-pr.pt-br/master/troubleshooting-ata-known-errors.09d3985d5b8120ee3069cc21c8701940c07afcce.pt-br.xlf)
 * Handoff Datetime: 2016-07-06 00:54:39
 * Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
+* Archive File: [troubleshooting-ata-known-errors.09d3985d5b8120ee3069cc21c8701940c07afcce.pt-br.xlf](https://github.com/Microsoft/EM.handoff/blob/201adcbab7df2f6924ca1321b5ef39a909cca8f2/ol-handoff/Microsoft/ATADocs-pr.pt-br/master/archive/troubleshooting-ata-known-errors.09d3985d5b8120ee3069cc21c8701940c07afcce.pt-br.xlf)
+* Archive Datetime: 2016-07-09 01:16:57
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * Current Target File: [ATADocs\Troubleshoot\troubleshooting-ata-known-errors.md](https://github.com/Microsoft/ATADocs-pr.pt-br/blob/a08def95841c390eadd41bda2037c8867714b0d5/ATADocs/Troubleshoot/troubleshooting-ata-known-errors.md)
