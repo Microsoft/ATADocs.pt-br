@@ -1,5 +1,5 @@
 {
-  "LastProcessedCommit": "cc9c5d698f807ffff0901c4aa670160039db9b7c",
+  "LastProcessedCommit": "b6c49e34c960d091ccbdf6e9cb4f46e9e39d6c22",
   "LastTranslatedCommit": "0e94a8575999e6edd480e53dd0727aa7bea58c78",
   "Items": {
     "19ffcb31b9fc0f69362ca0b4fd2e2fdb06dc11d6": {
@@ -24125,10 +24125,10 @@
         "ATADocs\\DeployUse\\TOC.md"
       ],
       "HasMetadata": false,
-      "TranslationType": 0,
+      "TranslationType": 1,
       "HandoffFilePath": "ol-handoff\\Microsoft\\ATADocs-pr.pt-br\\master\\TOC.d272a951086c3fc033212846ba52cf9d255d1bc5.pt-br.xlf",
-      "HandoffFileCommit": "e4ceb01ed9059f9945dac7d75a3d2927037bdfbf",
-      "HandoffDateTime": "2016-06-21T17:50:52.5344677Z",
+      "HandoffFileCommit": "4929428ea2b5505b9de7ba6bf9574a81f0228b0c",
+      "HandoffDateTime": "2016-07-11T07:50:06.7490494Z",
       "HandoffPriority": "",
       "HandoffException": null,
       "HandoffFailureTimes": 0,
@@ -24140,9 +24140,9 @@
       "HandbackException": null,
       "HandbackFailureTimes": 0,
       "UpdatedDateTime": "2016-07-08T21:42:12.0309903Z",
-      "ArchiveFilePath": "ol-handoff\\Microsoft\\ATADocs-pr.pt-br\\master\\archive\\TOC.d272a951086c3fc033212846ba52cf9d255d1bc5.pt-br.xlf",
-      "ArchiveFileCommit": "bcb846ad38c8ff1ea4845a6fc92510b864805748",
-      "ArchiveFileDateTime": "2016-07-02T01:39:28.8445365Z",
+      "ArchiveFilePath": null,
+      "ArchiveFileCommit": null,
+      "ArchiveFileDateTime": "0001-01-01T00:00:00",
       "ArchiveException": null,
       "BilingualFilePath": null,
       "BilingualFileCommit": null,

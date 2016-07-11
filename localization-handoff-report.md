@@ -1,11 +1,26 @@
 # <a name='report-top'></a> Localization Handoff Report
 
 ## Summary
- Total Files | 0
+ Total Files | 1
 
 ## File List
+ Source File | Status | Details 
+ ----------- | ------ | ------- 
+ [ATADocs\DeployUse\TOC.md](https://github.com/Microsoft/ATADocs-pr/blob/df98a12a558a1247a5f4c4c9950ade55aad69f7b/ATADocs/DeployUse/TOC.md) | OutofSyncHandedBackSuccess | [Details](#7007fdee78565b7e29f15b05d430887c5d9bd268121)
 
 ## Item Details
+##### <a name='7007fdee78565b7e29f15b05d430887c5d9bd268121'></a> Source: [ATADocs\DeployUse\TOC.md](https://github.com/Microsoft/ATADocs-pr/blob/df98a12a558a1247a5f4c4c9950ade55aad69f7b/ATADocs/DeployUse/TOC.md)
+* Status: OutofSyncHandedBackSuccess
+* Target File: [ATADocs\DeployUse\TOC.md](https://github.com/Microsoft/ATADocs-pr.pt-br/blob/6ecefe192d75409afa5af3b49ada57e9128aa6f1/ATADocs/DeployUse/TOC.md)
+* Handoff File: [TOC.d272a951086c3fc033212846ba52cf9d255d1bc5.pt-br.xlf](https://github.com/Microsoft/EM.handoff/blob/4929428ea2b5505b9de7ba6bf9574a81f0228b0c/ol-handoff/Microsoft/ATADocs-pr.pt-br/master/TOC.d272a951086c3fc033212846ba52cf9d255d1bc5.pt-br.xlf)
+* Handoff Datetime: 2016-07-11 07:50:06
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [TOC.d272a951086c3fc033212846ba52cf9d255d1bc5.pt-br.xlf](https://github.com/Microsoft/EM.handback/blob/256054f51f0db77b76a00fe919c5640a8e9bff36/ol-handback/Microsoft/ATADocs-pr.pt-br/master/TOC.d272a951086c3fc033212846ba52cf9d255d1bc5.pt-br.xlf)
+* Handback Datetime: 2016-07-08 21:42:12
+* [Back to Top](#report-top)
+
 
 ## Error Details
 
