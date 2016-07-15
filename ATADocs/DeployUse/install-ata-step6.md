@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: Instalação do ATA | Microsoft Advanced Threat Analytics
-description: Na etapa final da instalação do ATA, configure as sub-redes de concessão de curto prazo e o usuário Honeytoken.
-keywords:
+title: "Instalação do ATA | Microsoft Advanced Threat Analytics"
+description: "Na etapa final da instalação do ATA, configure as sub-redes de concessão de curto prazo e o usuário Honeytoken."
+keywords: 
 author: rkarlin
 manager: stevenpo
 ms.date: 04/28/2016
@@ -12,16 +10,12 @@ ms.prod: identity-ata
 ms.service: advanced-threat-analytics
 ms.technology: security
 ms.assetid: 8980e724-06a6-40b0-8477-27d4cc29fd2b
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: bennyl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 8d1dedaf86031e8585cca23241aead58f7f3db4e
+ms.openlocfilehash: 76305bc5f55e956c787fe3e8bd954a56f40fc56f
+
 
 ---
 
@@ -33,7 +27,7 @@ ms.suite: ems
 ## Etapa 6. Configurar as sub-redes de concessão de curto prazo e o usuário Honeytoken
 Sub-redes de concessão de curto prazo são sub-redes nas quais a atribuição de endereço IP muda muito rapidamente, em questão de segundos ou minutos. Por exemplo, endereços IP usados para suas VPNs endereços IP de Wi-Fi . Para inserir a lista de sub-redes de concessão de curto prazo usadas em sua organização, execute estas etapas:
 
-1.  No Console do ATA no computador do Gateway do ATA, clique no ícone de configurações e escolha **Configuração**.
+1.  No Console do ATA na máquina do Gateway do ATA, clique no ícone de configurações e escolha **Configuração**.
 
     ![Definições de configurações do ATA](media/ATA-config-icon.JPG)
 
@@ -63,12 +57,13 @@ O ATA iniciará a verificação de atividades suspeitas imediatamente. Algumas a
 
 ## Consulte também
 
-- [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+- [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Configurar coleta de eventos](configure-event-collection.md)
 - [Pré-requisitos do ATA](/advanced-threat-analytics/plan-design/ata-prerequisites)
 
 
 
-<!--HONumber=May16_HO1-->
+
+<!--HONumber=Jun16_HO4-->
 
 

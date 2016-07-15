@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: Solução de problemas do log de erros do ATA | Microsoft Advanced Threat Analytics
-description: Descreve como é possível solucionar erros comuns no ATA 
-keywords:
+title: "Solução de problemas do log de erros do ATA | Microsoft Advanced Threat Analytics"
+description: "Descreve como é possível solucionar erros comuns no ATA"
+keywords: 
 author: rkarlin
 manager: stevenpo
 ms.date: 04/28/2016
@@ -12,16 +10,12 @@ ms.prod: identity-ata
 ms.service: advanced-threat-analytics
 ms.technology: security
 ms.assetid: d89e7aff-a6ef-48a3-ae87-6ac2e39f3bdb
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: bennyl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: e0745079465aecefd26571eea894d19b82cbc216
+ms.openlocfilehash: c72bca3cb1eef1f3fb59f666c6143cf5c095bde9
+
 
 ---
 
@@ -50,7 +44,7 @@ Esta seção detalha os possíveis erros nas implantações do ATA e as etapas n
 ## Erros de implantação
 |Erro do|Descrição|Resolução|
 |-------------|----------|---------|
-|Falha na instalação do .Net Framework 4.6.1 com o erro 0x800713ec|Os pré-requisitos do .Net Framework 4.6.1 não estão instalados no servidor. |Antes de instalar o ATA, verifique se as atualizações do Windows [KB2919442](https://www.microsoft.com/en-us/download/details.aspx?id=42135) e [KB2919355](https://support.microsoft.com/en-us/kb/2919355) estão instaladas no servidor.|
+|Falha na instalação do .Net Framework 4.6.1 com o erro 0x800713ec|Os pré-requisitos do .Net Framework 4.6.1 não estão instalados no servidor. |Antes de instalar o ATA, verifique se as atualizações do Windows [KB2919442](https://www.microsoft.com/download/details.aspx?id=42135) e [KB2919355](https://support.microsoft.com/kb/2919355) estão instaladas no servidor.|
 
 ![Imagem do erro de instalação do .NET no ATA](media/netinstallerror.png)
 
@@ -59,10 +53,11 @@ Esta seção detalha os possíveis erros nas implantações do ATA e as etapas n
 - [Pré-requisitos do ATA](/advanced-threat-analytics/plan-design/ata-prerequisites)
 - [Planejamento da capacidade de ATA](/advanced-threat-analytics/plan-design/ata-capacity-planning)
 - [Configurar coleta de eventos](/advanced-threat-analytics/deploy-use/configure-event-collection)
-- [Configuração do encaminhamento de eventos do Windows](/advanced-threat-analytics/deploy-use/configure-event-collection#ATA_event_WEF)
-- [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+- [Configuração do encaminhamento de eventos do Windows](/advanced-threat-analytics/deploy-use/configure-event-collection#configuring-windows-event-forwarding)
+- [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
 
-<!--HONumber=May16_HO4-->
+
+<!--HONumber=Jul16_HO1-->
 
 

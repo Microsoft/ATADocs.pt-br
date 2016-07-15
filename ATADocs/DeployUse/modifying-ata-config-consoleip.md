@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: Alteração da configuração do ATA - Endereço IP do Console do ATA | Microsoft Advanced Threat Analytics
-description: Descreve como alterar o endereço IP do Console do ATA, usado para criar um atalho até o Console do ATA em Gateways do ATA.
-keywords:
+title: "Alteração da configuração do ATA - Endereço IP do Console do ATA | Microsoft Advanced Threat Analytics"
+description: "Descreve como alterar o endereço IP do Console do ATA, usado para criar um atalho até o Console do ATA em Gateways do ATA."
+keywords: 
 author: rkarlin
 manager: stevenpo
 ms.date: 04/28/2016
@@ -12,24 +10,20 @@ ms.prod: identity-ata
 ms.service: advanced-threat-analytics
 ms.technology: security
 ms.assetid: 50118465-df34-4e04-b0cc-48808b6a96b1
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: bennyl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 8d1dedaf86031e8585cca23241aead58f7f3db4e
+ms.openlocfilehash: ee775e66de1a56b5270b0d32c7d5ca33d4d7980c
+
 
 ---
 
 # Alteração da configuração do ATA - Endereço IP do Console do ATA
 
 >[!div class="step-by-step"]
-[« Certificado do Centro do ATA](modifying-ata-config-centercert.md)
-[Certificado IIS »](modifying-ata-config-iiscert.md)
+[« Certificado da Central do ATA](modifying-ata-config-centercert.md)
+[Certificado do IIS »](modifying-ata-config-iiscert.md)
 
 ## Alterar o endereço IP do Console do ATA
 Por padrão, a URL do Console do ATA é o endereço IP selecionado como o endereço IP do Console do ATA durante a instalação do Centro do ATA.
@@ -78,16 +72,17 @@ Se você precisar modificar o endereço IP usado pelo IIS para o Console do ATA,
 9. Se a URL do Console do ATA for um FQDN, atualize o DNS com o novo endereço IP para o FQDN.
 
 >[!div class="step-by-step"]
-[« Certificado do Centro do ATA](modifying-ata-config-centercert.md)
-[Certificado IIS »](modifying-ata-config-iiscert.md)
+[« Certificado da Central do ATA](modifying-ata-config-centercert.md)
+[Certificado do IIS »](modifying-ata-config-iiscert.md)
 
 
 ## Consulte também
 - [Trabalhando com o Console do ATA](working-with-ata-console.md)
 - [Instalar o ATA](install-ata.md)
-- [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+- [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
 
-<!--HONumber=May16_HO1-->
+
+<!--HONumber=Jun16_HO4-->
 
 

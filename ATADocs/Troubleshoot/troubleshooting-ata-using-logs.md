@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: Solução de problemas do ATA utilizando os logs do ATA | Microsoft Advanced Threat Analytics
-description: Descreve como você pode usar os logs do ATA para solucionar problemas
-keywords:
+title: "Solução de problemas do ATA utilizando os logs do ATA | Microsoft Advanced Threat Analytics"
+description: "Descreve como você pode usar os logs do ATA para solucionar problemas"
+keywords: 
 author: rkarlin
 manager: stevenpo
 ms.date: 04/28/2016
@@ -12,16 +10,12 @@ ms.prod: identity-ata
 ms.service: advanced-threat-analytics
 ms.technology: security
 ms.assetid: b8ad5511-8893-4d1d-81ee-b9a86e378347
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: bennyl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 8d1dedaf86031e8585cca23241aead58f7f3db4e
+ms.openlocfilehash: 4f02b0fba381eb76ad500e198392ec7624a3028a
+
 
 ---
 
@@ -47,7 +41,7 @@ O Gateway do ATA tem os seguintes logs:
 > [!NOTE]
 > Os três primeiros arquivos de log têm um tamanho máximo de até 50 MB. Quando esse tamanho é atingido, um novo arquivo de log é aberto e o anterior é renomeado como "&lt;nome do arquivo original&gt;-Archived-00000". Esse número aumenta a cada renomeação.
 
-### Logs do Centro do ATA
+## Logs do Centro do ATA
 Os logs do Centro do ATA estão localizados em uma subpasta chamada **Logs**. No local de instalação padrão, ela pode ser encontrada em: **C:\Arquivos de Programas\Microsoft Advanced Threat Analytics\Center\Logs**.
 
 O Centro do ATA tem os seguintes logs:
@@ -64,7 +58,7 @@ O Centro do ATA tem os seguintes logs:
 > [!NOTE]
 > Os três primeiros arquivos de log têm um tamanho máximo de até 50 MB. Quando esse tamanho é atingido, um novo arquivo de log é aberto e o anterior é renomeado como "&lt;nome do arquivo original&gt;-Archived-00000". Esse número aumenta a cada renomeação.
 
-### Logs do Console do ATA
+## Logs do Console do ATA
 Os logs do Console do ATA (os logs da API de gerenciamento) estão localizados em uma subpasta chamada **Logs**. No local de instalação padrão, ela pode ser encontrada em: **C:\Arquivos de Programas\Microsoft Advanced Threat Analytics\Center\Management\Logs**.
 
 O Console do ATA tem os seguintes logs:
@@ -81,7 +75,7 @@ O Console do ATA tem os seguintes logs:
 > [!NOTE]
 > Os dois primeiros arquivos de log tem um tamanho máximo de 50 MB. Quando esse tamanho é atingido, um novo arquivo de log é aberto e o anterior é renomeado como "&lt;nome do arquivo original&gt;-Archived-00000". Esse número aumenta a cada renomeação.
 
-### Logs de implantação do ATA
+## Logs de implantação do ATA
 Os logs de implantação do ATA estão localizados no diretório temp do usuário que instalou o produto. No local de instalação padrão, ele pode ser encontrado em: **C:\Usuários\Administrator\AppData\Local\Temp** (ou um diretório acima de %temp%).
 
 Logs de implantação do Centro do Ata
@@ -103,9 +97,10 @@ Logs de implantação do Gateway do ATA e do Gateway Lightweight do ATA:
 - [Planejamento da capacidade de ATA](/advanced-threat-analytics/plan-design/ata-capacity-planning)
 - [Configurar coleta de eventos](/advanced-threat-analytics/deploy-use/configure-event-collection)
 - [Configuração do encaminhamento de eventos do Windows](/advanced-threat-analytics/deploy-use/configure-event-collection#configuring-windows-event-forwarding)
-- [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+- [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
 
-<!--HONumber=May16_HO3-->
+
+<!--HONumber=Jun16_HO4-->
 
 

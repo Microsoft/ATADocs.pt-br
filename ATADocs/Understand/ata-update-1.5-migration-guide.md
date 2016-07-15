@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: Guia de migração de atualização do ATA para 1.5 | Microsoft Advanced Threat Analytics
-description: Procedimentos para atualizar o ATA para a versão 1.5
-keywords:
+title: "Guia de migração de atualização do ATA para 1.5 | Microsoft Advanced Threat Analytics"
+description: "Procedimentos para atualizar o ATA para a versão 1.5"
+keywords: 
 author: rkarlin
 manager: stevenpo
 ms.date: 04/28/2016
@@ -12,16 +10,12 @@ ms.prod: identity-ata
 ms.service: advanced-threat-analytics
 ms.technology: security
 ms.assetid: fb65eb41-b215-4530-93a2-0b8991f4e980
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: bennyl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 8d1dedaf86031e8585cca23241aead58f7f3db4e
+ms.openlocfilehash: 87293e71e053e2d7a962a5b7362b92e5df677c77
+
 
 ---
 
@@ -44,7 +38,7 @@ A atualização 1.5 do ATA fornece melhorias nas seguintes áreas:
 
 ## Atualização do ATA para a versão 1.5
 > [!NOTE]
-> Se o ATA não estiver instalado em seu ambiente, baixe a versão completa que inclui a versão 1.5 e siga o procedimento de instalação padrão descrito em [Install ATA](/advanced-threat-analytics/deploy-use/install-ata) (Instalar ATA)..
+> Se o ATA não estiver instalado em seu ambiente, baixe a versão completa do ATA que inclui a versão 1.5 e siga o procedimento de instalação padrão descrito em [Instalar o ATA](/advanced-threat-analytics/deploy-use/install-ata).
 
 Se você já tiver a versão 1.4 do ATA implantada, esse procedimento explicará as etapas necessárias para atualizar sua instalação.
 
@@ -70,13 +64,13 @@ Execute estas etapas para atualizar para o ATA versão 1.5:
 
     -   Se a Central de ATA estiver sendo executada como uma máquina virtual e você quiser fazer um ponto de verificação, desligue a máquina virtual primeiro.
 
-    -   Se o Centro do ATA estiver em execução em um servidor físico, siga o procedimento recomendado para [fazer backup do MongoDB](https://docs.mongodb.org/manual/core/backups/).
+    -   Se a Central de ATA estiver em execução em um servidor físico, siga o procedimento recomendado para [fazer backup do MongoDB](https://docs.mongodb.org/manual/core/backups/).
 
 2.  Execute o arquivo de atualização, Microsoft ATA Center Update.exe, e siga as instruções na tela para instalar a atualização.
 
-    1.  Na página **Inicial**, selecione seu idioma e clique em **Avançar**.
+    1.  Na página **Boas-vindas**, selecione seu idioma e clique em **Avançar**.
 
-    2.  Leia o Contrato de Licença de Usuário Final e, se você aceitar os termos, marque a caixa de seleção e clique em **Avançar**..
+    2.  Leia o Contrato de Licença de Usuário Final e, se você aceitar os termos, clique na caixa de seleção **Avançar**.
 
     3.  Selecione se você quer executar a migração parcial ou completa (padrão).
 
@@ -136,9 +130,10 @@ Você saberá que todos os Gateways do ATA foram atualizados com êxito quando t
 
 ## Consulte também
 
-- [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+- [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
 
-<!--HONumber=May16_HO1-->
+
+<!--HONumber=Jun16_HO4-->
 
 

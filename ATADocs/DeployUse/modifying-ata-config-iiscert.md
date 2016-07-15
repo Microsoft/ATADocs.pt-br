@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: Alteração da configuração do ATA - Certificado IIS | Microsoft Advanced Threat Analytics
+title: "Alteração da configuração do ATA - Certificado IIS | Microsoft Advanced Threat Analytics"
 description: Descreve como alterar o certificado usado pelo IIS para o Centro do ATA.
-keywords:
+keywords: 
 author: rkarlin
 manager: stevenpo
 ms.date: 04/28/2016
@@ -12,16 +10,12 @@ ms.prod: identity-ata
 ms.service: advanced-threat-analytics
 ms.technology: security
 ms.assetid: e58a0390-57ef-4c68-a987-2e75e5f3d6b3
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: bennyl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 8d1dedaf86031e8585cca23241aead58f7f3db4e
+ms.openlocfilehash: 07888a46e26a7f87dc3b6424d97aba0813b43d02
+
 
 ---
 
@@ -64,9 +58,10 @@ Se você precisar modificar o certificado usado pelo IIS para o Centro do ATA, e
 ## Consulte também
 - [Trabalhando com o Console do ATA](working-with-ata-console.md)
 - [Instalar o ATA](install-ata.md)
-- [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+- [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
 
-<!--HONumber=May16_HO1-->
+
+<!--HONumber=Jun16_HO4-->
 
 

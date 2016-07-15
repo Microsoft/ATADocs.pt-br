@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: O que é o Microsoft Advanced Threat Analytics (ATA)? | Microsoft Advanced Threat Analytics
-description: Explica o que é o Microsoft Advanced Threat Analytics (ATA) e os tipos de atividades suspeitas que ele pode detectar
-keywords:
+title: "O que é o Microsoft Advanced Threat Analytics (ATA)? | Microsoft Advanced Threat Analytics"
+description: "Explica o que é o Microsoft Advanced Threat Analytics (ATA) e os tipos de atividades suspeitas que ele pode detectar"
+keywords: 
 author: rkarlin
 manager: stevenpo
 ms.date: 04/28/2016
@@ -12,16 +10,12 @@ ms.prod: identity-ata
 ms.service: advanced-threat-analytics
 ms.technology: security
 ms.assetid: 283e7b4e-996a-4491-b7f6-ff06e73790d2
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: bennyl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 8d1dedaf86031e8585cca23241aead58f7f3db4e
+ms.openlocfilehash: 4831e7a773b69a87bbcd505a8116230f14611250
+
 
 ---
 
@@ -68,8 +62,7 @@ Informações de DNS na rede de destino geralmente são informações de reconhe
 Para fornecer detecção de credenciais comprometidas, o ATA aproveita a análise de comportamento baseado em aprendizado de máquina, assim como a de ataques mal-intencionados conhecidos e detecção de técnicas.
 
 Usando a análise comportamental e o aprendizado de máquina, o ATA é capaz de detectar atividades suspeitas como logons, acesso a recursos e horas de trabalho anômalas. o que poderia indicar um comprometimento de credenciais.
-Para proteger contra credenciais comprometidas, o ATA detecta os ataques mal-intencionados e técnicas conhecidos a seguir:
-:
+Para proteger contra credenciais comprometidas, o ATA detecta os seguintes ataques mal-intencionados e técnicas conhecidas:
 
  - **Força bruta** <br>Em ataques de força bruta, os invasores tentam adivinhar as credenciais do usuário tentando vários usuários e emparelhando-os com várias tentativas de senha. Os invasores geralmente usam algoritmos complexos ou dicionários para tentar todos os valores permitidos por um sistema.
 
@@ -123,8 +116,7 @@ Em ataques de Skeleton key, o malware está instalado em seu controlador de dom�
 Em ataques de golden ticket, um invasor rouba as credenciais do KBTGT, o tíquete de ouro do Kerberos. Esse tíquete permite que o invasor crie um tíquete TGT offline, que será usado novamente para acessar recursos na rede.
 - **Execução remota**<br>
 Os invasores podem tentar controlar sua rede executando códigos remotamente em seu controlador de domínio.
--   **Solicitações de replicação mal-intencionada**
-Em ambientes do AD (Active Directory), a replicação ocorre regularmente entre Controladores de Domínio. Um invasor pode falsificar uma solicitação de replicação do AD (às vezes representando um Controlador de Domínio), permitindo que o invasor recupere os dados armazenados no AD, incluindo hashes de senha, sem utilizar técnicas mais invasivas como a Cópia de Sombra de Volume.
+-   **Solicitações de replicação mal-intencionadas** Em ambientes do AD (Active Directory), a replicação ocorre regularmente entre os Controladores de Domínio. Um invasor pode falsificar uma solicitação de replicação do AD (às vezes representando um Controlador de Domínio), permitindo que o invasor recupere os dados armazenados no AD, incluindo hashes de senha, sem utilizar técnicas mais invasivas como a Cópia de Sombra de Volume.
 
 ## Novidades
 
@@ -133,9 +125,10 @@ Em ambientes do AD (Active Directory), a replicação ocorre regularmente entre 
 -   Para começar a implantar o ATA: [Instalar o ATA](/advanced-threat-analytics/deploy-use/install-ata)
 
 ## Consulte também
-[Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+[Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
 
-<!--HONumber=May16_HO1-->
+
+<!--HONumber=Jun16_HO4-->
 
 

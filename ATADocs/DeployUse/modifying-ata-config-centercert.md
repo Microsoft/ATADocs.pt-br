@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: Alteração da configuração do ATA - Certificado do Centro do ATA | Microsoft Advanced Threat Analytics
-description: Descreve o processo de dois estágios para renovar ou substituir o certificado no repositório de computador local no servidor do Centro do ATA. 
-keywords:
+title: "Alteração da configuração do ATA - Certificado do Centro do ATA | Microsoft Advanced Threat Analytics"
+description: "Descreve o processo de dois estágios para renovar ou substituir o certificado no repositório de computador local no servidor do Centro do ATA."
+keywords: 
 author: rkarlin
 manager: stevenpo
 ms.date: 04/28/2016
@@ -12,23 +10,19 @@ ms.prod: identity-ata
 ms.service: advanced-threat-analytics
 ms.technology: security
 ms.assetid: c8855287-de3b-4cdd-be8f-2128f48a6f27
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: bennyl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 8d1dedaf86031e8585cca23241aead58f7f3db4e
+ms.openlocfilehash: 0cfeb67e663489d7264c88aafe04e77fcb63377f
+
 
 ---
 
 # Alteração da configuração do ATA - Certificado do Centro do ATA
 
 >[!div class="step-by-step"]
-[« Endereço IP de servidor do Centro do ATA](modifying-ata-config-centerip.md)
+[« Endereço IP do servidor da Central do ATA](modifying-ata-config-centerip.md)
 [Endereço IP do Console do ATA »](modifying-ata-config-consoleip.md)
 
 ## Alteração do certificado do Centro do ATA
@@ -45,11 +39,11 @@ Se os seus certificados expiram e precisam ser renovados ou substituídos após 
 
 1.  Abra o Console do ATA.
 
-2.  Selecione a opção de configurações na barra de ferramentas e selecione **Configuração**.
+2.  Selecione a opção de configurações na barra de ferramentas e escolha **Configuração**.
 
     ![Ícone Definições de configuração do ATA](media/ATA-config-icon.JPG)
 
-3.  Selecione **Central do ATA**..
+3.  Selecione **Centro do ATA**.
 
 4.  Em **Certificado**, escolha um dos certificados na lista.
 
@@ -66,15 +60,16 @@ Se os seus certificados expiram e precisam ser renovados ou substituídos após 
 8.  Verifique se todos os Gateways do ATA são capazes de sincronizar suas configurações após a ativação da alteração.
 
 >[!div class="step-by-step"]
-[« Endereço IP de servidor do Centro do ATA](modifying-ata-config-centerip.md)
+[« Endereço IP do servidor da Central do ATA](modifying-ata-config-centerip.md)
 [Endereço IP do Console do ATA »](modifying-ata-config-consoleip.md)
 
 ## Consulte também
 - [Trabalhando com o Console do ATA](working-with-ata-console.md)
 - [Instalar o ATA](install-ata.md)
-- [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+- [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
 
-<!--HONumber=May16_HO1-->
+
+<!--HONumber=Jun16_HO4-->
 
 

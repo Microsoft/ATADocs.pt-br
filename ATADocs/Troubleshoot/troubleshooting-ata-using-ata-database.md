@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: Solução de problemas do ATA usando o banco de dados do ATA | Microsoft Advanced Threat Analytics
-description: Descreve como você pode usar o banco de dados do ATA para solucionar problemas 
-keywords:
+title: "Solução de problemas do ATA usando o banco de dados do ATA | Microsoft Advanced Threat Analytics"
+description: "Descreve como você pode usar o banco de dados do ATA para solucionar problemas"
+keywords: 
 author: rkarlin
 manager: stevenpo
 ms.date: 04/28/2016
@@ -12,16 +10,12 @@ ms.prod: identity-ata
 ms.service: advanced-threat-analytics
 ms.technology: security
 ms.assetid: d89e7aff-a6ef-48a3-ae87-6ac2e39f3bdb
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: bennyl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 8d1dedaf86031e8585cca23241aead58f7f3db4e
+ms.openlocfilehash: 7de189008765d24e88a224d027146bf44fb6abbf
+
 
 ---
 
@@ -66,9 +60,10 @@ Essa coleção passa por backup a cada hora, realizado pelo serviço do Centro d
 - [Planejamento da capacidade de ATA](/advanced-threat-analytics/plan-design/ata-capacity-planning)
 - [Configurar coleta de eventos](/advanced-threat-analytics/deploy-use/configure-event-collection)
 - [Configuração do encaminhamento de eventos do Windows](/advanced-threat-analytics/deploy-use/configure-event-collection#configuring-windows-event-forwarding)
-- [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+- [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
 
-<!--HONumber=May16_HO3-->
+
+<!--HONumber=Jun16_HO4-->
 
 
