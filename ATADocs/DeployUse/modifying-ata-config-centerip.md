@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: Alteração da configuração do ATA - Endereço IP do Centro do ATA | Microsoft Advanced Threat Analytics
-description: Descreve como alterar o endereço IP, porta ou certificado de seu Centro do ATA.
-keywords:
+title: "Alteração da configuração do ATA - Endereço IP do Centro do ATA | Microsoft Advanced Threat Analytics"
+description: "Descreve como alterar o endereço IP, porta ou certificado de seu Centro do ATA."
+keywords: 
 author: rkarlin
 manager: stevenpo
 ms.date: 04/28/2016
@@ -12,16 +10,12 @@ ms.prod: identity-ata
 ms.service: advanced-threat-analytics
 ms.technology: security
 ms.assetid: 93b27f15-f7e5-49bb-870a-d81d09dfe9fc
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: bennyl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 8d1dedaf86031e8585cca23241aead58f7f3db4e
+ms.openlocfilehash: 373eb5722a5450bca87cf66933990249286138ab
+
 
 ---
 
@@ -37,7 +31,7 @@ Se você precisar alterar o endereço IP do Centro do ATA, além da porta ou do 
 
 Os Gateways do ATA armazenam localmente o endereço IP do Centro do ATA ao qual eles precisam se conectar. Regularmente, eles se conectam ao Centro do ATA e obtêm as alterações de configuração. Uma alteração no modo como os Gateways do ATA se conectam ao Centro do ATA é feita em dois estágios.
 
--   Primeiro estágio – Atualização do endereço IP e da porta que você quer que o serviço do Centro do ATA use. Nesse ponto, o Centro do ATA ainda está escutando no endereço IP original, e na próxima vez que o Gateway do ATA sincronizar sua configuração ele terá dois endereços IP para o Centro do ATA. Contanto que o Gateway do ATA possa se conectar usando o endereço IP original (primeiro), ele não tentará o novo endereço IP e porta.
+-   Primeiro estágio – Atualize o endereço IP e a porta que você quer que sejam usados pelo serviço da Central do ATA. Nesse ponto, o Centro do ATA ainda está escutando no endereço IP original, e na próxima vez que o Gateway do ATA sincronizar sua configuração ele terá dois endereços IP para o Centro do ATA. Contanto que o Gateway do ATA possa se conectar usando o endereço IP original (primeiro), ele não tentará o novo endereço IP e porta.
 
 -   Segundo estágio – Após a sincronização de todos os Gateways do ATA com a configuração atualizada, ative o novo endereço IP e a porta nos quais o Centro do ATA escuta. Quando você ativar o novo endereço IP, o serviço do Centro do ATA fará uma associação com o novo endereço IP. Os Gateways do ATA não poderão se conectar ao endereço original e agora tentarão se conectar com o segundo endereço IP (novo) para o Centro de ATA. Após a conexão com o Centro do ATA com o novo endereço IP, o Gateway do ATA obterá a configuração mais recente e terá um único endereço IP para o Centro do ATA. (A menos que você tenha iniciado o processo novamente.)
 
@@ -48,7 +42,7 @@ Os Gateways do ATA armazenam localmente o endereço IP do Centro do ATA ao qual 
 
 1.  Abra o Console do ATA.
 
-2.  Selecione a opção de configurações na barra de ferramentas e selecione **Configuração**.
+2.  Selecione a opção de configurações na barra de ferramentas e escolha **Configuração**.
 
     ![Ícone Definições de configuração do ATA](media/ATA-config-icon.JPG)
 
@@ -82,9 +76,10 @@ Os Gateways do ATA armazenam localmente o endereço IP do Centro do ATA ao qual 
 ## Consulte também
 - [Trabalhando com o Console do ATA](working-with-ata-console.md)
 - [Instalar o ATA](install-ata.md)
-- [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+- [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
 
-<!--HONumber=May16_HO1-->
+
+<!--HONumber=Jun16_HO4-->
 
 

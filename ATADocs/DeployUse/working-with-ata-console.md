@@ -1,9 +1,7 @@
 ---
-# required metadata
-
 title: Trabalhando com o Console do ATA | Microsoft Advanced Threat Analytics
 description: Descreve como entrar no Console do ATA e os componentes do console
-keywords:
+keywords: 
 author: rkarlin
 manager: stevenpo
 ms.date: 04/28/2016
@@ -12,16 +10,12 @@ ms.prod: identity-ata
 ms.service: advanced-threat-analytics
 ms.technology: security
 ms.assetid: 1bf264d9-9697-44b5-9533-e1c498da4f07
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: bennyl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 8d1dedaf86031e8585cca23241aead58f7f3db4e
+ms.openlocfilehash: 7f9ca7dcb227f5dde1225c55150fd1c737722ce1
+
 
 ---
 
@@ -39,14 +33,15 @@ Para permitir que um usuário faça logon no Console do ATA sem se tornar um adm
 
     ![Ícone do servidor de ATA](media/ata-server-icon.png)
 
-    > [!NOTE] Como alternativa, você pode abrir um navegador no Centro do ATA ou no Gateway do ATA e navegar até o endereço IP configurado na instalação do Centro do ATA para o Console do ATA.    
+>[!NOTE]
+> Também é possível abrir um navegador na Central do ATA ou no Gateway do ATA e navegar até o endereço IP configurado na instalação da Central do ATA para o Console do ATA.    
 
 2.  Digite seu nome de usuário e senha e clique em **Entrar**.
 
 ![Imagem de tela de logon no ATA](media/ATA-log-in-screen.jpg)
 
-    > [!NOTE]
-    > You have to log in with a user who is a member of the local administrator group OR of the Microsoft Advanced Threat Analytics Administrators group.
+> [!NOTE]
+> É necessário fazer logon com um usuário que seja membro do grupo de administradores locais OU do grupo de Administradores do Microsoft Advanced Threat Analytics.
 
 ## O Console do ATA
 
@@ -125,9 +120,10 @@ Em qualquer lugar no console onde exista uma única entidade apresentada, como u
 
 
 ## Consulte também
-[Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+[Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
 
-<!--HONumber=May16_HO3-->
+
+<!--HONumber=Jun16_HO4-->
 
 

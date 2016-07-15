@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: Configurando notificações do ATA | Microsoft Advanced Threat Analytics
-description: Descreve como fazer o ATA notificar você (por email ou por encaminhamento de eventos do ATA) quando ele detectar atividades suspeitas 
-keywords:
+title: "Configurando notificações do ATA | Microsoft Advanced Threat Analytics"
+description: "Descreve como fazer o ATA notificar você (por email ou por encaminhamento de eventos do ATA) quando ele detectar atividades suspeitas"
+keywords: 
 author: rkarlin
 manager: stevenpo
 ms.date: 04/28/2016
@@ -12,27 +10,23 @@ ms.prod: identity-ata
 ms.service: advanced-threat-analytics
 ms.technology: security
 ms.assetid: 14cb7513-5dc8-49cb-b3e0-94f469c443dd
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: bennyl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 8d1dedaf86031e8585cca23241aead58f7f3db4e
+ms.openlocfilehash: 66194d89c3e937923e576004a3ab4b7177f179c4
+
 
 ---
 
 ## Forneça ao ATA suas configurações do servidor de emails
-O ATA pode notificar você quando detectar uma atividade suspeita. Para que o ATA possa enviar notificações por email, você deve primeiro definir as **Configurações do servidor de emails**.
+O ATA pode notificar você quando detectar uma atividade suspeita. Para que o ATA possa enviar notificações por email, primeiro é necessário definir as **Configurações do servidor de email**.
 
 1.  No servidor do Centro do ATA, clique no ícone **Microsoft Advanced Threat Analytics Management** na área de trabalho.
 
 2.  Digite seu nome de usuário e senha e clique em **Entrar**.
 
-3.  Selecione a opção de configurações na barra de ferramentas e selecione **Configuração**.
+3.  Selecione a opção de configurações na barra de ferramentas e escolha **Configuração**.
 
     ![Ícone Definições de configuração do ATA](media/ATA-config-icon.JPG)
 
@@ -63,7 +57,7 @@ O ATA pode notificar você quando detectar uma atividade suspeita, enviando a no
 
 3.  Digite seu nome de usuário e senha e clique em **Entrar**.
 
-4.  Selecione a opção de configurações na barra de ferramentas e selecione **Configuração**.
+4.  Selecione a opção de configurações na barra de ferramentas e escolha **Configuração**.
 
     ![Ícone Definições de configuração do ATA](media/ATA-config-icon.JPG)
 
@@ -80,9 +74,10 @@ O ATA pode notificar você quando detectar uma atividade suspeita, enviando a no
 
 
 ## Consulte também
-[Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+[Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
 
-<!--HONumber=May16_HO1-->
+
+<!--HONumber=Jun16_HO4-->
 
 

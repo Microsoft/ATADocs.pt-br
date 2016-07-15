@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: Instalação do ATA - Etapa 2 | Microsoft Advanced Threat Analytics
-description: A etapa dois da instalação do ATA ajuda você a definir as configurações de conectividade do domínio em seu servidor do Centro do ATA
-keywords:
+title: "Instalação do ATA - Etapa 2 | Microsoft Advanced Threat Analytics"
+description: "A etapa dois da instalação do ATA ajuda você a definir as configurações de conectividade do domínio em seu servidor do Centro do ATA"
+keywords: 
 author: rkarlin
 manager: stevenpo
 ms.date: 04/28/2016
@@ -12,22 +10,19 @@ ms.prod: identity-ata
 ms.service: advanced-threat-analytics
 ms.technology: security
 ms.assetid: e1c5ff41-d989-46cb-aa38-5a3938f03c0f
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: bennyl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 8d1dedaf86031e8585cca23241aead58f7f3db4e
+ms.openlocfilehash: 73e2eb84e1e21cbc5afcb7a100f9a67da63c66a5
+
 
 ---
 
 # Instalação do ATA - Etapa 2
 
->[!div class="step-by-step"] [« Etapa 1](install-ata-step1.md)
+>[!div class="step-by-step"]
+[« Etapa 1](install-ata-step1.md)
 [Etapa 3 »](install-ata-step3.md)
 
 ## Etapa 2. Definir configurações gerais do Gateway do ATA
@@ -54,17 +49,19 @@ Para definir as configurações gerais do Gateway do ATA, siga este procedimento
 
 
 
->[!div class="step-by-step"] [« Etapa 1](install-ata-step1.md)
+>[!div class="step-by-step"]
+[« Etapa 1](install-ata-step1.md)
 [Etapa 3 »](install-ata-step3.md)
 
 
 ## Consulte também
 
-- [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+- [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Configurar coleta de eventos](configure-event-collection.md)
 - [Pré-requisitos do ATA](/advanced-threat-analytics/plan-design/ata-prerequisites)
 
 
-<!--HONumber=May16_HO3-->
+
+<!--HONumber=Jun16_HO4-->
 
 

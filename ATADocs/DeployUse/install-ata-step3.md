@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: Instalação do ATA - Etapa 3 | Microsoft Advanced Threat Analytics
-description: A etapa três da instalação do ATA ajuda você a baixar o pacote de instalação do Gateway do ATA.
-keywords:
+title: "Instalação do ATA - Etapa 3 | Microsoft Advanced Threat Analytics"
+description: "A etapa três da instalação do ATA ajuda você a baixar o pacote de instalação do Gateway do ATA."
+keywords: 
 author: rkarlin
 manager: stevenpo
 ms.date: 04/28/2016
@@ -12,16 +10,12 @@ ms.prod: identity-ata
 ms.service: advanced-threat-analytics
 ms.technology: security
 ms.assetid: 7fb024e6-297a-4ad9-b962-481bb75a0ba3
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: bennyl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 8d1dedaf86031e8585cca23241aead58f7f3db4e
+ms.openlocfilehash: 0209d8352704fef6caf059d152d6bde6127d3d55
+
 
 ---
 
@@ -32,11 +26,11 @@ ms.suite: ems
 [Etapa 4 »](install-ata-step4.md)
 
 ## Etapa 3. Baixe o pacote de instalação do Gateway do ATA
-Após definir as configurações de conectividade do domínio, você poderá baixar o pacote de instalação do Gateway do ATA. O Gateway do ATA do pode ser instalado em um servidor dedicado ou em um controlador de domínio. Se você instalá-lo em um controlador de domínio, ele será instalado como um Gateway Lightweight do ATA. Para saber mais sobre o Gateway Lightweight do ATA, confira [Arquitetura do ATA](/advanced-threat-analytics/plan-design/ata-architecture). 
+Após definir as configurações de conectividade do domínio, você poderá baixar o pacote de instalação do Gateway do ATA. O Gateway do ATA do pode ser instalado em um servidor dedicado ou em um controlador de domínio. Se você instalá-lo em um controlador de domínio, ele será instalado como um Gateway Lightweight do ATA. Para obter mais informações sobre o Gateway Lightweight do ATA, confira [Arquitetura do ATA](/advanced-threat-analytics/plan-design/ata-architecture). 
 
 Para baixar o pacote do Gateway do ATA:
 
-1.  No Console do ATA, clique no ícone de configurações e selecione **Configuração**..
+1.  No Console do ATA, clique no ícone de configurações e selecione **Configuração**.
 
     ![Definições de configuração do Gateway do ATA](media/ATA-config-icon.JPG)
 
@@ -58,11 +52,12 @@ O arquivo zip inclui o seguinte:
 
 ## Consulte também
 
-- [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+- [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Configurar coleta de eventos](configure-event-collection.md)
 - [Pré-requisitos do ATA](/advanced-threat-analytics/plan-design/ata-prerequisites)
 
 
-<!--HONumber=May16_HO1-->
+
+<!--HONumber=Jun16_HO4-->
 
 

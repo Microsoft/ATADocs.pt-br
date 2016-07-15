@@ -1,9 +1,7 @@
 ---
-# required metadata
-
 title: Arquitetura de ATA | Microsoft Advanced Threat Analytics
 description: Descreve a arquitetura da Advanced Threat Analytics (ATA)
-keywords:
+keywords: 
 author: rkarlin
 manager: stevenpo
 ms.date: 04/28/2016
@@ -12,16 +10,12 @@ ms.prod: identity-ata
 ms.service: advanced-threat-analytics
 ms.technology: security
 ms.assetid: 892b16d2-58a6-49f9-8693-1e5f69d8299c
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: bennyl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 8d1dedaf86031e8585cca23241aead58f7f3db4e
+ms.openlocfilehash: 2d753060f30cbcc7d16959355b86d64fdaa2ecd8
+
 
 ---
 
@@ -96,7 +90,7 @@ Considere o seguinte ao decidir quantos Centros de ATA você quer implantar em s
 
 -   Um Centro de ATA pode monitorar uma única floresta do Active Directory. Se você tiver mais de uma floresta do Active Directory, será necessário pelo menos um Centro de ATA por floresta do Active Directory.
 
--    Em implantações do Active Directory muito grandes, uma único Centro do ATA pode não ser capaz de lidar com todo o tráfego de todos os controladores de domínio. Nesse caso, serão necessárias várias Centrais do ATA. O número de Centrais do ATA deve ser determinado pelo [Planejamento de capacidade do ATA](ata-capacity-planning.md)..
+-    Em implantações do Active Directory muito grandes, uma único Centro do ATA pode não ser capaz de lidar com todo o tráfego de todos os controladores de domínio. Nesse caso, serão necessárias várias Centrais do ATA. O número de Centrais do ATA deve ser determinado pelo [planejamento de capacidade do ATA](ata-capacity-planning.md).
 
 ## Gateway do ATA e Gateway Lightweight do ATA
 
@@ -173,19 +167,20 @@ Os controladores de domínio e os Gateways do ATA podem ser físicos ou virtuais
 ### Eventos
 Para melhorar a detecção de passagem de hash, força bruta e Honey Tokens, o ATA precisa do log de eventos do Windows ID 4776. Isso pode ser encaminhado para o Gateway de ATA usando de uma entre duas maneiras, configurando o Gateway de ATA para escutar eventos SIEM ou usando o encaminhamento de eventos do Windows.
 
--   Configuração do Gateway de ATA para escutar eventos SIEM <br>Configure o SIEM para encaminhar eventos específicos do Windows para o ATA. O ATA oferece suporte a vários fornecedores SIEM. Para saber mais, confira [Configurar coleta de eventos](/advanced-threat-analytics/deploy-use/configure-event-collection)..
+-   Configuração do Gateway de ATA para escutar eventos SIEM <br>Configure o SIEM para encaminhar eventos específicos do Windows para o ATA. O ATA oferece suporte a vários fornecedores SIEM. Para obter mais informações, confira [Configurar coleta de eventos](/advanced-threat-analytics/deploy-use/configure-event-collection).
 
--   Configuração do encaminhamento de eventos do Windows<br>Outra maneira de o ATA conseguir obter seus eventos é configurando seus controladores de domínio para encaminhar eventos do Windows 4776 para o Gateway de ATA. Isso é especialmente útil se você não tiver um SIEM ou se o SIEM não for atualmente suportado pelo ATA. Para saber mais sobre o encaminhamento de eventos do Windows no ATA, confira [Configuring Windows event forwarding (Configuração do encaminhamento de eventos do Windows)](/advanced-threat-analytics/deploy-use/configure-event-collection#configuring-windows-event-forwarding)..
+-   Configuração do encaminhamento de eventos do Windows<br>Outra maneira de o ATA conseguir obter seus eventos é configurando seus controladores de domínio para encaminhar eventos do Windows 4776 para o Gateway de ATA. Isso é especialmente útil se você não tiver um SIEM ou se o SIEM não for atualmente suportado pelo ATA. Para obter mais informações sobre o Encaminhamento de Eventos do Windows no ATA, confira [Configurando o encaminhamento de eventos do Windows](/advanced-threat-analytics/deploy-use/configure-event-collection#configuring-windows-event-forwarding).
 
 ## Consulte também
 - [Pré-requisitos do ATA](ata-prerequisites.md)
 - [Planejamento da capacidade de ATA](ata-capacity-planning.md)
 - [Configurar coleta de eventos](/advanced-threat-analytics/deploy-use/configure-event-collection)
 - [Configuração do encaminhamento de eventos do Windows](/advanced-threat-analytics/deploy-use/configure-event-collection#configuring-windows-event-forwarding)
-- [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+- [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

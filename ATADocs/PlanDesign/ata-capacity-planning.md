@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: Planejando a implantação do ATA | Microsoft Advanced Threat Analytics
-description: Ajuda você a planejar a implantação e decidir quantos servidores ATA serão necessários para oferecer suporte à sua rede
-keywords:
+title: "Planejando a implantação do ATA | Microsoft Advanced Threat Analytics"
+description: "Ajuda você a planejar a implantação e decidir quantos servidores ATA serão necessários para oferecer suporte à sua rede"
+keywords: 
 author: rkarlin
 manager: stevenpo
 ms.date: 04/28/2016
@@ -12,16 +10,12 @@ ms.prod: identity-ata
 ms.service: advanced-threat-analytics
 ms.technology: security
 ms.assetid: 279d79f2-962c-4c6f-9702-29744a5d50e2
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: bennyl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: d6e7d7bef97bfc4ffde07959dd9256f0319d685f
+ms.openlocfilehash: ff8eb5361d3dfeaa3715d325ed91c0ad422211ed
+
 
 ---
 
@@ -30,6 +24,8 @@ Este tópico ajuda a determinar quantos servidores ATA serão necessários para 
 
 ## Dimensionamento da Central de ATA
 A Central de ATA requer um mínimo recomendado de 30 dias de dados para a análise de comportamento do usuário. O espaço em disco necessário para o banco de dados do ATA, um por controlador de domínio, é definido abaixo. Se você tiver vários controladores de domínio, some o espaço em disco necessário por controlador para calcular a quantidade total de espaço necessário para o banco de dados do ATA.
+> [!NOTE] 
+> Durante a execução como uma memória dinâmica da máquina virtual ou qualquer outra memória, não há suporte para o recurso de inchamento.
 
 |Pacotes por segundo&#42;|CPU (núcleos&#42;&#42;)|Memória (GB)|Armazenamento de bancos de dados por dia (GB)|Armazenamento de bancos de dados por mês (GB)|IOPS&#42;&#42;&#42;|
 |---------------------------|-------------------------|-------------------|---------------------------------|-----------------------------------|-----------------------------------|
@@ -51,18 +47,38 @@ A Central de ATA requer um mínimo recomendado de 30 dias de dados para a análi
 > -  A taxa entre as atividades de leitura e gravação é de, aproximadamente, 1:3 abaixo de 100.000 pacotes por segundo e 1:6 acima de 100.000 pacotes por segundo.
 
 ## Escolhendo o tipo certo de gateway para sua implantação
-É recomendável usar um Gateway Lightweight do ATA em vez de um Gateway do ATA sempre que possível, desde que os controladores de domínio cumpram a tabela de dimensionamento listada abaixo.
-A maioria dos controladores de domínio pode e deve ser coberta com o Gateway Lightweight do ATA, a menos que eles não atendam aos requisitos na [tabela de dimensionamento do Gateway Lightweight do ATA](#ata-lightweight-gateway-sizing).
-Veja a seguir os exemplos de cenários nos quais todos os controladores de domínio devem ser cobertos pelos Gateways Lightweight do ATA:
+Em uma implantação do ATA, há suporte para qualquer combinação dos tipos de Gateway do ATA:
 
--   Sites da filial
--   Controladores de domínio virtuais de qualquer fornecedor IaaS
+- Somente Gateway(s) do ATA
+- Somente Gateway(s) Lightweight do ATA
+- Uma combinação de ambas
+
+Ao decidir sobre o tipo de implantação do Gateway, considere o seguinte:
+
+|Tipo de gateway|Vantagens|Custo|Topologia de implantação|Uso do controlador de domínio|
+|----|----|----|----|-----|
+|Gateway do ATA|A implantação Fora de banda dificulta o trabalho dos invasores em descobrir se o ATA está presente|Mais alto|Instalado junto com o controlador de domínio (fora de banda)|Dá suporte a até 50.000 pacotes por segundo|
+|Gateway Lightweight do ATA|Não exige uma configuração de espelhamento de porta e servidor dedicado|Inferior|Instalado em um controlador de domínio|Dá suporte a até 10.000 pacotes por segundo|
+
+Veja a seguir exemplos de cenários nos quais os controladores de domínio devem ser cobertos pelo Gateway Lightweight do ATA:
+
+
+- Sites da filial
+
+- Controladores de domínio virtual implantados na nuvem (IaaS)
+
+
+Veja a seguir exemplos de cenários nos quais os controladores de domínio devem ser cobertos pelo Gateway do ATA:
+
+
+- Matriz dos datacenters (com controladores de domínio com mais de 10.000 pacotes por segundo)
 
 
 ## Dimensionamento do Gateway Lightweight do ATA
-É recomendável usar um Gateway Lightweight do ATA em vez de um Gateway do ATA sempre que possível, desde que os controladores de domínio cumpram a tabela de dimensionamento listada aqui.
 
 Um Gateway Lightweight do ATA pode oferecer suporte ao monitoramento de um controlador de domínio com base na quantidade de tráfego de rede gerado pelo controlador de domínio. 
+> [!NOTE] 
+> Durante a execução como uma memória dinâmica da máquina virtual ou qualquer outra memória, não há suporte para o recurso de inchamento.
 
 |Pacotes por segundo&#42;|CPU (núcleos&#42;&#42;)|Memória (GB)&#42;&#42;&#42;|
 |---------------------------|-------------------------|---------------|
@@ -75,16 +91,13 @@ Um Gateway Lightweight do ATA pode oferecer suporte ao monitoramento de um contr
 &#42;&#42;Quantidade total de núcleos não hyper-threaded que esse controlador de domínio tem instalada.<br>Embora o hyper-threading seja aceitável para o Gateway Lightweight do ATA, ao planejar a capacidade, você deve contar os núcleos reais, e não os núcleos hyper-threaded.
 
 &#42;&#42;&#42;Quantidade total de memória que esse controlador de domínio tem instalada.
-> [!NOTE]   Se o controlador de domínio não tiver a quantidade necessária de recursos exigida pelo Gateway Lightweight do ATA, o desempenho do controlador de domínio não será afetado, mas o Gateway Lightweight do ATA pode não operar conforme o esperado.
+> [!NOTE]   
+> Se o controlador de domínio não tiver a quantidade necessária de recursos exigida pelo Gateway Lightweight do ATA, o desempenho do controlador de domínio não será afetado, mas o Gateway Lightweight do ATA pode não operar conforme o esperado.
 
 
 ## Dimensionamento do Gateway de ATA
 
 Considere o seguinte ao decidir quantos Gateways do ATA implantar.
-
-A maioria dos controladores de domínio pode ser coberta por um Gateway Lightweight do ATA, o que deve ser planejado de acordo com a tabela de dimensionamento do Gateway Lightweight do ATA, acima.
-
-Se os Gateways do ATA ainda forem necessários, veja a seguir as considerações da quantidade exigida:<br>
 
 -   **Florestas e domínios do Active Directory**<br>
     O ATA pode monitorar o tráfego de vários domínios de uma única floresta do Active Directory. Monitorar várias florestas do Active Directory exige implantações separadas do ATA. Uma única implantação do ATA não deve ser configurada para monitorar o tráfego de rede dos controladores de domínio de diferentes florestas.
@@ -95,6 +108,9 @@ As considerações de espelhamento de porta podem exigir que você implante vár
 -   **Capacidade**<br>
     Um Gateway do ATA pode oferecer suporte ao monitoramento de vários controladores de domínio, dependendo da quantidade de tráfego de rede dos controladores de domínio sendo monitorados. 
 <br>
+
+> [!NOTE] 
+> Não há suporte para memória dinâmica.
 
 |Pacotes por segundo&#42;|CPU (núcleos&#42;&#42;)|Memória (GB)|
 |---------------------------|-------------------------|---------------|
@@ -138,7 +154,8 @@ Para determinar os pacotes por segundo, execute o seguinte em cada controlador d
 
 7.  Expanda **Adaptador de Rede**, selecione **Pacotes/s** e escolha a instância apropriada. Se não tiver certeza, você poderá selecionar **&lt;Todas as instâncias&gt;** e clicar em **Adicionar** e **OK**.
 
-    > [!NOTE] Para fazer isso, em uma linha de comando, execute `ipconfig /all` para ver o nome do adaptador e a configuração.
+    > [!NOTE]
+    > Para fazer isso, em uma linha de comando, execute `ipconfig /all` para ver o nome do adaptador e a configuração.
 
     ![Adicionar imagem dos contadores de desempenho](media/ATA-traffic-estimation-7.png)
 
@@ -163,9 +180,10 @@ Para determinar os pacotes por segundo, execute o seguinte em cada controlador d
 ## Consulte também
 - [Pré-requisitos do ATA](ata-prerequisites.md)
 - [Arquitetura do ATA](ata-architecture.md)
-- [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+- [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
 
-<!--HONumber=May16_HO3-->
+
+<!--HONumber=Jun16_HO4-->
 
 
