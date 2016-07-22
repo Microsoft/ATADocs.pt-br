@@ -1,9 +1,7 @@
 ---
-# required metadata
-
 title: Configurar a coleta de eventos | Microsoft Advanced Threat Analytics
-description: Descreve as opções para configurar a coleta de eventos com o ATA
-keywords:
+description: "Descreve as opções para configurar a coleta de eventos com o ATA"
+keywords: 
 author: rkarlin
 manager: stevenpo
 ms.date: 04/28/2016
@@ -12,21 +10,17 @@ ms.prod: identity-ata
 ms.service: advanced-threat-analytics
 ms.technology: security
 ms.assetid: 3f0498f9-061d-40e6-ae07-98b8dcad9b20
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: bennyl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: d6e7d7bef97bfc4ffde07959dd9256f0319d685f
+ms.openlocfilehash: 17f30cbe478a868f3b6887bf48d8084934624191
+
 
 ---
 
 # Configurar coleta de eventos
-Para aprimorar os recursos de detecção, o ATA precisa da ID 4776 do log de Eventos do Windows. Ela pode ser encaminhada ao Gateway do ATA de duas maneiras: configurando o Gateway do ATA para escutar eventos SIEM ou [Configurando o Encaminhamento de Eventos do Windows](#configuring-windows-event-forwarding).
+Para aprimorar os recursos de detecção, o ATA precisa da ID 4776 do log de Eventos do Windows. Isso pode ser encaminhado o Gateway do ATA usando uma entre duas maneiras, configurando o Gateway do ATA para escutar eventos SIEM ou [Configurando o encaminhamento de eventos do Windows](#configuring-windows-event-forwarding).
 
 ## Coleta de eventos
 Além de coletar e analisar o tráfego de rede para e a partir dos controladores de domínio, o ATA pode usar o evento 4776 do Windows para aprimorar a detecção da Passagem de Hash do ATA. Isso pode ser recebido de seu SIEM ou definindo o Encaminhamento de Eventos do Windows no controlador de domínio. Os eventos coletados fornecem à ATA informações adicionais que não estão disponíveis por meio do tráfego de rede do controlador de domínio.
@@ -158,7 +152,7 @@ Código de erro:         0x0
 -   A ordem não é importante para os pares de chave=valor
 
 #### QRadar
-O QRadar permite a coleta de eventos por meio de um agente. Se os dados forem reunidos usando um agente, o formato de hora será coletado sem dados de milissegundos. Uma vez que o ATA precisa dos dados de milissegundos, é necessário definir o QRadar para usar a coleta de eventos do Windows sem agente. Para saber mais, confira [http://www-01.ibm.com/support/docview.wss?uid=swg21700170](http://www-01.ibm.com/support/docview.wss?uid=swg21700170 "QRadar: Agentless Windows Events Collection using the MSRPC Protocol") (QRadar: Coleta de eventos do Windows sem agente usando o protocolo MSRPC).
+O QRadar permite a coleta de eventos por meio de um agente. Se os dados forem reunidos usando um agente, o formato de hora será coletado sem dados de milissegundos. Uma vez que o ATA precisa dos dados de milissegundos, é necessário definir o QRadar para usar a coleta de eventos do Windows sem agente. Para obter mais informações, confira [http://www-01.ibm.com/support/docview.wss?uid=swg21700170](http://www-01.ibm.com/support/docview.wss?uid=swg21700170 "QRadar: Agentless Windows Events Collection using the MSRPC Protocol").
 
     <13>Feb 11 00:00:00 %IPADDRESS% AgentDevice=WindowsLog AgentLogFile=Security Source=Microsoft-Windows-Security-Auditing Computer=%FQDN% User= Domain= EventID=4776 EventIDCode=4776 EventType=8 EventCategory=14336 RecordNumber=1961417 TimeGenerated=1456144380009 TimeWritten=1456144380009 Message=The computer attempted to validate the credentials for an account. Authentication Package: MICROSOFT_AUTHENTICATION_PACKAGE_V1_0 Logon Account: Administrator Source Workstation: HOSTNAME Error Code: 0x0
 
@@ -176,7 +170,8 @@ A mensagem é o texto do evento original do evento do Windows
 
 Certifique-se de ter \t entre os pares de chave=valor.
 
->[!NOTE] Não há suporte ao uso do WinCollect para a coleta de eventos do Windows.
+>[!NOTE] 
+> Não há suporte ao uso do WinCollect para a coleta de eventos do Windows.
 
 ## Configuração do encaminhamento de eventos do Windows
 Se você não tiver um servidor SIEM, configure os controladores de domínio para encaminhar a ID de Evento do Windows 4776 diretamente para um dos seus Gateways do ATA.
@@ -200,29 +195,29 @@ Clique com o botão direito e selecione **Propriedades**. Na guia **Membros**, a
     a. Em **Tipo de assinatura e computadores de origem**, clique em **Selecionar Computadores**, adicione os controladores de domínio e teste a conectividade.
     ![wef_subscription prop](media/wef_subscription-prop.png)
 
-    b. Em **Eventos a serem coletados**, clique em **Selecionar Eventos**. Selecione **Pelo log** e role a tela selecionar **Segurança**. Em seguida, em **Inclui/Exclui Identificações de Evento**, digite **4776**..<br>
+    b. Em **Eventos a serem coletados**, clique em **Selecionar Eventos**. Selecione **Pelo log** e role a tela selecionar **Segurança**. Em seguida, em **Inclui/Exclui Identificações de Evento**, digite **4776**.<br>
     ![wef_4776](media/wef_4776.png)
 
-    c. Em **Alterar conta de usuário ou definir configurações avançadas**, clique em **Avançado**.
-Defina o **Protocolo** como **HTTP** e a **Porta** como **5985**..<br>
+    c. Em **Alterar a conta de usuário ou definir configurações avançadas**, clique em **Avançado**.
+Defina o **Protocolo** como **HTTP** e a **Porta** como **5985**.<br>
     ![wef_http](media/wef_http.png)
 
 7.  [Opcional] Se você quiser um intervalo de sondagem menor, no Gateway do ATA, defina a pulsação da assinatura como 5 segundos para uma taxa de sondagem mais rápida.
-    wecutil ss <CollectionName>/cm:custom
-    wecutil ss <CollectionName> /hi:5000
+    wecutil ss <CollectionName>/cm:custom wecutil ss <CollectionName> /hi:5000
 
-8. Na página de configuração do Gateway do ATA, habilite **Coleta de Encaminhamento de Eventos do Windows**..
+8. Na página de configuração do Gateway do ATA, habilite **Coleta de Encaminhamento de Eventos do Windows**.
 
 > [!NOTE]
-Quando você habilitar essa configuração, o Gateway do ATA procurará no log de Eventos Encaminhados por Eventos do Windows que foram encaminhados a ele pelos controladores de domínio.
+> Quando você habilitar essa configuração, o Gateway do ATA procurará no log de Eventos Encaminhados por Eventos do Windows que foram encaminhados a ele pelos controladores de domínio.
 
-Para saber mais, confira: [Configurar computadores para encaminhar e coletar eventos](https://technet.microsoft.com/en-us/library/cc748890)
+Para obter mais informações, confira: [Configurar computadores para encaminhar e coletar eventos](https://technet.microsoft.com/library/cc748890)
 
 ## Consulte também
 - [Instalar o ATA](install-ata.md)
 - [Confira o fórum do ATA!!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
 
 
-<!--HONumber=May16_HO1-->
+
+<!--HONumber=Jun16_HO4-->
 
 

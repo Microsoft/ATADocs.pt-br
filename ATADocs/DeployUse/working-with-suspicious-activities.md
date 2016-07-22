@@ -1,9 +1,7 @@
 ---
-# required metadata
-
 title: Trabalhando com atividades suspeitas | Microsoft Advanced Threat Analytics
 description: Descreve como examinar atividades suspeitas identificadas pelo ATA
-keywords:
+keywords: 
 author: rkarlin
 manager: stevenpo
 ms.date: 04/28/2016
@@ -12,16 +10,12 @@ ms.prod: identity-ata
 ms.service: advanced-threat-analytics
 ms.technology: security
 ms.assetid: 44d7c899-816c-4f7f-91d3-84a09d291a24
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: bennyl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 8d1dedaf86031e8585cca23241aead58f7f3db4e
+ms.openlocfilehash: 1214560096227e00af36ff7cb1a0a95988a2ad40
+
 
 ---
 
@@ -63,7 +57,7 @@ Para filtrar a lista de atividades suspeitas:
 
 1.  No painel **Filtrar por** no lado esquerdo da tela, selecione um dos seguintes: **Todos**, **Abrir**, **Resolvido** ou **Descartado**.
 
-2.  Para filtrar a lista ainda mais, selecione **Alta**, **Média** ou **Baixa**..
+2.  Para filtrar a lista ainda mais, selecione **Alta**, **Média** ou **Baixa**.
 
 **Severidade da atividade suspeita**
 
@@ -107,17 +101,18 @@ Para permitir que o ATA saiba mais sobre a sua rede com você, algumas atividade
 
 3.  No entanto, se você responder sim, a atividade suspeita poderá ser descartada e as atividades futuras deste tipo no computador não poderão gerar uma atividade suspeita ou vão gerar uma atividade que será automaticamente descartada.
 
-4.  Se não souber, você poderá clicar em **Cancelar**.
+4.  Se você não souber, você pode clicar em **Cancelar**.
 
 ## Alterar o status de uma atividade suspeita
-Você pode alterar o status de uma atividade suspeita clicando no status atual da atividade suspeita e selecionando **Aberto**, **Resolvido** ou **Descartado**.
+Você pode alterar o status de uma atividade suspeita clicando no status atual da atividade suspeita e selecionando **Abrir**, **Resolvido** ou **Descartado**.
 
 ## Consulte também
-- [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+- [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Trabalhando com as configurações de detecção do ATA](working-with-detection-settings.md)
 - [Modificando a configuração do ATA](modifying-ata-configuration.md)
 
 
-<!--HONumber=May16_HO1-->
+
+<!--HONumber=Jun16_HO4-->
 
 

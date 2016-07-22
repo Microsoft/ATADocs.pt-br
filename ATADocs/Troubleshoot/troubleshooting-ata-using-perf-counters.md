@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: Solução de problemas do ATA usando os contadores de desempenho | Microsoft Advanced Threat Analytics
-description: Descreve como você pode usar os contadores de desempenho para solucionar problemas com o ATA
-keywords:
+title: "Solução de problemas do ATA usando os contadores de desempenho | Microsoft Advanced Threat Analytics"
+description: "Descreve como você pode usar os contadores de desempenho para solucionar problemas com o ATA"
+keywords: 
 author: rkarlin
 manager: stevenpo
 ms.date: 04/28/2016
@@ -12,21 +10,17 @@ ms.prod: identity-ata
 ms.service: advanced-threat-analytics
 ms.technology: security
 ms.assetid: df162a62-f273-4465-9887-94271f5000d2
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: bennyl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 8d1dedaf86031e8585cca23241aead58f7f3db4e
+ms.openlocfilehash: 21d87591c9c791aa431c273479921e1c11825e09
+
 
 ---
 
 # Solução de problemas do ATA usando contadores de desempenho
-Os contadores de desempenho do ATA fornecem informações sobre como está o desempenho de cada componente do ATA. Os componentes no ATA processam dados sequencialmente, para que quando haja um problema, ele cause uma reação em cadeia que faz com que o tráfego seja descartado. Para corrigir o problema, você precisa descobrir qual componente está dando problema e corrigi-lo no início da cadeia.
+Os contadores de desempenho do ATA fornecem informações sobre como está o desempenho de cada componente do ATA. Os componentes no ATA processam dados sequencialmente, para que quando houver um problema, ele possa causar um descarte de tráfego parcial em algum ponto da cadeia de componentes. Para corrigir o problema, você precisa descobrir qual componente está dando problema e corrigi-lo no início da cadeia. Use os dados encontrados nos contadores de desempenho para entender o funcionamento de cada componente.
 Consulte a [arquitetura do ATA](/advanced-threat-analytics/plan-design/ata-architecture) para entender o fluxo de componentes internos do ATA.
 
 **Processo de componente do ATA**:
@@ -37,7 +31,6 @@ Consulte a [arquitetura do ATA](/advanced-threat-analytics/plan-design/ata-archi
 
 3.  Isso acontece ao longo de todo o caminho até o componente NetworkListener inicial, que descartará o tráfego quando ele não puder mais encaminhar entidades.
 
-4. Use os dados encontrados nos contadores de desempenho para entender o funcionamento de cada componente.
 
 ## Contadores de desempenho do Gateway de ATA
 
@@ -65,7 +58,7 @@ Aqui está a lista dos principais contadores do Gateway de ATA a ter em atençã
 > -   Às vezes, é mais conveniente monitorar a lista completa de contadores usando o tipo de gráfico "Relatório" (exemplo: monitoramento em tempo real de todos os contadores)
 
 ## Contadores de desempenho do Centro de ATA
-Você pode observar o status de desempenho em tempo real do Centro de ATA adicionando os contadores de desempenho do Centro de ATA.
+Você pode observar o status de desempenho em tempo real da Central do ATA adicionando os contadores de desempenho da Central do ATA.
 
 Isso é feito abrindo o "Monitor de desempenho" e adicionando todos os contadores ao Centro de ATA. O nome do objeto do contador de desempenho é: "Microsoft ATA Center".
 
@@ -98,7 +91,7 @@ Abaixo temos a lista dos principais contadores do sistema operacional a ter em a
 |LogicalDisk(&#42;)\Média Média de Gravações/Disco s|A latência média de gravação dos dados para o disco (você deve escolher a unidade de banco de dados como a instância).|Deve ser menor que 10 milissegundos|Verifique se há um processo específico que está utilizando a unidade de banco de dados mais do que deveria.<br /><br />Consulte o fornecedor ou a equipe de armazenamento se esta unidade pode fornecer a carga de trabalho atual enquanto tem menos de 10 ms de latência. A carga de trabalho atual pode ser determinada usando os contadores de utilização do disco.|
 |\LogicalDisk(&#42;)\Leituras de Disco/seg|A taxa de execução de operações de leitura para o disco.|Sem limite|Os contadores de utilização de disco podem adicionar informações ao solucionar problemas de latência de armazenamento.|
 |\LogicalDisk(&#42;)\Bytes de Leitura de Disco/seg|O número de bytes por segundo que estão sendo lidos no disco.|Sem limite|Os contadores de utilização de disco podem adicionar informações ao solucionar problemas de latência de armazenamento.|
-|\LogicalDisk(&#42;)\Escritas de Disco/seg|A taxa de execução de operações de gravação no disco.|Sem limite|Os contadores de utilização de disco (pode adicionar informações ao solucionar problemas de latência de armazenamento)|
+|\LogicalDisk&#42;\Disk Writes/sec|A taxa de execução de operações de gravação no disco.|Sem limite|Os contadores de utilização de disco (pode adicionar informações ao solucionar problemas de latência de armazenamento)|
 |\LogicalDisk(&#42;)\Bytes de Escrita de Disco/seg|O número de bytes por segundo que estão sendo gravados no disco.|Sem limite|Os contadores de utilização de disco podem adicionar informações ao solucionar problemas de latência de armazenamento.|
 
 ## Consulte também
@@ -106,9 +99,10 @@ Abaixo temos a lista dos principais contadores do sistema operacional a ter em a
 - [Planejamento da capacidade de ATA](/advanced-threat-analytics/plan-design/ata-capacity-planning)
 - [Configurar coleta de eventos](/advanced-threat-analytics/deploy-use/configure-event-collection)
 - [Configuração do encaminhamento de eventos do Windows](/advanced-threat-analytics/deploy-use/configure-event-collection#configuring-windows-event-forwarding)
-- [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+- [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
 
-<!--HONumber=May16_HO3-->
+
+<!--HONumber=Jun16_HO4-->
 
 

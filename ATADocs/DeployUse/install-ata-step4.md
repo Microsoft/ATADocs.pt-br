@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: Instalação do ATA - Etapa 4 | Microsoft Advanced Threat Analytics
-description: A Etapa quatro da instalação do ATA ajuda você a instalar o Gateway do ATA.
-keywords:
+title: "Instalação do ATA - Etapa 4 | Microsoft Advanced Threat Analytics"
+description: "A Etapa quatro da instalação do ATA ajuda você a instalar o Gateway do ATA."
+keywords: 
 author: rkarlin
 manager: stevenpo
 ms.date: 04/28/2016
@@ -12,16 +10,12 @@ ms.prod: identity-ata
 ms.service: advanced-threat-analytics
 ms.technology: security
 ms.assetid: 6bbc50c3-bfa8-41db-a2f9-56eed68ef5d2
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: bennyl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: d6e7d7bef97bfc4ffde07959dd9256f0319d685f
+ms.openlocfilehash: f12e43a6918c0c02bb59e4a093720a805b7dbcfc
+
 
 ---
 
@@ -44,11 +38,12 @@ Antes de instalar o Gateway do ATA, verifique se o espelhamento de porta está c
 Execute as seguintes etapas no servidor do Gateway do ATA.
 
 1.  Extraia os arquivos do arquivo zip. 
-> [!NOTE] A instalação diretamente do arquivo zip falhará.
+> [!NOTE] 
+> A instalação diretamente do arquivo zip falhará.
 
 2.  Em um prompt de comando elevado, execute o arquivo **Microsoft ATA Gateway Setup.exe** e siga o assistente de instalação.
 
-3.  Na página **Inicial**, selecione o seu idioma e clique em **Avançar**.
+3.  Na página **Boas-vindas**, selecione seu idioma e clique em **Avançar**.
 
 4.  Na página **Configuração do Gateway do ATA** insira as informações a seguir com base em seu ambiente:
 
@@ -82,12 +77,13 @@ Execute as seguintes etapas no servidor do Gateway do ATA.
 
 ## Consulte também
 
-- [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+- [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Configurar coleta de eventos](configure-event-collection.md)
 - [Pré-requisitos do ATA](/advanced-threat-analytics/plan-design/ata-prerequisites)
 
 
 
-<!--HONumber=May16_HO1-->
+
+<!--HONumber=Jun16_HO4-->
 
 

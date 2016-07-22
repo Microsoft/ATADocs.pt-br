@@ -1,9 +1,7 @@
 ---
-# required metadata
-
 title: Perguntas frequentes sobre o ATA | Microsoft Advanced Threat Analytics
 description: Fornece uma lista de perguntas frequentes sobre o ATA e as respostas associadas.
-keywords:
+keywords: 
 author: rkarlin
 manager: stevenpo
 ms.date: 04/28/2016
@@ -12,16 +10,12 @@ ms.prod: identity-ata
 ms.service: advanced-threat-analytics
 ms.technology: security
 ms.assetid: a7d378ec-68ed-4a7b-a0db-f5e439c3e852
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: bennyl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 8d1dedaf86031e8585cca23241aead58f7f3db4e
+ms.openlocfilehash: bb6bc2bf0d0df3112ecfdb33c8e9d6e41f183145
+
 
 ---
 
@@ -30,7 +24,7 @@ Este artigo fornece uma lista de perguntas frequentes sobre o ATA e também as r
 
 
 ## Como o ATA é licenciado?
-Para obter informações sobre licenciamento, confira [Como comprar o Advanced Threat Analytics](https://www.microsoft.com/en-us/server-cloud/products/advanced-threat-analytics/Purchasing.aspx)
+Para obter informações sobre licenciamento, confira [How to buy Advanced Threat Analytics](https://www.microsoft.com/server-cloud/products/advanced-threat-analytics/Purchasing.aspx) (Como comprar o Advanced Threat Analytics)
 
 
 ## O que devo fazer se o Gateway do ATA não inicia?
@@ -54,7 +48,7 @@ O tráfego criptografado não será analisado (por exemplo: LDAPS, ESP IPSEC).
 Há suporte para a habilitação do Kerberos Armoring, também conhecido como FAST (encapsulamento seguro de autenticação flexível), pelo ATA, com exceção da detecção de passagem pelo hash, que não funcionará.
 ## De quantos Gateways de ATA eu preciso?
 
-Primeiro, é recomendável que você use Gateways Lightweight do ATA em controladores de domínio que possam acomodá-los. Para definir isso, confira [Dimensionamento do Gateway Lightweight do ATA](/advanced-threat-analytics/plan-design/ata-capacity-planning#ATA-Lightweight-Gateway-Sizing). 
+Primeiro, é recomendável usar Gateways Lightweight do ATA em controladores de domínio que podem acomodá-los. Para determinar isso, confira [Dimensionamento do Gateway Lightweight do ATA](/advanced-threat-analytics/plan-design/ata-capacity-planning#ata-lightweight-gateway-sizing). 
 
 Se todos os controladores de domínio puderem ser abordados pelos Gateways Lightweight do ATA, não haverá a necessidade de Gateways do ATA.
 
@@ -101,7 +95,7 @@ O Gateway de ATA requer um mínimo de dois adaptadores de rede:<br>1. Uma NIC pa
 O ATA tem uma integração bidirecional com o SIEMs, da seguinte maneira:
 
 1. O ATA pode ser configurado para enviar um alerta de Syslog, no caso de uma atividade suspeita, para qualquer servidor SIEM usando o formato CEF.
-2. O ATA pode ser configurado para receber mensagens do Syslog para cada evento do Windows com a ID 4776, destes [SIEMs](/advanced-threat-analytics/deploy-use/configure-event-collection#SIEM-support).
+2. O ATA pode ser configurado para receber mensagens do Syslog para cada evento do Windows com a ID 4776, destes [SIEMs](/advanced-threat-analytics/deploy-use/configure-event-collection#siem-support).
 
 ## O ATA pode monitorar controladores de domínio visualizados em sua solução IaaS?
 
@@ -143,10 +137,11 @@ Sim, é possível exibir a integridade geral da implantação, bem como os probl
 - [Planejamento da capacidade de ATA](/advanced-threat-analytics/plan-design/ata-capacity-planning)
 - [Configurar coleta de eventos](/advanced-threat-analytics/deploy-use/configure-event-collection)
 - [Configuração do encaminhamento de eventos do Windows](/advanced-threat-analytics/deploy-use/configure-event-collection#Configuring-Windows-Event-Forwarding)
-- [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+- [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
 
 
-<!--HONumber=May16_HO3-->
+
+<!--HONumber=Jun16_HO4-->
 
 
