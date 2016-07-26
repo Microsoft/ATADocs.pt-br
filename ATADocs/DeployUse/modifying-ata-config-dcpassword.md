@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: Alteração da configuração do ATA - senha de conectividade do domínio | Microsoft Advanced Threat Analytics
-description: Descreve como alterar a Senha de conectividade do domínio no Gateway do ATA.
-keywords:
+title: "Alteração da configuração do ATA – senha de conectividade do domínio | Microsoft ATA"
+description: "Descreve como alterar a Senha de conectividade do domínio no Gateway do ATA."
+keywords: 
 author: rkarlin
 manager: stevenpo
 ms.date: 04/28/2016
@@ -12,16 +10,12 @@ ms.prod: identity-ata
 ms.service: advanced-threat-analytics
 ms.technology: security
 ms.assetid: 4a25561b-a5ed-44aa-9b72-366976b3c72a
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: bennyl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: a5c7163bc7b1989672e587bfb4fa6a65cd4e3751
+ms.openlocfilehash: 860a83aa4e6656480217a457bb2492431d73637a
+
 
 ---
 
@@ -41,7 +35,7 @@ Para corrigir isso, siga este procedimento e atualize a Senha de conectividade d
 
 1.  Abra o Console do ATA no Gateway do ATA.
 
-2.  Selecione a opção de configurações na barra de ferramentas e selecione **Configuração**.
+2.  Selecione a opção de configurações na barra de ferramentas e escolha **Configuração**.
 
     ![Ícone Definições de configuração do ATA](media/ATA-config-icon.JPG)
 
@@ -61,9 +55,10 @@ Para corrigir isso, siga este procedimento e atualize a Senha de conectividade d
 ## Consulte também
 - [Trabalhando com o Console do ATA](working-with-ata-console.md)
 - [Instalar o ATA](install-ata.md)
-- [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+- [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
 
-<!--HONumber=May16_HO1-->
+
+<!--HONumber=Jul16_HO3-->
 
 

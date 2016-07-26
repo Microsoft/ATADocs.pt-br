@@ -1,5 +1,5 @@
 ---
-title: "Gerenciamento das configurações de telemetria | Microsoft Advanced Threat Analytics"
+title: "Gerenciar configurações de telemetria | Microsoft ATA"
 description: Descreve os dados coletados pelo ATA e fornece etapas para desativar a coleta de dados.
 keywords: 
 author: rkarlin
@@ -13,8 +13,8 @@ ms.assetid: 8c1c7a1b-a3de-4105-9fd0-08a061952172
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 8d1dedaf86031e8585cca23241aead58f7f3db4e
-ms.openlocfilehash: c6b3196f6093b909e8d97f9a9ac230e35807eb72
+ms.sourcegitcommit: a5c7163bc7b1989672e587bfb4fa6a65cd4e3751
+ms.openlocfilehash: b2b1ae963e8786b77c2fd124a612305be2c6b0bf
 
 
 ---
@@ -76,6 +76,6 @@ Execute as etapas a seguir para interromper a coleta e o envio de dados de telem
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO3-->
 
 

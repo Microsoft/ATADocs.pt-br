@@ -1,5 +1,5 @@
 ---
-title: Instalar o ATA silenciosamente | Microsoft Advanced Threat Analytics
+title: Instalar o ATA silenciosamente | Microsoft ATA
 description: Este artigo descreve como instalar o ATA silenciosamente.
 keywords: 
 author: rkarlin
@@ -13,8 +13,8 @@ ms.assetid: b3cceb18-0f3c-42ac-8630-bdc6b310f1d6
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: d6e7d7bef97bfc4ffde07959dd9256f0319d685f
-ms.openlocfilehash: 2e51bc9cac43ff90000ca74cccd158e119cc6ec0
+ms.sourcegitcommit: a5c7163bc7b1989672e587bfb4fa6a65cd4e3751
+ms.openlocfilehash: ef4477dbd7f894ecd371008cf0d2325179c55bf5
 
 
 ---
@@ -217,6 +217,6 @@ Use o seguinte comando para realizar uma desinstalação silenciosa do Gateway d
 - [Pré-requisitos do ATA](/advanced-threat-analytics/plan-design/ata-prerequisites)
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO3-->
 
 

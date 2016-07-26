@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: Instalação do ATA - Completa | Microsoft Advanced Threat Analytics
-description: Explica as etapas necessárias para implantar, configurar e executar o ATA.
-keywords:
+title: "Instalar o ATA – Completo | Microsoft ATA"
+description: "Explica as etapas necessárias para implantar, configurar e executar o ATA."
+keywords: 
 author: rkarlin
 manager: stevenpo
 ms.date: 04/28/2016
@@ -12,16 +10,12 @@ ms.prod: identity-ata
 ms.service: advanced-threat-analytics
 ms.technology: security
 ms.assetid: 3715b69e-e631-449b-9aed-144d0f9bcee7
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: bennyl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: c512fd20f913c53ac936f7de288eb024d91cf9f1
+ms.openlocfilehash: 4587b384314bbc1ee89a82134386ce1ffd5beef5
+
 
 ---
 
@@ -47,12 +41,13 @@ Para configurar o ATA, execute estas etapas:
 
 ## Consulte também
 
-- [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+- [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Configurar coleta de eventos](configure-event-collection.md)
 - [Pré-requisitos do ATA](/advanced-threat-analytics/plan-design/ata-prerequisites)
 
 
 
-<!--HONumber=May16_HO1-->
+
+<!--HONumber=Jul16_HO3-->
 
 

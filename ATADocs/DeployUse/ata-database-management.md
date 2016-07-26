@@ -1,5 +1,5 @@
 ---
-title: Gerenciamento do Banco de Dados do ATA | Microsoft Advanced Threat Analytics
+title: Gerenciamento do banco de dados do ATA | Microsoft ATA
 description: "Procedimentos para ajudá-lo a mover, fazer backup ou restaurar o banco de dados do ATA."
 keywords: 
 author: rkarlin
@@ -13,8 +13,8 @@ ms.assetid: 1d27dba8-fb30-4cce-a68a-f0b1df02b977
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 8d1dedaf86031e8585cca23241aead58f7f3db4e
-ms.openlocfilehash: 6c0e2abe43da5351568cf8db4e6ffe6fa919d835
+ms.sourcegitcommit: 115ec28877665c79e5cbcd557528da156c8d7149
+ms.openlocfilehash: fd00623f9be396b3a2c384cce436996b5093cc3f
 
 
 ---
@@ -52,8 +52,7 @@ Consulte a [documentação relevante do MongoDB](http://docs.mongodb.org/manual/
 
 8.  Execute o seguinte comando: `db.SystemProfiles.update( {_t: "CenterSystemProfile"} , {$set:{"Configuration.CenterDatabaseClientConfiguration.DataPath" : "<New DB Location>"}})`
 
-
-    Em vez de <New DB Location>, em que `&lt;New DB Location&gt;` é o novo caminho da pasta.
+   Em vez de <New DB Location>, em que `&lt;New DB Location&gt;` é o novo caminho da pasta.
 
 9.  Atualize HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft Advanced Threat Analytics\Center\DatabaseDataPath com o novo caminho de pasta.
 
@@ -62,12 +61,11 @@ Consulte a [documentação relevante do MongoDB](http://docs.mongodb.org/manual/
 ## Consulte também
 - [Arquitetura do ATA](/advanced-threat-analytics/plan-design/ata-architecture)
 - [Pré-requisitos do ATA](/advanced-threat-analytics/plan-design/ata-prerequisites)
-- [Confira o fórum do ATA!] (https://social.technet.microsoft.com/Forums/security/
-- home?forum=mata)
+- [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO3-->
 
 

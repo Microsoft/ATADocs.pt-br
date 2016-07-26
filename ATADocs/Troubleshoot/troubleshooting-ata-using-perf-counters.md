@@ -1,5 +1,5 @@
 ---
-title: "Solução de problemas do ATA usando os contadores de desempenho | Microsoft Advanced Threat Analytics"
+title: "Solução de problemas do ATA usando contadores de desempenho | Microsoft ATA"
 description: "Descreve como você pode usar os contadores de desempenho para solucionar problemas com o ATA"
 keywords: 
 author: rkarlin
@@ -13,8 +13,8 @@ ms.assetid: df162a62-f273-4465-9887-94271f5000d2
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 8d1dedaf86031e8585cca23241aead58f7f3db4e
-ms.openlocfilehash: 21d87591c9c791aa431c273479921e1c11825e09
+ms.sourcegitcommit: a5c7163bc7b1989672e587bfb4fa6a65cd4e3751
+ms.openlocfilehash: 95ba9fd4bee28d96715f7ba7cd04c7ebe788ef7b
 
 
 ---
@@ -103,6 +103,6 @@ Abaixo temos a lista dos principais contadores do sistema operacional a ter em a
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO3-->
 
 

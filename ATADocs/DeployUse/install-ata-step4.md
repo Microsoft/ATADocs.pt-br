@@ -1,5 +1,5 @@
 ---
-title: "Instalação do ATA - Etapa 4 | Microsoft Advanced Threat Analytics"
+title: "Instalar o ATA – Etapa 4 | Microsoft ATA"
 description: "A Etapa quatro da instalação do ATA ajuda você a instalar o Gateway do ATA."
 keywords: 
 author: rkarlin
@@ -13,8 +13,8 @@ ms.assetid: 6bbc50c3-bfa8-41db-a2f9-56eed68ef5d2
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: d6e7d7bef97bfc4ffde07959dd9256f0319d685f
-ms.openlocfilehash: f12e43a6918c0c02bb59e4a093720a805b7dbcfc
+ms.sourcegitcommit: a5c7163bc7b1989672e587bfb4fa6a65cd4e3751
+ms.openlocfilehash: 1cd9bafa0bfcd00e9801e252553382d98d3905f8
 
 
 ---
@@ -84,6 +84,6 @@ Execute as seguintes etapas no servidor do Gateway do ATA.
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO3-->
 
 

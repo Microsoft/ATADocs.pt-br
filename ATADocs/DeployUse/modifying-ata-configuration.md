@@ -1,5 +1,5 @@
 ---
-title: "Alteração da configuração do ATA | Microsoft Advanced Threat Analytics"
+title: "Alteração da configuração do ATA | Microsoft ATA"
 description: "Fornece uma lista de maneiras pelas quais você pode atualizar sua configuração do ATA."
 keywords: 
 author: rkarlin
@@ -13,8 +13,8 @@ ms.assetid: bcf0f7d3-8027-45c0-8002-19f71fcb30a6
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 8d1dedaf86031e8585cca23241aead58f7f3db4e
-ms.openlocfilehash: 02598258f063e65767164334c995ab87d7ad0270
+ms.sourcegitcommit: a5c7163bc7b1989672e587bfb4fa6a65cd4e3751
+ms.openlocfilehash: f28ced1f56dbc6b1266f1179a143e183532c6b17
 
 
 ---
@@ -40,6 +40,6 @@ Se você precisar atualizar ou alterar sua configuração após a instalação i
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO3-->
 
 

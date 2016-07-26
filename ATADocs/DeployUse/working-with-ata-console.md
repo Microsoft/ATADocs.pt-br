@@ -1,5 +1,5 @@
 ---
-title: Trabalhando com o Console do ATA | Microsoft Advanced Threat Analytics
+title: Trabalhando com o Console do ATA | Microsoft ATA
 description: Descreve como entrar no Console do ATA e os componentes do console
 keywords: 
 author: rkarlin
@@ -13,8 +13,8 @@ ms.assetid: 1bf264d9-9697-44b5-9533-e1c498da4f07
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 8d1dedaf86031e8585cca23241aead58f7f3db4e
-ms.openlocfilehash: 7f9ca7dcb227f5dde1225c55150fd1c737722ce1
+ms.sourcegitcommit: a5c7163bc7b1989672e587bfb4fa6a65cd4e3751
+ms.openlocfilehash: 7e40a2a6b3d5c4acb926dcab310b95bd7dd5b7af
 
 
 ---
@@ -124,6 +124,6 @@ Em qualquer lugar no console onde exista uma única entidade apresentada, como u
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO3-->
 
 

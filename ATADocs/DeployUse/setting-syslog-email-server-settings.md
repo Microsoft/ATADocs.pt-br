@@ -1,5 +1,5 @@
 ---
-title: "Configurando notificações do ATA | Microsoft Advanced Threat Analytics"
+title: "Definindo notificações do ATA | Microsoft ATA"
 description: "Descreve como fazer o ATA notificar você (por email ou por encaminhamento de eventos do ATA) quando ele detectar atividades suspeitas"
 keywords: 
 author: rkarlin
@@ -13,8 +13,8 @@ ms.assetid: 14cb7513-5dc8-49cb-b3e0-94f469c443dd
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 8d1dedaf86031e8585cca23241aead58f7f3db4e
-ms.openlocfilehash: 66194d89c3e937923e576004a3ab4b7177f179c4
+ms.sourcegitcommit: a5c7163bc7b1989672e587bfb4fa6a65cd4e3751
+ms.openlocfilehash: 5864070fe3ad5aedf1ff79d8386caba4b6a79adc
 
 
 ---
@@ -78,6 +78,6 @@ O ATA pode notificar você quando detectar uma atividade suspeita, enviando a no
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO3-->
 
 

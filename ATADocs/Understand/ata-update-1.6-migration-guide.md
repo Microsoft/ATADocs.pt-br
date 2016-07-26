@@ -1,5 +1,5 @@
 ---
-title: "Guia de migração de atualização do ATA para 1.6 | Microsoft Advanced Threat Analytics"
+title: "Guia de migração de atualização do ATA para 1.6 | Microsoft ATA"
 description: "Procedimentos para atualizar o ATA para a versão 1.6"
 keywords: 
 author: rkarlin
@@ -13,8 +13,8 @@ ms.assetid: fb65eb41-b215-4530-93a2-0b8991f4e980
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: d6e7d7bef97bfc4ffde07959dd9256f0319d685f
-ms.openlocfilehash: 190077cd6def34d5f15a6c7eb8f63fa85c3ec2f1
+ms.sourcegitcommit: a5c7163bc7b1989672e587bfb4fa6a65cd4e3751
+ms.openlocfilehash: f56f575bf4a11b09b04108d16c0d4df1c3fcad9b
 
 
 ---
@@ -140,6 +140,6 @@ Você saberá que todos os Gateways do ATA foram atualizados com êxito quando t
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO3-->
 
 

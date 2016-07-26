@@ -1,5 +1,5 @@
 ---
-title: "Planejando a implantação do ATA | Microsoft Advanced Threat Analytics"
+title: "Planejando a implantação do ATA | Microsoft ATA"
 description: "Ajuda você a planejar a implantação e decidir quantos servidores ATA serão necessários para oferecer suporte à sua rede"
 keywords: 
 author: rkarlin
@@ -13,8 +13,8 @@ ms.assetid: 279d79f2-962c-4c6f-9702-29744a5d50e2
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: d6e7d7bef97bfc4ffde07959dd9256f0319d685f
-ms.openlocfilehash: ff8eb5361d3dfeaa3715d325ed91c0ad422211ed
+ms.sourcegitcommit: a5c7163bc7b1989672e587bfb4fa6a65cd4e3751
+ms.openlocfilehash: a43184e0efa1de110f5c287c6079e80e1a9dd3de
 
 
 ---
@@ -184,6 +184,6 @@ Para determinar os pacotes por segundo, execute o seguinte em cada controlador d
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO3-->
 
 

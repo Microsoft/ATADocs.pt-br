@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: Configurar o espelhamento de porta | Microsoft Advanced Threat Analytics
-description: Descreve as opções de espelhamento de porta e como configurá-las para o ATA
-keywords:
+title: Configurar o espelhamento de porta | Microsoft ATA
+description: "Descreve as opções de espelhamento de porta e como configurá-las para o ATA"
+keywords: 
 author: rkarlin
 manager: stevenpo
 ms.date: 04/28/2016
@@ -12,21 +10,18 @@ ms.prod: identity-ata
 ms.service: advanced-threat-analytics
 ms.technology: security
 ms.assetid: cdaddca3-e26e-4137-b553-8ed3f389c460
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: bennyl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: a5c7163bc7b1989672e587bfb4fa6a65cd4e3751
+ms.openlocfilehash: 18b6ceb2c2d3eacb51cc150d5c7faaac5791a3d0
+
 
 ---
 
 # Configurar o espelhamento de porta
-> [!NOTE] Este artigo somente é relevante se você implanta Gateways do ATA em vez de Gateways Lightweight do ATA. Para determinar se você precisa usar Gateways do ATA, confira [Escolhendo os gateways certos para sua implantação](/advanced-threat-analytics/plan-design/ata-capacity-planning#Choosing-the-right-gateway-type-for-your-deployment)
+> [!NOTE] 
+> Este artigo somente é relevante se você implanta Gateways do ATA em vez de Gateways Lightweight do ATA. Para determinar se você precisa usar Gateways do ATA, confira [Choosing the right gateways for your deployment](/advanced-threat-analytics/plan-design/ata-capacity-planning#choosing-the-right-gateway-type-for-your-deployment) (Escolhendo os gateways certos para sua implantação)
  
 A fonte de dados principal usada pelo ATA é uma inspeção profunda de pacotes do tráfego de rede para e dos controladores de domínio. Para que o ATA veja o tráfego de rede, você deve configurar o espelhamento de porta ou usar uma TAP de Rede.
 
@@ -72,9 +67,10 @@ Depois de configurar o espelhamento de porta, verifique se está funcionando ant
 ## Consulte também
 - [Validação do espelhamento de porta](validate-port-mirroring.md)
 - [Instalar o ATA](install-ata.md)
-- [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+- [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
 
-<!--HONumber=May16_HO1-->
+
+<!--HONumber=Jul16_HO3-->
 
 
