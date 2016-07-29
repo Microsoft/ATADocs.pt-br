@@ -3,18 +3,18 @@ title: "Novidades na versão 1.6 do ATA | Microsoft ATA"
 description: "Lista as novidades na nova versão 1.6 do ATA e seus problemas conhecidos"
 keywords: 
 author: rkarlin
-manager: stevenpo
+manager: mbaldwin
 ms.date: 04/28/2016
 ms.topic: article
-ms.prod: identity-ata
+ms.prod: 
 ms.service: advanced-threat-analytics
-ms.technology: security
+ms.technology: 
 ms.assetid: a0d64aff-ca9e-4300-b3f8-eb3c8b8ae045
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: a5c7163bc7b1989672e587bfb4fa6a65cd4e3751
-ms.openlocfilehash: 6d153c67d8baa50f297b690970d8e5827f85a807
+ms.sourcegitcommit: f13750f9cdff98aadcd59346bfbbb73c2f3a26f0
+ms.openlocfilehash: 0f801b4d5f2ab9a103b2ca292c75f26040699dd0
 
 
 ---
@@ -146,6 +146,6 @@ O procedimento de atualização do ATA exporta os dados, caso você os queira pa
 [Atualizar o ATA para a versão 1.6 — guia de migração](ata-update-1.6-migration-guide.md)
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Jul16_HO4-->
 
 

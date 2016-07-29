@@ -3,18 +3,18 @@ title: "Pré-requisitos do ATA | Microsoft ATA"
 description: "Descreve os requisitos para uma implantação bem-sucedida do ATA em seu ambiente"
 keywords: 
 author: rkarlin
-manager: stevenpo
+manager: mbaldwin
 ms.date: 04/28/2016
 ms.topic: get-started-article
-ms.prod: identity-ata
+ms.prod: 
 ms.service: advanced-threat-analytics
-ms.technology: security
+ms.technology: 
 ms.assetid: a5f90544-1c70-4aff-8bf3-c59dd7abd687
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: a5c7163bc7b1989672e587bfb4fa6a65cd4e3751
-ms.openlocfilehash: e3fd607681c7209409bd8bf7a06dffb5aaea21ec
+ms.sourcegitcommit: f13750f9cdff98aadcd59346bfbbb73c2f3a26f0
+ms.openlocfilehash: 87891f6ad683ed9536d3d3f27449feac9bd9dee1
 
 
 ---
@@ -273,6 +273,6 @@ O acesso ao Console do ATA é por meio de um navegador com suporte para o seguin
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Jul16_HO4-->
 
 

@@ -3,18 +3,18 @@ title: Trabalhando com atividades suspeitas | Microsoft ATA
 description: Descreve como examinar atividades suspeitas identificadas pelo ATA
 keywords: 
 author: rkarlin
-manager: stevenpo
+manager: mbaldwin
 ms.date: 04/28/2016
 ms.topic: article
-ms.prod: identity-ata
+ms.prod: 
 ms.service: advanced-threat-analytics
-ms.technology: security
+ms.technology: 
 ms.assetid: 44d7c899-816c-4f7f-91d3-84a09d291a24
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: a5c7163bc7b1989672e587bfb4fa6a65cd4e3751
-ms.openlocfilehash: ea2b9ed3053260f65e6f163abac424cde7e9afac
+ms.sourcegitcommit: f13750f9cdff98aadcd59346bfbbb73c2f3a26f0
+ms.openlocfilehash: e07ab99454133eab0480277ec2e54a1c3253a621
 
 
 ---
@@ -113,6 +113,6 @@ Você pode alterar o status de uma atividade suspeita clicando no status atual d
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Jul16_HO4-->
 
 

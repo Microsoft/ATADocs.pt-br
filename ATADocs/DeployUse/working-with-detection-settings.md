@@ -3,18 +3,18 @@ title: "Trabalhando com as configurações de detecção do ATA | Microsoft ATA"
 description: "Descreve como configurar uma lista de endereços IP e sub-redes que tem circunstâncias incomuns e que deve ser tratada de forma diferente em relação a outras entidades em sua rede"
 keywords: 
 author: rkarlin
-manager: stevenpo
+manager: mbaldwin
 ms.date: 04/28/2016
 ms.topic: article
-ms.prod: identity-ata
+ms.prod: 
 ms.service: advanced-threat-analytics
-ms.technology: security
+ms.technology: 
 ms.assetid: f4f2ae30-4849-4a4f-8f6d-bfe99a32c746
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: a5c7163bc7b1989672e587bfb4fa6a65cd4e3751
-ms.openlocfilehash: 3575bb9489cae181f7902be23c680830203fafe7
+ms.sourcegitcommit: f13750f9cdff98aadcd59346bfbbb73c2f3a26f0
+ms.openlocfilehash: 692247420a849db5d77c3c035ee59c4a5c533686
 
 
 ---
@@ -42,6 +42,6 @@ Você pode excluir endereços IP das seguintes detecções. Se você inserir um 
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Jul16_HO4-->
 
 

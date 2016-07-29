@@ -3,18 +3,18 @@ title: "Novidades na versão 1.4 do ATA | Microsoft ATA"
 description: "Lista as novidades na versão 1.4 do ATA e seus problemas conhecidos"
 keywords: 
 author: rkarlin
-manager: stevenpo
+manager: mbaldwin
 ms.date: 04/28/2016
 ms.topic: article
-ms.prod: identity-ata
+ms.prod: 
 ms.service: advanced-threat-analytics
-ms.technology: security
+ms.technology: 
 ms.assetid: cbea47f9-34c1-42b6-ae9e-6a472b49e1a5
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: a5c7163bc7b1989672e587bfb4fa6a65cd4e3751
-ms.openlocfilehash: a120df03fa09fe877b8709b09a9db5e3fe2bfc53
+ms.sourcegitcommit: f13750f9cdff98aadcd59346bfbbb73c2f3a26f0
+ms.openlocfilehash: b66a315c9a98192cbd3b6feea462445c085091b1
 
 
 ---
@@ -101,6 +101,6 @@ Não instale a Base de dados de conhecimento 3047154 em um host de virtualizaç�
 [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Jul16_HO4-->
 
 
