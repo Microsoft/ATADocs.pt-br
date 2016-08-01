@@ -3,18 +3,18 @@ title: "Instalar o ATA – Etapa 5 | Microsoft ATA"
 description: "A Etapa cinco da instalação do ATA ajuda você a definir as configurações de seu Gateway do ATA."
 keywords: 
 author: rkarlin
-manager: stevenpo
+manager: mbaldwin
 ms.date: 04/28/2016
 ms.topic: get-started-article
-ms.prod: identity-ata
+ms.prod: 
 ms.service: advanced-threat-analytics
-ms.technology: security
+ms.technology: 
 ms.assetid: 2a5b6652-2aef-464c-ac17-c7e5f12f920f
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: a5c7163bc7b1989672e587bfb4fa6a65cd4e3751
-ms.openlocfilehash: 3e9f68e9868dc9aaf20fe9d1c4fe2b8bdd685291
+ms.sourcegitcommit: f13750f9cdff98aadcd59346bfbbb73c2f3a26f0
+ms.openlocfilehash: 3580e748d21db73b6fa8384d84e03b9954b823f8
 
 
 ---
@@ -36,10 +36,11 @@ Após a instalação do Gateway do ATA, execute as etapas a seguir para definir 
   - **Descrição**: <br>Digite uma descrição do Gateway do ATA (opcional).
   - **Controladores de Domínio Espelhados da Porta (FQDN)** (obrigatórios para o Gateway do ATA; não podem ser definidos para o Gateway Lightweight do ATA): <br>Digite o FQDN completo de seu controlador de domínio e clique no sinal de adição para acrescentá-lo à lista. Por exemplo, **dc01.contoso.com**<br /><br />![Imagem de exemplo do FQDN](media/ATAGWDomainController.png)
 
-As informações a seguir se aplicam aos servidores que você insere na lista **Controladores de Domínio**: -   Todos os controladores de domínio cujo tráfego está sendo monitorado por meio do espelhamento de porta pelo Gateway do ATA devem ser listados na lista **Controladores de Domínio**. Se um controlador de domínio não estiver listado em **Controladores de Domínio**, a detecção de atividades suspeitas pode não funcionar conforme o esperado.
--   Pelo menos um controlador de domínio na lista deve ser um servidor de catálogo global. Isso permitirá que o ATA resolva os objetos de usuário e computador em outros domínios na floresta.
+As informações a seguir se aplicam aos servidores digitados na lista **Controladores de Domínio**:
 
- - **Capturar adaptadores de rede** (obrigatório):<br>
+- Todos os controladores de domínio cujo tráfego esteja sendo monitorado por meio do espelhamento de porta pelo Gateway do ATA devem estar na lista **Controladores de Domínio**. Se um controlador de domínio não estiver listado em **Controladores de Domínio**, a detecção de atividades suspeitas pode não funcionar conforme o esperado.
+- Pelo menos um controlador de domínio na lista deve ser um servidor de catálogo global. Isso permitirá que o ATA resolva os objetos de usuário e computador em outros domínios na floresta.
+- **Capturar adaptadores de rede** (obrigatório):<br>
      - Para um Gateway do ATA em um servidor dedicado, selecione os adaptadores de rede que são configurados como a porta de espelho do destino. Eles receberão o tráfego do controlador de domínio espelhado.
      - Para um Gateway Lightweight do ATA, trata-se de todos os adaptadores de rede que são usados para comunicação com outros computadores da organização.
 
@@ -92,6 +93,6 @@ Para validar a implantação bem-sucedida do Gateway do ATA, verifique o seguint
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Jul16_HO4-->
 
 

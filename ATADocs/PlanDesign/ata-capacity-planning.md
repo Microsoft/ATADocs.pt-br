@@ -3,26 +3,43 @@ title: "Planejando a implantação do ATA | Microsoft ATA"
 description: "Ajuda você a planejar a implantação e decidir quantos servidores ATA serão necessários para oferecer suporte à sua rede"
 keywords: 
 author: rkarlin
-manager: stevenpo
+manager: mbaldwin
 ms.date: 04/28/2016
 ms.topic: get-started-article
-ms.prod: identity-ata
 ms.service: advanced-threat-analytics
-ms.technology: security
+ms.prod: 
 ms.assetid: 279d79f2-962c-4c6f-9702-29744a5d50e2
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: a5c7163bc7b1989672e587bfb4fa6a65cd4e3751
-ms.openlocfilehash: a43184e0efa1de110f5c287c6079e80e1a9dd3de
+ms.sourcegitcommit: f13750f9cdff98aadcd59346bfbbb73c2f3a26f0
+ms.openlocfilehash: e0174ecac39b2a8cd469ed698853c447a85e4251
 
 
 ---
 
 # Planejamento da capacidade de ATA
-Este tópico ajuda a determinar quantos servidores ATA serão necessários para oferecer suporte à sua rede, inclusive a entender quantos Gateways do ATA e Gateways Lightweight do ATA você precisa, bem como a capacidade do servidor para suo Centro do ATA e Gateways do ATA.
+Este tópico ajuda a determinar quantos servidores ATA serão necessários para monitorar sua rede, inclusive a entender quantos Gateways do ATA e/ou Gateways Lightweight do ATA você precisa, bem como a capacidade do servidor para seu Centro do ATA e Gateways do ATA.
 
-## Dimensionamento da Central de ATA
+##Usando a ferramenta de dimensionamento
+A maneira recomendada e mais simples para determinar a capacidade para sua implantação ATA é usar o [Ferramenta de Dimensionamento de ATA](http://aka.ms/atasizingtool). Execute a Ferramenta de Dimensionamento ATA e resultados de arquivo do Excel, use os campos a seguir para determinar a capacidade ATA que você precisa:
+
+- CPU e Memória do Centro do ATA: corresponda o campo **Pacotes Ocupado/s** na tabela do Centro do ATA no arquivo de resultados ao campo **PACOTES POR SEGUNDO** na [tabela do Centro do ATA](#ata-center-sizing).
+
+- Armazenamento do Centro do ATA: corresponda o campo **Média de Pacotes/s** na tabela do Centro do ATA no arquivo de resultados para o campo **PACOTES POR SEGUNDO** na [tabela do Centro do ATA](#ata-center-sizing).
+- Gateway do ATA: corresponder o campo **Pacotes Ocupados/s** na tabela do Gateway do ATA no arquivo de resultados ao campo **PACOTES POR SEGUNDO** na [tabela do Gateway do ATA](#ata-gateway-sizing) ou na [tabela do Lightweight Gateway do ATA](#ata-lightweight-gateway-sizing), dependendo do [tipo de gateway que você escolher](#choosing-the-right-gateway-type-for-your-deployment).
+
+
+![Ferramenta de planejamento de capacidade de amostra](media/capacity tool.png)
+
+
+
+Se, por alguma razão, você não puder usar a Ferramenta de Dimensionamento ATA, você precisará coletar manualmente as informações do contador de pacotes/segundos de todos os Controladores de Domínio por um período de 24 horas com um intervalo de coleta muito baixo (aproximadamente 5 segundos). Em seguida, para cada Controlador de Domínio, você deve calcular a média diária e a média do período mais ocupado (15 minutos).
+As seções a seguir apresentam instruções sobre como coletar o contador de pacotes/segundo de um Controlador de Domínio.
+
+
+
+### Dimensionamento da Central de ATA
 A Central de ATA requer um mínimo recomendado de 30 dias de dados para a análise de comportamento do usuário. O espaço em disco necessário para o banco de dados do ATA, um por controlador de domínio, é definido abaixo. Se você tiver vários controladores de domínio, some o espaço em disco necessário por controlador para calcular a quantidade total de espaço necessário para o banco de dados do ATA.
 > [!NOTE] 
 > Durante a execução como uma memória dinâmica da máquina virtual ou qualquer outra memória, não há suporte para o recurso de inchamento.
@@ -74,7 +91,7 @@ Veja a seguir exemplos de cenários nos quais os controladores de domínio devem
 - Matriz dos datacenters (com controladores de domínio com mais de 10.000 pacotes por segundo)
 
 
-## Dimensionamento do Gateway Lightweight do ATA
+### Dimensionamento do Gateway Lightweight do ATA
 
 Um Gateway Lightweight do ATA pode oferecer suporte ao monitoramento de um controlador de domínio com base na quantidade de tráfego de rede gerado pelo controlador de domínio. 
 > [!NOTE] 
@@ -95,7 +112,7 @@ Um Gateway Lightweight do ATA pode oferecer suporte ao monitoramento de um contr
 > Se o controlador de domínio não tiver a quantidade necessária de recursos exigida pelo Gateway Lightweight do ATA, o desempenho do controlador de domínio não será afetado, mas o Gateway Lightweight do ATA pode não operar conforme o esperado.
 
 
-## Dimensionamento do Gateway de ATA
+### Dimensionamento do Gateway de ATA
 
 Considere o seguinte ao decidir quantos Gateways do ATA implantar.
 
@@ -184,6 +201,6 @@ Para determinar os pacotes por segundo, execute o seguinte em cada controlador d
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Jul16_HO4-->
 
 
