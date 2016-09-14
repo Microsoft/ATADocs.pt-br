@@ -4,7 +4,7 @@ description: "Descreve como é possível solucionar erros comuns no ATA"
 keywords: 
 author: rkarlin
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 08/24/2016
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,15 @@ ms.assetid: d89e7aff-a6ef-48a3-ae87-6ac2e39f3bdb
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f13750f9cdff98aadcd59346bfbbb73c2f3a26f0
-ms.openlocfilehash: 6be26fd2d0348557fa7b1c78533eed8a2be1a39f
+ms.sourcegitcommit: 15c1a0d7ae213876c0e3a955eaeea8887281b4e6
+ms.openlocfilehash: b073a1b969f8841c9bbe540722349a5ef70340d4
 
 
 ---
+
+*Aplica-se a: Advanced Threat Analytics versão 1.7*
+
+
 
 # Solução de problemas do log de erros do ATA
 Esta seção detalha os possíveis erros nas implantações do ATA e as etapas necessárias para solucioná-los.
@@ -33,10 +37,14 @@ Esta seção detalha os possíveis erros nas implantações do ATA e as etapas n
 |Microsoft.Tri.Infrastructure.ContractException: exceção de contrato|Falha do Gateway do ATA ao sincronizar a configuração do Centro do ATA.|Conclua a configuração do Gateway do ATA no Console do ATA.|
 |System.Reflection.ReflectionTypeLoadException: Não é possível carregar um ou mais dos tipos solicitados. Recupere a propriedade LoaderExceptions para maiores informações.|O Analisador de Mensagem é instalado no Gateway do ATA.| Desinstale o Analisador de Mensagem.|
 |Erro [Layout] System.OutOfMemoryException: A exceção do tipo 'System.OutOfMemoryException' foi gerada.|O Gateway do ATA não tem memória suficiente.|Aumente a quantidade de memória no controlador de domínio.|
-|Falha ao iniciar o consumidor ao vivo ---> Microsoft.Opn.Runtime.Monitoring.MessageSessionException: O provedor de eventos PEFNDIS não está pronto|O PEF (Analisador de Mensagem) não foi instalado corretamente.|Entre em contato com o suporte para uma solução alternativa.|
+|Falha ao iniciar o consumidor ao vivo ---> Microsoft.Opn.Runtime.Monitoring.MessageSessionException: O provedor de eventos PEFNDIS não está pronto|O PEF (Analisador de Mensagem) não foi instalado corretamente.|Se você estiver usando o Hyper-V, tente atualizar os serviços de Integração do Hyper-V, caso contrário, contate o suporte para uma solução alternativa.|
 |A instalação falhou com o erro: 0x80070652|Há outras instalações pendentes no seu computador.|Aguarde até que as outras instalações sejam concluídas e, se necessário, reinicie o computador.|
+|System.InvalidOperationException: Instance 'Microsoft.Tri.Gateway' não existe na Categoria especificada.|PIDs foi habilitado para nomes de processo no Gateway do ATA|Use [KB281884](https://support.microsoft.com/en-us/kb/281884) para desabilitar os PIDs em nomes de processo|
+|System.InvalidOperationException: Categoria não existe.|Os contadores podem estar desabilitados no registro|Use [KB2554336](https://support.microsoft.com/en-us/kb/2554336) para recriar os Contadores de desempenho|
+|System.ApplicationException: Não é possível iniciar a sessão do ETW MMA-ETW-Livecapture-a4f595bd-f567-49a7-b963-20fa4e370329|Há uma entrada do host no arquivo HOSTS que aponta para o nome curto do computador|Remova a entrada do host do arquivo C:\Windows\System32\drivers\etc\HOSTS ou altere-a para um FQDN.|
 
-## Erros do Console do ATA
+
+## Erros de IIS do ATA (não aplicável para o ATA v1.7 e superior)
 |Erro do|Descrição|Resolução|
 |-------------|----------|---------|
 |Erro HTTP 500.19 – Erro Interno do Servidor|O módulo de Reescrita de URL para IIS não foi instalado corretamente.|Desinstale e reinstale o módulo de Reescrita de URL para IIS.<br>[Baixar o módulo de Reescrita de URL para IIS](http://go.microsoft.com/fwlink/?LinkID=615137)|
@@ -58,6 +66,6 @@ Esta seção detalha os possíveis erros nas implantações do ATA e as etapas n
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO5-->
 
 

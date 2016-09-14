@@ -4,7 +4,7 @@ description: Descreve como entrar no Console do ATA e os componentes do console
 keywords: 
 author: rkarlin
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 08/24/2016
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,19 +13,22 @@ ms.assetid: 1bf264d9-9697-44b5-9533-e1c498da4f07
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f13750f9cdff98aadcd59346bfbbb73c2f3a26f0
-ms.openlocfilehash: 1eb9397b541eb64cef553f61e8517568d16b0092
+ms.sourcegitcommit: a4ba68547d6746625a44aca5d05790c3ad138f4e
+ms.openlocfilehash: ab9abce7479971c80544476c54cbf0911d1a5822
 
 
 ---
+
+*Aplica-se a: Advanced Threat Analytics versão 1.7*
+
+
 
 # Trabalhando com o Console do ATA
 
 Use o Console do ATA para monitorar e responder a atividades suspeitas detectadas pelo ATA.
 
 ## Habilitando o acesso à Console do ATA
-Qualquer usuário que seja membro do grupo Administradores local no servidor do Console do ATA tem permissão para efetuar login no Console do ATA e gerenciar configurações de ATA.
-Para permitir que um usuário faça logon no Console do ATA sem se tornar um administrador local, adicione-o ao grupo local: **Administradores do Microsoft Advanced Threat Analytics**.
+Para fazer logon com êxito no Console do ATA, você precisa fazer logon com um usuário que recebeu a função adequada do ATA para acessar o Console do ATA. Para saber mais sobre RBAC (Controle de acesso baseado em função) no ATA, confira [Como trabalhar com grupos de função do ATA](ata-role-groups.md).
 
 ## Fazer logon no Console do ATA
 
@@ -38,10 +41,8 @@ Para permitir que um usuário faça logon no Console do ATA sem se tornar um adm
 
 2.  Digite seu nome de usuário e senha e clique em **Entrar**.
 
-![Imagem de tela de logon no ATA](media/ATA-log-in-screen.jpg)
+![Imagem de tela de logon no ATA](media/ATA-log-in-screen.png)
 
-> [!NOTE]
-> É necessário fazer logon com um usuário que seja membro do grupo de administradores locais OU do grupo de Administradores do Microsoft Advanced Threat Analytics.
 
 ## O Console do ATA
 
@@ -54,7 +55,7 @@ Esses são os principais elementos do Console do ATA.
 
 Essa é a página de aterrissagem exibida quando você entra no Console do ATA. Por padrão, todas as atividades suspeitas abertas são mostradas na linha do tempo de ataque. Você pode filtrar a linha do tempo de ataque para mostrar as atividades suspeitas com status Todos, Aberto, Descartado ou Resolvido. Você também pode ver a severidade atribuída a cada atividade.
 
-![Imagem da linha do tempo de ataque do ATA](media/attack-timeline.png)
+![Imagem da linha do tempo de ataque do ATA](media/attack-timeline-1.7.png)
 
 Para saber mais, confira [Trabalhando com atividades suspeitas](/advanced-threat-analytics/deploy-use/working-with-suspicious-activities).
 
@@ -62,7 +63,7 @@ Para saber mais, confira [Trabalhando com atividades suspeitas](/advanced-threat
 
 Quando uma nova atividade suspeita é detectada, a barra de notificação abrirá automaticamente no lado direito. Se houver novas atividades suspeitas desde a última vez que você entrou, a barra de notificação abrirá depois de você ter feito logon com êxito. Você pode clicar na seta à direita a qualquer momento para acessar a barra de notificação.
 
-![Imagem da barra de notificação de ATA](media/notification-bar.png)
+![Imagem da barra de notificação de ATA](media/notification-bar-1.7.png)
 
 ### Painel de filtro
 
@@ -78,7 +79,7 @@ No menu superior, você encontrará uma barra de pesquisa. Você pode pesquisar 
 
 O Centro de integridade fornece alertas quando algo não está funcionando corretamente na implantação do ATA.
 
-![Imagem do Centro de integridade do ATA](media/health-center.png)
+![Imagem do Centro de integridade do ATA](media/ATA-Health-Issue.jpg)
 
 Sempre que o sistema encontrar um problema, como um erro de conectividade ou um Gateway de ATA desconectado, o ícone da Central de integridade informará você exibindo um ponto vermelho. ![Imagem do ponto vermelho do Centro de integridade de ATA](media/ATA-Health-Center-Alert-red-dot.png)
 
@@ -124,6 +125,6 @@ Em qualquer lugar no console onde exista uma única entidade apresentada, como u
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO5-->
 
 

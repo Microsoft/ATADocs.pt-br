@@ -4,7 +4,7 @@ description: "Descreve como você pode usar o banco de dados do ATA para solucio
 keywords: 
 author: rkarlin
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 08/24/2016
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,15 @@ ms.assetid: d89e7aff-a6ef-48a3-ae87-6ac2e39f3bdb
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f13750f9cdff98aadcd59346bfbbb73c2f3a26f0
-ms.openlocfilehash: c86b6dc880238e262f696e88c54bc1bc7e01a1db
+ms.sourcegitcommit: af0508f82d8cf190dcd3ff058f4c2ff37b4b0595
+ms.openlocfilehash: dfc6c902cb13b1a2bf927cd235806ec32d9fefc3
 
 
 ---
+
+*Aplica-se a: Advanced Threat Analytics versão 1.7*
+
+
 
 # Solução de problemas do ATA usando o banco de dados do ATA
 O ATA usa o MongoDB como seu banco de dados.
@@ -45,17 +49,8 @@ O exemplo a seguir fornece código de exemplo usando a sintaxe fornecida acima. 
 `db.UniqueEntity.find({Name: "John Doe"})`<br>Anote sua ID, conforme indicado pelo valor de "`_id`" Para nosso exemplo, vamos supor que a ID seja "`123bdd24-b269-h6e1-9c72-7737as875351`"<br>Depois, pesquise pela coleção com a data mais próxima e anterior à data que você está procurando, no caso de nosso exemplo, 20/10/2015.<br>Em seguida, procure por atividades de NTLM na conta de John Doe: 
 
 `db.Ntlms_<closest date>.find({SourceAccountId: "123bdd24-b269-h6e1-9c72-7737as875351"})`
-## Arquivo de configuração do ATA
-A configuração do ATA é armazenada na coleção "SystemProfile" no banco de dados.
-Essa coleção passa por backup a cada hora, realizado pelo serviço do Centro do ATA para um arquivo chamado: "SystemProfile.json". Ele está localizado em uma subpasta chamada "Backup". No local de instalação padrão do ATA, ele pode ser encontrado aqui: **C:\Arquivos de Programas\Microsoft Advanced Threat Analytics\Center\Backup\SystemProfile.json**. 
 
-**Observação**: é recomendável fazer o backup desse arquivo sempre que você fizer alterações importantes no ATA.
-
-É possível restaurar todas as configurações executando o seguinte comando:
-
-`mongoimport.exe --db ATA --collection SystemProfile --file "<SystemProfile.json backup file>" --upsert`
-
-## Consulte também
+## Consulte Também
 - [Pré-requisitos do ATA](/advanced-threat-analytics/plan-design/ata-prerequisites)
 - [Planejamento da capacidade de ATA](/advanced-threat-analytics/plan-design/ata-capacity-planning)
 - [Configurar coleta de eventos](/advanced-threat-analytics/deploy-use/configure-event-collection)
@@ -64,6 +59,6 @@ Essa coleção passa por backup a cada hora, realizado pelo serviço do Centro d
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO5-->
 
 
