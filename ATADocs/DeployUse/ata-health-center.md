@@ -13,13 +13,17 @@ ms.assetid: d6c783b2-46c5-4211-b21a-d6b17f08d03d
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f13750f9cdff98aadcd59346bfbbb73c2f3a26f0
-ms.openlocfilehash: 3f357d2b21c453e0057370f3dfbbe45e39f3ba97
+ms.sourcegitcommit: 050f1ef0b39d69b64ede53243a7fa2d33d0e4813
+ms.openlocfilehash: 9f408d7c2cb9c14caee175a1dd1c9ddb1baf9faa
 
 
 ---
 
-# Central de Integridade de ATA
+*Aplica-se a: Advanced Threat Analytics versão 1.7*
+
+
+
+# Centro de Integridade de ATA
 A Central de Integridade de ATA permite saber como seu serviço ATA está sendo executado e alerta-o para os problemas.
 
 ## Trabalhando com a Central de Integridade de ATA
@@ -45,6 +49,6 @@ Para verificar a integridade geral do sistema, clique no ícone Central de Integ
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO5-->
 
 

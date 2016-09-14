@@ -4,7 +4,7 @@ description: "Explica passo a passo como trabalhar com o ATA e as atividades di�
 keywords: 
 author: rkarlin
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 08/24/2016
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,15 @@ ms.assetid: 3715b69e-e631-449b-9aed-144d0f9bcee7
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f13750f9cdff98aadcd59346bfbbb73c2f3a26f0
-ms.openlocfilehash: 7aaa8adca5e0e0c10157f9c8fadaf5374e060f47
+ms.sourcegitcommit: 23aea01f07de4fc52fa404304df7698370c75cb9
+ms.openlocfilehash: 5f011486d7dff8aa70720351a465ce4db823cc66
 
 
 ---
+
+*Aplica-se a: Advanced Threat Analytics versão 1.7*
+
+
 
 # Operar o ATA
 
@@ -26,10 +30,10 @@ Estas são as operações que podem ser executadas com o ATA:
 - [Alteração da configuração do ATA](modifying-ata-configuration.md)
   - [Alterar o endereço IP do Centro do ATA](modifying-ata-config-centerip.md)
   - [Alterar o certificado do Centro do ATA](modifying-ata-config-centercert.md)
-  - [Alterar o endereço IP do Console do ATA](modifying-ata-config-consoleip.md)
-  - [Alterar o certificado IIS](modifying-ata-config-iiscert.md)
+  - [Alterar a URL do Console do ATA](modifying-ata-config-consoleurl.md)
   - [Alterar a senha do controlador de domínio](modifying-ata-config-dcpassword.md)
 - [Trabalhando com o Console do ATA](working-with-ata-console.md)
+- [Grupos de função do ATA](ata-role-groups.md)
 - [Definir alertas do ATA](setting-ata-alerts.md)
 - [Definir as configurações de servidor Syslog e de emails](setting-syslog-email-server-settings.md)
 - [Trabalhando com as configurações de detecção](working-with-detection-settings.md)
@@ -39,15 +43,15 @@ Estas são as operações que podem ser executadas com o ATA:
 - [Gerenciar telemetria do ATA](manage-telemetry-settings.md)
 
 
-## Consulte também
+## Consulte Também
 
-- [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
+- [Confira o fórum do ATA!](https://aka.ms/ata-forum)
 - [Configurar coleta de eventos](configure-event-collection.md)
 - [Pré-requisitos do ATA](/advanced-threat-analytics/plan-design/ata-prerequisites)
 
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO5-->
 
 

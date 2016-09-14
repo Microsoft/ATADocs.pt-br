@@ -13,11 +13,15 @@ ms.assetid: 3f0498f9-061d-40e6-ae07-98b8dcad9b20
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f13750f9cdff98aadcd59346bfbbb73c2f3a26f0
-ms.openlocfilehash: fd0b2539841e6938e0f82a81bce04ffb9b5202b4
+ms.sourcegitcommit: 54e5105e78b6db9f33488135601381af5503aa4a
+ms.openlocfilehash: 118eb5bf505426f1947e96a4e01d0206abdce88d
 
 
 ---
+
+*Aplica-se a: Advanced Threat Analytics versão 1.6 e 1.7*
+
+
 
 # Configurar coleta de eventos
 Para aprimorar os recursos de detecção, o ATA precisa da ID 4776 do log de Eventos do Windows. Isso pode ser encaminhado o Gateway do ATA usando uma entre duas maneiras, configurando o Gateway do ATA para escutar eventos SIEM ou [Configurando o encaminhamento de eventos do Windows](#configuring-windows-event-forwarding).
@@ -28,7 +32,7 @@ Além de coletar e analisar o tráfego de rede para e a partir dos controladores
 ### SIEM/Syslog
 Para o ATA poder consumir dados de um servidor Syslog, você precisa fazer o seguinte:
 
--   Configurar um dos servidores do Gateway do ATA para escutar e aceitar eventos encaminhados do servidor SIEM/Sylog.
+-   Configurar seus servidores do Gateway do ATA para escutar e aceitar eventos encaminhados do servidor SIEM/Sylog.
 
 -   Configurar seu servidor Syslog/SIEM para encaminhar eventos específicos ao Gateway do ATA.
 
@@ -43,13 +47,11 @@ Se você não usa um servidor Syslog/SIEM, é possível configurar os controlado
 
 ## Configuração do Gateway de ATA para escutar eventos SIEM
 
-1.  Na configuração do Gateway do ATA, habilite **UDP de Ouvinte de Syslog**.
-
-    Defina o Endereço IP de Escuta conforme descrito na figura abaixo. A porta padrão é a 514.
+1.  Na configuração de ATA, na guia "Eventos", habilite **Syslog** e pressione **Salvar**.
 
     ![Habilitar a imagem UDP de ouvinte de syslog](media/ATA-enable-siem-forward-events.png)
 
-2.  Configure o servidor Syslog ou SIEM para encaminhar a ID de Evento do Windows 4776 para o endereço IP selecionado acima. Para saber mais sobre como configurar o SIEM, consulte a ajuda online do SIEM ou opções de suporte técnico para obter os requisitos de formatação específica para cada servidor SIEM.
+2.  Configure o servidor Syslog ou SIEM para encaminhar a ID de Evento do Windows 4776 para o endereço IP de um dos Gateways ATA. Para saber mais sobre como configurar o SIEM, consulte a ajuda online do SIEM ou opções de suporte técnico para obter os requisitos de formatação específica para cada servidor SIEM.
 
 ### Suporte a SIEM
 O ATA oferece suporte a eventos de SIEM nos seguintes formatos:
@@ -174,50 +176,116 @@ Certifique-se de ter \t entre os pares de chave=valor.
 > Não há suporte ao uso do WinCollect para a coleta de eventos do Windows.
 
 ## Configuração do encaminhamento de eventos do Windows
-Se você não tiver um servidor SIEM, configure os controladores de domínio para encaminhar a ID de Evento do Windows 4776 diretamente para um dos seus Gateways do ATA.
 
-1.  Faça logon em todos os controladores de domínio e máquinas do Gateway do ATA usando uma conta de domínio com privilégios de administrador.
-2. Verifique se todos os controladores de domínio e Gateways do ATA que você está conectando estão associados ao mesmo domínio.
-3.  Em cada controlador de domínio, digite o seguinte em um prompt de comando elevado:
-```
-winrm quickconfig
-```
-4.  No Gateway do ATA, digite o seguinte em um prompt de comando elevado:
-```
-wecutil qc
-```
-5.  Em cada controlador de domínio, em **Usuários e Computadores do Active Directory**, navegue até a pasta **Builtin** e clique duas vezes no grupo **Leitores de Log de Eventos**.<br>
-![wef_ad_eventlogreaders](media/wef_ad_eventlogreaders.png)<br>
-Clique com o botão direito e selecione **Propriedades**. Na guia **Membros**, adicione a conta de computador de cada Gateway do ATA.
-![wef_ad event log reader popup](media/wef_ad-event-log-reader-popup.png)
-6.  No Gateway do ATA, abra o Visualizador de Eventos e clique com o botão direito em **Assinaturas** e escolha **Criar Assinatura**.  
+### Configuração de WEF para Gateway do ATA com o espelhamento de porta
 
-    a. Em **Tipo de assinatura e computadores de origem**, clique em **Selecionar Computadores**, adicione os controladores de domínio e teste a conectividade.
-    ![wef_subscription prop](media/wef_subscription-prop.png)
+Após a configuração do espelhamento de porta nos controladores de domínio para o Gateway do ATA, siga as instruções abaixo para configurar o Encaminhamento de eventos do Windows usando a configuração Iniciada pela Origem. Essa é uma maneira para configurar o Encaminhamento de eventos do Windows. 
 
-    b. Em **Eventos a serem coletados**, clique em **Selecionar Eventos**. Selecione **Pelo log** e role a tela selecionar **Segurança**. Em seguida, em **Inclui/Exclui Identificações de Evento**, digite **4776**.<br>
-    ![wef_4776](media/wef_4776.png)
+**Etapa 1: Adicionar a conta de serviço de rede ao Grupo de leitores de log de eventos de domínio.** 
 
-    c. Em **Alterar a conta de usuário ou definir configurações avançadas**, clique em **Avançado**.
-Defina o **Protocolo** como **HTTP** e a **Porta** como **5985**.<br>
-    ![wef_http](media/wef_http.png)
+Nesse cenário, supomos que o Gateway ATA seja membro do domínio.
 
-7.  [Opcional] Se você quiser um intervalo de sondagem menor, no Gateway do ATA, defina a pulsação da assinatura como 5 segundos para uma taxa de sondagem mais rápida.
-    wecutil ss <CollectionName>/cm:custom wecutil ss <CollectionName> /hi:5000
+1.  Abra os Usuários e Computadores do Active Directory, navegue até a pasta **BuiltIn** e clique duas vezes em **Leitores de Log de Eventos**. 
+2.  Selecione **Membros**.
+4.  Se **Serviço de Rede** não estiver listado, clique em **Adicionar**, digite **Serviço de Rede** no campo **Digite os nomes de objeto a serem selecionados **. Depois, clique em **Verificar Nomes** e clique em **OK** duas vezes. 
 
-8. Na página de configuração do Gateway do ATA, habilite **Coleta de Encaminhamento de Eventos do Windows**.
+**Etapa 2: Criar uma política nos controladores de domínio para definir a configuração Configurar o Gerenciador de assinatura de destino.** 
+> [!Note] 
+> Você pode criar uma política de grupo para essas configurações e aplicá-la a cada controlador de domínio monitorado pelo Gateway do ATA. As etapas a seguir modificarão a política local do controlador de domínio.     
 
-> [!NOTE]
-> Quando você habilitar essa configuração, o Gateway do ATA procurará no log de Eventos Encaminhados por Eventos do Windows que foram encaminhados a ele pelos controladores de domínio.
+1.  Execute o seguinte comando em cada controlador de domínio: *winrm quickconfig*
+2.  Em um prompt de comando, digite *gpedit.msc*.
+3.  Expanda **Configuração do Computador > Modelos Administrativos > Componentes do Windows > Encaminhamento de Evento**
+
+ ![Imagem do editor de grupo de política local](media/wef 1 local group policy editor.png)
+
+4.  Clique duas vezes em **Configurar Gerenciador de assinatura de destino**.
+   
+    1.  Selecione **Habilitado**.
+    2.  Em **Opções**, clique em **Mostrar**.
+    3.  Em **SubscriptionManagers**, insira o seguinte valor e clique em **OK**:  *Server=http://<fqdnATAGateway>:5985/wsman/SubscriptionManager/WEC,Refresh=10* (Por exemplo: Server=http://atagateway9.contoso.com:5985/wsman/SubscriptionManager/WEC,Refresh=10)
+ 
+   ![Configurar a imagem de assinatura de destino](media/wef 2 config target sub manager.png)
+   
+    5.  Clique em **OK**.
+    6.  Em um prompt de comandos com privilégios elevados, digite *gpupdate /force*. 
+
+**Etapa 3: Executar as seguintes etapas no Gateway do ATA** 
+
+1.  Em um prompt de comandos com privilégios elevados, digite *wecutil qc*
+2.  Abra o **Visualizador de Eventos**. 
+3.  Clique com o botão direito em **Assinaturas** e selecione **Criar Assinatura**. 
+
+   1.   Insira um nome e uma descrição para a assinatura. 
+   2.   Para **Log de Destino** confirme se **Eventos Encaminhados** está selecionado. Para o ATA ler os eventos, o log de destino deve ser **Eventos Encaminhados**. 
+   3.   Selecione **Iniciado pelo computador de origem** e clique em **Selecionar Grupos de Computadores**.
+        1.  Clique em **Adicionar Computador do Domínio**.
+        2.  Insira o nome do controlador de domínio no campo **Digite o nome do objeto a ser selecionado**. Depois, clique em **Verificar Nomes** e clique em **OK**. 
+       
+        ![Imagem do Visualizador de Eventos](media/wef3 event viewer.png)
+   
+        
+        3.  Clique em **OK**.
+   4.   Clique em **Selecionar Eventos**.
+
+        1. Clique em **Pelo log** e selecione **Segurança**.
+        2. No campo **Inclui/Exclui ID do Evento**, digite **4776** e clique em **OK**. 
+
+ ![Imagem do filtro de consulta](media/wef 4 query filter.png)
+
+   5.   Clique com o botão direito na assinatura criada e selecione **Status de Tempo de Execução** para verificar se há problemas com o status. 
+   6.   Depois de alguns minutos, verifique se o evento 4776 aparece nos Eventos Encaminhados no Gateway do ATA.
+
+
+### Configuração do WEF para o Gateway de Lightweight do ATA
+Ao instalar o Gateway Lightweight do ATA nos controladores de domínio, você pode configurar os controladores de domínio para encaminhar eventos para si mesmo. Execute as etapas a seguir para configurar o Encaminhamento de Eventos do Windows ao usar o Gateway Lightweight do ATA. Essa é uma maneira para configurar o Encaminhamento de eventos do Windows.  
+
+**Etapa 1: Adicionar a conta de serviço de rede ao Grupo de leitores de log de eventos de domínio** 
+
+1.  Abra os Usuários e Computadores do Active Directory, navegue até a pasta **BuiltIn** e clique duas vezes em **Leitores de Log de Eventos**. 
+2.  Selecione **Membros**.
+3.  Se **Serviço de Rede** não estiver listado, clique em **Adicionar** e digite **Serviço de Rede** no campo **Digite os nomes de objeto a serem selecionados **. Depois, clique em **Verificar Nomes** e clique em **OK** duas vezes. 
+
+**Etapa 2: Executar as seguintes etapas no controlador de domínio depois que o Gateway Lightweight do ATA estiver instalado** 
+
+1.  Em um prompt de comandos com privilégios elevados, digite *winrm quickconfig* e *wecutil qc* 
+2.  Abra o **Visualizador de Eventos**. 
+3.  Clique com o botão direito em **Assinaturas** e selecione **Criar Assinatura**. 
+
+   1.   Insira um nome e uma descrição para a assinatura. 
+   2.   Para **Log de Destino** confirme se **Eventos Encaminhados** está selecionado. Para o ATA ler os eventos, o log de destino deve ser Eventos Encaminhados.
+
+        1.  Selecione **Coletor iniciado** e clique em **Selecionar Computadores**. Depois, clique em **Adicionar Computador do Domínio**.
+        2.  Insira o nome do controlador de domínio em **Digite o nome do objeto a ser selecionado**. Depois, clique em **Verificar Nomes** e clique em **OK**.
+
+            ![Imagem das propriedades da assinatura](media/wef 5 sub properties computers.png)
+
+        3.  Clique em **OK**.
+   3.   Clique em **Selecionar Eventos**.
+
+        1.  Clique em **Pelo log** e selecione **Segurança**.
+        2.  Em **Inclui/Exclui ID do Evento**, digite *4776* e clique em **OK**. 
+
+![Imagem do filtro de consulta](media/wef 4 query filter.png)
+
+
+  4.    Clique com o botão direito na assinatura criada e selecione **Status de Tempo de Execução** para verificar se há problemas com o status. 
+
+> [!Note] 
+> Talvez seja necessário reiniciar o controlador de domínio antes que a configuração tenha efeito. 
+
+Depois de alguns minutos, verifique se o evento 4776 aparece nos Eventos Encaminhados no Gateway do ATA.
+
+
 
 Para obter mais informações, confira: [Configurar computadores para encaminhar e coletar eventos](https://technet.microsoft.com/library/cc748890)
 
-## Consulte também
+## Consulte Também
 - [Instalar o ATA](install-ata.md)
 - [Confira o fórum do ATA!!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO5-->
 
 

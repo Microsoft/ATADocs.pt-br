@@ -4,7 +4,7 @@ description: "Descreve o processo de dois estágios para renovar ou substituir o
 keywords: 
 author: rkarlin
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 08/24/2016
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,20 +13,24 @@ ms.assetid: c8855287-de3b-4cdd-be8f-2128f48a6f27
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f13750f9cdff98aadcd59346bfbbb73c2f3a26f0
-ms.openlocfilehash: 5ae9f13c417459e73d85cce3ebbb0293c3e08f83
+ms.sourcegitcommit: 050f1ef0b39d69b64ede53243a7fa2d33d0e4813
+ms.openlocfilehash: e707d354396f8eeed58c13ee1e9e91df9888e030
 
 
 ---
+
+*Aplica-se a: Advanced Threat Analytics versão 1.7*
+
+
 
 # Alteração da configuração do ATA - Certificado do Centro do ATA
 
 >[!div class="step-by-step"]
 [« Endereço IP do servidor da Central do ATA](modifying-ata-config-centerip.md)
-[Endereço IP do Console do ATA »](modifying-ata-config-consoleip.md)
+[URL do Console do ATA »](modifying-ata-config-consoleurl.md)
 
 ## Alteração do certificado do Centro do ATA
-Se os seus certificados expiram e precisam ser renovados ou substituídos após a instalação do novo certificado no repositório de computador local no servidor do Centro do ATA, substitua o certificado com este processo em dois estágios:
+Se os seus certificados estiverem prestes a expirar e precisarem ser renovados ou substituídos após a instalação do novo certificado no repositório de computador local no servidor do Centro do ATA, substitua o certificado com este processo em dois estágios:
 
 -   Primeiro estágio – Atualizar o certificado que você deseja que o serviço do Centro do ATA use. Neste ponto, o serviço do Centro do ATA ainda está associado ao certificado original. Quando os Gateways do ATA sincronizarem suas configurações, terão dois possíveis certificados que serão válidos para autenticação mútua. Contanto que o Gateway do ATA possa se conectar usando o certificado original, ele não tentará o novo.
 
@@ -35,6 +39,7 @@ Se os seus certificados expiram e precisam ser renovados ou substituídos após 
 > [!NOTE]
 > -   Se um Gateway do ATA estava offline durante o primeira estágio e nunca recebeu a configuração atualizada, será necessário atualizar manualmente o arquivo de configuração JSON no Gateway do ATA.
 > -   O certificado que você está usando deve ser de confiança dos Gateways do ATA.
+> -   O certificado também é usado para o Console do ATA, portanto, ele deve corresponder ao endereço do Console do ATA a fim de evitar avisos do navegador
 > -   Se você precisar implantar um novo Gateway do ATA depois de ativar o novo certificado, será necessário baixar o pacote de Instalação do Gateway do ATA novamente.
 
 1.  Abra o Console do ATA.
@@ -43,7 +48,7 @@ Se os seus certificados expiram e precisam ser renovados ou substituídos após 
 
     ![Ícone Definições de configuração do ATA](media/ATA-config-icon.JPG)
 
-3.  Selecione **Centro do ATA**.
+3.  Selecione **Central**.
 
 4.  Em **Certificado**, escolha um dos certificados na lista.
 
@@ -61,15 +66,15 @@ Se os seus certificados expiram e precisam ser renovados ou substituídos após 
 
 >[!div class="step-by-step"]
 [« Endereço IP do servidor da Central do ATA](modifying-ata-config-centerip.md)
-[Endereço IP do Console do ATA »](modifying-ata-config-consoleip.md)
+[URL do Console do ATA »](modifying-ata-config-consoleurl.md)
 
 ## Consulte também
 - [Trabalhando com o Console do ATA](working-with-ata-console.md)
 - [Instalar o ATA](install-ata.md)
-- [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
+- [Confira o fórum do ATA!](https://aka.ms/ata-forum)
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO5-->
 
 

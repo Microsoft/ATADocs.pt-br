@@ -4,7 +4,7 @@ description: "Descreve os requisitos para uma implantação bem-sucedida do ATA 
 keywords: 
 author: rkarlin
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 08/24/2016
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,15 @@ ms.assetid: a5f90544-1c70-4aff-8bf3-c59dd7abd687
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f13750f9cdff98aadcd59346bfbbb73c2f3a26f0
-ms.openlocfilehash: 87891f6ad683ed9536d3d3f27449feac9bd9dee1
+ms.sourcegitcommit: 050f1ef0b39d69b64ede53243a7fa2d33d0e4813
+ms.openlocfilehash: a3fcf3b2ba7f90f2329d86ab9e8d19619cc7e28f
 
 
 ---
+
+*Aplica-se a: Advanced Threat Analytics versão 1.7*
+
+
 
 # Pré-requisitos do ATA
 Este artigo descreve os requisitos para uma implantação bem-sucedida do ATA em seu ambiente
@@ -27,6 +31,8 @@ Este artigo descreve os requisitos para uma implantação bem-sucedida do ATA em
 
 
 O ATA é composto pelo Centro do ATA, pelo Gateway do ATA e/ou o Gateway Lightweight do ATA. Para saber mais sobre os componentes do ATA, confira [Arquitetura do ATA](ata-architecture.md).
+
+O Sistema do ATA funciona nos limites da floresta do active directory e oferece suporte a FFL (Nível funcional da floresta) do Windows 2003 e superior.
 
 
 [Antes de iniciar](#before-you-start): esta seção lista as informações que você deve obter e as contas e entidades de rede que você deve ter antes de iniciar a instalação de ATA.
@@ -50,11 +56,10 @@ Esta seção lista as informações que você deve obter, as contas e entidades 
     > [!NOTE]
     > Se você tiver definido ACLs personalizadas em várias Unidades Organizacionais (UO) em seu domínio, verifique se o usuário selecionado tem permissões de leitura para essas UOs.
 
--   Ter uma lista de todas as sub-redes usadas em sua rede para a VPN e o Wi-Fi, que reatribui endereços IP entre os dispositivos em um período muito curto de tempo (em segundos ou minutos).  Convém identificar essas sub-redes de concessão de curto prazo para que o ATA possa reduzir seu tempo de vida do cache para aceitar a reatribuição rápida entre os dispositivos. Confira [Instalar o ATA](/advanced-threat-analytics/deploy-use/install-ata) para uma configuração de sub-rede de concessão de curto prazo.
--   Verifique se o Analisador de Mensagem e o Wire Shark não estão instalados no Gateway do ATA ou na Central do ATA.
--    Opcional: O usuário deve ter permissões de leitura somente no contêiner de Objetos Excluídos. Isso permitirá que o ATA detecte a exclusão em massa de objetos no domínio. Para obter informações sobre como configurar permissões de leitura somente no contêiner de Objetos Excluídos, confira a seção **Alterar permissões em um contêiner de objetos excluídos** no tópico [Exibir ou Definir Permissões em um Objeto de Diretório](https://technet.microsoft.com/library/cc816824%28v=ws.10%29.aspx).
+-   Verifique se o Analisador de Mensagem e o WireShark não estão instalados no Gateway do ATA.
+-    Recomendado: o usuário deve ter permissões de leitura somente no contêiner de Objetos Excluídos. Isso permitirá que o ATA detecte a exclusão em massa de objetos no domínio. Para obter informações sobre como configurar permissões de leitura somente no contêiner de Objetos Excluídos, confira a seção **Alterar permissões em um contêiner de objetos excluídos** no tópico [Exibir ou Definir Permissões em um Objeto de Diretório](https://technet.microsoft.com/library/cc816824%28v=ws.10%29.aspx).
 
--   Opcional: uma conta de usuário que não tem nenhuma atividade de rede. Essa conta será configurada como o usuário Honeytoken do ATA. Para configurar o usuário Honeytoken, será necessário a SID da conta de usuário, não o nome de usuário.
+-   Opcional: uma conta de usuário que não tem nenhuma atividade de rede. Essa conta será configurada como o usuário Honeytoken do ATA. Para configurar o usuário Honeytoken, será necessário a SID da conta de usuário, não o nome de usuário. Para saber mais, confira [Como trabalhar com configurações de detecção do ATA](https://docs.microsoft.com/en-us/advanced-threat-analytics/deploy-use/working-with-detection-settings).
 
 -   Opcional: além de coletar e analisar o tráfego de rede para e a partir dos controladores de domínio, o ATA pode usar o evento 4776 do Windows para aprimorar a detecção da Passagem de Hash do ATA. Isso pode ser recebido de seu SIEM ou definindo o Encaminhamento de Eventos do Windows no controlador de domínio. Os eventos coletados fornecem à ATA informações adicionais que não estão disponíveis por meio do tráfego de rede do controlador de domínio.
 
@@ -62,13 +67,16 @@ Esta seção lista as informações que você deve obter, as contas e entidades 
 ## Requisitos da Central de ATA
 Esta seção lista os requisitos para a Central de ATA.
 ### Geral
-A Central de ATA dá suporte à instalação em um servidor executando o Windows Server 2012 R2. A Central de ATA pode ser instalada em um servidor que seja membro de um domínio ou grupo de trabalho.
+A Central de ATA dá suporte à instalação em um servidor executando o Windows Server 2012 R2 ou o Windows Server 2016. A Central de ATA pode ser instalada em um servidor que seja membro de um domínio ou grupo de trabalho.
 
-Antes de instalar a Central do ATA, confirme se a seguinte atualização foi instalada: [KB2919355](https://support.microsoft.com/kb/2919355/).
+Antes de instalar a Central do ATA executando o Windows 2012 R2, confirme se a seguinte atualização foi instalada: [KB2919355](https://support.microsoft.com/kb/2919355/).
 
 Você pode verificar executando o seguinte cmdlet do Windows PowerShell: `[Get-HotFix -Id kb2919355]`.
 
 A instalação do ATA Center como uma máquina virtual tem suporte. 
+
+>[!NOTE] 
+> Durante a execução como uma memória dinâmica da máquina virtual ou qualquer outra memória, não há suporte para o recurso de inchamento.
 
 Se você executar a Central de ATA como uma máquina virtual, deverá finalizar o servidor antes de criar um novo ponto de verificação para evitar uma possível corrupção do banco de dados.
 ### Especificações do servidor
@@ -76,8 +84,6 @@ Ao trabalhar em um servidor físico, o banco de dados do ATA precisa que você *
 Para ter um melhor desempenho, defina a **Opção de Energia** do Centro do ATA como **Alto Desempenho**.<br>
 O número de controladores de domínio que você está monitorando e a carga em cada um dos controladores de domínio determinam as especificações do servidor necessárias. Confira [Planejamento de capacidade do ATA](ata-capacity-planning.md) para obter mais detalhes.
 
->[!NOTE] 
-> Durante a execução como uma memória dinâmica da máquina virtual ou qualquer outra memória, não há suporte para o recurso de inchamento.
 
 ### Sincronização da hora
 O servidor do Centro do ATA, os servidores do Gateway do ATA e os controladores de domínio devem ter a hora sincronizada no espaço de cinco minutos entre si.
@@ -85,11 +91,11 @@ O servidor do Centro do ATA, os servidores do Gateway do ATA e os controladores 
 
 ### Adaptadores de rede
 Você deve ter o seguinte:
--   Pelo menos um adaptador de rede
+-   Pelo menos um adaptador de rede (se estiver usando o servidor físico no ambiente de VLAN, recomendamos o uso de dois adaptadores de rede)
 
 -   Dois endereços IP (recomendado, mas não obrigatório)
 
-A comunicação entre a Central de ATA e o Gateway de ATA é criptografada usando o SSL na porta 443. Além disso, o Console de ATA é executado no IIS e protegido usando o SSL na porta 443. **Dois endereços IP** são recomendados. O serviço da Central de ATA associará a porta 443 ao primeiro endereço IP e o IIS associará a porta 443 ao segundo endereço IP.
+A comunicação entre a Central de ATA e o Gateway de ATA é criptografada usando o SSL na porta 443. Além disso, o Console do ATA também está usando SSL na porta 443. **Dois endereços IP** são recomendados. O serviço da Central de ATA associará a porta 443 ao primeiro endereço IP e o Console do ATA associará a porta 443 ao segundo endereço IP.
 
 > [!NOTE]
 > É possível usar um único endereço IP com duas portas diferentes, mas recomendamos dois endereços IP.
@@ -97,7 +103,7 @@ A comunicação entre a Central de ATA e o Gateway de ATA é criptografada usand
 ### Portas
 A tabela a seguir lista as portas mínimas que devem ser abertas para que a Central de ATA funcione corretamente.
 
-Nessa tabela, o endereço IP 1 é vinculado ao serviço do Centro do ATA e o endereço IP 2 é vinculado ao serviço do IIS para o Console do ATA:
+Nessa tabela, o endereço IP 1 é vinculado ao serviço do Centro do ATA e o endereço IP 2 é vinculado ao Console do ATA:
 
 |Protocolo|Transport|Porta|Para/De|Direção|Endereço IP|
 |------------|-------------|--------|-----------|-------------|--------------|
@@ -116,22 +122,20 @@ Para facilitar a instalação da Central de ATA, você pode instalar os certific
 > O tipo de provedor do certificado deve ser o CSP (provedor de serviços de criptografia).
 
 
-A Central de ATA exige certificados para os seguintes serviços:
+> Não há suporte para o uso da renovação automática de certificados.
 
--   Serviços de Informação da Internet (IIS) – certificado do servidor Web
-
--   Serviço de Central de ATA – certificado de autenticação de servidor
 
 > [!NOTE]
-> Se você pretende acessar o Console do ATA a partir de outros computadores, verifique se esses computadores confiam no certificado sendo usado pelo IIS, caso contrário, será exibida uma página de aviso de que há um problema com o certificado de segurança do site antes de acessar a página de logon.
+> Se você pretende acessar o Console do ATA a partir de outros computadores, verifique se esses computadores confiam no certificado sendo usado pelo Console do ATA, caso contrário, será exibida uma página de aviso de que há um problema com o certificado de segurança do site antes de acessar a página de logon.
 
 ## Requisitos do Gateway do ATA
 Esta seção lista os requisitos para o Gateway do ATA.
 ### Geral
-O Gateway do ATA dá suporte à instalação em um servidor executando o Windows Server 2012 R2.
+O Gateway do ATA dá suporte à instalação em um servidor executando o Windows Server 2012 R2 ou o Windows Server 2016 (Incluindo o Server Core).
 O Gateway do ATA pode ser instalado em um servidor que seja membro de um domínio ou grupo de trabalho.
+O Gateway do ATA pode ser usado para monitorar Controladores de Domínio com o Nível de Domínio Funcional do Windows 2003 e posterior.
 
-Antes de instalar o Gateway do ATA, confirme se a seguinte atualização foi instalada: [KB2919355](https://support.microsoft.com/kb/2919355/).
+Antes de instalar o Gateway do ATA executando o Windows 2012 R2, confirme se a seguinte atualização foi instalada: [KB2919355](https://support.microsoft.com/kb/2919355/).
 
 Você pode verificar executando o seguinte cmdlet do Windows PowerShell: `[Get-HotFix -Id kb2919355]`.
 
@@ -143,6 +147,8 @@ Um Gateway do ATA pode dar suporte ao monitoramento de vários controladores de 
 
 >[!NOTE] 
 > Durante a execução como uma memória dinâmica da máquina virtual ou qualquer outra memória, não há suporte para o recurso de inchamento.
+
+Para saber mais sobre os requisitos de hardware do Gateway do ATA, confira [Planejamento de capacidade do ATA](ata-capacity-planning.md).
 
 ### Sincronização da hora
 O servidor do Centro do ATA, os servidores do Gateway do ATA e os controladores de domínio devem ter a hora sincronizada no espaço de cinco minutos entre si.
@@ -161,7 +167,7 @@ O Gateway de ATA requer pelo menos um Adaptador de gerenciamento e pelo menos um
         ![Configure o sufixo DNS nas definições avançadas de TCP/IP](media/ATA-DNS-Suffix.png)
 
         > [!NOTE]
-        > Se o Gateway de ATA for um membro do domínio, isto será configurado automaticamente.
+        > Se o Gateway do ATA for um membro do domínio, isto poderá ser configurado automaticamente.
 
 -   **Adaptador de captura** - será usado para capturar o tráfego para e a partir dos controladores de domínio.
 
@@ -184,14 +190,14 @@ A tabela abaixo lista as portas mínimas que o Gateway do ATA requer configurada
 |DNS|TCP e UDP|53|Servidores DNS|Saída|
 |NTLM via RPC|TCP|135|Todos os dispositivos na rede|Saída|
 |NetBIOS|UDP|137|Todos os dispositivos na rede|Saída|
-|SSL|TCP|443 ou como configurado para o Serviço da Central|Centro do ATA:<br /><br />- Endereço IP do Serviço de Central<br />-   Endereço IP do IIS|Saída|
+|SSL|TCP|443 ou como configurado para o Serviço da Central|Centro do ATA:<br /><br />- Endereço IP do Serviço de Central<br />-   Endereço IP do Console|Saída|
 |Syslog (opcional)|UDP|514|Servidor SIEM|Entrada|
 
 > [!NOTE]
 > Como parte do processo de resolução feito pelo Gateway de ATA, as seguintes portas precisam ser a entrada nos dispositivos na rede a partir dos Gateways de ATA.
 >
-> -   NTLM via RPC
-> -   NetBIOS
+> -   NTLM sobre RPC (porta TCP 135)
+> -   NetBIOS (porta UDP 137)
 
 ### Certificados
 Verifique se o Centro do ATA tem acesso ao ponto de distribuição de CRL. Se os Gateways do ATA não tiverem acesso à Internet, execute o procedimento para importar manualmente uma CRL, tendo o cuidado de instalar todos os pontos de distribuição de CRL da cadeia inteira.<br>
@@ -205,11 +211,9 @@ Um certificado que oferece suporte para a **Autenticação do Servidor** precisa
 ## Requisitos do Gateway Lightweight do ATA
 Esta seção lista os requisitos para o Gateway Lightweight do ATA.
 ### Geral
-O Gateway Lightweight do ATA dá suporte à instalação em um controlador de domínio que executa o Windows Server 2008 R2 SP1, o Windows Server 2012 ou o Windows Server 2012 R2.
+O Gateway Lightweight do ATA dá suporte à instalação em um controlador de domínio que executa o Windows Server 2008 R2 SP1, o Windows Server 2012 ou o Windows Server 2012 R2, Windows Server 2016 (incluindo o Core, mas não o Nano).
 
 O controlador de domínio pode ser um RODC (controlador de domínio somente leitura).
-
-O controlador de domínio não pode ser o Server Core.
 
 Antes de instalar o Gateway Lightweight do ATA em um controlador de domínio que executa o Windows Server 2012 R2 SP1, confirme se a seguinte atualização foi instalada: [KB2919355](https://support.microsoft.com/kb/2919355/).
 Você pode verificar executando o seguinte cmdlet do Windows PowerShell: `[Get-HotFix -Id kb2919355]`.
@@ -223,6 +227,7 @@ O Gateway Lightweight do ATA pode ser implantado em controladores de domínio de
 >[!NOTE] 
 > Durante a execução como uma memória dinâmica da máquina virtual ou qualquer outra memória, não há suporte para o recurso de inchamento.
 
+Para saber mais sobre os requisitos de hardware do Gateway Lightweight do ATA, confira [Planejamento de capacidade do ATA](ata-capacity-planning.md).
 
 ### Sincronização da hora
 O servidor do Centro do ATA, os servidores do Gateway do ATA e os controladores de domínio devem ter a hora sincronizada no espaço de cinco minutos entre si.
@@ -238,7 +243,7 @@ A tabela abaixo lista o mínimo de portas que o Gateway Lightweight do ATA exige
 |DNS|TCP e UDP|53|Servidores DNS|Saída|
 |NTLM via RPC|TCP|135|Todos os dispositivos na rede|Saída|
 |NetBIOS|UDP|137|Todos os dispositivos na rede|Saída|
-|SSL|TCP|443 ou como configurado para o Serviço da Central|Centro do ATA:<br /><br />- Endereço IP do Serviço de Central<br />-   Endereço IP do IIS|Saída|
+|SSL|TCP|443 ou como configurado para o Serviço da Central|Centro do ATA:<br /><br />- Endereço IP do Serviço de Central<br />-   Endereço IP do Console|Saída|
 |Syslog (opcional)|UDP|514|Servidor SIEM|Entrada|
 
 > [!NOTE]
@@ -260,6 +265,8 @@ O acesso ao Console do ATA é por meio de um navegador com suporte para o seguin
 
 -   Internet Explorer versão 10 e posterior
 
+-   Microsoft Edge
+
 -   Google Chrome 40 e posterior
 
 -   Resolução de largura mínima da tela de 1.700 pixels
@@ -273,6 +280,7 @@ O acesso ao Console do ATA é por meio de um navegador com suporte para o seguin
 
 
 
-<!--HONumber=Jul16_HO4-->
+
+<!--HONumber=Aug16_HO5-->
 
 
