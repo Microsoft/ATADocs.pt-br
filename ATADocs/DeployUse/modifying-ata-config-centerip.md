@@ -4,7 +4,7 @@ description: "Descreve como alterar o endereço IP, porta ou certificado de seu 
 keywords: 
 author: rkarlin
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 08/24/2016
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,15 @@ ms.assetid: 93b27f15-f7e5-49bb-870a-d81d09dfe9fc
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f13750f9cdff98aadcd59346bfbbb73c2f3a26f0
-ms.openlocfilehash: 4eb552b9f7d42895abf08ec4cd9216b5204c5e0b
+ms.sourcegitcommit: 050f1ef0b39d69b64ede53243a7fa2d33d0e4813
+ms.openlocfilehash: e6d42610d1c785da5b7c7b1cf035d94c2fddff4b
 
 
 ---
+
+*Aplica-se a: Advanced Threat Analytics versão 1.7*
+
+
 
 # Alteração da configuração do ATA - Endereço IP do Centro do ATA
 
@@ -46,9 +50,9 @@ Os Gateways do ATA armazenam localmente o endereço IP do Centro do ATA ao qual 
 
     ![Ícone Definições de configuração do ATA](media/ATA-config-icon.JPG)
 
-3.  Selecione **Geral**.
+3.  Selecione **Central**.
 
-4.  Em **Endereço IP do Serviço do Centro do ATA: porta**, escolha um dos endereços IP existentes ou selecione **Adicionar endereço IP personalizado** e digite um endereço IP.
+4.  Em **Endereço IP do Serviço da Central: porta**, escolha um dos endereços IP existentes ou selecione **Adicionar endereço IP personalizado** e digite um endereço IP.
 
 5.  Clique em **Salvar**.
 
@@ -76,10 +80,10 @@ Os Gateways do ATA armazenam localmente o endereço IP do Centro do ATA ao qual 
 ## Consulte também
 - [Trabalhando com o Console do ATA](working-with-ata-console.md)
 - [Instalar o ATA](install-ata.md)
-- [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
+- [Confira o fórum do ATA!](https://aka.ms/ata-forum)
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO5-->
 
 

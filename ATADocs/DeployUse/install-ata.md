@@ -13,11 +13,15 @@ ms.assetid: 3715b69e-e631-449b-9aed-144d0f9bcee7
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f13750f9cdff98aadcd59346bfbbb73c2f3a26f0
-ms.openlocfilehash: 9448e5cf619e30f7ebae135e45c7a2fbab58332d
+ms.sourcegitcommit: 050f1ef0b39d69b64ede53243a7fa2d33d0e4813
+ms.openlocfilehash: c535ccfecafbd961167bac9c152bd6a1264ae17f
 
 
 ---
+
+*Aplica-se a: Advanced Threat Analytics versão 1.7*
+
+
 
 # Instalar o ATA
 
@@ -39,7 +43,7 @@ Para configurar o ATA, execute estas etapas:
 -   [Etapa 6. Configurar as sub-redes de concessão de curto prazo e o usuário Honeytoken](install-ata-step6.md)
 
 
-## Consulte também
+## Consulte Também
 
 - [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Configurar coleta de eventos](configure-event-collection.md)
@@ -48,6 +52,6 @@ Para configurar o ATA, execute estas etapas:
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO5-->
 
 

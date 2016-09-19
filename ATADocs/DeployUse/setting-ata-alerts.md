@@ -4,7 +4,7 @@ description: "Descreve como definir alertas do ATA para que você seja notificad
 keywords: 
 author: rkarlin
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 08/24/2016
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,15 @@ ms.assetid: 14cb7513-5dc8-49cb-b3e0-94f469c443dd
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f13750f9cdff98aadcd59346bfbbb73c2f3a26f0
-ms.openlocfilehash: 47796a385ce92217fe36040df0723f31e4cb8701
+ms.sourcegitcommit: 35fa7afeb673ec2b1aa295e576865cdd5c073c85
+ms.openlocfilehash: a5787be5a5a0df96651b3be8e056bcdd4340df94
 
 
 ---
+
+*Aplica-se a: Advanced Threat Analytics versão 1.7*
+
+
 
 # Configurando notificações do ATA
 O ATA pode notificar você quando detectar uma atividade suspeita, por email ou usando o encaminhamento de eventos do ATA, e encaminhar o evento para o servidor syslog/SIEM. Antes de selecionar quais notificações quer receber, você precisará [configurar o servidor de email e o servidor Syslog](setting-syslog-email-server-settings.md).
@@ -26,26 +30,30 @@ O ATA pode notificar você quando detectar uma atividade suspeita, por email ou 
 > -   Notificações por email incluem um link que levará o usuário diretamente para a atividade suspeita detectada. A parte do nome do host do link é obtida da configuração da URL do Console do ATA na página do Centro do ATA. Por padrão, a URL do Console do ATA é o endereço IP selecionado durante a instalação do Centro do ATA.  Se você pretende configurar notificações por email, aconselhamos o uso de um FQDN como a URL do Console do ATA.
 > -   As notificações são enviadas do Centro do ATA para o servidor SMTP e o servidor Syslog.
 
+## Notificações por email
 Para receber notificações por email, defina o seguinte:
 
 
 1. No Console do ATA, selecione a opção de configurações na barra de ferramentas e escolha **Configuração**.
 ![Ícone Definições de configuração do ATA](media/ATA-config-icon.JPG)
 
-2. Selecione **Notificações**.
-3. Em **Notificações por email**, use os botões para selecionar quais notificações devem ser enviadas:
+2. Na seção **Notificações**, selecione **Configurações**.
+3. Em **Destinatários do email**, especifique os destinatários que receberão as notificações por email.
 
+    [!Observação:] alertas de email para atividades suspeitas são enviados somente quando a atividade suspeita é criada.
+
+4. Em **Notificar quando:**, use os botões para selecionar quais notificações devem ser enviadas:
 
     - Nova atividade suspeita foi detectada
     - Novo problema de integridade foi detectado
     - Nova atualização de software está disponível
 
-4. Especifique os destinatários que receberão as notificações por email.
-
-    [!Observação:] alertas de email para atividades suspeitas são enviados somente quando a atividade suspeita é criada.
-
-
 5. Clique em **Salvar**.
+
+![Imagem das configurações de notificação de email do ATA](media/ATA-mail-notification-settings-1.7.png)
+
+
+## Notificação do Syslog
 
 Para receber notificações por Syslog, defina o seguinte:
 
@@ -53,7 +61,7 @@ Para receber notificações por Syslog, defina o seguinte:
 1. No Console do ATA, selecione a opção de configurações na barra de ferramentas e escolha **Configuração**.
 ![Ícone Definições de configuração do ATA](media/ATA-config-icon.JPG)
 
-2. Selecione **Notificações**.
+2. Na seção **Notificações**, selecione **Configurações**.
 3. Em **Notificações do Syslog**, use os botões para selecionar quais notificações devem ser enviadas:
 
 
@@ -61,7 +69,7 @@ Para receber notificações por Syslog, defina o seguinte:
     - Atividade suspeita existente foi atualizada
     - Novo problema de integridade foi detectado
 5. Clique em **Salvar**.
-![Imagem das configurações de notificação do ATA](media/ATA-notification-settings.png)
+![Imagem das configurações de notificação do ATA](media/ATA-syslog-notification-settings-1.7.png)
 
 
 
@@ -71,6 +79,6 @@ Para receber notificações por Syslog, defina o seguinte:
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO5-->
 
 

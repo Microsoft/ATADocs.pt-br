@@ -13,11 +13,15 @@ ms.assetid: 1d27dba8-fb30-4cce-a68a-f0b1df02b977
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f13750f9cdff98aadcd59346bfbbb73c2f3a26f0
-ms.openlocfilehash: 83222c6d29434d93fa1b5ecd613de30408ccfe59
+ms.sourcegitcommit: 5cd030f3b952d08c6617a6cda121c344a9c36f51
+ms.openlocfilehash: b4e68e9e8dbd94075a34a8e3e8f42d4f534caf50
 
 
 ---
+
+*Aplica-se a: Advanced Threat Analytics versão 1.7*
+
+
 
 # Gerenciamento do Banco de Dados de ATA
 Se você precisar mover, fazer backup ou restaurar o banco de dados do ATA, use estes procedimentos para trabalhar com o MongoDB.
@@ -46,19 +50,20 @@ Consulte a [documentação relevante do MongoDB](http://docs.mongodb.org/manual/
 
 6.  Inicie o serviço **MongoDB**.
 
-7.  Abra um prompt de comando e execute o shell Mongo executando `mongo.exe ATA`.
+7. Inicie o serviço **Centro do Microsoft Advanced Threat Analytics**.
 
-    Por padrão, o mongo.exe está localizado em C:\Arquivos de Programas\Microsoft Advanced Threat Analytics\Center\MongoDB\bin
+## Arquivo de configuração do ATA
+A configuração do ATA é armazenada na coleção "SystemProfile" no banco de dados.
+Essa coleção passa por backup a cada hora, realizado pelo serviço da Central do ATA para arquivos chamados: "SystemProfile_*carimbo de data e hora*.json". As 10 versões mais recentes são armazenadas.
+Ele está localizado em uma subpasta chamada "Backup". No local de instalação padrão do ATA, ele pode ser encontrado aqui: *C:\Arquivos de Programas\Microsoft Advanced Threat Analytics\Center\Backup\SystemProfile_*timestamp*.json*. 
 
-8.  Execute o seguinte comando: `db.SystemProfiles.update( {_t: "CenterSystemProfile"} , {$set:{"Configuration.CenterDatabaseClientConfiguration.DataPath" : "<New DB Location>"}})`
+**Observação**: é recomendável fazer o backup desse arquivo sempre que você fizer alterações importantes no ATA.
 
-   Em vez de <New DB Location>, em que `&lt;New DB Location&gt;` é o novo caminho da pasta.
+É possível restaurar todas as configurações executando o seguinte comando:
 
-9.  Atualize HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft Advanced Threat Analytics\Center\DatabaseDataPath com o novo caminho de pasta.
+`mongoimport.exe --db ATA --collection SystemProfile --file "<SystemProfile.json backup file>" --upsert`
 
-9. Inicie o serviço **Centro do Microsoft Advanced Threat Analytics**.
-
-## Consulte também
+## Consulte Também
 - [Arquitetura do ATA](/advanced-threat-analytics/plan-design/ata-architecture)
 - [Pré-requisitos do ATA](/advanced-threat-analytics/plan-design/ata-prerequisites)
 - [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
@@ -66,6 +71,6 @@ Consulte a [documentação relevante do MongoDB](http://docs.mongodb.org/manual/
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO5-->
 
 

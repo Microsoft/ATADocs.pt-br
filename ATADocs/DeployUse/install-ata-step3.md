@@ -4,7 +4,7 @@ description: "A etapa três da instalação do ATA ajuda você a baixar o pacote
 keywords: 
 author: rkarlin
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 08/24/2016
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,15 @@ ms.assetid: 7fb024e6-297a-4ad9-b962-481bb75a0ba3
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f13750f9cdff98aadcd59346bfbbb73c2f3a26f0
-ms.openlocfilehash: 19c1f0f56264952fc8156040ce717c049ce32dc0
+ms.sourcegitcommit: ba090fdd4f00c001020b1fbedf527e4fd69d3992
+ms.openlocfilehash: 277d08756b456d1a61fb9fdcb5014a6a1b4782ad
 
 
 ---
+
+*Aplica-se a: Advanced Threat Analytics versão 1.7*
+
+
 
 # Instalação do ATA - Etapa 3
 
@@ -28,16 +32,18 @@ ms.openlocfilehash: 19c1f0f56264952fc8156040ce717c049ce32dc0
 ## Etapa 3. Baixe o pacote de instalação do Gateway do ATA
 Após definir as configurações de conectividade do domínio, você poderá baixar o pacote de instalação do Gateway do ATA. O Gateway do ATA do pode ser instalado em um servidor dedicado ou em um controlador de domínio. Se você instalá-lo em um controlador de domínio, ele será instalado como um Gateway Lightweight do ATA. Para obter mais informações sobre o Gateway Lightweight do ATA, confira [Arquitetura do ATA](/advanced-threat-analytics/plan-design/ata-architecture). 
 
-Para baixar o pacote do Gateway do ATA:
+Se esta for a primeira vez que você está baixando um Gateway do ATA, você receberá a tela a seguir:
 
-1.  No Console do ATA, clique no ícone de configurações e selecione **Configuração**.
+![Definições de configuração do Gateway do ATA](media/ATA_1.7-welcome-download-gateway.PNG)
 
-    ![Definições de configuração do Gateway do ATA](media/ATA-config-icon.JPG)
+Se não for a primeira vez que você baixa um Gateway do ATA, esta mensagem de boas-vindas não será exibida.
 
-2.  Na guia **Gateways do ATA**, clique em **Baixar Instalação do Gateway do ATA**.
+> [!NOTE] 
+> Para acessar a tela de configuração mais tarde, clique no **ícone de configurações** (canto superior direito), selecione **Configuração**, e em **Sistema**, clique em **Gateways**.  
 
-3.  Salve o pacote localmente.
-4.  Copie o pacote para o servidor dedicado ou controlador de domínio no qual você está instalando o Gateway do ATA Como alternativa, você pode abrir o Console do ATA do controlador de domínio ou servidor dedicado e ignorar esta etapa.
+1.  Clique em **"Baixar a Instalação do Gateway"**.
+2.  Salve o pacote localmente.
+3.  Copie o pacote para o servidor dedicado ou controlador de domínio no qual você está instalando o Gateway do ATA Como alternativa, você pode abrir o Console do ATA do controlador de domínio ou servidor dedicado e ignorar esta etapa.
 
 O arquivo zip inclui o seguinte:
 
@@ -58,6 +64,6 @@ O arquivo zip inclui o seguinte:
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO5-->
 
 
