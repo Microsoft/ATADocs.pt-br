@@ -4,7 +4,7 @@ description: "A primeira etapa da instalação do ATA envolve baixar e instalar 
 keywords: 
 author: rkarlin
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 08/24/2016
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,21 +13,25 @@ ms.assetid: b3cceb18-0f3c-42ac-8630-bdc6b310f1d6
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: d89f6c5e0ac9712ce2fde057c9ef8e4025e8a144
-ms.openlocfilehash: 41d538039a8fa0511a74dd6cd5d840a1dea516e8
+ms.sourcegitcommit: d0681cfa4ae763da9c88c8dec9b77a75494a5c9f
+ms.openlocfilehash: 7365b09e98d422a8670725b47a1c2380f00e23fb
 
 
 ---
+
+*Aplica-se a: Advanced Threat Analytics versão 1.7*
+
+
 
 # Instalação do ATA - Etapa 1
 
 >[!div class="step-by-step"]
 [Etapa 2 »](install-ata-step2.md)
 
-O procedimento de instalação fornece instruções para executar uma nova instalação do ATA 1.6. Para saber mais sobre como atualizar uma implantação do ATA existente de uma versão anterior, confira [Guia de migração do ATA versão 1.6](/advanced-threat-analytics/understand-explore/ata-update-1.6-migration-guide).
+O procedimento de instalação fornece instruções para executar uma nova instalação do ATA 1.7. Para saber mais sobre como atualizar uma implantação do ATA existente de uma versão anterior, confira [Guia de migração do ATA versão 1.7](/advanced-threat-analytics/understand-explore/ata-update-1.7-migration-guide).
 
 > [!IMPORTANT] 
-> Instale o KB2934520 no servidor do Centro do ATA e nos servidores do Gateway do ATA antes de começar a instalação, caso contrário a instalação do ATA instalar essa atualização e exigirá uma reinicialização no meio do processo.
+> Se você estiver usando o Windows 2012 R2, instale o KB2934520 no servidor da Central do ATA e nos servidores do Gateway do ATA antes de começar a instalação, caso contrário a instalação do ATA instalar essa atualização e exigirá uma reinicialização no meio do processo.
 
 ## Etapa 1. Baixar e instalar o Centro do ATA
 Depois de verificar que o servidor atende aos requisitos, você pode prosseguir com a instalação do Centro do ATA.
@@ -57,19 +61,16 @@ Execute as seguintes etapas no servidor do Centro do ATA.
     |---------|---------------|------------|
     |Caminho da Instalação|Esse é o local onde o Centro do ATA será instalado. Por padrão, é %programfiles%\Microsoft Advanced Threat Analytics\Center|Mantenha o valor padrão|
     |Caminho de Dados do Banco de Dados|Esse é o local onde os arquivos de banco de dados do MongoDB estarão localizados. Por padrão, é %programfiles%\Microsoft Advanced Threat Analytics\Center\MongoDB\bin\data|Altere o local para um local onde você tem espaço para crescer com base em seu tamanho. **Observação:** <ul><li>Em ambientes de produção, você deve usar uma unidade que tenha espaço suficiente com base em um planejamento de capacidade.</li><li>Para implantações de grande porte, o banco de dados deve estar em um disco físico separado.</li></ul>Confira [Planejamento de capacidade do ATA](/advanced-threat-analytics/plan-design/ata-capacity-planning) para obter informações sobre dimensionamento.|
-    |Endereço IP do Serviço do Centro do ATA: Porta|Esse é o endereço IP que o serviço do Centro do ATA escutará a comunicação dos Gateways do ATA.<br /><br />**Porta padrão:** 443|Clique na seta para baixo para selecionar o endereço IP a ser usado pelo serviço do Centro do ATA.<br /><br />O endereço IP e a porta do serviço do Centro do ATA não podem ser iguais ao endereço IP e à porta do Console do ATA. Altere a porta do Console do ATA.|
-    |Certificado SSL do Serviço do Centro do ATA|Esse é o certificado que será usado pelo serviço do Centro do ATA.|Clique no ícone de chave para selecionar um certificado instalado ou verificar o certificado autoassinado durante a implantação em um ambiente de laboratório.|
-    |Endereço IP do Console do ATA|Esse é o endereço IP que será usado pelo IIS para o Console do ATA.|Clique na seta para baixo para selecionar o endereço IP a ser usado pelo Console do ATA. **Observação:** anote esse endereço IP para facilitar o acesso ao Console do ATA do Gateway do ATA.|
-    |Certificado SSL do Console do ATA|Este é o certificado a ser usado pelo IIS.|Clique no ícone de chave para selecionar um certificado instalado ou verificar o certificado autoassinado durante a implantação em um ambiente de laboratório.|
-
-    ![Imagem de configuração do Centro do ATA](media/ATA-Center-Configuration.JPG)
+    |Endereço IP do Serviço da Central: Porta|Esse é o endereço IP que o serviço do Centro do ATA escutará a comunicação dos Gateways do ATA.<br /><br />**Porta padrão:** 443|Clique na seta para baixo para selecionar o endereço IP a ser usado pelo serviço do Centro do ATA.<br /><br />O endereço IP e a porta do serviço do Centro do ATA não podem ser iguais ao endereço IP e à porta do Console do ATA. Altere a porta do Console do ATA.|
+    |Certificado SSL do Serviço da Central|Esse é o certificado que será usado pelo serviço da Central do ATA e pelo Console do ATA.|Clique no ícone de chave para selecionar um certificado instalado ou verificar o certificado autoassinado durante a implantação em um ambiente de laboratório.|
+    |Endereço IP do Console|Esse é o endereço IP que será usado para o Console do ATA.|Clique na seta para baixo para selecionar o endereço IP a ser usado pelo Console do ATA. **Observação:** anote esse endereço IP para facilitar o acesso ao Console do ATA do Gateway do ATA.|
+    
+    ![Imagem de configuração do Centro do ATA](media/ATA-Center-Configuration.png)
 
 10.  Clique em **Instalar** para instalar o Centro do ATA e seus componentes.
     Os seguintes componentes serão instalados e configurados durante a instalação do Centro do ATA:
 
-    -   Serviços de Informações da Internet (IIS)
-
-    -   Site do serviço do Centro do ATA e IIS do Console do ATA
+    -   Serviço da Central do ATA
 
     -   MongoDB
 
@@ -101,6 +102,6 @@ Como você está fazendo logon no site usando um endereço IP, você recebe um a
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Aug16_HO5-->
 
 

@@ -4,7 +4,7 @@ description: "Descreve como validar que o espelhamento de porta está configurad
 keywords: 
 author: rkarlin
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 08/24/2016
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,22 +13,26 @@ ms.assetid: ebd41719-c91a-4fdd-bcab-2affa2a2cace
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f13750f9cdff98aadcd59346bfbbb73c2f3a26f0
-ms.openlocfilehash: d95fd582362fc650dffeb6c4fbf892ba3e367f12
+ms.sourcegitcommit: e3b690767e5c6f5561a97a73eccfbf50ddb04148
+ms.openlocfilehash: 59d50b0d9c5adc78aca260412872076c84db8d57
 
 
 ---
 
+*Aplica-se a: Advanced Threat Analytics versão 1.7*
+
+
+
 # Validação do espelhamento de porta
 > [!NOTE] 
-> Este artigo somente é relevante se você implanta Gateways do ATA em vez de Gateways Lightweight do ATA. Para determinar se você precisa usar Gateways do ATA, confira [Choosing the right gateways for your deployment](/advanced-threat-analytics/plan-design/ata-capacity-planning#choosing-the-right-gateway-type-for-your-deployment) (Escolhendo os gateways certos para sua implantação)
+> Este artigo somente é relevante se você implanta Gateways do ATA em vez de Gateways Lightweight do ATA. Para determinar se você precisa usar Gateways do ATA, confira [Choosing the right gateways for your deployment](/advanced-threat-analytics/plan-design/ata-capacity-planning#choosing-the-right-gateway-type-for-your-deployment) (Escolhendo os gateways certos para sua implantação).
  
 As etapas a seguir guiarão você pelo processo de validação da configuração correta do espelhamento de porta. Para que o ATA funcione corretamente, o Gateway de ATA deve ser capaz de ver o tráfego para e do controlador de domínio. A fonte de dados principal usada pelo ATA é uma inspeção profunda de pacotes do tráfego de rede para e dos controladores de domínio. Para o ATA ver o tráfego de rede, o espelhamento de porta precisa ser configurado. O espelhamento de porta copia o tráfego de uma porta (de origem) para outra porta (de destino).
 
 ## Validar espelhamento de porta usando um script do Windows PowerShell
 
-1. Salve o texto do script em um arquivo chamado ATAdiag.ps1.
-2. Execute esse script do Gateway do ATA.
+1. Salve o texto do script em um arquivo chamado *ATAdiag.ps1*.
+2. Execute esse script no Gateway do ATA que você deseja validar.
 O script gera o tráfego ICMP do Gateway do ATA para o controlador de domínio e procura esse tráfego no NIC de Captura no controlador de domínio.
 Se o Gateway do ATA vê o tráfego ICMP com um endereço IP de destino igual ao endereço IP do DC que você digitou no Console do ATA, ele considera o espelhamento de porta configurado. 
 
@@ -188,7 +192,7 @@ Exemplo de como executar o script:
     
     
 ## Validar o espelhamento de porta usando Net Mon
-1.  Instale o [Monitor de Rede da Microsoft 3.4](http://www.microsoft.com/download/details.aspx?id=4865).
+1.  Instale o [Microsoft Network Monitor 3.4](http://www.microsoft.com/download/details.aspx?id=4865) no Gateway do ATA que você deseja validar.
 
     > [!IMPORTANT]
     > Não instale o Microsoft Message Analyzer ou qualquer outro software de captura de tráfego no Gateway de ATA.
@@ -224,6 +228,6 @@ Exemplo de como executar o script:
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO5-->
 
 

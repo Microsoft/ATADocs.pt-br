@@ -4,7 +4,7 @@ description: "Ajuda você a planejar a implantação e decidir quantos servidore
 keywords: 
 author: rkarlin
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 08/24/2016
 ms.topic: get-started-article
 ms.service: advanced-threat-analytics
 ms.prod: 
@@ -12,11 +12,15 @@ ms.assetid: 279d79f2-962c-4c6f-9702-29744a5d50e2
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f13750f9cdff98aadcd59346bfbbb73c2f3a26f0
-ms.openlocfilehash: e0174ecac39b2a8cd469ed698853c447a85e4251
+ms.sourcegitcommit: e3b690767e5c6f5561a97a73eccfbf50ddb04148
+ms.openlocfilehash: 09bf48be4c651af6ca1ae66a47f940d504570c8a
 
 
 ---
+
+*Aplica-se a: Advanced Threat Analytics versão 1.7*
+
+
 
 # Planejamento da capacidade de ATA
 Este tópico ajuda a determinar quantos servidores ATA serão necessários para monitorar sua rede, inclusive a entender quantos Gateways do ATA e/ou Gateways Lightweight do ATA você precisa, bem como a capacidade do servidor para seu Centro do ATA e Gateways do ATA.
@@ -41,8 +45,7 @@ As seções a seguir apresentam instruções sobre como coletar o contador de pa
 
 ### Dimensionamento da Central de ATA
 A Central de ATA requer um mínimo recomendado de 30 dias de dados para a análise de comportamento do usuário. O espaço em disco necessário para o banco de dados do ATA, um por controlador de domínio, é definido abaixo. Se você tiver vários controladores de domínio, some o espaço em disco necessário por controlador para calcular a quantidade total de espaço necessário para o banco de dados do ATA.
-> [!NOTE] 
-> Durante a execução como uma memória dinâmica da máquina virtual ou qualquer outra memória, não há suporte para o recurso de inchamento.
+ 
 
 |Pacotes por segundo&#42;|CPU (núcleos&#42;&#42;)|Memória (GB)|Armazenamento de bancos de dados por dia (GB)|Armazenamento de bancos de dados por mês (GB)|IOPS&#42;&#42;&#42;|
 |---------------------------|-------------------------|-------------------|---------------------------------|-----------------------------------|-----------------------------------|
@@ -59,9 +62,13 @@ A Central de ATA requer um mínimo recomendado de 30 dias de dados para a análi
 > [!NOTE]
 > -   A Central do ATA pode lidar com um máximo agregado de 400.000 FPS (quadros por segundo) de todos os controladores de domínio monitorados.
 > -   O volume de armazenamento ditado aqui são os valores net que você sempre deve levar em consideração para o crescimento futuro e verificar se o disco no qual o banco de dados reside tem, pelo menos, 20% de espaço livre.
-> -   Se o espaço livre chegar a um mínimo de 20% ou 100 GB, o conjunto mais antigo de dados será excluído. Isso continuará a ocorrer até que somente dois dias de dados, 5% ou 50 GB de espaço livre permaneça no ponto em que a coleta de dados irá parar de funcionar.
-> -  A latência de armazenamento para a leitura e a gravação das atividades deve estar abaixo de 10 ms.
-> -  A taxa entre as atividades de leitura e gravação é de, aproximadamente, 1:3 abaixo de 100.000 pacotes por segundo e 1:6 acima de 100.000 pacotes por segundo.
+> -   Se o espaço livre chegar a um mínimo de 20% ou 100 GB, o conjunto mais antigo de dados será excluído. Isso continuará a ocorrer até 5% ou 50 GB de espaço livre permaneça no ponto em que a coleta de dados deixará de funcionar.
+> -   A latência de armazenamento para a leitura e a gravação das atividades deve estar abaixo de 10 ms.
+> -   A taxa entre as atividades de leitura e gravação é de, aproximadamente, 1:3 abaixo de 100.000 pacotes por segundo e 1:6 acima de 100.000 pacotes por segundo.
+> -   Durante a execução como uma memória dinâmica da máquina virtual ou qualquer outra memória, não há suporte para o recurso de inchamento.
+> -   Para ter um melhor desempenho, defina a **Opção de Energia** do Centro do ATA como **Alto Desempenho**.<br>
+> -   Ao trabalhar em um servidor físico, o banco de dados do ATA precisa que você **desabilite** o NUMA (acesso não uniforme a memória) no BIOS. O sistema pode referir-se ao NUMA como Nó de Intercalação, caso em que você precisará **habilitar** a Intercalação de Nó para desabilitar o NUMA. Consulte a documentação da BIOS para saber mais. Observe que isso não é pertinente quando a Central do ATA está em execução em um servidor virtual.
+
 
 ## Escolhendo o tipo certo de gateway para sua implantação
 Em uma implantação do ATA, há suporte para qualquer combinação dos tipos de Gateway do ATA:
@@ -94,8 +101,7 @@ Veja a seguir exemplos de cenários nos quais os controladores de domínio devem
 ### Dimensionamento do Gateway Lightweight do ATA
 
 Um Gateway Lightweight do ATA pode oferecer suporte ao monitoramento de um controlador de domínio com base na quantidade de tráfego de rede gerado pelo controlador de domínio. 
-> [!NOTE] 
-> Durante a execução como uma memória dinâmica da máquina virtual ou qualquer outra memória, não há suporte para o recurso de inchamento.
+
 
 |Pacotes por segundo&#42;|CPU (núcleos&#42;&#42;)|Memória (GB)&#42;&#42;&#42;|
 |---------------------------|-------------------------|---------------|
@@ -108,8 +114,11 @@ Um Gateway Lightweight do ATA pode oferecer suporte ao monitoramento de um contr
 &#42;&#42;Quantidade total de núcleos não hyper-threaded que esse controlador de domínio tem instalada.<br>Embora o hyper-threading seja aceitável para o Gateway Lightweight do ATA, ao planejar a capacidade, você deve contar os núcleos reais, e não os núcleos hyper-threaded.
 
 &#42;&#42;&#42;Quantidade total de memória que esse controlador de domínio tem instalada.
+
 > [!NOTE]   
-> Se o controlador de domínio não tiver a quantidade necessária de recursos exigida pelo Gateway Lightweight do ATA, o desempenho do controlador de domínio não será afetado, mas o Gateway Lightweight do ATA pode não operar conforme o esperado.
+> -   Se o controlador de domínio não tiver a quantidade necessária de recursos exigida pelo Gateway Lightweight do ATA, o desempenho do controlador de domínio não será afetado, mas o Gateway Lightweight do ATA pode não operar conforme o esperado.
+> -   Durante a execução como uma memória dinâmica da máquina virtual ou qualquer outra memória, não há suporte para o recurso de inchamento.
+> -   Para ter um melhor desempenho, defina a **Opção de Energia** do Gateway Lightweight do ATA como **Alto Desempenho**.
 
 
 ### Dimensionamento do Gateway de ATA
@@ -126,8 +135,7 @@ As considerações de espelhamento de porta podem exigir que você implante vár
     Um Gateway do ATA pode oferecer suporte ao monitoramento de vários controladores de domínio, dependendo da quantidade de tráfego de rede dos controladores de domínio sendo monitorados. 
 <br>
 
-> [!NOTE] 
-> Não há suporte para memória dinâmica.
+
 
 |Pacotes por segundo&#42;|CPU (núcleos&#42;&#42;)|Memória (GB)|
 |---------------------------|-------------------------|---------------|
@@ -142,6 +150,9 @@ As considerações de espelhamento de porta podem exigir que você implante vár
 
 &#42;&#42;O hyper-threading deve ser desabilitado.
 
+> [!NOTE] 
+> -   Não há suporte para memória dinâmica.
+> -   Para ter um melhor desempenho, defina a **Opção de Energia** do Gateway de ATA para **Alto Desempenho**.
 
 
 ## Estimativa de tráfego do controlador de domínio
@@ -201,6 +212,6 @@ Para determinar os pacotes por segundo, execute o seguinte em cada controlador d
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO5-->
 
 

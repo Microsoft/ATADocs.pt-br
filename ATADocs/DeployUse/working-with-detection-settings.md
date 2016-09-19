@@ -4,7 +4,7 @@ description: "Descreve como configurar uma lista de endereços IP e sub-redes qu
 keywords: 
 author: rkarlin
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 08/24/2016
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,27 +13,39 @@ ms.assetid: f4f2ae30-4849-4a4f-8f6d-bfe99a32c746
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f13750f9cdff98aadcd59346bfbbb73c2f3a26f0
-ms.openlocfilehash: 692247420a849db5d77c3c035ee59c4a5c533686
+ms.sourcegitcommit: 28b6211599395317eb6336c37fd3461b8f5635f6
+ms.openlocfilehash: 09248cdd5f8a66a164a5cd275f2765107f5c706d
 
 
 ---
+
+*Aplica-se a: Advanced Threat Analytics versão 1.7*
+
+
 
 # Trabalhando com as configurações de detecção do ATA
 A página de configuração **Detecção** permite que você configure uma lista de endereços IP e sub-redes que tem circunstâncias incomuns e que deve ser tratada de forma ligeiramente diferente em relação a outras entidades em sua rede.
 
 ## Configuração da detecção
-Na página **Detecção** você pode definir os seguintes itens:
-
--   **Sub-redes de concessão a curto prazo** – Se a sua organização tiver qualquer sub-rede com endereço IP de prazo muito curto, por exemplo, sub-redes de endereço IP de VPN ou sub-redes de Wi-Fi, é importante inserir esses endereços IP e sub-redes no ATA para que ele saiba armazenar a associação entre um computador e um endereço IP a partir desses intervalos por um período mais curto de tempo do que o de outros endereços IP.
+Na seção **Detecção**, defina os itens a seguir:
 
 -   **SIDs da conta Honeytoken** – Esta é uma conta de usuário que não deve ter nenhuma atividade de rede. Essa conta será configurada como o usuário Honeytoken do ATA. Se alguém tentar usar esta conta de usuário, o ATA criará uma atividade suspeita e é uma indicação de atividade mal-intencionada. Para configurar o usuário Honeytoken, será necessário a SID da conta de usuário, não o nome de usuário.
 
-Você pode excluir endereços IP das seguintes detecções. Se você inserir um endereço IP em uma dessas listas, o ATA excluirá esse endereço IP deste tipo específico de atividade detectada.
+>[!NOTE]
+> Você pode encontrar o SID do usuário na guia *Informações da Conta* do perfil de usuário no Console do ATA.
+
+
+![Honeytoken de configurações de detecção do ATA](media/ata-detection-settings-honeytoken-1.7.png)
+
+
+**Exclusões de detecção** - Você pode excluir endereços IP das seguintes detecções. Se você inserir um endereço IP em uma dessas listas, o ATA excluirá esse endereço IP deste tipo específico de atividade detectada.
 
 -   Exclusões de endereço IP de reconhecimento de DNS
 
 -   Exclusões de endereço IP de passagem de tíquete
+
+![Exclusões de configurações de detecção do ATA](media/ata-detection-settings-exclusions-1.7.png)
+
 
 ## Consulte também
 - [Trabalhando com atividades suspeitas](working-with-suspicious-activities.md)
@@ -42,6 +54,6 @@ Você pode excluir endereços IP das seguintes detecções. Se você inserir um 
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO5-->
 
 

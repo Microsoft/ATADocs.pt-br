@@ -4,7 +4,7 @@ description: Fornece uma lista de perguntas frequentes sobre o ATA e as resposta
 keywords: 
 author: rkarlin
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 08/24/2016
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,12 @@ ms.assetid: a7d378ec-68ed-4a7b-a0db-f5e439c3e852
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 09de79e1f8fee6b27c7ba403df1af4431bd099a9
-ms.openlocfilehash: 51440757c89130f8454e9c2b1abe7182f2b7eb41
+ms.sourcegitcommit: b8ad2f343b8397184cd860803f06b0d59c492f5a
+ms.openlocfilehash: 96b3ce171ca07bf44163d49b50377fccd6472a08
 
 
 ---
+*Aplica-se a: Advanced Threat Analytics versão 1.7*
 
 # Perguntas frequentes sobre o ATA
 Este artigo fornece uma lista de perguntas frequentes sobre o ATA e também as respostas e outras informações.
@@ -39,23 +40,26 @@ Você pode simular atividades suspeitas, que é um teste de ponta a ponta, segui
 Isso deve ser executado remotamente no controlador de domínio que está sendo monitorado e não no Gateway do ATA.
 
 ## Como verificar o Encaminhamento de Eventos do Windows?
-Você pode executar o seguinte em um prompt de comando no diretório:  **\Arquivos de Programas\Microsoft Advanced Threat Analytics\Center\MongoDB\bin**:
+Você pode colocar o seguinte código em um arquivo e executá-lo em um prompt de comando no diretório:  **\Arquivos de Programas\Microsoft Advanced Threat Analytics\Center\MongoDB\bin** da seguinte maneira:
 
-        mongo ATA --eval "printjson(db.getCollectionNames())" | find /C "NtlmEvents"`
+nome do arquivo ATA mongo.exe
+
+        db.getCollectionNames().forEach(function(collection) {
+        if (collection.substring(0,10)=="NtlmEvent_") {
+                if (db[collection].count() > 0) {
+                                  print ("Found "+db[collection].count()+" NTLM events") 
+                                }
+                }
+        });
+
 ## O ATA funciona com tráfego criptografado?
-O tráfego criptografado não será analisado (por exemplo: LDAPS, ESP IPSEC).
+O ATA tem base na análise de vários protocolos de rede, bem como em eventos coletados no SIEM ou por meio do Encaminhamento de eventos do Windows, de modo que, embora o tráfego criptografado não seja analisado (por exemplo, LDAPS e ESP IPSEC) o ATA ainda funcionará e a maioria das detecções não será afetada
+
 ## O ATA funciona com Kerberos Armoring?
 Há suporte para a habilitação do Kerberos Armoring, também conhecido como FAST (encapsulamento seguro de autenticação flexível), pelo ATA, com exceção da detecção de passagem pelo hash, que não funcionará.
 ## De quantos Gateways de ATA eu preciso?
 
-Primeiro, é recomendável usar Gateways Lightweight do ATA em controladores de domínio que podem acomodá-los. Para determinar isso, confira [Dimensionamento do Gateway Lightweight do ATA](/advanced-threat-analytics/plan-design/ata-capacity-planning#ata-lightweight-gateway-sizing). 
-
-Se todos os controladores de domínio puderem ser abordados pelos Gateways Lightweight do ATA, não haverá a necessidade de Gateways do ATA.
-
-Para controladores de domínio que não podem ser usados com Gateway Lightweight do ATA, considere o seguinte ao decidir quantos Gateways do ATA serão necessários:
-
- - A quantidade total de tráfego que os controladores de domínio produzem e a arquitetura de rede (para configurar o espelhamento de porta). Para ler mais sobre como determinar a quantidade de tráfego produzido por seus controladores de domínio, confira [Estimativa de tráfego do controlador de domínio](/advanced-threat-analytics/plan-design/ata-capacity-planning#Domain-controller-traffic-estimation).
- - As limitações operacionais do espelhamento de porta também determinam a quantidade de Gateways do ATA que você precisa para oferecer suporte a todos os controladores de domínio, por exemplo: por comutador, por datacenter, por região. Cada ambiente tem seus próprios aspectos. 
+O número de Gateways do ATA depende de seu layout de rede, do volume de pacotes e do volume de eventos capturados pelo ATA. Para determinar o número exato, consulte [Dimensionamento do Gateway Lightweight do ATA](/advanced-threat-analytics/plan-design/ata-capacity-planning#ata-lightweight-gateway-sizing). 
 
 ## Qual a quantidade de armazenamento necessária para o ATA?
 Para cada dia inteiro com uma média de 1000 pacotes/s, você precisa de 0.3 GB de armazenamento.<br /><br />Para saber mais sobre consulte dimensionamento do Centro do ATA, confira [planejamento de capacidade do ATA](/advanced-threat-analytics/plan-design/ata-capacity-planning).
@@ -79,11 +83,10 @@ Se um controlador de domínio virtual não pode ser usado com Gateway Lightweigh
 Há duas coisas das quais fazer backup:
 
 -   O tráfego e os eventos armazenados pelo ATA, que podem sobre backup usando qualquer procedimento de backup de banco de dados com suporte, para saber mais, confira [Gerenciamento de banco de dados do ATA](/advanced-threat-analytics/deploy-use/ata-database-management). 
--   A configuração do ATA, que é armazenada no banco de dados e copiada em backup automaticamente a cada hora. 
-
+-   A configuração do ATA. Isso é armazenado no banco de dados e automaticamente submetido a backup a cada hora na pasta **Backup** do local de implantação da Central do ATA.  Consulte [Gerenciamento de banco de dados do ATA](https://docs.microsoft.com/en-us/advanced-threat-analytics/deploy-use/ata-database-management) para saber mais.
 ## O que o ATA pode detectar?
 O ATA detecta técnicas e ataques mal-intencionados e conhecidos, problemas de segurança e riscos.
-Para obter a lista completa de detecções do ATA, confira [O que é o Microsoft Advanced Threat Analytics?](what-is-ata.md).
+Para obter a lista completa das detecções do ATA, consulte [Quais detecções são realizadas pelo ATA?](ata-threats.md).
 
 ## Qual tipo de armazenamento eu preciso para o ATA?
 Recomendamos o armazenamento rápido (discos de 7.200 RPM não são recomendados) com acesso ao disco de baixa latência (menos de 10 ms). A configuração de RAID deve dar suporte a cargas pesadas de gravação (RAID-5/6 e seus derivados não são recomendados).
@@ -126,8 +129,7 @@ Não. O ATA monitora todos os dispositivos na rede que executam solicitações d
 Sim. Como as contas de computador (bem como quaisquer outras entidades) podem ser usadas para executar atividades mal-intencionadas, o ATA monitora todo o comportamento das contas de computador e todas as outras entidades no ambiente.
 
 ## O ATA pode dar suporte a vários domínios e várias florestas?
-Na disponibilidade geral, o Microsoft Advanced Threat Analytics oferecerá suporte a vários domínios com o mesmo limite de floresta. A floresta propriamente dita é o verdadeiro "limite de segurança", de modo que dar suporte a vários domínios permitirá que os clientes tenham 100% de cobertura de seus ambientes com o ATA.
-
+O Microsoft Advanced Threat Analytics oferece suporte a ambientes com vários domínios dentro dos mesmos limites de floresta. Várias florestas exigem uma implantação do ATA para cada floresta.
 ## Você pode ver a integridade geral da implantação?
 Sim, é possível exibir a integridade geral da implantação, bem como os problemas específicos relacionados à configuração, conectividade, etc., e você será alertado quando ocorrerem.
 
@@ -142,6 +144,6 @@ Sim, é possível exibir a integridade geral da implantação, bem como os probl
 
 
 
-<!--HONumber=Aug16_HO2-->
+<!--HONumber=Aug16_HO5-->
 
 
