@@ -140,6 +140,6 @@ Você saberá que todos os Gateways do ATA foram atualizados com êxito quando t
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Sep16_HO4-->
 
 
