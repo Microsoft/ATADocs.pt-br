@@ -13,8 +13,8 @@ ms.assetid:
 ms.reviewer: 
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: e3b690767e5c6f5561a97a73eccfbf50ddb04148
-ms.openlocfilehash: 579e49a8dd9a5cc67961af14259bb8bb27130de5
+ms.sourcegitcommit: ae6a3295d2fffabdb8e5f713674379e4af499ac2
+ms.openlocfilehash: af9101260b1a0d5d9da32398f638f76e0c8c40a7
 
 
 ---
@@ -63,13 +63,56 @@ A seguir estão os problemas conhecidos existentes nesta versão.
 ### Atualização automática do Gateway pode falhar
 **Sintomas:** em ambientes com links WAN lentos, a atualização do Gateway do ATA pode atingir o tempo limite para a atualização (100 segundos) e não ser concluída.
 No Console do ATA, o Gateway do ATA terá o status de "Atualizando (baixando pacote)" por um longo período e, eventualmente, falhará.
+
 **Solução alternativa:** para contornar esse problema, baixe o pacote mais recente do Gateway do ATA no Console do ATA e atualize o Gateway do ATA manualmente.
 
- > [!IMPORTANT]
- Não há suporte para a renovação automática de certificados para os certificados usados pelo ATA. O uso desses certificados pode fazer com que o ATA deixe de funcionar quando o certificado é renovado automaticamente. 
+### Falha de migração ao atualizar do ATA 1.6
+Ao atualizar para o ATA 1.7, o processo de atualização pode falhar com o seguinte código de erro *0x80070643*:
+
+![Erro ao atualizar o ATA para 1.7](media/ata-update-error.png)
+
+Examine o log de implantação para descobrir a causa da falha. O log de implantação está localizado no seguinte local,**%temp%\..\Microsoft Advanced Thread Analytics Center_{date_stamp}_MsiPackage.log**. 
+
+A tabela a seguir lista os erros para procura e o script Mongo correspondente para corrigir o erro. Consulte o exemplo abaixo da tabela sobre como executar o script Mongo:
+
+| Erro no arquivo de log de implantação                                                                                                                  | Script do Mongo                                                                                                                                                                         |
+|---|---|
+| System.FormatException: Size {size}, é maior do que MaxDocumentSize 16777216 <br>Mais para baixo no arquivo:<br>  Microsoft.Tri.Center.Deployment.Package.Actions.DatabaseActions.MigrateUniqueEntityProfiles(Boolean isPartial)                                                                                        | db.UniqueEntityProfile.find().forEach(function(obj){if(Object.bsonsize(obj) > 12582912) {print(obj._id);print(Object.bsonsize(obj));db.UniqueEntityProfile.remove({_id:obj._id});}}) |
+| System.OutOfMemoryException: a exceção do tipo 'System.OutOfMemoryException' foi lançada<br>Mais para baixo no arquivo:<br>Microsoft.Tri.Center.Deployment.Package.Actions.DatabaseActions.ReduceSuspiciousActivityDetailsRecords(IMongoCollection`1 suspiciousActivityCollection, Int32 deletedDetailRecordMaxCount) | db.SuspiciousActivity.find().forEach(function(obj){if(Object.bsonsize(obj) > 500000),{print(obj._id);print(Object.bsonsize(obj));db.SuspiciousActivity.remove({_id:obj._id});}})     |
+|System.Security.Cryptography.CryptographicException: Comprimento inválido<br>Mais para baixo no arquivo:<br> Microsoft.Tri.Center.Deployment.Package.Actions.DatabaseActions.MigrateCenterSystemProfile(IMongoCollection`1 systemProfileCollection)| CenterThumbprint=db.SystemProfile.find({_t:"CenterSystemProfile"}).toArray()[0].Configuration.SecretManagerConfiguration.CertificateThumbprint;db.SystemProfile.update({_t:"CenterSystemProfile"},{$set:{"Configuration.ManagementClientConfiguration.ServerCertificateThumbprint":CenterThumbprint}})|
 
 
-## Consulte Também
+Para executar o script apropriado, siga as etapas a seguir. 
+
+1.  Em um prompt de comandos com privilégios elevados, navegue até o local a seguir: **\Arquivos de Programas\Microsoft Advanced Threat Analytics\Center\MongoDB\bin**
+2.  Digite – **Mongo.exe ATA**   (*Observação*: ATA deve estar em letras maiúsculas.)
+3.  Cole o script que coincide com o erro no log de implantação da tabela acima.
+
+![Script do Mongo ATA](media/ATA-mongoDB-script.png)
+
+Neste ponto, você deve ser capaz de reiniciar a atualização.
+
+### O ATA relata um grande número de atividades suspeitas de "*Reconhecimento usando enumerações de serviços de diretório*":
+ 
+Será mais provável que isso ocorra se houver uma ferramenta de varredura de rede em execução em todos os (ou vários) computadores cliente da organização. Se esse problema estiver ocorrendo:
+
+1. Se você puder identificar o motivo ou o aplicativo específico que está em execução nos computadores cliente, envie um email para ATAEval em Microsoft.com com as informações.
+2. Use o seguinte script mongo para ignorar todos esses eventos (veja acima como executar o script mongo):
+
+db.SuspiciousActivity.update({_t: "SamrReconnaissanceSuspiciousActivity"}, {$set: {Status: "Dismissed"}}, {multi: true})
+
+### O ATA envia notificações para atividades suspeitas ignoradas:
+Se as notificações foram configuradas, o ATA poderá continuar enviando notificações (email, syslog e logs de eventos) para atividades suspeitas ignoradas.
+Não há solução alternativa para esse problema no momento. 
+
+### O Gateway do ATA poderá falhar ao se registrar com o Centro do ATA se o TLS 1.0 e o TLS 1.1 estiverem desabilitados:
+Se o TLS 1.0 e o TLS 1.1 estiverem desabilitados no Gateway do ATA (ou Lightweight Gateway), o gateway poderá falhar ao se registrar no Centro do ATA
+
+### A renovação de certificado automática para os certificados usados pelo ATA não tem suporte
+O uso da renovação de certificado automática pode fazer com que o ATA pare de funcionar quando o certificado for renovado automaticamente. 
+
+
+## Confira Também
 [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
 [Atualizar o ATA para a versão 1.7 — guia de migração](ata-update-1.7-migration-guide.md)
@@ -77,6 +120,6 @@ No Console do ATA, o Gateway do ATA terá o status de "Atualizando (baixando pac
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Sep16_HO2-->
 
 
