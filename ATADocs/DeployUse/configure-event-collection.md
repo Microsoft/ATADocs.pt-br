@@ -13,8 +13,8 @@ ms.assetid: 3f0498f9-061d-40e6-ae07-98b8dcad9b20
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 54e5105e78b6db9f33488135601381af5503aa4a
-ms.openlocfilehash: 118eb5bf505426f1947e96a4e01d0206abdce88d
+ms.sourcegitcommit: d2c1c00ff649557c1a0a16385e025c9d597c3bbf
+ms.openlocfilehash: 91ce3a3fef27673712a708aa1e92c32298cedd84
 
 
 ---
@@ -54,7 +54,7 @@ Se você não usa um servidor Syslog/SIEM, é possível configurar os controlado
 2.  Configure o servidor Syslog ou SIEM para encaminhar a ID de Evento do Windows 4776 para o endereço IP de um dos Gateways ATA. Para saber mais sobre como configurar o SIEM, consulte a ajuda online do SIEM ou opções de suporte técnico para obter os requisitos de formatação específica para cada servidor SIEM.
 
 ### Suporte a SIEM
-O ATA oferece suporte a eventos de SIEM nos seguintes formatos:
+O ATA oferece suporte a eventos de SIEM nos seguintes formatos:  
 
 #### Análise de Segurança do RSA
 &lt;Cabeçalho do syslog&gt;RsaSA\n2015-May-19 09:07:09\n4776\nMicrosoft-Windows-Security-Auditing\nSecurity\XXXXX.subDomain.domain.org.il\nYYYYY$\nMMMMM \n0x0
@@ -282,10 +282,10 @@ Para obter mais informações, confira: [Configurar computadores para encaminhar
 
 ## Consulte Também
 - [Instalar o ATA](install-ata.md)
-- [Confira o fórum do ATA!!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+- [Confira o fórum do ATA!!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Sep16_HO4-->
 
 

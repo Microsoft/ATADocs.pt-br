@@ -13,8 +13,8 @@ ms.assetid: a7d378ec-68ed-4a7b-a0db-f5e439c3e852
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b8ad2f343b8397184cd860803f06b0d59c492f5a
-ms.openlocfilehash: 96b3ce171ca07bf44163d49b50377fccd6472a08
+ms.sourcegitcommit: 7d081a6e14adffc675de203001074c3435cce6b2
+ms.openlocfilehash: 8896df26157f9da903e68ac7a1d21f7f80f95026
 
 
 ---
@@ -83,7 +83,7 @@ Se um controlador de domínio virtual não pode ser usado com Gateway Lightweigh
 Há duas coisas das quais fazer backup:
 
 -   O tráfego e os eventos armazenados pelo ATA, que podem sobre backup usando qualquer procedimento de backup de banco de dados com suporte, para saber mais, confira [Gerenciamento de banco de dados do ATA](/advanced-threat-analytics/deploy-use/ata-database-management). 
--   A configuração do ATA. Isso é armazenado no banco de dados e automaticamente submetido a backup a cada hora na pasta **Backup** do local de implantação da Central do ATA.  Consulte [Gerenciamento de banco de dados do ATA](https://docs.microsoft.com/en-us/advanced-threat-analytics/deploy-use/ata-database-management) para saber mais.
+-   A configuração do ATA. Isso é armazenado no banco de dados e automaticamente submetido a backup a cada hora na pasta **Backup** do local de implantação da Central do ATA.  Consulte [Gerenciamento de banco de dados do ATA](https://docs.microsoft.com/advanced-threat-analytics/deploy-use/ata-database-management) para saber mais.
 ## O que o ATA pode detectar?
 O ATA detecta técnicas e ataques mal-intencionados e conhecidos, problemas de segurança e riscos.
 Para obter a lista completa das detecções do ATA, consulte [Quais detecções são realizadas pelo ATA?](ata-threats.md).
@@ -144,6 +144,6 @@ Sim, é possível exibir a integridade geral da implantação, bem como os probl
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Sep16_HO4-->
 
 
