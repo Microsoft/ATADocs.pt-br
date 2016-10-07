@@ -13,8 +13,8 @@ ms.assetid: fb65eb41-b215-4530-93a2-0b8991f4e980
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f13750f9cdff98aadcd59346bfbbb73c2f3a26f0
-ms.openlocfilehash: 87cb9534a45d3a8ca29d6a803ca399a33a3d3ea6
+ms.sourcegitcommit: d3ec5d56444d618efcfc617172e93e0e8e8a1768
+ms.openlocfilehash: 6fd96a8bf2fb1e064cc05858a020cbc2e55746f4
 
 
 ---
@@ -71,23 +71,25 @@ Nessa versão, o mesmo arquivo de instalação (Microsoft ATA Center Setup.exe) 
 
 2.  Execute o arquivo de instalação, Microsoft ATA Center Setup.exe, e siga as instruções na tela para instalar a atualização.
 
-    1.  O ATA 1.6 exige o .Net Framework 4.6.1 instalado. Se ainda não estiver instalado, o ATA instalará o .NET Framework 4.6.1 como parte da configuração<br>
-    > [!NOTE]
-    > A instalação do .Net Framework 4.6.1 pode exigir a reinicialização do servidor. A instalação do ATA continuará somente depois que o servidor for reiniciado.
-5.  Na página **Boas-vindas**, selecione seu idioma e clique em **Avançar**.
+    1.  O ATA 1.6 exige o .Net Framework 4.6.1 instalado. Se ainda não estiver instalado, o ATA instalará o .NET Framework 4.6.1 como parte da configuração.
+    
+        > [!NOTE] 
+            A instalação do .Net Framework 4.6.1 pode exigir a reinicialização do servidor. A instalação do ATA continuará somente depois que o servidor for reiniciado.
+    
+    2.  Na página **Boas-vindas**, selecione seu idioma e clique em **Avançar**.
 
-    6.  Leia o Contrato de Licença de Usuário Final e, se você aceitar os termos, clique em **Avançar**.
+    3.  Leia o Contrato de Licença de Usuário Final e, se você aceitar os termos, clique em **Avançar**.
 
-    7.  Agora é possível usar o Microsoft Update para manter o ATA atualizado.  Na página do Microsoft Update, selecione **Usar o Microsoft Update ao verificar se há atualizações (recomendado)**.
+    4.  Agora é possível usar o Microsoft Update para manter o ATA atualizado.  Na página do Microsoft Update, selecione **Usar o Microsoft Update ao verificar se há atualizações (recomendado)**.
     ![Imagem Manter o ATA atualizado](media/ata_ms_update.png) Isso ajusta as configurações do Windows para habilitar atualizações para os outros produtos da Microsoft (incluindo o ATA), como visto aqui. 
      ![Imagem de atualização automática do Windows](media/ata_installupdatesautomatically.png)
 
-    8.  Antes de iniciar a instalação, o ATA executará uma verificação de preparação. Examine os resultados da verificação para saber se os pré-requisitos foram configurados com êxito e se você tem pelo menos a quantidade mínima de espaço em disco. 
+    5.  Antes de iniciar a instalação, o ATA executará uma verificação de preparação. Examine os resultados da verificação para saber se os pré-requisitos foram configurados com êxito e se você tem pelo menos a quantidade mínima de espaço em disco. 
     ![Imagem de verificação de preparação do ATA](media/ata_install_readinesschecks.png)
 
-    3.  Clique em **Atualizar**. Depois de clicar em Atualizar, o ATA ficará offline até que o procedimento de atualização seja concluído.
+    6.  Clique em **Atualizar**. Depois de clicar em Atualizar, o ATA ficará offline até que o procedimento de atualização seja concluído.
 
-4.  Depois de atualizar a Central de ATA, os Gateways do ATA reportarão que agora estão desatualizados.
+3.  Depois de atualizar a Central de ATA, os Gateways do ATA reportarão que agora estão desatualizados.
 
     ![Imagem de gateways desatualizados](media/ATA-center-outdated.png)
 
@@ -140,6 +142,6 @@ Você saberá que todos os Gateways do ATA foram atualizados com êxito quando t
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Oct16_HO1-->
 
 
