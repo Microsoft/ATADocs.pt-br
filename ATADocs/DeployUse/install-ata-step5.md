@@ -13,8 +13,8 @@ ms.assetid: 2a5b6652-2aef-464c-ac17-c7e5f12f920f
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: e3b690767e5c6f5561a97a73eccfbf50ddb04148
-ms.openlocfilehash: 168a41182128a1fc91d92a4ef11b873c04ecc6b7
+ms.sourcegitcommit: 39eadb9143740741fa592f983f03def5367ada46
+ms.openlocfilehash: 14b04a771f0c18170f0c80d388ab012574d40bee
 
 
 ---
@@ -45,9 +45,9 @@ Após a instalação do Gateway do ATA, execute as etapas a seguir para definir 
   - **Descrição**: insira uma descrição para o Gateway do ATA (opcional).
   - **Controladores de Domínio com porta espelhada (FQDN)** (exigidos para o Gateway do ATA, isso não pode ser alterado para o Gateway Lightweight do ATA): insira o FQDN completo de seu controlador de domínio e clique no sinal de adição para adicioná-lo à lista. Por exemplo, **dc01.contoso.com**
 
-        The following information applies to the servers you enter in the **Domain Controllers** list:
-        - All domain controllers whose traffic is being monitored via port mirroring by the ATA Gateway must be listed in the **Domain Controllers** list. If a domain controller is not listed in the **Domain Controllers** list, detection of suspicious activities might not function as expected.
-        - At least one domain controller in the list should be a global catalog. This will enable ATA to resolve computer and user objects in other domains in the forest.
+      As informações a seguir se aplicam aos servidores digitados na lista **Controladores de Domínio**:
+      - Todos os controladores de domínio cujo tráfego esteja sendo monitorado por meio do espelhamento de porta pelo Gateway do ATA devem estar na lista **Controladores de Domínio**. Se um controlador de domínio não estiver listado em **Controladores de Domínio**, a detecção de atividades suspeitas pode não funcionar conforme o esperado.
+      - Pelo menos um controlador de domínio na lista deve ser um catálogo global. Isso permitirá que o ATA resolva os objetos de usuário e computador em outros domínios na floresta.
 
 - **Capturar adaptadores de rede** (obrigatório):
   - Para um Gateway do ATA em um servidor dedicado, selecione os adaptadores de rede que são configurados como a porta de espelho do destino. Eles receberão o tráfego do controlador de domínio espelhado.
@@ -96,6 +96,6 @@ Para validar a implantação bem-sucedida do Gateway do ATA, verifique o seguint
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Sep16_HO4-->
 
 
