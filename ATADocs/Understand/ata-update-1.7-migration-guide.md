@@ -92,6 +92,6 @@ Nessa versão, o mesmo arquivo de instalação (Microsoft ATA Center Setup.exe) 
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Oct16_HO1-->
 
 
