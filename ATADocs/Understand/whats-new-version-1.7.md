@@ -13,8 +13,8 @@ ms.assetid:
 ms.reviewer: 
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: d47d9e7be294c68d764710c15c4bb78539e42f62
-ms.openlocfilehash: 62f2aadc978547647a1dc3c27ed3453f7ed15828
+ms.sourcegitcommit: a024cab5e706b32273d563095f5d7e690d6ed055
+ms.openlocfilehash: dec9fc03cdf718627dd72ac0c48f934fe507c7ac
 
 
 ---
@@ -73,6 +73,12 @@ No Console do ATA, o Gateway do ATA terá o status de "Atualizando (baixando pac
 ### Não há suporte do navegador para codificação JIS
 **Sintomas:** o Console ATA podem não funcionar conforme o esperado em navegadores que usam a codificação JIS **Solução:** alterar a codificação do navegador Unicode UTF-8.
  
+### Tráfego espelhado por porta descartado ao usar o VMware
+
+Alertas de tráfego espelhado por porta descartados ao usar o gateway lightweight no VMware
+
+Se você estiver usando controladores de domínio em máquinas virtuais VMware, você poderá receber alertas sobre o **Tráfego de rede espelhado por porta descartado**. Isso pode ocorrer devido a uma incompatibilidade de configuração no VMware. Para evitar esses alertas, verifique se as configurações a seguir estão definidas como 0 ou Desabilitado: TsoEnable, LargeSendOffload, IPv4 e Descarregamento de TSO (Descarregamento de Segmentação TCP). Além disso, considere desabilitar o Descarregamento TSO gigante do IPv4. Para obter mais informações, consulte a documentação do VMware.
+
 ## Alterações secundárias
 
 - Agora, o ATA está usando OWIN em vez de IIS para o Console de ATA.
@@ -87,6 +93,6 @@ No Console do ATA, o Gateway do ATA terá o status de "Atualizando (baixando pac
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Oct16_HO2-->
 
 
