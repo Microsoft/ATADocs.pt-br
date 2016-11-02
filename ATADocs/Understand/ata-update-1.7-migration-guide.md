@@ -13,8 +13,8 @@ ms.assetid: fb65eb41-b215-4530-93a2-0b8991f4e980
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: e3b690767e5c6f5561a97a73eccfbf50ddb04148
-ms.openlocfilehash: 5c20c41c3fe587f18087d64f4f84c1df65072fde
+ms.sourcegitcommit: 3a821bf1479af529fd65e2153f8b722999c83a4f
+ms.openlocfilehash: 444bc4744834219d9db7bc8c209f33c039f90dad
 
 
 ---
@@ -28,6 +28,7 @@ A atualização 1.7 do ATA fornece melhorias nas seguintes áreas:
   
 
 ## Atualizando o ATA para a versão 1.7
+
 > [!NOTE] 
 > Se o ATA não estiver instalado em seu ambiente, baixe a versão completa do ATA que inclui a versão 1.7 e siga o procedimento de instalação padrão descrito em [Instalar o ATA](/advanced-threat-analytics/deploy-use/install-ata).
 
@@ -81,17 +82,17 @@ Nessa versão, o mesmo arquivo de instalação (Microsoft ATA Center Setup.exe) 
 > Atualize todos os Gateways do ATA para ter certeza de o ATA funciona corretamente.
 > A porta de escuta Syslog configurada em todos os Gateways será alterada para 514.
  
-    > [!NOTE] 
-    > To install new ATA Gateways, go the **Gateways** screen and click **Download Gateway Setup** to get the ATA 1.7 installation package and follow the instructions for new Gateway installation as described in [Step 4. Install the ATA Gateway](/advanced-threat-analytics/deploy-use/install-ata-step4) .
+> [!NOTE] 
+> Para instalar novos Gateways ATA, acesse a tela **Gateways** e clique em **Baixar a instalação do Gateway** para obter o pacote de instalação ATA 1.7 e seguis as instruções para uma nova instalação do Gateway, conforme descrito na [Etapa 4. Instale o Gateway ATA](/advanced-threat-analytics/deploy-use/install-ata-step4).
 
 
 
-## Consulte também
+## Consulte Também
 
 - [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
 
 
-<!--HONumber=Oct16_HO1-->
+<!--HONumber=Oct16_HO3-->
 
 
