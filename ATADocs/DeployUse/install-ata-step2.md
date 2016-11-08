@@ -23,13 +23,13 @@ ms.openlocfilehash: be58ce053a2ddb59fa1556027e432c0499f8deb4
 
 
 
-# Instalação do ATA - Etapa 2
+# <a name="install-ata-step-2"></a>Instalação do ATA - Etapa 2
 
 >[!div class="step-by-step"]
 [« Etapa 1](install-ata-step1.md)
 [Etapa 3 »](install-ata-step3.md)
 
-## Etapa 2. Forneça um Nome de usuário e uma Senha para se conectar à sua Floresta do Active Directory
+## <a name="step-2-provide-a-username-and-password-to-connect-to-your-active-directory-forest"></a>Etapa 2. Forneça um Nome de usuário e uma Senha para se conectar à sua Floresta do Active Directory
 
 Na primeira vez que você abrir o Console do ATA, a tela a seguir será exibida:
 
@@ -54,7 +54,7 @@ Na primeira vez que você abrir o Console do ATA, a tela a seguir será exibida:
 [Etapa 3 »](install-ata-step3.md)
 
 
-## Consulte também
+## <a name="see-also"></a>Consulte Também
 
 - [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Configurar coleta de eventos](configure-event-collection.md)
@@ -62,6 +62,6 @@ Na primeira vez que você abrir o Console do ATA, a tela a seguir será exibida:
 
 
 
-<!--HONumber=Oct16_HO2-->
+<!--HONumber=Oct16_HO4-->
 
 
