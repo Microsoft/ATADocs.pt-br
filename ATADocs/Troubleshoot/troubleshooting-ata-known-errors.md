@@ -4,7 +4,7 @@ description: "Descreve como é possível solucionar erros comuns no ATA"
 keywords: 
 author: rkarlin
 manager: mbaldwin
-ms.date: 08/24/2016
+ms.date: 10/25/2016
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,8 +13,8 @@ ms.assetid: d89e7aff-a6ef-48a3-ae87-6ac2e39f3bdb
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 15c1a0d7ae213876c0e3a955eaeea8887281b4e6
-ms.openlocfilehash: b073a1b969f8841c9bbe540722349a5ef70340d4
+ms.sourcegitcommit: f334f9c8440e4bb0202579de220f6530d0aabad8
+ms.openlocfilehash: aa16eeb45272ffcf28bbb28ed9a02f30f52b15d0
 
 
 ---
@@ -23,9 +23,9 @@ ms.openlocfilehash: b073a1b969f8841c9bbe540722349a5ef70340d4
 
 
 
-# Solução de problemas do log de erros do ATA
+# <a name="troubleshooting-the-ata-error-log"></a>Solução de problemas do log de erros do ATA
 Esta seção detalha os possíveis erros nas implantações do ATA e as etapas necessárias para solucioná-los.
-## Erros do Gateway do ATA
+## <a name="ata-gateway-errors"></a>Erros do Gateway do ATA
 |Erro do|Descrição|Resolução|
 |-------------|----------|---------|
 |System.DirectoryServices.Protocols.LdapException: ocorreu um erro local|Falha do Gateway do ATA ao autenticar no controlador de domínio.|1. Confirme se o registro DNS do controlador de domínio está configurado corretamente no servidor DNS. <br>2. Verifique se a hora do Gateway do ATA está sincronizada com a hora do controlador de domínio.|
@@ -44,12 +44,21 @@ Esta seção detalha os possíveis erros nas implantações do ATA e as etapas n
 |System.ApplicationException: Não é possível iniciar a sessão do ETW MMA-ETW-Livecapture-a4f595bd-f567-49a7-b963-20fa4e370329|Há uma entrada do host no arquivo HOSTS que aponta para o nome curto do computador|Remova a entrada do host do arquivo C:\Windows\System32\drivers\etc\HOSTS ou altere-a para um FQDN.|
 
 
-## Erros de IIS do ATA (não aplicável para o ATA v1.7 e superior)
+
+## <a name="ata-lightweight-gateway-errors"></a>Erros do Gateway Lightweight do ATA
+
+**Erro**: alertas de tráfego espelhado por porta descartados ao usar o Gateway Lightweight no VMware
+
+**Descrição**: se você estiver usando DCs (controladores de domínio) em máquinas virtuais VMware, você poderá receber alertas sobre o **Tráfego de rede espelhado por porta descartado**. Isso pode ser devido a uma incompatibilidade de configuração no VMware. 
+**Solução**: Para evitar esses alertas, verifique se as configurações a seguir estão definidas como 0 ou Desabilitado: TsoEnable, LargeSendOffload, IPv4 e Descarregamento de TSO (Descarregamento de Segmentação TCP). Além disso, considere desabilitar o Descarregamento TSO gigante do IPv4. Para obter mais informações, consulte a documentação do VMware.
+
+
+## <a name="ata-iis-errors-not-applicable-for-ata-v17-and-above"></a>Erros de IIS do ATA (não aplicável para o ATA v1.7 e superior)
 |Erro do|Descrição|Resolução|
 |-------------|----------|---------|
 |Erro HTTP 500.19 – Erro Interno do Servidor|O módulo de Reescrita de URL para IIS não foi instalado corretamente.|Desinstale e reinstale o módulo de Reescrita de URL para IIS.<br>[Baixar o módulo de Reescrita de URL para IIS](http://go.microsoft.com/fwlink/?LinkID=615137)|
 
-## Erros de implantação
+## <a name="deployment-errors"></a>Erros de implantação
 |Erro do|Descrição|Resolução|
 |-------------|----------|---------|
 |Falha na instalação do .Net Framework 4.6.1 com o erro 0x800713ec|Os pré-requisitos do .Net Framework 4.6.1 não estão instalados no servidor. |Antes de instalar o ATA, verifique se as atualizações do Windows [KB2919442](https://www.microsoft.com/download/details.aspx?id=42135) e [KB2919355](https://support.microsoft.com/kb/2919355) estão instaladas no servidor.|
@@ -57,15 +66,15 @@ Esta seção detalha os possíveis erros nas implantações do ATA e as etapas n
 ![Imagem do erro de instalação do .NET no ATA](media/netinstallerror.png)
 
 
-## Consulte também
+## <a name="see-also"></a>Consulte Também
 - [Pré-requisitos do ATA](/advanced-threat-analytics/plan-design/ata-prerequisites)
-- [Planejamento da capacidade de ATA](/advanced-threat-analytics/plan-design/ata-capacity-planning)
+- [Planejamento da capacidade do ATA](/advanced-threat-analytics/plan-design/ata-capacity-planning)
 - [Configurar coleta de eventos](/advanced-threat-analytics/deploy-use/configure-event-collection)
 - [Configuração do encaminhamento de eventos do Windows](/advanced-threat-analytics/deploy-use/configure-event-collection#configuring-windows-event-forwarding)
 - [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Oct16_HO5-->
 
 

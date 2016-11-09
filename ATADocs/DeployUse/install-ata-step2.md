@@ -13,8 +13,8 @@ ms.assetid: e1c5ff41-d989-46cb-aa38-5a3938f03c0f
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 3768cd103fc2a938d2d39fe34179d74587abc118
-ms.openlocfilehash: be58ce053a2ddb59fa1556027e432c0499f8deb4
+ms.sourcegitcommit: f334f9c8440e4bb0202579de220f6530d0aabad8
+ms.openlocfilehash: 3f78d0dd6b1e3f419c7e72e0449f77e7d2b3167d
 
 
 ---
@@ -42,11 +42,12 @@ Na primeira vez que você abrir o Console do ATA, a tela a seguir será exibida:
     |**Nome de usuário** (obrigatório)|Insira o nome de usuário somente leitura, por exemplo: **ATAuser**.|
     |**Senha** (obrigatório)|Digite a senha para o usuário somente leitura, por exemplo: **Lápis1**.|
     |**Domínio** (obrigatório)|Digite o domínio para o usuário somente leitura, por exemplo: **contoso.com**. **Observação:** é importante que você insira o FQDN completo do domínio onde o usuário está localizado. Por exemplo, se a conta do usuário estiver no domínio corp.contoso.com, você precisará inserir `corp.contoso.com` e não contoso.com|
-    
+
+2. Opcionalmente, você pode clicar em **Testar conexão**, que testará a conectividade com o domínio e verificará se as credenciais fornecidas permitem acesso. Isso só funcionará se o Centro do ATA tiver conectividade com o domínio.   
 
     Após a gravação, a mensagem de boas-vindas no Console mudará para o seguinte: ![Estágio 1 das boas-vindas do ATA concluído](media/ATA_1.7-welcome-provide-username-finished.png)
 
-2. No Console, clique em **Baixar instalação do Gateway e instalar o primeiro Gateway** para continuar.
+3. No Console, clique em **Baixar instalação do Gateway e instalar o primeiro Gateway** para continuar.
 
 
 >[!div class="step-by-step"]
@@ -62,6 +63,6 @@ Na primeira vez que você abrir o Console do ATA, a tela a seguir será exibida:
 
 
 
-<!--HONumber=Oct16_HO4-->
+<!--HONumber=Oct16_HO5-->
 
 

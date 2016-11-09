@@ -13,8 +13,8 @@ ms.assetid: a5f90544-1c70-4aff-8bf3-c59dd7abd687
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 050f1ef0b39d69b64ede53243a7fa2d33d0e4813
-ms.openlocfilehash: a3fcf3b2ba7f90f2329d86ab9e8d19619cc7e28f
+ms.sourcegitcommit: c71d5ed1c705de558f1144820703ffe84850679b
+ms.openlocfilehash: a6fe3a8f042ca7f35180e99e5bc3ffd14f0ea6d8
 
 
 ---
@@ -117,7 +117,7 @@ Nessa tabela, o endereço IP 1 é vinculado ao serviço do Centro do ATA e o end
 ### Certificados
 Verifique se o Centro do ATA tem acesso ao ponto de distribuição de CRL. Se os Gateways do ATA não tiverem acesso à Internet, siga [o procedimento para importar manualmente uma CRL](https://technet.microsoft.com/library/aa996972%28v=exchg.65%29.aspx), tendo o cuidado de instalar todos os pontos de distribuição de CRL de toda a cadeia.
 
-Para facilitar a instalação da Central de ATA, você pode instalar os certificados autoassinados durante a instalação da Central de ATA. Após a implantação, você pode substituir o autoassinado pelo certificado de uma Autoridade de Certificação interna a ser usado pelo Gateway de ATA.<br>
+Para facilitar a instalação do ATA, você pode instalar certificados autoassinados durante a instalação. Após a implantação, você pode substituir o autoassinado pelo certificado de uma Autoridade de Certificação interna a ser usado pelo Gateway de ATA.<br>
 > [!NOTE]
 > O tipo de provedor do certificado deve ser o CSP (provedor de serviços de criptografia).
 
@@ -201,7 +201,7 @@ A tabela abaixo lista as portas mínimas que o Gateway do ATA requer configurada
 
 ### Certificados
 Verifique se o Centro do ATA tem acesso ao ponto de distribuição de CRL. Se os Gateways do ATA não tiverem acesso à Internet, execute o procedimento para importar manualmente uma CRL, tendo o cuidado de instalar todos os pontos de distribuição de CRL da cadeia inteira.<br>
-Para facilitar a instalação da Central de ATA, você pode instalar os certificados autoassinados durante a instalação da Central de ATA. Após a implantação, você pode substituir o autoassinado pelo certificado de uma Autoridade de Certificação interna a ser usado pelo Gateway de ATA.
+Para facilitar a instalação do ATA, você pode instalar certificados autoassinados durante a instalação. Após a implantação, você pode substituir o autoassinado pelo certificado de uma Autoridade de Certificação interna a ser usado pelo Gateway de ATA.
 
 > [!NOTE]
 > O tipo de provedor do certificado deve ser o CSP (provedor de serviços de criptografia).<br>
@@ -254,7 +254,7 @@ A tabela abaixo lista o mínimo de portas que o Gateway Lightweight do ATA exige
 
 ### Certificados
 Verifique se o Centro do ATA tem acesso ao ponto de distribuição de CRL. Se os Gateways Lightweight do ATA não tiverem acesso à Internet, execute o procedimento para importar manualmente uma CRL, tendo o cuidado de instalar todos os pontos de distribuição de CRL da cadeia inteira.
-Para facilitar a instalação da Central de ATA, você pode instalar os certificados autoassinados durante a instalação da Central de ATA. Após a implantação, você pode substituir o autoassinado pelo certificado de uma Autoridade de Certificação interna a ser usado pelo Gateway Lightweight do ATA.
+Para facilitar a instalação do ATA, você pode instalar certificados autoassinados durante a instalação. Após a implantação, você pode substituir o autoassinado pelo certificado de uma Autoridade de Certificação interna a ser usado pelo Gateway Lightweight do ATA.
 > [!NOTE]
 > O tipo de provedor do certificado deve ser o CSP (provedor de serviços de criptografia).
 
@@ -281,6 +281,6 @@ O acesso ao Console do ATA é por meio de um navegador com suporte para o seguin
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Oct16_HO4-->
 
 
