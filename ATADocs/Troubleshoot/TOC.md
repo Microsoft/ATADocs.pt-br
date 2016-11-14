@@ -1,13 +1,14 @@
-# [Compreensão e Exploração](/advanced-threat-analytics/understand-explore/what-is-ata)
-# [Plano e design](/advanced-threat-analytics/plan-design/ata-capacity-planning)
-# [Implantação e Uso](/advanced-threat-analytics/deploy-use/preinstall-ata)
-# [Solução de problemas](troubleshooting-ata-known-errors.md)
-## [Solucionando problemas usando erros conhecidos](troubleshooting-ata-known-errors.md)
+# [Compreender e explorar](/advanced-threat-analytics/understand-explore/what-is-ata)
+# [Planejar e projetar](/advanced-threat-analytics/plan-design/ata-architecture)
+# [Implantar](/advanced-threat-analytics/deploy-use/preinstall-ata)
+# [Use](/advanced-threat-analytics/deploy-use/operate-ata)
+# [Solucionar problemas](troubleshooting-ata-known-errors.md)
+## [Solução de problemas usando erros conhecidos](troubleshooting-ata-known-errors.md)
 ## [Solucionar problemas usando os logs](troubleshooting-ata-using-logs.md)
-## [Solucionar problemas usando os contadores de desempenho](troubleshooting-ata-using-perf-counters.md)
-## [Solucionar problemas usando o banco de dados](troubleshooting-ata-using-ata-database.md)
+## [Solução de problemas usando os contadores de desempenho](troubleshooting-ata-using-perf-counters.md)
+## [Solução de problemas usando o banco de dados](troubleshooting-ata-using-ata-database.md)
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Oct16_HO5-->
 
 
