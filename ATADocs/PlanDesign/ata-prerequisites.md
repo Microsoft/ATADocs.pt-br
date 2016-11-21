@@ -1,8 +1,9 @@
 ---
-title: "Pré-requisitos do ATA | Microsoft ATA"
+title: "Pré-requisitos do ATA | Microsoft Docs"
 description: "Descreve os requisitos para uma implantação bem-sucedida do ATA em seu ambiente"
 keywords: 
 author: rkarlin
+ms.author: rkarlin
 manager: mbaldwin
 ms.date: 08/24/2016
 ms.topic: get-started-article
@@ -13,8 +14,8 @@ ms.assetid: a5f90544-1c70-4aff-8bf3-c59dd7abd687
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: c71d5ed1c705de558f1144820703ffe84850679b
-ms.openlocfilehash: a6fe3a8f042ca7f35180e99e5bc3ffd14f0ea6d8
+ms.sourcegitcommit: 85e285c5d88e5916e0bf0eb7dd327cb4cb45b4cb
+ms.openlocfilehash: 56f397c373e0b6827aab084e21c804a135049a27
 
 
 ---
@@ -23,7 +24,7 @@ ms.openlocfilehash: a6fe3a8f042ca7f35180e99e5bc3ffd14f0ea6d8
 
 
 
-# Pré-requisitos do ATA
+# <a name="ata-prerequisites"></a>Pré-requisitos do ATA
 Este artigo descreve os requisitos para uma implantação bem-sucedida do ATA em seu ambiente
 
 >[!NOTE]
@@ -47,7 +48,7 @@ O Sistema do ATA funciona nos limites da floresta do active directory e oferece 
 
 ![Diagrama de arquitetura do ATA](media/ATA-architecture-topology.jpg)
 
-## Antes de começar
+## <a name="before-you-start"></a>Antes de começar
 Esta seção lista as informações que você deve obter, as contas e entidades de rede que você deve ter antes de iniciar a instalação do ATA.
 
 
@@ -64,9 +65,9 @@ Esta seção lista as informações que você deve obter, as contas e entidades 
 -   Opcional: além de coletar e analisar o tráfego de rede para e a partir dos controladores de domínio, o ATA pode usar o evento 4776 do Windows para aprimorar a detecção da Passagem de Hash do ATA. Isso pode ser recebido de seu SIEM ou definindo o Encaminhamento de Eventos do Windows no controlador de domínio. Os eventos coletados fornecem à ATA informações adicionais que não estão disponíveis por meio do tráfego de rede do controlador de domínio.
 
 
-## Requisitos da Central de ATA
+## <a name="ata-center-requirements"></a>Requisitos da Central de ATA
 Esta seção lista os requisitos para a Central de ATA.
-### Geral
+### <a name="general"></a>Geral
 A Central de ATA dá suporte à instalação em um servidor executando o Windows Server 2012 R2 ou o Windows Server 2016. A Central de ATA pode ser instalada em um servidor que seja membro de um domínio ou grupo de trabalho.
 
 Antes de instalar a Central do ATA executando o Windows 2012 R2, confirme se a seguinte atualização foi instalada: [KB2919355](https://support.microsoft.com/kb/2919355/).
@@ -79,17 +80,17 @@ A instalação do ATA Center como uma máquina virtual tem suporte.
 > Durante a execução como uma memória dinâmica da máquina virtual ou qualquer outra memória, não há suporte para o recurso de inchamento.
 
 Se você executar a Central de ATA como uma máquina virtual, deverá finalizar o servidor antes de criar um novo ponto de verificação para evitar uma possível corrupção do banco de dados.
-### Especificações do servidor
+### <a name="server-specifications"></a>Especificações do servidor
 Ao trabalhar em um servidor físico, o banco de dados do ATA precisa que você **desabilite** o NUMA (acesso não uniforme a memória) no BIOS. O sistema pode referir-se ao NUMA como Nó de Intercalação, caso em que você precisará **habilitar** a Intercalação de Nó para desabilitar o NUMA. Consulte a documentação da BIOS para saber mais. Observe que isso não é pertinente quando a Central do ATA está em execução em um servidor virtual.<br>
 Para ter um melhor desempenho, defina a **Opção de Energia** do Centro do ATA como **Alto Desempenho**.<br>
 O número de controladores de domínio que você está monitorando e a carga em cada um dos controladores de domínio determinam as especificações do servidor necessárias. Confira [Planejamento de capacidade do ATA](ata-capacity-planning.md) para obter mais detalhes.
 
 
-### Sincronização da hora
+### <a name="time-synchronization"></a>Sincronização da hora
 O servidor do Centro do ATA, os servidores do Gateway do ATA e os controladores de domínio devem ter a hora sincronizada no espaço de cinco minutos entre si.
 
 
-### Adaptadores de rede
+### <a name="network-adapters"></a>Adaptadores de rede
 Você deve ter o seguinte:
 -   Pelo menos um adaptador de rede (se estiver usando o servidor físico no ambiente de VLAN, recomendamos o uso de dois adaptadores de rede)
 
@@ -100,7 +101,7 @@ A comunicação entre a Central de ATA e o Gateway de ATA é criptografada usand
 > [!NOTE]
 > É possível usar um único endereço IP com duas portas diferentes, mas recomendamos dois endereços IP.
 
-### Portas
+### <a name="ports"></a>Portas
 A tabela a seguir lista as portas mínimas que devem ser abertas para que a Central de ATA funcione corretamente.
 
 Nessa tabela, o endereço IP 1 é vinculado ao serviço do Centro do ATA e o endereço IP 2 é vinculado ao Console do ATA:
@@ -114,7 +115,7 @@ Nessa tabela, o endereço IP 1 é vinculado ao serviço do Centro do ATA e o end
 |**SMTPS** (opcional)|TCP|465|Servidor SMTP|Saída|Endereço IP 2|
 |**Syslog** (opcional)|TCP|514|Servidor syslog|Saída|Endereço IP 2|
 
-### Certificados
+### <a name="certificates"></a>Certificados
 Verifique se o Centro do ATA tem acesso ao ponto de distribuição de CRL. Se os Gateways do ATA não tiverem acesso à Internet, siga [o procedimento para importar manualmente uma CRL](https://technet.microsoft.com/library/aa996972%28v=exchg.65%29.aspx), tendo o cuidado de instalar todos os pontos de distribuição de CRL de toda a cadeia.
 
 Para facilitar a instalação do ATA, você pode instalar certificados autoassinados durante a instalação. Após a implantação, você pode substituir o autoassinado pelo certificado de uma Autoridade de Certificação interna a ser usado pelo Gateway de ATA.<br>
@@ -128,9 +129,9 @@ Para facilitar a instalação do ATA, você pode instalar certificados autoassin
 > [!NOTE]
 > Se você pretende acessar o Console do ATA a partir de outros computadores, verifique se esses computadores confiam no certificado sendo usado pelo Console do ATA, caso contrário, será exibida uma página de aviso de que há um problema com o certificado de segurança do site antes de acessar a página de logon.
 
-## Requisitos do Gateway do ATA
+## <a name="ata-gateway-requirements"></a>Requisitos do Gateway do ATA
 Esta seção lista os requisitos para o Gateway do ATA.
-### Geral
+### <a name="general"></a>Geral
 O Gateway do ATA dá suporte à instalação em um servidor executando o Windows Server 2012 R2 ou o Windows Server 2016 (Incluindo o Server Core).
 O Gateway do ATA pode ser instalado em um servidor que seja membro de um domínio ou grupo de trabalho.
 O Gateway do ATA pode ser usado para monitorar Controladores de Domínio com o Nível de Domínio Funcional do Windows 2003 e posterior.
@@ -141,7 +142,7 @@ Você pode verificar executando o seguinte cmdlet do Windows PowerShell: `[Get-H
 
 Para obter informações sobre como usar máquinas virtuais com o Gateway do ATA, confira [Configurar o espelhamento de porta](/advanced-threat-analytics/deploy-use/configure-port-mirroring).
 
-### Especificações do servidor
+### <a name="server-specifications"></a>Especificações do servidor
 Para ter um melhor desempenho, defina a **Opção de Energia** do Gateway de ATA para **Alto Desempenho**.<br>
 Um Gateway do ATA pode dar suporte ao monitoramento de vários controladores de domínio, dependendo da quantidade de tráfego de rede para e a partir dos controladores de domínio.
 
@@ -150,10 +151,10 @@ Um Gateway do ATA pode dar suporte ao monitoramento de vários controladores de 
 
 Para saber mais sobre os requisitos de hardware do Gateway do ATA, confira [Planejamento de capacidade do ATA](ata-capacity-planning.md).
 
-### Sincronização da hora
+### <a name="time-synchronization"></a>Sincronização da hora
 O servidor do Centro do ATA, os servidores do Gateway do ATA e os controladores de domínio devem ter a hora sincronizada no espaço de cinco minutos entre si.
 
-### Adaptadores de rede
+### <a name="network-adapters"></a>Adaptadores de rede
 O Gateway de ATA requer pelo menos um Adaptador de gerenciamento e pelo menos um adaptador de captura:
 
 -   **Adaptador de gerenciamento** - será usado para as comunicações em sua rede corporativa. Esse adaptador deve ser configurado com o seguinte:
@@ -175,7 +176,7 @@ O Gateway de ATA requer pelo menos um Adaptador de gerenciamento e pelo menos um
     > -   Configure o espelhamento de porta do adaptador de captura como o destino do tráfego de rede do controlador de domínio. Confira [Configurar o espelhamento de porta](/advanced-threat-analytics/deploy-use/configure-port-mirroring) para saber mais. Normalmente, você precisará trabalhar com a equipe de virtualização ou de rede para configurar o espelhamento de porta.
     > -   Configure um endereço IP não roteável estático para seu ambiente sem um gateway padrão e endereço do servidor DNS. Por exemplo, 1.1.1.1/32. Isso irá assegurar que o adaptador da rede de captura poderá capturar a quantidade máxima de tráfego e que o adaptador da rede de gerenciamento será usado para enviar e receber o tráfego de rede requerido.
 
-### Portas
+### <a name="ports"></a>Portas
 A tabela abaixo lista as portas mínimas que o Gateway do ATA requer configuradas no adaptador de gerenciamento:
 
 |Protocolo|Transport|Porta|Para/De|Direção|
@@ -199,7 +200,7 @@ A tabela abaixo lista as portas mínimas que o Gateway do ATA requer configurada
 > -   NTLM sobre RPC (porta TCP 135)
 > -   NetBIOS (porta UDP 137)
 
-### Certificados
+### <a name="certificates"></a>Certificados
 Verifique se o Centro do ATA tem acesso ao ponto de distribuição de CRL. Se os Gateways do ATA não tiverem acesso à Internet, execute o procedimento para importar manualmente uma CRL, tendo o cuidado de instalar todos os pontos de distribuição de CRL da cadeia inteira.<br>
 Para facilitar a instalação do ATA, você pode instalar certificados autoassinados durante a instalação. Após a implantação, você pode substituir o autoassinado pelo certificado de uma Autoridade de Certificação interna a ser usado pelo Gateway de ATA.
 
@@ -208,9 +209,9 @@ Para facilitar a instalação do ATA, você pode instalar certificados autoassin
 
 Um certificado que oferece suporte para a **Autenticação do Servidor** precisa ser instalado no armazenamento do Computador do Gateway de ATA no armazenamento do Computador Local. A Central de ATA deve confiar nesse certificado.
 
-## Requisitos do Gateway Lightweight do ATA
+## <a name="ata-lightweight-gateway-requirements"></a>Requisitos do Gateway Lightweight do ATA
 Esta seção lista os requisitos para o Gateway Lightweight do ATA.
-### Geral
+### <a name="general"></a>Geral
 O Gateway Lightweight do ATA dá suporte à instalação em um controlador de domínio que executa o Windows Server 2008 R2 SP1, o Windows Server 2012 ou o Windows Server 2012 R2, Windows Server 2016 (incluindo o Core, mas não o Nano).
 
 O controlador de domínio pode ser um RODC (controlador de domínio somente leitura).
@@ -218,7 +219,7 @@ O controlador de domínio pode ser um RODC (controlador de domínio somente leit
 Antes de instalar o Gateway Lightweight do ATA em um controlador de domínio que executa o Windows Server 2012 R2 SP1, confirme se a seguinte atualização foi instalada: [KB2919355](https://support.microsoft.com/kb/2919355/).
 Você pode verificar executando o seguinte cmdlet do Windows PowerShell: `[Get-HotFix -Id kb2919355]`.
 
-### Especificações do servidor
+### <a name="server-specifications"></a>Especificações do servidor
 
 O Gateway Lightweight do ATA requer um mínimo de dois núcleos e 6 GB de RAM instalados no controlador de domínio.
 Para ter um melhor desempenho, defina a **Opção de Energia** do Gateway Lightweight do ATA como **Alto Desempenho**.
@@ -229,13 +230,13 @@ O Gateway Lightweight do ATA pode ser implantado em controladores de domínio de
 
 Para saber mais sobre os requisitos de hardware do Gateway Lightweight do ATA, confira [Planejamento de capacidade do ATA](ata-capacity-planning.md).
 
-### Sincronização da hora
+### <a name="time-synchronization"></a>Sincronização da hora
 O servidor do Centro do ATA, os servidores do Gateway do ATA e os controladores de domínio devem ter a hora sincronizada no espaço de cinco minutos entre si.
-### Adaptadores de rede
+### <a name="network-adapters"></a>Adaptadores de rede
 O Gateway Lightweight do ATA monitora o tráfego local em todos os adaptadores de rede do controlador de domínio. <br>
 Após a implantação, você pode usar o Console do ATA para modificar quais adaptadores de rede são monitorados.
 
-### Portas
+### <a name="ports"></a>Portas
 A tabela abaixo lista o mínimo de portas que o Gateway Lightweight do ATA exige:
 
 |Protocolo|Transport|Porta|Para/De|Direção|
@@ -252,7 +253,7 @@ A tabela abaixo lista o mínimo de portas que o Gateway Lightweight do ATA exige
 > -   NTLM via RPC
 > -   NetBIOS
 
-### Certificados
+### <a name="certificates"></a>Certificados
 Verifique se o Centro do ATA tem acesso ao ponto de distribuição de CRL. Se os Gateways Lightweight do ATA não tiverem acesso à Internet, execute o procedimento para importar manualmente uma CRL, tendo o cuidado de instalar todos os pontos de distribuição de CRL da cadeia inteira.
 Para facilitar a instalação do ATA, você pode instalar certificados autoassinados durante a instalação. Após a implantação, você pode substituir o autoassinado pelo certificado de uma Autoridade de Certificação interna a ser usado pelo Gateway Lightweight do ATA.
 > [!NOTE]
@@ -260,7 +261,7 @@ Para facilitar a instalação do ATA, você pode instalar certificados autoassin
 
 Um certificado que dá suporte à Autenticação do Servidor precisa ser instalado no armazenamento do Computador do Gateway Lightweight do ATA no repositório Computador Local. A Central de ATA deve confiar nesse certificado.
 
-## Console do ATA
+## <a name="ata-console"></a>Console do ATA
 O acesso ao Console do ATA é por meio de um navegador com suporte para o seguinte:
 
 -   Internet Explorer versão 10 e posterior
@@ -271,7 +272,7 @@ O acesso ao Console do ATA é por meio de um navegador com suporte para o seguin
 
 -   Resolução de largura mínima da tela de 1.700 pixels
 
-## Consulte também
+## <a name="see-also"></a>Consulte também
 
 - [Arquitetura do ATA](ata-architecture.md)
 - [Instalar o ATA](/advanced-threat-analytics/deploy-use/install-ata)
@@ -281,6 +282,6 @@ O acesso ao Console do ATA é por meio de um navegador com suporte para o seguin
 
 
 
-<!--HONumber=Oct16_HO4-->
+<!--HONumber=Nov16_HO3-->
 
 
