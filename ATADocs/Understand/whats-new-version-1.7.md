@@ -1,20 +1,21 @@
 ---
-title: "Novidades na versão 1.7 do ATA | Microsoft ATA"
+title: "Novidades na versão 1.7 do ATA | Microsoft Docs"
 description: "Lista as novidades na nova versão 1.7 do ATA e seus problemas conhecidos"
 keywords: 
 author: rkarlin
+ms.author: rkarlin
 manager: mbaldwin
 ms.date: 10/25/2016
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
 ms.technology: 
-ms.assetid: 
+ms.assetid: be9ee613-4eb3-40f1-8973-e7f0a707ff57
 ms.reviewer: 
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f334f9c8440e4bb0202579de220f6530d0aabad8
-ms.openlocfilehash: 03a5e6a5398ffcc43e712bd4a3c2f872cd91c0b4
+ms.sourcegitcommit: fca7f1b2b8260cad6e0ce32aad1c9e1b53fc0ad5
+ms.openlocfilehash: 8032e373567ce500c7741480d56d232f34b05446
 
 
 ---
@@ -75,9 +76,15 @@ No Console do ATA, o Gateway do ATA terá o status de "Atualizando (baixando pac
  
 ### <a name="dropped-port-mirror-traffic-when-using-vmware"></a>Tráfego espelhado por porta descartado ao usar o VMware
 
-Alertas de tráfego espelhado por porta descartados ao usar o gateway lightweight no VMware
+Alertas de tráfego espelhado por porta descartados ao usar o gateway lightweight no VMware.
 
-Se você estiver usando controladores de domínio em máquinas virtuais VMware, você poderá receber alertas sobre o **Tráfego de rede espelhado por porta descartado**. Isso pode ocorrer devido a uma incompatibilidade de configuração no VMware. Para evitar esses alertas, verifique se as configurações a seguir estão definidas como 0 ou Desabilitado: TsoEnable, LargeSendOffload, IPv4 e Descarregamento de TSO (Descarregamento de Segmentação TCP). Além disso, considere desabilitar o Descarregamento TSO gigante do IPv4. Para obter mais informações, consulte a documentação do VMware.
+Se você estiver usando controladores de domínio em máquinas virtuais VMware, você poderá receber alertas sobre o **Tráfego de rede espelhado por porta descartado**. Isso pode ocorrer devido a uma incompatibilidade de configuração no VMware. Para evitar esses alertas, verifique se as configurações a seguir estão definidas como 0 ou Desabilitado na máquina virtual:  
+
+- TsoEnable
+- LargeSendOffload(IPv4)
+- Descarregamento TSO IPv4
+
+Além disso, considere desabilitar o Descarregamento TSO gigante do IPv4. Para obter mais informações, consulte a documentação do VMware.
 
 ### <a name="automatic-gateway-update-fail-when-updating-to-17-update-1"></a>Falha de atualização automática do Gateway ao atualizar para a versão 1.7 atualização 1
 
@@ -110,6 +117,6 @@ Para resolver esse problema, depois de alterar o certificado em um prompt de com
 
 
 
-<!--HONumber=Oct16_HO5-->
+<!--HONumber=Nov16_HO3-->
 
 

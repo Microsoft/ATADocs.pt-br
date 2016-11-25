@@ -1,28 +1,29 @@
 ---
-title: "Novidades na versão 1.6 do ATA | Microsoft ATA"
+title: "Novidades na versão 1.6 do ATA | Microsoft Docs"
 description: "Lista as novidades na nova versão 1.6 do ATA e seus problemas conhecidos"
 keywords: 
 author: rkarlin
+ms.author: rkarlin
 manager: mbaldwin
 ms.date: 04/28/2016
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
 ms.technology: 
-ms.assetid: a0d64aff-ca9e-4300-b3f8-eb3c8b8ae045
+ms.assetid: 27b139e5-12b9-4953-8f53-eb58e8ce0038
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f13750f9cdff98aadcd59346bfbbb73c2f3a26f0
-ms.openlocfilehash: 0f801b4d5f2ab9a103b2ca292c75f26040699dd0
+ms.sourcegitcommit: fca7f1b2b8260cad6e0ce32aad1c9e1b53fc0ad5
+ms.openlocfilehash: 2cf155b0a54d12e78b5cac5be1ac077786e8cd07
 
 
 ---
 
-# Novidades na versão 1.6 do ATA
+# <a name="whats-new-in-ata-version-16"></a>Novidades na versão 1.6 do ATA
 Essas notas de versão fornecem informações sobre problemas conhecidos nesta versão da Advanced Threat Analytics.
 
-## Quais são as novidades na atualização 1.6 do ATA?
+## <a name="whats-new-in-the-ata-16-update"></a>Quais são as novidades na atualização 1.6 do ATA?
 A atualização 1.6 do ATA fornece melhorias nas seguintes áreas:
 
 -   Novas detecções
@@ -39,7 +40,7 @@ A atualização 1.6 do ATA fornece melhorias nas seguintes áreas:
 
 -   Suporte ao IBM QRadar
 
-### Novas detecções
+### <a name="new-detections"></a>Novas detecções
 
 
 - A API de Proteção de Dados (DPAPI) da **Solicitação de Informações Particulares de Proteção de Dados Mal-intencionados** é um serviço de proteção de dados baseado em senha. Esse serviço de proteção é usado por vários aplicativos que armazenam segredos do usuário, como senhas de site e as credenciais de compartilhamento de arquivos. Para dar suporte a cenários de perda de senha, os usuários poderão descriptografar os dados protegidos usando uma chave de recuperação que não envolva a senha deles. Em um ambiente de domínio, os invasores podem roubar a chave de recuperação remotamente e usá-la para descriptografar os dados protegidos em todos os computadores ingressados no domínio.
@@ -57,31 +58,31 @@ A atualização 1.6 do ATA fornece melhorias nas seguintes áreas:
 - **Implementação de protocolo incomum** As solicitações de autenticação (Kerberos ou NTLM) normalmente são executadas usando um conjunto padrão de métodos e protocolos. No entanto, para autenticar com êxito, a solicitação deve atender apenas a um conjunto específico de requisitos. Os invasores podem implementar esses protocolos com pequenos desvios da implementação padrão no ambiente. Esses desvios podem indicar a presença de um invasor tentando executar ataques como Pass-The-Hash, Força Bruta, entre outros.
 
 
-### Aprimoramentos nas detecções existentes
+### <a name="improvements-to-existing-detections"></a>Aprimoramentos nas detecções existentes
 O ATA 1.6 inclui lógica de detecção aprimorada que reduz cenários de falsos positivos e falsos negativos para detecções existentes, como Golden Ticket, Honey Token, Força Bruta e Execução Remota.
 
-### O Gateway Lightweight do ATA
+### <a name="the-ata-lightweight-gateway"></a>O Gateway Lightweight do ATA
 Essa versão do ATA introduz uma nova opção de implantação para o Gateway do ATA, que permite a um Gateway do ATA ser instalado diretamente no Controlador de Domínio. Essa opção de implantação remove funcionalidades do Gateway do ATA que não são essenciais e introduz gerenciamento dinâmico de recursos com base nos recursos disponíveis no DC, o que garante que as operações existentes do DC não sejam afetadas. O Gateway Lightweight do ATA reduz o custo da implantação do ATA. Ao mesmo tempo, ele facilita a implantação em sites da filial, em que há capacidade limitada de recursos de hardware ou impossibilidade configurar o suporte de espelhamento de porta.
 Para saber mais sobre o Gateway Lightweight do ATA, confira [ATA architecture](/advanced-threat-analytics/plan-design/ata-architecture#ata-gateway-and-ata-lightweight-gateway) (Arquitetura do ATA)
 
 Para saber mais sobre considerações de implantação e como escolher o tipo correto de gateways para você, confira [ATA capacity planning](/advanced-threat-analytics/plan-design/ata-capacity-planning#choosing-the-right-gateway-type-for-your-deployment) (Planejamento de capacidade do ATA)
 
 
-### Atualizações automáticas
+### <a name="automatic-updates"></a>Atualizações automáticas
 Começando na versão 1.6, é possível atualizar o Centro do ATA usando o Microsoft Update. Além disso, os Gateways do ATA agora podem ser atualizados automaticamente usando o respectivo canal de comunicação padrão com o Centro do ATA.
-### Melhor desempenho do Centro do ATA
+### <a name="improved-ata-center-performance"></a>Melhor desempenho do Centro do ATA
 Com essa versão, uma carga mais leve do banco de dados e uma maneira mais eficaz de executar toda a detecção permitem que muito mais controladores de domínio sejam monitorados com uma único Centro do ATA.
 
-### Menos requisitos de armazenamento
+### <a name="lower-storage-requirements"></a>Menos requisitos de armazenamento
 O ATA 1.6 necessita consideravelmente de menos espaço de armazenamento para executar o banco de dados do ATA, agora exigindo apenas 20% do espaço de armazenamento usado em versões anteriores.
 
-### Suporte ao IBM QRadar
+### <a name="support-for-ibm-qradar"></a>Suporte ao IBM QRadar
 Agora o ATA pode receber eventos da solução QRadar SIEM da IBM, além das soluções SIEM com suporte anterior.
 
-## Problemas conhecidos
+## <a name="known-issues"></a>Problemas conhecidos
 A seguir estão os problemas conhecidos existentes nesta versão.
 
-### Falha ao reconhecer novo caminho em bancos de dados movidos manualmente
+### <a name="failure-to-recognize-new-path-in-manually-moved-databases"></a>Falha ao reconhecer novo caminho em bancos de dados movidos manualmente
 
 Em implantações nas quais o caminho do banco de dados é movido manualmente, a implantação do ATA não usa o novo caminho do banco de dados para a atualização. Isso pode causar os seguintes problemas:
 
@@ -94,10 +95,10 @@ Em implantações nas quais o caminho do banco de dados é movido manualmente, a
     >[!Important]
 Antes de atualizar o ATA para a versão 1.6, atualize a seguinte chave do Registro com o caminho do banco de dados correto:  `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft Advanced Threat Analytics\Center\DatabaseDataPath`
 
-### Falha na migração ao atualizar do ATA 1.5
+### <a name="migration-failure-when-updating-from-ata-15"></a>Falha na migração ao atualizar do ATA 1.5
 Ao atualizar para o ATA 1.6, o processo de atualização pode falhar com o seguinte código de erro:
 
-![Erro ao atualizar para o ATA 1.6](http://i.imgur.com/QrLSApr.png) Se você ver esse erro, examine o log de implantação em: **C:\Users\<User>\AppData\Local\Temp** e procure pela seguinte exceção:
+![Erro ao atualizar para o ATA 1.6](http://i.imgur.com/QrLSApr.png) Se você receber esse erro, examine o log de implantação em: **C:Usuários\<Usuário>\AppData\Local\Temp** e procure pela seguinte exceção:
 
     System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> MongoDB.Driver.MongoWriteException: A write operation resulted in an error. E11000 duplicate key error index: ATA.UniqueEntityProfile.$_id_ dup key: { : "<guid>" } ---> MongoDB.Driver.MongoBulkWriteException`1: A bulk write operation resulted in one or more errors.  E11000 duplicate key error index: ATA.UniqueEntityProfile.$_id_ dup key: { : " <guid> " }
 
@@ -130,22 +131,22 @@ Se você ver algum desses erros, execute a seguinte solução alternativa.
 Isso deve retornar um WriteResult({ "nRemoved" : XX }) em que "XX" é o número de Atividades Suspeitas que foram excluídas. Se o número for maior que 0, saia do prompt de comando e continue o processo de atualização.
 
 
-### O NET Framework 4.6.1 requer a reinicialização do servidor
+### <a name="net-framework-461-requires-restarting-the-server"></a>O NET Framework 4.6.1 requer a reinicialização do servidor
 
 Em alguns casos, a instalação do .Net Framework 4.6.1 pode exigir a reinicialização do servidor. Observe que clicar em OK na caixa de diálogo **Configuração da Central do Microsoft Advanced Threat Analytics** reiniciará automaticamente o servidor. Isso é particularmente importante ao instalar o Gateway Lightweight do ATA em um controlador de domínio, pois pode ser conveniente planejar uma janela de manutenção antes da instalação.
     ![Reinicialização do .Net Framework](media/ata-net-framework-restart.png)
 
-### Histórico de atividades de rede não é mais migrado
+### <a name="historical-network-activities-no-longer-migrated"></a>Histórico de atividades de rede não é mais migrado
 Essa versão do ATA apresenta um mecanismo de detecção aprimorado, que fornece detecção mais precisa e reduz muitos cenários de falsos positivos, especialmente para Pass-the-Hash.
 O mecanismo de detecção novo e aprimorado utiliza tecnologia de detecção embutida, permitindo detecção sem acessar o histórico de atividades de rede, para aumentar consideravelmente o desempenho do Centro do ATA. Isso também significa que é desnecessário migrar o histórico de atividades de rede durante o procedimento de atualização.
 O procedimento de atualização do ATA exporta os dados, caso você os queira para investigação futura, para `<Center Installation Path>\Migration` como um arquivo JSON.
 
-## Consulte também
+## <a name="see-also"></a>Consulte também
 [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
 [Atualizar o ATA para a versão 1.6 — guia de migração](ata-update-1.6-migration-guide.md)
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Nov16_HO3-->
 
 
