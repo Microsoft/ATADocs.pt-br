@@ -1,20 +1,21 @@
 ---
-title: "Solução de problemas do ATA usando o banco de dados do ATA | Microsoft ATA"
+title: "Solução de problemas do ATA usando o banco de dados do ATA | Microsoft Docs"
 description: "Descreve como você pode usar o banco de dados do ATA para solucionar problemas"
 keywords: 
 author: rkarlin
+ms.author: rkarlin
 manager: mbaldwin
 ms.date: 08/24/2016
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
 ms.technology: 
-ms.assetid: d89e7aff-a6ef-48a3-ae87-6ac2e39f3bdb
+ms.assetid: 377a3c81-5c1d-486f-8942-85249aacf560
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: af0508f82d8cf190dcd3ff058f4c2ff37b4b0595
-ms.openlocfilehash: dfc6c902cb13b1a2bf927cd235806ec32d9fefc3
+ms.sourcegitcommit: fca7f1b2b8260cad6e0ce32aad1c9e1b53fc0ad5
+ms.openlocfilehash: bff3224736981f38616172a6b1717d7d125c3c0a
 
 
 ---
@@ -23,11 +24,11 @@ ms.openlocfilehash: dfc6c902cb13b1a2bf927cd235806ec32d9fefc3
 
 
 
-# Solução de problemas do ATA usando o banco de dados do ATA
+# <a name="troubleshooting-ata-using-the-ata-database"></a>Solução de problemas do ATA usando o banco de dados do ATA
 O ATA usa o MongoDB como seu banco de dados.
 Você pode interagir com o banco de dados usando a linha de comando padrão ou usando uma ferramenta de interface de usuário para executar tarefas avançadas e solucionar problemas.
 
-## Interação com o banco de dados
+## <a name="interacting-with-the-database"></a>Interação com o banco de dados
 O modo padrão, e mais básico, de consultar o banco de dados é usando o shell Mongo:
 
 1.  Abra uma janela de linha de comando e altere o caminho até a pasta bin do MongoDB. O caminho padrão é: **C:\Arquivos de Programas\Microsoft Advanced Threat Analytics\Center\MongoDB\bin**.
@@ -50,15 +51,15 @@ O exemplo a seguir fornece código de exemplo usando a sintaxe fornecida acima. 
 
 `db.Ntlms_<closest date>.find({SourceAccountId: "123bdd24-b269-h6e1-9c72-7737as875351"})`
 
-## Consulte Também
+## <a name="see-also"></a>Consulte também
 - [Pré-requisitos do ATA](/advanced-threat-analytics/plan-design/ata-prerequisites)
-- [Planejamento da capacidade de ATA](/advanced-threat-analytics/plan-design/ata-capacity-planning)
+- [Planejamento da capacidade do ATA](/advanced-threat-analytics/plan-design/ata-capacity-planning)
 - [Configurar coleta de eventos](/advanced-threat-analytics/deploy-use/configure-event-collection)
 - [Configuração do encaminhamento de eventos do Windows](/advanced-threat-analytics/deploy-use/configure-event-collection#configuring-windows-event-forwarding)
 - [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Nov16_HO3-->
 
 

@@ -1,25 +1,26 @@
 ---
-title: "Guia de migração de atualização do ATA para 1.6 | Microsoft ATA"
+title: "Guia de migração de atualização do ATA para 1.6 | Microsoft Docs"
 description: "Procedimentos para atualizar o ATA para a versão 1.6"
 keywords: 
 author: rkarlin
+ms.author: rkarlin
 manager: mbaldwin
 ms.date: 04/28/2016
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
 ms.technology: 
-ms.assetid: fb65eb41-b215-4530-93a2-0b8991f4e980
+ms.assetid: 0756ef64-3aef-4a69-8981-24fa8f285c6a
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: d3ec5d56444d618efcfc617172e93e0e8e8a1768
-ms.openlocfilehash: 6fd96a8bf2fb1e064cc05858a020cbc2e55746f4
+ms.sourcegitcommit: fca7f1b2b8260cad6e0ce32aad1c9e1b53fc0ad5
+ms.openlocfilehash: e361c1b659210934b9fcd70c7c438a47030eeeba
 
 
 ---
 
-# Guia de migração de atualização do ATA para 1.6
+# <a name="ata-update-to-16-migration-guide"></a>Guia de migração de atualização do ATA para 1.6
 A atualização 1.6 do ATA fornece melhorias nas seguintes áreas:
 
 -   Novas detecções
@@ -36,7 +37,7 @@ A atualização 1.6 do ATA fornece melhorias nas seguintes áreas:
 
 -   Suporte ao IBM QRadar
 
-## Atualizando o ATA para a versão 1.6
+## <a name="updating-ata-to-version-16"></a>Atualizando o ATA para a versão 1.6
 > [!NOTE] 
 > Se o ATA não estiver instalado em seu ambiente, baixe a versão completa do ATA que inclui a versão 1.6 e siga o procedimento de instalação padrão descrito em [Instalar o ATA](/advanced-threat-analytics/deploy-use/install-ata).
 
@@ -49,7 +50,7 @@ Execute estas etapas para atualizar para o ATA versão 1.6:
 
 1. Para evitar problemas de atualização, lembre-se de seguir as etapas 8 a 10 de **Falha na migração ao atualizar para a versão 1.6 do ATA** descrito em [Novidades na versão 1.6 do ATA](whats-new-version-1.6.md).
 2. Tenha certeza de que há espaço livre necessário para concluir a atualização. Você pode executar a instalação até a verificação de preparação para obter uma estimativa de quanto espaço livre é necessário e, em seguida, reiniciar a atualização depois de alocar o espaço em disco necessário.
-1.  [Baixe a atualização 1.6](http://www.microsoft.com/evalcenter/evaluate-microsoft-advanced-threat-analytics)<br>
+1.  [Baixar a atualização 1.6](http://www.microsoft.com/evalcenter/evaluate-microsoft-advanced-threat-analytics)<br>
 Nessa versão, o mesmo arquivo de instalação (Microsoft ATA Center Setup.exe) é usado para instalar uma nova implantação do ATA e para atualizar as implantações existentes.
 
 2.  Atualize o Centro do ATA
@@ -61,7 +62,7 @@ Nessa versão, o mesmo arquivo de instalação (Microsoft ATA Center Setup.exe) 
     > [!IMPORTANT]
     > Atualize todos os Gateways do ATA para ter certeza de o ATA funciona corretamente.
 
-### Etapa 1: Atualizar o Centro do ATA
+### <a name="step-1-update-the-ata-center"></a>Etapa 1: Atualizar o Centro do ATA
 
 1.  Faça backup do seu banco de dados: (opcional)
 
@@ -81,7 +82,7 @@ Nessa versão, o mesmo arquivo de instalação (Microsoft ATA Center Setup.exe) 
     3.  Leia o Contrato de Licença de Usuário Final e, se você aceitar os termos, clique em **Avançar**.
 
     4.  Agora é possível usar o Microsoft Update para manter o ATA atualizado.  Na página do Microsoft Update, selecione **Usar o Microsoft Update ao verificar se há atualizações (recomendado)**.
-    ![Imagem Manter o ATA atualizado](media/ata_ms_update.png) Isso ajusta as configurações do Windows para habilitar atualizações para os outros produtos da Microsoft (incluindo o ATA), como visto aqui. 
+    ![Imagem Manter o ATA atualizado](media/ata_ms_update.png) Isso ajustará as configurações do Windows para habilitar atualizações para os outros produtos da Microsoft (incluindo o ATA), como visto aqui. 
      ![Imagem de atualização automática do Windows](media/ata_installupdatesautomatically.png)
 
     5.  Antes de iniciar a instalação, o ATA executará uma verificação de preparação. Examine os resultados da verificação para saber se os pré-requisitos foram configurados com êxito e se você tem pelo menos a quantidade mínima de espaço em disco. 
@@ -96,7 +97,7 @@ Nessa versão, o mesmo arquivo de instalação (Microsoft ATA Center Setup.exe) 
 > [!IMPORTANT] 
 > Atualize todos os Gateways do ATA para ter certeza de o ATA funciona corretamente.
 
-### Etapa 2. Baixe o pacote de instalação do Gateway do ATA
+### <a name="step-2-download-the-ata-gateway-setup-package"></a>Etapa 2. Baixe o pacote de instalação do Gateway do ATA
 Após definir as configurações de conectividade do domínio, você poderá baixar o pacote de instalação do Gateway do ATA.
 
 Para baixar o pacote do Gateway do ATA:
@@ -117,7 +118,7 @@ O arquivo zip inclui o seguinte:
 
 -   Arquivo de configurações com as informações necessárias para conectar-se à Central de ATA
 
-### Etapa 3: Atualize os Gateways do ATA
+### <a name="step-3-update-the-ata-gateways"></a>Etapa 3: Atualize os Gateways do ATA
 
 1.  Em cada Gateway do ATA, extraia os arquivos do pacote do Gateway do ATA e execute o arquivo **Microsoft ATA Gateway Setup.exe**.
 
@@ -136,12 +137,12 @@ Você saberá que todos os Gateways do ATA foram atualizados com êxito quando t
 ![Imagem de gateways atualizados](media/ATA-gw-updated.png)
 
 
-## Consulte também
+## <a name="see-also"></a>Consulte também
 
 - [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
 
 
-<!--HONumber=Oct16_HO1-->
+<!--HONumber=Nov16_HO3-->
 
 
