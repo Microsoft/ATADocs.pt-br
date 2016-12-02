@@ -1,10 +1,11 @@
 ---
-title: Configurar coleta de eventos | Microsoft ATA
+title: Configurar coleta de eventos | Microsoft Docs
 description: "Descreve as opções para configurar a coleta de eventos com o ATA"
 keywords: 
 author: rkarlin
+ms.author: rkarlin
 manager: mbaldwin
-ms.date: 09/28/2016
+ms.date: 11/28/2016
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,8 +14,8 @@ ms.assetid: 3f0498f9-061d-40e6-ae07-98b8dcad9b20
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: d2c1c00ff649557c1a0a16385e025c9d597c3bbf
-ms.openlocfilehash: 91ce3a3fef27673712a708aa1e92c32298cedd84
+ms.sourcegitcommit: bc7af91a925928183d179391f15d3a24cda2b576
+ms.openlocfilehash: 2932fd80fd3a5ff6830f8629df824591e3fc47c3
 
 
 ---
@@ -23,13 +24,13 @@ ms.openlocfilehash: 91ce3a3fef27673712a708aa1e92c32298cedd84
 
 
 
-# Configurar coleta de eventos
+# <a name="configure-event-collection"></a>Configurar coleta de eventos
 Para aprimorar os recursos de detecção, o ATA precisa da ID 4776 do log de Eventos do Windows. Isso pode ser encaminhado o Gateway do ATA usando uma entre duas maneiras, configurando o Gateway do ATA para escutar eventos SIEM ou [Configurando o encaminhamento de eventos do Windows](#configuring-windows-event-forwarding).
 
-## Coleta de eventos
+## <a name="event-collection"></a>Coleta de eventos
 Além de coletar e analisar o tráfego de rede para e a partir dos controladores de domínio, o ATA pode usar o evento 4776 do Windows para aprimorar a detecção da Passagem de Hash do ATA. Isso pode ser recebido de seu SIEM ou definindo o Encaminhamento de Eventos do Windows no controlador de domínio. Os eventos coletados fornecem à ATA informações adicionais que não estão disponíveis por meio do tráfego de rede do controlador de domínio.
 
-### SIEM/Syslog
+### <a name="siemsyslog"></a>SIEM/Syslog
 Para o ATA poder consumir dados de um servidor Syslog, você precisa fazer o seguinte:
 
 -   Configurar seus servidores do Gateway do ATA para escutar e aceitar eventos encaminhados do servidor SIEM/Sylog.
@@ -42,10 +43,10 @@ Para o ATA poder consumir dados de um servidor Syslog, você precisa fazer o seg
 
 Consulte a documentação de produto do seu servidor SIEM/Syslog para saber como configurar o encaminhamento de eventos específicos para outro servidor. 
 
-### Encaminhamento de eventos do Windows
+### <a name="windows-event-forwarding"></a>Encaminhamento de eventos do Windows
 Se você não usa um servidor Syslog/SIEM, é possível configurar os controladores de domínio do Windows para encaminhar a ID de Evento do Windows 4776 para ser coletada e analisada pelo ATA. A ID de Evento do Windows 4776 fornece dados sobre autenticações NTLM.
 
-## Configuração do Gateway de ATA para escutar eventos SIEM
+## <a name="configuring-the-ata-gateway-to-listen-for-siem-events"></a>Configuração do Gateway de ATA para escutar eventos SIEM
 
 1.  Na configuração de ATA, na guia "Eventos", habilite **Syslog** e pressione **Salvar**.
 
@@ -53,11 +54,11 @@ Se você não usa um servidor Syslog/SIEM, é possível configurar os controlado
 
 2.  Configure o servidor Syslog ou SIEM para encaminhar a ID de Evento do Windows 4776 para o endereço IP de um dos Gateways ATA. Para saber mais sobre como configurar o SIEM, consulte a ajuda online do SIEM ou opções de suporte técnico para obter os requisitos de formatação específica para cada servidor SIEM.
 
-### Suporte a SIEM
+### <a name="siem-support"></a>Suporte a SIEM
 O ATA oferece suporte a eventos de SIEM nos seguintes formatos:  
 
-#### Análise de Segurança do RSA
-&lt;Cabeçalho do syslog&gt;RsaSA\n2015-May-19 09:07:09\n4776\nMicrosoft-Windows-Security-Auditing\nSecurity\XXXXX.subDomain.domain.org.il\nYYYYY$\nMMMMM \n0x0
+#### <a name="rsa-security-analytics"></a>Análise de Segurança do RSA
+&lt;Cabeçalho do Syslog&gt;RsaSA\n2015-May-19 09:07:09\n4776\nMicrosoft-Windows-Security-Auditing\nSecurity\XXXXX.subDomain.domain.org.il\nYYYYY$\nMMMMM \n0x0
 
 -   O cabeçalho do Syslog é opcional.
 
@@ -85,7 +86,7 @@ O ATA oferece suporte a eventos de SIEM nos seguintes formatos:
 
 -   A ordem é importante, e nada mais deve ser incluído na mensagem.
 
-#### HP Arcsight
+#### <a name="hp-arcsight"></a>HP Arcsight
 CEF:0|Microsoft|Microsoft Windows||Microsoft-Windows-Security-Auditing:4776|O controlador de domínio tentou validar as credenciais de uma conta.|Baixo| externalId=4776 cat=Security rt=1426218619000 shost=KKKKKK dhost=YYYYYY.subDomain.domain.com duser=XXXXXX cs2=Security cs3=Microsoft-Windows-Security-Auditing cs4=0x0 cs3Label=EventSource cs4Label=Motivo ou Código de erro
 
 -   Deve estar em conformidade com a definição de protocolo.
@@ -116,8 +117,8 @@ CEF:0|Microsoft|Microsoft Windows||Microsoft-Windows-Security-Auditing:4776|O co
 
     -   “Motivo ou Código de erro” = o código resultante do NTLM
 
-#### Splunk
-&lt;Cabeçalho do syslog&gt;\r\nEventCode=4776\r\nLogfile=Security\r\nSourceName=Microsoft-Windows-Security-Auditing\r\nTimeGenerated=20150310132717.784882-000\r\ComputerName=YYYYY\r\nMessage=
+#### <a name="splunk"></a>Splunk
+&lt;Cabeçalho do Syslog&gt;\r\nEventCode=4776\r\nLogfile=Security\r\nSourceName=Microsoft-Windows-Security-Auditing\r\nTimeGenerated=20150310132717.784882-000\r\ComputerName=YYYYY\r\nMessage=
 
 O computador tentou validar as credenciais de uma conta.
 
@@ -153,7 +154,7 @@ Código de erro:         0x0
 
 -   A ordem não é importante para os pares de chave=valor
 
-#### QRadar
+#### <a name="qradar"></a>QRadar
 O QRadar permite a coleta de eventos por meio de um agente. Se os dados forem reunidos usando um agente, o formato de hora será coletado sem dados de milissegundos. Uma vez que o ATA precisa dos dados de milissegundos, é necessário definir o QRadar para usar a coleta de eventos do Windows sem agente. Para obter mais informações, confira [http://www-01.ibm.com/support/docview.wss?uid=swg21700170](http://www-01.ibm.com/support/docview.wss?uid=swg21700170 "QRadar: Agentless Windows Events Collection using the MSRPC Protocol").
 
     <13>Feb 11 00:00:00 %IPADDRESS% AgentDevice=WindowsLog AgentLogFile=Security Source=Microsoft-Windows-Security-Auditing Computer=%FQDN% User= Domain= EventID=4776 EventIDCode=4776 EventType=8 EventCategory=14336 RecordNumber=1961417 TimeGenerated=1456144380009 TimeWritten=1456144380009 Message=The computer attempted to validate the credentials for an account. Authentication Package: MICROSOFT_AUTHENTICATION_PACKAGE_V1_0 Logon Account: Administrator Source Workstation: HOSTNAME Error Code: 0x0
@@ -175,13 +176,13 @@ Certifique-se de ter \t entre os pares de chave=valor.
 >[!NOTE] 
 > Não há suporte ao uso do WinCollect para a coleta de eventos do Windows.
 
-## Configuração do encaminhamento de eventos do Windows
+## <a name="configuring-windows-event-forwarding"></a>Configuração do encaminhamento de eventos do Windows
 
-### Configuração de WEF para Gateway do ATA com o espelhamento de porta
+### <a name="wef-configuration-for-ata-gateways-with-port-mirroring"></a>Configuração de WEF para Gateway do ATA com o espelhamento de porta
 
 Após a configuração do espelhamento de porta nos controladores de domínio para o Gateway do ATA, siga as instruções abaixo para configurar o Encaminhamento de eventos do Windows usando a configuração Iniciada pela Origem. Essa é uma maneira para configurar o Encaminhamento de eventos do Windows. 
 
-**Etapa 1: Adicionar a conta de serviço de rede ao Grupo de leitores de log de eventos de domínio.** 
+**Etapa 1: Adicionar a conta de serviço de rede ao Grupo de Leitores de Log de Eventos do domínio.** 
 
 Nesse cenário, supomos que o Gateway ATA seja membro do domínio.
 
@@ -189,7 +190,7 @@ Nesse cenário, supomos que o Gateway ATA seja membro do domínio.
 2.  Selecione **Membros**.
 4.  Se **Serviço de Rede** não estiver listado, clique em **Adicionar**, digite **Serviço de Rede** no campo **Digite os nomes de objeto a serem selecionados **. Depois, clique em **Verificar Nomes** e clique em **OK** duas vezes. 
 
-**Etapa 2: Criar uma política nos controladores de domínio para definir a configuração Configurar o Gerenciador de assinatura de destino.** 
+**Etapa 2: Criar uma política nos controladores de domínio para definir a configuração Configurar Gerenciador de Assinaturas de destino.** 
 > [!Note] 
 > Você pode criar uma política de grupo para essas configurações e aplicá-la a cada controlador de domínio monitorado pelo Gateway do ATA. As etapas a seguir modificarão a política local do controlador de domínio.     
 
@@ -237,16 +238,16 @@ Nesse cenário, supomos que o Gateway ATA seja membro do domínio.
    6.   Depois de alguns minutos, verifique se o evento 4776 aparece nos Eventos Encaminhados no Gateway do ATA.
 
 
-### Configuração do WEF para o Gateway de Lightweight do ATA
+### <a name="wef-configuration-for-the-ata-lightweight-gateway"></a>Configuração do WEF para o Gateway de Lightweight do ATA
 Ao instalar o Gateway Lightweight do ATA nos controladores de domínio, você pode configurar os controladores de domínio para encaminhar eventos para si mesmo. Execute as etapas a seguir para configurar o Encaminhamento de Eventos do Windows ao usar o Gateway Lightweight do ATA. Essa é uma maneira para configurar o Encaminhamento de eventos do Windows.  
 
-**Etapa 1: Adicionar a conta de serviço de rede ao Grupo de leitores de log de eventos de domínio** 
+**Etapa 1: Adicionar a conta de serviço de rede ao Grupo de Leitores de Log de Eventos do domínio** 
 
 1.  Abra os Usuários e Computadores do Active Directory, navegue até a pasta **BuiltIn** e clique duas vezes em **Leitores de Log de Eventos**. 
 2.  Selecione **Membros**.
 3.  Se **Serviço de Rede** não estiver listado, clique em **Adicionar** e digite **Serviço de Rede** no campo **Digite os nomes de objeto a serem selecionados **. Depois, clique em **Verificar Nomes** e clique em **OK** duas vezes. 
 
-**Etapa 2: Executar as seguintes etapas no controlador de domínio depois que o Gateway Lightweight do ATA estiver instalado** 
+**Etapa 2: Executar as etapas a seguir no controlador de domínio depois que o Gateway Lightweight do ATA estiver instalado** 
 
 1.  Em um prompt de comandos com privilégios elevados, digite *winrm quickconfig* e *wecutil qc* 
 2.  Abra o **Visualizador de Eventos**. 
@@ -280,12 +281,12 @@ Depois de alguns minutos, verifique se o evento 4776 aparece nos Eventos Encamin
 
 Para obter mais informações, confira: [Configurar computadores para encaminhar e coletar eventos](https://technet.microsoft.com/library/cc748890)
 
-## Consulte Também
-- [Instalar o ATA](install-ata.md)
-- [Confira o fórum do ATA!!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
+## <a name="see-also"></a>Consulte Também
+- [Instalar o ATA](install-ata-step1.md)
+- [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Nov16_HO5-->
 
 

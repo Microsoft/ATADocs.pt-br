@@ -3,8 +3,9 @@ title: "Alteração da configuração do ATA - Endereço IP do Console do ATA | 
 description: "Descreve como alterar o endereço IP do Console do ATA, usado para criar um atalho até o Console do ATA em Gateways do ATA."
 keywords: 
 author: rkarlin
+ms.author: rkarlin
 manager: stevenpo
-ms.date: 08/24/2016
+ms.date: 11/29/2016
 ms.topic: article
 ms.prod: identity-ata
 ms.service: advanced-threat-analytics
@@ -13,8 +14,8 @@ ms.assetid: 50118465-df34-4e04-b0cc-48808b6a96b1
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 050f1ef0b39d69b64ede53243a7fa2d33d0e4813
-ms.openlocfilehash: b3d11a87f1909c1fd964fa990e5d36a91691a844
+ms.sourcegitcommit: bc7af91a925928183d179391f15d3a24cda2b576
+ms.openlocfilehash: 8f816c8eda0a1b11a42314a18b1c8c39ac6a7ba8
 
 
 ---
@@ -23,13 +24,13 @@ ms.openlocfilehash: b3d11a87f1909c1fd964fa990e5d36a91691a844
 
 
 
-# Alteração da configuração do ATA - URL do Console do ATA
+# <a name="change-ata-configuration---ata-console-url"></a>Alteração da configuração do ATA - URL do Console do ATA
 
 >[!div class="step-by-step"]
 [«Certificado da Central do ATA](modifying-ata-config-centercert.md)
 [Senha de conectividade do domínio »](modifying-ata-config-dcpassword.md)
 
-## Alterar a URL do Console do ATA
+## <a name="change-the-ata-console-url"></a>Alterar a URL do Console do ATA
 Por padrão, a URL do Console do ATA é o endereço IP selecionado como o endereço IP do Console do ATA durante a instalação do Centro do ATA.
 
 A URL é usada nos seguintes cenários:
@@ -60,6 +61,9 @@ Se você precisar modificar a URL do Console do ATA, execute estas etapas no ser
 5.  Em **URL do Console**, modifique a URL, conforme o necessário:
 
     ![URL do Console do ATA](media/ATA-chge-center-URL.png)
+> [!NOTE]
+> Não inclua uma barra / no final da URL.
+
 6.  Clique em **Salvar**.
 
 >[!div class="step-by-step"]
@@ -67,13 +71,12 @@ Se você precisar modificar a URL do Console do ATA, execute estas etapas no ser
 [Senha de conectividade do domínio »](modifying-ata-config-dcpassword.md)
 
 
-## Consulte também
+## <a name="see-also"></a>Consulte também
 - [Trabalhando com o Console do ATA](working-with-ata-console.md)
-- [Instalar o ATA](install-ata.md)
 - [Confira o fórum do ATA!](https://aka.ms/ata-forum)
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Nov16_HO5-->
 
 
