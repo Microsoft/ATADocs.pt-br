@@ -1,10 +1,11 @@
 ---
-title: "Alteração da configuração do ATA – Endereço IP do Centro do ATA | Microsoft ATA"
+title: "Alterar a configuração do ATA – endereço IP do Centro do ATA | Microsoft Docs"
 description: "Descreve como alterar o endereço IP, porta ou certificado de seu Centro do ATA."
 keywords: 
 author: rkarlin
+ms.author: rkarlin
 manager: mbaldwin
-ms.date: 08/24/2016
+ms.date: 11/29/2016
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,8 +14,8 @@ ms.assetid: 93b27f15-f7e5-49bb-870a-d81d09dfe9fc
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 050f1ef0b39d69b64ede53243a7fa2d33d0e4813
-ms.openlocfilehash: e6d42610d1c785da5b7c7b1cf035d94c2fddff4b
+ms.sourcegitcommit: bc7af91a925928183d179391f15d3a24cda2b576
+ms.openlocfilehash: d0fed03deb5f50747383a398dfb2eca74ad0cdf0
 
 
 ---
@@ -23,14 +24,14 @@ ms.openlocfilehash: e6d42610d1c785da5b7c7b1cf035d94c2fddff4b
 
 
 
-# Alteração da configuração do ATA - Endereço IP do Centro do ATA
+# <a name="change-ata-configuration---ata-center-ip-address"></a>Alteração da configuração do ATA - Endereço IP do Centro do ATA
 
 >[!div class="step-by-step"]
 [Certificado do Centro do ATA »](modifying-ata-config-centercert.md)
 
 Após a implantação inicial, as modificações no Centro do ATA deverão ser feitas com cuidado. Use os procedimentos a seguir ao atualizar o endereço IP e a porta ou o certificado.
 
-## Alteração do endereço IP usado pelo servidor do Centro do ATA
+## <a name="change-the-ip-address-used-by-the-ata-center-server"></a>Alteração do endereço IP usado pelo servidor do Centro do ATA
 Se você precisar alterar o endereço IP do Centro do ATA, além da porta ou do certificado, leve o seguinte em consideração.
 
 Os Gateways do ATA armazenam localmente o endereço IP do Centro do ATA ao qual eles precisam se conectar. Regularmente, eles se conectam ao Centro do ATA e obtêm as alterações de configuração. Uma alteração no modo como os Gateways do ATA se conectam ao Centro do ATA é feita em dois estágios.
@@ -74,16 +75,15 @@ Os Gateways do ATA armazenam localmente o endereço IP do Centro do ATA ao qual 
 8.  Verifique se todos os Gateways do ATA são capazes de sincronizar suas configurações após a ativação da alteração. A barra de notificação indicará quantos Gateways do ATA tiveram suas configurações sincronizadas.
 
 >[!div class="step-by-step"]
-[Alteração do certificado do Centro do ATA »](modifying-ata-config-centercert.md)
+[Alterar o certificado do Centro do ATA »](modifying-ata-config-centercert.md)
 
 
-## Consulte também
+## <a name="see-also"></a>Consulte Também
 - [Trabalhando com o Console do ATA](working-with-ata-console.md)
-- [Instalar o ATA](install-ata.md)
 - [Confira o fórum do ATA!](https://aka.ms/ata-forum)
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Nov16_HO5-->
 
 

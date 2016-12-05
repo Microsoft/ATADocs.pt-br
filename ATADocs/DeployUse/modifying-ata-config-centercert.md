@@ -1,10 +1,11 @@
 ---
-title: "Alteração da configuração do ATA - Certificado do Centro do ATA | Microsoft ATA"
+title: "Alterar a configuração do ATA — certificado do Centro do ATA | Microsoft Docs"
 description: "Descreve o processo de dois estágios para renovar ou substituir o certificado no repositório de computador local no servidor do Centro do ATA."
 keywords: 
 author: rkarlin
+ms.author: rkarlin
 manager: mbaldwin
-ms.date: 08/24/2016
+ms.date: 11/24/2016
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,8 +14,8 @@ ms.assetid: c8855287-de3b-4cdd-be8f-2128f48a6f27
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 050f1ef0b39d69b64ede53243a7fa2d33d0e4813
-ms.openlocfilehash: e707d354396f8eeed58c13ee1e9e91df9888e030
+ms.sourcegitcommit: bc7af91a925928183d179391f15d3a24cda2b576
+ms.openlocfilehash: 534b5f476e580919b11327ddbf9a35edad130515
 
 
 ---
@@ -23,13 +24,13 @@ ms.openlocfilehash: e707d354396f8eeed58c13ee1e9e91df9888e030
 
 
 
-# Alteração da configuração do ATA - Certificado do Centro do ATA
+# <a name="change-ata-configuration---ata-center-certificate"></a>Alteração da configuração do ATA - Certificado do Centro do ATA
 
 >[!div class="step-by-step"]
 [« Endereço IP do servidor da Central do ATA](modifying-ata-config-centerip.md)
 [URL do Console do ATA »](modifying-ata-config-consoleurl.md)
 
-## Alteração do certificado do Centro do ATA
+## <a name="change-the-ata-center-certificate"></a>Alteração do certificado do Centro do ATA
 Se os seus certificados estiverem prestes a expirar e precisarem ser renovados ou substituídos após a instalação do novo certificado no repositório de computador local no servidor do Centro do ATA, substitua o certificado com este processo em dois estágios:
 
 -   Primeiro estágio – Atualizar o certificado que você deseja que o serviço do Centro do ATA use. Neste ponto, o serviço do Centro do ATA ainda está associado ao certificado original. Quando os Gateways do ATA sincronizarem suas configurações, terão dois possíveis certificados que serão válidos para autenticação mútua. Contanto que o Gateway do ATA possa se conectar usando o certificado original, ele não tentará o novo.
@@ -68,13 +69,12 @@ Se os seus certificados estiverem prestes a expirar e precisarem ser renovados o
 [« Endereço IP do servidor da Central do ATA](modifying-ata-config-centerip.md)
 [URL do Console do ATA »](modifying-ata-config-consoleurl.md)
 
-## Consulte também
+## <a name="see-also"></a>Consulte Também
 - [Trabalhando com o Console do ATA](working-with-ata-console.md)
-- [Instalar o ATA](install-ata.md)
 - [Confira o fórum do ATA!](https://aka.ms/ata-forum)
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Nov16_HO5-->
 
 

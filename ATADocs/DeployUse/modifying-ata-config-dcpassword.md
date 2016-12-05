@@ -1,10 +1,11 @@
 ---
-title: "Alteração da configuração do ATA – senha de conectividade do domínio | Microsoft ATA"
+title: "Alterar a configuração do ATA – senha de conectividade do domínio | Microsoft Docs"
 description: "Descreve como alterar a Senha de conectividade do domínio no Gateway do ATA."
 keywords: 
 author: rkarlin
+ms.author: rkarlin
 manager: mbaldwin
-ms.date: 08/24/2016
+ms.date: 11/29/2016
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,8 +14,8 @@ ms.assetid: 4a25561b-a5ed-44aa-9b72-366976b3c72a
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 050f1ef0b39d69b64ede53243a7fa2d33d0e4813
-ms.openlocfilehash: 7cee457a8959526b25a68c50efea2976bafbef75
+ms.sourcegitcommit: bc7af91a925928183d179391f15d3a24cda2b576
+ms.openlocfilehash: a6dbdb0d53a0a7f6903ec858bb44054c624ae226
 
 
 ---
@@ -23,17 +24,16 @@ ms.openlocfilehash: 7cee457a8959526b25a68c50efea2976bafbef75
 
 
 
-# Alteração da configuração do ATA - senha de conectividade do domínio
+# <a name="change-ata-configuration---domain-connectivity-password"></a>Alteração da configuração do ATA - senha de conectividade do domínio
 
 >[!div class="step-by-step"]
 [« URL do Console do ATA](modifying-ata-config-consoleurl.md)
 
 
-## Alterar a senha de conectividade do domínio
+## <a name="change-the-domain-connectivity-password"></a>Alterar a senha de conectividade do domínio
 Se você modificar a senha de conectividade do domínio, certifique-se de que a senha digitada esteja correta. Se não estiver, o serviço do Gateway do ATA deixará de ser executado em Gateways do ATA.
 
-Se você suspeitar que isso aconteceu, no Gateway do ATA, examine o arquivo Microsoft.Tri.Gateway-Errors.log em busca do seguinte:
-`The supplied credential is invalid.`
+Se você suspeitar que isso aconteceu, no Gateway do ATA, examine o arquivo Microsoft.Tri.Gateway-Errors.log em busca do seguinte: `The supplied credential is invalid.`
 
 Para corrigir isso, siga este procedimento e atualize a Senha de conectividade do domínio na Central do ATA:
 
@@ -58,13 +58,12 @@ Para corrigir isso, siga este procedimento e atualize a Senha de conectividade d
 >[!div class="step-by-step"]
 [« URL do Console do ATA](modifying-ata-config-consoleurl.md)
 
-## Consulte também
+## <a name="see-also"></a>Consulte Também
 - [Trabalhando com o Console do ATA](working-with-ata-console.md)
-- [Instalar o ATA](install-ata.md)
 - [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Nov16_HO5-->
 
 
