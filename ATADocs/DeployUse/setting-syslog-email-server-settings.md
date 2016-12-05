@@ -1,20 +1,21 @@
 ---
-title: "Definindo notificações do ATA | Microsoft ATA"
+title: "Definir as configurações de email | Microsoft Docs"
 description: "Descreve como fazer o ATA notificar você (por email ou por encaminhamento de eventos do ATA) quando ele detectar atividades suspeitas"
 keywords: 
 author: rkarlin
+ms.author: rkarlin
 manager: mbaldwin
 ms.date: 08/24/2016
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
 ms.technology: 
-ms.assetid: 14cb7513-5dc8-49cb-b3e0-94f469c443dd
+ms.assetid: bff20bf7-8b53-49da-81e5-b818a1c3b24e
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: a4ba68547d6746625a44aca5d05790c3ad138f4e
-ms.openlocfilehash: 9a8461da7ff8b0f939a11f85e5e8dc21d191cc52
+ms.sourcegitcommit: fca7f1b2b8260cad6e0ce32aad1c9e1b53fc0ad5
+ms.openlocfilehash: d967cbf2674c5f561e63f66b64640ac08daad6c0
 
 
 ---
@@ -23,7 +24,7 @@ ms.openlocfilehash: 9a8461da7ff8b0f939a11f85e5e8dc21d191cc52
 
 
 
-## Forneça ao ATA suas configurações do servidor de emails
+## <a name="provide-ata-with-up-your-email-server-settings"></a>Forneça ao ATA suas configurações do servidor de emails
 O ATA pode notificar você quando detectar uma atividade suspeita. Para que o ATA possa enviar notificações por email, primeiro é necessário definir as **Configurações do servidor de email**.
 
 1.  No servidor do Centro do ATA, clique no ícone **Microsoft Advanced Threat Analytics Management** na área de trabalho.
@@ -44,7 +45,7 @@ O ATA pode notificar você quando detectar uma atividade suspeita. Para que o AT
     |Enviar de (obrigatório)|Digite um endereço de email a partir do qual o email será enviado.|Por exemplo:<br />ATA@contoso.com|
     ![Imagem das configurações do servidor de emails do ATA](media/ATA-email-server-1.7.png)
 
-## Forneça ao ATA suas configurações do servidor Syslog
+## <a name="provide-ata-with-your-syslog-server-settings"></a>Forneça ao ATA suas configurações do servidor Syslog
 O ATA pode notificar você quando detectar uma atividade suspeita, enviando a notificação para seu servidor Syslog. Se você habilitar as notificações do Syslog, poderá definir os itens a seguir.
 
 1.  Antes de configurar as notificações do Syslog, trabalhe com seu administrador do SIEM para descobrir as seguintes informações:
@@ -77,11 +78,11 @@ O ATA pode notificar você quando detectar uma atividade suspeita, enviando a no
 
 
 
-## Consulte também
+## <a name="see-also"></a>Consulte Também
 [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Nov16_HO3-->
 
 

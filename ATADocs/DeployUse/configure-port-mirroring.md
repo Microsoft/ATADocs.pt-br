@@ -1,10 +1,11 @@
 ---
-title: Configurar o espelhamento de porta | Microsoft ATA
+title: Configurar o espelhamento de porta | Microsoft Docs
 description: "Descreve as opções de espelhamento de porta e como configurá-las para o ATA"
 keywords: 
 author: rkarlin
+ms.author: rkarlin
 manager: mbaldwin
-ms.date: 08/28/2016
+ms.date: 11/28/2016
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,8 +14,8 @@ ms.assetid: cdaddca3-e26e-4137-b553-8ed3f389c460
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: e3b690767e5c6f5561a97a73eccfbf50ddb04148
-ms.openlocfilehash: d7f15f08a64a9d884a560f4f3429568cf33bdd34
+ms.sourcegitcommit: bc7af91a925928183d179391f15d3a24cda2b576
+ms.openlocfilehash: 9312287da04f393282857005b68799f82e0bdfa5
 
 
 ---
@@ -23,7 +24,7 @@ ms.openlocfilehash: d7f15f08a64a9d884a560f4f3429568cf33bdd34
 
 
 
-# Configurar o espelhamento de porta
+# <a name="configure-port-mirroring"></a>Configurar o espelhamento de porta
 > [!NOTE] 
 > Este artigo somente é relevante se você implanta Gateways do ATA em vez de Gateways Lightweight do ATA. Para determinar se você precisa usar Gateways do ATA, confira [Choosing the right gateways for your deployment](/advanced-threat-analytics/plan-design/ata-capacity-planning#choosing-the-right-gateway-type-for-your-deployment) (Escolhendo os gateways certos para sua implantação).
  
@@ -43,7 +44,7 @@ Seus controladores de domínio e Gateways do ATA podem ser físicos ou virtuais.
 > [!NOTE]
 > Se o controlador de domínio que está passando por espelhamento de porta estiver conectado por um link de WAN, verifique se o link de WAN pode lidar com a carga adicional do tráfego do ERSPAN.
 
-## Opções de espelhamento de porta com suporte
+## <a name="supported-port-mirroring-options"></a>Opções de espelhamento de porta com suporte
 
 |Gateway do ATA|Controlador de Domínio|Considerações|
 |---------------|---------------------|------------------|
@@ -68,13 +69,12 @@ Seus controladores de domínio e Gateways do ATA podem ser físicos ou virtuais.
 
 Depois de configurar o espelhamento de porta, verifique se está funcionando antes de instalar o Gateway do ATA.
 
-## Consulte também
+## <a name="see-also"></a>Consulte também
 - [Validação do espelhamento de porta](validate-port-mirroring.md)
-- [Instalar o ATA](install-ata.md)
 - [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Nov16_HO5-->
 
 
