@@ -5,14 +5,13 @@
 ### [Configurar o espelhamento de porta](configure-port-mirroring.md)
 ### [Validação do espelhamento de porta](validate-port-mirroring.md)
 ### [Configurar coleta de eventos](configure-event-collection.md)
-## [Instalar o ATA](install-ata.md)
-### [Etapa 1](install-ata-step1.md)
-### [Etapa 2](install-ata-step2.md)
-### [Etapa 3](install-ata-step3.md)
-### [Etapa 4](install-ata-step4.md)
-### [Etapa 5](install-ata-step5.md)
-### [Etapa 6](install-ata-step6.md)
-### [Instalação silenciosa](ata-silent-installation.md)
+## [Instalação do ATA – Etapa 1](install-ata-step1.md)
+## [Instalação do ATA – Etapa 2](install-ata-step2.md)
+## [Instalação do ATA – Etapa 3](install-ata-step3.md)
+## [Instalação do ATA – Etapa 4](install-ata-step4.md)
+## [Instalação do ATA – Etapa 5](install-ata-step5.md)
+## [Instalação do ATA – Etapa 6](install-ata-step6.md)
+## [Instalação silenciosa](ata-silent-installation.md)
 # [Use](modifying-ata-config-centerip.md)
 ## [Alterar o endereço IP do Centro do ATA](modifying-ata-config-centerip.md)
 ## [Alterar o certificado do Centro do ATA](modifying-ata-config-centercert.md)
@@ -21,16 +20,16 @@
 ## [Trabalhando com o Console do ATA](working-with-ata-console.md)
 ## [Grupos de função do ATA](ata-role-groups.md)
 ## [Definir as configurações de servidor Syslog e Email](setting-syslog-email-server-settings.md)
-## [Definir alertas do ATA](setting-ata-alerts.md)
+## [Definir notificações do ATA](setting-ata-alerts.md)
 ## [Trabalhando com as configurações de detecção](working-with-detection-settings.md)
 ## [Centro de Integridade do ATA](ata-health-center.md)
 ## [Trabalhando com atividades suspeitas](working-with-suspicious-activities.md)
 ## [Gerenciamento do banco de dados do ATA](ata-database-management.md)
-## [Arquivo de configuração do ATA](ata-configuration-file.md)
+## [Exportar/importar configuração do ATA](ata-configuration-file.md)
 ## [Gerenciar telemetria do ATA](manage-telemetry-settings.md)
 # [Solucionar problemas](/advanced-threat-analytics/troubleshoot/troubleshooting-ata-known-errors)
 
 
-<!--HONumber=Oct16_HO5-->
+<!--HONumber=Nov16_HO5-->
 
 
