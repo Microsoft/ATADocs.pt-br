@@ -1,8 +1,9 @@
 ---
-title: Instalar o ATA silenciosamente | Microsoft ATA
+title: Instalar o ATA silenciosamente | Microsoft Docs
 description: Este artigo descreve como instalar o ATA silenciosamente.
 keywords: 
 author: rkarlin
+ms.author: rkarlin
 manager: mbaldwin
 ms.date: 04/28/2016
 ms.topic: get-started-article
@@ -13,8 +14,8 @@ ms.assetid: b3cceb18-0f3c-42ac-8630-bdc6b310f1d6
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: d0681cfa4ae763da9c88c8dec9b77a75494a5c9f
-ms.openlocfilehash: 7b9ba09d3757979c0b845f796a846e7e83b505af
+ms.sourcegitcommit: b7f9dac8c00f213ee0cefc9ff93f2c9ca40cd28b
+ms.openlocfilehash: 7d7eeaf450a38a23c5c3a4d6d192a773f4cd036c
 
 
 ---
@@ -23,9 +24,9 @@ ms.openlocfilehash: 7b9ba09d3757979c0b845f796a846e7e83b505af
 
 
 
-# Instalação silenciosa do ATA
+# <a name="ata-silent-installation"></a>Instalação silenciosa do ATA
 Este artigo fornece instruções de como instalar silenciosamente o ATA.
-## Pré-requisitos
+## <a name="prerequisites"></a>Pré-requisitos
 
 O Microsoft ATA v1.7 exige a instalação do Microsoft .NET Framework 4.6.1. 
 
@@ -36,7 +37,7 @@ Quando você instala ou atualiza o ATA, o .Net Framework 4.6.1 é instalado auto
 Ao usar o método de instalação silenciosa do ATA, o instalador é configurado para reiniciar automaticamente o servidor no final da instalação (se necessário). Para evitar a reinicialização do servidor como parte da instalação, use o sinalizador `-NoRestart`. Com o sinalizador `-NoRestart`, quando a reinicialização for obrigatória como parte da instalação, o instalador ficará pausado até que o servido seja reiniciado. Para acompanhar o andamento da implantação, monitore os logs do instalador do ATA localizados em **%AppData%\Local\Temp**.
 
 
-## Instalar a Central de ATA
+## <a name="install-the-ata-center"></a>Instalar a Central de ATA
 
 Use o seguinte comando para instalar o Centro do ATA:
 
@@ -77,7 +78,7 @@ Para instalar o Centro do ATA com caminhos de instalação padrão, dois endere�
     “Microsoft ATA Center Setup.exe” /quiet --LicenseAccepted NetFrameworkCommandLineArguments ="/q" CenterIpAddress=192.168.0.10 CenterPort=443 CenterCertificateThumbprint= ‎"1E2079739F624148ABDF502BF9C799FCB8C7212F”
     ConsoleIpAddress=192.168.0.11  ConsoleCertificateThumbprint=”G9530253C976BFA9342FD1A716C0EC94207BFD5A”
 
-## Atualize o Centro do ATA
+## <a name="update-the-ata-center"></a>Atualize o Centro do ATA
 
 Use o seguinte comando para atualizar o Centro do ATA:
 
@@ -102,7 +103,7 @@ Na atualização do ATA, o instalador detecta automaticamente que o ATA já est�
 
         “Microsoft ATA Center Setup.exe” /quiet NetFrameworkCommandLineArguments="/q"
 
-## Desinstalar o Centro do ATA silenciosamente
+## <a name="uninstall-the-ata-center-silently"></a>Desinstalar o Centro do ATA silenciosamente
 
 Use o seguinte comando para realizar uma desinstalação silenciosa da Central do ATA: **Sintaxe**:
 
@@ -129,7 +130,7 @@ Use o seguinte comando para realizar uma desinstalação silenciosa da Central d
 
     “Microsoft ATA Center Setup.exe” /quiet /uninstall --DeleteExistingDatabaseData
 
-## Instalação silenciosa do Gateway do ATA
+## <a name="ata-gateway-silent-installation"></a>Instalação silenciosa do Gateway do ATA
 Use o seguinte comando para instalar silenciosamente o Gateway do ATA:
 
 **Sintaxe**:
@@ -146,15 +147,14 @@ Use o seguinte comando para instalar silenciosamente o Gateway do ATA:
 |NoRestart|/norestart|Não|Suprime todas as tentativas de reinicialização. Por padrão, a interface do usuário será solicitada antes da reinicialização.|
 |Ajuda|/help|Não|Fornece ajuda e referência rápida. Exibe o uso correto do comando de configuração, incluindo uma lista de todas as opções e comportamentos.|
 |NetFrameworkCommandLineArguments="/q"|NetFrameworkCommandLineArguments="/q"|Sim|Especifica os parâmetros para a instalação do .Net Framework. Deve ser definido para impor a instalação silenciosa do .Net Framework.|
-|LicenseAccepted|--LicenseAccepted|Sim|Indica se a licença foi lida e aprovada. Deve ser definido na instalação silenciosa.|
 
 **Parâmetros de instalação**:
 
 |Nome|Sintaxe|Obrigatório para instalação silenciosa?|Descrição|
 |-------------|----------|---------|---------|
 |GatewayCertificateThumbprint|GatewayCertificateThumbprint=”<CertThumbprint >”|Não|Define a impressão digital do certificado para o serviço do Centro do ATA. Este certificado é usado para proteger a comunicação entre o Centro do ATA e o Gateway do ATA. Se não estiver definido, a instalação gerará um certificado autoassinado.|
-|ConsoleAccountName|ConsoleAccountName=”<AccountName>”|Sim|Define o nome da conta do usuário (usuario@dominio.com) que é usada para registrar o Gateway do ATA no Centro do ATA.|
-|ConsoleAccountPassword|ConsoleAccountPassword=”<AccountPassword>”|Sim|Define a senha da conta do usuário (usuario@dominio.com) que é usada para registrar o Gateway do ATA no Centro do ATA.|
+|ConsoleAccountName|ConsoleAccountName=”<AccountName>”|Sim|Define o nome da conta do usuário (user@domain.com) que é usada para registrar o Gateway do ATA no Centro do ATA.|
+|ConsoleAccountPassword|ConsoleAccountPassword=”<AccountPassword>”|Sim|Define a senha para a conta do usuário (user@domain.com) que é usada para registrar o Gateway do ATA no Centro do ATA.|
 
 **Exemplos**: instalar o Gateway do ATA no modo silencioso e registrá-lo na Central do ATA usando as credenciais especificadas:
 
@@ -162,7 +162,7 @@ Use o seguinte comando para instalar silenciosamente o Gateway do ATA:
     ConsoleAccountName=”user@contoso.com” ConsoleAccountPassword=“userpwd”
     
 
-## Atualizar o Gateway do ATA
+## <a name="update-the-ata-gateway"></a>Atualizar o Gateway do ATA
 
 Use o seguinte comando para atualizar silenciosamente o Gateway do ATA:
 
@@ -185,7 +185,7 @@ Use o seguinte comando para atualizar silenciosamente o Gateway do ATA:
 
         Microsoft ATA Gateway Setup.exe /quiet NetFrameworkCommandLineArguments="/q"
 
-## Desinstalar o Gateway do ATA silenciosamente
+## <a name="uninstall-the-ata-gateway-silently"></a>Desinstalar o Gateway do ATA silenciosamente
 
 Use o seguinte comando para realizar uma desinstalação silenciosa do Gateway do ATA: **Sintaxe**:
 
@@ -214,13 +214,13 @@ Use o seguinte comando para realizar uma desinstalação silenciosa do Gateway d
 
 
 
-## Consulte também
+## <a name="see-also"></a>Consulte também
 
 - [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Configurar coleta de eventos](configure-event-collection.md)
 - [Pré-requisitos do ATA](/advanced-threat-analytics/plan-design/ata-prerequisites)
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Dec16_HO1-->
 
 

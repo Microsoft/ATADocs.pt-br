@@ -14,17 +14,17 @@ ms.technology:
 ms.suite: ems
 ms.assetid: c4a97980-6e19-4d10-bf69-f0b338266efa
 translationtype: Human Translation
-ms.sourcegitcommit: 6d95045842d8bb19dba2e8d0fe13b1bf96e2e304
-ms.openlocfilehash: be7f4c021a6da9d58bb7e8329d9320db9ae19716
+ms.sourcegitcommit: 1dda7ed8bb461a15ae2cc9d379822ed4a96245ff
+ms.openlocfilehash: 6eeae28243bc000ad9424e655cfde75b10abe03a
 
 
 ---
-# Documentação do Microsoft Advanced Threat Analytics
+# <a name="microsoft-advanced-threat-analytics-documentation"></a>Documentação do Microsoft Advanced Threat Analytics
 <article id="main">
     <section id="hero-content">
       <h1>Documentação do Microsoft Advanced Threat Analytics</h1>
       <h2>Aprenda a implantar e a gerenciar o ATA (Microsoft Advanced Threat Analytics, um produto no local que ajuda profissionais de segurança de TI a proteger suas empresas contra ataques direcionados avançados.</h2>
-      <h3>O ATA ainda é uma novidade para você? <a href="http://go.microsoft.com/fwlink/?LinkId=816859" target="_blank">Visite a página do nosso produto &rarr;</a></h3>
+      <h3>O ATA ainda é uma novidade para você? <a href="http://go.microsoft.com/fwlink/?LinkId=816859" target="_blank">Visite a página do nosso produto&rarr;</a></h3>
     </section>
     <aside class="alert section-border">
       <p>Pronto para pôr a mão na massa?</p>
@@ -136,7 +136,7 @@ ms.openlocfilehash: be7f4c021a6da9d58bb7e8329d9320db9ae19716
                   </a>
                 </li>
                 <li class="column-third">
-                  <a href="/advanced-threat-analytics/deploy-use/install-ata">
+                  <a href="/advanced-threat-analytics/deploy-use/install-ata-step1">
                     <h3>Instalar o ATA</h3>
                     <p>Siga o guia de instalação passo a passo detalhado.</p>
                   </a>
@@ -154,7 +154,7 @@ ms.openlocfilehash: be7f4c021a6da9d58bb7e8329d9320db9ae19716
               <a href="/advanced-threat-analytics/troubleshoot/troubleshooting-ata-known-errors">
                 <div class="title column-third">
                   <span class="step-number">4</span>
-                  <p>Solução de problemas</p>
+                  <p>Solucionar problemas</p>
                 </div>
                 <p class="description column-two-thirds">Solucione problemas do ATA.
                 </p>
@@ -196,6 +196,6 @@ ms.openlocfilehash: be7f4c021a6da9d58bb7e8329d9320db9ae19716
 
 
 
-<!--HONumber=Sep16_HO2-->
+<!--HONumber=Dec16_HO1-->
 
 
