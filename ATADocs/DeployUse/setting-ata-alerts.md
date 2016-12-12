@@ -1,10 +1,11 @@
 ---
-title: "Definindo notificações do ATA | Microsoft ATA"
+title: "Definir notificações do ATA | Microsoft Docs"
 description: "Descreve como definir alertas do ATA para que você seja notificado quando atividades suspeitas forem detectadas."
 keywords: 
 author: rkarlin
+ms.author: rkarlin
 manager: mbaldwin
-ms.date: 08/24/2016
+ms.date: 11/29/2016
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,8 +14,8 @@ ms.assetid: 14cb7513-5dc8-49cb-b3e0-94f469c443dd
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 35fa7afeb673ec2b1aa295e576865cdd5c073c85
-ms.openlocfilehash: a5787be5a5a0df96651b3be8e056bcdd4340df94
+ms.sourcegitcommit: 7dc860fe31da1374a4466f8e56e55e6520bc10dc
+ms.openlocfilehash: f069f910e99c537e08b34b9a0b65aab7dcd08452
 
 
 ---
@@ -23,14 +24,14 @@ ms.openlocfilehash: a5787be5a5a0df96651b3be8e056bcdd4340df94
 
 
 
-# Configurando notificações do ATA
+# <a name="set-ata-notifications"></a>Definir notificações do ATA
 O ATA pode notificar você quando detectar uma atividade suspeita, por email ou usando o encaminhamento de eventos do ATA, e encaminhar o evento para o servidor syslog/SIEM. Antes de selecionar quais notificações quer receber, você precisará [configurar o servidor de email e o servidor Syslog](setting-syslog-email-server-settings.md).
 
 > [!NOTE]
 > -   Notificações por email incluem um link que levará o usuário diretamente para a atividade suspeita detectada. A parte do nome do host do link é obtida da configuração da URL do Console do ATA na página do Centro do ATA. Por padrão, a URL do Console do ATA é o endereço IP selecionado durante a instalação do Centro do ATA.  Se você pretende configurar notificações por email, aconselhamos o uso de um FQDN como a URL do Console do ATA.
 > -   As notificações são enviadas do Centro do ATA para o servidor SMTP e o servidor Syslog.
 
-## Notificações por email
+## <a name="mail-notifications"></a>Notificações por email
 Para receber notificações por email, defina o seguinte:
 
 
@@ -39,21 +40,20 @@ Para receber notificações por email, defina o seguinte:
 
 2. Na seção **Notificações**, selecione **Configurações**.
 3. Em **Destinatários do email**, especifique os destinatários que receberão as notificações por email.
-
-    [!Observação:] alertas de email para atividades suspeitas são enviados somente quando a atividade suspeita é criada.
+>   [!NOTE]
+>   Alertas de email para atividades suspeitas são enviados somente quando a atividade suspeita é criada.
 
 4. Em **Notificar quando:**, use os botões para selecionar quais notificações devem ser enviadas:
-
-    - Nova atividade suspeita foi detectada
-    - Novo problema de integridade foi detectado
-    - Nova atualização de software está disponível
+  - Nova atividade suspeita foi detectada
+  - Novo problema de integridade foi detectado
+  - Nova atualização de software está disponível
 
 5. Clique em **Salvar**.
 
 ![Imagem das configurações de notificação de email do ATA](media/ATA-mail-notification-settings-1.7.png)
 
 
-## Notificação do Syslog
+## <a name="syslog-notification"></a>Notificação do Syslog
 
 Para receber notificações por Syslog, defina o seguinte:
 
@@ -69,16 +69,17 @@ Para receber notificações por Syslog, defina o seguinte:
     - Atividade suspeita existente foi atualizada
     - Novo problema de integridade foi detectado
 5. Clique em **Salvar**.
+
 ![Imagem das configurações de notificação do ATA](media/ATA-syslog-notification-settings-1.7.png)
 
 
 
 
-## Consulte também
+## <a name="see-also"></a>Consulte Também
 [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Nov16_HO5-->
 
 
