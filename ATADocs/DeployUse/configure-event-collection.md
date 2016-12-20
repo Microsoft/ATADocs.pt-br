@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 11/28/2016
+ms.date: 12/08/2016
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -14,8 +14,8 @@ ms.assetid: 3f0498f9-061d-40e6-ae07-98b8dcad9b20
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: bc7af91a925928183d179391f15d3a24cda2b576
-ms.openlocfilehash: 2932fd80fd3a5ff6830f8629df824591e3fc47c3
+ms.sourcegitcommit: d16364cd4113534c3101ebfa7750c0d0b837856d
+ms.openlocfilehash: 9ac9478512f2e5f6d15dd9b5cba9970a51ffa4da
 
 
 ---
@@ -28,13 +28,14 @@ ms.openlocfilehash: 2932fd80fd3a5ff6830f8629df824591e3fc47c3
 Para aprimorar os recursos de detecção, o ATA precisa da ID 4776 do log de Eventos do Windows. Isso pode ser encaminhado o Gateway do ATA usando uma entre duas maneiras, configurando o Gateway do ATA para escutar eventos SIEM ou [Configurando o encaminhamento de eventos do Windows](#configuring-windows-event-forwarding).
 
 ## <a name="event-collection"></a>Coleta de eventos
-Além de coletar e analisar o tráfego de rede para e a partir dos controladores de domínio, o ATA pode usar o evento 4776 do Windows para aprimorar a detecção da Passagem de Hash do ATA. Isso pode ser recebido de seu SIEM ou definindo o Encaminhamento de Eventos do Windows no controlador de domínio. Os eventos coletados fornecem à ATA informações adicionais que não estão disponíveis por meio do tráfego de rede do controlador de domínio.
+Além de coletar e analisar o tráfego de rede para e a partir dos controladores de domínio, o ATA pode usar o evento 4776 do Windows para aprimorar a detecção da Passagem de Hash do ATA. Isso pode ser recebido de seu SIEM definindo o Encaminhamento de Eventos do Windows no controlador de domínio. Os eventos coletados fornecem à ATA informações adicionais que não estão disponíveis por meio do tráfego de rede do controlador de domínio.
 
 ### <a name="siemsyslog"></a>SIEM/Syslog
 Para o ATA poder consumir dados de um servidor Syslog, você precisa fazer o seguinte:
 
 -   Configurar seus servidores do Gateway do ATA para escutar e aceitar eventos encaminhados do servidor SIEM/Sylog.
-
+> [!NOTE]
+> ATA escuta somente IPv4, não IPv6. 
 -   Configurar seu servidor Syslog/SIEM para encaminhar eventos específicos ao Gateway do ATA.
 
 > [!IMPORTANT]
@@ -287,6 +288,6 @@ Para obter mais informações, confira: [Configurar computadores para encaminhar
 
 
 
-<!--HONumber=Nov16_HO5-->
+<!--HONumber=Dec16_HO2-->
 
 

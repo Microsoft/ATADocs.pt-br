@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 10/25/2016
+ms.date: 12/08/2016
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -14,8 +14,8 @@ ms.assetid: be9ee613-4eb3-40f1-8973-e7f0a707ff57
 ms.reviewer: 
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: fca7f1b2b8260cad6e0ce32aad1c9e1b53fc0ad5
-ms.openlocfilehash: 8032e373567ce500c7741480d56d232f34b05446
+ms.sourcegitcommit: 00ddddfd927ed1ba4c52d4774085da04ce359bde
+ms.openlocfilehash: 1c8d7983c5fd86ae3ef2c906eba3f0781cffb99b
 
 
 ---
@@ -30,14 +30,14 @@ A atualização 1.7 do ATA fornece melhorias nas seguintes áreas:
 
 -   Controle de acesso baseado em função
 
--   Compatível com Windows Server 2016 e o Windows Server Core
+-   Suporte para Windows Server 2016 e Windows Server 2016 Core
 
 -   Aprimoramentos da experiência do usuário
 
 -   Alterações secundárias
 
 
-### <a name="new-updated-detections"></a>Detecções novas e atualizadas
+### <a name="new--updated-detections"></a>Detecções novas e atualizadas
 
 
 - **Reconhecimento usando a enumeração dos serviços de diretório** Como parte da fase de reconhecimento, os invasores coletam informações sobre as entidades na rede usando métodos diferentes. A enumeração dos serviços de diretório usando o protocolo SAM-R permite que os invasores obtenham a lista de usuários e grupos em um domínio e compreendam a interação entre as diferentes entidades. 
@@ -55,7 +55,7 @@ A atualização 1.7 do ATA fornece melhorias nas seguintes áreas:
 
 - **Controle de acesso baseado em função** O recurso RBAC (Controle de acesso baseado em função). O ATA 1.7 inclui três funções: Administrador do ATA, Analista do ATA e Executivo do ATA.
 
-- **Suporte para Windows Server 2016 e Windows Server Core** O ATA 1.7 oferece suporte à implantação de Lightweight Gateways em controladores de domínio que executam o Server Core para Windows Server 2012 e o Server Core para Windows Server 2012 R2. Além disso, esta versão oferece suporte ao Windows Server 2016 para os componentes do Centro de ATA e do Gateway do ATA.
+- **Suporte para Windows Server 2016 e Windows Server Core** O ATA 1.7 dá suporte à implantação de Lightweight Gateways em controladores de domínio que executam o Windows Server 2008 R2 SP1 (sem incluir o Server Core), o Windows Server 2012, o Windows Server 2012 R2, o Windows Server 2016 (incluindo o Core, mas não o Nano). Além disso, esta versão oferece suporte ao Windows Server 2016 para os componentes do Centro de ATA e do Gateway do ATA.
 
 ### <a name="user-experience"></a>Experiência de usuário
 - **Experiência de configuração** Nesta versão, a experiência de configuração do ATA foi reprojetada para proporcionar uma experiência de usuário melhor e para oferecer um suporte mais adequado a ambientes com vários Gateways do ATA. Esta versão também apresenta a página de atualização do Gateway do ATA para um gerenciamento mais simples das atualizações automáticas para os diversos Gateways.
@@ -102,6 +102,12 @@ Para resolver esse problema, depois de alterar o certificado em um prompt de com
 
 3. db.SystemProfile.update({_t:"ServiceSystemProfile"},{$set:{"Configuration.ManagementClientConfiguration.ServerCertificateThumbprint":CenterThumbprint}}, {multi: true})
 
+### <a name="export-suspicious-activity-details-to-excel-may-fail"></a>Exportar detalhes de atividade suspeita para o Excel pode falhar
+Ao tentar exportar os detalhes de atividade suspeita para um arquivo do Excel, a operação pode falhar com o seguinte erro: *Erro [BsonClassMapSerializer`1] System.FormatException: Um erro ocorreu ao desserializar a propriedade Atividade da classe Microsoft.Tri.Common.Data.NetworkActivities.SuspiciousActivityActivity: Elemento 'ResourceIdentifier' não corresponde a nenhum campo ou propriedade de classe Microsoft.Tri.Common.Data.EventActivities.NtlmEvent. ---> System.FormatException: O Elemento 'ResourceIdentifier' não corresponde a nenhum campo ou propriedade da classe Microsoft.Tri.Common.Data.EventActivities.NtlmEvent.*
+
+Para resolver esse problema, em um prompt de comandos com privilégios elevados, navegue até o seguinte local: **%ProgramFiles%\Microsoft Advanced Threat Analytics\Center\MongoDB\bin** e execute o seguinte:
+1.  **Mongo.exe ATA** (ATA deve estar em letras maiúsculas)
+2.  **db.SuspiciousActivityActivity.update({ "Activity._t": "NtlmEvent" },{$unset: {"Activity.ResourceIdentifier": ""}}, {multi: true});**
 
 ## <a name="minor-changes"></a>Alterações secundárias
 
@@ -117,6 +123,6 @@ Para resolver esse problema, depois de alterar o certificado em um prompt de com
 
 
 
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

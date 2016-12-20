@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 08/24/2016
+ms.date: 12/14/2016
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -14,8 +14,8 @@ ms.assetid: a5f90544-1c70-4aff-8bf3-c59dd7abd687
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 85e285c5d88e5916e0bf0eb7dd327cb4cb45b4cb
-ms.openlocfilehash: 56f397c373e0b6827aab084e21c804a135049a27
+ms.sourcegitcommit: 67b430fbed97bd08e5f538043c783e70ed2ab956
+ms.openlocfilehash: 60ec036a8c22fb34c673653a6378437ab14f9853
 
 
 ---
@@ -142,6 +142,9 @@ Você pode verificar executando o seguinte cmdlet do Windows PowerShell: `[Get-H
 
 Para obter informações sobre como usar máquinas virtuais com o Gateway do ATA, confira [Configurar o espelhamento de porta](/advanced-threat-analytics/deploy-use/configure-port-mirroring).
 
+> [!NOTE]
+> É necessário um mínimo de 5 GB de espaço e recomenda-se 10 GB. Isso inclui o espaço necessário para os binários ATA, [logs ATA](/advanced-threat-analytics/troubleshoot/troubleshooting-ata-using-logs) e [logs de desempenho](/advanced-threat-analytics/troubleshoot/troubleshooting-ata-using-perf-counters).
+
 ### <a name="server-specifications"></a>Especificações do servidor
 Para ter um melhor desempenho, defina a **Opção de Energia** do Gateway de ATA para **Alto Desempenho**.<br>
 Um Gateway do ATA pode dar suporte ao monitoramento de vários controladores de domínio, dependendo da quantidade de tráfego de rede para e a partir dos controladores de domínio.
@@ -212,12 +215,15 @@ Um certificado que oferece suporte para a **Autenticação do Servidor** precisa
 ## <a name="ata-lightweight-gateway-requirements"></a>Requisitos do Gateway Lightweight do ATA
 Esta seção lista os requisitos para o Gateway Lightweight do ATA.
 ### <a name="general"></a>Geral
-O Gateway Lightweight do ATA dá suporte à instalação em um controlador de domínio que executa o Windows Server 2008 R2 SP1, o Windows Server 2012 ou o Windows Server 2012 R2, Windows Server 2016 (incluindo o Core, mas não o Nano).
+O Gateway Lightweight do ATA dá suporte à instalação em um controlador de domínio que executa o Windows Server 2008 R2 SP1 (sem incluir o Server Core), o Windows Server 2012, o Windows Server 2012 R2, o Windows Server 2016 (incluindo o Core, mas não o Nano).
 
 O controlador de domínio pode ser um RODC (controlador de domínio somente leitura).
 
 Antes de instalar o Gateway Lightweight do ATA em um controlador de domínio que executa o Windows Server 2012 R2 SP1, confirme se a seguinte atualização foi instalada: [KB2919355](https://support.microsoft.com/kb/2919355/).
 Você pode verificar executando o seguinte cmdlet do Windows PowerShell: `[Get-HotFix -Id kb2919355]`.
+
+> [!NOTE]
+> É necessário um mínimo de 5 GB de espaço e recomenda-se 10 GB. Isso inclui o espaço necessário para os binários ATA, [logs ATA](/advanced-threat-analytics/troubleshoot/troubleshooting-ata-using-logs.md) e [logs de desempenho](/advanced-threat-analytics/troubleshoot/troubleshooting-ata-using-perf-counters.md).
 
 ### <a name="server-specifications"></a>Especificações do servidor
 
@@ -282,6 +288,6 @@ O acesso ao Console do ATA é por meio de um navegador com suporte para o seguin
 
 
 
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 
