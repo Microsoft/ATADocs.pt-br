@@ -1,10 +1,11 @@
 ---
-title: "Planejando a implantação do ATA | Microsoft ATA"
+title: "Planejando a implantação do ATA | Microsoft Docs"
 description: "Ajuda você a planejar a implantação e decidir quantos servidores ATA serão necessários para oferecer suporte à sua rede"
 keywords: 
 author: rkarlin
+ms.author: rkarlin
 manager: mbaldwin
-ms.date: 08/24/2016
+ms.date: 11/6/2016
 ms.topic: get-started-article
 ms.service: advanced-threat-analytics
 ms.prod: 
@@ -12,8 +13,8 @@ ms.assetid: 279d79f2-962c-4c6f-9702-29744a5d50e2
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: e3b690767e5c6f5561a97a73eccfbf50ddb04148
-ms.openlocfilehash: 09bf48be4c651af6ca1ae66a47f940d504570c8a
+ms.sourcegitcommit: 56eff27ffdd988d5cc9e67352859ddfedebb2144
+ms.openlocfilehash: 93ec7373a166529332d7c4809c756ab3ba240868
 
 
 ---
@@ -22,10 +23,10 @@ ms.openlocfilehash: 09bf48be4c651af6ca1ae66a47f940d504570c8a
 
 
 
-# Planejamento da capacidade de ATA
+# <a name="ata-capacity-planning"></a>Planejamento da capacidade de ATA
 Este tópico ajuda a determinar quantos servidores ATA serão necessários para monitorar sua rede, inclusive a entender quantos Gateways do ATA e/ou Gateways Lightweight do ATA você precisa, bem como a capacidade do servidor para seu Centro do ATA e Gateways do ATA.
 
-##Usando a ferramenta de dimensionamento
+##<a name="using-the-sizing-tool"></a>Usando a ferramenta de dimensionamento
 A maneira recomendada e mais simples para determinar a capacidade para sua implantação ATA é usar o [Ferramenta de Dimensionamento de ATA](http://aka.ms/atasizingtool). Execute a Ferramenta de Dimensionamento ATA e resultados de arquivo do Excel, use os campos a seguir para determinar a capacidade ATA que você precisa:
 
 - CPU e Memória do Centro do ATA: corresponda o campo **Pacotes Ocupado/s** na tabela do Centro do ATA no arquivo de resultados ao campo **PACOTES POR SEGUNDO** na [tabela do Centro do ATA](#ata-center-sizing).
@@ -43,22 +44,21 @@ As seções a seguir apresentam instruções sobre como coletar o contador de pa
 
 
 
-### Dimensionamento da Central de ATA
-A Central de ATA requer um mínimo recomendado de 30 dias de dados para a análise de comportamento do usuário. O espaço em disco necessário para o banco de dados do ATA, um por controlador de domínio, é definido abaixo. Se você tiver vários controladores de domínio, some o espaço em disco necessário por controlador para calcular a quantidade total de espaço necessário para o banco de dados do ATA.
+### <a name="ata-center-sizing"></a>Dimensionamento da Central de ATA
+A Central de ATA requer um mínimo recomendado de 30 dias de dados para a análise de comportamento do usuário.
  
 
-|Pacotes por segundo&#42;|CPU (núcleos&#42;&#42;)|Memória (GB)|Armazenamento de bancos de dados por dia (GB)|Armazenamento de bancos de dados por mês (GB)|IOPS&#42;&#42;&#42;|
+|Pacotes por segundo de todos os controladores de domínio|CPU (núcleos&#42;)|Memória (GB)|Armazenamento de bancos de dados por dia (GB)|Armazenamento de bancos de dados por mês (GB)|IOPS&#42;&#42;|
 |---------------------------|-------------------------|-------------------|---------------------------------|-----------------------------------|-----------------------------------|
 |1,000|2|32|0.3|9|30 (100)
 |10.000|4|48|3|90|200 (300)
 |40.000|8|64|12|360|500 (1.000)
 |100,000|12|96|30|900|1.000 (1.500)
 |400.000|40|128|120|1.800|2.000 (2.500)
-&#42;Número médio diário total de pacotes por segundo de todos os controladores de domínio sendo monitorados por todos os Gateways de ATA.
 
-&#42;&#42;Isto inclui os núcleos físicos, não os núcleos com hyper-threading.
+&#42;Isso inclui os núcleos físicos, não os núcleos com hyper-threading.
 
-&#42;&#42;&#42;Média dos números (Números de pico)
+&#42;&#42;Média dos números (Números de pico)
 > [!NOTE]
 > -   A Central do ATA pode lidar com um máximo agregado de 400.000 FPS (quadros por segundo) de todos os controladores de domínio monitorados.
 > -   O volume de armazenamento ditado aqui são os valores net que você sempre deve levar em consideração para o crescimento futuro e verificar se o disco no qual o banco de dados reside tem, pelo menos, 20% de espaço livre.
@@ -70,7 +70,7 @@ A Central de ATA requer um mínimo recomendado de 30 dias de dados para a análi
 > -   Ao trabalhar em um servidor físico, o banco de dados do ATA precisa que você **desabilite** o NUMA (acesso não uniforme a memória) no BIOS. O sistema pode referir-se ao NUMA como Nó de Intercalação, caso em que você precisará **habilitar** a Intercalação de Nó para desabilitar o NUMA. Consulte a documentação da BIOS para saber mais. Observe que isso não é pertinente quando a Central do ATA está em execução em um servidor virtual.
 
 
-## Escolhendo o tipo certo de gateway para sua implantação
+## <a name="choosing-the-right-gateway-type-for-your-deployment"></a>Escolhendo o tipo certo de gateway para sua implantação
 Em uma implantação do ATA, há suporte para qualquer combinação dos tipos de Gateway do ATA:
 
 - Somente Gateway(s) do ATA
@@ -98,7 +98,7 @@ Veja a seguir exemplos de cenários nos quais os controladores de domínio devem
 - Matriz dos datacenters (com controladores de domínio com mais de 10.000 pacotes por segundo)
 
 
-### Dimensionamento do Gateway Lightweight do ATA
+### <a name="ata-lightweight-gateway-sizing"></a>Dimensionamento do Gateway Lightweight do ATA
 
 Um Gateway Lightweight do ATA pode oferecer suporte ao monitoramento de um controlador de domínio com base na quantidade de tráfego de rede gerado pelo controlador de domínio. 
 
@@ -119,9 +119,10 @@ Um Gateway Lightweight do ATA pode oferecer suporte ao monitoramento de um contr
 > -   Se o controlador de domínio não tiver a quantidade necessária de recursos exigida pelo Gateway Lightweight do ATA, o desempenho do controlador de domínio não será afetado, mas o Gateway Lightweight do ATA pode não operar conforme o esperado.
 > -   Durante a execução como uma memória dinâmica da máquina virtual ou qualquer outra memória, não há suporte para o recurso de inchamento.
 > -   Para ter um melhor desempenho, defina a **Opção de Energia** do Gateway Lightweight do ATA como **Alto Desempenho**.
+> -   É necessário um mínimo de 5 GB de espaço e recomenda-se 10 GB. Isso inclui o espaço necessário para os binários ATA, [logs ATA](/advanced-threat-analytics/troubleshoot/troubleshooting-ata-using-logs) e [logs de desempenho](/advanced-threat-analytics/troubleshoot/troubleshooting-ata-using-perf-counters).
 
 
-### Dimensionamento do Gateway de ATA
+### <a name="ata-gateway-sizing"></a>Dimensionamento do Gateway de ATA
 
 Considere o seguinte ao decidir quantos Gateways do ATA implantar.
 
@@ -153,9 +154,10 @@ As considerações de espelhamento de porta podem exigir que você implante vár
 > [!NOTE] 
 > -   Não há suporte para memória dinâmica.
 > -   Para ter um melhor desempenho, defina a **Opção de Energia** do Gateway de ATA para **Alto Desempenho**.
+> -   É necessário um mínimo de 5 GB de espaço e recomenda-se 10 GB. Isso inclui o espaço necessário para os binários ATA, [logs ATA](/advanced-threat-analytics/troubleshoot/troubleshooting-ata-using-logs) e [logs de desempenho](/advanced-threat-analytics/troubleshoot/troubleshooting-ata-using-perf-counters).
 
 
-## Estimativa de tráfego do controlador de domínio
+## <a name="domain-controller-traffic-estimation"></a>Estimativa de tráfego do controlador de domínio
 Há várias ferramentas que você pode usar para descobrir a média de pacotes por segundo dos controladores de domínio. Se você não tiver as ferramentas que acompanham este contador, poderá usar o Monitor de Desempenho para coletar as informações necessárias.
 
 Para determinar os pacotes por segundo, execute o seguinte em cada controlador de domínio:
@@ -205,13 +207,13 @@ Para determinar os pacotes por segundo, execute o seguinte em cada controlador d
 
     ![Imagem do contador de pacotes por segundo](media/ATA-traffic-estimation-14.png)
 
-## Consulte também
+## <a name="see-also"></a>Consulte também
 - [Pré-requisitos do ATA](ata-prerequisites.md)
 - [Arquitetura do ATA](ata-architecture.md)
 - [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Dec16_HO2-->
 
 
