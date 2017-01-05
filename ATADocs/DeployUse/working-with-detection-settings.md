@@ -1,8 +1,9 @@
 ---
-title: "Trabalhando com as configurações de detecção do ATA | Microsoft ATA"
+title: "Trabalhando com as configurações de detecção do ATA | Microsoft Docs"
 description: "Descreve como configurar uma lista de endereços IP e sub-redes que tem circunstâncias incomuns e que deve ser tratada de forma diferente em relação a outras entidades em sua rede"
 keywords: 
 author: rkarlin
+ms.author: rkarlin
 manager: mbaldwin
 ms.date: 08/24/2016
 ms.topic: article
@@ -13,8 +14,8 @@ ms.assetid: f4f2ae30-4849-4a4f-8f6d-bfe99a32c746
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 28b6211599395317eb6336c37fd3461b8f5635f6
-ms.openlocfilehash: 09248cdd5f8a66a164a5cd275f2765107f5c706d
+ms.sourcegitcommit: 85e285c5d88e5916e0bf0eb7dd327cb4cb45b4cb
+ms.openlocfilehash: 93f2a72c9623674c73b3ee83ecf12be8e0766365
 
 
 ---
@@ -23,10 +24,10 @@ ms.openlocfilehash: 09248cdd5f8a66a164a5cd275f2765107f5c706d
 
 
 
-# Trabalhando com as configurações de detecção do ATA
+# <a name="working-with-ata-detection-settings"></a>Trabalhando com as configurações de detecção do ATA
 A página de configuração **Detecção** permite que você configure uma lista de endereços IP e sub-redes que tem circunstâncias incomuns e que deve ser tratada de forma ligeiramente diferente em relação a outras entidades em sua rede.
 
-## Configuração da detecção
+## <a name="setting-up-detection"></a>Configuração da detecção
 Na seção **Detecção**, defina os itens a seguir:
 
 -   **SIDs da conta Honeytoken** – Esta é uma conta de usuário que não deve ter nenhuma atividade de rede. Essa conta será configurada como o usuário Honeytoken do ATA. Se alguém tentar usar esta conta de usuário, o ATA criará uma atividade suspeita e é uma indicação de atividade mal-intencionada. Para configurar o usuário Honeytoken, será necessário a SID da conta de usuário, não o nome de usuário.
@@ -47,13 +48,13 @@ Na seção **Detecção**, defina os itens a seguir:
 ![Exclusões de configurações de detecção do ATA](media/ata-detection-settings-exclusions-1.7.png)
 
 
-## Consulte também
+## <a name="see-also"></a>Consulte Também
 - [Trabalhando com atividades suspeitas](working-with-suspicious-activities.md)
 - [Modificando a configuração do ATA](modifying-ata-configuration.md)
 - [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Jan17_HO1-->
 
 

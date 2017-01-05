@@ -1,8 +1,9 @@
 ---
-title: "Guia de migração de atualização do ATA para 1.5 | Microsoft ATA"
+title: "Guia de migração de atualização do ATA para 1.5 | Microsoft Docs"
 description: "Procedimentos para atualizar o ATA para a versão 1.5"
 keywords: 
 author: rkarlin
+ms.author: rkarlin
 manager: mbaldwin
 ms.date: 04/28/2016
 ms.topic: article
@@ -13,13 +14,13 @@ ms.assetid: fb65eb41-b215-4530-93a2-0b8991f4e980
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: c71d5ed1c705de558f1144820703ffe84850679b
-ms.openlocfilehash: 637d847af82d15a5b88fb43274f606a9b89da445
+ms.sourcegitcommit: 85e285c5d88e5916e0bf0eb7dd327cb4cb45b4cb
+ms.openlocfilehash: c23512e159c2f01bc0a930f71373aa5315f0310c
 
 
 ---
 
-# Guia de migração de atualização do ATA para 1.5
+# <a name="ata-update-to-15-migration-guide"></a>Guia de migração de atualização do ATA para 1.5
 A atualização 1.5 do ATA fornece melhorias nas seguintes áreas:
 
 -   Tempo de detecção mais rápido
@@ -36,7 +37,7 @@ A atualização 1.5 do ATA fornece melhorias nas seguintes áreas:
 
 -   Contadores de desempenho adicionais para monitoramento e solução de problemas avançados
 
-## Atualização do ATA para a versão 1.5
+## <a name="updating-ata-to-version-15"></a>Atualização do ATA para a versão 1.5
 > [!NOTE]
 > Se o ATA não estiver instalado em seu ambiente, baixe a versão completa do ATA que inclui a versão 1.5 e siga o procedimento de instalação padrão descrito em [Instalar o ATA](/advanced-threat-analytics/deploy-use/install-ata).
 
@@ -58,7 +59,7 @@ Execute estas etapas para atualizar para o ATA versão 1.5:
     > [!IMPORTANT]
     > Atualize todos os Gateways do ATA para ter certeza de o ATA funciona corretamente.
 
-### Etapa 1: Atualizar o Centro do ATA
+### <a name="step-1-update-the-ata-center"></a>Etapa 1: Atualizar o Centro do ATA
 
 1.  Faça backup do seu banco de dados: (opcional)
 
@@ -89,7 +90,7 @@ Execute estas etapas para atualizar para o ATA versão 1.5:
 > [!IMPORTANT]
 > - Atualize todos os Gateways do ATA para ter certeza de o ATA funciona corretamente.
 
-### Etapa 2. Baixe o pacote de instalação do Gateway do ATA
+### <a name="step-2-download-the-ata-gateway-setup-package"></a>Etapa 2. Baixe o pacote de instalação do Gateway do ATA
 Após definir as configurações de conectividade do domínio, você poderá baixar o pacote de instalação do Gateway do ATA.
 
 Para baixar o pacote do Gateway do ATA:
@@ -110,7 +111,7 @@ O arquivo zip inclui o seguinte:
 
 -   Arquivo de configurações com as informações necessárias para conectar-se à Central de ATA
 
-### Etapa 3: Atualize os Gateways do ATA
+### <a name="step-3-update-the-ata-gateways"></a>Etapa 3: Atualize os Gateways do ATA
 
 1.  Em cada Gateway do ATA, extraia os arquivos do pacote do Gateway do ATA e execute o arquivo de Configuração do Gateway do Microsoft ATA.
 
@@ -128,12 +129,12 @@ Você saberá que todos os Gateways do ATA foram atualizados com êxito quando t
 
 ![Imagem de gateways atualizados](media/ATA-gw-updated.png)
 
-## Consulte também
+## <a name="see-also"></a>Consulte também
 
 - [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
 
 
-<!--HONumber=Oct16_HO4-->
+<!--HONumber=Jan17_HO1-->
 
 

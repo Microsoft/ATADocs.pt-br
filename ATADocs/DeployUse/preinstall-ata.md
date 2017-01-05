@@ -1,8 +1,9 @@
 ---
-title: "Antes de instalar o ATA — Concluir as etapas | Microsoft ATA"
+title: "Antes de instalar o ATA — concluir as etapas | Microsoft Docs"
 description: "Explica as etapas necessárias que devem ser concluídas antes da implantação do ATA."
 keywords: 
 author: rkarlin
+ms.author: rkarlin
 manager: mbaldwin
 ms.date: 08/24/2016
 ms.topic: get-started-article
@@ -13,8 +14,8 @@ ms.assetid: 3715b69e-e631-449b-9aed-144d0f9bcee7
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 050f1ef0b39d69b64ede53243a7fa2d33d0e4813
-ms.openlocfilehash: 0c1a53ff7192ec5a343330750d600d545c0e0237
+ms.sourcegitcommit: 85e285c5d88e5916e0bf0eb7dd327cb4cb45b4cb
+ms.openlocfilehash: 731a3a2d404c2449b7e84bf40b47bfba29053316
 
 
 ---
@@ -23,7 +24,7 @@ ms.openlocfilehash: 0c1a53ff7192ec5a343330750d600d545c0e0237
 
 
 
-# Antes de instalar o ATA
+# <a name="before-you-install-ata"></a>Antes de instalar o ATA
 
 As etapas a seguir devem ser concluídas antes de instalar o ATA:
 
@@ -33,7 +34,7 @@ As etapas a seguir devem ser concluídas antes de instalar o ATA:
 
 
 
-## Consulte também
+## <a name="see-also"></a>Consulte também
 
 - [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
@@ -42,6 +43,6 @@ As etapas a seguir devem ser concluídas antes de instalar o ATA:
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Jan17_HO1-->
 
 

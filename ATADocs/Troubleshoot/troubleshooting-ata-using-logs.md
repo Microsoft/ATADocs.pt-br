@@ -1,8 +1,9 @@
 ---
-title: "Solução de problemas do ATA usando os logs do ATA | Microsoft ATA"
+title: "Solução de problemas do ATA usando os logs do ATA | Microsoft Docs"
 description: "Descreve como você pode usar os logs do ATA para solucionar problemas"
 keywords: 
 author: rkarlin
+ms.author: rkarlin
 manager: mbaldwin
 ms.date: 08/24/2016
 ms.topic: article
@@ -13,8 +14,8 @@ ms.assetid: b8ad5511-8893-4d1d-81ee-b9a86e378347
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: c71d5ed1c705de558f1144820703ffe84850679b
-ms.openlocfilehash: f8024edbfad1961db7fa469cc2907c55bb5ec93f
+ms.sourcegitcommit: 85e285c5d88e5916e0bf0eb7dd327cb4cb45b4cb
+ms.openlocfilehash: 3a2ae61ba1b54efd5dca5f0f71dc71b98872145d
 
 
 ---
@@ -23,10 +24,10 @@ ms.openlocfilehash: f8024edbfad1961db7fa469cc2907c55bb5ec93f
 
 
 
-# Solução de problemas do ATA usando os logs do ATA
+# <a name="troubleshooting-ata-using-the-ata-logs"></a>Solução de problemas do ATA usando os logs do ATA
 Os logs do ATA fornecem informações sobre o que cada componente do ATA está fazendo a qualquer hora.
 
-## Logs do Gateway do ATA
+## <a name="ata-gateway-logs"></a>Logs do Gateway do ATA
 Nesta seção, todas as referências ao Gateway do ATA são relevantes também para o Gateway Lightweight do ATA. 
 
 Os logs do Gateway do ATA estão localizados em uma subpasta chamada **Logs**, no local em que o ATA está instalado; o local padrão é: **C:\Arquivos de Programas\Microsoft Advanced Threat Analytics\**. No local de instalação padrão, ela pode ser encontrada em: **C:\Arquivos de Programas\Microsoft Advanced Threat Analytics\Gateway\Logs**.
@@ -47,7 +48,7 @@ O Gateway do ATA tem os seguintes logs:
 > [!NOTE]
 > Os três primeiros arquivos de log têm um tamanho máximo de até 50 MB. Quando esse tamanho é atingido, um novo arquivo de log é aberto e o anterior é renomeado como "&lt;nome do arquivo original&gt;-Archived-00000". Esse número aumenta a cada renomeação. Por padrão, se já houver mais de 10 arquivos do mesmo tipo, os mais antigos serão excluídos.
 
-## Logs do Centro do ATA
+## <a name="ata-center-logs"></a>Logs do Centro do ATA
 Os logs do Centro do ATA estão localizados em uma subpasta chamada **Logs**. No local de instalação padrão, ela pode ser encontrada em: **C:\Arquivos de Programas\Microsoft Advanced Threat Analytics\Center\Logs**.
 > [!Note]
 > Os logs do console do ATA, que estavam nos logs do IIS, agora estão localizados nos logs da Central do ATA.
@@ -67,7 +68,7 @@ O Centro do ATA tem os seguintes logs:
 > Os três primeiros arquivos de log têm um tamanho máximo de até 50 MB. Quando esse tamanho é atingido, um novo arquivo de log é aberto e o anterior é renomeado como "&lt;nome do arquivo original&gt;-Archived-00000". Esse número aumenta a cada renomeação. Por padrão, se já houver mais de 10 arquivos do mesmo tipo, os mais antigos serão excluídos.
 
 
-## Logs de implantação do ATA
+## <a name="ata-deployment-logs"></a>Logs de implantação do ATA
 Os logs de implantação do ATA estão localizados no diretório temp do usuário que instalou o produto. No local de instalação padrão, ele pode ser encontrado em: **C:\Usuários\Administrator\AppData\Local\Temp** (ou um diretório acima de %temp%).
 
 Logs de implantação do Centro do Ata
@@ -85,15 +86,15 @@ Logs de implantação do Gateway do ATA e do Gateway Lightweight do ATA:
 -   **Microsoft Advanced Threat Analytics Gateway_YYYYMMDDHHMMSS_001_MsiPackage.log** – Esse arquivo de log lista as etapas no processo de implantação dos binários do Gateway do ATA. Usado principalmente para acompanhar a implantação dos binários do Gateway do ATA.
 
 
-## Consulte também
+## <a name="see-also"></a>Consulte também
 - [Pré-requisitos do ATA](/advanced-threat-analytics/plan-design/ata-prerequisites)
-- [Planejamento da capacidade de ATA](/advanced-threat-analytics/plan-design/ata-capacity-planning)
+- [Planejamento da capacidade do ATA](/advanced-threat-analytics/plan-design/ata-capacity-planning)
 - [Configurar coleta de eventos](/advanced-threat-analytics/deploy-use/configure-event-collection)
 - [Configuração do encaminhamento de eventos do Windows](/advanced-threat-analytics/deploy-use/configure-event-collection#configuring-windows-event-forwarding)
 - [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
 
 
-<!--HONumber=Oct16_HO4-->
+<!--HONumber=Jan17_HO1-->
 
 

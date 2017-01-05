@@ -1,8 +1,9 @@
 ---
-title: "Novidades na versão 1.4 do ATA | Microsoft ATA"
+title: "Novidades na versão 1.4 do ATA | Microsoft Docs"
 description: "Lista as novidades na versão 1.4 do ATA e seus problemas conhecidos"
 keywords: 
 author: rkarlin
+ms.author: rkarlin
 manager: mbaldwin
 ms.date: 04/28/2016
 ms.topic: article
@@ -13,16 +14,16 @@ ms.assetid: cbea47f9-34c1-42b6-ae9e-6a472b49e1a5
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f13750f9cdff98aadcd59346bfbbb73c2f3a26f0
-ms.openlocfilehash: b66a315c9a98192cbd3b6feea462445c085091b1
+ms.sourcegitcommit: 85e285c5d88e5916e0bf0eb7dd327cb4cb45b4cb
+ms.openlocfilehash: 3bb1b12088e4871bf65bb67cdfb432d1c414792a
 
 
 ---
 
-# Novidades na versão 1.4 do ATA
+# <a name="what39s-new-in-ata-version-14"></a>Novidades na versão 1.4 do ATA
 Essas notas de versão fornecem informações sobre problemas conhecidos na versão 1.4 da Advanced Threat Analytics.
 
-## O que há de novo nesta versão?
+## <a name="whats-new-in-this-version"></a>O que há de novo nesta versão?
 
 -   Suporte do Windows Event Forwarding (WEF) para enviar eventos diretamente dos controladores de domínio para o Gateway de ATA.
 
@@ -54,23 +55,23 @@ Essas notas de versão fornecem informações sobre problemas conhecidos na vers
 
 -   Telemetria para ajudar a melhorar a experiência do cliente.
 
-## Problemas conhecidos
+## <a name="known-issues"></a>Problemas conhecidos
 A seguir estão os problemas conhecidos existentes nesta versão.
 
-### Software de captura de rede
+### <a name="network-capture-software"></a>Software de captura de rede
 No Gateway do ATA, o único software de captura de rede com suporte que pode ser instalado é o [Microsoft Network Monitor 3.4](http://www.microsoft.com/download/details.aspx?id=4865). Não instale o Microsoft Message Analyzer ou qualquer outro software de captura de rede. A instalação de outro software fará com que o Gateway de ATA pare de funcionar corretamente.
 
-### Instalação do arquivo Zip
+### <a name="installation-from-zip-file"></a>Instalação do arquivo Zip
 Ao instalar o Gateway de ATA, certifique-se de extrair os arquivos do arquivo zip para um diretório local e instalá-lo de lá. Não instale o Gateway de ATA diretamente de dentro do arquivo zip ou a instalação falhará.
 
-### Desinstalando versões anteriores de ATA
+### <a name="uninstalling-previous-versions-of-ata"></a>Desinstalando versões anteriores de ATA
 Se você instalou uma versão anterior do ATA, da Visualização Pública ou da Visualização Privada, você deve desinstalar o Centro de ATA e os Gateways de ATA antes de instalar esta versão do ATA.
 
 Você também deve excluir os arquivos de banco de dados e arquivos de log. Os bancos de dados de versões anteriores do ATA não são compatíveis com a versão GA do ATA.
 
 Ao tentar desinstalar o Centro de ATA ou o Gateway de ATA, se a instalação do ATA abrir em vez da desinstalação, você precisará adicionar a seguinte chave do registro e, em seguida, desinstalar o ATA novamente.
 
-**Centro de ATA**
+**Centro do ATA**
 
 -   HKLM\SOFTWARE\Microsoft\Microsoft Advanced Threat Analytics\Center
 
@@ -78,7 +79,7 @@ Ao tentar desinstalar o Centro de ATA ou o Gateway de ATA, se a instalação do 
 
     ![Editor do registro para o caminho de instalação do Centro de ATA](media/ATA-uninstall-center-bug.jpg)
 
-**Gateway de ATA**
+**Gateway do ATA**
 
 -   HKLM\SOFTWARE\Microsoft\Microsoft Advanced Threat Analytics\Gateway
 
@@ -88,19 +89,19 @@ Ao tentar desinstalar o Centro de ATA ou o Gateway de ATA, se a instalação do 
 
 Após a desinstalação, exclua a pasta de instalação no Centro de ATA e no Gateway de ATA.  Se você instalou o banco de dados em uma pasta separada, exclua a pasta do banco de dados no Centro de ATA.
 
-### Alerta de integridade – Gateway de ATA desconectado
+### <a name="health-alert---disconnected-ata-gateway"></a>Alerta de integridade – Gateway de ATA desconectado
 Se você tiver mais de um Gateway de ATA e tiver desconectado os alertas de Gateway de ATA, a resolução automática funcionará em apenas um deles, deixando os restantes com status em aberto. Você deve confirmar manualmente que o Gateway de ATA está ativo e que o serviço está em execução e resolver manualmente o alerta.
 
-### Base de dados de conhecimento sobre host de virtualização
+### <a name="kb-on-virtualization-host"></a>Base de dados de conhecimento sobre host de virtualização
 Não instale a Base de dados de conhecimento 3047154 em um host de virtualização. Isso pode fazer com que o espelhamento de porta pare de funcionar corretamente.
 
-## Consulte também
+## <a name="see-also"></a>Consulte também
 
 [Atualizar o ATA para a versão 1.6 — guia de migração](ata-update-1.6-migration-guide.md)
 
 [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Jan17_HO1-->
 
 
