@@ -22,7 +22,7 @@ ms.openlocfilehash: 2671937cf0ed9ff2865073b97ee735da99fa7d7f
 
 *Aplica-se a: Advanced Threat Analytics versão 1.7*
 
-## <a name="what-threats-does-ata-look-for"></a>Que tipos de ameaças o ATA procura?
+# <a name="what-threats-does-ata-look-for"></a>Que tipos de ameaças o ATA procura?
 
 O ATA fornece detecção para as seguintes várias fases de ataque avançado: reconhecimento, comprometimento de credenciais, movimentação lateral, elevação de privilégios, predominância de domínio e outros. Essas detecções visam detectar ataques avançados e ameaças internas antes que eles possam causar danos à sua organização.
 A detecção de cada fase resulta em várias atividades suspeitas relevantes para a fase em questão, em que cada atividade suspeita se correlaciona com diferentes tipos de ataques possíveis.
