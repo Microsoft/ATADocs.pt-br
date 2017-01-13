@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 10/25/2016
+ms.date: 1/9/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -14,8 +14,8 @@ ms.assetid: b3cceb18-0f3c-42ac-8630-bdc6b310f1d6
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 85e285c5d88e5916e0bf0eb7dd327cb4cb45b4cb
-ms.openlocfilehash: c946aa6cfde5bcb72ce8c6efba626c31c2413893
+ms.sourcegitcommit: b73fb769438a7290053c27766c233010079dca78
+ms.openlocfilehash: 313ae02742d4acc68c52d5481fdc24c0aa508681
 
 
 ---
@@ -94,7 +94,7 @@ Como você está fazendo logon no site usando um endereço IP, você recebe um a
 
 
 >[!div class="step-by-step"]
-[« Pré-instalação](preinstall-ata.md)
+[« Pré-instalação](configure-port-mirroring.md)
 [Etapa 2 »](install-ata-step2.md)
 
 ## <a name="see-also"></a>Consulte Também
@@ -106,6 +106,6 @@ Como você está fazendo logon no site usando um endereço IP, você recebe um a
 
 
 
-<!--HONumber=Jan17_HO1-->
+<!--HONumber=Jan17_HO2-->
 
 
