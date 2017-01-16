@@ -14,8 +14,8 @@ ms.technology:
 ms.suite: ems
 ms.assetid: c4a97980-6e19-4d10-bf69-f0b338266efa
 translationtype: Human Translation
-ms.sourcegitcommit: 1dda7ed8bb461a15ae2cc9d379822ed4a96245ff
-ms.openlocfilehash: 6eeae28243bc000ad9424e655cfde75b10abe03a
+ms.sourcegitcommit: dc1bfcd10b1856a7b92189f5cfd3b7492cf15bcb
+ms.openlocfilehash: 22af8d46b375e86c203da1cadd89416b42c45db7
 
 
 ---
@@ -23,7 +23,7 @@ ms.openlocfilehash: 6eeae28243bc000ad9424e655cfde75b10abe03a
 <article id="main">
     <section id="hero-content">
       <h1>Documentação do Microsoft Advanced Threat Analytics</h1>
-      <h2>Aprenda a implantar e a gerenciar o ATA (Microsoft Advanced Threat Analytics, um produto no local que ajuda profissionais de segurança de TI a proteger suas empresas contra ataques direcionados avançados.</h2>
+      <h2>Aprenda a implantar e a gerenciar o ATA (Microsoft Advanced Threat Analytics), um produto no local que ajuda profissionais de segurança de TI a proteger suas empresas contra ataques direcionados avançados.</h2>
       <h3>O ATA ainda é uma novidade para você? <a href="http://go.microsoft.com/fwlink/?LinkId=816859" target="_blank">Visite a página do nosso produto&rarr;</a></h3>
     </section>
     <aside class="alert section-border">
@@ -74,9 +74,9 @@ ms.openlocfilehash: 6eeae28243bc000ad9424e655cfde75b10abe03a
                   </a>
                 </li>
                 <li class="column-third">
-                  <a href="/advanced-threat-analytics/understand-explore/ata-release-notes">
+                  <a href="/advanced-threat-analytics/understand-explore/whats-new-version-1.7">
                     <h3>Notas de versão do ATA</h3>
-                    <p>Confira uma lista do que foi atualizado nas versões mais recentes, além de problemas conhecidos e guias de migração.</p>
+                    <p>Confira as novidades das versões mais recentes, além de problemas conhecidos e guias de migração.</p>
                   </a>
                 </li>
               </ul>
@@ -118,7 +118,7 @@ ms.openlocfilehash: 6eeae28243bc000ad9424e655cfde75b10abe03a
           </li>
           <li class="journey-step">
             <header class="journey-step-header row">
-              <a href="/advanced-threat-analytics/deploy-use/preinstall-ata">
+              <a href="/advanced-threat-analytics/deploy-use/configure-port-mirroring">
                 <div class="title column-third">
                   <span class="step-number">3</span>
                   <p>Implantar &amp; Usar</p>
@@ -130,7 +130,7 @@ ms.openlocfilehash: 6eeae28243bc000ad9424e655cfde75b10abe03a
             <section class="journey-step-elements content">
               <ul class="row">
                 <li class="column-third">
-                  <a href="/advanced-threat-analytics/deploy-use/preinstall-ata">
+                  <a href="/advanced-threat-analytics/deploy-use/configure-port-mirroring">
                     <h3>Antes de instalar o ATA</h3>
                     <p>Siga estas etapas antes de instalar o ATA.</p>
                   </a>
@@ -142,7 +142,7 @@ ms.openlocfilehash: 6eeae28243bc000ad9424e655cfde75b10abe03a
                   </a>
                 </li>
                 <li class="column-third">
-                  <a href="/advanced-threat-analytics/deploy-use/operate-ata">
+                  <a href="/advanced-threat-analytics/deploy-use/modifying-ata-config-centerip">
                     <h3>Operar o ATA</h3>
                     <p>Modifique as configurações do ATA e realize o monitoramento diário usando o ATA.</p>
                   </a>
@@ -154,7 +154,7 @@ ms.openlocfilehash: 6eeae28243bc000ad9424e655cfde75b10abe03a
               <a href="/advanced-threat-analytics/troubleshoot/troubleshooting-ata-known-errors">
                 <div class="title column-third">
                   <span class="step-number">4</span>
-                  <p>Solucionar problemas</p>
+                  <p>Solução de problemas</p>
                 </div>
                 <p class="description column-two-thirds">Solucione problemas do ATA.
                 </p>
@@ -196,6 +196,6 @@ ms.openlocfilehash: 6eeae28243bc000ad9424e655cfde75b10abe03a
 
 
 
-<!--HONumber=Dec16_HO1-->
+<!--HONumber=Jan17_HO2-->
 
 
