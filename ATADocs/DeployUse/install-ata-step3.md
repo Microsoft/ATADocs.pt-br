@@ -1,8 +1,9 @@
 ---
-title: "Instalar o ATA – Etapa 3 | Microsoft ATA"
+title: "Instalar o ATA – Etapa 3 | Microsoft Docs"
 description: "A etapa três da instalação do ATA ajuda você a baixar o pacote de instalação do Gateway do ATA."
 keywords: 
 author: rkarlin
+ms.author: rkarlin
 manager: mbaldwin
 ms.date: 08/24/2016
 ms.topic: get-started-article
@@ -13,8 +14,8 @@ ms.assetid: 7fb024e6-297a-4ad9-b962-481bb75a0ba3
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ba090fdd4f00c001020b1fbedf527e4fd69d3992
-ms.openlocfilehash: 277d08756b456d1a61fb9fdcb5014a6a1b4782ad
+ms.sourcegitcommit: 85e285c5d88e5916e0bf0eb7dd327cb4cb45b4cb
+ms.openlocfilehash: c8f3f5453757fbc7a95aa2377a84c3a133d38181
 
 
 ---
@@ -23,13 +24,13 @@ ms.openlocfilehash: 277d08756b456d1a61fb9fdcb5014a6a1b4782ad
 
 
 
-# Instalação do ATA - Etapa 3
+# <a name="install-ata---step-3"></a>Instalação do ATA - Etapa 3
 
 >[!div class="step-by-step"]
 [« Etapa 2](install-ata-step2.md)
 [Etapa 4 »](install-ata-step4.md)
 
-## Etapa 3. Baixe o pacote de instalação do Gateway do ATA
+## <a name="step-3-download-the-ata-gateway-setup-package"></a>Etapa 3. Baixe o pacote de instalação do Gateway do ATA
 Após definir as configurações de conectividade do domínio, você poderá baixar o pacote de instalação do Gateway do ATA. O Gateway do ATA do pode ser instalado em um servidor dedicado ou em um controlador de domínio. Se você instalá-lo em um controlador de domínio, ele será instalado como um Gateway Lightweight do ATA. Para obter mais informações sobre o Gateway Lightweight do ATA, confira [Arquitetura do ATA](/advanced-threat-analytics/plan-design/ata-architecture). 
 
 Se esta for a primeira vez que você está baixando um Gateway do ATA, você receberá a tela a seguir:
@@ -56,7 +57,7 @@ O arquivo zip inclui o seguinte:
 [« Etapa 2](install-ata-step2.md)
 [Etapa 4 »](install-ata-step4.md)
 
-## Consulte também
+## <a name="see-also"></a>Consulte também
 
 - [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Configurar coleta de eventos](configure-event-collection.md)
@@ -64,6 +65,6 @@ O arquivo zip inclui o seguinte:
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Jan17_HO1-->
 
 

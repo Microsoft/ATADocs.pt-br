@@ -1,8 +1,9 @@
 ---
-title: "Instalar o ATA – Etapa 4 | Microsoft ATA"
+title: "Instalar o ATA – Etapa 4 | Microsoft Docs"
 description: "A Etapa quatro da instalação do ATA ajuda você a instalar o Gateway do ATA."
 keywords: 
 author: rkarlin
+ms.author: rkarlin
 manager: mbaldwin
 ms.date: 08/24/2016
 ms.topic: get-started-article
@@ -13,8 +14,8 @@ ms.assetid: 6bbc50c3-bfa8-41db-a2f9-56eed68ef5d2
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 54e5105e78b6db9f33488135601381af5503aa4a
-ms.openlocfilehash: 305c939ebda636617ece6e41f0554af0e948c3ec
+ms.sourcegitcommit: 85e285c5d88e5916e0bf0eb7dd327cb4cb45b4cb
+ms.openlocfilehash: ebaab5e8768d6b78c6d9ff93fa1430673827e483
 
 
 ---
@@ -23,13 +24,13 @@ ms.openlocfilehash: 305c939ebda636617ece6e41f0554af0e948c3ec
 
 
 
-# Instalação do ATA - Etapa 4
+# <a name="install-ata---step-4"></a>Instalação do ATA - Etapa 4
 
 >[!div class="step-by-step"]
 [« Etapa 3](install-ata-step3.md)
 [Etapa 5 »](install-ata-step5.md)
 
-## Etapa 4. Instalar o Gateway do ATA
+## <a name="step-4-install-the-ata-gateway"></a>Etapa 4. Instalar o Gateway do ATA
 
 Antes de instalar o Gateway do ATA, verifique se o espelhamento de porta está configurado corretamente e se o Gateway do ATA pode ver o tráfego chegando e saindo dos controladores de domínio. Confira [Validar o espelhamento de porta](validate-port-mirroring.md) para saber mais.
 
@@ -89,7 +90,7 @@ Execute as seguintes etapas no servidor do Gateway do ATA.
 [« Etapa 3](install-ata-step3.md)
 [Etapa 5 »](install-ata-step5.md)
 
-## Consulte também
+## <a name="see-also"></a>Consulte também
 
 - [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Configurar coleta de eventos](configure-event-collection.md)
@@ -98,6 +99,6 @@ Execute as seguintes etapas no servidor do Gateway do ATA.
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Jan17_HO1-->
 
 

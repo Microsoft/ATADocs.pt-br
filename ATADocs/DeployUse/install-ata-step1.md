@@ -1,10 +1,11 @@
 ---
-title: "Instalar o ATA – Etapa 1 | Microsoft ATA"
+title: "Instalar o ATA – Etapa 1 | Microsoft Docs"
 description: "A primeira etapa da instalação do ATA envolve baixar e instalar o Centro do ATA em seu servidor escolhido."
 keywords: 
 author: rkarlin
+ms.author: rkarlin
 manager: mbaldwin
-ms.date: 10/25/2016
+ms.date: 1/9/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,8 +14,8 @@ ms.assetid: b3cceb18-0f3c-42ac-8630-bdc6b310f1d6
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: c71d5ed1c705de558f1144820703ffe84850679b
-ms.openlocfilehash: cf7ae4eccdf70e4e8661ac55ec15fff00bc9c62e
+ms.sourcegitcommit: b73fb769438a7290053c27766c233010079dca78
+ms.openlocfilehash: 313ae02742d4acc68c52d5481fdc24c0aa508681
 
 
 ---
@@ -23,7 +24,7 @@ ms.openlocfilehash: cf7ae4eccdf70e4e8661ac55ec15fff00bc9c62e
 
 
 
-# Instalação do ATA - Etapa 1
+# <a name="install-ata---step-1"></a>Instalação do ATA - Etapa 1
 
 >[!div class="step-by-step"]
 [Etapa 2 »](install-ata-step2.md)
@@ -33,7 +34,7 @@ O procedimento de instalação fornece instruções para executar uma nova insta
 > [!IMPORTANT] 
 > Se você estiver usando o Windows 2012 R2, instale o KB2934520 no servidor da Central do ATA e nos servidores do Gateway do ATA antes de começar a instalação, caso contrário a instalação do ATA instalar essa atualização e exigirá uma reinicialização no meio do processo.
 
-## Etapa 1. Baixar e instalar o Centro do ATA
+## <a name="step-1-download-and-install-the-ata-center"></a>Etapa 1. Baixar e instalar o Centro do ATA
 Depois de verificar que o servidor atende aos requisitos, você pode prosseguir com a instalação do Centro do ATA.
 
 Execute as seguintes etapas no servidor do Centro do ATA.
@@ -53,7 +54,7 @@ Execute as seguintes etapas no servidor do Centro do ATA.
 6.  Leia os Termos de Licença para Software Microsoft e, se aceitá-los, clique na caixa de seleção e em **Avançar**.
 
 7.  É recomendável que você defina o ATA para atualizar automaticamente. Se o Windows não estiver configurado para fazer isso no seu computador, você verá a tela **Utilizar o Microsoft Update para ajudar a manter seu computador protegido e atualizado**. 
-    ![Imagem Mantenha o ATA atualizado](media/ata_ms_update.png)
+    ![Imagem Manter o ATA atualizado](media/ata_ms_update.png)
 
 8. Selecione **Usar o Microsoft Update ao verificar atualizações (recomendado)** Isso ajustará as configurações do Windows para habilitar atualizações para outros produtos da Microsoft (incluindo o ATA), como visto aqui. 
     ![Imagem de atualização automática do Windows](media/ata_installupdatesautomatically.png)
@@ -85,7 +86,7 @@ Execute as seguintes etapas no servidor do Centro do ATA.
 Neste ponto, você será levado automaticamente para a página de configuração **Geral** a fim de continuar a configuração e a implantação dos Gateways do ATA.
 Como você está fazendo logon no site usando um endereço IP, você recebe um aviso relacionado ao certificado e isso é normal. Clique em **Continuar neste site**.
 
-### Validar a instalação
+### <a name="validate-installation"></a>Validar a instalação
 
 1.  Verifique se o serviço chamado **Central do Microsoft Advanced Threat Analytics** está em execução.
 2.  Na área de trabalho, clique no atalho do **Microsoft Advanced Threat Analytics** para se conectar ao Console do ATA. Faça logon com as mesmas credenciais de usuário que você usou para instalar o Centro do ATA.
@@ -93,10 +94,10 @@ Como você está fazendo logon no site usando um endereço IP, você recebe um a
 
 
 >[!div class="step-by-step"]
-[« Pré-instalação](preinstall-ata.md)
+[« Pré-instalação](configure-port-mirroring.md)
 [Etapa 2 »](install-ata-step2.md)
 
-## Consulte também
+## <a name="see-also"></a>Consulte Também
 
 - [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Configurar coleta de eventos](configure-event-collection.md)
@@ -105,6 +106,6 @@ Como você está fazendo logon no site usando um endereço IP, você recebe um a
 
 
 
-<!--HONumber=Oct16_HO4-->
+<!--HONumber=Jan17_HO2-->
 
 

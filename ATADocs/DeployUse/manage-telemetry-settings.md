@@ -1,8 +1,9 @@
 ---
-title: "Gerenciar configurações de telemetria | Microsoft ATA"
+title: "Gerenciar configurações de telemetria | Microsoft Docs"
 description: Descreve os dados coletados pelo ATA e fornece etapas para desativar a coleta de dados.
 keywords: 
 author: rkarlin
+ms.author: rkarlin
 manager: mbaldwin
 ms.date: 08/24/2016
 ms.topic: article
@@ -13,8 +14,8 @@ ms.assetid: 8c1c7a1b-a3de-4105-9fd0-08a061952172
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 3a7e375da4acd5546347310c5965394b2addfe63
-ms.openlocfilehash: 0c6b8589fffe24298d0caf2cf2eb5e7e817e4da2
+ms.sourcegitcommit: 85e285c5d88e5916e0bf0eb7dd327cb4cb45b4cb
+ms.openlocfilehash: c7366dcc2cbd7a9eba1503e5af3290ec4ac73c32
 
 
 ---
@@ -23,10 +24,10 @@ ms.openlocfilehash: 0c6b8589fffe24298d0caf2cf2eb5e7e817e4da2
 
 
 
-# Gerenciamento das configurações de telemetria
+# <a name="manage-telemetry-settings"></a>Gerenciamento das configurações de telemetria
 O ATA (Advanced Threat Analytics) coleta dados de telemetria anônimos sobre o ATA e os transmite por uma conexão HTTPS para os servidores Microsoft.  Esses dados são usados pela Microsoft para ajudar a melhorar as versões futuras do ATA.
 
-## Dados coletados
+## <a name="data-collected"></a>Dados coletados
 Os dados anônimos coletados incluem o seguinte:
 
 -   Contadores de desempenho do Centro do ATA e do Gateway do ATA
@@ -82,19 +83,19 @@ Os dados anônimos coletados incluem o seguinte:
 - Endereços de URL do Console do ATA - Endereços de URL ao usar o Console do ATA, ou seja, quais páginas no Console do ATA foram visitadas.
 
 
-### Desabilitar coleta de dados
+### <a name="disable-data-collection"></a>Desabilitar coleta de dados
 Execute as etapas a seguir para interromper a coleta e o envio de dados de telemetria à Microsoft:
 
 1.  Faça logon no Console do ATA, clique nos três pontos na barra de ferramentas e escolha **Sobre**.
 
 2.  Desmarque a caixa para **Envie informações de uso para ajudar a melhorar a experiência do cliente no futuro**.
 
-## Consulte Também
+## <a name="see-also"></a>Consulte também
 - [Novidades na versão 1.6](/advanced-threat-analytics/understand-explore/whats-new-version-1.6)
 - [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Jan17_HO1-->
 
 
