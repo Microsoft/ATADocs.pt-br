@@ -1,8 +1,9 @@
 ---
-title: Central de Integridade do ATA | Microsoft ATA
+title: Central de Integridade do ATA | Microsoft Docs
 description: "Use a Central de Integridade de ATA para verificar como o serviço do ATA está funcionando e seja alertado sobre possíveis problemas."
 keywords: 
 author: rkarlin
+ms.author: rkarlin
 manager: mbaldwin
 ms.date: 04/28/2016
 ms.topic: article
@@ -13,8 +14,8 @@ ms.assetid: d6c783b2-46c5-4211-b21a-d6b17f08d03d
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 050f1ef0b39d69b64ede53243a7fa2d33d0e4813
-ms.openlocfilehash: 9f408d7c2cb9c14caee175a1dd1c9ddb1baf9faa
+ms.sourcegitcommit: 85e285c5d88e5916e0bf0eb7dd327cb4cb45b4cb
+ms.openlocfilehash: bff593f07d70cd559a1ee75d3b75c61b6534432d
 
 
 ---
@@ -23,15 +24,15 @@ ms.openlocfilehash: 9f408d7c2cb9c14caee175a1dd1c9ddb1baf9faa
 
 
 
-# Centro de Integridade de ATA
+# <a name="ata-health-center"></a>Centro de Integridade de ATA
 A Central de Integridade de ATA permite saber como seu serviço ATA está sendo executado e alerta-o para os problemas.
 
-## Trabalhando com a Central de Integridade de ATA
+## <a name="working-with-the-ata-health-center"></a>Trabalhando com a Central de Integridade de ATA
 A Central de Integridade de ATA permite que você saiba se há um problema gerando um alerta (um ponto vermelho) acima do ícone Central de Integridade na barra de menus.
 
 ![Barra de ferramentas do ponto vermelho da Central de Integridade do ATA](media/ATA-Health-Center-Alert-red-dot.png)
 
-### Gerenciando a Integridade de ATA
+### <a name="managing-ata-health"></a>Gerenciando a Integridade de ATA
 Para verificar a integridade geral do sistema, clique no ícone Central de Integridade na barra de menus ![Ícone Central de Integridade de ATA](media/ATA-red-dot.png)
 
 -   Todos os alertas abertos podem ser gerenciados definindo-os como **Resolvido** ou **Ignorado**. No Alerta, clique em **Abrir** e role para baixo até **Resolvido** ou **Ignorado**.
@@ -42,13 +43,13 @@ Para verificar a integridade geral do sistema, clique no ícone Central de Integ
 
 ![Imagem dos problemas da Central de Integridade de ATA](media/ATA-Health-Issue.JPG)
 
-## Consulte também
+## <a name="see-also"></a>Consulte Também
 - [Trabalhando com as configurações de detecção do ATA](working-with-detection-settings.md)
 - [Trabalhando com atividades suspeitas](working-with-suspicious-activities.md)
 - [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Jan17_HO1-->
 
 

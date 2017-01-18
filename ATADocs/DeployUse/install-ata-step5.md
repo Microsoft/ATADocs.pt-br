@@ -1,8 +1,9 @@
 ---
-title: "Instalar o ATA – Etapa 5 | Microsoft ATA"
+title: "Instalar o ATA – Etapa 5 | Microsoft Docs"
 description: "A Etapa cinco da instalação do ATA ajuda você a definir as configurações de seu Gateway do ATA."
 keywords: 
 author: rkarlin
+ms.author: rkarlin
 manager: mbaldwin
 ms.date: 08/24/2016
 ms.topic: get-started-article
@@ -13,8 +14,8 @@ ms.assetid: 2a5b6652-2aef-464c-ac17-c7e5f12f920f
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 39eadb9143740741fa592f983f03def5367ada46
-ms.openlocfilehash: 14b04a771f0c18170f0c80d388ab012574d40bee
+ms.sourcegitcommit: 85e285c5d88e5916e0bf0eb7dd327cb4cb45b4cb
+ms.openlocfilehash: b30fe6bc977184fb8cc297e10724c7fe48ee6934
 
 
 ---
@@ -23,14 +24,14 @@ ms.openlocfilehash: 14b04a771f0c18170f0c80d388ab012574d40bee
 
 
 
-# Instalação do ATA - Etapa 5
+# <a name="install-ata---step-5"></a>Instalação do ATA - Etapa 5
 
 >[!div class="step-by-step"]
 [« Etapa 4](install-ata-step4.md)
 [Etapa 6 »](install-ata-step6.md)
 
 
-## Etapa 5. Definir as configurações do Gateway do ATA
+## <a name="step-5-configure-the-ata-gateway-settings"></a>Etapa 5. Definir as configurações do Gateway do ATA
 Após a instalação do Gateway do ATA, execute as etapas a seguir para definir as configurações do Gateway do ATA.
 
 1.  No Console do ATA, acesse **Configuração** e, em **Sistema**, selecione **Gateways**.
@@ -67,7 +68,7 @@ Após a instalação do Gateway do ATA, execute as etapas a seguir para definir 
 3. Clique em **Salvar**.
 
 
-## Validar instalações
+## <a name="validate-installations"></a>Validar instalações
 Para validar a implantação bem-sucedida do Gateway do ATA, verifique o seguinte:
 
 1.  Verifique se o serviço nomeado **Gateway do Microsoft Advanced Threat Analytics** está em execução. Depois de salvar as configurações do Gateway do ATA, talvez demore alguns minutos até que o serviço seja iniciado.
@@ -87,7 +88,7 @@ Para validar a implantação bem-sucedida do Gateway do ATA, verifique o seguint
 [« Etapa 4](install-ata-step4.md)
 [Etapa 6 »](install-ata-step6.md)
 
-## Consulte também
+## <a name="see-also"></a>Consulte também
 
 - [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Configurar coleta de eventos](configure-event-collection.md)
@@ -96,6 +97,6 @@ Para validar a implantação bem-sucedida do Gateway do ATA, verifique o seguint
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Jan17_HO1-->
 
 

@@ -24,7 +24,7 @@ ms.openlocfilehash: d967cbf2674c5f561e63f66b64640ac08daad6c0
 
 
 
-## <a name="provide-ata-with-up-your-email-server-settings"></a>Forneça ao ATA suas configurações do servidor de emails
+# <a name="provide-ata-with-up-your-email-server-settings"></a>Forneça ao ATA suas configurações do servidor de emails
 O ATA pode notificar você quando detectar uma atividade suspeita. Para que o ATA possa enviar notificações por email, primeiro é necessário definir as **Configurações do servidor de email**.
 
 1.  No servidor do Centro do ATA, clique no ícone **Microsoft Advanced Threat Analytics Management** na área de trabalho.
