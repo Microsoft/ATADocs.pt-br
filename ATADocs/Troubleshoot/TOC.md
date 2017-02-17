@@ -47,8 +47,8 @@
 ## [Solucionar problemas usando os logs](troubleshooting-ata-using-logs.md)
 ## [Solução de problemas usando os contadores de desempenho](troubleshooting-ata-using-perf-counters.md)
 ## [Solução de problemas usando o banco de dados](troubleshooting-ata-using-ata-database.md)
+## [Recuperação de desastres](/advanced-threat-analytics/troubleshoot/disaster-recovery.md)
 
-
-<!--HONumber=Feb17_HO1-->
+<!--HONumber=Feb17_HO2-->
 
 

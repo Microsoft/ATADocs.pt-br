@@ -47,9 +47,9 @@
 ## [Solucionar problemas usando os logs](/advanced-threat-analytics/troubleshoot/troubleshooting-ata-using-logs)
 ## [Solução de problemas usando os contadores de desempenho](/advanced-threat-analytics/troubleshoot/troubleshooting-ata-using-perf-counters)
 ## [Solução de problemas usando o banco de dados](/advanced-threat-analytics/troubleshoot/troubleshooting-ata-using-ata-database)
+## [Recuperação de desastres](/advanced-threat-analytics/troubleshoot/disaster-recovery)
 
 
-
-<!--HONumber=Feb17_HO1-->
+<!--HONumber=Feb17_HO2-->
 
 
