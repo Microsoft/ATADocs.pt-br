@@ -1,11 +1,11 @@
 ---
-title: "Guia de migração de atualização do ATA para 1.5 | Microsoft Docs"
+title: "Guia de migração de atualização do Advanced Threat Analytics para 1.5 | Microsoft Docs"
 description: "Procedimentos para atualizar o ATA para a versão 1.5"
 keywords: 
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 01/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -14,8 +14,8 @@ ms.assetid: fb65eb41-b215-4530-93a2-0b8991f4e980
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 85e285c5d88e5916e0bf0eb7dd327cb4cb45b4cb
-ms.openlocfilehash: c23512e159c2f01bc0a930f71373aa5315f0310c
+ms.sourcegitcommit: b28cb3a0da844b7c460c03726222bc775a9e47da
+ms.openlocfilehash: c0efec3abdec8e44c8cf5005d756f973e64312e7
 
 
 ---
@@ -135,6 +135,6 @@ Você saberá que todos os Gateways do ATA foram atualizados com êxito quando t
 
 
 
-<!--HONumber=Jan17_HO1-->
+<!--HONumber=Feb17_HO1-->
 
 

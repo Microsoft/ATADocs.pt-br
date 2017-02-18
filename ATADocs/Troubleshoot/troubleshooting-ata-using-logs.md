@@ -1,11 +1,11 @@
 ---
-title: "Solução de problemas do ATA usando os logs do ATA | Microsoft Docs"
+title: "Solução de problemas do Advanced Threat Analytics usando os logs | Microsoft Docs"
 description: "Descreve como você pode usar os logs do ATA para solucionar problemas"
 keywords: 
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 08/24/2016
+ms.date: 01/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -14,8 +14,8 @@ ms.assetid: b8ad5511-8893-4d1d-81ee-b9a86e378347
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 85e285c5d88e5916e0bf0eb7dd327cb4cb45b4cb
-ms.openlocfilehash: 3a2ae61ba1b54efd5dca5f0f71dc71b98872145d
+ms.sourcegitcommit: b28cb3a0da844b7c460c03726222bc775a9e47da
+ms.openlocfilehash: 58df6ec3473118d0e11a5128eabd8feaa29f9fd2
 
 
 ---
@@ -95,6 +95,6 @@ Logs de implantação do Gateway do ATA e do Gateway Lightweight do ATA:
 
 
 
-<!--HONumber=Jan17_HO1-->
+<!--HONumber=Feb17_HO1-->
 
 
