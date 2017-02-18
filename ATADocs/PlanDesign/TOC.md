@@ -50,6 +50,6 @@
 ## [Recuperação de desastres](/advanced-threat-analytics/troubleshoot/disaster-recovery)
 
 
-<!--HONumber=Feb17_HO2-->
+<!--HONumber=Feb17_HO3-->
 
 
