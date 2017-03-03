@@ -1,11 +1,11 @@
 ---
-title: Perguntas frequentes do ATA | Microsoft Docs
+title: Perguntas frequentes sobre o Advanced Threat Analytics | Microsoft Docs
 description: Fornece uma lista de perguntas frequentes sobre o ATA e as respostas associadas.
 keywords: 
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 08/24/2016
+ms.date: 02/7/2017
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -14,8 +14,8 @@ ms.assetid: a7d378ec-68ed-4a7b-a0db-f5e439c3e852
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 85e285c5d88e5916e0bf0eb7dd327cb4cb45b4cb
-ms.openlocfilehash: f806437df3a2c581631e924798a367e5e48be6f8
+ms.sourcegitcommit: bdb830bb7d8ecb6e04bb9c62b40904300fc1b404
+ms.openlocfilehash: 715d6987a74d2d6222acd6747f3cf425a6a901da
 
 
 ---
@@ -27,6 +27,7 @@ Este artigo fornece uma lista de perguntas frequentes sobre o ATA e também as r
 
 ## <a name="what-should-i-do-if-the-ata-gateway-wont-start"></a>O que devo fazer se o Gateway do ATA não inicia?
 Procure o erro mais recente no log de erros atual (No local onde o ATA está instalado, na pasta "Logs").
+
 ## <a name="how-can-i-test-ata"></a>Como posso testar o ATA?
 Você pode simular atividades suspeitas, que é um teste de ponta a ponta, seguindo um destes procedimentos:
 
@@ -54,6 +55,7 @@ O ATA tem base na análise de vários protocolos de rede, bem como em eventos co
 
 ## <a name="does-ata-work-with-kerberos-armoring"></a>O ATA funciona com Kerberos Armoring?
 Há suporte para a habilitação do Kerberos Armoring, também conhecido como FAST (encapsulamento seguro de autenticação flexível), pelo ATA, com exceção da detecção de passagem pelo hash, que não funcionará.
+
 ## <a name="how-many-ata-gateways-do-i-need"></a>De quantos Gateways de ATA eu preciso?
 
 O número de Gateways do ATA depende de seu layout de rede, do volume de pacotes e do volume de eventos capturados pelo ATA. Para determinar o número exato, consulte [Dimensionamento do Gateway Lightweight do ATA](/advanced-threat-analytics/plan-design/ata-capacity-planning#ata-lightweight-gateway-sizing). 
@@ -81,7 +83,11 @@ Há duas coisas das quais fazer backup:
 
 -   O tráfego e os eventos armazenados pelo ATA, que podem sobre backup usando qualquer procedimento de backup de banco de dados com suporte, para saber mais, confira [Gerenciamento de banco de dados do ATA](/advanced-threat-analytics/deploy-use/ata-database-management). 
 -   A configuração do ATA. Isso é armazenado no banco de dados e automaticamente submetido a backup a cada hora na pasta **Backup** do local de implantação da Central do ATA.  Consulte [Gerenciamento de banco de dados do ATA](https://docs.microsoft.com/advanced-threat-analytics/deploy-use/ata-database-management) para saber mais.
+
+
+
 ## <a name="what-can-ata-detect"></a>O que o ATA pode detectar?
+
 O ATA detecta técnicas e ataques mal-intencionados e conhecidos, problemas de segurança e riscos.
 Para obter a lista completa das detecções do ATA, consulte [Quais detecções são realizadas pelo ATA?](ata-threats.md).
 
@@ -98,7 +104,6 @@ O ATA tem uma integração bidirecional com o SIEMs, da seguinte maneira:
 2. O ATA pode ser configurado para receber mensagens do Syslog para cada evento do Windows com a ID 4776, destes [SIEMs](/advanced-threat-analytics/deploy-use/configure-event-collection#siem-support).
 
 ## <a name="can-ata-monitor-domain-controllers-virtualized-on-your-iaas-solution"></a>O ATA pode monitorar controladores de domínio visualizados em sua solução IaaS?
-
 Sim, você pode usar o Gateway Lightweight do ATA para monitorar controladores de domínio em qualquer solução IaaS.
 
 ## <a name="is-this-an-on-premises-or-in-cloud-offering"></a>Isto é uma oferta local ou na nuvem?
@@ -127,6 +132,7 @@ Sim. Como as contas de computador (bem como quaisquer outras entidades) podem se
 
 ## <a name="can-ata-support-multi-domain-and-multi-forest"></a>O ATA pode dar suporte a vários domínios e várias florestas?
 O Microsoft Advanced Threat Analytics oferece suporte a ambientes com vários domínios dentro dos mesmos limites de floresta. Várias florestas exigem uma implantação do ATA para cada floresta.
+
 ## <a name="can-you-see-the-overall-health-of-the-deployment"></a>Você pode ver a integridade geral da implantação?
 Sim, é possível exibir a integridade geral da implantação, bem como os problemas específicos relacionados à configuração, conectividade, etc., e você será alertado quando ocorrerem.
 
@@ -141,6 +147,6 @@ Sim, é possível exibir a integridade geral da implantação, bem como os probl
 
 
 
-<!--HONumber=Jan17_HO1-->
+<!--HONumber=Feb17_HO1-->
 
 

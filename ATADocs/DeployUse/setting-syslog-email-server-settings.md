@@ -1,11 +1,11 @@
 ---
-title: "Definir as configurações de email | Microsoft Docs"
+title: "Definição das configurações de notificação de email no Advanced Threat Analytics | Microsoft Docs"
 description: "Descreve como fazer o ATA notificar você (por email ou por encaminhamento de eventos do ATA) quando ele detectar atividades suspeitas"
 keywords: 
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 08/24/2016
+ms.date: 01/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -14,8 +14,8 @@ ms.assetid: bff20bf7-8b53-49da-81e5-b818a1c3b24e
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: fca7f1b2b8260cad6e0ce32aad1c9e1b53fc0ad5
-ms.openlocfilehash: d967cbf2674c5f561e63f66b64640ac08daad6c0
+ms.sourcegitcommit: 22d08a20291b1651a36247e9ffbeff8c881aefc5
+ms.openlocfilehash: 9b4db2f6489afc1687783d0a879f9303f3a8c775
 
 
 ---
@@ -83,6 +83,6 @@ O ATA pode notificar você quando detectar uma atividade suspeita, enviando a no
 
 
 
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Feb17_HO1-->
 
 
