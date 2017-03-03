@@ -1,11 +1,11 @@
 ---
-title: Configurar coleta de eventos | Microsoft Docs
+title: "Configuração da coleta de eventos no Advanced Threat Analytics | Microsoft Docs"
 description: "Descreve as opções para configurar a coleta de eventos com o ATA"
 keywords: 
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 12/08/2016
+ms.date: 1/23/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -14,8 +14,9 @@ ms.assetid: 3f0498f9-061d-40e6-ae07-98b8dcad9b20
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: d16364cd4113534c3101ebfa7750c0d0b837856d
-ms.openlocfilehash: 9ac9478512f2e5f6d15dd9b5cba9970a51ffa4da
+ms.sourcegitcommit: 6fddbbae0a0734834a21975c7690e06ac28dc64d
+ms.openlocfilehash: e31e3b8a94c8beef22be2f06ecaeb89545b3f62d
+ms.lasthandoff: 02/21/2017
 
 
 ---
@@ -187,56 +188,58 @@ Após a configuração do espelhamento de porta nos controladores de domínio pa
 
 Nesse cenário, supomos que o Gateway ATA seja membro do domínio.
 
-1.  Abra os Usuários e Computadores do Active Directory, navegue até a pasta **BuiltIn** e clique duas vezes em **Leitores de Log de Eventos**. 
-2.  Selecione **Membros**.
-4.  Se **Serviço de Rede** não estiver listado, clique em **Adicionar**, digite **Serviço de Rede** no campo **Digite os nomes de objeto a serem selecionados **. Depois, clique em **Verificar Nomes** e clique em **OK** duas vezes. 
+1.    Abra os Usuários e Computadores do Active Directory, navegue até a pasta **BuiltIn** e clique duas vezes em **Leitores de Log de Eventos**. 
+2.    Selecione **Membros**.
+4.    Se **Serviço de Rede** não estiver listado, clique em **Adicionar**, digite **Serviço de Rede** no campo **Digite os nomes de objeto a serem selecionados **. Depois, clique em **Verificar Nomes** e clique em **OK** duas vezes. 
+
+Observe que após adicionar o **Serviço de Rede** no grupo **Leitores de Log de Eventos** é necessário reiniciar os controladores de domínio para que a alteração tenha efeito.
 
 **Etapa 2: Criar uma política nos controladores de domínio para definir a configuração Configurar Gerenciador de Assinaturas de destino.** 
 > [!Note] 
 > Você pode criar uma política de grupo para essas configurações e aplicá-la a cada controlador de domínio monitorado pelo Gateway do ATA. As etapas a seguir modificarão a política local do controlador de domínio.     
 
-1.  Execute o seguinte comando em cada controlador de domínio: *winrm quickconfig*
+1.    Execute o seguinte comando em cada controlador de domínio: *winrm quickconfig*
 2.  Em um prompt de comando, digite *gpedit.msc*.
-3.  Expanda **Configuração do Computador > Modelos Administrativos > Componentes do Windows > Encaminhamento de Evento**
+3.    Expanda **Configuração do Computador > Modelos Administrativos > Componentes do Windows > Encaminhamento de Evento**
 
  ![Imagem do editor de grupo de política local](media/wef 1 local group policy editor.png)
 
-4.  Clique duas vezes em **Configurar Gerenciador de assinatura de destino**.
+4.    Clique duas vezes em **Configurar Gerenciador de assinatura de destino**.
    
-    1.  Selecione **Habilitado**.
-    2.  Em **Opções**, clique em **Mostrar**.
-    3.  Em **SubscriptionManagers**, insira o seguinte valor e clique em **OK**:  *Server=http://<fqdnATAGateway>:5985/wsman/SubscriptionManager/WEC,Refresh=10* (Por exemplo: Server=http://atagateway9.contoso.com:5985/wsman/SubscriptionManager/WEC,Refresh=10)
+    1.    Selecione **Habilitado**.
+    2.    Em **Opções**, clique em **Mostrar**.
+    3.    Em **SubscriptionManagers**, insira o seguinte valor e clique em **OK**:  *Server=http://<fqdnATAGateway>:5985/wsman/SubscriptionManager/WEC,Refresh=10* (Por exemplo: Server=http://atagateway9.contoso.com:5985/wsman/SubscriptionManager/WEC,Refresh=10)
  
    ![Configurar a imagem de assinatura de destino](media/wef 2 config target sub manager.png)
    
-    5.  Clique em **OK**.
-    6.  Em um prompt de comandos com privilégios elevados, digite *gpupdate /force*. 
+    5.    Clique em **OK**.
+    6.    Em um prompt de comandos com privilégios elevados, digite *gpupdate /force*. 
 
 **Etapa 3: Executar as seguintes etapas no Gateway do ATA** 
 
-1.  Em um prompt de comandos com privilégios elevados, digite *wecutil qc*
-2.  Abra o **Visualizador de Eventos**. 
-3.  Clique com o botão direito em **Assinaturas** e selecione **Criar Assinatura**. 
+1.    Em um prompt de comandos com privilégios elevados, digite *wecutil qc*
+2.    Abra o **Visualizador de Eventos**. 
+3.    Clique com o botão direito em **Assinaturas** e selecione **Criar Assinatura**. 
 
-   1.   Insira um nome e uma descrição para a assinatura. 
-   2.   Para **Log de Destino** confirme se **Eventos Encaminhados** está selecionado. Para o ATA ler os eventos, o log de destino deve ser **Eventos Encaminhados**. 
-   3.   Selecione **Iniciado pelo computador de origem** e clique em **Selecionar Grupos de Computadores**.
-        1.  Clique em **Adicionar Computador do Domínio**.
-        2.  Insira o nome do controlador de domínio no campo **Digite o nome do objeto a ser selecionado**. Depois, clique em **Verificar Nomes** e clique em **OK**. 
+   1.    Insira um nome e uma descrição para a assinatura. 
+   2.    Para **Log de Destino** confirme se **Eventos Encaminhados** está selecionado. Para o ATA ler os eventos, o log de destino deve ser **Eventos Encaminhados**. 
+   3.    Selecione **Iniciado pelo computador de origem** e clique em **Selecionar Grupos de Computadores**.
+        1.    Clique em **Adicionar Computador do Domínio**.
+        2.    Insira o nome do controlador de domínio no campo **Digite o nome do objeto a ser selecionado**. Depois, clique em **Verificar Nomes** e clique em **OK**. 
        
         ![Imagem do Visualizador de Eventos](media/wef3 event viewer.png)
    
         
-        3.  Clique em **OK**.
-   4.   Clique em **Selecionar Eventos**.
+        3.    Clique em **OK**.
+   4.    Clique em **Selecionar Eventos**.
 
         1. Clique em **Pelo log** e selecione **Segurança**.
         2. No campo **Inclui/Exclui ID do Evento**, digite **4776** e clique em **OK**. 
 
  ![Imagem do filtro de consulta](media/wef 4 query filter.png)
 
-   5.   Clique com o botão direito na assinatura criada e selecione **Status de Tempo de Execução** para verificar se há problemas com o status. 
-   6.   Depois de alguns minutos, verifique se o evento 4776 aparece nos Eventos Encaminhados no Gateway do ATA.
+   5.    Clique com o botão direito na assinatura criada e selecione **Status de Tempo de Execução** para verificar se há problemas com o status. 
+   6.    Depois de alguns minutos, verifique se o evento 4776 aparece nos Eventos Encaminhados no Gateway do ATA.
 
 
 ### <a name="wef-configuration-for-the-ata-lightweight-gateway"></a>Configuração do WEF para o Gateway de Lightweight do ATA
@@ -244,29 +247,29 @@ Ao instalar o Gateway Lightweight do ATA nos controladores de domínio, você po
 
 **Etapa 1: Adicionar a conta de serviço de rede ao Grupo de Leitores de Log de Eventos do domínio** 
 
-1.  Abra os Usuários e Computadores do Active Directory, navegue até a pasta **BuiltIn** e clique duas vezes em **Leitores de Log de Eventos**. 
-2.  Selecione **Membros**.
-3.  Se **Serviço de Rede** não estiver listado, clique em **Adicionar** e digite **Serviço de Rede** no campo **Digite os nomes de objeto a serem selecionados **. Depois, clique em **Verificar Nomes** e clique em **OK** duas vezes. 
+1.    Abra os Usuários e Computadores do Active Directory, navegue até a pasta **BuiltIn** e clique duas vezes em **Leitores de Log de Eventos**. 
+2.    Selecione **Membros**.
+3.    Se **Serviço de Rede** não estiver listado, clique em **Adicionar** e digite **Serviço de Rede** no campo **Digite os nomes de objeto a serem selecionados **. Depois, clique em **Verificar Nomes** e clique em **OK** duas vezes. 
 
 **Etapa 2: Executar as etapas a seguir no controlador de domínio depois que o Gateway Lightweight do ATA estiver instalado** 
 
-1.  Em um prompt de comandos com privilégios elevados, digite *winrm quickconfig* e *wecutil qc* 
-2.  Abra o **Visualizador de Eventos**. 
-3.  Clique com o botão direito em **Assinaturas** e selecione **Criar Assinatura**. 
+1.    Em um prompt de comandos com privilégios elevados, digite *winrm quickconfig* e *wecutil qc* 
+2.    Abra o **Visualizador de Eventos**. 
+3.    Clique com o botão direito em **Assinaturas** e selecione **Criar Assinatura**. 
 
-   1.   Insira um nome e uma descrição para a assinatura. 
-   2.   Para **Log de Destino** confirme se **Eventos Encaminhados** está selecionado. Para o ATA ler os eventos, o log de destino deve ser Eventos Encaminhados.
+   1.    Insira um nome e uma descrição para a assinatura. 
+   2.    Para **Log de Destino** confirme se **Eventos Encaminhados** está selecionado. Para o ATA ler os eventos, o log de destino deve ser Eventos Encaminhados.
 
-        1.  Selecione **Coletor iniciado** e clique em **Selecionar Computadores**. Depois, clique em **Adicionar Computador do Domínio**.
-        2.  Insira o nome do controlador de domínio em **Digite o nome do objeto a ser selecionado**. Depois, clique em **Verificar Nomes** e clique em **OK**.
+        1.    Selecione **Coletor iniciado** e clique em **Selecionar Computadores**. Depois, clique em **Adicionar Computador do Domínio**.
+        2.    Insira o nome do controlador de domínio em **Digite o nome do objeto a ser selecionado**. Depois, clique em **Verificar Nomes** e clique em **OK**.
 
             ![Imagem das propriedades da assinatura](media/wef 5 sub properties computers.png)
 
-        3.  Clique em **OK**.
-   3.   Clique em **Selecionar Eventos**.
+        3.    Clique em **OK**.
+   3.    Clique em **Selecionar Eventos**.
 
-        1.  Clique em **Pelo log** e selecione **Segurança**.
-        2.  Em **Inclui/Exclui ID do Evento**, digite *4776* e clique em **OK**. 
+        1.    Clique em **Pelo log** e selecione **Segurança**.
+        2.    Em **Inclui/Exclui ID do Evento**, digite *4776* e clique em **OK**. 
 
 ![Imagem do filtro de consulta](media/wef 4 query filter.png)
 
@@ -285,9 +288,4 @@ Para obter mais informações, confira: [Configurar computadores para encaminhar
 ## <a name="see-also"></a>Consulte Também
 - [Instalar o ATA](install-ata-step1.md)
 - [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
-
-
-
-<!--HONumber=Dec16_HO2-->
-
 

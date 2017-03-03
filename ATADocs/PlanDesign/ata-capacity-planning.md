@@ -1,11 +1,11 @@
 ---
-title: "Planejando a implantação do ATA | Microsoft Docs"
+title: "Planejamento da implantação do Advanced Threat Analytics | Microsoft Docs"
 description: "Ajuda você a planejar a implantação e decidir quantos servidores ATA serão necessários para oferecer suporte à sua rede"
 keywords: 
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 11/6/2016
+ms.date: 1/23/2017
 ms.topic: get-started-article
 ms.service: advanced-threat-analytics
 ms.prod: 
@@ -13,8 +13,8 @@ ms.assetid: 279d79f2-962c-4c6f-9702-29744a5d50e2
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 56eff27ffdd988d5cc9e67352859ddfedebb2144
-ms.openlocfilehash: 93ec7373a166529332d7c4809c756ab3ba240868
+ms.sourcegitcommit: 0bacaaaa543d74e9575811d64b4cd41ac0fdb140
+ms.openlocfilehash: 2cdf7e00b575ee759a54fb99fb97cbfcee5a43de
 
 
 ---
@@ -54,13 +54,13 @@ A Central de ATA requer um mínimo recomendado de 30 dias de dados para a análi
 |10.000|4|48|3|90|200 (300)
 |40.000|8|64|12|360|500 (1.000)
 |100,000|12|96|30|900|1.000 (1.500)
-|400.000|40|128|120|1.800|2.000 (2.500)
+|400.000|40|128|120|3.600|4.000 (5.000)
 
 &#42;Isso inclui os núcleos físicos, não os núcleos com hyper-threading.
 
 &#42;&#42;Média dos números (Números de pico)
 > [!NOTE]
-> -   A Central do ATA pode lidar com um máximo agregado de 400.000 FPS (quadros por segundo) de todos os controladores de domínio monitorados.
+> -   A Central do ATA pode lidar com um máximo agregado de 400.000 FPS (quadros por segundo) de todos os controladores de domínio monitorados. Em alguns ambientes, o mesmo Centro do ATA pode lidar com o tráfego geral superior a 400.000. Entre em contato com askcesec@microsoft.com para obter assistência para esses ambientes.
 > -   O volume de armazenamento ditado aqui são os valores net que você sempre deve levar em consideração para o crescimento futuro e verificar se o disco no qual o banco de dados reside tem, pelo menos, 20% de espaço livre.
 > -   Se o espaço livre chegar a um mínimo de 20% ou 100 GB, o conjunto mais antigo de dados será excluído. Isso continuará a ocorrer até 5% ou 50 GB de espaço livre permaneça no ponto em que a coleta de dados deixará de funcionar.
 > -   A latência de armazenamento para a leitura e a gravação das atividades deve estar abaixo de 10 ms.
@@ -115,7 +115,7 @@ Um Gateway Lightweight do ATA pode oferecer suporte ao monitoramento de um contr
 
 &#42;&#42;&#42;Quantidade total de memória que esse controlador de domínio tem instalada.
 
-> [!NOTE]   
+> [!NOTE]    
 > -   Se o controlador de domínio não tiver a quantidade necessária de recursos exigida pelo Gateway Lightweight do ATA, o desempenho do controlador de domínio não será afetado, mas o Gateway Lightweight do ATA pode não operar conforme o esperado.
 > -   Durante a execução como uma memória dinâmica da máquina virtual ou qualquer outra memória, não há suporte para o recurso de inchamento.
 > -   Para ter um melhor desempenho, defina a **Opção de Energia** do Gateway Lightweight do ATA como **Alto Desempenho**.
@@ -126,13 +126,13 @@ Um Gateway Lightweight do ATA pode oferecer suporte ao monitoramento de um contr
 
 Considere o seguinte ao decidir quantos Gateways do ATA implantar.
 
--   **Florestas e domínios do Active Directory**<br>
+-    **Florestas e domínios do Active Directory**<br>
     O ATA pode monitorar o tráfego de vários domínios de uma única floresta do Active Directory. Monitorar várias florestas do Active Directory exige implantações separadas do ATA. Uma única implantação do ATA não deve ser configurada para monitorar o tráfego de rede dos controladores de domínio de diferentes florestas.
 
--   **Espelhamento de porta**<br>
+-    **Espelhamento de porta**<br>
 As considerações de espelhamento de porta podem exigir que você implante vários Gateways do ATA por data center ou site de filial.
 
--   **Capacidade**<br>
+-    **Capacidade**<br>
     Um Gateway do ATA pode oferecer suporte ao monitoramento de vários controladores de domínio, dependendo da quantidade de tráfego de rede dos controladores de domínio sendo monitorados. 
 <br>
 
@@ -214,6 +214,6 @@ Para determinar os pacotes por segundo, execute o seguinte em cada controlador d
 
 
 
-<!--HONumber=Dec16_HO2-->
+<!--HONumber=Feb17_HO2-->
 
 

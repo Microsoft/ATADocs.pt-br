@@ -20,12 +20,12 @@
 ### [2. Validar o espelhamento de porta](/advanced-threat-analytics/deploy-use/validate-port-mirroring)
 ### [3. Configurar a coleção de eventos](/advanced-threat-analytics/deploy-use/configure-event-collection)
 ## Instalar o ATA
-### [Etapa 1](/advanced-threat-analytics/deploy-use/install-ata-step1)
-### [Etapa 2](/advanced-threat-analytics/deploy-use/install-ata-step2)
-### [Etapa 3](/advanced-threat-analytics/deploy-use/install-ata-step3)
-### [Etapa 4](/advanced-threat-analytics/deploy-use/install-ata-step4)
-### [Etapa 5](/advanced-threat-analytics/deploy-use/install-ata-step5)
-### [Etapa 6](/advanced-threat-analytics/deploy-use/install-ata-step6)
+### [Etapa 1 Baixar e instalar a Central](/advanced-threat-analytics/deploy-use/install-ata-step1)
+### [Etapa 2 Conectar ao AD](/advanced-threat-analytics/deploy-use/install-ata-step2)
+### [Etapa 3 Baixar o pacote de GW](/advanced-threat-analytics/deploy-use/install-ata-step3)
+### [Etapa 4 Instalar o GW](/advanced-threat-analytics/deploy-use/install-ata-step4)
+### [Etapa 5 Configurar o GW](/advanced-threat-analytics/deploy-use/install-ata-step5)
+### [Etapa 6 Exclusinos e Honeytoken](/advanced-threat-analytics/deploy-use/install-ata-step6)
 ### [Instalação silenciosa](/advanced-threat-analytics/deploy-use/ata-silent-installation)
 # Use objetos de
 ## [Alterar o endereço IP do Centro do ATA](/advanced-threat-analytics/deploy-use/modifying-ata-config-centerip)
@@ -47,8 +47,8 @@
 ## [Solucionar problemas usando os logs](troubleshooting-ata-using-logs.md)
 ## [Solução de problemas usando os contadores de desempenho](troubleshooting-ata-using-perf-counters.md)
 ## [Solução de problemas usando o banco de dados](troubleshooting-ata-using-ata-database.md)
+## [Recuperação de desastres](/advanced-threat-analytics/troubleshoot/disaster-recovery.md)
 
-
-<!--HONumber=Jan17_HO2-->
+<!--HONumber=Feb17_HO3-->
 
 

@@ -1,11 +1,11 @@
 ---
-title: "Solução de problemas do ATA usando o banco de dados do ATA | Microsoft Docs"
+title: "Solução de problemas do Advanced Threat Analytics usando o banco de dados | Microsoft Docs"
 description: "Descreve como você pode usar o banco de dados do ATA para solucionar problemas"
 keywords: 
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 11/29/2016
+ms.date: 1/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -14,8 +14,8 @@ ms.assetid: 377a3c81-5c1d-486f-8942-85249aacf560
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 7dc860fe31da1374a4466f8e56e55e6520bc10dc
-ms.openlocfilehash: fd2cc788ec3fb2c64d47694997762f740f5af503
+ms.sourcegitcommit: b28cb3a0da844b7c460c03726222bc775a9e47da
+ms.openlocfilehash: 301e57f7bd66a0e557054d9b7a641c4c1c200142
 
 
 ---
@@ -59,6 +59,6 @@ O exemplo a seguir fornece código de exemplo usando a sintaxe fornecida acima. 
 
 
 
-<!--HONumber=Nov16_HO5-->
+<!--HONumber=Feb17_HO1-->
 
 

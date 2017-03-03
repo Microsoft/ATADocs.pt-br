@@ -1,11 +1,11 @@
 ---
-title: "Instalar o ATA – Etapa 2 | Microsoft Docs"
+title: "Instalação do Advanced Threat Analytics – Etapa 2 | Microsoft Docs"
 description: "A etapa dois da instalação do ATA ajuda você a definir as configurações de conectividade do domínio em seu servidor do Centro do ATA"
 keywords: 
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 08/24/2016
+ms.date: 01/23/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -14,8 +14,8 @@ ms.assetid: e1c5ff41-d989-46cb-aa38-5a3938f03c0f
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 85e285c5d88e5916e0bf0eb7dd327cb4cb45b4cb
-ms.openlocfilehash: 4ca0f9b9c73ddb1432eaf31b75f78af4541e3e29
+ms.sourcegitcommit: b28cb3a0da844b7c460c03726222bc775a9e47da
+ms.openlocfilehash: 23ea3185e0d3556f524d8131a715a6057988f04c
 
 
 ---
@@ -64,6 +64,6 @@ Na primeira vez que você abrir o Console do ATA, a tela a seguir será exibida:
 
 
 
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Feb17_HO1-->
 
 

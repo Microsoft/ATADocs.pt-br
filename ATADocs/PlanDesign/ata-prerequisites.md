@@ -1,11 +1,11 @@
 ---
-title: "Pré-requisitos do ATA | Microsoft Docs"
+title: "Pré-requisitos do Advanced Threat Analytics | Microsoft Docs"
 description: "Descreve os requisitos para uma implantação bem-sucedida do ATA em seu ambiente"
 keywords: 
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 12/14/2016
+ms.date: 2/16/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -14,8 +14,8 @@ ms.assetid: a5f90544-1c70-4aff-8bf3-c59dd7abd687
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 67b430fbed97bd08e5f538043c783e70ed2ab956
-ms.openlocfilehash: 60ec036a8c22fb34c673653a6378437ab14f9853
+ms.sourcegitcommit: f61bbb895e4a2f239f91328f8d8b2b5260452cc2
+ms.openlocfilehash: 764d20fd113b8d40d359a8976c175e889f554dba
 
 
 ---
@@ -219,8 +219,13 @@ O Gateway Lightweight do ATA dá suporte à instalação em um controlador de do
 
 O controlador de domínio pode ser um RODC (controlador de domínio somente leitura).
 
-Antes de instalar o Gateway Lightweight do ATA em um controlador de domínio que executa o Windows Server 2012 R2 SP1, confirme se a seguinte atualização foi instalada: [KB2919355](https://support.microsoft.com/kb/2919355/).
-Você pode verificar executando o seguinte cmdlet do Windows PowerShell: `[Get-HotFix -Id kb2919355]`.
+Antes de instalar o ATA Lightweight Gateway em um controlador de domínio que execute o Windows Server 2012 R2, confirme que a seguinte atualização está instalada: [KB2919355](https://support.microsoft.com/kb/2919355/).
+
+Você pode verificar executando o seguinte cmdlet do Windows PowerShell: `[Get-HotFix -Id kb2919355]`
+
+Se a instalação for para o Windows Server 2012 R2 Server Core, também deve ser instalada a seguinte atualização:  [KB3000850](https://support.microsoft.com/help/3000850/november-2014-update-rollup-for-windows-rt-8.1%2c-windows-8.1%2c-and-windows-server-2012-r2).
+
+ Você pode verificar executando o seguinte cmdlet do Windows PowerShell: `[Get-HotFix -Id kb3000850]`
 
 > [!NOTE]
 > É necessário um mínimo de 5 GB de espaço e recomenda-se 10 GB. Isso inclui o espaço necessário para os binários ATA, [logs ATA](/advanced-threat-analytics/troubleshoot/troubleshooting-ata-using-logs.md) e [logs de desempenho](/advanced-threat-analytics/troubleshoot/troubleshooting-ata-using-perf-counters.md).
@@ -288,6 +293,6 @@ O acesso ao Console do ATA é por meio de um navegador com suporte para o seguin
 
 
 
-<!--HONumber=Dec16_HO2-->
+<!--HONumber=Feb17_HO3-->
 
 
