@@ -12,13 +12,10 @@ ms.prod:
 ms.assetid: 279d79f2-962c-4c6f-9702-29744a5d50e2
 ms.reviewer: bennyl
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 0bacaaaa543d74e9575811d64b4cd41ac0fdb140
-ms.openlocfilehash: 2cdf7e00b575ee759a54fb99fb97cbfcee5a43de
-
-
+ms.openlocfilehash: 4e0a6dd325c172ba4eb3b68fe4d4aab96f20684b
+ms.sourcegitcommit: 49e892a82275efa5146998764e850959f20d3216
+translationtype: HT
 ---
-
 *Aplica-se a: Advanced Threat Analytics versão 1.7*
 
 
@@ -211,9 +208,3 @@ Para determinar os pacotes por segundo, execute o seguinte em cada controlador d
 - [Pré-requisitos do ATA](ata-prerequisites.md)
 - [Arquitetura do ATA](ata-architecture.md)
 - [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
-
-
-
-<!--HONumber=Feb17_HO2-->
-
-

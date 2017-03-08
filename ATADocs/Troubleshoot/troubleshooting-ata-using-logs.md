@@ -13,13 +13,10 @@ ms.technology:
 ms.assetid: b8ad5511-8893-4d1d-81ee-b9a86e378347
 ms.reviewer: bennyl
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: b28cb3a0da844b7c460c03726222bc775a9e47da
-ms.openlocfilehash: 58df6ec3473118d0e11a5128eabd8feaa29f9fd2
-
-
+ms.openlocfilehash: 5bde3ff8abbdace3c56bb86b8889b53320470b00
+ms.sourcegitcommit: 49e892a82275efa5146998764e850959f20d3216
+translationtype: HT
 ---
-
 *Aplica-se a: Advanced Threat Analytics versão 1.7*
 
 
@@ -42,8 +39,8 @@ O Gateway do ATA tem os seguintes logs:
 
 -   **Microsoft.Tri.Gateway-ExceptionStatistics.log** – Esse log agrupa todos os erros e exceções semelhantes e mede sua contagem.
     Esse arquivo começa vazio sempre que o serviço do Gateway do ATA é iniciado, e é atualizado a cada minuto. Usado principalmente para entender se há erros ou problemas com o Gateway do ATA (pois os erros são agrupados e é mais fácil ler e rapidamente entender se há algum problema novo).
--   **Microsoft.Tri.Gateway.Updater.log** - Esse log é usado para o processo do atualizador de gateway, que é responsável por atualizar o gateway, se estiver configurado para fazer isso automaticamente. Para o Gateway Lightweight do ATA, o processo do atualizador de gateway também é responsável pelas limitações de recursos do Gateway Lightweight do ATA.
--   **Microsoft.Tri.Gateway.Updater-ExceptionStatistics.log** - Esse log agrupa todos os erros e exceções semelhantes e mede sua contagem. Esse arquivo começa vazio sempre que o serviço do Atualizador do ATA é iniciado, e é atualizado a cada minuto. Ele permite que você entenda se há erros ou problemas novos com o Atualizador do ATA. Os erros são agrupados para facilitar uma compreensão rápida se algum erro ou problema for detectado.
+-    **Microsoft.Tri.Gateway.Updater.log** - Esse log é usado para o processo do atualizador de gateway, que é responsável por atualizar o gateway, se estiver configurado para fazer isso automaticamente. Para o Gateway Lightweight do ATA, o processo do atualizador de gateway também é responsável pelas limitações de recursos do Gateway Lightweight do ATA.
+-    **Microsoft.Tri.Gateway.Updater-ExceptionStatistics.log** - Esse log agrupa todos os erros e exceções semelhantes e mede sua contagem. Esse arquivo começa vazio sempre que o serviço do Atualizador do ATA é iniciado, e é atualizado a cada minuto. Ele permite que você entenda se há erros ou problemas novos com o Atualizador do ATA. Os erros são agrupados para facilitar uma compreensão rápida se algum erro ou problema for detectado.
 
 > [!NOTE]
 > Os três primeiros arquivos de log têm um tamanho máximo de até 50 MB. Quando esse tamanho é atingido, um novo arquivo de log é aberto e o anterior é renomeado como "&lt;nome do arquivo original&gt;-Archived-00000". Esse número aumenta a cada renomeação. Por padrão, se já houver mais de 10 arquivos do mesmo tipo, os mais antigos serão excluídos.
@@ -92,9 +89,3 @@ Logs de implantação do Gateway do ATA e do Gateway Lightweight do ATA:
 - [Configurar coleta de eventos](/advanced-threat-analytics/deploy-use/configure-event-collection)
 - [Configuração do encaminhamento de eventos do Windows](/advanced-threat-analytics/deploy-use/configure-event-collection#configuring-windows-event-forwarding)
 - [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
-
-
-
-<!--HONumber=Feb17_HO1-->
-
-

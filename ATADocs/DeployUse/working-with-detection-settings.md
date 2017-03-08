@@ -13,13 +13,10 @@ ms.technology:
 ms.assetid: f4f2ae30-4849-4a4f-8f6d-bfe99a32c746
 ms.reviewer: bennyl
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: b28cb3a0da844b7c460c03726222bc775a9e47da
-ms.openlocfilehash: c88d74793c6210704f2a187df6508bf525907118
-
-
+ms.openlocfilehash: 831bafd08e0eea821fda94bd4f519d92ffec3397
+ms.sourcegitcommit: 49e892a82275efa5146998764e850959f20d3216
+translationtype: HT
 ---
-
 *Aplica-se a: Advanced Threat Analytics versão 1.7*
 
 
@@ -52,9 +49,3 @@ Na seção **Detecção**, defina os itens a seguir:
 - [Trabalhando com atividades suspeitas](working-with-suspicious-activities.md)
 - [Modificando a configuração do ATA](modifying-ata-configuration.md)
 - [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
-
-
-
-<!--HONumber=Feb17_HO1-->
-
-

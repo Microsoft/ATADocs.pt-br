@@ -13,13 +13,10 @@ ms.technology:
 ms.assetid: 1d27dba8-fb30-4cce-a68a-f0b1df02b977
 ms.reviewer: bennyl
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: b28cb3a0da844b7c460c03726222bc775a9e47da
-ms.openlocfilehash: 5ea29a5b64fd1f786200d3bbb62cd3964f8802e2
-
-
+ms.openlocfilehash: b0d85b60129e2638880c11b5f1faadca2feeae2c
+ms.sourcegitcommit: 49e892a82275efa5146998764e850959f20d3216
+translationtype: HT
 ---
-
 *Aplica-se a: Advanced Threat Analytics versão 1.7*
 
 
@@ -39,10 +36,4 @@ Ele está localizado em uma subpasta chamada "Backup". No local de instalação 
 - [Arquitetura do ATA](/advanced-threat-analytics/plan-design/ata-architecture)
 - [Pré-requisitos do ATA](/advanced-threat-analytics/plan-design/ata-prerequisites)
 - [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
-
-
-
-
-<!--HONumber=Feb17_HO1-->
-
 
