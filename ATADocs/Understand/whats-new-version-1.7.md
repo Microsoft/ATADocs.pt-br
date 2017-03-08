@@ -13,13 +13,10 @@ ms.technology:
 ms.assetid: be9ee613-4eb3-40f1-8973-e7f0a707ff57
 ms.reviewer: 
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 00ddddfd927ed1ba4c52d4774085da04ce359bde
-ms.openlocfilehash: 1c8d7983c5fd86ae3ef2c906eba3f0781cffb99b
-
-
+ms.openlocfilehash: b9ba013c76c785290649037c8a01af1cd2feced5
+ms.sourcegitcommit: 49e892a82275efa5146998764e850959f20d3216
+translationtype: HT
 ---
-
 # <a name="whats-new-in-ata-version-17"></a>Novidades na versão 1.7 do ATA
 Estas notas de versão fornecem informações sobre problemas conhecidos nesta versão da Advanced Threat Analytics.
 
@@ -106,8 +103,8 @@ Para resolver esse problema, depois de alterar o certificado em um prompt de com
 Ao tentar exportar os detalhes de atividade suspeita para um arquivo do Excel, a operação pode falhar com o seguinte erro: *Erro [BsonClassMapSerializer`1] System.FormatException: Um erro ocorreu ao desserializar a propriedade Atividade da classe Microsoft.Tri.Common.Data.NetworkActivities.SuspiciousActivityActivity: Elemento 'ResourceIdentifier' não corresponde a nenhum campo ou propriedade de classe Microsoft.Tri.Common.Data.EventActivities.NtlmEvent. ---> System.FormatException: O Elemento 'ResourceIdentifier' não corresponde a nenhum campo ou propriedade da classe Microsoft.Tri.Common.Data.EventActivities.NtlmEvent.*
 
 Para resolver esse problema, em um prompt de comandos com privilégios elevados, navegue até o seguinte local: **%ProgramFiles%\Microsoft Advanced Threat Analytics\Center\MongoDB\bin** e execute o seguinte:
-1.  **Mongo.exe ATA** (ATA deve estar em letras maiúsculas)
-2.  **db.SuspiciousActivityActivity.update({ "Activity._t": "NtlmEvent" },{$unset: {"Activity.ResourceIdentifier": ""}}, {multi: true});**
+1.    **Mongo.exe ATA** (ATA deve estar em letras maiúsculas)
+2.    **db.SuspiciousActivityActivity.update({ "Activity._t": "NtlmEvent" },{$unset: {"Activity.ResourceIdentifier": ""}}, {multi: true});**
 
 ## <a name="minor-changes"></a>Alterações secundárias
 
@@ -119,10 +116,4 @@ Para resolver esse problema, em um prompt de comandos com privilégios elevados,
 [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
 [Atualizar o ATA para a versão 1.7 — guia de migração](ata-update-1.7-migration-guide.md)
-
-
-
-
-<!--HONumber=Dec16_HO2-->
-
 
