@@ -1,22 +1,15 @@
 ---
-title: "Solução de problemas do log de erros do Advanced Threat Analytics | Microsoft Docs"
-description: "Descreve como é possível solucionar erros comuns no ATA"
-keywords: 
-author: rkarlin
-ms.author: rkarlin
-manager: mbaldwin
-ms.date: 1/23/2017
-ms.topic: article
-ms.prod: 
-ms.service: advanced-threat-analytics
-ms.technology: 
-ms.assetid: d89e7aff-a6ef-48a3-ae87-6ac2e39f3bdb
-ms.reviewer: bennyl
-ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: b28cb3a0da844b7c460c03726222bc775a9e47da
-ms.openlocfilehash: 47fe467a9244d6ea8925a255552aa0f5c785dce3
+# <a name="required-metadata"></a>metadados necessários
 
+title: Solucionar problemas do log de erros do Advanced Threat Analytics | Descrição do Microsoft Docs: descreve como você pode solucionar erros comuns em palavras-chave de ATA: author: rkarlin ms.author: rkarlin manager: mbaldwin ms.date: 1/23/2017 ms.topic: article ms.prod: ms.service: advanced-threat-analytics ms.technology: ms.assetid: d89e7aff-a6ef-48a3-ae87-6ac2e39f3bdb
+
+# <a name="optional-metadata"></a>metadados opcionais
+
+#<a name="robots"></a>ROBOTS:
+#<a name="audience"></a>audiência:
+#<a name="msdevlang"></a>ms.devlang:
+ms.reviewer: arzinger ms.suite: ems#ms.tgt_pltfrm:
+#<a name="mscustom"></a>ms.custom:
 
 ---
 
@@ -74,9 +67,3 @@ Esta seção detalha os possíveis erros nas implantações do ATA e as etapas n
 - [Configurar coleta de eventos](/advanced-threat-analytics/deploy-use/configure-event-collection)
 - [Configuração do encaminhamento de eventos do Windows](/advanced-threat-analytics/deploy-use/configure-event-collection#configuring-windows-event-forwarding)
 - [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
-
-
-
-<!--HONumber=Feb17_HO1-->
-
-
