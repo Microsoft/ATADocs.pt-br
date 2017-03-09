@@ -13,8 +13,8 @@ ms.technology:
 ms.assetid: 7620e171-76d5-4e3f-8b03-871678217a3a
 ms.reviewer: arzinger
 ms.suite: ems
-ms.openlocfilehash: 3f9ca1e33c9e82f730d199f92b2f9778519ac973
-ms.sourcegitcommit: 49e892a82275efa5146998764e850959f20d3216
+ms.openlocfilehash: e315e9731fa9715c3b41b9292349ee5aca13fbce
+ms.sourcegitcommit: 4f5927f30089655e3984d69623ea4439b7c36845
 translationtype: HT
 ---
 *Aplica-se a: Advanced Threat Analytics versão 1.7*
@@ -31,7 +31,7 @@ Este artigo descreve como recuperar rapidamente seu Centro de ATA e restaurar a 
 
 1. A configuração do Centro de ATA é armazenada em backup em um arquivo a cada hora. Localize a última cópia de backup da configuração do Centro de ATA e salve-a em um computador à parte. Para obter uma explicação completa de como localizar esses arquivos, confira [Exportar e importar a configuração de ATA](/advanced-threat-analytics/deploy-use/ata-configuration-file). 
 2. Exportação do certificado do Centro de ATA.
-    1. No gerenciador de certificados, navegue até **Certificados (Computador Local)** -> **Pessoal** ->**Certificados** e selecione **Centro de ATA**.
+    1. No gerenciador de certificados (`certlm.msc`), navegue até **Certificados (Computador Local)** -> **Pessoal** ->**Certificados** e selecione **Centro de ATA**.
     2. Clique com o botão direito em **Centro de ATA** e selecione **Todas as Tarefas** e, em seguida, **Exportar**. 
      ![Certificado do Centro de ATA](media/ata-center-cert.png)
     3. Siga as instruções para exportar o certificado, certificando-se de exportar também a chave privada.
@@ -44,12 +44,12 @@ Este artigo descreve como recuperar rapidamente seu Centro de ATA e restaurar a 
 
 1. Crie uma nova máquina do Windows Server usando o mesmo nome de computador e o endereço IP da máquina anterior do Centro de ATA.
 4. Importe o certificado que você armazenou em backup acima para o novo servidor.
-5. Siga as instruções para [Implantar o Centro de ATA](/advanced-threat-analytics/deploy-use/install-ata-step1) no Windows Server recém-criado. Não é necessário implantar os Gateways do ATA novamente. Quando for solicitado um certificado, forneça o certificado exportado durante o backup da configuração do Centro de ATA. 
+5. Siga as instruções para [Implantar o Centro de ATA](/advanced-threat-analytics/deploy-use/install-ata-step1) no Windows Server recém-criado. Verifique se você selecionou o mesmo endereço IP e porta do centro antigo. Não é necessário implantar os Gateways do ATA novamente. Quando for solicitado um certificado, forneça o certificado exportado durante o backup da configuração do Centro de ATA. 
 ![Restauração do Centro de ATA](media/ata-center-restore.png)
 6. Importe a configuração do Centro de ATA armazenada em backup:
     1. Remova o documento padrão do Perfil do Sistema do Centro de ATA do MongoDB: 
         1. Acesse **C:\Arquivos de Programas\Microsoft Advanced Threat Analytics\Center\MongoDB\bin**. 
-        2. Execute `mongo.exe` 
+        2. Execute `mongo.exe ATA` 
         3. Execute este comando para remover o perfil do sistema padrão: `db.SystemProfile.remove({})`
     2. Execute o comando: `mongoimport.exe --db ATA --collection SystemProfile --file "<SystemProfile.json backup file>" --upsert` usando o arquivo de backup da etapa 1.</br>
     Para obter uma explicação completa de como localizar e importar arquivos de backup, confira [Exportar e importar a configuração de ATA](/advanced-threat-analytics/deploy-use/ata-configuration-file). 
