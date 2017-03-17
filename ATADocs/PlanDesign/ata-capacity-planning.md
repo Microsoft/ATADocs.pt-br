@@ -5,15 +5,15 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 1/23/2017
+ms.date: 3/5/2017
 ms.topic: get-started-article
 ms.service: advanced-threat-analytics
 ms.prod: 
 ms.assetid: 279d79f2-962c-4c6f-9702-29744a5d50e2
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 4e0a6dd325c172ba4eb3b68fe4d4aab96f20684b
-ms.sourcegitcommit: 49e892a82275efa5146998764e850959f20d3216
+ms.openlocfilehash: ce017adf26e30a5fde3c89a30c33f87d71716a4c
+ms.sourcegitcommit: 998e8aed5835b228e907aab78845723a02521741
 translationtype: HT
 ---
 *Aplica-se a: Advanced Threat Analytics versão 1.7*
@@ -22,6 +22,9 @@ translationtype: HT
 
 # <a name="ata-capacity-planning"></a>Planejamento da capacidade de ATA
 Este tópico ajuda a determinar quantos servidores ATA serão necessários para monitorar sua rede, inclusive a entender quantos Gateways do ATA e/ou Gateways Lightweight do ATA você precisa, bem como a capacidade do servidor para seu Centro do ATA e Gateways do ATA.
+
+> [!NOTE] 
+> O ATA Center pode ser implantado em qualquer fornecedor de IaaS, desde que os requisitos de desempenho descritos neste artigo sejam atendidos.
 
 ##<a name="using-the-sizing-tool"></a>Usando a ferramenta de dimensionamento
 A maneira recomendada e mais simples para determinar a capacidade para sua implantação ATA é usar o [Ferramenta de Dimensionamento de ATA](http://aka.ms/atasizingtool). Execute a Ferramenta de Dimensionamento ATA e resultados de arquivo do Excel, use os campos a seguir para determinar a capacidade ATA que você precisa:
@@ -60,6 +63,7 @@ A Central de ATA requer um mínimo recomendado de 30 dias de dados para a análi
 > -   A Central do ATA pode lidar com um máximo agregado de 400.000 FPS (quadros por segundo) de todos os controladores de domínio monitorados. Em alguns ambientes, o mesmo Centro do ATA pode lidar com o tráfego geral superior a 400.000. Entre em contato com askcesec@microsoft.com para obter assistência para esses ambientes.
 > -   O volume de armazenamento ditado aqui são os valores net que você sempre deve levar em consideração para o crescimento futuro e verificar se o disco no qual o banco de dados reside tem, pelo menos, 20% de espaço livre.
 > -   Se o espaço livre chegar a um mínimo de 20% ou 100 GB, o conjunto mais antigo de dados será excluído. Isso continuará a ocorrer até 5% ou 50 GB de espaço livre permaneça no ponto em que a coleta de dados deixará de funcionar.
+> - O ATA Center pode ser implantado em qualquer fornecedor de IaaS, desde que os requisitos de desempenho descritos neste artigo sejam atendidos.
 > -   A latência de armazenamento para a leitura e a gravação das atividades deve estar abaixo de 10 ms.
 > -   A taxa entre as atividades de leitura e gravação é de, aproximadamente, 1:3 abaixo de 100.000 pacotes por segundo e 1:6 acima de 100.000 pacotes por segundo.
 > -   Durante a execução como uma memória dinâmica da máquina virtual ou qualquer outra memória, não há suporte para o recurso de inchamento.
