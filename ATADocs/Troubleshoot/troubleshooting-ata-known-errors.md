@@ -1,28 +1,32 @@
---
-# <a name="required-metadata"></a>metadados necessários
-
-title: Solução de problemas do log de erros do Advanced Threat Analytics | Descrição do Microsoft Docs: descreve como você pode solucionar erros comuns em palavras-chave de ATA: author: rkarlin ms.author: rkarlin manager: mbaldwin ms.date: 14/3/2017 ms.topic: article ms.prod: ms.service: advanced-threat-analytics ms.technology: ms.assetid: d89e7aff-a6ef-48a3-ae87-6ac2e39f3bdb
-
-# <a name="optional-metadata"></a>metadados opcionais
-
-#<a name="robots"></a>ROBOTS:
-#<a name="audience"></a>audiência:
-#<a name="msdevlang"></a>ms.devlang:
-ms.reviewer: arzinger
-
-ms.suite: ems
-#<a name="mstgtpltfrm"></a>ms.tgt_pltfrm:
-#<a name="mscustom"></a>ms.custom:
-
 ---
-
+title: "Solução de problemas do log de erros do Advanced Threat Analytics | Microsoft Docs"
+description: "Descreve como é possível solucionar erros comuns no ATA"
+keywords: 
+author: rkarlin
+ms.author: rkarlin
+manager: mbaldwin
+ms.date: 3/14/2017
+ms.topic: article
+ms.prod: 
+ms.service: advanced-threat-analytics
+ms.technology: 
+ms.assetid: d89e7aff-a6ef-48a3-ae87-6ac2e39f3bdb
+ms.reviewer: arzinger
+ms.suite: ems
+ms.openlocfilehash: 0c72b14a042e473c0cd59811db63ecafc4ec02d4
+ms.sourcegitcommit: f18c0841d85e54eca940c8cbf226938b3c2bc80f
+translationtype: HT
+---
 *Aplica-se a: Advanced Threat Analytics versão 1.7*
 
 
 
 # <a name="troubleshooting-the-ata-error-log"></a>Solução de problemas do log de erros do ATA
+
 Esta seção detalha os possíveis erros nas implantações do ATA e as etapas necessárias para solucioná-los.
+
 ## <a name="ata-gateway-errors"></a>Erros do Gateway do ATA
+
 |Erro do|Descrição|Resolução|
 |-------------|----------|---------|
 |System.DirectoryServices.Protocols.LdapException: ocorreu um erro local|Falha do Gateway do ATA ao autenticar no controlador de domínio.|1. Confirme se o registro DNS do controlador de domínio está configurado corretamente no servidor DNS. <br>2. Verifique se a hora do Gateway do ATA está sincronizada com a hora do controlador de domínio.|
