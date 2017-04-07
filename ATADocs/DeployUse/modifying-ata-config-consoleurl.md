@@ -13,13 +13,10 @@ ms.technology: security
 ms.assetid: 50118465-df34-4e04-b0cc-48808b6a96b1
 ms.reviewer: bennyl
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: b28cb3a0da844b7c460c03726222bc775a9e47da
-ms.openlocfilehash: 5f662793ae0c758becb08c3fd91b79587124d99a
-
-
+ms.openlocfilehash: db179445a0ea80411a0462e639f1d8c890bf21b0
+ms.sourcegitcommit: 49e892a82275efa5146998764e850959f20d3216
+translationtype: HT
 ---
-
 *Aplica-se a: Advanced Threat Analytics versão 1.7*
 
 
@@ -74,9 +71,3 @@ Se você precisar modificar a URL do Console do ATA, execute estas etapas no ser
 ## <a name="see-also"></a>Consulte também
 - [Trabalhando com o Console do ATA](working-with-ata-console.md)
 - [Confira o fórum do ATA!](https://aka.ms/ata-forum)
-
-
-
-<!--HONumber=Feb17_HO1-->
-
-

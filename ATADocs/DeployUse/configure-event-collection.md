@@ -13,14 +13,10 @@ ms.technology:
 ms.assetid: 3f0498f9-061d-40e6-ae07-98b8dcad9b20
 ms.reviewer: bennyl
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 6fddbbae0a0734834a21975c7690e06ac28dc64d
-ms.openlocfilehash: e31e3b8a94c8beef22be2f06ecaeb89545b3f62d
-ms.lasthandoff: 02/21/2017
-
-
+ms.openlocfilehash: f807b428dfcc12a15b814106cc190f2a72fa4254
+ms.sourcegitcommit: 49e892a82275efa5146998764e850959f20d3216
+translationtype: HT
 ---
-
 *Aplica-se a: Advanced Threat Analytics versão 1.6 e 1.7*
 
 
@@ -190,7 +186,7 @@ Nesse cenário, supomos que o Gateway ATA seja membro do domínio.
 
 1.    Abra os Usuários e Computadores do Active Directory, navegue até a pasta **BuiltIn** e clique duas vezes em **Leitores de Log de Eventos**. 
 2.    Selecione **Membros**.
-4.    Se **Serviço de Rede** não estiver listado, clique em **Adicionar**, digite **Serviço de Rede** no campo **Digite os nomes de objeto a serem selecionados **. Depois, clique em **Verificar Nomes** e clique em **OK** duas vezes. 
+4.    Se **Serviço de Rede** não estiver listado, clique em **Adicionar**, digite **Serviço de Rede** no campo **Digite os nomes de objeto a serem selecionados**. Depois, clique em **Verificar Nomes** e clique em **OK** duas vezes. 
 
 Observe que após adicionar o **Serviço de Rede** no grupo **Leitores de Log de Eventos** é necessário reiniciar os controladores de domínio para que a alteração tenha efeito.
 
@@ -249,7 +245,7 @@ Ao instalar o Gateway Lightweight do ATA nos controladores de domínio, você po
 
 1.    Abra os Usuários e Computadores do Active Directory, navegue até a pasta **BuiltIn** e clique duas vezes em **Leitores de Log de Eventos**. 
 2.    Selecione **Membros**.
-3.    Se **Serviço de Rede** não estiver listado, clique em **Adicionar** e digite **Serviço de Rede** no campo **Digite os nomes de objeto a serem selecionados **. Depois, clique em **Verificar Nomes** e clique em **OK** duas vezes. 
+3.    Se **Serviço de Rede** não estiver listado, clique em **Adicionar** e digite **Serviço de Rede** no campo **Digite os nomes de objeto a serem selecionados**. Depois, clique em **Verificar Nomes** e clique em **OK** duas vezes. 
 
 **Etapa 2: Executar as etapas a seguir no controlador de domínio depois que o Gateway Lightweight do ATA estiver instalado** 
 
@@ -288,4 +284,3 @@ Para obter mais informações, confira: [Configurar computadores para encaminhar
 ## <a name="see-also"></a>Consulte Também
 - [Instalar o ATA](install-ata-step1.md)
 - [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
-
