@@ -5,28 +5,28 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 1/23/2017
+ms.date: 3/14/2017
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
 ms.technology: 
 ms.assetid: d89e7aff-a6ef-48a3-ae87-6ac2e39f3bdb
-ms.reviewer: bennyl
+ms.reviewer: arzinger
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: b28cb3a0da844b7c460c03726222bc775a9e47da
-ms.openlocfilehash: 47fe467a9244d6ea8925a255552aa0f5c785dce3
-
-
+ms.openlocfilehash: 0c72b14a042e473c0cd59811db63ecafc4ec02d4
+ms.sourcegitcommit: f18c0841d85e54eca940c8cbf226938b3c2bc80f
+translationtype: HT
 ---
-
 *Aplica-se a: Advanced Threat Analytics versão 1.7*
 
 
 
 # <a name="troubleshooting-the-ata-error-log"></a>Solução de problemas do log de erros do ATA
+
 Esta seção detalha os possíveis erros nas implantações do ATA e as etapas necessárias para solucioná-los.
+
 ## <a name="ata-gateway-errors"></a>Erros do Gateway do ATA
+
 |Erro do|Descrição|Resolução|
 |-------------|----------|---------|
 |System.DirectoryServices.Protocols.LdapException: ocorreu um erro local|Falha do Gateway do ATA ao autenticar no controlador de domínio.|1. Confirme se o registro DNS do controlador de domínio está configurado corretamente no servidor DNS. <br>2. Verifique se a hora do Gateway do ATA está sincronizada com a hora do controlador de domínio.|
@@ -74,9 +74,3 @@ Esta seção detalha os possíveis erros nas implantações do ATA e as etapas n
 - [Configurar coleta de eventos](/advanced-threat-analytics/deploy-use/configure-event-collection)
 - [Configuração do encaminhamento de eventos do Windows](/advanced-threat-analytics/deploy-use/configure-event-collection#configuring-windows-event-forwarding)
 - [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
-
-
-
-<!--HONumber=Feb17_HO1-->
-
-

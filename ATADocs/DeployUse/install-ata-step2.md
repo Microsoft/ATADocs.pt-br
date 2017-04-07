@@ -13,13 +13,10 @@ ms.technology:
 ms.assetid: e1c5ff41-d989-46cb-aa38-5a3938f03c0f
 ms.reviewer: bennyl
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: b28cb3a0da844b7c460c03726222bc775a9e47da
-ms.openlocfilehash: 23ea3185e0d3556f524d8131a715a6057988f04c
-
-
+ms.openlocfilehash: fea114b062a7861ac284b4bf746fff68c5c1bd52
+ms.sourcegitcommit: 49e892a82275efa5146998764e850959f20d3216
+translationtype: HT
 ---
-
 *Aplica-se a: Advanced Threat Analytics versão 1.7*
 
 
@@ -44,7 +41,7 @@ Na primeira vez que você abrir o Console do ATA, a tela a seguir será exibida:
     |**Senha** (obrigatório)|Digite a senha para o usuário somente leitura, por exemplo: **Lápis1**.|
     |**Domínio** (obrigatório)|Digite o domínio para o usuário somente leitura, por exemplo: **contoso.com**. **Observação:** é importante que você insira o FQDN completo do domínio onde o usuário está localizado. Por exemplo, se a conta do usuário estiver no domínio corp.contoso.com, você precisará inserir `corp.contoso.com` e não contoso.com|
 
-2. Opcionalmente, você pode clicar em **Testar conexão**, que testará a conectividade com o domínio e verificará se as credenciais fornecidas permitem acesso. Isso só funcionará se o Centro do ATA tiver conectividade com o domínio.   
+2. Opcionalmente, você pode clicar em **Testar conexão**, que testará a conectividade com o domínio e verificará se as credenciais fornecidas permitem acesso. Isso só funcionará se o Centro do ATA tiver conectividade com o domínio.     
 
     Após a gravação, a mensagem de boas-vindas no Console mudará para o seguinte: ![Estágio 1 das boas-vindas do ATA concluído](media/ATA_1.7-welcome-provide-username-finished.png)
 
@@ -61,9 +58,3 @@ Na primeira vez que você abrir o Console do ATA, a tela a seguir será exibida:
 - [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Configurar coleta de eventos](configure-event-collection.md)
 - [Pré-requisitos do ATA](/advanced-threat-analytics/plan-design/ata-prerequisites)
-
-
-
-<!--HONumber=Feb17_HO1-->
-
-

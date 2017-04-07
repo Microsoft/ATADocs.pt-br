@@ -1,14 +1,13 @@
 ---
 layout: LandingPage
 description: Aprenda a usar o Advanced Threat Analytics.
-translationtype: Human Translation
-ms.sourcegitcommit: c4e5418a8b5f7093792f52f1553307039f38ff5f
-ms.openlocfilehash: 1fe4d6e06150cc1425c92165445fd087544b8904
-
+ms.openlocfilehash: ddf06db756bd991c49200ba35b6a515832ccc3cb
+ms.sourcegitcommit: 9b128d6946e32b00f595e00902b9ff95f18141ff
+translationtype: HT
 ---
 # <a name="advanced-threat-analytics-documentation"></a>Documentação do Advanced Threat Analytics
 
-Controlar e proteger emails, documentos e dados confidenciais compartilhados fora da sua empresa. Desde uma classificação fácil até rótulos inseridos e permissões, aprimore a proteção de dados em todos os momentos com a Proteção de Informações do Azure — independentemente de onde eles estão armazenados ou com quem eles serão compartilhados.
+O Advanced Threat Analytics (ATA) é uma plataforma local que ajuda a proteger sua empresa de vários tipos avançados de ataques cibernéticos direcionados e de ameaças internas usando informações de várias fontes de dados em sua rede para aprender o comportamento dos usuários e de outras entidades na organização e criar um perfil comportamental sobre eles, aproveitando o mecanismo de análise de rede proprietário do ATA para capturar e analisar o tráfego de rede de vários protocolos.
 
 <ul class="panelContent cardsFTitle">
     <li>
@@ -131,15 +130,10 @@ Controlar e proteger emails, documentos e dados confidenciais compartilhados for
                 <div class="card">
                     <div class="cardText">
                         <p><a href="https://go.microsoft.com/fwlink/?linkid=836487">Avaliar</a></p>
+                        <p><a href="https://docs.microsoft.com/enterprise-mobility-security/solutions/ata-attack-simulation-playbook">Veja o manual de simulação de ataque ATA</a></p>
                     </div>
                 </div>
             </div>
         </div>
     </li>  
 </ul>
-
-
-
-<!--HONumber=Feb17_HO3-->
-
-

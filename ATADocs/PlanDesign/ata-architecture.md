@@ -13,13 +13,10 @@ ms.technology:
 ms.assetid: 892b16d2-58a6-49f9-8693-1e5f69d8299c
 ms.reviewer: bennyl
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: b28cb3a0da844b7c460c03726222bc775a9e47da
-ms.openlocfilehash: 2c4ae574b3ce7346ba05abb357c23cfdab6482a4
-
-
+ms.openlocfilehash: 489d85e7e8250dffe8d40225b31ed308a9a79969
+ms.sourcegitcommit: 49e892a82275efa5146998764e850959f20d3216
+translationtype: HT
 ---
-
 *Aplica-se a: Advanced Threat Analytics versão 1.7*
 
 
@@ -52,11 +49,11 @@ Uma implantação do ATA pode consistir em uma único Centro do ATA conectada a 
 ## <a name="deployment-options"></a>Opções de implantação
 Você pode implantar o ATA usando a seguinte combinação de gateways:
 
--   **Usando somente os Gateways do ATA** <br>
+-    **Usando somente os Gateways do ATA** <br>
 Se sua implantação do ATA contém apenas Gateways do ATA, sem os Gateways Lightweight do ATA, todos os controladores de domínio devem ser configurados para habilitar o espelhamento de porta para um Gateway do ATA ou uma TAP de rede deve estar em funcionamento.
--   **Usando somente Gateways Lightweight do ATA**<br>
+-    **Usando somente Gateways Lightweight do ATA**<br>
 Se sua implantação do ATA contém somente Gateways Lightweight do ATA, estes são implantados em cada controlador de domínio e não há a necessidade de servidores adicionais ou de configuração de espelhamento de porta.
--   **Usando tanto Gateways do ATA quanto Gateways Lightweight do ATA**<br>
+-    **Usando tanto Gateways do ATA quanto Gateways Lightweight do ATA**<br>
 Se sua implantação do ATA inclui Gateways do ATA e Gateways Lightweight do ATA, e o Gateway Lightweight do ATA está instalado em alguns de seus controladores de domínio (por exemplo, todos os controladores de domínio em seus sites de filial) ao passo que outros controladores de domínio são monitorados pelos Gateways do ATA (por exemplo, os maior controladores de domínio em seus data centers principais).
 
 Em todos os três cenários, todos os gateways enviam seus dados para o Centro do ATA.
@@ -130,7 +127,7 @@ O Gateway do ATA recebe o tráfego de rede espelhado e os eventos do Windows da 
 
 Os recursos a seguir funcionam de modo diferente dependendo de você estar executando um Gateway do ATA ou um Gateway Lightweight do ATA.
 
--   **Candidato ao sincronizador de domínio**<br>
+-    **Candidato ao sincronizador de domínio**<br>
 O gateway sincronizador de domínio é responsável por sincronizar todas as entidades de um determinado domínio do Active Directory de forma proativa (semelhante ao mecanismo utilizado pelos próprios controladores de domínio para replicação). Um gateway é escolhido aleatoriamente, na lista de candidatos, para servir como sincronizador de domínio. <br><br>
 Se o sincronizador estiver offline por mais de 30 minutos, outro candidato é escolhido em seu lugar. Se não houver nenhum sincronizador de domínio disponível para um domínio específico, o ATA não poderá sincronizar entidades e suas alterações proativamente. No entanto, o ATA recuperará novas entidades reativamente conforme elas forem detectadas no tráfego monitorado. 
 <br>Se nenhum sincronizador de domínio estiver disponível e você pesquisar por uma entidade que não tem qualquer tráfego relacionado a ela, nenhum resultado será exibido.<br><br>
@@ -138,7 +135,7 @@ Por padrão, todos os Gateways do ATA são candidatos a sincronizador.<br><br>
 Como todos os Gateways Lightweight do ATA têm maior probabilidade de serem implantados em filiais e em pequenos controladores de domínio, eles não são candidatos a sincronizador por padrão.
 
 
--   **Limitações de recursos**<br>
+-    **Limitações de recursos**<br>
 O Gateway Lightweight do ATA inclui um componente de monitoramento que avalia a capacidade de computação e de memória disponível no controlador de domínio no qual ele está sendo executado. O processo de monitoramento é executado a cada 10 segundos e atualiza dinamicamente a cota de utilização de CPU e memória no processo de Gateway Lightweight do ATA para garantir que a qualquer hora o controlador de domínio tenha pelo menos 15% de recursos de computação e memória livres.<br><br>
 Não importa o que acontece no controlador de domínio, esse processo sempre libera os recursos para fazer com que a funcionalidade principal do controlador de domínio não seja afetada.<br><br>
 Se isso faz com que o Gateway Lightweight do ATA fique sem recursos, apenas o tráfego parcial é monitorado e o alerta de monitoramento "Tráfego de rede espelhado na porta descartado" será exibido na página Integridade.
@@ -183,10 +180,4 @@ Para melhorar a detecção de passagem de hash, força bruta e Honey Tokens, o A
 - [Configurar coleta de eventos](/advanced-threat-analytics/deploy-use/configure-event-collection)
 - [Configuração do encaminhamento de eventos do Windows](/advanced-threat-analytics/deploy-use/configure-event-collection#configuring-windows-event-forwarding)
 - [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
-
-
-
-
-<!--HONumber=Feb17_HO1-->
-
 
