@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 1/23/2017
+ms.date: 4/30/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,8 +13,8 @@ ms.technology:
 ms.assetid: cdaddca3-e26e-4137-b553-8ed3f389c460
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: f91c728614cbe03f794fd0ad45ccc19af712cf54
-ms.sourcegitcommit: 49e892a82275efa5146998764e850959f20d3216
+ms.openlocfilehash: ff27dbe4b2b5e44add5dfd93e0a71419ba818ea6
+ms.sourcegitcommit: cb2a4df6805d41bf030d3439ef87281fc6acc98f
 translationtype: HT
 ---
 *Aplica-se a: Advanced Threat Analytics versão 1.7*
@@ -40,6 +40,7 @@ Seus controladores de domínio e Gateways do ATA podem ser físicos ou virtuais.
 
 > [!NOTE]
 > Se o controlador de domínio que está passando por espelhamento de porta estiver conectado por um link de WAN, verifique se o link de WAN pode lidar com a carga adicional do tráfego do ERSPAN.
+> A ATA dá suporte ao monitoramento de tráfego somente quando o tráfego alcança a NIC e o controlador de domínio da mesma maneira. ATA não dá suporte ao monitoramento de tráfego quando o tráfego é dividido em portas diferentes.
 
 ## <a name="supported-port-mirroring-options"></a>Opções de espelhamento de porta com suporte
 
