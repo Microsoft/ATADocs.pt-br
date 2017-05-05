@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 2/16/2017
+ms.date: 4/30/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,8 +13,8 @@ ms.technology:
 ms.assetid: a5f90544-1c70-4aff-8bf3-c59dd7abd687
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: ebc02319374079ebb09bb6480ebef7f871bc9beb
-ms.sourcegitcommit: 49e892a82275efa5146998764e850959f20d3216
+ms.openlocfilehash: 270a16feada7db5462c5232f023c0bab9ef23c7e
+ms.sourcegitcommit: cb2a4df6805d41bf030d3439ef87281fc6acc98f
 translationtype: HT
 ---
 *Aplica-se a: Advanced Threat Analytics versão 1.7*
@@ -137,6 +137,7 @@ Antes de instalar o Gateway do ATA executando o Windows 2012 R2, confirme se a s
 
 Você pode verificar executando o seguinte cmdlet do Windows PowerShell: `[Get-HotFix -Id kb2919355]`.
 
+
 Para obter informações sobre como usar máquinas virtuais com o Gateway do ATA, confira [Configurar o espelhamento de porta](/advanced-threat-analytics/deploy-use/configure-port-mirroring).
 
 > [!NOTE]
@@ -223,6 +224,10 @@ Você pode verificar executando o seguinte cmdlet do Windows PowerShell: `[Get-H
 Se a instalação for para o Windows Server 2012 R2 Server Core, também deve ser instalada a seguinte atualização:  [KB3000850](https://support.microsoft.com/help/3000850/november-2014-update-rollup-for-windows-rt-8.1%2c-windows-8.1%2c-and-windows-server-2012-r2).
 
  Você pode verificar executando o seguinte cmdlet do Windows PowerShell: `[Get-HotFix -Id kb3000850]`
+
+
+Durante a instalação, o .Net Framework 4.6.1 é instalado e pode causar a reinicialização do controlador de domínio.
+
 
 > [!NOTE]
 > É necessário um mínimo de 5 GB de espaço e recomenda-se 10 GB. Isso inclui o espaço necessário para os binários ATA, [logs ATA](/advanced-threat-analytics/troubleshoot/troubleshooting-ata-using-logs.md) e [logs de desempenho](/advanced-threat-analytics/troubleshoot/troubleshooting-ata-using-perf-counters.md).
