@@ -13,9 +13,11 @@ ms.technology:
 ms.assetid: d89e7aff-a6ef-48a3-ae87-6ac2e39f3bdb
 ms.reviewer: arzinger
 ms.suite: ems
-ms.openlocfilehash: 0c72b14a042e473c0cd59811db63ecafc4ec02d4
-ms.sourcegitcommit: f18c0841d85e54eca940c8cbf226938b3c2bc80f
-translationtype: HT
+ms.openlocfilehash: a87fed6bf8ce69ea3391e729c57217d1cff8ffc2
+ms.sourcegitcommit: a1595b51c95235eede3d3b34a02f24bedd5dfc5a
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 05/14/2017
 ---
 *Aplica-se a: Advanced Threat Analytics versão 1.7*
 
@@ -43,7 +45,7 @@ Esta seção detalha os possíveis erros nas implantações do ATA e as etapas n
 |System.InvalidOperationException: Instance 'Microsoft.Tri.Gateway' não existe na Categoria especificada.|PIDs foi habilitado para nomes de processo no Gateway do ATA|Use [KB281884](https://support.microsoft.com/en-us/kb/281884) para desabilitar os PIDs em nomes de processo|
 |System.InvalidOperationException: Categoria não existe.|Os contadores podem estar desabilitados no registro|Use [KB2554336](https://support.microsoft.com/en-us/kb/2554336) para recriar os Contadores de desempenho|
 |System.ApplicationException: Não é possível iniciar a sessão do ETW MMA-ETW-Livecapture-a4f595bd-f567-49a7-b963-20fa4e370329|Há uma entrada do host no arquivo HOSTS que aponta para o nome curto do computador|Remova a entrada do host do arquivo C:\Windows\System32\drivers\etc\HOSTS ou altere-a para um FQDN.|
-|System.IO.IOException: a autenticação falhou porque a parte remota fechou o fluxo de transporte.|O TLS 1.0 está desabilitado no Gateway ATA, mas o .Net está configurado para usar o TLS 1.2|Use uma das seguintes opções: </br> Habilitar o TLS 1.0 no Gateway ATA </br>Habilite o TLS 1.2 no .Net definindo as chaves de registro para usar os padrões do sistema operacional para LLS e TLS, da seguinte forma: `[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\v4.0.30319] "SystemDefaultTlsVersions"=dword:00000001` </br>`[HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\.NETFramework\v4.0.30319] "SystemDefaultTlsVersions"`|
+|System.IO.IOException: a autenticação falhou porque a parte remota fechou o fluxo de transporte.|O TLS 1.0 está desabilitado no Gateway ATA, mas o .Net está configurado para usar o TLS 1.2|Use uma das seguintes opções: </br> Habilitar o TLS 1.0 no Gateway ATA </br>Habilite o TLS 1.2 no .Net definindo as chaves de registro para usar os padrões do sistema operacional para LLS e TLS, da seguinte forma: `[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\v4.0.30319] "SystemDefaultTlsVersions"=dword:00000001` </br>`[HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\.NETFramework\v4.0.30319] "SystemDefaultTlsVersions"=dword:00000001`|
 
 
 
