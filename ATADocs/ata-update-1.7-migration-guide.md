@@ -1,100 +1,92 @@
 ---
-# required metadata
-
-title: Advanced Threat Analytics update to 1.7 migration guide | Microsoft Docs
-description: Procedures to update ATA to version 1.7
-keywords:
+title: "Guia de migração de atualização do Advanced Threat Analytics para 1.7 | Microsoft Docs"
+description: "Procedimentos para atualizar o ATA para a versão 1.7"
+keywords: 
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
 ms.date: 01/23/2017
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: advanced-threat-analytics
-ms.technology:
+ms.technology: 
 ms.assetid: 8eefcd45-7a4b-4074-ac5b-1ffc48e6654a
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: bennyl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
-
+ms.openlocfilehash: a1494f0428593ee58c7e1da64192b45c6d006c15
+ms.sourcegitcommit: 470675730967e0c36ebc90fc399baa64e7901f6b
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/30/2017
 ---
+# <a name="ata-update-to-17-migration-guide"></a>Guia de migração de atualização do ATA para 1.7
+A atualização 1.7 do ATA fornece melhorias nas seguintes áreas:
 
-# ATA update to 1.7 migration guide
-The update to ATA 1.7 provides improvements in the following areas:
+-   Novas detecções
 
--   New detections
-
--   Improvements to existing detections
+-   Aprimoramentos nas detecções existentes
   
 
-## Updating ATA to version 1.7
+## <a name="updating-ata-to-version-17"></a>Atualizando o ATA para a versão 1.7
 
 > [!NOTE] 
-> If ATA is not installed in your environment, download the full version of ATA which includes version 1.7 and follow the standard installation procedure described in [Install ATA](install-ata-step1.md).
+> Se o ATA não estiver instalado em seu ambiente, baixe a versão completa do ATA que inclui a versão 1.7 e siga o procedimento de instalação padrão descrito em [Instalar o ATA](install-ata-step1.md).
 
-If you already have ATA version 1.6 deployed, this procedure will walk you through the steps necessary to update your deployment.
+Se você já tiver a versão 1.6 do ATA implantada, esse procedimento explicará as etapas necessárias para atualizar sua implantação.
 
 > [!NOTE] 
-> You cannot install ATA version 1.7 directly on top of ATA version 1.4 or 1.5. You must install ATA version 1.6 first. 
+> Você não pode instalar o ATA versão 1.7 diretamente sobre o ATA versão 1.4 ou 1.5. Instale primeiro o ATA versão 1.6. 
 
-Follow these steps to update to ATA version 1.7:
+Execute estas etapas para atualizar para o ATA versão 1.7:
 
-1.  [Download update 1.7](http://www.microsoft.com/evalcenter/evaluate-microsoft-advanced-threat-analytics)<br>
-In this version of, the same installation file (Microsoft ATA Center Setup.exe) is used for installing a new deployment of ATA and for upgrading existing deployments.
+1.  [Baixar a atualização 1.7](http://www.microsoft.com/evalcenter/evaluate-microsoft-advanced-threat-analytics)<br>
+Nessa versão, o mesmo arquivo de instalação (Microsoft ATA Center Setup.exe) é usado para instalar uma nova implantação do ATA e para atualizar as implantações existentes.
 
-2.  Update the ATA Center
+2.  Atualize o Centro do ATA
 
-4.  Update the ATA Gateways
+4.  Atualize os Gateways do ATA
 
     > [!IMPORTANT]
-    > Update all the ATA Gateways to make sure ATA functions properly.
+    > Atualize todos os Gateways do ATA para ter certeza de o ATA funciona corretamente.
 
-### Step 1: Update the ATA Center
+### <a name="step-1-update-the-ata-center"></a>Etapa 1: Atualizar o Centro do ATA
 
-1.  Back up your database: (optional)
+1.  Faça backup do seu banco de dados: (opcional)
 
-    -   If the ATA Center is running as a virtual machine and you want to take a checkpoint, shut the virtual machine down first.
+    -   Se a Central de ATA estiver sendo executada como uma máquina virtual e você quiser fazer um ponto de verificação, desligue a máquina virtual primeiro.
 
-    -   If the ATA Center is running on a physical server, follow the recommended procedure to [back up MongoDB](https://docs.mongodb.org/manual/core/backups/).
+    -   Se a Central de ATA estiver em execução em um servidor físico, siga o procedimento recomendado para [fazer backup do MongoDB](https://docs.mongodb.org/manual/core/backups/).
 
-2.  Run the installation file, **Microsoft ATA Center Setup.exe**, and follow the instructions on the screen to install the update.
+2.  Execute o arquivo de instalação, **Microsoft ATA Center Setup.exe**, e siga as instruções na tela para instalar a atualização.
 
-	-  On the **Welcome** page, select your language and click **Next**.
+    -  Na página **Boas-vindas**, selecione seu idioma e clique em **Avançar**.
 
-	-  If you didn't enable automatic updates in version 1.6, you will be prompted to set ATA to use Microsoft Update for ATA to remain up-to-date.  In the Microsoft Update page, select **Use Microsoft Update when I check for updates (recommended)**.
-    ![Keep ATA up to date image](media/ata_ms_update.png)
-     This will adjust the Windows settings to enable updates for other Microsoft products (including ATA), as seen here. 
-    ![Windows auto-update image](media/ata_installupdatesautomatically.png)
+    -  Se você não tiver habilitado as atualizações automáticas na versão 1.6, será necessário definir o ATA para usar o Microsoft Update para ATA a fim de permanecer atualizado.  Na página do Microsoft Update, selecione **Usar o Microsoft Update ao verificar se há atualizações (recomendado)**.
+    ![Imagem Manter o ATA atualizado](media/ata_ms_update.png) Isso ajustará as configurações do Windows para habilitar atualizações para os outros produtos da Microsoft (incluindo o ATA), como visto aqui. 
+     ![Imagem de atualização automática do Windows](media/ata_installupdatesautomatically.png)
 
-	-  In the **Data migration** screen, select whether you want to migrate all or partial data. If you choose to migrate only partial data, your previously captured network traffic and behavior profiles will not be migrated. This means that it will take three weeks before the abnormal behavior detection has a complete profile to enable anomalous activity detection. During those three weeks, all other ATA detections will function properly. The **Partial** data migration takes much less time to install. If you select **Full** data migration, it may take a significant amount of time for the installation to complete. The estimated amount of time and the required disk space, which are listed on the **Data Migration** screen, depend on the amount of previously captured network traffic you had saved in previous versions of ATA. Before selecting **Partial** or **Full**, make sure to check these requirements.  
+    -  Na tela **Migração de dados**, selecione se deseja migrar todos os dados ou dados parciais. Se você optar por migrar apenas os dados parciais, os perfis de comportamento e tráfego de rede capturados anteriormente não serão migrados. Isso significa que serão necessárias três semanas antes que a detecção de um comportamento anormal tenha um perfil completo para ativar a detecção de atividade anormal. Durante essas três semanas, todas as outras detecções do ATA funcionarão corretamente. A migração de dados **Parcial** demora muito menos para ser instalada. Se você selecionar a migração de dados **Completa**, pode demorar bastante para a instalação ser concluída. A quantidade estimada de tempo e de espaço em disco necessário, listada na tela **Migração de Dados**, dependerá da quantidade de tráfego de rede capturado anteriormente e já salvo em versões anteriores do ATA. Antes de selecionar **Parcial** ou **Completa**, verifique estes requisitos.  
     
-    ![ATA data migration](media/migration data migration.png)
+    ![Migração de dados do ATA](media/migration-data-migration17.png)
 
-	-  Click **Update**. After you click Update, ATA is offline until the update procedure is complete.
+    -  Clique em **Atualizar**. Depois de clicar em Atualizar, o ATA ficará offline até que o procedimento de atualização seja concluído.
 
-4.  After the ATA Center update completes successfully, click **Launch** to open the **Update** screen in the ATA console for the ATA Gateways.
-    ![Update success screen](media/migration center success.png)
+4.  Após a conclusão da atualização do Centro do ATA, clique em **Iniciar** para abrir a tela **Atualizar** no console do ATA para os Gateways do ATA.
+    ![Tela de atualização bem-sucedida](media/migration-center-success17.png)
 
-5.  In the **Updates** screen, if you already set your ATA Gateways to automatically update, they will update at this point, if not, click **Update** next to each ATA Gateway.
-  ![Update gateways image](media/migration update gw.png)
+5.  Na tela **Atualizações**, se você já tiver configurado seus Gateways do ATA para atualizarem automaticamente, eles serão atualizados agora, caso contrário, clique em **Atualizar** ao lado de cada Gateway do ATA.
+  ![Imagem de atualização dos gateways](media/migration-update-gw-17.png)
 
   
 > [!IMPORTANT] 
-> Update all the ATA Gateways to make sure ATA functions properly.
-> The configured Syslog listener port on all Gateways will be changed to 514.
+> Atualize todos os Gateways do ATA para ter certeza de o ATA funciona corretamente.
+> A porta de escuta Syslog configurada em todos os Gateways será alterada para 514.
  
 > [!NOTE] 
-> To install new ATA Gateways, go the **Gateways** screen and click **Download Gateway Setup** to get the ATA 1.7 installation package and follow the instructions for new Gateway installation as described in [Step 4. Install the ATA Gateway](install-ata-step4.md) .
+> Para instalar novos Gateways ATA, acesse a tela **Gateways** e clique em **Baixar a instalação do Gateway** para obter o pacote de instalação ATA 1.7 e seguis as instruções para uma nova instalação do Gateway, conforme descrito na [Etapa 4. Instale o Gateway ATA](install-ata-step4.md).
 
 
 
-## See Also
+## <a name="see-also"></a>Consulte Também
 
-- [Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
+- [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
