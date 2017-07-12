@@ -1,55 +1,64 @@
 ---
-# required metadata
-
-title: Monitor Advanced Threat Analytics Health Center alerts | Microsoft Docs
-description: Use the ATA Health Center to check how the ATA service is working and be alerted to potential problems.
-keywords:
+title: Monitorar os eventos e a integridade do sistema do Advanced Threat Analytics | Microsoft Docs
+description: "Use a Central de Integridade de ATA para verificar como o serviço do ATA está funcionando e seja alertado sobre possíveis problemas e exibir eventos de sistema no Visualizador de Eventos."
+keywords: 
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 01/23/2017
+ms.date: 07/2/2017
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: advanced-threat-analytics
-ms.technology:
+ms.technology: 
 ms.assetid: d6c783b2-46c5-4211-b21a-d6b17f08d03d
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: bennyl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
-
+ms.openlocfilehash: 7e396cddb818c0e80f8b7d78764a58d6abd560e5
+ms.sourcegitcommit: fa50f37b134d7579d7c310852dff60e5f1996eaa
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 07/03/2017
 ---
-
-*Applies to: Advanced Threat Analytics version 1.7*
-
+*Aplica-se a: Advanced Threat Analytics versão 1.8*
 
 
-# ATA Health Center
-The ATA Health Center lets you know how your ATA service is performing and alerts you to problems.
+<a id="working-with-ata-system-health-and-events" class="xliff"></a>
 
-## Working with the ATA Health Center
-The ATA Health Center lets you know that there's a problem by raising an alert (a red dot) above the Health Center icon in the menu bar.
+# Trabalhando com eventos e a integridade do sistema ATA
 
-![ATA Health Center red dot toolbar](media/ATA-Health-Center-Alert-red-dot.png)
+<a id="ata-health-center" class="xliff"></a>
 
-### Managing ATA health
-To check up on your system's overall health, click the Health Center icon in the menu bar ![ATA Health Center icon](media/ATA-red-dot.png)
+## Centro de Integridade de ATA
+A Central de Integridade de ATA permite saber como seu serviço ATA está sendo executado e alerta-o para os problemas.
 
--   All open alerts can be managed by setting them to **Resolved** or **Dismissed**. In the Alert, click **Open** and scroll down to either **Resolved** or **Dismissed**.
+<a id="working-with-the-ata-health-center" class="xliff"></a>
 
--   If you resolve an issue and ATA detects that the issue persists, the issue will automatically be moved back to the **Open** issues list. If ATA detects that an open issue is resolved, it will automatically be moved to the **Resolved** issues list.
+## Trabalhando com a Central de Integridade de ATA
+A Central de Integridade de ATA permite que você saiba se há um problema gerando um alerta (um ponto vermelho) acima do ícone Central de Integridade na barra de menus.
 
--   **Dismissed** issues are issues that you do not want ATA to continue to check - for example, if you are alerted to an issue that you know exists and you do not plan to resolve the issue but do not want to continue to get notifications about it and you no longer want to see it in your **Open** issues list, you can set it to **Dismissed**.
+![Barra de ferramentas do ponto vermelho da Central de Integridade do ATA](media/ATA-Health-Center-Alert-red-dot.png)
 
-![ATA Health Center issues image](media/ATA-Health-Issue.JPG)
+<a id="managing-ata-health" class="xliff"></a>
 
-## See Also
-- [Working with ATA detection settings](working-with-detection-settings.md)
-- [Working with suspicious activities](working-with-suspicious-activities.md)
-- [Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
+### Gerenciando a Integridade de ATA
+Para verificar a integridade geral do sistema, clique no ícone Central de Integridade na barra de menus ![Ícone Central de Integridade de ATA](media/ATA-red-dot.png)
+
+-   Todos os alertas abertos podem ser gerenciados definindo-os como **Resolvido** ou **Ignorado**. No Alerta, clique em **Abrir** e role para baixo até **Resolvido** ou **Ignorado**.
+
+-   Se você resolver um problema e o ATA detectar que ele persiste, o problema será automaticamente retornado para a lista de problemas **Abrir**. Se o ATA detectar que um problema aberto está resolvido, ele será automaticamente movido para a lista de problemas **Resolvido**.
+
+-   Os problemas em **Ignorado** são aqueles que você não deseja que o ATA continue a verificar - por exemplo, se você for alertado para um problema que sabe que existe e não planeja resolvê-lo, mas não deseja continuar recebendo notificações sobre ele e não deseja vê-lo em sua lista de problemas **Abrir**, poderá defini-lo para **Ignorado**.
+
+![Imagem dos problemas da Central de Integridade de ATA](media/ATA-Health-Issue.JPG)
+
+
+
+
+
+
+<a id="see-also" class="xliff"></a>
+
+## Consulte Também
+- [Trabalhando com as configurações de detecção do ATA](working-with-detection-settings.md)
+- [Trabalhando com atividades suspeitas](working-with-suspicious-activities.md)
+- [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

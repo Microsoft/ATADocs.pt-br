@@ -1,101 +1,102 @@
 ---
-# required metadata
-
-title: Manage Advanced Threat Analytics telemetry settings | Microsoft Docs
-description: Describes the data collected by ATA and provides steps to turn off data collection.
-keywords:
+title: "Gerenciamento das configurações de telemetria do Advanced Threat Analytics | Microsoft Docs"
+description: Descreve os dados coletados pelo ATA e fornece etapas para desativar a coleta de dados.
+keywords: 
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 01/23/2017
+ms.date: 07/3/2017
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: advanced-threat-analytics
-ms.technology:
+ms.technology: 
 ms.assetid: 8c1c7a1b-a3de-4105-9fd0-08a061952172
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: bennyl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
-
+ms.openlocfilehash: b0e94ca7d817d6d5735921fefd7c9f4cf2cbd866
+ms.sourcegitcommit: fa50f37b134d7579d7c310852dff60e5f1996eaa
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 07/03/2017
 ---
-
-*Applies to: Advanced Threat Analytics version 1.7*
-
+*Aplica-se a: Advanced Threat Analytics versão 1.8*
 
 
-# Manage Telemetry Settings
-Advanced Threat Analytics (ATA) collects anonymized telemetry data about ATA and transmits the data over an HTTPS connection to Microsoft servers.  This data is used by Microsoft to help improve future versions of ATA.
 
-## Data collected
-Collected anonymized data includes the following:
+<a id="manage-telemetry-settings" class="xliff"></a>
 
--   Performance counters from both the ATA Center and the ATA Gateway
+# Gerenciamento das configurações de telemetria
+O ATA (Advanced Threat Analytics) coleta dados de telemetria anônimos sobre o ATA e os transmite por uma conexão HTTPS para os servidores Microsoft.  Esses dados são usados pela Microsoft para ajudar a melhorar as versões futuras do ATA.
 
--   Product ID from licensed copies of ATA
+<a id="data-collected" class="xliff"></a>
 
--   Deployment date of the ATA Center
+## Dados coletados
+Os dados anônimos coletados incluem o seguinte:
 
--   Number of deployed ATA Gateways
+-   Contadores de desempenho do Centro do ATA e do Gateway do ATA
 
--   The following anonymized Active Directory information:
+-   ID do produto de cópias licenciadas do ATA
 
-    -   Domain ID for the domain whose name would be the first domain when sorted alphabetically
+-   Data da implantação do Centro do ATA
 
-    -   Number of domain controllers
+-   Número de Gateways do ATA implantados
 
-    -   Number of domain controllers monitored by ATA via port mirroring
+-   As seguintes informações anônimas do Active Directory:
 
-    -   Number of Sites
+    -   ID de Domínio do domínio cujo nome seria o primeiro domínio quando classificado em ordem alfabética
 
-    -   Number of Computers
+    -   Número de controladores de domínio
 
-    -   Number of Groups
+    -   Número de controladores de domínio monitorados pelo ATA por meio do espelhamento de porta
 
-    -   Number of Users
+    -   Número de sites
 
--   Suspicious Activities  – The following anonymized data is collected for each suspicious activity:
+    -   Número de computadores
 
-    (Computer names, user names, and IP addresses are **not** collected)
+    -   Número de grupos
 
-    -   Suspicious activity type
+    -   Número de usuários
 
-    -   Suspicious activity ID
+-   Atividades suspeitas – os dados anônimos a seguir são coletados para cada atividade suspeita:
 
-    -   Status
+    (Os nomes de computador, nomes de usuário e endereços IP **não** são coletados)
 
-    -   Start and End Time
+    -   Tipo de atividade suspeita
 
-    -   Input provided
-
-- Health issues – The following anonymized data is collected for each health issue:
-
-    (Computer names, user names, and IP addresses are not collected)
-
-    -   Health issue type
-
-    -   Health issue ID
+    -   ID da atividade suspeita
 
     -   Status
 
-    -   Start and End Time
+    -   Horas de início e de término
 
-- ATA Console URL addresses - URL addresses when using the ATA Console i.e. which pages in the ATA Console are visited.
+    -   Entrada fornecida
+
+- Problemas de integridade – Os seguintes dados anônimos são coletados para cada problema de integridade:
+
+    (Os nomes de computador, nomes de usuário e endereços IP não são coletados)
+
+    -   Tipo de problema de integridade
+
+    -   ID do problema de integridade
+
+    -   Status
+
+    -   Horas de início e de término
+
+- Endereços de URL do Console do ATA - Endereços de URL ao usar o Console do ATA, ou seja, quais páginas no Console do ATA foram visitadas.
 
 
-### Disable data collection
-Perform the following steps to stop collecting and sending telemetry data to Microsoft:
+<a id="disable-data-collection" class="xliff"></a>
 
-1.  Log in to the ATA Console, click the three dots in the toolbar and select **About**.
+### Desabilitar coleta de dados
+Execute as etapas a seguir para interromper a coleta e o envio de dados de telemetria à Microsoft:
 
-2.  Uncheck the box for **Send us usage information to help improve your customer experience in the future**.
+1.  Faça logon no Console do ATA, clique nos três pontos na barra de ferramentas e escolha **Sobre**.
 
-## See Also
-- [What's new in version 1.6](whats-new-version-1.6.md)
-- [Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
+2.  Desmarque a caixa para **Envie informações de uso para ajudar a melhorar a experiência do cliente no futuro**.
+
+<a id="see-also" class="xliff"></a>
+
+## Consulte Também
+- [Troubleshooting ATA using the event log](troubleshooting-ata-using-logs.md) (Solução de problemas do ATA usando o log de eventos)
+- [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

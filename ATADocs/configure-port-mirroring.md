@@ -1,81 +1,80 @@
 ---
-# required metadata
-
-title: Configure Port Mirroring when deploying Advanced Threat Analytics | Microsoft Docs
-description: Describes port mirroring options and how to configure them for ATA
-keywords:
+title: "Configuração do espelhamento de porta ao implantar o Advanced Threat Analytics | Microsoft Docs"
+description: "Descreve as opções de espelhamento de porta e como configurá-las para o ATA"
+keywords: 
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
 ms.date: 4/30/2017
 ms.topic: get-started-article
-ms.prod:
+ms.prod: 
 ms.service: advanced-threat-analytics
-ms.technology:
+ms.technology: 
 ms.assetid: cdaddca3-e26e-4137-b553-8ed3f389c460
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: bennyl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
-
+ms.openlocfilehash: 234c759db2b766b2a4ad9b26ae31a8f6825d957f
+ms.sourcegitcommit: 470675730967e0c36ebc90fc399baa64e7901f6b
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/30/2017
 ---
-
-*Applies to: Advanced Threat Analytics version 1.7*
-
+*Aplica-se a: Advanced Threat Analytics versão 1.8*
 
 
-# Configure Port Mirroring
+
+<a id="configure-port-mirroring" class="xliff"></a>
+
+# Configurar o espelhamento de porta
 > [!NOTE] 
-> This article is relevant only if you deploy ATA Gateways instead of ATA Lightweight Gateways. To determine if you need to use ATA Gateways, see [Choosing the right gateways for your deployment](ata-capacity-planning.md#choosing-the-right-gateway-type-for-your-deployment).
+> Este artigo somente é relevante se você implanta Gateways do ATA em vez de Gateways Lightweight do ATA. Para determinar se você precisa usar Gateways do ATA, confira [Choosing the right gateways for your deployment](ata-capacity-planning.md#choosing-the-right-gateway-type-for-your-deployment) (Escolhendo os gateways certos para sua implantação).
  
-The main data source used by ATA is deep packet inspection of the network traffic to and from your domain controllers. For ATA to see the network traffic, you must either configure port mirroring, or use a Network TAP.
+A fonte de dados principal usada pelo ATA é uma inspeção profunda de pacotes do tráfego de rede para e dos controladores de domínio. Para que o ATA veja o tráfego de rede, você deve configurar o espelhamento de porta ou usar uma TAP de Rede.
 
-For port mirroring, configure **port mirroring** for each domain controller to be monitored, as the **source** of the network traffic. Typically, you will need to work with the networking or virtualization team to configure port mirroring.
-For more information, refer to your vendor's documentation.
+Para o espelhamento de porta, configure **espelhamento de porta** para cada controlador de domínio a ser monitorado, como a **origem** do tráfego de rede. Normalmente, você precisará trabalhar com a equipe de virtualização ou de rede para configurar o espelhamento de porta.
+Para saber mais, consulte a documentação do fornecedor.
 
-Your domain controllers and ATA Gateways can be either physical or virtual. The following are common methods for port mirroring and some considerations. Refer to your switch or virtualization server product documentation for additional information. Your switch manufacturer might use different terminology.
+Seus controladores de domínio e Gateways do ATA podem ser físicos ou virtuais. Veja a seguir métodos comuns de espelhamento de porta e algumas considerações. Consulte a documentação de produto do servidor de virtualização ou comutador para saber mais. O fabricante do comutador pode usar terminologias distintas.
 
-**Switched Port Analyzer (SPAN)** – Copies network traffic from one or more switch ports to another switch port on the same switch. Both the ATA Gateway and domain controllers must be connected to the same physical switch.
+**Switched Port Analyzer (SPAN)** – Copia o tráfego de rede de uma ou mais portas de comutador para outra porta de comutador no mesmo comutador. Tanto o Gateway do ATA quanto os controladores de domínio devem estar conectados ao mesmo comutador físico.
 
-**Remote Switch Port Analyzer (RSPAN)**  – Allows you to monitor network traffic from source ports distributed over multiple physical switches. RSPAN copies the source traffic into a special RSPAN configured VLAN. This VLAN needs to be trunked to the other switches involved. RSPAN works at Layer 2.
+**Remote Switch Port Analyzer (RSPAN)**  – Permite que você monitore o tráfego de rede das portas de origem distribuídas em vários comutadores físicos. O RSPAN copia o tráfego de origem em uma VLAN especial configurada com RSPAN. Essa VLAN precisa ser truncada com os outros comutadores envolvidos. RSPAN funciona na Camada 2.
 
-**Encapsulated Remote Switch Port Analyzer (ERSPAN)** – Is a Cisco proprietary technology working at Layer 3. ERSPAN allows you to monitor traffic across switches without the need for VLAN trunks. ERSPAN uses generic routing encapsulation (GRE) to copy monitored network traffic. ATA currently cannot directly receive ERSPAN traffic. For ATA to work with ERSPAN traffic, a switch or router that can decapsulate the traffic needs to be configured as the destination of ERSPAN where the traffic will be decapsulated. The switch or router will then need to be configured to forward it to the ATA Gateway using either SPAN or RSPAN.
+**Encapsulated Remote Switch Port Analyzer (ERSPAN)** – É uma tecnologia da Cisco que funciona na Camada 3. O ERSPAN permite que você monitore o tráfego entre comutadores, sem a necessidade de troncos de VLAN. O ERSPAN usa o recurso GRE (encapsulamento de roteamento genérico) para copiar o tráfego de rede monitorado. Atualmente, o ATA não pode receber o tráfego do ERSPAN diretamente. Para que o ATA trabalhe com o tráfego do ERSPAN, um comutador ou roteador que pode desencapsular o tráfego deve ser configurado como o destino do ERSPAN onde o tráfego será desencapsulado. Em seguida, o comutador ou roteador precisará ser configurado para encaminhar para o Gateway do ATA usando SPAN ou RSPAN.
 
 > [!NOTE]
-> If the domain controller being port mirrored is connected over a WAN link, make sure the WAN link can handle the additional load of the ERSPAN traffic.
-> ATA only supports traffic monitoring when the traffic reaches the NIC and the domain controller in the same manner. ATA does not support traffic monitoring when the traffic is broken out to different ports.
+> Se o controlador de domínio que está passando por espelhamento de porta estiver conectado por um link de WAN, verifique se o link de WAN pode lidar com a carga adicional do tráfego do ERSPAN.
+> A ATA dá suporte ao monitoramento de tráfego somente quando o tráfego alcança a NIC e o controlador de domínio da mesma maneira. ATA não dá suporte ao monitoramento de tráfego quando o tráfego é dividido em portas diferentes.
 
-## Supported port mirroring options
+<a id="supported-port-mirroring-options" class="xliff"></a>
 
-|ATA Gateway|Domain Controller|Considerations|
+## Opções de espelhamento de porta com suporte
+
+|Gateway do ATA|Controlador de Domínio|Considerações|
 |---------------|---------------------|------------------|
-|Virtual|Virtual on same host|The virtual switch needs to support port mirroring.<br /><br />Moving one of the virtual machines to another host by itself may break the port mirroring.|
-|Virtual|Virtual on different hosts|Make sure your virtual switch supports this scenario.|
-|Virtual|Physical|Requires a dedicated network adapter otherwise ATA will see all of the traffic coming in and out of the host, even the traffic it sends to the ATA Center.|
-|Physical|Virtual|Make sure your virtual switch supports this scenario - and port mirroring configuration on your physical switches based on the scenario:<br /><br />If the virtual host is on the same physical switch, you will need to configure a switch level span.<br /><br />If the virtual host is on a different switch, you will need to configure RSPAN or ERSPAN&#42;.|
-|Physical|Physical on the same switch|Physical switch must support SPAN/Port Mirroring.|
-|Physical|Physical on a different switch|Requires physical switches to support RSPAN or ERSPAN&#42;.|
-&#42; ERSPAN is only supported when decapsulation is performed before the traffic is analyzed by ATA.
+|Máquina|Virtual no mesmo host|O comutador virtual precisa oferecer suporte ao espelhamento de porta.<br /><br />Mover uma das máquinas virtuais para outro host por si só pode quebrar o espelhamento de porta.|
+|Máquina|Virtuais em hosts diferentes|Verifique se o comutador virtual oferece suporte a esse cenário.|
+|Máquina|Físico|Exige um adaptador de rede dedicado, caso contrário o ATA verá todo o tráfego que chega e sai do host, até mesmo o tráfego que ele envia ao Centro do ATA.|
+|Físico|Máquina|Verifique se o comutador virtual oferece suporte a este cenário, e se a configuração de espelhamento de porta em seus comutadores físicos tem base no cenário:<br /><br />Se o host virtual estiver no mesmo comutador físico, você precisará configurar um span no nível do comutador.<br /><br />Se o host virtual estiver em um comutador diferente, você precisará configurar RSPAN ou ERSPAN &#42;.|
+|Físico|Físico no mesmo comutador|O comutador físico deve oferecer suporte ao Espelhamento de Porta/SPAN.|
+|Físico|Físico em um comutador diferente|Exige que os comutadores físicos ofereçam suporte a RSPAN ou ERSPAN&#42;.|
+&#42; O ERSPAN recebe suporte apenas quando o desencapsulamento é executado antes de o tráfego ser analisado pelo ATA.
 
 > [!NOTE]
-> Make sure that domain controllers and the ATA Gateways to which they connect have time synchronized to within 5 minutes of each other.
+> Verifique se os controladores de domínio e os Gateways do ATA aos quais eles se conectam estão com seus horários sincronizados com uma diferença de cinco minutos.
 
-**If you are working with virtualization clusters:**
+**Se você estiver trabalhando com clusters de virtualização:**
 
--   For each domain controller running on the virtualization cluster in a virtual machine with the ATA Gateway,  configure affinity between the domain controller and the ATA Gateway. This way when the domain controller moves to another host in the cluster the ATA Gateway will follow it. This works well when there are a few domain controllers.
+-   Para cada controlador de domínio em execução no cluster de virtualização em uma máquina virtual com o Gateway do ATA, configure a afinidade entre o controlador de domínio e o Gateway do ATA. Dessa forma, quando o controlador de domínio for para outro host no cluster, o Gateway do ATA o seguirá. Isso funciona bem quando há alguns controladores de domínio.
 > [!NOTE]
-> If your environment supports Virtual to Virtual on different hosts (RSPAN) you do not need to worry about affinity.
+> Caso seu ambiente dê suporte a RSPAN (virtual para virtual em hosts diferentes), você não precisa se preocupar com afinidade.
 > 
--   To make sure the ATA Gateways are properly sized to handle monitoring all of the DCs by themselves, try this option: Install a virtual machine on each virtualization host and install an ATA Gateway on each host. Configure each ATA Gateway to monitor all of the domain controllers  that run on the cluster. This way, any host the domain controllers run on will be monitored.
+-   Para verificar se os Gateways do ATA estão com um tamanho correto que os permita lidar com o monitoramento de todos os controladores de domínio, tente esta opção: instalar uma máquina virtual em cada host de virtualização e instalar um Gateway do ATA em cada host. Configure cada Gateway do ATA para monitorar todos os controladores de domínio executados no cluster. Dessa forma, qualquer host no qual os controladores de domínio executem será monitorado.
 
-After configuring port mirroring, validate that port mirroring is working before installing the ATA Gateway.
+Depois de configurar o espelhamento de porta, verifique se está funcionando antes de instalar o Gateway do ATA.
 
-## See Also
-- [Validate port mirroring](validate-port-mirroring.md)
-- [Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
+<a id="see-also" class="xliff"></a>
+
+## Consulte também
+- [Validação do espelhamento de porta](validate-port-mirroring.md)
+- [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

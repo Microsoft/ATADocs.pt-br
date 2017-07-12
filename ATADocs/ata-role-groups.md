@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 4/30/2017
+ms.date: 6/13/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,23 +13,29 @@ ms.technology:
 ms.assetid: 3715b69e-e631-449b-9aed-144d0f9bcee7
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 6243c03af9e40b8774b2ce7089a47e54569ba45e
-ms.sourcegitcommit: cb2a4df6805d41bf030d3439ef87281fc6acc98f
-translationtype: HT
+ms.openlocfilehash: 1afb8e728fa359721d78833f8220cae3f65bd896
+ms.sourcegitcommit: 470675730967e0c36ebc90fc399baa64e7901f6b
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/30/2017
 ---
-*Aplica-se a: Advanced Threat Analytics versão 1.7*
+*Aplica-se a: Advanced Threat Analytics versão 1.8*
 
 
 
 
-# <a name="ata-role-groups"></a>Grupos de função do ATA
+<a id="ata-role-groups" class="xliff"></a>
+
+# Grupos de função do ATA
 
 Os grupos de função permitem o gerenciamento de acesso para o ATA. Com os grupos de função, você pode separar as tarefas dentro de sua equipe de segurança e conceder apenas a quantidade de acesso que os usuários precisam para realizar seus trabalhos. Este artigo explica o gerenciamento de acesso e a autorização de função do ATA, e ajuda você a colocar em funcionamento os grupos de função no ATA.
 
 > [!NOTE]
 > Qualquer administrador local no ATA Center é automaticamente um Administrador do Microsoft Advanced Threat Analytics.
 
-## <a name="types-of-ata-role-groups"></a>Tipos de Grupos de função do ATA 
+<a id="types-of-ata-role-groups" class="xliff"></a>
+
+## Tipos de Grupos de função do ATA 
 
 O ATA apresenta três tipos de Grupos de função: Administradores do ATA, Usuários do ATA e Visualizadores do ATA. A tabela a seguir descreve o tipo de acesso no ATA disponível por função. Dependendo de qual função você atribuir, várias telas e opções de menu no ATA não estarão disponíveis. Veja a seguir:
 
@@ -51,7 +57,9 @@ O ATA apresenta três tipos de Grupos de função: Administradores do ATA, Usuá
 
 Quando os usuários tentam acessar uma página que não está disponível para seus grupos de função, ele é redirecionado à página não autorizada do ATA. 
 
-## <a name="add--remove-users---ata-role-groups"></a>Adicionar\Remover usuários - Grupos de função do ATA 
+<a id="add--remove-users---ata-role-groups" class="xliff"></a>
+
+## Adicionar\Remover usuários - Grupos de função do ATA 
 
 O ATA usa grupos locais do Windows como base para os grupos de função. Os grupos de função devem ser gerenciados no servidor do ATA Center.
 Para adicionar ou remover usuários, use os **Usuários e Grupos Locais** MMC (Lusrmgr.msc). Em um computador associado ao domínio, você pode adicionar contas de domínio, bem como contas locais. 

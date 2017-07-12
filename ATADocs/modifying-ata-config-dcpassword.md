@@ -1,70 +1,65 @@
 ---
-# required metadata
-
-title: Change Advanced Threat Analytics config - domain connectivity password | Microsoft Docs
-description: Describes how to change the Domain Connectivity Password on the ATA Gateway.
-keywords:
+title: "Alteração da configuração do Advanced Threat Analytics – senha de conectividade do domínio | Microsoft Docs"
+description: "Descreve como alterar a Senha de conectividade do domínio no Gateway do ATA."
+keywords: 
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 1/23/2017
+ms.date: 6/12/2017
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: advanced-threat-analytics
-ms.technology:
+ms.technology: 
 ms.assetid: 4a25561b-a5ed-44aa-9b72-366976b3c72a
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: bennyl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
-
+ms.openlocfilehash: 19eee0466269bbc2255d3a83e2f8c073057ba356
+ms.sourcegitcommit: 470675730967e0c36ebc90fc399baa64e7901f6b
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/30/2017
 ---
-
-*Applies to: Advanced Threat Analytics version 1.7*
-
+*Aplica-se a: Advanced Threat Analytics versão 1.8*
 
 
-# Change ATA configuration - domain connectivity password
 
->[!div class="step-by-step"]
-[« ATA Console URL](modifying-ata-config-consoleurl.md)
+<a id="change-ata-configuration---domain-connectivity-password" class="xliff"></a>
+
+# Alteração da configuração do ATA - senha de conectividade do domínio
 
 
-## Change the domain connectivity password
-If you modify the Domain Connectivity Password, make sure that the password you enter is correct. If it is not, the ATA Gateway service will stop running on the ATA Gateways.
 
-If you suspect that this happened, on the ATA Gateway, look at the Microsoft.Tri.Gateway-Errors.log file for the following:
-`The supplied credential is invalid.`
+<a id="change-the-domain-connectivity-password" class="xliff"></a>
 
-To correct this, follow this procedure to update the Domain Connectivity password on the ATA Center:
+## Alterar a senha de conectividade do domínio
+Se você modificar a senha de conectividade do domínio, certifique-se de que a senha digitada esteja correta. Se não estiver, o serviço do Gateway do ATA deixará de ser executado em Gateways do ATA.
 
-1.  Open the ATA Console on the ATA Center.
+Se você suspeitar que isso aconteceu, no Gateway do ATA, examine o arquivo Microsoft.Tri.Gateway-Errors.log em busca do seguinte: `The supplied credential is invalid.`
 
-2.  Select the settings option on the toolbar and select **Configuration**.
+Para corrigir isso, siga este procedimento e atualize a Senha de conectividade do domínio na Central do ATA:
 
-    ![ATA configuration settings icon](media/ATA-config-icon.JPG)
+1.  Abra o Console do ATA na Central do ATA.
 
-3.  Select **Directory Services**.
+2.  Selecione a opção de configurações na barra de ferramentas e escolha **Configuração**.
 
-    ![ATAA Gateway change password image](media/ATA-GW-change-DC-password.png)
+    ![Ícone Definições de configuração do ATA](media/ATA-config-icon.png)
 
-4.  Under **Password**, change the password.
+3.  Selecione **Serviços de Diretório**.
 
-    If the ATA Center have connectivity to the domain, use the **Test Connection** button to validate the credentials
+    ![Imagem da mudança de senha no Gateway do ATA](media/ATA-GW-change-DC-password.png)
 
-5.  Click **Save**.
+4.  Em **Senha**, altere a senha.
 
-6.  After changing the password, manually check that the ATA Gateway service is running on the ATA Gateway servers.
+    Se a Central do ATA tiver conectividade com o domínio, use o botão **Testar Conexão** para validar as credenciais
 
->[!div class="step-by-step"]
-[« ATA Console URL](modifying-ata-config-consoleurl.md)
+5.  Clique em **Salvar**.
 
-## See Also
-- [Working with the ATA Console](working-with-ata-console.md)
-- [Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
+6.  Depois de alterar a senha, verifique manualmente se o serviço do Gateway do ATA está em execução nos servidores do Gateway do ATA.
+
+
+
+<a id="see-also" class="xliff"></a>
+
+## Consulte também
+- [Trabalhando com o Console do ATA](working-with-ata-console.md)
+- [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
