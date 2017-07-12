@@ -1,70 +1,68 @@
 ---
-# required metadata
-
-title: Install Advanced Threat Analytics - Step 2 | Microsoft Docs
-description: Step two of installing ATA helps you configure the domain connectivity settings on your ATA Center server
-keywords:
+title: "Instalação do Advanced Threat Analytics – Etapa 2 | Microsoft Docs"
+description: "A etapa dois da instalação do ATA ajuda você a definir as configurações de conectividade do domínio em seu servidor do Centro do ATA"
+keywords: 
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 01/23/2017
+ms.date: 07/2/2017
 ms.topic: get-started-article
-ms.prod:
+ms.prod: 
 ms.service: advanced-threat-analytics
-ms.technology:
+ms.technology: 
 ms.assetid: e1c5ff41-d989-46cb-aa38-5a3938f03c0f
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: bennyl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
-
+ms.openlocfilehash: aa5e752fa10644165cb70d2cd8c08a1145261edb
+ms.sourcegitcommit: fa50f37b134d7579d7c310852dff60e5f1996eaa
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 07/03/2017
 ---
-
-*Applies to: Advanced Threat Analytics version 1.7*
-
+*Aplica-se a: Advanced Threat Analytics versão 1.8*
 
 
-# Install ATA - Step 2
+
+<a id="install-ata---step-2" class="xliff"></a>
+
+# Instalação do ATA - Etapa 2
 
 >[!div class="step-by-step"]
-[« Step 1](install-ata-step1.md)
-[Step 3 »](install-ata-step3.md)
+[« Etapa 1](install-ata-step1.md)
+[Etapa 3 »](install-ata-step3.md)
 
-## Step 2. Provide a Username and Password to connect to your Active Directory Forest
+<a id="step-2-provide-a-username-and-password-to-connect-to-your-active-directory-forest" class="xliff"></a>
 
-The first time you open the ATA Console, the following screen appears:
+## Etapa 2. Forneça um Nome de usuário e uma Senha para se conectar à sua Floresta do Active Directory
 
-![ATA welcome stage 1](media/ATA_1.7-welcome-provide-username.png)
+Na primeira vez que você abrir o Console do ATA, a tela a seguir será exibida:
 
-1.  Enter the following information and click **Save**:
+![Estágio 1 das boas-vindas do ATA](media/ATA_1.7-welcome-provide-username.png)
 
-    |Field|Comments|
+1.  Insira as seguintes informações e clique em **Salvar**:
+
+    |Campo|Comentários|
     |---------|------------|
-    |**Username** (required)|Enter the read-only user name, for example: **ATAuser**.|
-    |**Password** (required)|Enter the password for the read-only user, for example: **Pencil1**.|
-    |**Domain** (required)|Enter the domain for the read-only user, for example, **contoso.com**. **Note:** It is important that you enter the complete FQDN of the domain where the user is located. For example, if the user’s account is in domain corp.contoso.com, you need to enter `corp.contoso.com` not contoso.com|
+    |**Nome de usuário** (obrigatório)|Insira o nome de usuário somente leitura, por exemplo: **ATAuser**.|
+    |**Senha** (obrigatório)|Digite a senha para o usuário somente leitura, por exemplo: **Lápis1**.|
+    |**Domínio** (obrigatório)|Digite o domínio para o usuário somente leitura, por exemplo: **contoso.com**. **Observação:** é importante que você insira o FQDN completo do domínio onde o usuário está localizado. Por exemplo, se a conta do usuário estiver no domínio corp.contoso.com, você precisará inserir `corp.contoso.com` e não contoso.com|
 
-2. Optionally, you can click **Test connection** which will test connectivity to the domain and check that the credentials supplied provide access. This will only work if the ATA Center has connectivity to the domain. 	
+2. Você pode clicar em **Testar conexão** para testar a conectividade com o domínio e verificar se as credenciais fornecidas concedem acesso. Isso só funcionará se o Centro do ATA tiver conectividade com o domínio.   
 
-    After it is saved, the welcome message in the Console will change to the following:
-![ATA welcome stage 1 finished](media/ATA_1.7-welcome-provide-username-finished.png)
+    Após a gravação, a mensagem de boas-vindas no Console mudará para o seguinte: ![Estágio 1 das boas-vindas do ATA concluído](media/ATA_1.7-welcome-provide-username-finished.png)
 
-3. In the Console, click **Download Gateway setup and install the first Gateway** to continue.
+3. No Console, clique em **Baixar instalação do Gateway e instalar o primeiro Gateway** para continuar.
 
 
 >[!div class="step-by-step"]
-[« Step 1](install-ata-step1.md)
-[Step 3 »](install-ata-step3.md)
+[« Etapa 1](install-ata-step1.md)
+[Etapa 3 »](install-ata-step3.md)
 
 
-## See Also
+<a id="see-also" class="xliff"></a>
 
-- [Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
-- [Configure event collection](configure-event-collection.md)
-- [ATA prerequisites](ata-prerequisites.md)
+## Consulte Também
+
+- [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
+- [Configurar coleta de eventos](configure-event-collection.md)
+- [Pré-requisitos do ATA](ata-prerequisites.md)

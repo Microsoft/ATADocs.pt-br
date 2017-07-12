@@ -1,80 +1,79 @@
 ---
-# required metadata
-
-title: Disaster recovery for Advanced Threat Analytics | Microsoft Docs
-description: Describes how you can quickly recover ATA functionality after disaster
-keywords:
+title: "Recuperação de desastre para o Advanced Threat Analytics | Microsoft Docs"
+description: "Descreve como você pode recuperar rapidamente a funcionalidade do ATA após desastres"
+keywords: 
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 02/28/2017
+ms.date: 3/7/2017
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: advanced-threat-analytics
-ms.technology:
+ms.technology: 
 ms.assetid: 7620e171-76d5-4e3f-8b03-871678217a3a
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: arzinger
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
-
+ms.openlocfilehash: ce06038a3c3f2e5a6f2a5d57ad814ab8393c0b0c
+ms.sourcegitcommit: 470675730967e0c36ebc90fc399baa64e7901f6b
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/30/2017
 ---
-
-*Applies to: Advanced Threat Analytics version 1.7*
-
+*Aplica-se a: Advanced Threat Analytics versão 1.8*
 
 
-# ATA disaster recovery
-This article describes how to quickly recover your ATA Center and restore ATA functionality when the ATA Center functionality is lost but the ATA Gateways are still working. 
+
+<a id="ata-disaster-recovery" class="xliff"></a>
+
+# Recuperação de desastre de ATA
+Este artigo descreve como recuperar rapidamente seu Centro de ATA e restaurar a funcionalidade do ATA quando a funcionalidade do Centro de ATA for perdida, mas os Gateways de ATA ainda estiverem funcionando. 
 
 >[!NOTE]
-> The process described does not recover previously detected suspicious activities but does return the ATA Center to full functionality. Additionally, the learning period needed for some behavioral detections will restart, but most of the detection that ATA offers is operational after the ATA Center is restored. 
+> O processo descrito não recupera atividades suspeitas detectadas anteriormente, mas retorna o Centro de ATA à funcionalidade completa. Além disso, o período de aprendizado necessário para algumas detecções comportamentais reiniciará, mas a maior parte da detecção que o ATA oferece estará funcionando depois que o Centro de ATA estiver restaurado. 
 
-## Back up your ATA Center configuration
+<a id="back-up-your-ata-center-configuration" class="xliff"></a>
 
-1. The ATA Center configuration is backed up to a file every hour. Locate the latest backup copy of the ATA Center configuration and save it on a separate computer. For a full explanation of how to locate these files, see [Export and import the ATA configuration](ata-configuration-file.md). 
-2. Export the ATA Center certificate.
-    1. In the certificate manager (`certlm.msc`), navigate to **Certificates (Local Computer)** -> **Personal** ->**Certificates**, and select **ATA Center**.
-    2. Right click **ATA Center** and select **All Tasks** followed by **Export**. 
-     ![ATA Center Certificate](media/ata-center-cert.png)
-    3. Follow the instructions to export the certificate, making sure to export the private key as well.
-    4. Back up the exported certificate file on a separate computer.
+## Fazer backup da sua configuração do Centro de ATA
+
+1. A configuração do Centro de ATA é armazenada em backup em um arquivo a cada hora. Localize a última cópia de backup da configuração do Centro de ATA e salve-a em um computador à parte. Para obter uma explicação completa de como localizar esses arquivos, confira [Exportar e importar a configuração de ATA](/advanced-threat-analytics/deploy-use/ata-configuration-file). 
+2. Exportação do certificado do Centro de ATA.
+    1. No gerenciador de certificados, navegue até **Certificados (Computador Local)** -> **Pessoal** ->**Certificados** e selecione **Centro de ATA**.
+    2. Clique com o botão direito em **Centro de ATA** e selecione **Todas as Tarefas** e, em seguida, **Exportar**. 
+     ![Certificado do Centro de ATA](media/ata-center-cert.png)
+    3. Siga as instruções para exportar o certificado, certificando-se de exportar também a chave privada.
+    4. Faça o backup do arquivo de certificado exportado em um computador separado.
 
   > [!NOTE] 
-  > If you cannot export the private key, you must create a new certificate and deploy it to ATA, as described in [Change the ATA Center certificate](modifying-ata-config-centercert.md), and then export it. 
+  > Se você não puder exportar a chave privada, você deve criar um novo certificado e implantá-lo no ATA, conforme descrito em [Alteração do certificado do Centro de ATA](/advanced-threat-analytics/deploy-use/modifying-ata-config-centercert) e, em seguida, exportá-la. 
 
-## Recover your ATA Center
+<a id="recover-your-ata-center" class="xliff"></a>
 
-1. Create a new Windows Server machine using the same IP address and computer name as the previous ATA Center machine.
-4. Import the certificate you backed up, above, to the new server.
-5. Follow the instructions to [Deploy the ATA Center](install-ata-step1.md) on the newly created Windows Server. Make sure to select the same IP address and port as the old center. There is no need to deploy the 
-ATA Gateways again. When prompted for a certificate, provide the certificate you exported when backing up the ATA Center configuration. 
- ![ATA Center restore](media/ata-center-restore.png)
-6. Import the backed up ATA Center configuration:
-    1. Remove the default ATA Center System Profile document from the MongoDB: 
-        1. Go to **C:\Program Files\Microsoft Advanced Threat Analytics\Center\MongoDB\bin**. 
-        2. Run `mongo.exe ATA` 
-        3. Run this command to remove the default system profile: `db.SystemProfile.remove({})`
-    2. Run the command: `mongoimport.exe --db ATA --collection SystemProfile --file "<SystemProfile.json backup file>" --upsert` using the backup file from step 1.</br>
-    For a full explanation of how to locate and import backup files, see [Export and import the ATA configuration](ata-configuration-file.md). 
-    3. After importing, run this command to remove some of the default system profiles (to reset them for the new environment): `db.SystemProfile.remove({$or:[{"_t":"DetectorProfile"}, "_t":"DirectoryServicesSystemProfile"}]}) `
-    4. Open the ATA Console. You should see all the ATA Gateways linked under the Configuration/Gateways tab. 
-    5. Make sure to define a [**Directory services user**](install-ata-step2.md) and to choose a [**Domain controller synchronizer**](install-ata-step5.md). 
+## Recuperar seu Centro de ATA
 
-
+1. Crie uma nova máquina do Windows Server usando o mesmo nome de computador e o endereço IP da máquina anterior do Centro de ATA.
+4. Importe o certificado que você armazenou em backup acima para o novo servidor.
+5. Siga as instruções para [Implantar o Centro de ATA](/advanced-threat-analytics/deploy-use/install-ata-step1) no Windows Server recém-criado. Não é necessário implantar os Gateways do ATA novamente. Quando for solicitado um certificado, forneça o certificado exportado durante o backup da configuração do Centro de ATA. 
+![Restauração do Centro de ATA](media/disaster-recovery-deploymentss.png)
+6. Importe a configuração do Centro de ATA armazenada em backup:
+    1. Remova o documento padrão do Perfil do Sistema do Centro de ATA do MongoDB: 
+        1. Acesse **C:\Arquivos de Programas\Microsoft Advanced Threat Analytics\Center\MongoDB\bin**. 
+        2. Execute `mongo.exe` 
+        3. Execute este comando para remover o perfil do sistema padrão: `db.SystemProfile.remove({})`
+    2. Execute o comando: `mongoimport.exe --db ATA --collection SystemProfile --file "<SystemProfile.json backup file>" --upsert` usando o arquivo de backup da etapa 1.</br>
+    Para obter uma explicação completa de como localizar e importar arquivos de backup, confira [Exportar e importar a configuração de ATA](/advanced-threat-analytics/deploy-use/ata-configuration-file). 
+    3. Abra o Console do ATA. Você deverá ver todos os Gateways do ATA vinculados na guia Configuração/Gateways. 
+    5. Defina um [**Usuário de serviços de diretório**](/advanced-threat-analytics/deploy-use/install-ata-step2) e escolha um [**Sincronizador de controlador de domínio**](/advanced-threat-analytics/deploy-use/install-ata-step5). 
 
 
 
 
-## See Also
-- [ATA prerequisites](ata-prerequisites.md)
-- [ATA capacity planning](ata-capacity-planning.md)
-- [Configure event collection](configure-event-collection.md)
-- [Configuring Windows event forwarding](configure-event-collection.md#configuring-windows-event-forwarding)
-- [Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
+
+
+<a id="see-also" class="xliff"></a>
+
+## Consulte também
+- [Pré-requisitos do ATA](/advanced-threat-analytics/plan-design/ata-prerequisites)
+- [Planejamento da capacidade do ATA](/advanced-threat-analytics/plan-design/ata-capacity-planning)
+- [Configurar coleta de eventos](/advanced-threat-analytics/deploy-use/configure-event-collection)
+- [Configuração do encaminhamento de eventos do Windows](/advanced-threat-analytics/deploy-use/configure-event-collection#configuring-windows-event-forwarding)
+- [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

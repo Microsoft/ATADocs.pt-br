@@ -1,123 +1,120 @@
 ---
-# required metadata
-
-title: Working with suspicious activities in Advanced Threat Analytics | Microsoft Docs
-description: Describes how to review suspicious activities identified by ATA
-keywords:
+title: Como trabalhar com atividades suspeitas no Advanced Threat Analytics | Microsoft Docs
+description: Descreve como examinar atividades suspeitas identificadas pelo ATA
+keywords: 
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 01/23/2017
+ms.date: 06/23/2017
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: advanced-threat-analytics
-ms.technology:
+ms.technology: 
 ms.assetid: 44d7c899-816c-4f7f-91d3-84a09d291a24
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: bennyl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
-
+ms.openlocfilehash: 1ff15a323f461cf8436e1ff7e15738a49bf3973c
+ms.sourcegitcommit: 470675730967e0c36ebc90fc399baa64e7901f6b
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/30/2017
 ---
-
-*Applies to: Advanced Threat Analytics version 1.7*
-
+*Aplica-se a: Advanced Threat Analytics versão 1.8*
 
 
-# Working with Suspicious Activities
-This topic explains the basics of how to work with Advanced Threat Analytics.
 
-## Review suspicious activities on the attack time line
-After logging in to the ATA Console, you are automatically taken to the open **Suspicious Activities Time Line**. Suspicious activities are listed in chronological order with the newest suspicious activities on the top of the time line.
-Each suspicious activity has the following information:
+<a id="working-with-suspicious-activities" class="xliff"></a>
 
--   Entities involved, including users, computers, servers, domain controllers, and resources.
+# Trabalhando com atividades suspeitas
+Este tópico explica as noções básicas de como trabalhar com a Advanced Threat Analytics.
 
--   Times and time frame of the suspicious activities.
+<a id="review-suspicious-activities-on-the-attack-time-line" class="xliff"></a>
 
--   Severity of the suspicious activity, High, Medium, or Low.
+## Examinar atividades suspeitas na linha do tempo de ataque
+Depois de fazer logon no Console do ATA, você será direcionado automaticamente para a **linha do tempo de atividades suspeitas** aberta. As atividades suspeitas são listadas em ordem cronológica com as atividades suspeitas mais recentes na parte superior da linha do tempo.
+Cada atividade suspeita tem as seguintes informações:
 
--   Status: Open, resolved, or dismissed.
+-   Entidades envolvidas, incluindo usuários, computadores, servidores, controladores de domínio e recursos.
 
--   Ability to
+-   Os tempos e o intervalo de tempo das atividades suspeitas.
 
-    -   Share the suspicious activity with other people in your organization via email.
+-   A severidade da atividade suspeita: alta, média ou baixa.
 
-    -   Export the suspicious activity to Excel.
+-   Status: aberto, fechado ou suprimido.
 
-    -   Add a note to the suspicious activity.
+-   Capacidade de
 
-    -   Provide input on the suspicious activity.
+    -   Compartilhar a atividade suspeita com outras pessoas na organização por email.
 
--   Provides recommendations for how to respond to the suspicious activity.
+    -   Exportar a atividade suspeita para o Excel.
+
+    -   Adicionar uma anotação para a atividade suspeita.
+
+    -   Fornecer comentários sobre a atividade suspeita.
+
+-   Fornecer recomendações sobre como responder a atividades suspeitas.
 
 > [!NOTE]
-> -   When you hover your mouse over a user or computer, an entity mini-profile is displayed that provides additional information about the entity and includes the number of suspicious activities that the entity is linked to.
-> -   If you click on an entity, it will take you to the entity profile of the user or computer.
+> -   Quando você passa o mouse sobre um usuário ou computador, é exibido um perfil simplificado da entidade que fornece informações adicionais sobre a entidade e inclui o número de atividades suspeitas vinculado à entidade.
+> -   Se você clicar em uma entidade, ela levará você ao perfil de entidade de usuário ou computador.
 
-![ATA suspicious activities timeline image](media/ATA-Suspicious-Activity-Timeline.JPG)
+![Imagem da linha do tempo das atividades suspeitas do ATA](media/ATA-Suspicious-Activity-Timeline.JPG)
 
-## Filter suspicious activities list
-To filter the suspicious activities list:
+<a id="filter-suspicious-activities-list" class="xliff"></a>
 
-1.  In the **Filter by** pane on the left side of the screen, select one of the following: **All**, **Open**, **Resolved**, or **Dismissed**.
+## Filtrar lista de atividades suspeitas
+Para filtrar a lista de atividades suspeitas:
 
-2.  To further filter the list, select **High**, **Medium** or **Low**.
+1.  No painel **Filtrar por** no lado esquerdo da tela, selecione um dos seguintes: **Todos**, **Abrir**, **Resolvido** ou **Descartado**.
 
-**Suspicious activity severity**
+2.  Para filtrar a lista ainda mais, selecione **Alta**, **Média** ou **Baixa**.
 
--   **Low**
+**Gravidade da atividade suspeita**
 
-    Indicates suspicious activities that can lead to attacks designed for malicious users or software to gain access to organizational data.
+-   **Baixa**
 
--   **Medium**
+    Indica atividades suspeitas que podem levar a ataques projetados para usuários ou softwares mal-intencionados para obter acesso aos dados organizacionais.
 
-    Indicates suspicious activities that can put specific identities at risk for more severe attacks that could result in identity theft or privileged escalation
+-   **Média**
 
--   **High**
+    Indica atividades suspeitas que podem colocar identidades específicas em risco de ataques mais graves que podem resultar em roubo de identidade ou escalonamento privilegiado
 
-    Indicates suspicious activities that can lead to identity theft, privilege escalation or other high-impact attacks
+-   **Alta**
 
-**Suspicious activity status**
+    Indica as atividades suspeitas que podem levar a roubo de identidade, elevação de privilégios ou outros ataques de alto impacto
 
--   **Open**
 
-    All new suspicious activities appear in this list
 
--   **Resolved**
 
-    Is used to track suspicious activities which you identified, researched and fixed for mitigated.
+<a id="remediating-suspicious-activities" class="xliff"></a>
+
+## Corrigindo atividades suspeitas
+Você pode alterar o status de uma atividade suspeita clicando no status atual da atividade suspeita e selecionando uma das seguintes opções **Aberto**, **Suprimido**, **Fechado** ou **Excluído**.
+Para fazer isso, clique nos três pontos no canto superior direito de uma atividade suspeita específica para exibir a lista de ações disponíveis.
+
+![Ações do ATA para atividades suspeitas](./media/sa-actions.png)
+
+**Status de atividade suspeita**
+
+-   **Abrir**: todas as novas atividades suspeitas aparecem nesta lista.
+
+-   **Fechar**: é usado para rastrear atividades suspeitas que você identificou, pesquisou e corrigiu como mitigado.
 
     > [!NOTE]
-    > ATA may reopen a resolved activity if it the same activity is detected again within a short period of time.
+    > O ATA pode reabrir uma atividade resolvida se a mesma atividade for novamente detectada em um curto período de tempo.
 
--   **Dismissed**
+-   **Suprimir**: suprimir uma atividade significa que você deseja ignorá-la por enquanto e apenas ser alertado novamente se houver uma nova instância. Isso significa que, se houver um alerta semelhante o ATA não reabrirá. Mas, se o alerta parar por sete dias e for observado novamente, você será alertado novamente.
 
-    Are activities that you manually dismissed. If ATA detects a similar suspicious activity a new detection will be created.
+- **Excluir**: se você excluir um alerta, ele será excluído do sistema, do banco de dados e você NÃO poderá restaurá-lo. Depois de clicar em Excluir, você poderá excluir todas as atividades suspeitas do mesmo tipo.
 
-## Provide input on a suspicious activity
-To enable ATA to learn about your network with you, some suspicious activities (DNS reconnaissance, Pass the Ticket, SMB Session Enumeration, Abnormal Behavior and Remote Execution) request your input to will enhance the detection of suspicious activities going forward.
+- **Excluir**: a capacidade de excluir uma entidade de gerar mais de um determinado tipo de alertas. Por exemplo, você pode definir o ATA para excluir uma entidade específica (usuário ou computador) de emitir um alerta novamente para um determinado tipo de atividade suspeita, como um administrador específico que executa o código remoto ou um scanner de segurança que o reconhecimento de DNS. Além de ser capaz de adicionar exclusões diretamente na atividade suspeita conforme ela é detectada na linha do tempo, você também pode acessar a página Configuração até **Exclusões** e para cada atividade suspeita, você pode adicionar e remover manualmente entidades ou sub-redes excluídas (por exemplo, para Passagem de Tíquete). 
+> [!NOTE]
+> As páginas de configuração podem ser modificadas apenas por administradores do ATA.
 
-1.  For suspicious activities that enable you to provide input, the input question opens automatically. You will be asked to answer questions about activities on your network and whether or not they should be considered suspicious. In the below example, you are being asked if running scanning tools is allowed from a specific computer.
 
-    ![ATA provide input for suspicious activities image](media/ATA-Input.JPG)
+<a id="see-also" class="xliff"></a>
 
-2.  If you answer no, this activity will be considered suspicious and any time ATA encounters this activity from this computer, you will be alerted.
-
-3.  However, if you answer yes, the suspicious activity may be dismissed and future activities of this type from this computer may not generate a suspicious activity or will generate an activity that is automatically dismissed.
-
-4.  If you do not know, you can click **Cancel**.
-
-## Change the status of a suspicious activity
-You can change the status of a suspicious activity by clicking the current status of the suspicious activity and selecting one of the following **Open**, **Resolved** or **Dismissed**.
-
-## See Also
-- [Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
-- [Working with ATA detection settings](working-with-detection-settings.md)
-- [Modifying ATA configuration](modifying-ata-configuration.md)
+## Consulte Também
+- [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
+- [Trabalhando com as configurações de detecção do ATA](working-with-detection-settings.md)
+- [Modificando a configuração do ATA](modifying-ata-center-configuration.md)

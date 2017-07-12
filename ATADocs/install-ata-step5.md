@@ -1,102 +1,104 @@
 ---
-# required metadata
-
-title: Install Advanced Threat Analytics - Step 5 | Microsoft Docs
-description: Step five of installing ATA helps you configure settings for your ATA Gateway.
-keywords:
+title: "Instalação do Advanced Threat Analytics – Etapa 5 | Microsoft Docs"
+description: "A Etapa cinco da instalação do ATA ajuda você a definir as configurações de seu Gateway do ATA."
+keywords: 
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 01/23/2017
+ms.date: 06/12/2017
 ms.topic: get-started-article
-ms.prod:
+ms.prod: 
 ms.service: advanced-threat-analytics
-ms.technology:
+ms.technology: 
 ms.assetid: 2a5b6652-2aef-464c-ac17-c7e5f12f920f
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: bennyl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
-
+ms.openlocfilehash: 6952a239eb5f11cdfefc9ce201f9a765e61de8e8
+ms.sourcegitcommit: 470675730967e0c36ebc90fc399baa64e7901f6b
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/30/2017
 ---
-
-*Applies to: Advanced Threat Analytics version 1.7*
-
+*Aplica-se a: Advanced Threat Analytics versão 1.8*
 
 
-# Install ATA - Step 5
+
+<a id="install-ata---step-5" class="xliff"></a>
+
+# Instalação do ATA - Etapa 5
 
 >[!div class="step-by-step"]
-[« Step 4](install-ata-step4.md)
-[Step 6 »](install-ata-step6.md)
+[« Etapa 4](install-ata-step4.md)
+[Etapa 6 »](install-ata-step6.md)
 
 
-## Step 5. Configure the ATA Gateway settings
-After the ATA Gateway was installed, perform the following steps to configure the settings for the ATA Gateway.
+<a id="step-5-configure-the-ata-gateway-settings" class="xliff"></a>
 
-1.  In the ATA Console, go to **Configuration** and, under **System**, select **Gateways**.
+## Etapa 5. Definir as configurações do Gateway do ATA
+Após a instalação do Gateway do ATA, execute as etapas a seguir para definir as configurações do Gateway do ATA.
+
+1.  No Console do ATA, acesse **Configuração** e, em **Sistema**, selecione **Gateways**.
    
-     ![Configure gateway settings image](media/ATA-Gateways-config-1.png)
+     ![Imagem de definição das configurações do gateway](media/ata-gw-config-1.png)
 
 
-2.  Select the Gateway you want to configure and then enter the following information:
+2.  Clique no Gateway que você deseja configurar e insira as seguintes informações:
 
-    ![Configure gateway settings image](media/ATA-Gateways-config-2.png)
+    ![Imagem de definição das configurações do gateway](media/ATA-Gateways-config-2.png)
 
-  - **Description**: Enter a description for the ATA Gateway (optional).
-  - **Port Mirrored Domain Controllers (FQDN)** (required for the ATA Gateway, this cannot be changed for the ATA Lightweight Gateway): Enter the complete FQDN of your domain controller and click the plus sign to add it to the list. For example,  **dc01.contoso.com**
+  - **Descrição**: insira uma descrição para o Gateway do ATA (opcional).
+  - **Controladores de Domínio com porta espelhada (FQDN)** (exigidos para o Gateway do ATA, isso não pode ser alterado para o Gateway Lightweight do ATA): insira o FQDN completo de seu controlador de domínio e clique no sinal de adição para adicioná-lo à lista. Por exemplo, **dc01.contoso.com**
 
-      The following information applies to the servers you enter in the **Domain Controllers** list:
-      - All domain controllers whose traffic is being monitored via port mirroring by the ATA Gateway must be listed in the **Domain Controllers** list. If a domain controller is not listed in the **Domain Controllers** list, detection of suspicious activities might not function as expected.
-      - At least one domain controller in the list should be a global catalog. This will enable ATA to resolve computer and user objects in other domains in the forest.
+      As informações a seguir se aplicam aos servidores digitados na lista **Controladores de Domínio**:
+      - Todos os controladores de domínio cujo tráfego esteja sendo monitorado por meio do espelhamento de porta pelo Gateway do ATA devem estar na lista **Controladores de Domínio**. Se um controlador de domínio não estiver listado em **Controladores de Domínio**, a detecção de atividades suspeitas pode não funcionar conforme o esperado.
+      - Pelo menos um controlador de domínio na lista deve ser um catálogo global. Isso permitirá que o ATA resolva os objetos de usuário e computador em outros domínios na floresta.
 
-- **Capture Network adapters** (required):
-  - For an ATA Gateway on a dedicated server, select the network adapters that are configured as the destination mirror port. These will receive the mirrored domain controller traffic.
-  - For an ATA Lightweight Gateway, this should be all the network adapters that are used for communication with other computers in your organization.
-
-
- - **Domain synchronizer candidate**: Any ATA Gateway set to be a domain synchronizer candidate can be responsible for synchronization between ATA and your Active Directory domain. Depending on the size of the domain, the initial synchronization might take some time and is resource intensive. By default, only ATA Gateways are set as Domain synchronizer candidates.
-   It is recommended to disable any remote site ATA Gateways from being Domain synchronizer candidates.
-   If your domain controller is read-only, do not set it as a Domain synchronizer candidate. For more information, see [ATA architecture](ata-architecture.md#ata-lightweight-gateway-features).
-
-> [!NOTE] 
-> It will take a few minutes for the ATA Gateway service to start the first time after installation because it builds the cache of the network capture parsers.
-> The configuration changes will be applied to the ATA Gateway on the next scheduled sync between the ATA Gateway and the ATA Center.
-
-3. Optionally, you can set the [Syslog listener and Windows Event Forwarding Collection](configure-event-collection.md). 
-4. Enable **Update ATA Gateway automatically** so that in upcoming version releases when you update the ATA Center, this ATA Gateway will be automatically updated.
-3. Click **Save**.
+  - **Capturar adaptadores de rede** (obrigatório):
+  - Para um Gateway do ATA em um servidor dedicado, selecione os adaptadores de rede que são configurados como a porta de espelho do destino. Eles receberão o tráfego do controlador de domínio espelhado.
+  - Para um Gateway Lightweight do ATA, trata-se de todos os adaptadores de rede que são usados para comunicação com outros computadores da organização.
 
 
-## Validate installations
-To validate that the ATA Gateway has been successfully deployed, check the following:
+  - **Candidato ao sincronizador de domínio**: qualquer Gateway do ATA definido para ser um candidato ao sincronizador de domínio pode ser responsável pela sincronização entre o ATA e o domínio do Active Directory. Dependendo do tamanho do domínio, a sincronização inicial pode ser demorada e consumir muitos recursos. Por padrão, somente Gateways do ATA são definidos como Candidatos ao sincronizador do domínio.
+   É recomendável impedir os Gateways do ATA do site remoto de serem candidatos ao sincronizador do domínio.
+   Se o controlador de domínio for somente leitura, não o defina como um candidato ao sincronizador do domínio. Para saber mais, confira [Arquitetura do ATA](ata-architecture.md#ata-lightweight-gateway-features).
 
-1.  Check that the service named **Microsoft Advanced Threat Analytics Gateway** is running. After you save the ATA Gateway settings, it might take a few minutes for the service to start.
+  > [!NOTE] 
+  > Levará alguns minutos para que o serviço do Gateway do ATA inicie pela primeira vez após a instalação, pois ele cria o cache dos analisadores de captura de rede.
+  > As alterações de configuração serão aplicadas ao Gateway do ATA na próxima sincronização agendada entre o ele e o Centro do ATA.
 
-2.  If the service does not start, review the “Microsoft.Tri.Gateway-Errors.log” file located in the following default folder, “%programfiles%\Microsoft Advanced Threat Analytics\Gateway\Logs” and Check [ATA Troubleshooting](troubleshooting-ata-known-errors.md) for help.
+3. Se desejar, é possível definir o [Ouvinte do syslog e o Conjunto de Encaminhamento de Eventos do Windows](configure-event-collection.md). 
+4. Habilite **Atualizar Gateway do ATA automaticamente** para que nos lançamentos de versões futuras, quando você atualizar o Centro do ATA, esse Gateway do ATA seja atualizado automaticamente.
 
-3.  If this is the first ATA Gateway installed, after a few minutes, log into the ATA Console and open the notification pane by swiping the right side of the screen open. You should see a list of **Entities Recently Learned** in the notification bar on the right side of the console.
+5. Clique em **Salvar**.
 
-4.  On the desktop, click the **Microsoft Advanced Threat Analytics** shortcut to connect to the ATA Console. Log in with the same user credentials that you used to install the ATA Center.
-5.  In the console, search for something in the search bar, such as a user or a group on your domain.
-6.  Open Performance Monitor. In the Performance tree, click on **Performance Monitor** and then click the plus icon to **Add a Counter**. Expand **Microsoft ATA Gateway** and scroll down to **Network Listener PEF Captured Messages/Sec** and add it. Then, make sure you see activity on the graph.
 
-    ![Add performance counters image](media/ATA-performance-monitoring-add-counters.png)
+<a id="validate-installations" class="xliff"></a>
+
+## Validar instalações
+Para validar a implantação bem-sucedida do Gateway do ATA, verifique o seguinte:
+
+1.  Verifique se o serviço nomeado **Gateway do Microsoft Advanced Threat Analytics** está em execução. Depois de salvar as configurações do Gateway do ATA, talvez demore alguns minutos até que o serviço seja iniciado.
+
+2.  Se o serviço não iniciar, examine o arquivo "Microsoft.Tri.Gateway-Errors.log" localizado na pasta padrão "%programfiles%\Microsoft Advanced Threat Analytics\Gateway\Logs" e confira [Solução de problemas do ATA](troubleshooting-ata-known-errors.md) para obter ajuda.
+
+3.  Se esse for o primeiro Gateway do ATA instalado, após alguns minutos, faça logon no Console do ATA e abra o painel de notificação deslizando para abrir o lado direito da tela. Você deverá ver uma lista de **Entidades Recentemente Aprendidas** na barra de notificação no lado direito do console.
+
+4.  Na área de trabalho, clique no atalho do **Microsoft Advanced Threat Analytics** para se conectar ao Console do ATA. Faça logon com as mesmas credenciais de usuário que você usou para instalar o Centro do ATA.
+5.  No console, procure algo na barra de pesquisa, por exemplo, um usuário ou um grupo em seu domínio.
+6.  Abra o Monitor de Desempenho. Na árvore de Desempenho, clique em **Monitor de Desempenho** e clique no ícone de adição para **Adicionar um Contador**. Expanda **Gateway do Microsoft ATA** e role para baixo até **Mensagens Capturadas PEF do Ouvinte de Rede/s** e adicione-o. Em seguida, verifique se a atividade aparece no gráfico.
+
+    ![Adicionar imagem dos contadores de desempenho](media/ATA-performance-monitoring-add-counters.png)
 
 
 >[!div class="step-by-step"]
-[« Step 4](install-ata-step4.md)
-[Step 6 »](install-ata-step6.md)
+[« Etapa 4](install-ata-step4.md)
+[Etapa 6 »](install-ata-step6.md)
 
-## See Also
+<a id="see-also" class="xliff"></a>
 
-- [Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
-- [Configure event collection](configure-event-collection.md)
-- [ATA prerequisites](ata-prerequisites.md)
+## Consulte também
+
+- [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
+- [Configurar coleta de eventos](configure-event-collection.md)
+- [Pré-requisitos do ATA](ata-prerequisites.md)
 
