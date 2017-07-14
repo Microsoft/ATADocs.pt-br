@@ -13,34 +13,30 @@ ms.technology:
 ms.assetid: d6c783b2-46c5-4211-b21a-d6b17f08d03d
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 7e396cddb818c0e80f8b7d78764a58d6abd560e5
-ms.sourcegitcommit: fa50f37b134d7579d7c310852dff60e5f1996eaa
+ms.openlocfilehash: 59e5cafcff7b84ffb9dc161cd0b50cd3014e455a
+ms.sourcegitcommit: 3177d5894413fbd363b9aca8130f3f7a369223b8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/03/2017
+ms.lasthandoff: 07/10/2017
 ---
 *Aplica-se a: Advanced Threat Analytics versão 1.8*
 
 
+# Trabalhando com eventos e a integridade do sistema ATA
 <a id="working-with-ata-system-health-and-events" class="xliff"></a>
 
-# Trabalhando com eventos e a integridade do sistema ATA
-
-<a id="ata-health-center" class="xliff"></a>
-
 ## Centro de Integridade de ATA
+<a id="ata-health-center" class="xliff"></a>
 A Central de Integridade de ATA permite saber como seu serviço ATA está sendo executado e alerta-o para os problemas.
 
-<a id="working-with-the-ata-health-center" class="xliff"></a>
-
 ## Trabalhando com a Central de Integridade de ATA
+<a id="working-with-the-ata-health-center" class="xliff"></a>
 A Central de Integridade de ATA permite que você saiba se há um problema gerando um alerta (um ponto vermelho) acima do ícone Central de Integridade na barra de menus.
 
 ![Barra de ferramentas do ponto vermelho da Central de Integridade do ATA](media/ATA-Health-Center-Alert-red-dot.png)
 
-<a id="managing-ata-health" class="xliff"></a>
-
 ### Gerenciando a Integridade de ATA
+<a id="managing-ata-health" class="xliff"></a>
 Para verificar a integridade geral do sistema, clique no ícone Central de Integridade na barra de menus ![Ícone Central de Integridade de ATA](media/ATA-red-dot.png)
 
 -   Todos os alertas abertos podem ser gerenciados definindo-os como **Resolvido** ou **Ignorado**. No Alerta, clique em **Abrir** e role para baixo até **Resolvido** ou **Ignorado**.
@@ -56,9 +52,8 @@ Para verificar a integridade geral do sistema, clique no ícone Central de Integ
 
 
 
+## Consulte também
 <a id="see-also" class="xliff"></a>
 
-## Consulte Também
-- [Trabalhando com as configurações de detecção do ATA](working-with-detection-settings.md)
 - [Trabalhando com atividades suspeitas](working-with-suspicious-activities.md)
 - [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
