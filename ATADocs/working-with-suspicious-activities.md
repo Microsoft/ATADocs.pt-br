@@ -13,24 +13,22 @@ ms.technology:
 ms.assetid: 44d7c899-816c-4f7f-91d3-84a09d291a24
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 1ff15a323f461cf8436e1ff7e15738a49bf3973c
-ms.sourcegitcommit: 470675730967e0c36ebc90fc399baa64e7901f6b
+ms.openlocfilehash: d943dc9aae7192f46f079175c2216b5b27e459e2
+ms.sourcegitcommit: 3177d5894413fbd363b9aca8130f3f7a369223b8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 07/10/2017
 ---
 *Aplica-se a: Advanced Threat Analytics versão 1.8*
 
 
 
-<a id="working-with-suspicious-activities" class="xliff"></a>
-
 # Trabalhando com atividades suspeitas
+<a id="working-with-suspicious-activities" class="xliff"></a>
 Este tópico explica as noções básicas de como trabalhar com a Advanced Threat Analytics.
 
-<a id="review-suspicious-activities-on-the-attack-time-line" class="xliff"></a>
-
 ## Examinar atividades suspeitas na linha do tempo de ataque
+<a id="review-suspicious-activities-on-the-attack-time-line" class="xliff"></a>
 Depois de fazer logon no Console do ATA, você será direcionado automaticamente para a **linha do tempo de atividades suspeitas** aberta. As atividades suspeitas são listadas em ordem cronológica com as atividades suspeitas mais recentes na parte superior da linha do tempo.
 Cada atividade suspeita tem as seguintes informações:
 
@@ -60,9 +58,8 @@ Cada atividade suspeita tem as seguintes informações:
 
 ![Imagem da linha do tempo das atividades suspeitas do ATA](media/ATA-Suspicious-Activity-Timeline.JPG)
 
-<a id="filter-suspicious-activities-list" class="xliff"></a>
-
 ## Filtrar lista de atividades suspeitas
+<a id="filter-suspicious-activities-list" class="xliff"></a>
 Para filtrar a lista de atividades suspeitas:
 
 1.  No painel **Filtrar por** no lado esquerdo da tela, selecione um dos seguintes: **Todos**, **Abrir**, **Resolvido** ou **Descartado**.
@@ -86,9 +83,8 @@ Para filtrar a lista de atividades suspeitas:
 
 
 
-<a id="remediating-suspicious-activities" class="xliff"></a>
-
 ## Corrigindo atividades suspeitas
+<a id="remediating-suspicious-activities" class="xliff"></a>
 Você pode alterar o status de uma atividade suspeita clicando no status atual da atividade suspeita e selecionando uma das seguintes opções **Aberto**, **Suprimido**, **Fechado** ou **Excluído**.
 Para fazer isso, clique nos três pontos no canto superior direito de uma atividade suspeita específica para exibir a lista de ações disponíveis.
 
@@ -112,9 +108,7 @@ Para fazer isso, clique nos três pontos no canto superior direito de uma ativid
 > As páginas de configuração podem ser modificadas apenas por administradores do ATA.
 
 
-<a id="see-also" class="xliff"></a>
-
 ## Consulte Também
+<a id="see-also" class="xliff"></a>
 - [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
-- [Trabalhando com as configurações de detecção do ATA](working-with-detection-settings.md)
 - [Modificando a configuração do ATA](modifying-ata-center-configuration.md)
