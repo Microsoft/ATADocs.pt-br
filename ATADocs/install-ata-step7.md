@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 07/2/2017
+ms.date: 07/9/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,26 +13,24 @@ ms.technology:
 ms.assetid: 8980e724-06a6-40b0-8477-27d4cc29fd2b
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: d261273adfa23392a9c0b8408483aa02708f1eee
-ms.sourcegitcommit: fa50f37b134d7579d7c310852dff60e5f1996eaa
+ms.openlocfilehash: 2b969089d8c4c2d861591342f7367e8cc5430b24
+ms.sourcegitcommit: 3177d5894413fbd363b9aca8130f3f7a369223b8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/03/2017
+ms.lasthandoff: 07/10/2017
 ---
 *Aplica-se a: Advanced Threat Analytics versão 1.8*
 
 
 
-<a id="install-ata---step-7" class="xliff"></a>
-
 # Instalação do ATA – Etapa 7
+<a id="install-ata---step-7" class="xliff"></a>
 
 >[!div class="step-by-step"]
 [« Etapa 6](install-ata-step6.md)
 
-<a id="step-7-configure-ip-address-exclusions-and-honeytoken-user" class="xliff"></a>
-
 ## Etapa 7. Configurar as exclusões de endereço IP e o usuário Honeytoken
+<a id="step-7-configure-ip-address-exclusions-and-honeytoken-user" class="xliff"></a>
 O ATA permite a exclusão de endereços IP ou de usuários específicos de várias detecções. 
 
 Por exemplo, uma **exclusão por Reconhecimento de DNS** poderia ser um verificador de segurança que usa o DNS como um mecanismo de verificação. A exclusão ajuda o ATA a ignorar esses verificadores. Um exemplo de uma exclusão por *Passagem de tíquete* é um dispositivo NAT.    
@@ -51,7 +49,7 @@ Para configurar os itens acima, execute estas etapas:
 
    ![Honeytoken](media/honeytoken.png)
 
-3. Clique em **Exclusões**. Para cada tipo de ameaça, insira uma conta de usuário ou endereço IP a ser excluído da detecção dessas ameaças e clique no sinal de *adição*. O campo de adicionar entidade (usuário ou computador) é pesquisável e será preenchido automaticamente com entidades na sua rede.
+3. Clique em **Exclusões**. Para cada tipo de ameaça, insira uma conta de usuário ou endereço IP a ser excluído da detecção dessas ameaças e clique no sinal de *adição*. O campo **Adicionar entidade** (usuário ou computador) é pesquisável e será preenchido automaticamente com entidades na sua rede. Para obter mais informações, consulte [Excluindo entidades de detecções](excluding-entities-from-detections.md)
 
    ![Exclusões](media/exclusions.png)
 
@@ -75,9 +73,8 @@ Para verificar se ATA está funcionando e detectar violações em sua rede, é p
 [« Etapa 6](install-ata-step6.md)
 
 
-<a id="see-also" class="xliff"></a>
-
 ## Consulte também
+<a id="see-also" class="xliff"></a>
 
 - [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Configurar coleta de eventos](configure-event-collection.md)
