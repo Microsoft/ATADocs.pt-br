@@ -23,8 +23,7 @@ ms.lasthandoff: 07/11/2017
 
 
 
-# Excluindo entidades de detecções
-<a id="excluding-entities-from-detections" class="xliff"></a>
+# <a name="excluding-entities-from-detections"></a>Excluindo entidades de detecções
 Este tópico explica como excluir entidades de disparar alertas para minimizar verdadeiros positivos benignos mas ao mesmo tempo, capturar os verdadeiros positivos. Para impedir que o ATA seja desnecessariamente ruidoso sobre as atividades que, de usuários específicos, podem ser parte de seu ritmo normal de negócios, você pode silenciar ou excluir entidades específicas da geração de alertas.
 
 Por exemplo, se você tiver um verificador de segurança que realiza reconhecimento DNS ou um administrador que executa scripts remotamente no controlador de domínio, essas serão atividades sancionadas cujo objetivo é parte das operações de TI normais em sua organização.
@@ -58,7 +57,6 @@ Quando você tiver a possibilidade de exclusão de um endereço IP ou de um comp
 > As páginas de configuração podem ser modificadas apenas por administradores do ATA.
 
 
-## Consulte Também
-<a id="see-also" class="xliff"></a>
+## <a name="see-also"></a>Consulte Também
 - [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Modificando a configuração do ATA](modifying-ata-center-configuration.md)

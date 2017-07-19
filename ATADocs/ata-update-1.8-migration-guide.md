@@ -19,8 +19,7 @@ ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 07/10/2017
 ---
-# Atualizando o ATA para a versão 1.8
-<a id="updating-ata-to-version-18" class="xliff"></a>
+# <a name="updating-ata-to-version-18"></a>Atualizando o ATA para a versão 1.8
 
 > [!NOTE] 
 > Se o ATA não estiver instalado em seu ambiente, baixe a versão completa do ATA que inclui a versão 1.8 e siga o procedimento de instalação padrão descrito em [Instalar o ATA](install-ata-step1.md).
@@ -42,8 +41,7 @@ Na versão de migração, o arquivo pode ser usado apenas para a atualização d
     > [!IMPORTANT]
     > Atualize todos os Gateways do ATA para ter certeza de o ATA funciona corretamente.
 
-### Etapa 1: Atualizar o Centro do ATA
-<a id="step-1-update-the-ata-center" class="xliff"></a>
+### <a name="step-1-update-the-ata-center"></a>Etapa 1: Atualizar o Centro do ATA
 
 1.  Faça backup do seu banco de dados: (opcional)
 
@@ -84,7 +82,6 @@ Na versão de migração, o arquivo pode ser usado apenas para a atualização d
 > Para instalar novos Gateways do ATA, acesse a tela **Gateways** e clique em **Baixar a instalação do Gateway** para obter o pacote de instalação do Gateway do ATA 1.8 e siga as instruções para uma nova instalação do Gateway, conforme descrito na [Etapa 4. Instalar o Gateway do ATA](install-ata-step4.md).
 
 
-## Consulte também
-<a id="see-also" class="xliff"></a>
+## <a name="see-also"></a>Consulte também
 
 - [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

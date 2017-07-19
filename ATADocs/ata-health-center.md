@@ -22,21 +22,17 @@ ms.lasthandoff: 07/10/2017
 *Aplica-se a: Advanced Threat Analytics versão 1.8*
 
 
-# Trabalhando com eventos e a integridade do sistema ATA
-<a id="working-with-ata-system-health-and-events" class="xliff"></a>
+# <a name="working-with-ata-system-health-and-events"></a>Trabalhando com eventos e a integridade do sistema ATA
 
-## Centro de Integridade de ATA
-<a id="ata-health-center" class="xliff"></a>
+## <a name="ata-health-center"></a>Centro de Integridade de ATA
 A Central de Integridade de ATA permite saber como seu serviço ATA está sendo executado e alerta-o para os problemas.
 
-## Trabalhando com a Central de Integridade de ATA
-<a id="working-with-the-ata-health-center" class="xliff"></a>
+## <a name="working-with-the-ata-health-center"></a>Trabalhando com a Central de Integridade de ATA
 A Central de Integridade de ATA permite que você saiba se há um problema gerando um alerta (um ponto vermelho) acima do ícone Central de Integridade na barra de menus.
 
 ![Barra de ferramentas do ponto vermelho da Central de Integridade do ATA](media/ATA-Health-Center-Alert-red-dot.png)
 
-### Gerenciando a Integridade de ATA
-<a id="managing-ata-health" class="xliff"></a>
+### <a name="managing-ata-health"></a>Gerenciando a Integridade de ATA
 Para verificar a integridade geral do sistema, clique no ícone Central de Integridade na barra de menus ![Ícone Central de Integridade de ATA](media/ATA-red-dot.png)
 
 -   Todos os alertas abertos podem ser gerenciados definindo-os como **Resolvido** ou **Ignorado**. No Alerta, clique em **Abrir** e role para baixo até **Resolvido** ou **Ignorado**.
@@ -52,8 +48,7 @@ Para verificar a integridade geral do sistema, clique no ícone Central de Integ
 
 
 
-## Consulte também
-<a id="see-also" class="xliff"></a>
+## <a name="see-also"></a>Consulte também
 
 - [Trabalhando com atividades suspeitas](working-with-suspicious-activities.md)
 - [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
