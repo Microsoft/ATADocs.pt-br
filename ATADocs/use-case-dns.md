@@ -21,13 +21,11 @@ ms.lasthandoff: 07/11/2017
 ---
 *Aplica-se a: Advanced Threat Analytics versão 1.8*
 
-# Investigando o reconhecimento usando DNS
-<a id="investigating-reconnaissance-using-dns" class="xliff"></a>
+# <a name="investigating-reconnaissance-using-dns"></a>Investigando o reconhecimento usando DNS
 
 Se o ATA detectar o **Reconhecimento usando DNS** na sua rede e alertá-lo sobre isso, use esse artigo para ajudá-lo a investigar o alerta e entender como corrigir o problema.
 
-## O que é o reconhecimento usando DNS?
-<a id="what-is-reconnaissance-using-dns" class="xliff"></a>
+## <a name="what-is-reconnaissance-using-dns"></a>O que é o reconhecimento usando DNS?
 
 O alerta de **Reconhecimento usando DNS** indica que consultas DNS (Sistema de Nomes de Domínio) suspeitas estão sendo feitas de um host incomum para executar o reconhecimento na rede interna.
 
@@ -35,13 +33,11 @@ O DNS (Sistema de Nomes de Domínio) é um serviço implementado como um banco d
 Para um adversário, o DNS contém informações importantes para o mapeamento de uma rede interna, incluindo uma lista de todos os servidores e geralmente todos os clientes mapeados para seus endereços IP. Além disso, essa informação é valiosa porque ela lista os nomes de host que geralmente são descritivos em um determinado ambiente de rede. Ao recuperar essas informações, um adversário pode priorizar melhor seus esforços nas entidades relevantes durante uma campanha. Ferramentas como [Nmap](https://nmap.org/), [Fierce](https://github.com/mschwager/fierce) e ferramentas internas como [Nslookup](https://technet.microsoft.com/library/cc725991(v=ws.11).aspx) fornecem recursos para a descoberta de host usando o reconhecimento de DNS.
 A detecção de reconhecimento usando consultas DNS de um host interno é causa de preocupação e um indicativo da possibilidade de um comprometimento de host existente, um comprometimento de rede mais amplo ou a possibilidade de uma ameaça interna.
 
-## Tipos de consulta DNS
-<a id="dns-query-types" class="xliff"></a>
+## <a name="dns-query-types"></a>Tipos de consulta DNS
 
 Há vários tipos de consulta no protocolo DNS. O ATA detecta as solicitações AXFR (transferência) e cria um alerta quando elas são vistas. Esse tipo de consulta deve vir apenas de servidores DNS.
 
-## Descoberta do ataque
-<a id="discovering-the-attack" class="xliff"></a>
+## <a name="discovering-the-attack"></a>Descoberta do ataque
 
 Quando um invasor tenta realizar o reconhecimento usando DNS, o ATA o detecta e o marca com a severidade média.
 
@@ -49,8 +45,7 @@ Quando um invasor tenta realizar o reconhecimento usando DNS, o ATA o detecta e 
  
 O ATA exibe o nome do computador de origem, bem como os detalhes adicionais sobre a consulta DNS real que foi executada. Por exemplo, pode haver várias tentativas feitas do mesmo host.
 
-## Investigação
-<a id="investigating" class="xliff"></a>
+## <a name="investigating"></a>Investigação
 
 Para investigar o reconhecimento usando DNS, primeiro você precisa determinar a causa das consultas. Elas podem ser identificadas em uma das categorias a seguir: 
 -   Verdadeiros positivos – há um invasor ou malware mal-intencionado na rede. Isso pode ser um invasor que violou o perímetro da rede ou uma ameaça interna.
@@ -75,8 +70,7 @@ O gráfico a seguir ajuda a determinar quais etapas de investigação você deve
     2.  Conduza a análise baseada em host. 
     3.  Se a atividade não for de um usuário suspeito, deverá ser realizada a análise forense no computador para determinar se ele foi comprometido com malware.
 
-## Investigação de postagem
-<a id="post-investigation" class="xliff"></a>
+## <a name="post-investigation"></a>Investigação de postagem
 
 O malware usado para comprometer o host pode incluir cavalos de troia com recursos de backdoor. Em casos em que a movimentação lateral bem-sucedida foi identificada do host comprometido, as ações de correção devem se estender a esses hosts, incluindo alterar senhas e credenciais usadas no host e em qualquer host incluído na movimentação lateral. 
 
@@ -84,14 +78,12 @@ Em casos em que o host vítima não pode ser confirmado como limpo após as etap
 
 A Microsoft recomenda consultar uma equipe profissional de Resposta a Incidentes e Recuperação, que pode ser contatada por meio da Equipe de contas da Microsoft, para ajudar a detectar se um invasor implantou métodos de persistência em sua rede.
 
-## Atenuação
-<a id="mitigation" class="xliff"></a>
+## <a name="mitigation"></a>Atenuação
 
 A proteção de um servidor DNS interno para impedir que o reconhecimento usando DNS ocorra pode ser obtida desabilitando ou restringindo as transferências de zona apenas para endereços IP específicos. Para obter informações adicionais sobre como restringir transferências de zona, consulte o artigo do Technet do Windows Server, [Restrict Zone Transfers](https://technet.microsoft.com/library/ee649273(v=ws.10).aspx) (Restringir transferências de zona). As transferências de zona podem ser bloqueadas [protegendo as transferências de zona com IPsec](https://technet.microsoft.com/library/ee649192(v=ws.10).aspx). A modificação de transferências de zona é uma tarefa entre uma lista de verificação deve ser resolvida para [proteger seus servidores DNS contra ataques internos e externos](https://technet.microsoft.com/library/cc770432(v=ws.11).aspx).
 
 
 
-## Consulte também
-<a id="see-also" class="xliff"></a>
+## <a name="see-also"></a>Consulte também
 - [Trabalhando com atividades suspeitas](working-with-suspicious-activities.md)
 - [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
