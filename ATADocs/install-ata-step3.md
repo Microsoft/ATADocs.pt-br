@@ -23,17 +23,13 @@ ms.lasthandoff: 06/30/2017
 
 
 
-<a id="install-ata---step-3" class="xliff"></a>
-
-# Instalação do ATA - Etapa 3
+# <a name="install-ata---step-3"></a>Instalação do ATA - Etapa 3
 
 >[!div class="step-by-step"]
 [« Etapa 2](install-ata-step2.md)
 [Etapa 4 »](install-ata-step4.md)
 
-<a id="step-3-download-the-ata-gateway-setup-package" class="xliff"></a>
-
-## Etapa 3. Baixe o pacote de instalação do Gateway do ATA
+## <a name="step-3-download-the-ata-gateway-setup-package"></a>Etapa 3. Baixe o pacote de instalação do Gateway do ATA
 Após definir as configurações de conectividade do domínio, você poderá baixar o pacote de instalação do Gateway do ATA. O Gateway do ATA do pode ser instalado em um servidor dedicado ou em um controlador de domínio. Se você instalá-lo em um controlador de domínio, ele será instalado como um Gateway Lightweight do ATA. Para obter mais informações sobre o Gateway Lightweight do ATA, confira [Arquitetura do ATA](ata-architecture.md). 
 
 Clique em Baixar instalação do Gateway na lista de etapas na parte superior da página para ir para a página Gateways:
@@ -59,9 +55,7 @@ O arquivo zip inclui o seguinte:
 [« Etapa 2](install-ata-step2.md)
 [Etapa 4 »](install-ata-step4.md)
 
-<a id="see-also" class="xliff"></a>
-
-## Consulte também
+## <a name="see-also"></a>Consulte também
 
 - [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Configurar coleta de eventos](configure-event-collection.md)

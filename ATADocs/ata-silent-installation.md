@@ -23,13 +23,9 @@ ms.lasthandoff: 06/30/2017
 
 
 
-<a id="ata-silent-installation" class="xliff"></a>
-
-# Instalação silenciosa do ATA
+# <a name="ata-silent-installation"></a>Instalação silenciosa do ATA
 Este artigo fornece instruções de como instalar silenciosamente o ATA.
-<a id="prerequisites" class="xliff"></a>
-
-## Pré-requisitos
+## <a name="prerequisites"></a>Pré-requisitos
 
 O ATA versão 1.8 requer a instalação do Microsoft .NET Framework 4.6.1. 
 
@@ -42,9 +38,7 @@ Ao usar o método de instalação silenciosa do ATA, o instalador é configurado
 Para acompanhar o andamento da implantação, monitore os logs do instalador do ATA localizados em **%AppData%\Local\Temp**.
 
 
-<a id="install-the-ata-center" class="xliff"></a>
-
-## Instalar a Central de ATA
+## <a name="install-the-ata-center"></a>Instalar a Central de ATA
 
 Use o seguinte comando para instalar o Centro do ATA:
 
@@ -84,9 +78,7 @@ Para instalar o Centro do ATA com caminhos de instalação padrão, dois endere�
     "Microsoft ATA Center Setup.exe" /quiet --LicenseAccepted NetFrameworkCommandLineArguments ="/q" CenterIpAddress=192.168.0.10 CenterPort=443 CenterCertificateThumbprint= ‎"1E2079739F624148ABDF502BF9C799FCB8C7212F"
     ConsoleIpAddress=192.168.0.11  ConsoleCertificateThumbprint="G9530253C976BFA9342FD1A716C0EC94207BFD5A"
 
-<a id="update-the-ata-center" class="xliff"></a>
-
-## Atualize o Centro do ATA
+## <a name="update-the-ata-center"></a>Atualize o Centro do ATA
 
 Use o seguinte comando para atualizar o Centro do ATA:
 
@@ -110,9 +102,7 @@ Na atualização do ATA, o instalador detecta automaticamente que o ATA já est�
 
         "Microsoft ATA Center Setup.exe" /quiet NetFrameworkCommandLineArguments="/q"
 
-<a id="uninstall-the-ata-center-silently" class="xliff"></a>
-
-## Desinstalar o Centro do ATA silenciosamente
+## <a name="uninstall-the-ata-center-silently"></a>Desinstalar o Centro do ATA silenciosamente
 
 Use o seguinte comando para realizar uma desinstalação silenciosa da Central do ATA: **Sintaxe**:
 
@@ -138,9 +128,7 @@ Use o seguinte comando para realizar uma desinstalação silenciosa da Central d
 
     "Microsoft ATA Center Setup.exe" /quiet /uninstall --DeleteExistingDatabaseData
 
-<a id="ata-gateway-silent-installation" class="xliff"></a>
-
-## Instalação silenciosa do Gateway do ATA
+## <a name="ata-gateway-silent-installation"></a>Instalação silenciosa do Gateway do ATA
 Use o seguinte comando para instalar silenciosamente o Gateway do ATA:
 
 **Sintaxe**:
@@ -175,9 +163,7 @@ Use o seguinte comando para instalar silenciosamente o Gateway do ATA:
     ConsoleAccountName="user@contoso.com" ConsoleAccountPassword="userpwd"
     
 
-<a id="update-the-ata-gateway" class="xliff"></a>
-
-## Atualizar o Gateway do ATA
+## <a name="update-the-ata-gateway"></a>Atualizar o Gateway do ATA
 
 Use o seguinte comando para atualizar silenciosamente o Gateway do ATA:
 
@@ -199,9 +185,7 @@ Use o seguinte comando para atualizar silenciosamente o Gateway do ATA:
 
         Microsoft ATA Gateway Setup.exe /quiet NetFrameworkCommandLineArguments="/q"
 
-<a id="uninstall-the-ata-gateway-silently" class="xliff"></a>
-
-## Desinstalar o Gateway do ATA silenciosamente
+## <a name="uninstall-the-ata-gateway-silently"></a>Desinstalar o Gateway do ATA silenciosamente
 
 Use o seguinte comando para realizar uma desinstalação silenciosa do Gateway do ATA: **Sintaxe**:
 
@@ -229,9 +213,7 @@ Use o seguinte comando para realizar uma desinstalação silenciosa do Gateway d
 
 
 
-<a id="see-also" class="xliff"></a>
-
-## Consulte também
+## <a name="see-also"></a>Consulte também
 
 - [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Configurar coleta de eventos](configure-event-collection.md)

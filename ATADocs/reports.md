@@ -22,9 +22,7 @@ ms.lasthandoff: 06/30/2017
 *Aplica-se a: Advanced Threat Analytics versão 1.8*
 
 
-<a id="ata-reports" class="xliff"></a>
-
-# Relatórios do ATA
+# <a name="ata-reports"></a>Relatórios do ATA
 
 A seção de relatórios do ATA no console permite gerar relatórios que fornecem informações do status do sistema, a integridade do sistema e um relatório de atividades suspeitas detectadas em seu ambiente.
 
@@ -56,9 +54,7 @@ Para definir um relatório agendado:
 > Os relatórios agendados são entregues por email e podem ser enviados apenas se você já tiver configurado um servidor de email em **Configuração** e, em seguida, em Notifications e Reports (Notificações e Relatórios), selecione **Servidor de email**.
 
 
-<a id="see-also" class="xliff"></a>
-
-## Consulte Também
+## <a name="see-also"></a>Consulte Também
 - [Pré-requisitos do ATA](ata-prerequisites.md)
 - [Planejamento da capacidade do ATA](ata-capacity-planning.md)
 - [Configurar coleta de eventos](configure-event-collection.md)

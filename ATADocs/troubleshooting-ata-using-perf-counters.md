@@ -23,9 +23,7 @@ ms.lasthandoff: 06/30/2017
 
 
 
-<a id="troubleshooting-ata-using-the-performance-counters" class="xliff"></a>
-
-# Solução de problemas do ATA usando contadores de desempenho
+# <a name="troubleshooting-ata-using-the-performance-counters"></a>Solução de problemas do ATA usando contadores de desempenho
 Os contadores de desempenho do ATA fornecem informações sobre como está o desempenho de cada componente do ATA. Os componentes no ATA processam dados sequencialmente, para que quando houver um problema, ele possa causar um descarte de tráfego parcial em algum ponto da cadeia de componentes. Para corrigir o problema, você precisa descobrir qual componente está dando problema e corrigi-lo no início da cadeia. Use os dados encontrados nos contadores de desempenho para entender o funcionamento de cada componente.
 Consulte a [arquitetura do ATA](ata-architecture.md) para entender o fluxo de componentes internos do ATA.
 
@@ -38,9 +36,7 @@ Consulte a [arquitetura do ATA](ata-architecture.md) para entender o fluxo de co
 3.  Isso acontece ao longo de todo o caminho até o componente NetworkListener, que descartará o tráfego quando ele não puder mais encaminhar entidades.
 
 
-<a id="retrieving-performance-monitor-files-for-troubleshooting" class="xliff"></a>
-
-## Recuperando arquivos do monitor de desempenho para solução de problemas
+## <a name="retrieving-performance-monitor-files-for-troubleshooting"></a>Recuperando arquivos do monitor de desempenho para solução de problemas
 
 Para recuperar os arquivos do monitor de desempenho (BLG) de vários componentes do ATA:
 1.  Abra o perfmon.
@@ -50,9 +46,7 @@ Para recuperar os arquivos do monitor de desempenho (BLG) de vários componentes
 5.  Reinicie o conjunto de coletores de dados nomeado: "Microsoft ATA Gateway" ou "Microsoft ATA Center".
 
 
-<a id="ata-gateway-performance-counters" class="xliff"></a>
-
-## Contadores de desempenho do Gateway de ATA
+## <a name="ata-gateway-performance-counters"></a>Contadores de desempenho do Gateway de ATA
 
 Nesta seção, todas as referências ao Gateway do ATA referem-se também ao Gateway Lightweight do ATA.
 
@@ -75,9 +69,7 @@ Aqui está a lista dos principais contadores do Gateway de ATA a ter em atençã
 > -   Os contadores de tempo estão em milissegundos.
 > -   Às vezes, é mais conveniente monitorar a lista completa de contadores usando o tipo de gráfico "Relatório" (exemplo: monitoramento em tempo real de todos os contadores)
 
-<a id="ata-lightweight-gateway-performance-counters" class="xliff"></a>
-
-## Contadores de desempenho do Gateway Lightweight do ATA
+## <a name="ata-lightweight-gateway-performance-counters"></a>Contadores de desempenho do Gateway Lightweight do ATA
 Os contadores de desempenho podem ser usados para gerenciamento de cotas no Gateway Lightweight, a fim de certificar-se de que o ATA não use muitos recursos de muitos dos controladores de domínio no qual ele está instalado.
 Para medir as limitações de recursos que o ATA impõe sobre o Gateway Lightweight, adicione os contadores a seguir.
 
@@ -102,9 +94,7 @@ Para ver seu consumo real, consulte os seguintes contadores:
 |Process(Microsoft.Tri.Gateway)Bytes Privados|A quantidade de memória confirmada (em bytes) que o processo do Gateway Lightweight está consumindo.|Sem limite. | Compare os resultados desse contador com o limite encontrado em Tamanho Máximo de Memória de Confirmação do GatewayUpdaterResourceManager. Se você perceber que o processo atinge frequentemente o limite máximo durante um período (o processo atinge o limite e, em seguida, começa a descartar tráfego), significa que você precisa dedicar mais recursos ao Gateway Lightweight.| 
 |Process(Microsoft.Tri.Gateway)\Conjunto de Trabalho|A quantidade de memória física (em bytes) que o processo do Gateway Lightweight está consumindo.|Sem limite. |Compare os resultados desse contador com o limite encontrado em GatewayUpdaterResourceManager Working Set Limit Size. Se você perceber que o processo atinge frequentemente o limite máximo durante um período (o processo atinge o limite e, em seguida, começa a descartar tráfego), significa que você precisa dedicar mais recursos ao Gateway Lightweight.|
 
-<a id="ata-center-performance-counters" class="xliff"></a>
-
-## Contadores de desempenho do Centro de ATA
+## <a name="ata-center-performance-counters"></a>Contadores de desempenho do Centro de ATA
 Você pode observar o status de desempenho em tempo real da Central do ATA adicionando os contadores de desempenho da Central do ATA.
 
 Isso é feito abrindo o "Monitor de desempenho" e adicionando todos os contadores ao Centro de ATA. O nome do objeto do contador de desempenho é: "Microsoft ATA Center".
@@ -123,9 +113,7 @@ Aqui está a lista dos principais contadores do Centro de ATA a ter em atenção
 > -   Os contadores de tempo estão em milissegundos
 > -   Às vezes, é mais conveniente monitorar a lista completa de contadores usando o tipo de gráfico de Relatório (exemplo: monitoramento em tempo real de todos os contadores).
 
-<a id="operating-system-counters" class="xliff"></a>
-
-## Contadores do sistema operacional
+## <a name="operating-system-counters"></a>Contadores do sistema operacional
 Abaixo temos a lista dos principais contadores do sistema operacional a ter em atenção:
 
 |Contador|Descrição|Limite|Solução de problemas|
@@ -141,9 +129,7 @@ Abaixo temos a lista dos principais contadores do sistema operacional a ter em a
 |\LogicalDisk&#42;\Gravações em Disco\s|A taxa de execução de operações de gravação no disco.|Sem limite|Os contadores de utilização de disco (pode adicionar informações ao solucionar problemas de latência de armazenamento)|
 |\LogicalDisk(&#42;)\Bytes de Gravação em Disco\s|O número de bytes por segundo que estão sendo gravados no disco.|Sem limite|Os contadores de utilização de disco podem adicionar informações ao solucionar problemas de latência de armazenamento.|
 
-<a id="see-also" class="xliff"></a>
-
-## Consulte também
+## <a name="see-also"></a>Consulte também
 - [Pré-requisitos do ATA](ata-prerequisites.md)
 - [Planejamento da capacidade do ATA](ata-capacity-planning.md)
 - [Configurar coleta de eventos](configure-event-collection.md)

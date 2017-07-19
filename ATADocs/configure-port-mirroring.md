@@ -23,9 +23,7 @@ ms.lasthandoff: 06/30/2017
 
 
 
-<a id="configure-port-mirroring" class="xliff"></a>
-
-# Configurar o espelhamento de porta
+# <a name="configure-port-mirroring"></a>Configurar o espelhamento de porta
 > [!NOTE] 
 > Este artigo somente é relevante se você implanta Gateways do ATA em vez de Gateways Lightweight do ATA. Para determinar se você precisa usar Gateways do ATA, confira [Choosing the right gateways for your deployment](ata-capacity-planning.md#choosing-the-right-gateway-type-for-your-deployment) (Escolhendo os gateways certos para sua implantação).
  
@@ -46,9 +44,7 @@ Seus controladores de domínio e Gateways do ATA podem ser físicos ou virtuais.
 > Se o controlador de domínio que está passando por espelhamento de porta estiver conectado por um link de WAN, verifique se o link de WAN pode lidar com a carga adicional do tráfego do ERSPAN.
 > A ATA dá suporte ao monitoramento de tráfego somente quando o tráfego alcança a NIC e o controlador de domínio da mesma maneira. ATA não dá suporte ao monitoramento de tráfego quando o tráfego é dividido em portas diferentes.
 
-<a id="supported-port-mirroring-options" class="xliff"></a>
-
-## Opções de espelhamento de porta com suporte
+## <a name="supported-port-mirroring-options"></a>Opções de espelhamento de porta com suporte
 
 |Gateway do ATA|Controlador de Domínio|Considerações|
 |---------------|---------------------|------------------|
@@ -73,8 +69,6 @@ Seus controladores de domínio e Gateways do ATA podem ser físicos ou virtuais.
 
 Depois de configurar o espelhamento de porta, verifique se está funcionando antes de instalar o Gateway do ATA.
 
-<a id="see-also" class="xliff"></a>
-
-## Consulte também
+## <a name="see-also"></a>Consulte também
 - [Validação do espelhamento de porta](validate-port-mirroring.md)
 - [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

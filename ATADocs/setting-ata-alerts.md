@@ -23,9 +23,7 @@ ms.lasthandoff: 06/30/2017
 
 
 
-<a id="set-ata-notifications" class="xliff"></a>
-
-# Definir notificações do ATA
+# <a name="set-ata-notifications"></a>Definir notificações do ATA
 O ATA pode notificar você quando detectar uma atividade suspeita, por email ou usando o encaminhamento de eventos do ATA, e encaminhar o evento para o servidor syslog/SIEM. Antes de selecionar quais notificações quer receber, você precisará [configurar o servidor de email e o servidor Syslog](setting-syslog-email-server-settings.md).
 
 > [!NOTE]
@@ -52,7 +50,5 @@ Para receber notificações, defina o seguinte:
 
 
 
-<a id="see-also" class="xliff"></a>
-
-## Consulte também
+## <a name="see-also"></a>Consulte também
 [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

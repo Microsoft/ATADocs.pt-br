@@ -21,9 +21,7 @@ ms.lasthandoff: 07/05/2017
 ---
 *Aplica-se a: Advanced Threat Analytics versão 1.8*
 
-<a id="working-with-ata-audit-logs" class="xliff"></a>
-
-# Trabalhando com logs de auditoria do ATA
+# <a name="working-with-ata-audit-logs"></a>Trabalhando com logs de auditoria do ATA
 
 Os logs de auditoria do ATA são mantidos nos Logs de Eventos do Windows em **Aplicativos e Serviços** e **Microsoft ATA** tanto nos computadores do Gateway do ATA quanto no Centro do ATA.
 
@@ -41,8 +39,6 @@ O log de auditoria do Gateway do ATA contém:
 *O log de auditoria de alterações de configuração conterá a configuração anterior e a nova configuração.
 
 
-<a id="see-also" class="xliff"></a>
-
-## Consulte Também
+## <a name="see-also"></a>Consulte Também
 - [Trabalhando com atividades suspeitas](working-with-suspicious-activities.md)
 - [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

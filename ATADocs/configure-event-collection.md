@@ -23,18 +23,14 @@ ms.lasthandoff: 07/03/2017
 
 
 
-<a id="configuring-windows-event-forwarding" class="xliff"></a>
-
-# Configuração do encaminhamento de eventos do Windows
+# <a name="configuring-windows-event-forwarding"></a>Configuração do encaminhamento de eventos do Windows
 
 Para aprimorar os recursos de detecção, o ATA precisa dos seguintes eventos do Windows: 4776, 4732, 4733, 4728, 4729, 4756, 4757. Eles podem ser lidos automaticamente pelo Gateway Lightweight do ATA ou no caso de o Gateway Lightweight do ATA não estar implantado, podem ser encaminhados para o Gateway do ATA de duas maneiras: configurando o Gateway do ATA para escutar o SIEM ou [Configurando o Encaminhamento de Eventos do Windows](#configuring-windows-event-forwarding).
 
 > [!NOTE]
 > Para as versões 1.8 e mais recentes do ATA, a configuração de coleta de eventos não é mais necessária para Gateways Lightweight do ATA. O Gateway Lightweight do ATA poderá ler eventos localmente, sem a necessidade de configurar o encaminhamento de eventos.
 
-<a id="wef-configuration-for-ata-gateways-with-port-mirroring" class="xliff"></a>
-
-### Configuração de WEF para Gateway do ATA com o espelhamento de porta
+### <a name="wef-configuration-for-ata-gateways-with-port-mirroring"></a>Configuração de WEF para Gateway do ATA com o espelhamento de porta
 
 Após a configuração do espelhamento de porta nos controladores de domínio para o Gateway do ATA, siga as instruções abaixo para configurar o Encaminhamento de eventos do Windows usando a configuração Iniciada pela Origem. Essa é uma maneira para configurar o Encaminhamento de eventos do Windows. 
 
@@ -98,8 +94,6 @@ Observe que após adicionar o **Serviço de Rede** no grupo **Leitores de Log de
 
 Para obter mais informações, confira: [Configurar computadores para encaminhar e coletar eventos](https://technet.microsoft.com/library/cc748890)
 
-<a id="see-also" class="xliff"></a>
-
-## Consulte Também
+## <a name="see-also"></a>Consulte Também
 - [Instalar o ATA](install-ata-step1.md)
 - [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
