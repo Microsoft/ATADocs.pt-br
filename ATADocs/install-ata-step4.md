@@ -23,17 +23,13 @@ ms.lasthandoff: 06/30/2017
 
 
 
-<a id="install-ata---step-4" class="xliff"></a>
-
-# Instalação do ATA - Etapa 4
+# <a name="install-ata---step-4"></a>Instalação do ATA - Etapa 4
 
 >[!div class="step-by-step"]
 [« Etapa 3](install-ata-step3.md)
 [Etapa 5 »](install-ata-step5.md)
 
-<a id="step-4-install-the-ata-gateway" class="xliff"></a>
-
-## Etapa 4. Instalar o Gateway do ATA
+## <a name="step-4-install-the-ata-gateway"></a>Etapa 4. Instalar o Gateway do ATA
 
 Antes de instalar o Gateway do ATA, verifique se o espelhamento de porta está configurado corretamente e se o Gateway do ATA pode ver o tráfego chegando e saindo dos controladores de domínio. Confira [Validar o espelhamento de porta](validate-port-mirroring.md) para saber mais.
 
@@ -92,9 +88,7 @@ Execute as seguintes etapas no servidor do Gateway do ATA.
 [« Etapa 3](install-ata-step3.md)
 [Etapa 5 »](install-ata-step5.md)
 
-<a id="see-also" class="xliff"></a>
-
-## Consulte também
+## <a name="see-also"></a>Consulte também
 
 - [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Configurar coleta de eventos](configure-event-collection.md)

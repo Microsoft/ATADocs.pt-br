@@ -23,15 +23,11 @@ ms.lasthandoff: 07/03/2017
 
 
 
-<a id="troubleshooting-ata-known-issues" class="xliff"></a>
-
-# Solução de problemas conhecidos do ATA
+# <a name="troubleshooting-ata-known-issues"></a>Solução de problemas conhecidos do ATA
 
 Esta seção detalha os possíveis erros nas implantações do ATA e as etapas necessárias para solucioná-los.
 
-<a id="ata-gateway-and-lightweight-gateway-errors" class="xliff"></a>
-
-## Erros do Gateway e do Gateway Lightweight do ATA
+## <a name="ata-gateway-and-lightweight-gateway-errors"></a>Erros do Gateway e do Gateway Lightweight do ATA
 
 |Erro do|Descrição|Resolução|
 |-------------|----------|---------|
@@ -54,9 +50,7 @@ Esta seção detalha os possíveis erros nas implantações do ATA e as etapas n
 |Alertas de tráfego espelhado por porta descartados ao usar o Gateway Lightweight no VMware|Se você estiver usando DCs em máquinas virtuais VMware, poderá receber alertas sobre o **Tráfego de rede espelhado por porta descartado**. Isso pode ser devido a uma incompatibilidade de configuração no VMware. |Para evitar esses alertas, verifique se as configurações a seguir estão definidas como 0 ou Desabilitado: TsoEnable, LargeSendOffload, IPv4 e Descarregamento de TSO (Descarregamento de Segmentação TCP). Além disso, considere desabilitar o Descarregamento TSO gigante do IPv4. Para obter mais informações, consulte a documentação do VMware.|
 
 
-<a id="deployment-errors" class="xliff"></a>
-
-## Erros de implantação
+## <a name="deployment-errors"></a>Erros de implantação
 |Erro do|Descrição|Resolução|
 |-------------|----------|---------|
 |Falha na instalação do .Net Framework 4.6.1 com o erro 0x800713ec|Os pré-requisitos do .Net Framework 4.6.1 não estão instalados no servidor. |Antes de instalar o ATA, verifique se as atualizações do Windows [KB2919442](https://www.microsoft.com/download/details.aspx?id=42135) e [KB2919355](https://support.microsoft.com/kb/2919355) estão instaladas no servidor.|
@@ -68,9 +62,7 @@ Esta seção detalha os possíveis erros nas implantações do ATA e as etapas n
 
 
 
-<a id="see-also" class="xliff"></a>
-
-## Consulte também
+## <a name="see-also"></a>Consulte também
 - [Pré-requisitos do ATA](ata-prerequisites.md)
 - [Planejamento da capacidade do ATA](ata-capacity-planning.md)
 - [Configurar coleta de eventos](configure-event-collection.md)

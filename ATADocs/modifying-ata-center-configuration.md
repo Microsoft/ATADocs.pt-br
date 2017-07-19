@@ -23,16 +23,12 @@ ms.lasthandoff: 06/30/2017
 
 
 
-<a id="modifying-the-ata-center-configuration" class="xliff"></a>
-
-# Modificar a configuração do Centro do ATA
+# <a name="modifying-the-ata-center-configuration"></a>Modificar a configuração do Centro do ATA
 
 
 Após a implantação inicial, as modificações no Centro do ATA deverão ser feitas com cuidado. Use os procedimentos a seguir ao atualizar o endereço IP, a porta, a URL do console e o certificado.
 
-<a id="the-ata-center-ip-address" class="xliff"></a>
-
-## O endereço IP do Centro do ATA
+## <a name="the-ata-center-ip-address"></a>O endereço IP do Centro do ATA
 
 Os Gateways do ATA armazenam localmente o endereço IP do Centro do ATA ao qual eles precisam se conectar. Regularmente, eles se conectam ao Centro do ATA e obtêm as alterações de configuração. Uma alteração no modo como os Gateways do ATA se conectam ao Centro do ATA é feita em dois estágios.
 
@@ -45,9 +41,7 @@ Os Gateways do ATA armazenam localmente o endereço IP do Centro do ATA ao qual 
 > -   Se o novo endereço IP estiver instalado no servidor do Centro do ATA, selecione-o na lista de endereços IP ao fazer a alteração. No entanto, se por algum motivo você não conseguiu instalar o endereço IP no servidor do Centro do ATA, selecionar o endereço IP personalizado e adicione-o manualmente. Você não poderá ativar o novo endereço IP até que o endereço IP esteja instalado no servidor.
 > -   Se você precisar implantar um novo Gateway do ATA depois de ativar o novo endereço IP, será necessário baixar o pacote de Instalação do Gateway do ATA novamente.
 
-<a id="the-console-url" class="xliff"></a>
-
-## A URL do Console
+## <a name="the-console-url"></a>A URL do Console
 
 A URL é usada nos seguintes cenários:
 
@@ -62,9 +56,7 @@ A URL é usada nos seguintes cenários:
 > [!NOTE]
 > Depois de modificar a URL do Console do ATA, você deve baixar o pacote de Instalação do Gateway do ATA antes de instalar novos Gateways do ATA.
 
-<a id="the-ata-center-certificate" class="xliff"></a>
-
-## O certificado do Centro do ATA
+## <a name="the-ata-center-certificate"></a>O certificado do Centro do ATA
 Se os seus certificados estiverem prestes a expirar e precisarem ser renovados ou substituídos após a instalação do novo certificado no repositório de computador local no servidor do Centro do ATA, substitua o certificado com este processo em dois estágios:
 
 -   Primeiro estágio – Atualizar o certificado que você deseja que o serviço do Centro do ATA use. Neste ponto, o serviço do Centro do ATA ainda está associado ao certificado original. Quando os Gateways do ATA sincronizarem suas configurações, terão dois possíveis certificados que serão válidos para autenticação mútua. Contanto que o Gateway do ATA possa se conectar usando o certificado original, ele não tentará o novo.
@@ -77,9 +69,7 @@ Se os seus certificados estiverem prestes a expirar e precisarem ser renovados o
 > -   O certificado também é usado para o Console do ATA, portanto, ele deve corresponder ao endereço do Console do ATA a fim de evitar avisos do navegador
 > -   Se você precisar implantar um novo Gateway do ATA depois de ativar o novo certificado, será necessário baixar o pacote de Instalação do Gateway do ATA novamente.
 
-<a id="changing-the-ata-center-configuration" class="xliff"></a>
-
-## Alterando a configuração do Centro do ATA
+## <a name="changing-the-ata-center-configuration"></a>Alterando a configuração do Centro do ATA
 
 1.  Abra o Console do ATA.
 
@@ -111,8 +101,6 @@ Se os seus certificados estiverem prestes a expirar e precisarem ser renovados o
 
 
 
-<a id="see-also" class="xliff"></a>
-
-## Consulte também
+## <a name="see-also"></a>Consulte também
 - [Trabalhando com o Console do ATA](working-with-ata-console.md)
 - [Confira o fórum do ATA!](https://aka.ms/ata-forum)

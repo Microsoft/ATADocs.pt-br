@@ -23,17 +23,13 @@ ms.lasthandoff: 06/30/2017
 
 
 
-<a id="ata-disaster-recovery" class="xliff"></a>
-
-# Recuperação de desastre de ATA
+# <a name="ata-disaster-recovery"></a>Recuperação de desastre de ATA
 Este artigo descreve como recuperar rapidamente seu Centro de ATA e restaurar a funcionalidade do ATA quando a funcionalidade do Centro de ATA for perdida, mas os Gateways de ATA ainda estiverem funcionando. 
 
 >[!NOTE]
 > O processo descrito não recupera atividades suspeitas detectadas anteriormente, mas retorna o Centro de ATA à funcionalidade completa. Além disso, o período de aprendizado necessário para algumas detecções comportamentais reiniciará, mas a maior parte da detecção que o ATA oferece estará funcionando depois que o Centro de ATA estiver restaurado. 
 
-<a id="back-up-your-ata-center-configuration" class="xliff"></a>
-
-## Fazer backup da sua configuração do Centro de ATA
+## <a name="back-up-your-ata-center-configuration"></a>Fazer backup da sua configuração do Centro de ATA
 
 1. A configuração do Centro de ATA é armazenada em backup em um arquivo a cada hora. Localize a última cópia de backup da configuração do Centro de ATA e salve-a em um computador à parte. Para obter uma explicação completa de como localizar esses arquivos, confira [Exportar e importar a configuração de ATA](/advanced-threat-analytics/deploy-use/ata-configuration-file). 
 2. Exportação do certificado do Centro de ATA.
@@ -46,9 +42,7 @@ Este artigo descreve como recuperar rapidamente seu Centro de ATA e restaurar a 
   > [!NOTE] 
   > Se você não puder exportar a chave privada, você deve criar um novo certificado e implantá-lo no ATA, conforme descrito em [Alteração do certificado do Centro de ATA](/advanced-threat-analytics/deploy-use/modifying-ata-config-centercert) e, em seguida, exportá-la. 
 
-<a id="recover-your-ata-center" class="xliff"></a>
-
-## Recuperar seu Centro de ATA
+## <a name="recover-your-ata-center"></a>Recuperar seu Centro de ATA
 
 1. Crie uma nova máquina do Windows Server usando o mesmo nome de computador e o endereço IP da máquina anterior do Centro de ATA.
 4. Importe o certificado que você armazenou em backup acima para o novo servidor.
@@ -69,9 +63,7 @@ Este artigo descreve como recuperar rapidamente seu Centro de ATA e restaurar a 
 
 
 
-<a id="see-also" class="xliff"></a>
-
-## Consulte também
+## <a name="see-also"></a>Consulte também
 - [Pré-requisitos do ATA](/advanced-threat-analytics/plan-design/ata-prerequisites)
 - [Planejamento da capacidade do ATA](/advanced-threat-analytics/plan-design/ata-capacity-planning)
 - [Configurar coleta de eventos](/advanced-threat-analytics/deploy-use/configure-event-collection)

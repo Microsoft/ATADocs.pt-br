@@ -23,18 +23,14 @@ ms.lasthandoff: 06/30/2017
 
 
 
-<a id="install-ata---step-5" class="xliff"></a>
-
-# Instalação do ATA - Etapa 5
+# <a name="install-ata---step-5"></a>Instalação do ATA - Etapa 5
 
 >[!div class="step-by-step"]
 [« Etapa 4](install-ata-step4.md)
 [Etapa 6 »](install-ata-step6.md)
 
 
-<a id="step-5-configure-the-ata-gateway-settings" class="xliff"></a>
-
-## Etapa 5. Definir as configurações do Gateway do ATA
+## <a name="step-5-configure-the-ata-gateway-settings"></a>Etapa 5. Definir as configurações do Gateway do ATA
 Após a instalação do Gateway do ATA, execute as etapas a seguir para definir as configurações do Gateway do ATA.
 
 1.  No Console do ATA, acesse **Configuração** e, em **Sistema**, selecione **Gateways**.
@@ -72,9 +68,7 @@ Após a instalação do Gateway do ATA, execute as etapas a seguir para definir 
 5. Clique em **Salvar**.
 
 
-<a id="validate-installations" class="xliff"></a>
-
-## Validar instalações
+## <a name="validate-installations"></a>Validar instalações
 Para validar a implantação bem-sucedida do Gateway do ATA, verifique o seguinte:
 
 1.  Verifique se o serviço nomeado **Gateway do Microsoft Advanced Threat Analytics** está em execução. Depois de salvar as configurações do Gateway do ATA, talvez demore alguns minutos até que o serviço seja iniciado.
@@ -94,9 +88,7 @@ Para validar a implantação bem-sucedida do Gateway do ATA, verifique o seguint
 [« Etapa 4](install-ata-step4.md)
 [Etapa 6 »](install-ata-step6.md)
 
-<a id="see-also" class="xliff"></a>
-
-## Consulte também
+## <a name="see-also"></a>Consulte também
 
 - [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Configurar coleta de eventos](configure-event-collection.md)

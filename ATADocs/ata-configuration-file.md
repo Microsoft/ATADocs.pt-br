@@ -23,9 +23,7 @@ ms.lasthandoff: 06/30/2017
 
 
 
-<a id="export-and-import-the-ata-configuration" class="xliff"></a>
-
-# Exportar e importar a configuração do ATA
+# <a name="export-and-import-the-ata-configuration"></a>Exportar e importar a configuração do ATA
 A configuração do ATA é armazenada na coleção "SystemProfile" no banco de dados.
 Essa coleção passa por backup a cada hora, realizado pelo serviço da Central do ATA para arquivos chamados: "SystemProfile_*carimbo de data e hora*.json". As 10 versões mais recentes são armazenadas.
 Ele está localizado em uma subpasta chamada "Backup". No local de instalação padrão do ATA, ele pode ser encontrado aqui: *C:\Arquivos de Programas\Microsoft Advanced Threat Analytics\Center\Backup\SystemProfile_*timestamp*.json*. 
@@ -36,9 +34,7 @@ Ele está localizado em uma subpasta chamada "Backup". No local de instalação 
 
 `mongoimport.exe --db ATA --collection SystemProfile --file "<SystemProfile.json backup file>" --upsert`
 
-<a id="see-also" class="xliff"></a>
-
-## Consulte também
+## <a name="see-also"></a>Consulte também
 - [Arquitetura do ATA](ata-architecture.md)
 - [Pré-requisitos do ATA](ata-prerequisites.md)
 - [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

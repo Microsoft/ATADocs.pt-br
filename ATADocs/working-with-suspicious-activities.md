@@ -23,12 +23,10 @@ ms.lasthandoff: 07/10/2017
 
 
 
-# Trabalhando com atividades suspeitas
-<a id="working-with-suspicious-activities" class="xliff"></a>
+# <a name="working-with-suspicious-activities"></a>Trabalhando com atividades suspeitas
 Este tópico explica as noções básicas de como trabalhar com a Advanced Threat Analytics.
 
-## Examinar atividades suspeitas na linha do tempo de ataque
-<a id="review-suspicious-activities-on-the-attack-time-line" class="xliff"></a>
+## <a name="review-suspicious-activities-on-the-attack-time-line"></a>Examinar atividades suspeitas na linha do tempo de ataque
 Depois de fazer logon no Console do ATA, você será direcionado automaticamente para a **linha do tempo de atividades suspeitas** aberta. As atividades suspeitas são listadas em ordem cronológica com as atividades suspeitas mais recentes na parte superior da linha do tempo.
 Cada atividade suspeita tem as seguintes informações:
 
@@ -58,8 +56,7 @@ Cada atividade suspeita tem as seguintes informações:
 
 ![Imagem da linha do tempo das atividades suspeitas do ATA](media/ATA-Suspicious-Activity-Timeline.JPG)
 
-## Filtrar lista de atividades suspeitas
-<a id="filter-suspicious-activities-list" class="xliff"></a>
+## <a name="filter-suspicious-activities-list"></a>Filtrar lista de atividades suspeitas
 Para filtrar a lista de atividades suspeitas:
 
 1.  No painel **Filtrar por** no lado esquerdo da tela, selecione um dos seguintes: **Todos**, **Abrir**, **Resolvido** ou **Descartado**.
@@ -83,8 +80,7 @@ Para filtrar a lista de atividades suspeitas:
 
 
 
-## Corrigindo atividades suspeitas
-<a id="remediating-suspicious-activities" class="xliff"></a>
+## <a name="remediating-suspicious-activities"></a>Corrigindo atividades suspeitas
 Você pode alterar o status de uma atividade suspeita clicando no status atual da atividade suspeita e selecionando uma das seguintes opções **Aberto**, **Suprimido**, **Fechado** ou **Excluído**.
 Para fazer isso, clique nos três pontos no canto superior direito de uma atividade suspeita específica para exibir a lista de ações disponíveis.
 
@@ -108,7 +104,6 @@ Para fazer isso, clique nos três pontos no canto superior direito de uma ativid
 > As páginas de configuração podem ser modificadas apenas por administradores do ATA.
 
 
-## Consulte Também
-<a id="see-also" class="xliff"></a>
+## <a name="see-also"></a>Consulte Também
 - [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Modificando a configuração do ATA](modifying-ata-center-configuration.md)

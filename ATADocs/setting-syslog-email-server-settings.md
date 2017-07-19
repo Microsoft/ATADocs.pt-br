@@ -23,9 +23,7 @@ ms.lasthandoff: 06/30/2017
 
 
 
-<a id="provide-ata-with-your-email-server-settings" class="xliff"></a>
-
-# Forneça ao ATA suas configurações do servidor de emails
+# <a name="provide-ata-with-your-email-server-settings"></a>Forneça ao ATA suas configurações do servidor de emails
 O ATA pode notificar você quando detectar uma atividade suspeita. Para que o ATA possa enviar notificações por email, primeiro é necessário definir as **Configurações do servidor de email**.
 
 1.  No servidor do Centro do ATA, clique no ícone **Microsoft Advanced Threat Analytics Management** na área de trabalho.
@@ -46,9 +44,7 @@ O ATA pode notificar você quando detectar uma atividade suspeita. Para que o AT
     |Enviar de (obrigatório)|Digite um endereço de email a partir do qual o email será enviado.|Por exemplo:<br />ATA@contoso.com|
     ![Imagem das configurações do servidor de emails do ATA](media/ata-email-server.png)
 
-<a id="provide-ata-with-your-syslog-server-settings" class="xliff"></a>
-
-## Forneça ao ATA suas configurações do servidor Syslog
+## <a name="provide-ata-with-your-syslog-server-settings"></a>Forneça ao ATA suas configurações do servidor Syslog
 O ATA pode notificar você quando detectar uma atividade suspeita, enviando a notificação para seu servidor Syslog. Se você habilitar as notificações do Syslog, poderá definir os itens a seguir.
 
 1.  Antes de configurar as notificações do Syslog, trabalhe com seu administrador do SIEM para descobrir as seguintes informações:
@@ -81,7 +77,5 @@ O ATA pode notificar você quando detectar uma atividade suspeita, enviando a no
 
 
 
-<a id="see-also" class="xliff"></a>
-
-## Consulte Também
+## <a name="see-also"></a>Consulte Também
 [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

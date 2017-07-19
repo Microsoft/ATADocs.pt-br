@@ -23,22 +23,16 @@ ms.lasthandoff: 07/03/2017
 
 
 
-<a id="working-with-the-ata-console" class="xliff"></a>
-
-# Trabalhando com o Console do ATA
+# <a name="working-with-the-ata-console"></a>Trabalhando com o Console do ATA
 
 Use o Console do ATA para monitorar e responder a atividades suspeitas detectadas pelo ATA.
 
 Digitar o ? fornecerá os atalhos de teclado para acessibilidade do Portal do ATA. 
 
-<a id="enabling-access-to-the-ata-console" class="xliff"></a>
-
-## Habilitando o acesso à Console do ATA
+## <a name="enabling-access-to-the-ata-console"></a>Habilitando o acesso à Console do ATA
 Para fazer logon com êxito no Console do ATA, você precisa fazer logon com um usuário que recebeu a função adequada do ATA para acessar o Console do ATA. Para saber mais sobre RBAC (Controle de acesso baseado em função) no ATA, confira [Como trabalhar com grupos de função do ATA](ata-role-groups.md).
 
-<a id="logging-into-the-ata-console" class="xliff"></a>
-
-## Fazer logon no Console do ATA
+## <a name="logging-into-the-ata-console"></a>Fazer logon no Console do ATA
 
 1. No servidor do Centro do ATA, clique no ícone **Console do Microsoft ATA** na área de trabalho ou abra um navegador e procure o Console do ATA.
 
@@ -59,18 +53,14 @@ Para fazer logon usando o SSO, certifique-se de que o site do Console do ATA est
 
 
 
-<a id="the-ata-console" class="xliff"></a>
-
-## O Console do ATA
+## <a name="the-ata-console"></a>O Console do ATA
 
 O Console do ATA fornece uma visão geral de todas as atividades suspeitas em ordem cronológica. Ele permite que você analise detalhes de qualquer atividade e executar ações baseadas em atividades. O console também exibe alertas e notificações para realçar problemas com a rede de ATA ou novas atividades que são consideradas suspeitas.
 
 Esses são os principais elementos do Console do ATA.
 
 
-<a id="attack-time-line" class="xliff"></a>
-
-### Linha do tempo de ataque
+### <a name="attack-time-line"></a>Linha do tempo de ataque
 
 Essa é a página de aterrissagem exibida quando você entra no Console do ATA. Por padrão, todas as atividades suspeitas abertas são mostradas na linha do tempo de ataque. Você pode filtrar a linha do tempo de ataque para mostrar as atividades suspeitas com status Todos, Aberto, Descartado ou Resolvido. Você também pode ver a severidade atribuída a cada atividade.
 
@@ -78,31 +68,23 @@ Essa é a página de aterrissagem exibida quando você entra no Console do ATA. 
 
 Para saber mais, confira [Trabalhando com atividades suspeitas](working-with-suspicious-activities.md).
 
-<a id="notification-bar" class="xliff"></a>
-
-### Barra de notificação
+### <a name="notification-bar"></a>Barra de notificação
 
 Quando uma nova atividade suspeita é detectada, a barra de notificação abrirá automaticamente no lado direito. Se houver novas atividades suspeitas desde a última vez que você entrou, a barra de notificação abrirá depois de você ter feito logon com êxito. Você pode clicar na seta à direita a qualquer momento para acessar a barra de notificação.
 
 ![Imagem da barra de notificação de ATA](media/notification-bar-1.7.png)
 
-<a id="filtering-panel" class="xliff"></a>
-
-### Painel de filtro
+### <a name="filtering-panel"></a>Painel de filtro
 
 Você pode filtrar quais atividades suspeitas são exibidas na linha do tempo de ataque ou exibidas na guia de atividades suspeitas de perfil de entidade com base no Status e na Severidade.
 
-<a id="search-bar" class="xliff"></a>
-
-### Barra de pesquisa
+### <a name="search-bar"></a>Barra de pesquisa
 
 No menu superior, você encontrará uma barra de pesquisa. Você pode pesquisar por um usuário específico, computador ou grupos no ATA. Para experimentar, basta começa a digitar.
 
 ![Imagem de pesquisa do Console do ATA](media/ATA-console-search.png)
 
-<a id="health-center" class="xliff"></a>
-
-### Centro de integridade
+### <a name="health-center"></a>Centro de integridade
 
 O Centro de integridade fornece alertas quando algo não está funcionando corretamente na implantação do ATA.
 
@@ -112,9 +94,7 @@ Sempre que o sistema encontrar um problema, como um erro de conectividade ou um 
 
 Os alertas do Centro de Integridade podem ser descartados ou resolvidos e são categorizados com status Alto, Médio ou Baixo, dependendo da gravidade. Se você resolver um alerta que o serviço de ATA detecta como ativo, ele será movido automaticamente para abrir a lista de alertas. Se o sistema detectar que a causa do alerta já não existe mais (a situação foi corrigida), ele será movido automaticamente para a lista resolvida.
 
-<a id="user-and-computer-profiles" class="xliff"></a>
-
-### Perfis de usuário e computador
+### <a name="user-and-computer-profiles"></a>Perfis de usuário e computador
 
 O ATA cria um perfil para cada usuário e computador na rede. No perfil de usuário, o ATA exibe informações gerais, como associação de grupo, logons recentes e recursos acessados recentemente. Ele também fornece uma lista de locais em que o usuário conectou por meio de VPN. Para obter uma lista de associações de grupo que o ATA considera confidencial, consulte abaixo.
 
@@ -131,9 +111,7 @@ Um perfil que o ATA não tenha sido capaz de resolver completamente será identi
 
 ![Imagem de perfil não resolvido do ATA](media/ATA-Unresolved-Profile.jpg)
 
-<a id="sensitive-groups" class="xliff"></a>
-
-### Grupos confidenciais
+### <a name="sensitive-groups"></a>Grupos confidenciais
 
 A lista de grupos a seguir é considerada **Confidencial** pelo ATA. Esses grupos serão sinalizados como tendo privilégios administrativos e gerarão alertas que correspondem às contas confidenciais:
 
@@ -157,9 +135,7 @@ A lista de grupos a seguir é considerada **Confidencial** pelo ATA. Esses grupo
 - Administradores do DNS 
 
 
-<a id="mini-profile" class="xliff"></a>
-
-### Miniperfil
+### <a name="mini-profile"></a>Miniperfil
 
 Em qualquer lugar no console onde exista uma única entidade apresentada, como um usuário ou computador, se você passar o mouse sobre a entidade, um miniperfil será aberto automaticamente, exibindo as informações a seguir, se disponíveis:
 
@@ -177,7 +153,5 @@ Em qualquer lugar no console onde exista uma única entidade apresentada, como u
 
 
 
-<a id="see-also" class="xliff"></a>
-
-## Consulte também
+## <a name="see-also"></a>Consulte também
 [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

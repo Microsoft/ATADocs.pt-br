@@ -22,14 +22,10 @@ ms.lasthandoff: 07/03/2017
 *Aplica-se a: Advanced Threat Analytics versão 1.8*
 
 
-<a id="what-is-advanced-threat-analytics" class="xliff"></a>
-
-# O que é o Advanced Threat Analytics?
+# <a name="what-is-advanced-threat-analytics"></a>O que é o Advanced Threat Analytics?
 O ATA (Advanced Threat Analytics) é uma plataforma local que ajuda a proteger sua empresa contra vários tipos de ataques cibernéticos avançados e ameaças internas.
 
-<a id="how-ata-works" class="xliff"></a>
-
-## Como o ATA funciona
+## <a name="how-ata-works"></a>Como o ATA funciona
 
 O ATA aproveita um mecanismo de análise de rede proprietário para capturar e analisar o tráfego de rede de vários protocolos (como Kerberos, DNS, RPC, NTLM entre outros) para autenticação, autorização e coleta de informações. Essas informações são coletadas pelo ATA por meio de:
 
@@ -46,9 +42,7 @@ O ATA pode receber eventos e logs de:
 
 Para saber mais sobre a arquitetura do ATA, confira [Arquitetura do ATA](ata-architecture.md).
 
-<a id="what-does-ata-do" class="xliff"></a>
-
-## O que o ATA faz?
+## <a name="what-does-ata-do"></a>O que o ATA faz?
 
 A tecnologia do ATA detecta várias atividades suspeitas, concentrando-se em várias fases da cadeia do ataque cibernético, incluindo:
 
@@ -100,24 +94,18 @@ Você pode exibir as atividades suspeitas desse tipo no Painel do ATA. No exempl
   ![tela de exemplo de ATA de confiança quebrada](media/broken-trust-sa.png)
 
 
-<a id="known-issues" class="xliff"></a>
-
-## Problemas conhecidos
+## <a name="known-issues"></a>Problemas conhecidos
 
 - Se você atualizar para o ATA 1.7 e imediatamente para o ATA 1.8, sem primeiro atualizar os Gateways do ATA, não será possível migrar para o ATA 1.8. É necessário primeiro atualizar todos os Gateways para a versão 1.7.1 ou 1.7.2 antes de atualizar o Centro do ATA para a versão 1.8.
 
 - Se você selecionar a opção para executar uma migração completa, ela poderá demorar muito tempo, dependendo do tamanho do banco de dados. Quando você estiver selecionando as opções de migração, o tempo estimado será exibido, anote-o antes de decidir qual opção selecionar. 
 
 
-<a id="whats-next" class="xliff"></a>
-
-## Novidades
+## <a name="whats-next"></a>Novidades
 
 -   Para saber mais sobre como o ATA se adapta à sua rede: [Arquitetura do ATA](ata-architecture.md)
 
 -   Para começar a implantar o ATA: [Instalar o ATA](install-ata-step1.md)
 
-<a id="see-also" class="xliff"></a>
-
-## Consulte também
+## <a name="see-also"></a>Consulte também
 [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

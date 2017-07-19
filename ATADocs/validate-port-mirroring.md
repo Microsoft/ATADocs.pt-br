@@ -23,17 +23,13 @@ ms.lasthandoff: 06/30/2017
 
 
 
-<a id="validate-port-mirroring" class="xliff"></a>
-
-# Validação do espelhamento de porta
+# <a name="validate-port-mirroring"></a>Validação do espelhamento de porta
 > [!NOTE] 
 > Este artigo somente é relevante se você implanta Gateways do ATA em vez de Gateways Lightweight do ATA. Para determinar se você precisa usar Gateways do ATA, confira [Choosing the right gateways for your deployment](ata-capacity-planning.md#choosing-the-right-gateway-type-for-your-deployment) (Escolhendo os gateways certos para sua implantação).
  
 As etapas a seguir guiarão você pelo processo de validação da configuração correta do espelhamento de porta. Para que o ATA funcione corretamente, o Gateway de ATA deve ser capaz de ver o tráfego para e do controlador de domínio. A fonte de dados principal usada pelo ATA é uma inspeção profunda de pacotes do tráfego de rede para e dos controladores de domínio. Para o ATA ver o tráfego de rede, o espelhamento de porta precisa ser configurado. O espelhamento de porta copia o tráfego de uma porta (de origem) para outra porta (de destino).
 
-<a id="validate-port-mirroring-using-a-windows-powershell-script" class="xliff"></a>
-
-## Validar espelhamento de porta usando um script do Windows PowerShell
+## <a name="validate-port-mirroring-using-a-windows-powershell-script"></a>Validar espelhamento de porta usando um script do Windows PowerShell
 
 1. Salve o texto do script em um arquivo chamado *ATAdiag.ps1*.
 2. Execute esse script no Gateway do ATA que você deseja validar.
@@ -195,9 +191,7 @@ Exemplo de como executar o script:
     [void][System.Console]::ReadKey($true)
     
     
-<a id="validate-port-mirroring-using-net-mon" class="xliff"></a>
-
-## Validar o espelhamento de porta usando Net Mon
+## <a name="validate-port-mirroring-using-net-mon"></a>Validar o espelhamento de porta usando Net Mon
 1.  Instale o [Microsoft Network Monitor 3.4](http://www.microsoft.com/download/details.aspx?id=4865) no Gateway do ATA que você deseja validar.
 
     > [!IMPORTANT]
@@ -227,9 +221,7 @@ Exemplo de como executar o script:
 
 5.  Se você vir somente o tráfego em uma direção, você deve trabalhar com as equipes de rede ou de virtualização para ajudar a solucionar os problemas de sua configuração de espelhamento de porta.
 
-<a id="see-also" class="xliff"></a>
-
-## Consulte Também
+## <a name="see-also"></a>Consulte Também
 
 - [Configurar o espelhamento de porta](configure-port-mirroring.md)
 - [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

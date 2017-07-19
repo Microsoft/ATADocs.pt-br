@@ -22,9 +22,7 @@ ms.lasthandoff: 07/03/2017
 *Aplica-se a: Advanced Threat Analytics versão 1.8*
 
 
-<a id="install-ata---step-1" class="xliff"></a>
-
-# Instalação do ATA - Etapa 1
+# <a name="install-ata---step-1"></a>Instalação do ATA - Etapa 1
 
 >[!div class="step-by-step"]
 [Etapa 2 »](install-ata-step2.md)
@@ -34,9 +32,7 @@ O procedimento de instalação fornece instruções para executar uma nova insta
 > [!IMPORTANT] 
 > Se você estiver usando o Windows 2012 R2, instale o KB2934520 no servidor da Central do ATA e nos servidores do Gateway do ATA antes de começar a instalação, caso contrário a instalação do ATA instalar essa atualização e exigirá uma reinicialização no meio do processo.
 
-<a id="step-1-download-and-install-the-ata-center" class="xliff"></a>
-
-## Etapa 1. Baixar e instalar o Centro do ATA
+## <a name="step-1-download-and-install-the-ata-center"></a>Etapa 1. Baixar e instalar o Centro do ATA
 Depois de verificar que o servidor atende aos requisitos, você pode prosseguir com a instalação do Centro do ATA.
     
 > [!NOTE]
@@ -90,9 +86,7 @@ Execute as seguintes etapas no servidor do Centro do ATA.
 Neste ponto, você será levado automaticamente para a página de configuração **Geral** a fim de continuar a configuração e a implantação dos Gateways do ATA.
 Como você está fazendo logon no site usando um endereço IP, você recebe um aviso relacionado ao certificado e isso é normal. Clique em **Continuar neste site**.
 
-<a id="validate-installation" class="xliff"></a>
-
-### Validar a instalação
+### <a name="validate-installation"></a>Validar a instalação
 
 1.  Verifique se o serviço chamado **Central do Microsoft Advanced Threat Analytics** está em execução.
 2.  Na área de trabalho, clique no atalho do **Microsoft Advanced Threat Analytics** para se conectar ao Console do ATA. Faça logon com as mesmas credenciais de usuário que você usou para instalar o Centro do ATA.
@@ -103,9 +97,7 @@ Como você está fazendo logon no site usando um endereço IP, você recebe um a
 [« Pré-instalação](configure-port-mirroring.md)
 [Etapa 2 »](install-ata-step2.md)
 
-<a id="see-also" class="xliff"></a>
-
-## Consulte Também
+## <a name="see-also"></a>Consulte Também
 
 - [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Configurar coleta de eventos](configure-event-collection.md)

@@ -21,9 +21,7 @@ ms.lasthandoff: 07/03/2017
 ---
 *Aplica-se a: Advanced Threat Analytics versão 1.8*
 
-<a id="what-threats-does-ata-look-for" class="xliff"></a>
-
-# Que tipos de ameaças o ATA procura?
+# <a name="what-threats-does-ata-look-for"></a>Que tipos de ameaças o ATA procura?
 
 O ATA fornece detecção para as seguintes várias fases de ataque avançado: reconhecimento, comprometimento de credenciais, movimentação lateral, elevação de privilégios, predominância de domínio e outros. Essas detecções visam detectar ataques avançados e ameaças internas antes que eles possam causar danos à sua organização.
 A detecção de cada fase resulta em várias atividades suspeitas relevantes para a fase em questão, em que cada atividade suspeita se correlaciona com diferentes tipos de ataques possíveis.
@@ -32,9 +30,7 @@ Essas fases na cadeia de extermínio, nas quais o ATA fornece atualmente as dete
 ![O ATA se concentra na atividade lateral da cadeia de extermínio do ataque](media/attack-kill-chain-small.jpg)
 
 
-<a id="reconnaissance" class="xliff"></a>
-
-### Reconhecimento
+### <a name="reconnaissance"></a>Reconhecimento
 
 O ATA fornece diversas detecções de reconhecimento. Essas detecções incluem:
 
@@ -47,9 +43,7 @@ O ATA fornece diversas detecções de reconhecimento. Essas detecções incluem:
 -   **Reconhecimento usando enumeração de serviços de diretório**<br></br>Detecção de reconhecimento para entidades (usuários, grupos etc.) executada usando o protocolo remoto SAM para execução de consultas em controladores de domínio. Esse método de reconhecimento é predominante em diversos tipos de malware vistos em situações de ataque reais. 
 
 
-<a id="compromised-credentials" class="xliff"></a>
-
-### Credenciais comprometidas
+### <a name="compromised-credentials"></a>Credenciais comprometidas
 
 Para fornecer detecção de credenciais comprometidas, o ATA aproveita a análise de comportamento baseado em aprendizado de máquina, assim como a de ataques mal-intencionados conhecidos e detecção de técnicas.
 Usando a análise comportamental e o aprendizado de máquina, o ATA é capaz de detectar atividades suspeitas como logons, acesso a recursos e horas de trabalho anômalas. o que poderia indicar um comprometimento de credenciais. Para proteger contra credenciais comprometidas, o ATA detecta os ataques mal-intencionados e técnicas conhecidos a seguir:
@@ -70,9 +64,7 @@ Usando a análise comportamental e o aprendizado de máquina, o ATA é capaz de 
 
 -   **Comportamento Anormal**<br></br>Muitas vezes em casos de ameaças internas e de ataques avançados, as credenciais da conta podem ser comprometidas usando métodos de engenharia social ou métodos e técnicas novos e ainda não conhecidos. O ATA é capaz de detectar esses tipos de comprometimento, analisar o comportamento da entidade e detectar e alertar anomalias nas operações executadas pela entidade.
 
-<a id="lateral-movement" class="xliff"></a>
-
-### Movimentação lateral
+### <a name="lateral-movement"></a>Movimentação lateral
 
 Para fornecer detecção de movimentação lateral, quando os usuários se aproveitarem de credenciais que fornecem acesso a alguns recursos para obter recursos de acesso que eles não deveriam acessar, o ATA usa a análise de comportamento baseada em aprendizado de máquina e detecção de técnicas e ataques mal-intencionados.
 Usando análise comportamental e aprendizado de máquina, o ATA detecta o acesso anormal aos recursos, dispositivos anômalos usados e outros indicadores que evidenciam a movimentação lateral.
@@ -86,9 +78,7 @@ Além disso, o ATA é capaz de detectar movimentação lateral por meio das téc
 
 -   **Comportamento anormal**<br></br>A movimentação lateral é uma técnica normalmente usada pelos invasores para mover entre dispositivos e áreas na rede da vítima a fim de obter acesso a credenciais com altos privilégios ou informações confidenciais de interesse ao invasor. O ATA é capaz de detectar movimentação lateral analisando o comportamento dos usuários, o dispositivos e suas relações dentro da rede corporativa, e de detectar padrões de acesso anômalos que podem indicar movimentação lateral executada por um invasor.
 
-<a id="privilege-escalation" class="xliff"></a>
-
-### Elevação de privilégios
+### <a name="privilege-escalation"></a>Elevação de privilégios
 
 O ATA detecta tentativas e efetivos ataques de elevação de privilégio, nos quais os invasores tentam aumentar privilégios existentes e usá-los várias vezes para finalmente obter controle total sobre o ambiente da vítima.
 O ATA habilita a detecção de escalonamento de privilégio combinando com análise comportamental para detectar comportamentos anômalos de contas privilegiadas e detectar técnicas e ataques conhecidos e mal-intencionados que geralmente são usados para escalonar privilégios, como:
@@ -99,9 +89,7 @@ O ATA habilita a detecção de escalonamento de privilégio combinando com anál
 
 -   **Modificação anormal de grupos confidenciais**  <br></br>Como parte da fase de elevação de privilégio, os invasores modificam grupos com altos privilégios para obter acesso a recursos confidenciais. Agora o ATA detecta quando há uma alteração anormal em um grupo com privilégios elevados.
 
-<a id="domain-dominance" class="xliff"></a>
-
-### Predominância de domínio
+### <a name="domain-dominance"></a>Predominância de domínio
 
 O ATA detecta invasores tentando ou efetivamente conseguindo obter dominância e controle total sobre o ambiente da vítima pela execução de detecção de técnicas conhecidas usadas pelos invasores, que incluem:
 
@@ -116,15 +104,11 @@ O ATA detecta invasores tentando ou efetivamente conseguindo obter dominância e
 -   **Solicitações de replicação mal-intencionada** <br></br>Em ambientes do AD (Active Directory), a replicação ocorre regularmente entre Controladores de Domínio. Um invasor pode falsificar uma solicitação de replicação do AD (às vezes representando um Controlador de Domínio), permitindo que o invasor recupere os dados armazenados no AD, incluindo hashes de senha, sem utilizar técnicas mais invasivas como a Cópia de Sombra de Volume.
 
 
-<a id="whats-next" class="xliff"></a>
-
-## Novidades
+## <a name="whats-next"></a>Novidades
 
 -   Para saber mais sobre como o ATA se adapta à sua rede: [Arquitetura do ATA](ata-architecture.md)
 
 -   Para começar a implantar o ATA: [Instalar o ATA](install-ata-step1.md)
 
-<a id="see-also" class="xliff"></a>
-
-## Consulte também
+## <a name="see-also"></a>Consulte também
 [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

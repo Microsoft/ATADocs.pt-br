@@ -23,9 +23,7 @@ ms.lasthandoff: 06/30/2017
 
 
 
-<a id="troubleshooting-ata-center-service-startup" class="xliff"></a>
-
-# Solução de problemas de inicialização de serviço do Centro de ATA
+# <a name="troubleshooting-ata-center-service-startup"></a>Solução de problemas de inicialização de serviço do Centro de ATA
 
 Se seu Centro de ATA não for iniciado, execute o seguinte procedimento de solução de problemas:
 
@@ -38,9 +36,7 @@ Se ele puder ser iniciado, provavelmente a plataforma está OK, se não, esse ai
 
 
 
-<a id="see-also" class="xliff"></a>
-
-## Consulte Também
+## <a name="see-also"></a>Consulte Também
 - [Pré-requisitos do ATA](ata-prerequisites.md)
 - [Planejamento da capacidade do ATA](ata-capacity-planning.md)
 - [Configurar coleta de eventos](configure-event-collection.md)

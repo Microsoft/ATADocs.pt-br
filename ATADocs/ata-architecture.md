@@ -24,9 +24,7 @@ ms.lasthandoff: 07/05/2017
 
 
 
-<a id="ata-architecture" class="xliff"></a>
-
-# Arquitetura do ATA
+# <a name="ata-architecture"></a>Arquitetura do ATA
 A arquitetura da Advanced Threat Analytics é detalhada neste diagrama:
 
 ![Diagrama de topologia da arquitetura do ATA](media/ATA-architecture-topology.jpg)
@@ -37,9 +35,7 @@ Esta seção descreve o fluxo de rede e a captura de eventos e descreve detalhad
 
 ![Diagrama de fluxo de tráfego de ATA](media/ATA-traffic-flow.jpg)
 
-<a id="ata-components" class="xliff"></a>
-
-## Componentes de ATA
+## <a name="ata-components"></a>Componentes de ATA
 O ATA é formado pelos seguintes componentes:
 
 -   **Centro do ATA** <br>
@@ -52,9 +48,7 @@ O Gateway Lightweight do ATA está instalado diretamente em seus controladores d
 Uma implantação do ATA pode consistir em uma único Centro do ATA conectado a todos os Gateways do ATA, a todos os Gateways Lightweight do ATA ou a uma combinação de Gateways do ATA e Gateways Lightweight do ATA.
 
 
-<a id="deployment-options" class="xliff"></a>
-
-## Opções de implantação
+## <a name="deployment-options"></a>Opções de implantação
 Você pode implantar o ATA usando a seguinte combinação de gateways:
 
 -   **Usando somente os Gateways do ATA** <br>
@@ -69,9 +63,7 @@ Em todos os três cenários, todos os gateways enviam seus dados para o Centro d
 
 
 
-<a id="ata-center" class="xliff"></a>
-
-## Centro de ATA
+## <a name="ata-center"></a>Centro de ATA
 O **Centro de ATA** executa as seguintes funções:
 
 -   Gerencia as definições de configuração de Gateway do ATA e de Gateway Lightweight do ATA
@@ -105,13 +97,9 @@ Considere os seguintes critérios ao decidir quantos Centros do ATA você quer i
 
 -    Em implantações do Active Directory muito grandes, uma único Centro do ATA pode não ser capaz de lidar com todo o tráfego de todos os controladores de domínio. Nesse caso, serão necessários vários Centros do ATA. O número de Centrais do ATA deve ser determinado pelo [planejamento de capacidade do ATA](ata-capacity-planning.md).
 
-<a id="ata-gateway-and-ata-lightweight-gateway" class="xliff"></a>
+## <a name="ata-gateway-and-ata-lightweight-gateway"></a>Gateway do ATA e Gateway Lightweight do ATA
 
-## Gateway do ATA e Gateway Lightweight do ATA
-
-<a id="gateway-core-functionality" class="xliff"></a>
-
-### Funcionalidade básica do gateway
+### <a name="gateway-core-functionality"></a>Funcionalidade básica do gateway
 O **Gateway do ATA** e o **Gateway Lightweight do ATA** têm a mesma funcionalidade básica:
 
 -   Capturar e inspecionar o tráfego de rede do controlador de domínio. Este é o tráfego espelhado da porta para Gateways do ATA e tráfego local do controlador de domínio em Gateways Lightweight do ATA. 
@@ -137,9 +125,7 @@ O Gateway do ATA recebe o tráfego de rede espelhado e os eventos do Windows da 
 |Resolvedor de Entidade|O Resolvedor de Entidade utiliza os dados analisados (tráfego de rede e eventos) e resolve os dados com o Active Directory para localizar informações de conta e identidade. Em seguida, ele é correspondido com os endereços IP encontrados nos dados analisados. O Resolvedor de Entidade inspeciona os cabeçalhos de pacote com eficiência, permite analisar pacotes de autenticação para nomes, propriedades e identidades de computadores. O Resolvedor de Entidade combina os pacotes de autenticação analisado com os dados no pacote real.|
 |Remetente de Entidade|O Remetente de Entidade envia os dados analisados e correspondentes para o Centro do ATA.|
 
-<a id="ata-lightweight-gateway-features" class="xliff"></a>
-
-## Recursos do Gateway Lightweight do ATA
+## <a name="ata-lightweight-gateway-features"></a>Recursos do Gateway Lightweight do ATA
 
 Os recursos a seguir funcionam de modo diferente dependendo de você estar executando um Gateway do ATA ou um Gateway Lightweight do ATA.
 
@@ -174,14 +160,10 @@ Se o Active Directory precisa de mais de computação, a cota necessária do Gat
 
 
 
-<a id="your-network-components" class="xliff"></a>
-
-## Componentes da sua rede
+## <a name="your-network-components"></a>Componentes da sua rede
 Para trabalhar com o ATA, verifique o seguinte:
 
-<a id="port-mirroring" class="xliff"></a>
-
-### Espelhamento de porta
+### <a name="port-mirroring"></a>Espelhamento de porta
 Se você estiver usando Gateways do ATA, precisará configurar o espelhamento de porta para os controladores de domínio que serão monitorados e definir o Gateway do ATA como o destino usando os comutadores físicos ou virtuais. Outra opção é usar TAPs de rede. O ATA funcionará se alguns, e não todos, controladores de domínio forem monitorados, mas detecção será menos eficiente.
 
 Enquanto o espelhamento de portas espelha todo o tráfego de rede do controlador de domínio para o Gateway do ATA, apenas uma porcentagem muito pequena desse tráfego é compactada e enviada para o Centro do ATA para análise.
@@ -189,18 +171,14 @@ Enquanto o espelhamento de portas espelha todo o tráfego de rede do controlador
 Os controladores de domínio e os Gateways do ATA podem ser físicos ou virtuais, consulte [Configurar o espelhamento de porta](configure-port-mirroring.md) para obter mais informações.
 
 
-<a id="events" class="xliff"></a>
-
-### Eventos
+### <a name="events"></a>Eventos
 Para melhorar a detecção do ATA de Pass-the-Hash, Força Bruta, Modificação para grupos confidenciais e Honey Tokens, o ATA precisa dos seguintes eventos do Windows: 4776, 4732, 4733, 4728, 4729, 4756, 4757. Eles podem ser lidos automaticamente pelo Gateway Lightweight do ATA ou no caso de o Gateway Lightweight do ATA não estar implantado, podem ser encaminhados para o Gateway do ATA de duas maneiras: configurando o Gateway do ATA para escutar o SIEM ou [Configurando o Encaminhamento de Eventos do Windows](#configuring-windows-event-forwarding).
 
 -   Configuração do Gateway de ATA para escutar eventos SIEM <br>Configure o SIEM para encaminhar eventos específicos do Windows para o ATA. O ATA oferece suporte a vários fornecedores SIEM. Para obter mais informações, confira [Configurar coleta de eventos](configure-event-collection.md).
 
 -   Configuração do encaminhamento de eventos do Windows<br>Outra maneira de o ATA conseguir obter seus eventos é configurando seus controladores de domínio para encaminhar eventos do Windows 4776, 4732, 4733, 4728, 4729, 4756 and 4757 para seu Gateway do ATA. Isso é especialmente útil se você não tiver um SIEM ou se o SIEM não for atualmente suportado pelo ATA. Para obter mais informações sobre o Encaminhamento de Eventos do Windows no ATA, confira [Configurando o encaminhamento de eventos do Windows](configure-event-collection.md#configuring-windows-event-forwarding). Observe que isso se aplica apenas a Gateways do ATA físicos, não ao Gateway Lightweight do ATA.
 
-<a id="see-also" class="xliff"></a>
-
-## Consulte também
+## <a name="see-also"></a>Consulte também
 - [Pré-requisitos do ATA](ata-prerequisites.md)
 - [Planejamento da capacidade do ATA](ata-capacity-planning.md)
 - [Configurar coleta de eventos](configure-event-collection.md)
