@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 7/2/2017
+ms.date: 7/16/2017
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,14 +13,13 @@ ms.technology:
 ms.assetid: 9592d413-df0e-4cec-8e03-be1ae00ba5dc
 ms.reviewer: 
 ms.suite: ems
-ms.openlocfilehash: 6850c5e8e264a9610e377a9ab4aadca338971ee1
-ms.sourcegitcommit: be6bdfa24a9b25a3375a4768d513b93900b3a498
+ms.openlocfilehash: 63dd37548dbf4e150f32880543c3bf421bf3fe71
+ms.sourcegitcommit: 3cd268cf353ff8bc3d0b8f9a8c10a34353d1fcf1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2017
+ms.lasthandoff: 07/16/2017
 ---
-# Novidades na versão 1.8 do ATA
-<a id="whats-new-in-ata-version-18" class="xliff"></a>
+# <a name="whats-new-in-ata-version-18"></a>Novidades na versão 1.8 do ATA
 
 A versão mais recente da atualização do ATA pode ser [baixada do Centro de Download](https://www.microsoft.com/download/details.aspx?id=55536) ou a versão completa pode ser baixada do [centro Eval](http://www.microsoft.com/evalcenter/evaluate-microsoft-advanced-threat-analytics).
 
@@ -28,8 +27,7 @@ Essas notas de versão fornecem informações sobre atualizações, novos recurs
 
 
 
-## Detecções novas e atualizadas
-<a id="new--updated-detections" class="xliff"></a>
+## <a name="new--updated-detections"></a>Detecções novas e atualizadas
 
 - A implementação de protocolo incomum foi aperfeiçoada para ser capaz de detectar malware WannaCry.
 
@@ -48,8 +46,7 @@ Essas notas de versão fornecem informações sobre atualizações, novos recurs
     - Implementação de protocolo incomum
     - Confiança quebrada
 
-## Triagem de atividades suspeitas aprimorada
-<a id="improved-triage-of-suspicious-activities" class="xliff"></a>
+## <a name="improved-triage-of-suspicious-activities"></a>Triagem de atividades suspeitas aprimorada
 
 -   NOVO! O ATA 1.8 permite que você execute as seguintes atividades suspeitas durante o processo de triagem: 
     - **Excluir entidades** de gerar futuras atividades suspeitas para impedir que o ATA alerte quando detectar verdadeiros positivos benignos (como um administrador executando código remoto ou detectando scanners de segurança).
@@ -57,32 +54,32 @@ Essas notas de versão fornecem informações sobre atualizações, novos recurs
     - **Excluir atividades suspeitas** da linha do tempo de ataque.
 -   O processo para acompanhar alertas de atividade suspeita agora é mais eficiente. A linha do tempo de atividades suspeitas foi redefinida. No ATA 1.8, você poderá ver muito mais atividades suspeitas em uma única tela, que contém as melhores informações para fins de triagem e investigação. 
 
-## Novos relatórios para ajudá-lo a investigar
-<a id="new-reports-to-help-you-investigate" class="xliff"></a> 
+## <a name="new-reports-to-help-you-investigate"></a>Novos relatórios para ajudá-lo a investigar 
 -   NOVO! O **relatório de resumo** foi adicionado para permitir que você veja todos os dados resumidos do ATA, incluindo atividades suspeitas, problemas de integridade e muito mais. Você pode até mesmo definir um relatório personalizado que é gerado automaticamente de forma recorrente.
 -   NOVO! O **relatório de grupos confidenciais** foi adicionado para que você possa ver todas as alterações feitas em grupos confidenciais durante um certo período.
 
 
-## Melhorias na infraestrutura
-<a id="infrastructure-improvements" class="xliff"></a>
+## <a name="infrastructure-improvements"></a>Melhorias na infraestrutura
 
 -   O desempenho do Centro do ATA foi aprimorado. No ATA 1.8 o Centro do ATA pode lidar com mais de um milhão de pacotes por segundo.
 -   O Gateway Lightweight do ATA poderá ler eventos localmente, sem a necessidade de configurar o encaminhamento de eventos.
 -   Agora você pode configurar separadamente um email para alertas de monitoramento e para atividades suspeitas.
 
-## Aprimoramentos de segurança
-<a id="security-improvements" class="xliff"></a>
+## <a name="security-improvements"></a>Aprimoramentos de segurança
 
 -   NOVO! **Logon único para o gerenciamento do ATA**. O ATA dá suporte ao logon único integrado com a autenticação do Windows – se você já fez logon em seu computador, o ATA usará esse token para fazer o logon no Console do ATA. Você também pode fazer logon usando um cartão inteligente. Scripts de instalação silenciosa para o Gateway de ATA e para o Gateway Lightweight do ATA agora usam o contexto do usuário conectado, sem a necessidade de fornecer credenciais.
 -   Os privilégios do sistema local foram removidos do processo do Gateway do ATA, portanto, agora você pode usar contas virtuais (disponíveis apenas em Gateways do ATA autônomos), contas de serviço gerenciadas e contas de serviço gerenciado de grupo para executar o processo do Gateway do ATA.   
 -   Foram adicionados logs de auditoria para o Centro do ATA e para os Gateways do ATA e todas as ações agora podem ser registradas no Log de Eventos do Windows.
 -   Foi adicionado suporte para certificados KSP para o Centro do ATA.
 
+## <a name="additional-changes"></a>Alterações adicionais
+
+- A opção para adicionar anotações foi removida de Atividades suspeitas
+- As recomendações para redução de atividades suspeitas foram removidas da linha do tempo de Atividades suspeitas.
 
 
 
-## Consulte também
-<a id="see-also" class="xliff"></a>
+## <a name="see-also"></a>Consulte também
 [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
 [Atualizar o ATA para a versão 1.8 — guia de migração](ata-update-1.8-migration-guide.md)
