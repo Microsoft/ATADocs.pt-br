@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 377a3c81-5c1d-486f-8942-85249aacf560
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 112ee57f79b20b4e42b15c6fdc4566bbdcebe29f
-ms.sourcegitcommit: 470675730967e0c36ebc90fc399baa64e7901f6b
+ms.openlocfilehash: 174918812562b9bfe892fcde90d92e208b26ffc3
+ms.sourcegitcommit: 42ce07e3207da10e8dd7585af0e34b51983c4998
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 07/25/2017
 ---
 *Aplica-se a: Advanced Threat Analytics versão 1.8*
 
@@ -34,6 +34,7 @@ O modo padrão, e mais básico, de consultar o banco de dados é usando o shell 
 
 2.  Execute: `mongo.exe ATA`. Digite ATA com letras maiúsculas.
 
+> [!div class="mx-tableFixed"]
 |Como...|Sintaxe|Anotações|
 |-------------|----------|---------|
 |Verifique se há coleções no banco de dados.|`show collections`|É útil como um teste completo para verificar se o tráfego está sendo gravado no banco de dados, e se o evento 4776 está sendo recebido pelo ATA.|
