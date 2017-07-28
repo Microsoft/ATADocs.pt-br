@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 06/28/2017
+ms.date: 07/20/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: b3cceb18-0f3c-42ac-8630-bdc6b310f1d6
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 5b46d53d4e72ebe32b6e1f57960694194b71b31c
-ms.sourcegitcommit: 470675730967e0c36ebc90fc399baa64e7901f6b
+ms.openlocfilehash: 7e130da2b5a177658e176a428101c11d02bc2a3f
+ms.sourcegitcommit: 42ce07e3207da10e8dd7585af0e34b51983c4998
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 07/25/2017
 ---
 *Aplica-se a: Advanced Threat Analytics versão 1.8*
 
@@ -49,6 +49,7 @@ Use o seguinte comando para instalar o Centro do ATA:
     
 **Opções de instalação**:
 
+> [!div class="mx-tableFixed"]
 |Nome|Sintaxe|Obrigatório para instalação silenciosa?|Descrição|
 |-------------|----------|---------|---------|
 |Quiet|/quiet|Sim|Executa o instalador sem exibir a interface do usuário nem solicitações.|
@@ -58,6 +59,7 @@ Use o seguinte comando para instalar o Centro do ATA:
 
 **Parâmetros de instalação**:
 
+> [!div class="mx-tableFixed"]
 |Nome|Sintaxe|Obrigatório para instalação silenciosa?|Descrição|
 |-------------|----------|---------|---------|
 |InstallationPath|InstallationPath=“<InstallPath>”|Não|Define o caminho para a instalação dos binários do ATA. Caminho padrão: C:\Arquivos de Programas\Microsoft Advanced Threat Analytics\Center|
@@ -89,6 +91,7 @@ Use o seguinte comando para atualizar o Centro do ATA:
 
 **Opções de instalação**:
 
+> [!div class="mx-tableFixed"]
 |Nome|Sintaxe|Obrigatório para instalação silenciosa?|Descrição|
 |-------------|----------|---------|---------|
 |Quiet|/quiet|Sim|Executa o instalador sem exibir a interface do usuário nem solicitações.|
@@ -111,6 +114,7 @@ Use o seguinte comando para realizar uma desinstalação silenciosa da Central d
 
 **Opções de instalação**:
 
+> [!div class="mx-tableFixed"]
 |Nome|Sintaxe|Obrigatório para desinstalação silenciosa?|Descrição|
 |-------------|----------|---------|---------|
 |Quiet|/quiet|Sim|Executa o desinstalador sem exibir a interface do usuário nem solicitações.|
@@ -119,6 +123,7 @@ Use o seguinte comando para realizar uma desinstalação silenciosa da Central d
 
 **Parâmetros de instalação**:
 
+> [!div class="mx-tableFixed"]
 |Nome|Sintaxe|Obrigatório para desinstalação silenciosa?|Descrição|
 |-------------|----------|---------|---------|
 |DeleteExistingDatabaseData|DeleteExistingDatabaseData|Não|Exclui todos os arquivos do banco de dados existente.|
@@ -134,7 +139,7 @@ Use o seguinte comando para instalar silenciosamente o Gateway do ATA:
 **Sintaxe**:
 
     Microsoft ATA Gateway Setup.exe [/quiet] [/Help] [NetFrameworkCommandLineArguments ="/q"] 
-    [GatewayCertificateThumbprint="<CertThumbprint >"] [ConsoleAccountName="<AccountName>"] 
+    [ConsoleAccountName="<AccountName>"] 
     [ConsoleAccountPassword="<AccountPassword>"]
 
 > [!NOTE]
@@ -143,6 +148,7 @@ Use o seguinte comando para instalar silenciosamente o Gateway do ATA:
 
 **Opções de instalação**:
 
+> [!div class="mx-tableFixed"]
 |Nome|Sintaxe|Obrigatório para instalação silenciosa?|Descrição|
 |-------------|----------|---------|---------|
 |Quiet|/quiet|Sim|Executa o instalador sem exibir a interface do usuário nem solicitações.|
@@ -151,9 +157,9 @@ Use o seguinte comando para instalar silenciosamente o Gateway do ATA:
 
 **Parâmetros de instalação**:
 
+> [!div class="mx-tableFixed"]
 |Nome|Sintaxe|Obrigatório para instalação silenciosa?|Descrição|
 |-------------|----------|---------|---------|
-|GatewayCertificateThumbprint|GatewayCertificateThumbprint=”<CertThumbprint >”|Não|Define a impressão digital do certificado para o serviço do Centro do ATA. Este certificado é usado para proteger a comunicação entre o Centro do ATA e o Gateway do ATA. Se não estiver definido, a instalação gerará um certificado autoassinado.|
 |ConsoleAccountName|ConsoleAccountName=”<AccountName>”|Sim|Define o nome da conta do usuário (user@domain.com) usada para registrar o Gateway do ATA no Centro do ATA.|
 |ConsoleAccountPassword|ConsoleAccountPassword=”<AccountPassword>”|Sim|Define a senha para a conta do usuário (user@domain.com) usada para registrar o Gateway do ATA no Centro do ATA.|
 
@@ -174,6 +180,7 @@ Use o seguinte comando para atualizar silenciosamente o Gateway do ATA:
 
 **Opções de instalação**:
 
+> [!div class="mx-tableFixed"]
 |Nome|Sintaxe|Obrigatório para instalação silenciosa?|Descrição|
 |-------------|----------|---------|---------|
 |Quiet|/quiet|Sim|Executa o instalador sem exibir a interface do usuário nem solicitações.|
@@ -193,6 +200,7 @@ Use o seguinte comando para realizar uma desinstalação silenciosa do Gateway d
     
 **Opções de instalação**:
 
+> [!div class="mx-tableFixed"]
 |Nome|Sintaxe|Obrigatório para desinstalação silenciosa?|Descrição|
 |-------------|----------|---------|---------|
 |Quiet|/quiet|Sim|Executa o desinstalador sem exibir a interface do usuário nem solicitações.|

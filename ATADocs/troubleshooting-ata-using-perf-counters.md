@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: df162a62-f273-4465-9887-94271f5000d2
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: ae72f7a25f0c57dadd02049fe3a570a0da7b84fd
-ms.sourcegitcommit: 470675730967e0c36ebc90fc399baa64e7901f6b
+ms.openlocfilehash: bc3ad332e1a8af6259eadaecc4638f27fded67c6
+ms.sourcegitcommit: 42ce07e3207da10e8dd7585af0e34b51983c4998
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 07/25/2017
 ---
 *Aplica-se a: Advanced Threat Analytics versão 1.8*
 
@@ -55,6 +55,7 @@ Isso é feito abrindo o "Monitor de desempenho" e adicionando todos os contadore
 
 Aqui está a lista dos principais contadores do Gateway de ATA a ter em atenção:
 
+> [!div class="mx-tableFixed"]
 |Contador|Descrição|Limite|Solução de problemas|
 |-----------|---------------|-------------|-------------------|
 |Mensagens\s do PEF analisado do NetworkListener\Gateway de ATA da Microsoft|A quantidade de tráfego processada pelo Gateway de ATA a cada segundo.|Sem limite|Ajuda a entender a quantidade de tráfego que está sendo analisada pelo Gateway de ATA.|
@@ -75,7 +76,7 @@ Para medir as limitações de recursos que o ATA impõe sobre o Gateway Lightwei
 
 Para fazer isso, abra o "Monitor de desempenho" e adicione todos os contadores ao Lightweight Gateway do ATA. O nome dos objetos de contador de desempenho são: "Microsoft ATA Gateway" e "Microsoft ATA Gateway Updater".
 
-
+> [!div class="mx-tableFixed"]
 |Contador|Descrição|Limite|Solução de problemas|
 |-----------|---------------|-------------|-------------------|
 |% Máxima de Tempo de CPU do Microsoft ATA Gateway Updater\GatewayUpdaterResourceManager|A quantidade máxima de tempo da CPU (em porcentagem) que o processo do Gateway Lightweight pode consumir. |Sem limite. | Esta é a limitação que impede que os recursos do controlador de domínio sejam usados pelo Gateway Lightweight do ATA. Se você perceber que o processo atinge frequentemente o limite máximo durante um período (o processo atinge o limite e, em seguida, começa a descartar tráfego), significa que você precisa adicionar mais recursos ao servidor que está executando o controlador de domínio.|
@@ -87,7 +88,7 @@ Para fazer isso, abra o "Monitor de desempenho" e adicione todos os contadores a
 Para ver seu consumo real, consulte os seguintes contadores:
 
 
-
+> [!div class="mx-tableFixed"]
 |Contador|Descrição|Limite|Solução de problemas|
 |-----------|---------------|-------------|-------------------|
 |Process(Microsoft.Tri.Gateway)\%Tempo do Processador|A quantidade de tempo da CPU (em porcentagem) que o processo do Gateway Lightweight está consumindo. |Sem limite. | Compare os resultados desse contador com o limite encontrado em GatewayUpdaterResourceManager CPU Time Max %. Se você perceber que o processo atinge frequentemente o limite máximo durante um período (o processo atinge o limite e, em seguida, começa a descartar tráfego), significa que você precisa dedicar mais recursos ao Gateway Lightweight.|
@@ -101,6 +102,7 @@ Isso é feito abrindo o "Monitor de desempenho" e adicionando todos os contadore
 
 Aqui está a lista dos principais contadores do Centro de ATA a ter em atenção:
 
+> [!div class="mx-tableFixed"]
 |Contador|Descrição|Limite|Solução de problemas|
 |-----------|---------------|-------------|-------------------|
 |Tamanho do Bloco do Lote de Entidade do Centro do Microsoft ATA/EntityReceiver|O número de lotes de entidade colocados em fila pelo Centro de ATA.|Deve ser menor que o máximo de 1 (máximo padrão: 10.000)|Verifique se há qualquer componente que atingiu seu tamanho máximo e está bloqueando componentes anteriores até o NetworkListener.  Consulte o **Processo de componente do ATA** acima.<br /><br />Verifique se não há nenhum problema com a CPU ou a memória.|
@@ -116,6 +118,7 @@ Aqui está a lista dos principais contadores do Centro de ATA a ter em atenção
 ## <a name="operating-system-counters"></a>Contadores do sistema operacional
 Abaixo temos a lista dos principais contadores do sistema operacional a ter em atenção:
 
+> [!div class="mx-tableFixed"]
 |Contador|Descrição|Limite|Solução de problemas|
 |-----------|---------------|-------------|-------------------|
 |Processador(_Total)\% Tempo do Processador|Percentual de tempo decorrido que o processador gasta para executar um thread não ocioso.|Menos de 80% em média|Verifique se há um processo específico que está levando muito mais tempo de processamento do que deveria.<br /><br />Adicione mais processadores.<br /><br />Reduza a quantidade de tráfego por servidor.<br /><br />O contador "Processador(_Total)\% Tempo do Processador" pode ser menos preciso em servidores virtuais. Nesse caso, a maneira mais precisa de medir a falta de energia do processador é por meio do contador "Sistema\Comprimento da Fila do Processador".|
