@@ -1,7 +1,7 @@
 # Compreensão e Exploração
 ## [O que é o Microsoft Advanced Threat Analytics?](what-is-ata.md)
 ## [Quais ameaças o ATA detecta?](ata-threats.md)
-## Notas de versão do ATA
+## Novidades no ATA?
 ### [Novidades na versão 1.8 do ATA](whats-new-version-1.8.md)
 #### [Atualização para o ATA 1.8 — guia de migração](ata-update-1.8-migration-guide.md)
 ### [Novidades na versão 1.7 do ATA](whats-new-version-1.7.md)
@@ -28,19 +28,19 @@
 ### [Etapa 4 Instalar o Gateway do ATA](install-ata-step4.md)
 ### [Etapa 5 Configurar o Gateway do ATA](install-ata-step5.md)
 ### [Etapa 6 Coleta de eventos e VPN](install-ata-step6.md)
-### [Etapa 6 Exclusão e Honeytoken](install-ata-step6.md)
+### [Etapa 7 Exclusão e Honeytoken](install-ata-step7.md)
 ### [Instalação silenciosa](ata-silent-installation.md)
-# Use objetos de
-## [Alterar a configuração do Centro do ATA](modifying-ata-center-configuration.md)
-## [Alterar a senha de conectividade do domínio](modifying-ata-config-dcpassword.md)
+# Uso
 ## [Trabalhando com o Console do ATA](working-with-ata-console.md)
-## [Grupos de função do ATA](ata-role-groups.md)
-## [Definir as configurações de servidor Syslog e Email](setting-syslog-email-server-settings.md)
+## [Trabalhando com atividades suspeitas](working-with-suspicious-activities.md)
+###[Excluindo entidades de detecções](excluding-entities-from-detections.md)
 ## [Definir notificações do ATA](setting-ata-alerts.md)
-## [Trabalhando com as configurações de detecção](working-with-detection-settings.md)
 ## [Relatórios do ATA](reports.md)
 ## [Centro de Integridade do ATA](ata-health-center.md)
-## [Trabalhando com atividades suspeitas](working-with-suspicious-activities.md)
+## [Grupos de função do ATA](ata-role-groups.md)
+## [Alterar a configuração do Centro do ATA](modifying-ata-center-configuration.md)
+## [Alterar a senha de conectividade do domínio](modifying-ata-config-dcpassword.md)
+## [Definir as configurações de servidor Syslog e Email](setting-syslog-email-server-settings.md)
 ## [Gerenciamento do banco de dados do ATA](ata-database-management.md)
 ## [Exportar/importar configuração do ATA](ata-configuration-file.md)
 ## [Gerenciar telemetria do ATA](manage-telemetry-settings.md)
