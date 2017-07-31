@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 7/16/2017
+ms.date: 7/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 9592d413-df0e-4cec-8e03-be1ae00ba5dc
 ms.reviewer: 
 ms.suite: ems
-ms.openlocfilehash: 63dd37548dbf4e150f32880543c3bf421bf3fe71
-ms.sourcegitcommit: 3cd268cf353ff8bc3d0b8f9a8c10a34353d1fcf1
+ms.openlocfilehash: b4754c749cad25a6aa4da94563df29f9f99e2a20
+ms.sourcegitcommit: 42ce07e3207da10e8dd7585af0e34b51983c4998
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2017
+ms.lasthandoff: 07/25/2017
 ---
 # <a name="whats-new-in-ata-version-18"></a>Novidades na versão 1.8 do ATA
 
@@ -77,6 +77,51 @@ Essas notas de versão fornecem informações sobre atualizações, novos recurs
 - A opção para adicionar anotações foi removida de Atividades suspeitas
 - As recomendações para redução de atividades suspeitas foram removidas da linha do tempo de Atividades suspeitas.
 
+## <a name="known-issues"></a>Problemas conhecidos
+
+### <a name="ata-gateway-on-windows-server-core"></a>Gateway do ATA no Windows Server Core
+
+**Sintomas**: atualizar um Gateway do ATA 1.8 no Windows Server 2012R2 Core com o .Net framework 4.7 pode falhar com o erro: *O gateway do Microsoft Advanced Threat Analytics parou de funcionar*. 
+
+![Erro de núcleo de gateway](./media/gateway-core-error.png)
+
+No Windows Server 2016 Core, você não poderá ver o erro, mas o processo falhará quando você tentar instalar e os eventos 1000 e 1001 (falha de processo) serão registrados no Log de Eventos do aplicativo no servidor.
+
+**Descrição**: há um problema com o .NET framework 4.7 que faz com que os aplicativos que usam a tecnologia WPF (como o ATA) falhem ao carregar. Para obter mais informações, [consulte KB 4034015](https://support.microsoft.com/help/4034015/wpf-window-can-t-be-loaded-after-you-install-the-net-framework-4-7-on). 
+
+**Solução alternativa**: desinstale o .Net 4.7 [Consulte KB 3186497](https://support.microsoft.com/help/3186497/the-net-framework-4-7-offline-installer-for-windows) para reverter a versão do .NET para .NET 4.6.2 e, em seguida, atualize o Gateway de ATA para a versão 1.8. Após a atualização do ATA, você pode reinstalar o .NET 4.7.  Haverá uma atualização para corrigir esse problema em uma versão futura.
+
+### <a name="lightweight-gateway-event-log-permissions"></a>Permissões de log de eventos do Gateway Lightweight
+
+**Sintomas**: quando você atualiza o ATA para a versão 1.8, aplicativos ou serviços que anteriormente tinham permissões para acessar o Log de Eventos de Segurança podem perder as permissões. 
+
+**Descrição**: para facilitar a implantação do ATA, o ATA 1.8 acessa seu Log de Eventos de Segurança diretamente, sem a necessidade de configuração do Windows Event Forwarding. Ao mesmo tempo, o ATA é executado como um serviço local de baixa permissão para manter a segurança mais forte. Para fornecer acesso para o ATA leia os eventos, o serviço do ATA concede a si mesmo permissões para o Log de Eventos de Segurança. Quando isso acontece, as permissões definidas anteriormente para outros serviços podem ser desabilitadas.
+
+**Solução alternativa**: execute o seguinte script do Windows PowerShell. Isso remove as permissões adicionadas incorretamente no registro do ATA e as adiciona por meio de uma API diferente. Isso pode restaurar permissões para outros aplicativos. Se não estiver, eles precisarão ser restaurados manualmente. Haverá uma atualização para corrigir esse problema em uma versão futura. 
+
+       $ATADaclEntry = "(A;;0x1;;;S-1-5-80-1717699148-1527177629-2874996750-2971184233-2178472682)"
+        try {
+        $SecurityDescriptor = Get-ItemProperty -Path HKLM:\SYSTEM\CurrentControlSet\Services\Eventlog\Security -Name CustomSD
+        $ATASddl = "O:BAG:SYD:" + $ATADaclEntry 
+        if($SecurityDescriptor.CustomSD -eq $ATASddl) {
+        Remove-ItemProperty -Path HKLM:\SYSTEM\CurrentControlSet\Services\Eventlog\Security -Name CustomSD
+        }
+    }
+    catch
+    {
+    # registry key does not exist
+    }
+
+    $EventLogConfiguration = New-Object -TypeName System.Diagnostics.Eventing.Reader.EventLogConfiguration("Security")
+    $EventLogConfiguration.SecurityDescriptor = $EventLogConfiguration.SecurityDescriptor + $ATADaclEntry
+
+### <a name="proxy-interference"></a>Interferência de proxy
+
+**Sintomas**: depois de atualizar para o ATA 1.8 o serviço de Gateway do ATA pode falhar ao iniciar. No log de erros do ATA, você verá a seguinte exceção: *System.Net.Http.HttpRequestException: ocorreu um erro ao enviar a solicitação.---> System.Net.WebException: o servidor remoto retornou um erro: (407) autenticação de proxy necessária.*
+
+**Descrição**: iniciando na versão 1.8 do ATA, o Gateway do ATA se comunica com o centro do ATA usando o protocolo http. Se o computador no qual você instalou o Gateway do ATA usa um servidor proxy para conectar-se ao centro do ATA, ela poderá quebrar essa comunicação. 
+
+**Solução alternativa**: desabilite o uso de um servidor proxy na conta de serviço de Gateway do ATA. Haverá uma atualização para corrigir esse problema em uma versão futura.
 
 
 ## <a name="see-also"></a>Consulte também
