@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 1bf264d9-9697-44b5-9533-e1c498da4f07
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 3d687087dd9e1ae7f7642f9fdd7d89420f3bec27
-ms.sourcegitcommit: fa50f37b134d7579d7c310852dff60e5f1996eaa
+ms.openlocfilehash: 7067477066a2341fa15b2b0d283b2d7721239d5e
+ms.sourcegitcommit: 42ce07e3207da10e8dd7585af0e34b51983c4998
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/03/2017
+ms.lasthandoff: 07/25/2017
 ---
 *Aplica-se a: Advanced Threat Analytics versão 1.8*
 
@@ -34,19 +34,22 @@ Para fazer logon com êxito no Console do ATA, você precisa fazer logon com um 
 
 ## <a name="logging-into-the-ata-console"></a>Fazer logon no Console do ATA
 
+>[!NOTE]
+ > Começando com o ATA 1.8, o log de processo para o Console do ATA é realizado usando o logon único.
+
 1. No servidor do Centro do ATA, clique no ícone **Console do Microsoft ATA** na área de trabalho ou abra um navegador e procure o Console do ATA.
 
     ![Ícone do servidor de ATA](media/ata-server-icon.png)
 
->[!NOTE]
-> Também é possível abrir um navegador na Central do ATA ou no Gateway do ATA e navegar até o endereço IP configurado na instalação da Central do ATA para o Console do ATA.    
+ >[!NOTE]
+ > Também é possível abrir um navegador na Central do ATA ou no Gateway do ATA e navegar até o endereço IP configurado na instalação da Central do ATA para o Console do ATA.    
 
 2.  Se o computador no qual o Centro do ATA está instalado e o computador do qual você está tentando acessar o Console do ATA estiverem ingressados no domínio, o ATA dará suporte ao logon único integrado com a autenticação do Windows, se você já estiver conectado no computador, o ATA usará esse token para conectá-lo ao Console do ATA. Você também pode fazer logon usando um cartão inteligente. Suas permissões no ATA corresponderão à sua [função de administrador](ata-role-groups.md).
 
-> [!NOTE]
-> Certifique-se de fazer logon no computador do qual deseja acessar o Console do ATA usando seu nome de usuário administrador e senha do ATA. Como alternativa, você pode executar seu navegador como um usuário diferente ou desconectar do Windows e fazer logon com o usuário administrador do ATA. Para solicitar que o Console do ATA peça credenciais, acesse o console usando um endereço IP e você será solicitado a inserir as credenciais.
+ > [!NOTE]
+ > Certifique-se de fazer logon no computador do qual deseja acessar o Console do ATA usando seu nome de usuário administrador e senha do ATA. Como alternativa, você pode executar seu navegador como um usuário diferente ou desconectar do Windows e fazer logon com o usuário administrador do ATA. Para solicitar que o Console do ATA peça credenciais, acesse o console usando um endereço IP e você será solicitado a inserir as credenciais.
 
-Para fazer logon usando o SSO, certifique-se de que o site do Console do ATA esteja definido como um site de intranet local no seu navegador e de acessá-lo usando um nome curto ou um localhost.
+3. Para fazer logon usando o SSO, certifique-se de que o site do Console do ATA esteja definido como um site de intranet local no seu navegador e de acessá-lo usando um nome curto ou um localhost.
 
 > [!NOTE]
 > Além de registrar cada atividade suspeita e alerta de integridade, cada alteração de configuração feita no Console do ATA é auditada no Log de Eventos do Windows no computador do Centro do ATA, em **Applications and services log (Log de serviços e aplicativos)** e em **Microsoft ATA**. Cada logon no console do ATA é auditado também.<br></br>  A configuração que afeta o Gateway do ATA também é registrada no Log de Eventos do Windows do computador do Gateway do ATA. 
@@ -113,7 +116,7 @@ Um perfil que o ATA não tenha sido capaz de resolver completamente será identi
 
 ### <a name="sensitive-groups"></a>Grupos confidenciais
 
-A lista de grupos a seguir é considerada **Confidencial** pelo ATA. Esses grupos serão sinalizados como tendo privilégios administrativos e gerarão alertas que correspondem às contas confidenciais:
+A lista de grupos a seguir é considerada **Confidencial** pelo ATA. Qualquer entidade que é um membro desses grupos é considerada confidencial:
 
 - Controladores de domínio de empresa somente leitura 
 - Administradores do domínio 
