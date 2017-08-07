@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 07/3/2017
+ms.date: 08/2/2017
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: a7d378ec-68ed-4a7b-a0db-f5e439c3e852
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 5beabd2617f55ecbcc717338dc40d9f597cc25d4
-ms.sourcegitcommit: fa50f37b134d7579d7c310852dff60e5f1996eaa
+ms.openlocfilehash: 05853aecf8f8aa075d66c5a755cf89ffd7727739
+ms.sourcegitcommit: 7bc04eb4d004608764b3ded1febf32bc4ed020be
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/03/2017
+ms.lasthandoff: 08/02/2017
 ---
 *Aplica-se a: Advanced Threat Analytics versão 1.8*
 
@@ -73,7 +73,7 @@ nome do arquivo ATA mongo.exe
         });
 
 ## <a name="does-ata-work-with-encrypted-traffic"></a>O ATA funciona com tráfego criptografado?
-O ATA tem base na análise de vários protocolos de rede, bem como em eventos coletados do SIEM ou por meio do Encaminhamento de Eventos do Windows, de modo que, embora o tráfego criptografado não seja analisado (por exemplo, LDAPS e ESP IPSEC) o ATA ainda funcionará e a maioria das detecções não será afetada.
+O ATA tem base na análise de vários protocolos de rede, bem como em eventos coletados do SIEM ou por meio do Encaminhamento de Eventos do Windows, de modo que, embora o tráfego criptografado não seja analisado (por exemplo, LDAPS e IPSEC) o ATA ainda funcionará e a maioria das detecções não será afetada.
 
 ## <a name="does-ata-work-with-kerberos-armoring"></a>O ATA funciona com Kerberos Armoring?
 Há suporte para a habilitação do Kerberos Armoring, também conhecido como FAST (encapsulamento seguro de autenticação flexível), pelo ATA, com exceção da detecção de passagem pelo hash, que não funcionará.
