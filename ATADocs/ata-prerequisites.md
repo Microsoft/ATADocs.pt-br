@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 7/2/2017
+ms.date: 8/2/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: a5f90544-1c70-4aff-8bf3-c59dd7abd687
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 14b0d68ce797eeaa99c9e067f7f8caacee1a7b74
-ms.sourcegitcommit: 3cd268cf353ff8bc3d0b8f9a8c10a34353d1fcf1
+ms.openlocfilehash: 0a9d92e5851f1cf64c5e4b4e1ee57d7ee4562d96
+ms.sourcegitcommit: 7bc04eb4d004608764b3ded1febf32bc4ed020be
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2017
+ms.lasthandoff: 08/02/2017
 ---
 *Aplica-se a: Advanced Threat Analytics versão 1.8*
 
@@ -51,12 +51,12 @@ O Sistema do ATA funciona nos limites da floresta do active directory e oferece 
 Esta seção lista as informações que você deve obter, as contas e entidades de rede que você deve ter antes de iniciar a instalação do ATA.
 
 
--   Conta de usuário e senha com acesso de leitura para todos os objetos nos domínios que serão monitorados.
+-   Conta de usuário e senha com acesso de leitura para todos os objetos nos domínios monitorados.
 
     > [!NOTE]
     > Se você tiver definido ACLs personalizadas em várias Unidades Organizacionais (UO) em seu domínio, verifique se o usuário selecionado tem permissões de leitura para essas UOs.
 
--   Não instale o Microsoft Message Analyzer em um Gateway ou Gateway Lightweight do ATA. O driver do Message Analyzer conflita com os drivers do Gateway e Gateway Lightweight do ATA. Se você executar o Wireshark no Gateway do ATA, precisará reiniciar o Serviço de Gateway do Microsoft Advanced Threat Analytics após parar a captura do Wireshark. Caso contrário, o Gateway não capturará qualquer tráfego. Observe que executar o Wireshark em um Gateway Lightweight do ATA não interfere no Gateway Lightweight do ATA.
+-   Não instale o Microsoft Message Analyzer em um Gateway ou um Gateway Lightweight do ATA. O driver do Message Analyzer conflita com os drivers do Gateway e Gateway Lightweight do ATA. Se você executar o Wireshark no Gateway do ATA, precisará reiniciar o Serviço de Gateway do Microsoft Advanced Threat Analytics após parar a captura do Wireshark. Caso contrário, o Gateway para de capturar o tráfego. Observe que executar o Wireshark em um Gateway Lightweight do ATA não interfere no Gateway Lightweight do ATA.
 
 -    Recomendado: o usuário deve ter permissões de leitura somente no contêiner de Objetos Excluídos. Isso permitirá que o ATA detecte a exclusão em massa de objetos no domínio. Para obter informações sobre como configurar permissões de leitura somente no contêiner de Objetos Excluídos, confira a seção **Alterar permissões em um contêiner de objetos excluídos** no tópico [Exibir ou Definir Permissões em um Objeto de Diretório](https://technet.microsoft.com/library/cc816824%28v=ws.10%29.aspx).
 
@@ -94,7 +94,7 @@ O servidor do Centro do ATA, os servidores do Gateway do ATA e os controladores 
 Você deve ter o seguinte:
 -   Pelo menos um adaptador de rede (se estiver usando o servidor físico no ambiente de VLAN, recomendamos o uso de dois adaptadores de rede)
 
--   Um endereço IP para comunicação entre o Centro do ATA e o Gateway de ATA, que é criptografado com o SSL na porta 443. 
+-   Um endereço IP para comunicação entre o Centro do ATA e o Gateway de ATA, que é criptografado com o SSL na porta 443. (O serviço do ATA é associado a todos os endereços IP que o Centro do ATA tem na porta 443.)
 
 ### <a name="ports"></a>Portas
 A tabela a seguir lista as portas mínimas que devem ser abertas para que a Central de ATA funcione corretamente.
@@ -114,19 +114,23 @@ A tabela a seguir lista as portas mínimas que devem ser abertas para que a Cent
 |**Netlogon** (opcional se ingressado no domínio)|TCP e UDP|445|Controladores de domínio|Saída|
 |**Horário do Windows** (opcional se ingressado no domínio)|UDP|123|Controladores de domínio|Saída|
 
+> [!NOTE]
+> O LDAP é necessário para testar as credenciais entre os Gateways do ATA e os controladores de domínio. Os testes executados do Centro do ATA para um controlador de domínio para testar a validade dessas credenciais, depois do qual o Gateway do ATA usa o LDAP como parte da comunicação normal.
+
+
 ### <a name="certificates"></a>Certificados
 Verifique se o Centro do ATA tem acesso ao ponto de distribuição de CRL. Se os Gateways do ATA não tiverem acesso à Internet, siga [o procedimento para importar manualmente uma CRL](https://technet.microsoft.com/library/aa996972%28v=exchg.65%29.aspx), tendo o cuidado de instalar todos os pontos de distribuição de CRL de toda a cadeia.
 
 Para facilitar a instalação do ATA, você pode instalar certificados autoassinados durante a instalação. Após a implantação, você pode substituir o autoassinado pelo certificado de uma Autoridade de Certificação interna a ser usado pelo Gateway de ATA.<br>
-> [!NOTE]
-> O tipo de provedor do certificado pode ser o CSP (Provedor de Serviços de Criptografia) ou KSP (Provedor de Armazenamento de Chaves).
 
-
-> Não há suporte para o uso da renovação automática de certificados.
+> [!WARNING]
+> - Não há suporte para o processo de renovação de um certificado existente. A única maneira de renovar um certificado é criando um novo certificado e configurando o ATA para usar o novo certificado.
 
 
 > [!NOTE]
-> Se você pretende acessar o Console do ATA a partir de outros computadores, verifique se esses computadores confiam no certificado sendo usado pelo Console do ATA, caso contrário, será exibida uma página de aviso de que há um problema com o certificado de segurança do site antes de acessar a página de logon.
+> - O tipo de provedor do certificado pode ser o CSP (Provedor de Serviços de Criptografia) ou KSP (Provedor de Armazenamento de Chaves).
+> - O certificado do Centro do ATA NÃO DEVE ser renovado. Antes de sua expiração, a maneira correta de renová-lo é criar um novo certificado e escolher o novo certificado. 
+> - Se você pretende acessar o Console do ATA a partir de outros computadores, verifique se esses computadores confiam no certificado sendo usado pelo Console do ATA, caso contrário, será exibida uma página de aviso de que há um problema com o certificado de segurança do site antes de acessar a página de logon.
 
 ## <a name="ata-gateway-requirements"></a>Requisitos do Gateway do ATA
 Esta seção lista os requisitos para o Gateway do ATA.
