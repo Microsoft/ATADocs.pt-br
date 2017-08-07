@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 7/23/2017
+ms.date: 7/30/2017
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: d89e7aff-a6ef-48a3-ae87-6ac2e39f3bdb
 ms.reviewer: arzinger
 ms.suite: ems
-ms.openlocfilehash: 28b3bca7e84213b0f41bd8e2de61c006592819d5
-ms.sourcegitcommit: 42ce07e3207da10e8dd7585af0e34b51983c4998
+ms.openlocfilehash: 734455b06514cadb232916b8db76e47b8bf3e67a
+ms.sourcegitcommit: e7f83eb636db00333fe3965324a10a2ef5e2beba
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/25/2017
+ms.lasthandoff: 07/30/2017
 ---
 *Aplica-se a: Advanced Threat Analytics versão 1.8*
 
@@ -51,6 +51,7 @@ Esta seção detalha os possíveis erros nas implantações do ATA e as etapas n
 |Alertas de tráfego espelhado por porta descartados ao usar o Gateway Lightweight no VMware|Se você estiver usando DCs em máquinas virtuais VMware, poderá receber alertas sobre o **Tráfego de rede espelhado por porta descartado**. Isso pode ser devido a uma incompatibilidade de configuração no VMware. |Para evitar esses alertas, verifique se as configurações a seguir estão definidas como 0 ou Desabilitado: TsoEnable, LargeSendOffload, IPv4 e Descarregamento de TSO (Descarregamento de Segmentação TCP). Além disso, considere desabilitar o Descarregamento TSO gigante do IPv4. Para obter mais informações, consulte a documentação do VMware.|
 |System.Net.WebException: o servidor remoto retornou um erro: (407) Autenticação de proxy necessária|A comunicação de Gateway do ATA no centro do ATA está sendo interrompida por um servidor proxy.|Desabilite o proxy no computador do Gateway do ATA. <br></br>Observe que as configurações de proxy podem ser por conta.|
 |System.IO.DirectoryNotFoundException: o sistema não pode localizar o caminho especificado. (Exceção de HRESULT: 0x80070003)|Um ou mais dos serviços necessários para operar o ATA não foram iniciados.|Inicie os seguintes serviços: <br></br>Logs e Alertas de Desempenho (PLA), Agendador de Tarefas (agenda).|
+|System.Net.WebException: o servidor remoto retornou um erro: (403) Proibido|O Gateway de ATA ou o Gateway Lightweight foi proibido de estabelecer uma conexão HTTP porque o Centro do ATA não é confiável.|Adicione o nome NetBIOS e o FQDN do Centro do ATA à lista de sites confiáveis e limpe o cache no Internet Explorer (ou o nome do Centro do ATA, conforme especificado na configuração, se o configurado for diferente do NetBIOS/FQDN).|
 
 ## <a name="deployment-errors"></a>Erros de implantação
 > [!div class="mx-tableFixed"]
