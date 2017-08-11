@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 8/2/2017
+ms.date: 8/6/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: a5f90544-1c70-4aff-8bf3-c59dd7abd687
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 0a9d92e5851f1cf64c5e4b4e1ee57d7ee4562d96
-ms.sourcegitcommit: 7bc04eb4d004608764b3ded1febf32bc4ed020be
+ms.openlocfilehash: bd3ddca6f233499441bf82a0cdb5a79078df0bf5
+ms.sourcegitcommit: 28f5d0f39149955c0d1059e13db289d13be9b642
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 08/07/2017
 ---
 *Aplica-se a: Advanced Threat Analytics versão 1.8*
 
@@ -115,8 +115,7 @@ A tabela a seguir lista as portas mínimas que devem ser abertas para que a Cent
 |**Horário do Windows** (opcional se ingressado no domínio)|UDP|123|Controladores de domínio|Saída|
 
 > [!NOTE]
-> O LDAP é necessário para testar as credenciais entre os Gateways do ATA e os controladores de domínio. Os testes executados do Centro do ATA para um controlador de domínio para testar a validade dessas credenciais, depois do qual o Gateway do ATA usa o LDAP como parte da comunicação normal.
-
+> O LDAP é necessário para testar as credenciais serem usadas entre os Gateways do ATA e os controladores de domínio. Os testes executados do Centro do ATA para um controlador de domínio para testar a validade dessas credenciais, depois do qual o Gateway do ATA usa o LDAP como parte do processo de resolução normal.
 
 ### <a name="certificates"></a>Certificados
 Verifique se o Centro do ATA tem acesso ao ponto de distribuição de CRL. Se os Gateways do ATA não tiverem acesso à Internet, siga [o procedimento para importar manualmente uma CRL](https://technet.microsoft.com/library/aa996972%28v=exchg.65%29.aspx), tendo o cuidado de instalar todos os pontos de distribuição de CRL de toda a cadeia.
