@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 3/7/2017
+ms.date: 8/6/2017
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 7620e171-76d5-4e3f-8b03-871678217a3a
 ms.reviewer: arzinger
 ms.suite: ems
-ms.openlocfilehash: ce06038a3c3f2e5a6f2a5d57ad814ab8393c0b0c
-ms.sourcegitcommit: 470675730967e0c36ebc90fc399baa64e7901f6b
+ms.openlocfilehash: d3621338070c257d9fa196fba8657a805216383b
+ms.sourcegitcommit: 28f5d0f39149955c0d1059e13db289d13be9b642
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 08/07/2017
 ---
 *Aplica-se a: Advanced Threat Analytics versão 1.8*
 
@@ -51,7 +51,7 @@ Este artigo descreve como recuperar rapidamente seu Centro de ATA e restaurar a 
 6. Importe a configuração do Centro de ATA armazenada em backup:
     1. Remova o documento padrão do Perfil do Sistema do Centro de ATA do MongoDB: 
         1. Acesse **C:\Arquivos de Programas\Microsoft Advanced Threat Analytics\Center\MongoDB\bin**. 
-        2. Execute `mongo.exe` 
+        2. Execute `mongo.exe ATA` 
         3. Execute este comando para remover o perfil do sistema padrão: `db.SystemProfile.remove({})`
     2. Execute o comando: `mongoimport.exe --db ATA --collection SystemProfile --file "<SystemProfile.json backup file>" --upsert` usando o arquivo de backup da etapa 1.</br>
     Para obter uma explicação completa de como localizar e importar arquivos de backup, confira [Exportar e importar a configuração de ATA](/advanced-threat-analytics/deploy-use/ata-configuration-file). 
