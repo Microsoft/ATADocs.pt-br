@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: a5f90544-1c70-4aff-8bf3-c59dd7abd687
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: bd3ddca6f233499441bf82a0cdb5a79078df0bf5
-ms.sourcegitcommit: 28f5d0f39149955c0d1059e13db289d13be9b642
+ms.openlocfilehash: dfcdffb3458124cade644cc06a4c359458eb26fe
+ms.sourcegitcommit: 8b622fa5457cf1a540504899c8c98e860b946e01
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 08/14/2017
 ---
 *Aplica-se a: Advanced Threat Analytics versão 1.8*
 
@@ -118,9 +118,12 @@ A tabela a seguir lista as portas mínimas que devem ser abertas para que a Cent
 > O LDAP é necessário para testar as credenciais serem usadas entre os Gateways do ATA e os controladores de domínio. Os testes executados do Centro do ATA para um controlador de domínio para testar a validade dessas credenciais, depois do qual o Gateway do ATA usa o LDAP como parte do processo de resolução normal.
 
 ### <a name="certificates"></a>Certificados
-Verifique se o Centro do ATA tem acesso ao ponto de distribuição de CRL. Se os Gateways do ATA não tiverem acesso à Internet, siga [o procedimento para importar manualmente uma CRL](https://technet.microsoft.com/library/aa996972%28v=exchg.65%29.aspx), tendo o cuidado de instalar todos os pontos de distribuição de CRL de toda a cadeia.
 
-Para facilitar a instalação do ATA, você pode instalar certificados autoassinados durante a instalação. Após a implantação, você pode substituir o autoassinado pelo certificado de uma Autoridade de Certificação interna a ser usado pelo Gateway de ATA.<br>
+Para facilitar a instalação do ATA, você pode instalar certificados autoassinados durante a instalação. Após a implantação, você deverá substituir o autoassinado pelo certificado de uma Autoridade de Certificação interna a ser usado pelo Centro de ATA.
+
+
+Verifique se que os Gateways de ATA e o Centro de ATA têm acesso ao ponto de distribuição de CRL. Se eles não tiverem acesso à Internet, siga [o procedimento para importar manualmente uma CRL](https://technet.microsoft.com/library/aa996972%28v=exchg.65%29.aspx), tendo o cuidado de instalar todos os pontos de distribuição de CRL de toda a cadeia.
+
 
 > [!WARNING]
 > - Não há suporte para o processo de renovação de um certificado existente. A única maneira de renovar um certificado é criando um novo certificado e configurando o ATA para usar o novo certificado.
@@ -128,8 +131,8 @@ Para facilitar a instalação do ATA, você pode instalar certificados autoassin
 
 > [!NOTE]
 > - O tipo de provedor do certificado pode ser o CSP (Provedor de Serviços de Criptografia) ou KSP (Provedor de Armazenamento de Chaves).
-> - O certificado do Centro do ATA NÃO DEVE ser renovado. Antes de sua expiração, a maneira correta de renová-lo é criar um novo certificado e escolher o novo certificado. 
 > - Se você pretende acessar o Console do ATA a partir de outros computadores, verifique se esses computadores confiam no certificado sendo usado pelo Console do ATA, caso contrário, será exibida uma página de aviso de que há um problema com o certificado de segurança do site antes de acessar a página de logon.
+> - Começando com o ATA versão 1.8, os Gateways de ATA e Gateways Lightweight estão gerenciando seus próprios certificados e não precisam de nenhuma interação do administrador para gerenciá-los.
 
 ## <a name="ata-gateway-requirements"></a>Requisitos do Gateway do ATA
 Esta seção lista os requisitos para o Gateway do ATA.
