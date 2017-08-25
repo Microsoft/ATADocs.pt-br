@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 8/6/2017
+ms.date: 8/20/2017
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: d89e7aff-a6ef-48a3-ae87-6ac2e39f3bdb
 ms.reviewer: arzinger
 ms.suite: ems
-ms.openlocfilehash: 675543c11e07bcc243131e2350cfb33bfe8e7e39
-ms.sourcegitcommit: 28f5d0f39149955c0d1059e13db289d13be9b642
+ms.openlocfilehash: 89d1472b18f20d9702fcd7dfd47fa4b22858ab83
+ms.sourcegitcommit: 37fdfb6a21d1b81f5a4b4c1351112bdf727a633f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 08/20/2017
 ---
 *Aplica-se a: Advanced Threat Analytics versão 1.8*
 
@@ -53,7 +53,9 @@ Esta seção detalha os possíveis erros nas implantações do ATA e as etapas n
 |System.Net.WebException: o servidor remoto retornou um erro: (407) Autenticação de proxy necessária|A comunicação de Gateway do ATA no centro do ATA está sendo interrompida por um servidor proxy.|Desabilite o proxy no computador do Gateway do ATA. <br></br>Observe que as configurações de proxy podem ser por conta.|
 |System.IO.DirectoryNotFoundException: o sistema não pode localizar o caminho especificado. (Exceção de HRESULT: 0x80070003)|Um ou mais dos serviços necessários para operar o ATA não foram iniciados.|Inicie os seguintes serviços: <br></br>Logs e Alertas de Desempenho (PLA), Agendador de Tarefas (agenda).|
 |System.Net.WebException: o servidor remoto retornou um erro: (403) Proibido|O Gateway de ATA ou o Gateway Lightweight foi proibido de estabelecer uma conexão HTTP porque o Centro do ATA não é confiável.|Adicione o nome NetBIOS e o FQDN do Centro do ATA à lista de sites confiáveis e limpe o cache no Internet Explorer (ou o nome do Centro do ATA, conforme especificado na configuração, se o configurado for diferente do NetBIOS/FQDN).|
+|System.Net.Http.HttpRequestException: falha na PostAsync [requestTypeName=StopNetEventSessionRequest]|O Gateway do ATA ou o Gateway Lightweight do ATA não pode parar e iniciar a sessão do ETW (Rastreamento de Eventos para Windows) que coleta o tráfego de rede devido a um problema WMI (Instrumentação de Gerenciamento do Windows)|Siga as instruções no artigo [WMI: como recriar o repositório WMI](https://blogs.technet.microsoft.com/askperf/2009/04/13/wmi-rebuilding-the-wmi-repository/) para corrigir o problema WMI|
 
+ 
 ## <a name="deployment-errors"></a>Erros de implantação
 > [!div class="mx-tableFixed"]
 |Erro do|Descrição|Resolução|

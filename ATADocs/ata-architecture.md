@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 07/5/2017
+ms.date: 08/20/2017
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 892b16d2-58a6-49f9-8693-1e5f69d8299c
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 5410f706e84517eb964e991deeb21001a09d0cef
-ms.sourcegitcommit: 42ce07e3207da10e8dd7585af0e34b51983c4998
+ms.openlocfilehash: 250c68f0efc7064f7ec4a4578342c935d04e815b
+ms.sourcegitcommit: 129bee06ff89b72d21b64f9aa0d1a29f66bf9153
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/25/2017
+ms.lasthandoff: 08/20/2017
 ---
 *Aplica-se a: Advanced Threat Analytics versão 1.8*
 
@@ -180,8 +180,13 @@ Para melhorar a detecção do ATA de Pass-the-Hash, Força Bruta, Modificação 
 
 -   Configuração do encaminhamento de eventos do Windows<br>Outra maneira de o ATA conseguir obter seus eventos é configurando seus controladores de domínio para encaminhar eventos do Windows 4776, 4732, 4733, 4728, 4729, 4756 and 4757 para seu Gateway do ATA. Isso é especialmente útil se você não tiver um SIEM ou se o SIEM não for atualmente suportado pelo ATA. Para obter mais informações sobre o Encaminhamento de Eventos do Windows no ATA, confira [Configurando o encaminhamento de eventos do Windows](configure-event-collection.md#configuring-windows-event-forwarding). Observe que isso se aplica apenas a Gateways do ATA físicos, não ao Gateway Lightweight do ATA.
 
+## <a name="related-videos"></a>Vídeos Relacionados
+- [Como escolher o tipo certo de Gateway do ATA](https://channel9.msdn.com/Shows/Microsoft-Security/ATA-Deployment-Choose-the-Right-Gateway-Type)
+
+
 ## <a name="see-also"></a>Consulte também
 - [Pré-requisitos do ATA](ata-prerequisites.md)
+- [Ferramenta de dimensionamento do ATA](http://aka.ms/atasizingtool)
 - [Planejamento da capacidade do ATA](ata-capacity-planning.md)
 - [Configurar coleta de eventos](configure-event-collection.md)
 - [Configuração do encaminhamento de eventos do Windows](configure-event-collection.md#configuring-windows-event-forwarding)

@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 1fe5fd6f-1b79-4a25-8051-2f94ff6c71c1
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 8c93f4485998bbb1b2b440f01fed8d96ad4e2842
-ms.sourcegitcommit: 7bc04eb4d004608764b3ded1febf32bc4ed020be
+ms.openlocfilehash: f9f9fee8ad8d75d3510c86890201dd719e074b8c
+ms.sourcegitcommit: 129bee06ff89b72d21b64f9aa0d1a29f66bf9153
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 08/20/2017
 ---
 *Aplica-se a: Advanced Threat Analytics versão 1.8*
 
@@ -204,7 +204,13 @@ O reconhecimento de serviços de diretório é uma técnica usada pelos invasore
 |------|----|------|----------|
 | O ATA gera esse alerta quando mais de 5% de todas as contas são excluídas. Isso requer o acesso de leitura para o contêiner do item excluído. | Entenda por que 5% de todas as suas contas foram excluídas repentinamente. | Remova as permissões para usuários que podem excluir contas no Active Directory. Para obter mais detalhes, consulte [View or Set Permissions on a Directory Object](https://technet.microsoft.com/library/cc816824%28v=ws.10%29.aspx) (Exibir ou definir permissões em um objeto de diretório). | Baixo |
 
-## <a name="see-also"></a>Consulte Também
+## <a name="related-videos"></a>Vídeos Relacionados
+- [Participar da comunidade de segurança](https://channel9.msdn.com/Shows/Microsoft-Security/Join-the-Security-Community)
+
+
+## <a name="see-also"></a>Consulte também
+- [Manual da atividade suspeita do ATA](http://aka.ms/ataplaybook)
+- [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Trabalhando com atividades suspeitas](working-with-suspicious-activities.md)
 - [Investigando ataques de PAC forjado](use-case-forged-pac.md)
 - [Solução de erros conhecidos do ATA](troubleshooting-ata-known-errors.md)

@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 07/9/2017
+ms.date: 08/20/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 8980e724-06a6-40b0-8477-27d4cc29fd2b
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 2b969089d8c4c2d861591342f7367e8cc5430b24
-ms.sourcegitcommit: 3177d5894413fbd363b9aca8130f3f7a369223b8
+ms.openlocfilehash: 527e62553913dc12b2b0d5ff149f765002de7946
+ms.sourcegitcommit: 129bee06ff89b72d21b64f9aa0d1a29f66bf9153
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2017
+ms.lasthandoff: 08/20/2017
 ---
 *Aplica-se a: Advanced Threat Analytics versão 1.8*
 
@@ -71,8 +71,14 @@ Para verificar se ATA está funcionando e detectar violações em sua rede, é p
 [« Etapa 6](install-ata-step6.md)
 
 
-## <a name="see-also"></a>Consulte também
 
+## <a name="related-videos"></a>Vídeos Relacionados
+- [Como escolher o tipo certo de Gateway do ATA](https://channel9.msdn.com/Shows/Microsoft-Security/ATA-Deployment-Choose-the-Right-Gateway-Type)
+
+
+## <a name="see-also"></a>Consulte também
+- [Guia de implantação da POC (prova de conceito) do ATA](http://aka.ms/atapoc)
+- [Ferramenta de dimensionamento do ATA](http://aka.ms/atasizingtool)
 - [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Configurar coleta de eventos](configure-event-collection.md)
 - [Pré-requisitos do ATA](ata-prerequisites.md)

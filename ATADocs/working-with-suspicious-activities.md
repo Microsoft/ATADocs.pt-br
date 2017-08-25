@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 06/23/2017
+ms.date: 08/20/2017
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 44d7c899-816c-4f7f-91d3-84a09d291a24
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: d943dc9aae7192f46f079175c2216b5b27e459e2
-ms.sourcegitcommit: 3177d5894413fbd363b9aca8130f3f7a369223b8
+ms.openlocfilehash: fcee6f1887e6842d1ccdfd2863620af8a5a8279f
+ms.sourcegitcommit: 129bee06ff89b72d21b64f9aa0d1a29f66bf9153
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2017
+ms.lasthandoff: 08/20/2017
 ---
 *Aplica-se a: Advanced Threat Analytics versão 1.8*
 
@@ -104,6 +104,11 @@ Para fazer isso, clique nos três pontos no canto superior direito de uma ativid
 > As páginas de configuração podem ser modificadas apenas por administradores do ATA.
 
 
-## <a name="see-also"></a>Consulte Também
+## <a name="related-videos"></a>Vídeos Relacionados
+- [Participar da comunidade de segurança](https://channel9.msdn.com/Shows/Microsoft-Security/Join-the-Security-Community)
+
+
+## <a name="see-also"></a>Consulte também
+- [Manual da atividade suspeita do ATA](http://aka.ms/ataplaybook)
 - [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Modificando a configuração do ATA](modifying-ata-center-configuration.md)
