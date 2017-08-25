@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 8/6/2017
+ms.date: 8/20/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: a5f90544-1c70-4aff-8bf3-c59dd7abd687
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: dfcdffb3458124cade644cc06a4c359458eb26fe
-ms.sourcegitcommit: 8b622fa5457cf1a540504899c8c98e860b946e01
+ms.openlocfilehash: 313ee78070ab991d3d1b30441be8a4cee990eace
+ms.sourcegitcommit: 129bee06ff89b72d21b64f9aa0d1a29f66bf9153
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/14/2017
+ms.lasthandoff: 08/20/2017
 ---
 *Aplica-se a: Advanced Threat Analytics versão 1.8*
 
@@ -276,8 +276,12 @@ O acesso ao Console do ATA é por meio de um navegador com suporte para o seguin
 
 -   Resolução de largura mínima da tela de 1.700 pixels
 
-## <a name="see-also"></a>Consulte também
+## <a name="related-videos"></a>Vídeos Relacionados
+- [Como escolher o tipo certo de Gateway do ATA](https://channel9.msdn.com/Shows/Microsoft-Security/ATA-Deployment-Choose-the-Right-Gateway-Type)
 
+
+## <a name="see-also"></a>Consulte também
+- [Ferramenta de dimensionamento do ATA](http://aka.ms/atasizingtool)
 - [Arquitetura do ATA](ata-architecture.md)
 - [Instalar o ATA](install-ata-step1.md)
 - [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

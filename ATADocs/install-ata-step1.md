@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: b3cceb18-0f3c-42ac-8630-bdc6b310f1d6
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 97fa1522ca43cf92416ac845b8886f2905e9981b
-ms.sourcegitcommit: fa50f37b134d7579d7c310852dff60e5f1996eaa
+ms.openlocfilehash: 3dc73583295136567ac221006430a3e8bc1353d9
+ms.sourcegitcommit: 129bee06ff89b72d21b64f9aa0d1a29f66bf9153
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/03/2017
+ms.lasthandoff: 08/20/2017
 ---
 *Aplica-se a: Advanced Threat Analytics versão 1.8*
 
@@ -97,8 +97,13 @@ Como você está fazendo logon no site usando um endereço IP, você recebe um a
 [« Pré-instalação](configure-port-mirroring.md)
 [Etapa 2 »](install-ata-step2.md)
 
-## <a name="see-also"></a>Consulte Também
+## <a name="related-videos"></a>Vídeos Relacionados
+- [Como escolher o tipo certo de Gateway do ATA](https://channel9.msdn.com/Shows/Microsoft-Security/ATA-Deployment-Choose-the-Right-Gateway-Type)
 
+
+## <a name="see-also"></a>Consulte também
+- [Guia de implantação da POC (prova de conceito) do ATA](http://aka.ms/atapoc)
+- [Ferramenta de dimensionamento do ATA](http://aka.ms/atasizingtool)
 - [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Configurar coleta de eventos](configure-event-collection.md)
 - [Pré-requisitos do ATA](ata-prerequisites.md)
