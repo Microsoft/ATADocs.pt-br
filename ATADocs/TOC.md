@@ -17,19 +17,18 @@
 ## [Planejar a capacidade do ATA](ata-capacity-planning.md)
 ## [Pré-requisitos do ATA](ata-prerequisites.md)
 # Implantar
-## Etapas de pré-instalação
+## [1 Baixar e instalar a Central](install-ata-step1.md)
+## [2 Conectar-se ao AD DS](install-ata-step2.md)
+## [3 Baixar o pacote do Gateway do ATA](install-ata-step3.md)
+## [4 Instalar o Gateway do ATA](install-ata-step4.md)
+## [5 Configurar o Gateway do ATA](install-ata-step5.md)
+## [6 Coleta de eventos e VPN](install-ata-step6.md)
+## [7 Exclusão e Honeytoken](install-ata-step7.md)
+## [Instalação silenciosa](ata-silent-installation.md)
+## Etapas adicionais do Gateway do ATA
 ### [1. Configurar o espelhamento de porta](configure-port-mirroring.md)
 ### [2. Validar o espelhamento de porta](validate-port-mirroring.md)
 ### [3. Configurar o encaminhamento de eventos do Windows](configure-event-collection.md)
-## Instalar o ATA
-### [Etapa 1 Baixar e instalar a Central](install-ata-step1.md)
-### [Etapa 2 Conectar ao AD](install-ata-step2.md)
-### [Etapa 3 Baixar o pacote do Gateway do ATA](install-ata-step3.md)
-### [Etapa 4 Instalar o Gateway do ATA](install-ata-step4.md)
-### [Etapa 5 Configurar o Gateway do ATA](install-ata-step5.md)
-### [Etapa 6 Coleta de eventos e VPN](install-ata-step6.md)
-### [Etapa 7 Exclusão e Honeytoken](install-ata-step7.md)
-### [Instalação silenciosa](ata-silent-installation.md)
 # Uso
 ## [Trabalhando com o Console do ATA](working-with-ata-console.md)
 ## [Trabalhando com atividades suspeitas](working-with-suspicious-activities.md)
