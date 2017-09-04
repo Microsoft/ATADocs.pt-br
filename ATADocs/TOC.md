@@ -16,6 +16,7 @@
 ## [Arquitetura do ATA](ata-architecture.md)
 ## [Planejar a capacidade do ATA](ata-capacity-planning.md)
 ## [Pré-requisitos do ATA](ata-prerequisites.md)
+## [Caminho de atualização recomendado](upgrade-path.md)
 # Implantar
 ## [1 Baixar e instalar a Central](install-ata-step1.md)
 ## [2 Conectar-se ao AD DS](install-ata-step2.md)
