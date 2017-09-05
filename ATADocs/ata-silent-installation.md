@@ -136,7 +136,7 @@ Use o seguinte comando para realizar uma desinstalação silenciosa da Central d
 ## <a name="ata-gateway-silent-installation"></a>Instalação silenciosa do Gateway do ATA
 
 > [!NOTE]
-> Ao implantar silenciosamente o Gateway Lightweight do ATA por meio do System Center Configuration Manager ou de outro sistema de implantação de software, é recomendável criar dois pacotes de implantação:</br>- Net Framework 4.6.1 incluindo inicializando o controlador de domínio</br>- Gateway do ATA. </br>Torne o pacote Gateway do ATA dependente da implantação do pacote .Net Framework. </br>Obtenha o pacote [de implantação offline do .Net Framework 4.6.1](https://www.microsoft.com/download/details.aspx?id=49982). 
+> Ao implantar silenciosamente o Gateway Lightweight do ATA por meio do System Center Configuration Manager ou de outro sistema de implantação de software, é recomendável criar dois pacotes de implantação:</br>– Net Framework 4.6.1 incluindo inicializar o controlador de domínio</br>– Gateway do ATA. </br>Torne o pacote Gateway do ATA dependente da implantação do pacote .Net Framework. </br>Obtenha o pacote [de implantação offline do .Net Framework 4.6.1](https://www.microsoft.com/download/details.aspx?id=49982). 
 
 
 Use o seguinte comando para instalar silenciosamente o Gateway do ATA:

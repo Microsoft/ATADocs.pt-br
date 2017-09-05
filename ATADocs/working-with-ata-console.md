@@ -65,7 +65,7 @@ Esses são os principais elementos do Console do ATA.
 
 ### <a name="attack-time-line"></a>Linha do tempo de ataque
 
-Essa é a página de aterrissagem exibida quando você entra no Console do ATA. Por padrão, todas as atividades suspeitas abertas são mostradas na linha do tempo de ataque. Você pode filtrar a linha do tempo de ataque para mostrar as atividades suspeitas com status Todos, Aberto, Descartado ou Suprimido. Você também pode ver a severidade atribuída a cada atividade.
+Essa é a página de aterrissagem exibida quando você entra no Console do ATA. Por padrão, todas as atividades suspeitas abertas são mostradas na linha do tempo de ataque. Você pode filtrar a linha do tempo de ataque para mostrar as atividades suspeitas com status Tudo, Aberto, Descartado ou Suprimido. Você também pode ver a severidade atribuída a cada atividade.
 
 ![Imagem da linha do tempo de ataque do ATA](media/ATA-Suspicious-Activity-Timeline.jpg)
 

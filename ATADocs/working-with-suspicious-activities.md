@@ -59,7 +59,7 @@ Cada atividade suspeita tem as seguintes informações:
 ## <a name="filter-suspicious-activities-list"></a>Filtrar lista de atividades suspeitas
 Para filtrar a lista de atividades suspeitas:
 
-1.  No painel **Filtrar por** no lado esquerdo da tela, selecione um dos seguintes: **Todos**, **Aberto**, **Fechado** ou **Suprimido**.
+1.  No painel **Filtrar por** no lado esquerdo da tela, selecione um dos seguintes: **Tudo**, **Aberto**, **Fechado** ou **Suprimido**.
 
 2.  Para filtrar a lista ainda mais, selecione **Alta**, **Média** ou **Baixa**.
 
