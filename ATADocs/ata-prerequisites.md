@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 8/20/2017
+ms.date: 9/3/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: a5f90544-1c70-4aff-8bf3-c59dd7abd687
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: f9c2df3c454e2098277f4c475dc1d69378a90987
-ms.sourcegitcommit: 46dd0e695f16a0dd23bbfa140eba15ea6a34d7af
+ms.openlocfilehash: d7f5423104b3e42777b6ce8013832b3bac6353be
+ms.sourcegitcommit: 654500928025e3cb127e095c17cc1d6444defd3a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/03/2017
 ---
 *Aplica-se a: Advanced Threat Analytics versão 1.8*
 
@@ -124,13 +124,19 @@ Para facilitar a instalação do ATA, você pode instalar certificados autoassin
 
 Verifique se que os Gateways de ATA e o Centro de ATA têm acesso ao ponto de distribuição de CRL. Se eles não tiverem acesso à Internet, siga [o procedimento para importar manualmente uma CRL](https://technet.microsoft.com/library/aa996972%28v=exchg.65%29.aspx), tendo o cuidado de instalar todos os pontos de distribuição de CRL de toda a cadeia.
 
+O certificado deve ter:
+-   Uma chave privada
+-   Um tipo de provedor do CSP (Provedor de Serviços de Criptografia) ou KSP (Provedor de Armazenamento de Chaves)
+-   Um comprimento de chave pública de 2048 bits
+-   Um valor definido para os sinalizadores de uso KeyEncipherment e ServerAuthentication
+
+Por exemplo, você pode usar os modelos padrão **servidor Web** ou **Computador**.
 
 > [!WARNING]
 > - Não há suporte para o processo de renovação de um certificado existente. A única maneira de renovar um certificado é criando um novo certificado e configurando o ATA para usar o novo certificado.
 
 
 > [!NOTE]
-> - O tipo de provedor do certificado pode ser o CSP (Provedor de Serviços de Criptografia) ou KSP (Provedor de Armazenamento de Chaves).
 > - Se você pretende acessar o Console do ATA a partir de outros computadores, verifique se esses computadores confiam no certificado sendo usado pelo Console do ATA, caso contrário, será exibida uma página de aviso de que há um problema com o certificado de segurança do site antes de acessar a página de logon.
 > - Começando com o ATA versão 1.8, os Gateways de ATA e Gateways Lightweight estão gerenciando seus próprios certificados e não precisam de nenhuma interação do administrador para gerenciá-los.
 
