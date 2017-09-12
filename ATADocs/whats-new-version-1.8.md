@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 8/14/2017
+ms.date: 9/03/2017
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 9592d413-df0e-4cec-8e03-be1ae00ba5dc
 ms.reviewer: 
 ms.suite: ems
-ms.openlocfilehash: 1ec9308e046a228ac1276eb1aace58eec47e95d0
-ms.sourcegitcommit: 8b622fa5457cf1a540504899c8c98e860b946e01
+ms.openlocfilehash: 2793a602a0cd0fb9902197acd45dd5bdd4612ea4
+ms.sourcegitcommit: 654500928025e3cb127e095c17cc1d6444defd3a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/14/2017
+ms.lasthandoff: 09/03/2017
 ---
 # <a name="whats-new-in-ata-version-18"></a>Novidades na versão 1.8 do ATA
 
@@ -126,6 +126,14 @@ No Windows Server 2016 Core, você não poderá ver o erro, mas o processo falha
 **Descrição**: iniciando na versão 1.8 do ATA, o Gateway do ATA se comunica com o centro do ATA usando o protocolo http. Se o computador no qual você instalou o Gateway do ATA usa um servidor proxy para conectar-se ao centro do ATA, ela poderá quebrar essa comunicação. 
 
 **Solução alternativa**: desabilite o uso de um servidor proxy na conta de serviço de Gateway do ATA. Haverá uma atualização para corrigir esse problema em uma versão futura.
+
+### <a name="report-settings-reset"></a>Redefinição de configurações de Relatório
+
+**Sintomas**: qualquer configuração que foi feita para os relatórios agendados é limpa quando você atualiza para 1.8 atualização 1.
+
+**Descrição**: atualizar para 1.8 atualização 1 do 1.8 redefine as configurações de agendamento dos relatórios.
+
+**Solução alternativa**: antes de atualizar para o 1.8 atualização 1, faça uma cópia das configurações de relatório e as insira novamente, isso também pode ser feito por meio de um script, para obter mais informações, consulte [Exportar e importar a configuração do ATA](ata-configuration-file.md).
 
 
 ## <a name="see-also"></a>Consulte também
