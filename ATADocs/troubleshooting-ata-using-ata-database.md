@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 6/23/2017
+ms.date: 9/19/2017
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 377a3c81-5c1d-486f-8942-85249aacf560
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 174918812562b9bfe892fcde90d92e208b26ffc3
-ms.sourcegitcommit: 42ce07e3207da10e8dd7585af0e34b51983c4998
+ms.openlocfilehash: f88dcf9b2c3bb9db5d81a039e7e7ae8818c48137
+ms.sourcegitcommit: 34c3d6f56f175994b672842c7576040956ceea69
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/25/2017
+ms.lasthandoff: 09/19/2017
 ---
 *Aplica-se a: Advanced Threat Analytics versão 1.8*
 
@@ -41,7 +41,6 @@ O modo padrão, e mais básico, de consultar o banco de dados é usando o shell 
 |Obter detalhes de um usuário/computador/grupo (UniqueEntity), como ID do usuário.|`db.UniqueEntity.find({SearchNames: "<name of entity in lower case>"})`||
 |Encontre o tráfego de autenticação Kerberos proveniente de um computador específico em um dia específico.|`db.KerberosAs_<datetime>.find({SourceComputerId: "<Id of the source computer>"})`|Para obter a &lt;ID do computador de origem&gt;, consulte as coleções UniqueEntity, conforme mostrado no exemplo.<br /><br />Cada tipo de atividade de rede, por exemplo, autenticações Kerberos, possui sua própria coleção de acordo com a data UTC.|
 |Encontre o tráfego de NTLM proveniente de um computador específico relacionado a uma conta específica em um dia específico.|`db.Ntlm_<datetime>.find({SourceComputerId: "<Id of the source computer>", SourceAccountId: "<Id of the account>"})`|Para obter a &lt;ID do computador de origem&gt; e a &lt;ID da conta&gt;, consulte as coleções UniqueEntity, conforme mostrado no exemplo.<br /><br />Cada tipo de atividade de rede, por exemplo, autenticações NTLM, possui sua própria coleção de acordo com a data UTC.|
-|Pesquise propriedades avançadas, como as datas ativas de uma conta. |`db.UniqueEntityProfile.find({UniqueEntityId: "<Id of the account>")`|Para obter a &lt;ID da conta&gt;, consulte as coleções UniqueEntity, conforme mostrado no exemplo.<br>O nome da propriedade que mostra as datas nas quais a conta esteve ativa é chamado: "ActiveDates". Por exemplo, talvez você queira saber se uma conta tem pelo menos 21 dias de atividade para que o algoritmo de aprendizado de máquina de comportamento anormal possa ser executado.|
 |Faça alterações de configuração avançadas. Neste exemplo, alteramos o tamanho da fila de envio para todos os Gateways do ATA para 10.000.|`db.SystemProfile.update( {_t: "GatewaySystemProfile"} ,`<br>`{$set:{"Configuration.EntitySenderConfiguration.EntityBatchBlockMaxSize" : "10000"}})`|`|
 
 O exemplo a seguir fornece código de exemplo usando a sintaxe fornecida acima. Se você estiver investigando uma atividade suspeita que ocorreu em 20/10/2015 e quiser saber mais sobre as atividades de NTLM que "John Doe" realizou nesse dia:<br /><br />Primeiro, encontre a ID de "John Doe"
