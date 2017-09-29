@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 9/3/2017
+ms.date: 9/24/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: a5f90544-1c70-4aff-8bf3-c59dd7abd687
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: d7f5423104b3e42777b6ce8013832b3bac6353be
-ms.sourcegitcommit: 654500928025e3cb127e095c17cc1d6444defd3a
+ms.openlocfilehash: b681a6a27189d2e1aec3f7f9913b97f9e7717911
+ms.sourcegitcommit: 47b2b9ebaadff79c087d14f86462d3d8102cc551
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/03/2017
+ms.lasthandoff: 09/24/2017
 ---
 *Aplica-se a: Advanced Threat Analytics versão 1.8*
 
@@ -81,9 +81,9 @@ A instalação do ATA Center como uma máquina virtual tem suporte.
 
 Se você executar a Central de ATA como uma máquina virtual, deverá finalizar o servidor antes de criar um novo ponto de verificação para evitar uma possível corrupção do banco de dados.
 ### <a name="server-specifications"></a>Especificações do servidor
-Ao trabalhar em um servidor físico, o banco de dados do ATA precisa que você **desabilite** o NUMA (acesso não uniforme a memória) no BIOS. O sistema pode referir-se ao NUMA como Nó de Intercalação, caso em que você precisará **habilitar** a Intercalação de Nó para desabilitar o NUMA. Consulte a documentação da BIOS para saber mais. Observe que isso não é pertinente quando a Central do ATA está em execução em um servidor virtual.<br>
+Ao trabalhar em um servidor físico, o banco de dados do ATA precisa que você **desabilite** o NUMA (acesso não uniforme a memória) no BIOS. O sistema pode referir-se ao NUMA como Nó de Intercalação, caso em que você precisará **habilitar** a Intercalação de Nó para desabilitar o NUMA. Para obter mais informações, confira a documentação do BIOS. Isso não é pertinente quando o Centro do ATA está em execução em um servidor virtual.<br>
 Para ter um melhor desempenho, defina a **Opção de Energia** do Centro do ATA como **Alto Desempenho**.<br>
-O número de controladores de domínio que você está monitorando e a carga em cada um dos controladores de domínio determinam as especificações do servidor necessárias. Confira [Planejamento de capacidade do ATA](ata-capacity-planning.md) para obter mais detalhes.
+O número de controladores de domínio que você está monitorando e a carga em cada um dos controladores de domínio determina as especificações de servidor necessárias. Para obter mais informações, consulte [Planejamento de capacidade de ATA](ata-capacity-planning.md).
 
 
 ### <a name="time-synchronization"></a>Sincronização da hora
@@ -94,7 +94,7 @@ O servidor do Centro do ATA, os servidores do Gateway do ATA e os controladores 
 Você deve ter o seguinte:
 -   Pelo menos um adaptador de rede (se estiver usando o servidor físico no ambiente de VLAN, recomendamos o uso de dois adaptadores de rede)
 
--   Um endereço IP para comunicação entre o Centro do ATA e o Gateway de ATA, que é criptografado com o SSL na porta 443. (O serviço do ATA é associado a todos os endereços IP que o Centro do ATA tem na porta 443.)
+-   Um endereço IP para comunicação entre o Centro do ATA e o Gateway do ATA, que é criptografado com o SSL na porta 443. (O serviço do ATA é associado a todos os endereços IP que o Centro do ATA tem na porta 443.)
 
 ### <a name="ports"></a>Portas
 A tabela a seguir lista as portas mínimas que devem ser abertas para que a Central de ATA funcione corretamente.
@@ -137,7 +137,7 @@ Por exemplo, você pode usar os modelos padrão **servidor Web** ou **Computador
 
 
 > [!NOTE]
-> - Se você pretende acessar o Console do ATA a partir de outros computadores, verifique se esses computadores confiam no certificado sendo usado pelo Console do ATA, caso contrário, será exibida uma página de aviso de que há um problema com o certificado de segurança do site antes de acessar a página de logon.
+> - Se você pretende acessar o Console do ATA a partir de outros computadores, verifique se esses computadores confiam no certificado sendo usado pelo Centro do ATA, caso contrário, será exibida uma página de aviso informando que há um problema com o certificado de segurança do site antes de acessar a página de logon.
 > - Começando com o ATA versão 1.8, os Gateways de ATA e Gateways Lightweight estão gerenciando seus próprios certificados e não precisam de nenhuma interação do administrador para gerenciá-los.
 
 ## <a name="ata-gateway-requirements"></a>Requisitos do Gateway do ATA
@@ -155,7 +155,7 @@ Você pode verificar executando o seguinte cmdlet do Windows PowerShell: `[Get-H
 Para obter informações sobre como usar máquinas virtuais com o Gateway do ATA, confira [Configurar o espelhamento de porta](configure-port-mirroring.md).
 
 > [!NOTE]
-> É necessário um mínimo de 5 GB de espaço e recomenda-se 10 GB. Isso inclui o espaço necessário para os binários ATA, [logs ATA](troubleshooting-ata-using-logs.md) e [logs de desempenho](troubleshooting-ata-using-perf-counters.md).
+> É necessário um mínimo de 5 GB de espaço e recomenda-se 10 GB. Isso inclui o espaço necessário para os binários ATA, [logs ATA e [logs de desempenho](troubleshooting-ata-using-perf-counters.md).
 
 ### <a name="server-specifications"></a>Especificações do servidor
 Para ter um melhor desempenho, defina a **Opção de Energia** do Gateway de ATA para **Alto Desempenho**.<br>
@@ -172,7 +172,7 @@ O servidor do Centro do ATA, os servidores do Gateway do ATA e os controladores 
 ### <a name="network-adapters"></a>Adaptadores de rede
 O Gateway de ATA requer pelo menos um Adaptador de gerenciamento e pelo menos um adaptador de captura:
 
--   **Adaptador de gerenciamento** - será usado para as comunicações em sua rede corporativa. Esse adaptador deve ser configurado com o seguinte:
+-   **Adaptador de gerenciamento** - usado para as comunicações em sua rede corporativa. Esse adaptador deve ser configurado com as seguintes definições:
 
     -   Endereço IP estático, incluindo o gateway padrão
 
@@ -188,8 +188,8 @@ O Gateway de ATA requer pelo menos um Adaptador de gerenciamento e pelo menos um
 -   **Adaptador de captura** - será usado para capturar o tráfego para e a partir dos controladores de domínio.
 
     > [!IMPORTANT]
-    > -   Configure o espelhamento de porta do adaptador de captura como o destino do tráfego de rede do controlador de domínio. Confira [Configurar o espelhamento de porta](configure-port-mirroring.md) para saber mais. Normalmente, você precisará trabalhar com a equipe de virtualização ou de rede para configurar o espelhamento de porta.
-    > -   Configure um endereço IP não roteável estático para seu ambiente sem um gateway padrão e endereço do servidor DNS. Por exemplo, 1.1.1.1/32. Isso irá assegurar que o adaptador da rede de captura poderá capturar a quantidade máxima de tráfego e que o adaptador da rede de gerenciamento será usado para enviar e receber o tráfego de rede requerido.
+    > -   Configure o espelhamento de porta do adaptador de captura como o destino do tráfego de rede do controlador de domínio. Confira [Configurar o espelhamento de porta](configure-port-mirroring.md) para saber mais. Normalmente, você precisa trabalhar com a equipe de virtualização ou de rede para configurar o espelhamento de porta.
+    > -   Configure um endereço IP não roteável estático para seu ambiente sem um gateway padrão e endereço do servidor DNS. Por exemplo, 1.1.1.1/32. Isso assegura que o adaptador da rede de captura poderá capturar a quantidade máxima de tráfego e que o adaptador da rede de gerenciamento será usado para enviar e receber o tráfego de rede solicitado.
 
 ### <a name="ports"></a>Portas
 A tabela abaixo lista as portas mínimas que o Gateway do ATA requer configuradas no adaptador de gerenciamento:
@@ -235,7 +235,7 @@ Durante a instalação, o .Net Framework 4.6.1 é instalado e pode causar a rein
 
 
 > [!NOTE]
-> É necessário um mínimo de 5 GB de espaço e recomenda-se 10 GB. Isso inclui o espaço necessário para os binários ATA, [logs ATA](troubleshooting-ata-using-logs.md) e [logs de desempenho](troubleshooting-ata-using-perf-counters.md).
+> É necessário um mínimo de 5 GB de espaço e recomenda-se 10 GB. Isso inclui o espaço necessário para os binários ATA, [logs ATA e [logs de desempenho](troubleshooting-ata-using-perf-counters.md).
 
 ### <a name="server-specifications"></a>Especificações do servidor
 
@@ -249,7 +249,7 @@ O Gateway Lightweight do ATA pode ser implantado em controladores de domínio de
 Para saber mais sobre os requisitos de hardware do Gateway Lightweight do ATA, confira [Planejamento de capacidade do ATA](ata-capacity-planning.md).
 
 ### <a name="time-synchronization"></a>Sincronização da hora
-O servidor do Centro do ATA, os servidores do Gateway do ATA e os controladores de domínio devem ter a hora sincronizada no espaço de cinco minutos entre si.
+O servidor do Centro do ATA, os servidores do Gateway Lightweight do ATA e os controladores de domínio devem ter a hora sincronizada no espaço de cinco minutos entre si.
 ### <a name="network-adapters"></a>Adaptadores de rede
 O Gateway Lightweight do ATA monitora o tráfego local em todos os adaptadores de rede do controlador de domínio. <br>
 Após a implantação, você pode usar o Console do ATA para modificar quais adaptadores de rede são monitorados.
@@ -272,7 +272,7 @@ A tabela abaixo lista o mínimo de portas que o Gateway Lightweight do ATA exige
 > -   NetBIOS
 
 ## <a name="ata-console"></a>Console do ATA
-O acesso ao Console do ATA é por meio de um navegador com suporte para o seguinte:
+O acesso ao Console do ATA é por meio de um navegador, oferecendo suporte a definições e navegadores:
 
 -   Internet Explorer versão 10 e posterior
 
