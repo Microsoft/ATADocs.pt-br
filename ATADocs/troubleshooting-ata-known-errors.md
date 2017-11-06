@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 8/20/2017
+ms.date: 10/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: d89e7aff-a6ef-48a3-ae87-6ac2e39f3bdb
 ms.reviewer: arzinger
 ms.suite: ems
-ms.openlocfilehash: 2362f6bf64147b972e9c45e3b97bab4280c6eeac
-ms.sourcegitcommit: 46dd0e695f16a0dd23bbfa140eba15ea6a34d7af
+ms.openlocfilehash: 09936cf9f86711ea6d48d0571178d2387694d412
+ms.sourcegitcommit: 835ea2b8190eb753aaf8d400531040ce1845d75a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 10/23/2017
 ---
 *Aplica-se a: Advanced Threat Analytics versão 1.8*
 
@@ -48,12 +48,11 @@ Esta seção detalha os possíveis erros nas implantações do ATA e as etapas n
 |System.ApplicationException: Não é possível iniciar a sessão do ETW MMA-ETW-Livecapture-a4f595bd-f567-49a7-b963-20fa4e370329|Há uma entrada do host no arquivo HOSTS que aponta para o nome curto do computador|Remova a entrada do host do arquivo C:\Windows\System32\drivers\etc\HOSTS ou altere-a para um FQDN.|
 |System.IO.IOException: a autenticação falhou porque a parte remota fechou o fluxo de transporte.|O TLS 1.0 está desabilitado no Gateway de ATA, mas o .Net está configurado para usar o TLS 1.2|Use uma das seguintes opções: </br> Habilitar o TLS 1.0 no Gateway ATA </br>Habilite o TLS 1.2 no .Net definindo as chaves de registro para usar os padrões do sistema operacional para SSL e TLS, da seguinte forma: </br>`[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\v4.0.30319] "SystemDefaultTlsVersions"=dword:00000001` </br>`[HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\.NETFramework\v4.0.30319] "SystemDefaultTlsVersions"=dword:00000001`</br>`[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\v4.0.30319] "SchUseStrongCrypto"=dword:00000001 `</br>`[HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\.NETFramework\v4.0.30319] " SchUseStrongCrypto"=dword:00000001`|
 |System.TypeLoadException: não foi possível carregar o tipo 'Microsoft.Opn.Runtime.Values.BinaryValueBufferManager' do assembly 'Microsoft.Opn.Runtime, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35'|Falha do Gateway do ATA ao carregar os arquivos de análise necessários.|Verifique se o Microsoft Message Analyzer está instalado no momento. Não há suporte para o Message Analyzer ser instalado com o Gateway/Gateway Lightweight do ATA. Desinstale o Message Analyzer e reinicie o serviço de Gateway.|
-|Alertas de tráfego espelhado por porta descartados ao usar o Gateway Lightweight no VMware|Se você estiver usando DCs em máquinas virtuais VMware, poderá receber alertas sobre o **Tráfego de rede espelhado por porta descartado**. Isso pode ser devido a uma incompatibilidade de configuração no VMware. |Para evitar esses alertas, verifique se as configurações a seguir estão definidas como 0 ou Desabilitado: TsoEnable, LargeSendOffload, IPv4 e Descarregamento de TSO (Descarregamento de Segmentação TCP). Além disso, considere desabilitar o Descarregamento TSO gigante do IPv4. Para obter mais informações, consulte a documentação do VMware.|
 |System.Net.WebException: o servidor remoto retornou um erro: (407) Autenticação de proxy necessária|A comunicação de Gateway do ATA no centro do ATA está sendo interrompida por um servidor proxy.|Desabilite o proxy no computador do Gateway do ATA. <br></br>Observe que as configurações de proxy podem ser por conta.|
 |System.IO.DirectoryNotFoundException: o sistema não pode localizar o caminho especificado. (Exceção de HRESULT: 0x80070003)|Um ou mais dos serviços necessários para operar o ATA não foram iniciados.|Inicie os seguintes serviços: <br></br>Logs e Alertas de Desempenho (PLA), Agendador de Tarefas (agenda).|
 |System.Net.WebException: o servidor remoto retornou um erro: (403) Proibido|O Gateway de ATA ou o Gateway Lightweight foi proibido de estabelecer uma conexão HTTP porque o Centro do ATA não é confiável.|Adicione o nome NetBIOS e o FQDN do Centro do ATA à lista de sites confiáveis e limpe o cache no Internet Explorer (ou o nome do Centro do ATA, conforme especificado na configuração, se o configurado for diferente do NetBIOS/FQDN).|
 |System.Net.Http.HttpRequestException: falha na PostAsync [requestTypeName=StopNetEventSessionRequest]|O Gateway do ATA ou o Gateway Lightweight do ATA não pode parar e iniciar a sessão do ETW (Rastreamento de Eventos para Windows) que coleta o tráfego de rede devido a um problema WMI (Instrumentação de Gerenciamento do Windows)|Siga as instruções no artigo [WMI: como recriar o repositório WMI](https://blogs.technet.microsoft.com/askperf/2009/04/13/wmi-rebuilding-the-wmi-repository/) para corrigir o problema WMI|
-
+|System.Net.Sockets.SocketException: foi feita uma tentativa de acessar um soquete de uma maneira proibida pelas permissões de acesso dele|Outro aplicativo está usando a porta 514 no Gateway do ATA|Use `netstat -o` para estabelecer qual processo está usando essa porta.|
  
 ## <a name="deployment-errors"></a>Erros de implantação
 > [!div class="mx-tableFixed"]
