@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 10/23/2017
+ms.date: 11/7/2017
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: d89e7aff-a6ef-48a3-ae87-6ac2e39f3bdb
 ms.reviewer: arzinger
 ms.suite: ems
-ms.openlocfilehash: 09936cf9f86711ea6d48d0571178d2387694d412
-ms.sourcegitcommit: 835ea2b8190eb753aaf8d400531040ce1845d75a
+ms.openlocfilehash: f13416c4179d65ee8096d246ea92969b1cf9af43
+ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/23/2017
+ms.lasthandoff: 11/07/2017
 ---
 *Aplica-se a: Advanced Threat Analytics versão 1.8*
 
@@ -62,7 +62,7 @@ Esta seção detalha os possíveis erros nas implantações do ATA e as etapas n
 |System.Threading.Tasks.TaskCanceledException: uma tarefa foi cancelada|O processo de implantação atingiu o tempo limite, uma vez que ele não pôde acessar o Centro do ATA.|1.    Verifique a conectividade de rede com o Centro do ATA navegando até ele usando seu endereço IP. <br></br>2.    Verifique a configuração de proxy ou firewall.|
 |System.Net.Http.HttpRequestException: ocorreu um erro ao enviar a solicitação. ---> System.Net.WebException: o servidor remoto retornou um erro: (407) Autenticação de proxy necessária.|O processo de implantação atingiu o tempo limite, uma vez que ele não pôde acessar o Centro do ATA devido à configuração incorreta de proxy.|Desabilite a configuração de proxy antes da implantação e habilite a configuração de proxy novamente. Como alternativa, você pode configurar uma exceção no proxy.|
 |System.Net.Sockets.SocketException: uma conexão existente foi fechada forçadamente pelo host remoto||Use uma das seguintes opções: </br>Habilitar o TLS 1.0 no Gateway ATA </br>Habilite o TLS 1.2 no .Net definindo as chaves de registro para usar os padrões do sistema operacional para SSL e TLS, da seguinte forma:</br> `[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\v4.0.30319] "SystemDefaultTlsVersions"=dword:00000001`</br> `[HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\.NETFramework\v4.0.30319] "SystemDefaultTlsVersions"=dword:00000001`</br>`[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\v4.0.30319] "SchUseStrongCrypto"=dword:00000001` </br>`[HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\.NETFramework\v4.0.30319] " SchUseStrongCrypto"=dword:00000001`|
-|Erro [\[]DeploymentModel[\]] Falha na autenticação de gerenciamento [\[]CurrentlyLoggedOnUser=<domain>\<username>Status=FailedAuthentication Exception=[\]]|O processo de implantação do Gateway do ATA ou do Gateway Lightweight do ATA não conseguiu autenticar com sucesso o ATA Center|Abra um navegador no computador no qual o processo de implantação falhou e veja se você pode alcançar o Console do ATA. </br>Se não, inicie a solução de problemas para ver o motivo de o navegador não conseguir autenticar o Centro do ATA. </br>Verifique a:</br>Configuração de proxy</br>Problemas de rede</br>Configurações de política de grupo para a autenticação no computador que difere do Centro do ATA.|
+|Erro [\[]DeploymentModel[\]] Falha na autenticação de gerenciamento [\[]CurrentlyLoggedOnUser=<domain>\<username>Status=FailedAuthentication Exception=[\]]|O processo de implantação do Gateway do ATA ou do Gateway Lightweight do ATA não conseguiu autenticar com sucesso o ATA Center|Abra um navegador no computador no qual o processo de implantação falhou e veja se você pode alcançar o Console do ATA. </br>Se não, inicie a solução de problemas para ver o motivo de o navegador não conseguir autenticar o Centro do ATA. </br>Verifique a: </br>Configuração de proxy</br>Problemas de rede</br>Configurações de política de grupo para a autenticação no computador que difere do Centro do ATA.|
 
 
 
