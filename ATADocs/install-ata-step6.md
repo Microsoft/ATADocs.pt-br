@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 8980e724-06a6-40b0-8477-27d4cc29fd2b
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 3798f7faeb62e44d3877880c2d594332502e76c5
-ms.sourcegitcommit: e9f2bfd610b7354ea3fef749275f16819d60c186
+ms.openlocfilehash: 2f38ee3b8a50a4776709f1a5aa1f37af869a916b
+ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2017
+ms.lasthandoff: 11/07/2017
 ---
 *Aplica-se a: Advanced Threat Analytics versão 1.8*
 
@@ -39,7 +39,7 @@ Para aprimorar os recursos de detecção, o ATA precisa dos seguintes eventos do
 Além de coletar e analisar o tráfego de rede para e nos controladores de domínio, o ATA pode usar os eventos do Windows para aprimorar ainda mais as detecções. Ele usa o evento 4776 para NTLM que melhora várias detecções e os eventos 4732, 4733, 4728, 4729, 4756 e 4757 para aprimorar a detecção de modificações de grupo confidencial. Isso pode ser recebido de seu SIEM definindo o Encaminhamento de Eventos do Windows no controlador de domínio. Os eventos coletados fornecem à ATA informações adicionais que não estão disponíveis por meio do tráfego de rede do controlador de domínio.
 
 #### <a name="siemsyslog"></a>SIEM/Syslog
-Para o ATA poder consumir dados de um servidor Syslog, você precisa fazer o seguinte:
+Para o ATA poder consumir dados de um servidor Syslog, você precisa executar as seguintes etapas:
 
 -   Configurar seus servidores do Gateway do ATA para escutar e aceitar eventos encaminhados do servidor SIEM/Sylog.
 > [!NOTE]
@@ -61,7 +61,7 @@ Consulte a documentação de produto do seu servidor SIEM/Syslog para saber como
 
     ![Habilitar a imagem UDP de ouvinte de syslog](media/ATA-enable-siem-forward-events.png)
 
-2.  Configure o servidor Syslog ou SIEM para encaminhar a ID de Evento do Windows 4776 para o endereço IP de um dos Gateways ATA. Para saber mais sobre como configurar o SIEM, consulte a ajuda online do SIEM ou opções de suporte técnico para obter os requisitos de formatação específica para cada servidor SIEM.
+2.  Configure o servidor Syslog ou SIEM para encaminhar a ID de Evento do Windows 4776 para o endereço IP de um dos Gateways ATA. Para saber mais sobre como configurar o SIEM, confira a ajuda online do SIEM ou opções de suporte técnico para obter os requisitos de formatação específica para cada servidor SIEM.
 
 O ATA oferece suporte a eventos de SIEM nos seguintes formatos:  
 
@@ -76,7 +76,7 @@ O ATA oferece suporte a eventos de SIEM nos seguintes formatos:
 
     1.  Constante RsaSA (deve aparecer).
 
-    2.  O carimbo de hora do evento real (verifique se ele não é o carimbo de hora de chegada no SIEM, ou do envio para o ATA). Preferência de precisão em milissegundos, isso é muito importante.
+    2.  O carimbo de hora do evento real (verifique se ele não é o carimbo de hora de chegada no SIEM, ou do envio para o ATA). Preferencialmente com a precisão em milissegundos, isso é importante.
 
     3.  A ID de evento do Windows
 
@@ -107,7 +107,7 @@ CEF:0|Microsoft|Microsoft Windows||Microsoft-Windows-Security-Auditing:4776|O co
 
     -   externalId = a ID de evento do Windows
 
-    -   rt = o carimbo de hora do evento real (verifique se ele não é o carimbo de hora de chegada no SIEM, ou do envio para nós). Preferência de precisão em milissegundos, isso é muito importante.
+    -   rt = o carimbo de hora do evento real (verifique se ele não é o carimbo de hora de chegada no SIEM, ou do envio para o ATA). Preferencialmente com a precisão em milissegundos, isso é importante.
 
     -   cat = o nome do log de eventos do Windows
 
@@ -152,7 +152,7 @@ Código de erro:         0x0
 
     -   SourceName = o nome do provedor de eventos do Windows
 
-    -   TimeGenerated = O carimbo de hora do evento real (verifique se não é o carimbo de hora de chegada no SIEM, ou do envio para o ATA). O formato deve corresponder a yyyyMMddHHmmss.FFFFFF, preferencialmente com precisão de milissegundos, isso é muito importante.
+    -   TimeGenerated = O carimbo de hora do evento real (verifique se não é o carimbo de hora de chegada no SIEM, ou do envio para o ATA). O formato deve corresponder a aaaaMMddHHmmss.FFFFFF, preferencialmente com precisão de milissegundos, isso é importante.
 
     -   ComputerName = o nome do host de origem
 
@@ -175,7 +175,7 @@ Os campos necessários são:
 - O nome de domínio totalmente qualificado do DC
 - A ID de evento do Windows
 
-TimeGenerated é o carimbo de data/hora do evento real (verifique se não é o carimbo de data/hora de chegada no SIEM, ou do envio para o ATA). O formato deve corresponder a aaaaMMddHHmmss.FFFFFF, preferencialmente com precisão de milissegundos, isso é muito importante.
+TimeGenerated é o carimbo de data/hora do evento real (verifique se não é o carimbo de data/hora de chegada no SIEM, ou do envio para o ATA). O formato deve corresponder a aaaaMMddHHmmss.FFFFFF, preferencialmente com precisão de milissegundos, isso é importante.
 
 A mensagem é o texto do evento original do evento do Windows
 

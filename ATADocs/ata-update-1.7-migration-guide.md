@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 8eefcd45-7a4b-4074-ac5b-1ffc48e6654a
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: a1494f0428593ee58c7e1da64192b45c6d006c15
-ms.sourcegitcommit: 470675730967e0c36ebc90fc399baa64e7901f6b
+ms.openlocfilehash: 891ba71bcb8c1ee362b92be2404c65c7b5158055
+ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 11/07/2017
 ---
 # <a name="ata-update-to-17-migration-guide"></a>Guia de migração de atualização do ATA para 1.7
 A atualização 1.7 do ATA fornece melhorias nas seguintes áreas:
@@ -65,7 +65,7 @@ Nessa versão, o mesmo arquivo de instalação (Microsoft ATA Center Setup.exe) 
     ![Imagem Manter o ATA atualizado](media/ata_ms_update.png) Isso ajustará as configurações do Windows para habilitar atualizações para os outros produtos da Microsoft (incluindo o ATA), como visto aqui. 
      ![Imagem de atualização automática do Windows](media/ata_installupdatesautomatically.png)
 
-    -  Na tela **Migração de dados**, selecione se deseja migrar todos os dados ou dados parciais. Se você optar por migrar apenas os dados parciais, os perfis de comportamento e tráfego de rede capturados anteriormente não serão migrados. Isso significa que serão necessárias três semanas antes que a detecção de um comportamento anormal tenha um perfil completo para ativar a detecção de atividade anormal. Durante essas três semanas, todas as outras detecções do ATA funcionarão corretamente. A migração de dados **Parcial** demora muito menos para ser instalada. Se você selecionar a migração de dados **Completa**, pode demorar bastante para a instalação ser concluída. A quantidade estimada de tempo e de espaço em disco necessário, listada na tela **Migração de Dados**, dependerá da quantidade de tráfego de rede capturado anteriormente e já salvo em versões anteriores do ATA. Antes de selecionar **Parcial** ou **Completa**, verifique estes requisitos.  
+    -  Na tela **Migração de dados**, selecione se deseja migrar todos os dados ou dados parciais. Se você optar por migrar apenas os dados parciais, os perfis de comportamento e tráfego de rede capturados anteriormente não serão migrados. Isso significa que são necessárias três semanas antes que a detecção de um comportamento anormal tenha um perfil completo para ativar a detecção de atividade anormal. Durante essas três semanas, todas as outras detecções do ATA funcionarão corretamente. A migração de dados **Parcial** demora muito menos para ser instalada. Se você selecionar a migração de dados **Completa**, pode demorar bastante para a instalação ser concluída. A quantidade estimada de tempo e de espaço em disco necessário, listada na tela **Migração de Dados**, dependerá da quantidade de tráfego de rede capturado anteriormente e já salvo em versões anteriores do ATA. Antes de selecionar **Parcial** ou **Completa**, verifique estes requisitos.  
     
     ![Migração de dados do ATA](media/migration-data-migration17.png)
 
@@ -83,10 +83,10 @@ Nessa versão, o mesmo arquivo de instalação (Microsoft ATA Center Setup.exe) 
 > A porta de escuta Syslog configurada em todos os Gateways será alterada para 514.
  
 > [!NOTE] 
-> Para instalar novos Gateways ATA, acesse a tela **Gateways** e clique em **Baixar a instalação do Gateway** para obter o pacote de instalação ATA 1.7 e seguis as instruções para uma nova instalação do Gateway, conforme descrito na [Etapa 4. Instale o Gateway ATA](install-ata-step4.md).
+> Para instalar novos Gateways ATA, acesse a tela **Gateways** e clique em **Baixar a instalação do Gateway** para obter o pacote de instalação ATA 1.7 e seguis as instruções para uma nova instalação do Gateway, conforme descrito na [Etapa 4. Instalar o Gateway do ATA](install-ata-step4.md).
 
 
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Consulte também
 
 - [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

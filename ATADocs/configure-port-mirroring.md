@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 4/30/2017
+ms.date: 11/7/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: cdaddca3-e26e-4137-b553-8ed3f389c460
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 234c759db2b766b2a4ad9b26ae31a8f6825d957f
-ms.sourcegitcommit: 470675730967e0c36ebc90fc399baa64e7901f6b
+ms.openlocfilehash: fb9c6aa3962f7fc121f3737a32c9a5cfb2fcfb8e
+ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 11/07/2017
 ---
 *Aplica-se a: Advanced Threat Analytics versão 1.8*
 
@@ -29,16 +29,16 @@ ms.lasthandoff: 06/30/2017
  
 A fonte de dados principal usada pelo ATA é uma inspeção profunda de pacotes do tráfego de rede para e dos controladores de domínio. Para que o ATA veja o tráfego de rede, você deve configurar o espelhamento de porta ou usar uma TAP de Rede.
 
-Para o espelhamento de porta, configure **espelhamento de porta** para cada controlador de domínio a ser monitorado, como a **origem** do tráfego de rede. Normalmente, você precisará trabalhar com a equipe de virtualização ou de rede para configurar o espelhamento de porta.
-Para saber mais, consulte a documentação do fornecedor.
+Para o espelhamento de porta, configure **espelhamento de porta** para cada controlador de domínio a ser monitorado, como a **origem** do tráfego de rede. Normalmente, você precisa trabalhar com a equipe de virtualização ou de rede para configurar o espelhamento de porta.
+Para saber mais, veja a documentação do fornecedor.
 
-Seus controladores de domínio e Gateways do ATA podem ser físicos ou virtuais. Veja a seguir métodos comuns de espelhamento de porta e algumas considerações. Consulte a documentação de produto do servidor de virtualização ou comutador para saber mais. O fabricante do comutador pode usar terminologias distintas.
+Seus controladores de domínio e Gateways do ATA podem ser físicos ou virtuais. Veja a seguir métodos comuns de espelhamento de porta e algumas considerações. Para saber mais, veja a documentação de produtos para servidores de virtualização ou comutador. O fabricante do comutador pode usar terminologias distintas.
 
 **Switched Port Analyzer (SPAN)** – Copia o tráfego de rede de uma ou mais portas de comutador para outra porta de comutador no mesmo comutador. Tanto o Gateway do ATA quanto os controladores de domínio devem estar conectados ao mesmo comutador físico.
 
 **Remote Switch Port Analyzer (RSPAN)**  – Permite que você monitore o tráfego de rede das portas de origem distribuídas em vários comutadores físicos. O RSPAN copia o tráfego de origem em uma VLAN especial configurada com RSPAN. Essa VLAN precisa ser truncada com os outros comutadores envolvidos. RSPAN funciona na Camada 2.
 
-**Encapsulated Remote Switch Port Analyzer (ERSPAN)** – É uma tecnologia da Cisco que funciona na Camada 3. O ERSPAN permite que você monitore o tráfego entre comutadores, sem a necessidade de troncos de VLAN. O ERSPAN usa o recurso GRE (encapsulamento de roteamento genérico) para copiar o tráfego de rede monitorado. Atualmente, o ATA não pode receber o tráfego do ERSPAN diretamente. Para que o ATA trabalhe com o tráfego do ERSPAN, um comutador ou roteador que pode desencapsular o tráfego deve ser configurado como o destino do ERSPAN onde o tráfego será desencapsulado. Em seguida, o comutador ou roteador precisará ser configurado para encaminhar para o Gateway do ATA usando SPAN ou RSPAN.
+**Encapsulated Remote Switch Port Analyzer (ERSPAN)** – É uma tecnologia da Cisco que funciona na Camada 3. O ERSPAN permite que você monitore o tráfego entre comutadores, sem a necessidade de troncos de VLAN. O ERSPAN usa o recurso GRE (encapsulamento de roteamento genérico) para copiar o tráfego de rede monitorado. Atualmente, o ATA não pode receber o tráfego do ERSPAN diretamente. Para que o ATA trabalhe com o tráfego do ERSPAN, um comutador ou roteador que pode desencapsular o tráfego deve ser configurado como o destino do ERSPAN onde o tráfego é desencapsulado. Em seguida, configure o comutador ou roteador para encaminhar o tráfego desencapsulado para o Gateway do ATA usando SPAN ou RSPAN.
 
 > [!NOTE]
 > Se o controlador de domínio que está passando por espelhamento de porta estiver conectado por um link de WAN, verifique se o link de WAN pode lidar com a carga adicional do tráfego do ERSPAN.
@@ -51,7 +51,7 @@ Seus controladores de domínio e Gateways do ATA podem ser físicos ou virtuais.
 |Máquina|Virtual no mesmo host|O comutador virtual precisa oferecer suporte ao espelhamento de porta.<br /><br />Mover uma das máquinas virtuais para outro host por si só pode quebrar o espelhamento de porta.|
 |Máquina|Virtuais em hosts diferentes|Verifique se o comutador virtual oferece suporte a esse cenário.|
 |Máquina|Físico|Exige um adaptador de rede dedicado, caso contrário o ATA verá todo o tráfego que chega e sai do host, até mesmo o tráfego que ele envia ao Centro do ATA.|
-|Físico|Máquina|Verifique se o comutador virtual oferece suporte a este cenário, e se a configuração de espelhamento de porta em seus comutadores físicos tem base no cenário:<br /><br />Se o host virtual estiver no mesmo comutador físico, você precisará configurar um span no nível do comutador.<br /><br />Se o host virtual estiver em um comutador diferente, você precisará configurar RSPAN ou ERSPAN &#42;.|
+|Físico|Máquina|Verifique se o comutador virtual oferece suporte a este cenário, e se a configuração de espelhamento de porta em seus comutadores físicos tem base no cenário:<br /><br />Se o host virtual estiver no mesmo comutador físico, você precisará configurar um span no nível do comutador.<br /><br />Se o host virtual estiver em um comutador diferente, você precisará configurar RSPAN ou ERSPAN&#42;.|
 |Físico|Físico no mesmo comutador|O comutador físico deve oferecer suporte ao Espelhamento de Porta/SPAN.|
 |Físico|Físico em um comutador diferente|Exige que os comutadores físicos ofereçam suporte a RSPAN ou ERSPAN&#42;.|
 &#42; O ERSPAN recebe suporte apenas quando o desencapsulamento é executado antes de o tráfego ser analisado pelo ATA.
@@ -65,7 +65,7 @@ Seus controladores de domínio e Gateways do ATA podem ser físicos ou virtuais.
 > [!NOTE]
 > Caso seu ambiente dê suporte a RSPAN (virtual para virtual em hosts diferentes), você não precisa se preocupar com afinidade.
 > 
--   Para verificar se os Gateways do ATA estão com um tamanho correto que os permita lidar com o monitoramento de todos os controladores de domínio, tente esta opção: instalar uma máquina virtual em cada host de virtualização e instalar um Gateway do ATA em cada host. Configure cada Gateway do ATA para monitorar todos os controladores de domínio executados no cluster. Dessa forma, qualquer host no qual os controladores de domínio executem será monitorado.
+-   Para verificar se os Gateways do ATA estão com um tamanho correto que os permita lidar com o monitoramento de todos os controladores de domínio, tente esta opção: instalar uma máquina virtual em cada host de virtualização e instalar um Gateway do ATA em cada host. Configure cada Gateway do ATA para monitorar todos os controladores de domínio executados no cluster. Dessa forma, qualquer host no qual os controladores de domínio são executados será monitorado.
 
 Depois de configurar o espelhamento de porta, verifique se está funcionando antes de instalar o Gateway do ATA.
 

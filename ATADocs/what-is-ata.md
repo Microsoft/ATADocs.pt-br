@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 10/9/2017
+ms.date: 11/7/2017
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 283e7b4e-996a-4491-b7f6-ff06e73790d2
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 1afaf258198c1b18aca5cc2e4be6774600f72a73
-ms.sourcegitcommit: e9f2bfd610b7354ea3fef749275f16819d60c186
+ms.openlocfilehash: 44f50b2daefb5a54c56b90289faf08b897494093
+ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2017
+ms.lasthandoff: 11/07/2017
 ---
 *Aplica-se a: Advanced Threat Analytics versão 1.8*
 
@@ -46,9 +46,9 @@ Para saber mais sobre a arquitetura do ATA, confira [Arquitetura do ATA](ata-arc
 
 A tecnologia do ATA detecta várias atividades suspeitas, concentrando-se em várias fases da cadeia do ataque cibernético, incluindo:
 
--   Reconhecimento, durante o qual os invasores coletam informações sobre como o ambiente foi criado, quais são os diferentes ativos e entidades que existem, e geralmente criam seu plano para as próximas fases do ataque.
+-   Reconhecimento, durante o qual os invasores coletam informações sobre como o ambiente foi compilado criado, o que são os ativos diferentes e quais entidades existem. Geralmente, eles criam o plano para as próximas fases do ataque.
 -   Ciclo de movimentação lateral, durante o qual um invasor investe tempo e esforço na propagação da superfície de seu ataque dentro de sua rede.
--   Controle do domínio (persistência), durante o qual um invasor captura as informações permitindo que retome sua campanha usando vários conjunto de pontos de entrada, credenciais e técnicas. 
+-   Controle do domínio (persistência), durante o qual um invasor captura as informações permitindo que retome sua campanha usando vários conjuntos de pontos de entrada, credenciais e técnicas. 
 
 Essas fases de um ataque cibernético são semelhantes e previsíveis, independentemente do tipo de empresa que está sob ataque ou do tipo de informação visado.
 O ATA procura três tipos de ataques principais: ataques mal-intencionados, comportamento anormal e riscos e problemas de segurança.
@@ -65,7 +65,8 @@ Os **ataques mal-intencionados** são detectados de forma determinista, olhando 
 -   Força Bruta
 -   Execução remota
 
-Para obter uma lista completa de detecções e suas descrições, consulte [Quais atividades suspeitas o ATA pode detectar?](ata-threats.md)
+Para obter uma lista completa de detecções e suas descrições, confira [Quais atividades suspeitas o ATA pode detectar?](ata-threats.md). 
+
 O ATA detecta essas atividades suspeitas e revela as informações no Console do ATA, incluindo uma visão clara de Quem, O que, Quando e Como. Como você pode ver, monitorando este painel simples e fácil de usar, você será alertado de que o ATA suspeita de uma tentativa de ataque Pass-the-Ticket nos computadores Cliente 1 e Cliente 2 em sua rede.
 
  ![tela de exemplo do ATA de pass-the-ticket](media/pass_the_ticket_sa.png)

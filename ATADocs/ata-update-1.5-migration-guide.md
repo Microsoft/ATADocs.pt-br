@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: fb65eb41-b215-4530-93a2-0b8991f4e980
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: daaa2b3d495900d84fe7b61afb8e3bb22b3d7f72
-ms.sourcegitcommit: 470675730967e0c36ebc90fc399baa64e7901f6b
+ms.openlocfilehash: 654312c841c38c86c9efa826227d7cc93eb772cf
+ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 11/07/2017
 ---
 # <a name="ata-update-to-15-migration-guide"></a>Guia de migração de atualização do ATA para 1.5
 A atualização 1.5 do ATA fornece melhorias nas seguintes áreas:
@@ -104,7 +104,7 @@ Para baixar o pacote do Gateway do ATA:
 
 4.  Salve o pacote localmente.
 
-O arquivo zip inclui o seguinte:
+O arquivo zip inclui os seguintes arquivos:
 
 -   Instalador do Gateway do ATA
 
@@ -117,7 +117,7 @@ O arquivo zip inclui o seguinte:
     > [!NOTE]
     > Você também pode usar este pacote de Gateway do ATA para instalar novos Gateways do ATA.
 
-2.  As configurações anteriores serão preservadas, mas talvez demore alguns minutos até que o serviço seja reiniciado.
+2.  As configurações anteriores são preservadas, mas talvez demore alguns minutos até que o serviço seja reiniciado.
 
 3.  Repita essa etapa para todos os outros Gateways do ATA implantados.
 

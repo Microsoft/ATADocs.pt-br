@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 6/12/2017
+ms.date: 11/7/2017
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 4a25561b-a5ed-44aa-9b72-366976b3c72a
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 19eee0466269bbc2255d3a83e2f8c073057ba356
-ms.sourcegitcommit: 470675730967e0c36ebc90fc399baa64e7901f6b
+ms.openlocfilehash: 652d3a9e20737d26e8776035690a180f6bd84593
+ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 11/07/2017
 ---
 *Aplica-se a: Advanced Threat Analytics versão 1.8*
 
@@ -30,7 +30,7 @@ ms.lasthandoff: 06/30/2017
 ## <a name="change-the-domain-connectivity-password"></a>Alterar a senha de conectividade do domínio
 Se você modificar a senha de conectividade do domínio, certifique-se de que a senha digitada esteja correta. Se não estiver, o serviço do Gateway do ATA deixará de ser executado em Gateways do ATA.
 
-Se você suspeitar que isso aconteceu, no Gateway do ATA, examine o arquivo Microsoft.Tri.Gateway-Errors.log em busca do seguinte: `The supplied credential is invalid.`
+Se você suspeitar que isso aconteceu, no Gateway do ATA, examine o arquivo Microsoft.Tri.Gateway-Errors.log em busca dos seguintes erros: `The supplied credential is invalid.`
 
 Para corrigir isso, siga este procedimento e atualize a Senha de conectividade do domínio na Central do ATA:
 
@@ -46,7 +46,7 @@ Para corrigir isso, siga este procedimento e atualize a Senha de conectividade d
 
 4.  Em **Senha**, altere a senha.
 
-    Se a Central do ATA tiver conectividade com o domínio, use o botão **Testar Conexão** para validar as credenciais
+    Se o Centro do ATA tiver conectividade com o domínio, use o botão **Testar Conexão** para validar as credenciais
 
 5.  Clique em **Salvar**.
 

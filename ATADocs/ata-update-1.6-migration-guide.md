@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 0756ef64-3aef-4a69-8981-24fa8f285c6a
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: b8979b7a032e8f44f2da3844cbcb975d4f3f5c84
-ms.sourcegitcommit: 470675730967e0c36ebc90fc399baa64e7901f6b
+ms.openlocfilehash: c1be20cc147e88f55d227818331f06d409dd08e7
+ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 11/07/2017
 ---
 # <a name="ata-update-to-16-migration-guide"></a>Guia de migração de atualização do ATA para 1.6
 A atualização 1.6 do ATA fornece melhorias nas seguintes áreas:
@@ -43,7 +43,7 @@ A atualização 1.6 do ATA fornece melhorias nas seguintes áreas:
 Se você já tiver a versão 1.5 do ATA implantada, esse procedimento explicará as etapas necessárias para atualizar sua implantação.
 
 > [!NOTE] 
-> Você não pode instalar o ATA versão 1.6 diretamente sobre o ATA versão 1.4. Instale primeiro o ATA versão 1.5. Se você tentar acidentalmente instalar o ATA 1.6 sem instalar o ATA 1.5, você obterá um erro informando que **Uma versão mais recente já está instalada no seu computador.** Desinstale os resíduos do ATA 1.6 que permanecerem no seu computador - mesmo que a instalação falhe - antes de instalar o ATA versão 1.5.
+> Você não pode instalar o ATA versão 1.6 diretamente sobre o ATA versão 1.4. Instale primeiro o ATA versão 1.5. Se você tentar acidentalmente instalar o ATA 1.6 sem instalar o ATA 1.5, obterá um erro informando que **Uma versão mais recente já está instalada no seu computador.** Desinstale os resíduos do ATA 1.6 que permanecerem em seu computador, mesmo que a instalação falhe, antes de instalar o ATA versão 1.5.
 
 Execute estas etapas para atualizar para o ATA versão 1.6:
 
@@ -84,7 +84,7 @@ Nessa versão, o mesmo arquivo de instalação (Microsoft ATA Center Setup.exe) 
     ![Imagem Manter o ATA atualizado](media/ata_ms_update.png) Isso ajustará as configurações do Windows para habilitar atualizações para os outros produtos da Microsoft (incluindo o ATA), como visto aqui. 
      ![Imagem de atualização automática do Windows](media/ata_installupdatesautomatically.png)
 
-    5.  Antes de iniciar a instalação, o ATA executará uma verificação de preparação. Examine os resultados da verificação para saber se os pré-requisitos foram configurados com êxito e se você tem pelo menos a quantidade mínima de espaço em disco. 
+    5.  Antes de iniciar a instalação, o ATA executa uma verificação de preparação. Examine os resultados da verificação para saber se os pré-requisitos foram configurados com êxito e se você tem pelo menos a quantidade mínima de espaço em disco. 
     ![Imagem de verificação de preparação do ATA](media/ata_install_readinesschecks.png)
 
     6.  Clique em **Atualizar**. Depois de clicar em Atualizar, o ATA ficará offline até que o procedimento de atualização seja concluído.
@@ -111,7 +111,7 @@ Para baixar o pacote do Gateway do ATA:
 
 4.  Salve o pacote localmente.
 
-O arquivo zip inclui o seguinte:
+O arquivo zip inclui os seguintes arquivos:
 
 -   Instalador do Gateway do ATA
 

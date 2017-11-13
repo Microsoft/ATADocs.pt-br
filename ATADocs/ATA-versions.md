@@ -4,7 +4,7 @@ description: "Explica as diferentes opções para versões do Microsoft Advanced
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 7/3/2017
+ms.date: 11/7/2017
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -12,26 +12,26 @@ ms.technology:
 ms.assetid: a8afbd91-c888-4dfc-94ab-72e38745163e
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: f1092e1cf6c991785dbf8bad3b197b68a21c0833
-ms.sourcegitcommit: fa50f37b134d7579d7c310852dff60e5f1996eaa
+ms.openlocfilehash: f77f8ef71765dc71d690876d4043e1b3702b9971
+ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/03/2017
+ms.lasthandoff: 11/07/2017
 ---
 *Aplica-se a: Advanced Threat Analytics versão 1.8*
 
 # <a name="support-for-microsoft-advanced-threat-analytics-ata-versions"></a>Suporte para versões do Microsoft Advanced Threat Analytics (ATA)
 
-A Microsoft pretende lançar atualizações do ATA algumas vezes por ano, com cada versão de atualização com suporte por 12 meses, a partir da data de lançamento da GA (disponibilidade geral). O suporte técnico será fornecido pelos 12 meses inteiros. No entanto, nossa estrutura de suporte agora é dinâmica, evoluindo em duas fases de manutenção distintas, que dependem da disponibilidade da versão mais recente.
+A Microsoft pretende lançar atualizações do ATA algumas vezes por ano, com cada versão de atualização com suporte por 12 meses, a partir da data de lançamento da GA (disponibilidade geral). O suporte técnico será fornecido por 12 meses. No entanto, nossa estrutura de suporte agora é dinâmica, evoluindo em duas fases de manutenção distintas, que dependem da disponibilidade da versão mais recente.
 
--   Fase de manutenção das Atualizações Críticas e de Segurança – Ao executar a versão mais recente do ATA, você receberá as Atualizações Críticas e de Segurança.
+-   Fase de manutenção das Atualizações Críticas e de Segurança – ao executar a versão mais recente do ATA, você recebe as Atualizações Críticas e de Segurança.
 
 -   Fase de manutenção das Atualizações de Segurança (somente) – Após o lançamento de uma nova versão do ATA, o suporte para versões anteriores será reduzido a somente Atualizações de Segurança pelo restante dos 12 meses do ciclo de vida de suporte (mostrado no exemplo de versões de suporte para manutenção a seguir).
  
 ![Exemplo de versões de suporte para manutenção](media/versions.png)
 
 > [!Note]
-> A versão mais recente do ATA estará sempre na fase de manutenção de Atualizações Críticas e de Segurança. Isso significa que, se você encontrar um defeito de código que requer uma atualização crítica, deverá ter a versão do Branch Atual mais recente instalada para receber uma correção. Todas as outras versões com suporte estarão qualificadas apenas para receber Atualizações de Segurança. O suporte termina por completo após o ciclo de vida de 12 meses de uma versão expirar. Nessa ocasião, os clientes devem atualizar para uma versão com suporte.
+> A versão mais recente do ATA estará sempre na fase de manutenção de Atualizações Críticas e de Segurança. Isso significa que, se você encontrar um defeito de código que requer uma atualização crítica, deverá ter a versão do Branch Atual mais recente instalada para receber uma correção. Todas as outras versões com suporte só podem receber Atualizações de Segurança. O suporte termina por completo após o ciclo de vida de 12 meses de uma versão expirar. Nessa ocasião, os clientes devem atualizar para uma versão com suporte.
 
 ## <a name="version-history"></a>Histórico de versão
 

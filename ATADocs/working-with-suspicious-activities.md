@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 08/28/2017
+ms.date: 11/7/2017
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,18 +13,18 @@ ms.technology:
 ms.assetid: 44d7c899-816c-4f7f-91d3-84a09d291a24
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 62ce117423a189a1c2ce00b862f323db6ed328cb
-ms.sourcegitcommit: 46dd0e695f16a0dd23bbfa140eba15ea6a34d7af
+ms.openlocfilehash: b78f0407d74c3c8e0187c9934d3d7555104cd6ec
+ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 11/07/2017
 ---
 *Aplica-se a: Advanced Threat Analytics versão 1.8*
 
 
 
 # <a name="working-with-suspicious-activities"></a>Trabalhando com atividades suspeitas
-Este tópico explica as noções básicas de como trabalhar com a Advanced Threat Analytics.
+Este artigo explica as noções básicas de como trabalhar com a Advanced Threat Analytics.
 
 ## <a name="review-suspicious-activities-on-the-attack-time-line"></a>Examinar atividades suspeitas na linha do tempo de ataque
 Depois de fazer logon no Console do ATA, você será direcionado automaticamente para a **linha do tempo de atividades suspeitas** aberta. As atividades suspeitas são listadas em ordem cronológica com as atividades suspeitas mais recentes na parte superior da linha do tempo.
@@ -59,7 +59,7 @@ Cada atividade suspeita tem as seguintes informações:
 ## <a name="filter-suspicious-activities-list"></a>Filtrar lista de atividades suspeitas
 Para filtrar a lista de atividades suspeitas:
 
-1.  No painel **Filtrar por** no lado esquerdo da tela, selecione um dos seguintes: **Tudo**, **Aberto**, **Fechado** ou **Suprimido**.
+1.  No painel **Filtrar por** no lado esquerdo da tela, selecione uma das seguintes opções: **Tudo**, **Aberto**, **Fechado** ou **Suprimido**.
 
 2.  Para filtrar a lista ainda mais, selecione **Alta**, **Média** ou **Baixa**.
 
@@ -93,9 +93,9 @@ Para fazer isso, clique nos três pontos no canto superior direito de uma ativid
 -   **Fechar**: é usado para rastrear atividades suspeitas que você identificou, pesquisou e corrigiu como mitigado.
 
     > [!NOTE]
-    > O ATA pode reabrir uma atividade fechada se a mesma atividade for novamente detectada em um curto período de tempo.
+    > Se a mesma atividade for detectada novamente dentro de um curto período, o ATA poderá reabrir uma atividade fechada.
 
--   **Suprimir**: suprimir uma atividade significa que você deseja ignorá-la por enquanto e apenas ser alertado novamente se houver uma nova instância. Isso significa que, se houver um alerta semelhante o ATA não reabrirá. Mas, se o alerta parar por sete dias e for observado novamente, você será alertado novamente.
+-   **Suprimir**: suprimir uma atividade significa que você deseja ignorá-la por enquanto e apenas ser alertado novamente se houver uma nova instância. Isso significa que, se houver um alerta semelhante, o ATA não reabrirá. Mas, se o alerta parar por sete dias e for observado novamente, você será alertado novamente.
 
 - **Excluir**: se você excluir um alerta, ele será excluído do sistema, do banco de dados e você NÃO poderá restaurá-lo. Depois de clicar em Excluir, você poderá excluir todas as atividades suspeitas do mesmo tipo.
 

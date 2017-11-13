@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 10/9/2017
+ms.date: 11/7/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 6bbc50c3-bfa8-41db-a2f9-56eed68ef5d2
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 66e910c1d6d11781fa66f8386b4b3939fd49ebf7
-ms.sourcegitcommit: e9f2bfd610b7354ea3fef749275f16819d60c186
+ms.openlocfilehash: 4abeda5a54de771c6e6d3c73d9217113dfe88b8e
+ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2017
+ms.lasthandoff: 11/07/2017
 ---
 *Aplica-se a: Advanced Threat Analytics versão 1.8*
 
@@ -31,7 +31,7 @@ ms.lasthandoff: 10/09/2017
 
 ## <a name="step-4-install-the-ata-gateway"></a>Etapa 4. Instalar o Gateway do ATA
 
-Antes de instalar o Gateway do ATA, verifique se o espelhamento de porta está configurado corretamente e se o Gateway do ATA pode ver o tráfego chegando e saindo dos controladores de domínio. Confira [Validar o espelhamento de porta](validate-port-mirroring.md) para saber mais.
+Antes de instalar o Gateway do ATA, verifique se o espelhamento de porta está configurado corretamente e se o Gateway do ATA pode ver o tráfego chegando e saindo dos controladores de domínio. Para saber mais, confira [Validar o espelhamento de porta](validate-port-mirroring.md).
 
 
 > [!IMPORTANT]
@@ -43,15 +43,15 @@ Execute as seguintes etapas no servidor do Gateway do ATA.
 
 1.  Extraia os arquivos do arquivo zip. 
 > [!NOTE] 
-> A instalação diretamente do arquivo zip falhará.
+> A instalação diretamente do arquivo zip falha.
 
 2.  Execute **Microsoft ATA Gateway Setup.exe** e siga o assistente de instalação.
 
 3.  Na página **Boas-vindas**, selecione seu idioma e clique em **Avançar**.
 
-4.  O assistente de instalação verificará automaticamente se o servidor é um controlador de domínio ou um servidor dedicado. Se for um controlador de domínio, o Gateway Lightweight do ATA será instalado, se for um servidor dedicado, o Gateway do ATA será instalado. 
+4.  O assistente de instalação verifica automaticamente se o servidor é um controlador de domínio ou um servidor dedicado. Se for um controlador de domínio, o Gateway Lightweight do ATA será instalado, se for um servidor dedicado, o Gateway do ATA será instalado. 
     
-    Por exemplo, no caso de um Gateway do ATA, a tela a seguir será exibida informando que um Gateway do ATA será instalado em seu servidor dedicado:
+    Por exemplo, para um Gateway do ATA, a tela a seguir será exibida informando que um Gateway do ATA será instalado em seu servidor dedicado:
     
     ![Instalação do Gateway do ATA](media/ata-gw-install.png) Clique em **Avançar**.
 
@@ -63,11 +63,11 @@ Execute as seguintes etapas no servidor do Gateway do ATA.
     ![Imagem da configuração do gateway de ATA](media/ata-gw-configure.png)
 
     > [!NOTE]
-    > Quando você implanta o Gateway do ATA, não precisa fornecer credenciais. Se a instalação do Gateway do ATA não conseguir recuperar suas credenciais usando o logon único (por exemplo, isso pode acontecer se o Centro do ATA não está no domínio, se o Gateway do ATA não está no domínio, você não precisa das credenciais de administrador do ATA), será solicitado que você forneça credenciais, como na tela a seguir. 
+    > Quando você implanta o Gateway do ATA, não precisa fornecer credenciais. Se a instalação do Gateway do ATA não conseguir recuperar suas credenciais usando o logon único (por exemplo, isso pode acontecer se o Centro do ATA não estiver no domínio, nesse caso, você não precisa das credenciais de administrador do ATA), você receberá uma solicitação para fornecer credenciais, como na tela a seguir: 
 
-  ![Fornecer credenciais do Gateway do ATA](media/ata-install-credentials.png)
+  ![Fornecer credenciais do gateway do ATA](media/ata-install-credentials.png)
 
-   - Caminho de Instalação: esse é o local em que o Gateway do ATA será instalado. Por padrão, é %programfiles%\Microsoft Advanced Threat Analytics\Gateway. Mantenha o valor padrão.
+   - Caminho de Instalação: esse é o local em que o Gateway do ATA é instalado. Por padrão, é %programfiles%\Microsoft Advanced Threat Analytics\Gateway. Mantenha o valor padrão.
     
 5. Clique em **Instalar**. Os componentes a seguir serão instalados e configurados durante a instalação do Gateway do ATA:
 

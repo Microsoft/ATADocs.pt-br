@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 27b139e5-12b9-4953-8f53-eb58e8ce0038
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: c5beb4868fb8ced42457a8cadd1123956dd69ad7
-ms.sourcegitcommit: 470675730967e0c36ebc90fc399baa64e7901f6b
+ms.openlocfilehash: 47a8b5c52bf978d5e07007a3402a567be39e2157
+ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 11/07/2017
 ---
 # <a name="whats-new-in-ata-version-16"></a>Novidades na versão 1.6 do ATA
 Essas notas de versão fornecem informações sobre problemas conhecidos nesta versão da Advanced Threat Analytics.
@@ -103,7 +103,7 @@ Ao atualizar para o ATA 1.6, o processo de atualização pode falhar com o segui
 
 Você também pode ver este erro: System.ArgumentNullException: o valor não pode ser nulo.
     
-Se você ver algum desses erros, execute a seguinte solução alternativa.
+Se você ver algum desses erros, execute a seguinte solução alternativa:
 
 **Solução alternativa**: 
 
@@ -120,19 +120,19 @@ Se você ver algum desses erros, execute a seguinte solução alternativa.
     2.  Central do Microsoft Advanced Threat Analytics
 7.  Revise os logs para verificar se o produto está sendo executado sem erros.
 8.  [Baixe](http://aka.ms/ataremoveduplicateprofiles "Baixe") a ferramenta "RemoveDuplicateProfiles.exe" e copie-a para o caminho de instalação principal (%ProgramFiles%\Microsoft Advanced Threat Analytics\Center)
-9.  Em um prompt de comando elevado, execute "RemoveDuplicateProfiles.exe" e aguarde até que ela seja concluída com êxito.
+9.  Em um prompt de comandos com privilégios elevados, execute `RemoveDuplicateProfiles.exe` e aguarde até que ela seja concluída com êxito.
 10. Do diretório: …\Microsoft Advanced Threat Analytics\Center\MongoDB\bin: **Mongo ATA**, digite o seguinte comando:
 
-    db.SuspiciousActivities.remove({ "_t" : "RemoteExecutionSuspiciousActivity", "DetailsRecords" : { "$elemMatch" : { "ReturnCode" : null } } }, { "_id" : 1 });
+          db.SuspiciousActivities.remove({ "_t" : "RemoteExecutionSuspiciousActivity", "DetailsRecords" : { "$elemMatch" : { "ReturnCode" : null } } }, { "_id" : 1 });
 
 ![Solução alternativa de atualização](http://i.imgur.com/Nj99X2f.png)
 
-Isso deve retornar um WriteResult({ "nRemoved" : XX }) em que "XX" é o número de Atividades Suspeitas que foram excluídas. Se o número for maior que 0, saia do prompt de comando e continue o processo de atualização.
+Isso deve retornar um `WriteResult({ "nRemoved" : XX })` em que "XX" é o número de Atividades Suspeitas que foram excluídas. Se o número for maior que 0, saia do prompt de comando e continue o processo de atualização.
 
 
 ### <a name="net-framework-461-requires-restarting-the-server"></a>O NET Framework 4.6.1 requer a reinicialização do servidor
 
-Em alguns casos, a instalação do .Net Framework 4.6.1 pode exigir a reinicialização do servidor. Observe que clicar em OK na caixa de diálogo **Configuração da Central do Microsoft Advanced Threat Analytics** reiniciará automaticamente o servidor. Isso é particularmente importante ao instalar o Gateway Lightweight do ATA em um controlador de domínio, pois pode ser conveniente planejar uma janela de manutenção antes da instalação.
+Em alguns casos, a instalação do .Net Framework 4.6.1 pode exigir a reinicialização do servidor. Observe que clicar em OK na caixa de diálogo **Configuração da Central do Microsoft Advanced Threat Analytics** reinicia automaticamente o servidor. Isso é particularmente importante ao instalar o Gateway Lightweight do ATA em um controlador de domínio, pois pode ser conveniente planejar uma janela de manutenção antes da instalação.
     ![Reinicialização do .Net Framework](media/ata-net-framework-restart.png)
 
 ### <a name="historical-network-activities-no-longer-migrated"></a>Histórico de atividades de rede não é mais migrado
