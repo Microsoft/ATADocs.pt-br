@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 7/4/2017
+ms.date: 11/7/2017
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: f3db435e-9553-40a2-a2ad-278fad4f0ef5
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 842e9866c5fdb447f49600501c4486da6db902f2
-ms.sourcegitcommit: 4118dd4bd98994ec8a7ea170b09aa301a4be2c8a
+ms.openlocfilehash: 1820687d1340dfbef703129e5fad7d7a63cfd632
+ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/05/2017
+ms.lasthandoff: 11/07/2017
 ---
 *Aplica-se a: Advanced Threat Analytics versão 1.8*
 
@@ -49,19 +49,19 @@ Os boletins de segurança [MS14-068](https://technet.microsoft.com/library/secur
 Um ataque de elevação de privilégios usando dados de autorização forjados é uma tentativa de um invasor tirar proveito das vulnerabilidades do PAC para elevar seus privilégios no seu Domínio ou Floresta do Active Directory. Para realizar esse ataque, o invasor deve:
 -   Ter credenciais para um usuário de domínio.
 -   Ter conectividade de rede com um Controlador de Domínio que pode ser usado para autenticar as credenciais de domínio comprometidas.
--   Ter as ferramentas certas. O PyKEK (Kit de Exploração de Kerberos do Python) é uma ferramenta conhecida que forjará os PACs.
+-   Ter as ferramentas certas. O PyKEK (Kit de Exploração de Kerberos do Python) é uma ferramenta conhecida que forja os PACs.
 
 Se o invasor tiver as credenciais e a conectividade necessárias, ele poderá modificar ou forjar o PAC (Certificado de Atributo Privilegiado) de um token de logon do usuário (TGT) Kerberos existente. O invasor altera a declaração de associação de grupo para incluir um grupo de privilégios elevados (por exemplo, "Administradores de domínio" ou "Administradores de empresa"). O invasor, então, inclui o PAC modificado no Tíquete Kerberos. Esse Tíquete Kerberos, em seguida, é usado para solicitar um Tíquete de serviço do DC (Controlador de Domínio) sem patch, dando ao invasor permissões elevadas no domínio e autorização para executar ações que não deveria. Um invasor pode apresentar o token de logon do usuário (TGT) modificado para acessar qualquer recurso no domínio, solicitando tokens de acesso do recurso (TGS). Isso significa que um invasor pode ignorar todas as ACLs de recursos configuradas que limitam o acesso na rede por meio da falsificação dos dados de autorização (PAC) de qualquer usuário no Active Directory.
 
 ## <a name="discovering-the-attack"></a>Descoberta do ataque
-Quando o invasor tenta elevar seus privilégios, o ATA o detectará e marcará como um alerta de gravidade alta.
+Quando o invasor tenta elevar seus privilégios, o ATA o detecta e marca como um alerta de gravidade alta.
 
 ![Atividades suspeitas de PAC forjado](./media/forged-pac.png)
 
-O ATA indicará no alerta de atividade suspeita independentemente de a elevação de privilégios usando dados de autorização forjados ter êxito ou falhar. Tanto os alertas de êxito quanto os de falha devem ser investigados, pois as tentativas frustradas ainda podem indicar a presença de um invasor em seu ambiente.
+O ATA indica no alerta de atividade suspeita se a elevação de privilégios usando dados de autorização forjados teve êxito ou não. Tanto os alertas de êxito quanto os de falha devem ser investigados, pois as tentativas frustradas ainda podem indicar a presença de um invasor em seu ambiente.
 
 ## <a name="investigating"></a>Investigação
-Depois de receber o alerta de elevação de privilégios usando o alerta de dados de autorização no ATA, você precisa determinar o que deve ser feito para mitigar o ataque. Para fazer isso, primeiro você deve classificar o alerta como um dos seguintes: 
+Depois de receber o alerta de elevação de privilégios usando o alerta de dados de autorização no ATA, você precisa determinar o que deve ser feito para mitigar o ataque. Para fazer isso, primeiro você deve classificar o alerta como um dos seguintes tipos de alerta: 
 -   Verdadeiro positivo: uma ação mal intencionada detectada pelo ATA
 -   Falso positivo: um alerta falso – a elevação de privilégios usando dados de autorização forjados não ocorreu na verdade (esse é um evento que o ATA confundiu com um ataque de elevação de privilégios usando dados de autorização forjados)
 -   Verdadeiro positivo benigno: uma ação detectada pelo ATA que é real, mas não é mal intencionada, como um teste de penetração
@@ -76,7 +76,7 @@ O gráfico a seguir ajuda a determinar quais etapas você deve executar:
 
 
 2.  Se o ataque de Elevação de privilégios usando dados de autorização forjados tiver tido êxito:
-    -   Se o DC no qual o alerta foi gerado corretamente for corrigido, ele será um falso positivo. Nesse caso, você deve ignorar o alerta e enviar um email notificando a equipe do ATA em ATAEval@microsoft.com para melhorar continuamente nossa detecções. 
+    -   Se o DC no qual o alerta foi gerado corretamente for corrigido, ele será um falso positivo. Nesse caso, você deve ignorar o alerta e enviar um email para a equipe do ATA, no endereço ATAEval@microsoft.com, para que possam melhorar continuamente as detecções. 
     -   Se o controlador de domínio no alerta não estiver devidamente corrigido:
         -   Se o serviço listado no alerta não tiver seu próprio mecanismo de autorização, isso será um verdadeiro positivo e você deverá executar o processo de RI (Resposta de Incidente) da sua organização. 
         -   Se o serviço listado no alerta tiver um mecanismo interno de autorização que solicita dados de autorização, ele poderá ser falsamente identificado como um ataque de elevação de privilégios usando dados de autorização forjados. 
@@ -86,7 +86,7 @@ O gráfico a seguir ajuda a determinar quais etapas você deve executar:
 
     -   Se o sistema operacional ou o aplicativo não for conhecido por modificar o PAC: 
 
-        -   Se o serviço listado não tiver seu próprio serviço de autorização, isso será um verdadeiro positivo e você deverá executar o processo de RI (Resposta de Incidente) da sua organização. Mesmo que o invasor não tenha êxito ao elevar seus privilégios no domínio, você pode assumir que há um invasor em sua rede e vai querer localizá-lo assim que possível, antes que ele tente outros ataques persistentes avançados conhecidos para elevar seus privilégios. 
+        -   Se o serviço listado não tiver seu próprio serviço de autorização, isso será um verdadeiro positivo e você deverá executar o processo de RI (Resposta de Incidente) da sua organização. Mesmo que o invasor não tenha êxito ao elevar seus privilégios no domínio, você pode assumir que há um invasor em sua rede, e convém localizá-lo assim que possível, antes que ele tente outros ataques persistentes avançados conhecidos para elevar seus privilégios. 
         -   Se o serviço listado no alerta tiver seu próprio mecanismo de autorização que solicita dados de autorização, ele poderá ser falsamente identificado como um ataque de elevação de privilégios usando dados de autorização forjados.
 
 ## <a name="post-investigation"></a>Investigação de postagem

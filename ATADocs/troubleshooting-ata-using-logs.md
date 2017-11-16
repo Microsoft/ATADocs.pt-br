@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 06/30/2017
+ms.date: 11/7/2017
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,24 +13,20 @@ ms.technology:
 ms.assetid: b8ad5511-8893-4d1d-81ee-b9a86e378347
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: d5a3587de2aa628eb61ace199b2282e7d7fe773a
-ms.sourcegitcommit: 470675730967e0c36ebc90fc399baa64e7901f6b
+ms.openlocfilehash: 02cf0ce0f80dbb61c2326088b20c83ef403b2246
+ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 11/07/2017
 ---
 *Aplica-se a: Advanced Threat Analytics versão 1.8*
 
 
 
-<a id="troubleshooting-ata-using-the-ata-logs" class="xliff"></a>
-
-# Solução de problemas do ATA usando os logs do ATA
+# <a name="troubleshooting-ata-using-the-ata-logs"></a>Solução de problemas do ATA usando os logs do ATA
 Os logs do ATA fornecem informações sobre o que cada componente do ATA está fazendo a qualquer hora.
 
-<a id="ata-gateway-logs" class="xliff"></a>
-
-## Logs do Gateway do ATA
+## <a name="ata-gateway-logs"></a>Logs do Gateway do ATA
 Nesta seção, todas as referências ao Gateway do ATA são relevantes também para o Gateway Lightweight do ATA. 
 
 Os logs do Gateway do ATA estão localizados em uma subpasta chamada **Logs**, na qual o ATA está instalado; o local padrão é: **C:\Arquivos de Programas\Microsoft Advanced Threat Analytics\**. No local de instalação padrão, ela pode ser encontrada em: **C:\Arquivos de Programas\Microsoft Advanced Threat Analytics\Gateway\Logs**.
@@ -45,15 +41,13 @@ O Gateway do ATA tem os seguintes logs:
 
 -   **Microsoft.Tri.Gateway-ExceptionStatistics.log** – Esse log agrupa todos os erros e exceções semelhantes e mede sua contagem.
     Esse arquivo começa vazio sempre que o serviço do Gateway do ATA é iniciado, e é atualizado a cada minuto. Usado principalmente para entender se há erros ou problemas com o Gateway do ATA (pois os erros são agrupados e é mais fácil ler e rapidamente entender se há algum problema novo).
--   **Microsoft.Tri.Gateway.Updater.log** - Esse log é usado para o processo do atualizador de gateway, que é responsável por atualizar o gateway, se estiver configurado para fazer isso automaticamente. Para o Gateway Lightweight do ATA, o processo do atualizador de gateway também é responsável pelas limitações de recursos do Gateway Lightweight do ATA.
+-   **Microsoft.Tri.Gateway.Updater.log** - esse log é usado para o processo do atualizador de gateway, que é responsável por atualizar o Gateway do ATA, se estiver configurado para fazer isso automaticamente. Para o Gateway Lightweight do ATA, o processo do atualizador de gateway também é responsável pelas limitações de recursos do Gateway Lightweight do ATA.
 -   **Microsoft.Tri.Gateway.Updater-ExceptionStatistics.log** - Esse log agrupa todos os erros e exceções semelhantes e mede sua contagem. Esse arquivo começa vazio sempre que o serviço do Atualizador do ATA é iniciado, e é atualizado a cada minuto. Ele permite que você entenda se há erros ou problemas novos com o Atualizador do ATA. Os erros são agrupados para facilitar uma compreensão rápida se algum erro ou problema for detectado.
 
 > [!NOTE]
 > Os três primeiros arquivos de log têm um tamanho máximo de até 50 MB. Quando esse tamanho é atingido, um novo arquivo de log é aberto e o anterior é renomeado como "&lt;nome do arquivo original&gt;-Archived-00000". Esse número aumenta a cada renomeação. Por padrão, se já houver mais de 10 arquivos do mesmo tipo, os mais antigos serão excluídos.
 
-<a id="ata-center-logs" class="xliff"></a>
-
-## Logs do Centro do ATA
+## <a name="ata-center-logs"></a>Logs do Centro do ATA
 Os logs do Centro do ATA estão localizados em uma subpasta chamada **Logs**. No local de instalação padrão, ela pode ser encontrada em: **C:\Arquivos de Programas\Microsoft Advanced Threat Analytics\Center\Logs**.
 > [!Note]
 > Os logs do console do ATA, que estavam nos logs do IIS, agora estão localizados nos logs da Central do ATA.
@@ -67,15 +61,13 @@ O Centro do ATA tem os seguintes logs:
 -   **Microsoft.Tri.Center-Errors.log** – Esse log contém apenas os erros que são detectados pelo Centro do ATA. Usado principalmente para executar verificações de integridade e investigar problemas que precisam estar correlacionados a horários específicos.
 
 -   **Microsoft.Tri.Center-ExceptionStatistics.log** – Esse log agrupa todos os erros e exceções semelhantes e mede sua contagem.
-    Esse arquivo começa vazio sempre que o serviço do Centro do ATA é iniciado, e é atualizado a cada minuto. Usado principalmente para entender se há erros ou problemas novos com a Central do ATA - como os erros são agrupados, fica mais fácil entender rapidamente se há um novo tipo de problema ou erro.
+    Esse arquivo começa vazio sempre que o serviço do Centro do ATA é iniciado, e é atualizado a cada minuto. Usado principalmente para entender se há erros ou problemas novos com a Central do ATA - como os erros são agrupados, fica mais fácil entender rapidamente se há um novo problema ou erro.
 
 > [!NOTE]
 > Os três primeiros arquivos de log têm um tamanho máximo de até 50 MB. Quando esse tamanho é atingido, um novo arquivo de log é aberto e o anterior é renomeado como "&lt;nome do arquivo original&gt;-Archived-00000". Esse número aumenta a cada renomeação. Por padrão, se já houver mais de 10 arquivos do mesmo tipo, os mais antigos serão excluídos.
 
 
-<a id="ata-deployment-logs" class="xliff"></a>
-
-## Logs de implantação do ATA
+## <a name="ata-deployment-logs"></a>Logs de implantação do ATA
 Os logs de implantação do ATA estão localizados no diretório temp do usuário que instalou o produto. No local de instalação padrão, ele pode ser encontrado em: **C:\Usuários\Administrator\AppData\Local\Temp** (ou um diretório acima de %temp%).
 
 Logs de implantação do Centro do Ata
@@ -97,9 +89,7 @@ Logs de implantação do Gateway do ATA e do Gateway Lightweight do ATA:
 > Além de logs de implantação mencionados aqui, há outros logs que começam com "Microsoft Advanced Threat Analytics" que também pode fornecer informações adicionais sobre o processo de implantação.
 
 
-<a id="see-also" class="xliff"></a>
-
-## Consulte Também
+## <a name="see-also"></a>Consulte Também
 - [Pré-requisitos do ATA](ata-prerequisites.md)
 - [Planejamento da capacidade do ATA](ata-capacity-planning.md)
 - [Configurar coleta de eventos](configure-event-collection.md)

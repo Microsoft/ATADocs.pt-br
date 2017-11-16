@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 10/9/2017
+ms.date: 11/7/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 8980e724-06a6-40b0-8477-27d4cc29fd2b
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 49d0df5f3d835a879990d590b447ed3b4de88685
-ms.sourcegitcommit: e9f2bfd610b7354ea3fef749275f16819d60c186
+ms.openlocfilehash: 0feb12a2e86adae124016c90431209ec33cdbcb5
+ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2017
+ms.lasthandoff: 11/07/2017
 ---
 *Aplica-se a: Advanced Threat Analytics versão 1.8*
 
@@ -33,9 +33,9 @@ O ATA permite a exclusão de endereços IP ou de usuários específicos de vári
 
 Por exemplo, uma **exclusão por Reconhecimento de DNS** poderia ser um verificador de segurança que usa o DNS como um mecanismo de verificação. A exclusão ajuda o ATA a ignorar esses verificadores. Um exemplo de uma exclusão por *Passagem de tíquete* é um dispositivo NAT.    
 
-O ATA também permite a configuração de um usuário Honeytoken, que é usado como uma interceptação de atores mal-intencionados - qualquer autenticação associada à essa conta (normalmente inativa) disparará um alerta.
+O ATA também permite a configuração de um usuário Honeytoken, que é usado como uma interceptação de atores mal-intencionados - qualquer autenticação associada à essa conta (normalmente inativa) dispara um alerta.
 
-Para configurar os itens acima, execute estas etapas:
+Para configurar isso, execute estas etapas:
 
 1.  No Console do ATA, clique no ícone de configurações e selecione **Configuração**.
 
@@ -43,7 +43,7 @@ Para configurar os itens acima, execute estas etapas:
 
 2.  Em **Detecção**, clique em **Geral**.
 
-2. Em **Honeytoken accounts (Contas Honeytoken)** insira o nome da conta Honeytoken. O campo de contas Honeytoken é pesquisável e exibirá automaticamente entidades em sua rede.
+2. Em **Honeytoken accounts (Contas Honeytoken)** insira o nome da conta Honeytoken. O campo de contas Honeytoken é pesquisável e exibe automaticamente entidades em sua rede.
 
    ![Honeytoken](media/honeytoken.png)
 
@@ -58,7 +58,7 @@ Parabéns, você implantou com êxito o Microsoft Advanced Threat Analytics!
 
 Verifique a linha de tempo do ataque para exibir atividades suspeitas detectadas e pesquisar por usuários ou computadores e exibir seus perfis.
 
-O ATA iniciará a verificação de atividades suspeitas imediatamente. Algumas atividades, como algumas atividades de comportamento suspeito, não estarão disponíveis até que o ATA tenha tempo de criar perfis de comportamentos (três semanas, no mínimo).
+O ATA inicia a verificação de atividades suspeitas imediatamente. Algumas atividades, como atividades de comportamento suspeito, não ficam disponíveis até que o ATA tenha tempo de criar perfis de comportamentos (três semanas, no mínimo).
 
 Para verificar se ATA está funcionando e detectar violações em sua rede, é possível conferir o [manual de simulação de ataque ATA](https://docs.microsoft.com/enterprise-mobility-security/solutions/ata-attack-simulation-playbook).
 

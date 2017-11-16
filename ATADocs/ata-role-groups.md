@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 7/16/2017
+ms.date: 11/7/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 3715b69e-e631-449b-9aed-144d0f9bcee7
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 1f531db341f442d135b802af965f714b37f69e3a
-ms.sourcegitcommit: 3cd268cf353ff8bc3d0b8f9a8c10a34353d1fcf1
+ms.openlocfilehash: 06f96ad4627cd5400d822caabeaff15dfaabfb72
+ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2017
+ms.lasthandoff: 11/07/2017
 ---
 *Aplica-se a: Advanced Threat Analytics versão 1.8*
 
@@ -50,7 +50,7 @@ O ATA apresenta três tipos de Grupos de função: Administradores do ATA, Usuá
 |Exibir alertas e atividades suspeitas|Disponível|Disponível|Disponível|
 
 
-Quando os usuários tentam acessar uma página que não está disponível para seus grupos de função, ele é redirecionado à página não autorizada do ATA. 
+Quando os usuários tentam acessar uma página que não está disponível para seus grupos de função, são redirecionados à página não autorizada do ATA. 
 
 ## <a name="add--remove-users---ata-role-groups"></a>Adicionar\Remover usuários - Grupos de função do ATA 
 

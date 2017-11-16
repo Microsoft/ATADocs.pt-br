@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 10/25/2017
+ms.date: 11/14/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: a5f90544-1c70-4aff-8bf3-c59dd7abd687
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 2f720118b1d9ac08f26b7057e5c7b6706ff4b0b1
-ms.sourcegitcommit: 0cc999b20e919abe4d6edaedee78185788a3e3b9
+ms.openlocfilehash: 29aef3eeddf6045d200f9b27809567f18a2fa2d0
+ms.sourcegitcommit: 4d9d1e089bbb50baceb87f273ddf2d3aaa9a78e8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2017
+ms.lasthandoff: 11/14/2017
 ---
 *Aplica-se a: Advanced Threat Analytics versão 1.8*
 
@@ -56,13 +56,13 @@ Esta seção lista as informações que você deve obter, as contas e entidades 
     > [!NOTE]
     > Se você tiver definido ACLs personalizadas em várias Unidades Organizacionais (UO) em seu domínio, verifique se o usuário selecionado tem permissões de leitura para essas UOs.
 
--   Não instale o Microsoft Message Analyzer em um Gateway ou um Gateway Lightweight do ATA. O driver do Message Analyzer conflita com os drivers do Gateway e Gateway Lightweight do ATA. Se você executar o Wireshark no Gateway do ATA, precisará reiniciar o Serviço de Gateway do Microsoft Advanced Threat Analytics após parar a captura do Wireshark. Caso contrário, o Gateway para de capturar o tráfego. Observe que executar o Wireshark em um Gateway Lightweight do ATA não interfere no Gateway Lightweight do ATA.
+-   Não instale o Microsoft Message Analyzer em um Gateway ou um Gateway Lightweight do ATA. O driver do Message Analyzer conflita com os drivers do Gateway e Gateway Lightweight do ATA. Se você executar o Wireshark no Gateway do ATA, precisará reiniciar o Serviço de Gateway do Microsoft Advanced Threat Analytics após parar a captura do Wireshark. Caso contrário, o Gateway para de capturar o tráfego. Executar o Wireshark em um Gateway Lightweight do ATA não interfere no Gateway Lightweight do ATA.
 
--    Recomendado: o usuário deve ter permissões de leitura somente no contêiner Objetos Excluídos. Isso permite que o ATA detecte a exclusão em massa de objetos no domínio. Para obter informações sobre como configurar permissões de somente leitura no contêiner Objetos Excluídos, confira a seção **Alterar permissões em um contêiner de objetos excluídos** no tópico [Exibir ou definir permissões em um Objeto de Diretório](https://technet.microsoft.com/library/cc816824%28v=ws.10%29.aspx).
+-    Recomendado: o usuário deve ter permissões de leitura somente no contêiner Objetos Excluídos. Isso permite que o ATA detecte a exclusão em massa de objetos no domínio. Para saber mais sobre como configurar permissões de somente leitura no contêiner Objetos Excluídos, confira a seção **Alterar permissões em um contêiner de objetos excluídos** no artigo [Exibir ou definir permissões em um Objeto de Diretório](https://technet.microsoft.com/library/cc816824%28v=ws.10%29.aspx).
 
 -   Opcional: uma conta de usuário que não tem nenhuma atividade de rede. Essa conta está configurada como o usuário Honeytoken do ATA. Para configurar o usuário Honeytoken, é necessária a SID da conta de usuário, não o nome de usuário. Para obter mais informações, consulte [Configurar as exclusões de endereço IP e o usuário Honeytoken](install-ata-step7.md).
 
--   Opcional: além de coletar e analisar o tráfego de rede para e nos controladores de domínio, o ATA pode usar os eventos do Windows 4776, 4732, 4733, 4728, 4729, 4756 e 4757 para aprimorar ainda mais as detecções de Pass-the-Hash, Força Bruta, Modificação para grupos confidenciais e Honey Tokens do ATA. Eles podem ser recebidos de seu SIEM ou definindo o Encaminhamento de Eventos do Windows no controlador de domínio. Os eventos coletados fornecem à ATA informações adicionais que não estão disponíveis por meio do tráfego de rede do controlador de domínio.
+-   Opcional: além de coletar e analisar o tráfego de rede para e nos controladores de domínio, o ATA pode usar os eventos do Windows 4776, 4732, 4733, 4728, 4729, 4756 e 4757 para aprimorar ainda mais as detecções de Pass-the-Hash, Força Bruta, Modificação para grupos confidenciais e Honey Tokens do ATA. Esses eventos podem ser recebidos de seu SIEM ou definindo o Encaminhamento de Eventos do Windows no controlador de domínio. Os eventos coletados fornecem à ATA informações adicionais que não estão disponíveis por meio do tráfego de rede do controlador de domínio.
 
 
 ## <a name="ata-center-requirements"></a>Requisitos da Central de ATA
@@ -101,7 +101,7 @@ A tabela a seguir lista as portas mínimas que devem ser abertas para que a Cent
 
 |Protocolo|Transport|Porta|Para/De|Direção|
 |------------|-------------|--------|-----------|-------------|
-|**SSL** (Comunicações do ATA)|TCP|443 ou configurável|Gateway do ATA|Entrada|
+|**SSL** (Comunicações do ATA)|TCP|443|Gateway do ATA|Entrada|
 |**HTTP** (opcional)|TCP|80|Rede da Empresa|Entrada|
 |**HTTPS**|TCP|443|Rede da Empresa e Gateway de ATA|Entrada|
 |**SMTP** (opcional)|TCP|25|Servidor SMTP|Saída|
@@ -185,10 +185,10 @@ O Gateway de ATA requer pelo menos um Adaptador de gerenciamento e pelo menos um
         > [!NOTE]
         > Se o Gateway do ATA for um membro do domínio, isto poderá ser configurado automaticamente.
 
--   **Adaptador de captura** - será usado para capturar o tráfego para e a partir dos controladores de domínio.
+-   **Adaptador de captura** - usado para capturar o tráfego dos controladores de domínio.
 
     > [!IMPORTANT]
-    > -   Configure o espelhamento de porta do adaptador de captura como o destino do tráfego de rede do controlador de domínio. Confira [Configurar o espelhamento de porta](configure-port-mirroring.md) para saber mais. Normalmente, você precisa trabalhar com a equipe de virtualização ou de rede para configurar o espelhamento de porta.
+    > -   Configure o espelhamento de porta do adaptador de captura como o destino do tráfego de rede do controlador de domínio. Para saber mais, confira [Configurar o espelhamento de porta](configure-port-mirroring.md). Normalmente, você precisa trabalhar com a equipe de virtualização ou de rede para configurar o espelhamento de porta.
     > -   Configure um endereço IP não roteável estático para seu ambiente sem um gateway padrão e endereço do servidor DNS. Por exemplo, 1.1.1.1/32. Isso assegura que o adaptador da rede de captura poderá capturar a quantidade máxima de tráfego e que o adaptador da rede de gerenciamento será usado para enviar e receber o tráfego de rede solicitado.
 
 ### <a name="ports"></a>Portas
@@ -206,7 +206,7 @@ A tabela abaixo lista as portas mínimas que o Gateway do ATA requer configurada
 |DNS|TCP e UDP|53|Servidores DNS|Saída|
 |NTLM via RPC|TCP|135|Todos os dispositivos na rede|Saída|
 |NetBIOS|UDP|137|Todos os dispositivos na rede|Saída|
-|SSL|TCP|443 ou como configurado para o Serviço da Central|Centro do ATA:<br /><br />- Endereço IP do Serviço de Central<br />-   Endereço IP do Console|Saída|
+|SSL|TCP|443|Centro de ATA|Saída|
 |Syslog (opcional)|UDP|514|Servidor SIEM|Entrada|
 
 > [!NOTE]
@@ -262,7 +262,7 @@ A tabela abaixo lista o mínimo de portas que o Gateway Lightweight do ATA exige
 |DNS|TCP e UDP|53|Servidores DNS|Saída|
 |NTLM via RPC|TCP|135|Todos os dispositivos na rede|Saída|
 |NetBIOS|UDP|137|Todos os dispositivos na rede|Saída|
-|SSL|TCP|443 ou como configurado para o Serviço da Central|Centro do ATA:<br /><br />- Endereço IP do Serviço de Central<br />-   Endereço IP do Console|Saída|
+|SSL|TCP|443|Centro de ATA|Saída|
 |Syslog (opcional)|UDP|514|Servidor SIEM|Entrada|
 
 > [!NOTE]

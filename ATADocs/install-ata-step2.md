@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 10/9/2017
+ms.date: 11/7/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: e1c5ff41-d989-46cb-aa38-5a3938f03c0f
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 6a2e559f5aef382230476dde44e8118f2f26b3cf
-ms.sourcegitcommit: e9f2bfd610b7354ea3fef749275f16819d60c186
+ms.openlocfilehash: c4cd30446193ff2d9ab4069b1312593a2102282a
+ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2017
+ms.lasthandoff: 11/07/2017
 ---
 *Aplica-se a: Advanced Threat Analytics versão 1.8*
 
@@ -43,9 +43,9 @@ Na primeira vez que você abrir o Console do ATA, a tela a seguir será exibida:
     |**Senha** (obrigatório)|Digite a senha para o usuário somente leitura, por exemplo: **Lápis1**.|
     |**Domínio** (obrigatório)|Digite o domínio para o usuário somente leitura, por exemplo: **contoso.com**. **Observação:** é importante que você insira o FQDN completo do domínio onde o usuário está localizado. Por exemplo, se a conta do usuário estiver no domínio corp.contoso.com, você precisará inserir `corp.contoso.com` e não contoso.com|
 
-2. Você pode clicar em **Testar conexão** para testar a conectividade com o domínio e verificar se as credenciais fornecidas concedem acesso. Isso só funcionará se o Centro do ATA tiver conectividade com o domínio.   
+2. Você pode clicar em **Testar conexão** para testar a conectividade com o domínio e verificar se as credenciais fornecidas concedem acesso. Isso só funciona se o Centro do ATA tiver conectividade com o domínio.    
 
-    Após a gravação, a mensagem de boas-vindas no Console mudará para o seguinte: ![Estágio 1 das boas-vindas do ATA concluído](media/ATA_1.7-welcome-provide-username-finished.png)
+    Após a gravação, a mensagem de boas-vindas no Console mudará para a seguinte mensagem: ![Estágio 1 das boas-vindas do ATA concluído](media/ATA_1.7-welcome-provide-username-finished.png)
 
 3. No Console, clique em **Baixar instalação do Gateway e instalar o primeiro Gateway** para continuar.
 

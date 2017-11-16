@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 9592d413-df0e-4cec-8e03-be1ae00ba5dc
 ms.reviewer: 
 ms.suite: ems
-ms.openlocfilehash: 2793a602a0cd0fb9902197acd45dd5bdd4612ea4
-ms.sourcegitcommit: 654500928025e3cb127e095c17cc1d6444defd3a
+ms.openlocfilehash: 71e7f723d02b4e86f1799e5a92998363766de7a2
+ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/03/2017
+ms.lasthandoff: 11/07/2017
 ---
 # <a name="whats-new-in-ata-version-18"></a>Novidades na versão 1.8 do ATA
 
@@ -133,7 +133,7 @@ No Windows Server 2016 Core, você não poderá ver o erro, mas o processo falha
 
 **Descrição**: atualizar para 1.8 atualização 1 do 1.8 redefine as configurações de agendamento dos relatórios.
 
-**Solução alternativa**: antes de atualizar para o 1.8 atualização 1, faça uma cópia das configurações de relatório e as insira novamente, isso também pode ser feito por meio de um script, para obter mais informações, consulte [Exportar e importar a configuração do ATA](ata-configuration-file.md).
+**Solução alternativa**: antes de atualizar para o 1.8 atualização 1, faça uma cópia das configurações de relatório e as insira novamente, isso também pode ser feito por meio de um script, para saber mais, confira [Exportar e importar a configuração do ATA](ata-configuration-file.md).
 
 
 ## <a name="see-also"></a>Consulte também

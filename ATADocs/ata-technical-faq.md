@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 09/03/2017
+ms.date: 11/7/2017
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: a7d378ec-68ed-4a7b-a0db-f5e439c3e852
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: f0cef288b36bb070d632c78d773c769f7862ff19
-ms.sourcegitcommit: 654500928025e3cb127e095c17cc1d6444defd3a
+ms.openlocfilehash: 25c2defd02e260248d30eb76f6ae297c1b36325f
+ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/03/2017
+ms.lasthandoff: 11/07/2017
 ---
 *Aplica-se a: Advanced Threat Analytics versão 1.8*
 
@@ -87,7 +87,7 @@ Para entender por que uma conta é confidencial, você pode examinar sua associa
 ## <a name="how-do-i-monitor-a-virtual-domain-controller-using-ata"></a>Como monitorar o controlador de domínio virtual usando o ATA?
 A maioria dos controladores de domínio virtuais pode ser abrangida pelo Gateway Lightweight do ATA. Para determinar se o Gateway Lightweight do ATA é apropriado para seu ambiente, confira [Planejamento de capacidade do ATA](ata-capacity-planning.md).
 
-Se um controlador de domínio virtual não pode ser usado com Gateway Lightweight do ATA, você pode ter Gateways do ATA físicos ou virtuais conforme descrito em [Configurar o espelhamento de porta](configure-port-mirroring.md).  <br />A maneira mais fácil é ter um Gateway de ATA virtual em cada host no qual o controlador de domínio virtual exista.<br />Se os controladores de domínio virtuais se movimentarem entre os hosts, será necessário executar um destes procedimentos:
+Se um controlador de domínio virtual não pode ser usado com Gateway Lightweight do ATA, você pode ter Gateway do ATA físico ou virtual conforme descrito em [Configurar o espelhamento de porta](configure-port-mirroring.md).  <br />A maneira mais fácil é ter um Gateway de ATA virtual em cada host no qual o controlador de domínio virtual exista.<br />Se os controladores de domínio virtuais se movimentarem entre os hosts, será necessário executar uma destas etapas:
 
 -   Quando o controlador de domínio virtual for movido para outro host, pré-configure o Gateway do ATA nesse host para receber o tráfego do controlador de domínio virtual movimentado recentemente.
 -   Verifique se você afiliou o Gateway do ATA virtual ao controlador de domínio virtual, de modo que se ele for movido, o Gateway do ATA será movido com ele.
@@ -105,15 +105,15 @@ O ATA detecta técnicas e ataques mal-intencionados e conhecidos, problemas de s
 Para obter a lista completa das detecções do ATA, consulte [Quais detecções são realizadas pelo ATA?](ata-threats.md).
 
 ## <a name="what-kind-of-storage-do-i-need-for-ata"></a>Qual tipo de armazenamento eu preciso para o ATA?
-Recomendamos o armazenamento rápido (discos de 7.200 RPM não são recomendados) com acesso ao disco de baixa latência (menos de 10 ms). A configuração de RAID deve dar suporte a cargas pesadas de gravação (RAID-5/6 e seus derivados não são recomendados).
+Recomendamos o armazenamento rápido (discos de 7200 RPM não são recomendados) com acesso ao disco de baixa latência (menos de 10 ms). A configuração de RAID deve dar suporte a cargas pesadas de gravação (RAID-5/6 e seus derivados não são recomendados).
 
 ## <a name="how-many-nics-does-the-ata-gateway-require"></a>De quantos NICs o Gateway de ATA precisa?
-O Gateway de ATA requer um mínimo de dois adaptadores de rede:<br>1. Uma NIC para se conectar à rede interna e à Central de ATA<br>2. Uma NIC que será usado para capturar o tráfego de rede do controlador de domínio por meio do espelhamento de porta.<br>* Isso não se aplica ao Gateway Lightweight do ATA, que usa nativamente todos os adaptadores de rede que o controlador de domínio usa.
+O Gateway de ATA requer um mínimo de dois adaptadores de rede:<br>1. Uma NIC para se conectar à rede interna e à Central de ATA<br>2. Uma NIC usada para capturar o tráfego de rede do controlador de domínio por meio do espelhamento de porta.<br>* Isso não se aplica ao Gateway Lightweight do ATA, que usa nativamente todos os adaptadores de rede que o controlador de domínio usa.
 
 ## <a name="what-kind-of-integration-does-ata-have-with-siems"></a>Que tipo de integração o ATA tem com o SIEMs?
 O ATA tem uma integração bidirecional com o SIEMs, da seguinte maneira:
 
-1. O ATA pode ser configurado para enviar um alerta de Syslog, no caso de uma atividade suspeita, para qualquer servidor SIEM usando o formato CEF.
+1. O ATA pode ser configurado para enviar um alerta de Syslog a qualquer servidor SIEM usando o formato CEF no caso de uma atividade suspeita.
 2. O ATA pode ser configurado para receber mensagens do Syslog eventos do Windows [destes SIEMs](install-ata-step6.md).
 
 ## <a name="can-ata-monitor-domain-controllers-virtualized-on-your-iaas-solution"></a>O ATA pode monitorar controladores de domínio visualizados em sua solução IaaS?
@@ -128,7 +128,7 @@ Esta solução é atualmente uma oferta autônoma; ela não faz parte do Azure A
 ## <a name="do-you-have-to-write-your-own-rules-and-create-a-thresholdbaseline"></a>Você precisa escrever suas próprias regras e criar um limite/linha de base?
 Com o Microsoft Advanced Threat Analytics, não é necessário criar regras, limites ou linhas de base e, em seguida, ajustar. O ATA analisa os comportamentos entre os usuários, dispositivos e recursos — bem como sua relação um com o outro — e pode detectar atividades suspeitas e ataques conhecidos rapidamente. Três semanas após a implantação, o ATA começa a detectar as atividades suspeitas do comportamento. Por outro lado, o ATA começará a detectar os ataques mal-intencionados conhecidos e os problemas de segurança imediatamente após a implantação.
 
-## <a name="if-you-are-already-breached-will-microsoft-advanced-threat-analytics-be-able-to-identify-abnormal-behavior"></a>Se você já sofreu uma violação, o Microsoft Advanced Threat Analytics será capaz de identificar um comportamento anormal?
+## <a name="if-you-are-already-breached-can-microsoft-advanced-threat-analytics-identify-abnormal-behavior"></a>Se você já sofreu uma violação, o Microsoft Advanced Threat Analytics será capaz de identificar um comportamento anormal?
 Sim, mesmo quando o ATA for instalado depois de você ter sofrido a violação, ainda poderá detectar atividades suspeitas do hacker. O ATA não está vendo apenas o comportamento do usuário, mas também os outros usuários no mapa de segurança da organização. Durante a análise inicial, se o comportamento do invasor for anormal, ele será identificado como uma "exceção" e o ATA continuará informando sobre o comportamento anormal. Além disso, o ATA poderá detectar uma atividade suspeita se o hacker tentar roubar outras credenciais dos usuários, como a Passagem de Tíquete, ou tentar realizar uma execução remota em um dos controladores de domínio.
 
 ## <a name="does-this-only-leverage-traffic-from-active-directory"></a>Isto aproveita apenas o tráfego do Active Directory?
@@ -147,7 +147,7 @@ Sim. Como as contas de computador (bem como quaisquer outras entidades) podem se
 O Microsoft Advanced Threat Analytics oferece suporte a ambientes com vários domínios dentro dos mesmos limites de floresta. Várias florestas exigem uma implantação do ATA para cada floresta.
 
 ## <a name="can-you-see-the-overall-health-of-the-deployment"></a>Você pode ver a integridade geral da implantação?
-Sim, é possível exibir a integridade geral da implantação, bem como os problemas específicos relacionados à configuração, conectividade, etc., e você será alertado quando ocorrerem.
+Sim, é possível exibir a integridade geral da implantação, bem como os problemas específicos relacionados à configuração, conectividade, etc., e você recebe um alerta quando ocorrerem.
 
 
 ## <a name="see-also"></a>Consulte também

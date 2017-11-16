@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 08/29/2017
+ms.date: 11/7/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: b3cceb18-0f3c-42ac-8630-bdc6b310f1d6
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: c38db312ea877b63580d745153aa58ea34a160a6
-ms.sourcegitcommit: 9ce330726e5de8c05eae6a20d3e6c1d8bef3cd0e
+ms.openlocfilehash: 3210d9153cd6781ae13a784e1f2b5927e0703009
+ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2017
+ms.lasthandoff: 11/07/2017
 ---
 *Aplica-se a: Advanced Threat Analytics versão 1.8*
 
@@ -33,7 +33,7 @@ Quando você instala ou atualiza o ATA, o .Net Framework 4.6.1 é instalado auto
 
 > [!Note] 
 > A instalação do .Net Framework 4.6.1 pode exigir a reinicialização do servidor. Ao instalar o Gateway do ATA em Controladores de Domínio, considere o agendamento de uma janela de manutenção para esses Controladores de Domínio.
-Ao usar o método de instalação silenciosa do ATA, o instalador é configurado para reiniciar automaticamente o servidor no final da instalação (se necessário). Devido a um bug do Windows Installer, o sinalizador norestart não pode ser usado de forma confiável para garantir que o servidor não será reiniciado, portanto, certifique-se executar a instalação silenciosa somente durante uma janela de manutenção.
+Ao usar o método de instalação silenciosa do ATA, o instalador é configurado para reiniciar automaticamente o servidor no final da instalação (se necessário). Devido a um bug do Windows Installer, o sinalizador norestart não pode ser usado de forma confiável para garantir que o servidor não seja reiniciado, portanto, execute a instalação silenciosa somente durante uma janela de manutenção.
 
 Para acompanhar o andamento da implantação, monitore os logs do instalador do ATA localizados em **%AppData%\Local\Temp**.
 
@@ -68,7 +68,7 @@ Use o seguinte comando para instalar o Centro do ATA:
 |CenterPort|CenterPort=<CenterPort>|Sim|Define a porta de rede do Serviço do Centro do ATA|
 |CenterCertificateThumbprint|CenterCertificateThumbprint=“<CertThumbprint>”|Não|Define a impressão digital do certificado para o Serviço do Centro do ATA. Este certificado é usado para proteger a comunicação entre o Centro do ATA e o Gateway do ATA. Se não estiver definido, a instalação gerará um certificado autoassinado.|
 |ConsoleIpAddress|ConsoleIpAddress=<ConsoleIPAddress>|Sim|Define o endereço IP do Console do ATA|
-|ConsoleCertificateThumbprint|ConsoleCertificateThumbprint=”<CertThumbprint >”|Não|Especifica a impressão digital do certificado para o Console do ATA. Esse certificado é usado para validar a identidade do site do Console do ATA. Se não for especificado, a instalação vai gerar um certificado autoassinado|
+|ConsoleCertificateThumbprint|ConsoleCertificateThumbprint=”<CertThumbprint >”|Não|Especifica a impressão digital do certificado para o Console do ATA. Esse Certificado é usado para validar a identidade do site do Console do ATA. Se não for definido, a instalação gerará um certificado autoassinado|
 
 **Exemplos**: instalar a Central do ATA com caminhos de instalação padrão e um único endereço IP:
 
@@ -168,7 +168,7 @@ Use o seguinte comando para instalar silenciosamente o Gateway do ATA:
 |ConsoleAccountName|ConsoleAccountName=”<AccountName>”|Sim|Define o nome da conta do usuário (user@domain.com) usada para registrar o Gateway do ATA no Centro do ATA.|
 |ConsoleAccountPassword|ConsoleAccountPassword=”<AccountPassword>”|Sim|Define a senha para a conta do usuário (user@domain.com) usada para registrar o Gateway do ATA no Centro do ATA.|
 
-**Exemplos**: para instalar silenciosamente o log do Gateway do ATA no computador ingressado no domínio com suas credenciais de administrador do ATA e não será necessário especificar as credenciais. Caso contrário, registre-o no Centro do ATA usando as credenciais especificadas:
+**Exemplos**: para instalar silenciosamente o log do Gateway do ATA no computador ingressado no domínio com suas credenciais de administrador do ATA, de modo que não seja necessário especificar as credenciais como parte da instalação. Caso contrário, registre-o no Centro do ATA usando as credenciais especificadas:
 
     "Microsoft ATA Gateway Setup.exe" /quiet NetFrameworkCommandLineArguments="/q" 
     ConsoleAccountName="user@contoso.com" ConsoleAccountPassword="userpwd"

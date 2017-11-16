@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 10/9/2017
+ms.date: 11/7/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: b3cceb18-0f3c-42ac-8630-bdc6b310f1d6
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 39d5180d280d2cbee3d9d312b27120066e7858be
-ms.sourcegitcommit: e9f2bfd610b7354ea3fef749275f16819d60c186
+ms.openlocfilehash: f35c495193806f1c1ccc00800402d9b0aca36982
+ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2017
+ms.lasthandoff: 11/07/2017
 ---
 *Aplica-se a: Advanced Threat Analytics versão 1.8*
 
@@ -57,7 +57,7 @@ Execute as seguintes etapas no servidor do Centro do ATA.
 7.  É recomendável que você defina o ATA para atualizar automaticamente. Se o Windows não estiver configurado para fazer isso no seu computador, você verá a tela **Utilizar o Microsoft Update para ajudar a manter seu computador protegido e atualizado**. 
     ![Imagem Manter o ATA atualizado](media/ata_ms_update.png)
 
-8. Selecione **Usar o Microsoft Update ao verificar atualizações (recomendado)** Isso ajustará as configurações do Windows para habilitar atualizações para outros produtos da Microsoft (incluindo o ATA), como visto aqui. 
+8. Selecione **Usar o Microsoft Update ao verificar atualizações (recomendado)** Isso ajusta as configurações do Windows para habilitar atualizações para outros produtos da Microsoft (incluindo o ATA), conforme visto aqui. 
 
     ![Imagem de atualização automática do Windows](media/ata_installupdatesautomatically.png)
 
@@ -66,8 +66,8 @@ Execute as seguintes etapas no servidor do Centro do ATA.
     |Campo|Descrição|Comentários|
     |---------|---------------|------------|
     |Caminho da Instalação|Esse é o local onde o Centro do ATA será instalado. Por padrão, é %programfiles%\Microsoft Advanced Threat Analytics\Center|Mantenha o valor padrão|
-    |Caminho de Dados do Banco de Dados|Esse é o local onde os arquivos de banco de dados do MongoDB estarão localizados. Por padrão, é %programfiles%\Microsoft Advanced Threat Analytics\Center\MongoDB\bin\data|Altere o local para um local onde você tem espaço para crescer com base em seu tamanho. **Observação:** <ul><li>Em ambientes de produção, você deve usar uma unidade que tenha espaço suficiente com base em um planejamento de capacidade.</li><li>Para implantações de grande porte, o banco de dados deve estar em um disco físico separado.</li></ul>Confira [Planejamento de capacidade do ATA](ata-capacity-planning.md) para obter informações sobre dimensionamento.|
-    |Certificado SSL do Serviço da Central|Esse é o certificado que será usado pelo serviço da Central do ATA e pelo Console do ATA.|Clique no ícone de chave para selecionar um certificado instalado ou verificar o certificado autoassinado durante a implantação em um ambiente de laboratório. Observe que você tem a opção de criar um certificado autoassinado.|
+    |Caminho de Dados do Banco de Dados|Esse é o local onde os arquivos de banco de dados do MongoDB estão localizados. Por padrão, é %programfiles%\Microsoft Advanced Threat Analytics\Center\MongoDB\bin\data|Altere o local para um local onde você tem espaço para crescer com base em seu tamanho. **Observação:** <ul><li>Em ambientes de produção, você deve usar uma unidade que tenha espaço suficiente com base em um planejamento de capacidade.</li><li>Para implantações de grande porte, o banco de dados deve estar em um disco físico separado.</li></ul>Confira [Planejamento de capacidade do ATA](ata-capacity-planning.md) para obter informações sobre dimensionamento.|
+    |Certificado SSL do Serviço da Central|Esse é o certificado usado pelo serviço do Centro do ATA e pelo Console do ATA.|Clique no ícone de chave para selecionar um certificado instalado ou verificar o certificado autoassinado durante a implantação em um ambiente de laboratório. Você tem a opção de criar um certificado autoassinado.|
         
     ![Imagem de configuração do Centro do ATA](media/ATA-Center-Configuration.png)
 

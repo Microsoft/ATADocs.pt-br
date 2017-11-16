@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 10/26/2017
+ms.date: 11/7/2017
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 7620e171-76d5-4e3f-8b03-871678217a3a
 ms.reviewer: arzinger
 ms.suite: ems
-ms.openlocfilehash: 819f006ae89960ed8f9494ce36ba4fd7f120357a
-ms.sourcegitcommit: 5563c6861bb5db5cb73e058e5a51b4938b9a7d46
+ms.openlocfilehash: 005f698c19c99c31dfa0e660e489f8c402eb1bc6
+ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2017
+ms.lasthandoff: 11/07/2017
 ---
 *Aplica-se a: Advanced Threat Analytics versão 1.8*
 
@@ -34,7 +34,7 @@ Este artigo descreve como recuperar rapidamente seu Centro de ATA e restaurar a 
 1. A configuração do Centro de ATA é armazenada em backup em um arquivo a cada hora. Localize a última cópia de backup da configuração do Centro de ATA e salve-a em um computador à parte. Para obter uma explicação completa de como localizar esses arquivos, confira [Exportar e importar a configuração de ATA](ata-configuration-file.md). 
 2. Exportação do certificado do Centro de ATA.
     1. No gerenciador de certificados, navegue até **Certificados (Computador Local)** -> **Pessoal** ->**Certificados** e selecione **Centro de ATA**.
-    2. Clique com o botão direito em **Centro de ATA** e selecione **Todas as Tarefas** e, em seguida, **Exportar**. 
+    2. Clique com o botão direito do mouse em **Centro de ATA** e selecione **Todas as Tarefas** e, em seguida, **Exportar**. 
      ![Certificado do Centro de ATA](media/ata-center-cert.png)
     3. Siga as instruções para exportar o certificado, certificando-se de exportar também a chave privada.
     4. Faça o backup do arquivo de certificado exportado em um computador separado.
@@ -45,7 +45,7 @@ Este artigo descreve como recuperar rapidamente seu Centro de ATA e restaurar a 
 ## <a name="recover-your-ata-center"></a>Recuperar seu Centro de ATA
 
 1. Crie uma nova máquina do Windows Server usando o mesmo nome de computador e o endereço IP da máquina anterior do Centro de ATA.
-4. Importe o certificado que você armazenou em backup acima para o novo servidor.
+4. Importe o certificado que você armazenou em backup anteriormente no novo servidor.
 5. Siga as instruções para [Implantar o Centro de ATA](install-ata-step1.md) no Windows Server recém-criado. Não é necessário implantar os Gateways do ATA novamente. Quando for solicitado um certificado, forneça o certificado exportado durante o backup da configuração do Centro de ATA. 
 ![Restauração do Centro de ATA](media/disaster-recovery-deploymentss.png)
 6. Importe a configuração do Centro de ATA armazenada em backup:

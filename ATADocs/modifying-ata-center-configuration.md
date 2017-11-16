@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 8/14/2017
+ms.date: 11/7/2017
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 93b27f15-f7e5-49bb-870a-d81d09dfe9fc
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: bfd86dadbc773b349f28a6327ec2e177da74be8d
-ms.sourcegitcommit: 8b622fa5457cf1a540504899c8c98e860b946e01
+ms.openlocfilehash: 4fe4569cd6477775e8a888d2acd05511f16fb5f6
+ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/14/2017
+ms.lasthandoff: 11/07/2017
 ---
 *Aplica-se a: Advanced Threat Analytics versão 1.8*
 
@@ -44,7 +44,7 @@ A URL é usada nos seguintes cenários:
 
 1. Verifique se a nova URL que você deseja usar é resolvida para o endereço IP do Console do ATA.
 
-2. Nas configurações do ATA, em **Centro**, digite a nova URL. Neste ponto, o serviço do Centro do ATA ainda usará a URL original. 
+2. Nas configurações do ATA, em **Centro**, digite a nova URL. Neste ponto, o serviço do Centro do ATA ainda usa a URL original. 
 
  ![Alteração da configuração do ATA](media/change-center-config.png)
 
@@ -68,7 +68,7 @@ A URL é usada nos seguintes cenários:
 
 Substitua o certificado seguindo este processo:
 
-1. Antes da expiração do certificado atual, crie um novo certificado e verifique se ele está instalado no servidor do Centro do ATA. <br></br>É recomendável escolher um certificado de uma autoridade de certificação interna, mas também é possível criar um novo certificado autoassinado. Para obter mais informações, consulte [New-SelfSignedCertificate](https://technet.microsoft.com/itpro/powershell/windows/pkiclient/new-selfsignedcertificate).
+1. Antes da expiração do certificado atual, crie um novo certificado e verifique se ele está instalado no servidor do Centro do ATA. <br></br>É recomendável escolher um certificado de uma autoridade de certificação interna, mas também é possível criar um novo certificado autoassinado. Para saber mais, confira [New-SelfSignedCertificate](https://technet.microsoft.com/itpro/powershell/windows/pkiclient/new-selfsignedcertificate).
 
 2. Nas configurações do ATA, em **Centro**, selecione este certificado recém-criado. Neste ponto, o serviço do Centro do ATA ainda está associado ao certificado original. 
 
@@ -76,7 +76,7 @@ Substitua o certificado seguindo este processo:
 
 3. Aguarde a sincronização dos Gateways do ATA. Agora eles têm dois possíveis certificados que são válidos para autenticação mútua. Contanto que o Gateway do ATA possa se conectar usando o certificado original, ele não tentará o novo.
 
-4. Após a sincronização de todos os Gateways do ATA com a configuração atualizada, ative o novo certificado ao qual o serviço do Centro do ATA está associado. Quando você ativar o novo certificado, o serviço do Centro do ATA se associará ao novo certificado. Os Gateways do ATA usarão o novo certificado para se autenticarem no Centro do ATA. Após a conexão com o serviço do Centro do ATA, o Gateway do ATA obterá a configuração mais recente e terá somente o novo certificado para o Centro do ATA. 
+4. Após a sincronização de todos os Gateways do ATA com a configuração atualizada, ative o novo certificado ao qual o serviço do Centro do ATA está associado. Quando você ativar o novo certificado, o serviço do Centro do ATA se associará ao novo certificado. Agora, os Gateways do ATA usam o novo certificado para autenticar no Centro do ATA. Após a conexão com o serviço do Centro do ATA, o Gateway do ATA obterá a configuração mais recente e terá somente o novo certificado para o Centro do ATA. 
 
 > [!NOTE]
 > -   Se um Gateway do ATA estava offline durante a ativação do novo certificado, e portanto nunca recebeu a configuração atualizada, será necessário atualize manualmente o arquivo de configuração JSON no Gateway do ATA.

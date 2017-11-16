@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: e5a9718c-b22e-41f7-a614-f00fc4997682
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 89d3d80e647e61cded6e2428ed1d1f8905552867
-ms.sourcegitcommit: 42ce07e3207da10e8dd7585af0e34b51983c4998
+ms.openlocfilehash: 540d1cb0754dc9191a985625a8f988cb44c9f000
+ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/25/2017
+ms.lasthandoff: 11/07/2017
 ---
 # <a name="updating-ata-to-version-18"></a>Atualizando o ATA para a versão 1.8
 
@@ -56,11 +56,11 @@ Na versão de migração, o arquivo pode ser usado apenas para a atualização d
     -  Se você não tiver habilitado as atualizações automáticas na versão 1.7, será necessário definir o ATA para usar o Microsoft Update para ATA a fim de permanecer atualizado.  Na página do Microsoft Update, selecione **Usar o Microsoft Update ao verificar se há atualizações (recomendado)**.
     ![Imagem Manter o ATA atualizado](media/ata_ms_update.png)
      
-     Isso ajustará as configurações do Windows para habilitar as atualizações para o ATA. 
+     Isso ajusta as configurações do Windows para habilitar as atualizações para o ATA. 
     
     -  Na tela **Migração de dados**, selecione se deseja migrar todos os dados ou dados parciais. Se você optar por migrar apenas os dados parciais, todas as detecções funcionarão imediatamente com a exceção da detecção de comportamento anormal, que demora três semanas para criar um perfil completo.  
     
-    A migração de dados **Parcial** demora muito menos para ser instalada. Se você selecionar a migração de dados **Completa**, pode demorar bastante para a instalação ser concluída. Certifique-se de examinar a quantidade estimada de tempo e de espaço em disco necessário, que são listadas na tela **Migração de Dados**. Esses números dependem da quantidade de tráfego de rede capturada anteriormente que você salvou nas versões anteriores do ATA. Por exemplo, na tela abaixo, você pode ver uma migração de dados de um banco de dados muito grande:
+    A migração de dados **Parcial** demora muito menos para ser instalada. Se você selecionar a migração de dados **Completa**, pode demorar bastante para a instalação ser concluída. Certifique-se de examinar a quantidade estimada de tempo e de espaço em disco necessário, que são listadas na tela **Migração de Dados**. Esses números dependem da quantidade de tráfego de rede capturada anteriormente que você salvou nas versões anteriores do ATA. Por exemplo, na tela abaixo, você pode ver uma migração de dados de um banco de dados grande:
          
     ![Migração de dados do ATA](media/migration-data-migration.png)
 

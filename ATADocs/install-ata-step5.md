@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 10/9/2017
+ms.date: 11/7/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 2a5b6652-2aef-464c-ac17-c7e5f12f920f
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 518153d03f41956871ec5e7bf680f72187e4919c
-ms.sourcegitcommit: e9f2bfd610b7354ea3fef749275f16819d60c186
+ms.openlocfilehash: 05af384d91e899c1c0bc50ec2da6147eb47adb82
+ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2017
+ms.lasthandoff: 11/07/2017
 ---
 *Aplica-se a: Advanced Threat Analytics versão 1.8*
 
@@ -47,20 +47,20 @@ Após a instalação do Gateway do ATA, execute as etapas a seguir para definir 
 
       As informações a seguir se aplicam aos servidores digitados na lista **Controladores de Domínio**:
       - Todos os controladores de domínio cujo tráfego esteja sendo monitorado por meio do espelhamento de porta pelo Gateway do ATA devem estar na lista **Controladores de Domínio**. Se um controlador de domínio não estiver listado em **Controladores de Domínio**, a detecção de atividades suspeitas pode não funcionar conforme o esperado.
-      - Pelo menos um controlador de domínio na lista deve ser um catálogo global. Isso permitirá que o ATA resolva os objetos de usuário e computador em outros domínios na floresta.
+      - Pelo menos um controlador de domínio na lista deve ser um catálogo global. Isso permite que o ATA resolva os objetos de usuário e computador em outros domínios na floresta.
 
   - **Capturar adaptadores de rede** (obrigatório):
-  - Para um Gateway do ATA em um servidor dedicado, selecione os adaptadores de rede que são configurados como a porta de espelho do destino. Eles receberão o tráfego do controlador de domínio espelhado.
+  - Para um Gateway do ATA em um servidor dedicado, selecione os adaptadores de rede que são configurados como a porta de espelho do destino. Eles recebem o tráfego do controlador de domínio espelhado.
   - Para um Gateway Lightweight do ATA, trata-se de todos os adaptadores de rede que são usados para comunicação com outros computadores da organização.
 
 
   - **Candidato ao sincronizador de domínio**: qualquer Gateway do ATA definido para ser um candidato ao sincronizador de domínio pode ser responsável pela sincronização entre o ATA e o domínio do Active Directory. Dependendo do tamanho do domínio, a sincronização inicial pode ser demorada e consumir muitos recursos. Por padrão, somente Gateways do ATA são definidos como Candidatos ao sincronizador do domínio.
-   É recomendável impedir os Gateways do ATA do site remoto de serem candidatos ao sincronizador do domínio.
+   É recomendável impedir que os Gateways do ATA do site remoto sejam candidatos ao Sincronizador de domínio.
    Se o controlador de domínio for somente leitura, não o defina como um candidato ao sincronizador do domínio. Para saber mais, confira [Arquitetura do ATA](ata-architecture.md#ata-lightweight-gateway-features).
 
   > [!NOTE] 
   > Levará alguns minutos para que o serviço do Gateway do ATA inicie pela primeira vez após a instalação, pois ele cria o cache dos analisadores de captura de rede.
-  > As alterações de configuração serão aplicadas ao Gateway do ATA na próxima sincronização agendada entre o ele e o Centro do ATA.
+  > As alterações de configuração são aplicadas ao Gateway do ATA na próxima sincronização agendada entre o ele e o Centro do ATA.
 
 3. Se desejar, é possível definir o [Ouvinte do syslog e o Conjunto de Encaminhamento de Eventos do Windows](configure-event-collection.md). 
 4. Habilite **Atualizar Gateway do ATA automaticamente** para que nos lançamentos de versões futuras, quando você atualizar o Centro do ATA, esse Gateway do ATA seja atualizado automaticamente.
@@ -69,7 +69,7 @@ Após a instalação do Gateway do ATA, execute as etapas a seguir para definir 
 
 
 ## <a name="validate-installations"></a>Validar instalações
-Para validar a implantação bem-sucedida do Gateway do ATA, verifique o seguinte:
+Para validar a implantação bem-sucedida do Gateway do ATA, verifique as seguintes etapas:
 
 1.  Verifique se o serviço nomeado **Gateway do Microsoft Advanced Threat Analytics** está em execução. Depois de salvar as configurações do Gateway do ATA, talvez demore alguns minutos até que o serviço seja iniciado.
 

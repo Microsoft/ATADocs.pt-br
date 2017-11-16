@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 09/6/2017
+ms.date: 11/7/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 1fe5fd6f-1b79-4a25-8051-2f94ff6c71c1
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: cd6e2968cad2393e2f56ece03be880622a3a0c6a
-ms.sourcegitcommit: 79abfe095f5def259ebb5018d49f9aadd5f2d4f4
+ms.openlocfilehash: bff477a66b837d82bb10a43a0dad7d36c6542d9f
+ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2017
+ms.lasthandoff: 11/07/2017
 ---
 *Aplica-se a: Advanced Threat Analytics versão 1.8*
 
@@ -34,7 +34,7 @@ Após investigação adequada, qualquer atividade suspeita pode ser classificada
 
 Para saber mais sobre como trabalhar com alertas ATA, confira [Trabalhando com atividades suspeitas](working-with-suspicious-activities.md).
 
-Para fazer perguntas ou comentários, entre em contato conosco em [ATAEval@microsoft.com](mailto:ATAEval@microsoft.com).
+Para fazer perguntas ou comentários, entre em contato com a equipe do ATA em [ATAEval@microsoft.com](mailto:ATAEval@microsoft.com).
 
 ## <a name="abnormal-sensitive-group-modification"></a>Modificação anormal de grupo confidencial
 
@@ -47,7 +47,7 @@ Para obter uma definição de grupos confidenciais no ATA, consulte [Trabalhando
 
 
 A detecção depende de [eventos auditados em controladores de domínio](https://docs.microsoft.com/advanced-threat-analytics/configure-event-collection).
-Use a ferramenta referenciada em [Auditoria do ATA (AuditPol, Aplicação de configurações de auditoria avançadas, descoberta de serviço do Gateway Lightweight)](https://aka.ms/ataauditingblog) para verificar se seus controladores de domínio realizam a auditoria de eventos necessários.
+Para verificar se seus controladores de domínio realizam a auditoria de eventos necessários, use a ferramenta referenciada em [Auditoria do ATA (AuditPol, Aplicação de configurações de auditoria avançadas, descoberta de serviço do Gateway Lightweight)](https://aka.ms/ataauditingblog).
 
 **Investigação**
 
@@ -109,7 +109,7 @@ Há três tipos de detecção:
 
 1.  Skeleton Key – é um malware que é executado nos controladores de domínio e permite a autenticação no domínio com qualquer conta sem saber sua senha. Este malware geralmente usa algoritmos de criptografia mais fracos para codificação de senhas do usuário no controlador de domínio. Nesta detecção, o método de criptografia da mensagem KRB_ERR do computador de origem foi desatualizado em comparação com o comportamento aprendido anteriormente.
 
-2.  Golden Ticket – em um alerta [Golden Ticket](#golden-ticket), o método de criptografia do campo TGT da mensagem TGS_REQ (solicitação de serviço) do computador de origem foi desatualizado em comparação com o comportamento aprendido anteriormente. Observe que isso não é baseado em uma anomalia de tempo (como na outra detecção Golden Ticket). Além disso, não houve nenhuma solicitação de autenticação Kerberos associada à solicitação de serviço acima detectada pelo ATA.
+2.  Golden Ticket – em um alerta [Golden Ticket](#golden-ticket), o método de criptografia do campo TGT da mensagem TGS_REQ (solicitação de serviço) do computador de origem foi desatualizado em comparação com o comportamento aprendido anteriormente. Isso não tem base em uma anomalia de tempo (como na outra detecção Golden Ticket). Além disso, não houve nenhuma solicitação de autenticação Kerberos associada à solicitação de serviço anterior detectada pelo ATA.
 
 3.  Overpass-the-Hash – o tipo de criptografia de mensagem AS_REQ do computador de origem foi desatualizado em comparação com o comportamento aprendido anteriormente (ou seja, o computador estava usando AES).
 
@@ -131,7 +131,7 @@ Primeiro, verifique a descrição do alerta para ver com qual dos três tipos de
 2.  Golden Ticket – Siga as instruções das atividades suspeitas do [Golden Ticket](#golden-ticket).   
     Além disso, como criar um tíquete de ouro requer direitos de administrador de domínio, implemente [Passar as recomendações de hash](http://aka.ms/PtH).
 
-3.  Overpass-the-Hash – Se a conta envolvida não for confidencial, então, redefina a senha dessa conta. Isso impedirá que o invasor crie novos tíquetes Kerberos do hash de senha, embora os tíquetes existentes ainda possam ser usados até expirarem. Se for uma conta confidencial, você deverá considerar redefinir a conta KRBTGT duas vezes como na atividade suspeita do Golden Ticket. Redefinir o KRBTGT duas vezes invalidará todos os tíquetes Kerberos nesse domínio, portanto, planeje antes de fazer isso. Consulte as diretrizes em [Scripts de redefinição de senha da conta KRBTGT disponíveis agora para os clientes](https://blogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/). Consulte também como usar a [ferramenta Redefinir as chaves/senha da conta KRBTGT](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51). Como essa é uma técnica de movimentação lateral, siga as práticas recomendadas das [recomendações de Passagem de hash](http://aka.ms/PtH).
+3.  Overpass-the-Hash – Se a conta envolvida não for confidencial, então, redefina a senha dessa conta. Isso impede que o invasor crie novos tíquetes Kerberos do hash de senha, embora os tíquetes existentes ainda possam ser usados até expirarem. Se for uma conta confidencial, você deverá considerar redefinir a conta KRBTGT duas vezes como na atividade suspeita do Golden Ticket. Redefinir o KRBTGT duas vezes invalida todos os tíquetes Kerberos nesse domínio, portanto, planeje antes de fazer isso. Consulte as diretrizes em [Scripts de redefinição de senha da conta KRBTGT disponíveis agora para os clientes](https://blogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/). Consulte também como usar a [ferramenta Redefinir as chaves/senha da conta KRBTGT](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51). Como essa é uma técnica de movimentação lateral, siga as práticas recomendadas das [recomendações de Passagem de hash](http://aka.ms/PtH).
 
 ## Golden Ticket<a name="golden-ticket"></a>
 
@@ -139,7 +139,7 @@ Primeiro, verifique a descrição do alerta para ver com qual dos três tipos de
 
 Os invasores com direitos de administrador de domínio podem comprometer a [conta KRBTGT](https://technet.microsoft.com/library/dn745899(v=ws.11).aspx#Sec_KRBTGT). Ao usar a conta KRBTGT, eles podem criar um tíquete de concessão de tíquete Kerberos (TGT) que fornece autorização para qualquer recurso e define a expiração do tíquete para qualquer momento arbitrário. Esse TGT falso é chamado de "Golden Ticket" e permite que os invasores obtenham persistência na rede.
 
-Nessa detecção, um alerta será acionado quando um tíquete de concessão de tíquete Kerberos for usado por mais tempo do que o permitido conforme especificado na política de segurança [Tempo de vida máximo para tíquete de usuário](https://technet.microsoft.com/library/jj852169(v=ws.11).aspx).
+Nessa detecção, um alerta é acionado quando um tíquete de concessão de tíquete Kerberos for usado por mais tempo do que o permitido conforme especificado na política de segurança [Tempo de vida máximo para tíquete de usuário](https://technet.microsoft.com/library/jj852169(v=ws.11).aspx).
 
 **Investigação**
 
@@ -151,7 +151,7 @@ Nessa detecção, um alerta será acionado quando um tíquete de concessão de t
 
 **Remediação**
 
-Altere o Tíquete de concessão de tíquete Kerberos (KRBTGT) duas vezes de acordo com as diretrizes em [Scripts de redefinição de senha da conta KRBTGT disponíveis agora para clientes](https://blogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/) usando a [ferramenta Redefinir chaves/senha da conta KRBTGT](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51). Redefinir o KRBTGT duas vezes invalidará todos os tíquetes Kerberos nesse domínio, portanto, planeje antes de fazer isso.  
+Altere o Tíquete de concessão de tíquete Kerberos (KRBTGT) duas vezes de acordo com as diretrizes em [Scripts de redefinição de senha da conta KRBTGT disponíveis agora para clientes](https://blogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/) usando a [ferramenta Redefinir chaves/senha da conta KRBTGT](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51). Redefinir o KRBTGT duas vezes invalida todos os tíquetes Kerberos nesse domínio, portanto, planeje antes de fazer isso.  
 Além disso, como criar um tíquete de ouro requer direitos de administrador de domínio, implemente [Passar as recomendações de hash](http://aka.ms/PtH).
 
 ## <a name="honeytoken-activity"></a>Atividade de Honeytoken
@@ -189,9 +189,9 @@ O hash foi usado em um computador que o usuário destinado possui ou usa regular
 
 **Remediação**
 
-1. Se a conta envolvida não for confidencial, então, redefina a senha dessa conta. Isso impedirá que o invasor crie novos tíquetes Kerberos do hash de senha, embora os tíquetes existentes ainda possam ser usados até expirarem. 
+1. Se a conta envolvida não for confidencial, então, redefina a senha dessa conta. Isso impede que o invasor crie novos tíquetes Kerberos do hash de senha, embora os tíquetes existentes ainda possam ser usados até expirarem. 
 
-2. Se for uma conta confidencial, você deverá considerar redefinir a conta KRBTGT duas vezes como na atividade suspeita do Golden Ticket. Redefinir o KRBTGT duas vezes invalidará todos os tíquetes Kerberos nesse domínio, portanto, planeje antes de fazer isso. Consulte as diretrizes em [Scripts de redefinição de senha da conta KRBTGT disponíveis agora para clientes](https://blogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/), consulte também como usar a [ferramenta Redefinir chaves/senha da conta KRBTGT](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51). Como essa é uma técnica de movimentação lateral, siga as práticas recomendadas das [recomendações de Passagem de hash](http://aka.ms/PtH).
+2. Se for uma conta confidencial, você deverá considerar redefinir a conta KRBTGT duas vezes como na atividade suspeita do Golden Ticket. Redefinir o KRBTGT duas vezes invalida todos os tíquetes Kerberos nesse domínio, portanto, planeje antes de fazer isso. Consulte as diretrizes em [Scripts de redefinição de senha da conta KRBTGT disponíveis agora para clientes](https://blogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/), consulte também como usar a [ferramenta Redefinir chaves/senha da conta KRBTGT](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51). Como essa é uma técnica de movimentação lateral, siga as práticas recomendadas das [recomendações de Passagem de hash](http://aka.ms/PtH).
 
 ## <a name="identity-theft-using-pass-the-ticket-attack"></a>Roubo de identidade usando o ataque Pass-the-Ticket
 
@@ -207,16 +207,16 @@ Pass-the-Ticket é uma técnica de movimento lateral em que os invasores roubam 
 
 **Remediação**
 
-1. Se a conta envolvida não for confidencial, então, redefina a senha dessa conta. Isso impedirá que o invasor crie novos tíquetes Kerberos do hash de senha, embora os tíquetes existentes ainda possam ser usados até expirarem.  
+1. Se a conta envolvida não for confidencial, então, redefina a senha dessa conta. Isso impede que o invasor crie novos tíquetes Kerberos do hash de senha, embora os tíquetes existentes ainda possam ser usados até expirarem.  
 
-2. Se for uma conta confidencial, você deverá considerar redefinir a conta KRBTGT duas vezes como na atividade suspeita do Golden Ticket. Redefinir o KRBTGT duas vezes invalidará todos os tíquetes Kerberos nesse domínio, portanto, planeje antes de fazer isso. Consulte as diretrizes em [Scripts de redefinição de senha da conta KRBTGT disponíveis agora para clientes](https://blogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/), consulte também como usar a [ferramenta Redefinir chaves/senha da conta KRBTGT](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51).  Como essa é uma técnica de movimentação lateral, siga as práticas recomendadas nas [recomendações de Passagem de hash](http://aka.ms/PtH).
+2. Se for uma conta confidencial, você deverá considerar redefinir a conta KRBTGT duas vezes como na atividade suspeita do Golden Ticket. Redefinir o KRBTGT duas vezes invalida todos os tíquetes Kerberos nesse domínio, portanto, planeje antes de fazer isso. Consulte as diretrizes em [Scripts de redefinição de senha da conta KRBTGT disponíveis agora para clientes](https://blogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/), consulte também como usar a [ferramenta Redefinir chaves/senha da conta KRBTGT](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51).  Como essa é uma técnica de movimentação lateral, siga as práticas recomendadas nas [recomendações de Passagem de hash](http://aka.ms/PtH).
 
 ## <a name="malicious-data-protection-private-information-request"></a>Solicitação de informações privadas para proteção contra dados mal-intencionados
 
 **Descrição**
 
 A DPAPI (API de Proteção de Dados) é usada pelo Windows para proteger senhas com segurança salvas por navegadores, arquivos criptografados e outros dados confidencias. Os controladores de domínio têm uma chave mestra de backup que pode ser usada para descriptografar todos os segredos criptografados com DPAPI em computadores Windows ingressados no domínio. Os invasores podem usar essa chave mestra para descriptografar informações secretas protegidas por DPAPI em todos os computadores que ingressaram no domínio.
-Nessa detecção, um alerta será acionado quando o DPAPI for usado para recuperar a chave mestra do backup.
+Nessa detecção, um alerta é acionado quando o DPAPI é usado para recuperar a chave mestra do backup.
 
 **Investigação**
 
@@ -237,7 +237,7 @@ Para usar DPAPI, um invasor precisa de direitos de administrador de domínio. Im
 
 A replicação do Active Directory é o processo pelo qual as alterações feitas em um controlador de domínio são sincronizadas com todos os outros controladores de domínio. Com as permissões necessárias, os invasores podem iniciar uma solicitação de replicação, permitindo que eles possam recuperar os dados armazenados no Active Directory, incluindo hashes de senha.
 
-Nessa detecção, um alerta será disparado quando uma solicitação de replicação for iniciada em um computador que não seja um controlador de domínio.
+Nessa detecção, um alerta é disparado quando uma solicitação de replicação for iniciada em um computador que não seja um controlador de domínio.
 
 **Investigação**
 
@@ -262,7 +262,7 @@ Você pode utilizar o [Scanner ACL do AD](https://blogs.technet.microsoft.com/pf
 
 Em alguns cenários, os invasores executam uma negação de serviço (DoS) em vez de apenas roubar informações. Excluir um grande número de contas é uma técnica DoS.
 
-Nessa detecção, um alerta será disparado quando mais de 5% de todas as contas for excluído. A detecção requer o acesso de leitura ao contêiner do objeto excluído.  
+Nessa detecção, um alerta é disparado quando mais de 5% de todas as contas for excluído. A detecção requer o acesso de leitura ao contêiner do objeto excluído.  
 Para obter informações sobre como configurar permissões de somente leitura no contêiner Objetos excluídos, confira a seção **Alterar permissões em um contêiner de objetos excluídos** no tópico [Exibir ou definir permissões em um objeto de diretório](https://technet.microsoft.com/library/cc816824%28v=ws.10%29.aspx).
 
 **Investigação**
@@ -351,7 +351,7 @@ A modificação de transferências de zona é uma tarefa entre uma lista de veri
 
 A enumeração do protocolo SMB (Bloco de mensagens de servidor) permite que invasores obtenham informações sobre onde os usuários se conectaram recentemente. Depois que os invasores tiverem essas informações, eles podem mover lateralmente na rede para obter uma determinada conta confidencial.
 
-Nessa detecção, um alerta será acionado quando uma enumeração de sessão SMB é executada em um controlador de domínio, porque isso não deve ocorrer.
+Nessa detecção, um alerta é acionado quando uma enumeração de sessão SMB é executada em um controlador de domínio, pois isso não deve ocorrer.
 
 **Investigação**
 
@@ -399,7 +399,7 @@ Os invasores que comprometem credenciais de administrador ou que usam uma explor
 
 **Descrição**
 
-Alguns serviços enviam as credenciais de conta em texto sem formatação. Isso pode ocorrer até mesmo para contas confidenciais. Os invasores que monitoram o tráfego de rede podem capturar e reutilizar essas credenciais para fins mal-intencionados. Qualquer senha de texto não criptografada para uma conta confidencial disparará o alerta, enquanto para contas não confidenciais o alerta é disparado se cinco ou mais contas diferentes enviarem senhas em texto não criptografado no mesmo computador de origem. 
+Alguns serviços enviam as credenciais de conta em texto sem formatação. Isso pode ocorrer até mesmo para contas confidenciais. Os invasores que monitoram o tráfego de rede podem capturar e reutilizar essas credenciais para fins mal-intencionados. Qualquer senha de texto não criptografada para uma conta confidencial dispara o alerta, enquanto para contas não confidenciais o alerta é disparado se cinco ou mais contas diferentes enviarem senhas em texto não criptografado no mesmo computador de origem. 
 
 **Investigação**
 
@@ -417,7 +417,7 @@ Verifique a configuração nos computadores de origem e certifique-se de não us
 
 Em um ataque de força bruta, o invasor tenta autenticar com muitas senhas diferentes para diferentes contas até que uma senha correta seja encontrada para pelo menos uma conta. Uma vez encontrada, um invasor pode fazer logon usando essa conta.
 
-Nessa detecção, um alerta será disparado quando diversas falhas de autenticação ocorrerem, isso pode ser horizontalmente com um pequeno conjunto de senhas entre vários usuários; ou verticalmente com um grande conjunto de senhas em apenas alguns usuários; ou qualquer combinação dessas duas opções.
+Nessa detecção, um alerta é disparado quando diversas falhas de autenticação ocorrerem, isso pode ser horizontalmente com um pequeno conjunto de senhas entre vários usuários; ou verticalmente com um grande conjunto de senhas em apenas alguns usuários; ou qualquer combinação dessas duas opções.
 
 **Investigação**
 
@@ -453,7 +453,7 @@ Dependendo do que fez com que esse comportamento ocorresse, diferentes ações d
 
 **Descrição**
 
-Os invasores usam ferramentas que implementam vários protocolos (SMB, Kerberos, NTLM) de maneiras não padrão. Embora esse tipo de tráfego de rede seja geralmente aceito pelo Windows sem avisos, o ATA é capaz de reconhecer possíveis mal-intencionados. O comportamento é uma indicação de técnicas como força bruta e de Over-Pass-the-Hash, bem como explorações usadas pelo ransomware avançado, por exemplo, WannaCry.
+Os invasores usam ferramentas que implementam vários protocolos (SMB, Kerberos, NTLM) de maneiras não padrão. Embora esse tipo de tráfego de rede seja aceito pelo Windows sem avisos, o ATA é capaz de reconhecer possíveis mal-intencionados. O comportamento é uma indicação de técnicas como força bruta e de Over-Pass-the-Hash, bem como explorações usadas pelo ransomware avançado, por exemplo, WannaCry.
 
 **Investigação**
 

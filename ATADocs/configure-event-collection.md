@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 10/23/2017
+ms.date: 11/7/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 3f0498f9-061d-40e6-ae07-98b8dcad9b20
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 3ebf3165973c14c45d33c95769f0e6ae47e3e795
-ms.sourcegitcommit: 835ea2b8190eb753aaf8d400531040ce1845d75a
+ms.openlocfilehash: 482b16462d115c7bcc2854d30c2ef19fce37f2c0
+ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/23/2017
+ms.lasthandoff: 11/07/2017
 ---
 *Aplica-se a: Advanced Threat Analytics versão 1.8*
 
@@ -35,17 +35,17 @@ Para aprimorar os recursos de detecção, o ATA precisa dos seguintes eventos do
 
 ### <a name="wef-configuration-for-ata-gateways-with-port-mirroring"></a>Configuração de WEF para Gateway do ATA com o espelhamento de porta
 
-Após a configuração do espelhamento de porta nos controladores de domínio para o Gateway do ATA, siga as instruções abaixo para configurar o Encaminhamento de eventos do Windows usando a configuração Iniciada pela Origem. Essa é uma maneira para configurar o Encaminhamento de eventos do Windows. 
+Após a configuração do espelhamento de porta nos controladores de domínio para o Gateway do ATA, siga as instruções a seguir para configurar o Encaminhamento de eventos do Windows usando a configuração Iniciada pela Origem. Essa é uma maneira para configurar o Encaminhamento de eventos do Windows. 
 
 **Etapa 1: Adicionar a conta de serviço de rede ao Grupo de Leitores de Log de Eventos do domínio.** 
 
-Nesse cenário, supomos que o Gateway ATA seja membro do domínio.
+Neste cenário, supomos que o Gateway ATA seja membro do domínio.
 
 1.  Abra os Usuários e Computadores do Active Directory, navegue até a pasta **BuiltIn** e clique duas vezes em **Leitores de Log de Eventos**. 
 2.  Selecione **Membros**.
 4.  Se **Serviço de Rede** não estiver listado, clique em **Adicionar**, digite **Serviço de Rede** no campo **Digite os nomes de objeto a serem selecionados** . Depois, clique em **Verificar Nomes** e clique em **OK** duas vezes. 
 
-Observe que após adicionar o **Serviço de Rede** no grupo **Leitores de Log de Eventos** é necessário reiniciar os controladores de domínio para que a alteração tenha efeito.
+Após adicionar o **Serviço de Rede** ao grupo **Leitores de Log de Eventos**, reinicie os controladores de domínio para que a alteração tenha efeito.
 
 **Etapa 2: Criar uma política nos controladores de domínio para definir a configuração Configurar Gerenciador de Assinaturas de destino.** 
 > [!Note] 
@@ -61,7 +61,7 @@ Observe que após adicionar o **Serviço de Rede** no grupo **Leitores de Log de
    
     1.  Selecione **Habilitado**.
     2.  Em **Opções**, clique em **Mostrar**.
-    3.  Em **SubscriptionManagers**, insira o seguinte valor e clique em **OK**:  *Server=http://<fqdnATAGateway>:5985/wsman/SubscriptionManager/WEC,Refresh=10* (Por exemplo: Server=http://atagateway9.contoso.com:5985/wsman/SubscriptionManager/WEC,Refresh=10)
+    3.  Em **SubscriptionManagers**, insira o seguinte valor e clique em **OK**: *Server=http://<fqdnATAGateway>:5985/wsman/SubscriptionManager/WEC,Refresh=10* (Por exemplo: Server=http://atagateway9.contoso.com:5985/wsman/SubscriptionManager/WEC,Refresh=10)
  
    ![Configurar a imagem de assinatura de destino](media/wef 2 config target sub manager.png)
    
@@ -72,7 +72,7 @@ Observe que após adicionar o **Serviço de Rede** no grupo **Leitores de Log de
 
 1.  Em um prompt de comandos com privilégios elevados, digite *wecutil qc*
 2.  Abra o **Visualizador de Eventos**. 
-3.  Clique com o botão direito em **Assinaturas** e selecione **Criar Assinatura**. 
+3.  Clique com o botão direito do mouse em **Assinaturas** e selecione **Criar Assinatura**. 
 
    1.   Insira um nome e uma descrição para a assinatura. 
    2.   Para **Log de Destino** confirme se **Eventos Encaminhados** está selecionado. Para o ATA ler os eventos, o log de destino deve ser **Eventos Encaminhados**. 
@@ -91,12 +91,12 @@ Observe que após adicionar o **Serviço de Rede** no grupo **Leitores de Log de
 
  ![Imagem do filtro de consulta](media/wef 4 query filter.png)
 
-   5.   Clique com o botão direito na assinatura criada e selecione **Status de Tempo de Execução** para verificar se há problemas com o status. 
+   5.   Clique com o botão direito do mouse na assinatura criada e selecione **Status de Tempo de Execução** para verificar se há problemas com o status. 
    6.   Depois de alguns minutos, verifique se os eventos definidos para serem encaminhados aparecem nos Eventos Encaminhados no Gateway do ATA.
 
 
-Para obter mais informações, confira: [Configurar computadores para encaminhar e coletar eventos](https://technet.microsoft.com/library/cc748890)
+Para saber mais, confira: [Configurar computadores para encaminhar e coletar eventos](https://technet.microsoft.com/library/cc748890)
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Consulte também
 - [Instalar o ATA](install-ata-step1.md)
 - [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

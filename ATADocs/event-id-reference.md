@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 10/25/2017
+ms.date: 11/6/2017
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 5d639e84-2e37-43a9-9667-49be6c4fa8b7
 ms.reviewer: arzinger
 ms.suite: ems
-ms.openlocfilehash: 7bd0f90acbb6a2d8eb84fd09bc4d859fff082273
-ms.sourcegitcommit: 5563c6861bb5db5cb73e058e5a51b4938b9a7d46
+ms.openlocfilehash: 07be2dad511158a9234c99287f7eefd7cc12ba83
+ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2017
+ms.lasthandoff: 11/07/2017
 ---
 *Aplica-se a: Advanced Threat Analytics versão 1.8*
 
@@ -74,7 +74,7 @@ Os eventos podem ser encontrados aqui:
 
 1022 – Alerta de integridade de falha na resolução de endereço IP externo da Central do ATA 
  
-## <a name="ata-suspicious-ctivity-events"></a>Eventos de atividade suspeita do ATA
+## <a name="ata-suspicious-activity-events"></a>Eventos de atividade suspeita do ATA
 
 2001 – Atividade suspeita de comportamento anormal 
 
@@ -114,9 +114,9 @@ Os eventos podem ser encontrados aqui:
 
 2022 – Atividade suspeita de golden ticket 
 
-2023 – Atividade suspeita de alteração de associação de grupo confidencial anormal 
-
 2023 – Atividade suspeita de força bruta 
+
+2024 – Atividade suspeita de alteração de associação de grupo confidencial anormal  
 
 ## <a name="ata-auditing-events"></a>Eventos de auditoria de ATA
 

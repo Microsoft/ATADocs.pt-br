@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: cbea47f9-34c1-42b6-ae9e-6a472b49e1a5
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 69127773d9c3130bd07dee0b65956b93848ec399
-ms.sourcegitcommit: 470675730967e0c36ebc90fc399baa64e7901f6b
+ms.openlocfilehash: c60e577ed5df2beecd9737a4637c7a3162a9e706
+ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 11/07/2017
 ---
 # <a name="what39s-new-in-ata-version-14"></a>Novidades na versão 1.4 do ATA
 Essas notas de versão fornecem informações sobre problemas conhecidos na versão 1.4 da Advanced Threat Analytics.
@@ -34,7 +34,7 @@ Essas notas de versão fornecem informações sobre problemas conhecidos na vers
 
 -   Aprimoramentos de desempenho para oferecer suporte a mais Gateways de ATA por Centro de ATA.
 
--   Um novo processo de resolução de nome automático foi adicionado, o que corresponde a nomes de computador e de endereços IP – este recurso exclusivo economizará tempo precioso no processo de investigação e fornecerá provas sólidas de analistas de segurança
+-   Um novo processo de resolução de nome automático foi adicionado, o que corresponde a nomes de computador e de endereços IP – este recurso exclusivo economiza um tempo precioso no processo de investigação e fornece provas sólidas para analistas de segurança
 
 -   Maior capacidade de coletar informações de usuários para ajustar automaticamente o processo de detecção.
 
@@ -58,7 +58,7 @@ Essas notas de versão fornecem informações sobre problemas conhecidos na vers
 A seguir estão os problemas conhecidos existentes nesta versão.
 
 ### <a name="network-capture-software"></a>Software de captura de rede
-No Gateway do ATA, o único software de captura de rede com suporte que pode ser instalado é o [Microsoft Network Monitor 3.4](http://www.microsoft.com/download/details.aspx?id=4865). Não instale o Microsoft Message Analyzer ou qualquer outro software de captura de rede. A instalação de outro software fará com que o Gateway de ATA pare de funcionar corretamente.
+No Gateway do ATA, o único software de captura de rede com suporte que pode ser instalado é o [Microsoft Network Monitor 3.4](http://www.microsoft.com/download/details.aspx?id=4865). Não instale o Microsoft Message Analyzer ou qualquer outro software de captura de rede. A instalação de outro software faz com que o Gateway de ATA pare de funcionar corretamente.
 
 ### <a name="installation-from-zip-file"></a>Instalação do arquivo Zip
 Ao instalar o Gateway de ATA, certifique-se de extrair os arquivos do arquivo zip para um diretório local e instalá-lo de lá. Não instale o Gateway de ATA diretamente de dentro do arquivo zip ou a instalação falhará.
@@ -68,13 +68,13 @@ Se você instalou uma versão anterior do ATA, da Visualização Pública ou da 
 
 Você também deve excluir os arquivos de banco de dados e arquivos de log. Os bancos de dados de versões anteriores do ATA não são compatíveis com a versão GA do ATA.
 
-Ao tentar desinstalar o Centro de ATA ou o Gateway de ATA, se a instalação do ATA abrir em vez da desinstalação, você precisará adicionar a seguinte chave do registro e, em seguida, desinstalar o ATA novamente.
+Se a instalação do ATA abrir em vez da desinstalação quando você tentar desinstalar o Centro de ATA ou o Gateway do ATA, será necessário adicionar a seguinte chave do Registro e, depois, desinstalar o ATA novamente.
 
 **Centro do ATA**
 
 -   HKLM\SOFTWARE\Microsoft\Microsoft Advanced Threat Analytics\Center
 
--   Adicione um novo valor de cadeia de caracteres chamado `InstallationPath` com um valor de `C:\Program Files\Microsoft Advanced Threat Analytics\Center` . Esta é a pasta de instalação padrão. Se você alterou a pasta de instalação, insira o caminho onde o ATA está instalado.
+-   Adicione um novo valor de cadeia de caracteres chamado `InstallationPath` com um valor de `C:\Program Files\Microsoft Advanced Threat Analytics\Center`. Esta é a pasta de instalação padrão. Se você tiver alterado a pasta de instalação, insira o caminho onde o ATA está instalado.
 
     ![Editor do registro para o caminho de instalação do Centro de ATA](media/ATA-uninstall-center-bug.jpg)
 
@@ -82,14 +82,14 @@ Ao tentar desinstalar o Centro de ATA ou o Gateway de ATA, se a instalação do 
 
 -   HKLM\SOFTWARE\Microsoft\Microsoft Advanced Threat Analytics\Gateway
 
--   Adicione um novo valor de cadeia de caracteres chamado `InstallationPath` com um valor de `C:\Program Files\Microsoft Advanced Threat Analytics\Gateway`. Esta é a pasta de instalação padrão.  Se você alterou a pasta de instalação, insira o caminho onde o ATA está instalado.
+-   Adicione um novo valor de cadeia de caracteres chamado `InstallationPath` com um valor de `C:\Program Files\Microsoft Advanced Threat Analytics\Gateway`. Esta é a pasta de instalação padrão.  Se você tiver alterado a pasta de instalação, insira o caminho onde o ATA está instalado.
 
     ![Editor do registro para o caminho de instalação do Gateway de ATA](media/ATA-GW-uninstall-bug.jpg)
 
 Após a desinstalação, exclua a pasta de instalação no Centro de ATA e no Gateway de ATA.  Se você instalou o banco de dados em uma pasta separada, exclua a pasta do banco de dados no Centro de ATA.
 
 ### <a name="health-alert---disconnected-ata-gateway"></a>Alerta de integridade – Gateway de ATA desconectado
-Se você tiver mais de um Gateway de ATA e tiver desconectado os alertas de Gateway de ATA, a resolução automática funcionará em apenas um deles, deixando os restantes com status em aberto. Você deve confirmar manualmente que o Gateway de ATA está ativo e que o serviço está em execução e resolver manualmente o alerta.
+Se você tiver mais de um Gateway de ATA e tiver desconectado os alertas de Gateway de ATA, a resolução automática funcionará em apenas um deles, deixando os restantes com status em aberto. Confirme manualmente que o Gateway de ATA está ativo e que o serviço está em execução, e resolva manualmente o alerta.
 
 ### <a name="kb-on-virtualization-host"></a>Base de dados de conhecimento sobre host de virtualização
 Não instale a Base de dados de conhecimento 3047154 em um host de virtualização. Isso pode fazer com que o espelhamento de porta pare de funcionar corretamente.

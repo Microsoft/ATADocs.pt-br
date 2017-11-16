@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 7/4/2017
+ms.date: 11/7/2017
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 1d186a96-ef70-4787-aa64-c03d1db94ce0
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: f85d52420c55e2f1119ad14eb1a6c957fbc50be6
-ms.sourcegitcommit: be6bdfa24a9b25a3375a4768d513b93900b3a498
+ms.openlocfilehash: 5ec554b303a19a6e7b12cd788755604f1aaf43db
+ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2017
+ms.lasthandoff: 11/07/2017
 ---
 *Aplica-se a: Advanced Threat Analytics versão 1.8*
 
@@ -56,7 +56,7 @@ O gráfico a seguir ajuda a determinar quais etapas de investigação você deve
 
 ![Resolvendo o reconhecimento de DNS com o ATA](./media/dns-recon-diagram.png)
  
-1.  A primeira etapa é identificar o computador do qual o alerta é originado, conforme descrito abaixo:
+1.  A primeira etapa é identificar o computador do qual o alerta é originado, conforme descrito na tela a seguir:
  
     ![Exibir atividades suspeitas de reconhecimento de DNS no ATA](./media/dns-recon.png)
 2.  Identifique o que este computador é. É uma estação de trabalho, um servidor, uma estação de trabalho de administração, um teste de penetração etc.?
@@ -80,7 +80,7 @@ A Microsoft recomenda consultar uma equipe profissional de Resposta a Incidentes
 
 ## <a name="mitigation"></a>Atenuação
 
-A proteção de um servidor DNS interno para impedir que o reconhecimento usando DNS ocorra pode ser obtida desabilitando ou restringindo as transferências de zona apenas para endereços IP específicos. Para obter informações adicionais sobre como restringir transferências de zona, consulte o artigo do Technet do Windows Server, [Restrict Zone Transfers](https://technet.microsoft.com/library/ee649273(v=ws.10).aspx) (Restringir transferências de zona). As transferências de zona podem ser bloqueadas [protegendo as transferências de zona com IPsec](https://technet.microsoft.com/library/ee649192(v=ws.10).aspx). A modificação de transferências de zona é uma tarefa entre uma lista de verificação deve ser resolvida para [proteger seus servidores DNS contra ataques internos e externos](https://technet.microsoft.com/library/cc770432(v=ws.11).aspx).
+A proteção de um servidor DNS interno para impedir que o reconhecimento usando DNS ocorra pode ser obtida desabilitando ou restringindo as transferências de zona apenas para endereços IP específicos. Para obter mais informações sobre como restringir transferências de zona, confira [Restringir transferências de zona](https://technet.microsoft.com/library/ee649273(v=ws.10).aspx). As transferências de zona podem ser bloqueadas [protegendo as transferências de zona com IPsec](https://technet.microsoft.com/library/ee649192(v=ws.10).aspx). A modificação de transferências de zona é uma tarefa entre uma lista de verificação deve ser resolvida para [proteger seus servidores DNS contra ataques internos e externos](https://technet.microsoft.com/library/cc770432(v=ws.11).aspx).
 
 
 

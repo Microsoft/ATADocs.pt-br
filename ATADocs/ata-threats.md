@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 09/19/2017
+ms.date: 11/7/2017
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,19 +13,19 @@ ms.technology:
 ms.assetid: 283e7b4e-996a-4491-b7f6-ff06e73790d2
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 858bc9874855c02ad598d89a6e85296fe98073af
-ms.sourcegitcommit: 34c3d6f56f175994b672842c7576040956ceea69
+ms.openlocfilehash: 842b2a5d4e211c2b2fcb4cd0afc96bb33ac42311
+ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2017
+ms.lasthandoff: 11/07/2017
 ---
 *Aplica-se a: Advanced Threat Analytics versão 1.8*
 
 # <a name="what-threats-does-ata-look-for"></a>Que tipos de ameaças o ATA procura?
 
-O ATA fornece detecção para as seguintes várias fases de ataque avançado: reconhecimento, comprometimento de credenciais, movimentação lateral, elevação de privilégios, predominância de domínio e outros. Essas detecções visam detectar ataques avançados e ameaças internas antes que eles possam causar danos à sua organização.
+O ATA fornece detecção para as várias fases de ataque avançado a seguir: reconhecimento, comprometimento de credenciais, movimentação lateral, elevação de privilégios, predominância de domínio e outros. Essas detecções visam detectar ataques avançados e ameaças internas antes que eles possam causar danos à sua organização.
 A detecção de cada fase resulta em várias atividades suspeitas relevantes para a fase em questão, em que cada atividade suspeita se correlaciona com diferentes tipos de ataques possíveis.
-Essas fases na cadeia de extermínio, nas quais o ATA fornece atualmente as detecções, estão realçadas na imagem abaixo.
+Essas fases na cadeia de extermínio, nas quais o ATA fornece atualmente as detecções, estão realçadas na imagem a seguir:
 
 ![O ATA se concentra na atividade lateral da cadeia de extermínio do ataque](media/attack-kill-chain-small.jpg)
 
