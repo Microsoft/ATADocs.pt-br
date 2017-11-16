@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 11/7/2017
+ms.date: 11/14/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: a5f90544-1c70-4aff-8bf3-c59dd7abd687
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: d0d7ce6aae1bb59d266ddc0f7162ecfbc477b78a
-ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
+ms.openlocfilehash: 29aef3eeddf6045d200f9b27809567f18a2fa2d0
+ms.sourcegitcommit: 4d9d1e089bbb50baceb87f273ddf2d3aaa9a78e8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2017
+ms.lasthandoff: 11/14/2017
 ---
 *Aplica-se a: Advanced Threat Analytics versão 1.8*
 
@@ -101,7 +101,7 @@ A tabela a seguir lista as portas mínimas que devem ser abertas para que a Cent
 
 |Protocolo|Transport|Porta|Para/De|Direção|
 |------------|-------------|--------|-----------|-------------|
-|**SSL** (Comunicações do ATA)|TCP|443 ou configurável|Gateway do ATA|Entrada|
+|**SSL** (Comunicações do ATA)|TCP|443|Gateway do ATA|Entrada|
 |**HTTP** (opcional)|TCP|80|Rede da Empresa|Entrada|
 |**HTTPS**|TCP|443|Rede da Empresa e Gateway de ATA|Entrada|
 |**SMTP** (opcional)|TCP|25|Servidor SMTP|Saída|
@@ -206,7 +206,7 @@ A tabela abaixo lista as portas mínimas que o Gateway do ATA requer configurada
 |DNS|TCP e UDP|53|Servidores DNS|Saída|
 |NTLM via RPC|TCP|135|Todos os dispositivos na rede|Saída|
 |NetBIOS|UDP|137|Todos os dispositivos na rede|Saída|
-|SSL|TCP|443 ou como configurado para o Serviço da Central|Centro do ATA:<br /><br />- Endereço IP do Serviço de Central<br />-   Endereço IP do Console|Saída|
+|SSL|TCP|443|Centro de ATA|Saída|
 |Syslog (opcional)|UDP|514|Servidor SIEM|Entrada|
 
 > [!NOTE]
@@ -262,7 +262,7 @@ A tabela abaixo lista o mínimo de portas que o Gateway Lightweight do ATA exige
 |DNS|TCP e UDP|53|Servidores DNS|Saída|
 |NTLM via RPC|TCP|135|Todos os dispositivos na rede|Saída|
 |NetBIOS|UDP|137|Todos os dispositivos na rede|Saída|
-|SSL|TCP|443 ou como configurado para o Serviço da Central|Centro do ATA:<br /><br />- Endereço IP do Serviço de Central<br />-   Endereço IP do Console|Saída|
+|SSL|TCP|443|Centro de ATA|Saída|
 |Syslog (opcional)|UDP|514|Servidor SIEM|Entrada|
 
 > [!NOTE]
