@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 11/7/2017
+ms.date: 12/112017
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 44d7c899-816c-4f7f-91d3-84a09d291a24
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: b78f0407d74c3c8e0187c9934d3d7555104cd6ec
-ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
+ms.openlocfilehash: 62bc4ad19e632550261e8cf90df53d82d878f8fc
+ms.sourcegitcommit: 261a8ed1a28089c3e40ba4aff43f287db5d9dd4a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2017
+ms.lasthandoff: 11/21/2017
 ---
 *Aplica-se a: Advanced Threat Analytics versão 1.8*
 
@@ -47,8 +47,6 @@ Cada atividade suspeita tem as seguintes informações:
     -   Adicionar uma anotação para a atividade suspeita.
 
     -   Fornecer comentários sobre a atividade suspeita.
-
--   Fornecer recomendações sobre como responder a atividades suspeitas.
 
 > [!NOTE]
 > -   Quando você passa o mouse sobre um usuário ou computador, é exibido um perfil simplificado da entidade que fornece informações adicionais sobre a entidade e inclui o número de atividades suspeitas vinculado à entidade.
