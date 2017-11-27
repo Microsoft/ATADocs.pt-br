@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 11/7/2017
+ms.date: 12/11/2017
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 7620e171-76d5-4e3f-8b03-871678217a3a
 ms.reviewer: arzinger
 ms.suite: ems
-ms.openlocfilehash: 005f698c19c99c31dfa0e660e489f8c402eb1bc6
-ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
+ms.openlocfilehash: fca262cde38ea35c431b12173b6395eed32abc54
+ms.sourcegitcommit: 261a8ed1a28089c3e40ba4aff43f287db5d9dd4a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2017
+ms.lasthandoff: 11/21/2017
 ---
 *Aplica-se a: Advanced Threat Analytics versão 1.8*
 
@@ -40,23 +40,25 @@ Este artigo descreve como recuperar rapidamente seu Centro de ATA e restaurar a 
     4. Faça o backup do arquivo de certificado exportado em um computador separado.
 
   > [!NOTE] 
-  > Se você não puder exportar a chave privada, você deve criar um novo certificado e implantá-lo no ATA, conforme descrito em [Alteração do certificado do Centro de ATA](modifying-ata-center-configuration#the-ata-center-certificate) e, em seguida, exportá-la. 
+  > Se você não puder exportar a chave privada, você deve criar um novo certificado e implantá-lo no ATA, conforme descrito em [Alteração do certificado do Centro de ATA](modifying-ata-center-configuration.md) e, em seguida, exportá-la. 
 
 ## <a name="recover-your-ata-center"></a>Recuperar seu Centro de ATA
 
 1. Crie uma nova máquina do Windows Server usando o mesmo nome de computador e o endereço IP da máquina anterior do Centro de ATA.
-4. Importe o certificado que você armazenou em backup anteriormente no novo servidor.
-5. Siga as instruções para [Implantar o Centro de ATA](install-ata-step1.md) no Windows Server recém-criado. Não é necessário implantar os Gateways do ATA novamente. Quando for solicitado um certificado, forneça o certificado exportado durante o backup da configuração do Centro de ATA. 
+2. Importe o certificado que você armazenou em backup anteriormente no novo servidor.
+3. Siga as instruções para [Implantar o Centro de ATA](install-ata-step1.md) no Windows Server recém-criado. Não é necessário implantar os Gateways do ATA novamente. Quando for solicitado um certificado, forneça o certificado exportado durante o backup da configuração do Centro de ATA. 
 ![Restauração do Centro de ATA](media/disaster-recovery-deploymentss.png)
-6. Importe a configuração do Centro de ATA armazenada em backup:
+4. Interrompa o serviço do Centro ATA.
+5. Importe a configuração do Centro de ATA armazenada em backup:
     1. Remova o documento padrão do Perfil do Sistema do Centro de ATA do MongoDB: 
         1. Acesse **C:\Arquivos de Programas\Microsoft Advanced Threat Analytics\Center\MongoDB\bin**. 
         2. Execute `mongo.exe ATA` 
-        3. Execute este comando para remover o perfil do sistema padrão: `db.SystemProfile.remove({})`
+        3. Inicie o serviço do Centro ATA.
+        4. Execute este comando para remover o perfil do sistema padrão: `db.SystemProfile.remove({})`
     2. Execute o comando: `mongoimport.exe --db ATA --collection SystemProfile --file "<SystemProfile.json backup file>" --upsert` usando o arquivo de backup da etapa 1.</br>
     Para obter uma explicação completa de como localizar e importar arquivos de backup, confira [Exportar e importar a configuração de ATA](ata-configuration-file.md). 
     3. Abra o Console do ATA. Você deverá ver todos os Gateways do ATA vinculados na guia Configuração/Gateways. 
-    5. Defina um [**Usuário de serviços de diretório**](install-ata-step2.md) e escolha um [**Sincronizador de controlador de domínio**](install-ata-step5.md). 
+    4. Defina um [**Usuário de serviços de diretório**](install-ata-step2.md) e escolha um [**Sincronizador de controlador de domínio**](install-ata-step5.md). 
 
 
 
