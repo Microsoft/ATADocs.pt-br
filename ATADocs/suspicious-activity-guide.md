@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 11/7/2017
+ms.date: 12/13/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 1fe5fd6f-1b79-4a25-8051-2f94ff6c71c1
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: bff477a66b837d82bb10a43a0dad7d36c6542d9f
-ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
+ms.openlocfilehash: b72b60aabb616f6ef5f1307d9d229ae1229681d2
+ms.sourcegitcommit: 2550ea51d36a7411d84ef19c5af25595289b02bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2017
+ms.lasthandoff: 12/13/2017
 ---
 *Aplica-se a: Advanced Threat Analytics versão 1.8*
 
@@ -292,6 +292,34 @@ As vulnerabilidades conhecidas em versões mais antigas do Windows Server permit
 **Remediação**
 
 Verifique se todos os controladores de domínio com sistemas operacionais até o Windows Server 2012 R2 estão instalados com o [KB3011780](https://support.microsoft.com/help/2496930/ms11-013-vulnerabilities-in-kerberos-could-allow-elevation-of-privilege) e todos os servidores membros e controladores de domínio até 2012 R2 estão atualizados com o KB2496930. Para obter mais informações, consulte [PAC Prata](https://technet.microsoft.com/library/security/ms11-013.aspx) e [PAC Forjado](https://technet.microsoft.com/library/security/ms14-068.aspx).
+
+## <a name="reconnaissance-using-account-enumeration"></a>Reconhecimento de enumeração de conta
+
+**Descrição**
+
+No reconhecimento de enumeração de conta, um invasor usa um dicionário com milhares de nomes de usuário ou ferramentas como KrbGuess para tentar adivinhar nomes de usuário em seu domínio. O invasor faz solicitações Kerberos usando esses nomes para tentar localizar um nome de usuário válido no domínio. Se uma estimativa com êxito determinar um nome de usuário, o invasor obterá o erro de Kerberos **Pré-autenticação necessária** em vez de **Entidade de segurança desconhecida**. 
+
+Nesta detecção, o ATA pode detectar de onde veio o ataque, o número total de tentativas de previsão e quantas foram correspondidos. Se houver muitos usuários desconhecidos, o ATA detectará como uma atividade suspeita. 
+
+**Investigação**
+
+1. Clique no alerta para ver sua página de detalhes. 
+
+2. Este computador host deve consultar o controlador de domínio quanto à existência de contas (por exemplo, os servidores Exchange)? <br></br>
+Há um script ou aplicativo em execução no host que pode gerar esse comportamento? <br></br>
+Se a resposta para qualquer uma dessas perguntas for Sim, **feche** a atividades suspeitas (é um falso positivo) e exclua o host da atividade suspeita.
+
+3. Baixe os detalhes do alerta em uma planilha do Excel para convenientemente ver a lista de tentativas de conta, dividido em contas existentes e não existentes. Se você observar a folha de contas não existentes na planilha e as contas parecerem familiares, elas poderão ser contas desabilitadas ou funcionários que saíram da empresa. Nesse caso, é improvável que a tentativa é proveniente de um dicionário. Provavelmente, é um aplicativo ou um script que está verificando as contas que ainda existem no Active Directory. Isso é um positivo verdadeiro benigno.
+
+3. Se os nomes forem muito desconhecidos, alguma das tentativas de estimativa corresponderá aos nomes de conta existentes no Active Directory? Se não houver nenhuma correspondência, a tentativa foi inútil, mas você deve prestar atenção ao alerta para ver se ele é atualizado ao longo do tempo.
+
+4. Se as tentativas de estimativa corresponderem aos nomes de conta existentes, você deverá considerar isso como um alerta de alta prioridade. O invasor sabe da existência de contas em seu ambiente e pode tentar usar força bruta para acessar seu domínio usando os nomes de usuário descobertos. Verifique os nomes de conta que foram adivinhados para ver se há atividades suspeitas adicionais. Verifique se todas as contas correspondentes são contas confidenciais.
+
+
+**Remediação**
+
+[Senhas complexas e longas](https://docs.microsoft.com/windows/device-security/security-policy-settings/password-policy) fornecem o primeiro nível necessário de segurança contra ataques de força bruta.
+
 
 ## <a name="reconnaissance-using-directory-services-queries"></a>Reconhecimento usando consultas de serviços de diretório
 
