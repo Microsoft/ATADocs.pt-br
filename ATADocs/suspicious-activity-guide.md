@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 12/13/2017
+ms.date: 12/17/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 1fe5fd6f-1b79-4a25-8051-2f94ff6c71c1
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: b72b60aabb616f6ef5f1307d9d229ae1229681d2
-ms.sourcegitcommit: 2550ea51d36a7411d84ef19c5af25595289b02bf
+ms.openlocfilehash: 0d951edf1037422c1ee52c8b1e35308665aad256
+ms.sourcegitcommit: 91158e5e63ce2021a1f5f85d47de03d963b7cb70
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2017
+ms.lasthandoff: 12/20/2017
 ---
 *Aplica-se a: Advanced Threat Analytics versão 1.8*
 
@@ -307,13 +307,13 @@ Nesta detecção, o ATA pode detectar de onde veio o ataque, o número total de 
 
 2. Este computador host deve consultar o controlador de domínio quanto à existência de contas (por exemplo, os servidores Exchange)? <br></br>
 Há um script ou aplicativo em execução no host que pode gerar esse comportamento? <br></br>
-Se a resposta para qualquer uma dessas perguntas for Sim, **feche** a atividades suspeitas (é um falso positivo) e exclua o host da atividade suspeita.
+Se a resposta para qualquer uma dessas perguntas for sim, **feche** as atividades suspeitas (é um positivo verdadeiro benigno) e exclua o host da atividade suspeita.
 
-3. Baixe os detalhes do alerta em uma planilha do Excel para convenientemente ver a lista de tentativas de conta, dividido em contas existentes e não existentes. Se você observar a folha de contas não existentes na planilha e as contas parecerem familiares, elas poderão ser contas desabilitadas ou funcionários que saíram da empresa. Nesse caso, é improvável que a tentativa é proveniente de um dicionário. Provavelmente, é um aplicativo ou um script que está verificando as contas que ainda existem no Active Directory. Isso é um positivo verdadeiro benigno.
+3. Baixe os detalhes do alerta em uma planilha do Excel para convenientemente ver a lista de tentativas de conta, dividido em contas existentes e não existentes. Se você observar a folha de contas não existentes na planilha e as contas parecerem familiares, elas poderão ser contas desabilitadas ou funcionários que saíram da empresa. Nesse caso, é improvável que a tentativa é proveniente de um dicionário. Provavelmente, é um aplicativo ou um script que está verificando quais contas que ainda existem no Active Directory, significando que é um positivo verdadeiro benigno.
 
 3. Se os nomes forem muito desconhecidos, alguma das tentativas de estimativa corresponderá aos nomes de conta existentes no Active Directory? Se não houver nenhuma correspondência, a tentativa foi inútil, mas você deve prestar atenção ao alerta para ver se ele é atualizado ao longo do tempo.
 
-4. Se as tentativas de estimativa corresponderem aos nomes de conta existentes, você deverá considerar isso como um alerta de alta prioridade. O invasor sabe da existência de contas em seu ambiente e pode tentar usar força bruta para acessar seu domínio usando os nomes de usuário descobertos. Verifique os nomes de conta que foram adivinhados para ver se há atividades suspeitas adicionais. Verifique se todas as contas correspondentes são contas confidenciais.
+4. Se qualquer uma das tentativas de suposição corresponder nomes de contas existentes, o invasor sabe da existência de contas em seu ambiente e pode tentar usar força bruta para acessar seu domínio usando os nomes de usuário descobertos. Verifique os nomes de conta que foram adivinhados para ver se há atividades suspeitas adicionais. Verifique se todas as contas correspondentes são contas confidenciais.
 
 
 **Remediação**
@@ -350,6 +350,9 @@ Nessa detecção, nenhum alerta será disparado no primeiro mês após a implant
 **Remediação**
 
 Use a [ferramenta SAMRi10](https://gallery.technet.microsoft.com/SAMRi10-Hardening-Remote-48d94b5b) para proteger seu ambiente contra essa técnica.
+Se a ferramenta não for aplicável ao seu DC:
+1. O computador está executando uma ferramenta de verificação de vulnerabilidade?  
+2. Investigue se os usuários e grupos específicos consultados no ataque são contas com privilégios ou alto valor (por exemplo, CEO, CFO, gerenciamento de TI, etc.).  Nesse caso, examine outras atividades no ponto de extremidade e monitore os computadores em que as contas consultadas são registradas, como eles são provavelmente destinos para a movimentação lateral.
 
 ## <a name="reconnaissance-using-dns"></a>Reconhecimento usando DNS
 
@@ -515,7 +518,7 @@ Corrija todos os seus computadores, especialmente aplicando as atualizações de
 - [Participar da comunidade de segurança](https://channel9.msdn.com/Shows/Microsoft-Security/Join-the-Security-Community)
 
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Consulte Também
 - [Manual da atividade suspeita do ATA](http://aka.ms/ataplaybook)
 - [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Trabalhando com atividades suspeitas](working-with-suspicious-activities.md)
