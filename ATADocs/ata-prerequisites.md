@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 11/14/2017
+ms.date: 12/20/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: a5f90544-1c70-4aff-8bf3-c59dd7abd687
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 29aef3eeddf6045d200f9b27809567f18a2fa2d0
-ms.sourcegitcommit: 4d9d1e089bbb50baceb87f273ddf2d3aaa9a78e8
+ms.openlocfilehash: d3f112c455fbf2bbab2137d158cbd31fe6e02f7e
+ms.sourcegitcommit: 5a02c6d497265e65633f96f5f8264a29a18a1114
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/14/2017
+ms.lasthandoff: 12/20/2017
 ---
 *Aplica-se a: Advanced Threat Analytics versão 1.8*
 
@@ -249,10 +249,15 @@ O Gateway Lightweight do ATA pode ser implantado em controladores de domínio de
 Para saber mais sobre os requisitos de hardware do Gateway Lightweight do ATA, confira [Planejamento de capacidade do ATA](ata-capacity-planning.md).
 
 ### <a name="time-synchronization"></a>Sincronização da hora
+
 O servidor do Centro do ATA, os servidores do Gateway Lightweight do ATA e os controladores de domínio devem ter a hora sincronizada no espaço de cinco minutos entre si.
+
 ### <a name="network-adapters"></a>Adaptadores de rede
+
 O Gateway Lightweight do ATA monitora o tráfego local em todos os adaptadores de rede do controlador de domínio. <br>
 Após a implantação, você pode usar o Console do ATA para modificar quais adaptadores de rede são monitorados.
+
+Não há suporte para o Gateway Lightweight em controles de domínio que executem o Windows 2008 R2 com o Broadcom Network Adapter Teaming habilitado.
 
 ### <a name="ports"></a>Portas
 A tabela abaixo lista o mínimo de portas que o Gateway Lightweight do ATA exige:
@@ -286,7 +291,7 @@ O acesso ao Console do ATA é por meio de um navegador, oferecendo suporte a def
 - [Como escolher o tipo certo de Gateway do ATA](https://channel9.msdn.com/Shows/Microsoft-Security/ATA-Deployment-Choose-the-Right-Gateway-Type)
 
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Consulte Também
 - [Ferramenta de dimensionamento do ATA](http://aka.ms/atasizingtool)
 - [Arquitetura do ATA](ata-architecture.md)
 - [Instalar o ATA](install-ata-step1.md)

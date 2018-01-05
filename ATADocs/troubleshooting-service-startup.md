@@ -1,11 +1,11 @@
 ---
-title: "Solução de problemas do Advanced Threat Analytics usando os logs | Microsoft Docs"
-description: "Descreve como você pode usar os logs do ATA para solucionar problemas"
+title: "Solução de problemas de inicialização de serviço do Advanced Threat Analytics | Microsoft Docs"
+description: "Descreve como é possível solucionar problemas de inicialização do ATA"
 keywords: 
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 11/7/2017
+ms.date: 12/20/2017
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,17 +13,19 @@ ms.technology:
 ms.assetid: 5a65285c-d1de-4025-9bb4-ef9c20b13cfa
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 125376b1e3530481a3b9f62c4661dd10dce13f22
-ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
+ms.openlocfilehash: 33ff11f592984b754521c562414ffeabd2d1f255
+ms.sourcegitcommit: 91158e5e63ce2021a1f5f85d47de03d963b7cb70
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2017
+ms.lasthandoff: 12/20/2017
 ---
 *Aplica-se a: Advanced Threat Analytics versão 1.8*
 
 
 
-# <a name="troubleshooting-ata-center-service-startup"></a>Solução de problemas de inicialização de serviço do Centro de ATA
+# <a name="troubleshooting-service-startup"></a>Solução de problemas de inicialização do serviço
+
+## <a name="troubleshooting-ata-center-service-startup"></a>Solução de problemas de inicialização de serviço do Centro de ATA
 
 Se seu Centro de ATA não for iniciado, execute o seguinte procedimento de solução de problemas:
 
@@ -42,9 +44,25 @@ Se puder iniciar, provavelmente a plataforma estará bem. Caso contrário, a pla
         logman start "Microsoft ATA Center"
         sc start ATACenter
 
+## <a name="troubleshooting-ata-lightweight-gateway-startup"></a>Solução de problemas de inicialização do Gateway Lightweight do ATA
+
+**Sintoma**
+
+Seu Gateway do ATA não inicia e você receberá esse erro:<br></br>
+*System.Net.Http.HttpRequestException: o código de status de resposta não indica êxito: 500 (erro interno do servidor)*
+
+**Descrição**
+
+Isso acontece porque, como parte do processo de instalação do Gateway Lightweight, o ATA aloca um limite de CPU que permite que o Gateway Lightweight use a CPU com um buffer de 15%. Se você tiver definido independentemente um limite usando a chave do Registro: esse conflito impedirá que o Gateway Lightweight seja iniciado. 
+
+**Resolução**
+
+1. Nas chaves de registro, se houver um valor DWORD chamado **Desabilitar os Contadores de Desempenho** certifique-se de que ele seja definido como **0**: `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\PerfOS\Performance\` `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\PerfProc\Performance`
+ 
+2. Em seguida, reinicie o serviço de PLA. O Gateway Lightweight do ATA automaticamente detectará a mudança e reiniciará o serviço.
 
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Consulte Também
 - [Pré-requisitos do ATA](ata-prerequisites.md)
 - [Planejamento da capacidade do ATA](ata-capacity-planning.md)
 - [Configurar coleta de eventos](configure-event-collection.md)
