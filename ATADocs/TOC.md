@@ -1,4 +1,4 @@
-# Compreensão e Exploração
+# Entender e explorar
 ## [O que é o Microsoft Advanced Threat Analytics?](what-is-ata.md)
 ## [Quais ameaças o ATA detecta?](ata-threats.md)
 ## Novidades no ATA?
@@ -58,3 +58,4 @@
 ## [Solução de problemas usando o banco de dados](troubleshooting-ata-using-ata-database.md)
 ## [Solução de problemas de inicialização do serviço](troubleshooting-service-startup.md)
 ## [Recuperação de desastres](disaster-recovery.md)
+# [Recursos](ata-resources.md)
