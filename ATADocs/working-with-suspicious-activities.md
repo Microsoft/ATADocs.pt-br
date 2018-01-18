@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 12/10/2017
+ms.date: 1/15/2018
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 44d7c899-816c-4f7f-91d3-84a09d291a24
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: c07d4ddc88651c0e74ee8b9f866e2d949ece5f27
-ms.sourcegitcommit: d41dcc40196a165026fd27db7bbd74d87b8fedda
+ms.openlocfilehash: 634341bf4ca15e077e3fd6424dd9fa8b8d74c301
+ms.sourcegitcommit: 55f7ac32bcd4ac8edb8b8b3b47993bf96b9acce2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2017
+ms.lasthandoff: 01/15/2018
 ---
 *Aplica-se a: Advanced Threat Analytics versão 1.8*
 
@@ -106,7 +106,7 @@ Para fazer isso, clique nos três pontos no canto superior direito de uma ativid
 - [Participar da comunidade de segurança](https://channel9.msdn.com/Shows/Microsoft-Security/Join-the-Security-Community)
 
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Consulte Também
 - [Manual da atividade suspeita do ATA](http://aka.ms/ataplaybook)
 - [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Modificando a configuração do ATA](modifying-ata-center-configuration.md)
