@@ -5,18 +5,18 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 11/7/2017
+ms.date: 2/1/2018
 ms.topic: get-started-article
 ms.service: advanced-threat-analytics
 ms.prod: 
 ms.assetid: 279d79f2-962c-4c6f-9702-29744a5d50e2
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: a0cc958cd7c802d02c96b6d7d3bc7e7180bd3d95
-ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
+ms.openlocfilehash: 76173dfa0b41195e641235f8792723fa7b038a68
+ms.sourcegitcommit: 7684a9942719a90444ab567ffe9b2ff86438c04b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2017
+ms.lasthandoff: 02/01/2018
 ---
 *Aplica-se a: Advanced Threat Analytics versão 1.8*
 
@@ -39,6 +39,9 @@ A maneira recomendada e mais simples para determinar a capacidade para sua impla
 
 ![Ferramenta de planejamento de capacidade de amostra](media/capacity tool.png)
 
+
+> [!NOTE]
+> Como diferentes ambientes variam e têm várias características de tráfego de rede especiais e inesperadas, depois de implantar o ATA e executar a ferramenta de dimensionamento, talvez seja necessário ajustar sua implantação de capacidade.
 
 
 Se, por alguma razão, você não puder usar a Ferramenta de Dimensionamento ATA, reúna manualmente as informações do contador de pacotes/segundos de todos os Controladores de Domínio por um período de 24 horas com um intervalo de coleta baixo (aproximadamente 5 segundos). Em seguida, para cada Controlador de Domínio, você deve calcular a média diária e a média do período mais ocupado (15 minutos).
@@ -216,7 +219,7 @@ Para determinar os pacotes por segundo, execute as etapas a seguir em cada contr
 - [Como escolher o tipo certo de Gateway do ATA](https://channel9.msdn.com/Shows/Microsoft-Security/ATA-Deployment-Choose-the-Right-Gateway-Type)
 
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Consulte Também
 - [Ferramenta de dimensionamento do ATA](http://aka.ms/atasizingtool)
 - [Pré-requisitos do ATA](ata-prerequisites.md)
 - [Arquitetura do ATA](ata-architecture.md)

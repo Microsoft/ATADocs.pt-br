@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 11/7/2017
+ms.date: 2/1/2018
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: b3cceb18-0f3c-42ac-8630-bdc6b310f1d6
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: f35c495193806f1c1ccc00800402d9b0aca36982
-ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
+ms.openlocfilehash: 7a5dd2c722244ec94ebf49555483ddd201b5ba54
+ms.sourcegitcommit: 7684a9942719a90444ab567ffe9b2ff86438c04b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2017
+ms.lasthandoff: 02/01/2018
 ---
 *Aplica-se a: Advanced Threat Analytics versão 1.8*
 
@@ -91,6 +91,10 @@ Como você está fazendo logon no site usando um endereço IP, você recebe um a
 1.  Verifique se o serviço chamado **Central do Microsoft Advanced Threat Analytics** está em execução.
 2.  Na área de trabalho, clique no atalho do **Microsoft Advanced Threat Analytics** para se conectar ao Console do ATA. Faça logon com as mesmas credenciais de usuário que você usou para instalar o Centro do ATA.
 
+### <a name="set-anti-virus-exclusions"></a>Definir as exclusões de antivírus
+
+Depois de instalar a Central do ATA, você deve excluir o diretório de banco de dados do MongoDB da análise contínua realizada pelo seu aplicativo de antivírus. A localização padrão no banco de dados é: **C:\Program Files\Microsoft Advanced Threat Analytics\Center\MongoDB\bin\data**.
+
 
 
 >[!div class="step-by-step"]
@@ -102,7 +106,7 @@ Como você está fazendo logon no site usando um endereço IP, você recebe um a
 - [Visão geral da implantação do ATA](https://channel9.msdn.com/Shows/Microsoft-Security/Overview-of-ATA-Deployment-in-10-Minutes)
 
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Consulte Também
 - [Guia de implantação da POC (prova de conceito) do ATA](http://aka.ms/atapoc)
 - [Ferramenta de dimensionamento do ATA](http://aka.ms/atasizingtool)
 - [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
