@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 2/21/2018
+ms.date: 3/3/2018
 ms.topic: get-started-article
 ms.prod: 
 ms.service: azure-advanced-threat-protection
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 9c173d28-a944-491a-92c1-9690eb06b151
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 47fa5ad5d6fb7800c7df4b878d16ec335e2b70e5
-ms.sourcegitcommit: 03e959b7ce4b6df421297e1872e028793c967302
+ms.openlocfilehash: f077bbd9990affbb6c552c5ad8875fdfebbd70f2
+ms.sourcegitcommit: 84556e94a3efdf20ca1ebf89a481550d7f8f0f69
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 03/08/2018
 ---
 *Aplica-se a: Proteção Avançada contra Ameaças do Azure*
 
@@ -29,7 +29,7 @@ Para seus Controladores de domínio se comunicarem com o serviço de nuvem, voc�
  
 1.  Confirme se o **usuário atual** tem acesso ao ponto de extremidade do processador usando o Internet Explorer, navegando até a seguinte URL do CD: https://triprd1wcuse1sensorapi.eastus.cloudapp.azure.com (nos EUA), você deve receber o erro 503:
 
- ![serviço indisponível](/media/service-unavailable.png)
+ ![serviço indisponível](./media/service-unavailable.png)
  
 2.  Se não receber um erro 503, examine a configuração de proxy e tente novamente.
 
@@ -39,11 +39,11 @@ Para seus Controladores de domínio se comunicarem com o serviço de nuvem, voc�
 
 Se você receber o erro "ERRO: O sistema não pôde localizar a chave do registro ou valor especificado." isso significa que nenhum proxy foi definido no nível do **LOCAL_SYSTEM**
  
- ![erro de sistema local do proxy](/media/proxy-local-system-error.png)
+ ![erro de sistema local do proxy](./media/proxy-local-system-error.png)
 
 Se o resultado for "Resultado comparado: diferente ", isso significa que o proxy foi definido para **LOCAL_SYSTEM**, mas não é o mesmo que o **CURRENT_USER**:
  
-  ![resultado de proxy comparado](/media/proxy-result-compared.png)
+  ![resultado de proxy comparado](./media/proxy-result-compared.png)
 
 5.  Se **LOCAL_SYSTEM** não tiver as configurações de proxy corretas (não configuradas ou diferentes de **CURRENT_USER**), talvez seja necessário copiar as configurações de proxy de **CURRENT_ USER** para **LOCAL_SYSTEM**. Não deixe de fazer backup da chave do registro antes de modificá-la:
 
