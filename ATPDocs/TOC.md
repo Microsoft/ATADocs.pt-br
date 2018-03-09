@@ -13,12 +13,13 @@
 ## [5 Configurar o sensor do Azure ATP](install-atp-step5.md)
 ## [6 Integração de VPN](install-atp-step6-vpn.md)
 ## [7 Contas de honeytoken e exclusões](install-atp-step7.md)
-### [8 Configurar as permissões necessárias do SAM-R](install-atp-step8-samr.md)
+## [8 Configurar as permissões necessárias do SAM-R](install-atp-step8-samr.md)
 ## [Instalação silenciosa](ATP-silent-installation.md)
 ## Etapas adicionais do sensor do Azure ATP
 ### [Configurar o espelhamento de porta](configure-port-mirroring.md)
+### [Validação do espelhamento de porta](validate-port-mirroring.md)
 ### [Configurar coleta de eventos](configure-event-collection.md)
-### [Configurar o encaminhamento de eventos do Windows](configure-event-forwarding.md)
+### [Configurar o Encaminhamento de Eventos do Windows](configure-event-forwarding.md)
 ### [Configurar o proxy para permitir a comunicação](configure-proxy.md)
 # Uso
 ## [Central de integridade do Azure ATP](atp-health-center.md)
@@ -39,3 +40,5 @@
 ## [Guia de atividade suspeita](suspicious-activity-guide.md)
 ## [Investigar caminhos de movimento lateral com o Azure ATP](use-case-lateral-movement-path.md)
 ## [Investigar entidades](entity-profiles.md)
+# Solução de problemas
+## [Solução de problemas conhecidos](troubleshooting-atp-known-issues.md)

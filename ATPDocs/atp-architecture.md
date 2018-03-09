@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 2/21/2018
+ms.date: 2/27/2018
 ms.topic: article
 ms.prod: 
 ms.service: azure-advanced-threat-protection
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 90f68f2c-d421-4339-8e49-1888b84416e6
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 09f82fa21bbaf61573b39fbe7a051db5c5e3b92a
-ms.sourcegitcommit: 03e959b7ce4b6df421297e1872e028793c967302
+ms.openlocfilehash: ffa58d4e6ca24773f7168dd94ad0596878eaf151
+ms.sourcegitcommit: 21d8f9abf909fc5f0e0da03cd100fa8fb950baa4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 02/27/2018
 ---
 *Aplica-se a: Proteção Avançada contra Ameaças do Azure*
 
@@ -71,6 +71,9 @@ O portal de gerenciamento de espaço de trabalho do Azure ATP permite:
 -   Integrar a outros serviços de segurança da Microsoft
 
 Definir seu espaço de trabalho principal como **Primário**. Somente um espaço de trabalho pode ser definido como primário. Definir um espaço de trabalho como primário afeta as integrações – você só pode integrar o Azure ATP com o Windows Defender ATP para seu espaço de trabalho primário. Você pode alterar qual espaço de trabalho é primário posteriormente, mas, para fazer isso, você precisará remover as integrações já definidas para o espaço de trabalho primário atual.
+
+> [!NOTE]
+> Atualmente, a ATP do Azure rem suporte para criação de dois espaços de trabalho. Recomendamos criar um espaço de trabalho principal para o ambiente de produção e um espaço de trabalho adicional como um ambiente de preparo.
 
 ### <a name="azure-atp-workspace-portal"></a>Portal de espaço de trabalho do Azure ATP
 

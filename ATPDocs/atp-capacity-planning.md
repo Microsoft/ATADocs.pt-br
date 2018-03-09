@@ -5,18 +5,18 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 2/21/2018
+ms.date: 3/3/2018
 ms.topic: get-started-article
 ms.service: azure-advanced-threat-protection
 ms.prod: 
 ms.assetid: da0ee438-35f8-4097-b3a1-1354ad59eb32
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 3939cba25f262991b000dbdd09bdfbf78f5102e7
-ms.sourcegitcommit: 03e959b7ce4b6df421297e1872e028793c967302
+ms.openlocfilehash: 0191ca50a5ea6328cc50ada6d9231ccb73da5c21
+ms.sourcegitcommit: 84556e94a3efdf20ca1ebf89a481550d7f8f0f69
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 03/08/2018
 ---
 *Aplica-se a: Proteção Avançada contra Ameaças do Azure*
 
@@ -40,7 +40,7 @@ A maneira recomendada e mais simples de determinar a capacidade de sua implanta�
 Se, por alguma razão, você não puder usar a Ferramenta de dimensionamento do Azure ATP, reúna manualmente as informações do contador de pacotes/s de todos os Controladores de domínio por 24 horas com um intervalo de coleta baixo (aproximadamente 5 segundos). Em seguida, para cada Controlador de Domínio, você deve calcular a média diária e a média do período mais ocupado (15 minutos).
 As seções a seguir apresentam instruções sobre como coletar o contador de pacotes/segundo de um Controlador de Domínio.
 
-## <a name="choosing-the-right-sensor-type-for-your-deployment"></a>Escolhendo o tipo certo de sensor para sua implantação
+## Escolher o tipo certo de sensor para a implantação<a name="choosing-the right-sensor-type-for-your-deployment"></a>
 Em uma implantação do Azure ATP, qualquer combinação dos tipos de sensor autônomo do Azure ATP tem suporte:
 
 - Somente sensores autônomos do Azure ATP
@@ -82,7 +82,7 @@ Um sensor do Azure ATA pode dar suporte ao monitoramento de um controlador de do
 |75k - 100k|3.50 |9.50|
 
 > [!NOTE]
-> - Número total de núcleos não hyper-threaded que esse controlador de domínio tem instalados.<br>Embora o hyper-threading seja aceitável para o sensor do Azure ATP, ao planejar a capacidade, você deve contar os núcleos reais e não os núcleos hyper-threaded.
+> - Número total de núcleos que esse controlador de domínio instalou.<br>Recomendamos não trabalhar com núcleos hyper-threaded.
 > - Quantidade total de memória que esse controlador de domínio tem instalada.
 > -   Se o controlador de domínio não tiver os recursos exigidos pelo sensor do Azure ATP, o desempenho do controlador de domínio não será afetado, mas o sensor do Azure ATP poderá não operar conforme o esperado.
 > -   Durante a execução como uma memória dinâmica da máquina virtual ou qualquer outra memória, não há suporte para o recurso de inchamento.
