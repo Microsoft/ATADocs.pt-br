@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 2/20/2018
+ms.date: 2/27/2018
 ms.topic: article
 ms.prod: 
 ms.service: azure-advanced-threat-protection
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 6a9b5273-eb26-414e-9cdd-f64406e24ed8
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: c37b46f66715a34145b6123a9278fbc53d4f0d15
-ms.sourcegitcommit: 03e959b7ce4b6df421297e1872e028793c967302
+ms.openlocfilehash: 6a6a34b9a2aae0e507fe18872a31368cf3f3e9d0
+ms.sourcegitcommit: 21d8f9abf909fc5f0e0da03cd100fa8fb950baa4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 02/27/2018
 ---
 *Aplica-se a: Proteção Avançada contra Ameaças do Azure*
 
@@ -27,7 +27,7 @@ Este artigo fornece uma lista de perguntas frequentes sobre o Azure ATP e també
 
 ## <a name="where-can-i-get-a-license-for-azure-advanced-threat-protection-atp"></a>Onde posso obter uma licença do Azure ATP (Proteção Avançada contra Ameaças)?
 
-Se você tiver adquirido uma licença do EMS 5 (Enterprise Mobility + Security 5) diretamente pelo portal do Office 365 ou pelo modelo de licenciamento CSP (Parceiro de Solução de Nuvem) e não tiver acesso ao Azure ATP pelo VLSC (Centro de Licenciamento por Volume da Microsoft), entre em contato com o Atendimento ao Cliente Microsoft para obter o processo para ativar o Azure ATP (Proteção Avançada contra Ameaças).
+Se você adquirir uma licença do EMS E5 (Enterprise Mobility + Security 5) diretamente no portal do Office 365 ou pelo modelo de licenciamento do CSP (Provedor de Soluções na Nuvem da Microsoft) e não tiver acesso à ATP do Azure por meio do Centro de Serviços de Licenciamento por Volume da Microsoft (VLSC), contate o Serviço de Suporte e Atendimento ao Cliente Microsoft a fim de obter o processo para ativar a ATP (Proteção Avançada contra Ameaças) do Azure.
 
 ## <a name="what-should-i-do-if-the-azure-atp-sensor-or-standalone-sensor-doesnt-start"></a>O que devo fazer se o sensor ou o sensor autônomo do Azure ATP não for iniciado?
 Procure o erro mais recente no log de erros atual (onde o Azure ATP está instalado, na pasta "Logs").
