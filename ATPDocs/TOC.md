@@ -1,6 +1,7 @@
-# Entenda e explore – Versão prévia!
+# Entender e explorar
 ## [O que é o Azure Advanced Threat Protection?](what-is-atp.md)
 ## [Perguntas frequentes](atp-technical-faq.md)
+## [Novidades sobre o Azure ATP](atp-whats-new.md)
 # Plano e design
 ## [Pré-requisitos do Azure ATP](atp-prerequisites.md)
 ## [Arquitetura do Azure ATP](atp-architecture.md)
@@ -19,7 +20,7 @@
 ### [Configurar o espelhamento de porta](configure-port-mirroring.md)
 ### [Validação do espelhamento de porta](validate-port-mirroring.md)
 ### [Configurar coleta de eventos](configure-event-collection.md)
-### [Configurar o Encaminhamento de Eventos do Windows](configure-event-forwarding.md)
+### [Configurar o encaminhamento de eventos do Windows](configure-event-forwarding.md)
 ### [Configurar o proxy para permitir a comunicação](configure-proxy.md)
 # Uso
 ## [Central de integridade do Azure ATP](atp-health-center.md)
