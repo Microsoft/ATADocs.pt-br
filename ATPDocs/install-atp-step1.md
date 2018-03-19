@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 2/21/2018
+ms.date: 3/11/2018
 ms.topic: get-started-article
 ms.prod: 
 ms.service: azure-advanced-threat-protection
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 15ee7d0b-9a0c-46b9-bc71-98d0b4619ed0
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: aa5f1af43a77d37ba8635fba10628d1720174393
-ms.sourcegitcommit: 03e959b7ce4b6df421297e1872e028793c967302
+ms.openlocfilehash: 5eabf4fc3965e8745b7e2c0fbae4973deb358814
+ms.sourcegitcommit: 912e453753156902618ae6ebb8489c2320c06fc6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 03/12/2018
 ---
 *Aplica-se a: Proteção Avançada contra Ameaças do Azure*
 
@@ -29,7 +29,10 @@ ms.lasthandoff: 02/21/2018
 
 Este procedimento de instalação fornece instruções para criar e gerenciar um espaço de trabalho no portal de gerenciamento do espaço de trabalho do Azure ATP. Para obter informações sobre a arquitetura do Azure ATP, consulte [Arquitetura do Azure ATP](atp-architecture.md).
 
-No Azure ATP, você pode gerenciar e monitorar vários espaços de trabalho. Isso é especialmente útil se você quiser criar um espaço de trabalho de demonstração e um espaço de trabalho de teste no qual pode fazer a prova de conceito do Azure ATP antes de disponibilizá-lo para toda a organização. Isso também é necessário para dar suporte a implantações com várias florestas. Um único espaço de trabalho só pode monitorar vários domínios de uma única floresta.
+No Azure ATP, você pode gerenciar e monitorar vários espaços de trabalho. Isso é especialmente útil se você quiser criar um espaço de trabalho de demonstração e um espaço de trabalho de teste no qual pode fazer a prova de conceito do Azure ATP antes de disponibilizá-lo para toda a organização. Isso também é necessário para dar suporte a implantações com várias florestas. Um único espaço de trabalho só pode monitorar vários domínios de uma única floresta. 
+
+> [!NOTE]
+> Você pode ter um máximo de dois espaços de trabalho ativos. Depois de excluir um espaço de trabalho, você pode entrar em contato com o suporte para reativá-lo. Você pode ter um máximo de três espaços de trabalho excluídos. Para aumentar o número de espaços de trabalho salvos e excluídos, entre em contato com o suporte do Azure ATP.
 
 ## <a name="step-1-enter-the-workspace-management-portal"></a>Etapa 1. Entrar no portal de gerenciamento do espaço de trabalho
 
