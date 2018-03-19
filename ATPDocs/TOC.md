@@ -43,3 +43,4 @@
 ## [Investigar entidades](entity-profiles.md)
 # Solução de problemas
 ## [Solução de problemas conhecidos](troubleshooting-atp-known-issues.md)
+## [Suporte e informações](atp-support.md)
