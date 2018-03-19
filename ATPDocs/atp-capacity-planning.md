@@ -5,18 +5,18 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 3/3/2018
+ms.date: 3/11/2018
 ms.topic: get-started-article
 ms.service: azure-advanced-threat-protection
 ms.prod: 
 ms.assetid: da0ee438-35f8-4097-b3a1-1354ad59eb32
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 0191ca50a5ea6328cc50ada6d9231ccb73da5c21
-ms.sourcegitcommit: 84556e94a3efdf20ca1ebf89a481550d7f8f0f69
+ms.openlocfilehash: 577b7a5105e8de773f57b1e00bc1c9cb51096799
+ms.sourcegitcommit: 912e453753156902618ae6ebb8489c2320c06fc6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 03/12/2018
 ---
 *Aplica-se a: Proteção Avançada contra Ameaças do Azure*
 
@@ -68,8 +68,9 @@ Considerações de espelhamento de porta podem exigir que você implante vários
 
 ## Sensor do Azure ATP e dimensionamento de sensor autônomo <a name="sizing"></a>
 
-Um sensor do Azure ATA pode dar suporte ao monitoramento de um controlador de domínio com base na quantidade de tráfego de rede gerado pelo controlador de domínio. A tabela a seguir é uma estimativa, o valor final que o sensor analisa depende da quantidade de tráfego que você tem. 
-
+Um sensor do Azure ATA pode dar suporte ao monitoramento de um controlador de domínio com base na quantidade de tráfego de rede gerado pelo controlador de domínio. A tabela a seguir é uma estimativa, o valor final que o sensor analisa depende da quantidade de tráfego que você tem e da distribuição desse tráfego. 
+> [!NOTE]
+> A capacidade de CPU e memória a seguir se refere ao consumo do próprio sensor – e não à capacidade do controlador de domínio.
 
 |Pacotes por segundo*|CPU (núcleos)|Memória (GB)|
 |----|----|-----|
@@ -82,12 +83,12 @@ Um sensor do Azure ATA pode dar suporte ao monitoramento de um controlador de do
 |75k - 100k|3.50 |9.50|
 
 > [!NOTE]
-> - Número total de núcleos que esse controlador de domínio instalou.<br>Recomendamos não trabalhar com núcleos hyper-threaded.
-> - Quantidade total de memória que esse controlador de domínio tem instalada.
+> - Número total de núcleos a serem usados pelo serviço de sensor.<br>Recomendamos não trabalhar com núcleos hyper-threaded.
+> - Número total de memória a ser usada pelo serviço de sensor.
 > -   Se o controlador de domínio não tiver os recursos exigidos pelo sensor do Azure ATP, o desempenho do controlador de domínio não será afetado, mas o sensor do Azure ATP poderá não operar conforme o esperado.
 > -   Durante a execução como uma memória dinâmica da máquina virtual ou qualquer outra memória, não há suporte para o recurso de inchamento.
 > -   Para ter um melhor desempenho, defina a **Opção de Energia** do sensor do Azure ATP como **Alto Desempenho**.
-> -   É necessário um mínimo de 2 núcleos e 6 GB de espaço, e 10 GB são recomendados, incluindo o espaço necessário para os binários do Azure ATP.
+> -   É necessário um mínimo de dois núcleos e 6 GB de espaço, e 10 GB são recomendados, incluindo o espaço necessário para os binários e logs do Azure ATP.
 
 
 ## <a name="domain-controller-traffic-estimation"></a>Estimativa de tráfego do controlador de domínio

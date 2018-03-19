@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 2/27/2018
+ms.date: 3/13/2018
 ms.topic: article
 ms.prod: 
 ms.service: azure-advanced-threat-protection
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 6a9b5273-eb26-414e-9cdd-f64406e24ed8
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 6a6a34b9a2aae0e507fe18872a31368cf3f3e9d0
-ms.sourcegitcommit: 21d8f9abf909fc5f0e0da03cd100fa8fb950baa4
+ms.openlocfilehash: d7f7f4841c40fb78dc06bae1c06e3c57d2e7f7ee
+ms.sourcegitcommit: c77e378d18e654bea4b4af4f24cc941a6659ce99
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/15/2018
 ---
 *Aplica-se a: Proteção Avançada contra Ameaças do Azure*
 
@@ -27,7 +27,7 @@ Este artigo fornece uma lista de perguntas frequentes sobre o Azure ATP e també
 
 ## <a name="where-can-i-get-a-license-for-azure-advanced-threat-protection-atp"></a>Onde posso obter uma licença do Azure ATP (Proteção Avançada contra Ameaças)?
 
-Se você adquirir uma licença do EMS E5 (Enterprise Mobility + Security 5) diretamente no portal do Office 365 ou pelo modelo de licenciamento do CSP (Provedor de Soluções na Nuvem da Microsoft) e não tiver acesso à ATP do Azure por meio do Centro de Serviços de Licenciamento por Volume da Microsoft (VLSC), contate o Serviço de Suporte e Atendimento ao Cliente Microsoft a fim de obter o processo para ativar a ATP (Proteção Avançada contra Ameaças) do Azure.
+Você pode adquirir uma licença do Enterprise Mobility + Security 5 (EMS E5) diretamente por meio do [Portal do Office 365](https://www.microsoft.com/cloud-platform/enterprise-mobility-security-pricing) ou do modelo de licenciamento do Parceiro de Soluções na Nuvem (CSP).                  
 
 ## <a name="what-should-i-do-if-the-azure-atp-sensor-or-standalone-sensor-doesnt-start"></a>O que devo fazer se o sensor ou o sensor autônomo do Azure ATP não for iniciado?
 Procure o erro mais recente no log de erros atual (onde o Azure ATP está instalado, na pasta "Logs").

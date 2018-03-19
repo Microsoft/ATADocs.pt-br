@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 2/21/2017
+ms.date: 3/11/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: azure-advanced-threat-protection
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 24eca4c6-c949-42ea-97b9-41ef0fb611f1
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 862420fb6914dbf9ee57c36bc21103cc7dddf7af
-ms.sourcegitcommit: 03e959b7ce4b6df421297e1872e028793c967302
+ms.openlocfilehash: f27020f1b4a5fa7aa8fefbda28eac0c2ad6c64d0
+ms.sourcegitcommit: 912e453753156902618ae6ebb8489c2320c06fc6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 03/12/2018
 ---
 *Aplica-se a: Proteção Avançada contra Ameaças do Azure*
 
@@ -31,7 +31,10 @@ O Azure ATP requer a instalação do Microsoft .NET Framework 4.7.
 
 Quando você instala o Azure ATP, o .Net Framework 4.7 é instalado automaticamente como parte da implantação do Azure ATP.
 
-> [!Note] 
+> [!IMPORTANT] 
+> Verifique se a versão instalada do .Net Framework é a mais recente. Se uma versão anterior do .Net estiver instalada, a instalação silenciosa do Azure ATP ficará presa em um loop e não será realizada. 
+
+> [!NOTE] 
 > A instalação do .Net Framework 4.7 pode exigir a reinicialização do servidor. Ao instalar o sensor do Azure ATP em Controladores de domínio, considere agendar uma janela de manutenção para esses Controladores de domínio.
 Ao usar o método de instalação silenciosa do Azure ATP, o instalador é configurado para reiniciar automaticamente o servidor no final da instalação (se necessário). Devido a um bug do Windows Installer, o sinalizador *norestart* não pode ser usado de forma confiável para garantir que o servidor não seja reiniciado, portanto, execute a instalação silenciosa somente durante uma janela de manutenção.
 

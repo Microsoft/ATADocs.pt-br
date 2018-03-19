@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 2/27/2018
+ms.date: 3/11/2018
 ms.topic: article
 ms.prod: 
 ms.service: azure-advanced-threat-protection
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 90f68f2c-d421-4339-8e49-1888b84416e6
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: ffa58d4e6ca24773f7168dd94ad0596878eaf151
-ms.sourcegitcommit: 21d8f9abf909fc5f0e0da03cd100fa8fb950baa4
+ms.openlocfilehash: 640974bbeb0ff147b21da24d6ad6df2f54e9ab4d
+ms.sourcegitcommit: 912e453753156902618ae6ebb8489c2320c06fc6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 *Aplica-se a: Proteção Avançada contra Ameaças do Azure*
 
@@ -74,6 +74,8 @@ Definir seu espaço de trabalho principal como **Primário**. Somente um espaço
 
 > [!NOTE]
 > Atualmente, a ATP do Azure rem suporte para criação de dois espaços de trabalho. Recomendamos criar um espaço de trabalho principal para o ambiente de produção e um espaço de trabalho adicional como um ambiente de preparo.
+> Depois de excluir um espaço de trabalho, você pode entrar em contato com o suporte para reativá-lo. Você pode ter um máximo de três espaços de trabalho excluídos. Para aumentar o número de espaços de trabalho salvos e excluídos, entre em contato com o suporte do Azure ATP.
+
 
 ### <a name="azure-atp-workspace-portal"></a>Portal de espaço de trabalho do Azure ATP
 
@@ -119,6 +121,8 @@ O **sensor do Azure ATP** e o **sensor autônomo do Azure ATP** têm a mesma fun
 -   Transferir dados relevantes para o serviço de nuvem do Azure ATP
 
 -   Monitorar vários controladores de domínio de um único sensor autônomo do Azure ATP ou monitorar um único controlador de domínio para um sensor do Azure ATP.
+
+O Azure ATP é compatível com até 100 sensores. Caso deseje instalar mais, entre em contato com o suporte do Azure ATP.
 
 O sensor autônomo do Azure ATP recebe o tráfego de rede espelhado e os eventos do Windows da sua rede e processa-os nos seguintes componentes principais:
 
