@@ -2,6 +2,8 @@
 ## [O que é o Microsoft Advanced Threat Analytics?](what-is-ata.md)
 ## [Quais ameaças o ATA detecta?](ata-threats.md)
 ## Novidades no ATA?
+### [Novidades na versão 1.9 do ATA](whats-new-version-1.9.md)
+#### [Atualização para o ATA 1.9 — guia de migração](ata-update-1.9-migration-guide.md)
 ### [Novidades na versão 1.8 do ATA](whats-new-version-1.8.md)
 #### [Atualização para o ATA 1.8 — guia de migração](ata-update-1.8-migration-guide.md)
 ### [Novidades na versão 1.7 do ATA](whats-new-version-1.7.md)
@@ -26,6 +28,7 @@
 ## [6 Coleta de eventos](install-ata-step6.md)
 ## [7 Integração ao VPN](vpn-integration-install-step.md)
 ## [8 Exclusão e Honeytoken](install-ata-step7.md)
+## [9 Configurar SAM-R](install-ata-step9-samr.md)
 ## [Instalação silenciosa](ata-silent-installation.md)
 ## Etapas adicionais do Gateway do ATA
 ### [1. Configurar o espelhamento de porta](configure-port-mirroring.md)
@@ -42,9 +45,12 @@
 ## [Exportar/importar configuração do ATA](ata-configuration-file.md)
 ## [Gerenciar telemetria do ATA](manage-telemetry-settings.md)
 ## [Definir notificações do ATA](setting-ata-alerts.md)
-## [Definir as configurações de servidor Syslog e Email](setting-syslog-email-server-settings.md)
+## [Definir as configurações de servidor de email e syslog](setting-syslog-email-server-settings.md)
+## [Marcar contas confidenciais](tag-sensitive-accounts.md)
 ## [Trabalhando com atividades suspeitas](working-with-suspicious-activities.md)
 ## [Trabalhando com o Console do ATA](working-with-ata-console.md)
+### [Perfis de entidade](entity-profiles.md)
+##[Evitando caminhos de movimentação lateral](use-case-lateral-movement-path.md)
 ## Informações de referência de ATA
 ### [Referência de log do SIEM do ATA](cef-format-sa.md)
 ### [Referência de ID do evento](event-id-reference.md)
