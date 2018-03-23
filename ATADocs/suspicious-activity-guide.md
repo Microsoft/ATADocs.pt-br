@@ -1,25 +1,25 @@
 ---
 title: Guia de atividades suspeitas do ATA | Microsoft Docs
 d|Description: This article provides a list of the suspicious activities ATA can detect and steps for remediation.
-keywords: 
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 12/17/2017
+ms.date: 3/21/2018
 ms.topic: get-started-article
-ms.prod: 
+ms.prod: ''
 ms.service: advanced-threat-analytics
-ms.technology: 
+ms.technology: ''
 ms.assetid: 1fe5fd6f-1b79-4a25-8051-2f94ff6c71c1
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 0d951edf1037422c1ee52c8b1e35308665aad256
-ms.sourcegitcommit: 91158e5e63ce2021a1f5f85d47de03d963b7cb70
+ms.openlocfilehash: d76c34b115bd38bdb1eb82fbff1c0857b0ad8dfa
+ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 03/22/2018
 ---
-*Aplica-se a: Advanced Threat Analytics versão 1.8*
+*Aplica-se a: Advanced Threat Analytics versão 1.9*
 
 
 # <a name="advanced-threat-analytics-suspicious-activity-guide"></a>Guia de atividades suspeitas Advanced Threat Analytics
@@ -63,6 +63,8 @@ Configure o [Privileged Access Management para Active Directory](https://docs.mi
 
 ## <a name="broken-trust-between-computers-and-domain"></a>Confiança quebrada entre domínio e computadores
 
+> ![NOTE] Esta atividade suspeita foi preterida e só aparece nas versões do ATA anteriores à 1.9.
+
 **Descrição**
 
 Confiança quebrada significa que os requisitos de segurança do Active Directory podem não estar em vigor para os computadores em questão. Isso é geralmente considerado uma falha de conformidade e segurança de linha de base e um alvo fácil para os invasores. Nessa detecção, um alerta será acionado se mais de 5 falhas de autenticação Kerberos forem vistas de uma conta de computador em 24 horas.
@@ -76,6 +78,7 @@ O computador em questão está permitindo que os usuários de domínio façam lo
 
 Ingresse novamente o computador no domínio se necessário ou redefina a senha do computador.
 
+
 ## <a name="brute-force-attack-using-ldap-simple-bind"></a>Ataque de força bruta usando associação simples LDAP
 
 **Descrição**
@@ -85,7 +88,7 @@ Ingresse novamente o computador no domínio se necessário ou redefina a senha d
 
 Em um ataque de força bruta, o invasor tenta autenticar com muitas senhas diferentes para diferentes contas até que uma senha correta seja encontrada para pelo menos uma conta. Uma vez encontrada, um invasor pode fazer logon usando essa conta.
 
-Nessa detecção, um alerta é disparado quando o ATA detecta que muitas senhas diferentes estão sendo usadas. Isso pode ser *horizontalmente* com um pequeno conjunto de senhas entre vários usuários; ou *verticalmente "* com um grande conjunto de senhas em apenas alguns usuários; ou qualquer combinação dessas duas opções.
+Nessa detecção, um alerta é disparado quando o ATA detecta um grande número de autenticações de associação simples. Isso pode ser *horizontalmente* com um pequeno conjunto de senhas entre vários usuários; ou *verticalmente "* com um grande conjunto de senhas em apenas alguns usuários; ou qualquer combinação dessas duas opções.
 
 **Investigação**
 
@@ -103,15 +106,15 @@ Nessa detecção, um alerta é disparado quando o ATA detecta que muitas senhas 
 
 **Descrição**
 
-Vários métodos de ataque utilizam criptografias Kerberos fracas. Nessa detecção, o ATA aprende os tipos de criptografia Kerberos usados por computadores e usuários e alerta você quando uma criptografia mais fraca é usada que: (1) seja incomum para o computador de origem e/ou o usuário; e (2) corresponda a técnicas de ataque conhecidas.
+O downgrade de criptografia é um método para enfraquecer o Kerberos fazendo um downgrade do nível de criptografia de diferentes campos do protocolo que geralmente são criptografados usando o nível mais elevado de criptografia. Um campo criptografado enfraquecido pode ser um alvo mais fácil para tentativas de força bruta offline. Vários métodos de ataque utilizam criptografias Kerberos fracas. Nessa detecção, o ATA aprende os tipos de criptografia Kerberos usados por computadores e usuários e alerta você quando uma criptografia mais fraca é usada que: (1) seja incomum para o computador de origem e/ou o usuário; e (2) corresponda a técnicas de ataque conhecidas.
 
 Há três tipos de detecção:
 
-1.  Skeleton Key – é um malware que é executado nos controladores de domínio e permite a autenticação no domínio com qualquer conta sem saber sua senha. Este malware geralmente usa algoritmos de criptografia mais fracos para codificação de senhas do usuário no controlador de domínio. Nesta detecção, o método de criptografia da mensagem KRB_ERR do computador de origem foi desatualizado em comparação com o comportamento aprendido anteriormente.
+1.  Skeleton Key – é um malware que é executado nos controladores de domínio e permite a autenticação no domínio com qualquer conta sem saber sua senha. Este malware geralmente usa algoritmos de criptografia mais fracos para fazer o hash das senhas do usuário no controlador de domínio. Nesta detecção, o método de criptografia da mensagem KRB_ERR do controlador de domínio para a conta, solicitando um tíquete, passou por um downgrade em comparação com o comportamento aprendido anteriormente.
 
 2.  Golden Ticket – em um alerta [Golden Ticket](#golden-ticket), o método de criptografia do campo TGT da mensagem TGS_REQ (solicitação de serviço) do computador de origem foi desatualizado em comparação com o comportamento aprendido anteriormente. Isso não tem base em uma anomalia de tempo (como na outra detecção Golden Ticket). Além disso, não houve nenhuma solicitação de autenticação Kerberos associada à solicitação de serviço anterior detectada pelo ATA.
 
-3.  Overpass-the-Hash – o tipo de criptografia de mensagem AS_REQ do computador de origem foi desatualizado em comparação com o comportamento aprendido anteriormente (ou seja, o computador estava usando AES).
+3.  Overpass-the-Hash – um invasor pode usar um hash roubado fraco para criar um tíquete forte com uma solicitação do Kerberos AS. Nesta detecção, o tipo de criptografia de mensagem AS_REQ do computador de origem passou por downgrade em comparação com o comportamento aprendido anteriormente (ou seja, o computador estava usando AES).
 
 **Investigação**
 
@@ -347,6 +350,8 @@ Nessa detecção, nenhum alerta será disparado no primeiro mês após a implant
 
  - Se a resposta para todas as perguntas acima for não, suponha que ele seja mal-intencionado.
 
+6. Se não houver informações sobre a conta envolvida, você poderá ir até o ponto de extremidade e verificar qual conta estava conectada no momento do alerta.
+
 **Remediação**
 
 Use a [ferramenta SAMRi10](https://gallery.technet.microsoft.com/SAMRi10-Hardening-Remote-48d94b5b) para proteger seu ambiente contra essa técnica.
@@ -428,6 +433,9 @@ Os invasores que comprometem credenciais de administrador ou que usam uma explor
 
 ## <a name="sensitive-account-credentials-exposed--services-exposing-account-credentials"></a>Credenciais de contas confidenciais expostas e serviços que expõem credenciais da conta
 
+> [!NOTE]
+> Essa atividade suspeita foi preterida e só aparece nas versões do ATA anteriores à 1.9. Para o ATA 1.9 e posterior, veja [Relatórios](reports.md).
+
 **Descrição**
 
 Alguns serviços enviam as credenciais de conta em texto sem formatação. Isso pode ocorrer até mesmo para contas confidenciais. Os invasores que monitoram o tráfego de rede podem capturar e reutilizar essas credenciais para fins mal-intencionados. Qualquer senha de texto não criptografada para uma conta confidencial dispara o alerta, enquanto para contas não confidenciais o alerta é disparado se cinco ou mais contas diferentes enviarem senhas em texto não criptografado no mesmo computador de origem. 
@@ -448,7 +456,7 @@ Verifique a configuração nos computadores de origem e certifique-se de não us
 
 Em um ataque de força bruta, o invasor tenta autenticar com muitas senhas diferentes para diferentes contas até que uma senha correta seja encontrada para pelo menos uma conta. Uma vez encontrada, um invasor pode fazer logon usando essa conta.
 
-Nessa detecção, um alerta é disparado quando diversas falhas de autenticação ocorrerem, isso pode ser horizontalmente com um pequeno conjunto de senhas entre vários usuários; ou verticalmente com um grande conjunto de senhas em apenas alguns usuários; ou qualquer combinação dessas duas opções.
+Nesta detecção, um alerta é disparado quando ocorrem diversas falhas de autenticação usando Kerberos ou NTLM. Isso pode acontecer horizontalmente com um pequeno conjunto de senhas entre vários usuários, verticalmente com um grande conjunto de senhas em apenas alguns usuários ou qualquer combinação dessas duas opções. O período mínimo antes que um alerta possa ser disparado é de uma semana.
 
 **Investigação**
 
@@ -461,6 +469,30 @@ Nessa detecção, um alerta é disparado quando diversas falhas de autenticaçã
 **Remediação**
 
 [Senhas complexas e longas](https://docs.microsoft.com/windows/device-security/security-policy-settings/password-policy) fornecem o primeiro nível necessário de segurança contra ataques de força bruta.
+
+## Criação de serviço suspeito <a name="suspicious-service-creation"></a>
+
+**Descrição**
+
+Os invasores tentam executar serviços suspeitos em sua rede. O ATA emite um alerta quando um novo serviço suspeito é criado em um controlador de domínio. Esse alerta baseia-se no evento 7045 e é detectado em cada controlador de domínio coberto por um Gateway do ATA ou por um Gateway Lightweight.
+
+**Investigação**
+
+1. Se o computador em questão for uma estação de trabalho administrativa ou um computador no qual membros da equipe de TI e contas de serviço executam tarefas administrativas, este pode ser um falso positivo e talvez você precise **Suprimir** o alerta e adicioná-lo à lista de Exclusões, se necessário.
+
+2. O serviço é algo que você reconhece neste computador?
+
+ - A **conta** em questão tem permissão para instalar esse serviço?
+
+ - Se a resposta para ambas as perguntas for *sim*, **Feche** o alerta ou adicione-o à lista de Exclusões.
+
+3. Se a resposta a uma das perguntas for *não*, então, isso deverá ser considerado um positivo verdadeiro.
+
+**Remediação**
+
+- Implemente o acesso com menos privilégios em computadores de domínio para permitir que apenas usuários específicos tenham o direito de criar novos serviços.
+
+
 
 ## <a name="suspicion-of-identity-theft-based-on-abnormal-behavior"></a>Suspeita de roubo de identidade com base no comportamento anormal
 
@@ -484,7 +516,7 @@ Dependendo do que fez com que esse comportamento ocorresse, diferentes ações d
 
 **Descrição**
 
-Os invasores usam ferramentas que implementam vários protocolos (SMB, Kerberos, NTLM) de maneiras não padrão. Embora esse tipo de tráfego de rede seja aceito pelo Windows sem avisos, o ATA é capaz de reconhecer possíveis mal-intencionados. O comportamento é uma indicação de técnicas como força bruta e de Over-Pass-the-Hash, bem como explorações usadas pelo ransomware avançado, por exemplo, WannaCry.
+Os invasores usam ferramentas que implementam vários protocolos (SMB, Kerberos, NTLM) de maneiras não padrão. Embora esse tipo de tráfego de rede seja aceito pelo Windows sem avisos, o ATA é capaz de reconhecer possíveis mal-intencionados. O comportamento é uma indicação de técnicas como Over-Pass-the-Hash, bem como explorações usadas por ransomware avançado, por exemplo, WannaCry.
 
 **Investigação**
 
@@ -513,6 +545,10 @@ Corrija todos os seus computadores, especialmente aplicando as atualizações de
 2. [Remover WannaCry](https://support.microsoft.com/help/890830/remove-specific-prevalent-malware-with-windows-malicious-software-remo)
 
 3. O WanaKiwi poderá descriptografar os dados nas mãos de algum ransoware, mas apenas se o usuário não tiver reiniciado ou desligado o computador. Para obter mais informações, consulte [Ransomware Wanna Cry](https://answers.microsoft.com/en-us/windows/forum/windows_10-security/wanna-cry-ransomware/5afdb045-8f36-4f55-a992-53398d21ed07?auth=1)
+
+
+>[!NOTE]
+> Para desabilitar uma atividade suspeita, contate o suporte.
 
 ## <a name="related-videos"></a>Vídeos Relacionados
 - [Participar da comunidade de segurança](https://channel9.msdn.com/Shows/Microsoft-Security/Join-the-Security-Community)

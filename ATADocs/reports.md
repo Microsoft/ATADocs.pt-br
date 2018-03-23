@@ -1,25 +1,25 @@
 ---
-title: "Trabalhando com relatórios do ATA | Microsoft Docs"
-description: "Descreve como você pode gerar relatórios no ATA para monitorar sua rede."
-keywords: 
+title: Trabalhando com relatórios do ATA | Microsoft Docs
+description: Descreve como você pode gerar relatórios no ATA para monitorar sua rede.
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 11/7/2017
+ms.date: 3/21/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: advanced-threat-analytics
-ms.technology: 
+ms.technology: ''
 ms.assetid: 38ea49b5-cd5e-43e5-bc39-5071f759633b
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: f97033ee685c10e9ee647e52c19cbd4ee1640b6f
-ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
+ms.openlocfilehash: b7f921bb2eb655a929eb19c849788c1bf9f64527
+ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2017
+ms.lasthandoff: 03/22/2018
 ---
-*Aplica-se a: Advanced Threat Analytics versão 1.8*
+*Aplica-se a: Advanced Threat Analytics versão 1.9*
 
 
 # <a name="ata-reports"></a>Relatórios do ATA
@@ -28,16 +28,23 @@ A seção de relatórios do ATA no console permite gerar relatórios que fornece
 
 Para acessar a página relatórios, clique no ícone de relatório na barra de menus: ![ícone de relatório](./media/ata-report-icon.png).
 Os relatórios disponíveis são: 
-- Relatório de resumo: o relatório de resumo apresenta um painel do status no sistema. Você pode exibir três guias, uma para um **Resumo** do que foi detectado na rede, **Open suspicious activities (Atividades suspeitas em aberto)** que lista as atividades suspeitas das quais você deve cuidar e **Open health issues (Problemas de integridade em aberto)** que lista os problemas de integridade do sistema do ATA dos quais você deve cuidar. As atividades suspeitas listadas são divididas por tipo, assim como os problemas de integridade. 
-- Modification to sensitive groups (Modificação para grupos confidenciais): este relatório lista toda vez que uma modificação é feita para grupos confidenciais (como administradores).
+
+- **Relatório de resumo**: o relatório de resumo apresenta um painel do status no sistema. Você pode exibir três guias, uma para um **Resumo** do que foi detectado na rede, **Open suspicious activities (Atividades suspeitas em aberto)** que lista as atividades suspeitas das quais você deve cuidar e **Open health issues (Problemas de integridade em aberto)** que lista os problemas de integridade do sistema do ATA dos quais você deve cuidar. As atividades suspeitas listadas são divididas por tipo, assim como os problemas de integridade. 
+
+- **Modificação de grupos confidenciais**: esse relatório lista todas as vezes que uma modificação é feita em grupos confidenciais (como no grupo de administradores).
+
+- **Senhas expostas em texto não criptografado**: alguns serviços usam o protocolo não seguro do LDAP para enviar credenciais de conta em texto sem formatação. Isso pode ocorrer até mesmo para contas confidenciais. Os invasores que monitoram o tráfego de rede podem capturar e reutilizar essas credenciais para fins mal-intencionados. Esse relatório lista todos os computadores de origem e as senhas de contas do ATA detectadas como tendo sido enviadas em texto não criptografado. 
+
+- **Caminhos de movimento lateral para contas confidenciais**: este relatório lista as contas confidenciais que estão expostas por meio de caminhos de movimentação lateral. Para obter mais informações, veja [Caminhos de movimento lateral](use-case-lateral-movement-path.md)
 
 Há duas maneiras de gerar um relatório: sob demanda ou agendando um relatório para ser enviado para seu email periodicamente.
 
 Para gerar um relatório sob demanda:
 
 1. Na barra de menus do console do ATA, clique no ícone de relatório na barra de menus: ![ícone de relatório](./media/ata-report-icon.png).
-2. Em **Resumo** ou **Modifications to sensitive groups (Modificações para grupos confidenciais)**, defina as datas **De** e **Até** e clique em **Baixar**. 
-![relatórios](./media/reports.png)
+
+2. Em seu tipo de relatório selecionado, defina as datas **De** e **Até** e clique em **Baixar**. 
+ ![relatórios](./media/reports.png)
 
 Para definir um relatório agendado:
  
@@ -45,13 +52,13 @@ Para definir um relatório agendado:
 
    ![Agendar relatórios](./media/ata-sched-reports.png)
 
-2. Clique em **Agendar** ao lado de **Resumo** ou **Modification to sensitive groups (Modificação para grupos confidenciais)** para definir a frequência e o endereço de email para a entrega dos relatórios, clique no sinal de adição ao lado dos endereços de email e adicione-os e clique em **Salvar**.
+2. Clique em **Agendar** ao lado do tipo de relatório selecionado para definir a frequência e o endereço de email para a entrega dos relatórios, clique no sinal de adição ao lado dos endereços de email para adicioná-los e clique em **Salvar**.
 
    ![Frequência e email do relatório agendado](./media/sched-report1.png)
 
 
 > [!NOTE]
-> Os relatórios agendados são entregues por email e podem ser enviados apenas se você já tiver configurado um servidor de email em **Configuração** e, em seguida, em Notifications e Reports (Notificações e Relatórios), selecione **Servidor de email**.
+> Os relatórios agendados são entregues por email e poderão ser enviados apenas se você já tiver configurado um servidor de email em **Configuração** e, em seguida, em **Notificações e Relatórios**, selecione **Servidor de email**.
 
 
 ## <a name="see-also"></a>Consulte Também

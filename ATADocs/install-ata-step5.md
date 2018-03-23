@@ -1,25 +1,25 @@
 ---
-title: "Instalação do Advanced Threat Analytics – Etapa 5 | Microsoft Docs"
-description: "A Etapa cinco da instalação do ATA ajuda você a definir as configurações de seu Gateway do ATA."
-keywords: 
+title: Instalação do Advanced Threat Analytics – Etapa 5 | Microsoft Docs
+description: A Etapa cinco da instalação do ATA ajuda você a definir as configurações de seu Gateway do ATA.
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 11/7/2017
+ms.date: 3/21/2018
 ms.topic: get-started-article
-ms.prod: 
+ms.prod: ''
 ms.service: advanced-threat-analytics
-ms.technology: 
+ms.technology: ''
 ms.assetid: 2a5b6652-2aef-464c-ac17-c7e5f12f920f
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 05af384d91e899c1c0bc50ec2da6147eb47adb82
-ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
+ms.openlocfilehash: d8a8f5df37422f98f6ea3357c672297395907a8d
+ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2017
+ms.lasthandoff: 03/22/2018
 ---
-*Aplica-se a: Advanced Threat Analytics versão 1.8*
+*Aplica-se a: Advanced Threat Analytics versão 1.9*
 
 
 
@@ -95,7 +95,7 @@ Para validar a implantação bem-sucedida do Gateway do ATA, verifique as seguin
 - [Como escolher o tipo certo de Gateway do ATA](https://channel9.msdn.com/Shows/Microsoft-Security/ATA-Deployment-Choose-the-Right-Gateway-Type)
 
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Consulte Também
 - [Guia de implantação da POC (prova de conceito) do ATA](http://aka.ms/atapoc)
 - [Ferramenta de dimensionamento do ATA](http://aka.ms/atasizingtool)
 - [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

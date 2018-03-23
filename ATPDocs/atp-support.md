@@ -1,23 +1,23 @@
 ---
 title: Suporte do Azure ATP | Microsoft Docs
 description: Descreve o processo a ser seguido para obter ajuda do suporte do Azure ATP.
-keywords: 
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 3/13/2018
+ms.date: 3/18/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: azure-advanced-threat-protection
-ms.technology: 
+ms.technology: ''
 ms.assetid: 8ae459ac-9fca-4923-9a1a-dc10d5c50b29
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 966d9e4e8e086b6f131d6fa33060d11073f82b4f
-ms.sourcegitcommit: c77e378d18e654bea4b4af4f24cc941a6659ce99
+ms.openlocfilehash: 58e3b0d04b196f0c49b6e146952c1819c8413ee3
+ms.sourcegitcommit: adfa7a3a3918518b6b14b94d3c0a9f899142196a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 03/19/2018
 ---
 *Aplica-se a: Proteção Avançada contra Ameaças do Azure*
 
@@ -58,6 +58,10 @@ Outros clientes devem usar estes canais de suporte:
 Para obter opções de suporte adicionais, fale com seu contato da Microsoft.
 
 ### <a name="self-help"></a>Autoajuda
+
+#### <a name="system-status-page"></a>Página Status do sistema 
+
+Para exibir o status do sistema para o Azure ATP, acesse a página [**Status do sistema**](https://health.atp.azure.com/). Essa página fornece informações sobre se o Portal de Gerenciamento do espaço de trabalho está funcionando e ativo, se há problemas com as detecções e se o sensor pode enviar tráfego para a nuvem. Você pode acessar o **Status do sistema** na barra de menus do Azure ATP.
 
 #### <a name="on-demand-videos"></a>Vídeos sob demanda
 

@@ -1,24 +1,24 @@
 ---
-title: "Planejamento da implantação do Advanced Threat Analytics | Microsoft Docs"
-description: "Ajuda você a planejar a implantação e decidir quantos servidores ATA serão necessários para oferecer suporte à sua rede"
-keywords: 
+title: Planejamento da implantação do Advanced Threat Analytics | Microsoft Docs
+description: Ajuda você a planejar a implantação e decidir quantos servidores ATA serão necessários para oferecer suporte à sua rede
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 2/1/2018
+ms.date: 3/21/2018
 ms.topic: get-started-article
 ms.service: advanced-threat-analytics
-ms.prod: 
+ms.prod: ''
 ms.assetid: 279d79f2-962c-4c6f-9702-29744a5d50e2
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 76173dfa0b41195e641235f8792723fa7b038a68
-ms.sourcegitcommit: 7684a9942719a90444ab567ffe9b2ff86438c04b
+ms.openlocfilehash: e58fe62fc655fed8f17ae800dda20e022e198a26
+ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 03/22/2018
 ---
-*Aplica-se a: Advanced Threat Analytics versão 1.8*
+*Aplica-se a: Advanced Threat Analytics versão 1.9*
 
 
 
@@ -28,7 +28,7 @@ Este artigo ajuda a determinar quantos servidores do ATA são necessários para 
 > [!NOTE] 
 > O ATA Center pode ser implantado em qualquer fornecedor de IaaS, desde que os requisitos de desempenho descritos neste artigo sejam atendidos.
 
-##<a name="using-the-sizing-tool"></a>Usando a ferramenta de dimensionamento
+## <a name="using-the-sizing-tool"></a>Usando a ferramenta de dimensionamento
 A maneira recomendada e mais simples para determinar a capacidade para sua implantação ATA é usar o [Ferramenta de Dimensionamento de ATA](http://aka.ms/atasizingtool). Execute a Ferramenta de Dimensionamento ATA e resultados de arquivo do Excel, use os campos a seguir para determinar a capacidade ATA que você precisa:
 
 - CPU e Memória do Centro do ATA: corresponda o campo **Pacotes Ocupado/s** na tabela do Centro do ATA no arquivo de resultados ao campo **PACOTES POR SEGUNDO** na [tabela do Centro do ATA](#ata-center-sizing).
@@ -47,6 +47,9 @@ A maneira recomendada e mais simples para determinar a capacidade para sua impla
 Se, por alguma razão, você não puder usar a Ferramenta de Dimensionamento ATA, reúna manualmente as informações do contador de pacotes/segundos de todos os Controladores de Domínio por um período de 24 horas com um intervalo de coleta baixo (aproximadamente 5 segundos). Em seguida, para cada Controlador de Domínio, você deve calcular a média diária e a média do período mais ocupado (15 minutos).
 As seções a seguir apresentam instruções sobre como coletar o contador de pacotes/segundo de um Controlador de Domínio.
 
+
+> [!NOTE]
+> Como diferentes ambientes variam e têm várias características de tráfego de rede especiais e inesperadas, depois de implantar o ATA e executar a ferramenta de dimensionamento, talvez seja necessário ajustar sua implantação de capacidade.
 
 
 ### <a name="ata-center-sizing"></a>Dimensionamento da Central de ATA
@@ -67,8 +70,7 @@ A Central de ATA requer um mínimo recomendado de 30 dias de dados para a análi
 &#42;&#42;Média dos números (Números de pico)
 > [!NOTE]
 > -   O Centro do ATA pode lidar com um máximo agregado de 1 milhão de pacotes por segundo de todos os controladores de domínio monitorados. Em alguns ambientes, o mesmo Centro do ATA pode lidar com o tráfego geral superior a 1 milhão. Entre em contato com askcesec@microsoft.com para obter assistência para esses ambientes.
-> -   A quantidade de armazenamento determinada aqui refere-se a valores líquidos. Você sempre deve levar em consideração o crescimento futuro e verificar se o disco no qual o banco de dados reside tem, pelo menos, 20% de espaço livre.
-> -   Se o espaço livre chegar a um mínimo de 20% ou 200 GB, o conjunto mais antigo de dados será excluído. A exclusão continuará a ocorrer até 5% ou 50 GB de espaço livre permaneça no ponto em que a coleta de dados deixará de funcionar.
+> -   Se o espaço livre chegar a um mínimo de 20% ou 200 GB, o conjunto mais antigo de dados será excluído. Se não for possível reduzir com êxito a coleta de dados a esse nível, um alerta será registrado.  O ATA continuará a funcionar até o limite de 5% ou 50 GB livres ser alcançado.  Nesse momento, o ATA deixará de popular o banco de dados e um alerta adicional será emitido.
 > - O ATA Center pode ser implantado em qualquer fornecedor de IaaS, desde que os requisitos de desempenho descritos neste artigo sejam atendidos.
 > -   A latência de armazenamento para a leitura e a gravação das atividades deve estar abaixo de 10 ms.
 > -   A taxa entre as atividades de leitura e gravação é de, aproximadamente, 1:3 abaixo de 100.000 pacotes por segundo e 1:6 acima de 100.000 pacotes por segundo.
@@ -163,56 +165,6 @@ As considerações de espelhamento de porta podem exigir que você implante vár
 > -   Para ter um melhor desempenho, defina a **Opção de Energia** do Gateway de ATA para **Alto Desempenho**.
 > -   É necessário um mínimo de 5 GB de espaço e é recomendável 10 GB de espaço, incluindo o espaço necessário para os binários do ATA, [logs do ATA](troubleshooting-ata-using-logs.md) e [logs de desempenho](troubleshooting-ata-using-perf-counters.md).
 
-
-## <a name="domain-controller-traffic-estimation"></a>Estimativa de tráfego do controlador de domínio
-Há várias ferramentas que você pode usar para descobrir a média de pacotes por segundo dos controladores de domínio. Se você não tiver as ferramentas que acompanham este contador, poderá usar o Monitor de Desempenho para coletar as informações necessárias.
-
-Para determinar os pacotes por segundo, execute as etapas a seguir em cada controlador de domínio:
-
-1.  Abra o Monitor de Desempenho.
-
-    ![Imagem do monitor de desempenho](media/ATA-traffic-estimation-1.png)
-
-2.  Expanda **Conjuntos de Coletores de Dados**.
-
-    ![Imagem dos conjuntos de coletores de dados](media/ATA-traffic-estimation-2.png)
-
-3.  Clique com botão direito do mouse em **Definido pelo Usuário** e selecione **Novo** &gt; **Conjunto de Coletores de Dados**.
-
-    ![Imagem do novo conjunto de coletores de dados](media/ATA-traffic-estimation-3.png)
-
-4.  Insira um nome para o conjunto de coletores e selecione **Criar Manualmente (Avançado)**.
-
-5.  Em **Que tipo de dados deseja incluir?**, selecione **Criar logs de dados e Contador de desempenho**.
-
-    ![Imagem do tipo de dados do novo conjunto de coletores de dados](media/ATA-traffic-estimation-5.png)
-
-6.  Em **Que contadores de desempenho deseja registrar em log?**, clique em **Adicionar**.
-
-7.  Expanda **Adaptador de Rede**, selecione **Pacotes/s** e escolha a instância apropriada. Se não tiver certeza, você poderá selecionar **&lt;Todas as instâncias&gt;** e clicar em **Adicionar** e **OK**.
-
-    > [!NOTE]
-    > Para executar essa operação em uma linha de comando, execute `ipconfig /all` para ver o nome do adaptador e a configuração.
-
-    ![Adicionar imagem dos contadores de desempenho](media/ATA-traffic-estimation-7.png)
-
-8.  Altere o **Intervalo de amostragem** para **1 segundo**.
-
-9. Defina o local onde você deseja que os dados sejam salvos.
-
-10. Em **Criar conjunto de coletores de dados**, selecione **Iniciar conjunto de coletores de dados agora** e clique em **Concluir**.
-
-    Agora, você deverá ver o conjunto de coletores de dados que criou com um triângulo verde, indicando que ele está funcionando.
-
-11. Após 24 horas, pare o conjunto de coletores de dados clicando com o botão direito do mouse no conjunto de coletores de dados e selecionando **Parar**.
-
-    ![Imagem ao parar o conjunto de coletores de dados](media/ATA-traffic-estimation-12.png)
-
-12. No Explorador de Arquivos, navegue até a pasta em que o arquivo .blg foi salvo e clique duas vezes nele para abri-lo no Monitor de Desempenho.
-
-13. Selecione o contador Pacotes/s e registre os valores médio e máximo.
-
-    ![Imagem do contador de pacotes por segundo](media/ATA-traffic-estimation-14.png)
 
 
 ## <a name="related-videos"></a>Vídeos Relacionados

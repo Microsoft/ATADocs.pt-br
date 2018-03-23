@@ -1,25 +1,25 @@
 ---
-title: "Pré-requisitos do Advanced Threat Analytics | Microsoft Docs"
-description: "Descreve os requisitos para uma implantação bem-sucedida do ATA em seu ambiente"
-keywords: 
+title: Pré-requisitos do Advanced Threat Analytics | Microsoft Docs
+description: Descreve os requisitos para uma implantação bem-sucedida do ATA em seu ambiente
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 2/1/2018
+ms.date: 3/21/2018
 ms.topic: get-started-article
-ms.prod: 
+ms.prod: ''
 ms.service: advanced-threat-analytics
-ms.technology: 
+ms.technology: ''
 ms.assetid: a5f90544-1c70-4aff-8bf3-c59dd7abd687
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: dd422a7feffcddc0f56b54b11d5dadb029457a8e
-ms.sourcegitcommit: 7684a9942719a90444ab567ffe9b2ff86438c04b
+ms.openlocfilehash: 419df4c4404bf26a85c1a955139d0dee6f50828e
+ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 03/22/2018
 ---
-*Aplica-se a: Advanced Threat Analytics versão 1.8*
+*Aplica-se a: Advanced Threat Analytics versão 1.9*
 
 
 
@@ -68,7 +68,12 @@ Esta seção lista as informações que você deve obter, as contas e entidades 
 ## <a name="ata-center-requirements"></a>Requisitos da Central de ATA
 Esta seção lista os requisitos para a Central de ATA.
 ### <a name="general"></a>Geral
-A Central de ATA dá suporte à instalação em um servidor executando o Windows Server 2012 R2 ou o Windows Server 2016. A Central de ATA pode ser instalada em um servidor que seja membro de um domínio ou grupo de trabalho.
+A Central de ATA dá suporte à instalação em um servidor executando o Windows Server 2012 R2 ou o Windows Server 2016. 
+
+ > [!NOTE]
+ > A Central do ATA não é compatível com o núcleo do Windows Server.
+
+A Central de ATA pode ser instalada em um servidor que seja membro de um domínio ou grupo de trabalho.
 
 Antes de instalar a Central do ATA executando o Windows 2012 R2, confirme se a seguinte atualização foi instalada: [KB2919355](https://support.microsoft.com/kb/2919355/).
 
@@ -83,7 +88,8 @@ Se você executar a Central de ATA como uma máquina virtual, deverá finalizar 
 
 ### <a name="server-specifications"></a>Especificações do servidor
 
-Ao trabalhar em um servidor físico, o banco de dados do ATA precisa que você **desabilite** o NUMA (acesso não uniforme a memória) no BIOS. O sistema pode referir-se ao NUMA como Nó de Intercalação, caso em que você precisará **habilitar** a Intercalação de Nó para desabilitar o NUMA. Para obter mais informações, confira a documentação do BIOS. <br>
+Ao trabalhar em um servidor físico, o banco de dados do ATA precisa que você **desabilite** o NUMA (acesso não uniforme a memória) no BIOS. O sistema pode referir-se ao NUMA como Nó de Intercalação, caso em que você precisará **habilitar** a Intercalação de Nó para desabilitar o NUMA. Para obter mais informações, confira a documentação do BIOS.<br>
+
 Para ter um melhor desempenho, defina a **Opção de Energia** do Centro do ATA como **Alto Desempenho**.<br>
 O número de controladores de domínio que você está monitorando e a carga em cada um dos controladores de domínio determina as especificações de servidor necessárias. Para obter mais informações, consulte [Planejamento de capacidade de ATA](ata-capacity-planning.md).
 
@@ -117,6 +123,7 @@ A tabela a seguir lista as portas mínimas que devem ser abertas para que a Cent
 |**Kerberos** (opcional se ingressado no domínio)|TCP e UDP|88|Controladores de domínio|Saída|
 |**Netlogon** (opcional se ingressado no domínio)|TCP e UDP|445|Controladores de domínio|Saída|
 |**Horário do Windows** (opcional se ingressado no domínio)|UDP|123|Controladores de domínio|Saída|
+|**Netlogon (SMB, CIFS, SAM-R)**|TCP e UDP|445|Gateways e dispositivos|Entrada e saída|
 
 > [!NOTE]
 > O LDAP é necessário para testar as credenciais serem usadas entre os Gateways do ATA e os controladores de domínio. Os testes executados do Centro do ATA para um controlador de domínio para testar a validade dessas credenciais, depois do qual o Gateway do ATA usa o LDAP como parte do processo de resolução normal.
@@ -147,7 +154,7 @@ Por exemplo, você pode usar os modelos padrão **servidor Web** ou **Computador
 ## <a name="ata-gateway-requirements"></a>Requisitos do Gateway do ATA
 Esta seção lista os requisitos para o Gateway do ATA.
 ### <a name="general"></a>Geral
-O Gateway do ATA dá suporte à instalação em um servidor executando o Windows Server 2012 R2 ou o Windows Server 2016 (Incluindo o Server Core).
+O Gateway do ATA permite instalação em um servidor executando o Windows Server 2012 R2 ou o Windows Server 2016 (incluindo o núcleo do servidor).
 O Gateway do ATA pode ser instalado em um servidor que seja membro de um domínio ou grupo de trabalho.
 O Gateway do ATA pode ser usado para monitorar Controladores de Domínio com o Nível de Domínio Funcional do Windows 2003 e posterior.
 

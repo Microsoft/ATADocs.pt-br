@@ -1,23 +1,23 @@
 ---
-title: "Instalar a Proteção Avançada contra Ameaças do Azure – etapa 1 | Microsoft Docs"
-description: "A primeira etapa para instalar o Azure ATP envolve a criação de um espaço de trabalho para sua implantação do Azure ATP."
-keywords: 
+title: Instalar a Proteção Avançada contra Ameaças do Azure – etapa 1 | Microsoft Docs
+description: A primeira etapa para instalar o Azure ATP envolve a criação de um espaço de trabalho para sua implantação do Azure ATP.
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 3/11/2018
+ms.date: 3/15/2018
 ms.topic: get-started-article
-ms.prod: 
+ms.prod: ''
 ms.service: azure-advanced-threat-protection
-ms.technology: 
+ms.technology: ''
 ms.assetid: 15ee7d0b-9a0c-46b9-bc71-98d0b4619ed0
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 5eabf4fc3965e8745b7e2c0fbae4973deb358814
-ms.sourcegitcommit: 912e453753156902618ae6ebb8489c2320c06fc6
+ms.openlocfilehash: 833e0bdf61ce25a8c56d820ad04981cd44321ac2
+ms.sourcegitcommit: f9d07a6b1f2193f0d2906092e252eb1d7398b493
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/16/2018
 ---
 *Aplica-se a: Proteção Avançada contra Ameaças do Azure*
 
@@ -44,7 +44,7 @@ Depois de confirmar que sua rede atende aos requisitos do sensor, você poderá 
 
 1.  Entre no [portal de espaço de trabalho do Azure ATP](https://portal.atp.azure.com).
 
-2.  Faça logon com sua conta de usuário do Azure Active Directory local que tenha pelo menos acesso de leitura a todos os objetos nos domínios monitorados.
+2.  Faça logon com sua conta de usuário do Azure Active Directory.
 
 ## <a name="step-2-create-a-workspace"></a>Etapa 2. Criar um espaço de trabalho
 

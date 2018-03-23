@@ -1,25 +1,25 @@
 ---
-title: "Instalação do Advanced Threat Analytics – Etapa 1 | Microsoft Docs"
-description: "A primeira etapa da instalação do ATA envolve baixar e instalar o Centro do ATA em seu servidor escolhido."
-keywords: 
+title: Instalação do Advanced Threat Analytics – Etapa 1 | Microsoft Docs
+description: A primeira etapa da instalação do ATA envolve baixar e instalar o Centro do ATA em seu servidor escolhido.
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 2/1/2018
+ms.date: 3/21/2018
 ms.topic: get-started-article
-ms.prod: 
+ms.prod: ''
 ms.service: advanced-threat-analytics
-ms.technology: 
+ms.technology: ''
 ms.assetid: b3cceb18-0f3c-42ac-8630-bdc6b310f1d6
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 7a5dd2c722244ec94ebf49555483ddd201b5ba54
-ms.sourcegitcommit: 7684a9942719a90444ab567ffe9b2ff86438c04b
+ms.openlocfilehash: 27a016fe71d08dd8e8852fc44d5dea142f914d9e
+ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 03/22/2018
 ---
-*Aplica-se a: Advanced Threat Analytics versão 1.8*
+*Aplica-se a: Advanced Threat Analytics versão 1.9*
 
 
 # <a name="install-ata---step-1"></a>Instalação do ATA - Etapa 1
@@ -27,7 +27,7 @@ ms.lasthandoff: 02/01/2018
 >[!div class="step-by-step"]
 [Etapa 2 »](install-ata-step2.md)
 
-O procedimento de instalação fornece instruções para executar uma nova instalação do ATA 1.8. Para saber mais sobre como atualizar uma implantação do ATA existente de uma versão anterior, confira [o guia de migração do ATA versão 1.8](ata-update-1.8-migration-guide.md).
+O procedimento de instalação fornece instruções para executar uma nova instalação do ATA 1.8. Para obter mais informações sobre como atualizar uma implantação existente do ATA de uma versão anterior, veja [o guia de migração do ATA para a versão 1.9](ata-update-1.9-migration-guide.md).
 
 > [!IMPORTANT] 
 > Se você estiver usando o Windows 2012 R2, instale o KB2934520 no servidor da Central do ATA e nos servidores do Gateway do ATA antes de começar a instalação, caso contrário a instalação do ATA instalar essa atualização e exigirá uma reinicialização no meio do processo.

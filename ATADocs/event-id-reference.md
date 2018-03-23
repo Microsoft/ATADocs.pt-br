@@ -1,25 +1,25 @@
 ---
-title: "Referência de ID de evento ATA | Microsoft Docs"
-description: "Fornece uma lista de IDs de eventos ATA e as respectivas descrições."
-keywords: 
+title: Referência de ID de evento ATA | Microsoft Docs
+description: Fornece uma lista de IDs de eventos ATA e as respectivas descrições.
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 11/6/2017
+ms.date: 3/21/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: advanced-threat-analytics
-ms.technology: 
+ms.technology: ''
 ms.assetid: 5d639e84-2e37-43a9-9667-49be6c4fa8b7
 ms.reviewer: arzinger
 ms.suite: ems
-ms.openlocfilehash: 07be2dad511158a9234c99287f7eefd7cc12ba83
-ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
+ms.openlocfilehash: e9147f4333f481eaec4967dd32846bd123866941
+ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2017
+ms.lasthandoff: 03/22/2018
 ---
-*Aplica-se a: Advanced Threat Analytics versão 1.8*
+*Aplica-se a: Advanced Threat Analytics versão 1.9*
 
 
 # <a name="ata-event-id-reference"></a>Referência de ID do evento ATA
@@ -84,8 +84,6 @@ Os eventos podem ser encontrados aqui:
 
 2004 – Atividade suspeita de força bruta de LDAP 
 
-2005 – Atividade suspeita de falha na pré-autenticação do computador 
-
 2006 – Atividade suspeita de replicação de serviços de diretório 
 
 2007 – Atividade suspeita de reconhecimento de DNS 
@@ -97,8 +95,6 @@ Os eventos podem ser encontrados aqui:
 2013 – Atividade suspeita de PAC forjado 
 
 2014 – Atividade suspeita de atividade de Honeytoken 
-
-2015 – Atividade suspeita de senha de texto não criptografado de LDAP 
 
 2016 – Atividade suspeita de exclusão de objeto grande 
 
@@ -135,7 +131,7 @@ Os eventos podem ser encontrados aqui:
 3007 – Alteração manual ao status da atividade suspeita 
 
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Consulte Também
 - [Pré-requisitos do ATA](ata-prerequisites.md)
 - [Planejamento da capacidade do ATA](ata-capacity-planning.md)
 - [Configurar coleta de eventos](configure-event-collection.md)

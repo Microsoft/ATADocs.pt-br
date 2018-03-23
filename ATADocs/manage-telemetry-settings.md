@@ -1,25 +1,25 @@
 ---
-title: "Gerenciamento das configurações de telemetria do Advanced Threat Analytics | Microsoft Docs"
+title: Gerenciamento das configurações de telemetria do Advanced Threat Analytics | Microsoft Docs
 description: Descreve os dados coletados pelo ATA e fornece etapas para desativar a coleta de dados.
-keywords: 
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 11/7/2017
+ms.date: 3/21/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: advanced-threat-analytics
-ms.technology: 
+ms.technology: ''
 ms.assetid: 8c1c7a1b-a3de-4105-9fd0-08a061952172
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 2f5db3fad62b0fe2243b5bbd82677426ee6fe90c
-ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
+ms.openlocfilehash: 98d377dd7e09636d1866d461a981cdcf1cf8aea7
+ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2017
+ms.lasthandoff: 03/22/2018
 ---
-*Aplica-se a: Advanced Threat Analytics versão 1.8*
+*Aplica-se a: Advanced Threat Analytics versão 1.9*
 
 
 

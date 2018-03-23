@@ -1,25 +1,25 @@
 ---
-title: "Alteração da configuração do Advanced Threat Analytics – senha de conectividade do domínio | Microsoft Docs"
-description: "Descreve como alterar a Senha de conectividade do domínio no Gateway do ATA."
-keywords: 
+title: Alteração da configuração do Advanced Threat Analytics – senha de conectividade do domínio | Microsoft Docs
+description: Descreve como alterar a Senha de conectividade do domínio no Gateway do ATA.
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 11/7/2017
+ms.date: 3/21/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: advanced-threat-analytics
-ms.technology: 
+ms.technology: ''
 ms.assetid: 4a25561b-a5ed-44aa-9b72-366976b3c72a
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 652d3a9e20737d26e8776035690a180f6bd84593
-ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
+ms.openlocfilehash: 47bd7e9cdd97d8343202be86954e82e69948afed
+ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2017
+ms.lasthandoff: 03/22/2018
 ---
-*Aplica-se a: Advanced Threat Analytics versão 1.8*
+*Aplica-se a: Advanced Threat Analytics versão 1.9*
 
 
 
@@ -54,6 +54,6 @@ Para corrigir isso, siga este procedimento e atualize a Senha de conectividade d
 
 
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Consulte Também
 - [Trabalhando com o Console do ATA](working-with-ata-console.md)
 - [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
