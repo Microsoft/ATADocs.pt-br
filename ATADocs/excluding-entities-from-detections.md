@@ -1,25 +1,25 @@
 ---
-title: "Excluindo entidades de detecção no Advanced Threat Analytics | Microsoft Docs"
-description: "Descreve como impedir que o ATA detecte atividades de entidade específicas como suspeitas"
-keywords: 
+title: Excluindo entidades de detecção no Advanced Threat Analytics | Microsoft Docs
+description: Descreve como impedir que o ATA detecte atividades de entidade específicas como suspeitas
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 11/7/2017
+ms.date: 3/21/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: advanced-threat-analytics
-ms.technology: 
+ms.technology: ''
 ms.assetid: 344c0f33-45e1-42e2-a051-f722a4504531
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: f9fce36074b5c31e35f95f028b856b18fa3bae0b
-ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
+ms.openlocfilehash: 21b1d8a4537bb77de120dac4b2f15bc785161749
+ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2017
+ms.lasthandoff: 03/22/2018
 ---
-*Aplica-se a: Advanced Threat Analytics versão 1.8*
+*Aplica-se a: Advanced Threat Analytics versão 1.9*
 
 
 

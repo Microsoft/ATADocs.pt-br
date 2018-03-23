@@ -1,24 +1,24 @@
 ---
-title: "Versões do Advanced Threat Analytics | Microsoft Docs"
-description: "Explica as diferentes opções para versões do Microsoft Advanced Threat Analytics (ATA)."
+title: Versões do Advanced Threat Analytics | Microsoft Docs
+description: Explica as diferentes opções para versões do Microsoft Advanced Threat Analytics (ATA).
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 11/7/2017
+ms.date: 3/21/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: advanced-threat-analytics
-ms.technology: 
+ms.technology: ''
 ms.assetid: a8afbd91-c888-4dfc-94ab-72e38745163e
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: f77f8ef71765dc71d690876d4043e1b3702b9971
-ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
+ms.openlocfilehash: 88ccd0e1667805d96ddd69145c4c85475ed6a2fc
+ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2017
+ms.lasthandoff: 03/22/2018
 ---
-*Aplica-se a: Advanced Threat Analytics versão 1.8*
+*Aplica-se a: Advanced Threat Analytics versão 1.9*
 
 # <a name="support-for-microsoft-advanced-threat-analytics-ata-versions"></a>Suporte para versões do Microsoft Advanced Threat Analytics (ATA)
 
@@ -49,5 +49,5 @@ A Microsoft pretende lançar atualizações do ATA algumas vezes por ano, com ca
 
 
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Consulte Também
 [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

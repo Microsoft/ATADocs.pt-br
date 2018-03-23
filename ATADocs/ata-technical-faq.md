@@ -1,25 +1,25 @@
 ---
 title: Perguntas frequentes sobre o Advanced Threat Analytics | Microsoft Docs
 description: Fornece uma lista de perguntas frequentes sobre o ATA e as respostas associadas.
-keywords: 
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 12/10/2017
+ms.date: 3/21/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: advanced-threat-analytics
-ms.technology: 
+ms.technology: ''
 ms.assetid: a7d378ec-68ed-4a7b-a0db-f5e439c3e852
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: da225af4578d4673040315f8814b9067a46517ce
-ms.sourcegitcommit: d41dcc40196a165026fd27db7bbd74d87b8fedda
+ms.openlocfilehash: 5fe0e6f0d8c75c099aa6623cd0f5245c955d9ffa
+ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2017
+ms.lasthandoff: 03/22/2018
 ---
-*Aplica-se a: Advanced Threat Analytics versão 1.8*
+*Aplica-se a: Advanced Threat Analytics versão 1.9*
 
 # <a name="ata-frequently-asked-questions"></a>Perguntas frequentes sobre o ATA
 Este artigo fornece uma lista de perguntas frequentes sobre o ATA e também as respostas e outras informações.
@@ -83,7 +83,9 @@ Para cada dia inteiro com uma média de 1000 pacotes/s, você precisa de 0.3 GB 
 ## <a name="why-are-certain-accounts-considered-sensitive"></a>Por que certas contas são consideradas confidenciais?
 Isso ocorre quando uma conta é membro de determinados grupos que podemos chamar de confidenciais (por exemplo: "Administradores do Domínio").
 
-Para entender por que uma conta é confidencial, você pode examinar sua associação de grupo para entender a quais grupos confidenciais ela pertence (o grupo ao qual ela pertence também pode ser confidencial devido a outro grupo, portanto, o mesmo processo deve ser executado até que você localize o grupo confidencial de nível mais alto).
+Para entender por que uma conta é confidencial, você pode examinar sua associação de grupo para entender a quais grupos confidenciais ela pertence (o grupo ao qual ela pertence também pode ser confidencial devido a outro grupo, portanto, o mesmo processo deve ser executado até que você localize o grupo confidencial de nível mais alto). 
+
+Além disso, você pode marcar manualmente um usuário, um grupo ou um computador como confidencial. Para obter mais informações, veja [Marcar contas confidenciais](tag-sensitive-accounts.md).
 
 ## <a name="how-do-i-monitor-a-virtual-domain-controller-using-ata"></a>Como monitorar o controlador de domínio virtual usando o ATA?
 A maioria dos controladores de domínio virtuais pode ser abrangida pelo Gateway Lightweight do ATA. Para determinar se o Gateway Lightweight do ATA é apropriado para seu ambiente, confira [Planejamento de capacidade do ATA](ata-capacity-planning.md).
@@ -151,7 +153,7 @@ O Microsoft Advanced Threat Analytics oferece suporte a ambientes com vários do
 Sim, é possível exibir a integridade geral da implantação, bem como os problemas específicos relacionados à configuração, conectividade, etc., e você recebe um alerta quando ocorrerem.
 
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Consulte Também
 - [Pré-requisitos do ATA](ata-prerequisites.md)
 - [Planejamento da capacidade do ATA](ata-capacity-planning.md)
 - [Configurar coleta de eventos](configure-event-collection.md)

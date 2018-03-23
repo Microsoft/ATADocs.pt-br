@@ -1,28 +1,36 @@
 ---
 title: Novidades do Azure ATP | Microsoft Docs
-description: "Descreve as versões mais recentes do Azure ATP e fornece informações sobre as novidades de cada versão."
-keywords: 
+description: Descreve as versões mais recentes do Azure ATP e fornece informações sobre as novidades de cada versão.
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 3/11/2018
+ms.date: 3/18/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: azure-advanced-threat-protection
-ms.technology: 
+ms.technology: ''
 ms.assetid: 7d0f33db-2513-4146-a395-290e001f4199
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 4a81d84a46b9710c2376bbc50f699966a24138db
-ms.sourcegitcommit: 912e453753156902618ae6ebb8489c2320c06fc6
+ms.openlocfilehash: 6b3c9ddd1873b3139009a44e9c1f7a85ea3b6901
+ms.sourcegitcommit: adfa7a3a3918518b6b14b94d3c0a9f899142196a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/19/2018
 ---
 *Aplica-se a: Proteção Avançada contra Ameaças do Azure*
 
 
 # <a name="whats-new-in-azure-atp"></a>Novidades do Azure ATP 
+
+## <a name="azure-atp-release-225"></a>Azure ATP versão 2.25
+
+Lançada em 18 de março de 2018
+
+- Agora há compatibilidade com a MFA (Autenticação Multifator) no Azure ATP. Os locatários usando MFA agora podem entrar no portal do Azure ATP.
+- O Azure ATP agora tem uma página [**Status do sistema**](https://health.atp.azure.com/) para fornecer informações sobre se o Portal de Gerenciamento do espaço de trabalho está funcionando e ativo, se há problemas com as detecções e se o sensor pode enviar tráfego para a nuvem. Você pode acessar o **Status do sistema** na barra de menus do Azure ATP.
+
 
 ## <a name="azure-atp-release-224"></a>Versão 2.24 do Azure ATP
 

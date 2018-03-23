@@ -1,25 +1,25 @@
 ---
-title: "Noções básicas sobre o console do Advanced Threat Analytics | Microsoft Docs"
+title: Noções básicas sobre o console do Advanced Threat Analytics | Microsoft Docs
 description: Descreve como entrar no Console do ATA e os componentes do console
-keywords: 
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 11/6/2017
+ms.date: 3/21/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: advanced-threat-analytics
-ms.technology: 
+ms.technology: ''
 ms.assetid: 1bf264d9-9697-44b5-9533-e1c498da4f07
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 26c093c4163593611b175f4f0002f443e593f952
-ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
+ms.openlocfilehash: 2ecffce7d692a9f1ecea8d8c5220ce3b2dbf848e
+ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2017
+ms.lasthandoff: 03/22/2018
 ---
-*Aplica-se a: Advanced Threat Analytics versão 1.8*
+*Aplica-se a: Advanced Threat Analytics versão 1.9*
 
 
 
@@ -77,6 +77,10 @@ Quando uma nova atividade suspeita for detectada, a barra de notificação abrir
 
 ![Imagem da barra de notificação de ATA](media/notification-bar-1.7.png)
 
+### <a name="whats-new"></a>Novidades
+
+Após uma nova versão do ATA ser lançada, a janela **Novidades** será exibida na parte superior direita para que você saiba o que foi adicionado na versão mais recente. Ela também fornece um link para o download da versão.
+
 ### <a name="filtering-panel"></a>Painel de filtro
 
 Você pode filtrar quais atividades suspeitas são exibidas na linha do tempo de ataque ou exibidas na guia de atividades suspeitas de perfil de entidade com base no Status e na Severidade.
@@ -94,23 +98,6 @@ O Centro de integridade fornece alertas quando algo não está funcionando corre
 ![Imagem do Centro de integridade do ATA](media/ATA-Health-Issue.jpg)
 
 Sempre que o sistema encontrar um problema, como um erro de conectividade ou um Gateway de ATA desconectado, o ícone da Central de integridade te avisa exibindo um ponto vermelho. ![Imagem do ponto vermelho do Centro de integridade de ATA](media/ATA-Health-Center-Alert-red-dot.png)
-
-### <a name="user-and-computer-profiles"></a>Perfis de usuário e computador
-
-O ATA cria um perfil para cada usuário e computador na rede. No perfil de usuário, o ATA exibe informações gerais, como associação de grupo, logons recentes e recursos acessados recentemente. Ele também fornece uma lista de locais em que o usuário conectou por meio de VPN. Para obter uma lista de associações de grupo que o ATA considera confidenciais, confira a lista abaixo.
-
-![Perfil de usuário](media/user-profile.png)
-
-No perfil de computador, o ATA exibe informações gerais, como logons recentes e recursos acessados recentemente.
-
-![Perfil de computador](media/computer-profile.png)
-
-O ATA fornece informações adicionais sobre as entidades (computadores, dispositivos, usuários) nas seguintes páginas: resumo, atividades e atividades suspeitas.
-
-Um perfil que o ATA não tenha sido capaz de resolver completamente é identificado por um ícone de círculo preenchido pela metade ao lado dele.
-
-
-![Imagem de perfil não resolvido do ATA](media/ATA-Unresolved-Profile.jpg)
 
 ### <a name="sensitive-groups"></a>Grupos confidenciais
 
@@ -154,5 +141,5 @@ Se você passar o mouse sobre a entidade, em qualquer lugar no console onde exis
 
 
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Consulte Também
 [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

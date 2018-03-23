@@ -1,25 +1,25 @@
 ---
-title: "Instalação do Advanced Threat Analytics – Etapa 3 | Microsoft Docs"
-description: "A etapa três da instalação do ATA ajuda você a baixar o pacote de instalação do Gateway do ATA."
-keywords: 
+title: Instalação do Advanced Threat Analytics – Etapa 3 | Microsoft Docs
+description: A etapa três da instalação do ATA ajuda você a baixar o pacote de instalação do Gateway do ATA.
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 11/7/2017
+ms.date: 3/21/2018
 ms.topic: get-started-article
-ms.prod: 
+ms.prod: ''
 ms.service: advanced-threat-analytics
-ms.technology: 
+ms.technology: ''
 ms.assetid: 7fb024e6-297a-4ad9-b962-481bb75a0ba3
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: ab80ec5b172311e955a25fed677c40cee1e95269
-ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
+ms.openlocfilehash: 879d0e0617f74da2a6098c8d0dedc80b9a713674
+ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2017
+ms.lasthandoff: 03/22/2018
 ---
-*Aplica-se a: Advanced Threat Analytics versão 1.8*
+*Aplica-se a: Advanced Threat Analytics versão 1.9*
 
 
 
@@ -60,7 +60,7 @@ O arquivo zip inclui os seguintes arquivos:
 - [Visão geral da implantação do ATA](https://channel9.msdn.com/Shows/Microsoft-Security/Overview-of-ATA-Deployment-in-10-Minutes)
 - [Como escolher o tipo certo de Gateway do ATA](https://channel9.msdn.com/Shows/Microsoft-Security/ATA-Deployment-Choose-the-Right-Gateway-Type)
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Consulte Também
 - [Guia de implantação da POC (prova de conceito) do ATA](http://aka.ms/atapoc)
 - [Ferramenta de dimensionamento do ATA](http://aka.ms/atasizingtool)
 - [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

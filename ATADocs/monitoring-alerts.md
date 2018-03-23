@@ -1,28 +1,28 @@
 ---
 title: Entendendo os alertas de monitoramento do ATA | Microsoft Docs
-description: "Descreve como você pode usar os logs do ATA para solucionar problemas"
-keywords: 
+description: Descreve como você pode usar os logs do ATA para solucionar problemas
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 11/7/2017
+ms.date: 3/21/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: advanced-threat-analytics
-ms.technology: 
+ms.technology: ''
 ms.assetid: b04fb8a4-b366-4b55-9d4c-6f054fa58a90
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 0d3b57e852a18bf9602d3a75ab627c23496f7285
-ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
+ms.openlocfilehash: 6506ecf445641e9789cb1817916089f5463ba289
+ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2017
+ms.lasthandoff: 03/22/2018
 ---
-*Aplica-se a: Advanced Threat Analytics versão 1.8*
+*Aplica-se a: Advanced Threat Analytics versão 1.9*
 
 
-
+# <a name="understanding-ata-monitoring-alerts"></a>Entendendo os alertas de monitoramento do ATA
 O Centro de Integridade do ATA permite saber quando há um problema com a implantação do ATA gerando um alerta de monitoramento.
 Este artigo descreve todos os alertas de monitoramento para cada componente, listando a causa e as etapas necessárias para resolver o problema.
 ## <a name="ata-center-issues"></a>Problemas do Centro do ATA
@@ -118,7 +118,7 @@ Este artigo descreve todos os alertas de monitoramento para cada componente, lis
 |O Gateway Lightweight do ATA interrompeu seu funcionamento e reiniciará automaticamente para proteger o controlador de domínio de uma condição de memória insuficiente.|O Gateway Lightweight do ATA impõe limitações de memória em si mesmo para impedir que o controlador de domínio tenha limitações de recursos. Isso ocorre quando o uso de memória no controlador de domínio é alto. Os dados do controlador de domínio são apenas parcialmente monitorados.|Aumente a quantidade de memória (RAM) no controlador de domínio ou adicione mais controladores de domínio a esse site para melhor distribuir o carregamento deste controlador de domínio.|Média|
 
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Consulte Também
 - [Pré-requisitos do ATA](ata-prerequisites.md)
 - [Planejamento da capacidade do ATA](ata-capacity-planning.md)
 - [Configurar coleta de eventos](configure-event-collection.md)

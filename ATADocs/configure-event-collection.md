@@ -1,25 +1,25 @@
 ---
 title: Configurar o Encaminhamento de Eventos do Windows no Advanced Threat Analytics | Microsoft Docs
-description: "Descreve suas opções para configurar o Encaminhamento de Eventos do Windows com o ATA"
-keywords: 
+description: Descreve suas opções para configurar o Encaminhamento de Eventos do Windows com o ATA
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 11/7/2017
+ms.date: 3/21/2018
 ms.topic: get-started-article
-ms.prod: 
+ms.prod: ''
 ms.service: advanced-threat-analytics
-ms.technology: 
+ms.technology: ''
 ms.assetid: 3f0498f9-061d-40e6-ae07-98b8dcad9b20
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 482b16462d115c7bcc2854d30c2ef19fce37f2c0
-ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
+ms.openlocfilehash: 2c8f67d0c8d9020eb0e7ae16e8410db473ace044
+ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2017
+ms.lasthandoff: 03/22/2018
 ---
-*Aplica-se a: Advanced Threat Analytics versão 1.8*
+*Aplica-se a: Advanced Threat Analytics versão 1.9*
 
 
 
@@ -29,7 +29,7 @@ ms.lasthandoff: 11/07/2017
 > Para as versões 1.8 e mais recentes do ATA, a configuração de coleta de eventos não é mais necessária para Gateways Lightweight do ATA. O Gateway Lightweight do ATA poderá ler eventos localmente, sem a necessidade de configurar o encaminhamento de eventos.
 
 
-Para aprimorar os recursos de detecção, o ATA precisa dos seguintes eventos do Windows: 4776, 4732, 4733, 4728, 4729, 4756, 4757. Eles podem ser lidos automaticamente pelo Gateway Lightweight do ATA ou no caso de o Gateway Lightweight do ATA não estar implantado, podem ser encaminhados para o Gateway do ATA de duas maneiras: configurando o Gateway do ATA para escutar os eventos do SIEM ou configurando o Encaminhamento de Eventos do Windows.
+Para aprimorar as funcionalidades de detecção, o ATA precisa dos seguintes eventos do Windows: 4776, 4732, 4733, 4728, 4729, 4756, 4757 e 7045. Eles podem ser lidos automaticamente pelo Gateway Lightweight do ATA ou no caso de o Gateway Lightweight do ATA não estar implantado, podem ser encaminhados para o Gateway do ATA de duas maneiras: configurando o Gateway do ATA para escutar os eventos do SIEM ou configurando o Encaminhamento de Eventos do Windows.
 
 
 
@@ -61,7 +61,7 @@ Após adicionar o **Serviço de Rede** ao grupo **Leitores de Log de Eventos**, 
    
     1.  Selecione **Habilitado**.
     2.  Em **Opções**, clique em **Mostrar**.
-    3.  Em **SubscriptionManagers**, insira o seguinte valor e clique em **OK**: *Server=http://<fqdnATAGateway>:5985/wsman/SubscriptionManager/WEC,Refresh=10* (Por exemplo: Server=http://atagateway9.contoso.com:5985/wsman/SubscriptionManager/WEC,Refresh=10)
+    3.  Em **SubscriptionManagers**, digite o seguinte valor e clique em **OK**: *Server=http://<fqdnATAGateway>:5985/wsman/SubscriptionManager/WEC,Refresh=10* (Por exemplo: Server=http://atagateway9.contoso.com:5985/wsman/SubscriptionManager/WEC,Refresh=10)
  
    ![Configurar a imagem de assinatura de destino](media/wef 2 config target sub manager.png)
    
@@ -97,6 +97,6 @@ Após adicionar o **Serviço de Rede** ao grupo **Leitores de Log de Eventos**, 
 
 Para saber mais, confira: [Configurar computadores para encaminhar e coletar eventos](https://technet.microsoft.com/library/cc748890)
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Consulte Também
 - [Instalar o ATA](install-ata-step1.md)
 - [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

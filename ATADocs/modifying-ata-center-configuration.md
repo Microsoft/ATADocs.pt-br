@@ -1,25 +1,24 @@
 ---
-title: "Alterar a configuração do Centro do ATA do Advanced Threat Analytics | Microsoft Docs"
-description: "Descreve como alterar o endereço IP, a porta, a URL do console ou o certificado de seu Centro do ATA."
-keywords: 
+title: Alterar a configuração do Centro do ATA do Advanced Threat Analytics | Microsoft Docs
+description: Descreve como alterar o endereço IP, a porta, a URL do console ou o certificado de seu Centro do ATA.
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 11/7/2017
-ms.topic: article
-ms.prod: 
+ms.date: 3/21/2018
+ms.prod: ''
 ms.service: advanced-threat-analytics
-ms.technology: 
+ms.technology: ''
 ms.assetid: 93b27f15-f7e5-49bb-870a-d81d09dfe9fc
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 4fe4569cd6477775e8a888d2acd05511f16fb5f6
-ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
+ms.openlocfilehash: 294b9204f9ca6a40a835e5360a7011947e3255b4
+ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2017
+ms.lasthandoff: 03/22/2018
 ---
-*Aplica-se a: Advanced Threat Analytics versão 1.8*
+*Aplica-se a: Advanced Threat Analytics versão 1.9*
 
 
 
@@ -53,7 +52,9 @@ A URL é usada nos seguintes cenários:
     
 3. Aguarde a sincronização dos Gateways do ATA. Agora eles têm duas URLs potenciais por meio das quais acessam o Console do ATA. Contanto que o Gateway do ATA possa se conectar usando a URL original, ele não tentará a nova.
 
-4. Após a sincronização de todos os Gateways do ATA com a configuração atualizada, ative a nova URL. Quando você ativar a nova URL, os Gateways do ATA usarão a nova URL para acessar o centro do ATA. Após a conexão com o serviço do Centro do ATA, o Gateway do ATA obterá a configuração mais recente e terá somente a nova URL do Console do ATA. 
+4. Depois que todos os Gateways do ATA forem sincronizados com a configuração atualizada, na página de configuração central, clique no botão **Ativar** para ativar a nova URL. Quando você ativar a nova URL, os Gateways do ATA usarão a nova URL para acessar o centro do ATA. Após a conexão com o serviço do Centro do ATA, o Gateway do ATA obterá a configuração mais recente e terá somente a nova URL do Console do ATA. 
+5. 
+ ![Ativar o certificado](media/center-activation.png)
 
 > [!NOTE]
 > -   Se um Gateway do ATA estava offline durante a ativação da nova URL, e portanto nunca recebeu a configuração atualizada, atualize manualmente o arquivo JSON de configuração no Gateway do ATA.
@@ -87,6 +88,6 @@ Substitua o certificado seguindo este processo:
 
 
  
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Consulte Também
 - [Trabalhando com o Console do ATA](working-with-ata-console.md)
 - [Confira o fórum do ATA!](https://aka.ms/ata-forum)
