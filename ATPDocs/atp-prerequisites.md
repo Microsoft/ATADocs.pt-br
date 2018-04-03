@@ -1,23 +1,23 @@
 ---
-title: "Pré-requisitos da Proteção Avançada contra Ameaças do Azure | Microsoft Docs"
-description: "Descreve os requisitos para uma implantação bem-sucedida do Azure ATP em seu ambiente"
-keywords: 
+title: Pré-requisitos da Proteção Avançada contra Ameaças do Azure | Microsoft Docs
+description: Descreve os requisitos para uma implantação bem-sucedida do Azure ATP em seu ambiente
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 2/25/2018
+ms.date: 3/28/2018
 ms.topic: get-started-article
-ms.prod: 
+ms.prod: ''
 ms.service: azure-advanced-threat-protection
-ms.technology: 
+ms.technology: ''
 ms.assetid: 62c99622-2fe9-4035-9839-38fec0a353da
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 3cb4eb8a914f1fd4be0c1ddb26f9be3964c529f7
-ms.sourcegitcommit: 26d833f7d9502db73876ced9879789db395224f7
+ms.openlocfilehash: 3c8e0b239c335981b2030021d1d4e319b2810fda
+ms.sourcegitcommit: 7c9fe4eb781bec71129310a6e0c5e76b022a0213
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/28/2018
 ---
 *Aplica-se a: Proteção Avançada contra Ameaças do Azure*
 
@@ -131,11 +131,13 @@ A tabela abaixo lista as portas mínimas que o sensor autônomo do Azure ATP req
 
 |Protocolo|Transport|Porta|Para/De|Direção|
 |------------|-------------|--------|-----------|-------------|
+|**Portas de Internet**|||||
+|SSL (*.atp.azure.com)|TCP|443|Serviço de nuvem do Azure ATP|Saída|
+|**Portas internas**|||||
 |LDAP|TCP e UDP|389|Controladores de domínio|Saída|
 |LDAP seguro (LDAPS)|TCP|636|Controladores de domínio|Saída|
 |LDAP para o Catálogo Global|TCP|3268|Controladores de domínio|Saída|
 |LDAPS para o Catálogo Global|TCP|3269|Controladores de domínio|Saída|
-|SSL (*.atp.azure.com)|TCP|443|Serviço de nuvem do Azure ATP|Saída|
 |Kerberos|TCP e UDP|88|Controladores de domínio|Saída|
 |Netlogon (SMB, CIFS, SAM-R)|TCP e UDP|445|Controladores de domínio|Saída|
 |Tempo do Windows|UDP|123|Controladores de domínio|Saída|
@@ -195,7 +197,9 @@ A tabela abaixo lista o mínimo de portas que o sensor do Azure ATP exige:
 
 |Protocolo|Transport|Porta|Para/De|Direção|
 |------------|-------------|--------|-----------|-------------|
+|**Portas de Internet**|||||
 |SSL (*.atp.azure.com)|TCP|443|Serviço de nuvem do Azure ATP|Saída|
+|**Portas internas**|||||
 |DNS|TCP e UDP|53|Servidores DNS|Saída|
 |NTLM via RPC|TCP|135|Todos os dispositivos na rede|Saída|
 |Netlogon (SMB, CIFS, SAM-R)|TCP/UDP|445|Controladores de domínio|Saída|

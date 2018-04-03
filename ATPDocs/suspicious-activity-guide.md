@@ -1,23 +1,23 @@
 ---
 title: Guia de atividades suspeitas do Azure ATP | Microsoft Docs
 d|Description: This article provides a list of the suspicious activities Azure ATP can detect and steps for remediation.
-keywords: 
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 2/21/2018
+ms.date: 3/25/2018
 ms.topic: get-started-article
-ms.prod: 
+ms.prod: ''
 ms.service: azure-advanced-threat-protection
-ms.technology: 
+ms.technology: ''
 ms.assetid: ca5d1c7b-11a9-4df3-84a5-f53feaf6e561
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: ee8e45b6ef2da2d8866a1795bdab3987180acefe
-ms.sourcegitcommit: 03e959b7ce4b6df421297e1872e028793c967302
+ms.openlocfilehash: ec9a2bc18262f88ada0a7a4ac56b5a4b2c104165
+ms.sourcegitcommit: 158bf048d549342f2d4689f98ab11f397d9525a2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 03/28/2018
 ---
 *Aplica-se a: Proteção Avançada contra Ameaças do Azure*
 
@@ -240,6 +240,21 @@ Valide as seguintes permissões:
 Para obter mais informações, consulte [Conceder permissões do Active Directory Domain Services para sincronização de perfil no SharePoint Server 2013](https://technet.microsoft.com/library/hh296982.aspx).
 Você pode utilizar o [Scanner ACL do AD](https://blogs.technet.microsoft.com/pfesweplat/2013/05/13/take-control-over-ad-permissions-and-the-ad-acl-scanner-tool/) ou criar um script do Windows PowerShell para determinar quem no domínio tem essas permissões.
 
+
+## <a name="password-exposed-in-cleartext-report"></a>Senha exposta no relatório de texto não criptografado
+
+**Descrição**
+
+Alguns serviços enviam as credenciais de conta em texto sem formatação. Isso pode ocorrer até mesmo para contas de usuários. Os invasores que monitoram o tráfego de rede podem capturar e reutilizar essas credenciais para fins mal-intencionados. 
+
+**Investigação**
+
+Clique na página de relatórios e baixe a senha exposta no relatório de texto não criptografado. Na planilha do Excel, consulte as contas que foram expostas.
+Geralmente, há um aplicativo herdado ou script nos computadores de origem que usa a associação simples LDAP.
+
+**Remediação**
+
+Verifique a configuração nos computadores de origem e certifique-se de não usar a associação LDAP simples. Em vez de usar as ligações LDAP simples, use LDAP SALS ou LDAPS.
 
 ## <a name="privilege-escalation-using-forged-authorization-data"></a>Elevação de privilégios usando dados de autorização forjados
 

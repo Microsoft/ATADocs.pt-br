@@ -1,23 +1,23 @@
 ---
-title: "Trabalhando com relatórios do Azure ATP | Microsoft Docs"
-description: "Descreve como você pode gerar relatórios no Azure ATP para monitorar sua rede."
-keywords: 
+title: Trabalhando com relatórios do Azure ATP | Microsoft Docs
+description: Descreve como você pode gerar relatórios no Azure ATP para monitorar sua rede.
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 2/21/2018
+ms.date: 2/27/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: azure-advanced-threat-protection
-ms.technology: 
+ms.technology: ''
 ms.assetid: 2c2d6b1a-fc8c-4ff7-b07d-64ce6159f84d
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 2ebc0d9bb860bd93f14c4c511b034c740b59dffb
-ms.sourcegitcommit: 03e959b7ce4b6df421297e1872e028793c967302
+ms.openlocfilehash: 8d9c7f9208ce76e6c2ca915729b9c64f769ae7bd
+ms.sourcegitcommit: 158bf048d549342f2d4689f98ab11f397d9525a2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 03/28/2018
 ---
 *Aplica-se a: Proteção Avançada contra Ameaças do Azure*
 
@@ -25,6 +25,7 @@ ms.lasthandoff: 02/21/2018
 # <a name="azure-atp-reports"></a>Relatórios do Azure ATP
 
 A seção de relatórios do Azure ATP no portal de espaço de trabalho permite gerar relatórios que fornecem informações do status do sistema, a integridade do sistema e um relatório de atividades suspeitas detectadas em seu ambiente.
+
 
 Para acessar a página relatórios, clique no ícone de relatório na barra de menus: ![ícone de relatório](./media/atp-report-icon.png).
 Os relatórios disponíveis são: 
@@ -51,6 +52,9 @@ Para definir um relatório agendado:
 1. Na página **Relatórios**, clique em **Definir relatórios agendados** ou, na página de configuração do portal de espaço de trabalho do Azure ATP, em Notificações e Relatórios, clique em **Relatórios agendados**.
 
    ![Agendar relatórios](./media/atp-sched-reports.png)
+ 
+ > [!NOTE]
+ > Os relatórios diários foram criados para serem enviados logo após a meia-noite (UTC).
 
 2. Clique em **Agendar** ao lado do tipo de relatório selecionado para definir a frequência e o endereço de email para a entrega dos relatórios, clique no sinal de adição ao lado dos endereços de email para adicioná-los e clique em **Salvar**.
 

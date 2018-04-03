@@ -1,23 +1,23 @@
 ---
-title: "Instalar a Proteção Avançada contra Ameaças do Azure – etapa 4 | Microsoft Docs"
-description: "A etapa quatro da instalação do Azure ATP ajuda a instalar o sensor autônomo do Azure ATP."
-keywords: 
+title: Instalar a Proteção Avançada contra Ameaças do Azure – etapa 4 | Microsoft Docs
+description: A etapa quatro da instalação do Azure ATP ajuda a instalar o sensor autônomo do Azure ATP.
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 2/21/2017
+ms.date: 3/25/2018
 ms.topic: get-started-article
-ms.prod: 
+ms.prod: ''
 ms.service: azure-advanced-threat-protection
-ms.technology: 
+ms.technology: ''
 ms.assetid: 51911e39-76c7-4dcd-bc0b-ec6235d0403f
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 7b003882f21f22b3427fb95534ca2bde255b14e6
-ms.sourcegitcommit: 03e959b7ce4b6df421297e1872e028793c967302
+ms.openlocfilehash: 56b3cea2089c64e2c78361c44d049d6de67764b6
+ms.sourcegitcommit: 158bf048d549342f2d4689f98ab11f397d9525a2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 03/28/2018
 ---
 *Aplica-se a: Proteção Avançada contra Ameaças do Azure*
 
@@ -35,11 +35,16 @@ Antes de instalar o sensor autônomo do Azure ATP em um servidor dedicado, verif
 
 
 > [!IMPORTANT]
->Verifique se o .NET Framework 4.7 está instalado no computador. Se o .Net Framework 4.7 não estiver instalado, o pacote de instalação do sensor do Azure ATP o instalará, o que requer uma reinicialização do servidor. Verifique se o computador tem conectividade com o ponto de extremidade de serviço de nuvem do Azure ATP: https://triprd1wceuw1sensorapi.atp.azure.com (para a Europa) ou https://triprd1wcuse1sensorapi.atp.azure.com (para os EUA).
+>Verifique se o .NET Framework 4.7 está instalado no computador. Se o .Net Framework 4.7 não estiver instalado, o pacote de instalação do sensor do Azure ATP o instalará, o que requer uma reinicialização do servidor.
 
 Execute as seguintes etapas no servidor do sensor do Azure ATP ou no controlador de domínio.
 
-1.  Extraia os arquivos do arquivo zip. 
+1. Verifique se a máquina tem conectividade com o ponto de extremidade de serviço de nuvem do Azure ATP relevante:
+  - https://triprd1wceuw1sensorapi.atp.azure.com (na Europa)  
+  - https://triprd1wcuse1sensorapi.atp.azure.com (nos EUA)
+  - https://triprd1wcasse1sensorapi.atp.azure.com (na Ásia)
+
+2. Extraia os arquivos de instalação do arquivo zip. 
 > [!NOTE] 
 > A instalação diretamente do arquivo zip falha.
 
