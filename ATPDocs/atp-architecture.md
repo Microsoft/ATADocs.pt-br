@@ -1,23 +1,23 @@
 ---
-title: "Arquitetura da Proteção Avançada contra Ameaças do Azure | Microsoft Docs"
-description: "Descreve a arquitetura do Azure ATP (Proteção Avançada contra Ameaças)"
-keywords: 
+title: Arquitetura da Proteção Avançada contra Ameaças do Azure | Microsoft Docs
+description: Descreve a arquitetura do Azure ATP (Proteção Avançada contra Ameaças)
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 3/11/2018
+ms.date: 3/27/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: azure-advanced-threat-protection
-ms.technology: 
+ms.technology: ''
 ms.assetid: 90f68f2c-d421-4339-8e49-1888b84416e6
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 640974bbeb0ff147b21da24d6ad6df2f54e9ab4d
-ms.sourcegitcommit: 912e453753156902618ae6ebb8489c2320c06fc6
+ms.openlocfilehash: 57f4eb56eaa0547d18421b17fb5804840e4997e3
+ms.sourcegitcommit: 158bf048d549342f2d4689f98ab11f397d9525a2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/28/2018
 ---
 *Aplica-se a: Proteção Avançada contra Ameaças do Azure*
 
@@ -74,7 +74,7 @@ Definir seu espaço de trabalho principal como **Primário**. Somente um espaço
 
 > [!NOTE]
 > Atualmente, a ATP do Azure rem suporte para criação de dois espaços de trabalho. Recomendamos criar um espaço de trabalho principal para o ambiente de produção e um espaço de trabalho adicional como um ambiente de preparo.
-> Depois de excluir um espaço de trabalho, você pode entrar em contato com o suporte para reativá-lo. Você pode ter um máximo de três espaços de trabalho excluídos. Para aumentar o número de espaços de trabalho salvos e excluídos, entre em contato com o suporte do Azure ATP.
+> Depois de excluir um espaço de trabalho, você pode entrar em contato com o suporte para reativá-lo. É possível ter um máximo de três espaços de trabalho excluídos. Para aumentar o número de espaços de trabalho salvos e excluídos, entre em contato com o suporte do Azure ATP.
 
 
 ### <a name="azure-atp-workspace-portal"></a>Portal de espaço de trabalho do Azure ATP
@@ -122,7 +122,7 @@ O **sensor do Azure ATP** e o **sensor autônomo do Azure ATP** têm a mesma fun
 
 -   Monitorar vários controladores de domínio de um único sensor autônomo do Azure ATP ou monitorar um único controlador de domínio para um sensor do Azure ATP.
 
-O Azure ATP é compatível com até 100 sensores. Caso deseje instalar mais, entre em contato com o suporte do Azure ATP.
+Por padrão, o Azure ATP é compatível com até 100 sensores. Caso deseje instalar mais, entre em contato com o suporte do Azure ATP.
 
 O sensor autônomo do Azure ATP recebe o tráfego de rede espelhado e os eventos do Windows da sua rede e processa-os nos seguintes componentes principais:
 

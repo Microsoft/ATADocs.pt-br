@@ -5,7 +5,7 @@ keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 3/21/2018
+ms.date: 3/25/2018
 ms.topic: article
 ms.prod: ''
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology: ''
 ms.assetid: 581a3257-32dc-453f-b84e-b9f99186f5d3
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: f9e19a1d033238f506fc0523bf50af6e204ba0cf
-ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
+ms.openlocfilehash: f2fd6f28eb6bf11aa3705f5320fcdae01d02f6d0
+ms.sourcegitcommit: 158bf048d549342f2d4689f98ab11f397d9525a2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 03/28/2018
 ---
 *Aplica-se a: Advanced Threat Analytics versão 1.9*
 
@@ -46,6 +46,8 @@ Na parte superior, você pode exibir os blocos de resumo que fornecem uma visão
 - Quantos recursos o usuário acessou
 - De quais locais o usuário fez logon na VPN
 
+  ![menu de entidade](media/entity-menu.png)
+
 Para computadores, você verá:
 - Quantas atividades suspeitas abertas existem para o computador
 - Quantos usuários fizeram logon no computador
@@ -53,7 +55,7 @@ Para computadores, você verá:
 - Quantas VPN de locais foram acessadas do computador
 - Uma lista de quais endereços IP o computador foi usado
 
-![menu de entidade](media/entity-menu.png)
+  ![computador de menu de entidade](media/entity-computer.png)
 
 Usando o botão **Filtrar por** acima da linha do tempo de atividades, você pode filtrar as atividades por tipo de atividade. Também é possível filtrar um tipo específico de atividade (ruído). Isso é muito útil para fazer investigações quando você quiser entender o básico do que uma entidade está fazendo na rede. Você também pode ir para uma data específica e pode exportar as atividades filtradas para o Excel. O arquivo exportado fornece uma página de alterações de serviços de diretório (itens alterados no Active Directory para a conta) e uma página separada de atividades. 
 
