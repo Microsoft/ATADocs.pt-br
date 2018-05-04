@@ -1,23 +1,23 @@
 ---
-title: "Grupos de função da Proteção Avançada contra Ameaças do Azure para gerenciamento de acesso | Microsoft Docs"
-description: "Explica passo a passo como trabalhar com grupos de função do Azure ATP."
-keywords: 
+title: Grupos de função da Proteção Avançada contra Ameaças do Azure para gerenciamento de acesso | Microsoft Docs
+description: Explica passo a passo como trabalhar com grupos de função do Azure ATP.
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 2/21/2017
+ms.date: 4/30/2018
 ms.topic: get-started-article
-ms.prod: 
+ms.prod: ''
 ms.service: azure-advanced-threat-protection
-ms.technology: 
+ms.technology: ''
 ms.assetid: effca0f2-fcae-4fca-92c1-c37306decf84
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 86cb55fd2b5ce81460dead4b8b753c88f79edd7b
-ms.sourcegitcommit: 03e959b7ce4b6df421297e1872e028793c967302
+ms.openlocfilehash: 8fda27ed8ed4a589ff205e815e8b3cf97026b819
+ms.sourcegitcommit: 5c0f914b44bfb8e03485f12658bfa9a7cd3d8bbc
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 04/30/2018
 ---
 *Aplica-se a: Proteção Avançada contra Ameaças do Azure*
 
@@ -46,10 +46,9 @@ O Azure ATP apresenta três tipos de grupo de segurança: Administradores do *no
 |Atividade |Administradores do *nome do espaço de trabalho* Azure ATP|Usuários do *nome do espaço de trabalho* Azure ATP|Visualizadores do *nome do espaço de trabalho* Azure ATP|
 |----|----|----|----|
 |Fazer logon|Disponível|Disponível|Disponível|
-|Fornecer informações sobre atividades suspeitas|Disponível|Disponível|Não disponível|
 |Alterar o status de atividades suspeitas|Disponível|Disponível|Não disponível|
-|Compartilhar/Exportar atividade suspeita por email/link|Disponível|Disponível|Não disponível|
-|Alterar o status dos Alertas de monitoramento|Disponível|Disponível|Não disponível|
+|Compartilhar/Exportar atividade suspeita por email/link|Disponível|Disponível|Disponível|
+|Alterar o status dos Alertas de monitoramento|Disponível|Não disponível|Não disponível|
 |Atualizar configuração do Azure ATP|Disponível|Não disponível|Não disponível|
 |sensor – Adicionar|Disponível|Não disponível|Não disponível|
 |sensor – Excluir |Disponível|Não disponível|Não disponível|
@@ -62,7 +61,7 @@ Quando tentam acessar uma página que não está disponível para seus grupos de
 
 ## <a name="add-and-remove-users"></a>Adicionar e remover usuários 
 
-O Azure ATP usa grupos de segurança do Azure AD como uma base para os grupos de função. Os grupos de função podem ser gerenciados de [https://aad.portal.azure.com/#blade/Microsoft_AAD_IAM/UserManagementMenuBlade/Todos os Grupos](https://aad.portal.azure.com/#blade/Microsoft_AAD_IAM/UserManagementMenuBlade/All groups).  Somente usuários do AAD podem ser adicionados ou removidos de grupos de segurança. 
+O Azure ATP usa grupos de segurança do Azure AD como uma base para os grupos de função. Os grupos de função podem ser gerenciados por meio dos [https://aad.portal.azure.com/#blade/Microsoft_AAD_IAM/UserManagementMenuBlade/All groups](https://aad.portal.azure.com/#blade/Microsoft_AAD_IAM/UserManagementMenuBlade/All groups).  Somente usuários do AAD podem ser adicionados ou removidos de grupos de segurança. 
 
 
 ## <a name="see-also"></a>Consulte Também

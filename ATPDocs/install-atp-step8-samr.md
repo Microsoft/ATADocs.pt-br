@@ -1,23 +1,23 @@
 ---
-title: "Configurar SAM-R para habilitar a detecção de caminho de movimento lateral no Azure ATP | Microsoft Docs"
-description: "Descreve como configurar SAM-R para habilitar a detecção de caminho de movimento lateral no Azure ATP"
-keywords: 
+title: Configurar SAM-R para habilitar a detecção de caminho de movimento lateral no Azure ATP | Microsoft Docs
+description: Descreve como configurar SAM-R para habilitar a detecção de caminho de movimento lateral no Azure ATP
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 2/21/2018
+ms.date: 4/29/2018
 ms.topic: get-started-article
-ms.prod: 
+ms.prod: ''
 ms.service: azure-advanced-threat-protection
-ms.technology: 
+ms.technology: ''
 ms.assetid: b09adce3-0fbc-40e3-a53f-31f57fe79ca3
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 0e2ac4fb68fb1429610a0416582c871c9ae704df
-ms.sourcegitcommit: 03e959b7ce4b6df421297e1872e028793c967302
+ms.openlocfilehash: 24b42c5425933d8931a85e0ba454a69e0ca94a21
+ms.sourcegitcommit: 5c0f914b44bfb8e03485f12658bfa9a7cd3d8bbc
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 04/30/2018
 ---
 *Aplica-se a: Proteção Avançada contra Ameaças do Azure*
 
@@ -30,7 +30,7 @@ ms.lasthandoff: 02/21/2018
 
 A detecção de [caminho de movimento lateral](use-case-lateral-movement-path.md) se baseia em consultas que identificam os administradores locais em computadores específicos. Essas consultas são executadas usando o protocolo SAM-R, por meio da conta de serviço do Azure ATP criada na [Etapa 2. Conectar-se ao AD](install-atp-step2.md).
  
-Para garantir que servidores e clientes do Windows permitam que a conta de serviço do Azure ATP execute essa operação de SAM-R, é necessário fazer uma modificação na Política de Grupo.
+Para garantir que clientes e servidores Windows permitam que a conta do Azure ATP execute essa operação SAM-R, é necessário fazer uma modificação na **política de grupo** que adicione a conta de serviço do Azure ATP, além das contas configuradas listadas na política de **Acesso de rede**.
 
 1. Localize a política:
 

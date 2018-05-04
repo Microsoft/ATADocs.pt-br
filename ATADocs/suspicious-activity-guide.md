@@ -5,7 +5,7 @@ keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 3/21/2018
+ms.date: 4/29/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology: ''
 ms.assetid: 1fe5fd6f-1b79-4a25-8051-2f94ff6c71c1
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: d76c34b115bd38bdb1eb82fbff1c0857b0ad8dfa
-ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
+ms.openlocfilehash: a5e93ab47f454acc3157a9c6ee4053255be59f23
+ms.sourcegitcommit: 5c0f914b44bfb8e03485f12658bfa9a7cd3d8bbc
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/30/2018
 ---
 *Aplica-se a: Advanced Threat Analytics versão 1.9*
 
@@ -118,14 +118,14 @@ Há três tipos de detecção:
 
 **Investigação**
 
-Primeiro, verifique a descrição do alerta para ver com qual dos três tipos de detecção acima você está lidando.
-
-1.  Skeleton Key – Você pode verificar se a Skeleton Key afetou os controladores de domínio usando [o analisador gravado pela equipe do ATA](https://gallery.technet.microsoft.com/Aorato-Skeleton-Key-24e46b73).
-    Se o analisador encontrar malware em 1 ou mais controladores de domínio, é um verdadeiro positivo.
-
-2.  Golden Ticket – há casos em que um aplicativo personalizado que é raramente usado está se autenticando usando uma codificação de criptografia inferior. Verifique se há algum desses aplicativos personalizados no computador de origem. Nesse caso, ele é provavelmente um positivo verdadeiro benigno e pode ser suprimido.
-
-3.  Overpass-the-Hash – há casos em que esse alerta pode ser disparado quando usuários configurados com cartões inteligentes forem necessários para logon interativo e essa configuração é desabilitada e, em seguida, habilitada. Verifique se ocorreram alterações como essa para a(s) conta(s) envolvida(s). Nesse caso, ele é provavelmente um positivo verdadeiro benigno e pode ser suprimido.
+Primeiro, verifique a descrição do alerta para ver com qual dos três tipos de detecção acima você está lidando. Para saber mais, baixe a planilha do Excel.
+1.  Skeleton Key – você pode verificar se a Skeleton Key afetou os controladores de domínio usando o analisador gravado pela equipe do ATA. Se o analisador encontrar malware em 1 ou mais controladores de domínio, é um verdadeiro positivo.
+2.  Golden Ticket – na planilha do Excel, vá para a guia de **Atividade de rede**. Você verá que o campo de downgrade relevante é **Solicitar Tipo de Criptografia de Tíquete** e **Tipos de Criptografia com Suporte no Computador de Origem** contém métodos de criptografia mais fortes.
+  a.    Verifique o computador de origem e a conta ou, se houver vários computadores de origem e contas, verifique se eles têm algo em comum (por exemplo, toda a equipe de marketing usa um aplicativo específico que pode fazer o alerta ser disparado). Há casos em que um aplicativo personalizado raramente usado faz autenticação usando uma codificação de criptografia inferior. Verifique se há algum desses aplicativos personalizados no computador de origem. Nesse caso, ele é provavelmente um positivo verdadeiro benigno e pode ser **Suprimido**.
+  b.    Verifique o recurso acessado por essas permissões. Se houver um recurso que todas elas estão acessando, valide-o e verifique se é um recurso válido que elas precisam acessar. Além disso, verifique se o recurso de destino é compatível com métodos de criptografia forte. Você pode verificar isso no Active Directory verificando o atributo `msDS-SupportedEncryptionTypes`, da conta de serviço do recurso.
+3.  Overpass-the-Hash – na planilha do Excel, vá para a guia de **Atividade de rede**. Você verá que o campo de downgrade relevante é **Tipo de Criptografia de Carimbo de Data/Hora Criptografado** e **Tipos de Criptografia com Suporte no Computador de Origem** contém métodos de criptografia mais fortes.
+  a.    Há casos em que esse alerta pode ser disparado quando os usuários fazem logon usando cartões inteligentes, se a configuração do cartão inteligente foi alterada recentemente. Verifique se ocorreram alterações como essa para a(s) conta(s) envolvida(s). Nesse caso, ele é provavelmente um positivo verdadeiro benigno e pode ser **Suprimido**.
+  b.    Verifique o recurso acessado por essas permissões. Se houver um recurso que todas elas estão acessando, valide-o e verifique se é um recurso válido que elas precisam acessar. Além disso, verifique se o recurso de destino é compatível com métodos de criptografia forte. Você pode verificar isso no Active Directory verificando o atributo `msDS-SupportedEncryptionTypes`, da conta de serviço do recurso.
 
 **Remediação**
 
@@ -244,9 +244,10 @@ Nessa detecção, um alerta é disparado quando uma solicitação de replicaçã
 
 **Investigação**
 
-1. O computador em questão é um controlador de domínio? Por exemplo, um controlador de domínio recém-promovido que teve problemas de replicação. Se sim, **Feche e exclua** a atividade suspeita.  
+1.  O computador em questão é um controlador de domínio? Por exemplo, um controlador de domínio recém-promovido que teve problemas de replicação. Em caso afirmativo, **Fechar** a atividade suspeita. 
+2.  O computador em questão deveria estar replicando dados do Active Directory? Por exemplo, o Azure AD Connect. Se sim, **Feche e exclua** a atividade suspeita.
+3.  Clique no computador de origem ou na conta para acessar a página de perfil. Verifique o que aconteceu no momento da replicação, pesquisando atividades incomuns, como: quem estava conectado e quais recursos foram acessados. 
 
-2. O computador em questão deveria estar replicando dados do Active Directory? Por exemplo, o Azure AD Connect. Se sim, **Feche e exclua** a atividade suspeita.
 
 **Remediação**
 
@@ -369,11 +370,10 @@ Há vários tipos de consulta no protocolo DNS. O ATA detecta a solicitação AX
 
 **Investigação**
 
-1. O computador de origem (**Proveniente de...** ) é um servidor DNS? Se sim, então, provavelmente é um falso positivo. Para validar, clique no alerta para ver sua página de detalhes. Na tabela, em **Consulta**, verifique quais domínios foram consultados. Esses domínios são existentes? Se sim, então, **Feche** a atividade suspeita (é um falso positivo). Além disso, certifique-se de que a porta 53 do UDP esteja aberta entre os Gateways do ATA e o computador de origem para evitar futuros falsos positivos.
+1. O computador de origem (**Proveniente de...** ) é um servidor DNS? Se sim, então, provavelmente é um falso positivo. Para validar, clique no alerta para ver sua página de detalhes. Na tabela, em **Consulta**, verifique quais domínios foram consultados. Esses domínios são existentes? Se sim, então, **Feche** a atividade suspeita (é um falso positivo). Além disso, certifique-se de que a porta 53 do UDP esteja aberta entre o Gateway do ATA e o computador de origem para evitar futuros falsos positivos.
+2.  O computador de origem está executando um verificador de segurança? Em caso afirmativo, **Excluir** as entidades no ATA, seja diretamente com **Fechar e excluir** ou por meio da página **Exclusão** (em **Configuração** – disponível para administradores do ATA).
+3.  Se a resposta a todas as perguntas anteriores for não, continue investigando, concentrando-se no computador de origem. Clique no computador de origem para acessar a página de perfil. Verifique o que aconteceu no momento da solicitação, pesquisando atividades incomuns, como: quem estava conectado e quais recursos foram acessados.
 
-2. O computador de origem está executando um verificador de segurança? Em caso afirmativo, **Exclua as entidades** no ATA, seja diretamente com **Fechar e excluir** ou por meio da página **Exclusão** (em **Configuração** – disponível para administradores do ATA).
-
-3. Se a resposta para todas as perguntas acima for não, suponha que ele seja mal-intencionado.
 
 **Remediação**
 
@@ -415,15 +415,12 @@ Os invasores que comprometem credenciais de administrador ou que usam uma explor
 
 **Investigação**
 
-1. Isso é comum para membros da equipe de TI e de estações de trabalho administrativas ou contas de serviço que executam tarefas administrativas nos controladores de domínio. Se for esse o caso e se o alerta for atualizado desde que o mesmo administrador e/ou computador esteja executando a tarefa, então, **Suprima** o alerta.
+1. Isso é comum para membros da equipe de TI, de estações de trabalho administrativas e contas de serviço que executam tarefas administrativas nos controladores de domínio. Se for esse o caso e se o alerta for atualizado porque o mesmo administrador ou computador está executando a tarefa, **Suprima** o alerta.
+2.  O computador em questão tem permissão para realizar essa execução remota em seu controlador de domínio?
+  - A conta em questão tem permissão para realizar essa execução remota em seu controlador de domínio?
+  - Se a resposta a ambas as perguntas for sim, **Feche** o alerta.
+3.  Se a resposta a uma das perguntas for não, isso deverá ser considerado um positivo verdadeiro. Tente localizar a origem da tentativa verificando perfis de computador e conta. Clique no computador de origem ou na conta para acessar a página de perfil. Verifique o que aconteceu no momento dessas tentativas, pesquisando atividades incomuns, como: quem estava conectado e quais recursos foram acessados.
 
-2. O **computador** em questão tem permissão para realizar essa execução remota em seu controlador de domínio?
-
- - A **conta** em questão tem permissão para realizar essa execução remota em seu controlador de domínio?
-
- - Se a resposta a ambas as perguntas for *Sim*, então, **Feche** o alerta.
-
-3. Se a resposta a uma das perguntas for *não*, então, isso deverá ser considerado um positivo verdadeiro.
 
 **Remediação**
 
@@ -460,11 +457,14 @@ Nesta detecção, um alerta é disparado quando ocorrem diversas falhas de auten
 
 **Investigação**
 
-1. Se houver muitas contas envolvidas, clique em **Baixar detalhes** para exibir a lista em uma planilha do Excel.
+1.  Clique em **Baixar detalhes** para exibir as informações completas em uma planilha do Excel. Você pode obter as seguintes informações: 
+  - Lista das contas atacadas
+  - Lista de contas adivinhadas em que as tentativas de logon terminaram com a autenticação bem-sucedida
+  - Se as tentativas de autenticação tiverem sido realizadas usando NTLM, você verá as atividades de eventos relevantes 
+  - Se as tentativas de autenticação tiverem sido realizadas usando Kerberos, você verá as atividades de rede relevantes
+2.  Clique no computador de origem para acessar a página de perfil. Verifique o que aconteceu no momento dessas tentativas, pesquisando atividades incomuns, como: quem estava conectado e quais recursos foram acessados. 
+3.  Se a autenticação tiver sido executada usando NTLM, você vir que o alerta ocorre muitas vezes e não houver informações suficientes disponíveis sobre o servidor que tentou acessar o computador de origem, você deverá habilitar a **Auditoria de NTLM** nos controladores de domínio envolvidos. Para fazer isso, ative o evento 8004. Esse é o evento de autenticação de NTLM que inclui informações sobre o computador de origem, a conta de usuário e o **servidor** que o computador de origem tentou acessar. Depois que saber qual servidor enviou a validação de autenticação, você deverá investigar o servidor, verificando seus eventos, como 4624, para compreender melhor o processo de autenticação. 
 
-2. Clique no alerta para ir até sua página de detalhes. Verifique se alguma tentativa de logon terminou com uma autenticação bem-sucedida, elas aparecem como **Contas adivinhadas** no lado direito do infográfico. Se sim, alguma das **Contas adivinhadas** é normalmente usada pelo computador de origem? Se sim, **Omita** a atividade suspeita.
-
-3. Se não houver nenhuma **Conta adivinhada**, alguma das **Contas atacadas** é normalmente usada no computador de origem? Se sim, **Omita** a atividade suspeita.
 
 **Remediação**
 
