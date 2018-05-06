@@ -5,7 +5,7 @@ keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 3/28/2018
+ms.date: 4/22/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,11 +13,11 @@ ms.technology: ''
 ms.assetid: 62c99622-2fe9-4035-9839-38fec0a353da
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 3c8e0b239c335981b2030021d1d4e319b2810fda
-ms.sourcegitcommit: 7c9fe4eb781bec71129310a6e0c5e76b022a0213
+ms.openlocfilehash: 9a9998360a24fd7f4d4151d4572c7715be03d34d
+ms.sourcegitcommit: d2d2750bfb0198c8488d538f1773fda6eda5e6f9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/23/2018
 ---
 *Aplica-se a: Proteção Avançada contra Ameaças do Azure*
 
@@ -88,7 +88,7 @@ Para seus controladores de domínio se comunicarem com o serviço de nuvem, voc�
 Para obter informações sobre como usar máquinas virtuais com o sensor autônomo do Azure ATP, consulte [Configurar o espelhamento de porta](configure-port-mirroring.md).
 
 > [!NOTE]
-> É necessário um mínimo de 5 GB de espaço e recomenda-se 10 GB. Isso inclui o espaço necessário para os binários do Azure ATP, logs do Azure ATP e logs de desempenho.
+> São necessários no mínimo 5 GB de espaço. Recomenda-se 10 GB. Isso inclui o espaço necessário para os binários do Azure ATP, logs do Azure ATP e logs de desempenho.
 
 ### <a name="server-specifications"></a>Especificações do servidor
 Para ter um melhor desempenho, defina a **Opção de Energia** do sensor autônomo do Azure ATP como **Alto Desempenho**.<br>
@@ -107,9 +107,9 @@ Os servidores e controladores de domínio nos quais o sensor é instalado devem 
 ### <a name="network-adapters"></a>Adaptadores de rede
 O sensor autônomo do Azure ATP requer pelo menos um adaptador de gerenciamento e pelo menos um adaptador de captura:
 
--   **Adaptador de gerenciamento** - usado para as comunicações em sua rede corporativa. Esse adaptador deve ser configurado com as seguintes definições:
+-   **Adaptador de gerenciamento** - usado para as comunicações em sua rede corporativa. O sensor usará esse adaptador para consultar se o DC está protegendo e realizando a resolução para contas de computador. <br>Esse adaptador deve ser configurado com as seguintes definições:
 
-    -   Endereço IP estático, incluindo o sensor padrão
+    -   Endereço IP estático, incluindo o gateway padrão
 
     -   Servidores DNS preferenciais e alternativos
 
@@ -164,11 +164,11 @@ O controlador de domínio pode ser um RODC (controlador de domínio somente leit
 
 Para seus controladores de domínio se comunicarem com o serviço de nuvem, você deve abrir a porta 443 em seus firewalls e proxies para *. atp.azure.com.
 
-Durante a instalação, o .Net Framework 4.7 é instalado e pode causar uma reinicialização do controlador de domínio.
+Durante a instalação, o .Net Framework 4.7 é instalado e poderá exigir uma reinicialização do controlador de domínio, se uma reinicialização já estiver pendente.
 
 
 > [!NOTE]
-> É necessário um mínimo de 5 GB de espaço e recomenda-se 10 GB. Isso inclui o espaço necessário para os binários do Azure ATP, logs do Azure ATP e logs de desempenho.
+> São necessários no mínimo 5 GB de espaço. Recomenda-se 10 GB. Isso inclui o espaço necessário para os binários do Azure ATP, logs do Azure ATP e logs de desempenho.
 
 ### <a name="server-specifications"></a>Especificações do servidor
 

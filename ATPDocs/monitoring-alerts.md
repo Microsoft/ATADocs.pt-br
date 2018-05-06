@@ -1,29 +1,29 @@
 ---
 title: Entendendo os alertas de monitoramento do Azure ATP | Microsoft Docs
-description: "Descreve como você pode usar os logs do Azure ATP para solucionar problemas"
-keywords: 
+description: Descreve como você pode usar os logs do Azure ATP para solucionar problemas
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 2/21/2018
+ms.date: 4/15/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: azure-advanced-threat-protection
-ms.technology: 
+ms.technology: ''
 ms.assetid: d0551e91-3b21-47d5-ad9d-3362df6d47c0
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: cdb440e92aef0f9d09d3aa9411d0ce65435469d1
-ms.sourcegitcommit: 03e959b7ce4b6df421297e1872e028793c967302
+ms.openlocfilehash: 34702edcde2b96ca16570af5803a03d4f0f66c6e
+ms.sourcegitcommit: e0209c6db649a1ced8303bb1692596b9a19db60d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 04/16/2018
 ---
 *Aplica-se a: Proteção Avançada contra Ameaças do Azure*
 
 # <a name="understanding-azure-atp-sensor-and-standalone-sensor-monitoring-alerts"></a>Entendendo os alertas de monitoramento do sensor autônomo e do sensor do Azure ATP
 
-O Centro de Integridade do Azure ATP informa quando há um problema algum de seus espaços de trabalho do Azure ATP gerando um alerta de monitoramento. Este artigo descreve todos os alertas de monitoramento para cada componente, listando a causa e as etapas necessárias para resolver o problema.
+O Centro de Integridade do Azure ATP informa quando há um problema algum em seus espaços de trabalho do Azure ATP gerando um alerta de monitoramento. Este artigo descreve todos os alertas de monitoramento para cada componente, listando a causa e as etapas necessárias para resolver o problema.
 
 ## <a name="read-only-user-password-to-expire-shortly"></a>Senha de usuário somente leitura a expirar em breve
 

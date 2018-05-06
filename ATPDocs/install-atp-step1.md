@@ -5,7 +5,7 @@ keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 3/15/2018
+ms.date: 4/10/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,11 +13,11 @@ ms.technology: ''
 ms.assetid: 15ee7d0b-9a0c-46b9-bc71-98d0b4619ed0
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 833e0bdf61ce25a8c56d820ad04981cd44321ac2
-ms.sourcegitcommit: f9d07a6b1f2193f0d2906092e252eb1d7398b493
+ms.openlocfilehash: a4c2f03955eddb4615b347fa8a211501546e6f4a
+ms.sourcegitcommit: e0209c6db649a1ced8303bb1692596b9a19db60d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 04/16/2018
 ---
 *Aplica-se a: Proteção Avançada contra Ameaças do Azure*
 
@@ -32,7 +32,8 @@ Este procedimento de instalação fornece instruções para criar e gerenciar um
 No Azure ATP, você pode gerenciar e monitorar vários espaços de trabalho. Isso é especialmente útil se você quiser criar um espaço de trabalho de demonstração e um espaço de trabalho de teste no qual pode fazer a prova de conceito do Azure ATP antes de disponibilizá-lo para toda a organização. Isso também é necessário para dar suporte a implantações com várias florestas. Um único espaço de trabalho só pode monitorar vários domínios de uma única floresta. 
 
 > [!NOTE]
-> Você pode ter um máximo de dois espaços de trabalho ativos. Depois de excluir um espaço de trabalho, você pode entrar em contato com o suporte para reativá-lo. Você pode ter um máximo de três espaços de trabalho excluídos. Para aumentar o número de espaços de trabalho salvos e excluídos, entre em contato com o suporte do Azure ATP.
+> - Você pode ter um máximo de dois espaços de trabalho ativos. Depois de excluir um espaço de trabalho, você pode entrar em contato com o suporte para reativá-lo. É possível ter um máximo de três espaços de trabalho excluídos. Para aumentar o número de espaços de trabalho salvos e excluídos, entre em contato com o suporte do Azure ATP.
+> - No momento, os data centers do Azure ATP são implantados na Europa, na América do Norte/América Central/Caribe e na Ásia.
 
 ## <a name="step-1-enter-the-workspace-management-portal"></a>Etapa 1. Entrar no portal de gerenciamento do espaço de trabalho
 

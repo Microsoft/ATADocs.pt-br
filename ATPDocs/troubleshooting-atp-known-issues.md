@@ -1,28 +1,33 @@
 ---
-title: "Solução de problemas conhecidos da ATP do Azure | Microsoft Docs"
-description: "Descreve como solucionar problemas de inicialização na ATP do Azure."
-keywords: 
+title: Solução de problemas conhecidos da ATP do Azure | Microsoft Docs
+description: Descreve como solucionar problemas de inicialização na ATP do Azure.
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 3/6/2018
+ms.date: 4/10/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: azure-advanced-threat-protection
-ms.technology: 
+ms.technology: ''
 ms.assetid: 23386e36-2756-4291-923f-fa8607b5518a
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 2895a38e2328fb7de4fe7f47d00c4e40ac854e74
-ms.sourcegitcommit: 84556e94a3efdf20ca1ebf89a481550d7f8f0f69
+ms.openlocfilehash: 2112e9fea1f316ff12d87b3a477b78bff4457a5f
+ms.sourcegitcommit: e0209c6db649a1ced8303bb1692596b9a19db60d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 *Aplica-se a: Proteção Avançada contra Ameaças do Azure*
 
 
 # <a name="troubleshooting-azure-atp-known-issues"></a>Solução de problemas conhecidos da ATP do Azure 
+
+
+## <a name="deployment-log-location"></a>Local do log de implantação
+ 
+Os logs de implantação do Azure ATP estão localizados no diretório temp do usuário que instalou o produto. No local de instalação padrão, ele pode ser encontrado em: C:\Users\Administrator\AppData\Local\Temp (ou um diretório acima de %temp%).
 
 ## <a name="azure-atp-sensor-nic-teaming-issue"></a>Problemas do Agrupamento NIC do sensor da ATP do Azure
 
@@ -30,14 +35,14 @@ Se tentar instalar o sensor do ATP em um computador configurado com um adaptador
 
 Se ainda não instalou o sensor:
 
-1.  Baixe o Npcap do site [https://nmap.org/npcap/](https://nmap.org/npcap/).
+1.  Baixar Npcap de [https://nmap.org/npcap/](https://nmap.org/npcap/).
 2.  Desinstale o WinPcap, caso esteja instalado.
 3.  Instale o Npcap com as seguintes opções: loopback_support=no & winpcap_mode=yes
 4.  Instale o pacote do sensor.
 
 Após instalar o sensor:
 
-1.  Baixe o Npcap do site [https://nmap.org/npcap/](https://nmap.org/npcap/).
+1.  Baixar Npcap de [https://nmap.org/npcap/](https://nmap.org/npcap/).
 2.  Desinstale o sensor.
 3.  Desinstale o WinPcap.
 4.  Instale o Npcap com as seguintes opções: loopback_support=no & winpcap_mode=yes

@@ -1,57 +1,75 @@
 ---
-title: "Configurar seu proxy ou firewall para habilitar a comunicação do Azure ATP com o sensor | Microsoft Docs"
-description: "Descreve como configurar o firewall ou proxy para permitir a comunicação entre o serviço de nuvem do Azure ATP e sensores do Azure ATP"
-keywords: 
+title: Configurar seu proxy ou firewall para habilitar a comunicação do Azure ATP com o sensor | Microsoft Docs
+description: Descreve como configurar o firewall ou proxy para permitir a comunicação entre o serviço de nuvem do Azure ATP e sensores do Azure ATP
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 3/3/2018
+ms.date: 4/22/2018
 ms.topic: get-started-article
-ms.prod: 
+ms.prod: ''
 ms.service: azure-advanced-threat-protection
-ms.technology: 
+ms.technology: ''
 ms.assetid: 9c173d28-a944-491a-92c1-9690eb06b151
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: f077bbd9990affbb6c552c5ad8875fdfebbd70f2
-ms.sourcegitcommit: 84556e94a3efdf20ca1ebf89a481550d7f8f0f69
+ms.openlocfilehash: c52fa6d7cb42605f1809a40926e391bf39fe3eb2
+ms.sourcegitcommit: d2d2750bfb0198c8488d538f1773fda6eda5e6f9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/23/2018
 ---
 *Aplica-se a: Proteção Avançada contra Ameaças do Azure*
 
 
 
-# <a name="configure-your-proxy-to-allow-communication-between-azure-atp-sensors-and-the-azure-atp-cloud-service"></a>Configure seu proxy para permitir a comunicação entre os sensores do Azure ATP e o serviço de nuvem do Azure ATP
+# <a name="configure-endpoint-proxy-and-internet-connectivity-settings-for-your-azure-atp-sensor"></a>Configurar o proxy do ponto de extremidade e configurações de conectividade de Internet para o Sensor de ATP do Azure
 
-Para seus Controladores de domínio se comunicarem com o serviço de nuvem, você deve abrir: *. atp.azure.com porta 443 em seu firewall ou proxy. A configuração precisa ser feita no nível do computador (= conta do computador) e não no nível de conta do usuário. Você pode testar a configuração usando as seguintes etapas:
+Cada sensor do Azure ATP (Proteção Avançada contra Ameaças) requer conectividade com a Internet para que o serviço de nuvem do Azure ATP funcione com êxito. Em algumas organizações, os controladores de domínio não são diretamente conectados à Internet, mas são conectados por meio de uma conexão de proxy da Web. Cada sensor do Azure ATP requer que você use a configuração de proxy Microsoft Windows Internet (WinINET) para relatar dados do sensor e se comunicar com o serviço do Azure ATP. Se usar WinHTTP para a configuração de proxy, você ainda precisará definir configurações de proxy do navegador Windows Internet (WinINet) para comunicação entre o sensor e o serviço de nuvem do Azure ATP.
+
+
+Ao configurar o proxy, você precisará saber o que o serviço de sensor do Azure ATP interno é executado no contexto do sistema usando a conta **LocalService**, e o serviço de Atualizador do Sensor do Azure ATP é executado no contexto do sistema usando a conta **LocalSystem**. 
+
+> [!NOTE]
+> Se estiver usando um proxy Transparente ou WPAD em sua topologia de rede, você não precisará configurar WinINET para o proxy.
+
+## <a name="configure-the-proxy"></a>Configurar o proxy 
+
+Configure o servidor proxy manualmente usando um proxy estático baseado no Registro, para permitir que o sensor ATP do Azure relate dados de diagnóstico e se comunique com o serviço de nuvem do Azure ATP quando um computador não tiver permissão para se conectar à Internet.
+
+> [!NOTE]
+> As alterações no Registro devem ser aplicadas apenas a LocalService e LocalSystem.
+
+O proxy estático é configurável por meio do Registro. Você deve copiar a configuração de proxy que usa no contexto do usuário para localsystem e localservice. Para copiar as configurações de proxy do contexto de usuário:
+
+1.   Não deixe de fazer backup das chave do Registro antes de modificá-las.
+
+2. No Registro, procure o valor `DefaultConnectionSetting` como REG_BINARY na chave do registro `HKCU\Software\Microsoft\Windows\CurrentVersion\InternetSetting\Connections\DefaultConnectionSetting` e copie-o.
  
-1.  Confirme se o **usuário atual** tem acesso ao ponto de extremidade do processador usando o Internet Explorer, navegando até a seguinte URL do CD: https://triprd1wcuse1sensorapi.eastus.cloudapp.azure.com (nos EUA), você deve receber o erro 503:
+2.  Se LocalSystem não tiver as configurações de proxy corretas (se elas não estiverem configuradas ou se forem diferentes de Current_User), copie as configurações de proxy de Current_User para LocalSystem. Na chave do Registro `HKU\S-1-5-18\Software\Microsoft\Windows\CurrentVersion\InternetSetting\Connections\DefaultConnectionSetting`.
 
- ![serviço indisponível](./media/service-unavailable.png)
- 
-2.  Se não receber um erro 503, examine a configuração de proxy e tente novamente.
+3.  Cole o valor de Current_user `DefaultConnectionSetting` como REG_BINARY.
 
-3.  Se a configuração de proxy funcionar para **CURRENT_USER** (ou seja, se você vir o erro 503), verifique se as configurações de proxy de WinInet estão habilitadas para a conta **LOCAL_SYSTEM** (usada pelo serviço de atualizador do sensor) executando o seguinte comando no prompt de comandos com privilégios elevados:
- 
-    reg compare "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings\Connections" "HKU\S-1-5-18\Software\Microsoft\Windows\CurrentVersion\Internet Settings\Connections" /v DefaultConnectionSettings
+4.  Se LocalService não tiver as configurações de proxy corretas, copie a configuração de proxy de Current_User para LocalService. Na chave do Registro `HKU\S-1-5-19\Software\Microsoft\Windows\CurrentVersion\InternetSetting\Connections\DefaultConnectionSetting`.
 
-Se você receber o erro "ERRO: O sistema não pôde localizar a chave do registro ou valor especificado." isso significa que nenhum proxy foi definido no nível do **LOCAL_SYSTEM**
- 
- ![erro de sistema local do proxy](./media/proxy-local-system-error.png)
+5.  Cole o valor de Current_User `DefaultConnectionSetting` como REG_BINARY.
 
-Se o resultado for "Resultado comparado: diferente ", isso significa que o proxy foi definido para **LOCAL_SYSTEM**, mas não é o mesmo que o **CURRENT_USER**:
- 
-  ![resultado de proxy comparado](./media/proxy-result-compared.png)
+> [!NOTE]
+> Isso afetará todos os aplicativos, incluindo os serviços do Windows que usam WinINET com LocalService, contexto LocalSytem.
 
-5.  Se **LOCAL_SYSTEM** não tiver as configurações de proxy corretas (não configuradas ou diferentes de **CURRENT_USER**), talvez seja necessário copiar as configurações de proxy de **CURRENT_ USER** para **LOCAL_SYSTEM**. Não deixe de fazer backup da chave do registro antes de modificá-la:
 
- Chave do usuário atual: HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings\Connections\DefaultConnectionSettings” Chave do sistema local: HKU\S-1-5-18\Software\Microsoft\Windows\CurrentVersion\Internet Settings\Connections\DefaultConnectionSettings”
+## <a name="enable-access-to-azure-atp-service-urls-in-the-proxy-server"></a>Habilitar o acesso a URLs de serviço do Azure ATP no servidor proxy
 
- 
-6.  Conclua as etapas 4 e 5 para a conta **Local_Service** (é a mesma que **Local_System**, mas deve ser S-1-5-19 em vez de S-1-5-18.
+Se um proxy ou firewall estiver bloqueando todo o tráfego por padrão e permitindo somente domínios específicos ou se a verificação de HTTPS (inspeção de SSL) estiver habilitada, verifique se as seguintes URLs estão na lista de permissão para permitir a comunicação com o serviço do Azure ATP na porta 443:
 
+|Local do serviço|Registro DNS .Atp.Azure.com|
+|----|----|
+|EUA |triprd1wcusw1sensorapi.atp.azure.com<br>triprd1wcuswb1sensorapi.atp.azure.com<br>triprd1wcuse1sensorapi.atp.azure.com|
+|Ocidental|triprd1wceun1sensorapi.atp.azure.com<br>triprd1wceuw1sensorapi.atp.azure.com|
+|Ásia|triprd1wcasse1sensorapi.atp.azure.com|
+
+> [!NOTE]
+> Ao executar a inspeção de SSL no tráfego de rede do Azure ATP (entre o sensor e o serviço do Azure ATP), a inspeção de SSL deve dar suporte à inspeção mútua.
 
 
 ## <a name="see-also"></a>Consulte Também

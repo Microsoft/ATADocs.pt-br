@@ -13,11 +13,11 @@ ms.technology: ''
 ms.assetid: 90f68f2c-d421-4339-8e49-1888b84416e6
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 57f4eb56eaa0547d18421b17fb5804840e4997e3
-ms.sourcegitcommit: 158bf048d549342f2d4689f98ab11f397d9525a2
+ms.openlocfilehash: 435e5141c8abda338c1115004d1876ff5b7736a4
+ms.sourcegitcommit: e0209c6db649a1ced8303bb1692596b9a19db60d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 *Aplica-se a: Proteção Avançada contra Ameaças do Azure*
 
@@ -106,7 +106,7 @@ Considere os seguintes critérios ao decidir quantos espaços de trabalho do Azu
 
 ## <a name="azure-atp-sensor-and-azure-atp-standalone-sensor"></a>Sensor do Azure ATP e sensor autônomo do Azure ATP
 
-O **sensor do Azure ATP** e o **sensor autônomo do Azure ATP** têm a mesma funcionalidade básica:
+O **sensor do Azure ATP** e o **sensor autônomo do Azure ATP** autônomo têm a mesma funcionalidade básica:
 
 -   Capturar e inspecionar o tráfego de rede do controlador de domínio. Este tráfego é espelhado da porta para sensores autônomos do Azure ATP e o tráfego local do controlador de domínio em sensores do Azure ATP. 
 

@@ -5,7 +5,7 @@ keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 3/25/2018
+ms.date: 4/15/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,11 +13,11 @@ ms.technology: ''
 ms.assetid: ca5d1c7b-11a9-4df3-84a5-f53feaf6e561
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: ec9a2bc18262f88ada0a7a4ac56b5a4b2c104165
-ms.sourcegitcommit: 158bf048d549342f2d4689f98ab11f397d9525a2
+ms.openlocfilehash: 6246849cf7e8566b27c969b73e9c96cb0e7b7978
+ms.sourcegitcommit: e0209c6db649a1ced8303bb1692596b9a19db60d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 *Aplica-se a: Proteção Avançada contra Ameaças do Azure*
 
@@ -100,14 +100,20 @@ Há três tipos de detecção:
 
 **Investigação**
 
-Primeiro, verifique a descrição do alerta para ver com qual dos três tipos de detecção acima você está lidando.
+Primeiro, verifique a descrição do alerta para ver com quais dos três tipos de detecção acima você está lidando. Primeiro, verifique a descrição do alerta com quais dos três tipos de detecção acima você está lidando. Para obter mais informações, baixe a planilha do Excel.
 
-1.  Skeleton Key – você pode verificar se a Skeleton Key afetou os controladores de domínio usando [o verificador escrito pela equipe do ATP do Azure](https://gallery.technet.microsoft.com/Aorato-Skeleton-Key-24e46b73).
-    Se o analisador encontrar malware em 1 ou mais controladores de domínio, é um verdadeiro positivo.
+1.  Skeleton Key – você pode verificar se a Skeleton Key afetou os controladores de domínio usando [o verificador escrito pela equipe do ATP do Azure](https://gallery.technet.microsoft.com/Aorato-Skeleton-Key-24e46b73). Se o analisador encontrar malware em 1 ou mais controladores de domínio, é um verdadeiro positivo.
 
-2.  Golden Ticket – há casos em que um aplicativo personalizado que é raramente usado está se autenticando usando uma codificação de criptografia inferior. Verifique se há algum desses aplicativos personalizados no computador de origem. Nesse caso, ele é provavelmente um positivo verdadeiro benigno e pode ser suprimido.
+2.  Golden Ticket – na planilha do Excel, vá para a guia de atividade de rede. Você verá que o campo de downgrade relevante é **Solicitar Tipo de Criptografia de Tíquete** e **Tipos de Criptografia com Suporte no Computador de Origem** contém métodos de criptografia mais fortes.
 
-3.  Overpass-the-Hash – há casos em que esse alerta pode ser disparado quando usuários configurados com cartões inteligentes forem necessários para logon interativo e essa configuração é desabilitada e, em seguida, habilitada. Verifique se ocorreram alterações como essa para a(s) conta(s) envolvida(s). Nesse caso, ele é provavelmente um positivo verdadeiro benigno e pode ser suprimido.
+  1. Verifique o computador de origem e a conta ou, se houver vários computadores de origem e contas, verifique se eles têm algo em comum (por exemplo, toda a equipe de marketing usa um aplicativo específico que pode estar fazendo o alerta ser disparado). Há casos em que um aplicativo personalizado que é raramente usado está se autenticando usando uma codificação de criptografia inferior. Verifique se há algum desses aplicativos personalizados no computador de origem. Nesse caso, ele é provavelmente um positivo verdadeiro benigno e pode ser suprimido.
+  
+  2. Verifique o recurso acessado por essas permissões. Se houver um recurso que todas elas estão acessando, valide-o e verifique se é um recurso válido que elas precisam acessar. Além disso, verifique se o recurso de destino dá suporte a métodos de criptografia forte. Você pode verificar isso no Active Directory verificando o atributo msDS-SupportedEncryptionTypes, da conta de serviço do recurso.
+
+3.  Overpass-the-Hash – na planilha do Excel, vá para a guia de atividade de rede. Você verá que o campo de downgrade relevante é **Tipo de Criptografia de Carimbo de Data/Hora Criptografado** e **Tipos de Criptografia com Suporte no Computador de Origem** contém métodos de criptografia mais fortes.
+
+  1. Há casos em que esse alerta pode ser disparado quando os usuários fazem logon usando cartões inteligentes, se a configuração do cartão inteligente foi alterada recentemente. Verifique se ocorreram alterações como essa para a(s) conta(s) envolvida(s). Nesse caso, ele é provavelmente um positivo verdadeiro benigno e pode ser suprimido.
+  2. Verifique o recurso acessado por essas permissões. Se houver um recurso que todas elas estão acessando, valide-o e verifique se é um recurso válido que elas precisam acessar. Além disso, verifique se o recurso de destino dá suporte a métodos de criptografia forte. Você pode verificar isso no Active Directory verificando o atributo msDS-SupportedEncryptionTypes, da conta de serviço do recurso.
 
 **Remediação**
 
@@ -225,9 +231,10 @@ Nessa detecção, um alerta é disparado quando uma solicitação de replicaçã
 
 **Investigação**
 
-1. O computador em questão é um controlador de domínio? Por exemplo, um controlador de domínio recém-promovido que teve problemas de replicação. Se sim, **Feche e exclua** a atividade suspeita.  
+1.  O computador em questão é um controlador de domínio? Por exemplo, um controlador de domínio recém-promovido que teve problemas de replicação. Em caso afirmativo, **Fechar** a atividade suspeita. 
+2.  O computador em questão deveria estar replicando dados do Active Directory? Por exemplo, o Azure AD Connect. Se sim, **Feche e exclua** a atividade suspeita.
+3.  Clique no computador de origem ou na conta para acessar a página de perfil. Verifique o que aconteceu no momento da replicação, pesquisando atividades incomuns, como: quem estava conectado e quais recursos foram acessados. Se você tiver habilitado a integração do Windows Defender ATP, clique no selo do Windows Defender ATP ![Selo do Windows Defender ATP](./media/wd-badge.png) para continuar a investigar o computador. No Windows Defender ATP, você pode ver quais processos e alertas ocorreram no momento do alerta. 
 
-2. O computador em questão deveria estar replicando dados do Active Directory? Por exemplo, o Azure AD Connect. Se sim, **Feche e exclua** a atividade suspeita.
 
 **Remediação**
 
@@ -352,7 +359,7 @@ Há vários tipos de consulta no protocolo DNS. O Azure ATP detecta a solicitaç
 
 2. O computador de origem está executando um verificador de segurança? Em caso afirmativo, **Exclua as entidades** no ATP, seja diretamente com **Fechar e excluir** ou por meio da página **Exclusão** (em **Configuração** – disponível para administradores do Azure ATP).
 
-3. Se a resposta para todas as perguntas anteriores for não, presuma que ele é mal-intencionado.
+3. Se a resposta a todas as perguntas anteriores for não, continue investigando, concentrando-se no computador de origem. Clique no computador de origem para acessar a página de perfil. Verifique o que aconteceu no momento da solicitação, pesquisando atividades incomuns, como: quem estava conectado e quais recursos foram acessados. Se você tiver habilitado a integração do Windows Defender ATP, clique no selo do Windows Defender ATP ![Selo do Windows Defender ATP](./media/wd-badge.png) para continuar a investigar o computador. No Windows Defender ATP, você pode ver quais processos e alertas ocorreram no momento do alerta. 
 
 **Remediação**
 
@@ -386,7 +393,7 @@ Nessa detecção, um alerta é acionado quando uma enumeração de sessão SMB �
 
 Use a [ferramenta Net Cease](https://gallery.technet.microsoft.com/Net-Cease-Blocking-Net-1e8dcb5b) para proteger seu ambiente contra esse ataque.
 
-## <a name="remote-execution-attempt-detected"></a>Tentativa de execução remota detectada
+## <a name="remote-execution-attempt"></a>Tentativa de execução remota
 
 **Descrição**
 
@@ -402,7 +409,7 @@ Os invasores que comprometem credenciais de administrador ou que usam uma explor
 
  - Se a resposta a ambas as perguntas for *Sim*, então, **Feche** o alerta.
 
-3. Se a resposta a uma das perguntas for *não*, então, isso deverá ser considerado um positivo verdadeiro.
+3. Se a resposta a uma das perguntas for não, isso deverá ser considerado um positivo verdadeiro. Tente localizar a origem da tentativa verificando perfis de computador e conta. Clique no computador de origem ou na conta para acessar a página de perfil. Verifique o que aconteceu no momento dessas tentativas, pesquisando atividades incomuns, como: quem estava conectado e quais recursos foram acessados. Se você tiver habilitado a integração do Windows Defender ATP, clique no selo do Windows Defender ATP ![Selo do Windows Defender ATP](./media/wd-badge.png) para continuar a investigar o computador. No Windows Defender ATP, você pode ver quais processos e alertas ocorreram no momento do alerta. 
 
 **Remediação**
 
@@ -420,21 +427,25 @@ Nesta detecção, um alerta é disparado quando ocorrem diversas falhas de auten
 
 **Investigação**
 
-1. Se houver muitas contas envolvidas, clique em **Baixar detalhes** para exibir a lista em uma planilha do Excel.
+1.  Clique em **Baixar detalhes** para exibir as informações completas em uma planilha do Excel. Você pode obter as seguintes informações: 
+   -    Lista das contas atacadas
+   -    Lista de contas adivinhadas em que as tentativas de logon terminaram com a autenticação bem-sucedida
+   -    Se as tentativas de autenticação tiverem sido realizadas usando NTLM, você verá as atividades de eventos relevantes 
+   -    Se as tentativas de autenticação tiverem sido realizadas usando Kerberos, você verá as atividades de rede relevantes
 
-2. Clique no alerta para ir até sua página de detalhes. Verifique se alguma tentativa de logon terminou com uma autenticação bem-sucedida, elas aparecem como **Contas adivinhadas** no lado direito do infográfico. Se sim, alguma das **Contas adivinhadas** é normalmente usada pelo computador de origem? Se sim, **Omita** a atividade suspeita.
+2.  Clique no computador de origem para acessar a página de perfil. Verifique o que aconteceu no momento dessas tentativas, pesquisando atividades incomuns, como: quem estava conectado e quais recursos foram acessados. Se você tiver habilitado a integração do Windows Defender ATP, clique no selo do Windows Defender ATP ![Selo do Windows Defender ATP](./media/wd-badge.png) para continuar a investigar o computador. No Windows Defender ATP, você pode ver quais processos e alertas ocorreram no momento do alerta. 
 
-3. Se não houver nenhuma **Conta adivinhada**, alguma das **Contas atacadas** é normalmente usada no computador de origem? Se sim, **Omita** a atividade suspeita.
+3.  Se a autenticação tiver sido executada usando NTLM, você vir que o alerta ocorre muitas vezes e não houver informações suficientes disponíveis sobre o servidor que tentou acessar o computador de origem, você deverá habilitar a **Auditoria de NTLM** nos controladores de domínio envolvidos. Para fazer isso, ative o evento 8004. Esse é o evento de autenticação de NTLM que inclui informações sobre o computador de origem, a conta de usuário e o **servidor** que o computador de origem tentou acessar. Depois que souber qual servidor enviou a validação de autenticação, você deverá investigar o servidor, verificando seus eventos, como 4624, para compreender melhor o processo de autenticação. 
 
 **Remediação**
 
 [Senhas complexas e longas](https://docs.microsoft.com/windows/device-security/security-policy-settings/password-policy) fornecem o primeiro nível necessário de segurança contra ataques de força bruta.
 
-## <a name="suspicious-service-creation---preview-feature"></a>Criação de serviço suspeito – recurso em visualização!
+## <a name="suspicious-service-creation"></a>Criação de serviço suspeito
 
 **Descrição**
 
-Um serviço suspeito foi criado em um controlador de domínio em sua organização. Esse alerta se baseia no evento 7045 para identificar a atividade suspeita em seus pontos de extremidade. O evento 7045 deve ser encaminhado dos pontos de extremidade para o ATP configurando o [Encaminhamento de Eventos do Windows](configure-event-forwarding.md) ou encaminhando eventos 7045 para o SIEM e [configurando seu SIEM](configure-event-collection.md) como uma fonte de dados que encaminha eventos para o ATP.
+Um serviço suspeito foi criado em um controlador de domínio em sua organização. Esse alerta se baseia no evento 7045 para identificar a atividade suspeita em seus pontos de extremidade. 
 
 **Investigação**
 
@@ -488,7 +499,8 @@ Corrija todos os seus computadores, especialmente aplicando as atualizações de
 3. O WanaKiwi poderá descriptografar os dados nas mãos de algum ransoware, mas apenas se o usuário não tiver reiniciado ou desligado o computador. Para obter mais informações, consulte [Ransomware Wanna Cry](https://answers.microsoft.com/en-us/windows/forum/windows_10-security/wanna-cry-ransomware/5afdb045-8f36-4f55-a992-53398d21ed07?auth=1)
 
 
->! [OBSERVAÇÃO] Para desabilitar uma atividade suspeita, contate o suporte.
+> [!NOTE]
+> Para desabilitar uma atividade suspeita, contate o suporte.
 
 
 ## <a name="see-also"></a>Consulte Também
