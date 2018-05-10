@@ -5,7 +5,7 @@ keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 4/22/2018
+ms.date: 4/29/2018
 ms.topic: article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,11 +13,11 @@ ms.technology: ''
 ms.assetid: 7d0f33db-2513-4146-a395-290e001f4199
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: edf9222f7ccaca33317120a7cdaacf04873a67a4
-ms.sourcegitcommit: d2d2750bfb0198c8488d538f1773fda6eda5e6f9
+ms.openlocfilehash: de761df3badbd1ae1118c96d018a24dd22318328
+ms.sourcegitcommit: 5c0f914b44bfb8e03485f12658bfa9a7cd3d8bbc
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2018
+ms.lasthandoff: 04/30/2018
 ---
 *Aplica-se a: Proteção Avançada contra Ameaças do Azure*
 
@@ -25,6 +25,15 @@ ms.lasthandoff: 04/23/2018
 # <a name="whats-new-in-azure-atp"></a>Novidades do Azure ATP 
 
 
+
+## <a name="azure-atp-release-230"></a>Azure ATP versão 2.30
+
+Lançado em 29 de abril de 2018
+ 
+- Agora, as atividades suspeitas de downgrade de criptografia incluem uma seção de evidências que descreve os sintomas detectados pelo Azure ATP e que fazem com que ele suspeite de uma atividade de downgrade de criptografia. 
+-   Agora, o Azure ATP usa o Azure Email Orchestrator para todos os emails enviados do Azure ATP, inclusive atividades suspeitas, alertas de monitoramento e relatórios. Você verá que essas notificações de email agora seguem um formato consistente para facilitar o uso e que arquivos do Excel terão um link para download no console.
+ 
+ 
 
 ## <a name="azure-atp-release-229"></a>Azure ATP versão 2.29
 
@@ -61,7 +70,7 @@ Lançado em 25 de março de 2018
 
 ## <a name="azure-atp-release-225"></a>Azure ATP versão 2.25
 
-Lançada em 18 de março de 2018
+Lançado em 18 de março de 2018
 
 - Agora há compatibilidade com a MFA (Autenticação Multifator) no Azure ATP. Os locatários usando MFA agora podem entrar no portal do Azure ATP.
 - O Azure ATP agora tem uma página [**Status do sistema**](https://health.atp.azure.com/) para fornecer informações sobre se o Portal de Gerenciamento do espaço de trabalho está funcionando e ativo, se há problemas com as detecções e se o sensor pode enviar tráfego para a nuvem. Você pode acessar o **Status do sistema** na barra de menus do Azure ATP.
@@ -69,7 +78,7 @@ Lançada em 18 de março de 2018
 
 ## <a name="azure-atp-release-224"></a>Versão 2.24 do Azure ATP
 
-Lançada em 11 de março de 2018
+Lançado em 11 de março de 2018
 
 **Detecções novas e atualizadas**
   - Criação de serviços suspeitos – invasores tentam executar serviços suspeitos na sua rede. Agora, o Azure ATP gera um alerta ao identificar que um novo serviço que parece suspeito está sendo executado por uma pessoa em um computador específico. Essa detecção se baseia em eventos (e não no tráfego de rede) e ocorre em qualquer controlador de domínio da rede que esteja encaminhando o evento 7045 para o Azure ATP. Para saber mais, consulte o [Guia de atividades suspeitas](suspicious-activity-guide.md).

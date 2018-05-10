@@ -5,7 +5,7 @@ keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 4/10/2018
+ms.date: 4/29/2018
 ms.topic: article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,11 +13,11 @@ ms.technology: ''
 ms.assetid: 23386e36-2756-4291-923f-fa8607b5518a
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 2112e9fea1f316ff12d87b3a477b78bff4457a5f
-ms.sourcegitcommit: e0209c6db649a1ced8303bb1692596b9a19db60d
+ms.openlocfilehash: c430ec58c197c8fcc6e539d0923278cd8469987d
+ms.sourcegitcommit: 5c0f914b44bfb8e03485f12658bfa9a7cd3d8bbc
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/30/2018
 ---
 *Aplica-se a: Proteção Avançada contra Ameaças do Azure*
 
@@ -28,6 +28,24 @@ ms.lasthandoff: 04/16/2018
 ## <a name="deployment-log-location"></a>Local do log de implantação
  
 Os logs de implantação do Azure ATP estão localizados no diretório temp do usuário que instalou o produto. No local de instalação padrão, ele pode ser encontrado em: C:\Users\Administrator\AppData\Local\Temp (ou um diretório acima de %temp%).
+
+## <a name="proxy-authentication-problem-presents-as-licensing-error"></a>Problema de autenticação de proxy apresentado como erro de licenciamento
+
+Durante a instalação de sensor, você recebe o seguinte erro: **Falha no registro do sensor devido a problemas de licenciamento.**
+
+Entradas do log de implantação: [1C60:1AA8][2018-03-24T23:59:13]i000: 2018-03-25 02:59:13.1237 Info  InteractiveDeploymentManager ValidateCreateSensorAsync retornou [\[]validateCreateSensorResult=LicenseInvalid[\]] [1C60:1AA8][2018-03-24T23:59:56]i000: 2018-03-25 02:59:56.4856 Info  InteractiveDeploymentManager ValidateCreateSensorAsync retornou [\[]validateCreateSensorResult=LicenseInvalid[\]] [1C60:1AA8][2018-03-25T00:27:56]i000: 2018-03-25 03:27:56.7399 Debug SensorBootstrapperApplication Engine.Quit [\[]deploymentResultStatus=1602 isRestartRequired=False[\]] [1C60:15B8][2018-03-25T00:27:56]i500: Desligando, código de saída: 0x642
+
+
+**Causa:**
+
+em alguns casos, ao se comunicar por meio de um proxy durante a autenticação, ele pode responder para o sensor do Azure ATP com o erro 401 ou 403, em vez do erro 407. O sensor Azure ATP interpretará o erro 401 ou 403 como um problema de licenciamento, não como um problema de autenticação de proxy. 
+
+**Resolução:**
+
+o sensor deve poder navegar até *.atp.azure.com por meio do proxy configurado sem autenticação. Saiba mais em [Configurar o proxy para habilitar a comunicação](configure-proxy.md).
+
+
+
 
 ## <a name="azure-atp-sensor-nic-teaming-issue"></a>Problemas do Agrupamento NIC do sensor da ATP do Azure
 

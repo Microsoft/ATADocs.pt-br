@@ -5,7 +5,7 @@ keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 3/27/2018
+ms.date: 4/29/2018
 ms.topic: article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,11 +13,11 @@ ms.technology: ''
 ms.assetid: 90f68f2c-d421-4339-8e49-1888b84416e6
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 435e5141c8abda338c1115004d1876ff5b7736a4
-ms.sourcegitcommit: e0209c6db649a1ced8303bb1692596b9a19db60d
+ms.openlocfilehash: 838c5ce470bdf78ec81aed5d6fa1cf2407abc6f9
+ms.sourcegitcommit: 5c0f914b44bfb8e03485f12658bfa9a7cd3d8bbc
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/30/2018
 ---
 *Aplica-se a: Proteção Avançada contra Ameaças do Azure*
 
@@ -30,6 +30,8 @@ A arquitetura da Proteção Avançada contra Ameaças do Azure é detalhada nest
 O Azure ATP monitora o tráfego de rede do controlador de domínio utilizando o espelhamento de porta para um sensor autônomo do Azure ATP usando comutadores físicos ou virtuais. Se você implantar o sensor do Azure ATP diretamente em seus controladores de domínio, ele eliminará a necessidade de espelhamento de porta. Além disso, o Azure ATP pode aproveitar os eventos do Windows (encaminhados diretamente de seus controladores de domínio ou de um servidor SIEM) e analisar os dados em relação a ataques e ameaças. O Azure ATP recebe tráfego analisado do sensor autônomo do Azure ATP e do sensor do Azure ATP. Ele realiza então a criação de perfil, executa detecção determinística e executa algoritmos comportamentais e de aprendizado de máquina para conhecer sua rede, permitindo a detecção de anomalias e avisando sobre atividades suspeitas.
 
 Esta seção descreve o fluxo de rede e a captura de eventos e descreve detalhadamente a funcionalidade dos componentes principais do ATP: o sensor autônomo do Azure ATP, o sensor do Azure ATP (que tem a mesma funcionalidade básica do sensor autônomo do Azure ATP) e o serviço de nuvem do Azure ATP. 
+
+Quando instalado diretamente em controladores de domínio, o sensor acessa os logs de eventos necessários diretamente do controlador de domínio. Após a análise desses logs e do tráfego de rede pelo sensor, o Azure ATP envia apenas essas informações analisadas ao serviço do Azure ATP (nem todos os logs).
 
 ## <a name="azure-atp-components"></a>Componentes do Azure ATP
 O Azure ATP é formado pelos seguintes componentes:
@@ -185,7 +187,7 @@ Seus controladores de domínio e o sensor autônomo do Azure ATP podem ser físi
 ### <a name="events"></a>Eventos
 Para aprimorar a detecção do Azure ATP de Pass-the-Hash, força bruta, modificação de grupos confidenciais, criação de serviços suspeitos e modificações de Honey Tokens, o Azure ATP precisa dos seguintes eventos do Windows: 4776, 4732, 4733, 4728, 4729, 4756, 4757 e 7045. Eles podem ser lidos automaticamente pelo sensor do Azure ATP ou, caso o sensor do Azure ATP não esteja implantado, ele poderá ser encaminhado para o sensor autônomo do Azure ATP de duas maneiras: configurando o sensor autônomo do Azure ATP para escutar eventos do SIEM ou [Configurando o Encaminhamento de Eventos do Windows](configure-event-forwarding.md).
 
--   Configuração do sensor autônomo do Azure ATP para escutar eventos de SIEM <br>Configure o SIEM para encaminhar eventos específicos do Windows para o ATA. O Azure ATP dá suporte a vários fornecedores SIEM. Para obter mais informações, confira [Configurar encaminhamento de eventos](configure-event-forwarding.md).
+-   Configuração do sensor autônomo do Azure ATP para escutar eventos de SIEM <br>Configure o SIEM para encaminhar eventos específicos do Windows para o ATP. O Azure ATP dá suporte a vários fornecedores SIEM. Para obter mais informações, confira [Configurar encaminhamento de eventos](configure-event-forwarding.md).
 
 -   Configuração do encaminhamento de eventos do Windows<br>Outra maneira do Azure ATP conseguir obter seus eventos é configurando seus controladores de domínio para encaminhar eventos do Windows 4776, 4732, 4733, 4728, 4729, 4756, 4757 e 7045 para seu sensor autônomo do Azure ATP. Isso é especialmente útil se você não tiver um SIEM ou se o SIEM não tiver suporte atualmente do ATP. Para obter mais informações sobre o Encaminhamento de Eventos do Windows no ATP, confira [Configurando o encaminhamento de eventos do Windows](configure-event-forwarding.md). Isso se aplica somente aos sensores autônomos físicos do Azure ATP – não ao sensor do Azure ATP.
 
