@@ -5,7 +5,7 @@ keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 3/21/2018
+ms.date: 5/6/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology: ''
 ms.assetid: a5f90544-1c70-4aff-8bf3-c59dd7abd687
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 419df4c4404bf26a85c1a955139d0dee6f50828e
-ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
+ms.openlocfilehash: 91ce961b832fd02ba343b3f55ae3570fe4b10207
+ms.sourcegitcommit: 39a1ddeb6c9dd0817f92870b711627350b7f6f03
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 05/08/2018
 ---
 *Aplica-se a: Advanced Threat Analytics versão 1.9*
 
@@ -121,9 +121,7 @@ A tabela a seguir lista as portas mínimas que devem ser abertas para que a Cent
 |**LDAPS** (opcional)|TCP|636|Controladores de domínio|Saída|
 |**DNS**|TCP e UDP|53|Servidores DNS|Saída|
 |**Kerberos** (opcional se ingressado no domínio)|TCP e UDP|88|Controladores de domínio|Saída|
-|**Netlogon** (opcional se ingressado no domínio)|TCP e UDP|445|Controladores de domínio|Saída|
 |**Horário do Windows** (opcional se ingressado no domínio)|UDP|123|Controladores de domínio|Saída|
-|**Netlogon (SMB, CIFS, SAM-R)**|TCP e UDP|445|Gateways e dispositivos|Entrada e saída|
 
 > [!NOTE]
 > O LDAP é necessário para testar as credenciais serem usadas entre os Gateways do ATA e os controladores de domínio. Os testes executados do Centro do ATA para um controlador de domínio para testar a validade dessas credenciais, depois do qual o Gateway do ATA usa o LDAP como parte do processo de resolução normal.
@@ -212,7 +210,7 @@ A tabela abaixo lista as portas mínimas que o Gateway do ATA requer configurada
 |LDAP para o Catálogo Global|TCP|3268|Controladores de domínio|Saída|
 |LDAPS para o Catálogo Global|TCP|3269|Controladores de domínio|Saída|
 |Kerberos|TCP e UDP|88|Controladores de domínio|Saída|
-|Netlogon|TCP e UDP|445|Controladores de domínio|Saída|
+|Netlogon (SMB, CIFS, SAM-R)|TCP e UDP|445|Todos os dispositivos na rede|Saída|
 |Tempo do Windows|UDP|123|Controladores de domínio|Saída|
 |DNS|TCP e UDP|53|Servidores DNS|Saída|
 |NTLM via RPC|TCP|135|Todos os dispositivos na rede|Saída|
@@ -225,6 +223,10 @@ A tabela abaixo lista as portas mínimas que o Gateway do ATA requer configurada
 >
 > -   NTLM sobre RPC (porta TCP 135)
 > -   NetBIOS (porta UDP 137)
+> - Usando a conta de usuário do serviço de diretório, o Gateway do ATA consulta pontos de extremidade em sua organização para administradores locais usando SAM-R (logon de rede) para criar o [grafo de caminho de movimentação lateral](use-case-lateral-movement-path.md). Para obter mais informações, consulte [Configurar permissões necessárias do SAM-R](install-ata-step9-samr.md).
+> - As seguintes portas precisam estar abertas para entrada em dispositivos na rede do Gateway do ATA:
+>   -   NTLM via RPC (porta TCP 135) para fins de resolução
+>   -   NetBIOS (porta UDP 137) para fins de resolução
 
 ## <a name="ata-lightweight-gateway-requirements"></a>Requisitos do Gateway Lightweight do ATA
 Esta seção lista os requisitos para o Gateway Lightweight do ATA.
@@ -280,12 +282,17 @@ A tabela abaixo lista o mínimo de portas que o Gateway Lightweight do ATA exige
 |NetBIOS|UDP|137|Todos os dispositivos na rede|Saída|
 |SSL|TCP|443|Centro de ATA|Saída|
 |Syslog (opcional)|UDP|514|Servidor SIEM|Entrada|
+|Netlogon (SMB, CIFS, SAM-R)|TCP e UDP|445|Todos os dispositivos na rede|Saída|
 
 > [!NOTE]
 > Como parte do processo de resolução realizado pelo Gateway Lightweight do ATA, as portas a seguir precisam ser abertas na entrada dos dispositivos na rede por meio dos Gateways Lightweight do ATA.
 >
 > -   NTLM via RPC
 > -   NetBIOS
+> - Usando a conta de usuário do serviço de diretório, o Gateway Lightweight do ATA consulta pontos de extremidade em sua organização para administradores locais usando SAM-R (logon de rede) para criar o [grafo de caminho de movimentação lateral](use-case-lateral-movement-path.md). Para obter mais informações, consulte [Configurar permissões necessárias do SAM-R](install-ata-step9-samr.md).
+> - As seguintes portas precisam estar abertas para entrada em dispositivos na rede do Gateway do ATA:
+>   -   NTLM via RPC (porta TCP 135) para fins de resolução
+>   -   NetBIOS (porta UDP 137) para fins de resolução
 
 ## <a name="ata-console"></a>Console do ATA
 O acesso ao Console do ATA é por meio de um navegador, oferecendo suporte a definições e navegadores:

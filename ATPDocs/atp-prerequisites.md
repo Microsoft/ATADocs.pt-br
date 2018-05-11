@@ -5,7 +5,7 @@ keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 4/22/2018
+ms.date: 5/8/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,11 +13,11 @@ ms.technology: ''
 ms.assetid: 62c99622-2fe9-4035-9839-38fec0a353da
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 9a9998360a24fd7f4d4151d4572c7715be03d34d
-ms.sourcegitcommit: d2d2750bfb0198c8488d538f1773fda6eda5e6f9
+ms.openlocfilehash: ae859121fbe856c93b8568ef38bf0b4bdb77837a
+ms.sourcegitcommit: 8472f3f46fc90da7471cd1065cdb2f6a1d5a9f69
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2018
+ms.lasthandoff: 05/08/2018
 ---
 *Aplica-se a: Proteção Avançada contra Ameaças do Azure*
 
@@ -139,21 +139,21 @@ A tabela abaixo lista as portas mínimas que o sensor autônomo do Azure ATP req
 |LDAP para o Catálogo Global|TCP|3268|Controladores de domínio|Saída|
 |LDAPS para o Catálogo Global|TCP|3269|Controladores de domínio|Saída|
 |Kerberos|TCP e UDP|88|Controladores de domínio|Saída|
-|Netlogon (SMB, CIFS, SAM-R)|TCP e UDP|445|Controladores de domínio|Saída|
+|Netlogon (SMB, CIFS, SAM-R)|TCP e UDP|445|Todos os dispositivos na rede|Saída|
 |Tempo do Windows|UDP|123|Controladores de domínio|Saída|
 |DNS|TCP e UDP|53|Servidores DNS|Saída|
 |NTLM via RPC|TCP|135|Todos os dispositivos na rede|Saída|
 |NetBIOS|UDP|137|Todos os dispositivos na rede|Saída|
 |Syslog (opcional)|TCP/UDP|514, dependendo da configuração|Servidor SIEM|Entrada|
 |RADIUS|UDDP|1813|RADIUS|Entrada|
+|RDP|TCP|3389|Todos os dispositivos na rede|Saída|
 
 > [!NOTE]
 > - Usando a conta de usuário do serviço de diretório, o sensor consulta pontos de extremidade em sua organização para administradores locais usando SAM-R (logon de rede) para criar o [gráfico de caminho de movimento lateral](use-case-lateral-movement-path.md). Para obter mais informações, consulte [Configurar permissões necessárias do SAM-R](install-atp-step8-samr.md).
 > - As seguintes portas precisam estar abertas para entrada em dispositivos na rede de sensores autônomos do Azure ATP:
 >   -   NTLM via RPC (porta TCP 135) para fins de resolução
 >   -   NetBIOS (porta UDP 137) para fins de resolução
->   -   Consultas de SAM-R (porta TCP/UDP 445) para fins de detecção
-
+>   -   RDP (porta TCP 3389), apenas o primeiro pacote *Client Hello*, para fins de resolução<br> Observe que nenhuma autenticação é realizada em nenhuma porta.
 
 ## <a name="azure-atp-sensor-requirements"></a>Requisitos do sensor do Azure ATP
 Esta seção lista os requisitos do sensor do Azure ATP.
@@ -202,18 +202,18 @@ A tabela abaixo lista o mínimo de portas que o sensor do Azure ATP exige:
 |**Portas internas**|||||
 |DNS|TCP e UDP|53|Servidores DNS|Saída|
 |NTLM via RPC|TCP|135|Todos os dispositivos na rede|Saída|
-|Netlogon (SMB, CIFS, SAM-R)|TCP/UDP|445|Controladores de domínio|Saída|
+|Netlogon (SMB, CIFS, SAM-R)|TCP/UDP|445|Todos os dispositivos na rede|Saída|
 |NetBIOS|UDP|137|Todos os dispositivos na rede|Saída|
 |Syslog (opcional)|TCP/UDP|514, dependendo da configuração|Servidor SIEM|Entrada|
 |RADIUS|UDDP|1813|RADIUS|Entrada|
+|Porta TLS para RDP|TCP|3389|Todos os dispositivos na rede|Saída|
 
 > [!NOTE]
-> - Usando a conta de usuário do serviço de diretório, o sensor consulta pontos de extremidade em sua organização para administradores locais usando SAM-R (logon de rede) para criar o [gráfico de caminho de movimento lateral](use-case-lateral-movement-path.md).
-> - As seguintes portas precisam estar abertas para entrada em dispositivos na rede de sensores do Azure ATP:
+> - Usando a conta de usuário do serviço de diretório, o sensor consulta pontos de extremidade em sua organização para administradores locais usando SAM-R (logon de rede) para criar o [gráfico de caminho de movimento lateral](use-case-lateral-movement-path.md). Para obter mais informações, consulte [Configurar permissões necessárias do SAM-R](install-atp-step8-samr.md).
+> - As seguintes portas precisam estar abertas para entrada em dispositivos na rede de sensores autônomos do Azure ATP:
 >   -   NTLM via RPC (porta TCP 135) para fins de resolução
 >   -   NetBIOS (porta UDP 137) para fins de resolução
->   -   Consultas de SAM-R (porta TCP/UDP 445) para fins de detecção
-
+>   -   RDP (porta TCP 3389), apenas o primeiro pacote *Client Hello*, para fins de resolução<br> Observe que nenhuma autenticação é realizada em nenhuma porta.
 
 
 

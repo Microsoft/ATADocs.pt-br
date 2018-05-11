@@ -5,7 +5,7 @@ keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 3/21/2018
+ms.date: 5/6/2018
 ms.topic: article
 ms.prod: ''
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology: ''
 ms.assetid: a7d378ec-68ed-4a7b-a0db-f5e439c3e852
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 5fe0e6f0d8c75c099aa6623cd0f5245c955d9ffa
-ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
+ms.openlocfilehash: f372b4b85c240079da157052e2c20c46801398be
+ms.sourcegitcommit: 39a1ddeb6c9dd0817f92870b711627350b7f6f03
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 05/08/2018
 ---
 *Aplica-se a: Advanced Threat Analytics versão 1.9*
 
@@ -51,6 +51,10 @@ Para obter informações de atualização de versão, consulte [Caminho de atual
 
 Para obter a matriz de atualização de versão do ATA, consulte [Caminho de atualização do ATA](upgrade-path.md).
 
+
+## <a name="how-does-the-ata-center-update-its-latest-signatures"></a>Como o Centro do ATA atualiza suas assinaturas mais recentes?
+
+O mecanismo de detecção do ATA é aprimorado quando uma nova versão é instalada no Centro do ATA. É possível atualizar o Centro usando o MU (Microsoft Update) ou manualmente, baixando a nova versão do Centro de Download ou do Site de Licenças por Volume.
 
 ## <a name="how-do-i-verify-windows-event-forwarding"></a>Como verificar o Encaminhamento de Eventos do Windows?
 Você pode colocar o seguinte código em um arquivo e executá-lo em um prompt de comando no diretório:  **\Arquivos de Programas\Microsoft Advanced Threat Analytics\Center\MongoDB\bin** da seguinte maneira:
