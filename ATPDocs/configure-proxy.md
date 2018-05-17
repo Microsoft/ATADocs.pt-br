@@ -5,7 +5,7 @@ keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 4/22/2018
+ms.date: 5/16/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,11 +13,11 @@ ms.technology: ''
 ms.assetid: 9c173d28-a944-491a-92c1-9690eb06b151
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: c52fa6d7cb42605f1809a40926e391bf39fe3eb2
-ms.sourcegitcommit: d2d2750bfb0198c8488d538f1773fda6eda5e6f9
+ms.openlocfilehash: 5a1fd5631a568419c600f35d44f09c9c61f17129
+ms.sourcegitcommit: 714a01edc9006b38d1163d03852dafc2a5fddb5f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2018
+ms.lasthandoff: 05/16/2018
 ---
 *Aplica-se a: Proteção Avançada contra Ameaças do Azure*
 
@@ -25,7 +25,7 @@ ms.lasthandoff: 04/23/2018
 
 # <a name="configure-endpoint-proxy-and-internet-connectivity-settings-for-your-azure-atp-sensor"></a>Configurar o proxy do ponto de extremidade e configurações de conectividade de Internet para o Sensor de ATP do Azure
 
-Cada sensor do Azure ATP (Proteção Avançada contra Ameaças) requer conectividade com a Internet para que o serviço de nuvem do Azure ATP funcione com êxito. Em algumas organizações, os controladores de domínio não são diretamente conectados à Internet, mas são conectados por meio de uma conexão de proxy da Web. Cada sensor do Azure ATP requer que você use a configuração de proxy Microsoft Windows Internet (WinINET) para relatar dados do sensor e se comunicar com o serviço do Azure ATP. Se usar WinHTTP para a configuração de proxy, você ainda precisará definir configurações de proxy do navegador Windows Internet (WinINet) para comunicação entre o sensor e o serviço de nuvem do Azure ATP.
+Cada sensor do Azure ATP (Proteção Avançada contra Ameaças) requer conectividade com a Internet para que o serviço de nuvem do Azure ATP funcione com êxito. Em algumas organizações, os controladores de domínio não são diretamente conectados à Internet, mas são conectados por meio de uma conexão de proxy da Web. Cada sensor do Azure ATP requer que você use a configuração de proxy do WinINET (Microsoft Windows Internet) para relatar dados do sensor e comunicar-se com o serviço do Azure ATP. Se você usar o WinHTTP para a configuração de proxy, ainda será necessário definir as configurações de proxy do navegador WinINet (Windows Internet) para a comunicação entre o sensor e o serviço de nuvem do Azure ATP.
 
 
 Ao configurar o proxy, você precisará saber o que o serviço de sensor do Azure ATP interno é executado no contexto do sistema usando a conta **LocalService**, e o serviço de Atualizador do Sensor do Azure ATP é executado no contexto do sistema usando a conta **LocalSystem**. 
@@ -68,6 +68,11 @@ Se um proxy ou firewall estiver bloqueando todo o tráfego por padrão e permiti
 |Ocidental|triprd1wceun1sensorapi.atp.azure.com<br>triprd1wceuw1sensorapi.atp.azure.com|
 |Ásia|triprd1wcasse1sensorapi.atp.azure.com|
 
+
+Também é possível fortalecer as regras de firewall ou de proxy para um espaço de trabalho específico criado por você, definindo uma regra para os seguintes registros DNS:
+- <Nome-do-espaço-de-trabalho>.atp.azure.com – para conectividade de console
+- <Nome-do-espaço-de-trabalho>sensorapi.atp.azure.com – para conectividade de sensor
+ 
 > [!NOTE]
 > Ao executar a inspeção de SSL no tráfego de rede do Azure ATP (entre o sensor e o serviço do Azure ATP), a inspeção de SSL deve dar suporte à inspeção mútua.
 

@@ -1,23 +1,23 @@
 ---
-title: "Integração da Proteção Avançada contra Ameaças do Azure com o Windows Defender ATP | Microsoft Docs"
-description: "Como integrar a Proteção Avançada contra Ameaças do Azure com o Windows Defender ATP para cobertura completa de detecção de ameaças"
-keywords: 
+title: Integração da Proteção Avançada contra Ameaças do Azure com o Windows Defender ATP | Microsoft Docs
+description: Como integrar a Proteção Avançada contra Ameaças do Azure com o Windows Defender ATP para cobertura completa de detecção de ameaças
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 2/21/2018
+ms.date: 5/16/2018
 ms.topic: get-started-article
-ms.prod: 
+ms.prod: ''
 ms.service: azure-advanced-threat-protection
-ms.technology: 
+ms.technology: ''
 ms.assetid: f6f3ed75-d6bb-4966-a9a7-5339c4f3ebac
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 3521e500548b04febbff37d3dfe9150cf6f2d35b
-ms.sourcegitcommit: 03e959b7ce4b6df421297e1872e028793c967302
+ms.openlocfilehash: 17ade33a55039eaf8abc98901cdab9ebeef850c5
+ms.sourcegitcommit: 714a01edc9006b38d1163d03852dafc2a5fddb5f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 05/16/2018
 ---
 *Aplica-se a: Proteção Avançada contra Ameaças do Azure*
 
@@ -96,8 +96,10 @@ Se clicar na notificação, você será direcionado para o portal do Windows Def
  ![Windows Defender ATP cinza](./media/wd-grey.png)
 
 No portal do Windows Defender ATP, quando clica em um ponto de extremidade, você pode exibir alertas do Azure ATP. Se você clicar nos alertas para esta entidade no Windows Defender ATP, a página de perfil da entidade será aberta no Azure ATP. 
+ 
+ > ![NOTE] No momento, a integração do Azure ATP com o Windows Defender ATP dá suporte apenas a usuários e computadores do AD local. Os usuários do Azure AD e as máquinas virtuais que são gerenciadas no Azure não serão exibidos como parte da integração 
 
- ![Alertas do Windows Defender ATP](./media/wd-atp-alerts.png)
+![Alertas do Windows Defender ATP](./media/wd-atp-alerts.png)
 
 
 ## <a name="see-also"></a>Consulte Também

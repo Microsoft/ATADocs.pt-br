@@ -5,7 +5,7 @@ keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 5/8/2018
+ms.date: 5/13/2018
 ms.topic: article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,11 +13,11 @@ ms.technology: ''
 ms.assetid: 7d0f33db-2513-4146-a395-290e001f4199
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 6d794e2d30b51d78bd3e4af76d8bd4a48b2d413f
-ms.sourcegitcommit: 8472f3f46fc90da7471cd1065cdb2f6a1d5a9f69
+ms.openlocfilehash: a40c2b188e777ca78462e4a3901b311af457d9ae
+ms.sourcegitcommit: 170bc1c04d1ea0538dddbb497d8045781a6a8b74
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 05/13/2018
 ---
 *Aplica-se a: Proteção Avançada contra Ameaças do Azure*
 
@@ -25,6 +25,12 @@ ms.lasthandoff: 05/08/2018
 # <a name="whats-new-in-azure-atp"></a>Novidades do Azure ATP 
 
 
+
+## <a name="azure-atp-release-232"></a>Azure ATP versão 2.32
+
+Lançado em 13 de maio de 2018
+ 
+- Essa versão inclui correções e melhorias para vários problemas. 
 
 ## <a name="azure-atp-release-231"></a>Azure ATP versão 2.31
 
