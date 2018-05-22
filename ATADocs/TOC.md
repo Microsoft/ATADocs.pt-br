@@ -44,7 +44,7 @@
 ## [Alterar a senha de conectividade do domínio](modifying-ata-config-dcpassword.md)
 ## [Excluindo entidades de detecções](excluding-entities-from-detections.md)
 ## [Exportar/importar configuração do ATA](ata-configuration-file.md)
-## [Gerenciar telemetria do ATA](manage-telemetry-settings.md)
+## [Gerenciar logs gerados pelo sistema](manage-telemetry-settings.md)
 ## [Definir notificações do ATA](setting-ata-alerts.md)
 ## [Definir as configurações de servidor de email e syslog](setting-syslog-email-server-settings.md)
 ## [Marcar contas confidenciais](tag-sensitive-accounts.md)
