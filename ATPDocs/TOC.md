@@ -2,6 +2,7 @@
 ## [O que é o Azure Advanced Threat Protection?](what-is-atp.md)
 ## [Perguntas frequentes](atp-technical-faq.md)
 ## [Novidades sobre o Azure ATP](atp-whats-new.md)
+## [Privacidade e segurança de dados do Azure ATP](atp-privacy-compliance.md)
 # Plano e design
 ## [Pré-requisitos do Azure ATP](atp-prerequisites.md)
 ## [Arquitetura do Azure ATP](atp-architecture.md)
