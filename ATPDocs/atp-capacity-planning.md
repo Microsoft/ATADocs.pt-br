@@ -1,22 +1,22 @@
 ---
-title: "Planejamento da implantação da Proteção Avançada contra Ameaças do Azure | Microsoft Docs"
-description: "Ajuda você a planejar a implantação e a decidir quantos servidores do Azure ATP serão necessários para dar suporte à sua rede"
-keywords: 
+title: Planejamento da implantação da Proteção Avançada contra Ameaças do Azure | Microsoft Docs
+description: Ajuda você a planejar a implantação e a decidir quantos servidores do Azure ATP serão necessários para dar suporte à sua rede
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 3/11/2018
+ms.date: 5/22/2018
 ms.topic: get-started-article
 ms.service: azure-advanced-threat-protection
-ms.prod: 
+ms.prod: ''
 ms.assetid: da0ee438-35f8-4097-b3a1-1354ad59eb32
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 577b7a5105e8de773f57b1e00bc1c9cb51096799
-ms.sourcegitcommit: 912e453753156902618ae6ebb8489c2320c06fc6
+ms.openlocfilehash: 35d3495585cce321adccb05f202fd664356db37f
+ms.sourcegitcommit: 324dc941282f2948366afa5a919bda0b029bd59d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 05/22/2018
 ---
 *Aplica-se a: Proteção Avançada contra Ameaças do Azure*
 
@@ -40,7 +40,7 @@ A maneira recomendada e mais simples de determinar a capacidade de sua implanta�
 Se, por alguma razão, você não puder usar a Ferramenta de dimensionamento do Azure ATP, reúna manualmente as informações do contador de pacotes/s de todos os Controladores de domínio por 24 horas com um intervalo de coleta baixo (aproximadamente 5 segundos). Em seguida, para cada Controlador de Domínio, você deve calcular a média diária e a média do período mais ocupado (15 minutos).
 As seções a seguir apresentam instruções sobre como coletar o contador de pacotes/segundo de um Controlador de Domínio.
 
-## Escolher o tipo certo de sensor para a implantação<a name="choosing-the right-sensor-type-for-your-deployment"></a>
+## Escolher o tipo certo de sensor para a implantação<a name="choosing-the-right-sensor-type-for-your-deployment"></a>
 Em uma implantação do Azure ATP, qualquer combinação dos tipos de sensor autônomo do Azure ATP tem suporte:
 
 - Somente sensores autônomos do Azure ATP

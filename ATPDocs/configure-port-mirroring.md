@@ -1,23 +1,23 @@
 ---
-title: "Configurar o espelhamento de porta ao implantar a Proteção Avançada contra Ameaças do Azure | Microsoft Docs"
-description: "Descreve as opções de espelhamento de porta e como configurá-las para o Azure ATP"
-keywords: 
+title: Configurar o espelhamento de porta ao implantar a Proteção Avançada contra Ameaças do Azure | Microsoft Docs
+description: Descreve as opções de espelhamento de porta e como configurá-las para o Azure ATP
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 2/21/2018
+ms.date: 5/22/2018
 ms.topic: get-started-article
-ms.prod: 
+ms.prod: ''
 ms.service: azure-advanced-threat-protection
-ms.technology: 
+ms.technology: ''
 ms.assetid: 9ec7eb4c-3cad-4543-bbf0-b951d8fc8ffe
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 1cc622f1a8306530423920873e5efa05e8c87064
-ms.sourcegitcommit: 03e959b7ce4b6df421297e1872e028793c967302
+ms.openlocfilehash: 1f59f02f73507fe29b41fd13c96a359dee2e88fc
+ms.sourcegitcommit: 324dc941282f2948366afa5a919bda0b029bd59d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 05/22/2018
 ---
 *Aplica-se a: Proteção Avançada contra Ameaças do Azure*
 
