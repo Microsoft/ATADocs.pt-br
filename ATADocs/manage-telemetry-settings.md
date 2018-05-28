@@ -1,5 +1,5 @@
 ---
-title: Gerenciamento das configurações de telemetria do Advanced Threat Analytics | Microsoft Docs
+title: Gerenciar logs gerados pelo sistema do Advanced Threat Analytics | Microsoft Docs
 description: Descreve os dados coletados pelo ATA e fornece etapas para desativar a coleta de dados.
 keywords: ''
 author: rkarlin
@@ -13,18 +13,21 @@ ms.technology: ''
 ms.assetid: 8c1c7a1b-a3de-4105-9fd0-08a061952172
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 98d377dd7e09636d1866d461a981cdcf1cf8aea7
-ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
+ms.openlocfilehash: 7f1a0cb9a7e237259a9b77b96e16c6680336c2b0
+ms.sourcegitcommit: 324dc941282f2948366afa5a919bda0b029bd59d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 05/22/2018
 ---
 *Aplica-se a: Advanced Threat Analytics versão 1.9*
 
 
 
-# <a name="manage-telemetry-settings"></a>Gerenciamento das configurações de telemetria
-O ATA (Advanced Threat Analytics) coleta dados de telemetria anônimos sobre o ATA e os transmite por uma conexão HTTPS para os servidores Microsoft.  Esses dados são usados pela Microsoft para ajudar a melhorar as versões futuras do ATA.
+# <a name="manage-system-generated-logs-note"></a>Gerenciar logs gerados pelo sistema[!NOTE]
+> Se você tiver interesse em visualizar ou excluir dados pessoais, consulte as diretrizes da Microsoft no [Gerente de Conformidade da Microsoft](https://servicetrust.microsoft.com/ComplianceManager) e na [seção RGPD do site de Conformidade Corporativa do Microsoft 365 Enterprise](https://docs.microsoft.com/en-us/microsoft-365/compliance/gdpr). Se você estiver procurando informações gerais sobre o RGPD, confira a seção [RGPD do Portal de Confiança do Serviço](https://servicetrust.microsoft.com/ViewPage/GDPRGetStarted).
+
+
+O ATA (Advanced Threat Analytics) coleta dados de log anônimos gerados pelo sistema sobre o ATA e transmite os dados por uma conexão HTTPS para os servidores da Microsoft.  Esses dados são usados pela Microsoft para ajudar a melhorar as versões futuras do ATA.
 
 ## <a name="data-collected"></a>Dados coletados
 Os dados anônimos coletados incluem os seguintes parâmetros:

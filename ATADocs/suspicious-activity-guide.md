@@ -5,7 +5,7 @@ keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 5/6/2018
+ms.date: 5/21/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology: ''
 ms.assetid: 1fe5fd6f-1b79-4a25-8051-2f94ff6c71c1
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: db63df945bf218f384c9f9dac6f111f5290aa138
-ms.sourcegitcommit: 39a1ddeb6c9dd0817f92870b711627350b7f6f03
+ms.openlocfilehash: b6c11292fd8e7436257e4616c65d76aad1aed8de
+ms.sourcegitcommit: c01f93bd9e41355d2f47f648e3fea7736e1218f6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 05/21/2018
 ---
 *Aplica-se a: Advanced Threat Analytics versão 1.9*
 
@@ -119,7 +119,7 @@ Há três tipos de detecção:
 **Investigação**
 
 Primeiro, verifique a descrição do alerta para ver com qual dos três tipos de detecção acima você está lidando. Para saber mais, baixe a planilha do Excel.
-1.  Skeleton Key – você pode verificar se a Skeleton Key afetou os controladores de domínio usando o analisador gravado pela equipe do ATA. Se o analisador encontrar malware em 1 ou mais controladores de domínio, é um verdadeiro positivo.
+1.  Skeleton Key – você pode verificar se a Skeleton Key afetou os controladores de domínio usando o [analisador gravado pela equipe do ATA](https://gallery.technet.microsoft.com/Aorato-Skeleton-Key-24e46b73). Se o analisador encontrar malware em 1 ou mais controladores de domínio, é um verdadeiro positivo.
 2.  Golden Ticket – na planilha do Excel, vá para a guia de **Atividade de rede**. Você verá que o campo de downgrade relevante é **Solicitar Tipo de Criptografia de Tíquete** e **Tipos de Criptografia com Suporte no Computador de Origem** contém métodos de criptografia mais fortes.
   a.    Verifique o computador de origem e a conta ou, se houver vários computadores de origem e contas, verifique se eles têm algo em comum (por exemplo, toda a equipe de marketing usa um aplicativo específico que pode fazer o alerta ser disparado). Há casos em que um aplicativo personalizado raramente usado faz autenticação usando uma codificação de criptografia inferior. Verifique se há algum desses aplicativos personalizados no computador de origem. Nesse caso, ele é provavelmente um positivo verdadeiro benigno e pode ser **Suprimido**.
   b.    Verifique o recurso acessado por essas permissões. Se houver um recurso que todas elas estão acessando, valide-o e verifique se é um recurso válido que elas precisam acessar. Além disso, verifique se o recurso de destino é compatível com métodos de criptografia forte. Você pode verificar isso no Active Directory verificando o atributo `msDS-SupportedEncryptionTypes`, da conta de serviço do recurso.

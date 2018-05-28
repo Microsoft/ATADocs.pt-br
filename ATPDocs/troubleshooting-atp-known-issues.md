@@ -5,7 +5,7 @@ keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 4/29/2018
+ms.date: 5/21/2018
 ms.topic: article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,11 +13,11 @@ ms.technology: ''
 ms.assetid: 23386e36-2756-4291-923f-fa8607b5518a
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: c430ec58c197c8fcc6e539d0923278cd8469987d
-ms.sourcegitcommit: 5c0f914b44bfb8e03485f12658bfa9a7cd3d8bbc
+ms.openlocfilehash: 15c857085fb7d003f783981a89fe02e920a8e49a
+ms.sourcegitcommit: 3539dd3f9ab7729e5326b904fc64985c808bc8ce
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/21/2018
 ---
 *Aplica-se a: Proteção Avançada contra Ameaças do Azure*
 
@@ -47,7 +47,7 @@ o sensor deve poder navegar até *.atp.azure.com por meio do proxy configurado s
 
 
 
-## <a name="azure-atp-sensor-nic-teaming-issue"></a>Problemas do Agrupamento NIC do sensor da ATP do Azure
+## Problema de agrupamento NIC do sensor da ATP do Azure <a name="nic-teaming"></a>
 
 Se tentar instalar o sensor do ATP em um computador configurado com um adaptador de agrupamento NIC, você receberá um erro de instalação. Se quiser instalar o sensor da ATP em um computador configurado com Agrupamento NIC, siga essas instruções:
 

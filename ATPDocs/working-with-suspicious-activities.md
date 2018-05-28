@@ -1,23 +1,23 @@
 ---
-title: "Trabalhar com atividades suspeitas na Proteção Avançada contra Ameaças do Azure | Microsoft Docs"
+title: Trabalhar com atividades suspeitas na Proteção Avançada contra Ameaças do Azure | Microsoft Docs
 description: Descreve como examinar atividades suspeitas identificadas pelo Azure ATP
-keywords: 
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 2/21/2018
+ms.date: 5/22/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: azure-advanced-threat-protection
-ms.technology: 
+ms.technology: ''
 ms.assetid: a06004bd-9f77-4e8e-a0e5-4727d6651a0f
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: a5e7598e94e1d6d4b09c827770e062be9fefd1c4
-ms.sourcegitcommit: 03e959b7ce4b6df421297e1872e028793c967302
+ms.openlocfilehash: 1dccee094f4d6a8ec9bdc94a1d1314fa0675da9d
+ms.sourcegitcommit: 324dc941282f2948366afa5a919bda0b029bd59d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 05/22/2018
 ---
 *Aplica-se a: Proteção Avançada contra Ameaças do Azure*
 
@@ -26,7 +26,7 @@ ms.lasthandoff: 02/21/2018
 # <a name="working-with-suspicious-activities"></a>Trabalhando com atividades suspeitas
 Este artigo explica noções básicas de como trabalhar com a Proteção Avançada contra Ameaças do Azure.
 
-## <a name="review-suspicious-activities-on-the-attack-time-line"></a>Examinar atividades suspeitas na linha do tempo de ataque
+## Examinar atividades suspeitas na linha do tempo de ataque <a name="review-suspicious-activities-on-the-attack-time-line"></a>
 Após fazer logon no portal do espaço de trabalho do Azure ATP, você será levado automaticamente para a **linha do tempo de atividades suspeitas** aberta. As atividades suspeitas são listadas em ordem cronológica com as atividades suspeitas mais recentes na parte superior da linha do tempo.
 Cada atividade suspeita tem as seguintes informações:
 

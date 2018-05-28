@@ -5,7 +5,7 @@ keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 5/8/2018
+ms.date: 5/21/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,11 +13,11 @@ ms.technology: ''
 ms.assetid: 62c99622-2fe9-4035-9839-38fec0a353da
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: ae859121fbe856c93b8568ef38bf0b4bdb77837a
-ms.sourcegitcommit: 8472f3f46fc90da7471cd1065cdb2f6a1d5a9f69
+ms.openlocfilehash: 1fc2b3656701ee5db54a4f918ab617a2ad487780
+ms.sourcegitcommit: 3539dd3f9ab7729e5326b904fc64985c808bc8ce
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 05/21/2018
 ---
 *Aplica-se a: Proteção Avançada contra Ameaças do Azure*
 
@@ -58,7 +58,7 @@ Esta seção lista as informações que você deve obter e as contas e entidades
 
 -   Se executar o Wireshark no sensor autônomo do Azure ATP, você precisará reiniciar o serviço de sensor da Proteção Avançada contra Ameaças do Azure após parar a captura do Wireshark. Caso contrário, o sensor para de capturar o tráfego.
 
-- Se tentar instalar o sensor do ATP em um computador configurado com um adaptador de agrupamento NIC, você receberá um erro de instalação. Se quiser instalar o sensor do ATP em um computador configurado com agrupamento NIC, entre em contato com seu representante de suporte do Azure ATP.
+- Se tentar instalar o sensor do ATP em um computador configurado com um adaptador de agrupamento NIC, você receberá um erro de instalação. Se quiser instalar o sensor do ATP em um computador configurado com agrupamento NIC, confira [Problemas do Agrupamento NIC do Sensor do Azure ATP](troubleshooting-atp-known-issues.md#nic-teaming).
 
 -    Recomendado: o usuário deve ter permissões de leitura somente no contêiner Objetos Excluídos. Isso permite que o Azure ATP detecte a exclusão em massa de objetos no domínio. Para saber mais sobre como configurar permissões de somente leitura no contêiner Objetos Excluídos, confira a seção **Alterar permissões em um contêiner de objetos excluídos** no artigo [Exibir ou definir permissões em um Objeto de Diretório](https://technet.microsoft.com/library/cc816824%28v=ws.10%29.aspx).
 

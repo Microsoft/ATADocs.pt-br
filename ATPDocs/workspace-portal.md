@@ -1,23 +1,23 @@
 ---
-title: "Noções básicas sobre o portal de espaço de trabalho da Proteção Avançada contra Ameaças do Azure | Microsoft Docs"
-description: "Descreve como fazer logon no portal de espaço de trabalho do Azure ATP e os componentes do portal de espaço de trabalho"
-keywords: 
+title: Noções básicas sobre o portal de espaço de trabalho da Proteção Avançada contra Ameaças do Azure | Microsoft Docs
+description: Descreve como fazer logon no portal de espaço de trabalho do Azure ATP e os componentes do portal de espaço de trabalho
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 2/21/2018
+ms.date: 5/22/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: azure-advanced-threat-protection
-ms.technology: 
+ms.technology: ''
 ms.assetid: 4ba46d60-3a74-480e-8f0f-9a082d62f343
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 21cc8b6b27efb514d2a313fc0959152d601d4344
-ms.sourcegitcommit: 03e959b7ce4b6df421297e1872e028793c967302
+ms.openlocfilehash: 40e139cc5e7dc6396914b0314d2d698a4782af02
+ms.sourcegitcommit: 324dc941282f2948366afa5a919bda0b029bd59d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 05/22/2018
 ---
 *Aplica-se a: Proteção Avançada contra Ameaças do Azure*
 
@@ -39,7 +39,7 @@ Para fazer logon com êxito no portal de espaço de trabalho do Azure ATP, você
 
 ## <a name="logging-into-the-azure-atp-workspace-portal"></a>Fazer logon no portal de espaço de trabalho do Azure ATP
 
-1. Você pode entrar no portal de espaço de trabalho fazendo logon no portal de gerenciamento de espaço de trabalho [https://portal.atp.azure.com](https://portal.atp.azure.com) e, em seguida, selecionando o espaço de trabalho relevante ou navegando até a URL do espaço de trabalho: [https://*NomeDoEspaçoDeTrabalho*. atp.azure.com](https://*workspacename*.atp.azure.com).
+1. Você pode entrar no portal de espaço de trabalho fazendo logon no portal de gerenciamento de espaço de trabalho [https://portal.atp.azure.com](https://portal.atp.azure.com) e, em seguida, selecionando o espaço de trabalho relevante ou navegando até a URL do espaço de trabalho: [https://*nomedoespaçodetrabalho*.atp.azure.com](https://*workspacename*.atp.azure.com).
 
 
 2.  O Azure ATP dá suporte ao logon único integrado com a autenticação do Windows – se você já tiver feito logon em seu computador, o Azure ATP usará esse token para fazer logon no portal de espaço de trabalho do Azure ATP. Você também pode fazer logon usando um cartão inteligente. Suas permissões no Azure ATP correspondem à sua [função de administrador](atp-role-groups.md).
@@ -64,7 +64,7 @@ Após uma nova versão do Azure ATP ser lançada, a janela **O que há de novo**
 
 Você pode filtrar quais atividades suspeitas são exibidas na linha do tempo de ataque ou exibidas na guia de atividades suspeitas de perfil de entidade com base no Status e na Severidade.
 
-### <a name="search-bar"></a>Barra de pesquisa
+### Barra de pesquisa <a name="search-bar"></a>
 
 No menu superior, há uma barra de pesquisa. Você pode pesquisar por um usuário, computador ou grupo específico no Azure ATP. Para experimentar, basta começa a digitar. Na parte inferior da barra de pesquisa, o número de resultados da pesquisa encontrados é indicado. 
 
