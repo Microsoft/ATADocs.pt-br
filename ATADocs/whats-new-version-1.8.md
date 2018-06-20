@@ -1,23 +1,24 @@
 ---
-title: "Novidades na versão 1.8 do ATA | Microsoft Docs"
-description: "Lista as novidades na nova versão 1.8 do ATA e seus problemas conhecidos"
-keywords: 
+title: Novidades na versão 1.8 do ATA | Microsoft Docs
+description: Lista as novidades na nova versão 1.8 do ATA e seus problemas conhecidos
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
 ms.date: 9/03/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: advanced-threat-analytics
-ms.technology: 
+ms.technology: ''
 ms.assetid: 9592d413-df0e-4cec-8e03-be1ae00ba5dc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: ems
 ms.openlocfilehash: 71e7f723d02b4e86f1799e5a92998363766de7a2
 ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 11/07/2017
+ms.locfileid: "24019044"
 ---
 # <a name="whats-new-in-ata-version-18"></a>Novidades na versão 1.8 do ATA
 

@@ -6,6 +6,7 @@ ms.sourcegitcommit: 03e959b7ce4b6df421297e1872e028793c967302
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 02/21/2018
+ms.locfileid: "29444122"
 ---
 # <a name="azure-advanced-threat-protection-documentation"></a>Documentação do Azure Advanced Threat Protection
 

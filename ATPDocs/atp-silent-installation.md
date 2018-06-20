@@ -1,15 +1,15 @@
 ---
-title: "Instalar a Proteção Avançada contra Ameaças do Azure silenciosamente | Microsoft Docs"
+title: Instalar a Proteção Avançada contra Ameaças do Azure silenciosamente | Microsoft Docs
 description: Este artigo descreve como instalar silenciosamente o Azure ATP.
-keywords: 
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
 ms.date: 3/11/2017
 ms.topic: get-started-article
-ms.prod: 
+ms.prod: ''
 ms.service: azure-advanced-threat-protection
-ms.technology: 
+ms.technology: ''
 ms.assetid: 24eca4c6-c949-42ea-97b9-41ef0fb611f1
 ms.reviewer: itargoet
 ms.suite: ems
@@ -18,6 +18,7 @@ ms.sourcegitcommit: 912e453753156902618ae6ebb8489c2320c06fc6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 03/12/2018
+ms.locfileid: "29856474"
 ---
 *Aplica-se a: Proteção Avançada contra Ameaças do Azure*
 

@@ -1,15 +1,15 @@
 ---
-title: "Instalar a Proteção Avançada contra Ameaças do Azure – etapa 3 | Microsoft Docs"
-description: "A etapa três da instalação do Azure ATP ajuda a baixar o pacote de instalação do sensor autônomo do Azure ATP."
-keywords: 
+title: Instalar a Proteção Avançada contra Ameaças do Azure – etapa 3 | Microsoft Docs
+description: A etapa três da instalação do Azure ATP ajuda a baixar o pacote de instalação do sensor autônomo do Azure ATP.
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
 ms.date: 2/21/2017
 ms.topic: get-started-article
-ms.prod: 
+ms.prod: ''
 ms.service: azure-advanced-threat-protection
-ms.technology: 
+ms.technology: ''
 ms.assetid: 95bb4ec1-841f-41b7-92fe-fbd144085724
 ms.reviewer: itargoet
 ms.suite: ems
@@ -18,6 +18,7 @@ ms.sourcegitcommit: 03e959b7ce4b6df421297e1872e028793c967302
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 02/21/2018
+ms.locfileid: "29444932"
 ---
 *Aplica-se a: Proteção Avançada contra Ameaças do Azure*
 

@@ -18,6 +18,7 @@ ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 03/22/2018
+ms.locfileid: "30010492"
 ---
 *Aplica-se a: Advanced Threat Analytics versão 1.9*
 
@@ -26,7 +27,7 @@ ms.lasthandoff: 03/22/2018
 # <a name="export-and-import-the-ata-configuration"></a>Exportar e importar a configuração do ATA
 A configuração do ATA é armazenada na coleção "SystemProfile" no banco de dados.
 A cada hora, é feito o backup dessa coleção pelo serviço da Central do ATA para arquivos chamados: **SystemProfile_*timestamp*.json**. As 10 versões mais recentes são armazenadas.
-Esse arquivo está localizado em uma subpasta chamada **Backup**. No local de instalação padrão do ATA, ele pode ser encontrado aqui: *C:\Arquivos de Programas\Microsoft Advanced Threat Analytics\Center\Backup\SystemProfile_*timestamp*.json*. 
+Esse arquivo está localizado em uma subpasta chamada **Backup**. No local de instalação padrão do ATA, ele pode ser encontrado aqui: *C:\Arquivos de Programas\Microsoft Advanced Threat Analytics\Center\Backup\SystemProfile_* timestamp *.json*. 
 
 **Observação**: é recomendável fazer o backup desse arquivo sempre que você fizer alterações importantes no ATA.
 

@@ -1,15 +1,15 @@
 ---
-title: "O que é o Azure ATP (Proteção Avançada contra Ameaças)? | Microsoft Docs"
-description: "Explica o que é o Azure ATP (Proteção Avançada contra Ameaças) e os tipos de atividades suspeitas que ele pode detectar"
-keywords: 
+title: O que é o Azure ATP (Proteção Avançada contra Ameaças)? | Microsoft Docs
+description: Explica o que é o Azure ATP (Proteção Avançada contra Ameaças) e os tipos de atividades suspeitas que ele pode detectar
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
 ms.date: 2/21/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: azure-advanced-threat-protection
-ms.technology: 
+ms.technology: ''
 ms.assetid: 2d14d0e9-1b03-4bcc-ae97-8fd41526ffc5
 ms.reviewer: itargoet
 ms.suite: ems
@@ -18,6 +18,7 @@ ms.sourcegitcommit: 03e959b7ce4b6df421297e1872e028793c967302
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 02/21/2018
+ms.locfileid: "29445072"
 ---
 *Aplica-se a: Proteção Avançada contra Ameaças do Azure*
 

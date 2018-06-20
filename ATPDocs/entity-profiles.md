@@ -1,15 +1,15 @@
 ---
-title: "Trabalhando com perfis de usuário no portal de espaço de trabalho da Proteção Avançada contra Ameaças do Azure | Microsoft Docs"
-description: "Descreve como investigar os usuários na tela de perfis de usuário no portal de espaço de trabalho do Azure ATP"
-keywords: 
+title: Trabalhando com perfis de usuário no portal de espaço de trabalho da Proteção Avançada contra Ameaças do Azure | Microsoft Docs
+description: Descreve como investigar os usuários na tela de perfis de usuário no portal de espaço de trabalho do Azure ATP
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
 ms.date: 2/21/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: azure-advanced-threat-protection
-ms.technology: 
+ms.technology: ''
 ms.assetid: 17458706-79fb-4c23-aa42-66979164a45f
 ms.reviewer: itargoet
 ms.suite: ems
@@ -18,6 +18,7 @@ ms.sourcegitcommit: 03e959b7ce4b6df421297e1872e028793c967302
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 02/21/2018
+ms.locfileid: "29444972"
 ---
 *Aplica-se a: Proteção Avançada contra Ameaças do Azure*
 

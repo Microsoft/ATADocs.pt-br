@@ -1,15 +1,15 @@
 ---
-title: "Guia de migração de atualização do Advanced Threat Analytics para 1.8 | Microsoft Docs"
-description: "Procedimentos para atualizar o ATA para a versão 1.8"
-keywords: 
+title: Guia de migração de atualização do Advanced Threat Analytics para 1.8 | Microsoft Docs
+description: Procedimentos para atualizar o ATA para a versão 1.8
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
 ms.date: 07/20/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: advanced-threat-analytics
-ms.technology: 
+ms.technology: ''
 ms.assetid: e5a9718c-b22e-41f7-a614-f00fc4997682
 ms.reviewer: bennyl
 ms.suite: ems
@@ -18,6 +18,7 @@ ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 11/07/2017
+ms.locfileid: "24018993"
 ---
 # <a name="updating-ata-to-version-18"></a>Atualizando o ATA para a versão 1.8
 

@@ -1,15 +1,15 @@
 ---
-title: "Excluindo entidades de detecções na Proteção Avançada contra Ameaças do Azure | Microsoft Docs"
-description: "Descreve como impedir que o Azure ATP detecte atividades de entidades específicas como suspeitas"
-keywords: 
+title: Excluindo entidades de detecções na Proteção Avançada contra Ameaças do Azure | Microsoft Docs
+description: Descreve como impedir que o Azure ATP detecte atividades de entidades específicas como suspeitas
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
 ms.date: 2/21/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: azure-advanced-threat-protection
-ms.technology: 
+ms.technology: ''
 ms.assetid: cae3ed45-8fbc-4f25-ba24-3cc407c6ea93
 ms.reviewer: itargoet
 ms.suite: ems
@@ -18,6 +18,7 @@ ms.sourcegitcommit: 03e959b7ce4b6df421297e1872e028793c967302
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 02/21/2018
+ms.locfileid: "29444912"
 ---
 *Aplica-se a: Proteção Avançada contra Ameaças do Azure*
 
