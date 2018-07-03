@@ -18,6 +18,7 @@
 ## [7 Contas de honeytoken e exclusões](install-atp-step7.md)
 ## [8 Configurar as permissões necessárias do SAM-R](install-atp-step8-samr.md)
 ## [Instalação silenciosa](ATP-silent-installation.md)
+## [Atualizar sensores de ATP](sensor-update.md)
 ## Etapas adicionais do sensor do Azure ATP
 ### [Configurar o espelhamento de porta](configure-port-mirroring.md)
 ### [Validação do espelhamento de porta](validate-port-mirroring.md)
