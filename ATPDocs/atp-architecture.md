@@ -5,7 +5,7 @@ keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 4/29/2018
+ms.date: 7/4/2018
 ms.topic: article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,11 +13,12 @@ ms.technology: ''
 ms.assetid: 90f68f2c-d421-4339-8e49-1888b84416e6
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 838c5ce470bdf78ec81aed5d6fa1cf2407abc6f9
-ms.sourcegitcommit: 5c0f914b44bfb8e03485f12658bfa9a7cd3d8bbc
+ms.openlocfilehash: 3f99aff656f6eff67a4077817c761c7627511bb2
+ms.sourcegitcommit: 40dbce8045f689376a50275fb12e3c5c32ca8092
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37799172"
 ---
 *Aplica-se a: Proteção Avançada contra Ameaças do Azure*
 
@@ -72,11 +73,12 @@ O portal de gerenciamento de espaço de trabalho do Azure ATP permite:
 
 -   Integrar a outros serviços de segurança da Microsoft
 
-Definir seu espaço de trabalho principal como **Primário**. Somente um espaço de trabalho pode ser definido como primário. Definir um espaço de trabalho como primário afeta as integrações – você só pode integrar o Azure ATP com o Windows Defender ATP para seu espaço de trabalho primário. Você pode alterar qual espaço de trabalho é primário posteriormente, mas, para fazer isso, você precisará remover as integrações já definidas para o espaço de trabalho primário atual.
+Definir seu espaço de trabalho principal como **Primário**. Definir um espaço de trabalho como primário afeta as integrações – você só pode integrar o Azure ATP com o Windows Defender ATP para seu espaço de trabalho primário. 
 
 > [!NOTE]
-> Atualmente, a ATP do Azure rem suporte para criação de dois espaços de trabalho. Recomendamos criar um espaço de trabalho principal para o ambiente de produção e um espaço de trabalho adicional como um ambiente de preparo.
-> Depois de excluir um espaço de trabalho, você pode entrar em contato com o suporte para reativá-lo. É possível ter um máximo de três espaços de trabalho excluídos. Para aumentar o número de espaços de trabalho salvos e excluídos, entre em contato com o suporte do Azure ATP.
+> - Atualmente, o Azure ATP oferece suporte à criação de apenas um espaço de trabalho. Depois de excluir um espaço de trabalho, você pode entrar em contato com o suporte para reativá-lo. Você pode ter no máximo três espaços de trabalho excluídos. Para aumentar o número de espaços de trabalho salvos e excluídos, entre em contato com o suporte do Azure ATP.
+> - Se nenhum sensor for instalado no seu espaço de trabalho dentro de 60 dias, o espaço de trabalho poderá ser excluído e será necessário criá-lo novamente.
+
 
 
 ### <a name="azure-atp-workspace-portal"></a>Portal de espaço de trabalho do Azure ATP
@@ -187,7 +189,7 @@ Seus controladores de domínio e o sensor autônomo do Azure ATP podem ser físi
 ### <a name="events"></a>Eventos
 Para aprimorar a detecção do Azure ATP de Pass-the-Hash, força bruta, modificação de grupos confidenciais, criação de serviços suspeitos e modificações de Honey Tokens, o Azure ATP precisa dos seguintes eventos do Windows: 4776, 4732, 4733, 4728, 4729, 4756, 4757 e 7045. Eles podem ser lidos automaticamente pelo sensor do Azure ATP ou, caso o sensor do Azure ATP não esteja implantado, ele poderá ser encaminhado para o sensor autônomo do Azure ATP de duas maneiras: configurando o sensor autônomo do Azure ATP para escutar eventos do SIEM ou [Configurando o Encaminhamento de Eventos do Windows](configure-event-forwarding.md).
 
--   Configuração do sensor autônomo do Azure ATP para escutar eventos de SIEM <br>Configure o SIEM para encaminhar eventos específicos do Windows para o ATP. O Azure ATP dá suporte a vários fornecedores SIEM. Para obter mais informações, confira [Configurar encaminhamento de eventos](configure-event-forwarding.md).
+-   Configuração do sensor autônomo do Azure ATP para escutar eventos de SIEM <br>Configure o SIEM para encaminhar eventos específicos do Windows para o ATA. O Azure ATP dá suporte a vários fornecedores SIEM. Para obter mais informações, confira [Configurar encaminhamento de eventos](configure-event-forwarding.md).
 
 -   Configuração do encaminhamento de eventos do Windows<br>Outra maneira do Azure ATP conseguir obter seus eventos é configurando seus controladores de domínio para encaminhar eventos do Windows 4776, 4732, 4733, 4728, 4729, 4756, 4757 e 7045 para seu sensor autônomo do Azure ATP. Isso é especialmente útil se você não tiver um SIEM ou se o SIEM não tiver suporte atualmente do ATP. Para obter mais informações sobre o Encaminhamento de Eventos do Windows no ATP, confira [Configurando o encaminhamento de eventos do Windows](configure-event-forwarding.md). Isso se aplica somente aos sensores autônomos físicos do Azure ATP – não ao sensor do Azure ATP.
 

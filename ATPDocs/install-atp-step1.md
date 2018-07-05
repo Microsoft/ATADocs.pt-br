@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 15ee7d0b-9a0c-46b9-bc71-98d0b4619ed0
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: a4c2f03955eddb4615b347fa8a211501546e6f4a
-ms.sourcegitcommit: e0209c6db649a1ced8303bb1692596b9a19db60d
+ms.openlocfilehash: cadd708c20733324b939db1e35d12aae3f2d80f2
+ms.sourcegitcommit: 40dbce8045f689376a50275fb12e3c5c32ca8092
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31007263"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37799069"
 ---
 *Aplica-se a: Proteção Avançada contra Ameaças do Azure*
 
@@ -33,8 +33,7 @@ Este procedimento de instalação fornece instruções para criar e gerenciar um
 No Azure ATP, você pode gerenciar e monitorar vários espaços de trabalho. Isso é especialmente útil se você quiser criar um espaço de trabalho de demonstração e um espaço de trabalho de teste no qual pode fazer a prova de conceito do Azure ATP antes de disponibilizá-lo para toda a organização. Isso também é necessário para dar suporte a implantações com várias florestas. Um único espaço de trabalho só pode monitorar vários domínios de uma única floresta. 
 
 > [!NOTE]
-> - Você pode ter um máximo de dois espaços de trabalho ativos. Depois de excluir um espaço de trabalho, você pode entrar em contato com o suporte para reativá-lo. É possível ter um máximo de três espaços de trabalho excluídos. Para aumentar o número de espaços de trabalho salvos e excluídos, entre em contato com o suporte do Azure ATP.
-> - No momento, os data centers do Azure ATP são implantados na Europa, na América do Norte/América Central/Caribe e na Ásia.
+> No momento, os data centers do Azure ATP são implantados na Europa, na América do Norte/América Central/Caribe e na Ásia.
 
 ## <a name="step-1-enter-the-workspace-management-portal"></a>Etapa 1. Entrar no portal de gerenciamento do espaço de trabalho
 
@@ -69,7 +68,7 @@ Depois de confirmar que sua rede atende aos requisitos do sensor, você poderá 
 - Somente o espaço de trabalho primário pode ser editado. Para fazer alterações em outros espaços de trabalho, você pode excluí-los e adicioná-los novamente. Se quiser excluir o espaço de trabalho primário, primeiro você precisará desligar as integrações e definir o espaço de trabalho como não **Primário** antes que ele possa ser excluído.
 - Para editar um espaço de trabalho Primário, primeiro você precisa desligar as integrações existentes no espaço de trabalho.
 
-- Retenção de dados – espaços de trabalho excluídos não aparecem na interface do usuário. No entanto, seus dados são retidos de acordo com a [Política de retenção de dados da Microsoft](https://www.microsoft.com/trustcenter/privacy/you-own-your-data).
+- Retenção de dados – espaços de trabalho excluídos não são exibidos na interface do usuário. Para obter mais informações sobre a retenção de dados do Azure ATP, veja [privacidade e segurança de dados do Azure ATP](atp-privacy-compliance.md).
 
 
 >[!div class="step-by-step"]
