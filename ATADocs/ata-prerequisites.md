@@ -13,11 +13,12 @@ ms.technology: ''
 ms.assetid: a5f90544-1c70-4aff-8bf3-c59dd7abd687
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 91ce961b832fd02ba343b3f55ae3570fe4b10207
-ms.sourcegitcommit: 39a1ddeb6c9dd0817f92870b711627350b7f6f03
+ms.openlocfilehash: 90c4bcad1b5a2d6da06153706129d9670ad57e1c
+ms.sourcegitcommit: 321ff1af2c140f41600c4c42ac4d455b3cdb9440
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36232997"
 ---
 *Aplica-se a: Advanced Threat Analytics versão 1.9*
 
@@ -26,7 +27,7 @@ ms.lasthandoff: 05/08/2018
 # <a name="ata-prerequisites"></a>Pré-requisitos do ATA
 Este artigo descreve os requisitos para uma implantação bem-sucedida do ATA em seu ambiente
 
->[!NOTE]
+> [!NOTE]
 > Para obter informações sobre como planejar a capacidade e os recursos, confira [Planejamento de capacidade do ATA](ata-capacity-planning.md).
 
 
@@ -81,7 +82,7 @@ Você pode verificar executando o seguinte cmdlet do Windows PowerShell: `[Get-H
 
 A instalação do ATA Center como uma máquina virtual tem suporte. 
 
->[!NOTE] 
+> [!NOTE] 
 > Durante a execução como uma memória dinâmica da máquina virtual ou qualquer outra memória, não há suporte para o recurso de inchamento.
 
 Se você executar a Central de ATA como uma máquina virtual, deverá finalizar o servidor antes de criar um novo ponto de verificação para evitar uma possível corrupção do banco de dados.
@@ -142,7 +143,7 @@ O certificado deve ter:
 Por exemplo, você pode usar os modelos padrão **servidor Web** ou **Computador**.
 
 > [!WARNING]
-> - Não há suporte para o processo de renovação de um certificado existente. A única maneira de renovar um certificado é criando um novo certificado e configurando o ATA para usar o novo certificado.
+> Não há suporte para o processo de renovação de um certificado existente. A única maneira de renovar um certificado é criando um novo certificado e configurando o ATA para usar o novo certificado.
 
 
 > [!NOTE]
@@ -164,13 +165,13 @@ Você pode verificar executando o seguinte cmdlet do Windows PowerShell: `[Get-H
 Para obter informações sobre como usar máquinas virtuais com o Gateway do ATA, confira [Configurar o espelhamento de porta](configure-port-mirroring.md).
 
 > [!NOTE]
-> É necessário um mínimo de 5 GB de espaço e recomenda-se 10 GB. Isso inclui o espaço necessário para os binários ATA, [logs ATA e [logs de desempenho](troubleshooting-ata-using-perf-counters.md).
+> É necessário um mínimo de 5 GB de espaço e recomenda-se 10 GB. Isso inclui o espaço necessário para os binários do ATA, os logs do ATA e os [logs de desempenho](troubleshooting-ata-using-perf-counters.md).
 
 ### <a name="server-specifications"></a>Especificações do servidor
 Para ter um melhor desempenho, defina a **Opção de Energia** do Gateway de ATA para **Alto Desempenho**.<br>
 Um Gateway do ATA pode dar suporte ao monitoramento de vários controladores de domínio, dependendo da quantidade de tráfego de rede para e a partir dos controladores de domínio.
 
->[!NOTE] 
+> [!NOTE] 
 > Durante a execução como uma memória dinâmica da máquina virtual ou qualquer outra memória, não há suporte para o recurso de inchamento.
 
 Para saber mais sobre os requisitos de hardware do Gateway do ATA, confira [Planejamento de capacidade do ATA](ata-capacity-planning.md).
@@ -218,6 +219,7 @@ A tabela abaixo lista as portas mínimas que o Gateway do ATA requer configurada
 |SSL|TCP|443|Centro de ATA|Saída|
 |Syslog (opcional)|UDP|514|Servidor SIEM|Entrada|
 
+
 > [!NOTE]
 > Como parte do processo de resolução feito pelo Gateway de ATA, as seguintes portas precisam ser a entrada nos dispositivos na rede a partir dos Gateways de ATA.
 >
@@ -248,7 +250,7 @@ Durante a instalação, o .Net Framework 4.6.1 é instalado e pode causar a rein
 
 
 > [!NOTE]
-> É necessário um mínimo de 5 GB de espaço e recomenda-se 10 GB. Isso inclui o espaço necessário para os binários ATA, [logs ATA e [logs de desempenho](troubleshooting-ata-using-perf-counters.md).
+> É necessário um mínimo de 5 GB de espaço e recomenda-se 10 GB. Isso inclui o espaço necessário para os binários do ATA, os logs do ATA e os [logs de desempenho](troubleshooting-ata-using-perf-counters.md).
 
 ### <a name="server-specifications"></a>Especificações do servidor
 
@@ -256,7 +258,7 @@ O Gateway Lightweight do ATA requer um mínimo de dois núcleos e 6 GB de RAM in
 Para ter um melhor desempenho, defina a **Opção de Energia** do Gateway Lightweight do ATA como **Alto Desempenho**.
 O Gateway Lightweight do ATA pode ser implantado em controladores de domínio de vários tamanhos e cargas, dependendo da quantidade de tráfego de rede dos controladores de domínio e da quantidade de recursos instalados no controlador de domínio.
 
->[!NOTE] 
+> [!NOTE] 
 > Durante a execução como uma memória dinâmica da máquina virtual ou qualquer outra memória, não há suporte para o recurso de inchamento.
 
 Para saber mais sobre os requisitos de hardware do Gateway Lightweight do ATA, confira [Planejamento de capacidade do ATA](ata-capacity-planning.md).
@@ -270,7 +272,8 @@ O servidor do Centro do ATA, os servidores do Gateway Lightweight do ATA e os co
 O Gateway Lightweight do ATA monitora o tráfego local em todos os adaptadores de rede do controlador de domínio. <br>
 Após a implantação, você pode usar o Console do ATA para modificar quais adaptadores de rede são monitorados.
 
-Não há suporte para o Gateway Lightweight em controles de domínio que executem o Windows 2008 R2 com o Broadcom Network Adapter Teaming habilitado.
+> [!NOTE]
+> Não há suporte para o Gateway Lightweight em controles de domínio que executem o Windows 2008 R2 com o Broadcom Network Adapter Teaming habilitado.
 
 ### <a name="ports"></a>Portas
 A tabela abaixo lista o mínimo de portas que o Gateway Lightweight do ATA exige:

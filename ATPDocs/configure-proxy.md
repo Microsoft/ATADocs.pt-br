@@ -5,7 +5,7 @@ keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 5/16/2018
+ms.date: 5/29/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,11 +13,12 @@ ms.technology: ''
 ms.assetid: 9c173d28-a944-491a-92c1-9690eb06b151
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 5a1fd5631a568419c600f35d44f09c9c61f17129
-ms.sourcegitcommit: 714a01edc9006b38d1163d03852dafc2a5fddb5f
+ms.openlocfilehash: 2f39c0d3628c3a3cc9e034fa1da8bb5a66bc704b
+ms.sourcegitcommit: 3eade64779002d2c8ae005565bc69e1b3f89fb7d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/16/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34560234"
 ---
 *Aplica-se a: Proteção Avançada contra Ameaças do Azure*
 
@@ -70,8 +71,9 @@ Se um proxy ou firewall estiver bloqueando todo o tráfego por padrão e permiti
 
 
 Também é possível fortalecer as regras de firewall ou de proxy para um espaço de trabalho específico criado por você, definindo uma regra para os seguintes registros DNS:
-- <Nome-do-espaço-de-trabalho>.atp.azure.com – para conectividade de console
-- <Nome-do-espaço-de-trabalho>sensorapi.atp.azure.com – para conectividade de sensor
+- <Workspace-Name>.atp.azure.com – para conectividade do console. Por exemplo, contosoATP.atp.azure.com
+- <Workspace-Name>sensorapi.atp.azure.com – para conectividade de sensores. Por exemplo, contosoATPsensorapi.atp.azure.com
+
  
 > [!NOTE]
 > Ao executar a inspeção de SSL no tráfego de rede do Azure ATP (entre o sensor e o serviço do Azure ATP), a inspeção de SSL deve dar suporte à inspeção mútua.

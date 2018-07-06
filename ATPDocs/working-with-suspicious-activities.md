@@ -13,11 +13,12 @@ ms.technology: ''
 ms.assetid: a06004bd-9f77-4e8e-a0e5-4727d6651a0f
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 1dccee094f4d6a8ec9bdc94a1d1314fa0675da9d
-ms.sourcegitcommit: 324dc941282f2948366afa5a919bda0b029bd59d
+ms.openlocfilehash: 7caae52ff7402fdc8cb18ce1a01bba469c2d649b
+ms.sourcegitcommit: f61616a8269d27a8fcde6ecf070a00e2c56481ac
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/22/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35259201"
 ---
 *Aplica-se a: Proteção Avançada contra Ameaças do Azure*
 
@@ -49,6 +50,25 @@ Cada atividade suspeita tem as seguintes informações:
 > -   Se você clicar em uma entidade, ela levará você ao perfil de entidade de usuário ou computador.
 
 ![Imagem da linha do tempo de atividades suspeitas do Azure ATP](media/atp-sa-timeline.png)
+
+## Detecções de versão prévia<a name="preview-detections"></a>
+
+A equipe de pesquisa da Azure ATP (Proteção Avançada contra Ameaças do Azure) trabalha constantemente para implementar novas detecções para ataques recém-descobertos. Como a Azure ATP é um serviço de nuvem, é possível lançar essas novas detecções rapidamente para permitir que os clientes da Azure ATP se beneficiem das novas detecções o mais breve possível.
+
+Essas detecções são marcadas como uma notificação de versão prévia para ajudar a identificar as novas detecções e saber que elas são novas para o produto. Se você desabilitar as detecções de versão prévia, elas não serão exibidas no console da Azure ATP (nem na linha do tempo nem nos perfis de entidade) e novos alertas não serão abertos.
+
+![VPN de detecção de versão prévia](./media/preview-detection-vpn.png) 
+
+Por padrão, as detecções de versão prévia são habilitadas na Azure ATP. 
+
+Para desabilitar as detecções de versão prévia:
+
+1. No console da Azure ATP, clique no símbolo de engrenagem de configurações.
+2. No menu à esquerda, em Versão prévia, clique em **Detecções**.
+3. Use o controle deslizante para habilitar e desabilitar às detecções de versão prévia.
+ 
+![detecções de versão prévia](./media/preview-detections.png) 
+
 
 ## <a name="filter-suspicious-activities-list"></a>Filtrar lista de atividades suspeitas
 Para filtrar a lista de atividades suspeitas:

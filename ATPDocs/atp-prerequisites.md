@@ -5,7 +5,7 @@ keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 5/21/2018
+ms.date: 6/7/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,11 +13,12 @@ ms.technology: ''
 ms.assetid: 62c99622-2fe9-4035-9839-38fec0a353da
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 1fc2b3656701ee5db54a4f918ab617a2ad487780
-ms.sourcegitcommit: 3539dd3f9ab7729e5326b904fc64985c808bc8ce
+ms.openlocfilehash: 070062cccb26bd99be48614bf8d40bd781d7b240
+ms.sourcegitcommit: 37b9ff946aad31eed1c6eab5d55d44fce167e20a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/21/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34827478"
 ---
 *Aplica-se a: Proteção Avançada contra Ameaças do Azure*
 
@@ -82,7 +83,7 @@ O sensor autônomo do Azure ATP dá suporte à instalação em um servidor execu
 A sensor autônomo do Azure ATP pode ser instalado em um servidor que é membro de um domínio ou grupo de trabalho.
 O sensor autônomo do Azure ATP pode ser usado para monitorar Controladores de domínio com o Nível de domínio funcional do Windows 2003 e posterior.
 
-Para seus controladores de domínio se comunicarem com o serviço de nuvem, você deve abrir a porta 443 em seus firewalls e proxies para *. atp.azure.com.
+Para que o sensor autônomo se comunique com o serviço de nuvem, você precisa abrir a porta 443 nos firewalls e proxies para *.atp.azure.com
 
 
 Para obter informações sobre como usar máquinas virtuais com o sensor autônomo do Azure ATP, consulte [Configurar o espelhamento de porta](configure-port-mirroring.md).
@@ -145,7 +146,7 @@ A tabela abaixo lista as portas mínimas que o sensor autônomo do Azure ATP req
 |NTLM via RPC|TCP|135|Todos os dispositivos na rede|Saída|
 |NetBIOS|UDP|137|Todos os dispositivos na rede|Saída|
 |Syslog (opcional)|TCP/UDP|514, dependendo da configuração|Servidor SIEM|Entrada|
-|RADIUS|UDDP|1813|RADIUS|Entrada|
+|RADIUS|UDP|1813|RADIUS|Entrada|
 |RDP|TCP|3389|Todos os dispositivos na rede|Saída|
 
 > [!NOTE]
@@ -205,7 +206,7 @@ A tabela abaixo lista o mínimo de portas que o sensor do Azure ATP exige:
 |Netlogon (SMB, CIFS, SAM-R)|TCP/UDP|445|Todos os dispositivos na rede|Saída|
 |NetBIOS|UDP|137|Todos os dispositivos na rede|Saída|
 |Syslog (opcional)|TCP/UDP|514, dependendo da configuração|Servidor SIEM|Entrada|
-|RADIUS|UDDP|1813|RADIUS|Entrada|
+|RADIUS|UDP|1813|RADIUS|Entrada|
 |Porta TLS para RDP|TCP|3389|Todos os dispositivos na rede|Saída|
 
 > [!NOTE]

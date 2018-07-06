@@ -5,7 +5,7 @@ keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 5/6/2018
+ms.date: 6/10/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,11 +13,12 @@ ms.technology: ''
 ms.assetid: ca5d1c7b-11a9-4df3-84a5-f53feaf6e561
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 9b28cf2497e1f742416f996e4b2dcaf934dc9142
-ms.sourcegitcommit: 39a1ddeb6c9dd0817f92870b711627350b7f6f03
+ms.openlocfilehash: de0b8f1673098a1b4b00255f4543ca18a903c83f
+ms.sourcegitcommit: f61616a8269d27a8fcde6ecf070a00e2c56481ac
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35259218"
 ---
 *Aplica-se a: Proteção Avançada contra Ameaças do Azure*
 
@@ -462,6 +463,26 @@ Um serviço suspeito foi criado em um controlador de domínio em sua organizaç�
 **Remediação**
 
 - Implementar o acesso com menos privilégios em computadores de domínio para permitir que apenas usuários específicos tenham o direito de criar novos serviços.
+
+## Conexão de VPN suspeita – versão prévia<a name="suspicious-vpn-detection"></a>
+
+**Descrição**
+
+A Azure ATP aprende o comportamento da entidade dos usuários de conexões VPN em um período corrido de um mês. 
+
+O modelo de comportamento de VPN é baseado nas seguintes atividades: os computadores aos quais os usuários se conectam e as localizações de onde eles se conectam. 
+
+Um alerta é aberto quando há um desvio no comportamento do usuário com base no algoritmo de aprendizado de máquina.
+
+**Investigação**
+
+1.  O usuário em questão deveria executar essas operações?
+2.  Considere os seguintes casos como possíveis falsos positivos: um usuário que alterou sua localização, um usuário que está viajando e conecta-se de um novo dispositivo.
+
+**Remediação**
+
+1.  Considere a possibilidade de redefinir a senha desse usuário. Isso impede que o invasor crie novas conexões VPN usando as credenciais antigas.
+2.  Considere a possibilidade de impedir que esse usuário se conecte por meio da VPN.
 
 ## <a name="unusual-protocol-implementation"></a>Implementação de protocolo incomum
 
