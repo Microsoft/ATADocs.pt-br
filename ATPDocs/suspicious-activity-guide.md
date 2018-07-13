@@ -5,7 +5,7 @@ keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 6/10/2018
+ms.date: 7/5/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: ca5d1c7b-11a9-4df3-84a5-f53feaf6e561
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: de0b8f1673098a1b4b00255f4543ca18a903c83f
-ms.sourcegitcommit: f61616a8269d27a8fcde6ecf070a00e2c56481ac
+ms.openlocfilehash: 610a84ac0e9b3c199971ced47dc5a5d08db00287
+ms.sourcegitcommit: 4170888deee71060e9a17c8a1ac772cc2fe4b51e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35259218"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37800667"
 ---
 *Aplica-se a: Proteção Avançada contra Ameaças do Azure*
 
@@ -182,25 +182,44 @@ Pass-the-Ticket é uma técnica de movimento lateral em que os invasores roubam 
 
 2. Se for uma conta confidencial, você deverá considerar redefinir a conta KRBTGT duas vezes como na atividade suspeita do Golden Ticket. Redefinir o KRBTGT duas vezes invalida todos os tíquetes Kerberos nesse domínio, portanto, planeje antes de fazer isso. Consulte as diretrizes em [Scripts de redefinição de senha da conta KRBTGT disponíveis agora para clientes](https://blogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/), consulte também como usar a [ferramenta Redefinir chaves/senha da conta KRBTGT](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51).  Como essa é uma técnica de movimentação lateral, siga as práticas recomendadas nas [recomendações de Passagem de hash](http://aka.ms/PtH).
 
-## Golden Ticket do Kerberos<a name="golden-ticket"></a>
+## Golden ticket do Kerberos<a name="golden-ticket"></a>
 
 **Descrição**
 
-Os invasores com direitos de administrador de domínio podem comprometer a [conta KRBTGT](https://technet.microsoft.com/library/dn745899(v=ws.11).aspx#Sec_KRBTGT). Ao usar a conta KRBTGT, eles podem criar um tíquete de concessão de tíquete Kerberos (TGT) que fornece autorização para qualquer recurso e define a expiração do tíquete para qualquer momento arbitrário. Esse TGT falso é chamado de "Golden Ticket" e permite que os invasores obtenham persistência na rede.
+Os invasores com direitos de administrador de domínio podem comprometer a [conta KRBTGT](https://technet.microsoft.com/library/dn745899(v=ws.11).aspx#Sec_KRBTGT). Ao usar a conta KRBTGT, eles podem criar um tíquete de concessão de tíquete Kerberos (TGT) que fornece autorização para qualquer recurso e define a expiração do tíquete para qualquer momento arbitrário. Esse TGT falso é chamado de "goldenTicket" e permite que os invasores obtenham persistência na rede.
 
-Nessa detecção, um alerta é acionado quando um tíquete de concessão de tíquete Kerberos for usado por mais tempo do que o permitido conforme especificado na política de segurança [Tempo de vida máximo para tíquete de usuário](https://technet.microsoft.com/library/jj852169(v=ws.11).aspx).
+Nessa detecção, um alerta é acionado quando um tíquete de concessão de tíquete Kerberos é usado por mais tempo do que o permitido, como especificado no [Tempo de vida máximo para tíquete de usuário](https://technet.microsoft.com/library/jj852169(v=ws.11).aspx). Esse é um ataque de golden ticket por **anomalia de tempo** ou por uma conta não existente. Esse é um ataque de golden ticket por **conta não existente**.
+política de segurança.
 
 **Investigação**
 
-1. Houve alguma alteração recente (dentro das últimas horas) feita na configuração **Tempo de vida máximo para tíquete de usuário** na política de grupo? Se Sim, então, **Feche** o alerta (era um falso positivo).
+- **Anomalia de tempo**
+   1.   Houve alguma alteração recente (dentro das últimas horas) feita na configuração "Tempo de vida máximo para tíquete de usuário" na política de grupo? Verifique o valor específico e veja se ele é menor do que o tempo de uso do tíquete. Se sim, então feche o alerta (era um falso positivo).
+   2.   O sensor do Azure ATP envolvido neste alerta é uma máquina virtual? Se Sim, ele retomou recentemente de um estado salvo? Se sim, então feche este alerta.
+   3.   Se a resposta para as perguntas acima for não, suponha que ele seja mal-intencionado.
+- **Conta não existente**
+   1.   Faça as seguintes perguntas:
+         - O usuário é um usuário de domínio válido e conhecido? Se sim, então feche o alerta (era um falso positivo).
+         - O usuário foi adicionado recentemente? Se sim, então feche o alerta, a alteração pode não ter sido ainda sincronizada.
+         - O usuário foi excluído recentemente do AD? Se sim, então feche este alerta.
+   2.   Se a resposta para as perguntas acima for não, suponha que ele seja mal-intencionado.
 
-2. O sensor autônomo do Azure ATP envolvido neste alerta é uma máquina virtual? Se Sim, ele retomou recentemente de um estado salvo? Se Sim, então, **Feche** este alerta.
+1. Para ambos os tipos de ataques de golden ticket, clique no computador de origem para acessar a página **Perfil**. Verifique o que aconteceu no momento da atividade e procure por atividades incomuns, como quem estava conectado e quais recursos foram acessados. 
 
-3. Se a resposta para as perguntas acima for não, suponha que ele seja mal-intencionado.
+2.  Todos os usuários que estavam conectados no computador deveriam estar conectados? Quais são os privilégios deles? 
+
+3.  Estes usuários devem ter acesso a esses recursos?<br>
+Se você tiver habilitado a integração do Windows Defender ATP, clique no ![selo WD](./media/wd-badge.png) do selo do Windows Defender ATP.
+ 
+ 4. Para continuar a investigar o computador, no Windows Defender ATP, verifique quais processos e alertas ocorreram no momento do alerta.
 
 **Remediação**
 
+
 Altere o Tíquete de concessão de tíquete Kerberos (KRBTGT) duas vezes de acordo com as diretrizes em [Scripts de redefinição de senha da conta KRBTGT disponíveis agora para clientes](https://blogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/) usando a [ferramenta Redefinir chaves/senha da conta KRBTGT](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51). Redefinir o KRBTGT duas vezes invalida todos os tíquetes Kerberos nesse domínio, portanto, planeje antes de fazer isso. Além disso, como criar um tíquete de ouro requer direitos de administrador de domínio, implemente [Passar as recomendações de hash](http://aka.ms/PtH).
+
+
+
 
 ## <a name="malicious-data-protection-private-information-request"></a>Solicitação de informações privadas para proteção contra dados mal-intencionados
 
@@ -232,9 +251,14 @@ Nessa detecção, um alerta é disparado quando uma solicitação de replicaçã
 
 **Investigação**
 
-1.  O computador em questão é um controlador de domínio? Por exemplo, um controlador de domínio recém-promovido que teve problemas de replicação. Em caso afirmativo, **Fechar** a atividade suspeita. 
-2.  O computador em questão deveria estar replicando dados do Active Directory? Por exemplo, o Azure AD Connect. Se sim, **Feche e exclua** a atividade suspeita.
-3.  Clique no computador de origem ou na conta para acessar a página de perfil. Verifique o que aconteceu no momento da replicação, pesquisando atividades incomuns, como: quem estava conectado e quais recursos foram acessados. Se você tiver habilitado a integração do Windows Defender ATP, clique no selo do Windows Defender ATP ![Selo do Windows Defender ATP](./media/wd-badge.png) para continuar a investigar o computador. No Windows Defender ATP, você pode ver quais processos e alertas ocorreram no momento do alerta. 
+> [!NOTE]
+> Se você tem controladores de domínio nos quais os sensores do Azure ATP não estejam instalados, estes controladores de domínio não estão cobertos pelo Azure ATP. Nesse caso, se você implantar um novo controlador de domínio em um controlador de domínio não registrado ou desprotegido, ele poderá não ser identificado inicialmente pelo Azure ATP como um controlador de domínio. É altamente recomendável instalar o sensor do Azure ATP em todos os controladores de domínio para obter uma cobertura completa.
+
+1. O computador em questão é um controlador de domínio? Por exemplo, um controlador de domínio recém-promovido que teve problemas de replicação. Em caso afirmativo, **Fechar** a atividade suspeita. 
+2.  O computador em questão deveria estar replicando dados do Active Directory? Por exemplo, o Azure AD Connect ou dispositivos de monitoramento de desempenho de rede. Se sim, **Feche e exclua** a atividade suspeita.
+3. O IP que enviou a solicitação de replicação é um NAT ou um proxy? Se sim, verifique se há um novo controlador de domínio atrás do dispositivo ou se outras atividades suspeitas ocorreram a partir dele. 
+
+4. Clique no computador de origem ou na conta para acessar a página de perfil. Verifique o que aconteceu no momento da replicação, pesquisando atividades incomuns, como: quem estava conectado e quais recursos foram acessados. Se você tiver habilitado a integração do Windows Defender ATP, clique no selo do Windows Defender ATP ![Selo do Windows Defender ATP](./media/wd-badge.png) para continuar a investigar o computador. No Windows Defender ATP, você pode ver quais processos e alertas ocorreram no momento do alerta. 
 
 
 **Remediação**
@@ -505,9 +529,9 @@ Para determinar se este é um ataque WannaCry, realize as seguintes etapas:
 
 2. Se nenhuma ferramenta de ataque for encontrada, verifique se o computador de origem está executando um aplicativo que implementa a sua própria pilha NTLM ou SMB.
 
-3. Caso contrário, então, verifique se isso é causado pelo WannaCry executando um script de verificação de WannaCry, por exemplo [este analisador](https://github.com/apkjet/TrustlookWannaCryToolkit/tree/master/scanner) no computador de origem envolvido na atividade suspeita. Se o analisador descobrir que o computador está infectado ou vulnerável, aplique patches no computador, remova o malware e bloqueie-o da rede.
+3. Clique no computador de origem para acessar a página de perfil. Verifique o que aconteceu no momento do alerta, pesquisando atividades incomuns, como: quem estava conectado e quais recursos foram acessados. Se você tiver habilitado a integração do Windows Defender ATP, clique no selo do Windows Defender ATP ![selo do WD](./media/wd-badge.png) para continuar a investigar o computador. No Windows Defender ATP, você pode ver quais processos e alertas ocorreram no momento do alerta.
 
-4. Se o script não considerar que o computador está infectado ou vulnerável, então, ele ainda poderá estar infectado, mas o SMBv1 pode ter sido desabilitado ou o computador foi corrigido, o que afetaria a ferramenta de verificação.
+
 
 **Remediação**
 
