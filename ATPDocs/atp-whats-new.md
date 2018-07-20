@@ -5,7 +5,7 @@ keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 7/5/2018
+ms.date: 7/15/2018
 ms.topic: article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,17 +13,25 @@ ms.technology: ''
 ms.assetid: 7d0f33db-2513-4146-a395-290e001f4199
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: f533d835c9129dd56db5ac6e0ef2cca4b33cc043
-ms.sourcegitcommit: 4170888deee71060e9a17c8a1ac772cc2fe4b51e
+ms.openlocfilehash: 9e28c18f118f7a2dc9d516cf62a113245a7be1fa
+ms.sourcegitcommit: a9b8bc26d3cb5645f21a68dc192b4acef8f54895
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37800701"
+ms.lasthandoff: 07/16/2018
+ms.locfileid: "39064076"
 ---
 *Aplica-se a: Proteção Avançada contra Ameaças do Azure*
 
 
 # <a name="whats-new-in-azure-atp"></a>Novidades do Azure ATP 
+
+## <a name="azure-atp-release-240"></a>Azure ATP versão 2.40
+
+Lançado em 15 de julho de 2018
+
+- A detecção de pass-the-ticket agora inclui uma seção de evidências na página de detalhes do alerta. Isso fornece informações adicionais para a investigação do alerta.
+
+- Os sinalizadores de controle de acesso do usuário, que podem ser encontrados no perfil de um usuário nos Dados do diretório, agora incluem uma legenda para permitir um melhor entendimento dos atributos que estão habilitados e desativados.  
 
 ## <a name="azure-atp-release-239"></a>Azure ATP versão 2.39
 

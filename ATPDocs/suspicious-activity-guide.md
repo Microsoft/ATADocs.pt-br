@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: ca5d1c7b-11a9-4df3-84a5-f53feaf6e561
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 610a84ac0e9b3c199971ced47dc5a5d08db00287
-ms.sourcegitcommit: 4170888deee71060e9a17c8a1ac772cc2fe4b51e
+ms.openlocfilehash: 83c855a89ad418769c81a4f1da3950ae0b6c54f7
+ms.sourcegitcommit: a9b8bc26d3cb5645f21a68dc192b4acef8f54895
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37800667"
+ms.lasthandoff: 07/16/2018
+ms.locfileid: "39064110"
 ---
 *Aplica-se a: Proteção Avançada contra Ameaças do Azure*
 
@@ -107,9 +107,11 @@ Primeiro, verifique a descrição do alerta para ver com quais dos três tipos d
 
 2.  Golden Ticket – na planilha do Excel, vá para a guia de atividade de rede. Você verá que o campo de downgrade relevante é **Solicitar Tipo de Criptografia de Tíquete** e **Tipos de Criptografia com Suporte no Computador de Origem** contém métodos de criptografia mais fortes.
 
-  1. Verifique o computador de origem e a conta ou, se houver vários computadores de origem e contas, verifique se eles têm algo em comum (por exemplo, toda a equipe de marketing usa um aplicativo específico que pode estar fazendo o alerta ser disparado). Há casos em que um aplicativo personalizado que é raramente usado está se autenticando usando uma codificação de criptografia inferior. Verifique se há algum desses aplicativos personalizados no computador de origem. Nesse caso, ele é provavelmente um positivo verdadeiro benigno e pode ser suprimido.
+  1. Verifique o recurso acessado por essas permissões. Se houver um recurso que todas elas estão acessando, valide-o e verifique se é um recurso válido que elas precisam acessar. Além disso, verifique se o recurso de destino dá suporte a métodos de criptografia forte. Você pode verificar isso no Active Directory verificando o atributo msDS-SupportedEncryptionTypes, da conta de serviço do recurso.
   
-  2. Verifique o recurso acessado por essas permissões. Se houver um recurso que todas elas estão acessando, valide-o e verifique se é um recurso válido que elas precisam acessar. Além disso, verifique se o recurso de destino dá suporte a métodos de criptografia forte. Você pode verificar isso no Active Directory verificando o atributo msDS-SupportedEncryptionTypes, da conta de serviço do recurso.
+  2. Verifique o computador de origem e a conta ou, se houver vários computadores de origem e contas, verifique se eles têm algo em comum (por exemplo, toda a equipe de marketing usa um aplicativo específico que pode fazer o alerta ser disparado). Há casos em que um aplicativo personalizado que é raramente usado está se autenticando usando uma codificação de criptografia inferior. Verifique se há algum desses aplicativos personalizados no computador de origem. Nesse caso, ele é provavelmente um positivo verdadeiro benigno e pode ser suprimido.
+  
+  
 
 3.  Overpass-the-Hash – na planilha do Excel, vá para a guia de atividade de rede. Você verá que o campo de downgrade relevante é **Tipo de Criptografia de Carimbo de Data/Hora Criptografado** e **Tipos de Criptografia com Suporte no Computador de Origem** contém métodos de criptografia mais fortes.
 
@@ -197,7 +199,8 @@ política de segurança.
    1.   Houve alguma alteração recente (dentro das últimas horas) feita na configuração "Tempo de vida máximo para tíquete de usuário" na política de grupo? Verifique o valor específico e veja se ele é menor do que o tempo de uso do tíquete. Se sim, então feche o alerta (era um falso positivo).
    2.   O sensor do Azure ATP envolvido neste alerta é uma máquina virtual? Se Sim, ele retomou recentemente de um estado salvo? Se sim, então feche este alerta.
    3.   Se a resposta para as perguntas acima for não, suponha que ele seja mal-intencionado.
-- **Conta não existente**
+
+- **Conta não existente** (Versão prévia)
    1.   Faça as seguintes perguntas:
          - O usuário é um usuário de domínio válido e conhecido? Se sim, então feche o alerta (era um falso positivo).
          - O usuário foi adicionado recentemente? Se sim, então feche o alerta, a alteração pode não ter sido ainda sincronizada.

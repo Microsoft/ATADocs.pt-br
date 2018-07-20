@@ -4,7 +4,7 @@ description: Explica as diferentes opções para versões do Microsoft Advanced 
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 4/10/2018
+ms.date: 7/15/2018
 ms.topic: article
 ms.prod: ''
 ms.service: advanced-threat-analytics
@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: a8afbd91-c888-4dfc-94ab-72e38745163e
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 93c26e0049936b3db1253a785c6b28bffe0ab197
-ms.sourcegitcommit: e0209c6db649a1ced8303bb1692596b9a19db60d
+ms.openlocfilehash: 2aebec8f93153f626905067880235479705aa20a
+ms.sourcegitcommit: a9b8bc26d3cb5645f21a68dc192b4acef8f54895
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31007280"
+ms.lasthandoff: 07/16/2018
+ms.locfileid: "39064011"
 ---
 *Aplica-se a: Advanced Threat Analytics versão 1.9*
 
@@ -29,14 +29,12 @@ A Microsoft pretende lançar atualizações do ATA algumas vezes por ano, com ca
 
 -   Fase de manutenção das Atualizações de Segurança (somente) – Após o lançamento de uma nova versão do ATA, o suporte para versões anteriores será reduzido a somente Atualizações de Segurança pelo restante dos 12 meses do ciclo de vida de suporte (mostrado no exemplo de versões de suporte para manutenção a seguir).
  
-![Exemplo de versões de suporte para manutenção](media/versions.png)
-
 > [!Note]
 > A versão mais recente do ATA estará sempre na fase de manutenção de Atualizações Críticas e de Segurança. Isso significa que, se você encontrar um defeito de código que requer uma atualização crítica, deverá ter a versão do Branch Atual mais recente instalada para receber uma correção. Todas as outras versões com suporte só podem receber Atualizações de Segurança. O suporte termina por completo após o ciclo de vida de 12 meses de uma versão expirar. Nessa ocasião, os clientes devem atualizar para uma versão com suporte.
 
 ## <a name="version-history"></a>Histórico de versão
 
-|VERSÃO|NÚMERO DO BUILD|DATA DA DISPONIBILIDADE| DATA DE TÉRMINO DO SUPORTE|
+|VERSÃO|NÚMERO DO BUILD|DATA DA DISPONIBILIDADE|DATA DE TÉRMINO DO SUPORTE|
 |----|----|----|----|
 |1.4|1.4.2457|31 DE AGOSTO 2015|30 DE AGOSTO 2016|
 |1.5|1.5.2946|17 DE DEZEMBRO DE 2015|16 DE DEZEMBRO DE 2016|
@@ -48,7 +46,7 @@ A Microsoft pretende lançar atualizações do ATA algumas vezes por ano, com ca
 |1.8|1.8.6645|30 DE JUNHO DE 2017|30 DE JUNHO DE 2018|
 |1.8.1|1.8.6765|02 DE AGOSTO DE 2017|02 DE AGOSTO DE 2018|
 |1.9|1.9.7312|21 DE MARÇO DE 2018|21 DE MARÇO DE 2019|
-
+|1.9.1|1.9.7412|1º DE JULHO DE 2018|1º DE JULHO DE 2019|
 
 
 
