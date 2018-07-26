@@ -2,10 +2,10 @@
 title: Lista de recursos úteis da Proteção Avançada contra Ameaças do Azure | Microsoft Docs
 description: Este artigo contém uma lista de recursos úteis do Azure ATP
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 4/29/2018
+ms.date: 7/23/2018
 ms.topic: article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 34dc152c-6b7f-4128-93fe-aad56c282730
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: b8d91468664a76436078772ad1fc8510ea56d67a
-ms.sourcegitcommit: 5c0f914b44bfb8e03485f12658bfa9a7cd3d8bbc
+ms.openlocfilehash: 498d1b4d14db079583da1999bfb68a5648111362
+ms.sourcegitcommit: 63a36cd96aec30e90dd77bee1d0bddb13d2c4c64
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/30/2018
-ms.locfileid: "32298479"
+ms.lasthandoff: 07/24/2018
+ms.locfileid: "39227131"
 ---
 *Aplica-se a: Proteção Avançada contra Ameaças do Azure*
 
@@ -46,7 +46,7 @@ Esses recursos ajudarão você a configurar o Azure ATP, conectar ao Active Dire
 - [Teste o Azure ATP (parte do EMS E5)](http://aka.ms/aatptrial) A avaliação é válida por 90 dias.
 - [Guia de implantação](install-atp-step1.md) Siga estas etapas para implantar o Azure ATP no seu ambiente.
 - [Integrar o Azure ATP ao Windows Defender ATP](integrate-wd-atp.md)
-- 
+
 ## <a name="azure-atp-settings"></a>Configurações do Azure ATP
 
 As configurações básicas necessárias no Azure ATP são definidas ao criar o espaço de trabalho. No entanto, há várias outras configurações que podem ser definidas para ajustar o Azure ATP que tornam as detecções mais precisas para o seu ambiente, como a integração do SIEM e configurações de auditoria. 
@@ -64,6 +64,7 @@ Depois que o Azure ATP estiver em execução, você poderá exibir as atividades
 ## <a name="security-best-practices"></a>Práticas recomendadas de segurança
 
 - [Perguntas frequentes do Azure ATP](atp-technical-faq.md) – este artigo fornece uma lista de perguntas frequentes sobre o Azure ATP, bem como informações e respostas. 
+
 ## <a name="community-resources"></a>Recursos da comunidade
 
 Blog: [Blog do Azure ATP](https://aka.ms/aatpblog)
