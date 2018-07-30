@@ -2,10 +2,10 @@
 title: Guia de atividades suspeitas do Azure ATP | Microsoft Docs
 d|Description: This article provides a list of the suspicious activities Azure ATP can detect and steps for remediation.
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 7/5/2018
+ms.date: 7/24/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: ca5d1c7b-11a9-4df3-84a5-f53feaf6e561
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 83c855a89ad418769c81a4f1da3950ae0b6c54f7
-ms.sourcegitcommit: a9b8bc26d3cb5645f21a68dc192b4acef8f54895
+ms.openlocfilehash: 7ae5ac30d1d17084df4c30d502a58767b97a4582
+ms.sourcegitcommit: 63a36cd96aec30e90dd77bee1d0bddb13d2c4c64
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2018
-ms.locfileid: "39064110"
+ms.lasthandoff: 07/24/2018
+ms.locfileid: "39227165"
 ---
 *Aplica-se a: Proteção Avançada contra Ameaças do Azure*
 
@@ -469,6 +469,72 @@ Nesta detecção, um alerta é disparado quando ocorrem diversas falhas de auten
 
 [Senhas complexas e longas](https://docs.microsoft.com/windows/device-security/security-policy-settings/password-policy) fornecem o primeiro nível necessário de segurança contra ataques de força bruta.
 
+## <a name="suspicious-domain-controller-promotion-potential-dcshadow-attack---preview"></a>Promoção do controlador de domínio suspeito (possível ataque DCShadow) – Visualização
+
+**Descrição**
+
+Um ataque de sombra do controlador de domínio (DCShadow) é um ataque projetado para alterar objetos do directory usando uma replicação mal-intencionada. Esse ataque pode ser executado de qualquer computador com a criação de um controlador de domínio invasor usando um processo de replicação.
+ 
+O DCShadow usa RPC e LDAP para:
+1. Registrar a conta do computador como um controlador de domínio (usando os direitos de administrador de domínio) e
+2. Executar a replicação (usando os direitos de replicação concedidos) sobre DRSUAPI e enviar alterações para objetos do directory.
+ 
+Nessa detecção, um alerta é acionado quando um computador na rede está tentando registrar como um controlador de domínio invasor. 
+
+**Investigação**
+ 
+1. O computador em questão é um controlador de domínio? Por exemplo, um controlador de domínio recém-promovido que teve problemas de replicação. Em caso afirmativo, **Fechar** a atividade suspeita.
+2. O computador em questão deveria estar replicando dados do Active Directory? Por exemplo, o Azure AD Connect. Se sim, **Feche e exclua** a atividade suspeita.
+3. Clique no computador de origem ou na conta para acessar a página de perfil. Verifique o que aconteceu no momento da replicação, pesquisando atividades incomuns, como: quem estava conectado, com quais recursos e qual é o sistema operacional do computador?
+   1. Todos os usuários que estavam conectados ao computador deveriam estar conectados a ele? Quais são os privilégios deles? Eles têm permissão para promover um servidor para controlador de domínio? (eles são administradores de domínio)?
+   2. Os usuários devem acessar esses recursos?
+   3. O computador executa o sistema operacional Windows Server (ou Windows/Linux)? Um computador não servidor não deve replicar os dados.
+Se você tiver habilitado a integração do Windows Defender ATP, clique no selo do Windows Defender ATP ![selo do Windows Defender ATP](./media/wd-badge.png) para continuar a investigar o computador. No Windows Defender ATP, você pode ver quais processos e alertas ocorreram no momento do alerta.
+
+4. Examine o Visualizador de Eventos para ver os [eventos do Active Directory que ele registra no log de serviços de diretório](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-2000-server/cc961809(v=technet.10)). Você pode usar o log para monitorar as alterações no Active Directory. Por padrão, o Active Directory somente registra eventos de erro crítico, mas se esse alerta for recorrente, habilite essa auditoria no controlador de domínio relevante para uma investigação adicional.
+
+**Corrigir**
+
+Verifique quem em sua organização tem as seguintes permissões: 
+- Replicar alterações de diretório 
+- Replicar todas as alterações de diretório 
+ 
+ 
+Para obter mais informações, consulte [Conceder permissões do Active Directory Domain Services para sincronização de perfil no SharePoint Server 2013](https://technet.microsoft.com/library/hh296982.aspx). 
+
+Você pode utilizar o [Scanner ACL do AD](https://blogs.technet.microsoft.com/pfesweplat/2013/05/13/take-control-over-ad-permissions-and-the-ad-acl-scanner-tool/) ou criar um script do Windows PowerShell para determinar quem no domínio tem essas permissões.
+ 
+
+
+
+## <a name="suspicious-replication-request-potential-dcshadow-attack---preview"></a>Solicitação de replicação suspeita (possível ataque DCShadow) – Visualização
+
+**Descrição** 
+
+A replicação do Active Directory é o processo pelo qual as alterações feitas em um controlador de domínio são sincronizadas com outros controladores de domínio. Com as permissões necessárias, os invasores podem conceder direitos para sua conta do computador, permitindo que represente um controlador de domínio. Os invasores se esforçarão para iniciar uma solicitação de replicação mal-intencionada, permitindo que alterem os objetos do Active Directory em um controlador de domínio original, o que pode dar aos invasores persistência no domínio.
+Nessa detecção, um alerta é acionado quando uma solicitação de replicação suspeita é gerada em relação a um controlador de domínio original protegido pelo Azure ATP. O comportamento é uma indicação de técnicas usadas em ataques de sombra do controlador de domínio.
+
+**Investigação** 
+ 
+1. O computador em questão é um controlador de domínio? Por exemplo, um controlador de domínio recém-promovido que teve problemas de replicação. Em caso afirmativo, **Fechar** a atividade suspeita.
+2. O computador em questão deveria estar replicando dados do Active Directory? Por exemplo, o Azure AD Connect. Se sim, **Feche e exclua** a atividade suspeita.
+3. Clique no computador de origem para acessar a página de perfil. Verifique o que aconteceu no **momento** da replicação, pesquisando atividades incomuns, como: quem estava conectado, quais recursos foram usados e qual é o sistema operacional do computador?
+
+   1.  Todos os usuários que estavam conectados ao computador deveriam estar conectados a ele? Quais são os privilégios deles? Eles têm permissão para realizar replicações (eles são administradores do domínio)?
+   2.  Os usuários devem acessar esses recursos?
+   3. O computador executa o sistema operacional Windows Server (ou Windows/Linux)? Um computador não servidor não deve replicar os dados.
+Se você tiver habilitado a integração do Windows Defender ATP, clique no selo do Windows Defender ATP ![selo do Windows Defender ATP](./media/wd-badge.png) para continuar a investigar o computador. No Windows Defender ATP, você pode ver quais processos e alertas ocorreram no momento do alerta.
+1. Examine o Visualizador de Eventos para ver os [eventos do Active Directory que ele registra no log de serviços de diretório](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-2000-server/cc961809(v=technet.10)). Você pode usar o log para monitorar as alterações no Active Directory. Por padrão, o Active Directory somente registra eventos de erro crítico, mas se esse alerta for recorrente, habilite essa auditoria no controlador de domínio relevante para uma investigação adicional.
+
+**Remediação**
+
+Verifique quem em sua organização tem as seguintes permissões: 
+- Replicar alterações de diretório 
+- Replicar todas as alterações de diretório 
+
+Para fazer isso, você pode utilizar o [Scanner ACL do AD](https://blogs.technet.microsoft.com/pfesweplat/2013/05/13/take-control-over-ad-permissions-and-the-ad-acl-scanner-tool/) ou criar um script do Windows PowerShell para determinar quem no domínio tem essas permissões.
+
+
 ## <a name="suspicious-service-creation"></a>Criação de serviço suspeito
 
 **Descrição**
@@ -485,7 +551,7 @@ Um serviço suspeito foi criado em um controlador de domínio em sua organizaç�
 
  - Se a resposta para ambas as perguntas for *sim*, **Feche** o alerta ou adicione-o à lista de Exclusões.
 
-3. Se a resposta a uma das perguntas for *não*, então, isso deverá ser considerado um positivo verdadeiro.
+3. Se a resposta a uma das perguntas for *não*, isso deverá ser considerado um positivo verdadeiro.
 
 **Remediação**
 

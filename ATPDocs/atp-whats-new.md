@@ -5,7 +5,7 @@ keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 7/15/2018
+ms.date: 7/21/2018
 ms.topic: article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,17 +13,40 @@ ms.technology: ''
 ms.assetid: 7d0f33db-2513-4146-a395-290e001f4199
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 9e28c18f118f7a2dc9d516cf62a113245a7be1fa
-ms.sourcegitcommit: a9b8bc26d3cb5645f21a68dc192b4acef8f54895
+ms.openlocfilehash: be3a4315384d5df03b1f04f0a71a960c66858b05
+ms.sourcegitcommit: 63a36cd96aec30e90dd77bee1d0bddb13d2c4c64
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2018
-ms.locfileid: "39064076"
+ms.lasthandoff: 07/24/2018
+ms.locfileid: "39227216"
 ---
 *Aplica-se a: Proteção Avançada contra Ameaças do Azure*
 
 
 # <a name="whats-new-in-azure-atp"></a>Novidades do Azure ATP 
+
+
+## <a name="azure-atp-release-241"></a>Azure ATP versão 2.41
+
+Lançado em 22 de julho de 2018
+
+- **O suporte de várias florestas do Azure ATP está sendo distribuído gradualmente (visualização)** <br> Agora o Azure ATP pode dar suporte a organizações com várias florestas, permitindo monitorar a atividade e os perfis de usuário entre florestas. Essa nova funcionalidade permite que você:
+
+  - Exiba e investigue as atividades executadas pelos usuários em várias florestas de um único painel de controle.
+  - Melhore a detecção e reduza os falsos positivos, fornecendo integração avançada do Active Directory e a resolução de conta.
+  - Obtenha melhores alertas de monitoramento e emissão de relatórios para cobertura entre organizações.
+
+
+-   **Novas detecções: DCShadow**<br>Duas novas detecções foram adicionadas para ajudar a proteger contra ataques de sombra do controlador de domínio (DCShadow):
+
+    -   Promoção do controlador de domínio suspeito (possível ataque DCShadow) – essa detecção ajuda a detectar ataques nos quais uma máquina representa um controlador de domínio e tenta usar a replicação para propagar alterações em outros controladores de domínio em seu domínio.
+
+    -   Solicitação de replicação suspeita (possível ataque DCShadow) – essa detecção ajuda a proteger contra ataques que tentam executar a promoção DC dos computadores que não são controladores de domínio para alterar objetos do directory.
+
+-   **Informações aprimoradas de downgrade de criptografia**<br>Agora a detecção de downgrade de criptografia fornece mais informações sobre o tipo específico de ataque detectado: overpass-the-hash, golden ticket e skeleton key. Além disso, esses alertas foram agregados para permitir uma investigação mais fácil.
+- Essa versão inclui correções e melhorias para vários problemas. 
+
+
 
 ## <a name="azure-atp-release-240"></a>Azure ATP versão 2.40
 
@@ -45,7 +68,7 @@ Lançado em 5 de julho de 2018
 
 Lançado em 1º de julho de 2018
 
-- Esta versão inclui correções e aprimoramentos para vários problemas, bem como os aprimoramentos do portal do Azure ATP. 
+- Esta versão inclui correções e aprimoramentos para vários problemas, bem como os aprimoramentos do portal do Azure ATP.
 
 ## <a name="azure-atp-release-237"></a>Azure ATP versão 2.37
 

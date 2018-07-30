@@ -2,10 +2,10 @@
 title: O que é o Microsoft Advanced Threat Analytics (ATA)? | Microsoft Docs
 description: Explica o que é o Microsoft Advanced Threat Analytics (ATA) e os tipos de atividades suspeitas que ele pode detectar
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 3/21/2018
+ms.date: 7/24/2018
 ms.topic: article
 ms.prod: ''
 ms.service: advanced-threat-analytics
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 283e7b4e-996a-4491-b7f6-ff06e73790d2
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 2f83f3ff564596c37716d79b955ac4fca7d94aa2
-ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
+ms.openlocfilehash: adca31a6767031fce19f1a14bf8031c911717c9c
+ms.sourcegitcommit: 63a36cd96aec30e90dd77bee1d0bddb13d2c4c64
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "30009754"
+ms.lasthandoff: 07/24/2018
+ms.locfileid: "39227233"
 ---
 *Aplica-se a: Advanced Threat Analytics versão 1.9*
 
@@ -33,7 +33,7 @@ O ATA aproveita um mecanismo de análise de rede proprietário para capturar e a
 -   Espelhamento de porta de seus controladores de domínio e servidores DNS para o Gateway do ATA e/ou
 -   Implantação de um LGW (Gateway Lightweight do ATA) diretamente nos Controladores de domínio
 
-O ATA obtém informações de várias fontes de dados, como eventos e logs em sua rede, a fim de aprender o comportamento dos usuários e de outras entidades na organização e criar um perfil comportamental sobre eles.
+O ATA obtém informações de várias fontes de dados, como eventos e logs em sua rede, a fim de aprender o comportamento dos usuários e de outras entidades na organização e cria um perfil comportamental sobre eles.
 O ATA pode receber eventos e logs de:
 
 -   Integração do SIEM
@@ -47,9 +47,9 @@ Para saber mais sobre a arquitetura do ATA, confira [Arquitetura do ATA](ata-arc
 
 A tecnologia do ATA detecta várias atividades suspeitas, concentrando-se em várias fases da cadeia do ataque cibernético, incluindo:
 
--   Reconhecimento, durante o qual os invasores coletam informações sobre como o ambiente foi compilado criado, o que são os ativos diferentes e quais entidades existem. Geralmente, eles criam o plano para as próximas fases do ataque.
+-   Reconhecimento, durante o qual os invasores coletam informações sobre como o ambiente foi compilado criado, o que são os ativos diferentes e quais entidades existem. Normalmente, este é o ponto no qual os invasores criam planos para suas próximas fases do ataque.
 -   Ciclo de movimentação lateral, durante o qual um invasor investe tempo e esforço na propagação da superfície de seu ataque dentro de sua rede.
--   Controle do domínio (persistência), durante o qual um invasor captura as informações permitindo que retome sua campanha usando vários conjuntos de pontos de entrada, credenciais e técnicas. 
+-   Controle do domínio (persistência), durante o qual um invasor captura as informações que permitem retomar sua campanha usando vários conjuntos de pontos de entrada, credenciais e técnicas. 
 
 Essas fases de um ataque cibernético são semelhantes e previsíveis, independentemente do tipo de empresa que está sob ataque ou do tipo de informação visado.
 O ATA procura três tipos de ataques principais: ataques mal-intencionados, comportamento anormal e riscos e problemas de segurança.
@@ -68,7 +68,7 @@ Os **ataques mal-intencionados** são detectados de forma determinista, olhando 
 
 Para obter uma lista completa de detecções e suas descrições, confira [Quais atividades suspeitas o ATA pode detectar?](ata-threats.md). 
 
-O ATA detecta essas atividades suspeitas e revela as informações no Console do ATA, incluindo uma visão clara de Quem, O que, Quando e Como. Como você pode ver, monitorando este painel simples e fácil de usar, você será alertado de que o ATA suspeita de uma tentativa de ataque Pass-the-Ticket nos computadores Cliente 1 e Cliente 2 em sua rede.
+O ATA detecta essas atividades suspeitas e revela as informações no Console do ATA, incluindo uma visão clara de Quem, O que, Quando e Como. Como você pode ver, monitorando este painel simples e fácil de usar, você será alertado de que o ATA suspeita da tentativa de ataque Pass-the-Ticket nos computadores Cliente 1 e Cliente 2 em sua rede.
 
  ![tela de exemplo do ATA de pass-the-ticket](media/pass_the_ticket_sa.png)
 

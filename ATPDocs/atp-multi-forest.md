@@ -5,7 +5,7 @@ keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 7/17/2018
+ms.date: 7/20/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: effca0f2-fcae-4fca-92c1-c37306decf84
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: c76e459709c786082bea7566a61e5384a235eda4
-ms.sourcegitcommit: 8feb9b65dc0e1de0ace00aca11784e54f9852a15
+ms.openlocfilehash: a48bf96bd6a71282455d932a35aac23ba4c8193a
+ms.sourcegitcommit: 7909deafdd9323f074d0ff2f590e307bcfaaabad
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39098178"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39202125"
 ---
 *Aplica-se a: Proteção Avançada contra Ameaças do Azure*
 
@@ -44,7 +44,7 @@ A capacidade de dar suporte a várias florestas do Active Directory permite:
 Para detectar atividades entre florestas, os sensores do Azure ATP consultam os controladores de domínio em florestas remotas para criar perfis para todas as entidades envolvidas, incluindo usuários e computadores em florestas remotas. 
 
 > [!NOTE]
-> - Para que isso funcione, a floresta em que os sensores do Azure ATP estão instalados deve ser de confiança para todas as outras florestas.
+> - Sensores do Azure ATP podem ser instalados em todas as florestas (se existir uma relação de confiança unidirecional mínima).
 > - O usuário que você configura no console do Azure ATP em **Serviços de diretório** devem ser confiáveis em todas as outras florestas.
 
 
