@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 3547519f-8d9c-40a9-8f0e-c7ba21081203
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: df06235de3a29051f9ffcd889bb95936ed9fc27d
-ms.sourcegitcommit: 03e959b7ce4b6df421297e1872e028793c967302
+ms.openlocfilehash: 1b37bcbfc304ee0ef71d80eb84f6298d64e50d3f
+ms.sourcegitcommit: eebf1156aaae199b6aaa7e431cd6372e572b1e9f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/21/2018
-ms.locfileid: "29445002"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39396410"
 ---
 *Aplica-se a: Proteção Avançada contra Ameaças do Azure versão 1.9*
 
@@ -57,15 +57,15 @@ Após adicionar o **Serviço de Rede** ao grupo **Leitores de Log de Eventos**, 
 2.  Em um prompt de comando, digite *gpedit.msc*.
 3.  Expanda **Configuração do Computador > Modelos Administrativos > Componentes do Windows > Encaminhamento de Evento**
 
- ![Imagem do editor de grupo de política local](media/wef 1 local group policy editor.png)
+ ![Imagem do editor de grupo de política local](media/wef%201%20local%20group%20policy%20editor.png)
 
 4.  Clique duas vezes em **Configurar Gerenciador de assinatura de destino**.
    
     1.  Selecione **Habilitado**.
     2.  Em **Opções**, clique em **Mostrar**.
-    3.  Em **SubscriptionManagers**, insira o seguinte valor e clique em **OK**: *Server=http://<fqdnATPSensor>:5985/wsman/SubscriptionManager/WEC,Refresh=10* (Por exemplo: Server=http://atpsensor9.contoso.com:5985/wsman/SubscriptionManager/WEC,Refresh=10)
+    3.  Em **SubscriptionManagers**, digite o seguinte valor e clique em **OK**: *Server=http://<fqdnATPSensor>:5985/wsman/SubscriptionManager/WEC,Refresh=10* (Por exemplo: Server=http://atpsensor9.contoso.com:5985/wsman/SubscriptionManager/WEC,Refresh=10)
  
-   ![Configurar a imagem de assinatura de destino](media/wef 2 config target sub manager.png)
+   ![Configurar a imagem de assinatura de destino](media/wef%202%20config%20target%20sub%20manager.png)
    
     5.  Clique em **OK**.
     6.  Em um prompt de comandos com privilégios elevados, digite *gpupdate /force*. 
@@ -82,7 +82,7 @@ Após adicionar o **Serviço de Rede** ao grupo **Leitores de Log de Eventos**, 
         1.  Clique em **Adicionar Computador do Domínio**.
         2.  Insira o nome do controlador de domínio no campo **Digite o nome do objeto a ser selecionado**. Depois, clique em **Verificar Nomes** e clique em **OK**. 
        
-        ![Imagem do Visualizador de Eventos](media/wef3 event viewer.png)
+        ![Imagem do Visualizador de Eventos](media/wef3%20event%20viewer.png)
    
         
         3.  Clique em **OK**.
