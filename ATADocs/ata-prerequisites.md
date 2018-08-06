@@ -2,10 +2,10 @@
 title: Pré-requisitos do Advanced Threat Analytics | Microsoft Docs
 description: Descreve os requisitos para uma implantação bem-sucedida do ATA em seu ambiente
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 5/6/2018
+ms.date: 7/25/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: advanced-threat-analytics
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: a5f90544-1c70-4aff-8bf3-c59dd7abd687
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 90c4bcad1b5a2d6da06153706129d9670ad57e1c
-ms.sourcegitcommit: 321ff1af2c140f41600c4c42ac4d455b3cdb9440
+ms.openlocfilehash: 199830a6cd0b84cf897311cc80472a078f582b59
+ms.sourcegitcommit: 759e99f670c42c2dd60d07b2200d3de01ddf6055
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36232997"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39335904"
 ---
 *Aplica-se a: Advanced Threat Analytics versão 1.9*
 
@@ -129,7 +129,7 @@ A tabela a seguir lista as portas mínimas que devem ser abertas para que a Cent
 
 ### <a name="certificates"></a>Certificados
 
-Para facilitar a instalação do ATA, você pode instalar certificados autoassinados durante a instalação. Após a implantação, você deverá substituir o autoassinado pelo certificado de uma Autoridade de Certificação interna a ser usado pelo Centro de ATA.
+Para instalar e implantar o ATA rapidamente, você pode instalar os certificados autoassinados durante a instalação. Se você tiver optado por usar certificados autoassinados, após a implantação inicial será recomendável substituir os certificados autoassinados por certificados de uma Autoridade de Certificação interna a ser usada pelo Centro de ATA.
 
 
 Verifique se que os Gateways de ATA e o Centro de ATA têm acesso ao ponto de distribuição de CRL. Se eles não tiverem acesso à Internet, siga [o procedimento para importar manualmente uma CRL](https://technet.microsoft.com/library/aa996972%28v=exchg.65%29.aspx), tendo o cuidado de instalar todos os pontos de distribuição de CRL de toda a cadeia.
@@ -139,6 +139,7 @@ O certificado deve ter:
 -   Um tipo de provedor do CSP (Provedor de Serviços de Criptografia) ou KSP (Provedor de Armazenamento de Chaves)
 -   Um comprimento de chave pública de 2048 bits
 -   Um valor definido para os sinalizadores de uso KeyEncipherment e ServerAuthentication
+-   O valor KeySpec (KeyNumber) de "KeyExchange" (AT\_KEYEXCHANGE). Observe que o valor de "Signature" (AT\_SIGNATURE) não tem suporte. 
 
 Por exemplo, você pode usar os modelos padrão **servidor Web** ou **Computador**.
 

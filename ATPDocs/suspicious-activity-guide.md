@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: ca5d1c7b-11a9-4df3-84a5-f53feaf6e561
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 7ae5ac30d1d17084df4c30d502a58767b97a4582
-ms.sourcegitcommit: 63a36cd96aec30e90dd77bee1d0bddb13d2c4c64
+ms.openlocfilehash: 4e6a7d90ad5670b3d1c01ba70d7b5a81e8808b5e
+ms.sourcegitcommit: 759e99f670c42c2dd60d07b2200d3de01ddf6055
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2018
-ms.locfileid: "39227165"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39335870"
 ---
 *Aplica-se a: Proteção Avançada contra Ameaças do Azure*
 
@@ -101,7 +101,7 @@ Há três tipos de detecção:
 
 **Investigação**
 
-Primeiro, verifique a descrição do alerta para ver com quais dos três tipos de detecção acima você está lidando. Primeiro, verifique a descrição do alerta com quais dos três tipos de detecção acima você está lidando. Para saber mais, baixe a planilha do Excel.
+Primeiro, verifique a descrição do alerta para ver com qual dos três tipos de detecção acima você está lidando. Para saber mais, baixe a planilha do Excel.
 
 1.  Skeleton Key – você pode verificar se a Skeleton Key afetou os controladores de domínio usando [o verificador escrito pela equipe do ATP do Azure](https://gallery.technet.microsoft.com/Aorato-Skeleton-Key-24e46b73). Se o analisador encontrar malware em 1 ou mais controladores de domínio, é um verdadeiro positivo.
 
@@ -109,9 +109,9 @@ Primeiro, verifique a descrição do alerta para ver com quais dos três tipos d
 
   1. Verifique o recurso acessado por essas permissões. Se houver um recurso que todas elas estão acessando, valide-o e verifique se é um recurso válido que elas precisam acessar. Além disso, verifique se o recurso de destino dá suporte a métodos de criptografia forte. Você pode verificar isso no Active Directory verificando o atributo msDS-SupportedEncryptionTypes, da conta de serviço do recurso.
   
-  2. Verifique o computador de origem e a conta ou, se houver vários computadores de origem e contas, verifique se eles têm algo em comum (por exemplo, toda a equipe de marketing usa um aplicativo específico que pode fazer o alerta ser disparado). Há casos em que um aplicativo personalizado que é raramente usado está se autenticando usando uma codificação de criptografia inferior. Verifique se há algum desses aplicativos personalizados no computador de origem. Nesse caso, ele é provavelmente um positivo verdadeiro benigno e pode ser suprimido.
+  2. Verifique a conta e o computador de origem ou, se houver várias contas e computadores de origem, verifique se eles têm algo em comum. Por exemplo, todos de sua equipe de marketing usam um aplicativo específico que pode causar o acionamento do alerta. Há casos em que um aplicativo personalizado que é raramente usado está se autenticando usando uma codificação de criptografia inferior. Verifique se há algum desses aplicativos personalizados no computador de origem. Nesse caso, ele é provavelmente um positivo verdadeiro benigno e pode ser suprimido.
   
-  
+
 
 3.  Overpass-the-Hash – na planilha do Excel, vá para a guia de atividade de rede. Você verá que o campo de downgrade relevante é **Tipo de Criptografia de Carimbo de Data/Hora Criptografado** e **Tipos de Criptografia com Suporte no Computador de Origem** contém métodos de criptografia mais fortes.
 
@@ -120,7 +120,7 @@ Primeiro, verifique a descrição do alerta para ver com quais dos três tipos d
 
 **Remediação**
 
-1.  Skeleton Key – Remova malware. Para obter mais informações, consulte [Análise do malware Skeleton Key](https://www.secureworks.com/research/skeleton-key-malware-analysis) da SecureWorks.
+1.  Skeleton Key – Remova malware. Para saber mais, veja [Análise do malware Skeleton Key](https://www.virusbulletin.com/virusbulletin/2016/01/paper-digital-bian-lian-face-changing-skeleton-key-malware).
 
 2.  Golden Ticket – Siga as instruções das atividades suspeitas do [Golden Ticket](#golden-ticket).   
     Além disso, como criar um tíquete de ouro requer direitos de administrador de domínio, implemente [Passar as recomendações de hash](http://aka.ms/PtH).
@@ -551,7 +551,7 @@ Um serviço suspeito foi criado em um controlador de domínio em sua organizaç�
 
  - Se a resposta para ambas as perguntas for *sim*, **Feche** o alerta ou adicione-o à lista de Exclusões.
 
-3. Se a resposta a uma das perguntas for *não*, isso deverá ser considerado um positivo verdadeiro.
+3. Se a resposta a uma das perguntas for *não*, então, isso deverá ser considerado um positivo verdadeiro.
 
 **Remediação**
 

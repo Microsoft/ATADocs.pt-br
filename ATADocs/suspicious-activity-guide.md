@@ -2,10 +2,10 @@
 title: Guia de atividades suspeitas do ATA | Microsoft Docs
 d|Description: This article provides a list of the suspicious activities ATA can detect and steps for remediation.
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 5/21/2018
+ms.date: 7/29/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: advanced-threat-analytics
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 1fe5fd6f-1b79-4a25-8051-2f94ff6c71c1
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: b6c11292fd8e7436257e4616c65d76aad1aed8de
-ms.sourcegitcommit: c01f93bd9e41355d2f47f648e3fea7736e1218f6
+ms.openlocfilehash: 1a2585ac6d9bf73e7ad92dd6a053d7daf77a40f5
+ms.sourcegitcommit: 759e99f670c42c2dd60d07b2200d3de01ddf6055
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/21/2018
-ms.locfileid: "34402088"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39335921"
 ---
 *Aplica-se a: Advanced Threat Analytics versão 1.9*
 
@@ -130,7 +130,7 @@ Primeiro, verifique a descrição do alerta para ver com qual dos três tipos de
 
 **Remediação**
 
-1.  Skeleton Key – Remova malware. Para obter mais informações, consulte [Análise do malware Skeleton Key](https://www.secureworks.com/research/skeleton-key-malware-analysis) da SecureWorks.
+1.  Skeleton Key – Remova malware. Para saber mais, veja [Análise do malware Skeleton Key](https://www.virusbulletin.com/virusbulletin/2016/01/paper-digital-bian-lian-face-changing-skeleton-key-malware).
 
 2.  Golden Ticket – Siga as instruções das atividades suspeitas do [Golden Ticket](#golden-ticket).   
     Além disso, como criar um tíquete de ouro requer direitos de administrador de domínio, implemente [Passar as recomendações de hash](http://aka.ms/PtH).

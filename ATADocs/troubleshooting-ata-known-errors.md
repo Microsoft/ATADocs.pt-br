@@ -2,10 +2,10 @@
 title: Solução de problemas conhecidos do ATA | Microsoft Docs
 description: Descreve como solucionar os problemas conhecidos no Advanced Threat Analytics
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 3/21/2018
+ms.date: 7/25/2018
 ms.topic: article
 ms.prod: ''
 ms.service: advanced-threat-analytics
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: d89e7aff-a6ef-48a3-ae87-6ac2e39f3bdb
 ms.reviewer: arzinger
 ms.suite: ems
-ms.openlocfilehash: a7172447de5b4d4088da2d8d687a7bec47a01551
-ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
+ms.openlocfilehash: 3433da5ca3d6d08f91cd97b24f6b97251c6b28ae
+ms.sourcegitcommit: 759e99f670c42c2dd60d07b2200d3de01ddf6055
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "30010475"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39335989"
 ---
 *Aplica-se a: Advanced Threat Analytics versão 1.9*
 
@@ -66,7 +66,11 @@ Esta seção detalha os possíveis erros nas implantações do ATA e as etapas n
 |Erro [\[]DeploymentModel[\]] Falha na autenticação de gerenciamento [\[]CurrentlyLoggedOnUser=<domain>\<username>Status=FailedAuthentication Exception=[\]]|O processo de implantação do Gateway do ATA ou do Gateway Lightweight do ATA não conseguiu autenticar com sucesso o ATA Center|Abra um navegador no computador no qual o processo de implantação falhou e veja se você pode alcançar o Console do ATA. </br>Se não, inicie a solução de problemas para ver o motivo de o navegador não conseguir autenticar o Centro do ATA. </br>Verifique a: </br>Configuração de proxy</br>Problemas de rede</br>Configurações de política de grupo para a autenticação no computador que difere do Centro do ATA.|
 
 
-
+## <a name="ata-center-errors"></a>Erros do Centro do ATA
+> [!div class="mx-tableFixed"]
+|Erro do|Descrição|Resolução|
+|-------------|----------|---------|
+|System.Security.Cryptography.CryptographicException: acesso negado.|O Centro do ATA falha ao usar o certificado emitido para descriptografia. Isso provavelmente ocorreu devido ao uso de um certificado com KeySpec (KeyNumber) definido como Assinatura (AT\_SIGNATURE) que não tem suporte para a descriptografia, em vez de usar o KeyExchange (AT\_KEYEXCHANGE).|1.    Interrompa o serviço do Centro ATA. <br></br>2.     Exclua o certificado do centro de ATA do repositório de certificados do centro. (Antes de excluir, verifique se você tem o backup do certificado com a chave privada em um arquivo PFX). <br></br>3.    Abra um prompt de comando com privilégios elevados e execute certutil -importpfx "CenterCertificate.pfx" AT\_KEYEXCHANGE <br></br>4.     Inicie o serviço do Centro ATA. <br></br>5.     Verifique se agora tudo funciona conforme o esperado.|
 
 
 ## <a name="ata-gateway-and-lightweight-gateway-issues"></a>Erros do Gateway do ATA e do Gateway Lightweight
