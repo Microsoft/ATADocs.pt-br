@@ -43,7 +43,8 @@
 ## [Trabalhando com atividades suspeitas](working-with-suspicious-activities.md)
 ## [Guia de atividade suspeita](suspicious-activity-guide.md)
 ## [Investigar caminhos de movimento lateral com o Azure ATP](use-case-lateral-movement-path.md)
-## [Investigar entidades](entity-profiles.md)
+## [Investigar entidades](investigate-entity.md)
+## [Compreendendo perfis de entidade](entity-profiles.md)
 # Solução de problemas
 ## [Solução de problemas conhecidos](troubleshooting-atp-known-issues.md)
 ## [Suporte e informações](atp-support.md)
