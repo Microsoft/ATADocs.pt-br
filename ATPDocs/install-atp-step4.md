@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 51911e39-76c7-4dcd-bc0b-ec6235d0403f
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 56b3cea2089c64e2c78361c44d049d6de67764b6
-ms.sourcegitcommit: 759e99f670c42c2dd60d07b2200d3de01ddf6055
+ms.openlocfilehash: a6876de4f5cf293d58da08ab4e3a8443e76480f1
+ms.sourcegitcommit: ca6153d046d8ba225ee5bf92cf55d0bd57cf4765
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "30202265"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39585062"
 ---
 *Aplica-se a: Proteção Avançada contra Ameaças do Azure*
 
@@ -49,14 +49,14 @@ Execute as seguintes etapas no servidor do sensor do Azure ATP ou no controlador
 > [!NOTE] 
 > A instalação diretamente do arquivo zip falha.
 
-2.  Execute **Azure ATP sensor setup.exe** e siga o assistente de instalação.
+3.  Execute **Azure ATP sensor setup.exe** e siga o assistente de instalação.
 
-3.  Na página **Boas-vindas**, selecione seu idioma e clique em **Avançar**.
+4.  Na página **Boas-vindas**, selecione seu idioma e clique em **Avançar**.
 
      ![Idioma de instalação do sensor autônomo do Azure ATP](media/sensor-install-language.png)
 
 
-4.  O assistente de instalação verifica automaticamente se o servidor é um controlador de domínio ou um servidor dedicado. Se for um controlador de domínio, o sensor do Azure ATP será instalado, se for um servidor dedicado, o sensor autônomo do Azure ATP será instalado. 
+5.  O assistente de instalação verifica automaticamente se o servidor é um controlador de domínio ou um servidor dedicado. Se for um controlador de domínio, o sensor do Azure ATP será instalado, se for um servidor dedicado, o sensor autônomo do Azure ATP será instalado. 
     
     Por exemplo, para um sensor autônomo do Azure ATP, a tela a seguir será exibida informando que um sensor autônomo do Azure ATP está instalado em seu servidor dedicado:
     
@@ -67,7 +67,7 @@ Execute as seguintes etapas no servidor do sensor do Azure ATP ou no controlador
     > [!NOTE] 
     > Se o controlador de domínio ou servidor dedicado não atender aos requisitos mínimos de hardware para a instalação, você receberá um aviso. Isso não impede você de clicar em **Avançar** e prosseguir com a instalação. Essa pode ser a opção certa para a instalação do Azure ATP em um ambiente de teste de laboratório pequeno, no qual você não precisará de tanto espaço para armazenamento de dados. Para ambientes de produção, é altamente recomendável trabalhar com o guia de [planejamento de capacidade](atp-capacity-planning.md) do Azure ATP para certificar-se de que seus controladores de domínio ou servidores dedicados atendam aos requisitos necessários.
 
-4.  Em **Configurar o sensor**, insira o caminho de instalação e a chave de acesso que você copiou na etapa anterior, com base em seu ambiente:
+6.  Em **Configurar o sensor**, insira o caminho de instalação e a chave de acesso que você copiou na etapa anterior, com base em seu ambiente:
 
     ![Imagem de configuração de sensor autônomo do Azure ATP](media/sensor-install-config.png)
 
@@ -75,7 +75,7 @@ Execute as seguintes etapas no servidor do sensor do Azure ATP ou no controlador
 
       - Chave de acesso: é recuperada por meio do portal do espaço de trabalho na etapa anterior.
     
-5. Clique em **Instalar**. Os componentes a seguir serão instalados e configurados durante a instalação do sensor autônomo do Azure ATP:
+7. Clique em **Instalar**. Os componentes a seguir serão instalados e configurados durante a instalação do sensor autônomo do Azure ATP:
 
     -   KB 3047154 (somente para Windows Server 2012 R2)
 
@@ -86,7 +86,7 @@ Execute as seguintes etapas no servidor do sensor do Azure ATP ou no controlador
     -   Serviço de sensor do Azure ATP e serviço do atualizador do sensor do Azure ATP
     -   Microsoft Visual C++ 2013 Redistributable
 
-5.  Após a conclusão da instalação, clique em **Iniciar** para abrir o navegador e faça logon portal de espaço de trabalho do Azure ATP.
+8.  Após a conclusão da instalação, clique em **Iniciar** para abrir o navegador e faça logon portal de espaço de trabalho do Azure ATP.
 
 
 >[!div class="step-by-step"]

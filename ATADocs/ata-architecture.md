@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 892b16d2-58a6-49f9-8693-1e5f69d8299c
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: b620e5b6203d387de389cfb857c2dd6125239ed9
-ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
+ms.openlocfilehash: fa2b5fa5da1d73f90cac6937bef71fd239e498fc
+ms.sourcegitcommit: ca6153d046d8ba225ee5bf92cf55d0bd57cf4765
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "30010050"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39585045"
 ---
 *Aplica-se a: Advanced Threat Analytics versão 1.9*
 
@@ -92,6 +92,7 @@ O Centro do ATA recebe tráfego analisado do Gateway do ATA e do Gateway Lightwe
 |Banco de dados|O ATA utiliza o MongoDB para armazenar todos os dados no sistema:<br /><br />-   Atividade de rede<br />-   Atividades evento<br />-   Entidades exclusivas<br />-   Atividades suspeitas<br />-   Configuração do ATA|
 |Detectores|Os detectores usam algoritmos de aprendizado de máquina e regras determinísticas para localizar atividades suspeitas e comportamento anormal do usuário em sua rede.|
 |Console do ATA|O Console do ATA é para configurar o ATA e monitorar atividades suspeitas detectadas pelo ATA em sua rede. O Console do ATA não é dependente do serviço do Centro do ATA e é executado mesmo quando o serviço é interrompido, contanto que ele possa se comunicar com o banco de dados.|
+
 Considere os seguintes critérios ao decidir quantos Centros do ATA você quer implantar em sua rede:
 
 -   Um Centro de ATA pode monitorar uma única floresta do Active Directory. Se você tiver mais de uma floresta do Active Directory, será necessário pelo menos um Centro do ATA por floresta do Active Directory.

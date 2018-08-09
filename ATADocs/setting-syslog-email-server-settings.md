@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: bff20bf7-8b53-49da-81e5-b818a1c3b24e
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: a77e7e86d635d80ee09338843c42e003220133a0
-ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
+ms.openlocfilehash: f415fabe71512a5f9948a824d04e7bfece086ba4
+ms.sourcegitcommit: ca6153d046d8ba225ee5bf92cf55d0bd57cf4765
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "30010152"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39585028"
 ---
 *Aplica-se a: Advanced Threat Analytics versão 1.9*
 
@@ -43,6 +43,7 @@ O ATA pode notificar você quando detectar uma atividade suspeita. Para que o AT
     |SSL|Ativar SSL se o servidor SMTP exigir SSL. **Observação:** se você habilitar o SSL, também precisará alterar o número da Porta.|O padrão é desabilitado|
     |Autenticação|Habilite se o seu servidor SMTP exigir autenticação. **Observação:** se você habilitar a autenticação, será necessário fornecer um nome de usuário e senha de uma conta de email que tenha permissão para se conectar ao servidor SMTP.|O padrão é desabilitado|
     |Enviar de (obrigatório)|Digite um endereço de email a partir do qual o email será enviado.|Por exemplo:<br />ATA@contoso.com|
+    
     ![Imagem das configurações do servidor de emails do ATA](media/ata-email-server.png)
 
 ## <a name="provide-ata-with-your-syslog-server-settings"></a>Forneça ao ATA suas configurações do servidor Syslog

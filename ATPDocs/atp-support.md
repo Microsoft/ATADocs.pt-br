@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 8ae459ac-9fca-4923-9a1a-dc10d5c50b29
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 58e3b0d04b196f0c49b6e146952c1819c8413ee3
-ms.sourcegitcommit: adfa7a3a3918518b6b14b94d3c0a9f899142196a
+ms.openlocfilehash: 281db5cfee9366babfcdf30e14a80122aa6d04c8
+ms.sourcegitcommit: 7ab273d1a4c05b457ee02f1631f642346d687b1e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/19/2018
-ms.locfileid: "29977566"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39625601"
 ---
 *Aplica-se a: Proteção Avançada contra Ameaças do Azure*
 
@@ -30,7 +30,7 @@ Use os seguintes recursos para ajudá-lo a saber mais, implantar e dar suporte �
 
 |Para fazer isso...|...faça isto:|
 |----|----|
-|Consulte as documentações mais populares|Leia as cinco principais páginas:|- [O que é a Proteção Avançada contra Ameaças do Azure?](what-is-atp.md)<br>- [Pré-requisitos do Azure ATP](atp-prerequisites.md)<br>- [Arquitetura do Azure ATP](atp-architecture.md)<br>- [Planejamento de capacidade do Azure ATP](atp-capacity-planning.md)<br>- [Criar um espaço de trabalho](install-atp-step1.md)|
+|Consulte as documentações mais populares|Leia as cinco principais páginas:<br>- [O que é a Proteção Avançada contra Ameaças do Azure?](what-is-atp.md)<br>- [Pré-requisitos do Azure ATP](atp-prerequisites.md)<br>- [Arquitetura do Azure ATP](atp-architecture.md)<br>- [Planejamento de capacidade do Azure ATP](atp-capacity-planning.md)<br>- [Criar um espaço de trabalho](install-atp-step1.md)|
 |Entre em contato com a equipe de produto e seus colegas|Visite a [Comunidade Tecnológica](https://techcommunity.microsoft.com/t5/Azure-Advanced-Threat-Protection/bd-p/AzureAdvancedThreatProtection) da Proteção Avançada contra Ameaças do Azure.|
 |Verifique as informações da assinatura e quais recursos são compatíveis|Verifique as [informações da assinatura](https://www.microsoft.com/cloud-platform/azure-information-protection-pricing) e a [lista de recursos](https://www.microsoft.com/cloud-platform/azure-information-protection-features) no site da Proteção Avançada contra Ameaças do Azure.|
 

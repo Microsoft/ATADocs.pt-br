@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: cdaddca3-e26e-4137-b553-8ed3f389c460
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 9ed585d37363fbae2604fe0ea705a0ea30b9b283
-ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
+ms.openlocfilehash: 6f54967cfdbe7710168bf8f57a3280d5138923f1
+ms.sourcegitcommit: ca6153d046d8ba225ee5bf92cf55d0bd57cf4765
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "30010288"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39585196"
 ---
 *Aplica-se a: Advanced Threat Analytics versão 1.9*
 
@@ -55,6 +55,7 @@ Seus controladores de domínio e Gateways do ATA podem ser físicos ou virtuais.
 |Físico|Máquina|Verifique se o comutador virtual oferece suporte a este cenário, e se a configuração de espelhamento de porta em seus comutadores físicos tem base no cenário:<br /><br />Se o host virtual estiver no mesmo comutador físico, você precisará configurar um span no nível do comutador.<br /><br />Se o host virtual estiver em um comutador diferente, você precisará configurar RSPAN ou ERSPAN&#42;.|
 |Físico|Físico no mesmo comutador|O comutador físico deve oferecer suporte ao Espelhamento de Porta/SPAN.|
 |Físico|Físico em um comutador diferente|Exige que os comutadores físicos ofereçam suporte a RSPAN ou ERSPAN&#42;.|
+
 &#42; O ERSPAN recebe suporte apenas quando o desencapsulamento é executado antes de o tráfego ser analisado pelo ATA.
 
 > [!NOTE]
