@@ -14,10 +14,10 @@ ms.assetid: 27b139e5-12b9-4953-8f53-eb58e8ce0038
 ms.reviewer: bennyl
 ms.suite: ems
 ms.openlocfilehash: 47a8b5c52bf978d5e07007a3402a567be39e2157
-ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
+ms.sourcegitcommit: 1de2b047c0e9f92a106169f7634c480f694baf10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2017
+ms.lasthandoff: 08/13/2018
 ms.locfileid: "24018551"
 ---
 # <a name="whats-new-in-ata-version-16"></a>Novidades na versão 1.6 do ATA
@@ -141,7 +141,7 @@ Essa versão do ATA apresenta um mecanismo de detecção aprimorado, que fornece
 O mecanismo de detecção novo e aprimorado utiliza tecnologia de detecção embutida, permitindo detecção sem acessar o histórico de atividades de rede, para aumentar consideravelmente o desempenho do Centro do ATA. Isso também significa que é desnecessário migrar o histórico de atividades de rede durante o procedimento de atualização.
 O procedimento de atualização do ATA exporta os dados, caso você os queira para investigação futura, para `<Center Installation Path>\Migration` como um arquivo JSON.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Consulte Também
 [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
 [Atualizar o ATA para a versão 1.6 — guia de migração](ata-update-1.6-migration-guide.md)
