@@ -2,10 +2,10 @@
 title: Excluindo entidades de detecções na Proteção Avançada contra Ameaças do Azure | Microsoft Docs
 description: Descreve como impedir que o Azure ATP detecte atividades de entidades específicas como suspeitas
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 2/21/2018
+ms.date: 8/2/2018
 ms.topic: article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: cae3ed45-8fbc-4f25-ba24-3cc407c6ea93
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 60a2fae0ef044993786fb3b7e2d21a3ac27bb9f0
-ms.sourcegitcommit: 03e959b7ce4b6df421297e1872e028793c967302
+ms.openlocfilehash: 2a91ebbe3811aeefe6fcef660807976794513f32
+ms.sourcegitcommit: 14c05a210ae92d35100c984ff8c6d171db7c3856
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/21/2018
-ms.locfileid: "29444912"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39567824"
 ---
 *Aplica-se a: Proteção Avançada contra Ameaças do Azure*
 
@@ -33,7 +33,7 @@ Para excluir entidades da geração de alertas no Azure ATP:
 
 Há duas maneiras em que você pode excluir entidades, na atividade suspeita em si ou no guia **Exclusões** na página **Configuração**.
 
-- **Na atividade suspeita**: na linha do tempo de atividades suspeitas, quando você receber um alerta em uma atividade para um usuário ou computador ou endereço IP que tem permissão para executar uma atividade específica e pode realizá-lo com frequência, clique com botão direito do mouse nos três pontos no final da linha da atividade suspeita nessa entidade e selecione **Fechar e excluir**. <br></br>Isso adiciona o usuário, computador ou endereço IP à lista de exclusões da atividade suspeita. Isso fecha a atividade suspeita e ele não é listado na lista de eventos **Abrir** na **Linha do tempo de atividade suspeita**.
+- **Na atividade suspeita**: na linha do tempo de atividades suspeitas, quando você receber um alerta em uma atividade para um usuário ou computador ou endereço IP que tem permissão para executar uma atividade específica e pode realizá-lo com frequência, clique com botão direito do mouse nos três pontos no final da linha da atividade suspeita nessa entidade e selecione **Fechar e excluir**. <br></br>Isso adiciona o usuário, computador ou endereço IP à lista de exclusões da atividade suspeita. Isso fecha a atividade suspeita, e ela não aparece mais na lista de eventos **Abrir** na **Linha do tempo de atividade suspeita**.
 
     ![Excluir entidades](./media/exclude-in-sa.png)
 

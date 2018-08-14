@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 3f0498f9-061d-40e6-ae07-98b8dcad9b20
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 2c8f67d0c8d9020eb0e7ae16e8410db473ace044
-ms.sourcegitcommit: 759e99f670c42c2dd60d07b2200d3de01ddf6055
+ms.openlocfilehash: 755450654d870ec0235232e08194c1094c22f030
+ms.sourcegitcommit: ca6153d046d8ba225ee5bf92cf55d0bd57cf4765
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "30010237"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39585081"
 ---
 *Aplica-se a: Advanced Threat Analytics versão 1.9*
 
@@ -56,15 +56,15 @@ Após adicionar o **Serviço de Rede** ao grupo **Leitores de Log de Eventos**, 
 2.  Em um prompt de comando, digite *gpedit.msc*.
 3.  Expanda **Configuração do Computador > Modelos Administrativos > Componentes do Windows > Encaminhamento de Evento**
 
- ![Imagem do editor de grupo de política local](media/wef 1 local group policy editor.png)
+![Imagem do editor de grupo de política local](media/wef 1 local group policy editor.png)
 
 4.  Clique duas vezes em **Configurar Gerenciador de assinatura de destino**.
    
     1.  Selecione **Habilitado**.
     2.  Em **Opções**, clique em **Mostrar**.
-    3.  Em **SubscriptionManagers**, digite o seguinte valor e clique em **OK**: *Server=http://<fqdnATAGateway>:5985/wsman/SubscriptionManager/WEC,Refresh=10* (Por exemplo: Server=http://atagateway9.contoso.com:5985/wsman/SubscriptionManager/WEC,Refresh=10)
+    3.  Em **SubscriptionManagers**, digite o valor a seguir e clique em **OK**: *Server=`http://<fqdnATAGateway>:5985/wsman/SubscriptionManager/WEC,Refresh=10*` (por exemplo, Server=`http://atagateway9.contoso.com:5985/wsman/SubscriptionManager/WEC,Refresh=10`)
  
-   ![Configurar a imagem de assinatura de destino](media/wef 2 config target sub manager.png)
+    ![Configurar a imagem de assinatura de destino](media/wef 2 config target sub manager.png)
    
     5.  Clique em **OK**.
     6.  Em um prompt de comandos com privilégios elevados, digite *gpupdate /force*. 
@@ -75,25 +75,25 @@ Após adicionar o **Serviço de Rede** ao grupo **Leitores de Log de Eventos**, 
 2.  Abra o **Visualizador de Eventos**. 
 3.  Clique com o botão direito do mouse em **Assinaturas** e selecione **Criar Assinatura**. 
 
-   1.   Insira um nome e uma descrição para a assinatura. 
-   2.   Para **Log de Destino** confirme se **Eventos Encaminhados** está selecionado. Para o ATA ler os eventos, o log de destino deve ser **Eventos Encaminhados**. 
-   3.   Selecione **Iniciado pelo computador de origem** e clique em **Selecionar Grupos de Computadores**.
+    1.  Insira um nome e uma descrição para a assinatura. 
+    2.  Para **Log de Destino** confirme se **Eventos Encaminhados** está selecionado. Para o ATA ler os eventos, o log de destino deve ser **Eventos Encaminhados**. 
+    3.  Selecione **Iniciado pelo computador de origem** e clique em **Selecionar Grupos de Computadores**.
         1.  Clique em **Adicionar Computador do Domínio**.
         2.  Insira o nome do controlador de domínio no campo **Digite o nome do objeto a ser selecionado**. Depois, clique em **Verificar Nomes** e clique em **OK**. 
-       
-        ![Imagem do Visualizador de Eventos](media/wef3 event viewer.png)
-   
-        
+ 
+    ![Imagem do Visualizador de Eventos](media/wef3 event viewer.png)
+ 
+ 
         3.  Clique em **OK**.
-   4.   Clique em **Selecionar Eventos**.
+     4. Clique em **Selecionar Eventos**.
 
         1. Clique em **Pelo log** e selecione **Segurança**.
         2. No campo **Inclui/Exclui ID do Evento**, digite o número do evento e clique em **OK**. Por exemplo, digite 4776, conforme no exemplo a seguir.
 
- ![Imagem do filtro de consulta](media/wef 4 query filter.png)
+    ![Imagem do filtro de consulta](media/wef 4 query filter.png)
 
-   5.   Clique com o botão direito do mouse na assinatura criada e selecione **Status de Tempo de Execução** para verificar se há problemas com o status. 
-   6.   Depois de alguns minutos, verifique se os eventos definidos para serem encaminhados aparecem nos Eventos Encaminhados no Gateway do ATA.
+    5.  Clique com o botão direito do mouse na assinatura criada e selecione **Status de Tempo de Execução** para verificar se há problemas com o status. 
+    6.  Depois de alguns minutos, verifique se os eventos definidos para serem encaminhados aparecem nos Eventos Encaminhados no Gateway do ATA.
 
 
 Para saber mais, confira: [Configurar computadores para encaminhar e coletar eventos](https://technet.microsoft.com/library/cc748890)

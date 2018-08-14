@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 7/25/2018
+ms.date: 8/1/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: advanced-threat-analytics
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: a5f90544-1c70-4aff-8bf3-c59dd7abd687
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 199830a6cd0b84cf897311cc80472a078f582b59
-ms.sourcegitcommit: 759e99f670c42c2dd60d07b2200d3de01ddf6055
+ms.openlocfilehash: 6a51832f3dbff55ed2ad396307a487ad607b3a2b
+ms.sourcegitcommit: 14c05a210ae92d35100c984ff8c6d171db7c3856
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39335904"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39567654"
 ---
 *Aplica-se a: Advanced Threat Analytics versão 1.9*
 
@@ -49,7 +49,7 @@ O Sistema do ATA funciona nos limites da floresta do active directory e oferece 
 ![Diagrama de arquitetura do ATA](media/ATA-architecture-topology.jpg)
 
 ## <a name="before-you-start"></a>Antes de começar
-Esta seção lista as informações que você deve obter, as contas e entidades de rede que você deve ter antes de iniciar a instalação do ATA.
+Esta seção mostra as informações que você deve obter, bem como as contas e entidades de rede que você deve ter antes de iniciar a instalação do ATA.
 
 
 -   Conta de usuário e senha com acesso de leitura para todos os objetos nos domínios monitorados.
@@ -117,7 +117,7 @@ A tabela a seguir lista as portas mínimas que devem ser abertas para que a Cent
 |**HTTPS**|TCP|443|Rede da Empresa e Gateway de ATA|Entrada|
 |**SMTP** (opcional)|TCP|25|Servidor SMTP|Saída|
 |**SMTPS** (opcional)|TCP|465|Servidor SMTP|Saída|
-|**Syslog** (opcional)|TCP|514|Servidor syslog|Saída|
+|**Syslog** (opcional)|TCP/UPS/TLS (configurável)|514 (padrão)|Servidor syslog|Saída|
 |**LDAP**|TCP e UDP|389|Controladores de domínio|Saída|
 |**LDAPS** (opcional)|TCP|636|Controladores de domínio|Saída|
 |**DNS**|TCP e UDP|53|Servidores DNS|Saída|

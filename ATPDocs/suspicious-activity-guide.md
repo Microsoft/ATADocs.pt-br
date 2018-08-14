@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: ca5d1c7b-11a9-4df3-84a5-f53feaf6e561
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 4e6a7d90ad5670b3d1c01ba70d7b5a81e8808b5e
-ms.sourcegitcommit: 759e99f670c42c2dd60d07b2200d3de01ddf6055
+ms.openlocfilehash: 4667e13af4e86a18d1b50a2ea575f9c749f0c541
+ms.sourcegitcommit: ca6153d046d8ba225ee5bf92cf55d0bd57cf4765
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39335870"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39585230"
 ---
 *Aplica-se a: Proteção Avançada contra Ameaças do Azure*
 
@@ -191,7 +191,7 @@ Pass-the-Ticket é uma técnica de movimento lateral em que os invasores roubam 
 Os invasores com direitos de administrador de domínio podem comprometer a [conta KRBTGT](https://technet.microsoft.com/library/dn745899(v=ws.11).aspx#Sec_KRBTGT). Ao usar a conta KRBTGT, eles podem criar um tíquete de concessão de tíquete Kerberos (TGT) que fornece autorização para qualquer recurso e define a expiração do tíquete para qualquer momento arbitrário. Esse TGT falso é chamado de "goldenTicket" e permite que os invasores obtenham persistência na rede.
 
 Nessa detecção, um alerta é acionado quando um tíquete de concessão de tíquete Kerberos é usado por mais tempo do que o permitido, como especificado no [Tempo de vida máximo para tíquete de usuário](https://technet.microsoft.com/library/jj852169(v=ws.11).aspx). Esse é um ataque de golden ticket por **anomalia de tempo** ou por uma conta não existente. Esse é um ataque de golden ticket por **conta não existente**.
-política de segurança.
+
 
 **Investigação**
 
@@ -275,21 +275,6 @@ Valide as seguintes permissões:
 Para obter mais informações, consulte [Conceder permissões do Active Directory Domain Services para sincronização de perfil no SharePoint Server 2013](https://technet.microsoft.com/library/hh296982.aspx).
 Você pode utilizar o [Scanner ACL do AD](https://blogs.technet.microsoft.com/pfesweplat/2013/05/13/take-control-over-ad-permissions-and-the-ad-acl-scanner-tool/) ou criar um script do Windows PowerShell para determinar quem no domínio tem essas permissões.
 
-
-## <a name="password-exposed-in-cleartext-report"></a>Senha exposta no relatório de texto não criptografado
-
-**Descrição**
-
-Alguns serviços enviam as credenciais de conta em texto sem formatação. Isso pode ocorrer até mesmo para contas de usuários. Os invasores que monitoram o tráfego de rede podem capturar e reutilizar essas credenciais para fins mal-intencionados. 
-
-**Investigação**
-
-Clique na página de relatórios e baixe a senha exposta no relatório de texto não criptografado. Na planilha do Excel, consulte as contas que foram expostas.
-Geralmente, há um aplicativo herdado ou script nos computadores de origem que usa a associação simples LDAP.
-
-**Remediação**
-
-Verifique a configuração nos computadores de origem e certifique-se de não usar a associação LDAP simples. Em vez de usar as ligações LDAP simples, use LDAP SALS ou LDAPS.
 
 ## <a name="privilege-escalation-using-forged-authorization-data"></a>Elevação de privilégios usando dados de autorização forjados
 

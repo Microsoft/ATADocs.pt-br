@@ -2,10 +2,10 @@
 title: Trabalhando com perfis de usuário no portal de espaço de trabalho da Proteção Avançada contra Ameaças do Azure | Microsoft Docs
 description: Descreve como investigar os usuários na tela de perfis de usuário no portal de espaço de trabalho do Azure ATP
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 2/21/2018
+ms.date: 8/06/2018
 ms.topic: article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,18 +13,18 @@ ms.technology: ''
 ms.assetid: 17458706-79fb-4c23-aa42-66979164a45f
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 6ceefeeba6a52abf5da7ff44135cff55e9beab02
-ms.sourcegitcommit: 03e959b7ce4b6df421297e1872e028793c967302
+ms.openlocfilehash: cd34be695a190c719f991f8cc4b374942363a7c1
+ms.sourcegitcommit: 14c05a210ae92d35100c984ff8c6d171db7c3856
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/21/2018
-ms.locfileid: "29444972"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39567875"
 ---
 *Aplica-se a: Proteção Avançada contra Ameaças do Azure*
 
 
 
-# <a name="investigating-entity-profiles"></a>Investigando perfis de entidade
+# <a name="understanding-entity-profiles"></a>Noções básicas sobre perfis de entidade
 
 O perfil de entidade fornece uma abrangente página da entidade, projetada para fazer investigações completas e aprofundadas de usuários, computadores, dispositivos e dos recursos a que eles têm acesso e seu histórico. A página de perfil aproveita o novo conversor de atividade lógica do Azure ATP, que pode examinar um grupo de atividades em andamento (agregadas até um minuto) e agrupá-las em uma única atividade lógica para fornecer uma melhor compreensão das atividades reais de seus usuários.
 

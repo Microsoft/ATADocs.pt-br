@@ -2,10 +2,10 @@
 title: Arquitetura da Proteção Avançada contra Ameaças do Azure | Microsoft Docs
 description: Descreve a arquitetura do Azure ATP (Proteção Avançada contra Ameaças)
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 7/4/2018
+ms.date: 8/05/2018
 ms.topic: article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,18 +13,18 @@ ms.technology: ''
 ms.assetid: 90f68f2c-d421-4339-8e49-1888b84416e6
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 3f99aff656f6eff67a4077817c761c7627511bb2
-ms.sourcegitcommit: 40dbce8045f689376a50275fb12e3c5c32ca8092
+ms.openlocfilehash: 8264799f3aad2fb27287f56513458f34a3a7b0c6
+ms.sourcegitcommit: 14c05a210ae92d35100c984ff8c6d171db7c3856
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37799172"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39567637"
 ---
 *Aplica-se a: Proteção Avançada contra Ameaças do Azure*
 
 
 # <a name="azure-atp-architecture"></a>Arquitetura do Azure ATP
-A arquitetura da Proteção Avançada contra Ameaças do Azure é detalhada neste diagrama:
+Arquitetura da Proteção Avançada contra Ameaças do Azure:
 
 ![Diagrama de topologia da arquitetura do Azure ATP](media/atp-architecture-topology.png)
 
@@ -110,13 +110,13 @@ Considere os seguintes critérios ao decidir quantos espaços de trabalho do Azu
 
 ## <a name="azure-atp-sensor-and-azure-atp-standalone-sensor"></a>Sensor do Azure ATP e sensor autônomo do Azure ATP
 
-O **sensor do Azure ATP** e o **sensor autônomo do Azure ATP** autônomo têm a mesma funcionalidade básica:
+O **sensor do Azure ATP** e o **sensor autônomo do Azure ATP** têm a mesma funcionalidade básica:
 
 -   Capturar e inspecionar o tráfego de rede do controlador de domínio. Este tráfego é espelhado da porta para sensores autônomos do Azure ATP e o tráfego local do controlador de domínio em sensores do Azure ATP. 
 
 -   Receber eventos do Windows diretamente dos controladores de domínio (para sensores do ATP) ou de servidores de SIEM ou Syslog (para sensores autônomos do ATP)
 
--  Receber informações de contabilidade RADIUS de seu provedor de VPN
+-   Receber informações de contabilidade RADIUS de seu provedor de VPN
 
 -   Recuperar dados sobre usuários e computadores do domínio do Active Directory
 
@@ -176,7 +176,7 @@ Se o Active Directory precisa de mais capacidade de computação, a cota demanda
 
 
 ## <a name="your-network-components"></a>Componentes da sua rede
-Para trabalhar com Azure ATP, verifique se os seguintes componentes estão configurados.
+Verifique se os seguintes componentes estão configurados para funcionar com o Azure ATP.
 
 ### <a name="port-mirroring"></a>Espelhamento de porta
 Se você estiver usando sensores autônomos do Azure ATP, precisará configurar o espelhamento de porta para os controladores de domínio que serão monitorados e definir o sensor autônomo do Azure ATP como o destino usando os comutadores físicos ou virtuais. Outra opção é usar TAPs de rede. O Azure ATP funcionará se alguns e não todos, controladores de domínio forem monitorados, mas a detecção é menos eficiente.

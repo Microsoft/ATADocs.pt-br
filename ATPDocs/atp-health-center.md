@@ -2,10 +2,10 @@
 title: Monitorar eventos e a integridade do sistema da Proteção Avançada contra Ameaças do Azure | Microsoft Docs
 description: Use o centro de integridade do espaço de trabalho do Azure ATP para verificar como o serviço do Azure ATP está funcionando, ser alertado sobre possíveis problemas e exibir eventos de sistema no Visualizador de Eventos.
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 2/21/2018
+ms.date: 8/05/2018
 ms.topic: article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 1b7e72c3-a538-443f-981c-398ffafa5ab8
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 86eb90f452d5aee2504e525e64bfc62c22207880
-ms.sourcegitcommit: 03e959b7ce4b6df421297e1872e028793c967302
+ms.openlocfilehash: 75a0c9515f552c0ca18dbe2fd88cf27990fd59e1
+ms.sourcegitcommit: ca6153d046d8ba225ee5bf92cf55d0bd57cf4765
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/21/2018
-ms.locfileid: "29444902"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39584993"
 ---
 *Aplica-se a: Proteção Avançada contra Ameaças do Azure*
 
@@ -27,7 +27,7 @@ ms.locfileid: "29444902"
 
 ## <a name="azure-atp-workspace-health-center"></a>Centro de integridade do espaço de trabalho do Azure ATP 
 
-O centro de integridade do espaço de trabalho do Azure ATP informa sobre o desempenho de seu espaço de trabalho do Azure ATP e informa quando há problemas.
+O centro de integridade do espaço de trabalho do Azure ATP informa sobre o desempenho de seu espaço de trabalho do Azure ATP e alerta quando há problemas.
 
 ## <a name="working-with-the-azure-atp-workspace-health-center"></a>Trabalhando com o centro de integridade do espaço de trabalho do Azure ATP
 
@@ -50,9 +50,9 @@ Para verificar a integridade geral de seu espaço de trabalho, clique no ícone 
 
 -   **Suprimir**: suprimir uma atividade significa que você deseja ignorá-la por enquanto e apenas ser alertado novamente se houver uma nova instância. Se houver um alerta semelhante, o Azure ATP não o reabrirá. Mas, se o alerta parar por sete dias e for observado novamente, você será alertado novamente.
 
--   **Reabrir**: se fechar ou suprimir um problema, você poderá reabri-lo para que ele apareça como Aberto na linha do tempo novamente.
-- 
-- **Excluir**: dentro da linha do tempo de atividades suspeitas, você também tem a opção de excluir um problema de integridade. Se você excluir um alerta, ele será excluído do espaço de trabalho e você NÃO poderá restaurá-lo. Depois de clicar em Excluir, você poderá excluir todas as atividades suspeitas do mesmo tipo.
+-   **Reabrir**: você pode reabrir um problema fechado ou suprimido para que ele seja novamente exibido como Aberto na linha do tempo.
+
+-   **Excluir**: dentro da linha do tempo de atividades suspeitas, você também tem a opção de excluir um problema de integridade. Se você excluir um alerta, ele será excluído do espaço de trabalho e você NÃO poderá restaurá-lo. Depois de clicar em Excluir, você poderá excluir todas as atividades suspeitas do mesmo tipo.
 
 
 
