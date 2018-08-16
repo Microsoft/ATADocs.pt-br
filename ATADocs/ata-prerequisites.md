@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 8/1/2018
+ms.date: 8/9/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: advanced-threat-analytics
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: a5f90544-1c70-4aff-8bf3-c59dd7abd687
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 6a51832f3dbff55ed2ad396307a487ad607b3a2b
-ms.sourcegitcommit: 14c05a210ae92d35100c984ff8c6d171db7c3856
+ms.openlocfilehash: 04284a622aec1985e363bac7f0215cfd031d9854
+ms.sourcegitcommit: 1de2b047c0e9f92a106169f7634c480f694baf10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39567654"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "39723405"
 ---
 *Aplica-se a: Advanced Threat Analytics versão 1.9*
 
@@ -215,8 +215,8 @@ A tabela abaixo lista as portas mínimas que o Gateway do ATA requer configurada
 |Netlogon (SMB, CIFS, SAM-R)|TCP e UDP|445|Todos os dispositivos na rede|Saída|
 |Tempo do Windows|UDP|123|Controladores de domínio|Saída|
 |DNS|TCP e UDP|53|Servidores DNS|Saída|
-|NTLM via RPC|TCP|135|Todos os dispositivos na rede|Saída|
-|NetBIOS|UDP|137|Todos os dispositivos na rede|Saída|
+|NTLM via RPC|TCP|135|Todos os dispositivos na rede|Ambos|
+|NetBIOS|UDP|137|Todos os dispositivos na rede|Ambos|
 |SSL|TCP|443|Centro de ATA|Saída|
 |Syslog (opcional)|UDP|514|Servidor SIEM|Entrada|
 
@@ -282,8 +282,8 @@ A tabela abaixo lista o mínimo de portas que o Gateway Lightweight do ATA exige
 |Protocolo|Transport|Porta|Para/De|Direção|
 |------------|-------------|--------|-----------|-------------|
 |DNS|TCP e UDP|53|Servidores DNS|Saída|
-|NTLM via RPC|TCP|135|Todos os dispositivos na rede|Saída|
-|NetBIOS|UDP|137|Todos os dispositivos na rede|Saída|
+|NTLM via RPC|TCP|135|Todos os dispositivos na rede|Ambos|
+|NetBIOS|UDP|137|Todos os dispositivos na rede|Ambos|
 |SSL|TCP|443|Centro de ATA|Saída|
 |Syslog (opcional)|UDP|514|Servidor SIEM|Entrada|
 |Netlogon (SMB, CIFS, SAM-R)|TCP e UDP|445|Todos os dispositivos na rede|Saída|
