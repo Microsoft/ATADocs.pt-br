@@ -2,10 +2,10 @@
 title: Instalar a Proteção Avançada contra Ameaças do Azure | Microsoft Docs
 description: Nesta etapa da instalação do ATP, você configura fontes de dados.
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 3/28/2018
+ms.date: 8/15/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,20 +13,18 @@ ms.technology: ''
 ms.assetid: 88692d1a-45a3-4d54-a549-4b5bba6c037b
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 2c2a8e6d70d937c559c110a18feec4afc75271e9
-ms.sourcegitcommit: 45d0108d0cbf8fe7550d13486d3d9c06c1e58506
+ms.openlocfilehash: 8f52a8e5851cee9fc0ff15d97cd39e98695f9a83
+ms.sourcegitcommit: 121c49d559e71741136db1626455b065e8624ff9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "30213975"
+ms.lasthandoff: 08/20/2018
+ms.locfileid: "41734513"
 ---
 *Aplica-se a: Proteção Avançada contra Ameaças do Azure*
 
 
 
-# <a name="install-azure-atp"></a>Instalar o Azure ATP
-
-## <a name="configure-event-collection"></a>Configurar coleta de eventos
+# <a name="configure-event-collection"></a>Configurar coleta de eventos
 
 Para aprimorar as funcionalidades de detecção, o Azure ATP precisa dos seguintes eventos do Windows: 4776, 4732, 4733, 4728, 4729, 4756, 4757 e 7045. Eles podem ser lidos automaticamente pelo sensor do Azure ATP ou, caso o sensor do Azure ATP não esteja implantado, ele poderá ser encaminhado para o sensor autônomo do Azure ATP de duas maneiras: configurando o sensor autônomo do Azure ATP para escutar eventos do SIEM ou [Configurando o Encaminhamento de Eventos do Windows](configure-event-forwarding.md).
 
@@ -35,7 +33,7 @@ Para aprimorar as funcionalidades de detecção, o Azure ATP precisa dos seguint
 
 Além de coletar e analisar o tráfego de rede para e dos controladores de domínio, o Azure ATP pode usar eventos do Windows para aprimorar ainda mais as detecções. Ele usa o evento 4776 para NTLM, o que melhora várias detecções e os eventos 4732, 4733, 4728, 4729, 4756, 4757 e 7045 para aprimorar a detecção de modificações de grupos confidenciais e a criação de serviços. Isso pode ser recebido de seu SIEM definindo o Encaminhamento de Eventos do Windows no controlador de domínio. Os eventos coletados fornecem ao Azure ATP informações adicionais que não estão disponíveis por meio do tráfego de rede do controlador de domínio.
 
-### <a name="siemsyslog"></a>SIEM/Syslog
+## <a name="siemsyslog"></a>SIEM/Syslog
 Para que o Azure ATP possa consumir dados de um servidor Syslog, você precisa executar as seguintes etapas:
 
 -   Configurar seus servidores do sensor do Azure ATP para escutar e aceitar eventos encaminhados do servidor de SIEM/Sylog.
@@ -54,7 +52,7 @@ Consulte a documentação de produto do seu servidor SIEM/Syslog para saber como
 > [!NOTE]
 >Caso não use um servidor de SIEM/Syslog, você pode configurar os controladores de domínio do Windows para encaminhar todos os eventos necessários para serem coletados e analisados pelo ATA.
 
-### <a name="configuring-the-azure-atp-sensor-to-listen-for-siem-events"></a>Configuração do sensor do Azure ATP para escutar eventos de SIEM
+## <a name="configuring-the-azure-atp-sensor-to-listen-for-siem-events"></a>Configuração do sensor do Azure ATP para escutar eventos de SIEM
 
 1.  Na configuração do Azure ATP, em **Fontes de dados**, clique em **SIEM**, ative **Syslog** e clique em **Salvar**.
 
@@ -64,7 +62,7 @@ Consulte a documentação de produto do seu servidor SIEM/Syslog para saber como
 
 O Azure ATP dá suporte a eventos de SIEM nos seguintes formatos:  
 
-### <a name="rsa-security-analytics"></a>Análise de Segurança do RSA
+## <a name="rsa-security-analytics"></a>Análise de Segurança do RSA
 &lt;Cabeçalho do Syslog&gt;RsaSA\n2015-May-19 09:07:09\n4776\nMicrosoft-Windows-Security-Auditing\nSecurity\XXXXX.subDomain.domain.org.il\nYYYYY$\nMMMMM \n0x0
 
 -   O cabeçalho do Syslog é opcional.
@@ -93,7 +91,7 @@ O Azure ATP dá suporte a eventos de SIEM nos seguintes formatos:
 
 -   A ordem é importante, e nada mais deve ser incluído na mensagem.
 
-### <a name="hp-arcsight"></a>HP Arcsight
+## <a name="hp-arcsight"></a>HP Arcsight
 CEF:0|Microsoft|Microsoft Windows||Microsoft-Windows-Security-Auditing:4776|O controlador de domínio tentou validar as credenciais de uma conta.|Baixo| externalId=4776 cat=Security rt=1426218619000 shost=KKKKKK dhost=YYYYYY.subDomain.domain.com duser=XXXXXX cs2=Security cs3=Microsoft-Windows-Security-Auditing cs4=0x0 cs3Label=EventSource cs4Label=Motivo ou Código de erro
 
 -   Deve estar em conformidade com a definição de protocolo.
@@ -124,7 +122,7 @@ CEF:0|Microsoft|Microsoft Windows||Microsoft-Windows-Security-Auditing:4776|O co
 
     -   “Motivo ou Código de erro” = o código resultante do NTLM
 
-### <a name="splunk"></a>Splunk
+## <a name="splunk"></a>Splunk
 &lt;Cabeçalho do Syslog&gt;\r\nEventCode=4776\r\nLogfile=Security\r\nSourceName=Microsoft-Windows-Security-Auditing\r\nTimeGenerated=20150310132717.784882-000\r\ComputerName=YYYYY\r\nMessage=
 
 O computador tentou validar as credenciais de uma conta.
@@ -161,7 +159,7 @@ Código de erro:         0x0
 
 -   A ordem não é importante para os pares de chave=valor
 
-### <a name="qradar"></a>QRadar
+## <a name="qradar"></a>QRadar
 O QRadar permite a coleta de eventos por meio de um agente. Se os dados forem reunidos usando um agente, o formato de hora será coletado sem dados de milissegundos. Uma vez que o Azure ATP precisa de dados de milissegundos, é necessário configurar o QRadar para usar a coleta de eventos do Windows sem agente. Para obter mais informações, veja [http://www-01.ibm.com/support/docview.wss?uid=swg21700170](http://www-01.ibm.com/support/docview.wss?uid=swg21700170 "QRadar: Agentless Windows Events Collection using the MSRPC Protocol") (QRadar: Coleção de eventos do Windows sem agente usando o protocolo MSRPC).
 
     <13>Feb 11 00:00:00 %IPADDRESS% AgentDevice=WindowsLog AgentLogFile=Security Source=Microsoft-Windows-Security-Auditing Computer=%FQDN% User= Domain= EventID=4776 EventIDCode=4776 EventType=8 EventCategory=14336 RecordNumber=1961417 TimeGenerated=1456144380009 TimeWritten=1456144380009 Message=The computer attempted to validate the credentials for an account. Authentication Package: MICROSOFT_AUTHENTICATION_PACKAGE_V1_0 Logon Account: Administrator Source Workstation: HOSTNAME Error Code: 0x0

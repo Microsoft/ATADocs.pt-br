@@ -2,10 +2,10 @@
 title: Configurar o Encaminhamento de Eventos do Windows na Proteção Avançada contra Ameaças do Azure | Microsoft Docs
 description: Descreve suas opções para configurar o Encaminhamento de Eventos do Windows com o Azure ATP
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 02/21/2018
+ms.date: 08/12/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,14 +13,14 @@ ms.technology: ''
 ms.assetid: 3547519f-8d9c-40a9-8f0e-c7ba21081203
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 1b37bcbfc304ee0ef71d80eb84f6298d64e50d3f
-ms.sourcegitcommit: eebf1156aaae199b6aaa7e431cd6372e572b1e9f
+ms.openlocfilehash: 730ff2e96da8dc6329cf4855e9e7d279ef5a067d
+ms.sourcegitcommit: 845b8c0b6e0ec2d2e882672fd9f17ed573fafa56
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39396410"
+ms.lasthandoff: 08/17/2018
+ms.locfileid: "41734573"
 ---
-*Aplica-se a: Proteção Avançada contra Ameaças do Azure versão 1.9*
+*Aplica-se a: Proteção Avançada contra Ameaças do Azure*
 
 
 
@@ -63,12 +63,12 @@ Após adicionar o **Serviço de Rede** ao grupo **Leitores de Log de Eventos**, 
    
     1.  Selecione **Habilitado**.
     2.  Em **Opções**, clique em **Mostrar**.
-    3.  Em **SubscriptionManagers**, digite o seguinte valor e clique em **OK**: *Server=http://<fqdnATPSensor>:5985/wsman/SubscriptionManager/WEC,Refresh=10* (Por exemplo: Server=http://atpsensor9.contoso.com:5985/wsman/SubscriptionManager/WEC,Refresh=10)
- 
-   ![Configurar a imagem de assinatura de destino](media/wef%202%20config%20target%20sub%20manager.png)
-   
-    5.  Clique em **OK**.
-    6.  Em um prompt de comandos com privilégios elevados, digite *gpupdate /force*. 
+    3.  Em **SubscriptionManagers**, digite o valor a seguir e clique em **OK**: *Server=`http://<fqdnATPSensor>:5985/wsman/SubscriptionManager/WEC,Refresh=10*` (por exemplo, Server=`http://atpsensor9.contoso.com:5985/wsman/SubscriptionManager/WEC,Refresh=10`)
+    
+    ![Configurar a imagem de assinatura de destino](media/wef%202%20config%20target%20sub%20manager.png)
+    
+5.  Clique em **OK**.
+6.  Em um prompt de comandos com privilégios elevados, digite *gpupdate /force*. 
 
 **Etapa 3: Executar as seguintes etapas no sensor autônomo do Azure ATP** 
 
@@ -91,7 +91,7 @@ Após adicionar o **Serviço de Rede** ao grupo **Leitores de Log de Eventos**, 
         1. Clique em **Pelo log** e selecione **Segurança**.
         2. No campo **Inclui/Exclui ID do Evento**, digite o número do evento e clique em **OK**. Por exemplo, digite 4776, como no exemplo a seguir:
 
- ![Imagem do filtro de consulta](media/wef-4-query-filter.png)
+        ![Imagem do filtro de consulta](media/wef-4-query-filter.png)
 
    5.   Clique com o botão direito do mouse na assinatura criada e selecione **Status de Tempo de Execução** para verificar se há problemas com o status. 
    6.   Depois de alguns minutos, verifique se os eventos definidos para serem encaminhados aparecem nos Eventos Encaminhados no sensor autônomo do Azure ATP.

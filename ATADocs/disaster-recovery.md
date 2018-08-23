@@ -2,10 +2,10 @@
 title: Recuperação de desastre para o Advanced Threat Analytics | Microsoft Docs
 description: Descreve como você pode recuperar rapidamente a funcionalidade do ATA após desastres
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 3/21/2018
+ms.date: 8/20/2018
 ms.topic: article
 ms.prod: ''
 ms.service: advanced-threat-analytics
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 7620e171-76d5-4e3f-8b03-871678217a3a
 ms.reviewer: arzinger
 ms.suite: ems
-ms.openlocfilehash: 72598380f574e0475e4796887f44131009911be2
-ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
+ms.openlocfilehash: 5e6fac695e1dc51a1a0afcf20330918be82c75e9
+ms.sourcegitcommit: 121c49d559e71741136db1626455b065e8624ff9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "30009546"
+ms.lasthandoff: 08/20/2018
+ms.locfileid: "41734653"
 ---
 *Aplica-se a: Advanced Threat Analytics versão 1.9*
 
@@ -54,12 +54,12 @@ Este artigo descreve como recuperar rapidamente seu Centro de ATA e restaurar a 
     1. Remova o documento padrão do Perfil do Sistema do Centro de ATA do MongoDB: 
         1. Acesse **C:\Arquivos de Programas\Microsoft Advanced Threat Analytics\Center\MongoDB\bin**. 
         2. Execute `mongo.exe ATA` 
-        3. Inicie o serviço do Centro ATA.
-        4. Execute este comando para remover o perfil do sistema padrão: `db.SystemProfile.remove({})`
+        3. Execute este comando para remover o perfil do sistema padrão: `db.SystemProfile.remove({})`
     2. Execute o comando: `mongoimport.exe --db ATA --collection SystemProfile --file "<SystemProfile.json backup file>" --upsert` usando o arquivo de backup da etapa 1.</br>
     Para obter uma explicação completa de como localizar e importar arquivos de backup, confira [Exportar e importar a configuração de ATA](ata-configuration-file.md). 
-    3. Abra o Console do ATA. Você deverá ver todos os Gateways do ATA vinculados na guia Configuração/Gateways. 
-    4. Defina um [**Usuário de serviços de diretório**](install-ata-step2.md) e escolha um [**Sincronizador de controlador de domínio**](install-ata-step5.md). 
+    3. Inicie o serviço do Centro ATA.
+    4. Abra o Console do ATA. Você deverá ver todos os Gateways do ATA vinculados na guia Configuração/Gateways.
+    5. Defina um [**Usuário de serviços de diretório**](install-ata-step2.md) e escolha um [**Sincronizador de controlador de domínio**](install-ata-step5.md). 
 
 
 
