@@ -2,10 +2,10 @@
 title: Suporte a várias florestas da Proteção Avançada contra Ameaças do Azure | Microsoft Docs
 description: Como configurar o suporte para várias florestas do Active Directory no Azure ATP.
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 7/20/2018
+ms.date: 8/20/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: effca0f2-fcae-4fca-92c1-c37306decf84
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: a48bf96bd6a71282455d932a35aac23ba4c8193a
-ms.sourcegitcommit: 7909deafdd9323f074d0ff2f590e307bcfaaabad
+ms.openlocfilehash: 2a3460c39d6428831cc34231321fff745dbe0701
+ms.sourcegitcommit: 121c49d559e71741136db1626455b065e8624ff9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39202125"
+ms.lasthandoff: 08/20/2018
+ms.locfileid: "41734620"
 ---
 *Aplica-se a: Proteção Avançada contra Ameaças do Azure*
 
@@ -29,14 +29,14 @@ ms.locfileid: "39202125"
 
 ## <a name="step-9--set-up-azure-advanced-threat-protection-multi-forest-support"></a>Etapa 9.  Configurar o suporte para várias florestas da Proteção Avançada contra Ameaças do Azure
 
-O Azure ATP pode dar suporte a organizações com várias florestas, permitindo monitorar a atividade e os perfis de usuário entre florestas. 
+O Azure ATP pode dar suporte a organizações com várias florestas, permitindo monitorar com facilidade a atividade e os perfis de usuário entre florestas de um único painel de controle. 
 
-Uma organização pode ter várias florestas do Active Directory, geralmente usadas para finalidades diferentes, incluindo infraestrutura herdada de fusões e aquisições corporativas, distribuição geográfica e limites de segurança (florestas vermelhas). Você pode proteger várias florestas usando o Azure ATP, enviando todos os dados para um único espaço de trabalho primário e tendo a capacidade de monitorar e investigar por meio de um único painel de controle.
+As organizações normalmente têm várias florestas do Active Directory, geralmente usadas para finalidades diferentes, incluindo infraestrutura herdada de fusões e aquisições corporativas, distribuição geográfica e limites de segurança (florestas vermelhas). Você pode proteger várias florestas usando o Azure ATP, tendo a capacidade de monitorar e investigar por meio de um único painel de controle.
 
 A capacidade de dar suporte a várias florestas do Active Directory permite:
--   Exibir e investigar as atividades executadas pelos usuários em várias florestas de um único painel de controle. 
--   O suporte a várias florestas melhora a detecção e reduz os falsos positivos, fornecendo integração avançada do Active Directory e a resolução de conta. 
--   Como o suporte a várias florestas remove a necessidade de vários espaços de trabalho, você tem maior controle e implantação mais fácil, enquanto os controladores de domínio são monitorados centralmente de um único console do Azure ATP que fornece melhores alertas de monitoramento e relatórios de cobertura entre organizações.
+-   Exiba e investigue as atividades executadas pelos usuários em várias florestas de um único painel de controle. 
+-   Melhor detecção e redução de falsos positivos, fornecendo integração avançada do Active Directory e a resolução de conta. 
+-   Maior controle e implantação facilitada. Alertas de monitoramento aprimorados e relatórios para cobertura entre organizações quando os controladores do domínio forem todos monitorados de um único console do Azure ATP.
 
 
 ## <a name="how-azure-atp-detects-activities-across-multiple-forests"></a>Como o Azure ATP detecta atividades entre várias florestas 
@@ -48,7 +48,7 @@ Para detectar atividades entre florestas, os sensores do Azure ATP consultam os 
 > - O usuário que você configura no console do Azure ATP em **Serviços de diretório** devem ser confiáveis em todas as outras florestas.
 
 
-Mesmo que você tenha florestas sem nenhum sensor do Azure ATP instalado, o Azure ATP ainda pode exibir e monitorar as atividades provenientes dessas florestas. Os sensores do ATP instalados podem consultar todos os controladores de domínio da floresta remota conectados para resolver os usuários e computadores e criar perfis para cada um deles. 
+Mesmo que você tenha florestas sem nenhum sensor do Azure ATP instalado, o Azure ATP ainda pode exibir e monitorar as atividades provenientes dessas florestas. Os sensores do ATP instalados podem consultar todos os controladores de domínio da floresta remota conectados para resolver os usuários e computadores, e criar perfis para cada um deles. 
 
 ## <a name="installation-requirements"></a>Requisitos de instalação 
 
@@ -87,8 +87,8 @@ Quando o Azure ATP mapeia suas florestas, ele usa um processo que afeta o seguin
 
 
 ## <a name="see-also"></a>Consulte Também
-- [Ferramenta de dimensionamento do ATA](http://aka.ms/aatpsizingtool)
-- [Arquitetura do ATA](atp-architecture.md)
-- [Instalar o ATA](install-atp-step1.md)
+- [Ferramenta de dimensionamento do ATP](http://aka.ms/aatpsizingtool)
+- [Arquitetura do ATP](atp-architecture.md)
+- [Instalar o ATP](install-atp-step1.md)
 - [Confira o fórum do ATP!](https://aka.ms/azureatpcommunity)
 

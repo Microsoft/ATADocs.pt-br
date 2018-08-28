@@ -2,10 +2,10 @@
 title: Pré-requisitos da Proteção Avançada contra Ameaças do Azure | Microsoft Docs
 description: Descreve os requisitos para uma implantação bem-sucedida do Azure ATP em seu ambiente
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 6/7/2018
+ms.date: 8/15/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 62c99622-2fe9-4035-9839-38fec0a353da
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 070062cccb26bd99be48614bf8d40bd781d7b240
-ms.sourcegitcommit: 37b9ff946aad31eed1c6eab5d55d44fce167e20a
+ms.openlocfilehash: 74fea95d0cfdcca96eba1f77b6dbd81a101b3782
+ms.sourcegitcommit: 121c49d559e71741136db1626455b065e8624ff9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34827478"
+ms.lasthandoff: 08/20/2018
+ms.locfileid: "41734628"
 ---
 *Aplica-se a: Proteção Avançada contra Ameaças do Azure*
 
@@ -31,20 +31,20 @@ Este artigo descreve os requisitos para uma implantação bem-sucedida do Azure 
 > Para obter informações sobre como planejar a capacidade e os recursos, consulte [Planejamento de capacidade do Azure ATP](atp-capacity-planning.md).
 
 
-O Azure ATP é composto pelo serviço de nuvem do Azure ATP, que consiste no portal de gerenciamento de espaço de trabalho e em um portal de espaço de trabalho, pelo sensor autônomo do Azure ATO e/ou pelo sensor do Azure ATP. Para obter mais informações sobre os componentes do Azure ATP, consulte [Arquitetura do Azure ATP](atp-architecture.md).
+O Azure ATP é composto pelo serviço de nuvem do Azure ATP, que consiste no portal de gerenciamento, no portal de espaço de trabalho, no sensor do Azure ATO e/ou no sensor autônomo do Azure ATP. Para saber mais sobre cada um dos componentes do Azure ATP, veja [Arquitetura do Azure ATP](atp-architecture.md).
 
-Cada espaço de trabalho do Azure ATP dá suporte a um limite de floresta do Active Directory e dá suporte ao FFL (Nível funcional da floresta) do Windows 2003 e posteriores. Para implantações com várias florestas, um espaço de trabalho separado do Azure ATP é necessário para cada floresta.
+Cada instância do Azure ATP dá suporte a vários limites de floresta do Active Directory e dá suporte ao FFL (Nível funcional da floresta) do Windows 2003 e posteriores. 
 
 
 [Antes de começar](#before-you-start): esta seção lista as informações que você deve obter e as contas e entidades de rede que você deve ter antes de começar a instalação do Azure ATP.
 
-[Portal de gerenciamento de espaço de trabalho do Azure ATP](#azure-atp-workspace-management-portal-and-workspace-portal-requirements): esta seção descreve os requisitos de navegador do portal de gerenciamento de espaço de trabalho.
+[Portal de gerenciamento do Azure ATP](#azure-atp-workspace-management-portal-and-workspace-portal-requirements): esta seção descreve os requisitos de navegador do portal de gerenciamento do Azure ATP.
 
 [Portal de espaço de trabalho do Azure ATP](#azure-atp-workspace-management-portal-and-workspace-portal-requirements): esta seção descreve os requisitos de navegador para executar o portal de espaço de trabalho do Azure ATP.
 
-[Sensor autônomo do Azure ATP](#azure-atp-sensor-requirements): esta seção lista os requisitos de software e hardware do sensor autônomo do Azure ATP, bem como as configurações que você precisa definir nos servidores do sensor autônomo do Azure ATP.
-
 [Sensor do Azure ATP](#azure-atp-lightweight-sensor-requirements): esta seção lista os requisitos de hardware e software do sensor do Azure ATP.
+
+[Sensor autônomo do Azure ATP](#azure-atp-sensor-requirements): esta seção lista os requisitos de software e hardware do sensor autônomo do Azure ATP, bem como as configurações que você precisa definir nos servidores do sensor autônomo do Azure ATP.
 
 ![diagrama da arquitetura do Azure ATP](media/ATP-architecture-topology.png)
 
@@ -65,7 +65,7 @@ Esta seção lista as informações que você deve obter e as contas e entidades
 
 -   Opcional: uma conta de usuário que não tem nenhuma atividade de rede. Essa conta está configurada como o usuário Honeytoken do Azure ATP. Para obter mais informações, consulte [Configurar exclusões e usuário Honeytoken](install-atp-step7.md).
 
--   Opcional: ao implantar o sensor autônomo, é necessário encaminhar os eventos do Windows 4776, 4732, 4733, 4728, 4729, 4756, 4757 e 7045 para o ATP para melhorar ainda mais as detecções de Pass-the-Hash, força bruta, modificação de grupos confidenciais, Honey Tokens e criação de serviços mal-intencionados do Azure ATP. No sensor do Azure ATP, esses eventos são recebidos automaticamente. No sensor autônomo do Azure ATP, esses eventos podem ser recebidos de seu SIEM ou definindo o Encaminhamento de Eventos do Windows no controlador de domínio. Os eventos coletados fornecem ao Azure ATP informações adicionais que não estão disponíveis por meio do tráfego de rede do controlador de domínio.
+-   Opcional: ao implantar o sensor autônomo, é necessário encaminhar os eventos do Windows 4776, 4732, 4733, 4728, 4729, 4756, 4757 e 7045 para o ATP para melhorar ainda mais as detecções de Pass-the-Hash, força bruta, modificação de grupos confidenciais, Honey Tokens e criação de serviços mal-intencionados do Azure ATP. O sensor do Azure ATP recebe esses eventos automaticamente. No sensor autônomo do Azure ATP, esses eventos podem ser recebidos do SIEM ou definindo o Encaminhamento de Eventos do Windows no controlador de domínio. Os eventos coletados fornecem ao Azure ATP informações adicionais que não estão disponíveis por meio do tráfego de rede do controlador de domínio.
 
 
 ## <a name="azure-atp-workspace-management-portal-and-workspace-portal-requirements"></a>Requisitos do portal de espaço de trabalho e do portal de gerenciamento de espaço de trabalho do Azure ATP
@@ -74,7 +74,7 @@ O acesso ao portal de espaço de trabalho do Azure ATP e ao portal de gerenciame
 -   Internet Explorer versão 10 e posterior
 -   Google Chrome 4.0 e posterior
 -   Resolução de largura mínima da tela de 1.700 pixels
--   Firewall/proxy aberto – para se comunicar com o serviço de nuvem do Azure ATP, você deve abrir: *. atp.azure.com porta 443 em seu firewall/proxy. 
+-   Firewall/proxy aberto – para se comunicar com o serviço de nuvem do Azure ATP, você deve abrir *. atp.azure.com porta 443 no firewall/proxy. 
 
 ## <a name="azure-atp-standalone-sensor-requirements"></a>Requisitos do sensor autônomo do Azure ATP
 Esta seção lista os requisitos do sensor autônomo do Azure ATP.
@@ -83,7 +83,7 @@ O sensor autônomo do Azure ATP dá suporte à instalação em um servidor execu
 A sensor autônomo do Azure ATP pode ser instalado em um servidor que é membro de um domínio ou grupo de trabalho.
 O sensor autônomo do Azure ATP pode ser usado para monitorar Controladores de domínio com o Nível de domínio funcional do Windows 2003 e posterior.
 
-Para que o sensor autônomo se comunique com o serviço de nuvem, você precisa abrir a porta 443 nos firewalls e proxies para *.atp.azure.com
+Para que o sensor autônomo se comunique com o serviço de nuvem, a porta 443 deve estar aberta nos firewalls e proxies para *.atp.azure.com.
 
 
 Para obter informações sobre como usar máquinas virtuais com o sensor autônomo do Azure ATP, consulte [Configurar o espelhamento de porta](configure-port-mirroring.md).
@@ -143,11 +143,11 @@ A tabela abaixo lista as portas mínimas que o sensor autônomo do Azure ATP req
 |Netlogon (SMB, CIFS, SAM-R)|TCP e UDP|445|Todos os dispositivos na rede|Saída|
 |Tempo do Windows|UDP|123|Controladores de domínio|Saída|
 |DNS|TCP e UDP|53|Servidores DNS|Saída|
-|NTLM via RPC|TCP|135|Todos os dispositivos na rede|Saída|
-|NetBIOS|UDP|137|Todos os dispositivos na rede|Saída|
+|NTLM via RPC|TCP|135|Todos os dispositivos na rede|Ambos|
+|NetBIOS|UDP|137|Todos os dispositivos na rede|Ambos|
 |Syslog (opcional)|TCP/UDP|514, dependendo da configuração|Servidor SIEM|Entrada|
 |RADIUS|UDP|1813|RADIUS|Entrada|
-|RDP|TCP|3389|Todos os dispositivos na rede|Saída|
+|TLS para RDP|TCP|3389|Todos os dispositivos na rede|Ambos|
 
 > [!NOTE]
 > - Usando a conta de usuário do serviço de diretório, o sensor consulta pontos de extremidade em sua organização para administradores locais usando SAM-R (logon de rede) para criar o [gráfico de caminho de movimento lateral](use-case-lateral-movement-path.md). Para obter mais informações, consulte [Configurar permissões necessárias do SAM-R](install-atp-step8-samr.md).
@@ -202,12 +202,12 @@ A tabela abaixo lista o mínimo de portas que o sensor do Azure ATP exige:
 |SSL (*.atp.azure.com)|TCP|443|Serviço de nuvem do Azure ATP|Saída|
 |**Portas internas**|||||
 |DNS|TCP e UDP|53|Servidores DNS|Saída|
-|NTLM via RPC|TCP|135|Todos os dispositivos na rede|Saída|
 |Netlogon (SMB, CIFS, SAM-R)|TCP/UDP|445|Todos os dispositivos na rede|Saída|
-|NetBIOS|UDP|137|Todos os dispositivos na rede|Saída|
+|NTLM via RPC|TCP|135|Todos os dispositivos na rede|Ambos|
+|NetBIOS|UDP|137|Todos os dispositivos na rede|Ambos|
 |Syslog (opcional)|TCP/UDP|514, dependendo da configuração|Servidor SIEM|Entrada|
 |RADIUS|UDP|1813|RADIUS|Entrada|
-|Porta TLS para RDP|TCP|3389|Todos os dispositivos na rede|Saída|
+|Porta TLS para RDP|TCP|3389|Todos os dispositivos na rede|Ambos|
 
 > [!NOTE]
 > - Usando a conta de usuário do serviço de diretório, o sensor consulta pontos de extremidade em sua organização para administradores locais usando SAM-R (logon de rede) para criar o [gráfico de caminho de movimento lateral](use-case-lateral-movement-path.md). Para obter mais informações, consulte [Configurar permissões necessárias do SAM-R](install-atp-step8-samr.md).

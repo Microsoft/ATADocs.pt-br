@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 2d14d0e9-1b03-4bcc-ae97-8fd41526ffc5
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 5ccac90a171c895ee8b4d5336a125ccd7fa66239
-ms.sourcegitcommit: 03e959b7ce4b6df421297e1872e028793c967302
+ms.openlocfilehash: c889fc070ffaf79a89c072d83edf6cc6f1cd0413
+ms.sourcegitcommit: 121c49d559e71741136db1626455b065e8624ff9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/21/2018
-ms.locfileid: "29445072"
+ms.lasthandoff: 08/20/2018
+ms.locfileid: "41734556"
 ---
 *Aplica-se a: Proteção Avançada contra Ameaças do Azure*
 
@@ -62,6 +62,8 @@ O Azure ATP procura três tipos de ataques principais: ataques mal-intencionados
 -   Overpass-the-Hash
 -   PAC Forjado (MS14-068)
 -   Golden Ticket
+    -   anomalia de tempo
+    -   conta não existente – novo
 -   Replicação mal-intencionada
 -   Enumeração do serviço de diretório
 -   Enumeração da Sessão SMB
@@ -73,6 +75,9 @@ O Azure ATP procura três tipos de ataques principais: ataques mal-intencionados
 -   Downgrade de criptografia
 -   Execução remota
 -   Criação de serviço mal-intencionado
+-   Promoção do controlador de domínio suspeito (possível ataque DCShadow) – novo
+-   Solicitação de replicação suspeita (possível ataque DCShadow) – novo
+-   VPN 
 
 
 O Azure ATP detecta essas atividades suspeitas e revela as informações no portal de espaço de trabalho do Azure ATP, incluindo uma visão clara de Quem, O que, Quando e Como. Como você pode ver, monitorando este painel simples e fácil de usar, você será alertado de que o Azure ATP suspeita de uma tentativa de ataque Pass-the-Ticket nos computadores Cliente 1 e Cliente 2 em sua rede.

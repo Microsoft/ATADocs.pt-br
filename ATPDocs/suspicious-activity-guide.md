@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 7/24/2018
+ms.date: 8/20/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: ca5d1c7b-11a9-4df3-84a5-f53feaf6e561
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 4667e13af4e86a18d1b50a2ea575f9c749f0c541
-ms.sourcegitcommit: ca6153d046d8ba225ee5bf92cf55d0bd57cf4765
+ms.openlocfilehash: 4aa58228ea23f58ea37b10f941467e9dc076992f
+ms.sourcegitcommit: f534a318be71b840aecb6a84744d8cd1f251a7aa
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39585230"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "41734831"
 ---
 *Aplica-se a: Proteção Avançada contra Ameaças do Azure*
 
@@ -200,7 +200,7 @@ Nessa detecção, um alerta é acionado quando um tíquete de concessão de tíq
    2.   O sensor do Azure ATP envolvido neste alerta é uma máquina virtual? Se Sim, ele retomou recentemente de um estado salvo? Se sim, então feche este alerta.
    3.   Se a resposta para as perguntas acima for não, suponha que ele seja mal-intencionado.
 
-- **Conta não existente** (Versão prévia)
+- **Conta não existente**
    1.   Faça as seguintes perguntas:
          - O usuário é um usuário de domínio válido e conhecido? Se sim, então feche o alerta (era um falso positivo).
          - O usuário foi adicionado recentemente? Se sim, então feche o alerta, a alteração pode não ter sido ainda sincronizada.
@@ -454,7 +454,7 @@ Nesta detecção, um alerta é disparado quando ocorrem diversas falhas de auten
 
 [Senhas complexas e longas](https://docs.microsoft.com/windows/device-security/security-policy-settings/password-policy) fornecem o primeiro nível necessário de segurança contra ataques de força bruta.
 
-## <a name="suspicious-domain-controller-promotion-potential-dcshadow-attack---preview"></a>Promoção do controlador de domínio suspeito (possível ataque DCShadow) – Visualização
+## <a name="suspicious-domain-controller-promotion-potential-dcshadow-attack---new"></a>Promoção do controlador de domínio suspeito (possível ataque DCShadow) – novo
 
 **Descrição**
 
@@ -489,10 +489,11 @@ Para obter mais informações, consulte [Conceder permissões do Active Director
 
 Você pode utilizar o [Scanner ACL do AD](https://blogs.technet.microsoft.com/pfesweplat/2013/05/13/take-control-over-ad-permissions-and-the-ad-acl-scanner-tool/) ou criar um script do Windows PowerShell para determinar quem no domínio tem essas permissões.
  
+> [!NOTE]
+> As detecções de promoção do controlador de domínio suspeitas (possível ataque DCShadow) só têm suporte nos sensores do ATP. 
 
 
-
-## <a name="suspicious-replication-request-potential-dcshadow-attack---preview"></a>Solicitação de replicação suspeita (possível ataque DCShadow) – Visualização
+## <a name="suspicious-replication-request-potential-dcshadow-attack---new"></a>Solicitação de replicação suspeita (possível ataque DCShadow) – novo
 
 **Descrição** 
 
@@ -519,6 +520,9 @@ Verifique quem em sua organização tem as seguintes permissões:
 
 Para fazer isso, você pode utilizar o [Scanner ACL do AD](https://blogs.technet.microsoft.com/pfesweplat/2013/05/13/take-control-over-ad-permissions-and-the-ad-acl-scanner-tool/) ou criar um script do Windows PowerShell para determinar quem no domínio tem essas permissões.
 
+> [!NOTE]
+> As detecções de solicitações de replicação suspeitas (possível ataque DCShadow) só têm suporte nos sensores do ATP. 
+
 
 ## <a name="suspicious-service-creation"></a>Criação de serviço suspeito
 
@@ -542,7 +546,7 @@ Um serviço suspeito foi criado em um controlador de domínio em sua organizaç�
 
 - Implementar o acesso com menos privilégios em computadores de domínio para permitir que apenas usuários específicos tenham o direito de criar novos serviços.
 
-## Conexão de VPN suspeita – versão prévia<a name="suspicious-vpn-detection"></a>
+## Conexão de VPN suspeita <a name="suspicious-vpn-detection"></a>
 
 **Descrição**
 

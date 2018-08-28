@@ -2,10 +2,10 @@
 title: Perguntas frequentes sobre a Proteção Avançada contra Ameaças do Azure | Microsoft Docs
 description: Fornece uma lista de perguntas frequentes sobre o Azure ATP e as respostas associadas
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 3/13/2018
+ms.date: 8/13/2018
 ms.topic: article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 6a9b5273-eb26-414e-9cdd-f64406e24ed8
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: d7f7f4841c40fb78dc06bae1c06e3c57d2e7f7ee
-ms.sourcegitcommit: c77e378d18e654bea4b4af4f24cc941a6659ce99
+ms.openlocfilehash: 6550f6b6575af56eab7de911b22b1e4f27cff0f3
+ms.sourcegitcommit: 121c49d559e71741136db1626455b065e8624ff9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2018
-ms.locfileid: "29883943"
+ms.lasthandoff: 08/20/2018
+ms.locfileid: "41734543"
 ---
 *Aplica-se a: Proteção Avançada contra Ameaças do Azure*
 
@@ -31,19 +31,21 @@ Este artigo fornece uma lista de perguntas frequentes sobre o Azure ATP e també
 Você pode adquirir uma licença do Enterprise Mobility + Security 5 (EMS E5) diretamente por meio do [Portal do Office 365](https://www.microsoft.com/cloud-platform/enterprise-mobility-security-pricing) ou do modelo de licenciamento do Parceiro de Soluções na Nuvem (CSP).                  
 
 ## <a name="what-should-i-do-if-the-azure-atp-sensor-or-standalone-sensor-doesnt-start"></a>O que devo fazer se o sensor ou o sensor autônomo do Azure ATP não for iniciado?
-Procure o erro mais recente no log de erros atual (onde o Azure ATP está instalado, na pasta "Logs").
+Procure o erro mais recente no [log](troubleshooting-atp-using-logs.md) de erros atual (onde o Azure ATP está instalado, na pasta "Logs").
 
 ## <a name="how-can-i-test-azure-atp"></a>Como posso testar o Azure ATP?
-Você pode simular atividades suspeitas como um teste de ponta a ponta executando o seguinte comando:
+Você pode simular atividades suspeitas como um teste de ponta a ponta. No cenário a seguir, o reconhecimento DNS é simulado:
 
--  Reconhecimento de DNS usando Nslookup.exe
-
-
-Isso deve ser executado remotamente no controlador de domínio que está sendo monitorado e não no sensor autônomo do Azure ATP.
-
+1.  Verifique se os sensores do Azure ATP estão instalados e configurados nos controladores de domínio (ou se os sensores autônomos e o espelhamento de porta relacionado estão instalados e configurados)
+2.  Abra o CMD
+3.  Execute o seguinte comando: nslookup -<DC iP address>
+    1.  Pressione Enter
+    2.  Digite: Is -d <FQDN>
+    3.  Dependendo da configuração do ambiente, as respostas irão variar de "Consulta recusada" para uma lista dos registros DNS. 
+4. Exiba o alerta relacionado ao reconhecimento de DNS simulado no console do Azure ATP. 
 
 ## <a name="does-azure-atp-work-with-encrypted-traffic"></a>O Azure ATP funciona com tráfego criptografado?
-O Azure ATPA se baseia na análise de vários protocolos de rede, bem como em eventos coletados do SIEM ou por meio de Encaminhamento de Eventos do Windows. Detecções com base em protocolos de rede com tráfego criptografado (por exemplo, LDAPS e IPSEC) não são analisadas.
+O Azure ATPA se baseia na análise de vários protocolos de rede, bem como em eventos coletados do SIEM ou por meio de Encaminhamento de Eventos do Windows.  Os protocolos de rede com tráfego criptografado (por exemplo, LDAPS e IPSEC) não são descriptografados, mas são analisados.
 
 
 ## <a name="does-azure-atp-work-with-kerberos-armoring"></a>O Azure ATP funciona com Kerberos Armoring?
@@ -110,7 +112,7 @@ Não. O Azure ATP monitora todos os dispositivos na rede que executam solicitaç
 Sim. Como as contas computador (bem como quaisquer outras entidades) podem ser usadas para executar atividades mal-intencionadas, o Azure ATP monitora todo o comportamento das contas de computador e todas as outras entidades no ambiente.
 
 ## <a name="can-azure-atp-support-multi-domain-and-multi-forest"></a>O Azure ATP pode dar suporte a vários domínios e várias florestas?
-A Proteção Avançada contra Ameaças do Azure dá suporte a ambientes com vários domínios dentro dos mesmos limites de floresta. Várias florestas exigem um espaço de trabalho do Azure ATP para cada floresta.
+A Proteção Avançada contra Ameaças do Azure dá suporte a ambientes com vários domínios e com várias florestas. Este recurso está em visualização pública no momento. Confira mais informações e limitações conhecidas em [Suporte a várias florestas](atp-multi-forest.md).
 
 ## <a name="can-you-see-the-overall-health-of-the-deployment"></a>Você pode ver a integridade geral da implantação?
 Sim, é possível exibir a integridade geral da implantação, bem como os problemas específicos relacionados à configuração, conectividade, etc., e você recebe um alerta quando ocorrerem.

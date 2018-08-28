@@ -2,10 +2,10 @@
 title: Política de dados pessoais da Proteção Avançada contra Ameaças do Azure | Microsoft Docs
 description: Fornece links para informações sobre como excluir informações particulares e dados pessoais do Azure ATP.
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 6/26/2018
+ms.date: 8/15/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 224e629a-0e82-458c-bb03-b67070a9241d
 ms.reviewer: ophirp
 ms.suite: ems
-ms.openlocfilehash: d64cc0d40acc31e2187305c38a625924a91db06b
-ms.sourcegitcommit: 7d025a2518ce63f38ce609dc21d8c3bacdd6a8e7
+ms.openlocfilehash: e4aad8af65c27f351185808585aea37a8a67de42
+ms.sourcegitcommit: 121c49d559e71741136db1626455b065e8624ff9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36948924"
+ms.lasthandoff: 08/20/2018
+ms.locfileid: "41734563"
 ---
 *Aplica-se a: Proteção Avançada contra Ameaças do Azure*
 
@@ -30,13 +30,13 @@ ms.locfileid: "36948924"
 
 Na Proteção Avançada contra Ameaças do Azure, você pode exibir dados pessoais identificáveis ​​do [portal do Espaço de Trabalho](workspace-portal.md) usando a [barra de pesquisa](workspace-portal.md#search-bar). 
 
-Você pode pesquisar por um usuário ou computador específico e clicar na entidade o levará à [página de perfil do usuário ou computador](entity-profiles.md). O perfil fornece detalhes abrangentes sobre a entidade do Active Directory, incluindo atividade de rede relacionada a essa entidade e seu histórico.
+Pesquise um usuário ou computador específico e clique na entidade para ir à [página de perfil](entity-profiles.md) do usuário ou do computador. O perfil fornece detalhes abrangentes sobre a entidade do Active Directory, incluindo atividade de rede relacionada a essa entidade e seu histórico.
 
 Os dados pessoais do Azure ATP são coletados do Active Directory por meio do sensor do Azure ATP e armazenados em um banco de dados de back-end.
 
 ## <a name="update-personal-data"></a>Atualizar dados pessoais 
 
-Como os dados pessoais do usuário do Azure ATP são derivados do objeto do usuário no Active Directory da organização, quaisquer alterações feitas no perfil do usuário no AD serão refletidas no Azure ATP.
+Os dados de usuário pessoais do Azure ATP são derivados do objeto do usuário no Active Directory da organização. Portanto, as alterações feitas ao perfil de usuário no AD da organização são refletidas no Azure ATP.
 
 
 ## <a name="delete-personal-data"></a>Excluir dados pessoais 
@@ -45,7 +45,7 @@ Depois que um usuário é excluído do Active Directory da organização, o Azur
 
 ## <a name="export-personal-data"></a>Exportar dados pessoais 
 
-No Azure ATP você pode [exportar](working-with-suspicious-activities.md#review-suspicious-activities-on-the-attack-time-line) as informações de alerta de segurança para o Excel. Essa ação também exportará os dados pessoais. 
+No Azure ATP você pode [exportar](working-with-suspicious-activities.md#review-suspicious-activities-on-the-attack-time-line) as informações de alerta de segurança para o Excel. Essa função também exporta os dados pessoais. 
  
 ## <a name="audit-personal-data"></a>Auditar dados pessoais
 

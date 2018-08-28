@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 8/06/2018
+ms.date: 8/20/2018
 ms.topic: article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,16 +13,40 @@ ms.technology: ''
 ms.assetid: 7d0f33db-2513-4146-a395-290e001f4199
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 0062fc22df357e338d8eaf446688ea8bba56019c
-ms.sourcegitcommit: 14c05a210ae92d35100c984ff8c6d171db7c3856
+ms.openlocfilehash: 83b7b88d2b1ba61a2ae2733f1401d98b341ad3bd
+ms.sourcegitcommit: 121c49d559e71741136db1626455b065e8624ff9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39567943"
+ms.lasthandoff: 08/20/2018
+ms.locfileid: "41734648"
 ---
 *Aplica-se a: Proteção Avançada contra Ameaças do Azure*
 
 # <a name="whats-new-in-azure-atp"></a>Novidades do Azure ATP 
+
+
+## <a name="azure-atp-release-245"></a>Azure ATP versão 2.45
+
+Lançado em 19 de agosto de 2018
+
+- **O Azure ATP adiciona o ETW (Rastreamento de Eventos para Windows) como uma fonte de dados adicional**  <br> O ETW (Rastreamento de Eventos para Windows) é adicionado como fonte de dados adicional, além do tráfego de rede existente e dos eventos do Windows. O ETW fornece detecções de atividades suspeitas adicionais, incluindo: promoções do controlador de domínio suspeitas e solicitações de replicação do controlador de domínio suspeitas (ambas são possíveis ataques DCShadow). <br>
+Somente sensores do ATP instalados em controladores de domínio têm suporte detecções baseadas no ETW. As detecções do ETW não têm suporte nos sensores autônomos do ATP. <br>  
+
+- **Quatro novas detecções agora em disponibilidade geral** <br>
+  - Conexão de VPN suspeita
+  - Golden Ticket do Kerberos – conta não existente 
+  - Promoção do controlador de domínio suspeita (possível ataque DcShadow) – detecção baseada no ETW, só disponível nos sensores do ATP 
+  - Solicitação de replicação do controlador de domínio suspeita (possível ataque DcShadow) – detecção baseada no ETW, só disponível nos sensores do ATP
+
+- Essa versão também inclui correções e melhorias para vários problemas.
+
+
+## <a name="azure-atp-release-244"></a>Azure ATP versão 2.44
+
+Lançado em 12 de agosto de 2018
+
+- Essa versão inclui correções e melhorias para vários problemas.
+- Os arquivos de log criados no computador do sensor não incluem o log de "Estatística de Exceção".
 
 
 ## <a name="azure-atp-release-243"></a>Azure ATP versão 2.43

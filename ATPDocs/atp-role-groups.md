@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: effca0f2-fcae-4fca-92c1-c37306decf84
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 8e7af3846d31031b645c65c7550b696fe4738e5d
-ms.sourcegitcommit: a9b8bc26d3cb5645f21a68dc192b4acef8f54895
+ms.openlocfilehash: a6b4f668533ab3169c10cfc9b194b8bd392db6d1
+ms.sourcegitcommit: 121c49d559e71741136db1626455b065e8624ff9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2018
-ms.locfileid: "39064059"
+ms.lasthandoff: 08/20/2018
+ms.locfileid: "41734676"
 ---
 *Aplica-se a: Proteção Avançada contra Ameaças do Azure*
 
@@ -31,14 +31,14 @@ O Azure ATP oferece segurança baseada em funções para proteger os dados de ac
 
 [!INCLUDE [Handle personal data](../includes/gdpr-intro-sentence.md)]
 
-Grupos de função permitem o gerenciamento de acesso para o Azure ATP. Com os grupos de função, você pode separar as tarefas dentro de sua equipe de segurança e conceder apenas a quantidade de acesso que os usuários precisam para realizar seus trabalhos. Este artigo explica o gerenciamento de acesso e a autorização de funções no Azure ATP, além de ajudar você a colocar em funcionamento os grupos de função no Azure ATP.
+Grupos de função permitem o gerenciamento de acesso para o Azure ATP. Com os grupos de função, você pode separar as tarefas dentro de sua equipe de segurança e conceder apenas a quantidade de acesso que os usuários precisam para realizar seus trabalhos. Este artigo explica o gerenciamento de acesso, a autorização de funções no Azure ATP e ajuda você a colocar em funcionamento os grupos de função no ATP.
 
 > [!NOTE]
 > Qualquer administrador global ou administrador de segurança no Azure Active Directory do locatário é automaticamente um administrador do Azure ATP.
 
-## <a name="accessing-the-workspace-management-portal"></a>Acessando o portal de gerenciamento do espaço de trabalho
+## <a name="accessing-the-management-portal"></a>Como acessar o portal de gerenciamento
 
-O acesso ao portal de gerenciamento do espaço de trabalho (portal.atp.azure.com) só pode ser realizado por um usuário do Azure AD que tem a função do diretório de administrador global ou administrador de segurança. Após entrar no portal, você pode criar espaços de trabalho diferentes. Para cada espaço de trabalho, o serviço do Azure ATP cria três grupos de segurança em seu locatário do Azure Active Directory: Administradores, Usuários e Visualizadores. 
+O acesso ao portal de gerenciamento (portal.atp.azure.com) só pode ser realizado por um usuário do Azure AD com a função do diretório de administrador global ou administrador de segurança. Após entrar no portal, você pode criar espaços de trabalho. O serviço do Azure ATP cria três grupos de segurança no locatário do Azure Active Directory: Administradores, Usuários e Visualizadores. 
 
 > [!NOTE]
 > O acesso ao portal de espaço de trabalho do Azure ATP é concedido somente a usuários dentro dos grupos de segurança do Azure AD para esse espaço de trabalho e para administradores globais e administradores de segurança.
