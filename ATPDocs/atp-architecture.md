@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 90f68f2c-d421-4339-8e49-1888b84416e6
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: a6cb3ca9b4f9498caa0810cec129c24b0f2e587b
-ms.sourcegitcommit: 121c49d559e71741136db1626455b065e8624ff9
+ms.openlocfilehash: c7fda04658dc70406fc7c0d543286e46da4cfa86
+ms.sourcegitcommit: 56886d06abd25035ffc9885c69aca9b0ebf14abc
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/20/2018
-ms.locfileid: "41734593"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43039072"
 ---
 *Aplica-se a: Proteção Avançada contra Ameaças do Azure*
 
@@ -91,9 +91,6 @@ O espaço de trabalho do Azure ATP permite que você gerencie a seguinte funcion
 
 |||
 |-|-|
-|Receptor de Entidade|Recebe lotes de entidades de todos os sensores do Azure ATP e sensores autônomos do Azure ATP.|
-|Processador de atividade de rede|Processa todas as atividades de rede em cada lote recebido. Por exemplo, a correspondência entre as diversas etapas do Kerberos executadas em computadores potencialmente diferentes|
-|Criador de perfil de entidade|Cria o perfil de todas as entidades exclusivas de acordo com o tráfego e os eventos. Por exemplo, o Azure ATP atualiza a lista de computadores conectados para cada perfil do usuário.|
 |Portal de gerenciamento do Azure ATP|Gerencia o espaço de trabalho do Azure ATP.|
 |Portal de espaço de trabalho do Azure ATP|O espaço de trabalho do Azure ATP é usado para configurar o Azure ATP e monitorar atividades suspeitas detectadas pelo Azure ATP em sua rede. O espaço de trabalho do Azure ATP não é dependente do sensor do Azure ATP e é executado mesmo quando o serviço do sensor do Azure ATP está parado. |
 |Detectores|Os detectores usam algoritmos de aprendizado de máquina e regras determinísticas para localizar atividades suspeitas e comportamento anormal do usuário em sua rede.|

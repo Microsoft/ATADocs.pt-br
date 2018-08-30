@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 14cb7513-5dc8-49cb-b3e0-94f469c443dd
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 0b4d783d55d38d2a50c651ba47c584fed8bcee50
-ms.sourcegitcommit: 1de2b047c0e9f92a106169f7634c480f694baf10
+ms.openlocfilehash: 60e02ef1aff6b16bc56b12b8883ca2f5ed4a1f74
+ms.sourcegitcommit: 56886d06abd25035ffc9885c69aca9b0ebf14abc
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "30010135"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "42903899"
 ---
 *Aplica-se a: Advanced Threat Analytics versão 1.9*
 
@@ -36,17 +36,17 @@ Para receber notificações, defina os seguintes parâmetros:
 
 
 1. No Console do ATA, selecione a opção de configurações na barra de ferramentas e escolha **Configuração**.
-
-![Ícone Definições de configuração do ATA](media/ATA-config-icon.png)
-
-2. Na seção **Notifications & Reports (Notificações e Relatórios)**, selecione **Notificações**.
-3. Em **Notificações por Email**, especifique quais notificações devem ser enviadas por email: novas atividades suspeitas e novos problemas de integridade. Você pode definir um endereço de email separado para o qual enviar as atividades suspeitas e para os alertas de integridade para que, por exemplo, notificações de atividades suspeitas possam ser enviadas para o analista de segurança e as notificações de alerta de integridade possam ser enviadas para o administrador de TI.
->   [!NOTE]
->   Alertas de email para atividades suspeitas são enviados somente quando a atividade suspeita é criada.
-3. Em **Notificações do Syslog**, especifique quais notificações devem ser enviadas para o servidor Syslog: novas atividades suspeitas, atividades suspeitas atualizadas e novos problemas de integridade.
-5. Clique em **Salvar**.
-
-![Imagem das configurações de notificação de email do ATA](media/ata-mail-notification-settings.png)
+    
+    ![Ícone Definições de configuração do ATA](media/ATA-config-icon.png)
+    
+1. Na seção **Notifications & Reports (Notificações e Relatórios)**, selecione **Notificações**.
+1. Em **Notificações por Email**, especifique quais notificações devem ser enviadas por email: novas atividades suspeitas e novos problemas de integridade. Você pode definir um endereço de email separado para o qual enviar as atividades suspeitas e para os alertas de integridade para que, por exemplo, notificações de atividades suspeitas possam ser enviadas para o analista de segurança e as notificações de alerta de integridade possam ser enviadas para o administrador de TI.
+    >   [!NOTE]
+    >   Alertas de email para atividades suspeitas são enviados somente quando a atividade suspeita é criada.
+1. Em **Notificações do Syslog**, especifique quais notificações devem ser enviadas para o servidor Syslog: novas atividades suspeitas, atividades suspeitas atualizadas e novos problemas de integridade.
+1. Clique em **Salvar**.
+    
+    ![Imagem das configurações de notificação de email do ATA](media/ata-mail-notification-settings.png)
 
 
 

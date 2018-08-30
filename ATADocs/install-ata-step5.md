@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 2a5b6652-2aef-464c-ac17-c7e5f12f920f
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: d8a8f5df37422f98f6ea3357c672297395907a8d
-ms.sourcegitcommit: 1de2b047c0e9f92a106169f7634c480f694baf10
+ms.openlocfilehash: 1c75b9c74e1b53f81b5f957d9e78a8b425b6b28e
+ms.sourcegitcommit: ad83eaba24d5a6af465351291ba0e423319f78d3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "30009737"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42903916"
 ---
 *Aplica-se a: Advanced Threat Analytics versão 1.9*
 
@@ -46,9 +46,9 @@ Após a instalação do Gateway do ATA, execute as etapas a seguir para definir 
   - **Descrição**: insira uma descrição para o Gateway do ATA (opcional).
   - **Controladores de Domínio com porta espelhada (FQDN)** (exigidos para o Gateway do ATA, isso não pode ser alterado para o Gateway Lightweight do ATA): insira o FQDN completo de seu controlador de domínio e clique no sinal de adição para adicioná-lo à lista. Por exemplo, **dc01.contoso.com**
 
-      As informações a seguir se aplicam aos servidores digitados na lista **Controladores de Domínio**:
-      - Todos os controladores de domínio cujo tráfego esteja sendo monitorado por meio do espelhamento de porta pelo Gateway do ATA devem estar na lista **Controladores de Domínio**. Se um controlador de domínio não estiver listado em **Controladores de Domínio**, a detecção de atividades suspeitas pode não funcionar conforme o esperado.
-      - Pelo menos um controlador de domínio na lista deve ser um catálogo global. Isso permite que o ATA resolva os objetos de usuário e computador em outros domínios na floresta.
+    As informações a seguir se aplicam aos servidores digitados na lista **Controladores de Domínio**:
+    - Todos os controladores de domínio cujo tráfego esteja sendo monitorado por meio do espelhamento de porta pelo Gateway do ATA devem estar na lista **Controladores de Domínio**. Se um controlador de domínio não estiver listado em **Controladores de Domínio**, a detecção de atividades suspeitas pode não funcionar conforme o esperado.
+    - Pelo menos um controlador de domínio na lista deve ser um catálogo global. Isso permite que o ATA resolva os objetos de usuário e computador em outros domínios na floresta.
 
   - **Capturar adaptadores de rede** (obrigatório):
   - Para um Gateway do ATA em um servidor dedicado, selecione os adaptadores de rede que são configurados como a porta de espelho do destino. Eles recebem o tráfego do controlador de domínio espelhado.
