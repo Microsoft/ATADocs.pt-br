@@ -2,10 +2,10 @@
 title: Arquitetura do Advanced Threat Analytics | Microsoft Docs
 description: Descreve a arquitetura da Advanced Threat Analytics (ATA)
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 3/21/2018
+ms.date: 8/26/2018
 ms.topic: article
 ms.prod: ''
 ms.service: advanced-threat-analytics
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 892b16d2-58a6-49f9-8693-1e5f69d8299c
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: fa2b5fa5da1d73f90cac6937bef71fd239e498fc
-ms.sourcegitcommit: ca6153d046d8ba225ee5bf92cf55d0bd57cf4765
+ms.openlocfilehash: f2ae9948f6865480797b4a2a8b761c12553728b9
+ms.sourcegitcommit: 56886d06abd25035ffc9885c69aca9b0ebf14abc
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39585045"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43039012"
 ---
 *Aplica-se a: Advanced Threat Analytics versão 1.9*
 
@@ -179,7 +179,7 @@ Para melhorar a detecção do ATA de Pass-the-Hash, Força Bruta, Modificação 
 
 -   Configuração do Gateway de ATA para escutar eventos SIEM <br>Configure o SIEM para encaminhar eventos específicos do Windows para o ATA. O ATA oferece suporte a vários fornecedores SIEM. Para obter mais informações, confira [Configurar coleta de eventos](configure-event-collection.md).
 
--   Configuração do encaminhamento de eventos do Windows<br>Outra maneira de o ATA conseguir obter seus eventos é configurando seus controladores de domínio para encaminhar eventos do Windows 4776, 4732, 4733, 4728, 4729, 4756 and 4757 para seu Gateway do ATA. Isso é especialmente útil se você não tiver um SIEM ou se o SIEM não for atualmente suportado pelo ATA. Para obter mais informações sobre o Encaminhamento de Eventos do Windows no ATA, confira [Configurando o encaminhamento de eventos do Windows](configure-event-collection.md#configuring-windows-event-forwarding). Isso se aplica apenas a Gateways do ATA físicos, não ao Gateway Lightweight do ATA.
+-   Configuração do encaminhamento de eventos do Windows<br>Outra maneira de o ATA conseguir obter seus eventos é configurando seus controladores de domínio para encaminhar eventos do Windows 4776, 4732, 4733, 4728, 4729, 4756 and 4757 para seu Gateway do ATA. Isso é especialmente útil se você não tiver um SIEM ou se o SIEM não for atualmente suportado pelo ATA. Para completar a configuração do Encaminhamento de Eventos do Windows no ATA, confira [Configurando o encaminhamento de eventos do Windows](configure-event-collection.md#configuring-windows-event-forwarding). Isso se aplica apenas a Gateways do ATA físicos, não ao Gateway Lightweight do ATA.
 
 ## <a name="related-videos"></a>Vídeos Relacionados
 - [Como escolher o tipo certo de Gateway do ATA](https://channel9.msdn.com/Shows/Microsoft-Security/ATA-Deployment-Choose-the-Right-Gateway-Type)

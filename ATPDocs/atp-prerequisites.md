@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 8/15/2018
+ms.date: 8/26/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 62c99622-2fe9-4035-9839-38fec0a353da
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 74fea95d0cfdcca96eba1f77b6dbd81a101b3782
-ms.sourcegitcommit: 121c49d559e71741136db1626455b065e8624ff9
+ms.openlocfilehash: f1c9e4bc90289e7c7bfb90710ecbc83beb368ba8
+ms.sourcegitcommit: 56886d06abd25035ffc9885c69aca9b0ebf14abc
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/20/2018
-ms.locfileid: "41734628"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43038976"
 ---
 *Aplica-se a: Proteção Avançada contra Ameaças do Azure*
 
@@ -125,7 +125,7 @@ O sensor autônomo do Azure ATP requer pelo menos um adaptador de gerenciamento 
 
     > [!IMPORTANT]
     > -   Configure o espelhamento de porta do adaptador de captura como o destino do tráfego de rede do controlador de domínio. Para saber mais, confira [Configurar o espelhamento de porta](configure-port-mirroring.md). Normalmente, você precisa trabalhar com a equipe de virtualização ou de rede para configurar o espelhamento de porta.
-    > -   Configure um endereço IP não roteável estático para seu ambiente sem um sensor padrão e endereço do servidor DNS. Por exemplo, 1.1.1.1/32. Isso assegura que o adaptador da rede de captura poderá capturar a quantidade máxima de tráfego e que o adaptador da rede de gerenciamento será usado para enviar e receber o tráfego de rede solicitado.
+    > -   Configure um endereço IP não roteável estático (com máscara /32) para seu ambiente sem um gateway de sensor padrão e sem endereço do servidor DNS. Por exemplo, 10.10.0.10/32. Isso assegura que o adaptador da rede de captura poderá capturar a quantidade máxima de tráfego e que o adaptador da rede de gerenciamento será usado para enviar e receber o tráfego de rede solicitado.
 
 ### <a name="ports"></a>Portas
 A tabela abaixo lista as portas mínimas que o sensor autônomo do Azure ATP requer que estejam configuradas no adaptador de gerenciamento:
