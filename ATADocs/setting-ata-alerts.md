@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 14cb7513-5dc8-49cb-b3e0-94f469c443dd
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 60e02ef1aff6b16bc56b12b8883ca2f5ed4a1f74
-ms.sourcegitcommit: 56886d06abd25035ffc9885c69aca9b0ebf14abc
+ms.openlocfilehash: 55e56b9b2a3bbb04024fc7431e1ee7d1e459cfea
+ms.sourcegitcommit: d8ee6c236dc91802a8315fb97a9dc0ac501861cf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "42903899"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43353072"
 ---
 *Aplica-se a: Advanced Threat Analytics versão 1.9*
 
@@ -41,8 +41,10 @@ Para receber notificações, defina os seguintes parâmetros:
     
 1. Na seção **Notifications & Reports (Notificações e Relatórios)**, selecione **Notificações**.
 1. Em **Notificações por Email**, especifique quais notificações devem ser enviadas por email: novas atividades suspeitas e novos problemas de integridade. Você pode definir um endereço de email separado para o qual enviar as atividades suspeitas e para os alertas de integridade para que, por exemplo, notificações de atividades suspeitas possam ser enviadas para o analista de segurança e as notificações de alerta de integridade possam ser enviadas para o administrador de TI.
+    
     >   [!NOTE]
     >   Alertas de email para atividades suspeitas são enviados somente quando a atividade suspeita é criada.
+
 1. Em **Notificações do Syslog**, especifique quais notificações devem ser enviadas para o servidor Syslog: novas atividades suspeitas, atividades suspeitas atualizadas e novos problemas de integridade.
 1. Clique em **Salvar**.
     

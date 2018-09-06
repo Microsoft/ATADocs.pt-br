@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 3f0498f9-061d-40e6-ae07-98b8dcad9b20
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 755450654d870ec0235232e08194c1094c22f030
-ms.sourcegitcommit: ca6153d046d8ba225ee5bf92cf55d0bd57cf4765
+ms.openlocfilehash: e337c56730e1672ce1a4382a49bb16dab7b3a95d
+ms.sourcegitcommit: d8ee6c236dc91802a8315fb97a9dc0ac501861cf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39585081"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43353089"
 ---
 *Aplica-se a: Advanced Threat Analytics versão 1.9*
 
@@ -79,11 +79,8 @@ Após adicionar o **Serviço de Rede** ao grupo **Leitores de Log de Eventos**, 
     2.  Para **Log de Destino** confirme se **Eventos Encaminhados** está selecionado. Para o ATA ler os eventos, o log de destino deve ser **Eventos Encaminhados**. 
     3.  Selecione **Iniciado pelo computador de origem** e clique em **Selecionar Grupos de Computadores**.
         1.  Clique em **Adicionar Computador do Domínio**.
-        2.  Insira o nome do controlador de domínio no campo **Digite o nome do objeto a ser selecionado**. Depois, clique em **Verificar Nomes** e clique em **OK**. 
- 
-    ![Imagem do Visualizador de Eventos](media/wef3 event viewer.png)
- 
- 
+        2.  Insira o nome do controlador de domínio no campo **Digite o nome do objeto a ser selecionado**. Depois, clique em **Verificar Nomes** e clique em **OK**.  
+          ![Imagem do Visualizador de Eventos](media/wef3 event viewer.png)  
         3.  Clique em **OK**.
      4. Clique em **Selecionar Eventos**.
 
