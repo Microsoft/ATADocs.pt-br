@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: ca5d1c7b-11a9-4df3-84a5-f53feaf6e561
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 4aa58228ea23f58ea37b10f941467e9dc076992f
-ms.sourcegitcommit: f534a318be71b840aecb6a84744d8cd1f251a7aa
+ms.openlocfilehash: f382c5a7625ff29303ad92d05ec703c9ef1d72e3
+ms.sourcegitcommit: 04ec22abdfa571ec0e6e036e809f4e108a5c6f3d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "41734831"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42709769"
 ---
 *Aplica-se a: Proteção Avançada contra Ameaças do Azure*
 
@@ -200,7 +200,7 @@ Nessa detecção, um alerta é acionado quando um tíquete de concessão de tíq
    2.   O sensor do Azure ATP envolvido neste alerta é uma máquina virtual? Se Sim, ele retomou recentemente de um estado salvo? Se sim, então feche este alerta.
    3.   Se a resposta para as perguntas acima for não, suponha que ele seja mal-intencionado.
 
-- **Conta não existente**
+- **Conta não existente - Novo** 
    1.   Faça as seguintes perguntas:
          - O usuário é um usuário de domínio válido e conhecido? Se sim, então feche o alerta (era um falso positivo).
          - O usuário foi adicionado recentemente? Se sim, então feche o alerta, a alteração pode não ter sido ainda sincronizada.
@@ -476,7 +476,7 @@ Nessa detecção, um alerta é acionado quando um computador na rede está tenta
    3. O computador executa o sistema operacional Windows Server (ou Windows/Linux)? Um computador não servidor não deve replicar os dados.
 Se você tiver habilitado a integração do Windows Defender ATP, clique no selo do Windows Defender ATP ![selo do Windows Defender ATP](./media/wd-badge.png) para continuar a investigar o computador. No Windows Defender ATP, você pode ver quais processos e alertas ocorreram no momento do alerta.
 
-4. Examine o Visualizador de Eventos para ver os [eventos do Active Directory que ele registra no log de serviços de diretório](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-2000-server/cc961809(v=technet.10)). Você pode usar o log para monitorar as alterações no Active Directory. Por padrão, o Active Directory somente registra eventos de erro crítico, mas se esse alerta for recorrente, habilite essa auditoria no controlador de domínio relevante para uma investigação adicional.
+4. Examine o Visualizador de Eventos para ver os [eventos do Active Directory que ele registra no log de serviços de diretório](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-2000-server/cc961809(v=technet.10)). Você pode usar o log para monitorar as alterações no Active Directory. Por padrão, o Active Directory registra somente eventos de erro crítico, mas se esse alerta for recorrente, habilite essa auditoria no controlador de domínio relevante para uma investigação adicional.
 
 **Corrigir**
 
@@ -510,7 +510,7 @@ Nessa detecção, um alerta é acionado quando uma solicitação de replicação
    2.  Os usuários devem acessar esses recursos?
    3. O computador executa o sistema operacional Windows Server (ou Windows/Linux)? Um computador não servidor não deve replicar os dados.
 Se você tiver habilitado a integração do Windows Defender ATP, clique no selo do Windows Defender ATP ![selo do Windows Defender ATP](./media/wd-badge.png) para continuar a investigar o computador. No Windows Defender ATP, você pode ver quais processos e alertas ocorreram no momento do alerta.
-1. Examine o Visualizador de Eventos para ver os [eventos do Active Directory que ele registra no log de serviços de diretório](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-2000-server/cc961809(v=technet.10)). Você pode usar o log para monitorar as alterações no Active Directory. Por padrão, o Active Directory somente registra eventos de erro crítico, mas se esse alerta for recorrente, habilite essa auditoria no controlador de domínio relevante para uma investigação adicional.
+1. Examine o Visualizador de Eventos para ver os [eventos do Active Directory que ele registra no log de serviços de diretório](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-2000-server/cc961809(v=technet.10)). Você pode usar o log para monitorar as alterações no Active Directory. Por padrão, o Active Directory registra somente eventos de erro crítico, mas se esse alerta for recorrente, habilite essa auditoria no controlador de domínio relevante para uma investigação adicional.
 
 **Remediação**
 
@@ -546,7 +546,8 @@ Um serviço suspeito foi criado em um controlador de domínio em sua organizaç�
 
 - Implementar o acesso com menos privilégios em computadores de domínio para permitir que apenas usuários específicos tenham o direito de criar novos serviços.
 
-## Conexão de VPN suspeita <a name="suspicious-vpn-detection"></a>
+
+## Conexão VPN suspeita - Novo <a name="suspicious-vpn-detection"></a>
 
 **Descrição**
 
