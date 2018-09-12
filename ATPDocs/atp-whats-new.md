@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 8/26/2018
+ms.date: 9/05/2018
 ms.topic: article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,18 +13,31 @@ ms.technology: ''
 ms.assetid: 7d0f33db-2513-4146-a395-290e001f4199
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: b4a72c4dbde37a415797c467afac2c7c2636bfec
-ms.sourcegitcommit: 56886d06abd25035ffc9885c69aca9b0ebf14abc
+ms.openlocfilehash: 91e20af8e0bfedd626ee4625b0a5ec5647a41f97
+ms.sourcegitcommit: f9400ae27d22607e4146dc9b8a0b9ba6f61fdd38
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43039031"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43743392"
 ---
 *Aplica-se a: Proteção Avançada contra Ameaças do Azure*
 
 # <a name="whats-new-in-azure-atp"></a>Novidades do Azure ATP 
 
+## <a name="azure-atp-release-247"></a>ATP do Azure versão 2.47
+Lançado em 2 de setembro de 2018
 
+- **Verificação de política de auditoria avançada da ATP do Azure**
+ 
+A Proteção Avançada contra Ameaças agora verifica as políticas de auditoria avançadas existentes de seu controlador de domínio e recomenda alterações de política para fornecer a máxima cobertura do serviço de ATP do Azure para sua organização. 
+
+**Essa nova verificação permite que você:**
+  -  Identifique eventos ausentes de seus Logs de Eventos do Windows que atualmente são excluídos da sua cobertura da ATP do Azure.
+  -  Verifique se as configurações são as ideais e faça alterações de acordo com as recomendações de alerta de integridade fornecidas.
+  -  Será emitido um único alerta de integridade agregado para todos os controladores de domínio, incluindo sugestões de correção (se/conforme necessário).
+
+Revise como [Configurar políticas de auditoria avançadas](atp-advanced-audit-policy.md) para garantir que seu sistema esteja configurado corretamente. 
+- Essa versão também inclui correções e melhorias para vários problemas.
 
 ## <a name="azure-atp-release-246"></a>Azure ATP versão 2.46
 

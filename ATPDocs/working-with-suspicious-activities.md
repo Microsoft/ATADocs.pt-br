@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: a06004bd-9f77-4e8e-a0e5-4727d6651a0f
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 7caae52ff7402fdc8cb18ce1a01bba469c2d649b
-ms.sourcegitcommit: f61616a8269d27a8fcde6ecf070a00e2c56481ac
+ms.openlocfilehash: 4cf099faae920f23eeeaacdc8f10129005fdc896
+ms.sourcegitcommit: 93a133430ac85d6db7afad5f6f2583b3a39c423a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35259201"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43469661"
 ---
 *Aplica-se a: Proteção Avançada contra Ameaças do Azure*
 
@@ -53,7 +53,7 @@ Cada atividade suspeita tem as seguintes informações:
 
 ## Detecções de versão prévia<a name="preview-detections"></a>
 
-A equipe de pesquisa da Azure ATP (Proteção Avançada contra Ameaças do Azure) trabalha constantemente para implementar novas detecções para ataques recém-descobertos. Como a Azure ATP é um serviço de nuvem, é possível lançar essas novas detecções rapidamente para permitir que os clientes da Azure ATP se beneficiem das novas detecções o mais breve possível.
+A equipe de pesquisa da Azure ATP (Proteção Avançada contra Ameaças do Azure) trabalha constantemente para implementar novas detecções para ataques recém-descobertos. Já que a ATP do Azure é um serviço de nuvem, essas novas detecções são lançadas rapidamente para permitir que os clientes da ATP do Azure se beneficiem das novas detecções o mais breve possível.
 
 Essas detecções são marcadas como uma notificação de versão prévia para ajudar a identificar as novas detecções e saber que elas são novas para o produto. Se você desabilitar as detecções de versão prévia, elas não serão exibidas no console da Azure ATP (nem na linha do tempo nem nos perfis de entidade) e novos alertas não serão abertos.
 

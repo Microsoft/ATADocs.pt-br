@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: de15c920-8904-4124-8bdc-03abd9f667cf
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 730cf886f199c101ea14a09f177d7682238c2b7e
-ms.sourcegitcommit: 14c05a210ae92d35100c984ff8c6d171db7c3856
+ms.openlocfilehash: 270b84c24ef8b52565ee97c2c15374645eb54a2c
+ms.sourcegitcommit: 93a133430ac85d6db7afad5f6f2583b3a39c423a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39567705"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43469644"
 ---
 *Aplica-se a: Proteção Avançada contra Ameaças do Azure*
 
@@ -28,7 +28,7 @@ ms.locfileid: "39567705"
 O movimento lateral ocorre quando um invasor usa contas não confidenciais para acessar contas confidenciais. Isso pode ser feito usando os métodos descritos no [Guia de atividades suspeitas](suspicious-activity-guide.md). O movimento lateral é usado pelos invasores para identificar e obter acesso às contas confidenciais e máquinas em sua rede usando contas não confidenciais que compartilham credenciais de logon armazenadas em contas, grupos e computadores. Depois que um invasor obtém acesso, ele também pode aproveitar os dados em seus controladores de domínio.
 
 
-## <a name="discovery-your-at-risk-sensitive-accounts"></a>Descura suas contas confidenciais que estão em risco
+## <a name="discover-your-at-risk-sensitive-accounts"></a>Descobrir suas contas confidenciais que estão em risco
 
 Para descobrir quais contas confidenciais de sua rede estão expostas devido à sua conexão a contas, grupos e computadores não confidenciais, siga estas etapas. 
 

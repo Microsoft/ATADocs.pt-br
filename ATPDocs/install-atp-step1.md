@@ -1,11 +1,11 @@
 ---
 title: Instalar a Proteção Avançada contra Ameaças do Azure – etapa 1 | Microsoft Docs
-description: A primeira etapa para instalar o Azure ATP envolve a criação de um espaço de trabalho para sua implantação do Azure ATP.
+description: A primeira etapa para instalar a ATP do Azure envolve a criação de um espaço de trabalho para sua implantação da ATP do Azure.
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 4/10/2018
+ms.date: 9/04/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 15ee7d0b-9a0c-46b9-bc71-98d0b4619ed0
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: cadd708c20733324b939db1e35d12aae3f2d80f2
-ms.sourcegitcommit: 40dbce8045f689376a50275fb12e3c5c32ca8092
+ms.openlocfilehash: 9ba476c579de3c468ce9c8ca09e8b8bab4fa9e1d
+ms.sourcegitcommit: f9400ae27d22607e4146dc9b8a0b9ba6f61fdd38
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37799069"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43743307"
 ---
 *Aplica-se a: Proteção Avançada contra Ameaças do Azure*
 
@@ -28,30 +28,30 @@ ms.locfileid: "37799069"
 >[!div class="step-by-step"]
 [Etapa 2 »](install-atp-step2.md)
 
-Este procedimento de instalação fornece instruções para criar e gerenciar um espaço de trabalho no portal de gerenciamento do espaço de trabalho do Azure ATP. Para obter informações sobre a arquitetura do Azure ATP, consulte [Arquitetura do Azure ATP](atp-architecture.md).
+Este procedimento de instalação fornece instruções para criar e gerenciar a instância da ATP do Azure. Para obter informações sobre a arquitetura do Azure ATP, consulte [Arquitetura do Azure ATP](atp-architecture.md).
 
-No Azure ATP, você pode gerenciar e monitorar vários espaços de trabalho. Isso é especialmente útil se você quiser criar um espaço de trabalho de demonstração e um espaço de trabalho de teste no qual pode fazer a prova de conceito do Azure ATP antes de disponibilizá-lo para toda a organização. Isso também é necessário para dar suporte a implantações com várias florestas. Um único espaço de trabalho só pode monitorar vários domínios de uma única floresta. 
+Na ATP do Azure, você terá um único espaço de trabalho ou instância para que você possa gerenciar várias florestas de um único painel de exibição. 
 
 > [!NOTE]
 > No momento, os data centers do Azure ATP são implantados na Europa, na América do Norte/América Central/Caribe e na Ásia.
 
-## <a name="step-1-enter-the-workspace-management-portal"></a>Etapa 1. Entrar no portal de gerenciamento do espaço de trabalho
+## <a name="step-1-enter-the-management-portal"></a>Etapa 1. Entrar no portal de gerenciamento
 
 Depois de confirmar que sua rede atende aos requisitos do sensor, você poderá continuar com a criação do espaço de trabalho do Azure ATP.
 
 > [!NOTE]
->Para acessar o portal de gerenciamento do espaço de trabalho, você precisa ser um administrador global ou um administrador de segurança no locatário.
+>Para acessar o portal de gerenciamento, você precisa ser um administrador global ou um administrador de segurança nesse locatário.
 
 
-1.  Entre no [portal de espaço de trabalho do Azure ATP](https://portal.atp.azure.com).
+1.  Entre no [portal da ATP do Azure](https://portal.atp.azure.com).
 
 2.  Faça logon com sua conta de usuário do Azure Active Directory.
 
-## <a name="step-2-create-a-workspace"></a>Etapa 2. Criar um espaço de trabalho
+## <a name="step-2-create-your-workspace"></a>Etapa 2. Criar seu espaço de trabalho
 
 1. Clique em **Criar espaço de trabalho**.
 
-2. Na caixa de diálogo **Criar novo espaço de trabalho**, nomeie seu espaço de trabalho, decida se ele é o espaço de trabalho primário ou não e selecione uma **Geolocalização** para seu data center. Somente um espaço de trabalho pode ser definido como primário. Definir um espaço de trabalho como primário afeta as integrações – você só pode integrar o Azure ATP com o Windows Defender ATP para seu espaço de trabalho primário. Você pode alterar qual espaço de trabalho é primário posteriormente, mas, para fazer isso, você precisará remover as integrações já definidas para o espaço de trabalho primário atual.
+2. Na caixa de diálogo **Criar novo espaço de trabalho**, nomeie seu espaço de trabalho e selecione uma **Geolocalização** para seu data center. Somente um espaço de trabalho pode ser definido como primário. Definir um espaço de trabalho como primário afeta as integrações – você só pode integrar o Azure ATP com o Windows Defender ATP para seu espaço de trabalho primário. Você pode alterar qual espaço de trabalho é primário posteriormente, mas, para fazer isso, você precisará remover as integrações já definidas para o espaço de trabalho primário atual.
  > [!NOTE]
  > Depois de selecionar uma Geolocalização, você não poderá modificá-la.
     ![Espaço de trabalho do Azure ATP](media/create-workspace.png)
@@ -61,7 +61,7 @@ Depois de confirmar que sua rede atende aos requisitos do sensor, você poderá 
  > [!NOTE]
  > Para fazer logon com êxito no Azure ATP, você precisa fazer logon com um usuário que recebeu a função adequada do Azure ATP para acessar o portal de espaço de trabalho do Azure ATP. Para obter mais informações sobre o RBAC (controle de acesso baseado em função) no Azure ATP, consulte [Como trabalhar com grupos de função do Azure ATP](atp-role-groups.md).
 
-4. Clique no nome do novo espaço de trabalho para acessar o portal de espaço de trabalho do Azure ATP para esse espaço de trabalho.
+4. Clique no nome do novo espaço de trabalho para acessar o portal de espaço de trabalho da ATP do Azure para esse espaço de trabalho.
 
     ![Espaços de trabalho do Azure ATP](media/atp-workspaces.png)
 
