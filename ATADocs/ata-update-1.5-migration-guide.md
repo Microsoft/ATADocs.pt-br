@@ -6,19 +6,19 @@ author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
 ms.date: 01/23/2017
-ms.topic: article
+ms.topic: conceptual
 ms.prod: ''
 ms.service: advanced-threat-analytics
 ms.technology: ''
 ms.assetid: fb65eb41-b215-4530-93a2-0b8991f4e980
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 654312c841c38c86c9efa826227d7cc93eb772cf
-ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
+ms.openlocfilehash: 4a134c2a6b53df5243385b4c2bcdb9e15a0a843f
+ms.sourcegitcommit: 5ad28d7b0607c7ea36d795b72928769c629fb80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2017
-ms.locfileid: "24019316"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44165738"
 ---
 # <a name="ata-update-to-15-migration-guide"></a>Guia de migração de atualização do ATA para 1.5
 A atualização 1.5 do ATA fornece melhorias nas seguintes áreas:
@@ -129,6 +129,6 @@ Você saberá que todos os Gateways do ATA foram atualizados com êxito quando t
 
 ![Imagem de gateways atualizados](media/ATA-gw-updated.png)
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Consulte Também
 
 - [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

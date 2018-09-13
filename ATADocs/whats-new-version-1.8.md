@@ -6,19 +6,19 @@ author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
 ms.date: 9/03/2017
-ms.topic: article
+ms.topic: conceptual
 ms.prod: ''
 ms.service: advanced-threat-analytics
 ms.technology: ''
 ms.assetid: 9592d413-df0e-4cec-8e03-be1ae00ba5dc
 ms.reviewer: ''
 ms.suite: ems
-ms.openlocfilehash: 71e7f723d02b4e86f1799e5a92998363766de7a2
-ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
+ms.openlocfilehash: 4d8000f7a50b4847f647a9bcc10843786aeb1285
+ms.sourcegitcommit: 5ad28d7b0607c7ea36d795b72928769c629fb80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2017
-ms.locfileid: "24019044"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44166628"
 ---
 # <a name="whats-new-in-ata-version-18"></a>Novidades na versão 1.8 do ATA
 
@@ -137,7 +137,7 @@ No Windows Server 2016 Core, você não poderá ver o erro, mas o processo falha
 **Solução alternativa**: antes de atualizar para o 1.8 atualização 1, faça uma cópia das configurações de relatório e as insira novamente, isso também pode ser feito por meio de um script, para saber mais, confira [Exportar e importar a configuração do ATA](ata-configuration-file.md).
 
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Consulte Também
 [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
 [Atualizar o ATA para a versão 1.8 — guia de migração](ata-update-1.8-migration-guide.md)
