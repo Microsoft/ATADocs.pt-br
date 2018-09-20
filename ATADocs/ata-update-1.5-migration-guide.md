@@ -7,18 +7,18 @@ ms.author: rkarlin
 manager: mbaldwin
 ms.date: 01/23/2017
 ms.topic: conceptual
-ms.prod: ''
-ms.service: advanced-threat-analytics
+ms.prod: advanced-threat-analytics
+ms.service: ''
 ms.technology: ''
 ms.assetid: fb65eb41-b215-4530-93a2-0b8991f4e980
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 4a134c2a6b53df5243385b4c2bcdb9e15a0a843f
-ms.sourcegitcommit: 5ad28d7b0607c7ea36d795b72928769c629fb80a
+ms.openlocfilehash: f448242f43f8034e2b94b62cda2ec7c4409fc3f4
+ms.sourcegitcommit: 959b1f7753b9a8ad94870d2014376d55296fbbd4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44165738"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46133643"
 ---
 # <a name="ata-update-to-15-migration-guide"></a>Guia de migração de atualização do ATA para 1.5
 A atualização 1.5 do ATA fornece melhorias nas seguintes áreas:

@@ -7,18 +7,18 @@ ms.author: rkarlin
 manager: mbaldwin
 ms.date: 3/21/2018
 ms.topic: conceptual
-ms.prod: ''
-ms.service: advanced-threat-analytics
+ms.prod: advanced-threat-analytics
+ms.service: ''
 ms.technology: ''
 ms.assetid: 6bbc50c3-bfa8-41db-a2f9-56eed68ef5d2
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 5414539edca088b49d16dc03c17dfe0ee0a2bfc5
-ms.sourcegitcommit: 7f3ded32af35a433d4b407009f87cfa6099f8edf
+ms.openlocfilehash: 886b044725976559a35ee40e461e455320cb2200
+ms.sourcegitcommit: 9f02f0f6669b25f39b616bb0885bb55b8c4f050b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44125865"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46362452"
 ---
 *Aplica-se a: Advanced Threat Analytics versão 1.9*
 
@@ -82,7 +82,7 @@ Execute as seguintes etapas no servidor do Gateway do ATA.
     -   Microsoft Visual C++ 2013 Redistributable
     -   Conjunto de coleta de dados do Monitor de Desempenho Personalizado
 
-5.  Após a conclusão da instalação, para o Gateway do ATA, clique em **Iniciar** para abrir o navegador e entrar no Console do ATA. Para o Gateway Lightweight do ATA, clique em **Concluir**.
+6.  Após a conclusão da instalação, para o Gateway do ATA, clique em **Iniciar** para abrir o navegador e entrar no Console do ATA. Para o Gateway Lightweight do ATA, clique em **Concluir**.
 
 
 >[!div class="step-by-step"]

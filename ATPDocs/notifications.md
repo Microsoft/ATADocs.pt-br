@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 4308f03e-b2a7-4e38-a750-540ff94faa81
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 080b3469c862d4063db5a4832f63dd3614905fac
-ms.sourcegitcommit: 5ad28d7b0607c7ea36d795b72928769c629fb80a
+ms.openlocfilehash: c3fc5adbb700c4b8df66c243a655cf98aacc79af
+ms.sourcegitcommit: 9f02f0f6669b25f39b616bb0885bb55b8c4f050b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44166047"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46362418"
 ---
 *Aplica-se a: Proteção Avançada contra Ameaças do Azure*
 
@@ -39,8 +39,8 @@ Para receber notificações em um endereço de email específico, defina os segu
  
  >  [!NOTE]
  >   Alertas de email para atividades suspeitas são enviados somente quando a atividade suspeita é criada.
-
-5. Clique em **Salvar**.
+ 
+4. Clique em **Salvar**.
 
  ![Notificações do Azure ATP](media/atp-notifications.png)
 
