@@ -2,10 +2,10 @@
 title: Solução de problemas do Advanced Threat Analytics usando os contadores de desempenho | Microsoft Docs
 description: Descreve como você pode usar os contadores de desempenho para solucionar problemas com o ATA
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 3/21/2018
+ms.date: 9/25/2018
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
 ms.service: ''
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: df162a62-f273-4465-9887-94271f5000d2
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: c7a0ded6092740f92c12fbd7c57100293bf735c2
-ms.sourcegitcommit: 959b1f7753b9a8ad94870d2014376d55296fbbd4
+ms.openlocfilehash: 455e66b286916f125fcc34d61b167b86ccc59740
+ms.sourcegitcommit: caaa864708ec631ca4903f6270ad0012951ceef1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46134119"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47114452"
 ---
 *Aplica-se a: Advanced Threat Analytics versão 1.9*
 
@@ -108,7 +108,7 @@ Aqui está a lista dos principais contadores do Centro de ATA a ter em atenção
 |-----------|---------------|-------------|-------------------|
 |Tamanho do Bloco do Lote de Entidade do Centro do Microsoft ATA/EntityReceiver|O número de lotes de entidade colocados em fila pelo Centro de ATA.|Deve ser menor que o máximo de 1 (máximo padrão: 10.000)|Verifique se há qualquer componente que atingiu seu tamanho máximo e está bloqueando componentes anteriores até o NetworkListener.  Veja o **Processo de componente do ATA** anterior.<br /><br />Verifique se não há nenhum problema com a CPU ou a memória.|
 |Tamanho do Bloco de Atividade de Rede do Centro do Microsoft ATA\NetworkActivityProcessor|O número de atividades de rede (NAs) na fila de processamento.|Deve ser menor que o máximo de 1 (máximo padrão: 50.000)|Verifique se há qualquer componente que atingiu seu tamanho máximo e está bloqueando componentes anteriores até o NetworkListener. Veja o **Processo de componente do ATA** anterior.<br /><br />Verifique se não há nenhum problema com a CPU ou a memória.|
-|Tamanho do Bloco de Atividade de Rede do Centro do Microsoft ATA\EntityProfiler|O número de atividades de rede (NAs) na fila de criação de perfil.|Deve ser menor que o máximo de 1 (máximo padrão: 10.000)|Verifique se há qualquer componente que atingiu seu tamanho máximo e está bloqueando componentes anteriores até o NetworkListener. Veja o **Processo de componente do ATA** anterior.<br /><br />Verifique se não há nenhum problema com a CPU ou a memória.|
+|Tamanho do Bloco de Atividade de Rede do Centro do Microsoft ATA\EntityProfiler|O número de atividades de rede (NAs) na fila de criação de perfil.|Deve ser menor que o máximo de 1 (máximo padrão: 100.000)|Verifique se há qualquer componente que atingiu seu tamanho máximo e está bloqueando componentes anteriores até o NetworkListener. Veja o **Processo de componente do ATA** anterior.<br /><br />Verifique se não há nenhum problema com a CPU ou a memória.|
 |Tamanho do Bloco &#42; do Centro\Banco de dados do ATA da Microsoft|O número de atividades de rede, de um tipo específico, colocadas em fila para serem gravadas no banco de dados.|Deve ser menor que o máximo de 1 (máximo padrão: 50.000)|Verifique se há qualquer componente que atingiu seu tamanho máximo e está bloqueando componentes anteriores até o NetworkListener. Veja o **Processo de componente do ATA** anterior.<br /><br />Verifique se não há nenhum problema com a CPU ou a memória.|
 
 
