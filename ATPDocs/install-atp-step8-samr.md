@@ -13,20 +13,20 @@ ms.technology: ''
 ms.assetid: b09adce3-0fbc-40e3-a53f-31f57fe79ca3
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 63fee52a45913685c75872df156fecdddc5a6803
-ms.sourcegitcommit: 7f3ded32af35a433d4b407009f87cfa6099f8edf
+ms.openlocfilehash: 34ee1589d59b0740e9d3b05eb117991325619295
+ms.sourcegitcommit: b283bf66e63d76e6dba4564a229e804792794c6d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44125814"
+ms.lasthandoff: 09/29/2018
+ms.locfileid: "47453979"
 ---
 *Aplica-se a: Proteção Avançada contra Ameaças do Azure*
 
 # <a name="install-azure-atp---step-8"></a>Instalar o Azure ATP – etapa 8
 
->[!div class="step-by-step"]
-[« Etapa 7](install-atp-step7.md)
-[Etapa 9 »](atp-multi-forest.md)
+> [!div class="step-by-step"]
+> [« Etapa 7](install-atp-step7.md)
+> [Etapa 9 »](atp-multi-forest.md)
 
 ## <a name="step-8-configure-sam-r-required-permissions"></a>Etapa 8. Configurar permissões necessárias do SAM-R
 
@@ -53,9 +53,9 @@ Para garantir que clientes e servidores Windows permitam que sua conta do Azure 
 Para saber mais sobre SAM-R e esta Política de Grupo, confira [Acesso à rede: restringir clientes com permissão para efetuar chamadas remotas para SAM](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/network-access-restrict-clients-allowed-to-make-remote-sam-calls).
 
 
->[!div class="step-by-step"]
-[« Etapa 7](install-atp-step7.md)
-[Etapa 9 »](atp-multi-forest.md)
+> [!div class="step-by-step"]
+> [« Etapa 7](install-atp-step7.md)
+> [Etapa 9 »](atp-multi-forest.md)
 
 
 

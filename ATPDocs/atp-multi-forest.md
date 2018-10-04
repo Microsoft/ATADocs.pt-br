@@ -13,19 +13,19 @@ ms.technology: ''
 ms.assetid: effca0f2-fcae-4fca-92c1-c37306decf84
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: a6ba913710d5158c2e39105061acbebd566c5f13
-ms.sourcegitcommit: 7f3ded32af35a433d4b407009f87cfa6099f8edf
+ms.openlocfilehash: ad120cfe3e736935a557f66417794cd531fa5b2e
+ms.sourcegitcommit: b283bf66e63d76e6dba4564a229e804792794c6d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44126188"
+ms.lasthandoff: 09/29/2018
+ms.locfileid: "47454081"
 ---
 *Aplica-se a: Proteção Avançada contra Ameaças do Azure*
 
 # <a name="install-azure-atp---step-9"></a>Instalar o Azure ATP – etapa 9
 
->[!div class="step-by-step"]
-[« Etapa 8](install-atp-step8-samr.md)
+> [!div class="step-by-step"]
+> [« Etapa 8](install-atp-step8-samr.md)
 
 ## <a name="step-9--set-up-azure-advanced-threat-protection-multi-forest-support"></a>Etapa 9.  Configurar o suporte para várias florestas da Proteção Avançada contra Ameaças do Azure
 
@@ -82,8 +82,8 @@ Quando o Azure ATP mapeia suas florestas, ele usa um processo que afeta o seguin
 -   Os logons interativos executados por usuários em uma floresta para acessar recursos em outra floresta não são exibidos no painel do Azure ATP.
 
 
->[!div class="step-by-step"]
-[« Etapa 8](install-atp-step8-samr.md)
+> [!div class="step-by-step"]
+> [« Etapa 8](install-atp-step8-samr.md)
 
 
 ## <a name="see-also"></a>Consulte Também

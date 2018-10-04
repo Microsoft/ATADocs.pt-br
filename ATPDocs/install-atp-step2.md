@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: ae8a95f0-278c-4a12-ae69-14282364fba1
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: b2f83da3192770ddde05b04bed46a558a4491290
-ms.sourcegitcommit: 7f3ded32af35a433d4b407009f87cfa6099f8edf
+ms.openlocfilehash: 45c1ddfc80c481549ceb08ed45f535ca029b9626
+ms.sourcegitcommit: b283bf66e63d76e6dba4564a229e804792794c6d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44125882"
+ms.lasthandoff: 09/29/2018
+ms.locfileid: "47453826"
 ---
 *Aplica-se a: Proteção Avançada contra Ameaças do Azure*
 
@@ -26,9 +26,9 @@ ms.locfileid: "44125882"
 
 # <a name="install-azure-atp---step-2"></a>Instalar o Azure ATP – etapa 2
 
->[!div class="step-by-step"]
-[« Etapa 1](install-atp-step1.md)
-[Etapa 3 »](install-atp-step3.md)
+> [!div class="step-by-step"]
+> [« Etapa 1](install-atp-step1.md)
+> [Etapa 3 »](install-atp-step3.md)
 
 ## <a name="step-2-provide-a-username-and-password-to-connect-to-your-active-directory-forest"></a>Etapa 2. Fornecer um nome de usuário e uma senha para se conectar à sua Floresta do Active Directory
 
@@ -51,9 +51,9 @@ Na primeira vez em que você abre o portal do espaço de trabalho do Azure ATP, 
 3. No portal do espaço de trabalho, clique em **Baixar instalação do sensor e instalar o primeiro sensor** para continuar.
 
 
->[!div class="step-by-step"]
-[« Etapa 1](install-atp-step1.md)
-[Etapa 3 »](install-atp-step3.md)
+> [!div class="step-by-step"]
+> [« Etapa 1](install-atp-step1.md)
+> [Etapa 3 »](install-atp-step3.md)
 
 
 ## <a name="see-also"></a>Consulte Também

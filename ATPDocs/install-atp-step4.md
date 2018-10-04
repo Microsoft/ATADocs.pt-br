@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 51911e39-76c7-4dcd-bc0b-ec6235d0403f
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 9eaa6b37d56c3d8b18c3f5d015581cf7975d6e93
-ms.sourcegitcommit: 7f3ded32af35a433d4b407009f87cfa6099f8edf
+ms.openlocfilehash: 87a2b47261293fffffe9d822d698b551a332a481
+ms.sourcegitcommit: b283bf66e63d76e6dba4564a229e804792794c6d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44126308"
+ms.lasthandoff: 09/29/2018
+ms.locfileid: "47454132"
 ---
 *Aplica-se a: Proteção Avançada contra Ameaças do Azure*
 
@@ -26,9 +26,9 @@ ms.locfileid: "44126308"
 
 # <a name="install-azure-atp---step-4"></a>Instalar o Azure ATP – etapa 4
 
->[!div class="step-by-step"]
-[« Etapa 3](install-atp-step3.md)
-[Etapa 5 »](install-atp-step5.md)
+> [!div class="step-by-step"]
+> [« Etapa 3](install-atp-step3.md)
+> [Etapa 5 »](install-atp-step5.md)
 
 ## <a name="step-4-install-the-azure-atp-sensor"></a>Etapa 4. Instalar o sensor do Azure ATP
 
@@ -89,9 +89,9 @@ Execute as seguintes etapas no servidor do sensor do Azure ATP ou no controlador
 8.  Após a conclusão da instalação, clique em **Iniciar** para abrir o navegador e faça logon portal de espaço de trabalho do Azure ATP.
 
 
->[!div class="step-by-step"]
-[« Etapa 3](install-atp-step3.md)
-[Etapa 5 »](install-atp-step5.md)
+> [!div class="step-by-step"]
+> [« Etapa 3](install-atp-step3.md)
+> [Etapa 5 »](install-atp-step5.md)
 
 
 ## <a name="see-also"></a>Consulte Também

@@ -13,20 +13,20 @@ ms.technology: ''
 ms.assetid: b3cceb18-0f3c-42ac-8630-bdc6b310f1d6
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: e37954252708da31347b0af6479fbafbfd9433a7
-ms.sourcegitcommit: 959b1f7753b9a8ad94870d2014376d55296fbbd4
+ms.openlocfilehash: ea20c87fe7990542ad68de7ae6dfeefad062e378
+ms.sourcegitcommit: b283bf66e63d76e6dba4564a229e804792794c6d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46133728"
+ms.lasthandoff: 09/29/2018
+ms.locfileid: "47454149"
 ---
 *Aplica-se a: Advanced Threat Analytics versão 1.9*
 
 
 # <a name="install-ata---step-1"></a>Instalação do ATA - Etapa 1
 
->[!div class="step-by-step"]
-[Etapa 2 »](install-ata-step2.md)
+> [!div class="step-by-step"]
+> [Etapa 2 »](install-ata-step2.md)
 
 O procedimento de instalação fornece instruções para executar uma nova instalação do ATA 1.8. Para obter mais informações sobre como atualizar uma implantação existente do ATA de uma versão anterior, veja [o guia de migração do ATA para a versão 1.9](ata-update-1.9-migration-guide.md).
 
@@ -98,9 +98,9 @@ Depois de instalar a Central do ATA, você deve excluir o diretório de banco de
 
 
 
->[!div class="step-by-step"]
-[« Pré-instalação](configure-port-mirroring.md)
-[Etapa 2 »](install-ata-step2.md)
+> [!div class="step-by-step"]
+> [« Pré-instalação](configure-port-mirroring.md)
+> [Etapa 2 »](install-ata-step2.md)
 
 ## <a name="related-videos"></a>Vídeos Relacionados
 - [Como escolher o tipo certo de Gateway do ATA](https://channel9.msdn.com/Shows/Microsoft-Security/ATA-Deployment-Choose-the-Right-Gateway-Type)

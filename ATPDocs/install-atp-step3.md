@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 95bb4ec1-841f-41b7-92fe-fbd144085724
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: f10dd0714b2574ff9e1e476bc1865b1a0ed337b8
-ms.sourcegitcommit: 7f3ded32af35a433d4b407009f87cfa6099f8edf
+ms.openlocfilehash: 96d459bd00d39bb21ce363d079b5b24ceca4ace7
+ms.sourcegitcommit: b283bf66e63d76e6dba4564a229e804792794c6d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44125899"
+ms.lasthandoff: 09/29/2018
+ms.locfileid: "47454013"
 ---
 *Aplica-se a: Proteção Avançada contra Ameaças do Azure*
 
@@ -26,9 +26,9 @@ ms.locfileid: "44125899"
 
 # <a name="install-azure-atp---step-3"></a>Instalar o Azure ATP – etapa 3
 
->[!div class="step-by-step"]
-[« Etapa 2](install-atp-step2.md)
-[Etapa 4 »](install-atp-step4.md)
+> [!div class="step-by-step"]
+> [« Etapa 2](install-atp-step2.md)
+> [Etapa 4 »](install-atp-step4.md)
 
 ## <a name="step-3-download-the-azure-atp-sensor-setup-package"></a>Etapa 3. Baixar o pacote de instalação do sensor do Azure ATP
 Após definir as configurações de conectividade do domínio, você poderá baixar o pacote de instalação do sensor do Azure ATP. O pacote de instalação do sensor do Azure ATP pode ser instalado em um servidor dedicado ou em um controlador de domínio. Ao instalar diretamente em um controlador de domínio, ele é instalado como um sensor do Azure ATP e ao instalar em um servidor dedicado usando o espelhamento de porta, ele é instalado como um sensor autônomo do Azure ATP. Para obter mais informações sobre o sensor do Azure ATP, consulte [Arquitetura do Azure ATP](atp-architecture.md). 
@@ -52,9 +52,9 @@ O arquivo zip inclui os seguintes arquivos:
 -   Arquivo de configurações com as informações necessárias para conectar-se ao serviço de nuvem do Azure ATP
 
 
->[!div class="step-by-step"]
-[« Etapa 2](install-atp-step2.md)
-[Etapa 4 »](install-atp-step4.md)
+> [!div class="step-by-step"]
+> [« Etapa 2](install-atp-step2.md)
+> [Etapa 4 »](install-atp-step4.md)
 
 
 ## <a name="see-also"></a>Consulte Também

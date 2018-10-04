@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 7fb024e6-297a-4ad9-b962-481bb75a0ba3
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 86941e2081c3893d3ea8499b435968fbad243015
-ms.sourcegitcommit: 959b1f7753b9a8ad94870d2014376d55296fbbd4
+ms.openlocfilehash: d49770f435985027690ddfc05a9359e84841c0ff
+ms.sourcegitcommit: b283bf66e63d76e6dba4564a229e804792794c6d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46133150"
+ms.lasthandoff: 09/29/2018
+ms.locfileid: "47454030"
 ---
 *Aplica-se a: Advanced Threat Analytics versão 1.9*
 
@@ -26,9 +26,9 @@ ms.locfileid: "46133150"
 
 # <a name="install-ata---step-3"></a>Instalação do ATA - Etapa 3
 
->[!div class="step-by-step"]
-[« Etapa 2](install-ata-step2.md)
-[Etapa 4 »](install-ata-step4.md)
+> [!div class="step-by-step"]
+> [« Etapa 2](install-ata-step2.md)
+> [Etapa 4 »](install-ata-step4.md)
 
 ## <a name="step-3-download-the-ata-gateway-setup-package"></a>Etapa 3. Baixe o pacote de instalação do Gateway do ATA
 Após definir as configurações de conectividade do domínio, você poderá baixar o pacote de instalação do Gateway do ATA. O Gateway do ATA do pode ser instalado em um servidor dedicado ou em um controlador de domínio. Se você instalá-lo em um controlador de domínio, ele será instalado como um Gateway Lightweight do ATA. Para obter mais informações sobre o Gateway Lightweight do ATA, confira [Arquitetura do ATA](ata-architecture.md). 
@@ -52,9 +52,9 @@ O arquivo zip inclui os seguintes arquivos:
 -   Arquivo de configurações com as informações necessárias para conectar-se à Central de ATA
 
 
->[!div class="step-by-step"]
-[« Etapa 2](install-ata-step2.md)
-[Etapa 4 »](install-ata-step4.md)
+> [!div class="step-by-step"]
+> [« Etapa 2](install-ata-step2.md)
+> [Etapa 4 »](install-ata-step4.md)
 
 
 ## <a name="related-videos"></a>Vídeos Relacionados

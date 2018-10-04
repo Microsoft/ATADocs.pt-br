@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 1ad5e923-9bbd-4f56-839a-b11a9f387d4b
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 268898c5b39d889b29c2d4f560c8cff3ac70f274
-ms.sourcegitcommit: 7f3ded32af35a433d4b407009f87cfa6099f8edf
+ms.openlocfilehash: 9252e47978a4adc0e2059a3111b362ff2b042daf
+ms.sourcegitcommit: b283bf66e63d76e6dba4564a229e804792794c6d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44125950"
+ms.lasthandoff: 09/29/2018
+ms.locfileid: "47453792"
 ---
 *Aplica-se a: Proteção Avançada contra Ameaças do Azure*
 
@@ -26,9 +26,9 @@ ms.locfileid: "44125950"
 
 # <a name="install-azure-atp---step-7"></a>Instalar o Azure ATP – etapa 7
 
->[!div class="step-by-step"]
-[«Etapa 6](install-atp-step6-vpn.md)
-[Etapa 8»](install-atp-step8-samr.md)
+> [!div class="step-by-step"]
+> [«Etapa 6](install-atp-step6-vpn.md)
+> [Etapa 8»](install-atp-step8-samr.md)
 
 ## <a name="step-7-configure-detection-exclusions-and-honeytoken-accounts"></a>Etapa 7. Configurar exclusões de detecção e contas de honeytoken
 
@@ -66,9 +66,9 @@ O Azure ATP iniciará imediatamente a verificação de atividades suspeitas. Alg
 
 
 
->[!div class="step-by-step"]
-[«Etapa 6](install-atp-step6-vpn.md)
-[Etapa 8»](install-atp-step8-samr.md)
+> [!div class="step-by-step"]
+> [«Etapa 6](install-atp-step6-vpn.md)
+> [Etapa 8»](install-atp-step8-samr.md)
 
 ## <a name="see-also"></a>Consulte Também
 - [Ferramenta de dimensionamento do Azure ATP](http://aka.ms/aatpsizingtool)
