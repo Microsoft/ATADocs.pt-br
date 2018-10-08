@@ -5,19 +5,20 @@ keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 3/21/2018
-ms.topic: article
-ms.prod: ''
-ms.service: advanced-threat-analytics
+ms.date: 6/14/2018
+ms.topic: conceptual
+ms.prod: advanced-threat-analytics
+ms.service: ''
 ms.technology: ''
 ms.assetid: 40a1c5c4-b8d6-477c-8ae5-562b37661624
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: d9666c0a4fb3aad027ac1f85719bc533e919d75a
-ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
+ms.openlocfilehash: cea6d666d3d969070541fc8dcc4fd59726ac8c38
+ms.sourcegitcommit: 959b1f7753b9a8ad94870d2014376d55296fbbd4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46134069"
 ---
 *Aplica-se a: Advanced Threat Analytics versão 1.9*
 
@@ -41,6 +42,28 @@ Você pode marcar manualmente grupos ou contas como confidenciais para aprimorar
 
 5. Acesse a página do perfil da entidade clicando no nome da entidade. Aqui, você poderá ver por que a entidade é considerada confidencial, seja devido à associação a um grupo, seja devido à marcação manual como confidencial.
 
+
+## <a name="sensitive-groups"></a>Grupos confidenciais
+
+A lista de grupos a seguir é considerada Confidencial pelo ATA. Qualquer entidade que é um membro desses grupos é considerada confidencial:
+
+-   Administradores
+-   Usuários avançados
+-   Opers. de contas
+-   Operadores de Servidores
+-   Operadores de Impressão
+-   Operadores de cópia
+-   Replicadores
+-   Usuários da Área de Trabalho Remota 
+-   Operadores de Configuração de Rede 
+-   Criadores de confiança de floresta de entrada
+-   Administradores do domínio
+-   Controladores de Domínio
+-   Proprietários criadores de política de grupo 
+-   Controladores de domínio somente leitura 
+-   Controladores de domínio somente leitura da empresa 
+-   Administradores de esquemas 
+-   Administrador corporativo
      
 ## <a name="see-also"></a>Consulte também
 [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

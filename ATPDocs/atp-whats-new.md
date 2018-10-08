@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 9/05/2018
+ms.date: 9/16/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,16 +13,32 @@ ms.technology: ''
 ms.assetid: 7d0f33db-2513-4146-a395-290e001f4199
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: f6f291ebed680278391498361737e0f8be5ea710
-ms.sourcegitcommit: 5ad28d7b0607c7ea36d795b72928769c629fb80a
+ms.openlocfilehash: f9959f1b517890b725845f8dd01156f9a3e8198b
+ms.sourcegitcommit: 5ff50807f855db1051b977a64eb6e90487ea196c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44166673"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45750547"
 ---
 *Aplica-se a: Proteção Avançada contra Ameaças do Azure*
 
 # <a name="whats-new-in-azure-atp"></a>Novidades do Azure ATP 
+
+## <a name="azure-atp-release-248"></a>Azure ATP versão 2.48
+Lançado em 16 de setembro de 2018
+- **Alerta de segurança:** reconhecimento usando consultas de serviços de diretório
+
+  Esse alerta de segurança melhorou os infográficos e as evidências. 
+
+- **Excluir entidades de detecções** 
+
+  Para reduzir os falsos positivos, você pode optar por excluir entidades das seguintes detecções: 
+  - Conexão VPN suspeita (exclusão de usuário)
+  - Promoção do controlador de domínio suspeito (possível ataque DCShadow)
+  - Solicitação de replicação suspeita (possível ataque DCShadow)
+
+- Essa versão também inclui correções e melhorias para vários problemas.
+
 
 ## <a name="azure-atp-release-247"></a>ATP do Azure versão 2.47
 Lançado em 2 de setembro de 2018

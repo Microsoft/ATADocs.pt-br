@@ -6,19 +6,19 @@ author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
 ms.date: 3/21/2018
-ms.topic: article
-ms.prod: ''
-ms.service: advanced-threat-analytics
+ms.topic: conceptual
+ms.prod: advanced-threat-analytics
+ms.service: ''
 ms.technology: ''
 ms.assetid: 601b48ba-a327-4aff-a1f9-2377a2bb7a42
 ms.reviewer: arzinger
 ms.suite: ems
-ms.openlocfilehash: 7c6eaba8f80dcc7a8fc767f2bb8168221fbc7207
-ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
+ms.openlocfilehash: e4dc613ded1234bad931a67af679bb067c2d7719
+ms.sourcegitcommit: 959b1f7753b9a8ad94870d2014376d55296fbbd4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "30009863"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46134068"
 ---
 *Aplica-se a: Advanced Threat Analytics versão 1.9*
 
@@ -38,7 +38,7 @@ Os campos a seguir e seus valores são encaminhados para o SIEM:
 -   cnt – para alertas que têm uma contagem de vezes que o alerta ocorreu (por exemplo, força bruta que tem uma quantidade de senhas adivinhada)
 -   app – o protocolo usado neste alerta
 -   externalId – a ID do evento que o ATA grava no log de eventos que corresponde a esse alerta
--   cs#label e cs# – essas são as cadeias de caracteres do cliente que o CEF permite usar. cs#label é o nome do novo campo e cs# é o valor, por exemplo: cs1Label=url cs1=https://192.168.0.220/suspiciousActivity/5909ae198ca1ec04d05e65fa
+-   cs#label & cs# – essas são as cadeias de caracteres do cliente que o CEF permite usar. cs#label é o nome do novo campo, e cs# é o valor, por exemplo: cs1Label=url cs1=https://192.168.0.220/suspiciousActivity/5909ae198ca1ec04d05e65fa
 
 Neste exemplo, cs1 é um campo que tem uma URL para o alerta.
 
@@ -76,11 +76,11 @@ May  3 13:39:18 CENTER ATA:CEF:0|Microsoft|ATA|1.8.5942.64854|RetrieveDataProtec
 ### <a name="account-enumeration"></a>Enumeração de conta
 05-10-2017          16:44:22               Auth.Warning    192.168.0.220     1 2017-05-10T13:44:22.706381+00:00 CENTER ATA 596 AccountEnumerationSuspiciousActi ï»¿CEF:0|Microsoft|ATA|1.8.6455.41882|AccountEnumerationSuspiciousActivity|Reconhecimento usando enumeração de conta|5|start=2017-05-10T13:44:20.9930644Z app=Kerberos shost=CLIENT3 msg=A atividade de enumeração de conta suspeita usando o protocolo Kerberos, originada do CLIENT3, foi detectada. O invasor realizou um total de 72 tentativas de adivinhação para nomes de conta, 2 tentativas de adivinhação corresponderam a nomes de conta existentes no Active Directory. externalId=2003 cs1Label=url cs1=https://center/suspiciousActivity/591319368ca1ec02543c56ee
 ### <a name="dns-recon"></a>Reconhecimento de DNS
-05-03-2017          13:16:57               Auth.Warning    192.168.0.220     May  3 10:16:57 CENTER ATA:CEF:0|Microsoft|ATA|1.8.5942.64854|DnsReconnaissanceSuspiciousActivity|Reconnaissance using DNS|5|start=2017-05-03T10:16:41.8297467Z app=Dns shost=CLIENT1 msg=Foi observada uma atividade DNS suspeita, originada do CLIENT1 (que não é um servidor DNS) no DC1. cs1Label=url cs1=https://192.168.0.220/suspiciousActivity/5909ae198ca1ec04d05e65fa 05-03-2017          13:24:21               Auth.Warning    192.168.0.220     May  3 10:24:21 CENTER ATA:CEF:0|Microsoft|ATA|1.8.5942.64854|DnsReconnaissanceSuspiciousActivity|Reconnaissance using DNS|5|start=2017-05-03T10:24:08.0950753Z app=Dns shost=CLIENT1 request=contoso.com requestMethod=Axfr reason=NameError outcome=Failure msg=Foi observada uma atividade DNS suspeita, originada do CLIENT1 (que não é um servidor DNS). A consulta foi para contoso.com (tipo Axfr). A resposta foi NameError. cs1Label=url cs1=https://192.168.0.220/suspiciousActivity/5909ae198ca1ec04d05e65fa
+05-03-2017          13:16:57               Auth.Warning    192.168.0.220     May  3 10:16:57 CENTER ATA:CEF:0|Microsoft|ATA|1.8.5942.64854|DnsReconnaissanceSuspiciousActivity|Reconnaissance using DNS|5|start=2017-05-03T10:16:41.8297467Z app=Dns shost=CLIENT1 msg=Foi observada uma atividade DNS suspeita, originada do CLIENT1 (que não é um servidor DNS) no DC1. cs1Label=url cs1=https://192.168.0.220/suspiciousActivity/5909ae198ca1ec04d05e65fa 05-03-2017          13:24:21               Auth.Warning    192.168.0.220     May  3 10:24:21 CENTER ATA:CEF:0|Microsoft|ATA|1.8.5942.64854|DnsReconnaissanceSuspiciousActivity|Reconhecimento usando DNS|5|start=2017-05-03T10:24:08.0950753Z app=Dns shost=CLIENT1 request=contoso.com requestMethod=Axfr reason=NameError outcome=Failure msg=Foi observada uma atividade DNS suspeita, originada do CLIENT1 (que não é um servidor DNS). A consulta foi para contoso.com (tipo Axfr). A resposta foi NameError. cs1Label=url cs1=https://192.168.0.220/suspiciousActivity/5909ae198ca1ec04d05e65fa
 ### <a name="smb-session-enumeration"></a>Enumeração da sessão SMB
 May  3 11:55:43 CENTER ATA:CEF:0|Microsoft|ATA|1.8.5942.64854|EnumerateSessionsSuspiciousActivity|Reconnaissance using SMB Session Enumeration|5|start=2017-05-03T11:52:02.4360718Z app=SrvSvc shost=CLIENT1 msg=As tentativas de enumeração de sessão SMB foram realizadas com êxito do CLIENT1 no DC1, expondo o user1 (daf::1). cs1Label=url cs1=https://192.168.0.220/suspiciousActivity/5909c53f8ca1ec04d05f1cf1
 ### <a name="samr-enumeration"></a>Enumeração SAMR
-May  3 11:44:48 CENTER ATA:CEF:0|Microsoft|ATA|1.8.5942.64854|SamrReconnaissanceSuspiciousActivity|Reconnaissance using directory services enumeration|5|start=2017-05-03T11:42:46.5911225Z app=Samr shost=CLIENT1 suser=user1 outcome=Success msg=Ocorreram tentativas de realizar as seguintes enumerações de serviços de diretório usando o protocolo SAMR no DC1 do CLIENT1:\r\nEnumeração com êxito de todos os grupos em domain1.test.local pelo user1 cs1Label=url cs1=https://192.168.0.220/suspiciousActivity/5909c2b08ca1ec04d05f0e19
+May 3 11:44:48 CENTER ATA:CEF:0|Microsoft|ATA|1.8.5942.64854|SamrReconnaissanceSuspiciousActivity|Reconhecimento usando enumeração dos serviços de diretório|5|start=2017-05-03T11:42:46.5911225Z app=Samr shost=CLIENT1 suser=user1 outcome=Success msg=Ocorreram tentativas de realizar as seguintes enumerações de serviços de diretório usando o protocolo SAMR no DC1 do CLIENT1:\r\nEnumeração com êxito de todos os grupos em domain1.test.local pelo user1 cs1Label=url cs1=https://192.168.0.220/suspiciousActivity/5909c2b08ca1ec04d05f0e19
 ### <a name="remote-execution"></a>Execução Remota
 May  3 12:36:47 CENTER ATA:CEF:0|Microsoft|ATA|1.8.5942.64854|RemoteExecutionSuspiciousActivity|Remote execution attempt detected|3|start=2017-05-03T12:34:32.3714348Z app=ServiceControl shost=CLIENT1 suser=Administrator outcome=Success msg=As tentativas de execução remota a seguir foram realizadas no DC1 do CLIENT1:\r\nCriação remota com êxito de PSEXESVC pelo Administrador. cs1Label=url cs1=https://192.168.0.220/suspiciousActivity/5909cedf8ca1ec04d05f5692
 ### <a name="skeleton-key"></a>Skeleton Key

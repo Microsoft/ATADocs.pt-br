@@ -7,7 +7,7 @@
 ## [Pré-requisitos do Azure ATP](atp-prerequisites.md)
 ## [Arquitetura do Azure ATP](atp-architecture.md)
 ## [Planejar a capacidade do Azure ATP](atp-capacity-planning.md)
-### [Configurar o proxy para permitir a comunicação](configure-proxy.md)
+### [Configuração de proxy](configure-proxy.md)
 # Implantar
 ## [1 Criar um espaço de trabalho no portal de gerenciamento de espaço de trabalho](install-atp-step1.md)
 ## [2 Conectar-se ao AD DS](install-atp-step2.md)

@@ -6,19 +6,19 @@ author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
 ms.date: 3/21/2018
-ms.topic: article
-ms.prod: ''
-ms.service: advanced-threat-analytics
+ms.topic: conceptual
+ms.prod: advanced-threat-analytics
+ms.service: ''
 ms.technology: ''
 ms.assetid: 5a65285c-d1de-4025-9bb4-ef9c20b13cfa
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 87d3f1de8167c1198e6b334826f90df83cc96780
-ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
+ms.openlocfilehash: e3f59bc7c6873407d8764dc5ab64bfd7a52fdebe
+ms.sourcegitcommit: 959b1f7753b9a8ad94870d2014376d55296fbbd4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "30009261"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46133337"
 ---
 *Aplica-se a: Advanced Threat Analytics versão 1.9*
 
@@ -30,7 +30,8 @@ ms.locfileid: "30009261"
 
 Se seu Centro de ATA não for iniciado, execute o seguinte procedimento de solução de problemas:
 
-1.  Execute o seguinte comando do Windows PowerShell: `Get-Service Pla | Select Status` para garantir que o serviço de contador de desempenho está em execução. Se não estiver, é um problema de plataforma e você precisa se certificar de que o serviço está em execução novamente.
+1.  Execute o seguinte comando do Windows PowerShell: `Get-Service Pla | Select Status`
+    para verificar se o serviço do contador de desempenho está em execução. Se não estiver, é um problema de plataforma e você precisa se certificar de que o serviço está em execução novamente.
 2.  Se ele estava em execução, tente reiniciá-lo e veja se isso resolve o problema: `Restart-Service Pla`
 3.  Tente criar um novo coletor de dados manualmente (qualquer um será suficiente, até mesmo coletar a CPU do computador, por exemplo).
 Se puder iniciar, provavelmente a plataforma estará bem. Caso contrário, a plataforma ainda será o problema.
@@ -58,7 +59,8 @@ Isso acontece porque, como parte do processo de instalação do Gateway Lightwei
 
 **Resolução**
 
-1. Nas chaves de registro, se houver um valor DWORD chamado **Desabilitar os Contadores de Desempenho** certifique-se de que ele seja definido como **0**: `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\PerfOS\Performance\` `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\PerfProc\Performance`
+1. Nas chaves do Registro, se houver um valor DWORD chamado **Desabilitar os Contadores de Desempenho**, verifique se ele está definido como **0**: `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\PerfOS\Performance\`
+    `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\PerfProc\Performance`
  
 2. Em seguida, reinicie o serviço de PLA. O Gateway Lightweight do ATA automaticamente detectará a mudança e reiniciará o serviço.
 

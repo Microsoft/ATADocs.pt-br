@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 8/9/2018
+ms.date: 9/27/2018
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
 ms.service: ''
@@ -13,19 +13,19 @@ ms.technology: ''
 ms.assetid: a5f90544-1c70-4aff-8bf3-c59dd7abd687
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 06789ac50d52a9b202eea9fb9fb6ea74aaf7a5f3
-ms.sourcegitcommit: 959b1f7753b9a8ad94870d2014376d55296fbbd4
+ms.openlocfilehash: f5a21b1b84d164542e04d77e3a6a57fe5c944102
+ms.sourcegitcommit: 1b23381ca4551a902f6343428d98f44480077d30
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46133932"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47403192"
 ---
 *Aplica-se a: Advanced Threat Analytics versão 1.9*
 
 
 
 # <a name="ata-prerequisites"></a>Pré-requisitos do ATA
-Este artigo descreve os requisitos para uma implantação bem-sucedida do ATA em seu ambiente
+Este artigo descreve os requisitos para uma implantação bem-sucedida do ATA no seu ambiente.
 
 > [!NOTE]
 > Para obter informações sobre como planejar a capacidade e os recursos, confira [Planejamento de capacidade do ATA](ata-capacity-planning.md).
@@ -61,7 +61,7 @@ Esta seção mostra as informações que você deve obter, bem como as contas e 
 
 -    Recomendado: o usuário deve ter permissões de leitura somente no contêiner Objetos Excluídos. Isso permite que o ATA detecte a exclusão em massa de objetos no domínio. Para saber mais sobre como configurar permissões de somente leitura no contêiner Objetos Excluídos, confira a seção **Alterar permissões em um contêiner de objetos excluídos** no artigo [Exibir ou definir permissões em um Objeto de Diretório](https://technet.microsoft.com/library/cc816824%28v=ws.10%29.aspx).
 
--   Opcional: uma conta de usuário que não tem nenhuma atividade de rede. Essa conta está configurada como o usuário Honeytoken do ATA. Para configurar o usuário Honeytoken, é necessária a SID da conta de usuário, não o nome de usuário. Para obter mais informações, consulte [Configurar as exclusões de endereço IP e o usuário Honeytoken](install-ata-step7.md).
+-   Opcional: uma conta de usuário que não tem nenhuma atividade de rede. Essa conta está configurada como um usuário Honeytoken do ATA. Para configurar uma conta como um usuário Honeytoken, somente o nome de usuário é necessário. Para obter mais informações sobre configuração de Honeytoken, consulte [Configurar as exclusões de endereço IP e o usuário Honeytoken](install-ata-step7.md).
 
 -   Opcional: além de coletar e analisar o tráfego de rede para e nos controladores de domínio, o ATA pode usar os eventos do Windows 4776, 4732, 4733, 4728, 4729, 4756 e 4757 para aprimorar ainda mais as detecções de Pass-the-Hash, Força Bruta, Modificação para grupos confidenciais e Honey Tokens do ATA. Esses eventos podem ser recebidos de seu SIEM ou definindo o Encaminhamento de Eventos do Windows no controlador de domínio. Os eventos coletados fornecem à ATA informações adicionais que não estão disponíveis por meio do tráfego de rede do controlador de domínio.
 

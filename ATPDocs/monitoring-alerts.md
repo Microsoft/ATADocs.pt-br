@@ -6,18 +6,19 @@ author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
 ms.date: 4/15/2018
-ms.topic: article
+ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
 ms.technology: ''
 ms.assetid: d0551e91-3b21-47d5-ad9d-3362df6d47c0
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 34702edcde2b96ca16570af5803a03d4f0f66c6e
-ms.sourcegitcommit: e0209c6db649a1ced8303bb1692596b9a19db60d
+ms.openlocfilehash: 7cffaef77a80b5c1c9bb33694ef2c7a73ef80ee0
+ms.sourcegitcommit: 5ad28d7b0607c7ea36d795b72928769c629fb80a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44166911"
 ---
 *Aplica-se a: Proteção Avançada contra Ameaças do Azure*
 
@@ -61,7 +62,7 @@ O Centro de Integridade do Azure ATP informa quando há um problema algum em seu
 |----|----|----|----|
 |O sensor do Azure ATP está offline no momento devido a problemas de conectividade com todos os controladores de domínio configurados.|Isso afeta a capacidade do Azure ATP de detectar atividades suspeitas relacionadas aos controladores de domínio monitorados por esse sensor do Azure ATP.| Certifique-se de que os controladores de domínio estejam em funcionamento e de que esse sensor do Azure ATP possa abrir conexões LDAP para eles.|Média|
 
-## <a name="sensor-stopped-communicating"></a>o sensor parou de se comunicar
+## <a name="sensor-stopped-communicating"></a>O sensor parou de se comunicar
 
 |Alerta|Descrição|Resolução|Severidade|
 |----|----|----|----|
@@ -85,18 +86,23 @@ O Centro de Integridade do Azure ATP informa quando há um problema algum em seu
 |----|----|----|----|
 |O sensor do Azure ATP está recebendo mais tráfego de rede do que pode processar.|Parte do tráfego de rede não está sendo analisado, o que pode afetar a capacidade de detectar atividades suspeitas provenientes dos controladores de domínio monitorados por este sensor do Azure ATP.|Considere [adicionar mais processadores e memória](atp-capacity-planning.md) conforme necessário. Se esse for um sensor autônomo do Azure ATP, reduza o número de controladores de domínio monitorados.<br></br>Isso também pode ocorrer se você estiver usando controladores de domínio em máquinas virtuais VMware. Para evitar esses alertas, verifique se as configurações a seguir estão definidas como 0 ou Desabilitado na máquina virtual:<br></br>– TsoEnable<br></br>– LargeSendOffload(IPv4)<br></br>– Descarregamento de TSO do IPv4<br></br>Além disso, considere desabilitar o Descarregamento TSO gigante do IPv4. Para obter mais informações, consulte a documentação do VMware.|Média|
 
-## <a name="sensor-service-failed-to-start"></a>o serviço do sensor falhou ao iniciar
+## <a name="sensor-service-failed-to-start"></a>O serviço do sensor falhou ao iniciar
 
 |Alerta|Descrição|Resolução|Severidade|
 |----|----|----|----|
 |O sensor do Azure ATP não conseguiu iniciar por pelo menos 30 minutos.|Isso pode afetar a capacidade de detectar atividades suspeitas provenientes dos controladores de domínio monitorados por este sensor do Azure ATP.|Monitore os logs do sensor do Azure ATP para entender a causa raiz da falha do serviço do sensor do Azure ATP.|Alta|
 
-## <a name="sensor-reached-a-memory-resource-limit"></a>o sensor atingiu o limite de um recurso de memória
+## <a name="sensor-reached-a-memory-resource-limit"></a>O sensor atingiu o limite de um recurso de memória
 
 |Alerta|Descrição|Resolução|Severidade|
 |----|----|----|----|
 |O sensor do Azure ATP interrompeu seu funcionamento e reiniciará automaticamente para proteger o controlador de domínio de uma condição de memória insuficiente.|O sensor do Azure ATP impõe limitações de memória a si mesmo para impedir que o controlador de domínio tenha limitações de recursos. Isso ocorre quando o uso de memória no controlador de domínio é alto. Os dados do controlador de domínio são apenas parcialmente monitorados.|Aumente a quantidade de memória (RAM) no controlador de domínio ou adicione mais controladores de domínio a esse site para melhor distribuir o carregamento deste controlador de domínio.|Média|
 
+## <a name="sensor-outdated"></a>Sensor desatualizado
+
+|Alerta|Descrição|Resolução|Severidade|
+|----|----|----|----|
+|Um sensor do Azure ATP está desatualizado.|Um sensor do Azure ATP está executando uma versão desatualizada há três ou mais versões.|Atualize manualmente o sensor e verifique por que ele não está sendo atualizado automaticamente. Se isso não funcionar, baixe o pacote de instalação mais recente do sensor e desinstale e reinstale o sensor. Para obter mais informações, consulte [Instalando o sensor do Azure ATP](install-atp-step4.md).|Média|
 
 ## <a name="see-also"></a>Consulte Também
 

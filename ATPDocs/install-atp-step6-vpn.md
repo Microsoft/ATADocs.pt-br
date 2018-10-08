@@ -1,23 +1,24 @@
 ---
-title: "Instalar a Proteção Avançada contra Ameaças do Azure – etapa 6 | Microsoft Docs"
-description: "Nesta etapa da instalação do ATP, você integra sua VPN."
-keywords: 
+title: Instalar a Proteção Avançada contra Ameaças do Azure – etapa 6 | Microsoft Docs
+description: Nesta etapa da instalação do ATP, você integra sua VPN.
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 2/14/2018
-ms.topic: get-started-article
-ms.prod: 
+ms.date: 6/14/2018
+ms.topic: conceptual
+ms.prod: ''
 ms.service: azure-advanced-threat-protection
-ms.technology: 
+ms.technology: ''
 ms.assetid: 0d9d2a1d-6c76-4909-b6f9-58523df16d4f
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: d29210983f3f9f879b462ef760d0b3fe6e53cd5d
-ms.sourcegitcommit: 03e959b7ce4b6df421297e1872e028793c967302
+ms.openlocfilehash: 4923056f72147b327ca85f842acf328d6d8ef6f3
+ms.sourcegitcommit: 7f3ded32af35a433d4b407009f87cfa6099f8edf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44126120"
 ---
 *Aplica-se a: Proteção Avançada contra Ameaças do Azure*
 
@@ -67,7 +68,7 @@ Execute as seguintes etapas em seu servidor RRAS.
      
 ### <a name="configure-vpn-in-atp"></a>Configurar VPN no ATP
 
-O Azure ATP coleta dados da VPN que ajudam a caracterizar os locais dos quais os computadores se conectam à rede e a detectar conexões VPN anormais.
+O Azure ATP coleta dados da VPN que ajudam a criar o perfil dos locais dos quais os computadores se conectam à rede e a detectar conexões VPN suspeitas.
 
 Para configurar dados de VPN no ATP:
 

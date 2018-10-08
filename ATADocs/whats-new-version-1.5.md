@@ -6,19 +6,19 @@ author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
 ms.date: 01/23/2017
-ms.topic: article
-ms.prod: ''
-ms.service: advanced-threat-analytics
+ms.topic: conceptual
+ms.prod: advanced-threat-analytics
+ms.service: ''
 ms.technology: ''
 ms.assetid: a0d64aff-ca9e-4300-b3f8-eb3c8b8ae045
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: a00a555c0dc4590043f93abcd650f6e38d719e6c
-ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
+ms.openlocfilehash: 800d5d0ebf7eb044982c35e1f348b6c2faf14b07
+ms.sourcegitcommit: 959b1f7753b9a8ad94870d2014376d55296fbbd4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2017
-ms.locfileid: "24018262"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46133235"
 ---
 # <a name="whats-new-in-ata-version-15"></a>Novidades na versão 1.5 do ATA
 Essas notas de versão fornecem informações sobre problemas conhecidos nesta versão da Advanced Threat Analytics.
@@ -48,7 +48,7 @@ Depois de atualizar sua implantação do ATA para a versão 1.5, você obterá o
 
 ![Erro de GW do ATA](media/ata-install-error.png)
 
-<b>Solução alternativa:</b> envie um email para <ataeval@microsoft.com> e solicite etapas de solicitação alternativa.
+<b>Solução alternativa:</b> envie um email para <ataeval@microsoft.com> e solicite as etapas de solução alternativa.
 ### <a name="deployment"></a>Implantação
 A pasta especificada para o "Caminho de dados do banco de dados" e "Caminho de diário do banco de dados" deve estar vazia (sem arquivos ou subpastas).
 Se não estiver vazia, a implantação não poderá avançar.

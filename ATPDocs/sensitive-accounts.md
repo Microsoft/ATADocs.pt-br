@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 43e57f87-ca85-4922-8ed0-9830139fe7cb
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: b8b48b8090e109c9fc23c52b05f986b34e2549eb
-ms.sourcegitcommit: 5ad28d7b0607c7ea36d795b72928769c629fb80a
+ms.openlocfilehash: ccb87ab6b3fabed5edaf7c32324701c74259f098
+ms.sourcegitcommit: 5ff50807f855db1051b977a64eb6e90487ea196c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44165874"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45750430"
 ---
 *Aplica-se a: Proteção Avançada contra Ameaças do Azure*
 
@@ -37,7 +37,6 @@ A lista de grupos a seguir é considerada confidencial pelo Azure ATP. Qualquer 
 -   Operadores de Impressão
 -   Operadores de cópia
 -   Replicadores
--   Usuários da Área de Trabalho Remota 
 -   Operadores de Configuração de Rede 
 -   Criadores de confiança de floresta de entrada
 -   Administradores do domínio
@@ -48,6 +47,8 @@ A lista de grupos a seguir é considerada confidencial pelo Azure ATP. Qualquer 
 -   Administradores de esquemas 
 -   Administrador corporativo
 
+ > [!NOTE]
+ > Até setembro de 2018, usuários da Área de Trabalho Remota eram considerados confidenciais automaticamente pelo Azure ATP. Entidades ou grupos da Área de Trabalho Remota adicionados após essa data não são mais marcados como confidenciais automaticamente, enquanto as entidades e grupos da Área de Trabalho Remota adicionados antes dessa data podem permanecer marcados como Confidenciais. Essa configuração Confidencial agora pode ser alterada manualmente.  
 
 ## <a name="tagging-sensitive-accounts"></a>Marcando contas confidenciais
 

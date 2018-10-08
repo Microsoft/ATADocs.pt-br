@@ -2,23 +2,23 @@
 title: Integração da Proteção Avançada contra Ameaças do Azure com o Windows Defender ATP | Microsoft Docs
 description: Como integrar a Proteção Avançada contra Ameaças do Azure com o Windows Defender ATP para cobertura completa de detecção de ameaças
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 6/5/2018
-ms.topic: get-started-article
+ms.date: 9/12/2018
+ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
 ms.technology: ''
 ms.assetid: f6f3ed75-d6bb-4966-a9a7-5339c4f3ebac
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 6d6c2cdb157d4e3f75794c8c40abfc7556e314d5
-ms.sourcegitcommit: b218f60b42a25fe486d774d97719590e6fa74e10
+ms.openlocfilehash: 4dca942b6c7b066cfec44e51aaad0f1e003da6ec
+ms.sourcegitcommit: 5ff50807f855db1051b977a64eb6e90487ea196c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34760066"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45750411"
 ---
 *Aplica-se a: Proteção Avançada contra Ameaças do Azure*
 
@@ -59,13 +59,9 @@ Para habilitar esse recurso, você precisa de uma licença para o Azure ATP e o 
 
 ## <a name="how-to-integrate-azure-atp-with-windows-defender-atp"></a>Como integrar o Azure ATP ao Windows Defender ATP
 
-1. Defina o espaço de trabalho que você deseja integrar como **Primário**. Apenas um espaço de trabalho pode ser o espaço de trabalho primário e apenas um espaço de trabalho primário pode ser integrado a outros serviços. Se, em algum momento no futuro, você quiser que este espaço de trabalho não seja mais o espaço de trabalho primário, primeiro você precisará remover a integração antes que possa defini-lo como não primário.
+1. Clique em **Configuração** e, em **Fontes de dados**, selecione **Windows Defender ATP**. Em seguida, clique no link para **Gerenciamento de espaço de trabalho**. Isso só estará disponível se você tiver uma licença do Windows Defender ATP e já tiver executado o processo de ambientação do Windows Defender ATP. 
 
- ![espaço de trabalho primário](./media/primary-workspace.png)
-
-2. Clique em **Configuração** e, em **Fontes de dados**, selecione **Windows Defender ATP**. Em seguida, clique no link para **Gerenciamento de espaço de trabalho**. Isso só estará disponível se você tiver uma licença do Windows Defender ATP e já tiver executado o processo de ambientação do Windows Defender ATP. 
-
-3. Em seu espaço de trabalho primário, clique na engrenagem de configurações.
+2. No seu workspace, clique na engrenagem de configurações.
 
  ![integração do espaço de trabalho](./media/edit-workspace.png)
  
@@ -95,7 +91,8 @@ Se clicar na notificação, você será direcionado para o portal do Windows Def
 
 No portal do Windows Defender ATP, quando clica em um ponto de extremidade, você pode exibir alertas do Azure ATP. Se você clicar nos alertas para esta entidade no Windows Defender ATP, a página de perfil da entidade será aberta no Azure ATP. 
  
- > ![NOTE] No momento, a integração do Azure ATP com o Windows Defender ATP dá suporte apenas a usuários e computadores do AD local. Os usuários do Azure AD e as máquinas virtuais que são gerenciadas no Azure não serão exibidos como parte da integração 
+ > [!NOTE]
+ > No momento, a integração do Azure ATP com o Windows Defender ATP é compatível apenas com usuários e computadores do AD local. Os usuários do Azure AD e as máquinas virtuais que são gerenciadas no Azure não serão exibidos como parte da integração 
 
 ![Alertas do Windows Defender ATP](./media/wd-atp-alerts.png)
 

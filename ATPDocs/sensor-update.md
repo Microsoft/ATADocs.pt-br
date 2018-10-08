@@ -5,20 +5,20 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 8/06/2018
-ms.topic: get-started-article
+ms.date: 9/12/2018
+ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
 ms.technology: ''
 ms.assetid: 603d9e09-a07d-4357-862f-d5682c8bc3dd
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 35ca436a1da10b1675daed974920c9dc8ccc3da0
-ms.sourcegitcommit: ca6153d046d8ba225ee5bf92cf55d0bd57cf4765
+ms.openlocfilehash: 8a6481070abf1188507f31dbd01b26f7221b2e36
+ms.sourcegitcommit: a5823d0dfc48783ab990a99ca3f65b614fb49e75
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39585011"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44697235"
 ---
 *Aplica-se a: Proteção Avançada contra Ameaças do Azure*
 
@@ -28,7 +28,9 @@ ms.locfileid: "39585011"
 
 O serviço Azure ATP é atualizado algumas vezes ao mês com correções de bugs, melhorias de desempenho e novas detecções. Ocasionalmente, essas atualizações exigem uma atualização correspondente dos sensores. 
 
-Se você não atualizar os sensores, talvez eles não consigam se comunicar com o serviço de nuvem Azure ATP, o que poderá resultar na degradação do serviço.
+Se você não atualizar os sensores, talvez eles não consigam se comunicar com o serviço de nuvem Azure ATP, o que poderá resultar na degradação do serviço. 
+
+A autenticação entre os sensores e o serviço de nuvem do Azure usa autenticação mútua forte baseada em certificado. 
 
 Cada atualização é testada e validada em todos os sistemas operacionais compatíveis para causar o mínimo de impacto na rede e nas operações.
 

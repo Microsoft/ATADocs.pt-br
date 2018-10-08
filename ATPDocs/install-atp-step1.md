@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 15ee7d0b-9a0c-46b9-bc71-98d0b4619ed0
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 6f44bbf50cff2e983a7ddb1ef1cf54ebaf928741
-ms.sourcegitcommit: 7f3ded32af35a433d4b407009f87cfa6099f8edf
+ms.openlocfilehash: 6874c8a23372950dacdf328b1e885b7d039c8433
+ms.sourcegitcommit: 5ff50807f855db1051b977a64eb6e90487ea196c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44126222"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45750496"
 ---
 *Aplica-se a: Proteção Avançada contra Ameaças do Azure*
 
@@ -51,7 +51,7 @@ Depois de confirmar que sua rede atende aos requisitos do sensor, você poderá 
 
 1. Clique em **Criar espaço de trabalho**.
 
-2. Na caixa de diálogo **Criar novo espaço de trabalho**, nomeie seu espaço de trabalho e selecione uma **Geolocalização** para seu data center. Somente um espaço de trabalho pode ser definido como primário. Definir um espaço de trabalho como primário afeta as integrações – você só pode integrar o Azure ATP com o Windows Defender ATP para seu espaço de trabalho primário. Você pode alterar qual espaço de trabalho é primário posteriormente, mas, para fazer isso, você precisará remover as integrações já definidas para o espaço de trabalho primário atual.
+2. Na caixa de diálogo **Criar novo espaço de trabalho**, nomeie seu espaço de trabalho e selecione uma **Geolocalização** para seu data center. Um workspace pode ser definido como primário. Definir um espaço de trabalho como primário afeta as integrações – você só pode integrar o Azure ATP com o Windows Defender ATP para seu espaço de trabalho primário. Você pode alterar qual espaço de trabalho é primário posteriormente, mas, para fazer isso, você precisará remover as integrações já definidas para o espaço de trabalho primário atual.
  > [!NOTE]
  > Depois de selecionar uma Geolocalização, você não poderá modificá-la.
     ![Espaço de trabalho do Azure ATP](media/create-workspace.png)
@@ -65,7 +65,7 @@ Depois de confirmar que sua rede atende aos requisitos do sensor, você poderá 
 
     ![Espaços de trabalho do Azure ATP](media/atp-workspaces.png)
 
-- Somente o espaço de trabalho primário pode ser editado. Para fazer alterações em outros espaços de trabalho, você pode excluí-los e adicioná-los novamente. Se quiser excluir o espaço de trabalho primário, primeiro você precisará desligar as integrações e definir o espaço de trabalho como não **Primário** antes que ele possa ser excluído.
+- Somente o espaço de trabalho primário pode ser editado. Se quiser excluir o espaço de trabalho primário, primeiro você precisará desligar as integrações e definir o espaço de trabalho como não **Primário** antes que ele possa ser excluído.
 - Para editar um espaço de trabalho Primário, primeiro você precisa desligar as integrações existentes no espaço de trabalho.
 
 - Retenção de dados – espaços de trabalho excluídos não são exibidos na interface do usuário. Para obter mais informações sobre a retenção de dados do Azure ATP, veja [privacidade e segurança de dados do Azure ATP](atp-privacy-compliance.md).
