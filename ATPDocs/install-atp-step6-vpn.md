@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 0d9d2a1d-6c76-4909-b6f9-58523df16d4f
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 4923056f72147b327ca85f842acf328d6d8ef6f3
-ms.sourcegitcommit: 7f3ded32af35a433d4b407009f87cfa6099f8edf
+ms.openlocfilehash: 9ce1bbbda96cc8a10b026f2f422ac79b1b2bae55
+ms.sourcegitcommit: b283bf66e63d76e6dba4564a229e804792794c6d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44126120"
+ms.lasthandoff: 09/29/2018
+ms.locfileid: "47454098"
 ---
 *Aplica-se a: Proteção Avançada contra Ameaças do Azure*
 
@@ -26,9 +26,9 @@ ms.locfileid: "44126120"
 
 # <a name="install-azure-atp---step-6"></a>Instalar o Azure ATP – etapa 6
 
->[!div class="step-by-step"]
-[«Etapa 5](install-atp-step5.md)
-[Etapa 7»](install-atp-step7.md)
+> [!div class="step-by-step"]
+> [«Etapa 5](install-atp-step5.md)
+> [Etapa 7»](install-atp-step7.md)
 
 ## <a name="step-6-integrate-vpn"></a>Etapa 6. Integrar a VPN
 
@@ -91,9 +91,9 @@ Depois que o sensor do Azure ATP receber os eventos de VPN e os enviar para o se
 
 
 
->[!div class="step-by-step"]
-[«Etapa 6](install-atp-step5.md)
-[Etapa 7»](install-atp-step7.md)
+> [!div class="step-by-step"]
+> [«Etapa 6](install-atp-step5.md)
+> [Etapa 7»](install-atp-step7.md)
 
 
 ## <a name="see-also"></a>Consulte Também
