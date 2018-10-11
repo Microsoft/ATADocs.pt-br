@@ -5,20 +5,20 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 8/30/2018
-ms.topic: get-started-article
+ms.date: 9/25/2018
+ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
 ms.technology: ''
 ms.assetid: ab1e8dd9-a6c2-4c68-89d5-343b8ec56142
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: d37a55bdb1c437f7775f530cfc143146eb38ba96
-ms.sourcegitcommit: 93a133430ac85d6db7afad5f6f2583b3a39c423a
+ms.openlocfilehash: d54bfa71c2f587450fe7c68aaca1e721356c11d7
+ms.sourcegitcommit: 8e80f59409c65e7d8d60ec7de8b96b621795699a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43469690"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47168528"
 ---
 *Aplica-se a: Proteção Avançada contra Ameaças do Azure*
 
@@ -32,7 +32,9 @@ Para facilitar a verificação do status atual de cada uma das políticas de aud
 ![Alerta de Integridade da política de auditoria avançada](media/atp-health-alert-audit-policy.png)
 
 
-A política de auditoria de segurança avançada está habilitada via GPO. Esses eventos de auditoria são registrados nos Eventos do Windows do controlador de domínio. Isso deve ser habilitado na **Política de controladores de domínio padrão** no Active Directory.
+A Política de Auditoria de Segurança Avançada é habilitada por meio do GPO de **Política de Controladores de Domínio Padrão**. Esses eventos de auditoria são registrados nos Eventos do Windows do controlador de domínio. 
+
+
 
 <br>Modifique as políticas de auditoria avançadas do seu controlador de domínio usando as instruções a seguir:
 
@@ -50,9 +52,12 @@ A política de auditoria de segurança avançada está habilitada via GPO. Esses
 
     ![Validação de credenciais](media/atp-advanced-audit-policy-check-step-3.png)
 
-6. Vá para Logon na conta, clique duas vezes em **Gerenciamento do grupo de segurança de auditoria** e selecione **Configurar estes eventos de auditoria**, tanto para eventos de êxito quanto para os de falha.
+6. Vá para Gerenciamento da Conta, clique duas vezes em **Gerenciamento do Grupo de Segurança de Auditoria** e selecione **Configurar estes eventos de auditoria**, tanto para eventos de êxito quanto para os de falha.
 
     ![Auditoria de gerenciamento do grupo de distribuição](media/atp-advanced-audit-policy-check-step-4.png)
+
+> [!NOTE]
+> - Se você optar por usar a política local, adicione os logs de auditoria de **Logon da Conta** e **Gerenciamento de Conta** em sua política local. Se você estiver configurando a política de auditoria avançada, force a [subcategoria de política de auditoria](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/audit-force-audit-policy-subcategory-settings-to-override).
 
 7. Após a aplicação por meio do GPO, os novos eventos ficam visíveis nos **Logs de Eventos do Windows**.
 

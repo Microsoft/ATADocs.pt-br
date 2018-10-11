@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 8/12/2018
+ms.date: 9/25/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: d7c95f8c-04f8-4946-9bae-c27ed362fcb0
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 353845c3fb03d5bd4af18ea467fceea57010f33e
-ms.sourcegitcommit: 7f3ded32af35a433d4b407009f87cfa6099f8edf
+ms.openlocfilehash: 03aa84b4288e4155b579acc12f03b7ecdb55b160
+ms.sourcegitcommit: 8e80f59409c65e7d8d60ec7de8b96b621795699a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44126001"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47168596"
 ---
 *Aplica-se a: Proteção Avançada contra Ameaças do Azure*
 
@@ -51,12 +51,15 @@ Após a instalação do sensor do Azure ATP, execute as etapas a seguir para def
       - Pelo menos um controlador de domínio na lista deve ser um catálogo global. Isso permite que o Azure ATP resolva os objetos de usuário e computador em outros domínios na floresta.
 
   - **Capturar adaptadores de rede** (obrigatório):
-     - Para um sensor autônomo do Azure ATP em um servidor dedicado, selecione os adaptadores de rede que estão configurados como a porta de espelho do destino. Eles recebem o tráfego do controlador de domínio espelhado.
+   
      - Para um sensor do Azure ATP, trata-se de todos os adaptadores de rede usados para comunicação com outros computadores da organização.
+    - Para um sensor autônomo do Azure ATP em um servidor dedicado, selecione os adaptadores de rede que estão configurados como a porta de espelho do destino. Eles recebem o tráfego do controlador de domínio espelhado.
 
-    - **Candidato a sincronizador de domínio**: qualquer sensor autônomo do Azure ATP definido para ser um candidato a sincronizador de domínio pode ser responsável pela sincronização entre o Azure ATP e o domínio do Active Directory. Dependendo do tamanho do domínio, a sincronização inicial pode ser demorada e consumir muitos recursos. Por padrão, somente sensores autônomos do Azure ATP são definidos como candidatos a sincronizador de domínio.
-   É recomendável desabilitar que o sensor do Azure ATP do site remoto seja candidato a sincronizador de domínio.
-   Se o controlador de domínio for somente leitura, não o defina como um candidato ao sincronizador do domínio. Para obter mais informações, consulte [Arquitetura do Azure ATP](atp-architecture.md#azure-atp-sensor-features).
+    - **Candidato ao sincronizador de domínio**: por padrão, os sensores do Azure ATP não são candidatos ao sincronizador do domínio, embora os sensores autônomos do ATP do Azure sejam. Para selecionar manualmente um sensor do ATP do Azure como um candidato de sincronizador do domínio, alterne a opção **Candidato a sincronizador de domínio** para **LIGADO** na tela de configuração. 
+    
+        O sincronizador de domínio é responsável pela sincronização entre o Azure ATP e o domínio do Active Directory. Dependendo do tamanho do domínio, a sincronização inicial pode ser demorada e consumir muitos recursos. 
+   É recomendável desabilitar que os sensores do Azure ATP do site remoto sejam candidatos a sincronizador de domínio.
+   Se o controlador de domínio for somente leitura, não o defina como um candidato ao sincronizador do domínio. Para obter mais informações sobre a sincronização de domínio do Azure ATP, veja [arquitetura do Azure ATP](atp-architecture.md#azure-atp-sensor-features)
   
 4. Clique em **Salvar**.
 

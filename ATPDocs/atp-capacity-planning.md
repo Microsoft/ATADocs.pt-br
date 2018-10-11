@@ -12,12 +12,12 @@ ms.prod: ''
 ms.assetid: da0ee438-35f8-4097-b3a1-1354ad59eb32
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 3426829c0c3b9b52ec1c0fb2c7f19e5a0944bfdf
-ms.sourcegitcommit: 7f3ded32af35a433d4b407009f87cfa6099f8edf
+ms.openlocfilehash: e894422e7264650186c6f4eea28d5a9099ca7914
+ms.sourcegitcommit: 56065ee43dac299203871cd6f025315520750b3b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44126358"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47233891"
 ---
 *Aplica-se a: Proteção Avançada contra Ameaças do Azure*
 
@@ -58,7 +58,7 @@ Ao decidir o tipo de implantação do sensor, considere os seguintes benefícios
 Considere as seguintes questões ao decidir quantos sensores autônomos do Azure ATP implantar.
 
 -   **Florestas e domínios do Active Directory**<br>
-    O Azure ATP pode monitorar o tráfego de vários domínios em uma única floresta do Active Directory para cada espaço de trabalho que você criar. Para monitorar várias florestas, você precisa criar vários espaços de trabalho. 
+    O Azure ATP pode monitorar o tráfego de vários domínios em várias florestas do Active Directory para cada workspace que você cria. 
 
 -   **Espelhamento de porta**<br>
 Considerações de espelhamento de porta podem exigir que você implante vários sensores autônomos do Azure ATP por data center ou site de filial.

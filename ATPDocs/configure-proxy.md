@@ -2,23 +2,23 @@
 title: Configurar seu proxy ou firewall para habilitar a comunicação do Azure ATP com o sensor | Microsoft Docs
 description: Descreve como configurar o firewall ou proxy para permitir a comunicação entre o serviço de nuvem do Azure ATP e sensores do Azure ATP
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 5/29/2018
-ms.topic: get-started-article
+ms.date: 9/25/2018
+ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
 ms.technology: ''
 ms.assetid: 9c173d28-a944-491a-92c1-9690eb06b151
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 2f39c0d3628c3a3cc9e034fa1da8bb5a66bc704b
-ms.sourcegitcommit: 3eade64779002d2c8ae005565bc69e1b3f89fb7d
+ms.openlocfilehash: fa6bb10b029649a158d7733b10fec51c52acb9f7
+ms.sourcegitcommit: 8e80f59409c65e7d8d60ec7de8b96b621795699a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34560234"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47168545"
 ---
 *Aplica-se a: Proteção Avançada contra Ameaças do Azure*
 
@@ -45,15 +45,15 @@ O proxy estático é configurável por meio do Registro. Você deve copiar a con
 
 1.   Não deixe de fazer backup das chave do Registro antes de modificá-las.
 
-2. No Registro, procure o valor `DefaultConnectionSetting` como REG_BINARY na chave do registro `HKCU\Software\Microsoft\Windows\CurrentVersion\InternetSetting\Connections\DefaultConnectionSetting` e copie-o.
+2. No Registro, procure o valor `DefaultConnectionSettings` como REG_BINARY na chave do registro `HKCU\Software\Microsoft\Windows\CurrentVersion\InternetSetting\Connections\DefaultConnectionSettings` e copie-o.
  
-2.  Se LocalSystem não tiver as configurações de proxy corretas (se elas não estiverem configuradas ou se forem diferentes de Current_User), copie as configurações de proxy de Current_User para LocalSystem. Na chave do Registro `HKU\S-1-5-18\Software\Microsoft\Windows\CurrentVersion\InternetSetting\Connections\DefaultConnectionSetting`.
+2.  Se LocalSystem não tiver as configurações de proxy corretas (se elas não estiverem configuradas ou se forem diferentes de Current_User), copie as configurações de proxy de Current_User para LocalSystem. Na chave do Registro `HKU\S-1-5-18\Software\Microsoft\Windows\CurrentVersion\InternetSetting\Connections\DefaultConnectionSettings`.
 
-3.  Cole o valor de Current_user `DefaultConnectionSetting` como REG_BINARY.
+3.  Cole o valor de Current_user `DefaultConnectionSettings` como REG_BINARY.
 
-4.  Se LocalService não tiver as configurações de proxy corretas, copie a configuração de proxy de Current_User para LocalService. Na chave do Registro `HKU\S-1-5-19\Software\Microsoft\Windows\CurrentVersion\InternetSetting\Connections\DefaultConnectionSetting`.
+4.  Se LocalService não tiver as configurações de proxy corretas, copie a configuração de proxy de Current_User para LocalService. Na chave do Registro `HKU\S-1-5-19\Software\Microsoft\Windows\CurrentVersion\InternetSetting\Connections\DefaultConnectionSettings`.
 
-5.  Cole o valor de Current_User `DefaultConnectionSetting` como REG_BINARY.
+5.  Cole o valor de Current_User `DefaultConnectionSettings` como REG_BINARY.
 
 > [!NOTE]
 > Isso afetará todos os aplicativos, incluindo os serviços do Windows que usam WinINET com LocalService, contexto LocalSytem.
@@ -71,8 +71,8 @@ Se um proxy ou firewall estiver bloqueando todo o tráfego por padrão e permiti
 
 
 Também é possível fortalecer as regras de firewall ou de proxy para um espaço de trabalho específico criado por você, definindo uma regra para os seguintes registros DNS:
-- <Workspace-Name>.atp.azure.com – para conectividade do console. Por exemplo, contosoATP.atp.azure.com
-- <Workspace-Name>sensorapi.atp.azure.com – para conectividade de sensores. Por exemplo, contosoATPsensorapi.atp.azure.com
+- \<your-workspace-name>.atp.azure.com – para conectividade do console. Por exemplo, "Contoso-corp.atp.azure.com"
+- \<your-workspace-name>sensorapi.atp.azure.com – para conectividade de sensores. Por exemplo, "contoso-corpsensorapi.atp.azure.com"
 
  
 > [!NOTE]
