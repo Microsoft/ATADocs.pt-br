@@ -1,11 +1,11 @@
 ---
 title: Definir notificações da Proteção Avançada contra Ameaças do Azure | Microsoft Docs
-description: Descreve como definir alertas do Azure ATP para que você seja notificado quando atividades suspeitas forem detectadas.
+description: Descreve como definir alertas de segurança do Azure ATP para que você seja notificado quando atividades suspeitas forem detectadas.
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 2/21/2018
+ms.date: 10/04/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,24 +13,24 @@ ms.technology: ''
 ms.assetid: 4308f03e-b2a7-4e38-a750-540ff94faa81
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: c3fc5adbb700c4b8df66c243a655cf98aacc79af
-ms.sourcegitcommit: 9f02f0f6669b25f39b616bb0885bb55b8c4f050b
+ms.openlocfilehash: e6f3647ecaab82a32950fadd0a101385a2cc0051
+ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46362418"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48783042"
 ---
 *Aplica-se a: Proteção Avançada contra Ameaças do Azure*
 
 
 # <a name="set-azure-atp-notifications"></a>Definir notificações do Azure ATP
 
-O Azure ATP pode notificar você quando detectar uma atividade suspeita ou um alerta de integridade por email. 
+O Azure ATP pode notificar você quando detectar uma atividade suspeita e emite um alerta de segurança ou um alerta de integridade por email. 
 
 Para receber notificações em um endereço de email específico, defina os seguintes parâmetros:
 
 
-1. No portal do espaço de trabalho do Azure ATP, selecione a opção de configurações na barra de ferramentas e selecione **Configuração**.
+1. No portal do Azure ATP, selecione a opção de configurações na barra de ferramentas e selecione **Configuração**.
 
 ![Ícone de definições de configuração do Azure ATP](media/atp-config-menu.png)
 
@@ -51,4 +51,4 @@ Para receber notificações em um endereço de email específico, defina os segu
 - [Configurar coleta de eventos](configure-event-collection.md)
 
 - [Definir configurações de Syslog](setting-syslog.md)
-- [Confira o fórum do ATP!](https://aka.ms/azureatpcommunity)
+- [Confira o fórum do Azure ATP!](https://aka.ms/azureatpcommunity)

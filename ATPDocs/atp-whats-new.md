@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 9/16/2018
+ms.date: 10/07/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,16 +13,36 @@ ms.technology: ''
 ms.assetid: 7d0f33db-2513-4146-a395-290e001f4199
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: f9959f1b517890b725845f8dd01156f9a3e8198b
-ms.sourcegitcommit: 5ff50807f855db1051b977a64eb6e90487ea196c
+ms.openlocfilehash: dc008506e7b19a8d6eafd455a4414b1513608811
+ms.sourcegitcommit: c4978be196e0039c7a5d5887bec4cbc5c01d64f9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45750547"
+ms.lasthandoff: 10/07/2018
+ms.locfileid: "48848623"
 ---
 *Aplica-se a: Proteção Avançada contra Ameaças do Azure*
 
 # <a name="whats-new-in-azure-atp"></a>Novidades do Azure ATP 
+
+## <a name="azure-atp-release-249"></a>Azure ATP versão 2.49
+Lançado em 7 de outubro de 2018
+-   **Novas detecções: comunicação suspeita de DNS** (versão prévia)<br>Nova detecção adicionada para ajudar a proteger contra ataques de comunicação suspeita de DNS:
+
+    -   Essa detecção ajuda a detectar ataques contra o protocolo DNS. Na maioria das organizações, o protocolo DNS não é monitorado e raramente é bloqueado para atividade mal-intencionada. Isso permite que um invasor em um computador comprometido abuse do protocolo DNS. A comunicação mal-intencionada por DNS pode ser usada para extração, comando e controle de dados e/ou fuga de restrições de rede corporativa.
+
+- **Nova funcionalidade** <br>**Função de usuário** do Azure ATP aprimorada com as seguintes funcionalidades:
+  - Alterar o status de alertas de segurança (abrir novamente, fechar, excluir, suprimir)
+  - Definir relatórios agendados
+  - Definir marcas de entidade (confidenciais e honeytoken)
+  - Exclusão de detecção
+  - Alterar idioma
+  - Definir notificações por email ou syslog
+
+
+- Um aumento temporário no **Reconhecimento usando os alertas de segurança das consultas de serviços de diretório** que ocorreu em 16/09/2018 foi identificado e resolvido. 
+
+- Essa versão também inclui correções e melhorias para vários problemas.
+
 
 ## <a name="azure-atp-release-248"></a>Azure ATP versão 2.48
 Lançado em 16 de setembro de 2018
@@ -286,8 +306,8 @@ Lançada em 11 de março de 2018
  -  A infraestrutura do sensor do Azure ATP teve seu desempenho aprimorado: a exibição agregada do tráfego permite otimizar a CPU e o pipeline de pacotes. Além disso, reutiliza soquetes para os controladores de domínio minimizarem as sessões de SSL para o DC.
 
 ## <a name="see-also"></a>Consulte Também
+- [O que é o Azure Advanced Threat Protection?](what-is-atp.md)
+- [Perguntas frequentes](atp-technical-faq.md)
 - [Pré-requisitos do Azure ATP](atp-prerequisites.md)
-- [Planejamento de capacidade do Azure ATP](atp-capacity-planning.md)
-- [Configurar coleta de eventos](configure-event-collection.md)
-- [Configuração do encaminhamento de eventos do Windows](configure-event-forwarding.md#configuring-windows-event-forwarding)
-- [Confira o fórum do ATP!](https://aka.ms/azureatpcommunity)
+- [Planejamento de capacidade do Azure ATP](atp-capacity-planning.md) (configure-event-forwarding.md#configuring-windows-event-forwarding)
+- [Confira o fórum do Azure ATP!](https://aka.ms/azureatpcommunity)

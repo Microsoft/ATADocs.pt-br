@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 08/12/2018
+ms.date: 10/07/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 3547519f-8d9c-40a9-8f0e-c7ba21081203
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 4adae00e0985a831cddf1d9b5276c937e82523d3
-ms.sourcegitcommit: 7f3ded32af35a433d4b407009f87cfa6099f8edf
+ms.openlocfilehash: 90de9f0f02fa1b87fd2d741349a1d81e089b6fb1
+ms.sourcegitcommit: bbbe808c08ce703a314c82b46aedaae79ab256a3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44126035"
+ms.lasthandoff: 10/07/2018
+ms.locfileid: "48848517"
 ---
 *Aplica-se a: Proteção Avançada contra Ameaças do Azure*
 
@@ -45,7 +45,7 @@ Neste cenário, suponha que o sensor autônomo do Azure ATP seja membro do domí
 
 1.  Abra os Usuários e Computadores do Active Directory, navegue até a pasta **BuiltIn** e clique duas vezes em **Leitores de Log de Eventos**. 
 2.  Selecione **Membros**.
-4.  Se **Serviço de Rede** não estiver listado, clique em **Adicionar**, digite **Serviço de Rede** no campo **Digite os nomes de objeto a serem selecionados** . Depois, clique em **Verificar Nomes** e clique em **OK** duas vezes. 
+3.  Se **Serviço de Rede** não estiver listado, clique em **Adicionar**, digite **Serviço de Rede** no campo **Digite os nomes de objeto a serem selecionados** . Depois, clique em **Verificar Nomes** e clique em **OK** duas vezes. 
 
 Após adicionar o **Serviço de Rede** ao grupo **Leitores de Log de Eventos**, reinicie os controladores de domínio para que a alteração tenha efeito.
 
@@ -63,7 +63,7 @@ Após adicionar o **Serviço de Rede** ao grupo **Leitores de Log de Eventos**, 
    
     1.  Selecione **Habilitado**.
     2.  Em **Opções**, clique em **Mostrar**.
-    3.  Em **SubscriptionManagers**, digite o valor a seguir e clique em **OK**: *Server=`http://<fqdnATPSensor>:5985/wsman/SubscriptionManager/WEC,Refresh=10*` (por exemplo, Server=`http://atpsensor9.contoso.com:5985/wsman/SubscriptionManager/WEC,Refresh=10`)
+    3.  Em **SubscriptionManagers**, insira o seguinte valor e clique em **OK**: *Server=`http://<fqdnATPSensor>:5985/wsman/SubscriptionManager/WEC,Refresh=10*` *(Por exemplo: Server=`http://atpsensor9.contoso.com:5985/wsman/SubscriptionManager/WEC,Refresh=10`)
     
     ![Configurar a imagem de assinatura de destino](media/wef%202%20config%20target%20sub%20manager.png)
     
@@ -81,18 +81,11 @@ Após adicionar o **Serviço de Rede** ao grupo **Leitores de Log de Eventos**, 
    3.   Selecione **Iniciado pelo computador de origem** e clique em **Selecionar Grupos de Computadores**.
         1.  Clique em **Adicionar Computador do Domínio**.
         2.  Insira o nome do controlador de domínio no campo **Digite o nome do objeto a ser selecionado**. Depois, clique em **Verificar Nomes** e clique em **OK**. 
-       
-        ![Imagem do Visualizador de Eventos](media/wef3%20event%20viewer.png)
-   
-        
         3.  Clique em **OK**.
+        ![Imagem do Visualizador de Eventos](media/wef3%20event%20viewer.png)     
    4.   Clique em **Selecionar Eventos**.
-
         1. Clique em **Pelo log** e selecione **Segurança**.
-        2. No campo **Inclui/Exclui ID do Evento**, digite o número do evento e clique em **OK**. Por exemplo, digite 4776, como no exemplo a seguir:
-
-        ![Imagem do filtro de consulta](media/wef-4-query-filter.png)
-
+        2. No campo **Inclui/Exclui ID do Evento**, digite o número do evento e clique em **OK**. Por exemplo, digite 4776, como no exemplo a seguir: ![Imagem de filtro de consulta](media/wef-4-query-filter.png)
    5.   Clique com o botão direito do mouse na assinatura criada e selecione **Status de Tempo de Execução** para verificar se há problemas com o status. 
    6.   Depois de alguns minutos, verifique se os eventos definidos para serem encaminhados aparecem nos Eventos Encaminhados no sensor autônomo do Azure ATP.
 
@@ -102,4 +95,4 @@ Para saber mais, confira: [Configurar computadores para encaminhar e coletar eve
 ## <a name="see-also"></a>Consulte Também
 
 - [Instalar o Azure ATP](install-atp-step1.md)
-- [Confira o fórum do ATP!](https://aka.ms/azureatpcommunity)
+- [Confira o fórum do Azure ATP!](https://aka.ms/azureatpcommunity)

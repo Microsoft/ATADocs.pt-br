@@ -1,11 +1,11 @@
 ---
-title: Instalar a Proteção Avançada contra Ameaças do Azure – etapa 6 | Microsoft Docs
-description: Nesta etapa da instalação do ATP, você integra sua VPN.
+title: Instalar a Integração de VPN da Proteção Avançada contra Ameaças do Azure | Microsoft Docs
+description: Colete informações de contabilidade para o Azure ATP integrando uma VPN.
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 6/14/2018
+ms.date: 10/04/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,19 +13,21 @@ ms.technology: ''
 ms.assetid: 0d9d2a1d-6c76-4909-b6f9-58523df16d4f
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 9ce1bbbda96cc8a10b026f2f422ac79b1b2bae55
-ms.sourcegitcommit: b283bf66e63d76e6dba4564a229e804792794c6d
+ms.openlocfilehash: 382b0f31cbc24dde3905d99bab7ed8be8feb5cb4
+ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/29/2018
-ms.locfileid: "47454098"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48783739"
 ---
 *Aplica-se a: Proteção Avançada contra Ameaças do Azure*
 
 
 
-# <a name="install-azure-atp---step-6"></a>Instalar o Azure ATP – etapa 6
+# <a name="integrate-vpn"></a>Integrar a VPN
 
+<<<<<<< HEAD O Azure ATP (Proteção Avançada contra Ameaças) pode coletar informações de contabilidade de soluções de VPN. Quando configurada, a página de perfil do usuário inclui informações de conexões de VPN, tais como os endereços IP e os locais de origem das conexões. Isso complementa o processo de investigação, fornecendo informações adicionais sobre a atividade de usuário, bem como uma nova detecção para conexões de VPN anormais. A chamada para resolver um endereço IP externo de um local é anônima. Nenhuma identificação pessoal será enviada nesta chamada.
+=======
 > [!div class="step-by-step"]
 > [«Etapa 5](install-atp-step5.md)
 > [Etapa 7»](install-atp-step7.md)
@@ -33,6 +35,7 @@ ms.locfileid: "47454098"
 ## <a name="step-6-integrate-vpn"></a>Etapa 6. Integrar a VPN
 
 O Azure ATP (Proteção Avançada contra Ameaças) pode coletar informações de contabilidade de soluções de VPN. Quando configurada, a página de perfil do usuário inclui informações de conexões de VPN, tais como os endereços IP e os locais de origem das conexões. Isso complementa o processo de investigação, fornecendo informações adicionais sobre a atividade de usuário, bem como uma nova detecção para conexões de VPN anormais. A chamada para resolver um endereço IP externo de um local é anônima. Nenhuma identificação pessoal será enviada nesta chamada.
+>>>>>>> 209d7e7162816a4c9e6e0ec0ff8d02f771e12d04
 
 O Azure ATP integra-se à sua solução de VPN escutando eventos de contabilidade do RADIUS encaminhados para os sensores do Azure ATP. Este mecanismo é baseado em Contabilização RADIUS padrão ([RFC 2866](https://tools.ietf.org/html/rfc2866)) e têm suporte dos seguintes fornecedores de VPN:
 
@@ -45,7 +48,7 @@ O Azure ATP integra-se à sua solução de VPN escutando eventos de contabilidad
 
 Para habilitar a integração de VPN, verifique se você definiu os seguintes parâmetros:
 
--   Abra a porta UDP 1813 em seus sensores autônomos do Azure ATP e no sensor do Azure ATP.
+-   Abra a porta UDP 1813 em seus sensores do Azure ATP e/ou nos sensores autônomos do Azure ATP.
 
 
 O exemplo abaixo usa o Servidor de Roteamento e Acesso Remoto (RRAS) da Microsoft para descrever o processo de configuração de VPN.
@@ -72,7 +75,7 @@ O Azure ATP coleta dados da VPN que ajudam a criar o perfil dos locais dos quais
 
 Para configurar dados de VPN no ATP:
 
-1.  No portal de espaço de trabalho do Azure ATP, clique na engrenagem de configuração e, em seguida, em **VPN**.
+1.  No portal do Azure ATP, clique na engrenagem de configuração e, em seguida, em **VPN**.
  
 
 2.  Ativar **Contabilização Radius** e digite o **Segredo Compartilhado** configurado anteriormente em seu servidor VPN do RRAS. Em seguida, clique em **Salvar**.
@@ -81,23 +84,20 @@ Para configurar dados de VPN no ATP:
   ![Configurar VPN do Azure ATP](./media/atp-vpn-radius.png)
 
 
-Depois que isso for habilitado, todos os sensores e os sensores autônomos do Azure ATP escutam na porta 1813 para eventos de contabilidade do RADIUS. 
+Depois que isso for habilitado, todos os sensores e sensores autônomos do Azure ATP escutarão na porta 1813 para eventos de contabilidade do RADIUS, e sua instalação é concluída. 
 
-Sua instalação foi concluída. 
+ Depois que o sensor do Azure ATP receber os eventos de VPN e os enviar para o serviço de nuvem do Azure ATP para processamento, o perfil de entidade indicará locais distintos de VPN acessados e as atividades no perfil indicarão os locais.
 
-Depois que o sensor do Azure ATP receber os eventos de VPN e os enviar para o serviço de nuvem do Azure ATP para processamento, o perfil de entidade indicará locais distintos de VPN acessados e as atividades no perfil indicarão os locais.
-
-
-
-
-
+<a name="-head"></a><<<<<<< HEAD
+=======
 > [!div class="step-by-step"]
 > [«Etapa 6](install-atp-step5.md)
 > [Etapa 7»](install-atp-step7.md)
+>>>>>>> 209d7e7162816a4c9e6e0ec0ff8d02f771e12d04
 
 
 ## <a name="see-also"></a>Consulte Também
 - [Ferramenta de dimensionamento do Azure ATP](http://aka.ms/aatpsizingtool)
 - [Configurar coleta de eventos](configure-event-collection.md)
 - [Pré-requisitos do Azure ATP](atp-prerequisites.md)
-- [Confira o fórum do ATP!](https://aka.ms/azureatpcommunity)
+- [Confira o fórum do Azure ATP!](https://aka.ms/azureatpcommunity)

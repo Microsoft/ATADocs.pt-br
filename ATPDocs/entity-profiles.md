@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 8/06/2018
+ms.date: 10/04/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 17458706-79fb-4c23-aa42-66979164a45f
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: b4353de9d004358ddcdc929271fd96665e1c7322
-ms.sourcegitcommit: 5ad28d7b0607c7ea36d795b72928769c629fb80a
+ms.openlocfilehash: 357973698d9d53936c3fa308bc0021ae1cd98f60
+ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44165840"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48783501"
 ---
 *Aplica-se a: Proteção Avançada contra Ameaças do Azure*
 
@@ -51,7 +51,7 @@ A guia **Dados do diretório** fornece informações estáticas disponíveis do 
 
  ![dados do diretório do perfil do usuário](media/user-profile-dir-data.png)
 
-Na seção **Controle de acesso de usuários**, o Azure ATP exibe configurações de segurança que talvez precisem de sua atenção. Você pode ver sinalizadores importantes sobre o usuário, por exemplo, se o usuário pode pressionar Enter para ignorar a senha, se o usuário tem uma senha que nunca expira etc. 
+Na seção **Controle de acesso de usuários**, o Azure ATP exibe configurações de segurança que talvez precisem de sua atenção. É possível ver sinalizadores importantes sobre o usuário, como se o usuário pode pressionar enter para ignorar a senha e se o usuário tem uma senha que nunca expira, etc. 
 
 ## <a name="view-lateral-movement-paths"></a>Exibir caminhos de movimento lateral
 
@@ -59,7 +59,7 @@ Ao clicar na guia de Caminhos de movimento lateral, você pode exibir um mapa to
 
 O mapa fornece uma lista de quantos saltos entre computadores ou usuários um invasor teria que fazer para chegar ao usuário e comprometer uma conta confidencial e, se o usuário tiver uma conta confidencial, você poderá ver quantos recursos e contas estão conectadas diretamente.
 
-Se não for detectada nenhuma atividade nos últimos dois dias, o gráfico deixará de aparecer, mas o [relatório de caminho de movimento lateral](reports.md) estará disponível para fornecer informações sobre caminhos de movimento lateral dos últimos 60 dias. 
+Se não for detectada nenhuma atividade nos últimos dois dias, o grafo deixará de aparecer, mas o [relatório de caminho de movimento lateral](reports.md) estará disponível para fornecer informações sobre caminhos de movimento lateral que existiram nos últimos 60 dias. 
 
 Para obter mais informações, consulte [Caminhos de movimento lateral](use-case-lateral-movement-path.md). 
 
@@ -69,4 +69,4 @@ Para obter mais informações, consulte [Caminhos de movimento lateral](use-case
 ## <a name="see-also"></a>Consulte Também
 
 - [Investigar caminhos de movimento lateral com o Azure ATP](use-case-lateral-movement-path.md)
-- [Confira o fórum do ATP!](https://aka.ms/azureatpcommunity)
+- [Confira o fórum do Azure ATP!](https://aka.ms/azureatpcommunity)

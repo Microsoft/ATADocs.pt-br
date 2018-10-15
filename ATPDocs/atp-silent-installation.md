@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 8/7/2017
+ms.date: 10/09/2017
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 24eca4c6-c949-42ea-97b9-41ef0fb611f1
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 363400531fe2b4e2634fa80ec1f65ad80923606f
-ms.sourcegitcommit: 7f3ded32af35a433d4b407009f87cfa6099f8edf
+ms.openlocfilehash: 23d92b207c9bcfeb38afa67bdd5e4911b1a16aa4
+ms.sourcegitcommit: 02a4d7a0d44817da8e40580c5fe97f8839a7941f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44125780"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48876572"
 ---
 *Aplica-se a: Proteção Avançada contra Ameaças do Azure*
 
@@ -46,7 +46,7 @@ Para acompanhar o progresso da implantação, monitore os logs do instalador do 
 ## <a name="azure-atp-sensor-silent-installation"></a>Instalação silenciosa do sensor do Azure ATP
 
 > [!NOTE]
-> Ao implantar silenciosamente o sensor do Azure ATP por meio do System Center Configuration Manager ou de outro sistema de implantação de software, é recomendável criar dois pacotes de implantação:</br>– Net Framework 4.7, incluindo inicializar o controlador de domínio</br>– Sensor do Azure ATP. </br>Torne o sensor do Azure ATP dependente da implantação do pacote .Net Framework. </br>Obtenha o [Pacote de implantação offline do .Net Framework 4.7](https://www.microsoft.com/download/details.aspx?id=49982). 
+> Ao implantar silenciosamente o sensor do Azure ATP por meio do System Center Configuration Manager ou de outro sistema de implantação de software, é recomendável criar dois pacotes de implantação:</br>– Net Framework 4.7, incluindo inicializar o controlador de domínio</br>– Sensor do Azure ATP. </br>Torne o sensor do Azure ATP dependente da implantação do pacote .Net Framework. </br>Obtenha o [Pacote de implantação offline do .Net Framework 4.7](https://support.microsoft.com/help/3186497/the-net-framework-4-7-offline-installer-for-windows). 
 
 
 Use o seguinte comando para realizar uma instalação silenciosa completa do sensor do Azure ATP:
@@ -58,7 +58,7 @@ Use o seguinte comando para realizar uma instalação silenciosa completa do sen
    
 
 > [!NOTE]
-> Copie a chave de acesso do portal de espaço de trabalho em **Configuração** e, em seguida, **sensor**.
+> Copie a chave de acesso do portal do Azure ATP em **Configuração** e, em seguida, **sensor**.
 
 
 **Opções de instalação**:
@@ -131,6 +131,7 @@ Use o seguinte comando para realizar uma desinstalação silenciosa do sensor do
 
 ## <a name="see-also"></a>Consulte Também
 
-- [Configurar o encaminhamento de eventos](configure-event-forwarding.md)
 - [Pré-requisitos do Azure ATP](atp-prerequisites.md)
-- [Confira o fórum do ATP!](https://aka.ms/azureatpcommunity)
+- [Instalar o sensor do Azure ATP](install-atp-step4.md)
+- [Configurar o sensor do Azure ATP](install-atp-step5.md)
+- [Confira o fórum do Azure ATP!](https://aka.ms/azureatpcommunity)

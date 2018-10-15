@@ -2,10 +2,10 @@
 title: Suporte do Azure ATP | Microsoft Docs
 description: Descreve o processo a ser seguido para obter ajuda do suporte do Azure ATP.
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 3/18/2018
+ms.date: 10/04/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 8ae459ac-9fca-4923-9a1a-dc10d5c50b29
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: fa4577377c32562e0441014958e9702cbbb7399b
-ms.sourcegitcommit: 5ad28d7b0607c7ea36d795b72928769c629fb80a
+ms.openlocfilehash: 2c4f82ce7bf4e8ba7bf9e6ae56198ca1f6e4aefb
+ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44166399"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48783229"
 ---
 *Aplica-se a: Proteção Avançada contra Ameaças do Azure*
 
@@ -66,7 +66,7 @@ Para exibir o status do sistema para o Azure ATP, acesse a página [**Status do 
 
 #### <a name="on-demand-videos"></a>Vídeos sob demanda
 
-- Sessões do Microsoft Ignite 2017 para a [Proteção Avançada contra Ameaças do Azure](https://myignite.microsoft.com/sessions/53476?source=sessions).
+- Sessões do Microsoft Ignite 2018 para a [Proteção Avançada contra Ameaças do Azure](https://myignite.techcommunity.microsoft.com/sessions?t=%257B%2522from%2522%253A%25222018-09-23T08%253A00%253A00-04%253A00%2522%252C%2522to%2522%253A%25222018-09-28T19%253A00%253A00-04%253A00%2522%257D&q=azure%2520advanced%2520threat%2520protection#ignite-html-anchor).
 
 Solução de problemas:
 
@@ -76,8 +76,8 @@ Solução de problemas:
 
 - Se você tiver o Windows Defender ATP implantado no seu ambiente e quiser integrá-lo à Proteção Avançada contra Ameaças do Azure, consulte [Integrando o Azure ATP ao Windows Defender ATP](integrate-wd-atp.md).
 
-- Para saber mais sobre investigações de atividades suspeitas, consulte [Guia de atividades suspeitas](suspicious-activity-guide.md).
+- Para saber mais sobre investigações de um alerta de segurança, confira o [guia de alerta de segurança](suspicious-activity-guide.md).
 
 ### <a name="community-resources"></a>Recursos da comunidade
 
-Recomendamos o [para a Proteção Avançada contra Ameaças do Azure](https://www.yammer.com/AskIPTeam). Esse recurso fornece resposta diretas da equipe da Proteção Avançada contra Ameaças do Azure, além do benefício da experiência e do conhecimento compartilhados de outros administradores e consultores.
+Recomendamos o [grupo do Yammer para a Proteção Avançada contra Ameaças do Azure](https://www.yammer.com/AskIPTeam). Esse recurso fornece resposta diretas da equipe da Proteção Avançada contra Ameaças do Azure, além do benefício da experiência e do conhecimento compartilhados de outros administradores e consultores.

@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 8/2/2018
+ms.date: 10/04/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,19 +13,19 @@ ms.technology: ''
 ms.assetid: cae3ed45-8fbc-4f25-ba24-3cc407c6ea93
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: d5ac2ae53dfe13b850a06f6dd4b89a91ffedd946
-ms.sourcegitcommit: 5ad28d7b0607c7ea36d795b72928769c629fb80a
+ms.openlocfilehash: 432f55891440975e511ab5cd3e2972a1c7a33f37
+ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44166027"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48782923"
 ---
 *Aplica-se a: Proteção Avançada contra Ameaças do Azure*
 
 
 
 # <a name="excluding-entities-from-detections"></a>Excluindo entidades de detecções
-Este artigo explica como excluir entidades de disparar alertas para minimizar verdadeiros positivos benignos mas ao mesmo tempo, capturar os verdadeiros positivos. Para impedir que o Azure ATP seja ruidoso quando atividades que, vindas de usuários específicos, podem fazer parte de seu ritmo normal de negócios, você pode silenciar ou excluir entidades específicas da geração de alertas.
+Este artigo explica como excluir entidades de disparar alertas para minimizar verdadeiros positivos benignos enquanto é possível capturar os verdadeiros positivos. Para impedir que o Azure ATP seja ruidoso quando atividades que, vindas de usuários específicos, podem fazer parte de seu ritmo normal de negócios, você pode silenciar ou excluir entidades específicas da geração de alertas.
 
 Por exemplo, se você tiver um verificador de segurança que realiza reconhecimento DNS ou um administrador que executa scripts remotamente no controlador de domínio, essas serão atividades sancionadas cujo objetivo é parte das operações de TI normais em sua organização. Para obter mais informações sobre as detecções do Azure ATP para ajudá-lo a decidir quais entidades excluir, consulte o [Guia atividades suspeitas](suspicious-activity-guide.md).
 
@@ -63,4 +63,4 @@ Quando você tiver a possibilidade de exclusão de um endereço IP ou de um comp
 ## <a name="see-also"></a>Consulte Também
 
 - [Integrando com o Windows Defender ATP](integrate-wd-atp.md)
-- [Confira o fórum do ATP!](https://aka.ms/azureatpcommunity)
+- [Confira o fórum do Azure ATP!](https://aka.ms/azureatpcommunity)

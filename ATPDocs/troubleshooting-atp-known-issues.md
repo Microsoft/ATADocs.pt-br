@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 8/13/2018
+ms.date: 10/04/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 23386e36-2756-4291-923f-fa8607b5518a
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: a56845c619e93ed2fae0e10876a4d49a49e23e7d
-ms.sourcegitcommit: 5ad28d7b0607c7ea36d795b72928769c629fb80a
+ms.openlocfilehash: e65133fdd09f821c633a3095ae419df01da98b16
+ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44166265"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48783705"
 ---
 *Aplica-se a: Proteção Avançada contra Ameaças do Azure*
 
@@ -30,9 +30,9 @@ ms.locfileid: "44166265"
  
 Os logs de implantação do Azure ATP estão localizados no diretório temp do usuário que instalou o produto. No local de instalação padrão, ele pode ser encontrado em: C:\Users\Administrator\AppData\Local\Temp (ou um diretório acima de %temp%). Para saber mais, veja [Solucionar problemas do ATP usando logs](troubleshooting-atp-using-logs.md)
 
-## <a name="proxy-authentication-problem-presents-as-licensing-error"></a>Problema de autenticação de proxy apresentado como erro de licenciamento
+## <a name="proxy-authentication-problem-presents-as-a-licensing-error"></a>Problema de autenticação de proxy apresentado como erro de licenciamento
 
-Durante a instalação de sensor, você recebe o seguinte erro: **Falha no registro do sensor devido a problemas de licenciamento.**
+Se, durante a instalação de sensor, você receber o seguinte erro: **Falha no registro do sensor devido a problemas de licenciamento.**
 
 Entradas do log de implantação: [1C60:1AA8][2018-03-24T23:59:13]i000: 2018-03-25 02:59:13.1237 Info  InteractiveDeploymentManager ValidateCreateSensorAsync retornou [\[]validateCreateSensorResult=LicenseInvalid[\]] [1C60:1AA8][2018-03-24T23:59:56]i000: 2018-03-25 02:59:56.4856 Info  InteractiveDeploymentManager ValidateCreateSensorAsync retornou [\[]validateCreateSensorResult=LicenseInvalid[\]] [1C60:1AA8][2018-03-25T00:27:56]i000: 2018-03-25 03:27:56.7399 Debug SensorBootstrapperApplication Engine.Quit [\[]deploymentResultStatus=1602 isRestartRequired=False[\]] [1C60:15B8][2018-03-25T00:27:56]i500: Desligando, código de saída: 0x642
 
@@ -50,9 +50,9 @@ o sensor deve poder navegar até *.atp.azure.com por meio do proxy configurado s
 
 ## Problema de agrupamento NIC do sensor da ATP do Azure <a name="nic-teaming"></a>
 
-Se tentar instalar o sensor do ATP em um computador configurado com um adaptador de agrupamento NIC, você receberá um erro de instalação. Se quiser instalar o sensor da ATP em um computador configurado com Agrupamento NIC, siga essas instruções:
+Se tentar instalar o sensor do ATP em um computador configurado com um adaptador de agrupamento NIC, você receberá um erro de instalação. Se desejar instalar o sensor da ATP em um computador configurado com Agrupamento NIC, siga estas instruções:
 
-Se ainda não instalou o sensor:
+Se você ainda não tiver instalado o sensor:
 
 1.  Baixar Npcap de [https://nmap.org/npcap/](https://nmap.org/npcap/).
 2.  Desinstale o WinPcap, caso esteja instalado.
@@ -69,7 +69,7 @@ Após instalar o sensor:
 
 ## <a name="windows-defender-atp-integration-issue"></a>Problemas de integração do Windows Defender ATP
 
-A Proteção Avançada contra Ameaças do Azure permite integrar esse recurso ao Windows Defender ATP. 
+A Proteção Avançada contra Ameaças do Azure permite integrar esse recurso ao Windows Defender ATP. Confira [Integrar o Azure ATP ao Windows Defender ATP](integrate-wd-atp.md) para obter mais informações. 
 
 ## <a name="vmware-virtual-machine-sensor-issue"></a>Problema de sensor da Máquina Virtual VMware
 
@@ -88,4 +88,4 @@ Defina as configurações a seguir como **0** ou **Desabilitado** na configuraç
 - [Planejamento de capacidade do Azure ATP](atp-capacity-planning.md)
 - [Configurar coleta de eventos](configure-event-collection.md)
 - [Configuração do encaminhamento de eventos do Windows](configure-event-forwarding.md#configuring-windows-event-forwarding)
-- [Confira o fórum do ATP!](https://aka.ms/azureatpcommunity)
+- [Confira o fórum do Azure ATP!](https://aka.ms/azureatpcommunity)

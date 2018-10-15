@@ -1,11 +1,11 @@
 ---
 title: Suporte a várias florestas da Proteção Avançada contra Ameaças do Azure | Microsoft Docs
-description: Como configurar o suporte para várias florestas do Active Directory no Azure ATP.
+description: Suporte para várias florestas do Active Directory no Azure ATP.
 keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 8/20/2018
+ms.date: 10/04/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,21 +13,19 @@ ms.technology: ''
 ms.assetid: effca0f2-fcae-4fca-92c1-c37306decf84
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: ad120cfe3e736935a557f66417794cd531fa5b2e
-ms.sourcegitcommit: b283bf66e63d76e6dba4564a229e804792794c6d
+ms.openlocfilehash: 40bd468226f3c8db17663d02aed561b77cc2a128
+ms.sourcegitcommit: bbbe808c08ce703a314c82b46aedaae79ab256a3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/29/2018
-ms.locfileid: "47454081"
+ms.lasthandoff: 10/07/2018
+ms.locfileid: "48848483"
 ---
 *Aplica-se a: Proteção Avançada contra Ameaças do Azure*
 
-# <a name="install-azure-atp---step-9"></a>Instalar o Azure ATP – etapa 9
+# <a name="azure-advanced-threat-protection-multi-forest-support"></a>Suporte para várias florestas da Proteção Avançada contra Ameaças do Azure
 
-> [!div class="step-by-step"]
-> [« Etapa 8](install-atp-step8-samr.md)
 
-## <a name="step-9--set-up-azure-advanced-threat-protection-multi-forest-support"></a>Etapa 9.  Configurar o suporte para várias florestas da Proteção Avançada contra Ameaças do Azure
+## <a name="multi-forest-support-set-up"></a>Configuração de suporte a várias florestas 
 
 O Azure ATP pode dar suporte a organizações com várias florestas, permitindo monitorar com facilidade a atividade e os perfis de usuário entre florestas de um único painel de controle. 
 
@@ -55,7 +53,7 @@ Mesmo que você tenha florestas sem nenhum sensor do Azure ATP instalado, o Azur
 -   Se os sensores autônomos do Azure ATP estiverem instalados em computadores autônomos, em vez de diretamente nos controladores de domínio, os computadores devem ter permissão para se comunicar com todos os controladores de domínio da floresta remota usando o LDAP. 
 - O usuário que você configurar no console do Azure ATP em **Serviços de diretório** deve ser de confiança em todas as outras florestas e deve ter pelo menos permissão de leitura para executar consultas LDAP dos controladores de domínio.
 
-- Para que o Azure ATP se comunique com os sensores do ATP e com os sensores autônomos do ATP, abra as seguintes portas em cada computador no qual o sensor do ATP esteja instalado:
+- Para que o Azure ATP se comunique com os sensores do Azure ATP e com os sensores autônomos do Azure ATP, abra as seguintes portas em cada computador no qual o sensor do ATP está instalado:
 
  
   |Protocolo|Transport|Porta|Para/De|Direção|
@@ -76,19 +74,16 @@ Quando o Azure ATP mapeia suas florestas, ele usa um processo que afeta o seguin
 -   Depois que o sensor do Azure ATP está em execução, ele consulta as florestas remotas do Active Directory e recupera uma lista de usuários e dados de máquinas para a criação de perfil.
 -   A cada cinco minutos, cada sensor do Azure ATP consulta um controlador de domínio de cada domínio, de cada floresta, para mapear todas as florestas na rede.
 -   Cada sensor do Azure ATP mapeia as florestas usando o objeto "trustedDomain" no Active Directory, efetuando logon e verificando o tipo de relação de confiança.
--   Você também poderá ver tráfego ad hoc quando o sensor do ATP detectar atividade de diferentes florestas. Quando isso ocorre, os sensores do ATP enviam uma consulta LDAP para os controladores de domínio relevantes para recuperar informações da entidade. 
+-   Você também pode ver o tráfego ad hoc quando o sensor do Azure ATP detecta atividade entre florestas. Quando isso ocorre, os sensores do Azure ATP enviarão uma consulta LDAP para os respectivos controladores de domínio para recuperar informações da entidade. 
 
 ## <a name="known-limitations"></a>Limitações conhecidas
 -   Os logons interativos executados por usuários em uma floresta para acessar recursos em outra floresta não são exibidos no painel do Azure ATP.
 
 
-> [!div class="step-by-step"]
-> [« Etapa 8](install-atp-step8-samr.md)
-
 
 ## <a name="see-also"></a>Consulte Também
-- [Ferramenta de dimensionamento do ATP](http://aka.ms/aatpsizingtool)
-- [Arquitetura do ATP](atp-architecture.md)
-- [Instalar o ATP](install-atp-step1.md)
-- [Confira o fórum do ATP!](https://aka.ms/azureatpcommunity)
+- [Ferramenta de dimensionamento do Azure ATP](http://aka.ms/aatpsizingtool)
+- [Arquitetura do Azure ATP](atp-architecture.md)
+- [Instalar o Azure ATP](install-atp-step1.md)
+- [Confira o fórum do Azure ATP!](https://aka.ms/azureatpcommunity)
 

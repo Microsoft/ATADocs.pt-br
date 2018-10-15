@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 8/05/2018
+ms.date: 10/04/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 1b7e72c3-a538-443f-981c-398ffafa5ab8
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 033d338e9c1e5e85673e362069ff0a815cda127c
-ms.sourcegitcommit: 5ad28d7b0607c7ea36d795b72928769c629fb80a
+ms.openlocfilehash: 8fdaa7311d39680ed8e9389f5dc9b7cdeca73197
+ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44165585"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48782889"
 ---
 *Aplica-se a: Proteção Avançada contra Ameaças do Azure*
 
@@ -46,8 +46,7 @@ Para verificar a integridade geral de seu espaço de trabalho, clique no ícone 
 
     > [!NOTE]
     > O Azure ATP poderá reabrir uma atividade fechada se a mesma atividade for detectada novamente em um curto período.
-    > Cada espaço de trabalho tem seu próprio centro de integridade.
-
+    
 -   **Suprimir**: suprimir uma atividade significa que você deseja ignorá-la por enquanto e apenas ser alertado novamente se houver uma nova instância. Se houver um alerta semelhante, o Azure ATP não o reabrirá. Mas, se o alerta parar por sete dias e for observado novamente, você será alertado novamente.
 
 -   **Reabrir**: você pode reabrir um problema fechado ou suprimido para que ele seja novamente exibido como Aberto na linha do tempo.
@@ -56,7 +55,7 @@ Para verificar a integridade geral de seu espaço de trabalho, clique no ícone 
 
 
 
-![Imagem de problemas no centro de integridade do espaço de trabalho do Azure ATP](media/atp-health-issue.png)
+![Imagem dos problemas da central de integridade do Azure ATP](media/atp-health-issue.png)
 
 
 
@@ -66,4 +65,4 @@ Para verificar a integridade geral de seu espaço de trabalho, clique no ícone 
 ## <a name="see-also"></a>Consulte Também
 
 - [Trabalhando com atividades suspeitas](working-with-suspicious-activities.md)
-- [Confira o fórum do ATP!](https://aka.ms/azureatpcommunity)
+- [Confira o fórum do Azure ATP!](https://aka.ms/azureatpcommunity)

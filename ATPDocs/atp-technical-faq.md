@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 10/3/2018
+ms.date: 10/4/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 6a9b5273-eb26-414e-9cdd-f64406e24ed8
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 34a9b1deb9c5d2d709e333e78e87ded09fff134a
-ms.sourcegitcommit: 04ed0b9faf72d82cd10bf84efd9dc5aa525be212
+ms.openlocfilehash: 07c5d67804eb4c74df678e8752a2516af5c52cc7
+ms.sourcegitcommit: bbbe808c08ce703a314c82b46aedaae79ab256a3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48245376"
+ms.lasthandoff: 10/07/2018
+ms.locfileid: "48848500"
 ---
 *Aplica-se a: Proteção Avançada contra Ameaças do Azure*
 
@@ -86,13 +86,13 @@ Além disso, a Microsoft realiza verificações de histórico de determinados fu
 ## <a name="deployment"></a>Implantação
 ### <a name="how-many-azure-atp-sensors-do-i-need"></a>De quantos sensores do Azure ATP eu preciso?
 
-Cada controlador de domínio no ambiente deve ser coberto por um sensor ou sensor autônomo do ATP. Para obter mais informações, consulte [Dimensionamento do sensor do Azure ATP](atp-capacity-planning.md#sizing). 
+Cada controlador de domínio no ambiente deve ser coberto por um sensor ou sensor autônomo do ATP. Para obter mais informações, confira [Azure ATP sensor sizing](atp-capacity-planning.md#sizing) (Dimensionamento do sensor do Azure ATP). 
 
 ### <a name="does-azure-atp-work-with-encrypted-traffic"></a>O Azure ATP funciona com tráfego criptografado?
 Os protocolos de rede com tráfego criptografado (por exemplo, LDAPS e IPSEC) não são descriptografados, mas são analisados pelos sensores.
 
 ### <a name="does-azure-atp-work-with-kerberos-armoring"></a>O Azure ATP funciona com Kerberos Armoring?
-Há suporte para a habilitação do Kerberos Armoring, também conhecido como FAST (encapsulamento seguro de autenticação flexível), pelo Azure ATP, com exceção da detecção de passagem pelo hash, que não funciona com o Kerberos Armoring.
+Há suporte para a habilitação do Kerberos Armoring, também conhecido como FAST (Flexible Authentication Secure Tunneling), pelo Azure ATP, com exceção da detecção de passagem pelo hash, que não funciona com o Kerberos Armoring.
 
 ### <a name="how-do-i-monitor-a-virtual-domain-controller-using-azure-atp"></a>Como monitorar um controlador de domínio virtual usando o Azure ATP?
 A maioria dos controladores de domínio virtuais pode ser coberta pelo sensor do Azure ATP. Para determinar se o sensor do Azure ATP é apropriado para seu ambiente, consulte [Planejamento de capacidade do Azure ATP](atp-capacity-planning.md).
@@ -107,7 +107,7 @@ Se um controlador de domínio virtual não puder ser coberto pelo sensor do Azur
 
 Para seus controladores de domínio se comunicarem com o serviço de nuvem, você deve abrir: *. atp.azure.com porta 443 em seu firewall/proxy. Para obter instruções de como fazer isso, consulte [Configurar seu proxy ou firewall para habilitar a comunicação com sensores do Azure ATP](configure-proxy.md).
 
-### <a name="can-azure-atp-monitor-domain-controllers-virtualized-on-your-iaas-solution"></a>O Azure ATP pode monitorar controladores de domínio visualizados em sua solução IaaS?
+### <a name="can-azure-atp-monitor-domain-controllers-be-virtualized-on-your-iaas-solution"></a>Os controlador de domínio de monitor do Azure ATP podem ser virtualizados em sua solução IaaS?
 Sim, você pode usar o sensor do Azure ATP para monitorar controladores de domínio em qualquer solução IaaS.
 
 ### <a name="can-azure-atp-support-multi-domain-and-multi-forest"></a>O Azure ATP pode dar suporte a vários domínios e várias florestas?
@@ -142,7 +142,7 @@ Você pode simular atividades suspeitas como um teste de ponta a ponta. No cená
     -   Pressione Enter
     -   Digite: Is -d <FQDN>
     -   Dependendo da configuração do ambiente, as respostas irão variar de "Consulta recusada" para uma lista dos registros DNS. 
-4. Exiba o alerta relacionado ao reconhecimento de DNS simulado no console do Azure ATP. 
+4. Exiba o alerta relacionado ao reconhecimento de DNS simulado no portal do Azure ATP. 
 
 ## <a name="see-also"></a>Consulte Também
 - [Pré-requisitos do Azure ATP](atp-prerequisites.md)
@@ -150,4 +150,4 @@ Você pode simular atividades suspeitas como um teste de ponta a ponta. No cená
 - [Configurar coleta de eventos](configure-event-collection.md)
 - [Configuração do encaminhamento de eventos do Windows](configure-event-forwarding.md#configuring-windows-event-forwarding)
 - [Solução de problemas](troubleshooting-atp-known-issues.md)
-- [Confira o fórum do ATP!](https://aka.ms/azureatpcommunity)
+- [Confira o fórum do Azure ATP!](https://aka.ms/azureatpcommunity)

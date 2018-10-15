@@ -2,10 +2,10 @@
 title: Configurar o espelhamento de porta ao implantar a Proteção Avançada contra Ameaças do Azure | Microsoft Docs
 description: Descreve as opções de espelhamento de porta e como configurá-las para o Azure ATP
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 7/4/2018
+ms.date: 10/4/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 9ec7eb4c-3cad-4543-bbf0-b951d8fc8ffe
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 9ac3c584f5eb73b33415c6c1250eee4c41a12763
-ms.sourcegitcommit: 7f3ded32af35a433d4b407009f87cfa6099f8edf
+ms.openlocfilehash: 5ca24df927bc91383449926bdcd67a1c29585618
+ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44125984"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48783569"
 ---
 *Aplica-se a: Proteção Avançada contra Ameaças do Azure*
 
@@ -26,7 +26,7 @@ ms.locfileid: "44125984"
 
 # <a name="configure-port-mirroring"></a>Configurar o espelhamento de porta
 > [!NOTE] 
-> Este artigo é relevante apenas se você implantar o sensor autônomo do Azure ATP em vez do sensor do Azure ATP. Para determinar se você precisa usar o sensor autônomo do Azure ATP, confira [Escolhendo os sensores certos para sua implantação](atp-capacity-planning.md#choosing-the-right-sensor-type-for-your-deployment).
+> Este artigo será relevante apenas se você implantar sensores autônomos do Azure ATP, em vez de sensores do Azure ATP. Para determinar se você precisa usar sensores autônomos do Azure ATP, confira [Choosing the right sensors for your deployment](atp-capacity-planning.md#choosing-the-right-sensor-type-for-your-deployment) (Escolhendo os sensores certos para sua implantação).
  
 A fonte de dados principal usada pelo Azure ATP é uma inspeção profunda de pacotes do tráfego de rede para e dos controladores de domínio. Para que o Azure ATP veja o tráfego de rede, você deve configurar o espelhamento de porta ou usar uma TAP de Rede.
 
@@ -74,4 +74,4 @@ Depois de configurar o espelhamento de porta, verifique se ele está funcionando
 
 ## <a name="see-also"></a>Consulte Também
 - [Configurar o encaminhamento de eventos](configure-event-forwarding.md)
-- [Confira o fórum do ATP!](https://aka.ms/azureatpcommunity)
+- [Confira o fórum do Azure ATP!](https://aka.ms/azureatpcommunity)

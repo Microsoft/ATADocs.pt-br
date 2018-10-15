@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 8/12/2018
+ms.date: 10/04/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 43e57f87-ca85-4922-8ed0-9830139fe7cb
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: ccb87ab6b3fabed5edaf7c32324701c74259f098
-ms.sourcegitcommit: 5ff50807f855db1051b977a64eb6e90487ea196c
+ms.openlocfilehash: 31871a03795b1c08e4fd8954cac80a00538863db
+ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45750430"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48783331"
 ---
 *Aplica-se a: Proteção Avançada contra Ameaças do Azure*
 
@@ -54,7 +54,7 @@ A lista de grupos a seguir é considerada confidencial pelo Azure ATP. Qualquer 
 
 Além desses grupos, você pode marcar manualmente grupos ou contas como confidenciais para aprimorar as detecções. Isso é importante porque algumas detecções do Azure ATP, como a detecção de modificação de grupos confidenciais e o caminho de movimentação lateral, dependem de quais grupos e contas são consideradas confidenciais. Você pode marcar manualmente outros usuários ou grupos como confidenciais, como membros da diretoria, executivos ou diretores de vendas da empresa, entre outros, e o Azure ATP os considerará como confidenciais.
 
-1.  No portal de espaço de trabalho do Azure ATP, clique na engrenagem de **Configuração** na barra de menus.
+1.  No portal do Azure ATP, clique na engrenagem de **Configuração** na barra de menus.
 
 2.  Em **Detecção**, clique em **Marcas de entidade**.
 
@@ -70,4 +70,4 @@ Além desses grupos, você pode marcar manualmente grupos ou contas como confide
 ## <a name="see-also"></a>Consulte também
 
 - [Trabalhando com atividades suspeitas](working-with-suspicious-activities.md)
-- [Confira o fórum do ATP!](https://aka.ms/azureatpcommunity)
+- [Confira o fórum do Azure ATP!](https://aka.ms/azureatpcommunity)

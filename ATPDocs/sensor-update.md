@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 9/12/2018
+ms.date: 10/04/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 603d9e09-a07d-4357-862f-d5682c8bc3dd
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 8a6481070abf1188507f31dbd01b26f7221b2e36
-ms.sourcegitcommit: a5823d0dfc48783ab990a99ca3f65b614fb49e75
+ms.openlocfilehash: e478fc1a2ae955d66d00b3d87bd5f782354c766d
+ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44697235"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48783756"
 ---
 *Aplica-se a: Proteção Avançada contra Ameaças do Azure*
 
@@ -60,7 +60,7 @@ Geralmente, os sensores são atualizados automaticamente quando o serviço de nu
 Assim, é possível selecionar sensores específicos nos quais a atualização ocorrerá automaticamente e atualizar o restante dos sensores de forma atrasada, somente depois que você verificar que a atualização inicial ocorreu sem problemas.
 
 > [!NOTE]
-> Se ocorrer algum erro e o sensor não for atualizado, abra um tíquete de suporte.
+> Se ocorrer algum erro e o sensor não for atualizado, abra um tíquete de suporte. Para proteger ainda mais seu proxy para comunicar-se apenas com seu workspace, confira [configuração de Proxy](configure-proxy.md)
 
 Para configurar um sensor para atualização atrasada:
 
@@ -87,7 +87,7 @@ A cada poucos minutos, os sensores da Azure ATP verificam se eles têm a versão
   7. Um sensor recebe uma permissão do serviço de nuvem do Azure. Isso pode ser verificado na página **Atualizações**.
   8. O próximo sensor inicia o processo de atualização. 
 
-4. 24 horas depois que o serviço de nuvem Azure ATP é atualizado, os sensores selecionados para **Atualização atrasada iniciam o processo de atualização.
+4. 24 horas depois que o serviço de nuvem Azure ATP é atualizado, os sensores selecionados para **Atualização atrasada** iniciam o processo de atualização.
 
 ![atualização do sensor](./media/sensor-update.png)
 
@@ -101,4 +101,4 @@ Em caso de falha, se o sensor não concluir o processo de atualização, um aler
 
 - [Configurar o encaminhamento de eventos](configure-event-forwarding.md)
 - [Pré-requisitos do Azure ATP](atp-prerequisites.md)
-- [Confira o fórum do ATP!](https://aka.ms/azureatpcommunity)
+- [Confira o fórum do Azure ATP!](https://aka.ms/azureatpcommunity)

@@ -1,11 +1,11 @@
 ---
-title: Investigando ataques de caminho de movimento lateral com o Azure ATP | Microsoft Docs
-description: Este artigo descreve como detectar ataques de caminho de movimento lateral com o Azure ATP (Proteção Avançada contra Ameaças).
+title: Investigando ataques de movimento lateral com o Azure ATP | Microsoft Docs
+description: Este artigo descreve como detectar ataques de movimento lateral com o Azure ATP (Proteção Avançada contra Ameaças).
 keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 8/05/2018
+ms.date: 10/04/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: de15c920-8904-4124-8bdc-03abd9f667cf
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 0fcdfdbeaeed7e42aff9d63f4f88300346c73465
-ms.sourcegitcommit: 5ad28d7b0607c7ea36d795b72928769c629fb80a
+ms.openlocfilehash: e6a223405f4aa1e8daa1d393428db43c4e692daa
+ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44165568"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48783484"
 ---
 *Aplica-se a: Proteção Avançada contra Ameaças do Azure*
 
@@ -32,7 +32,7 @@ O movimento lateral ocorre quando um invasor usa contas não confidenciais para 
 
 Para descobrir quais contas confidenciais de sua rede estão expostas devido à sua conexão a contas, grupos e computadores não confidenciais, siga estas etapas. 
 
-1. No menu do portal de espaço de trabalho do Azure ATP, clique no ícone de relatórios ![ícone de relatórios](./media/atp-report-icon.png).
+1. No menu do portal do Azure ATP, clique no ícone de relatórios ![ícone de relatórios](./media/atp-report-icon.png).
 
 2. Em **Caminhos de movimento lateral para contas confidenciais**, se não forem encontrados caminhos potenciais de movimento lateral, o relatório ficará indisponível. Se houver o potencial para caminhos de movimento lateral, o relatório pré-selecionará automaticamente a primeira data em que há dados relevantes. O relatório de caminho de movimento lateral fornece dados de até 60 dias.
 
@@ -47,7 +47,7 @@ Para descobrir quais contas confidenciais de sua rede estão expostas devido à 
 
 
 
-1. No portal do espaço de trabalho do Azure ATP, pesquise a notificação de Movimento lateral que foi adicionada ao perfil da entidade quando ela está em um caminho de movimento lateral ![ícone lateral](./media/lateral-movement-icon.png) ou ![ícone do caminho](./media/paths-icon.png). Observe que as notificações só aparecerão se houver movimento lateral nas últimas 48 horas. 
+1. No portal do Azure ATP, pesquise a notificação de Movimento lateral adicionada ao perfil da entidade quando ela está em um caminho de movimento lateral ![ícone lateral](./media/lateral-movement-icon.png) ou ![ícone do caminho](./media/paths-icon.png). Observe que as notificações só aparecerão se houver movimento lateral nas últimas 48 horas. 
 
 2. Na página de perfil do usuário que é aberta, clique na guia **Caminhos de movimento lateral**. 
 
@@ -73,6 +73,6 @@ Para descobrir quais contas confidenciais de sua rede estão expostas devido à 
 
 ## <a name="see-also"></a>Consulte Também
 
-- [Configurar permissões necessárias do SAM-R](install-atp-step8-samr.md)
-- [Trabalhando com atividades suspeitas](working-with-suspicious-activities.md)
-- [Confira o fórum do ATP!](https://aka.ms/azureatpcommunity)
+- [Configurar o Azure ATP para realizar chamadas remotas para SAM](install-atp-step8-samr.md)
+- [Trabalhando com alertas de segurança](working-with-suspicious-activities.md)
+- [Confira o fórum do Azure ATP!](https://aka.ms/azureatpcommunity)

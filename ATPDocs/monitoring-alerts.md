@@ -2,10 +2,10 @@
 title: Entendendo os alertas de monitoramento do Azure ATP | Microsoft Docs
 description: Descreve como você pode usar os logs do Azure ATP para solucionar problemas
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 4/15/2018
+ms.date: 10/04/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,30 +13,30 @@ ms.technology: ''
 ms.assetid: d0551e91-3b21-47d5-ad9d-3362df6d47c0
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 7cffaef77a80b5c1c9bb33694ef2c7a73ef80ee0
-ms.sourcegitcommit: 5ad28d7b0607c7ea36d795b72928769c629fb80a
+ms.openlocfilehash: eed1509cb31885bccdfcc40505284dbdbdfc4cca
+ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44166911"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48783875"
 ---
 *Aplica-se a: Proteção Avançada contra Ameaças do Azure*
 
 # <a name="understanding-azure-atp-sensor-and-standalone-sensor-monitoring-alerts"></a>Entendendo os alertas de monitoramento do sensor autônomo e do sensor do Azure ATP
 
-O Centro de Integridade do Azure ATP informa quando há um problema algum em seus espaços de trabalho do Azure ATP gerando um alerta de monitoramento. Este artigo descreve todos os alertas de monitoramento para cada componente, listando a causa e as etapas necessárias para resolver o problema.
+O Centro de Integridade do Azure ATP permite que você saiba quando há um problema com seu workspace do Azure ATP gerando um alerta de monitoramento. Este artigo descreve todos os alertas de monitoramento para cada componente, listando a causa e as etapas necessárias para resolver o problema.
 
 ## <a name="read-only-user-password-to-expire-shortly"></a>Senha de usuário somente leitura a expirar em breve
 
 |Alerta|Descrição|Resolução|Severidade|
 |----|----|----|----|
-|A senha de usuário somente leitura, usada para executar a resolução de entidades no Active Directory, está prestes a expirar em menos de 30 dias.|Se a senha do usuário expirar, todos os sensores do Azure ATP deixarão de ser executados e nenhum novo dado será coletado.|[Altere a senha de conectividade do domínio](modifying-atp-config-dcpassword.md) e, em seguida, atualize a senha no Console do Azure ATP.|Média|
+|A senha de usuário somente leitura, usada para executar a resolução de entidades no Active Directory, está prestes a expirar em menos de 30 dias.|Se a senha do usuário expirar, todos os sensores do Azure ATP deixarão de ser executados e nenhum novo dado será coletado.|[Altere a senha de conectividade do domínio](modifying-atp-config-dcpassword.md) e, em seguida, atualize a senha no portal do Azure ATP.|Média|
 
 ## <a name="read-only-user-password-expired"></a>A senha de usuário somente leitura expirou
 
 |Alerta|Descrição|Resolução|Severidade|
 |----|----|----|----|
-|A senha de usuário somente leitura, usada para obter dados de diretório, expirou.|Todos os sensores do Azure ATP deixam de ser executados (ou deixarão de ser executados em breve) e nenhum novo dado é coletado.|[Altere a senha de conectividade do domínio](modifying-atp-config-dcpassword.md) e, em seguida, atualize a senha no Console do Azure ATP.|Alta|
+|A senha de usuário somente leitura, usada para obter dados de diretório, expirou.|Todos os sensores do Azure ATP deixam de ser executados (ou deixarão de ser executados em breve) e nenhum novo dado é coletado.|[Altere a senha de conectividade do domínio](modifying-atp-config-dcpassword.md) e, em seguida, atualize a senha no portal do Azure ATP.|Alta|
 
 ## <a name="domain-synchronizer-not-assigned"></a>Sincronizador de domínio não atribuído
 
@@ -110,4 +110,4 @@ O Centro de Integridade do Azure ATP informa quando há um problema algum em seu
 - [Planejamento de capacidade do Azure ATP](atp-capacity-planning.md)
 - [Configurar coleta de eventos](configure-event-collection.md)
 - [Configuração do encaminhamento de eventos do Windows](configure-event-forwarding.md#configuring-windows-event-forwarding)
-- [Confira o fórum do ATP!](https://aka.ms/azureatpcommunity)
+- [Confira o fórum do Azure ATP!](https://aka.ms/azureatpcommunity)

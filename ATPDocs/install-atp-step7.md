@@ -1,11 +1,11 @@
 ---
-title: Instalar a Proteção Avançada contra Ameaças do Azure – etapa 7 | Microsoft Docs
-description: Na etapa final da instalação do Azure ATP, você configura o usuário Honeytoken.
+title: Configurar exclusões de detecção e contas honeytoken da Proteção Avançada contra Ameaças do Azure | Microsoft Docs
+description: Configuração de exclusões de detecção e contas de usuário honeytoken.
 keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 8/2/2018
+ms.date: 10/04/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,16 +13,19 @@ ms.technology: ''
 ms.assetid: 1ad5e923-9bbd-4f56-839a-b11a9f387d4b
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 9252e47978a4adc0e2059a3111b362ff2b042daf
-ms.sourcegitcommit: b283bf66e63d76e6dba4564a229e804792794c6d
+ms.openlocfilehash: a538ce4596da106d11646e27aa65131bb47380d2
+ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/29/2018
-ms.locfileid: "47453792"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48782974"
 ---
 *Aplica-se a: Proteção Avançada contra Ameaças do Azure*
 
 
+<<<<<<< HEAD
+# <a name="configure-detection-exclusions-and-honeytoken-accounts"></a>Configurar exclusões de detecção e contas de honeytoken
+=======
 
 # <a name="install-azure-atp---step-7"></a>Instalar o Azure ATP – etapa 7
 
@@ -31,6 +34,7 @@ ms.locfileid: "47453792"
 > [Etapa 8»](install-atp-step8-samr.md)
 
 ## <a name="step-7-configure-detection-exclusions-and-honeytoken-accounts"></a>Etapa 7. Configurar exclusões de detecção e contas de honeytoken
+>>>>>>> 209d7e7162816a4c9e6e0ec0ff8d02f771e12d04
 
 O Azure ATP permite que endereços IP ou usuários específicos sejam excluídos de várias detecções. 
 
@@ -40,7 +44,7 @@ O Azure ATP também permite a configuração de contas de honeytoken, usadas com
 
 Para configurar, execute estas etapas:
 
-1.  No portal de espaço de trabalho do Azure ATP, clique no ícone de configurações e selecione **Configuração**.
+1.  No portal do Azure ATP, clique no ícone de configurações e selecione **Configuração**.
 
     ![Definições de configuração do Azure ATP](media/atp-config-menu.png)
 
@@ -65,13 +69,16 @@ Verifique a linha de tempo do ataque para exibir atividades suspeitas detectadas
 O Azure ATP iniciará imediatamente a verificação de atividades suspeitas. Algumas detecções, como Modificações de grupo anormais, requerem um período de aprendizado e não estão disponíveis imediatamente após a implantação do Azure ATP.
 
 
+<a name="-head"></a><<<<<<< HEAD
+=======
 
 > [!div class="step-by-step"]
 > [«Etapa 6](install-atp-step6-vpn.md)
 > [Etapa 8»](install-atp-step8-samr.md)
 
+>>>>>>> 209d7e7162816a4c9e6e0ec0ff8d02f771e12d04
 ## <a name="see-also"></a>Consulte Também
 - [Ferramenta de dimensionamento do Azure ATP](http://aka.ms/aatpsizingtool)
 - [Configurar coleta de eventos](configure-event-collection.md)
 - [Pré-requisitos do Azure ATP](atp-prerequisites.md)
-- [Confira o fórum do ATP!](https://aka.ms/azureatpcommunity)
+- [Confira o fórum do Azure ATP!](https://aka.ms/azureatpcommunity)

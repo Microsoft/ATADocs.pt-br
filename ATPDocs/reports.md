@@ -2,10 +2,10 @@
 title: Trabalhando com relatórios do Azure ATP | Microsoft Docs
 description: Descreve como você pode gerar relatórios no Azure ATP para monitorar sua rede.
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 2/27/2018
+ms.date: 10/04/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,19 +13,19 @@ ms.technology: ''
 ms.assetid: 2c2d6b1a-fc8c-4ff7-b07d-64ce6159f84d
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: eb1a29038d8afb47328970ff7179f0e1ff01614d
-ms.sourcegitcommit: 5ad28d7b0607c7ea36d795b72928769c629fb80a
+ms.openlocfilehash: 367ad07bd1d0be80486bfc10c2b70546d360805c
+ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44165925"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48783178"
 ---
 *Aplica-se a: Proteção Avançada contra Ameaças do Azure*
 
 
 # <a name="azure-atp-reports"></a>Relatórios do Azure ATP
 
-A seção de relatórios do Azure ATP no portal de espaço de trabalho permite gerar relatórios que fornecem informações do status do sistema, a integridade do sistema e um relatório de atividades suspeitas detectadas em seu ambiente.
+A seção de relatórios do Azure ATP no portal do Azure ATP permite gerar relatórios que fornecem informações do status do sistema, a integridade do sistema e um relatório de atividades suspeitas detectadas em seu ambiente.
 
 
 Para acessar a página relatórios, clique no ícone de relatório na barra de menus: ![ícone de relatório](./media/atp-report-icon.png).
@@ -43,7 +43,7 @@ Há duas maneiras de gerar um relatório: sob demanda ou agendando um relatório
 
 Para gerar um relatório sob demanda:
 
-1. Na barra de menus do portal de espaço de trabalho do Azure ATP, clique no ícone de relatório na barra de menus: ![ícone de relatório](./media/atp-report-icon.png).
+1. Na barra de menus do Azure ATP, clique no ícone de relatório na barra de menus: ![ícone de relatório](./media/atp-report-icon.png).
 
 2. Em seu tipo de relatório selecionado, defina as datas **De** e **Até** e clique em **Baixar**. 
  ![relatórios](./media/reports.png)
@@ -67,4 +67,4 @@ Para definir um relatório agendado:
 - [Planejamento de capacidade do Azure ATP](atp-capacity-planning.md)
 - [Configurar coleta de eventos](configure-event-collection.md)
 - [Configuração do encaminhamento de eventos do Windows](configure-event-forwarding.md#configuring-windows-event-forwarding)
-- [Confira o fórum do ATP!](https://aka.ms/azureatpcommunity)
+- [Confira o fórum do Azure ATP!](https://aka.ms/azureatpcommunity)

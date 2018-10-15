@@ -1,11 +1,11 @@
 ---
 title: Configurar SAM-R para habilitar a detecção de caminho de movimento lateral no Azure ATP | Microsoft Docs
-description: Descreve como configurar SAM-R para habilitar a detecção de caminho de movimento lateral no Azure ATP
+description: Explica como configurar o Azure ATP para realizar chamadas remotas para SAM
 keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 7/31/2018
+ms.date: 10/07/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,25 +13,19 @@ ms.technology: ''
 ms.assetid: b09adce3-0fbc-40e3-a53f-31f57fe79ca3
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 34ee1589d59b0740e9d3b05eb117991325619295
-ms.sourcegitcommit: b283bf66e63d76e6dba4564a229e804792794c6d
+ms.openlocfilehash: 49372ce2432e90b04e0d10b2e8e102c1b05e9c9a
+ms.sourcegitcommit: bbbe808c08ce703a314c82b46aedaae79ab256a3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/29/2018
-ms.locfileid: "47453979"
+ms.lasthandoff: 10/07/2018
+ms.locfileid: "48848466"
 ---
 *Aplica-se a: Proteção Avançada contra Ameaças do Azure*
 
-# <a name="install-azure-atp---step-8"></a>Instalar o Azure ATP – etapa 8
+# <a name="configure-azure-atp-to-make-remote-calls-to-sam"></a>Configurar o Azure ATP para realizar chamadas remotas para SAM
+A detecção de [caminho de movimento lateral](use-case-lateral-movement-path.md) se baseia em consultas que identificam os administradores locais em computadores específicos. Essas consultas são executadas com o protocolo SAM-R usando a conta de serviço do Azure ATP criada durante a instalação do Azure ATP [Etapa 2. Conectar-se ao AD](install-atp-step2.md).
 
-> [!div class="step-by-step"]
-> [« Etapa 7](install-atp-step7.md)
-> [Etapa 9 »](atp-multi-forest.md)
-
-## <a name="step-8-configure-sam-r-required-permissions"></a>Etapa 8. Configurar permissões necessárias do SAM-R
-
-A detecção de [caminho de movimento lateral](use-case-lateral-movement-path.md) se baseia em consultas que identificam os administradores locais em computadores específicos. Essas consultas são executadas com o protocolo SAM-R, usando a conta de serviço do Azure ATP criada na [Etapa 2. Conectar-se ao AD](install-atp-step2.md).
- 
+## <a name="configure-sam-r-required-permissions"></a>Configurar permissões necessárias do SAM-R
 Para garantir que clientes e servidores Windows permitam que sua conta do Azure ATP execute o SAM-R, é necessário fazer uma modificação na **Política de Grupo** para adicionar a conta de serviço do Azure ATP, além das contas configuradas que aparecem na política de **Acesso de rede**.
 
 1. Localize a política:
@@ -53,12 +47,7 @@ Para garantir que clientes e servidores Windows permitam que sua conta do Azure 
 Para saber mais sobre SAM-R e esta Política de Grupo, confira [Acesso à rede: restringir clientes com permissão para efetuar chamadas remotas para SAM](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/network-access-restrict-clients-allowed-to-make-remote-sam-calls).
 
 
-> [!div class="step-by-step"]
-> [« Etapa 7](install-atp-step7.md)
-> [Etapa 9 »](atp-multi-forest.md)
-
-
 
 ## <a name="see-also"></a>Consulte Também
 - [Investigando ataques de caminho de movimento lateral com o Azure ATP](use-case-lateral-movement-path.md)
-- [Confira o fórum do ATP!](https://aka.ms/azureatpcommunity)
+- [Confira o fórum do Azure ATP!](https://aka.ms/azureatpcommunity)

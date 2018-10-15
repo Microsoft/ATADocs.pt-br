@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 8/6/2018
+ms.date: 10/04/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 43e57f87-ca85-4922-8ed0-9830139fe7cb
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 0c0558dbe0b4eba849adb635a84bc934e406e56f
-ms.sourcegitcommit: 5ad28d7b0607c7ea36d795b72928769c629fb80a
+ms.openlocfilehash: 72e26d9cdc539da168d1bc7c274971526eec61d1
+ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44166554"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48783297"
 ---
 *Aplica-se a: Proteção Avançada contra Ameaças do Azure*
 
@@ -26,13 +26,13 @@ ms.locfileid: "44166554"
 
 # <a name="investigate-an-entity-with-azure-atp"></a>Investigar uma entidade com o Azure ATP
 
-Este artigo descreve o processo de investigação de entidades após a detecção de atividades suspeitas com o Azure ATP (Proteção Avançada contra Ameaças). Após exibir uma atividade suspeita na linha do tempo, é possível fazer uma busca detalhada sobre a entidade envolvida na atividade e usar os seguintes parâmetros e detalhes para saber mais sobre o que aconteceu e o que você precisa fazer para minimizar o risco.
+Este artigo descreve o processo de investigação de entidades após a detecção de atividades suspeitas com o Azure ATP (Proteção Avançada contra Ameaças). Após exibir um alerta de segurança na linha do tempo, é possível fazer drill down na entidade envolvida no alerta e usar os seguintes parâmetros e detalhes para saber mais sobre o que aconteceu e o que você precisa fazer para minimizar o risco.
 
 ## <a name="look-at-the-entity-profile"></a>Examinar o perfil da entidade
 
 O perfil de entidade fornece uma abrangente página da entidade, projetada para fazer investigações completas e aprofundadas de usuários, computadores, dispositivos e dos recursos a que eles têm acesso e junto com o histórico. A página de perfil aproveita o novo conversor de atividade lógica do Azure ATP, que pode examinar um grupo de atividades em andamento (agregadas até um minuto) e agrupá-las em uma única atividade lógica para fornecer uma melhor compreensão das atividades reais de seus usuários.
 
-Para acessar uma página de perfil de entidade, clique no nome da entidade, como um nome de usuário, na linha do tempo de atividades suspeitas. Também é possível ver uma miniversão do perfil de entidade na página da atividade suspeita passando o mouse sobre o nome da entidade.
+Para acessar uma página de perfil de entidade, clique no nome da entidade, como um nome de usuário, na linha do tempo de alerta de segurança. Também é possível ver uma miniversão do perfil da entidade na página de alerta de segurança passando o mouse sobre o nome da entidade.
 
 O perfil da entidade permite que você exiba atividades da entidade, dados de diretório e caminhos de movimentação lateral para ela. Confira mais informações em [Noções básicas sobre perfis de entidade](entity-profiles.md).
 
@@ -112,4 +112,4 @@ Antes de continuar com sua investigação, é importante saber se a entidade é 
 ## <a name="see-also"></a>Consulte também
 
 - [Trabalhando com atividades suspeitas](working-with-suspicious-activities.md)
-- [Confira o fórum do ATP!](https://aka.ms/azureatpcommunity)
+- [Confira o fórum do Azure ATP!](https://aka.ms/azureatpcommunity)
