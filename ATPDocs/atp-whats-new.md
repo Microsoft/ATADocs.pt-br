@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 10/07/2018
+ms.date: 10/14/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,16 +13,21 @@ ms.technology: ''
 ms.assetid: 7d0f33db-2513-4146-a395-290e001f4199
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: dc008506e7b19a8d6eafd455a4414b1513608811
-ms.sourcegitcommit: c4978be196e0039c7a5d5887bec4cbc5c01d64f9
+ms.openlocfilehash: 5e400f51281ea9d0dd17be50800f0d0a9d467986
+ms.sourcegitcommit: 7b138a310a6b31a6375d87a95c7866cb9f701a9e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/07/2018
-ms.locfileid: "48848623"
+ms.lasthandoff: 10/14/2018
+ms.locfileid: "49315894"
 ---
 *Aplica-se a: Proteção Avançada contra Ameaças do Azure*
 
 # <a name="whats-new-in-azure-atp"></a>Novidades do Azure ATP 
+
+## <a name="azure-atp-release-250"></a>Azure ATP versão 2.50
+Lançado em 14 de outubro de 2018
+- Essa versão inclui correções e melhorias para vários problemas.
+
 
 ## <a name="azure-atp-release-249"></a>Azure ATP versão 2.49
 Lançado em 7 de outubro de 2018
@@ -273,7 +278,7 @@ Lançado em 25 de março de 2018
 
 - Quando o Azure ATP alerta sobre uma atividade suspeita que você identifica como um positivo benigno (uma ação legítima que não é uma atividade suspeita), você tem a opção de excluir computadores e endereços IP de mais detecções, como: downgrade de criptografia, força bruta de LDAP, PAC forjado, força bruta e Pass-the-hash.
 -   O desempenho do sensor do Azure ATP foi aprimorado.
--   Uma nova região foi adicionada para a implantação do Espaço de trabalho. Agora é possível implantar um espaço de trabalho na Ásia. 
+-   Uma nova região foi adicionada para a implantação do Workspace. Agora é possível implantar um workspace na Ásia. 
 
 
 ## <a name="azure-atp-release-225"></a>Azure ATP versão 2.25
@@ -281,7 +286,7 @@ Lançado em 25 de março de 2018
 Lançada em 18 de março de 2018
 
 - Agora há compatibilidade com a MFA (Autenticação Multifator) no Azure ATP. Os locatários usando MFA agora podem entrar no portal do Azure ATP.
-- O Azure ATP agora tem uma página [**Status do sistema**](https://health.atp.azure.com/) para fornecer informações sobre se o Portal de Gerenciamento do espaço de trabalho está funcionando e ativo, se há problemas com as detecções e se o sensor pode enviar tráfego para a nuvem. Você pode acessar o **Status do sistema** na barra de menus do Azure ATP.
+- O Azure ATP agora tem uma página [**Status do sistema**](https://health.atp.azure.com/) para fornecer informações sobre se o Portal de Gerenciamento do workspace está funcionando e ativo, se há problemas com as detecções e se o sensor pode enviar tráfego para a nuvem. Você pode acessar o **Status do sistema** na barra de menus do Azure ATP.
 
 
 ## <a name="azure-atp-release-224"></a>Versão 2.24 do Azure ATP
