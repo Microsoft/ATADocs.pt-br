@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: f6f3ed75-d6bb-4966-a9a7-5339c4f3ebac
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: a888cbb80bba74d920e236b04c353008c7b56daf
-ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
+ms.openlocfilehash: c0bda95fb789225cf7d05616974f9a333f3c8e4f
+ms.sourcegitcommit: 30d874808cfeafd46ee8fbbf34e0bbcb337f6544
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48783654"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49089348"
 ---
 *Aplica-se a: Proteção Avançada contra Ameaças do Azure*
 
@@ -59,21 +59,21 @@ Para habilitar esse recurso, você precisa de uma licença para o Azure ATP e o 
 
 ## <a name="how-to-integrate-azure-atp-with-windows-defender-atp"></a>Como integrar o Azure ATP ao Windows Defender ATP
 
-1. Clique em **Configuração** e, em **Fontes de dados**, selecione **Windows Defender ATP**. Em seguida, clique no link para **Gerenciamento de espaço de trabalho**. Isso só estará disponível se você tiver uma licença do Windows Defender ATP e já tiver executado o processo de ambientação do Windows Defender ATP. 
+1. Clique em **Configuração** e, em **Fontes de dados**, selecione **Windows Defender ATP**. Em seguida, clique no link para **Gerenciamento de workspace**. Isso só estará disponível se você tiver uma licença do Windows Defender ATP e já tiver executado o processo de ambientação do Windows Defender ATP. 
 
 2. No seu workspace, clique na engrenagem de configurações.
 
- ![integração do espaço de trabalho](./media/edit-workspace.png)
+ ![integração do workspace](./media/edit-workspace.png)
  
 3. Defina a integração como **Ativo**. 
 
  ![habilitar integração](./media/enable-integration.png)
 
-4. No [Portal do Windows Defender ATP](https://beta.securitycenter.windows.com/preferences/advanced), vá até **Configurações**, **Recursos avançados** e defina **Integração do Azure ATP** como **ATIVO**. 
+4. No [Portal do Windows Defender ATP](https://securitycenter.windows.com/preferences/advanced), vá até **Configurações**, **Recursos avançados** e defina **Integração do Azure ATP** como **ATIVO**. 
 
  ![Habilitar integração do Windows Defender ATP](./media/wd-atp-enable.png)
 
-5. Para verificar o status da integração, no portal do Azure ATP, vá até **Configurações** e, em seguida, **Integração do Windows Defender ATP**. Você pode ver o status da integração. Se algo estiver errado, você verá um erro. Você também pode ver qual espaço de trabalho está integrado ao Windows Defender ATP.
+5. Para verificar o status da integração, no portal do Azure ATP, vá até **Configurações** e, em seguida, **Integração do Windows Defender ATP**. Você pode ver o status da integração. Se algo estiver errado, você verá um erro. Você também pode ver qual workspace está integrado ao Windows Defender ATP.
 
 ## <a name="how-it-works"></a>Como funciona
 
