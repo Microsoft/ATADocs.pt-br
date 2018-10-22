@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 10/04/2018
+ms.date: 10/14/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 8ae459ac-9fca-4923-9a1a-dc10d5c50b29
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 2c4f82ce7bf4e8ba7bf9e6ae56198ca1f6e4aefb
-ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
+ms.openlocfilehash: a5d6693aa44fd82d10654ebd40533100e8834627
+ms.sourcegitcommit: 58c75026e5ec4dcab3b0852a41f9f0a0ad6f22eb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48783229"
+ms.lasthandoff: 10/14/2018
+ms.locfileid: "49315754"
 ---
 *Aplica-se a: Proteção Avançada contra Ameaças do Azure*
 
@@ -30,7 +30,7 @@ Use os seguintes recursos para ajudá-lo a saber mais, implantar e dar suporte �
 
 |Para fazer isso...|...faça isto:|
 |----|----|
-|Consulte as documentações mais populares|Leia as cinco principais páginas:<br>- [O que é a Proteção Avançada contra Ameaças do Azure?](what-is-atp.md)<br>- [Pré-requisitos do Azure ATP](atp-prerequisites.md)<br>- [Arquitetura do Azure ATP](atp-architecture.md)<br>- [Planejamento de capacidade do Azure ATP](atp-capacity-planning.md)<br>- [Criar um espaço de trabalho](install-atp-step1.md)|
+|Consulte as documentações mais populares|Leia as cinco principais páginas:<br>- [O que é a Proteção Avançada contra Ameaças do Azure?](what-is-atp.md)<br>- [Pré-requisitos do Azure ATP](atp-prerequisites.md)<br>- [Arquitetura do Azure ATP](atp-architecture.md)<br>- [Planejamento de capacidade do Azure ATP](atp-capacity-planning.md)<br>- [Criar um workspace](install-atp-step1.md)|
 |Entre em contato com a equipe de produto e seus colegas|Visite a [Comunidade Tecnológica](https://techcommunity.microsoft.com/t5/Azure-Advanced-Threat-Protection/bd-p/AzureAdvancedThreatProtection) da Proteção Avançada contra Ameaças do Azure.|
 |Verifique as informações da assinatura e quais recursos são compatíveis|Verifique as [informações da assinatura](https://www.microsoft.com/cloud-platform/azure-information-protection-pricing) e a [lista de recursos](https://www.microsoft.com/cloud-platform/azure-information-protection-features) no site da Proteção Avançada contra Ameaças do Azure.|
 
@@ -62,7 +62,7 @@ Para obter opções de suporte adicionais, fale com seu contato da Microsoft.
 
 #### <a name="system-status-page"></a>Página Status do sistema 
 
-Para exibir o status do sistema para o Azure ATP, acesse a página [**Status do sistema**](https://health.atp.azure.com/). Essa página fornece informações sobre se o Portal de Gerenciamento do espaço de trabalho está funcionando e ativo, se há problemas com as detecções e se o sensor pode enviar tráfego para a nuvem. Você pode acessar o **Status do sistema** na barra de menus do Azure ATP.
+Para exibir o status do sistema para o Azure ATP, acesse a página [**Status do sistema**](https://health.atp.azure.com/). Essa página fornece informações sobre se o Portal do Azure ATP está funcionando e ativo, se há problemas com as detecções e se o sensor pode enviar tráfego para a nuvem. Você pode acessar o **Status do sistema** na barra de menus do Azure ATP.
 
 #### <a name="on-demand-videos"></a>Vídeos sob demanda
 

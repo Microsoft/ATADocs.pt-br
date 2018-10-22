@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 6a9b5273-eb26-414e-9cdd-f64406e24ed8
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 07c5d67804eb4c74df678e8752a2516af5c52cc7
-ms.sourcegitcommit: bbbe808c08ce703a314c82b46aedaae79ab256a3
+ms.openlocfilehash: 13fbc33c1f6aa525382644a48418dceabbb9b652
+ms.sourcegitcommit: 58c75026e5ec4dcab3b0852a41f9f0a0ad6f22eb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/07/2018
-ms.locfileid: "48848500"
+ms.lasthandoff: 10/14/2018
+ms.locfileid: "49315720"
 ---
 *Aplica-se a: Proteção Avançada contra Ameaças do Azure*
 
@@ -71,7 +71,7 @@ Sim, seus dados são isolados por meio da autenticação de acesso e da lógica 
 
 ### <a name="do-i-have-the-flexibility-to-select-where-to-store-my-data"></a>É tenho flexibilidade para selecionar onde armazenar meus dados? 
 
-Ao criar o espaço de trabalho do Azure ATP, você pode optar por armazenar seus dados em data centers do Microsoft Azure nos Estados Unidos ou na Europa. Após configurar, você não pode alterar o local onde os dados são armazenados. A Microsoft não transfere os dados do local especificado.                
+Ao criar o workspace do Azure ATP, você pode optar por armazenar seus dados em data centers do Microsoft Azure nos Estados Unidos ou na Europa. Após configurar, você não pode alterar o local onde os dados são armazenados. A Microsoft não transfere os dados do local especificado.                
 
 ### <a name="how-does-microsoft-prevent-malicious-insider-activities-and-abuse-of-high-privilege-roles"></a>Como a Microsoft impede atividades internas mal-intencionadas e abuso de funções de alto privilégio? 
 
