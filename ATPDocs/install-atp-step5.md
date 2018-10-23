@@ -1,11 +1,11 @@
 ---
-title: Instalar a Proteção Avançada contra Ameaças do Azure – etapa 5 | Microsoft Docs
+title: Instalar a Proteção Avançada contra Ameaças do Azure | Microsoft Docs
 description: A etapa cinco da instalação do Azure ATP ajuda a definir as configurações do sensor autônomo do Azure ATP.
 keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 9/25/2018
+ms.date: 10/04/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: d7c95f8c-04f8-4946-9bae-c27ed362fcb0
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 03aa84b4288e4155b579acc12f03b7ecdb55b160
-ms.sourcegitcommit: 8e80f59409c65e7d8d60ec7de8b96b621795699a
+ms.openlocfilehash: 6f65b3af56e683a385f7128a989170c8c4073b3e
+ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47168596"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48783858"
 ---
 *Aplica-se a: Proteção Avançada contra Ameaças do Azure*
 
@@ -26,15 +26,15 @@ ms.locfileid: "47168596"
 
 # <a name="install-azure-atp---step-5"></a>Instalar o Azure ATP – etapa 5
 
->[!div class="step-by-step"]
-[« Etapa 4](install-atp-step4.md)
-[Etapa 6 »](install-atp-step6-vpn.md)
+> [!div class="step-by-step"]
+> [« Etapa 4](install-atp-step4.md)
+
 
 
 ## <a name="step-5-configure-the-azure-atp-sensor-settings"></a>Etapa 5. Definir configurações do sensor do Azure ATP
 Após a instalação do sensor do Azure ATP, execute as etapas a seguir para definir as configurações do sensor do Azure ATP.
 
-1.  No portal de espaço de trabalho do Azure ATP, vá até **Configuração** e, em **Sistema**, selecione **sensor**.
+1.  No portal do ATP do Azure, vá em **Configuração** e, em **Sistema**, selecione **sensor**.
    
      ![Imagem de definição das configurações do sensor](media/atp-sensor-config.png)
 
@@ -72,15 +72,15 @@ Para validar a implantação bem-sucedida do sensor do Azure ATP, verifique as s
 2.  Se o serviço não iniciar, examine o arquivo "Microsoft.Tri.sensor-Errors.log" localizado na pasta padrão a seguir "%programfiles%\Azure Advanced Threat Protection sensor\Version X\Logs".
  
  >[!NOTE]
- > A versão do Azure ATP é atualizada com frequência, para verificar a versão mais recente, no portal de local de trabalho do Azure ATP, vá até **Configuração** e **Sobre**. 
+ > A versão do ATP do Azure é atualizada com frequência. Para verificar a versão mais recente, no portal do ATP do Azure, vá em **Configuração** e, em seguida, **Sobre**. 
 
-3.  Vá até a URL de seu espaço de trabalho. No portal de espaço de trabalho, pesquise algo na barra de pesquisa, por exemplo, um usuário ou um grupo em seu domínio.
+3.  Vá até a URL de seu espaço de trabalho. No portal do ATP do Azure, pesquise algo na barra de pesquisa, como um usuário ou um grupo em seu domínio.
 
 
 
->[!div class="step-by-step"]
-[« Etapa 4](install-atp-step4.md)
-[Etapa 6 »](install-atp-step6-vpn.md)
+> [!div class="step-by-step"]
+> [« Etapa 4](install-atp-step4.md)
+
 
 
 ## <a name="see-also"></a>Consulte Também
@@ -88,4 +88,4 @@ Para validar a implantação bem-sucedida do sensor do Azure ATP, verifique as s
 - [Ferramenta de dimensionamento do Azure ATP](http://aka.ms/aatpsizingtool)
 - [Configurar coleta de eventos](configure-event-collection.md)
 - [Pré-requisitos do Azure ATP](atp-prerequisites.md)
-- [Confira o fórum do ATP!](https://aka.ms/azureatpcommunity)
+- [Confira o fórum do ATP do Azure!](https://aka.ms/azureatpcommunity)

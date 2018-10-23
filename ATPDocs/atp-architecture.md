@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 9/25/2018
+ms.date: 10/04/2018
 ms.topic: article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,19 +13,19 @@ ms.technology: ''
 ms.assetid: 90f68f2c-d421-4339-8e49-1888b84416e6
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: fb9e99d43a800f6b7bc080fa3fe0bc2453f3d754
-ms.sourcegitcommit: 8e80f59409c65e7d8d60ec7de8b96b621795699a
+ms.openlocfilehash: 6853a2a768fabde94c7aa613c9a6c0403f14e066
+ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47168562"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48783552"
 ---
 *Aplica-se a: Proteção Avançada contra Ameaças do Azure*
 
 
 # <a name="azure-atp-architecture"></a>Arquitetura do Azure ATP
 
-O Azure ATP monitora seus controladores de domínio capturando e analisando o tráfego de rede e aproveitando os eventos do Windows (diretamente de seus controladores de domínio ou de um servidor SIEM), e analisa os dados em busca de ataques e ameaças. Utilizando criação de perfil, detecção determinística, aprendizado de máquina e algoritmos comportamentais que do Azure ATP aprende sobre sua rede, habilita a detecção de anomalias e avisa sobre atividades suspeitas.
+O ATP do Azure monitora seus controladores de domínio capturando e analisando o tráfego de rede e aproveitando os eventos do Windows diretamente de seus controladores de domínio, em seguida, analisa os dados em busca de ataques e ameaças. Utilizando criação de perfil, detecção determinística, aprendizado de máquina e algoritmos comportamentais que do Azure ATP aprende sobre sua rede, habilita a detecção de anomalias e avisa sobre atividades suspeitas.
 
 Arquitetura da Proteção Avançada contra Ameaças do Azure:
 
@@ -40,7 +40,6 @@ O Azure ATP é formado pelos seguintes componentes:
 
 -   **Portal do Azure ATP** <br>
 O portal do Azure ATP permite que você crie sua instância do Azure ATP, exibe os dados recebidos de sensores do Azure ATP e permite monitorar, gerenciar e investigar ameaças em seu ambiente de rede.  
-
 -   **Sensor do Azure ATP**<br>
 Sensores do Azure ATP são instalados diretamente em seus controladores de domínio. O sensor monitora diretamente o tráfego do controlador de domínio sem a necessidade de um servidor dedicado ou configuração de espelhamento de porta.
 
@@ -67,11 +66,10 @@ O sensor do Azure ATP tem as seguintes funcionalidades principais:
 - Recuperar dados sobre usuários e computadores do domínio do Active Directory
 - Executar a resolução de entidades de rede (usuários, grupos e computadores)
 - Transferir dados relevantes para o serviço de nuvem do Azure ATP
-> [!NOTE]
-> - Por padrão, o Azure ATP é compatível com até 100 sensores. Caso deseje instalar mais, entre em contato com o suporte do Azure ATP.
+
  
 ## <a name="azure-atp-sensor-features"></a>Funcionalidades do Sensor do Azure ATP
-O sensor do Azure ATP lê eventos localmente, sem necessidade de comprar e manter hardware ou configurações adicionais. O sensor do Azure ATP também tem suporte para o ETW, o que fornece as informações de log para várias detecções. As detecções baseadas no ETW incluem tanto a Solicitação de Replicação Suspeita quanto a Promoção de Controlador de Domínio Suspeita, ambas são possíveis ataques DCShadow.
+O sensor do Azure ATP lê eventos localmente, sem necessidade de comprar e manter hardware ou configurações adicionais. O sensor do ATP do Azure também dá suporte para o Rastreamento de Eventos para Windows (ETW), o qual fornece as informações de log para várias detecções. As detecções baseadas no ETW incluem tanto a Solicitação de Replicação Suspeita quanto a Promoção de Controlador de Domínio Suspeita, ambas são possíveis ataques do DCShadow.
 - Candidato ao sincronizador de domínio
 
     O candidato de sincronizador de domínio é responsável por sincronizar todas as entidades de um determinado domínio do Active Directory de forma proativa (semelhante ao mecanismo utilizado pelos próprios controladores de domínio para replicação). Um sensor é escolhido aleatoriamente, na lista de candidatos, para servir como sincronizador de domínio. 
@@ -99,4 +97,4 @@ O sensor do Azure ATP lê eventos localmente, sem necessidade de comprar e mante
 - [Planejamento de capacidade do Azure ATP](atp-capacity-planning.md)
 - [Configurar o encaminhamento de eventos](configure-event-forwarding.md)
 - [Configuração do encaminhamento de eventos do Windows](configure-event-forwarding.md)
-- [Confira o fórum do ATP!](https://aka.ms/azureatpcommunity)
+- [Confira o fórum do ATP do Azure!](https://aka.ms/azureatpcommunity)

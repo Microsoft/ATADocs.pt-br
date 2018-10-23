@@ -2,22 +2,22 @@
 title: Planejamento da implantação da Proteção Avançada contra Ameaças do Azure | Microsoft Docs
 description: Ajuda você a planejar a implantação e a decidir quantos servidores do Azure ATP serão necessários para dar suporte à sua rede
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 5/22/2018
+ms.date: 10/04/2018
 ms.topic: conceptual
 ms.service: azure-advanced-threat-protection
 ms.prod: ''
 ms.assetid: da0ee438-35f8-4097-b3a1-1354ad59eb32
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: e894422e7264650186c6f4eea28d5a9099ca7914
-ms.sourcegitcommit: 56065ee43dac299203871cd6f025315520750b3b
+ms.openlocfilehash: 9f2b8f31f88c14f67c8a03b748ac3d2fb6179a62
+ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47233891"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48783450"
 ---
 *Aplica-se a: Proteção Avançada contra Ameaças do Azure*
 
@@ -26,13 +26,13 @@ ms.locfileid: "47233891"
 # <a name="azure-atp-capacity-planning"></a>Planejamento de capacidade do Azure ATP
 Este artigo ajuda você a determinar quantos sensores e quantos sensores autônomos do Azure ATP são necessários.
 
-> [!NOTE] 
-> A ferramenta de dimensionamento tem duas folhas – uma para o ATA e outra para o Azure ATP. Verifique se você está na folha correta.
-
 ## <a name="using-the-sizing-tool"></a>Usando a ferramenta de dimensionamento
 A maneira recomendada e mais simples de determinar a capacidade de sua implantação do Azure ATP é usar o [Ferramenta de dimensionamento do Azure ATP](http://aka.ms/aatpsizingtool). Execute a Ferramenta de dimensionamento do Azure ATP e, nos resultados do arquivo do Excel, use os campos a seguir para determinar a memória e a CPU usadas pelo sensor:
 
-- Sensor do Azure ATP: faça a correspondência entre o campo **Pacotes Ocupados/s** na tabela do sensor do Azure ATP no arquivo de resultados com o campo **PACOTES POR SEGUNDO** na [Tabela do sensor autônomo do Azure ATP](#azure-atp-sensor-sizing) ou na [Tabela do sensor do Azure ATP](#azure-atp-standalone-sensor-sizing), dependendo do [tipo de sensor que você escolher](#choosing-the-right-sensor-type-for-your-deployment).
+> [!NOTE] 
+> A ferramenta de dimensionamento tem duas folhas – uma para o ATA e outra para o Azure ATP. Verifique se você está na folha correta.
+
+- Sensor do ATP do Azure: faça a correspondência entre o campo **Pacotes Ocupados/s** na tabela do sensor do ATP do Azure no arquivo de resultados com o campo **PACOTES POR SEGUNDO** na [Tabela do sensor autônomo do ATP do Azure](#azure-atp-sensor-sizing) ou na [Tabela do sensor do ATP do Azure](#azure-atp-standalone-sensor-sizing), dependendo do [tipo de sensor que você escolher](#choosing-the-right-sensor-type-for-your-deployment).
 
 
 ![Ferramenta de planejamento de capacidade de amostra](media/capacity-tool.png)
@@ -42,10 +42,10 @@ Se, por alguma razão, você não puder usar a Ferramenta de dimensionamento do 
 As seções a seguir apresentam instruções sobre como coletar o contador de pacotes/segundo de um Controlador de Domínio.
 
 ## Escolher o tipo certo de sensor para a implantação<a name="choosing-the-right-sensor-type-for-your-deployment"></a>
-Em uma implantação do Azure ATP, qualquer combinação dos tipos de sensor autônomo do Azure ATP tem suporte:
+Em uma implantação do ATP do Azure, há suporte para qualquer combinação dos tipos de sensores do ATP do Azure:
 
+- Somente sensores do ATP do Azure
 - Somente sensores autônomos do Azure ATP
-- Somente sensor do Azure ATP
 - Uma combinação de ambas
 
 Ao decidir o tipo de implantação do sensor, considere os seguintes benefícios:
@@ -61,7 +61,7 @@ Considere as seguintes questões ao decidir quantos sensores autônomos do Azure
     O Azure ATP pode monitorar o tráfego de vários domínios em várias florestas do Active Directory para cada workspace que você cria. 
 
 -   **Espelhamento de porta**<br>
-Considerações de espelhamento de porta podem exigir que você implante vários sensores autônomos do Azure ATP por data center ou site de filial.
+    Considerações de espelhamento de porta podem exigir que você implante vários sensores autônomos do Azure ATP por data center ou site de filial.
 
 -   **Capacidade**<br>
     Um sensor autônomo do Azure ATP pode dar suporte ao monitoramento de vários controladores de domínio, dependendo da quantidade de tráfego de rede dos controladores de domínio sendo monitorados. 
@@ -149,4 +149,4 @@ Para determinar os pacotes por segundo, execute as etapas a seguir em cada contr
 - [Ferramenta de dimensionamento do Azure ATP](http://aka.ms/aatpsizingtool)
 - [Pré-requisitos do Azure ATP](atp-prerequisites.md)
 - [Arquitetura do Azure ATP](atp-architecture.md)
-- [Confira o fórum do ATP!](https://aka.ms/azureatpcommunity)
+- [Confira o fórum do ATP do Azure!](https://aka.ms/azureatpcommunity)
