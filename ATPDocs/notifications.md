@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 4308f03e-b2a7-4e38-a750-540ff94faa81
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: acbab806e7f49052e0789927f452217c12efd992
-ms.sourcegitcommit: 8cb370eab974652451066570e435d8a4f304fa29
+ms.openlocfilehash: 79368731bcfef923466d566f06fe775ebf1caeac
+ms.sourcegitcommit: e783df4c9d928fedf6dc3c65d58d9b530cdd2ff2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49326754"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49800025"
 ---
 *Aplica-se a: Proteção Avançada contra Ameaças do Azure*
 
@@ -37,7 +37,7 @@ Para receber notificações em um endereço de email específico, defina os segu
 2. Clique em **Notificações**.
 3. Em **Notificações por email**, especifique quais notificações devem ser enviadas por email – é possível enviar notificações de novos alertas (atividades suspeitas) e novos problemas de integridade. 
  
- >  [!NOTE]
+ > [!NOTE]
  > Alertas de email para atividades suspeitas são enviados somente quando a atividade suspeita é criada.
  
 4. Clique em **Salvar**.
@@ -51,4 +51,4 @@ Para receber notificações em um endereço de email específico, defina os segu
 - [Configurar coleta de eventos](configure-event-collection.md)
 
 - [Definir configurações de Syslog](setting-syslog.md)
-- [Confira o fórum do Azure ATP!](https://aka.ms/azureatpcommunity)
+- [Confira o fórum do ATP do Azure!](https://aka.ms/azureatpcommunity)

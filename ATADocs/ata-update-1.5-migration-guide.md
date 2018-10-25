@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: fb65eb41-b215-4530-93a2-0b8991f4e980
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: f448242f43f8034e2b94b62cda2ec7c4409fc3f4
-ms.sourcegitcommit: 959b1f7753b9a8ad94870d2014376d55296fbbd4
+ms.openlocfilehash: cdf7966b9e3cfc68a9cb593cb12ef76aecddb1d9
+ms.sourcegitcommit: 59ed430fa0cd8ac34a70609026ec5fc2f5972f57
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46133643"
+ms.lasthandoff: 10/21/2018
+ms.locfileid: "49480711"
 ---
 # <a name="ata-update-to-15-migration-guide"></a>Guia de migração de atualização do ATA para 1.5
 A atualização 1.5 do ATA fornece melhorias nas seguintes áreas:
@@ -47,7 +47,7 @@ Execute estas etapas para atualizar para o ATA versão 1.5:
 
 1.  Baixe o ATA v1.5 do VLSC ou MSDN.
       > [!NOTE]
-         Você também pode usar a versão atualizada completa do ATA para executar a atualização para a versão 1.5.
+      > Você também pode usar a versão atualizada completa do ATA para executar a atualização para a versão 1.5.
 
 
 2.  Atualize o Centro do ATA

@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: cdaddca3-e26e-4137-b553-8ed3f389c460
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: e9d5ea1dfce5a162c0bf4642f2159b13a5b0f169
-ms.sourcegitcommit: 959b1f7753b9a8ad94870d2014376d55296fbbd4
+ms.openlocfilehash: b8b9f3b1eeb36e3a4af949d7165ce0a46225b858
+ms.sourcegitcommit: 59ed430fa0cd8ac34a70609026ec5fc2f5972f57
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46134136"
+ms.lasthandoff: 10/21/2018
+ms.locfileid: "49480643"
 ---
 *Aplica-se a: Advanced Threat Analytics versão 1.9*
 
@@ -64,9 +64,10 @@ Seus controladores de domínio e Gateways do ATA podem ser físicos ou virtuais.
 **Se você estiver trabalhando com clusters de virtualização:**
 
 -   Para cada controlador de domínio em execução no cluster de virtualização em uma máquina virtual com o Gateway do ATA, configure a afinidade entre o controlador de domínio e o Gateway do ATA. Dessa forma, quando o controlador de domínio for para outro host no cluster, o Gateway do ATA o seguirá. Isso funciona bem quando há alguns controladores de domínio.
+
 > [!NOTE]
 > Caso seu ambiente dê suporte a RSPAN (virtual para virtual em hosts diferentes), você não precisa se preocupar com afinidade.
-> 
+
 -   Para verificar se os Gateways do ATA estão com um tamanho correto que os permita lidar com o monitoramento de todos os controladores de domínio, tente esta opção: instalar uma máquina virtual em cada host de virtualização e instalar um Gateway do ATA em cada host. Configure cada Gateway do ATA para monitorar todos os controladores de domínio executados no cluster. Dessa forma, qualquer host no qual os controladores de domínio são executados será monitorado.
 
 Depois de configurar o espelhamento de porta, verifique se está funcionando antes de instalar o Gateway do ATA.

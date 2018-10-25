@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: d89e7aff-a6ef-48a3-ae87-6ac2e39f3bdb
 ms.reviewer: arzinger
 ms.suite: ems
-ms.openlocfilehash: ddbcd8877ca36afe9e56e9bc6febee19ff9957ff
-ms.sourcegitcommit: 959b1f7753b9a8ad94870d2014376d55296fbbd4
+ms.openlocfilehash: 5069fdda7c27a54705a17da79dbb536d412c4113
+ms.sourcegitcommit: 59ed430fa0cd8ac34a70609026ec5fc2f5972f57
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46133473"
+ms.lasthandoff: 10/21/2018
+ms.locfileid: "49480626"
 ---
 *Aplica-se a: Advanced Threat Analytics versão 1.9*
 
@@ -79,7 +79,7 @@ Esta seção detalha os possíveis erros nas implantações do ATA e as etapas n
 |Problema|Descrição|Resolução|
 |-------------|----------|---------|
 |Nenhum tráfego recebido do controlador de domínio, mas são observados alertas de monitoramento|    Nenhum tráfego foi recebido de um controlador de domínio usando o espelhamento de porta por meio de um Gateway do ATA|Na NIC de captura no Gateway do ATA, desabilite esses recursos em **Configurações Avançadas**:<br></br>União de Segmentos de Recebimento (IPv4)<br></br>União de Segmentos de Recebimento (IPv6)|
-|Esse alerta de monitoramento é exibido: **Parte do tráfego de rede não está sendo analisado**|Se você tiver um Gateway de ATA ou Gateway do Lightweight em máquinas virtuais VMware, você poderá receber este alerta de monitoramento. Isso ocorre devido a uma incompatibilidade de configuração no VMware.|Definir as configurações a seguir para **0** ou **Desabilitado** na configuração de NIC de máquina virtual: TsoEnable, LargeSendOffload, Descarregamento de TSO, Descarregamento de TSO Gigante|O TLS 1.0 está desabilitado no Gateway de ATA, mas o .Net está configurado para usar o TLS 1.2|
+|Esse alerta de monitoramento é exibido: **Parte do tráfego de rede não está sendo analisado**|Se você tiver um Gateway de ATA ou Gateway do Lightweight em máquinas virtuais VMware, você poderá receber este alerta de monitoramento. Isso ocorre devido a uma incompatibilidade de configuração no VMware.|Definir as configurações a seguir para **0** ou **Desabilitado** na configuração de NIC de máquina virtual: TsoEnable, LargeSendOffload, Descarregamento de TSO, Descarregamento de TSO Gigante|O TLS 1.0 está desabilitado no Gateway de ATA, mas o .Net está configurado para usar o TLS 1.2|<!-- line contains 5 vertical lines -->
 
 
 

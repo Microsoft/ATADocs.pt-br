@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: d7c95f8c-04f8-4946-9bae-c27ed362fcb0
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 6f65b3af56e683a385f7128a989170c8c4073b3e
-ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
+ms.openlocfilehash: b7ddaca0f0c5691c90873cef9af6cef13fa9650a
+ms.sourcegitcommit: e783df4c9d928fedf6dc3c65d58d9b530cdd2ff2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48783858"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49800026"
 ---
 *Aplica-se a: Proteção Avançada contra Ameaças do Azure*
 
@@ -28,6 +28,7 @@ ms.locfileid: "48783858"
 
 > [!div class="step-by-step"]
 > [« Etapa 4](install-atp-step4.md)
+> [Etapa 6 »](install-atp-step6-vpn.md)
 
 
 
@@ -61,7 +62,7 @@ Após a instalação do sensor do Azure ATP, execute as etapas a seguir para def
    É recomendável desabilitar que os sensores do Azure ATP do site remoto sejam candidatos a sincronizador de domínio.
    Se o controlador de domínio for somente leitura, não o defina como um candidato ao sincronizador do domínio. Para obter mais informações sobre a sincronização de domínio do Azure ATP, veja [arquitetura do Azure ATP](atp-architecture.md#azure-atp-sensor-features)
   
-4. Clique em **Salvar**.
+3. Clique em **Salvar**.
 
 
 ## <a name="validate-installations"></a>Validar instalações
@@ -74,12 +75,13 @@ Para validar a implantação bem-sucedida do sensor do Azure ATP, verifique as s
  >[!NOTE]
  > A versão do ATP do Azure é atualizada com frequência. Para verificar a versão mais recente, no portal do ATP do Azure, vá em **Configuração** e, em seguida, **Sobre**. 
 
-3.  Vá até a URL de seu espaço de trabalho. No portal do ATP do Azure, pesquise algo na barra de pesquisa, como um usuário ou um grupo em seu domínio.
+3.  Vá até a URL de seu workspace. No portal do ATP do Azure, pesquise algo na barra de pesquisa, como um usuário ou um grupo em seu domínio.
 
 
 
 > [!div class="step-by-step"]
 > [« Etapa 4](install-atp-step4.md)
+> [Etapa 6 »](install-atp-step6-vpn.md)
 
 
 
