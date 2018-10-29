@@ -37,6 +37,7 @@
 ## [Relatórios do Azure ATP](reports.md)
 ## [Compreendendo perfis de entidade](entity-profiles.md)
 ## [Atividades monitoradas](monitored-activities.md)
+### [Pesquisar e filtrar atividades monitoradas](atp-activities-search.md)
 ## [Gerenciando contas confidenciais](sensitive-accounts.md)
 ## [Excluindo entidades de detecções](excluding-entities-from-detections.md)
 ## [Contas de honeytoken e exclusões](install-atp-step7.md)
