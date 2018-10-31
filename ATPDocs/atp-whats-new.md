@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 10/14/2018
+ms.date: 10/21/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,16 +13,23 @@ ms.technology: ''
 ms.assetid: 7d0f33db-2513-4146-a395-290e001f4199
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 5e400f51281ea9d0dd17be50800f0d0a9d467986
-ms.sourcegitcommit: 7b138a310a6b31a6375d87a95c7866cb9f701a9e
+ms.openlocfilehash: bf620fd9eb3ee750f19a4fe69aa3efea16b9385a
+ms.sourcegitcommit: 59ed430fa0cd8ac34a70609026ec5fc2f5972f57
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/14/2018
-ms.locfileid: "49315894"
+ms.lasthandoff: 10/21/2018
+ms.locfileid: "49480660"
 ---
 *Aplica-se a: Proteção Avançada contra Ameaças do Azure*
 
 # <a name="whats-new-in-azure-atp"></a>Novidades do Azure ATP 
+
+## <a name="azure-atp-release-251"></a>ATP do Azure versão 2.5.1
+Lançado em 21 de outubro de 2018
+
+- Você pode agora habilitar/desabilitar a **integração WD-ATP** na tela [Configuração](integrate-wd-atp.md#how-to-integrate-azure-atp-with-windows-defender-atp) do portal do ATP do Azure. (Para acessar essa funcionalidade, o usuário do ATP do Azure deve ser um Administrador de segurança ou Global no locatário do AAD).
+
+- Essa versão também inclui aprimoramentos e correções de bug da infraestrutura do sensor interno.
 
 ## <a name="azure-atp-release-250"></a>Azure ATP versão 2.50
 Lançado em 14 de outubro de 2018

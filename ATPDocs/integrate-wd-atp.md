@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 10/04/2018
+ms.date: 10/18/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: f6f3ed75-d6bb-4966-a9a7-5339c4f3ebac
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: c0bda95fb789225cf7d05616974f9a333f3c8e4f
-ms.sourcegitcommit: 30d874808cfeafd46ee8fbbf34e0bbcb337f6544
+ms.openlocfilehash: 52445e15a4465f0fa4b399cf99ccf6620db7a572
+ms.sourcegitcommit: 59ed430fa0cd8ac34a70609026ec5fc2f5972f57
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49089348"
+ms.lasthandoff: 10/21/2018
+ms.locfileid: "49480677"
 ---
 *Aplica-se a: Proteção Avançada contra Ameaças do Azure*
 
@@ -30,15 +30,15 @@ Integrando o Windows Defender ATP ao Azure ATP, você pode aproveitar todo o pot
 
 - Sensores e sensores autônomos do Azure ATP: podem ser colocados diretamente em seus controladores de domínio ou espelhamento de porta de seus controladores de domínio para o ATP, a fim de capturar e analisar o tráfego de rede de vários protocolos (por exemplo, Kerberos, DNS, RPC, NTLM e outros) para autenticação, autorização e coleta de informações. 
 
--   Sensores de comportamento de ponto de extremidade: inseridos no Windows 10, esses sensores coletam e processam sinais comportamentais do sistema operacional (por exemplo, processo, registro, arquivo e comunicações de rede) e enviam esses dados do sensor à sua instância de nuvem privada e isolada do Windows Defender ATP.
+-   Sensores de comportamento de ponto de extremidade: inseridos no Windows 10, esses sensores coletam e processam sinais comportamentais do sistema operacional (por exemplo, processo, Registro, arquivo e comunicações de rede) e enviam esses dados do sensor à sua instância de nuvem privada e isolada do Windows Defender ATP.
 
 - Análise de segurança de nuvem: aproveitando Big Data, machine learning e uma visão única da Microsoft de todo o ecossistema do Windows (como a [Ferramenta de Remoção de Software Mal-Intencionado da Microsoft](https://www.microsoft.com/download/malicious-software-removal-tool-details.aspx)), produtos de nuvem corporativos (como o Office 365) e ativos online (como reputação de URLs do SmartScreen e o Bing), os sinais comportamentais são traduzidos em insights, detecções e respostas recomendadas a ameaças avançadas.
 
-- Inteligência contra ameaças: gerada por equipes de segurança e caçadores da Microsoft e ampliada pela inteligência contra ameaças fornecida por parceiros, a inteligência contra ameaças permite que o Windows Defender ATP identifique ferramentas, técnicas e procedimentos do invasor e gere alertas quando eles forem observados nos dados coletados pelo sensor.
+- Inteligência contra ameaças: gerada por equipes de segurança e caçadores da Microsoft e ampliada pela inteligência contra ameaças fornecida por parceiros, a inteligência contra ameaças permite que o Windows Defender ATP identifique ferramentas, técnicas e procedimentos do invasor e gere alertas quando essas atividades forem observadas nos dados coletados pelo sensor.
 
 A tecnologia do Azure ATP detecta várias atividades suspeitas, concentrando-se em várias fases da cadeia do ataque cibernético, incluindo:
 
-- Reconhecimento, durante o qual os invasores coletam informações sobre como o ambiente foi compilado criado, o que são os ativos diferentes e quais entidades existem. Geralmente, eles criam o plano para as próximas fases do ataque.
+- Reconhecimento, durante o qual os invasores coletam informações sobre como o ambiente foi compilado criado, o que são os ativos diferentes e quais entidades existem. Geralmente, eles criam o plano para as próximas fases do ataque aqui.
 
 - Ciclo de movimentação lateral, durante o qual um invasor investe tempo e esforço na propagação da superfície de seu ataque dentro de sua rede.
 
@@ -50,7 +50,7 @@ Ao mesmo tempo, o Windows Defender ATP aproveita a tecnologia e a experiência d
 
 - Linha do tempo avançada para investigação forense e mitigação<br></br>Investigue facilmente o escopo da violação ou comportamentos suspeitos em qualquer computador por meio de uma linha do tempo avançada. Inventário de arquivos, URLs e conexões de rede em toda a rede. Obtenha insights adicionais usando a coleta e análise profunda ("denotação") para qualquer arquivo ou URL.
 
-- Base de dados de conhecimento de inteligência contra ameaças exclusiva incorporada<br></br>A ótica incomparável com relação às ameaças fornece detalhes sobre o ator e o contexto da intenção para cada detecção de ameaça baseada em inteligência – combinando fontes de inteligência próprias e de terceiros.
+- Base de dados de conhecimento de inteligência contra ameaças exclusiva incorporada<br></br>A óptica incomparável com relação às ameaças fornece detalhes sobre o ator e o contexto da intenção para cada detecção de ameaça baseada em inteligência – combinando fontes de inteligência próprias e de terceiros.
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
@@ -59,21 +59,19 @@ Para habilitar esse recurso, você precisa de uma licença para o Azure ATP e o 
 
 ## <a name="how-to-integrate-azure-atp-with-windows-defender-atp"></a>Como integrar o Azure ATP ao Windows Defender ATP
 
-1. Clique em **Configuração** e, em **Fontes de dados**, selecione **Windows Defender ATP**. Em seguida, clique no link para **Gerenciamento de workspace**. Isso só estará disponível se você tiver uma licença do Windows Defender ATP e já tiver executado o processo de ambientação do Windows Defender ATP. 
+1. No portal do ATP do Azure, abra **Configuração**. 
 
-2. No seu workspace, clique na engrenagem de configurações.
+    ![Menu Configuração do ATP do Azure](./media/atp-configuration-wd.png)
+2. Na lista de Configurações, selecione **Windows Defender ATP** e defina a alternância de integração como **Ativa**. 
 
- ![integração do workspace](./media/edit-workspace.png)
- 
-3. Defina a integração como **Ativo**. 
+    ![Habilitar a integração do Windows Defender](./media/enable-integration.png)
 
- ![habilitar integração](./media/enable-integration.png)
 
-4. No [Portal do Windows Defender ATP](https://securitycenter.windows.com/preferences/advanced), vá até **Configurações**, **Recursos avançados** e defina **Integração do Azure ATP** como **ATIVO**. 
+3. No [Portal do Windows Defender ATP](https://securitycenter.windows.com/preferences/advanced), vá até **Configurações**, **Recursos avançados** e defina **Integração do Azure ATP** como **ATIVO**. 
 
- ![Habilitar integração do Windows Defender ATP](./media/wd-atp-enable.png)
+    ![Habilitar integração do Windows Defender ATP](./media/wd-atp-enable.png)
 
-5. Para verificar o status da integração, no portal do Azure ATP, vá até **Configurações** e, em seguida, **Integração do Windows Defender ATP**. Você pode ver o status da integração. Se algo estiver errado, você verá um erro. Você também pode ver qual workspace está integrado ao Windows Defender ATP.
+4. Para verificar o status da integração, no portal do ATP do Azure, vá até **Configurações** > **Integração do Windows Defender ATP**. Você pode ver o status da integração e, se algo estiver errado, você verá um erro. 
 
 ## <a name="how-it-works"></a>Como funciona
 
@@ -89,7 +87,7 @@ Se clicar na notificação, você será direcionado para o portal do Windows Def
 
  ![Windows Defender ATP cinza](./media/wd-grey.png)
 
-No portal do Windows Defender ATP, quando clica em um ponto de extremidade, você pode exibir alertas do Azure ATP. Se você clicar nos alertas para esta entidade no Windows Defender ATP, a página de perfil da entidade será aberta no Azure ATP. 
+No portal do Windows Defender ATP, clique em um ponto de extremidade para exibir alertas do ATP do Azure. Se você clicar nos alertas para esta entidade no Windows Defender ATP, a página de perfil da entidade será aberta no Azure ATP. 
  
  > [!NOTE]
  > No momento, a integração do Azure ATP com o Windows Defender ATP é compatível apenas com usuários e computadores do AD local. Os usuários do Azure AD e as máquinas virtuais que são gerenciadas no Azure não serão exibidos como parte da integração 
@@ -103,5 +101,5 @@ No portal do Windows Defender ATP, quando clica em um ponto de extremidade, voc�
 - [Ferramenta de dimensionamento do Azure ATP](http://aka.ms/aatpsizingtool)
 - [Arquitetura do Azure ATP](atp-architecture.md)
 - [Instalar o ATP](install-atp-step1.md)
-- [Confira o fórum do Azure ATP!](https://aka.ms/azureatpcommunity)
+- [Confira o fórum do ATP do Azure!](https://aka.ms/azureatpcommunity)
 

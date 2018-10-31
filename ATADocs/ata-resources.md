@@ -13,17 +13,17 @@ ms.technology: ''
 ms.assetid: 42a1a34f-ed6b-4538-befb-452168a30e8c
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 48756cbde8b288116975c05567beeac76e83a717
-ms.sourcegitcommit: 959b1f7753b9a8ad94870d2014376d55296fbbd4
+ms.openlocfilehash: 069ee0f367c52de897486291f761bf0dde6016e0
+ms.sourcegitcommit: 8ecb76ddfbf48c361d3637d15bd48313a3e68685
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46133762"
+ms.lasthandoff: 10/22/2018
+ms.locfileid: "49634742"
 ---
 *Aplica-se a: Advanced Threat Analytics versão 1.9*
 
 # <a name="ata-readiness-roadmap"></a>Roteiro de preparação do ATA 
-Este documento fornece um roteiro de preparação que ajudará você a se familiarizar com o Advanced Threat Analytics.
+Este artigo fornece um roteiro de preparação que ajudará você a se familiarizar com o Advanced Threat Analytics.
 
 ## <a name="understanding-ata"></a>Compreendendo o ATA
 
@@ -38,9 +38,9 @@ O ATA (Advanced Threat Analytics) é uma plataforma local que ajuda a proteger s
 
 ## <a name="deployment-decisions"></a>Decisões de implantação
 
-O ATA é composto do centro do ATA, que pode ser instalado em um servidor e dos Gateways do ATA que podem ser instalados em computadores separados ou usando o Gateway Lightweight diretamente em seus controladores de domínio. Antes de você colocar em funcionamento, é importante tomar as decisões de implantação a seguir:
+O ATA é composto pelo Centro do ATA, que pode ser instalado em um servidor, e pelos Gateways do ATA, que podem ser instalados em computadores separados ou ao usar o Gateway Lightweight diretamente em seus controladores de domínio. Antes de você colocar em funcionamento, é importante tomar as decisões de implantação a seguir:
 
-|CONFIGURAÇÃO|DECISÃO|
+|Configuração | Decisão |
 |----|----|
 |Tipo de hardware|VM do Azure, físico, virtual|
 |Grupo de Trabalho ou Domínio|Grupo de trabalho, domínio|
@@ -51,11 +51,13 @@ Se você estiver usando servidores físicos, você deverá planejar a capacidade
 
 [Ferramenta de dimensionamento do ATA](ata-capacity-planning.md) – A ferramenta de dimensionamento automatiza a coleta da quantidade de tráfego que a ATA precisa. Ele fornece automaticamente o suporte e as recomendações do recurso para o centro do ATA e Gateways Lightweight do ATA.
 
+
 [Planejamento da capacidade do ATA](ata-capacity-planning.md)
+
 
 ## <a name="deploy-ata"></a>Implantar o ATA
 
-Esses recursos ajudarão você a baixar e instalar o centro do ATA, conectar ao Active Directory, baixar o pacote de Gateway do ATA, configurar coleta de eventos e, opcionalmente, integrar com a sua VPN e configurar contas de honeytoken e exclusões.
+Esses recursos ajudarão você a baixar e instalar o Centro do ATA, a se conectar ao Active Directory, a baixar o pacote de Gateway do ATA, a configurar a coleta de eventos e, opcionalmente, integrar com a sua VPN e configurar contas de honeytoken e exclusões.
 
 [Baixar o ATA](http://aka.ms/ataeval) – Antes de implantar o ATA, se você ainda não fez a decisão de compra do ATA, você poderá baixar a versão de avaliação. 
 
@@ -65,7 +67,7 @@ Esses recursos ajudarão você a baixar e instalar o centro do ATA, conectar ao 
 
 ## <a name="ata-settings"></a>Configurações do LAN
 
-As configurações básicas necessárias no ATA são configuradas como parte do assistente de instalação. No entanto, há várias outras configurações que podem ser definidas para ajustar o ATA que tornam as detecções mais precisas para o seu ambiente, como a integração do SIEM e configurações de auditoria.
+As configurações básicas necessárias no ATA são configuradas como parte do assistente de instalação. No entanto, há várias outras configurações que podem ser definidas para ajustar o ATA que torna as detecções mais precisas para o seu ambiente, como a integração do SIEM e configurações de auditoria.
 
 [Configurações de auditoria](https://aka.ms/ataauditingblog) – Audite a integridade do seu controlador de domínio antes e após uma implantação do ATA.
 
@@ -73,7 +75,7 @@ As configurações básicas necessárias no ATA são configuradas como parte do 
 
 ## <a name="work-with-ata"></a>Trabalhar com o ATA
 
-Depois que o ATA estiver em execução, você poderá exibir as atividades suspeitas detectadas na linha do tempo de ataque. Essa é a página de aterrissagem exibida quando você entra no Console do ATA. Por padrão, todas as atividades suspeitas abertas são mostradas na linha do tempo de ataque. Você também pode ver a severidade atribuída a cada atividade. Investigue cada atividade suspeita, analisando as entidades (computadores, dispositivos, usuários) para abrir suas páginas de perfil que fornecem mais informações. Esses recursos ajudarão você a trabalhar com as atividades suspeitas do ATA:
+Depois que o ATA estiver em execução, você poderá exibir as atividades suspeitas detectadas na linha do tempo do Ataque. Essa é a página de aterrissagem exibida quando você entra no Console do ATA. Por padrão, todas as atividades suspeitas abertas são mostradas na linha do tempo de ataque. Você também pode ver a severidade atribuída a cada atividade. Investigue cada atividade suspeita, analisando as entidades (computadores, dispositivos, usuários) para abrir suas páginas de perfil que fornecem mais informações. Esses recursos ajudarão você a trabalhar com as atividades suspeitas do ATA:
 
 [Guia estratégico de atividades suspeitas do ATA](http://aka.ms/ataplaybook) – Este artigo o orienta por meio de técnicas de ataque de roubo de credenciais usando as ferramentas de pesquisa prontamente disponíveis na Internet. Em cada ponto de ataque, você pode ver como o ATA ajuda você a obter visibilidade nessas ameaças.
 

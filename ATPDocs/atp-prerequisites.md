@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 10/7/2018
+ms.date: 10/18/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 62c99622-2fe9-4035-9839-38fec0a353da
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: e3cf97c4bd95a1fefc0aef29009f644cd5ef907d
-ms.sourcegitcommit: bbbe808c08ce703a314c82b46aedaae79ab256a3
+ms.openlocfilehash: f959176ddca045f421af416d5ce9dc3a777cc43a
+ms.sourcegitcommit: fdff488c79729035f89897c2ea0771a45b4c3ecf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/07/2018
-ms.locfileid: "48848534"
+ms.lasthandoff: 10/18/2018
+ms.locfileid: "49401905"
 ---
 *Aplica-se a: Proteção Avançada contra Ameaças do Azure*
 
@@ -46,7 +46,7 @@ Este guia de pré-requisitos é dividido nas seguintes seções para garantir qu
 [Sensor autônomo do Azure ATP](#azure-atp-sensor-requirements): lista os requisitos de software e hardware do sensor autônomo do Azure ATP, bem como as configurações que você precisa definir nos servidores do sensor autônomo do Azure ATP.
 
 ## <a name="before-you-start"></a>Antes de começar
-Esta seção lista as informações que você deve obter e as contas e entidades de rede que deve ter antes de iniciar a instalação do Azure ATP.
+Esta seção mostra as informações que você deve obter, bem como as contas e informações sobre entidades de rede que deve ter antes de iniciar a instalação do ATP do Azure.
 
 - Adquira uma licença do EMS E5 (Enterprise Mobility + Security 5) diretamente por meio do [Portal do Office 365](https://www.microsoft.com/cloud-platform/enterprise-mobility-security-pricing) ou do modelo de licenciamento do CSP (Parceiro de Soluções na Nuvem).  
 
@@ -65,7 +65,7 @@ Esta seção lista as informações que você deve obter e as contas e entidades
 
 -   Opcional: uma conta de usuário que não tem nenhuma atividade de rede. Essa conta está configurada como um usuário Honeytoken do Azure ATP. Para obter mais informações, consulte [Configurar exclusões e usuário Honeytoken](install-atp-step7.md).
 
--   Opcional: ao implantar o sensor autônomo, é necessário encaminhar os eventos do Windows 4776, 4732, 4733, 4728, 4729, 4756, 4757 e 7045 para o Azure ATP para melhorar ainda mais as detecções de Pass-the-Hash, força bruta, modificação de grupos confidenciais, Honey Tokens e criação de serviços mal-intencionados do Azure ATP. O sensor do Azure ATP recebe esses eventos automaticamente. No sensor autônomo do Azure ATP, esses eventos podem ser recebidos do SIEM ou definindo o Encaminhamento de Eventos do Windows no controlador de domínio. Os eventos coletados fornecem ao Azure ATP informações adicionais que não estão disponíveis por meio do tráfego de rede do controlador de domínio.
+-   Opcional: ao implantar o sensor autônomo, é necessário encaminhar os eventos do Windows 4776, 4732, 4733, 4728, 4729, 4756, 4757 e 7045 para o ATP do Azure para melhorar ainda mais as detecções de Pass-the-Hash, força bruta, modificação de grupos confidenciais, Honey Tokens e criação de serviços mal-intencionados do ATP do Azure. O sensor do Azure ATP recebe esses eventos automaticamente. No sensor autônomo do Azure ATP, esses eventos podem ser recebidos do SIEM ou definindo o Encaminhamento de Eventos do Windows no controlador de domínio. Os eventos coletados fornecem ao Azure ATP informações adicionais que não estão disponíveis por meio do tráfego de rede do controlador de domínio.
 
 ## <a name="azure-atp-portal-requirements"></a>Requisitos do portal do Azure ATP
 O acesso ao portal do Azure ATP ocorre por meio de um navegador que dá suporte aos seguintes navegadores e configurações:
@@ -227,5 +227,5 @@ A tabela abaixo lista as portas mínimas que o sensor autônomo do Azure ATP req
 - [Ferramenta de dimensionamento do Azure ATP](http://aka.ms/aatpsizingtool)
 - [Arquitetura do Azure ATP](atp-architecture.md)
 - [Instalar o Azure ATP](install-atp-step1.md)
-- [Confira o fórum do Azure ATP!](https://aka.ms/azureatpcommunity)
+- [Confira o fórum do ATP do Azure!](https://aka.ms/azureatpcommunity)
 
