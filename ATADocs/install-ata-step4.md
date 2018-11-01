@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 6bbc50c3-bfa8-41db-a2f9-56eed68ef5d2
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 0973554e0fba448bc48526d1499768b2a2c864b1
-ms.sourcegitcommit: b283bf66e63d76e6dba4564a229e804792794c6d
+ms.openlocfilehash: 1ce4673b6fa071ebd74bf1d15cbbaa88ec9c0872
+ms.sourcegitcommit: c10a1c5d1e5408b5473a31485346915908688680
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/29/2018
-ms.locfileid: "47453843"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50208112"
 ---
 *Aplica-se a: Advanced Threat Analytics versão 1.9*
 
@@ -59,7 +59,7 @@ Execute as seguintes etapas no servidor do Gateway do ATA.
     > [!NOTE] 
     > Se o controlador de domínio ou servidor dedicado não atender aos requisitos mínimos de hardware para a instalação, você receberá um aviso. Isso não impede você de clicar em **Avançar** e prosseguir com a instalação. Essa pode ser a opção certa para a instalação do ATA em um ambiente de teste de laboratório pequeno no qual você não precisará de tanto espaço para armazenamento de dados. Para ambientes de produção, é altamente recomendável trabalhar com o guia de [planejamento de capacidade](ata-capacity-planning.md) do ATA para certificar-se de que seus controladores de domínio ou servidores dedicados atendam aos requisitos necessários.
 
-4.  Em **Configurar o Gateway**, insira as seguintes informações com base em seu ambiente:
+5.  Em **Configurar o Gateway**, insira as seguintes informações com base em seu ambiente:
 
     ![Imagem da configuração do gateway de ATA](media/ata-gw-configure.png)
 
@@ -70,7 +70,7 @@ Execute as seguintes etapas no servidor do Gateway do ATA.
 
    - Caminho de Instalação: esse é o local em que o Gateway do ATA é instalado. Por padrão, é %programfiles%\Microsoft Advanced Threat Analytics\Gateway. Mantenha o valor padrão.
     
-5. Clique em **Instalar**. Os componentes a seguir serão instalados e configurados durante a instalação do Gateway do ATA:
+6. Clique em **Instalar**. Os componentes a seguir serão instalados e configurados durante a instalação do Gateway do ATA:
 
     -   KB 3047154 (somente para Windows Server 2012 R2)
 
@@ -82,7 +82,7 @@ Execute as seguintes etapas no servidor do Gateway do ATA.
     -   Microsoft Visual C++ 2013 Redistributable
     -   Conjunto de coleta de dados do Monitor de Desempenho Personalizado
 
-6.  Após a conclusão da instalação, para o Gateway do ATA, clique em **Iniciar** para abrir o navegador e entrar no Console do ATA. Para o Gateway Lightweight do ATA, clique em **Concluir**.
+7.  Após a conclusão da instalação, para o Gateway do ATA, clique em **Iniciar** para abrir o navegador e entrar no Console do ATA. Para o Gateway Lightweight do ATA, clique em **Concluir**.
 
 
 > [!div class="step-by-step"]

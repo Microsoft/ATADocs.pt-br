@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 892b16d2-58a6-49f9-8693-1e5f69d8299c
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 41d685916c667a467edd307fac71933366019fea
-ms.sourcegitcommit: 959b1f7753b9a8ad94870d2014376d55296fbbd4
+ms.openlocfilehash: a71491fc717aca3f9b418750b78657e83ac65ecf
+ms.sourcegitcommit: 1b914a85cfa33dc0c5005f9dc68e6ea08a0164ac
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46134102"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50411639"
 ---
 *Aplica-se a: Advanced Threat Analytics versão 1.9*
 
@@ -148,7 +148,6 @@ Se isso faz com que o Gateway Lightweight do ATA fique sem recursos, apenas o tr
 
 A tabela abaixo fornece um exemplo de um controlador de domínio com recurso de computação suficiente disponível para permitir uma cota maior de recursos de computação necessária no momento, de forma que todo o tráfego é monitorado:
 
-> [!div class="mx-tableFixed"]
 ||||||
 |-|-|-|-|-|
 |Active Directory (Lsass.exe)|Gateway Lightweight do ATA (Microsoft.Tri.Gateway.exe)|Diversos (outros processos) |Cota do Gateway Lightweight do ATA|Descarte de gateway|
@@ -156,7 +155,6 @@ A tabela abaixo fornece um exemplo de um controlador de domínio com recurso de 
 
 Se o Active Directory precisa de mais de computação, a cota necessária do Gateway Lightweight do ATA é reduzida. No exemplo a seguir, o Gateway Lightweight do ATA precisa de mais do que a cota alocada e descarta parte do tráfego (monitorando apenas o tráfego parcial):
 
-> [!div class="mx-tableFixed"]
 ||||||
 |-|-|-|-|-|
 |Active Directory (Lsass.exe)|Gateway Lightweight do ATA (Microsoft.Tri.Gateway.exe)|Diversos (outros processos) |Cota do Gateway Lightweight do ATA|O gateway está descartando|

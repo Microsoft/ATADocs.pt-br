@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 2a5b6652-2aef-464c-ac17-c7e5f12f920f
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: f43503bb64ab79280782c1fc81a4821a8b905ff7
-ms.sourcegitcommit: b283bf66e63d76e6dba4564a229e804792794c6d
+ms.openlocfilehash: 0fbd15aa61983a62313f0f1ef89f688046474b9d
+ms.sourcegitcommit: 2916d6f8d6e6f754d7fb8a5d31b255a46aa35ecd
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/29/2018
-ms.locfileid: "47454047"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50132649"
 ---
 *Aplica-se a: Advanced Threat Analytics versão 1.9*
 
@@ -46,7 +46,7 @@ Após a instalação do Gateway do ATA, execute as etapas a seguir para definir 
   - **Descrição**: insira uma descrição para o Gateway do ATA (opcional).
   - **Controladores de Domínio com porta espelhada (FQDN)** (exigidos para o Gateway do ATA, isso não pode ser alterado para o Gateway Lightweight do ATA): insira o FQDN completo de seu controlador de domínio e clique no sinal de adição para adicioná-lo à lista. Por exemplo, **dc01.contoso.com**
 
-    As informações a seguir se aplicam aos servidores digitados na lista **Controladores de Domínio**:
+As informações a seguir se aplicam aos servidores digitados na lista **Controladores de Domínio**:
     - Todos os controladores de domínio cujo tráfego esteja sendo monitorado por meio do espelhamento de porta pelo Gateway do ATA devem estar na lista **Controladores de Domínio**. Se um controlador de domínio não estiver listado em **Controladores de Domínio**, a detecção de atividades suspeitas pode não funcionar conforme o esperado.
     - Pelo menos um controlador de domínio na lista deve ser um catálogo global. Isso permite que o ATA resolva os objetos de usuário e computador em outros domínios na floresta.
 

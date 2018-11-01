@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 15ee7d0b-9a0c-46b9-bc71-98d0b4619ed0
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 97cce3de3a1cbe049523c54901ecbc9228aaee53
-ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
+ms.openlocfilehash: 7a7bdd045a0964c4ed4ccc4ebe2315b3c3465be2
+ms.sourcegitcommit: c10a1c5d1e5408b5473a31485346915908688680
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48782990"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50208095"
 ---
 *Aplica-se a: Proteção Avançada contra Ameaças do Azure*
 
@@ -37,7 +37,7 @@ No Azure ATP, você terá uma única instância ou workspace que permite gerenci
 
 ## <a name="step-1-enter-the-azure-atp-portal"></a>Etapa 1. Entrar no portal do Azure ATP
 
-Depois de confirmar que sua rede atende aos requisitos do sensor, você poderá continuar com a criação do espaço de trabalho do Azure ATP.
+Depois de confirmar que sua rede atende aos requisitos do sensor, você poderá continuar com a criação do workspace do Azure ATP.
 
 > [!NOTE]
 >Para acessar o portal de gerenciamento, você precisa ser um administrador global ou um administrador de segurança nesse locatário.
@@ -49,12 +49,12 @@ Depois de confirmar que sua rede atende aos requisitos do sensor, você poderá 
 
 ## <a name="step-2-create-your-workspace"></a>Etapa 2. Criar seu espaço de trabalho
 
-1. Clique em **Criar espaço de trabalho**.
+1. Clique em **Criar workspace**.
 
 2. Na caixa de diálogo **Criar novo espaço de trabalho**, nomeie seu espaço de trabalho e selecione uma **Geolocalização** para seu data center. Seu workspace é **Primário** por padrão. 
  > [!NOTE]
  > Depois de selecionar uma Geolocalização, você não poderá modificá-la.
-    ![Espaço de trabalho do Azure ATP](media/create-workspace.png)
+    ![Workspace do Azure ATP](media/create-workspace.png)
 
 3. Você pode clicar no link **Gerenciar funções de usuário do Azure ATP** para acessar diretamente o [Centro de administração do Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-assign-admin-roles-azure-portal) e gerenciar seus grupos de função.
 
@@ -63,16 +63,15 @@ Depois de confirmar que sua rede atende aos requisitos do sensor, você poderá 
 
 4. Clique no nome do seu workspace para acessar o portal do Azure ATP.
 
-    ![Espaços de trabalho do Azure ATP](media/atp-workspaces.png)
+    ![Workspaces do Azure ATP](media/atp-workspaces.png)
 
-- Somente o espaço de trabalho primário pode ser editado. Se desejar excluir seu workspace primário, primeiro será necessário desligar as integrações antes de elas poderem ser excluídas.
+- Somente o workspace primário pode ser editado. Se desejar excluir seu workspace primário, primeiro será necessário desligar as integrações antes de elas poderem ser excluídas.
 
 - Retenção de dados – workspaces excluídos anteriormente não são exibidos na interface do usuário. Para obter mais informações sobre a retenção de dados do Azure ATP, veja [privacidade e segurança de dados do Azure ATP](atp-privacy-compliance.md).
 
-
->[!div class="step-by-step"]
-[« Pré-instalação](atp-prerequisites.md)
-[Etapa 2 »](install-atp-step2.md)
+> [!div class="step-by-step"]
+> [« Pré-instalação](atp-prerequisites.md)
+> [Etapa 2 »](install-atp-step2.md)
 
 
 
@@ -80,4 +79,4 @@ Depois de confirmar que sua rede atende aos requisitos do sensor, você poderá 
 - [Ferramenta de dimensionamento do Azure ATP](http://aka.ms/aatpsizingtool)
 - [Configurar coleta de eventos](configure-event-collection.md)
 - [Pré-requisitos do Azure ATP](atp-prerequisites.md)
-- [Confira o fórum do Azure ATP!](https://aka.ms/azureatpcommunity)
+- [Confira o fórum do ATP do Azure!](https://aka.ms/azureatpcommunity)

@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 8980e724-06a6-40b0-8477-27d4cc29fd2b
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: a347d8666ee8c2628592b8d4c866defd85d67ff8
-ms.sourcegitcommit: b283bf66e63d76e6dba4564a229e804792794c6d
+ms.openlocfilehash: 366660a600292490c2f7df13b9d276b6accc4b93
+ms.sourcegitcommit: 2916d6f8d6e6f754d7fb8a5d31b255a46aa35ecd
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/29/2018
-ms.locfileid: "47453981"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50132615"
 ---
 *Aplica-se a: Advanced Threat Analytics versão 1.9*
 
@@ -43,6 +43,7 @@ Além de coletar e analisar o tráfego de rede para e nos controladores de domí
 Para o ATA poder consumir dados de um servidor Syslog, você precisa executar as seguintes etapas:
 
 -   Configurar seus servidores do Gateway do ATA para escutar e aceitar eventos encaminhados do servidor SIEM/Sylog.
+
 > [!NOTE]
 > ATA escuta somente IPv4, não IPv6. 
 -   Configurar seu servidor Syslog/SIEM para encaminhar eventos específicos ao Gateway do ATA.
