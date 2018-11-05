@@ -38,9 +38,9 @@ ms.locfileid: "48783722"
 Execute as etapas a seguir no controlador de domínio.
 
 1. Verifique se a máquina tem conectividade com o ponto de extremidade de serviço de nuvem do Azure ATP relevante:
-  - https://triprd1wceuw1sensorapi.atp.azure.com (na Europa)  
-  - https://triprd1wcuse1sensorapi.atp.azure.com (nos EUA)
-  - https://triprd1wcasse1sensorapi.atp.azure.com (na Ásia)
+  - [https://triprd1wceuw1sensorapi.atp.azure.com](https://triprd1wceuw1sensorapi.atp.azure.com) (na Europa)  
+  - [https://triprd1wcuse1sensorapi.atp.azure.com](https://triprd1wcuse1sensorapi.atp.azure.com) (nos EUA)
+  - [https://triprd1wcasse1sensorapi.atp.azure.com](https://triprd1wcasse1sensorapi.atp.azure.com) (na Ásia)
 
 2. Extraia os arquivos de instalação do arquivo zip. 
 > [!NOTE] 
