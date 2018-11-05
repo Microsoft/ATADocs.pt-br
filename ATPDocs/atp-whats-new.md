@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 10/21/2018
+ms.date: 10/28/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,16 +13,37 @@ ms.technology: ''
 ms.assetid: 7d0f33db-2513-4146-a395-290e001f4199
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: bf620fd9eb3ee750f19a4fe69aa3efea16b9385a
-ms.sourcegitcommit: 59ed430fa0cd8ac34a70609026ec5fc2f5972f57
+ms.openlocfilehash: 21bc112da963fe883f601258ff38062f0243a47d
+ms.sourcegitcommit: 3ab48f180aa0276f4e19cf7cd567581c7b4324cc
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/21/2018
-ms.locfileid: "49480660"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50202381"
 ---
 *Aplica-se a: Proteção Avançada contra Ameaças do Azure*
 
 # <a name="whats-new-in-azure-atp"></a>Novidades do Azure ATP 
+
+### <a name="azure-atp-release-252"></a>ATP do Azure versão 2.5.2
+Lançado em 8 de outubro de 2018
+
+
+- **Melhoria de alerta de segurança: tentativa de execução remota de código**<br>
+O [alerta de segurança de tentativa de execução remota de código](suspicious-activity-guide.md) do ATP do Azure agora inclui monitoramento para tentativas suspeitas de execução remota de código do PowerShell em seus controladores de domínio. O PowerShell Remoto é um método comum para a execução de comandos administrativos válidos, mas é com frequência usado maliciosamente em uma tentativa de executar scripts em pontos de extremidade remotos. 
+
+- **Melhoria de recurso: definir o agendamento de relatórios**
+<br>Agora você pode definir uma hora específica para agendar seus relatórios do ATP do Azure usando a função [relatórios](reports.md#). 
+
+- **Adição de configuração: RBAC (Controle de Acesso Baseado em Função) do locatário**
+<br>Configure as funções de segurança do seu locatário no Centro de administração do AAD (Azure Active Directory) diretamente do novo link de administrador no Portal do ATP do Azure. 
+
+- **Estrutura e conteúdo de documentação revisados**
+<br>As recentes alterações de conteúdo para a documentação do ATP do Azure incluem novos artigos, fornecendo uma lista completa de todas as atividades monitoradas do ATP do Azure, instruções de filtragem de atividade, bem como uma reformulação da estrutura de site de documentação para melhor capacidade de utilização:
+  - [Atividades monitoradas do ATP do Azure](monitored-activities.md) 
+  - [Filtragem de atividades do ATP do Azure](atp-activities-search.md) 
+  - [Documentação do ATP do Azure](https://docs.microsoft.com/azure-advanced-threat-protection/)  
+
+- Essa versão também inclui aprimoramentos e correções de bug da infraestrutura do sensor interno.
 
 ## <a name="azure-atp-release-251"></a>ATP do Azure versão 2.5.1
 Lançado em 21 de outubro de 2018

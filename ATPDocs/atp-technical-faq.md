@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 10/4/2018
+ms.date: 10/29/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,22 +13,22 @@ ms.technology: ''
 ms.assetid: 6a9b5273-eb26-414e-9cdd-f64406e24ed8
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 13fbc33c1f6aa525382644a48418dceabbb9b652
-ms.sourcegitcommit: 58c75026e5ec4dcab3b0852a41f9f0a0ad6f22eb
+ms.openlocfilehash: f3336189338b16a58a4e8bf67490948a163e9d56
+ms.sourcegitcommit: c10a1c5d1e5408b5473a31485346915908688680
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/14/2018
-ms.locfileid: "49315720"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50208146"
 ---
 *Aplica-se a: Proteção Avançada contra Ameaças do Azure*
 
 # <a name="azure-atp-frequently-asked-questions"></a>Perguntas frequentes sobre o Azure ATP
 Este artigo fornece uma lista de perguntas frequentes sobre o Azure ATP e dividido nas seguintes categorias: 
-- [O que é o Azure ATP](#What-is-Azure-ATP)
-- [Licenciamento e privacidade](#Licensing-and-privacy)
-- [Implantação](#Deployment)
-- [Operações](#Operations)
-- [Solução de problemas](#Troubleshooting)
+- [O que é o Azure ATP](#what-is-azure-atp)
+- [Licenciamento e privacidade](#licensing-and-privacy)
+- [Implantação](#deployment)
+- [Operações](#operation)
+- [Solução de problemas](#troubleshooting)
 
 ## <a name="what-is-azure-atp"></a>O que é o Azure ATP?
 
@@ -60,7 +60,7 @@ Sim. Como as contas computador (bem como quaisquer outras entidades) podem ser u
 ## <a name="licensing-and-privacy"></a>Licenciamento e privacidade 
 ### <a name="where-can-i-get-a-license-for-azure-advanced-threat-protection-atp"></a>Onde posso obter uma licença do Azure ATP (Proteção Avançada contra Ameaças)?
 
-Você pode adquirir uma licença do Enterprise Mobility + Security 5 (EMS E5) diretamente por meio do [Portal do Office 365](https://www.microsoft.com/cloud-platform/enterprise-mobility-security-pricing) ou do modelo de licenciamento do Parceiro de Soluções na Nuvem (CSP).  
+O ATP do Azure está disponível como parte do Enterprise Mobility + Security 5 suite (EMS E5) e como uma licença autônoma. Você pode adquirir uma licença do [Portal do Office 365](https://www.microsoft.com/cloud-platform/enterprise-mobility-security-pricing) ou do modelo de licenciamento do Parceiro de Soluções na Nuvem (CSP).
 
 ### <a name="is-this-going-to-be-a-part-of-azure-active-directory-or-on-premises-active-directory"></a>Isto fará parte do Azure Active Directory ou do Active Directory local?
 Atualmente, esta solução é uma oferta autônoma. Ela não faz parte do Azure Active Directory ou do Active Directory local.
@@ -150,4 +150,4 @@ Você pode simular atividades suspeitas como um teste de ponta a ponta. No cená
 - [Configurar coleta de eventos](configure-event-collection.md)
 - [Configuração do encaminhamento de eventos do Windows](configure-event-forwarding.md#configuring-windows-event-forwarding)
 - [Solução de problemas](troubleshooting-atp-known-issues.md)
-- [Confira o fórum do Azure ATP!](https://aka.ms/azureatpcommunity)
+- [Confira o fórum do ATP do Azure!](https://aka.ms/azureatpcommunity)
