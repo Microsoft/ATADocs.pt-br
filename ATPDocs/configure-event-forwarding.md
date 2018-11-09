@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 3547519f-8d9c-40a9-8f0e-c7ba21081203
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 931ea6e4c122ad159e16450546d241c67249b321
-ms.sourcegitcommit: 63ec9181f71edce6a950f5cc0d69428405436c48
+ms.openlocfilehash: d8b1730da0f5ab74dff39b8331fb78c293d57db3
+ms.sourcegitcommit: 1a5880de35422d050fc1bc7a918dedc4180c45ad
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "49963328"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51265706"
 ---
 *Aplica-se a: Proteção Avançada contra Ameaças do Azure*
 
@@ -87,8 +87,8 @@ Após adicionar o **Serviço de Rede** ao grupo **Leitores de Log de Eventos**, 
         1. Clique em **Pelo log** e selecione **Segurança**.
         2. No campo **Inclui/Exclui ID do Evento**, digite o número do evento e clique em **OK**. Por exemplo, digite 4776, como no exemplo a seguir:<br/>
         ![Imagem do filtro de consulta](media/wef-4-query-filter.png)
-   5. Clique com o botão direito do mouse na assinatura criada e selecione **Status de Tempo de Execução** para verificar se há problemas com o status. 
-   6. Depois de alguns minutos, verifique se os eventos definidos para serem encaminhados aparecem nos Eventos Encaminhados no sensor autônomo do Azure ATP.
+    5. Clique com o botão direito do mouse na assinatura criada e selecione **Status de Tempo de Execução** para verificar se há problemas com o status. 
+    6. Depois de alguns minutos, verifique se os eventos definidos para serem encaminhados aparecem nos Eventos Encaminhados no sensor autônomo do Azure ATP.
 
 
 Para saber mais, confira: [Configurar computadores para encaminhar e coletar eventos](https://technet.microsoft.com/library/cc748890)

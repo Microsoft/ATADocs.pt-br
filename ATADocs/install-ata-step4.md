@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 6bbc50c3-bfa8-41db-a2f9-56eed68ef5d2
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 1ce4673b6fa071ebd74bf1d15cbbaa88ec9c0872
-ms.sourcegitcommit: c10a1c5d1e5408b5473a31485346915908688680
+ms.openlocfilehash: 4f53b977cf45e7a8ec6fbd7347fd9cda913bd3b8
+ms.sourcegitcommit: 1a5880de35422d050fc1bc7a918dedc4180c45ad
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50208112"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51265655"
 ---
 *Aplica-se a: Advanced Threat Analytics versão 1.9*
 
@@ -43,46 +43,46 @@ Antes de instalar o Gateway do ATA, verifique se o espelhamento de porta está c
 Execute as seguintes etapas no servidor do Gateway do ATA.
 
 1.  Extraia os arquivos do arquivo zip. 
-> [!NOTE] 
-> A instalação diretamente do arquivo zip falha.
-
-2.  Execute **Microsoft ATA Gateway Setup.exe** e siga o assistente de instalação.
-
-3.  Na página **Boas-vindas**, selecione seu idioma e clique em **Avançar**.
-
-4.  O assistente de instalação verifica automaticamente se o servidor é um controlador de domínio ou um servidor dedicado. Se for um controlador de domínio, o Gateway Lightweight do ATA será instalado, se for um servidor dedicado, o Gateway do ATA será instalado. 
+    > [!NOTE] 
+    > A instalação diretamente do arquivo zip falha.
+    
+1.  Execute **Microsoft ATA Gateway Setup.exe** e siga o assistente de instalação.
+    
+1.  Na página **Boas-vindas**, selecione seu idioma e clique em **Avançar**.
+    
+1.  O assistente de instalação verifica automaticamente se o servidor é um controlador de domínio ou um servidor dedicado. Se for um controlador de domínio, o Gateway Lightweight do ATA será instalado, se for um servidor dedicado, o Gateway do ATA será instalado. 
     
     Por exemplo, para um Gateway do ATA, a tela a seguir será exibida informando que um Gateway do ATA será instalado em seu servidor dedicado:
     
     ![Instalação do Gateway do ATA](media/ata-gw-install.png) Clique em **Avançar**.
-
+    
     > [!NOTE] 
     > Se o controlador de domínio ou servidor dedicado não atender aos requisitos mínimos de hardware para a instalação, você receberá um aviso. Isso não impede você de clicar em **Avançar** e prosseguir com a instalação. Essa pode ser a opção certa para a instalação do ATA em um ambiente de teste de laboratório pequeno no qual você não precisará de tanto espaço para armazenamento de dados. Para ambientes de produção, é altamente recomendável trabalhar com o guia de [planejamento de capacidade](ata-capacity-planning.md) do ATA para certificar-se de que seus controladores de domínio ou servidores dedicados atendam aos requisitos necessários.
-
-5.  Em **Configurar o Gateway**, insira as seguintes informações com base em seu ambiente:
-
+    
+1.  Em **Configurar o Gateway**, insira as seguintes informações com base em seu ambiente:
+    
     ![Imagem da configuração do gateway de ATA](media/ata-gw-configure.png)
-
+    
     > [!NOTE]
     > Quando você implanta o Gateway do ATA, não precisa fornecer credenciais. Se a instalação do Gateway do ATA não conseguir recuperar suas credenciais usando o logon único (por exemplo, isso pode acontecer se o Centro do ATA não estiver no domínio, nesse caso, você não precisa das credenciais de administrador do ATA), você receberá uma solicitação para fornecer credenciais, como na tela a seguir: 
-
+    
   ![Fornecer credenciais do gateway do ATA](media/ata-install-credentials.png)
-
+    
    - Caminho de Instalação: esse é o local em que o Gateway do ATA é instalado. Por padrão, é %programfiles%\Microsoft Advanced Threat Analytics\Gateway. Mantenha o valor padrão.
     
-6. Clique em **Instalar**. Os componentes a seguir serão instalados e configurados durante a instalação do Gateway do ATA:
-
+1. Clique em **Instalar**. Os componentes a seguir serão instalados e configurados durante a instalação do Gateway do ATA:
+    
     -   KB 3047154 (somente para Windows Server 2012 R2)
-
+    
         > [!IMPORTANT]
         > -   Não instale o KB 3047154 em um host de virtualização (o host que está executando a virtualização; não há problema em executá-lo em uma máquina virtual). Isso pode fazer com que o espelhamento de porta pare de funcionar corretamente. 
         > -   Não instale o Message Analyzer, o Wireshark ou qualquer outro software de captura de rede no Gateway do ATA. Se você precisa capturar o tráfego de rede, instale e use o Microsoft Network Monitor 3.4.
-
+    
     -   Serviço do Gateway do ATA
     -   Microsoft Visual C++ 2013 Redistributable
     -   Conjunto de coleta de dados do Monitor de Desempenho Personalizado
-
-7.  Após a conclusão da instalação, para o Gateway do ATA, clique em **Iniciar** para abrir o navegador e entrar no Console do ATA. Para o Gateway Lightweight do ATA, clique em **Concluir**.
+    
+1.  Após a conclusão da instalação, para o Gateway do ATA, clique em **Iniciar** para abrir o navegador e entrar no Console do ATA. Para o Gateway Lightweight do ATA, clique em **Concluir**.
 
 
 > [!div class="step-by-step"]
