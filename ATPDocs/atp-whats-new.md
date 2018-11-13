@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 10/28/2018
+ms.date: 11/04/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,19 +13,31 @@ ms.technology: ''
 ms.assetid: 7d0f33db-2513-4146-a395-290e001f4199
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 21bc112da963fe883f601258ff38062f0243a47d
-ms.sourcegitcommit: 3ab48f180aa0276f4e19cf7cd567581c7b4324cc
+ms.openlocfilehash: 3c453ad2fce37986811903693c27761c5ea79d40
+ms.sourcegitcommit: 03b1949beaf2f78a3cdf9396356a96488ea2e127
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50202381"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "50983133"
 ---
 *Aplica-se a: Proteção Avançada contra Ameaças do Azure*
 
 # <a name="whats-new-in-azure-atp"></a>Novidades do Azure ATP 
 
-### <a name="azure-atp-release-252"></a>ATP do Azure versão 2.5.2
-Lançado em 8 de outubro de 2018
+
+## <a name="azure-atp-release-253"></a>Proteção Avançada contra Ameaças do Azure versão 2.5.3
+Lançado em 4 de novembro de 2018
+
+- **Aprimoramento do alerta de segurança: falha de autenticação suspeita**<br>
+O [alerta de segurança de falha de autenticação suspeita](suspicious-activity-guide.md) da Proteção Avançada contra Ameaças do Azure agora inclui o monitoramento para detecção de ataques de força bruta de pulverização de senhas.
+Em um ataque típico de **pulverização de senhas**, depois de enumerar com êxito uma lista de usuários válidos do controlador de domínio, os invasores tentam UMA senha cuidadosamente concebida em TODAS as contas de usuário conhecidas (uma senha para várias contas). Quando a pulverização de senhas inicial não tem êxito, eles tentam novamente utilizando uma senha diferente cuidadosamente concebida, normalmente após aguardar 30 minutos entre as tentativas. Esse tempo de espera permite que os invasores evitem disparar a maioria dos limites de bloqueio de conta que se baseiam no tempo. A pulverização de senhas tornou-se rapidamente uma técnica de preferência entre os invasores e testadores de intrusão. Os ataques de pulverização de senhas se mostraram eficazes na conquista de uma entrada na organização e por fazer movimentos laterais posteriores, tentando aumentar os privilégios. 
+
+- **Aprimoramento de recurso: enviar uma mensagem de Syslog de teste**<br>   Nova funcionalidade de envio de mensagem de Syslog de teste durante o processo de configuração do SIEM. Saiba mais em [Integração com o Syslog](setting-syslog.md). 
+
+- Essa versão também inclui aprimoramentos e correções de bug da infraestrutura do sensor interno.
+
+## <a name="azure-atp-release-252"></a>ATP do Azure versão 2.5.2
+Lançado em 28 de outubro de 2018
 
 
 - **Melhoria de alerta de segurança: tentativa de execução remota de código**<br>

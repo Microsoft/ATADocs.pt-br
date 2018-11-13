@@ -1,11 +1,11 @@
 ---
-title: Definição de configurações de notificação por email na Proteção Avançada contra Ameaças do Azure | Microsoft Docs
+title: Definição de configurações do syslog na Proteção Avançada contra Ameaças do Azure | Microsoft Docs
 description: Descreve como fazer com que o Azure ATP notifique você (por email ou pelo encaminhamento de eventos do Azure ATP) quando detectar atividades suspeitas
 keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 10/04/2018
+ms.date: 11/04/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: a2d29c9c-7ecb-4804-b74b-fde899b28648
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 18f6d38f871539cf0701b697c9d0c5d9d96a27e4
-ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
+ms.openlocfilehash: ac01e5ae534fc5df5da70a8d1c47c11c1c455c98
+ms.sourcegitcommit: 03b1949beaf2f78a3cdf9396356a96488ea2e127
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48783535"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "50983082"
 ---
 *Aplica-se a: Proteção Avançada contra Ameaças do Azure*
 
@@ -59,8 +59,11 @@ O Azure ATP poderá notificar você quando detectar atividades suspeitas e alert
 
 6. Você pode selecionar quais eventos enviar ao servidor do Syslog. Em **Notificações do Syslog**, especifique quais notificações devem ser enviadas ao servidor do Syslog: novos alertas de segurança, alertas de segurança atualizados e novos problemas de integridade.
 
+> [!NOTE]
+> Caso planeje criar automação ou scripts para logs de SIEM do ATP do Azure, é recomendável usar o campo **externalId** para identificar o tipo de alerta em vez de usar o nome do alerta para essa finalidade. Nomes de alertas, ocasionalmente, podem ser modificados, enquanto o **externalId** de cada alerta é permanente. Para saber mais, confira [Referência de logs SIEM da Proteção Avançada contra Ameaças do Azure](cef-format-sa.md). 
+
 
 ## <a name="see-also"></a>Consulte Também
 
 - [Trabalhando com contas confidenciais](sensitive-accounts.md)
-- [Confira o fórum do Azure ATP!](https://aka.ms/azureatpcommunity)
+- [Confira o fórum do ATP do Azure!](https://aka.ms/azureatpcommunity)

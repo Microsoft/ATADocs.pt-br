@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 0d9d2a1d-6c76-4909-b6f9-58523df16d4f
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 9f5caf3ef7c0c986404cfe90a6f8cc40aa9462b4
-ms.sourcegitcommit: 30d874808cfeafd46ee8fbbf34e0bbcb337f6544
+ms.openlocfilehash: 1ddd369fe51117a120a3f5b8a688f22624d711c0
+ms.sourcegitcommit: 03b1949beaf2f78a3cdf9396356a96488ea2e127
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49089365"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "50983099"
 ---
 *Aplica-se a: Proteção Avançada contra Ameaças do Azure*
 
@@ -55,7 +55,7 @@ Execute as seguintes etapas em seu servidor RRAS.
 
     ![Configuração RADIUS](./media/radius-setup.png)
 
-4.  Na janela **Adicionar servidor RADIUS**, digite o **Nome do servidor** do sensor autônomo do Azure ATP ou sensor do Azure ATP mais próximo. Em **Porta**, verifique se o padrão de 1813 está configurado. Clique em **Alteração** e digite uma nova cadeia de caracteres alfanuméricos secreta compartilhada da qual você possa se lembrar. Você precisa preenchê-la mais tarde em sua Configuração do Azure ATP. Marque a caixa **Enviar mensagens de Contabilização RADIUS Ligada e Desligada** caixa e, em seguida, clique em **OK** em todas as caixas de diálogo abertas.
+4.  Na janela **Adicionar servidor RADIUS**, digite o **Nome do servidor** do sensor mais próximo da Proteção Avançada contra Ameaças do Azure (que tenha conectividade com a rede). Para HA, é possível adicionar sensores extras da Proteção Avançada contra Ameaças do Azure como servidores RADIUS. Em **Porta**, verifique se o padrão de 1813 está configurado. Clique em **Alteração** e digite uma nova cadeia de caracteres alfanuméricos secreta compartilhada da qual você possa se lembrar. Você precisa preenchê-la mais tarde em sua Configuração do Azure ATP. Marque a caixa **Enviar mensagens de Contabilização RADIUS Ligada e Desligada** caixa e, em seguida, clique em **OK** em todas as caixas de diálogo abertas.
  
      ![Configuração de VPN](./media/vpn-set-accounting.png)
      
@@ -84,4 +84,4 @@ Depois que isso for habilitado, todos os sensores e sensores autônomos do Azure
 - [Ferramenta de dimensionamento do Azure ATP](http://aka.ms/aatpsizingtool)
 - [Configurar coleta de eventos](configure-event-collection.md)
 - [Pré-requisitos do Azure ATP](atp-prerequisites.md)
-- [Confira o fórum do Azure ATP!](https://aka.ms/azureatpcommunity)
+- [Confira o fórum do ATP do Azure!](https://aka.ms/azureatpcommunity)

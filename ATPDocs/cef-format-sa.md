@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 10/24/2018
+ms.date: 11/01/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,34 +13,39 @@ ms.technology: ''
 ms.assetid: 3261155c-3c72-4327-ba29-c113c63a4e6d
 ms.reviewer: arzinger
 ms.suite: ems
-ms.openlocfilehash: 143002db7b45868e5b78c7da1cdc77c569d3a3dd
-ms.sourcegitcommit: 63ec9181f71edce6a950f5cc0d69428405436c48
+ms.openlocfilehash: 574606cfd172b9885534095be5ebbc266b1c8004
+ms.sourcegitcommit: 034d5cbd077a0dd18638d27aabbcf7b735993b08
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "49963311"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50748979"
 ---
 *Aplica-se a: Proteção Avançada contra Ameaças do Azure*
 
 
 # <a name="azure-atp-siem-log-reference"></a>Referência de logs de SIEM do Azure ATP
 
-O Azure ATP pode encaminhar eventos de alerta de monitoramento e atividades suspeitas para o SIEM. Eventos de atividade suspeita estão no formato CEF. Este artigo de referência fornece exemplos dos logs de atividades suspeitas enviados para o SIEM.
+A Proteção Avançada contra Ameaças do Azure pode encaminhar eventos de alerta de monitoramento e de segurança para o SIEM. Os alertas e eventos estão no formato CEF. Este artigo de referência fornece exemplos dos logs enviados ao SIEM.
 
-## <a name="sample-azure-atp-suspicious-activities-in-cef-format"></a>Exemplo de atividades suspeitas do Azure ATP no formato CEF
+## <a name="sample-azure-atp-security-alerts-in-cef-format"></a>Alertas de segurança de exemplo da Proteção Avançada contra Ameaças do Azure no formato CEF
 Os campos a seguir e seus valores são encaminhados para o SIEM:
 
--   start – a hora de início do alerta
--   suser – conta (normalmente, a conta de usuário) envolvida no alerta
--   shost – o computador de origem do alerta
--   outcome – quando relevante, êxito ou falha da atividade suspeita no alerta  
--   msg – descrição do alerta
--   cnt – para alertas que têm uma contagem do número de vezes que o alerta ocorreu (por exemplo, a força bruta tem uma quantidade de senhas adivinhadas)
--   app – protocolo usado neste alerta
--   externalId – a ID do tipo de evento que o ATP do Azure grava no log de eventos que corresponde a cada tipo de alerta
--   cs#label & cs# – cadeias de caracteres do cliente permitidas pelo CEF, nas quais cs#label é o nome do novo campo e cs# é o valor, por exemplo: cs1Label=url cs1=https://192.168.0.220/suspiciousActivity/5909ae198ca1ec04d05e65fa
+|Detalhes|Explicação|
+|---------|---------------|
+|start|hora de início do alerta|
+|suser|conta (normalmente a do usuário) envolvida no alerta|
+|shost|conta (normalmente a do usuário) envolvida no alerta|
+|resultado|quando relevante, êxito ou falha da atividade suspeita no alerta|
+|msg|descrição do alerta|
+|cnt|para alertas com uma contagem do número de vezes que a atividade ocorreu (por exemplo, a força bruta tem uma quantidade de senhas adivinhadas)|
+|app |protocolo usado neste alerta|
+|externalId|a ID do tipo de evento que a Proteção Avançada contra Ameaças do Azure grava no log de eventos correspondente a cada tipo de alerta|
+|cs#label|cadeias de caracteres do cliente permitidas pelo CEF, em que cs#label é o nome do novo campo |
+|cs#|cadeias de caracteres do cliente permitidas pelo CEF, em que cs# é o valor.|
+|
 
-    Neste exemplo, cs1 é um campo que tem uma URL para o alerta.
+Por exemplo: cs1Label=url cs1=https://192.168.0.220/suspiciousActivity/5909ae198ca1ec04d05e65fa
+<br> Neste exemplo, o campo cs1 é a URL de alerta. 
 
 > [!NOTE]
 > Caso planeje criar automação ou scripts para logs de SIEM do ATP do Azure, é recomendável usar o campo **externalId** para identificar o tipo de alerta em vez de usar o nome do alerta para essa finalidade. Nomes de alertas, ocasionalmente, podem ser modificados, enquanto o **externalId** de cada alerta é permanente.  

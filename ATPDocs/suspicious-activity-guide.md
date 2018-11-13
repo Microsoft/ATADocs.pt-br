@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: ca5d1c7b-11a9-4df3-84a5-f53feaf6e561
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 47adb120cebe068f974d61891b843e276a0f52c0
-ms.sourcegitcommit: c10a1c5d1e5408b5473a31485346915908688680
+ms.openlocfilehash: daeb998f6e97bc4ebdf290d4430fec8fcef40313
+ms.sourcegitcommit: 03b1949beaf2f78a3cdf9396356a96488ea2e127
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50208163"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "50983150"
 ---
 *Aplica-se a: Proteção Avançada contra Ameaças do Azure*
 
@@ -45,7 +45,7 @@ Para saber mais sobre como trabalhar com alertas de segurança do Azure ATP, con
 >[!NOTE]
 > A principal diferença entre **Falhas de autenticação suspeitas** e esta detecção é que, nesta detecção, o Azure ATP pode determinar se senhas diferentes foram usadas.
 
-Em um ataque de força bruta, o invasor tenta autenticar com muitas senhas diferentes para diferentes contas até que uma senha correta seja encontrada para pelo menos uma conta. Uma vez encontrada, um invasor pode fazer logon usando essa conta.
+Em um ataque de força bruta, o invasor tenta autenticar com muitas senhas diferentes para diferentes contas até que uma senha correta seja encontrada para pelo menos uma conta. Uma vez encontrada, um invasor pode entrar usando essa conta.
 
 Nesta detecção, um alerta é disparado quando o Azure ATP detecta um grande número de autenticações de associação simples. Isso pode ser *horizontalmente* com um pequeno conjunto de senhas entre vários usuários; ou *verticalmente "* com um grande conjunto de senhas em apenas alguns usuários; ou qualquer combinação dessas duas opções.
 
@@ -81,18 +81,18 @@ Primeiro, verifique a descrição do alerta para ver com qual dos três tipos de
 
 1.  Skeleton Key – você pode verificar se a Skeleton Key afetou os controladores de domínio usando [o verificador escrito pela equipe do ATP do Azure](https://gallery.technet.microsoft.com/Aorato-Skeleton-Key-24e46b73). Se o analisador encontrar malware em 1 ou mais controladores de domínio, é um verdadeiro positivo.
 
-2.  Golden Ticket – na planilha do Excel, vá para a guia de atividade de rede. Você verá que o campo de downgrade relevante é **Solicitar Tipo de Criptografia de Tíquete** e **Tipos de Criptografia com Suporte no Computador de Origem** contém métodos de criptografia mais fortes.
+2.  Golden Ticket – na planilha do Excel, abra a guia de atividade de rede. O campo relevante em que foi feito downgrade é **Solicitar Tipo de Criptografia de Tíquete**, e **Tipos de Criptografia com Suporte no Computador de Origem** apresenta os métodos de criptografia mais fortes.
 
-  a. Verifique o recurso acessado por essas permissões. Se houver um recurso que todas elas estão acessando, valide-o e verifique se é um recurso válido que elas precisam acessar. Além disso, verifique se o recurso de destino dá suporte a métodos de criptografia forte. Você pode verificar isso no Active Directory verificando o atributo msDS-SupportedEncryptionTypes, da conta de serviço do recurso.
+  1. Verifique o recurso acessado por essas permissões. Se houver um recurso que todas elas estão acessando, valide-o e verifique se é um recurso válido que elas precisam acessar. Além disso, verifique se o recurso de destino dá suporte a métodos de criptografia forte. Você pode verificar isso no Active Directory verificando o atributo msDS-SupportedEncryptionTypes, da conta de serviço do recurso.
   
-  b. Verifique a conta e o computador de origem ou, se houver várias contas e computadores de origem, verifique se eles têm algo em comum. Por exemplo, todos de sua equipe de marketing usam um aplicativo específico que pode causar o acionamento do alerta. Há casos em que um aplicativo personalizado que é raramente usado está se autenticando usando uma codificação de criptografia inferior. Verifique se há algum desses aplicativos personalizados no computador de origem. Nesse caso, ele é provavelmente um positivo verdadeiro benigno e pode ser suprimido.
+  2. Verifique a conta e o computador de origem ou, se houver várias contas e computadores de origem, verifique se eles têm algo em comum. Por exemplo, todos de sua equipe de marketing usam um aplicativo específico que pode causar o acionamento do alerta. Há casos em que um aplicativo personalizado que é raramente usado está se autenticando usando uma codificação de criptografia inferior. Verifique se há algum desses aplicativos personalizados no computador de origem. Nesse caso, ele é provavelmente um positivo verdadeiro benigno e pode ser suprimido.
   
 
 
 3.  Overpass-the-Hash – na planilha do Excel, vá para a guia de atividade de rede. Você verá que o campo de downgrade relevante é **Tipo de Criptografia de Carimbo de Data/Hora Criptografado** e **Tipos de Criptografia com Suporte no Computador de Origem** contém métodos de criptografia mais fortes.
 
-  a. Há casos em que esse alerta pode ser disparado quando os usuários fazem logon usando cartões inteligentes, se a configuração do cartão inteligente foi alterada recentemente. Verifique se ocorreram alterações como essa para a(s) conta(s) envolvida(s). Nesse caso, ele é provavelmente um positivo verdadeiro benigno e pode ser suprimido.
-  b. Verifique o recurso acessado por essas permissões. Se houver um recurso que todas elas estão acessando, valide-o e verifique se é um recurso válido que elas precisam acessar. Além disso, verifique se o recurso de destino dá suporte a métodos de criptografia forte. Você pode verificar isso no Active Directory verificando o atributo msDS-SupportedEncryptionTypes, da conta de serviço do recurso.
+  1. Há casos em que esse alerta pode ser disparado quando os usuários entram usando um cartão inteligente cuja configuração tenha sido alterada recentemente. Verifique se ocorreram alterações como essa para a(s) conta(s) envolvida(s). Nesse caso, ele é provavelmente um positivo verdadeiro benigno e pode ser suprimido.
+  2. Verifique o recurso acessado por essas permissões. Se houver um recurso que todas elas estão acessando, valide-o e verifique se é um recurso válido que elas precisam acessar. Além disso, verifique se o recurso de destino dá suporte a métodos de criptografia forte. Você pode verificar isso no Active Directory verificando o atributo msDS-SupportedEncryptionTypes, da conta de serviço do recurso.
 
 **Remediação**
 
@@ -110,7 +110,7 @@ Primeiro, verifique a descrição do alerta para ver com qual dos três tipos de
 
 As contas Honeytoken são contas fictícias configuradas para identificar e rastrear atividades mal-intencionadas que envolvem essas contas. Contas de Honeytoken devem ser deixadas como não utilizadas, enquanto têm um nome atraente para atrair invasores (por exemplo, SQL-Admin). Qualquer atividade delas pode indicar comportamento mal-intencionado.
 
-Para obter mais informações sobre contas honeytoken, consulte [Instalar o Azure ATP – etapa 7](install-atp-step7.md).
+Para saber mais sobre as contas honeytoken, confira [Instalar a Proteção Avançada contra Ameaças do Azure – etapa 7](install-atp-step7.md).
 
 **Investigação**
 
@@ -134,7 +134,7 @@ Passagem de Hash é uma técnica de movimento lateral em que os invasores roubam
 
 **Investigação**
 
-O hash foi usado em um computador que o usuário destinado possui ou usa regularmente? Se sim, esse é um falso positivo. Caso contrário, provavelmente é um verdadeiro positivo.
+O hash foi usado em um computador que o usuário de destino possui ou usa regularmente? Em caso afirmativo, é um falso positivo; em caso negativo, é provavelmente um positivo verdadeiro.
 
 **Remediação**
 
@@ -187,10 +187,10 @@ Nessa detecção, um alerta é acionado quando um tíquete de concessão de tíq
 
 2.  Todos os usuários que estavam conectados no computador deveriam estar conectados? Quais são os privilégios deles? 
 
-3.  Estes usuários devem ter acesso a esses recursos?<br>
-Se você tiver habilitado a integração do Windows Defender ATP, clique no ![selo WD](./media/wd-badge.png) do selo do Windows Defender ATP.
+3.  Os usuários que foram registrados deveriam ter acesso a esses recursos?<br>
+Se você tiver habilitado a integração do Windows Defender ATP, clique no selo do Windows Defender ATP.
  
- 4. Para continuar a investigar o computador, no Windows Defender ATP, verifique quais processos e alertas ocorreram no momento do alerta.
+ 4. Para continuar a investigar o computador, verifique quais processos e alertas ocorreram no momento do alerta no Windows Defender ATP.
 
 **Remediação**
 
@@ -256,7 +256,7 @@ Você pode utilizar o  [Scanner ACL do AD](https://blogs.technet.microsoft.com/
 
 **Descrição**
 
-As vulnerabilidades conhecidas em versões mais antigas do Windows Server permitem que os invasores manipulem o PAC (Certificado de Atributo Privilegiado), um campo no tíquete Kerberos que contém os dados de autorização do usuário (no Active Directory essa é a associação de grupo), concedendo ao invasor privilégios adicionais.
+Vulnerabilidades conhecidas em versões mais antigas do Windows Server permitem que os invasores manipulem o PAC (Certificado de Acesso Privilegiado). O PAC é um campo no tíquete Kerberos que contém os dados de autorização do usuário (no Active Directory, é a associação de grupo), concedendo privilégios adicionais aos invasores.
 
 **Investigação**
 
@@ -318,7 +318,7 @@ Nessa detecção, nenhum alerta é disparado no primeiro mês após a implantaç
 
 4. Se sim e se não precisar fazer mais isso, **Feche** a atividade suspeita.
 
-5. Se não houver informações sobre a conta envolvida: essas consultas devem ser feitas por essa conta ou essa conta normalmente faz logon no computador de origem?
+5. Se houver informações sobre a conta envolvida: essas consultas devem mesmo ser feitas por essa conta ou ela normalmente entra no computador de origem?
 
  - Se sim e se o alerta for atualizado, **Suprima** a atividade suspeita.
 
@@ -409,25 +409,28 @@ Os invasores que comprometem credenciais de administrador ou que usam uma explor
 > [!NOTE]
 > Alertas de tentativa de execução remota de código são compatíveis somente com sensores do ATP. 
 
-## <a name="suspicious-authentication-failures"></a>Falhas de autenticação suspeitas
+## <a name="suspicious-authentication-failures--enhanced"></a>Falhas suspeitas de autenticação – aprimorado
 
 **Descrição**
 
-Em um ataque de força bruta, o invasor tenta autenticar com muitas senhas diferentes para diferentes contas até que uma senha correta seja encontrada para pelo menos uma conta. Uma vez encontrada, um invasor pode fazer logon usando essa conta.
+Em um ataque de força bruta, o invasor tenta a autenticação usando várias senhas em diferentes contas até que uma senha correta seja encontrada ou usando uma senha em uma pulverização de senhas de grande escala que funciona para pelo menos uma conta. Uma vez descoberta, o invasor entra usando a conta autenticada.
 
-Nesta detecção, um alerta é disparado quando ocorrem diversas falhas de autenticação usando Kerberos ou NTLM. Isso pode acontecer horizontalmente com um pequeno conjunto de senhas entre vários usuários, verticalmente com um grande conjunto de senhas em apenas alguns usuários ou qualquer combinação dessas duas opções. O período mínimo antes que um alerta possa ser disparado é de uma semana.
+Nessa detecção, um alerta é disparado quando ocorrem diversas falhas de autenticação usando Kerberos ou NTLM ou quando o uso de uma pulverização de senhas é detectada. Por meio do Kerberos ou NTLM, esse ataque geralmente é horizontal, usando um pequeno conjunto de senhas com vários usuários, ou vertical, com um grande conjunto de senhas com poucos usuários, ou uma combinação dos dois. Em uma pulverização de senhas, depois de enumerar com êxito uma lista de usuários válidos do controlador de domínio, os invasores tentam UMA senha cuidadosamente concebida em TODAS as contas de usuário conhecidas (uma senha para várias contas). Se a pulverização de senhas inicial falhar, eles tentam novamente utilizando uma senha diferente cuidadosamente concebida, normalmente após aguardar 30 minutos entre as tentativas. Esse tempo de espera permite que os invasores evitem disparar a maioria dos limites de bloqueio de conta que se baseiam no tempo. A pulverização de senhas tornou-se rapidamente uma técnica de preferência entre os invasores e testadores de intrusão. Os ataques de pulverização de senhas se mostraram eficazes na conquista de uma entrada na organização e por fazer movimentos laterais posteriores, tentando aumentar os privilégios. 
+
+**Período de aprendizado**: o período mínimo antes do disparo desse tipo de alerta é de uma semana.
 
 **Investigação**
 
-1.  Clique em **Baixar detalhes** para exibir as informações completas em uma planilha do Excel. Você pode obter as seguintes informações: 
+1.  Clique em **Baixar detalhes** para exibir as informações completas em uma planilha do Excel. As informações a seguir estão disponíveis: 
    -    Lista das contas atacadas
    -    Lista de contas adivinhadas em que as tentativas de logon terminaram com a autenticação bem-sucedida
    -    Se as tentativas de autenticação tiverem sido realizadas usando NTLM, você verá as atividades de eventos relevantes 
    -    Se as tentativas de autenticação tiverem sido realizadas usando Kerberos, você verá as atividades de rede relevantes
+   -  Se as tentativas de autenticação tiverem usado uma pulverização de senhas, você verá as atividades de rede relevantes
 
 2.  Clique no computador de origem para acessar a página de perfil. Verifique o que aconteceu no momento dessas tentativas, pesquisando atividades incomuns, como: quem estava conectado e quais recursos foram acessados. Se você tiver habilitado a integração do Windows Defender ATP, clique no selo do Windows Defender ATP ![Selo do Windows Defender ATP](./media/wd-badge.png) para continuar a investigar o computador. No Windows Defender ATP, você pode ver quais processos e alertas ocorreram no momento do alerta. 
 
-3.  Se a autenticação tiver sido executada usando NTLM, você vir que o alerta ocorre muitas vezes e não houver informações suficientes disponíveis sobre o servidor que tentou acessar o computador de origem, você deverá habilitar a **Auditoria de NTLM** nos controladores de domínio envolvidos. Para fazer isso, ative o evento 8004. Esse é o evento de autenticação de NTLM que inclui informações sobre o computador de origem, a conta de usuário e o **servidor** que o computador de origem tentou acessar. Depois que saber qual servidor enviou a validação de autenticação, você deverá investigar o servidor, verificando seus eventos, como 4624, para compreender melhor o processo de autenticação. 
+3.  Se a autenticação tiver sido executada usando NTLM e você perceber que o alerta ocorre muitas vezes e não houver informações suficientes disponíveis sobre o servidor que o computador de origem tentou acessar, habilite a **Auditoria de NTLM** nos controladores de domínio envolvidos. Para fazer isso, ative o evento 8004. Esse é o evento de autenticação de NTLM que inclui informações sobre o computador de origem, a conta de usuário e o **servidor** que o computador de origem tentou acessar. Depois de saber qual servidor enviou a validação de autenticação, investigue-o verificando eventos como o 4624 para compreender melhor o processo de autenticação. 
 
 **Remediação**
 

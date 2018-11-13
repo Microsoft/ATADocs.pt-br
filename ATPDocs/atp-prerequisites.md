@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 62c99622-2fe9-4035-9839-38fec0a353da
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: f959176ddca045f421af416d5ce9dc3a777cc43a
-ms.sourcegitcommit: fdff488c79729035f89897c2ea0771a45b4c3ecf
+ms.openlocfilehash: 4b72d112a39b9fd7448ecfe2aa5c1808752d32a8
+ms.sourcegitcommit: 034d5cbd077a0dd18638d27aabbcf7b735993b08
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49401905"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50748996"
 ---
 *Aplica-se a: Proteção Avançada contra Ameaças do Azure*
 
@@ -114,7 +114,7 @@ Os servidores e controladores de domínio nos quais o sensor é instalado devem 
 ### <a name="network-adapters"></a>Adaptadores de rede
 
 O sensor do Azure ATP monitora o tráfego local em todos os adaptadores de rede do controlador de domínio. <br>
-Após a implantação, será possível usar o portal de workspace do Azure ATP se desejar modificar quais adaptadores de rede são monitorados.
+Após a implantação, será possível usar o portal da Proteção Avançada contra Ameaças do Azure se desejar modificar os adaptadores de rede a ser monitorados.
 
 Não há suporte para o sensor em controles de domínio que executem o Windows 2008 R2 com o Broadcom Network Adapter Teaming habilitado.
 
