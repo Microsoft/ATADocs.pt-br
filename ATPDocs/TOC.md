@@ -50,6 +50,7 @@
 ## [Central de integridade do Azure ATP](atp-health-center.md)
 ## [Gerenciar alertas de integridade do Azure ATP](monitoring-alerts.md)
 ## [Solução de problemas conhecidos](troubleshooting-atp-known-issues.md)
-### [Solução de problemas usando logs](troubleshooting-atp-using-logs.md)
+## [Solução de problemas usando logs](troubleshooting-atp-using-logs.md)
+## [Problemas conhecidos da ATP do Azure](known-issues.md)
 ## [Suporte e informações](atp-support.md)
 ## [Roteiro de preparação do Azure ATP](atp-resources.md)
