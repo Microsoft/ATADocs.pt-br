@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 3f0498f9-061d-40e6-ae07-98b8dcad9b20
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 6e15f09ff03402e7aed499e032bac018999ab538
-ms.sourcegitcommit: 2916d6f8d6e6f754d7fb8a5d31b255a46aa35ecd
+ms.openlocfilehash: 7f96971f3d7d11f49c025ddf88c1ced5e4fc8cb6
+ms.sourcegitcommit: f86dc8ad3d1e75ba64b372d4d0ab5386e28f2e29
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50132598"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51609666"
 ---
 *Aplica-se a: Advanced Threat Analytics versão 1.9*
 
@@ -84,8 +84,7 @@ Após adicionar o **Serviço de Rede** ao grupo **Leitores de Log de Eventos**, 
         2.  Insira o nome do controlador de domínio no campo **Digite o nome do objeto a ser selecionado**. Depois, clique em **Verificar Nomes** e clique em **OK**.  
           ![Imagem do Visualizador de Eventos](media/wef3%20event%20viewer.png)  
         3.  Clique em **OK**.
-     4. Clique em **Selecionar Eventos**.
-
+    4.  Clique em **Selecionar Eventos**.
         1. Clique em **Pelo log** e selecione **Segurança**.
         2. No campo **Inclui/Exclui ID do Evento**, digite o número do evento e clique em **OK**. Por exemplo, digite 4776, conforme no exemplo a seguir.
 

@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: ab1e8dd9-a6c2-4c68-89d5-343b8ec56142
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: d2d7027a53d6bbc26d037ceeef4c5083865bb7e7
-ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
+ms.openlocfilehash: d812673ed387bcd6a14e6b316cb2224819c503e3
+ms.sourcegitcommit: 46b6a5088ed975bcfb36e7f9a3b5c00ecd5e185a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48783093"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51645269"
 ---
 *Aplica-se a: Proteção Avançada contra Ameaças do Azure*
 
@@ -57,7 +57,7 @@ A Política de Auditoria de Segurança Avançada é habilitada por meio do GPO d
     ![Auditoria de gerenciamento do grupo de distribuição](media/atp-advanced-audit-policy-check-step-4.png)
 
 > [!NOTE]
-> - Se você optar por usar a política local, adicione os logs de auditoria de **Logon da Conta** e **Gerenciamento de Conta** em sua política local. Se você estiver configurando a política de auditoria avançada, force a [subcategoria de política de auditoria](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/audit-force-audit-policy-subcategory-settings-to-override).
+> Se você optar por usar a política local, adicione os logs de auditoria de **Logon da Conta** e **Gerenciamento de Conta** em sua política local. Se você estiver configurando a política de auditoria avançada, force a [subcategoria de política de auditoria](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/audit-force-audit-policy-subcategory-settings-to-override).
 
 7. Após a aplicação por meio do GPO, os novos eventos ficam visíveis nos **Logs de Eventos do Windows**.
 
