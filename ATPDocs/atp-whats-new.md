@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 11/04/2018
+ms.date: 11/12/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,17 +13,25 @@ ms.technology: ''
 ms.assetid: 7d0f33db-2513-4146-a395-290e001f4199
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 3c453ad2fce37986811903693c27761c5ea79d40
-ms.sourcegitcommit: 03b1949beaf2f78a3cdf9396356a96488ea2e127
+ms.openlocfilehash: 2237834e867aa6bdacbc67fcc1244f07ac88711b
+ms.sourcegitcommit: 2afc1486b40431f442d51a53df06e289796de87e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "50983133"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51560738"
 ---
 *Aplica-se a: Proteção Avançada contra Ameaças do Azure*
 
 # <a name="whats-new-in-azure-atp"></a>Novidades do Azure ATP 
 
+## <a name="azure-atp-release-254"></a>ATP do Azure versão 2.5.4
+Lançado em 11 de novembro de 2018
+
+- **Melhoria de recurso: exclusões de domínio padrão adicionadas ao alerta de Comunicação suspeita por DNS**<br>   Nova adição de três domínios populares à lista de exclusões de domínio padrão. A lista de exclusões permanece totalmente personalizável. Para saber mais, veja [Excluindo entidades de detecções](excluding-entities-from-detections.md). 
+
+- **Aprimoramentos de documentação: atualização de log do SIEM, diretrizes de problemas conhecidos**<br>    Mapeamento de externalId e explicações adicionais foram adicionados a descrições de log do SIEM. Para saber mais, veja [referência de log do SIEM](cef-format-sa.md). <br>Um artigo adicional para obter diretrizes de problemas conhecidos atualmente não resolvidos foi adicionado. Para saber mais, veja [Problemas conhecidos do ATP do Azure](known-issues.md).  
+
+- Essa versão inclui aprimoramentos e correções de bug da infraestrutura do sensor interno.
 
 ## <a name="azure-atp-release-253"></a>Proteção Avançada contra Ameaças do Azure versão 2.5.3
 Lançado em 4 de novembro de 2018
@@ -46,7 +54,7 @@ O [alerta de segurança de tentativa de execução remota de código](suspicious
 - **Melhoria de recurso: definir o agendamento de relatórios**
 <br>Agora você pode definir uma hora específica para agendar seus relatórios do ATP do Azure usando a função [relatórios](reports.md#). 
 
-- **Adição de configuração: RBAC (Controle de Acesso Baseado em Função) do locatário**
+- **Adição de configuração: RBAC (controle de acesso baseado em função) do locatário**
 <br>Configure as funções de segurança do seu locatário no Centro de administração do AAD (Azure Active Directory) diretamente do novo link de administrador no Portal do ATP do Azure. 
 
 - **Estrutura e conteúdo de documentação revisados**
@@ -73,7 +81,7 @@ Lançado em 14 de outubro de 2018
 Lançado em 7 de outubro de 2018
 -   **Novas detecções: comunicação suspeita de DNS** (versão prévia)<br>Nova detecção adicionada para ajudar a proteger contra ataques de comunicação suspeita de DNS:
 
-    -   Essa detecção ajuda a detectar ataques contra o protocolo DNS. Na maioria das organizações, o protocolo DNS não é monitorado e raramente é bloqueado para atividade mal-intencionada. Isso permite que um invasor em um computador comprometido abuse do protocolo DNS. A comunicação mal-intencionada por DNS pode ser usada para extração, comando e controle de dados e/ou fuga de restrições de rede corporativa.
+    -   Essa detecção ajuda a detectar ataques contra o protocolo DNS. Na maioria das organizações, o protocolo DNS não é monitorado e raramente é bloqueado para atividade mal-intencionada. Permitir que um invasor em um computador comprometido abuse do protocolo DNS. A comunicação mal-intencionada por DNS pode ser usada para extração, comando e controle de dados e/ou fuga de restrições de rede corporativa.
 
 - **Nova funcionalidade** <br>**Função de usuário** do Azure ATP aprimorada com as seguintes funcionalidades:
   - Alterar o status de alertas de segurança (abrir novamente, fechar, excluir, suprimir)
@@ -84,7 +92,7 @@ Lançado em 7 de outubro de 2018
   - Definir notificações por email ou syslog
 
 
-- Um aumento temporário no **Reconhecimento usando os alertas de segurança das consultas de serviços de diretório** que ocorreu em 16/09/2018 foi identificado e resolvido. 
+- Um aumento temporário no **Reconhecimento usando os alertas de segurança das consultas de serviços de diretório** que ocorreu em 16 de setembro de 2018 foi identificado e resolvido. 
 
 - Essa versão também inclui correções e melhorias para vários problemas.
 
