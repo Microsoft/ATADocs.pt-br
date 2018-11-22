@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 377a3c81-5c1d-486f-8942-85249aacf560
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 8707d34f22c358936bd6158311a78a45d783483c
-ms.sourcegitcommit: 959b1f7753b9a8ad94870d2014376d55296fbbd4
+ms.openlocfilehash: b3fb06733a2ba1c38aeb682cd6f8cc57a2ba1a3b
+ms.sourcegitcommit: 65885bab8e31dd862a4f2ae9028fb31b288d7229
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46133320"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52157515"
 ---
 *Aplica-se a: Advanced Threat Analytics versão 1.9*
 
@@ -41,7 +41,6 @@ O modo padrão, e mais básico, de consultar o banco de dados é usando o shell 
 |Verifique se há coleções no banco de dados.|`show collections`|É útil como um teste completo para verificar se o tráfego está sendo gravado no banco de dados, e se o evento 4776 está sendo recebido pelo ATA.|
 |Obter detalhes de um usuário/computador/grupo (UniqueEntity), como ID do usuário.|`db.UniqueEntity.find({CompleteSearchNames: "<name of entity in lower case>"})`||
 |Encontre o tráfego de autenticação Kerberos proveniente de um computador específico em um dia específico.|`db.KerberosAs_<datetime>.find({SourceComputerId: "<Id of the source computer>"})`|Para obter a &lt;ID do computador de origem&gt;, consulte as coleções UniqueEntity, conforme mostrado no exemplo.<br /><br />Cada tipo de atividade de rede, por exemplo, autenticações Kerberos, possui sua própria coleção de acordo com a data UTC.|
-|Encontre o tráfego de NTLM proveniente de um computador específico relacionado a uma conta específica em um dia específico.|`db.Ntlm_<datetime>.find({SourceComputerId: "<Id of the source computer>", SourceAccountId: "<Id of the account>"})`|Para obter a &lt;ID do computador de origem&gt; e a &lt;ID da conta&gt;, consulte as coleções UniqueEntity, conforme mostrado no exemplo.<br /><br />Cada tipo de atividade de rede, por exemplo, autenticações NTLM, possui sua própria coleção de acordo com a data UTC.|
 |Faça alterações de configuração avançadas. Neste exemplo, altere o tamanho da fila de envio de todos os Gateways do ATA para 10.000.|`db.SystemProfile.update( {_t: "GatewaySystemProfile"} ,`<br>`{$set:{"Configuration.EntitySenderConfiguration.EntityBatchBlockMaxSize" : "10000"}})`|`|
 
 O exemplo a seguir fornece um código de exemplo usando a sintaxe fornecida anteriormente. Se você estiver investigando uma atividade suspeita que ocorreu em 20/10/2015 e quiser saber mais sobre as atividades de NTLM que "John Doe" realizou nesse dia:<br /><br />Primeiro, encontre a ID de "John Doe"
