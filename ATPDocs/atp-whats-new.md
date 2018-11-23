@@ -13,16 +13,24 @@ ms.technology: ''
 ms.assetid: 7d0f33db-2513-4146-a395-290e001f4199
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 2237834e867aa6bdacbc67fcc1244f07ac88711b
-ms.sourcegitcommit: 2afc1486b40431f442d51a53df06e289796de87e
+ms.openlocfilehash: ca178eaa1b0ef1b631ebe2ab02f00fd5a9c26de5
+ms.sourcegitcommit: 65885bab8e31dd862a4f2ae9028fb31b288d7229
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51560738"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52157583"
 ---
 *Aplica-se a: Proteção Avançada contra Ameaças do Azure*
 
 # <a name="whats-new-in-azure-atp"></a>Novidades do Azure ATP 
+
+## <a name="azure-atp-release-255"></a>Proteção Avançada contra Ameaças do Azure versão 2.5.5
+Lançado em 18 de novembro de 2018
+
+- **Alerta de segurança: comunicação suspeita sobre DNS - disponibilidade geral**<br>
+O alerta de segurança de [comunicação suspeita sobre DNS](suspicious-activity-guide.md#suspicious-communication-over-dns) da Proteção Avançada contra Ameaças do Azure já está em disponibilidade geral. <br> Normalmente, o protocolo DNS não é monitorado na maioria das organizações e raramente é bloqueado para atividades mal-intencionadas. Isso permite que um invasor em um computador comprometido abuse do protocolo DNS. A comunicação mal-intencionada por DNS pode ser usada para extração, comando e controle de dados e/ou fuga de restrições de rede corporativa.
+
+- Essa versão também inclui aprimoramentos e correções de bug da infraestrutura do sensor interno.
 
 ## <a name="azure-atp-release-254"></a>ATP do Azure versão 2.5.4
 Lançado em 11 de novembro de 2018
@@ -362,5 +370,5 @@ Lançada em 11 de março de 2018
 - [O que é o Azure Advanced Threat Protection?](what-is-atp.md)
 - [Perguntas frequentes](atp-technical-faq.md)
 - [Pré-requisitos do Azure ATP](atp-prerequisites.md)
-- [Planejamento de capacidade do Azure ATP](atp-capacity-planning.md) (configure-event-forwarding.md#configuring-windows-event-forwarding)
-- [Confira o fórum do Azure ATP!](https://aka.ms/azureatpcommunity)
+- [Planejamento de capacidade do Azure ATP](atp-capacity-planning.md)
+- [Confira o fórum do ATP do Azure!](https://aka.ms/azureatpcommunity)

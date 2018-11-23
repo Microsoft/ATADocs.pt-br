@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 11/12/2018
+ms.date: 11/15/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: feea1982-ba23-48be-a468-98d2586cf840
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: c1c5aa0359ac0d24d2bf3fc3033986657c3fc897
-ms.sourcegitcommit: 2afc1486b40431f442d51a53df06e289796de87e
+ms.openlocfilehash: cab7dad8187c79ff1e5068594b972f58bb19040c
+ms.sourcegitcommit: 65885bab8e31dd862a4f2ae9028fb31b288d7229
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51561420"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52157549"
 ---
 *Aplica-se a: Proteção Avançada contra Ameaças do Azure*
 
@@ -28,11 +28,11 @@ Ocasionalmente, o ATP do Azure tem limitações de engenharia ou recurso que pod
 
 Para problemas conhecidos do ATP do Azure com soluções alternativas conhecidas, veja [Solução de problemas conhecidos do ATP do Azure](troubleshooting-atp-known-issues.md). Para verificar o status do seu locatário do ATP do Azure, visite o [Centro de integridade do ATP do Azure](atp-health-center.md). 
 
-## <a name="winrm-not-supported-using-windows-server-2016"></a>O WinRM não é compatível com o Windows Server 2016
+## <a name="remote-code-execution-attempts-using-remote-powershell-commands-or-scripts-are-not-detected-when-using-windows-server-2016"></a>As tentativas de Execução de Código Remoto por meio dos comandos ou scripts do PowerShell Remoto não são detectadas quando o Windows Server 2016 é usado
 > [!div class="mx-tableFixed"]  
 |Problema|Status|
 |----|----|
-|No momento, o WinRM não dá suporte ao Windows Server 2016. A detecção relacionada e os alertas resultantes (tentativas de execução de código remoto) não estão disponíveis para computadores que executam o Windows Server 2016.|A engenharia está trabalhando atualmente em resolver esse problema e adicionar suporte ao Windows Server 2016.|
+|No momento, as tentativas de Execução de Código Remoto por meio dos comandos do PowerShell Remoto não são detectadas em computadores Sensor que executam o Windows Server 2016. As detecções relacionadas e os alertas resultantes não estão disponíveis.|A engenharia está trabalhando atualmente em resolver esse problema e adicionar suporte ao Windows Server 2016.|
 
 ## <a name="ad-groups-with-more-than-1000-members-have-limited-detail-sync"></a>Grupos do AD com mais de 1.000 membros têm sincronização de detalhes limitada
 > [!div class="mx-tableFixed"]  
