@@ -1,11 +1,11 @@
 ---
-title: Investigando ataques de movimento lateral com o Azure ATP | Microsoft Docs
-description: Este artigo descreve como detectar ataques de movimento lateral com o Azure ATP (Proteção Avançada contra Ameaças).
+title: Apresentando os caminhos de movimento lateral com a ATP do Azure | Microsoft Docs
+description: Este artigo descreve os possíveis LMPs (caminhos de movimento lateral) da ATP (Proteção Avançada contra Ameaças) do Azure.
 keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 10/04/2018
+ms.date: 11/25/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,66 +13,79 @@ ms.technology: ''
 ms.assetid: de15c920-8904-4124-8bdc-03abd9f667cf
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: e6a223405f4aa1e8daa1d393428db43c4e692daa
-ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
+ms.openlocfilehash: 40faae88e209b8b737dbc7ef364f17a8b82a4d52
+ms.sourcegitcommit: eac0aa855270b550dfb4b8c61b9cf0953f1e5204
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48783484"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52298105"
 ---
 *Aplica-se a: Proteção Avançada contra Ameaças do Azure*
 
-# <a name="investigating-lateral-movement-paths-with-azure-atp"></a>Investigando caminhos de movimento lateral com o Azure ATP
+# <a name="azure-atp-lateral-movement-paths-lmps"></a>LMPs (caminhos de movimento lateral) da ATP do Azure 
+
+O movimento lateral ocorre quando um invasor usa contas não confidenciais para obter acesso a contas confidenciais em toda a rede. O movimento lateral é usado pelos invasores para identificar e obter acesso a contas e computadores confidenciais na rede que compartilham credenciais de logon armazenadas em contas, grupos e computadores. Depois que um invasor faz movimentos laterais bem-sucedidos em busca dos destinos principais, ele também pode aproveitar a oportunidade para obter acesso aos controladores de domínio. Os ataques de movimento lateral são realizados usando muitos dos métodos descritos no [Guia de atividades suspeitas](suspicious-activity-guide.md).
+
+Um componente fundamental para obter insights de segurança da ATP do Azure são os caminhos de movimento lateral ou LMPs. Os LMPs da ATP do Azure são guias visuais que ajudam a compreender e identificar rapidamente exatamente como os invasores podem fazer movimentos laterais dentro de sua rede. A finalidade dos movimentos laterais dentro da cadeia de extermínio do ataque cibernético é que os invasores obtenham e comprometam as contas confidenciais usando contas não confidenciais. O comprometimento das contas confidenciais aproxima-os mais do objetivo final, que é comprometer o domínio. Para impedir o sucesso desses ataques, os LMPs da ATP do Azure oferecem orientações visuais diretas e fáceis de interpretar em suas contas confidenciais e mais vulneráveis. Os LMPs ajudam a atenuar e impedir esses riscos futuros e encerram o ataque do invasor antes que ele comprometa o domínio.
+
+![LMP (caminho de movimento lateral) da ATP do Azure](./media/atp-lmp.png)
+
+Os ataques de movimento lateral normalmente são realizados usando uma série de técnicas diferentes. Alguns dos métodos mais populares usados pelos invasores são o roubo de credencial e o Pass-the-Ticket. Em ambos os métodos, contas não confidenciais são usadas pelos invasores para realizar movimentos laterais explorando computadores não confidenciais que compartilham credenciais de logon armazenadas em contas, grupos e computadores com contas confidenciais.
+
+## <a name="where-can-i-find-azure-atp-lmps"></a>Onde posso encontrar os LMPs da ATP do Azure?
+
+Cada perfil de computador ou de usuário descoberto pela ATP do Azure em um LMP apresenta uma guia **Caminhos de movimento lateral**. Os computadores e perfis que não apresentam nenhuma guia nunca foram descobertos em um possível LMP. 
+
+![Guia do LMP (caminho de movimento lateral) da ATP do Azure](./media/lateral-movement-path-tab.png)
+
+O LMP de cada entidade fornece informações diferentes dependendo da confidencialidade da entidade: 
+- Usuários confidenciais – são mostrados os possíveis LMPs que levam a esse usuário.
+- Usuários e computadores não confidenciais – são mostrados os possíveis LMPs aos quais a entidade está relacionada. <br>
+
+Cada vez que a guia é clicada, a ATP do Azure exibe o último LMP descoberto. Cada possível LMP é salvo por 48 horas após a descoberta. O histórico do LMP está disponível. Veja os LMPs mais antigos que foram descobertos anteriormente clicando em **Exibir uma data diferente**. 
+
+![Exibição do LMP (caminho de movimento lateral) da ATP do Azure](./media/atp-lmp-complete.png)
+
+Descubra quando os possíveis LMPs foram identificados e quais entidades relacionadas possivelmente estão envolvidas. 
+
+## <a name="lmp-discovery"></a>Descoberta de LMP
+
+Na guia Atividades, uma indicação é fornecida quando um novo possível LMP é identificado:
+- Usuários confidenciais – quando foi identificado um novo caminho até um usuário confidencial
+
+![LMP (caminho de movimento lateral) confidencial da ATP do Azure identificado](./media/atp-lmp-activities.png)
 
 
-O movimento lateral ocorre quando um invasor usa contas não confidenciais para acessar contas confidenciais. Isso pode ser feito usando os métodos descritos no [Guia de atividades suspeitas](suspicious-activity-guide.md). O movimento lateral é usado pelos invasores para identificar e obter acesso às contas confidenciais e máquinas em sua rede usando contas não confidenciais que compartilham credenciais de logon armazenadas em contas, grupos e computadores. Depois que um invasor obtém acesso, ele também pode aproveitar os dados em seus controladores de domínio.
+- Usuários e computadores não confidenciais – quando essa entidade foi identificada em um possível LMP que leva a um usuário confidencial.
 
+![LMP (caminho de movimento lateral) não confidencial da ATP do Azure identificado](./media/atp-lateral-non-sensitive.png)
 
-## <a name="discover-your-at-risk-sensitive-accounts"></a>Descobrir suas contas confidenciais que estão em risco
+## <a name="lmp-related-entities"></a>Entidades relacionadas ao LMP
+O LMP agora pode ajudar diretamente no processo de investigação. As listas de evidências de alerta de segurança da ATP do Azure fornecem as entidades relacionadas que estão envolvidas em cada possível caminho de movimento lateral. As listas de evidências ajudam diretamente a equipe de resposta de segurança a aumentar ou reduzir a importância do alerta de segurança e/ou a investigação das entidades relacionadas. Por exemplo, quando uma alerta de Pass-the-Ticket é emitido, o computador de origem, o usuário comprometido e o computador de destino do qual o tíquete roubado foi usado fazem parte do possível caminho de movimento lateral que leva a um usuário confidencial. A existência do LMP detectado aumenta ainda mais a importância da investigação do alerta e da observação do usuário suspeito para evitar que o adversário faça outros movimentos laterais. A evidência rastreável é fornecida nos LMPs para você impedir com rapidez e facilidade que os invasores avancem na rede. 
 
-Para descobrir quais contas confidenciais de sua rede estão expostas devido à sua conexão a contas, grupos e computadores não confidenciais, siga estas etapas. 
-
-1. No menu do portal do Azure ATP, clique no ícone de relatórios ![ícone de relatórios](./media/atp-report-icon.png).
-
-2. Em **Caminhos de movimento lateral para contas confidenciais**, se não forem encontrados caminhos potenciais de movimento lateral, o relatório ficará indisponível. Se houver o potencial para caminhos de movimento lateral, o relatório pré-selecionará automaticamente a primeira data em que há dados relevantes. O relatório de caminho de movimento lateral fornece dados de até 60 dias.
-
- ![relatórios](./media/reports.png)
-
-3. Clique em **Baixar**.
-
-4. É criado um arquivo do Excel que fornece detalhes sobre os possíveis caminhos de movimento lateral e exposição de conta confidencial para as datas selecionadas. A guia **Resumo** fornece gráficos que detalham o número de contas confidenciais, computadores e as médias do acesso em risco. A guia **Detalhes** fornece uma lista das contas confidenciais que você deve investigar mais. Observe que os caminhos detalhados no relatório baixado podem não estar mais disponíveis porque foram detectados nos últimos 60 dias e podem ter sido alterados ou modificados.
-
-
-## <a name="investigate"></a>Investigar
-
-
-
-1. No portal do Azure ATP, pesquise a notificação de Movimento lateral adicionada ao perfil da entidade quando ela está em um caminho de movimento lateral ![ícone lateral](./media/lateral-movement-icon.png) ou ![ícone do caminho](./media/paths-icon.png). Observe que as notificações só aparecerão se houver movimento lateral nas últimas 48 horas. 
-
-2. Na página de perfil do usuário que é aberta, clique na guia **Caminhos de movimento lateral**. 
-
-3. O gráfico exibido fornece um mapa dos caminhos possíveis para o usuário confidencial. O gráfico mostra as possíveis conexões observadas nas últimas 48 horas. Se não foi detectada nenhuma atividade nos últimos dois dias, o gráfico não será exibido. 
-
-4. Examine o gráfico para ver o que você pode aprender sobre a exposição das credenciais de seus usuários confidenciais. Por exemplo, neste mapa, você pode seguir as setas cinzas **Conectado por** para ver onde Samira se conectou com suas credenciais privilegiadas. Nesse caso, as credenciais confidenciais de Samira foram salvas no computador REDMOND-WA-DEV. Agora, observe quais outros usuários se conectaram em quais computadores e criaram mais exposição e vulnerabilidade. Você pode ver isso examinando as setas pretas **Administrador em** para ver quem tem privilégios de administrador no recurso. Neste exemplo, todos no grupo Contoso All podem acessar as credenciais do usuário desse recurso.  
-
- ![caminhos de movimento lateral do perfil do usuário](media/user-profile-lateral-movement-paths.png)
-
+## <a name="lateral-movement-paths-to-sensitive-accounts-report"></a>Relatório de caminhos de movimento lateral para contas confidenciais 
+Os dados do LMP também estão disponíveis no [Relatório de caminhos de movimento lateral para contas confidenciais](investigate-lateral-movement-path.md). Este relatório lista as contas confidenciais expostas por caminhos de movimento lateral e inclui os caminhos que foram selecionados manualmente em um período de tempo específico ou incluídos no período de tempo dos relatórios agendados.  Personalize o intervalo de datas incluído usando a seleção de calendário. 
 
 ## <a name="preventative-best-practices"></a>Melhores práticas recomendadas
+Os insights de segurança são sempre oportunos para impedir um próximo ataque e corrigir os danos. Por esse motivo, a investigação de um ataque, mesmo durante a fase de comprometimento de domínio, oferece um exemplo diferente, mas importante. Normalmente, durante a investigação de um alerta de segurança, como a execução remota de código, se o alerta é um verdadeiro positivo, o controlador de domínio pode já estar comprometido. Mas os LMPs informam onde o invasor obteve privilégios e qual caminho ele usou em sua rede. Usados dessa forma, os LMPs também podem oferecer insights importantes sobre como corrigir.  
 
-- A melhor maneira de impedir movimentos laterais é certificar-se de que os usuários confidenciais usem suas credenciais de administrador somente ao fazer logon em computadores protegidos. No exemplo, certifique-se de que, se a administradora Samira precisar de acesso a REDMOND-WA-DEV, ela faça logon com um nome de usuário e senha diferentes de suas credenciais de administrador.
+- A melhor maneira de evitar a exposição ao movimento lateral em sua organização é garantir que os usuários confidenciais usem apenas suas credenciais de administrador para fazer logon em computadores protegidos. No exemplo, verifique se o administrador no caminho realmente precisa acessar o computador compartilhado. Se ele precisar acessar, garanta que o acesso ao computador compartilhado seja feito com um nome de usuário e uma senha diferentes das credenciais de administrador ele.
 
-- Também é recomendável que você certifique-se de que ninguém tenha permissões administrativas desnecessárias. No exemplo, você deve verificar se todos no grupo Contoso All realmente precisam de direitos de administrador em REDMOND-WA-DEV.
+- Verifique se os usuários não têm permissões administrativas desnecessárias. No exemplo, verifique se todos no grupo compartilhado realmente requerem direitos de administrador no computador exposto.
 
-- Verifique se as pessoas têm acesso apenas aos recursos necessários. No exemplo, Oscar Posada amplia significativamente a exposição de Samira. É necessário que esse usuário seja incluído no grupo **Contoso All**? Existem subgrupos que podem ser criados para minimizar a exposição?
+- Verifique se as pessoas têm acesso apenas aos recursos necessários. No exemplo, Ron Harper amplia significativamente a exposição de Nick Cowley. É necessário que Ron Harper seja incluído no grupo? Há subgrupos que podem ser criados para minimizar a exposição ao movimento lateral?
 
-**Dica** – quando não for detectada nenhuma atividade nas últimas 48 horas e o gráfico não estiver disponível, o relatório de caminho de movimento lateral ainda estará disponível e fornecerá informações sobre os possíveis caminhos de movimento lateral detectados nos últimos 60 dias. 
+**Dica** – quando não for detectada nenhuma possível atividade de caminho de movimento lateral para uma entidade nas últimas 48 horas, escolha **Exibir uma data diferente** e verifique se há possíveis caminhos de movimento lateral anteriores. O **Relatório de LMP para usuários confidenciais** está sempre disponível com os LMPs onde foram descobertos e fornece informações sobre possíveis caminhos de movimento lateral detectados para usuários confidenciais. 
 
 **Dica** – para obter instruções sobre como configurar seus servidores e clientes para permitir que o Azure ATP execute as operações de SAM-R necessárias para detectar caminhos de movimento lateral, veja [Configurar SAM-R](install-atp-step8-samr.md).
 
 
-## <a name="see-also"></a>Consulte Também
+## <a name="investigating-lmps"></a>Investigando LMPs
+Para obter instruções de como identificar e investigar o uso de caminhos de movimento lateral da ATP do Azure, confira [Investigar caminhos de movimento lateral](investigate-lateral-movement-path.md).
 
+
+## <a name="see-also"></a>Consulte Também
+- [Investigando LMPs da ATP do Azure](investigate-lateral-movement-path.md)
 - [Configurar o Azure ATP para realizar chamadas remotas para SAM](install-atp-step8-samr.md)
 - [Trabalhando com alertas de segurança](working-with-suspicious-activities.md)
-- [Confira o fórum do Azure ATP!](https://aka.ms/azureatpcommunity)
+- [Confira o fórum do ATP do Azure!](https://aka.ms/azureatpcommunity)

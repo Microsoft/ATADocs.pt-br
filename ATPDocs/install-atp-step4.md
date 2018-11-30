@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 10/04/2018
+ms.date: 11/28/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 51911e39-76c7-4dcd-bc0b-ec6235d0403f
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 52ffbac6acd762d4cf2898c170d7a026d2a37826
-ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
+ms.openlocfilehash: fd2a2316f63b5324e7869878104bd663e48b2771
+ms.sourcegitcommit: e2a89030c31376c6798697a62b484f45ed54e679
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48783722"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52501103"
 ---
 *Aplica-se a: Proteção Avançada contra Ameaças do Azure*
 
@@ -33,7 +33,7 @@ ms.locfileid: "48783722"
 ## <a name="step-4-install-the-azure-atp-sensor"></a>Etapa 4. Instalar o sensor do Azure ATP
 
 > [!IMPORTANT]
->Verifique se o .NET Framework 4.7 está instalado no computador. Se o .Net Framework 4.7 não estiver instalado, o pacote de instalação do sensor do Azure ATP o instalará, o que requer uma reinicialização do servidor.
+>Verifique se o .NET Framework 4.7 está instalado no computador. Se o .NET Framework 4.7 não estiver instalado, o pacote de instalação do sensor da ATP do Azure o instalará, o que poderá exigir uma reinicialização do servidor.
 
 Execute as etapas a seguir no controlador de domínio.
 
@@ -99,4 +99,4 @@ Execute as etapas a seguir no controlador de domínio.
 
 - [Pré-requisitos do Azure ATP](atp-prerequisites.md)
 
-- [Confira o fórum do Azure ATP!](https://aka.ms/azureatpcommunity)
+- [Confira o fórum do ATP do Azure!](https://aka.ms/azureatpcommunity)

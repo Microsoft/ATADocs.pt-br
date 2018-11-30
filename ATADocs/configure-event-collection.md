@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 3f0498f9-061d-40e6-ae07-98b8dcad9b20
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 7f96971f3d7d11f49c025ddf88c1ced5e4fc8cb6
-ms.sourcegitcommit: f86dc8ad3d1e75ba64b372d4d0ab5386e28f2e29
+ms.openlocfilehash: 93c49b71ea5fb67e57d505fb0b7c2e69314de4f9
+ms.sourcegitcommit: e2a89030c31376c6798697a62b484f45ed54e679
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51609666"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52501114"
 ---
 *Aplica-se a: Advanced Threat Analytics versão 1.9*
 
@@ -56,7 +56,7 @@ Após adicionar o **Serviço de Rede** ao grupo **Leitores de Log de Eventos**, 
 2.  Em um prompt de comando, digite *gpedit.msc*.
 3.  Expanda **Configuração do Computador > Modelos Administrativos > Componentes do Windows > Encaminhamento de Evento**
 
-![Imagem do editor de grupo de política local](media/wef%201%20local%20group%20policy%20editor.png)
+  ![Imagem do editor de grupo de política local](media/wef%201%20local%20group%20policy%20editor.png)
 
 4.  Clique duas vezes em **Configurar Gerenciador de assinatura de destino**.
    
@@ -64,7 +64,7 @@ Após adicionar o **Serviço de Rede** ao grupo **Leitores de Log de Eventos**, 
     2.  Em **Opções**, clique em **Mostrar**.
     3.  Em **SubscriptionManagers**, digite o seguinte valor e clique em **OK**: *Server=http://<fqdnATAGateway>:5985/wsman/SubscriptionManager/WEC,Refresh=10* 
       
-         *(Por exemplo: Server=http://atagateway9.contoso.com:5985/wsman/SubscriptionManager/WEC, Refresh=10)*
+         *(Por exemplo: Server=`http://atagateway9.contoso.com:5985/wsman/SubscriptionManager/WEC,Refresh=10`)*
       
          ![Configurar a imagem de assinatura de destino](media/wef%202%20config%20target%20sub%20manager.png)
       

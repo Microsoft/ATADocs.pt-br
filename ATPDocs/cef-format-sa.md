@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 11/12/2018
+ms.date: 11/26/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 3261155c-3c72-4327-ba29-c113c63a4e6d
 ms.reviewer: arzinger
 ms.suite: ems
-ms.openlocfilehash: 4d1a4d24e2102a019b9df627f2d00c1df981c3ae
-ms.sourcegitcommit: 4d8e7c690453d9b78e6e597c3f8562250d335ba5
+ms.openlocfilehash: fcad0fd1677a6e34a9d72b0e9660eb2e680ca22e
+ms.sourcegitcommit: e2a89030c31376c6798697a62b484f45ed54e679
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52177378"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52501143"
 ---
 *Aplica-se a: Proteção Avançada contra Ameaças do Azure*
 
@@ -34,7 +34,7 @@ Os campos a seguir e seus valores são encaminhados para o SIEM:
 |---------|---------------|
 |iniciar|hora de início do alerta|
 |suser|conta (normalmente a do usuário) envolvida no alerta|
-|shost|conta (normalmente a do usuário) envolvida no alerta|
+|conta do computador|conta (normalmente a do usuário) envolvida no alerta|
 |resultado|quando relevante, êxito ou falha da atividade suspeita no alerta|
 |msg|descrição do alerta|
 |cnt|para alertas com uma contagem do número de vezes que a atividade ocorreu (por exemplo, a força bruta tem uma quantidade de senhas adivinhadas)|
@@ -55,38 +55,38 @@ Os campos a seguir e seus valores são encaminhados para o SIEM:
 
 ## <a name="azure-atp-security-alert-unique-externalids"></a>ExternalIds exclusivas de alerta de segurança do ATP do Azure
 
-|Nome do alerta de segurança|ExternalId exclusiva|
-|---------|---------|
-|Ataque de força bruta usando associação simples LDAP|2004|
-|Atividade de downgrade de criptografia – Skeleton Key|2011|
-|Atividade de downgrade de criptografia (possível ataque overpass-the-hash)|2008|
-|Atividade de downgrade de criptografia (possível ataque golden ticket)|2009|
-|Atividade de downgrade de criptografia (possível ataque de skeleton key)|2010|
-|Atividade de Honeytoken|2014|
-|Roubo de identidade usando o ataque de passagem de Hash|2017|
-|Roubo de identidade usando o ataque Pass-the-Ticket|2018|
-|Golden Ticket do Kerberos – anomalia de tempo|2022|
-|Golden Ticket do Kerberos – conta não existente|2027|
-|Solicitação de informações privadas para proteção contra dados mal-intencionados|2020|
-|Replicação mal-intencionada de serviços de diretório|2006|
-|Elevação de privilégios usando dados de autorização forjados|2013|
-|Reconhecimento de enumeração de conta|2003|
-|Reconhecimento usando DNS|2007|
-|Reconhecimento usando a enumeração da sessão SMB|2012|
-|Reconhecimento usando consultas de serviços de diretório|2021|
-|Tentativa de execução remota de código|2019|
-|Falhas de autenticação suspeitas|2023|
-|Solicitação de replicação de controlador de domínio suspeita (possível ataque DCShadow)|2029|
-|Promoção do controlador de domínio suspeito (possível ataque DCShadow)|2028|
-|Comunicação suspeita por DNS|2031|
-|Modificação suspeita de grupos confidenciais|2024|
-|Criação de serviço suspeito|2026|
-|Conexão de VPN suspeita|2025|
-|Implementação de protocolo incomum (possível ataque de ransomware WannaCry)*|2002|
-|Implementação de protocolo incomum (possível uso de ferramentas mal-intencionadas como a Hydra)*|2002|
-|Implementação de protocolo incomum (possível uso de ferramentas de invasão Metasploit)*|2002|
-|Implementação incomum de protocolo Kerberos (possível ataque overpass-the-hash)*|2002|
-|Alertas de *implementação de protocolo incomum* atualmente compartilham uma externalId. O externalId para cada tipo desses alertas será alterado em uma versão futura para um externalId exclusivo|****|
+> [!div class="mx-tableFixed"] 
+|Novo nome do alerta de segurança|Nome herdado do alerta de segurança|ExternalId exclusivo|
+|---------|----------|---------|
+|Suspeita de LDAP (ataque de força bruta)|Ataque de força bruta usando associação simples LDAP|2004|
+|Suspeita de ataque de Skeleton Key (downgrade de criptografia)|Atividade de downgrade de criptografia – Skeleton Key|2011|
+|Suspeita de ataque de Overpass-the-Hash (downgrade de criptografia)|Atividade de downgrade de criptografia (possível ataque overpass-the-hash)|2008|
+|Suspeita de uso de Golden Ticket (downgrade de criptografia)|Atividade de downgrade de criptografia (possível ataque golden ticket)|2009|
+|Suspeita de ataque de Skeleton Key (downgrade de criptografia)|Atividade de downgrade de criptografia (possível ataque de skeleton key)|2010|
+|Atividade de Honeytoken|Atividade de Honeytoken|2014|
+|Suspeita de roubo de identidade (Pass-the-Hash)|Roubo de identidade usando o ataque de passagem de Hash|2017|
+|Suspeita de roubo de identidade (Pass-the-Ticket)|Roubo de identidade usando o ataque Pass-the-Ticket|2018|
+|Suspeita de uso de Golden Ticket (anomalia de tempo) |Golden Ticket do Kerberos – anomalia de tempo|2022|
+|Suspeita de uso de Golden Ticket (conta inexistente)|Golden Ticket do Kerberos – conta não existente|2027|
+|Solicitação mal-intencionada de chave mestra da API de Proteção de Dados|Solicitação de informações privadas para proteção contra dados mal-intencionados|2020|
+|Suspeita de ataque de DCSync (replicação de serviços de diretório)|Replicação mal-intencionada de serviços de diretório|2006|
+|Suspeita de uso de Golden Ticket (dados de autorização forjados) |Elevação de privilégios usando dados de autorização forjados|2013|
+|Reconhecimento de enumeração de conta|Reconhecimento de enumeração de conta|2003|
+|Reconhecimento de mapeamento de rede (DNS)|Reconhecimento usando DNS|2007|
+|Reconhecimento de endereço IP e de usuário (SMB) |Reconhecimento usando a enumeração da sessão SMB|2012|
+|Reconhecimento de usuário e de associação a um grupo (SAMR)|Reconhecimento usando consultas de serviços de diretório|2021|
+|Tentativa de execução remota de código|Tentativa de execução remota de código|2019|
+|Suspeita de ataque de DCShadow (solicitação de replicação do controlador de domínio)|Solicitação de replicação de controlador de domínio suspeita (possível ataque DCShadow)|2029|
+|Suspeita de ataque de DCShadow (promoção do controlador de domínio)|Promoção do controlador de domínio suspeito (possível ataque DCShadow)|2028|
+|Comunicação suspeita por DNS|Comunicação suspeita por DNS|2031|
+|Modificação suspeita de grupos confidenciais|Modificação suspeita de grupos confidenciais|2024|
+|Criação de serviço suspeito|Criação de serviço suspeito|2026|
+|Conexão de VPN suspeita|Conexão de VPN suspeita|2025|
+|Suspeita de ataque do ransomware WannaCry|Implementação de protocolo incomum (possível ataque de ransomware WannaCry)*|2002|
+|Suspeita de ataque de força bruta (SMB)|Implementação de protocolo incomum (possível uso de ferramentas mal-intencionadas como a Hydra)*|2002|
+|Suspeita de uso da estrutura de hacker Metasploit|Implementação de protocolo incomum (possível uso de ferramentas de invasão Metasploit)*|2002|
+|Suspeita de ataque de Overpass-the-Hash (Kerberos)|Implementação incomum de protocolo Kerberos (possível ataque overpass-the-hash)*|2002|
+|Alertas de *implementação de protocolo incomum* atualmente compartilham uma externalId. O externalId para cada tipo desses alertas será alterado em uma versão futura para um externalId exclusivo||****|
 
 ## <a name="sample-logs"></a>Logs de exemplo
 
@@ -176,7 +176,7 @@ Prioridades:
 ### <a name="unusual-protocol-implementation---potential-use-of-malicious-tools-such-a-hydra"></a>Implementação de protocolo incomum (possível uso de ferramentas mal-intencionadas como a Hydra)
 02-21-2018  16:21:22    Auth.Warning    192.168.0.220   1 2018-02-21T14:21:13.916050+00:00 CENTER CEF 6076 AbnormalProtocolSecurityAlert ï»¿0|Microsoft|Azure ATP|2.22.4228.22540|AbnormalProtocolSecurityAlert|Unusual protocol implementation|5|start=2018-02-21T14:19:03.1981155Z app=Ntlm shost=CLIENT2 outcome=Success msg=There were attempts to authenticate from CLIENT2 against DC1 using an unusual protocol implementation. Pode ser um resultado de ferramentas mal-intencionadas usadas para executar ataques como o Pass-the-Hash e força bruta. externalId=2002 cs1Label=url cs1=https://contoso-corp.atp.azure.com/securityAlert/40fe98dd-aa42-4540-9d73-831486fdd1e4 cs2Label=trigger cs2=new
 
-### <a name="unusual-protocol-implementation--potential-use-of-malicious-tools-such-a-metasploit"></a>Implementação de protocolo incomum (possível uso de ferramentas mal-intencionadas como a Metasploit)
+### <a name="unusual-protocol-implementation---potential-use-of-malicious-tools-such-a-metasploit"></a>Implementação de protocolo incomum – (possível uso de ferramentas mal-intencionadas como o Metasploit)
 10-29-2018  11:22:04    Auth.Warning    192.168.0.202   1 2018-10-29T09:22:00.460233+00:00 DC3 CEF 3908 AbnormalProtocolSecurityAlert ï»¿0|Microsoft|Azure ATP|2.52.5704.46184|AbnormalProtocolSecurityAlert|Unusual protocol implementation (potential use of Metasploit hacking tools)|5|start=2018-10-29T09:19:46.6092465Z app=Ntlm shost=CLIENT2 outcome=Success msg=There were attempts to authenticate from CLIENT2 against DC1 using an unusual protocol implementation. externalId=2002 cs1Label=url cs1=https://contoso-corp.atp.azure.com/securityAlert/573f10a1-6f8a-44b1-a5b1-212d40996363 cs2Label=trigger cs2=new
 
 ## <a name="see-also"></a>Consulte Também
