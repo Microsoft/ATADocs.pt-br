@@ -8,7 +8,7 @@
 ## [Pré-requisitos do Azure ATP](atp-prerequisites.md)
 ## [Planejar a capacidade do Azure ATP](atp-capacity-planning.md)
 # quickStart
-## [Criar um workspace no portal do Azure ATP](install-atp-step1.md)
+## [Criar sua instância do ATP do Azure](install-atp-step1.md)
 ## [Conectar-se ao Active Directory](install-atp-step2.md)
 ### [Suporte a várias florestas do Azure ATP](atp-multi-forest.md)
 ## [Baixar o pacote de sensor do Azure ATP](install-atp-step3.md)
