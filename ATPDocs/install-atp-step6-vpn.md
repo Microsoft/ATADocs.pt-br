@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 10/11/2018
+ms.date: 11/04/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 0d9d2a1d-6c76-4909-b6f9-58523df16d4f
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 1ddd369fe51117a120a3f5b8a688f22624d711c0
-ms.sourcegitcommit: 03b1949beaf2f78a3cdf9396356a96488ea2e127
+ms.openlocfilehash: 9fe9011f0fbdf29e80e1957c4e1535f497061aa2
+ms.sourcegitcommit: f4f2a1b2c674c4dba7a46ece0624f5ea10c4865e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "50983099"
+ms.lasthandoff: 12/02/2018
+ms.locfileid: "52744856"
 ---
 *Aplica-se a: Proteção Avançada contra Ameaças do Azure*
 
@@ -55,7 +55,7 @@ Execute as seguintes etapas em seu servidor RRAS.
 
     ![Configuração RADIUS](./media/radius-setup.png)
 
-4.  Na janela **Adicionar servidor RADIUS**, digite o **Nome do servidor** do sensor mais próximo da Proteção Avançada contra Ameaças do Azure (que tenha conectividade com a rede). Para HA, é possível adicionar sensores extras da Proteção Avançada contra Ameaças do Azure como servidores RADIUS. Em **Porta**, verifique se o padrão de 1813 está configurado. Clique em **Alteração** e digite uma nova cadeia de caracteres alfanuméricos secreta compartilhada da qual você possa se lembrar. Você precisa preenchê-la mais tarde em sua Configuração do Azure ATP. Marque a caixa **Enviar mensagens de Contabilização RADIUS Ligada e Desligada** caixa e, em seguida, clique em **OK** em todas as caixas de diálogo abertas.
+4.  Na janela **Adicionar servidor RADIUS**, digite o **Nome do servidor** do sensor mais próximo da Proteção Avançada contra Ameaças do Azure (que tenha conectividade com a rede). Para HA, é possível adicionar sensores extras da Proteção Avançada contra Ameaças do Azure como servidores RADIUS. Em **Porta**, verifique se o padrão de 1813 está configurado. Clique em **Alterar** e digite uma nova cadeia de caracteres alfanuméricos secreta compartilhada. Anote a nova cadeia de caracteres secreta compartilhada, pois você precisará preenchê-la mais tarde durante a configuração do ATP do Azure. Marque a caixa **Enviar mensagens de conta habilitada e de contabilização desabilitada do RADIUS** e, em seguida, clique em **OK** em todas as caixas de diálogo abertas.
  
      ![Configuração de VPN](./media/vpn-set-accounting.png)
      
@@ -74,7 +74,7 @@ Para configurar dados de VPN no ATP:
   ![Configurar VPN do Azure ATP](./media/atp-vpn-radius.png)
 
 
-Depois que isso for habilitado, todos os sensores e sensores autônomos do Azure ATP escutarão na porta 1813 para eventos de contabilidade do RADIUS, e sua instalação é concluída. 
+Depois que isso for habilitado, todos os sensores do ATP do Azure passarão a escutar na porta 1813 os eventos de contabilização do RADIUS, e a instalação da VPN estará concluída. 
 
  Depois que o sensor do Azure ATP receber os eventos de VPN e os enviar para o serviço de nuvem do Azure ATP para processamento, o perfil de entidade indicará locais distintos de VPN acessados e as atividades no perfil indicarão os locais.
 

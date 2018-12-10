@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 10/07/2018
+ms.date: 11/29/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: effca0f2-fcae-4fca-92c1-c37306decf84
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 7ae3f0adca3137664f0a89c15e8feee71d0cd915
-ms.sourcegitcommit: c4978be196e0039c7a5d5887bec4cbc5c01d64f9
+ms.openlocfilehash: 4481f8896791e98f76a6fb6f0b93796337b15ed1
+ms.sourcegitcommit: f4f2a1b2c674c4dba7a46ece0624f5ea10c4865e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/07/2018
-ms.locfileid: "48848606"
+ms.lasthandoff: 12/02/2018
+ms.locfileid: "52744324"
 ---
 *Aplica-se a: Proteção Avançada contra Ameaças do Azure*
 
@@ -38,17 +38,17 @@ Grupos de função permitem o gerenciamento de acesso para o Azure ATP. Com os g
 
 ## <a name="accessing-the-azure-atp-portal"></a>Acessando o portal do Azure ATP
 
-O acesso ao portal do Azure ATP (portal.atp.azure.com) só pode ser realizado por um usuário do Azure AD com a função do diretório de administrador global ou administrador de segurança. Após entrar no portal, você pode criar espaços de trabalho. O serviço do Azure ATP cria três grupos de segurança no locatário do Azure Active Directory: Administradores, Usuários e Visualizadores. 
+O acesso ao portal do Azure ATP (portal.atp.azure.com) só pode ser realizado por um usuário do Azure AD com a função do diretório de administrador global ou administrador de segurança. Depois de entrar no portal com a função necessária, você poderá criar sua instância do ATP do Azure. O serviço do Azure ATP cria três grupos de segurança no locatário do Azure Active Directory: Administradores, Usuários e Visualizadores. 
 
 > [!NOTE]
-> O acesso ao portal do Azure ATP é concedido somente a usuários dentro dos grupos de segurança do Azure ATP dentro do Azure Active Directory e para administradores globais e administradores de segurança do locatário.
+> O acesso ao portal do ATP do Azure é permitido somente a usuários dentro dos grupos de segurança do ATP do Azure dentro do Azure Active Directory e para administradores globais e de segurança do locatário.
 
 
 ## <a name="types-of-azure-atp-security-groups"></a>Tipos de grupos de segurança do Azure ATP 
 
-O Azure ATP fornece três tipos de grupos de segurança: Administradores do *(nome do workspace)* do Azure ATP, Usuários do *(nome do workspace)* do Azure ATP e Visualizadores do *(nome do workspace)* do Azure ATP. A tabela a seguir descreve o tipo de acesso no portal do Azure ATP disponível para cada função. Dependendo de qual função você atribuir, várias telas e opções de menu no portal do Azure ATP não estarão disponíveis para esses usuários, da seguinte maneira:
+O ATP do Azure fornece três tipos de grupos de segurança: Administradores do *(nome da instância)* do ATP do Azure, Usuários do *(nome da instância)* do ATP do Azure e Visualizadores do *(nome da instância)* do ATP do Azure. A tabela a seguir descreve o tipo de acesso no portal do Azure ATP disponível para cada função. Dependendo de qual função você atribuir, várias telas e opções de menu no portal do Azure ATP não estarão disponíveis para esses usuários, da seguinte maneira:
 
-|Atividade |Administradores do *(nome do workspace)* do Azure ATP|Usuários do *(nome do workspace)* do Azure ATP|Visualizadores do *(nome do workspace)* do Azure ATP|
+|Atividade |Administradores do *(nome da instância)* do ATP do Azure|Usuários do *(nome da instância)* do ATP do Azure|Visualizadores do *(nome da instância)* do ATP do Azure|
 |----|----|----|----|
 |Fazer logon|Disponível|Disponível|Disponível|
 |Alterar o status de Alertas de Segurança (abrir novamente, fechar, excluir, suprimir)|Disponível|Disponível|Não disponível|
@@ -78,5 +78,5 @@ O Azure ATP usa grupos de segurança do Azure AD como uma base para os grupos de
 - [Ferramenta de dimensionamento do ATP](http://aka.ms/aatpsizingtool)
 - [Arquitetura do ATP](atp-architecture.md)
 - [Instalar o Azure ATP](install-atp-step1.md)
-- [Confira o fórum do Azure ATP!](https://aka.ms/azureatpcommunity)
+- [Confira o fórum do ATP do Azure!](https://aka.ms/azureatpcommunity)
 

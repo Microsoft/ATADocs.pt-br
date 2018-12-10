@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 10/04/2018
+ms.date: 12/02/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,18 +13,18 @@ ms.technology: ''
 ms.assetid: d0551e91-3b21-47d5-ad9d-3362df6d47c0
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: eed1509cb31885bccdfcc40505284dbdbdfc4cca
-ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
+ms.openlocfilehash: 8cff5cbba1c9ed8d04764d9839a5cb2c66093c81
+ms.sourcegitcommit: f4f2a1b2c674c4dba7a46ece0624f5ea10c4865e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48783875"
+ms.lasthandoff: 12/02/2018
+ms.locfileid: "52744754"
 ---
 *Aplica-se a: Proteção Avançada contra Ameaças do Azure*
 
 # <a name="understanding-azure-atp-sensor-and-standalone-sensor-monitoring-alerts"></a>Entendendo os alertas de monitoramento do sensor autônomo e do sensor do Azure ATP
 
-O Centro de Integridade do Azure ATP permite que você saiba quando há um problema com seu workspace do Azure ATP gerando um alerta de monitoramento. Este artigo descreve todos os alertas de monitoramento para cada componente, listando a causa e as etapas necessárias para resolver o problema.
+O Centro de Integridade do ATP do Azure permite que você saiba quando há um problema em sua instância do ATP do Azure gerando um alerta de monitoramento. Este artigo descreve todos os alertas de monitoramento para cada componente, listando a causa e as etapas necessárias para resolver o problema.
 
 ## <a name="read-only-user-password-to-expire-shortly"></a>Senha de usuário somente leitura a expirar em breve
 
@@ -110,4 +110,4 @@ O Centro de Integridade do Azure ATP permite que você saiba quando há um probl
 - [Planejamento de capacidade do Azure ATP](atp-capacity-planning.md)
 - [Configurar coleta de eventos](configure-event-collection.md)
 - [Configuração do encaminhamento de eventos do Windows](configure-event-forwarding.md#configuring-windows-event-forwarding)
-- [Confira o fórum do Azure ATP!](https://aka.ms/azureatpcommunity)
+- [Confira o fórum do ATP do Azure!](https://aka.ms/azureatpcommunity)

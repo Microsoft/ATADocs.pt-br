@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 10/18/2018
+ms.date: 11/28/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 62c99622-2fe9-4035-9839-38fec0a353da
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 4b72d112a39b9fd7448ecfe2aa5c1808752d32a8
-ms.sourcegitcommit: 034d5cbd077a0dd18638d27aabbcf7b735993b08
+ms.openlocfilehash: ad2a7e86b2280e1b30a7605bc832ede1e19cb7a2
+ms.sourcegitcommit: f4f2a1b2c674c4dba7a46ece0624f5ea10c4865e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50748996"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52744941"
 ---
 *Aplica-se a: Proteção Avançada contra Ameaças do Azure*
 
@@ -59,7 +59,7 @@ Esta seção mostra as informações que você deve obter, bem como as contas e 
 
 -   Se executar o Wireshark no sensor autônomo do Azure ATP, você precisará reiniciar o serviço de sensor da Proteção Avançada contra Ameaças do Azure após parar a captura do Wireshark. Caso contrário, o sensor para de capturar o tráfego.
 
-- Se tentar instalar o sensor do Azure ATP em um computador configurado com um adaptador de Agrupamento NIC, você receberá um erro de instalação. Se desejar instalar o sensor do Azure ATP em um computador configurado com Agrupamento NIC, confira [Problemas do Agrupamento NIC do Sensor do Azure ATP](troubleshooting-atp-known-issues.md#nic-teaming).
+- Se tentar instalar o sensor do ATP do Azure em um computador configurado com um adaptador de Agrupamento NIC, você receberá um erro de instalação. Se desejar instalar o sensor do Azure ATP em um computador configurado com Agrupamento NIC, confira [Problemas do Agrupamento NIC do Sensor do Azure ATP](troubleshooting-atp-known-issues.md#nic-teaming).
 
 -    Recomendado: o usuário deve ter permissões de leitura somente no contêiner Objetos Excluídos. Isso permite que o Azure ATP detecte exclusões do usuário do seu Active Directory. Para saber mais sobre como configurar permissões de somente leitura no contêiner Objetos Excluídos, confira a seção **Alterar permissões em um contêiner de objetos excluídos** no artigo [Exibir ou definir permissões em um Objeto de Diretório](https://technet.microsoft.com/library/cc816824%28v=ws.10%29.aspx).
 

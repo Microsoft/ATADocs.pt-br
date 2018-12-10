@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 4ba46d60-3a74-480e-8f0f-9a082d62f343
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: c4a437055c2fec0d242fe9de62ac9220ed2b66e6
-ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
+ms.openlocfilehash: 3968973bf4ddbc66dc66789239382ad5c9056aae
+ms.sourcegitcommit: f4f2a1b2c674c4dba7a46ece0624f5ea10c4865e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48783790"
+ms.lasthandoff: 12/02/2018
+ms.locfileid: "52744873"
 ---
 *Aplica-se a: Proteção Avançada contra Ameaças do Azure*
 
@@ -40,7 +40,7 @@ Para fazer logon com êxito no portal do Azure ATP, é necessário fazer logon c
 
 ## <a name="logging-into-the-azure-atp-portal"></a>Fazendo logon no Portal do Azure ATP
 
-1. É possível entrar no portal do Azure ATP fazendo logon no portal [https://portal.atp.azure.com](https://portal.atp.azure.com) e selecionando o workspace relevante ou navegando até a URL do workspace: [https://*nomedoespaçodetrabalho*.atp.azure.com](https://*workspacename*.atp.azure.com).
+1. Você pode entrar no portal do ATP do Azure fazendo logon no portal [https://portal.atp.azure.com](https://portal.atp.azure.com) e selecionando sua instância ou navegando até a URL da instância: [https://*instancename*.atp.azure.com](https://*instancename*.atp.azure.com).
 
 
 2.  O Azure ATP é compatível com o logon único integrado com a autenticação do Windows – se você já fez logon em seu computador, o Azure ATP usa esse token para fazer logon no portal do Azure ATP. Você também pode fazer logon usando um cartão inteligente. Suas permissões no Azure ATP correspondem à sua [função de administrador](atp-role-groups.md).
@@ -51,7 +51,7 @@ Para fazer logon com êxito no portal do Azure ATP, é necessário fazer logon c
 
 ### <a name="attack-time-line"></a>Linha do tempo de ataque
 
-A linha do tempo do ataque Essa é a página de aterrissagem padrão exibida quando você entra no portal de workspace do Azure ATP. Por padrão, todas as atividades suspeitas abertas são mostradas na linha do tempo de ataque. Você pode filtrar a linha do tempo de ataque para mostrar as atividades suspeitas com status Tudo, Aberto, Descartado ou Suprimido. Você também pode ver a severidade atribuída a cada atividade.
+A linha do tempo de ataque Essa é a página de aterrissagem padrão exibida quando você entra no portal do ATP do Azure. Por padrão, todas as atividades suspeitas abertas são mostradas na linha do tempo de ataque. Você pode filtrar a linha do tempo de ataque para mostrar as atividades suspeitas com status Tudo, Aberto, Descartado ou Suprimido. Você também pode ver a severidade atribuída a cada atividade.
 
 ![Imagem da linha do tempo de ataques do Azure ATP](media/atp-sa-timeline.png)
 
@@ -77,7 +77,7 @@ Se clicar no número, você pode acessar a página de resultados da pesquisa, na
 
 ### <a name="health-center"></a>Centro de integridade
 
-O Centro de integridade fornece alertas quando algo não está funcionando corretamente em seu espaço de trabalho do Azure ATP.
+O Centro de integridade fornece alertas quando algo não está funcionando corretamente em sua instância do ATP do Azure.
 
 ![Imagem do centro de integridade do Azure ATP](media/atp-health-issue.png)
 
@@ -91,7 +91,7 @@ Para obter informações sobre grupos confidenciais no Azure ATP, confira [Traba
 
 ### <a name="mini-profile"></a>Miniperfil
 
-Se você passar o mouse sobre uma entidade, em qualquer lugar no portal de espaço de trabalho em que existe uma única entidade apresentada, como um usuário ou computador, um miniperfil será aberto automaticamente exibindo as informações a seguir, se estiver disponíveis e forem relevantes:
+Se você passar o mouse sobre uma entidade, em qualquer lugar no portal do ATP do Azure em que exista uma única entidade apresentada, como um usuário ou computador, um miniperfil será aberto automaticamente exibindo as informações a seguir, se estiverem disponíveis e forem relevantes:
 
 ![Imagem de miniperfil do Azure ATP](media/atp-mini-profile.png)
 
@@ -114,5 +114,5 @@ Se você passar o mouse sobre uma entidade, em qualquer lugar no portal de espa�
 
 ## <a name="see-also"></a>Consulte Também
 
-- [Criando espaços de trabalho do Azure ATP](install-atp-step1.md)
-- [Confira o fórum do Azure ATP!](https://aka.ms/azureatpcommunity)
+- [Criando instâncias do ATP do Azure](install-atp-step1.md)
+- [Confira o fórum do ATP do Azure!](https://aka.ms/azureatpcommunity)

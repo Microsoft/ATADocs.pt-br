@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 10/04/2018
+ms.date: 12/02/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,18 +13,18 @@ ms.technology: ''
 ms.assetid: e7f065fa-1ad1-4e87-bd80-99cc695efbf5
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: a175a23a087b11d481dbcf055bff4fe5577b4f8e
-ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
+ms.openlocfilehash: a5b0befaa484a94cf307559296c887370228abb4
+ms.sourcegitcommit: f4f2a1b2c674c4dba7a46ece0624f5ea10c4865e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48783110"
+ms.lasthandoff: 12/02/2018
+ms.locfileid: "52744295"
 ---
 *Aplica-se a: Proteção Avançada contra Ameaças do Azure*
 
 
 
-# <a name="change-azure-atp-workspace-portal-configuration---domain-connectivity-password"></a>Alterar a configuração do portal do espaço de trabalho do Azure ATP – senha de conectividade de domínio
+# <a name="change-azure-atp-portal-configuration---domain-connectivity-password"></a>Alterar a configuração do portal do ATP do Azure – senha de conectividade de domínio
 
 
 
@@ -38,7 +38,7 @@ Siga este procedimento para atualizar a senha da Conectividade de domínio no po
 > [!NOTE]
 > Trata-se do nome de usuário e senha da implantação local do Active Directory e não do Azure AD.
 
-1.  Abra o portal do Azure ATP acessando a URL do workspace.
+1.  Abra o portal do ATP do Azure, acessando o portal de URL.
 
 2.  Selecione a opção de configurações na barra de ferramentas e escolha **Configuração**.
 
@@ -62,4 +62,4 @@ Siga este procedimento para atualizar a senha da Conectividade de domínio no po
 ## <a name="see-also"></a>Consulte Também
 
 - [Integração com o Windows Defender ATP](integrate-wd-atp.md)
-- [Confira o fórum do Azure ATP!](https://aka.ms/azureatpcommunity)
+- [Confira o fórum do ATP do Azure!](https://aka.ms/azureatpcommunity)

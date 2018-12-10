@@ -2,33 +2,35 @@
 title: Gerenciar logs gerados pelo sistema do Advanced Threat Analytics | Microsoft Docs
 description: Descreve os dados coletados pelo ATA e fornece etapas para desativar a coleta de dados.
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 6/26/2018
-ms.topic: conceptual
-ms.prod: advanced-threat-analytics
-ms.service: ''
+ms.date: 8/19/2018
+ms.topic: article
+ms.prod: ''
+ms.service: advanced-threat-analytics
 ms.technology: ''
 ms.assetid: 8c1c7a1b-a3de-4105-9fd0-08a061952172
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 0db1054f47d462251577a4d5251c07e8cd6283e8
-ms.sourcegitcommit: 959b1f7753b9a8ad94870d2014376d55296fbbd4
+ms.openlocfilehash: a0b856ced72ad91a046f1116f96648baba7f7cba
+ms.sourcegitcommit: bdf5dc203ecec3e7542f2ed08852afeff4f20dcd
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46133388"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52950298"
 ---
 *Aplica-se a: Advanced Threat Analytics versão 1.9*
 
 
 
-# <a name="manage-system-generated-logs-note"></a>Gerenciar logs gerados pelo sistema[!NOTE]
+# <a name="manage-system-generated-logs"></a>Gerenciar logs gerados pelo sistema> 
+
 
 [!INCLUDE [Handle personal data](../includes/gdpr-intro-sentence.md)]
 
-O ATA (Advanced Threat Analytics) coleta dados de log anônimos gerados pelo sistema sobre o ATA e transmite os dados por uma conexão HTTPS para os servidores da Microsoft.  Esses dados são usados pela Microsoft para ajudar a melhorar as versões futuras do ATA.
+ > [!NOTE]
+ > O ATA (Advanced Threat Analytics) coleta dados de log anônimos gerados pelo sistema sobre o ATA e transmite os dados por uma conexão HTTPS para os servidores da Microsoft. Esses dados são usados pela Microsoft para ajudar a melhorar as versões futuras do ATA.
 
 ## <a name="data-collected"></a>Dados coletados
 Os dados anônimos coletados incluem os seguintes parâmetros:

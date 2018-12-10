@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 10/04/2018
+ms.date: 12/02/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 9c173d28-a944-491a-92c1-9690eb06b151
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: a7dc9b6c9243377a613490e166fb7c0294ecde99
-ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
+ms.openlocfilehash: da38cef088dcd255c264792fd70bfebf1c42a34b
+ms.sourcegitcommit: f4f2a1b2c674c4dba7a46ece0624f5ea10c4865e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48783314"
+ms.lasthandoff: 12/02/2018
+ms.locfileid: "52744924"
 ---
 *Aplica-se a: Proteção Avançada contra Ameaças do Azure*
 
@@ -70,9 +70,9 @@ Se um proxy ou firewall estiver bloqueando todo o tráfego por padrão e permiti
 |Ásia|triprd1wcasse1sensorapi.atp.azure.com|
 
 
-Também é possível fortalecer as regras de firewall ou de proxy para um espaço de trabalho específico criado por você, definindo uma regra para os seguintes registros DNS:
-- \<your-workspace-name>.atp.azure.com – para conectividade do console. Por exemplo, "Contoso-corp.atp.azure.com"
-- \<your-workspace-name>sensorapi.atp.azure.com – para conectividade de sensores. Por exemplo, "contoso-corpsensorapi.atp.azure.com"
+Também é possível fortalecer as regras de firewall ou de proxy para uma instância específica criado por você definindo uma regra para os seguintes registros DNS:
+- \<nome-da-sua-instância>.atp.azure.com – para conectividade do console. Por exemplo, "Contoso-corp.atp.azure.com"
+- \<nome-da-sua-instância>sensorapi.atp.azure.com – para conectividade de sensores. Por exemplo, "contoso-corpsensorapi.atp.azure.com"
 
  
 > [!NOTE]

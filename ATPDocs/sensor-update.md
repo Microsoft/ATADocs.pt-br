@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 603d9e09-a07d-4357-862f-d5682c8bc3dd
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: e478fc1a2ae955d66d00b3d87bd5f782354c766d
-ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
+ms.openlocfilehash: a24210415929b69152377d34aeec1bdc8906d08c
+ms.sourcegitcommit: f4f2a1b2c674c4dba7a46ece0624f5ea10c4865e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48783756"
+ms.lasthandoff: 12/02/2018
+ms.locfileid: "52744431"
 ---
 *Aplica-se a: Proteção Avançada contra Ameaças do Azure*
 
@@ -60,11 +60,11 @@ Geralmente, os sensores são atualizados automaticamente quando o serviço de nu
 Assim, é possível selecionar sensores específicos nos quais a atualização ocorrerá automaticamente e atualizar o restante dos sensores de forma atrasada, somente depois que você verificar que a atualização inicial ocorreu sem problemas.
 
 > [!NOTE]
-> Se ocorrer algum erro e o sensor não for atualizado, abra um tíquete de suporte. Para proteger ainda mais seu proxy para comunicar-se apenas com seu workspace, confira [configuração de Proxy](configure-proxy.md)
+> Se ocorrer algum erro e o sensor não for atualizado, abra um tíquete de suporte. Para proteger ainda mais seu proxy para comunicar-se apenas com sua instância, confira [Configuração de proxy](configure-proxy.md)
 
 Para configurar um sensor para atualização atrasada:
 
-1. No portal de espaço de trabalho do Azure ATP, clique no ícone de configurações e selecione **Configuração**.
+1. No portal do Azure ATP, clique no ícone de configurações e selecione **Configuração**.
 2. Clique na guia **Atualizações**.
 3. Na linha da tabela ao lado de cada sensor que você deseja atrasar, defina o controle deslizante **Atualização atrasada** para **Habilitado**.
 4. Clique em **Salvar**.
@@ -101,4 +101,4 @@ Em caso de falha, se o sensor não concluir o processo de atualização, um aler
 
 - [Configurar o encaminhamento de eventos](configure-event-forwarding.md)
 - [Pré-requisitos do Azure ATP](atp-prerequisites.md)
-- [Confira o fórum do Azure ATP!](https://aka.ms/azureatpcommunity)
+- [Confira o fórum do ATP do Azure!](https://aka.ms/azureatpcommunity)

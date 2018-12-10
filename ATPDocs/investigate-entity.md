@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 10/04/2018
+ms.date: 12/02/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 43e57f87-ca85-4922-8ed0-9830139fe7cb
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 72e26d9cdc539da168d1bc7c274971526eec61d1
-ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
+ms.openlocfilehash: 379feeef63776e71375a789daf4c9608a863e37b
+ms.sourcegitcommit: f4f2a1b2c674c4dba7a46ece0624f5ea10c4865e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48783297"
+ms.lasthandoff: 12/02/2018
+ms.locfileid: "52744465"
 ---
 *Aplica-se a: Proteção Avançada contra Ameaças do Azure*
 
@@ -34,7 +34,7 @@ O perfil de entidade fornece uma abrangente página da entidade, projetada para 
 
 Para acessar uma página de perfil de entidade, clique no nome da entidade, como um nome de usuário, na linha do tempo de alerta de segurança. Também é possível ver uma miniversão do perfil da entidade na página de alerta de segurança passando o mouse sobre o nome da entidade.
 
-O perfil da entidade permite que você exiba atividades da entidade, dados de diretório e caminhos de movimentação lateral para ela. Confira mais informações em [Noções básicas sobre perfis de entidade](entity-profiles.md).
+O perfil da entidade permite que você exiba as atividades, os dados de diretório e os [caminhos de movimentação lateral](use-case-lateral-movement-path.md) da entidade. Para obter mais informações sobre entidades, confira [Noções básicas sobre perfis de entidade](entity-profiles.md).
 
 ## <a name="check-entity-tags"></a>Verificar marcas da entidade
 
@@ -111,5 +111,5 @@ Antes de continuar com sua investigação, é importante saber se a entidade é 
     
 ## <a name="see-also"></a>Consulte também
 
-- [Trabalhando com atividades suspeitas](working-with-suspicious-activities.md)
-- [Confira o fórum do Azure ATP!](https://aka.ms/azureatpcommunity)
+- [Trabalhando com alertas de segurança](working-with-suspicious-activities.md)
+- [Confira o fórum do ATP do Azure!](https://aka.ms/azureatpcommunity)

@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 10/14/2018
+ms.date: 11/29/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 8ae459ac-9fca-4923-9a1a-dc10d5c50b29
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: a5d6693aa44fd82d10654ebd40533100e8834627
-ms.sourcegitcommit: 58c75026e5ec4dcab3b0852a41f9f0a0ad6f22eb
+ms.openlocfilehash: 566b7ac598dcdd0d44d30c50c01846c42d0b643f
+ms.sourcegitcommit: f4f2a1b2c674c4dba7a46ece0624f5ea10c4865e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/14/2018
-ms.locfileid: "49315754"
+ms.lasthandoff: 12/02/2018
+ms.locfileid: "52744788"
 ---
 *Aplica-se a: Proteção Avançada contra Ameaças do Azure*
 
@@ -30,13 +30,13 @@ Use os seguintes recursos para ajudá-lo a saber mais, implantar e dar suporte �
 
 |Para fazer isso...|...faça isto:|
 |----|----|
-|Consulte as documentações mais populares|Leia as cinco principais páginas:<br>- [O que é a Proteção Avançada contra Ameaças do Azure?](what-is-atp.md)<br>- [Pré-requisitos do Azure ATP](atp-prerequisites.md)<br>- [Arquitetura do Azure ATP](atp-architecture.md)<br>- [Planejamento de capacidade do Azure ATP](atp-capacity-planning.md)<br>- [Criar um workspace](install-atp-step1.md)|
-|Entre em contato com a equipe de produto e seus colegas|Visite a [Comunidade Tecnológica](https://techcommunity.microsoft.com/t5/Azure-Advanced-Threat-Protection/bd-p/AzureAdvancedThreatProtection) da Proteção Avançada contra Ameaças do Azure.|
-|Verifique as informações da assinatura e quais recursos são compatíveis|Verifique as [informações da assinatura](https://www.microsoft.com/cloud-platform/azure-information-protection-pricing) e a [lista de recursos](https://www.microsoft.com/cloud-platform/azure-information-protection-features) no site da Proteção Avançada contra Ameaças do Azure.|
+|Consulte as documentações mais populares|Leia as cinco principais páginas:<br>- [O que é a Proteção Avançada contra Ameaças do Azure?](what-is-atp.md)<br>- [Pré-requisitos do Azure ATP](atp-prerequisites.md)<br>- [Arquitetura do Azure ATP](atp-architecture.md)<br>- [Planejamento de capacidade do Azure ATP](atp-capacity-planning.md)<br>- [Criando uma instância](install-atp-step1.md)|
+|Entre em contato com a equipe de produto e seus colegas|Visite a  [Comunidade de Tecnologia](https://techcommunity.microsoft.com/t5/Azure-Advanced-Threat-Protection/bd-p/AzureAdvancedThreatProtection)  da Proteção Avançada contra Ameaças do Azure.|
+|Verifique as informações da assinatura e quais recursos são compatíveis|Confira as  [informações da assinatura](https://www.microsoft.com/cloud-platform/azure-information-protection-pricing)  e a  [lista de recursos](https://www.microsoft.com/cloud-platform/azure-information-protection-features)  no site da Proteção Avançada contra Ameaças do Azure.|
 
 ## <a name="information-about-new-releases-and-updates"></a>Informações sobre novas versões e atualizações
 
-A equipe de produtos da Proteção Avançada contra Ameaças do Azure publica anúncios sobre novas versões e atualizações no [Blog do Enterprise Mobility + Security](https://cloudblogs.microsoft.com/enterprisemobility/author/microsoft-advanced-threat-analytics-team/).
+A equipe do produto Proteção Avançada contra Ameaças do Azure publica comunicados sobre novas versões e atualizações no  [Blog do Enterprise Mobility + Security.](https://cloudblogs.microsoft.com/enterprisemobility/author/microsoft-advanced-threat-analytics-team/)
 Essas postagens de blog complementam a documentação do produto e as informações de suporte.
 
 Para uma lista atualizada de recursos lançados recentemente e alterações no Azure ATP, veja o artigo [Novidades da Proteção Avançada contra Ameaças do Azure](atp-whats-new.md).
@@ -47,7 +47,7 @@ Esta seção contém informações de suporte, opções de solução de problema
 
 Para entrar em contato com o Suporte da Microsoft:
 
-Se você tiver Suporte Premier, visite o [portal para clientes do Suporte Premier](https://premier.microsoft.com/) para enviar incidentes, procurar soluções e obter ajuda.
+Se você tiver Suporte Premier, visite o  [portal para clientes do Suporte Premier](https://premier.microsoft.com/)  para enviar incidentes, procurar soluções e obter ajuda.
 
 Outros clientes devem usar estes canais de suporte:
 
@@ -66,7 +66,7 @@ Para exibir o status do sistema para o Azure ATP, acesse a página [**Status do 
 
 #### <a name="on-demand-videos"></a>Vídeos sob demanda
 
-- Sessões do Microsoft Ignite 2018 para a [Proteção Avançada contra Ameaças do Azure](https://myignite.techcommunity.microsoft.com/sessions?t=%257B%2522from%2522%253A%25222018-09-23T08%253A00%253A00-04%253A00%2522%252C%2522to%2522%253A%25222018-09-28T19%253A00%253A00-04%253A00%2522%257D&q=azure%2520advanced%2520threat%2520protection#ignite-html-anchor).
+- Sessões do Microsoft Ignite 2018 sobre a  [Proteção Avançada contra Ameaças do Azure](https://myignite.techcommunity.microsoft.com/sessions?t=%257B%2522from%2522%253A%25222018-09-23T08%253A00%253A00-04%253A00%2522%252C%2522to%2522%253A%25222018-09-28T19%253A00%253A00-04%253A00%2522%257D&q=azure%2520advanced%2520threat%2520protection#ignite-html-anchor).
 
 Solução de problemas:
 
@@ -76,8 +76,8 @@ Solução de problemas:
 
 - Se você tiver o Windows Defender ATP implantado no seu ambiente e quiser integrá-lo à Proteção Avançada contra Ameaças do Azure, consulte [Integrando o Azure ATP ao Windows Defender ATP](integrate-wd-atp.md).
 
-- Para saber mais sobre investigações de um alerta de segurança, confira o [guia de alerta de segurança](suspicious-activity-guide.md).
+- Para saber mais sobre a investigação de um alerta de segurança, confira o  [Guia de alerta de segurança](suspicious-activity-guide.md).
 
 ### <a name="community-resources"></a>Recursos da comunidade
 
-Recomendamos o [grupo do Yammer para a Proteção Avançada contra Ameaças do Azure](https://www.yammer.com/AskIPTeam). Esse recurso fornece resposta diretas da equipe da Proteção Avançada contra Ameaças do Azure, além do benefício da experiência e do conhecimento compartilhados de outros administradores e consultores.
+Recomendamos o  [grupo do Yammer da Proteção Avançada contra Ameaças do Azure](https://www.yammer.com/AskIPTeam). Esse recurso fornece resposta diretas da equipe da Proteção Avançada contra Ameaças do Azure, além do benefício da experiência e do conhecimento compartilhados de outros administradores e consultores.

@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 10/14/2018
+ms.date: 12/02/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 1ad5e923-9bbd-4f56-839a-b11a9f387d4b
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 9202ba7c2519de0c7cd2eb3103578159dc437e83
-ms.sourcegitcommit: 58c75026e5ec4dcab3b0852a41f9f0a0ad6f22eb
+ms.openlocfilehash: 45858f80efb18060a845da47bfac3353946d18e0
+ms.sourcegitcommit: f4f2a1b2c674c4dba7a46ece0624f5ea10c4865e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/14/2018
-ms.locfileid: "49315737"
+ms.lasthandoff: 12/02/2018
+ms.locfileid: "52744397"
 ---
 *Aplica-se a: Proteção Avançada contra Ameaças do Azure*
 
@@ -44,7 +44,7 @@ Para configurar, execute estas etapas:
    ![Honeytoken](media/honeytoken-sensitive.png)
 
 4. Clique em **Exclusões**. Insira uma conta de usuário ou endereço IP a ser excluído da detecção, para cada tipo de ameaça. 
-5. Clique no sinal *mais*. O campo **Adicionar entidade** (usuário ou computador) é pesquisável e será preenchido automaticamente com entidades na sua rede. Para obter mais informações, consulte [Excluindo entidades de detecções](excluding-entities-from-detections.md) e o [Guia de atividades suspeitas](suspicious-activity-guide.md).
+5. Clique no sinal *mais*. O campo **Adicionar entidade** (usuário ou computador) é pesquisável e será preenchido automaticamente com entidades na sua rede. Para obter mais informações, confira [Excluindo entidades das detecções](excluding-entities-from-detections.md) e o [Guia de alerta de segurança](suspicious-activity-guide.md).
 
    ![Exclusões](media/exclusions.png)
 
@@ -53,9 +53,9 @@ Para configurar, execute estas etapas:
 
 Parabéns, você implantou a Proteção Avançada contra Ameaças do Azure!
 
-Verifique a linha de tempo do ataque para exibir atividades suspeitas detectadas e pesquisar por usuários ou computadores e exibir seus perfis.
+Verifique a linha do tempo de ataque para exibir os alertas de segurança detectados e pesquisar por usuários ou computadores e exibir seus perfis.
 
-O Azure ATP iniciará imediatamente a verificação de atividades suspeitas. Algumas detecções, como Modificações de grupo anormais, requerem um período de aprendizado e não estão disponíveis imediatamente após a implantação do Azure ATP.
+A verificação do ATP do Azure é iniciada imediatamente. Algumas detecções, como Modificações de grupo anormais, requerem um período de aprendizado e não estão disponíveis imediatamente após a implantação do Azure ATP.
 
 
 ## <a name="see-also"></a>Consulte Também

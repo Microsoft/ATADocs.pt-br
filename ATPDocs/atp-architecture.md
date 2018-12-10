@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 90f68f2c-d421-4339-8e49-1888b84416e6
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 6853a2a768fabde94c7aa613c9a6c0403f14e066
-ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
+ms.openlocfilehash: d41eac8700e334989594639880a0f85d5c725578
+ms.sourcegitcommit: f4f2a1b2c674c4dba7a46ece0624f5ea10c4865e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48783552"
+ms.lasthandoff: 12/02/2018
+ms.locfileid: "52744414"
 ---
 *Aplica-se a: Proteção Avançada contra Ameaças do Azure*
 
@@ -31,15 +31,15 @@ Arquitetura da Proteção Avançada contra Ameaças do Azure:
 
 ![Diagrama de topologia da arquitetura do Azure ATP](media/atp-architecture-topology.png)
 
-Esta seção descreve como o fluxo de captura de eventos e rede do Azure ATP funciona e faz uma busca detalhada para descrever a funcionalidade dos componentes principais: o portal do Azure ATP, o sensor do Azure ATP e o serviço de nuvem do Azure ATP. 
+Esta seção descreve como o fluxo de captura de eventos e rede do ATP do Azure funciona e descreve detalhadamente as funcionalidades dos componentes principais: o portal do ATP do Azure, o sensor do ATP do Azure e o serviço de nuvem do ATP do Azure. 
 
-Instalado diretamente em seus controladores de domínio, o sensor do Azure ATP acessa os logs de eventos necessários diretamente do controlador de domínio. Depois que o tráfego de rede e os logs forem analisados pelo sensor, o Azure ATP enviará apenas as informações analisadas ao serviço de nuvem do Azure ATP (apenas um percentual dos logs é enviado). 
+Instalado diretamente em seus controladores de domínio, o sensor do ATP do Azure acessa os logs de eventos necessários diretamente do controlador de domínio. Depois que o tráfego de rede e os logs forem analisados pelo sensor, o Azure ATP enviará apenas as informações analisadas ao serviço de nuvem do Azure ATP (apenas um percentual dos logs é enviado). 
 
 ## <a name="azure-atp-components"></a>Componentes do Azure ATP
 O Azure ATP é formado pelos seguintes componentes:
 
 -   **Portal do Azure ATP** <br>
-O portal do Azure ATP permite que você crie sua instância do Azure ATP, exibe os dados recebidos de sensores do Azure ATP e permite monitorar, gerenciar e investigar ameaças em seu ambiente de rede.  
+O portal do ATP do Azure permite a criação da sua instância do ATP do Azure, exibe os dados recebidos de sensores do ATP Azure e permite monitorar, gerenciar e investigar ameaças em seu ambiente de rede.  
 -   **Sensor do Azure ATP**<br>
 Sensores do Azure ATP são instalados diretamente em seus controladores de domínio. O sensor monitora diretamente o tráfego do controlador de domínio sem a necessidade de um servidor dedicado ou configuração de espelhamento de porta.
 
@@ -56,7 +56,7 @@ Use o portal do Azure ATP para:
 - **Opcional**: o portal também pode ser configurado para enviar emails e eventos quando forem detectados problemas de integridade ou alertas de segurança
 
 > [!NOTE]
-> - Se nenhum sensor for instalado no seu workspace dentro de 60 dias, o workspace poderá ser excluído e será necessário recriá-lo.
+> - Se nenhum sensor for instalado em sua instância do ATP do Azure em até 60 dias, ela poderá ser excluída e você precisará recriá-la.
 
 ## <a name="azure-atp-sensor"></a>Sensor do Azure ATP
 O sensor do Azure ATP tem as seguintes funcionalidades principais:
@@ -69,7 +69,7 @@ O sensor do Azure ATP tem as seguintes funcionalidades principais:
 
  
 ## <a name="azure-atp-sensor-features"></a>Funcionalidades do Sensor do Azure ATP
-O sensor do Azure ATP lê eventos localmente, sem necessidade de comprar e manter hardware ou configurações adicionais. O sensor do ATP do Azure também dá suporte para o Rastreamento de Eventos para Windows (ETW), o qual fornece as informações de log para várias detecções. As detecções baseadas no ETW incluem tanto a Solicitação de Replicação Suspeita quanto a Promoção de Controlador de Domínio Suspeita, ambas são possíveis ataques do DCShadow.
+O sensor do Azure ATP lê eventos localmente, sem necessidade de comprar e manter hardware ou configurações adicionais. O sensor do ATP do Azure também dá suporte para o Rastreamento de Eventos para Windows (ETW), o qual fornece as informações de log para várias detecções. As detecções baseadas no ETW incluem Suspeita de ataques de DCShadow tentados usando a promoção do controlador de domínio e as solicitações de replicação do controlador de domínio.
 - Candidato ao sincronizador de domínio
 
     O candidato de sincronizador de domínio é responsável por sincronizar todas as entidades de um determinado domínio do Active Directory de forma proativa (semelhante ao mecanismo utilizado pelos próprios controladores de domínio para replicação). Um sensor é escolhido aleatoriamente, na lista de candidatos, para servir como sincronizador de domínio. 
@@ -89,7 +89,7 @@ O sensor do Azure ATP lê eventos localmente, sem necessidade de comprar e mante
 
 -  Eventos do Windows
 
-    Para melhorar a cobertura de detecção do Azure ATP de Pass-the-Hash, Falhas de autenticação suspeitas, Modificação de grupos confidenciais, Criação de serviços suspeitos e Tipos ataque de atividade de Honey Token, o Azure ATP precisa analisar os logs dos seguintes eventos do Windows: 4776, 4732, 4733, 4728, 4729, 4756, 4757 e 7045. Esses eventos são lidos automaticamente pelos sensores do Azure ATP com as [configurações corretas de política de auditoria avançada](atp-advanced-audit-policy.md). 
+    Para aprimorar a cobertura de detecção do ATP do Azure de suspeita de roubo de identidade (pass-the-hash), falhas de autenticação suspeitas, modificação de grupos confidenciais, criação de serviços suspeitos e tipos ataque de atividade de Honeytoken, o ATP do Azure precisa analisar os logs dos seguintes eventos do Windows: 4776, 4732, 4733, 4728, 4729, 4756, 4757 e 7045. Esses eventos são lidos automaticamente pelos sensores do Azure ATP com as [configurações corretas de política de auditoria avançada](atp-advanced-audit-policy.md). 
 
 ## <a name="see-also"></a>Consulte Também
 - [Pré-requisitos do Azure ATP](atp-prerequisites.md)

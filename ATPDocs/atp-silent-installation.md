@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 10/09/2017
+ms.date: 12/05/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 24eca4c6-c949-42ea-97b9-41ef0fb611f1
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 23d92b207c9bcfeb38afa67bdd5e4911b1a16aa4
-ms.sourcegitcommit: 02a4d7a0d44817da8e40580c5fe97f8839a7941f
+ms.openlocfilehash: fec3ccbf44b4637132d769e35c4c83f7a4b5e5f5
+ms.sourcegitcommit: bdf5dc203ecec3e7542f2ed08852afeff4f20dcd
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48876572"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52950315"
 ---
 *Aplica-se a: Proteção Avançada contra Ameaças do Azure*
 
@@ -36,17 +36,16 @@ Quando você instala o Azure ATP, o .Net Framework 4.7 é instalado automaticame
 > Verifique se a versão instalada do .Net Framework é a mais recente. Se uma versão anterior do .Net estiver instalada, a instalação silenciosa do Azure ATP ficará presa em um loop e não será realizada. 
 
 > [!NOTE] 
-> A instalação do .Net Framework 4.7 pode exigir a reinicialização do servidor. Ao instalar o sensor do Azure ATP em controladores de domínio, considere agendar uma janela de manutenção para os controladores de domínio.
+> A instalação do .Net Framework 4.7 pode exigir a reinicialização do servidor. Ao instalar o sensor do ATP do Azure em controladores de domínio, considere agendar uma janela de manutenção para eles.
 Ao usar a instalação silenciosa do Azure ATP, o instalador é configurado para reiniciar automaticamente o servidor no final da instalação (se necessário). Certifique-se de executar a instalação silenciosa somente durante uma janela de manutenção. Devido a um bug do Windows Installer, o sinalizador *norestart* não pode ser usado de forma confiável para garantir que o servidor não seja reiniciado.
 
 Para acompanhar o progresso da implantação, monitore os logs do instalador do Azure ATP localizados em **%AppData%\Local\Temp**.
 
 
-
 ## <a name="azure-atp-sensor-silent-installation"></a>Instalação silenciosa do sensor do Azure ATP
 
 > [!NOTE]
-> Ao implantar silenciosamente o sensor do Azure ATP por meio do System Center Configuration Manager ou de outro sistema de implantação de software, é recomendável criar dois pacotes de implantação:</br>– Net Framework 4.7, incluindo inicializar o controlador de domínio</br>– Sensor do Azure ATP. </br>Torne o sensor do Azure ATP dependente da implantação do pacote .Net Framework. </br>Obtenha o [Pacote de implantação offline do .Net Framework 4.7](https://support.microsoft.com/help/3186497/the-net-framework-4-7-offline-installer-for-windows). 
+> Ao implantar silenciosamente o sensor do Azure ATP por meio do System Center Configuration Manager ou de outro sistema de implantação de software, é recomendável criar dois pacotes de implantação:</br>– Net Framework 4.7, que pode incluir a reinicialização do controlador de domínio</br>– Sensor do Azure ATP. </br>Torne o sensor do Azure ATP dependente da implantação do pacote .Net Framework. </br>Obtenha o [Pacote de implantação offline do .Net Framework 4.7](https://support.microsoft.com/help/3186497/the-net-framework-4-7-offline-installer-for-windows). 
 
 
 Use o seguinte comando para realizar uma instalação silenciosa completa do sensor do Azure ATP:
@@ -75,9 +74,9 @@ Use o seguinte comando para realizar uma instalação silenciosa completa do sen
 > [!div class="mx-tableFixed"]
 |Nome|Sintaxe|Obrigatório para instalação silenciosa?|Descrição|
 |-------------|----------|---------|---------|
-|AccessKey|AccessKey="\*\*"|Sim|Define a chave de acesso que é usada para registrar o sensor do Azure ATP com o espaço de trabalho do Azure ATP.|
+|AccessKey|AccessKey="\*\*"|Sim|Define a chave de acesso que é usada para registrar o sensor do ATP do Azure na instância do ATP do Azure.|
 
-**Exemplos**: para instalar silenciosamente o sensor do Azure ATP, faça logon no computador ingressado no domínio com suas credenciais de administrador do Azure ATP de modo que não seja necessário especificar as credenciais como parte da instalação. Caso contrário, registre-o no serviço de nuvem do Azure ATP usando as credenciais especificadas:
+**Exemplos**: use o comando a seguir para instalar silenciosamente o sensor do ATP do Azure:
 
     "Azure ATP sensor Setup.exe" /quiet NetFrameworkCommandLineArguments="/q" 
     AccessKey="3WlO0uKW7lY6Lk0+dfkfkJQ0qZV6aSq5WxLf71+fuBhggCl/BMs9JxfAwi7oy9vYGviazUS1EPpzte7z8s4grw==" 

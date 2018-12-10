@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 10/18/2018
+ms.date: 12/02/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 37d1a032-65e7-4a89-be0b-c3f9cc2bacdb
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 5424c997de43ac186564b929ab50c7668333ed06
-ms.sourcegitcommit: 63ec9181f71edce6a950f5cc0d69428405436c48
+ms.openlocfilehash: afcad5dccda979bed54e7808bddb3c4190f5c3a8
+ms.sourcegitcommit: bdf5dc203ecec3e7542f2ed08852afeff4f20dcd
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "49963294"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52950332"
 ---
 *Aplica-se a: Proteção Avançada contra Ameaças do Azure*
 
@@ -75,14 +75,17 @@ As informações monitoradas pelo ATP do Azure são apresentadas na forma de ati
 
 |Atividade monitorada|Descrição|
 |---------------------|------------------|
+|Replicação do Serviço de Diretório  |O usuário tentou replicar o serviço de diretório.|
+|Consulta DNS  |O usuário executou uma consulta AXFR no controlador de domínio.|
 |Execução WMI  |O usuário tentou executar remotamente um método WMI.|
 |Criação de Serviço   |O usuário tentou criar remotamente de um serviço específico para um computador remoto.|
 |Enumeração da Sessão SMB   |O usuário tentou enumerar todos os usuários com sessões SMB abertas nos controladores de domínio.|
+|Cópia de arquivos SMB| O usuário copiou arquivos usando SMB|
 |Agendamento de Tarefas  |O usuário tentou agendar a tarefa X remotamente para um computador remoto.|
 |Consulta SAMR   |O usuário executou uma consulta SAMR.|
 |Recuperação de Dados Particular  |O usuário tentou/conseguiu consultar dados particulares usando o protocolo LSARPC.|
-|Replicação do Serviço de Diretório  |O usuário tentou replicar o serviço de diretório.|
-|Consulta DNS  |O usuário executou uma consulta AXFR no controlador de domínio.|
+
+
 
 
 ## <a name="monitored-user-activities-login-operations"></a>Atividades do usuário monitoradas: operações de logon

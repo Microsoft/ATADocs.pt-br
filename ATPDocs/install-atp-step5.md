@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: d7c95f8c-04f8-4946-9bae-c27ed362fcb0
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: b7ddaca0f0c5691c90873cef9af6cef13fa9650a
-ms.sourcegitcommit: e783df4c9d928fedf6dc3c65d58d9b530cdd2ff2
+ms.openlocfilehash: 2bdfd0fe41ed6dc5f489784c2095cefd2032d135
+ms.sourcegitcommit: f4f2a1b2c674c4dba7a46ece0624f5ea10c4865e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49800026"
+ms.lasthandoff: 12/02/2018
+ms.locfileid: "52744345"
 ---
 *Aplica-se a: Proteção Avançada contra Ameaças do Azure*
 
@@ -75,7 +75,7 @@ Para validar a implantação bem-sucedida do sensor do Azure ATP, verifique as s
  >[!NOTE]
  > A versão do ATP do Azure é atualizada com frequência. Para verificar a versão mais recente, no portal do ATP do Azure, vá em **Configuração** e, em seguida, **Sobre**. 
 
-3.  Vá até a URL de seu workspace. No portal do ATP do Azure, pesquise algo na barra de pesquisa, como um usuário ou um grupo em seu domínio.
+3.  Acesse a URL da instância do ATP do Azure. No portal do ATP do Azure, pesquise algo na barra de pesquisa, como um usuário ou um grupo em seu domínio.
 
 
 

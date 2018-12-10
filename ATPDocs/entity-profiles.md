@@ -1,11 +1,11 @@
 ---
-title: Trabalhando com perfis de usuário no portal de espaço de trabalho da Proteção Avançada contra Ameaças do Azure | Microsoft Docs
-description: Descreve como investigar os usuários na tela de perfis de usuário no portal de espaço de trabalho do Azure ATP
+title: Trabalhando com perfis de usuário no portal da Proteção Avançada contra Ameaças do Azure | Microsoft Docs
+description: Descreve como investigar os usuários na tela de perfis de usuário no portal do ATP do Azure
 keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 10/04/2018
+ms.date: 12/02/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 17458706-79fb-4c23-aa42-66979164a45f
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 357973698d9d53936c3fa308bc0021ae1cd98f60
-ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
+ms.openlocfilehash: a36afd4997a2f148bc5a31726aee22914a3607b4
+ms.sourcegitcommit: f4f2a1b2c674c4dba7a46ece0624f5ea10c4865e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48783501"
+ms.lasthandoff: 12/02/2018
+ms.locfileid: "52744363"
 ---
 *Aplica-se a: Proteção Avançada contra Ameaças do Azure*
 
@@ -26,7 +26,7 @@ ms.locfileid: "48783501"
 
 # <a name="understanding-entity-profiles"></a>Noções básicas sobre perfis de entidade
 
-O perfil de entidade fornece uma abrangente página da entidade, projetada para fazer investigações completas e aprofundadas de usuários, computadores, dispositivos e dos recursos a que eles têm acesso e seu histórico. A página de perfil aproveita o novo conversor de atividade lógica do Azure ATP, que pode examinar um grupo de atividades em andamento (agregadas até um minuto) e agrupá-las em uma única atividade lógica para fornecer uma melhor compreensão das atividades reais de seus usuários.
+O perfil da entidade fornece uma página da entidade abrangente, projetada para investigações completas e aprofundadas sobre usuários, computadores e dispositivos e sobre os recursos aos quais eles têm acesso e seus históricos. A página de perfil aproveita o novo conversor de atividade lógica do Azure ATP, que pode examinar um grupo de atividades em andamento (agregadas até um minuto) e agrupá-las em uma única atividade lógica para fornecer uma melhor compreensão das atividades reais de seus usuários.
 
 Para acessar uma página de perfil de entidade, clique no nome da entidade, como um nome de usuário, na linha do tempo de atividades suspeitas.
 
@@ -59,7 +59,7 @@ Ao clicar na guia de Caminhos de movimento lateral, você pode exibir um mapa to
 
 O mapa fornece uma lista de quantos saltos entre computadores ou usuários um invasor teria que fazer para chegar ao usuário e comprometer uma conta confidencial e, se o usuário tiver uma conta confidencial, você poderá ver quantos recursos e contas estão conectadas diretamente.
 
-Se não for detectada nenhuma atividade nos últimos dois dias, o grafo deixará de aparecer, mas o [relatório de caminho de movimento lateral](reports.md) estará disponível para fornecer informações sobre caminhos de movimento lateral que existiram nos últimos 60 dias. 
+Se não for detectado nenhum possível LMP para a entidade durante os últimos dois dias, o gráfico não será exibido. Selecione uma data diferente usando **Exibir uma data diferente** para exibir os gráficos de caminhos de movimento lateral anteriores descobertos para essa entidade. O [Relatório de caminho de movimento lateral](reports.md) está sempre disponível para fornecer informações sobre os possíveis caminhos de movimento lateral descobertos e pode ser personalizado por tempo.  
 
 Para obter mais informações, consulte [Caminhos de movimento lateral](use-case-lateral-movement-path.md). 
 
@@ -69,4 +69,4 @@ Para obter mais informações, consulte [Caminhos de movimento lateral](use-case
 ## <a name="see-also"></a>Consulte Também
 
 - [Investigar caminhos de movimento lateral com o Azure ATP](use-case-lateral-movement-path.md)
-- [Confira o fórum do Azure ATP!](https://aka.ms/azureatpcommunity)
+- [Confira o fórum do ATP do Azure!](https://aka.ms/azureatpcommunity)
