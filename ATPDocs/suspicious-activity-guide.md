@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 12/02/2018
+ms.date: 12/09/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: ca5d1c7b-11a9-4df3-84a5-f53feaf6e561
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: a32d19e8e130f326859276dde60c794712da5a91
-ms.sourcegitcommit: f4f2a1b2c674c4dba7a46ece0624f5ea10c4865e
+ms.openlocfilehash: 8604e3cfead3b52fd9f0d1ed38bb7d806cf50f46
+ms.sourcegitcommit: d1c9c3e69b196f6086a8f100e527553cf0d95aac
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2018
-ms.locfileid: "52744805"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53125125"
 ---
 *Aplica-se a: Proteção Avançada contra Ameaças do Azure*
 
@@ -27,9 +27,9 @@ ms.locfileid: "52744805"
 
 Após a devida investigação, todos os alertas de segurança do Azure ATP poderão ser classificados como:
 
--   **Verdadeiro positivo**: uma ação mal intencionada detectada pelo Azure ATP.
+-   **Verdadeiro positivo**: uma ação mal-intencionada detectada pelo ATP do Azure.
 
--   **Verdadeiro positivo benigno**: uma ação detectada pelo Azure ATP que é real, mas não é mal intencionada, como um teste de penetração.
+-   **Verdadeiro positivo benigno**: uma ação detectada pelo ATP do Azure que é real, mas não é mal-intencionada, como um teste de penetração.
 
 -   **Falso positivo**: um alarme falso, indicando que a atividade não ocorreu.
 
@@ -65,18 +65,17 @@ Na versão 2.56, todos os alertas de segurança da ATP do Azure existentes foram
 |Modificação suspeita de grupos confidenciais|Modificação suspeita de grupos confidenciais|2024|
 |Criação de serviço suspeito|Criação de serviço suspeito|2026|
 |Conexão de VPN suspeita|Conexão de VPN suspeita|2025|
-|Suspeita de ataque do ransomware WannaCry|Implementação de protocolo incomum (possível ataque do ransomware WannaCry) *|2002|
-|Suspeita de ataque de força bruta (SMB)|Implementação de protocolo incomum (possível uso de ferramentas mal-intencionadas, como a Hydra) *|2002|
-|Suspeita de uso da estrutura de hacker Metasploit|Implementação de protocolo incomum (possível uso das ferramentas de invasão Metasploit) *|2002|
-|Suspeita de ataque de Overpass-the-Hash (Kerberos)|Implementação incomum de protocolo Kerberos (possível ataque de overpass-the-hash) *|2002|
-|Os alertas de * *implementação de protocolo incomum* compartilham uma externalId no momento. O externalId para cada tipo desses alertas será alterado em uma versão futura para um externalId exclusivo||****|
+|Suspeita de ataque do ransomware WannaCry|Implementação de protocolo incomum (possível ataque do ransomware WannaCry)|2002|
+|Suspeita de ataque de força bruta (SMB)|Implementação de protocolo incomum (possível uso de ferramentas mal-intencionadas, como a Hydra)|2002|
+|Suspeita de uso da estrutura de hacker Metasploit|Implementação de protocolo incomum (possível uso das ferramentas de invasão Metasploit)|2002|
+|Suspeita de ataque de Overpass-the-Hash (Kerberos)|Implementação incomum de protocolo Kerberos (possível ataque de overpass-the-hash)|2002|
 |Reconhecimento de usuário e de associação a um grupo (SAMR)|Reconhecimento usando consultas de serviços de diretório|2021|
 |Reconhecimento de endereço IP e de usuário (SMB) |Reconhecimento usando a enumeração da sessão SMB|2012|
 
 
 ## <a name="account-enumeration-reconnaissance"></a>Reconhecimento de enumeração de conta
 <a name="reconnaissance-using-account-enumeration"></a>
-*Antigo nome:* reconhecimento usando enumeração de conta
+*Nome anterior:* Reconhecimento de enumeração de conta
 
 **Descrição**
 
@@ -106,7 +105,7 @@ Se a resposta para qualquer uma dessas perguntas for sim, **feche** as atividade
 ## <a name="honeytoken-activity"></a>Atividade de Honeytoken
 <a name="honeytoken-activity"></a>
 
-*Antigo nome:* atividade de Honeytoken
+*Nome anterior:* Atividade de Honeytoken
 
 **Descrição**
 
@@ -131,7 +130,7 @@ Certifique-se de que as contas Honeytoken sejam usadas apenas para sua finalidad
 ## <a name="malicious-request-of-data-protection-api-master-key"></a>Solicitação mal-intencionada de chave mestra da API de Proteção de Dados
 <a name="malicious-data-protection-private-information-request"></a>
 
-*Antigo nome:* solicitação mal-intencionada de informações particulares de proteção de dados
+*Nome anterior:* Solicitação de informações privadas para proteção contra dados mal-intencionados
 
 **Descrição**
 
@@ -152,7 +151,7 @@ Para usar DPAPI, um invasor precisa de direitos de administrador de domínio. Im
 
 ## <a name="suspected-brute-force-attack-ldap"></a>Suspeita de LDAP (ataque de força bruta) 
 <a name="brute-force-attack-using-ldap-simple-bind"></a>
-*Antigo nome:* ataque de força bruta usando associação simples de LDAP
+*Nome anterior:* Ataque de força bruta usando associação simples LDAP
 
 **Descrição**
 
@@ -178,7 +177,7 @@ Nesta detecção, um alerta é disparado quando o Azure ATP detecta um grande n�
 ## <a name="suspected-brute-force-attack-kerberos-ntlm"></a>Suspeita de ataque de força bruta (NTLM do Kerberos)
 <a name="suspicious-authentication-failures"></a>
 
-*Antigo nome:* falhas de autenticação suspeitas
+*Nome anterior:* Falhas de autenticação suspeitas
 
 **Descrição**
 
@@ -208,7 +207,7 @@ Nessa detecção, um alerta é disparado quando ocorrem diversas falhas de auten
 ## <a name="suspected-dcshadow-attack-dc-promotion"></a>Suspeita de ataque de DCShadow (promoção do controlador de domínio)
 <a name="suspicious-domain-controller-promotion-potential-dcshadow-attack"></a>
 
-*Antigo nome:* promoção suspeita do controlador de domínio (possível ataque de DCShadow)
+*Nome anterior:* Promoção do controlador de domínio suspeito (possível ataque DCShadow)
 
 **Descrição**
 
@@ -249,7 +248,7 @@ Você pode utilizar o [Scanner ACL do AD](https://blogs.technet.microsoft.com/pf
 ## <a name="suspected-dcshadow-attack-dc-replication-request"></a>Suspeita de ataque de DCShadow (solicitação de replicação do controlador de domínio)
 <a name="suspicious-replication-request-potential-dcshadow-attack"></a>
 
-*Antigo nome:* solicitação de replicação suspeita (possível ataque de DCShadow) 
+*Nome anterior:* Solicitação de replicação suspeita (possível ataque DCShadow) 
 
 **Descrição** 
 
@@ -282,7 +281,7 @@ Para fazer isso, você pode utilizar o [Scanner ACL do AD](https://blogs.technet
 ## <a name="suspected-dcsync-attack-replication-of-directory-services"></a>Suspeita de ataque de DCSync (replicação de serviços de diretório)
 <a name="malicious-replication-of-directory-services"></a>
 
-*Antigo nome:* replicação mal-intencionada de serviços de diretório
+*Nome anterior:* Replicação mal-intencionada de serviços de diretório
 
 **Descrição**
 
@@ -316,9 +315,9 @@ Você pode utilizar o  [Scanner ACL do AD](https://blogs.technet.microsoft.com/
 ## <a name="suspected-golden-ticket-usage-encryption-downgrade"></a>Suspeita de uso de Golden Ticket (downgrade de criptografia)
 <a name="Encryption-downgrade-activity-potential-golden-ticket-attack"></a>
 
-*Antigo nome:* atividade de downgrade de criptografia
+*Nome anterior:* Atividade de downgrade de criptografia
 
-**Descrição** o downgrade de criptografia é um método de enfraquecer o Kerberos fazendo downgrade do nível de criptografia de diferentes campos do protocolo que são criptografados usando o nível mais alto de criptografia. Um campo criptografado enfraquecido pode ser um alvo mais fácil para tentativas de força bruta offline. Vários métodos de ataque utilizam criptografias Kerberos fracas. Nessa detecção, o Azure ATP aprende os tipos de criptografia Kerberos usados por computadores e usuários e alerta você quando é usada uma criptografia mais fraca que: (1) seja incomum para o computador de origem e/ou o usuário; e (2) corresponda a técnicas de ataque conhecidas. 
+**Descrição** o downgrade de criptografia é um método de enfraquecer o Kerberos fazendo downgrade do nível de criptografia de diferentes campos do protocolo que são criptografados usando o nível mais alto de criptografia. Um campo criptografado enfraquecido pode ser um alvo mais fácil para tentativas de força bruta offline. Vários métodos de ataque utilizam criptografias Kerberos fracas. Nessa detecção, o ATP do Azure aprende os tipos de criptografia Kerberos usados por computadores e usuários e alerta você quando é usada uma criptografia mais fraca que: (1) seja incomum para o computador de origem e/ou o usuário; e (2) corresponda a técnicas de ataque conhecidas. 
 
 Em um alerta de Golden Ticket, o método de criptografia do campo TGT da mensagem TGS_REQ (solicitação de serviço) do computador de origem sofreu um downgrade em comparação com o comportamento aprendido anteriormente. Isso não tem base em uma anomalia de tempo (como na outra detecção Golden Ticket). Além disso, não houve nenhuma solicitação de autenticação Kerberos associada à solicitação de serviço anterior detectada pelo ATP.
 
@@ -341,7 +340,7 @@ Em um alerta de Golden Ticket, o método de criptografia do campo TGT da mensage
 ## <a name="suspected-golden-ticket-usage-forged-authorization-data"></a>Suspeita de uso de Golden Ticket (dados de autorização forjados)
 <a name="privilege-escalation-using-forged-authorization-data"></a>
 
-*Antigo nome:* elevação de privilégios usando dados de autorização forjados
+*Nome anterior:* Elevação de privilégios usando dados de autorização forjados
 
 **Descrição**
 
@@ -364,7 +363,7 @@ Verifique se todos os controladores de domínio com sistemas operacionais até o
 ## <a name="suspected-golden-ticket-usage-nonexistant-account"></a>Suspeita de uso de Golden Ticket (conta inexistente)
 <a name="golden-ticket"></a>
 
-Antigo nome: Golden Ticket Kerberos
+Nome anterior: Golden Ticket do Kerberos
 
 **Descrição**
 
@@ -394,7 +393,7 @@ Altere o Tíquete de concessão de tíquete Kerberos (KRBTGT) duas vezes de acor
 
 ## <a name="suspected-golden-ticket-usage-time-anomaly"></a>Suspeita de uso de Golden Ticket (anomalia de tempo)
 
-Antigo nome: Golden Ticket Kerberos
+Nome anterior: Golden Ticket do Kerberos
 
 **Descrição**
 
@@ -420,7 +419,7 @@ Altere o Tíquete de concessão de tíquete Kerberos (KRBTGT) duas vezes de acor
 
 **Descrição**
 
-Os invasores com direitos de administrador de domínio podem comprometer a conta KRBTGT. Usando a conta KRBTGT, eles podem criar um TGT (tíquete de concessão de tíquete) Kerberos que fornece autorização para qualquer recurso. Um TGT forjado desse tipo é chamado de "Golden Ticket" porque permite que os invasores obtenham uma persistência duradoura na rede. Os Golden Tickets forjados desse tipo têm características exclusivas que essa detecção foi projetada especificamente para identificar. 
+Os invasores com direitos de administrador de domínio podem comprometer a conta KRBTGT. Usando a conta KRBTGT, eles podem criar um TGT (tíquete de concessão de tíquete) Kerberos que fornece autorização para qualquer recurso. Um TGT forjado desse tipo é chamado de "Golden Ticket" porque permite que os invasores obtenham uma persistência duradoura na rede. Os Golden Tickets forjados desse tipo têm características exclusivas que essa detecção foi projetada para identificar. 
 
 **Investigação**
 1. Os serviços de federação podem gerar tíquetes que disparam esse alerta. O computador de origem hospeda esses serviços? Em caso afirmativo, feche o alerta de segurança.
@@ -441,7 +440,7 @@ Altere o Tíquete de concessão de tíquete Kerberos (KRBTGT) duas vezes de acor
 ## <a name="suspected-identity-theft-pass-the-hash"></a>Suspeita de roubo de identidade (Pass-the-Hash) 
 <a name="identity-theft-using-pass-the-hash-attack"></a>
 
-*Antigo nome:* roubo de identidade usando o ataque de Pass-the-Hash
+*Nome anterior:* Roubo de identidade usando o ataque de passagem de Hash
 
 **Descrição**
 
@@ -460,7 +459,7 @@ O hash foi usado em um computador que o usuário de destino possui ou usa regula
 ## <a name="suspected-identity-theft-pass-the-ticket"></a>Suspeita de roubo de identidade (Pass-the-Ticket) 
 <a name="identity-theft-using-pass-the-ticket-attack"></a>
 
-*Antigo nome:* roubo de identidade usando o ataque de Pass-the-Ticket
+*Nome anterior:* Roubo de identidade usando o ataque Pass-the-Ticket
 
 **Descrição**
 
@@ -481,11 +480,11 @@ Pass-the-Ticket é uma técnica de movimento lateral em que os invasores roubam 
 ## <a name="suspected-over-pass-the-hash-attack-encryption-downgrade"></a>Suspeita de ataque de Overpass-the-Hash (downgrade de criptografia) 
 <a name="Encryption-downgrade-activity-potential-over-pass-the-hash"></a>
 
-*Antigo nome:* atividade de downgrade de criptografia
+*Nome anterior:* Atividade de downgrade de criptografia
 
 **Descrição**
 
-O downgrade de criptografia é um método para enfraquecer o Kerberos fazendo downgrade do nível de criptografia de diferentes campos do protocolo que são criptografados usando o nível mais elevado de criptografia. Um campo criptografado enfraquecido pode ser um alvo mais fácil para tentativas de força bruta offline. Vários métodos de ataque utilizam criptografias Kerberos fracas. Nessa detecção, o Azure ATP aprende os tipos de criptografia Kerberos usados por computadores e usuários e alerta você quando é usada uma criptografia mais fraca que: (1) seja incomum para o computador de origem e/ou o usuário; e (2) corresponda a técnicas de ataque conhecidas. 
+O downgrade de criptografia é um método para enfraquecer o Kerberos fazendo downgrade do nível de criptografia de diferentes campos do protocolo que são criptografados usando o nível mais elevado de criptografia. Um campo criptografado enfraquecido pode ser um alvo mais fácil para tentativas de força bruta offline. Vários métodos de ataque utilizam criptografias Kerberos fracas. Nessa detecção, o ATP do Azure aprende os tipos de criptografia Kerberos usados por computadores e usuários e alerta você quando é usada uma criptografia mais fraca que: (1) seja incomum para o computador de origem e/ou o usuário; e (2) corresponda a técnicas de ataque conhecidas. 
 
 Em um ataque de Overpass-the-Hash, um invasor pode usar um hash roubado fraco para criar um tíquete forte, com uma solicitação de AS do Kerberos. Nesta detecção, o tipo de criptografia de mensagem AS_REQ do computador de origem passou por downgrade em comparação com o comportamento aprendido anteriormente (ou seja, o computador estava usando AES).
 
@@ -503,9 +502,9 @@ Em um ataque de Overpass-the-Hash, um invasor pode usar um hash roubado fraco pa
 ## <a name="suspected-skeleton-key-attack-encryption-downgrade"></a>Suspeita de ataque de Skeleton Key (downgrade de criptografia) 
 <a name="encryption-downgrade-activity-potential-skeleton-key-attack"></a>
 
-*Antigo nome:* atividade de downgrade de criptografia
+*Nome anterior:* Atividade de downgrade de criptografia
 
-**Descrição** o downgrade de criptografia é um método de enfraquecer o Kerberos fazendo downgrade do nível de criptografia de diferentes campos do protocolo que são criptografados usando o nível mais alto de criptografia. Um campo criptografado enfraquecido pode ser um alvo mais fácil para tentativas de força bruta offline. Vários métodos de ataque utilizam criptografias Kerberos fracas. Nessa detecção, o Azure ATP aprende os tipos de criptografia Kerberos usados por computadores e usuários e alerta você quando é usada uma criptografia mais fraca que: (1) seja incomum para o computador de origem e/ou o usuário; e (2) corresponda a técnicas de ataque conhecidas. 
+**Descrição** o downgrade de criptografia é um método de enfraquecer o Kerberos fazendo downgrade do nível de criptografia de diferentes campos do protocolo que são criptografados usando o nível mais alto de criptografia. Um campo criptografado enfraquecido pode ser um alvo mais fácil para tentativas de força bruta offline. Vários métodos de ataque utilizam criptografias Kerberos fracas. Nessa detecção, o ATP do Azure aprende os tipos de criptografia Kerberos usados por computadores e usuários e alerta você quando é usada uma criptografia mais fraca que: (1) seja incomum para o computador de origem e/ou o usuário e (2) corresponda a técnicas de ataque conhecidas. 
 
 Skeleton Key é um malware que é executado nos controladores de domínio e permite a autenticação no domínio com qualquer conta sem saber sua senha. Este malware geralmente usa algoritmos de criptografia mais fracos para fazer o hash das senhas do usuário no controlador de domínio. Nesta detecção, o método de criptografia da mensagem KRB_ERR do controlador de domínio para a conta, solicitando um tíquete, passou por um downgrade em comparação com o comportamento aprendido anteriormente.
 
@@ -544,7 +543,7 @@ A modificação de transferências de zona é uma tarefa entre uma lista de veri
 
 ## <a name="remote-code-execution-attempt"></a>Tentativa de execução remota de código
 <a name="remote-code-execution-attempt"></a>
-*Antigo nome:* tentativa de execução remota de código
+*Nome anterior:* Tentativa de execução remota de código
 
 **Descrição**
 
@@ -574,7 +573,7 @@ Os invasores que comprometem credenciais de administrador ou que usam uma explor
 ## <a name="suspicious-communication-over-dns"></a>Comunicação suspeita por DNS
 <a name="suspicious-communication-over-dns"></a>
 
-*Antigo nome:* comunicação suspeita sobre DNS 
+*Nome anterior:* Comunicação suspeita por DNS 
 
 **Descrição**
 
@@ -597,7 +596,7 @@ Se o domínio de consulta registrado for considerado não confiável após a inv
 ## <a name="suspicious-modification-of-sensitive-groups"></a>Modificação suspeita de grupos confidenciais
 <a name="suspicious-midification-of-sensitive-groups"></a>
 
-*Antigo nome:* modificação suspeita de grupos confidenciais
+*Nome anterior:* Modificação suspeita de grupos confidenciais
 
 **Descrição**
 
@@ -624,7 +623,7 @@ Configure o [Privileged Access Management para Active Directory](https://docs.mi
 ## <a name="suspicious-service-creation"></a>Criação de serviço suspeito
 <a name="suspicious-service-creation"></a>
 
-*Antigo nome:* criação de serviço suspeita
+*Nome anterior:* Criação de serviço suspeito
 
 **Descrição**
 
@@ -650,7 +649,7 @@ Um serviço suspeito foi criado em um controlador de domínio em sua organizaç�
 ## <a name="suspicious-vpn-connection"></a>Conexão de VPN suspeita
 <a name="suspicious-vpn-detection"></a>
 
-*Antigo nome:* conexão VPN suspeita 
+*Nome anterior:* Conexão de VPN suspeita 
 
 **Descrição**
 
@@ -671,41 +670,152 @@ Um alerta é aberto quando há um desvio no comportamento do usuário com base n
 2.  Considere a possibilidade de impedir que esse usuário se conecte por meio da VPN.
 
 
-## <a name="unusual-protocol-implementation"></a>Implementação de protocolo incomum
+## <a name="suspected-wannacry-ransomware-attack"></a>Suspeita de ataque do ransomware WannaCry
 <a name="unusual-protocol-implementation"></a>
 
-*Antigo nome:* implementação de protocolo incomum *Esse grupo de alertas de segurança será renomeado e receberá externalIds novas em uma versão futura da ATP do Azure*
+*Nome anterior:* Implementação de protocolo incomum (possível ataque do ransomware WannaCry)
 
 **Descrição**
 
-Os invasores usam ferramentas que implementam vários protocolos (SMB, Kerberos, NTLM) de maneiras não padrão. Embora esse tipo de tráfego de rede seja aceito pelo Windows sem avisos, o Azure ATP é capaz de reconhecer possíveis casos mal-intencionados. O comportamento é uma indicação de técnicas como força bruta e de Over-Pass-the-Hash, bem como explorações usadas pelo ransomware avançado, por exemplo, WannaCry.
+Os invasores usam ferramentas que implementam vários protocolos de maneiras não padrão. Embora esse tipo de tráfego de rede seja aceito pelo Windows sem avisos, o Azure ATP é capaz de reconhecer possíveis casos mal-intencionados. O comportamento é uma indicação de técnicas usadas por ransomware avançado, como WannaCry.
 
 **Investigação**
 
-Identifique o protocolo incomum – na linha do tempo da atividade suspeita, clique no alerta de segurança para acessar sua página de detalhes e o protocolo será exibido acima da seta: Kerberos ou NTLM.
+Analise a atividade incomum no alerta de segurança na linha do tempo da atividade. Clique no alerta de segurança para ver sua página de detalhes e, em seguida, examine as entidades potencialmente afetadas e a lista de evidências. 
 
-- **Kerberos**: isso geralmente será disparado se uma ferramenta de invasão como Mimikatz tiver sido usada, potencialmente executando um ataque de Overpass-the-Hash. Verifique se o computador de origem está executando um aplicativo que implementa a sua própria pilha de Kerberos, não de acordo com o RFC Kerberos. Se esse for o caso, é um positivo verdadeiro benigno e você poderá **Fechar** o alerta. Se o alerta continuar a ser disparado e sua seleção anterior ainda for verdadeira, você poderá **Suprimir** o alerta.
+Isso é um *verdadeiro positivo*, um *positivo verdadeiro benigno* ou um *falso positivo*? 
 
-- **NTLM**: possivelmente WannaCry ou ferramentas como Metasploit, Medusa e Hydra.  
+1. Verifique se o WannaCry está em execução no computador de origem. 
 
-Para determinar se este é um ataque WannaCry, realize as seguintes etapas:
+2. Em caso afirmativo, esse alerta é um verdadeiro positivo. Para entender o escopo da violação:
+      - Investigue o computador de origem
+      - Investigue o computador comprometido. 
 
-1. Verifique se o computador de origem está executando uma ferramenta de ataque como Metasploit, Medusa ou Hydra.
+2. Se o computador de origem não estiver executando uma ferramenta de ataque, às vezes, os aplicativos implementarão sua própria pilha NTLM ou SMB. Verifique se o computador de origem está executando um aplicativo que implementa sua própria pilha NTLM ou SMB.
 
-2. Se nenhuma ferramenta de ataque for encontrada, verifique se o computador de origem está executando um aplicativo que implementa a sua própria pilha NTLM ou SMB.
+      1. Se o computador estiver executando sua própria pilha, embora isso não devesse acontecer, corrija a configuração do aplicativo. Nesse caso, ele é uma atividade benigna e o alerta de segurança pode ser fechado.
 
-3. Clique no computador de origem para acessar a página de perfil. Verifique o que aconteceu no momento do alerta, pesquisando atividades incomuns, como: quem estava conectado e quais recursos foram acessados. Se você tiver habilitado a integração do Windows Defender ATP, clique no selo do Windows Defender ATP ![selo do WD](./media/wd-badge.png) para continuar a investigar o computador. No Windows Defender ATP, você pode ver quais processos e alertas ocorreram no momento do alerta.
+      2. Se o computador estiver executando sua própria pilha e sua configuração estiver correta, o alerta de segurança poderá ser fechado e o computador excluído já que deve se tratar de uma atividade benigna.
+
+3. Clique no computador de origem para acessar a página de perfil. Verifique o que aconteceu no momento do alerta pesquisando atividades incomuns como: quem estava conectado e quais recursos foram acessados. 
+
+4. Se você tiver habilitado a integração do Windows Defender ATP, clique no selo do Windows Defender ATP ![selo do WD](./media/wd-badge.png) para continuar a investigar o computador. No Windows Defender ATP, você pode ver quais processos e alertas ocorreram no momento do alerta.
 
 
 **Remediação**
 
-Corrija todos os seus computadores, especialmente aplicando as atualizações de segurança.
+1. Contenha o computador de origem. 
+      - [Remover WannaCry](https://support.microsoft.com/help/890830/remove-specific-prevalent-malware-with-windows-malicious-software-remo)
+      - O WanaKiwi poderá descriptografar os dados nas mãos de algum ransomware, mas apenas se o usuário não tiver reiniciado ou desligado o computador. Para obter mais informações, consulte [Ransomware Wanna Cry](https://answers.microsoft.com/en-us/windows/forum/windows_10-security/wanna-cry-ransomware/5afdb045-8f36-4f55-a992-53398d21ed07?auth=1)
+      - Pesquise usuários que estavam conectados no horário da atividade, pois é provável que eles também possam estar comprometidos. Redefina as senhas e habilite a MFA 
+2. Corrija todos os computadores, lembrando-se de aplicar atualizações de segurança. 
+      - [Desabilitar SMBv1](https://blogs.technet.microsoft.com/filecab/2016/09/16/stop-using-smb1/)
 
-1. [Desabilitar SMBv1](https://blogs.technet.microsoft.com/filecab/2016/09/16/stop-using-smb1/)
+## <a name="suspected-use-of-metasploit-hacking-framework"></a>Suspeita de uso da estrutura de hacker Metasploit
 
-2. [Remover WannaCry](https://support.microsoft.com/help/890830/remove-specific-prevalent-malware-with-windows-malicious-software-remo)
 
-3. O WanaKiwi poderá descriptografar os dados nas mãos de algum ransomware, mas apenas se o usuário não tiver reiniciado ou desligado o computador. Para obter mais informações, consulte [Ransomware Wanna Cry](https://answers.microsoft.com/en-us/windows/forum/windows_10-security/wanna-cry-ransomware/5afdb045-8f36-4f55-a992-53398d21ed07?auth=1)
+*Nome anterior:* Implementação de protocolo incomum (possível uso das ferramentas de invasão Metasploit)
+
+**Descrição**
+
+Os invasores usam ferramentas que implementam vários protocolos (SMB, Kerberos, NTLM) de maneiras não padrão. Embora esse tipo de tráfego de rede seja aceito pelo Windows sem avisos, o Azure ATP é capaz de reconhecer possíveis casos mal-intencionados. O comportamento é uma indicação de técnicas como o uso da estrutura Metasploit dos hackers. 
+
+**Investigação**
+
+Analise a atividade incomum no alerta de segurança na linha do tempo da atividade. Clique no alerta de segurança para ver sua página de detalhes e, em seguida, examine as entidades potencialmente afetadas e a lista de evidências.
+
+Isso é um *verdadeiro positivo*, um *positivo verdadeiro benigno* ou um *falso positivo*? 
+
+1. Verifique se o computador de origem está executando uma ferramenta de ataque como Metasploit ou Medusa. 
+
+2. Em caso afirmativo, é um verdadeiro positivo. Para entender o escopo da violação:
+      - Investigue o computador de origem
+      - Investigue o computador comprometido. 
+
+3. Se o computador de origem não estiver executando uma ferramenta de ataque, às vezes, os aplicativos implementarão sua própria pilha NTLM ou SMB. Verifique se o computador de origem está executando um aplicativo que implementa sua própria pilha NTLM ou SMB.
+
+4. Se o computador estiver executando sua própria pilha NTML ou SMB, embora isso não devesse acontecer, corrija a configuração do aplicativo.
+      1. Nesse caso, ele é uma atividade benigna e o alerta de segurança pode ser fechado. 
+      2. Se o computador estiver executando sua própria pilha e sua configuração estiver correta, o alerta de segurança poderá ser fechado e o computador excluído já que deve se tratar de uma atividade benigna.
+
+5. Clique no computador de origem para acessar a página de perfil. Verifique o que aconteceu no momento do alerta, pesquisando atividades incomuns, como: quem estava conectado e quais recursos foram acessados. Se você tiver habilitado a integração do Windows Defender ATP, clique no selo do Windows Defender ATP ![selo do WD](./media/wd-badge.png) para continuar a investigar o computador. No Windows Defender ATP, você pode ver quais processos e alertas ocorreram no momento do alerta.
+
+
+**Remediação**
+
+1. Redefina as senhas dos usuários comprometidos e habilite a autenticação multifator.
+2. Contenha o computador de origem
+   1. Encontre a ferramenta que realizou o ataque e remova-a.
+   2. Pesquise usuários que estavam conectados no horário da atividade, pois eles também podem estar comprometidos.
+   3. Redefina suas senhas e habilite a autenticação multifator. 
+4. Redefina as senhas do usuário de origem e habilite a autenticação multifator. 
+5. [Desabilitar SMBv1](https://blogs.technet.microsoft.com/filecab/2016/09/16/stop-using-smb1/)
+
+
+## <a name="suspected-overpass-the-hash-attack-kerberos"></a>Suspeita de ataque de Overpass-the-Hash (Kerberos)
+<a name="unusual-protocol-implementation"></a>
+
+*Nome anterior:* Implementação incomum de protocolo Kerberos (possível ataque de overpass-the-hash) 
+
+**Descrição**
+
+Os invasores usam ferramentas que implementam vários protocolos como SMB e Kerberos de maneiras não padrão. Embora esse tipo de tráfego de rede seja aceito pelo Windows sem avisos, o Azure ATP é capaz de reconhecer possíveis casos mal-intencionados. O comportamento é uma indicação de técnicas como força bruta e de Over-Pass-the-Hash, bem como explorações usadas pelo ransomware avançado, por exemplo, WannaCry.
+
+**Investigação**
+
+Analise a atividade incomum no alerta de segurança na linha do tempo da atividade. Clique no alerta de segurança para ver sua página de detalhes e, em seguida, examine as entidades potencialmente afetadas e a lista de evidências.
+
+Isso é um *verdadeiro positivo*, um *positivo verdadeiro benigno* ou um *falso positivo*? 
+
+ 1. Às vezes, os aplicativos implementam sua própria pilha de Kerberos, não de acordo com o RFC Kerberos.
+   1. Verifique se o computador de origem está executando sua própria pilha Kerberos. 
+   2. Se o computador estiver executando sua própria pilha Kerberos, embora isso não devesse acontecer, corrija a configuração do aplicativo. Nesse caso, ele é uma atividade benigna e o alerta de segurança pode ser fechado. 
+   3. Se o computador estiver executando sua própria pilha Kerberos e sua configuração estiver correta, o alerta de segurança poderá ser fechado e o computador excluído já que deve se tratar de uma atividade benigna.
+
+ **Remediação**
+
+1. Redefina as senhas dos usuários comprometidos e habilite a autenticação multifator.
+2. Contenha o computador de origem. 
+   1. Encontre a ferramenta que realizou o ataque e remova-a.
+   2. Pesquise usuários que estavam conectados no horário da atividade, pois eles também podem estar comprometidos. 
+   3. Redefina suas senhas e habilite a autenticação multifator. 
+4. Redefina as senhas do usuário de origem e habilite a autenticação multifator. 
+
+## <a name="suspected-brute-force-attack-smb"></a>Suspeita de ataque de força bruta (SMB)
+<a name="unusual-protocol-implementation-smb"></a>
+
+*Nome anterior:* Implementação de protocolo incomum (possível uso de ferramentas mal-intencionadas, como a Hydra)
+
+**Descrição**
+
+Os invasores usam ferramentas que implementam vários protocolos como SMB, Kerberos e NTLM de maneiras não padrão. Embora esse tipo de tráfego de rede seja aceito pelo Windows sem avisos, o Azure ATP é capaz de reconhecer possíveis casos mal-intencionados. O comportamento é uma indicação de técnicas de força bruta. 
+
+**Investigação**
+
+Analise a atividade incomum no alerta de segurança na linha do tempo da atividade. Clique no alerta de segurança para ver sua página de detalhes e, em seguida, examine as entidades potencialmente afetadas e a lista de evidências.
+
+Isso é um *verdadeiro positivo*, *positivo verdadeiro benigno ou *falso positivo*? 
+
+1. Verifique se o computador de origem está executando uma ferramenta de ataque como Hydra. 
+   1. Em caso afirmativo, é um verdadeiro positivo. Para entender o escopo da violação:
+      - Investigue o computador de origem
+      - Investigue o computador comprometido. 
+
+2. Se o computador de origem não estiver executando uma ferramenta de ataque, às vezes, os aplicativos implementarão sua própria pilha NTLM ou SMB. Verifique se o computador de origem está executando um aplicativo que implementa sua própria pilha NTLM ou SMB.
+
+3. Clique no computador de origem para acessar a página de perfil. Verifique o que aconteceu no momento do alerta, pesquisando atividades incomuns, como: quem estava conectado e quais recursos foram acessados. Se você tiver habilitado a integração do Windows Defender ATP, clique no selo do Windows Defender ATP ![selo do WD](./media/wd-badge.png) para continuar a investigar o computador. No Windows Defender ATP, você pode ver quais processos e alertas ocorreram no momento do alerta.
+
+**Remediação**
+
+1. Redefina as senhas dos usuários adivinhados e habilite a autenticação multifator.
+2. Adicione os usuários adivinhados a uma watchlist.
+3. Conter o computador de origem
+   1. Encontre a ferramenta que realizou o ataque e remova-a.
+   2. Pesquise usuários que estavam conectados no horário da atividade, pois eles também podem estar comprometidos.
+   3. Redefina suas senhas e habilite a autenticação multifator. 
+4. Implemente senhas complexas e longas na organização. As senhas complexas e longas fornecem o primeiro nível necessário de segurança contra ataques de força bruta futuros.
+5. [Desabilitar SMBv1](https://blogs.technet.microsoft.com/filecab/2016/09/16/stop-using-smb1/)
+
 
 ## <a name="user-and-ip-address-reconnaissance-smb"></a>Reconhecimento de endereço IP e de usuário (SMB)
 <a name="reconnaissance-using-smb-session-enumeration"></a> Reconhecimento usando a Enumeração da Sessão SMB

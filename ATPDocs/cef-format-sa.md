@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 12/02/2018
+ms.date: 12/09/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 3261155c-3c72-4327-ba29-c113c63a4e6d
 ms.reviewer: arzinger
 ms.suite: ems
-ms.openlocfilehash: 2cef2652b896ffb31d9b93ebf15e06d2c0638370
-ms.sourcegitcommit: f4f2a1b2c674c4dba7a46ece0624f5ea10c4865e
+ms.openlocfilehash: 5d2e359db2cd3b0d358ce14a9f662a82c47e23a2
+ms.sourcegitcommit: d1c9c3e69b196f6086a8f100e527553cf0d95aac
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2018
-ms.locfileid: "52744482"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53125108"
 ---
 *Aplica-se a: Proteção Avançada contra Ameaças do Azure*
 
@@ -81,11 +81,10 @@ Os campos a seguir e seus valores são encaminhados para o SIEM:
 |Modificação suspeita de grupos confidenciais|Modificação suspeita de grupos confidenciais|2024|
 |Criação de serviço suspeito|Criação de serviço suspeito|2026|
 |Conexão de VPN suspeita|Conexão de VPN suspeita|2025|
-|Suspeita de ataque do ransomware WannaCry|Implementação de protocolo incomum (possível ataque de ransomware WannaCry)*|2002|
-|Suspeita de ataque de força bruta (SMB)|Implementação de protocolo incomum (possível uso de ferramentas mal-intencionadas como a Hydra)*|2002|
-|Suspeita de uso da estrutura de hacker Metasploit|Implementação de protocolo incomum (possível uso de ferramentas de invasão Metasploit)*|2002|
-|Suspeita de ataque de Overpass-the-Hash (Kerberos)|Implementação incomum de protocolo Kerberos (possível ataque overpass-the-hash)*|2002|
-|Os alertas de * *implementação de protocolo incomum* compartilham uma externalId no momento. O externalId para cada tipo desses alertas será alterado em uma versão futura para um externalId exclusivo||****|
+|Suspeita de ataque do ransomware WannaCry|Implementação de protocolo incomum (possível ataque de ransomware WannaCry)*|2035|
+|Suspeita de ataque de força bruta (SMB)|Implementação de protocolo incomum (possível uso de ferramentas mal-intencionadas, como a Hydra)|2033|
+|Suspeita de uso da estrutura de hacker Metasploit|Implementação de protocolo incomum (possível uso das ferramentas de invasão Metasploit)|2034|
+|Suspeita de ataque de Overpass-the-Hash (Kerberos)|Implementação incomum de protocolo Kerberos (possível ataque de overpass-the-hash)|2002|
 |Reconhecimento de endereço IP e de usuário (SMB) |Reconhecimento usando a enumeração da sessão SMB|2012|
 |Reconhecimento de usuário e de associação a um grupo (SAMR)|Reconhecimento usando consultas de serviços de diretório|2021|
 
@@ -174,14 +173,20 @@ Prioridades:
 ### <a name="suspicious-vpn-connection"></a>Conexão VPN suspeita
 07-03-2018  13:13:12    Auth.Warning  192.168.0.200   1 2018-07-03T10:13:06.187834+00:00 DC1 CEF 2520 AbnormalVpnSecurityAlert ï»¿0|Microsoft|Azure ATP|2.39.0.0|AbnormalVpnSecurityAlert|Conexão VPN suspeita|5|start=2018-06-30T15:34:05.3887333Z app=VpnConnection suser=user1 msg=user1 conectado a uma VPN usando 3 computadores de 3 locais.     externalId=2025 cs1Label=url cs1=https\://contoso-corp.eng.atp.azure.com:13000/securityAlert/88c46b0e-372f-4c06-9935-67bd512c4f68 cs2Label=trigger cs2=new
 
-### <a name="unusual-protocol-implementation---potential-use-of-malicious-tools-such-a-hydra"></a>Implementação de protocolo incomum (possível uso de ferramentas mal-intencionadas como a Hydra)
-02-21-2018  16:21:22    Auth.Warning    192.168.0.220   1 2018-02-21T14:21:13.916050+00:00 CENTER CEF 6076 AbnormalProtocolSecurityAlert ï»¿0|Microsoft|Azure ATP|2.22.4228.22540|AbnormalProtocolSecurityAlert|Unusual protocol implementation|5|start=2018-02-21T14:19:03.1981155Z app=Ntlm shost=CLIENT2 outcome=Success msg=There were attempts to authenticate from CLIENT2 against DC1 using an unusual protocol implementation. Pode ser um resultado de ferramentas mal-intencionadas usadas para executar ataques como o Pass-the-Hash e força bruta. externalId=2002 cs1Label=url cs1=https\://contoso-corp.atp.azure.com/securityAlert/40fe98dd-aa42-4540-9d73-831486fdd1e4 cs2Label=trigger cs2=new
+### <a name="suspected-wannacry-ransomware-attack"></a>Suspeita de ataque do ransomware WannaCry
+02-21-2018  16:21:22    Auth.Warning    192.168.0.220   1 2018-02-21T14:21:13.916050+00:00 CENTER CEF 6076 AbnormalProtocolSecurityAlert ï»¿0|Microsoft|Azure ATP|2.22.4228.22540|AbnormalProtocolSecurityAlert|SuspectedWannaCryRansomwareAttack|5|start=2018-02-21T14:19:03.1981155Z app=Ntlm shost=CLIENT2 outcome=Success msg=Houve tentativas de autenticação do CLIENT2 em DC1 usando uma implementação de protocolo incomum. Pode ser um resultado de ferramentas mal-intencionadas usadas para executar ataques como o WannaCry. externalId=2035 cs1Label=url cs1=https\://contoso-corp.atp.azure.com/securityAlert/40fe98dd-aa42-4540-9d73-831486fdd1e4 cs2Label=trigger cs2=new
 
-### <a name="unusual-protocol-implementation---potential-use-of-malicious-tools-such-a-metasploit"></a>Implementação de protocolo incomum – (possível uso de ferramentas mal-intencionadas como o Metasploit)
-10-29-2018  11:22:04    Auth.Warning    192.168.0.202   1 2018-10-29T09:22:00.460233+00:00 DC3 CEF 3908 AbnormalProtocolSecurityAlert ï»¿0|Microsoft|Azure ATP|2.52.5704.46184|AbnormalProtocolSecurityAlert|Unusual protocol implementation (potential use of Metasploit hacking tools)|5|start=2018-10-29T09:19:46.6092465Z app=Ntlm shost=CLIENT2 outcome=Success msg=There were attempts to authenticate from CLIENT2 against DC1 using an unusual protocol implementation. externalId=2002 cs1Label=url cs1=https\://contoso-corp.atp.azure.com/securityAlert/573f10a1-6f8a-44b1-a5b1-212d40996363 cs2Label=trigger cs2=new
+### <a name="suspected-brute-force-attack-smb"></a>Suspeita de ataque de força bruta (SMB)
+002-21-2018 16:21:22    Auth.Warning    192.168.0.220   1 2018-02-21T14:21:13.916050+00:00 CENTER CEF 6076 AbnormalProtocolSecurityAlert ï»¿0|Microsoft|Azure ATP|2.22.4228.22540|AbnormalProtocolSecurityAlert|SuspectedBrutForceAttack|5|start=2018-02-21T14:19:03.1981155Z app=Ntlm shost=CLIENT2 outcome=Êxito msg=Houve tentativas de autenticação do CLIENT2 em DC1 usando uma implementação de protocolo incomum. Pode ser um resultado de ferramentas mal-intencionadas usadas para executar ataques como o Hydra. externalId=2033 cs1Label=url cs1=https\://contoso-corp.atp.azure.com/securityAlert/40fe98dd-aa42-4540-9d73-831486fdd1e4 cs2Label=trigger cs2=new
+
+### <a name="suspected-use-of-metasploit-hacking-framework"></a>Suspeita de uso da estrutura de hacker Metasploit
+002-21-2018 16:21:22    Auth.Warning    192.168.0.220   1 2018-02-21T14:21:13.916050+00:00 CENTER CEF 6076 AbnormalProtocolSecurityAlert ï»¿0|Microsoft|Azure ATP|2.22.4228.22540|AbnormalProtocolSecurityAlert|SuspectedAttackUsingMetasploit|5|start=2018-02-21T14:19:03.1981155Z app=Ntlm shost=CLIENT2 outcome=Êxito msg=Houve tentativas de autenticação do CLIENT2 em DC1 usando uma implementação de protocolo incomum. Pode ser um resultado de ferramentas mal-intencionadas usadas para executar ataques como o Metasploit. externalId=2034 cs1Label=url cs1=https\://contoso-corp.atp.azure.com/securityAlert/40fe98dd-aa42-4540-9d73-831486fdd1e4 cs2Label=trigger cs2=new
+
+### <a name="suspected-overpass-the-hash-attack-kerberos"></a>Suspeita de ataque de Overpass-the-Hash (Kerberos)
+002-21-2018 16:21:22    Auth.Warning    192.168.0.220   1 2018-02-21T14:21:13.916050+00:00 CENTER CEF 6076 AbnormalProtocolSecurityAlert ï»¿0|Microsoft|Azure ATP|2.22.4228.22540|AbnormalProtocolSecurityAlert|SuspectedOverPassTheHashAttack|5|start=2018-02-21T14:19:03.1981155Z app=Ntlm shost=CLIENT2 outcome=Êxito msg=Houve tentativas de autenticação do CLIENT2 em DC1 usando uma implementação de protocolo incomum. Pode ser o resultado de ações mal-intencionadas que usam o protocolo Kerberos. externalId=2002 cs1Label=url cs1=https\://contoso-corp.atp.azure.com/securityAlert/40fe98dd-aa42-4540-9d73-831486fdd1e4 cs2Label=trigger cs2=new
 
 ### <a name="user-and-ip-address-reconnaissance-smb"></a>Reconhecimento de endereço IP e de usuário (SMB) 
-02-21-2018  16:21:22    Auth.Warning    192.168.0.220   1 2018-02-21T14:21:13.962930+00:00 CENTER CEF 6076 EnumerateSessionsSecurityAlert ï»¿0|Microsoft|Azure ATP|2.22.4228.22540|EnumerateSessionsSecurityAlert|Reconnaissance using SMB Session Enumeration|5|start=2018-02-21T14:19:03.2071170Z app=SrvSvc shost=CLIENT1 msg=SMB session enumeration attempts were successfully performed by user1, from CLIENT1 against DC1, exposing Eugene Jenkins (user2-computer). externalId=2012 cs1Label=url cs1=https\://contoso-corp.atp.azure.com/securityAlert/622c38ab-324f-4c1f-9caa-1fe85db3b440 cs2Label=trigger cs2=new
+002-21-2018 16:21:22    Auth.Warning    192.168.0.220   1 2018-02-21T14:21:13.916050+00:00 CENTER CEF 6076 AbnormalProtocolSecurityAlert ï»¿0|Microsoft|Azure ATP|2.22.4228.22540|AbnormalProtocolSecurityAlert|ReconnaissanceusingSMBSessionEnumeration|5|start=2018-02-21T14:19:03.1981155Z app=Ntlm shost=CLIENT2 outcome=Êxito msg=Houve tentativas de autenticação do CLIENT2 em DC1 usando uma implementação de protocolo incomum. Pode ser um resultado de ferramentas mal-intencionadas usadas para executar ataques como o Metasploit. externalId=2034 cs1Label=url cs1=https\://contoso-corp.atp.azure.com/securityAlert/40fe98dd-aa42-4540-9d73-831486fdd1e4 cs2Label=trigger cs2=new
 
 ## <a name="see-also"></a>Consulte Também
 - [Pré-requisitos do Azure ATP](atp-prerequisites.md)

@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 15ee7d0b-9a0c-46b9-bc71-98d0b4619ed0
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 3fb857308d945fcae04e7dc3d501404a2334382e
-ms.sourcegitcommit: f4f2a1b2c674c4dba7a46ece0624f5ea10c4865e
+ms.openlocfilehash: e027e57e3f23be61139217b532b3b4a721dc9cdd
+ms.sourcegitcommit: d1c9c3e69b196f6086a8f100e527553cf0d95aac
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2018
-ms.locfileid: "52744686"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53125142"
 ---
 *Aplica-se a: Proteção Avançada contra Ameaças do Azure*
 
@@ -57,8 +57,8 @@ Depois de verificar que sua rede atende aos requisitos do sensor, continue com a
 
     ![Instância do Azure criada](media/instance-created.png)
 
-> [!NOTE]
- > Para fazer logon no ATP do Azure, você precisará fazer logon com um usuário atribuído a uma função do ATP do Azure com direitos para acessar o portal do ATP do Azure. Para obter mais informações sobre o RBAC (controle de acesso baseado em função) no Azure ATP, consulte [Como trabalhar com grupos de função do Azure ATP](atp-role-groups.md).
+    > [!NOTE]
+    > Para fazer logon no ATP do Azure, você precisará fazer logon com um usuário atribuído a uma função do ATP do Azure com direitos para acessar o portal do ATP do Azure. Para obter mais informações sobre o RBAC (controle de acesso baseado em função) no Azure ATP, consulte [Como trabalhar com grupos de função do Azure ATP](atp-role-groups.md).
  
 3. Clique em **Configuração**, **Gerenciar grupos de funções** e use o link [Centro de Administração do Azure AD](https://docs.microsoft.com/azure/active-directory/active-directory-assign-admin-roles-azure-portal) para gerenciar seus grupos de funções. .
 

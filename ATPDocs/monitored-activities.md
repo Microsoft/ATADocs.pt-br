@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 37d1a032-65e7-4a89-be0b-c3f9cc2bacdb
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: afcad5dccda979bed54e7808bddb3c4190f5c3a8
-ms.sourcegitcommit: bdf5dc203ecec3e7542f2ed08852afeff4f20dcd
+ms.openlocfilehash: f8bc815c3ffad4f75d84a69f2e6c30cc0707d8e3
+ms.sourcegitcommit: d1c9c3e69b196f6086a8f100e527553cf0d95aac
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "52950332"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53125023"
 ---
 *Aplica-se a: Proteção Avançada contra Ameaças do Azure*
 
@@ -41,10 +41,6 @@ As informações monitoradas pelo ATP do Azure são apresentadas na forma de ati
 
 |Atividade monitorada|Descrição|
 |---------------------|------------------|
-|Email de Usuário Alterado|O atributo de email de usuários foi alterado.|
-|Gerenciador de Usuários Alterado|O atributo do gerenciador de usuários foi alterado.|
-|Número de Telefone do Usuário Alterado|O número de telefone do usuário foi alterado.|
-|Título do Usuário Alterado |O atributo de título do usuário foi alterado.|
 |Estado da Delegação Restrita da Conta Alterado |O estado da conta agora está habilitado ou desabilitado para delegação.|
 |Spns da Delegação Restrita da Conta Alterados | A delegação restrita restringe os serviços nos quais um determinado servidor pode agir em nome do usuário.|
 |Conta Desabilitada Alterada |Indica se uma conta está desabilitada ou habilitada.|
@@ -56,11 +52,15 @@ As informações monitoradas pelo ATP do Azure são apresentadas na forma de ati
 |Senha da Conta Nunca Expira Alterada |Senha de usuário alterada para nunca expirar.|
 |Senha Não Obrigatória da Conta Alterada |A conta de usuário foi alterada e permite fazer logon com uma senha em branco.|
 |Cartão Inteligente Obrigatório da Conta Alterada  |A conta é alterada para exigir que os usuários façam logon em um dispositivo usando um cartão inteligente.|
-|Tipos de Criptografia com Suporte da Conta Alterados |Tipos de criptografia compatíveis com Kerberos foram alterados (tipos: Des, 129 AES, AES 256)|
-|Associação do Grupo Alterada  |O usuário adicionou/removeu, de/para um grupo, por outro usuário ou por si só.|
+|Tipos de Criptografia com Suporte da Conta Alterados |Tipos de criptografia compatíveis com Kerberos foram alterados (tipos: Des, AES 129, AES 256)|
 |Nome Upn de Conta Alterado  |O nome de entidade do usuário foi alterado.|
+|Associação do Grupo Alterada  |O usuário adicionou/removeu, de/para um grupo, por outro usuário ou por si só.|
+|Email de Usuário Alterado|O atributo de email de usuários foi alterado.|
+|Gerenciador de Usuários Alterado|O atributo do gerenciador de usuários foi alterado.|
+|Número de Telefone do Usuário Alterado|O número de telefone do usuário foi alterado.|
+|Título do Usuário Alterado |O atributo de título do usuário foi alterado.|
 
-## <a name="monitored-user-activities-ad-security-principal-operations"></a>Atividades de usuário monitoradas: operações de entidade de segurança do AD
+## <a name="monitored-user-activities-ad-security-principal-operations"></a>Atividades do usuário monitoradas: Operações da entidade de segurança do AD
 
 |Atividade monitorada|Descrição|
 |---------------------|------------------|
@@ -77,18 +77,15 @@ As informações monitoradas pelo ATP do Azure são apresentadas na forma de ati
 |---------------------|------------------|
 |Replicação do Serviço de Diretório  |O usuário tentou replicar o serviço de diretório.|
 |Consulta DNS  |O usuário executou uma consulta AXFR no controlador de domínio.|
-|Execução WMI  |O usuário tentou executar remotamente um método WMI.|
+|Recuperação de Dados Particular  |O usuário tentou/conseguiu consultar dados particulares usando o protocolo LSARPC.|
 |Criação de Serviço   |O usuário tentou criar remotamente de um serviço específico para um computador remoto.|
 |Enumeração da Sessão SMB   |O usuário tentou enumerar todos os usuários com sessões SMB abertas nos controladores de domínio.|
 |Cópia de arquivos SMB| O usuário copiou arquivos usando SMB|
-|Agendamento de Tarefas  |O usuário tentou agendar a tarefa X remotamente para um computador remoto.|
 |Consulta SAMR   |O usuário executou uma consulta SAMR.|
-|Recuperação de Dados Particular  |O usuário tentou/conseguiu consultar dados particulares usando o protocolo LSARPC.|
+|Agendamento de Tarefas  |O usuário tentou agendar a tarefa X remotamente para um computador remoto.|
+|Execução WMI  |O usuário tentou executar remotamente um método WMI.|
 
-
-
-
-## <a name="monitored-user-activities-login-operations"></a>Atividades do usuário monitoradas: operações de logon
+## <a name="monitored-user-activities-login-operations"></a>Atividades do usuário monitoradas: Operações de logon
 
 |Tipo de logon|Atividade monitorada|Descrição|
 |---------------------|---------------------|------------------|
@@ -101,7 +98,7 @@ As informações monitoradas pelo ATP do Azure são apresentadas na forma de ati
 | --- |Falha no Logon |Falha na tentativa de autenticação da conta de domínio (via NTLM e Kerberos) porque a seguinte conta estava desabilitada/expirada/bloqueada ou usou um certificado não confiável ou devido a horas de logon inválidas/senha antiga/senha expirada/senha errada.|
 
 
-## <a name="monitored-machine-activities-machine-account"></a>Atividades de computadores monitorados: conta do computador
+## <a name="monitored-machine-activities-machine-account"></a>Atividades da máquina monitoradas: conta do computador
 
 |Atividade monitorada|Descrição|
 |---------------------|------------------|
