@@ -13,20 +13,19 @@ ms.technology: ''
 ms.assetid: 2946310a-8e4e-48fc-9450-fc9647efeb22
 ms.reviewer: ort
 ms.suite: ems
-ms.openlocfilehash: b645522c26f42b4864a68f3793cb9474e98d2149
-ms.sourcegitcommit: ec5dc294d9c6cd5693b13a7c5e7cf1bdd6fb47d7
+ms.openlocfilehash: 80d6b2744c3299bf92d0c4082085dbd872403cc0
+ms.sourcegitcommit: 9acf035f6f2ce32290e00d2e45385ae7993bb63a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53179125"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53334980"
 ---
 # <a name="ata-version-191"></a>ATA versão 1.9.1
 
-## <a name="introduction"></a>Introdução
 
 Este artigo descreve os problemas corrigidos na Atualização 1 do Microsoft Advanced Threat Analytics (ATA) versão 1.9. O número de compilação dessa atualização é 1.9.7412.
 
-## <a name="fixed-issues-included-in-this-update"></a>Problemas corrigidos incluídos nessa atualização:
+## <a name="fixed-issues-included-in-this-update"></a>Problemas corrigidos incluídos nessa atualização
 
 - Possibilidade de falhas na migração entre a versão 1.8 do ATA para a versão 1.9 de grandes bancos de dados.
 - O navegador poderá travar caso você use a versão mais recente do navegador Microsoft Edge e alternar usuários.
@@ -37,11 +36,11 @@ Este artigo descreve os problemas corrigidos na Atualização 1 do Microsoft Adv
 - Exportações inconsistentes de atividades suspeitas para o Microsoft Excel. Falha ocasional com geração de erro.  
 
 
-## <a name="improvements-included-in-this-update"></a>Aprimoramentos incluídos nessa atualização: 
+## <a name="improvements-included-in-this-update"></a>Aprimoramentos incluídos nessa atualização
 - Alterações necessárias para a certificação de Padrões de Acessibilidade da Microsoft (MAS).
 - Inclui correções de desempenho e segurança adicionais.
 
-## <a name="get-this-update"></a>Obtenha essa atualização:
+## <a name="get-this-update"></a>Obter essa atualização
 
 As atualizações do Microsoft Advanced Threat Analytics versão 1.9 estão disponíveis no Microsoft Update ou por download manual.
 
@@ -61,7 +60,7 @@ O computador pode exigir uma reinicialização depois de aplicar essa atualizaç
 Esta atualização substitui o ATA versão 1.9 (1.9.7312).
 
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Consulte também
 
 - [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Versões do ATA](ata-versions.md)

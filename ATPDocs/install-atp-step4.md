@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 11/28/2018
+ms.date: 12/16/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 51911e39-76c7-4dcd-bc0b-ec6235d0403f
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: fd2a2316f63b5324e7869878104bd663e48b2771
-ms.sourcegitcommit: e2a89030c31376c6798697a62b484f45ed54e679
+ms.openlocfilehash: 5b5d588f11bb1c7a665cf4727cb996e5261b7237
+ms.sourcegitcommit: 281d8ea451b6ac726331d0032c344651b1a964b7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52501103"
+ms.lasthandoff: 12/16/2018
+ms.locfileid: "53450381"
 ---
 *Aplica-se a: Proteção Avançada contra Ameaças do Azure*
 
@@ -68,9 +68,9 @@ Execute as etapas a seguir no controlador de domínio.
 
     ![Imagem de configuração de sensor autônomo do Azure ATP](media/sensor-install-config.png)
 
-      - Caminho de instalação: é o local em que o sensor autônomo do Azure ATP é instalado. Por padrão, é %programfiles%\Azure Advanced Threat Protection sensor. Mantenha o valor padrão.
+      - Caminho da instalação: É o localização em que o sensor autônomo do ATP do Azure é instalada. Por padrão, é %programfiles%\Azure Advanced Threat Protection sensor. Mantenha o valor padrão.
 
-      - Chave de acesso: é recuperada por meio do portal do Azure ATP na etapa anterior.
+      - Chave de acesso: É recuperada por meio do portal do ATP do Azure na etapa anterior.
     
 7. Clique em **Instalar**. Os componentes a seguir serão instalados e configurados durante a instalação do sensor autônomo do Azure ATP:
 

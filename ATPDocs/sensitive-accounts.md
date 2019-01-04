@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 43e57f87-ca85-4922-8ed0-9830139fe7cb
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 31871a03795b1c08e4fd8954cac80a00538863db
-ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
+ms.openlocfilehash: 75a450b9ddea9c47d12f9c14da2ee6c3089775ea
+ms.sourcegitcommit: 8f9d6c517b91b9b389b604cd85f2482593b36fcf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48783331"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53654868"
 ---
 *Aplica-se a: Proteção Avançada contra Ameaças do Azure*
 
@@ -48,7 +48,7 @@ A lista de grupos a seguir é considerada confidencial pelo Azure ATP. Qualquer 
 -   Administrador corporativo
 
  > [!NOTE]
- > Até setembro de 2018, usuários da Área de Trabalho Remota eram considerados confidenciais automaticamente pelo Azure ATP. Entidades ou grupos da Área de Trabalho Remota adicionados após essa data não são mais marcados como confidenciais automaticamente, enquanto as entidades e grupos da Área de Trabalho Remota adicionados antes dessa data podem permanecer marcados como Confidenciais. Essa configuração Confidencial agora pode ser alterada manualmente.  
+ > Até setembro de 2018, usuários da Área de Trabalho Remota eram automaticamente considerados confidenciais pelo ATP do Azure. Entidades ou grupos da Área de Trabalho Remota adicionados após essa data não são mais marcados como confidenciais automaticamente, enquanto as entidades e grupos da Área de Trabalho Remota adicionados antes dessa data podem permanecer marcados como Confidenciais. Essa configuração Confidencial agora pode ser alterada manualmente.  
 
 ## <a name="tagging-sensitive-accounts"></a>Marcando contas confidenciais
 
@@ -70,4 +70,4 @@ Além desses grupos, você pode marcar manualmente grupos ou contas como confide
 ## <a name="see-also"></a>Consulte também
 
 - [Trabalhando com atividades suspeitas](working-with-suspicious-activities.md)
-- [Confira o fórum do Azure ATP!](https://aka.ms/azureatpcommunity)
+- [Confira o fórum do ATP do Azure!](https://aka.ms/azureatpcommunity)

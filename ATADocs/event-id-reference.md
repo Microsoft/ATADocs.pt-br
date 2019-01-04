@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 12/06/2018
+ms.date: 12/20/2018
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
 ms.service: ''
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 5d639e84-2e37-43a9-9667-49be6c4fa8b7
 ms.reviewer: arzinger
 ms.suite: ems
-ms.openlocfilehash: 353395f782d29bb18e95c02ad56407a592d8c20b
-ms.sourcegitcommit: 2b15356612eb720f83235ff8cb08e4a6435206ea
+ms.openlocfilehash: e21e2b984db3d58703cf6503817401f1bab0fda1
+ms.sourcegitcommit: c390d36d75f13607698c2a8d7ac757ecef4c748e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53022417"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53709907"
 ---
 *Aplica-se a: Advanced Threat Analytics versão 1.9*
 
@@ -33,114 +33,69 @@ Os eventos podem ser encontrados aqui:
 
 ## <a name="ata-health-events"></a>Eventos de integridade do ATA
 
-1001 – Alerta de integridade de espaço livre da unidade de dados de banco de dados da Central do ATA 
-
-1003 – Alerta de integridade de Central do ATA sobrecarregada 
-
-1004 – Alerta de integridade de expiração do certificado 
-
-1005 – Alerta de integridade de banco de dados da Central desconectado 
-
-1006 – Alerta de integridade de expiração de senha da conta de cliente dos serviços de diretório do Gateway do ATA 
-
-1007 – Alerta de integridade de sincronizador de domínio do Gateway do ATA não atribuído 
-
-1008 – Alerta de integridade de adaptador de rede de captura do Gateway do ATA com falha 
-
-1009 – Alerta de integridade de adaptador de rede de captura do Gateway do ATA ausente 
-
-1010 – Alerta de integridade de conectividade de cliente dos serviços de diretório do Gateway do ATA 
-
-1011 – Alerta de integridade de Gateway do ATA desconectado 
-
-1012 – Alerta de integridade de atividades de evento do Gateway do ATA sobrecarregadas 
-
-1013 – Alerta de integridade de atividades de rede do Gateway do ATA sobrecarregadas 
-
-1014 – Alerta de integridade de email da Central 
-
-1015 – Alerta de integridade de Syslog da Central 
-
-1016 – Alerta de integridade de Gateways do ATA desatualizados 
-
-1017 – Alerta de integridade de Central não recebendo tráfego 
-
-1018 – Alerta de integridade de falha ao iniciar o Gateway do ATA 
-
-1019 – Alerta de integridade de memória insuficiente no Gateway do ATA 
-
-1020 – alerta de integridade de ouvinte de evento de RADIUS do Gateway do ATA 
-
-1021 – Alerta de integridade de ouvinte de evento de Syslog do Gateway do ATA 
-
-1022 – Alerta de integridade de falha na resolução de endereço IP externo da Central do ATA 
+|ID do evento de monitoramento| Nome do alerta de monitoramento|
+|---------|---------------|
+|1001|Centro com pouco espaço em disco|
+|1003|Centro sobrecarregado|
+|1004|Certificado do centro prestes a expirar/Certificado do centro expirado|
+|1005|O MongoDB está inativo|
+|1006|A senha de usuário somente leitura expirará em breve/A senha de usuário somente leitura expirou|
+|1007|Sincronizador de domínio não atribuído|
+|1008|Todos ou alguns dos adaptadores de rede de captura em um Gateway não estão disponíveis|
+|1009|Um adaptador de rede de captura em um Gateway não existe mais|
+|1010|Alguns controladores de domínio estão inacessíveis por um Gateway/Todos os controladores de domínio estão inacessíveis por um Gateway|
+|1011|O Gateway parou de se comunicar|
+|1012|Alguns eventos encaminhados não estão sendo analisados|
+|1013|Parte do tráfego de rede não está sendo analisado|
+|1014|Falha ao enviar email|
+|1015|Falha ao conectar ao servidor SIEM usando Syslog|
+|1016|Versão do Gateway desatualizada|
+|1017|Nenhum tráfego recebido do controlador de domínio|
+|1018|Falha ao iniciar o serviço de Gateway|
+|1019|O Gateway Lightweight atingiu o limite de um recurso de memória|
+|1020|O Gateway não está processando eventos do Radius|
+|1021|O Gateway não está processando eventos do Syslog|
+|1022|O serviço de geolocalização não está disponível|
  
-## <a name="ata-suspicious-activity-events"></a>Eventos de atividade suspeita do ATA
+## <a name="ata-security-alert-events"></a>Eventos do alerta de segurança ATA
 
-2001 – Atividade suspeita de comportamento anormal 
-
-2002 – Atividade suspeita de protocolo anormal 
-
-2003 – Atividade suspeita de enumeração de conta 
-
-2004 – Atividade suspeita de força bruta de LDAP 
-
-2006 – Atividade suspeita de replicação de serviços de diretório 
-
-2007 – Atividade suspeita de reconhecimento de DNS 
-
-2008 – Atividade suspeita de downgrade de criptografia (sem subtipo)
-
-2009 – Atividade suspeita de downgrade de criptografia (suspeita de GoldenTicket)
-       
-2010 – Atividade suspeita de downgrade de criptografia (suspeita de Overpass-The-Hash)
-
-2011 – Atividade suspeita de downgrade de criptografia (suspeita de Skeleton-Key)
-
-2012 – Atividade suspeita na enumeração de sessões 
-
-2013 – Atividade suspeita de PAC forjado 
-
-2014 – Atividade suspeita de atividade de Honeytoken 
-
-2016 – Atividade suspeita de exclusão de objeto grande 
-
-2017 – Atividade suspeita de passagem de hash 
-
-2018 – Atividade suspeita de passagem de tíquete 
-
-2019 – Atividade suspeita de execução remota 
-
-2020 – Atividade suspeita de recuperação de chave de backup de proteção de dados 
-
-2021 – Atividade suspeita de reconhecimento de SAMR 
-
-2022 – Atividade suspeita de golden ticket 
-
-2023 – Atividade suspeita de força bruta 
-
-2024 – Alteração de associação anormal da atividade suspeita do grupo confidencial 
-
-2025 – Atividade suspeita de VPN anormal
-
-2026 – Atividade suspeita de criação de serviço mal-intencionado
+|Nome do alerta|IDs do evento de alerta|
+|---------|---------------|
+|2001|Suspeita de roubo de identidade com base no comportamento anormal|
+|2002|Implementação de protocolo incomum|
+|2003|Reconhecimento de enumeração de conta|
+|2004|Ataque de força bruta usando associação simples LDAP|
+|2006|Replicação mal-intencionada de serviços de diretório|
+|2007|Reconhecimento usando DNS|
+|2008|Atividade de downgrade de criptografia|
+|2009|Atividade de downgrade de criptografia (possível ataque golden ticket)|
+|2010|Atividade de downgrade de criptografia (possível ataque overpass-the-hash)|
+|2011|Atividade de downgrade de criptografia (possível ataque de skeleton key)|
+|2012|Reconhecimento usando a enumeração da sessão SMB|
+|2013|Elevação de privilégios usando dados de autorização forjados|
+|2014|Atividade de Honeytoken|
+|2016|Exclusão de objeto grande|
+|2017|Roubo de identidade usando o ataque de passagem de Hash|
+|2018|Roubo de identidade usando o ataque Pass-the-Ticket|
+|2019|Tentativa de execução remota detectada|
+|2020|Solicitação mal-intencionada de informações privadas para proteção de dados|
+|2021|Reconhecimento usando consultas de serviços de diretório|
+|2022|Atividade Golden Ticket do Kerberos|
+|2023|Falhas de autenticação suspeitas|
+|2024|Modificação anormal de grupos confidenciais|
+|2026|Criação de serviço suspeito|
 
 ## <a name="ata-auditing-events"></a>Eventos de auditoria de ATA
 
-3001 – Alteração à configuração do ATA 
-
-3002 – Gateway do ATA adicionado
-
-3003 – Gateway do ATA excluído
-
-3004 – Licença ATA ativada
-
-3005 – Fazer logon no console do ATA
-
-3006 – Alteração manual ao status da atividade de integridade 
-
-3007 – Alteração manual ao status da atividade suspeita 
-
+|Nome do alerta|IDs do evento de alerta|
+|---------|---------------|
+|3001|Alteração à configuração do ATA|
+|3002|Gateway do ATA adicionado|
+|3003|Gateway do ATA excluído|
+|3004|Licença ATA ativada|
+|3005|Fazer logon no console do ATA|
+|3006|Alteração manual ao status da atividade de integridade|
+|3007|Alteração manual ao status da atividade suspeita|
 
 ## <a name="see-also"></a>Consulte Também
 - [Pré-requisitos do ATA](ata-prerequisites.md)

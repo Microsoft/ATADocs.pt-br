@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 11/28/2018
+ms.date: 12/13/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 62c99622-2fe9-4035-9839-38fec0a353da
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: ad2a7e86b2280e1b30a7605bc832ede1e19cb7a2
-ms.sourcegitcommit: f4f2a1b2c674c4dba7a46ece0624f5ea10c4865e
+ms.openlocfilehash: 1fc3930fc4b38b396bda2c3ff50795d835910439
+ms.sourcegitcommit: 1c657f269aaece71b2126df55a37f8c43851539a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52744941"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53335414"
 ---
 *Aplica-se a: Proteção Avançada contra Ameaças do Azure*
 
@@ -37,13 +37,13 @@ Para criar sua instância do Azure ATP, será necessário um locatário do AAD c
 
 Este guia de pré-requisitos é dividido nas seguintes seções para garantir que você tem tudo de que precisa para implantar o Azure ATP com êxito. 
 
-[Antes de iniciar](#before-you-start): lista as informações a serem reunidas e as contas e entidades de rede de que você precisará antes de iniciar a instalação.
+[Antes de começar](#before-you-start): Lista as informações a serem reunidas e as contas e entidades de rede de que você precisará antes de iniciar a instalação.
 
-[Portal do Azure ATP](#azure-atp-workspace-management-portal-and-workspace-portal-requirements): descreve os requisitos do navegador do portal do Azure ATP.
+[Portal do ATP do Azure](#azure-atp-workspace-management-portal-and-workspace-portal-requirements): Descreve os requisitos do navegador do portal do ATP do Azure.
 
-[Sensor do Azure ATP](#azure-atp-lightweight-sensor-requirements): lista os requisitos de hardware e software do sensor do Azure ATP.
+[Sensor do ATP do Azure](#azure-atp-lightweight-sensor-requirements): Lista os requisitos de hardware e software do sensor do ATP do Azure.
 
-[Sensor autônomo do Azure ATP](#azure-atp-sensor-requirements): lista os requisitos de software e hardware do sensor autônomo do Azure ATP, bem como as configurações que você precisa definir nos servidores do sensor autônomo do Azure ATP.
+[Sensor autônomo do ATP do Azure](#azure-atp-sensor-requirements): Lista os requisitos de software e hardware do sensor autônomo do ATP do Azure, bem como as configurações que você precisa definir nos servidores do sensor autônomo do ATP do Azure.
 
 ## <a name="before-you-start"></a>Antes de começar
 Esta seção mostra as informações que você deve obter, bem como as contas e informações sobre entidades de rede que deve ter antes de iniciar a instalação do ATP do Azure.
@@ -61,11 +61,11 @@ Esta seção mostra as informações que você deve obter, bem como as contas e 
 
 - Se tentar instalar o sensor do ATP do Azure em um computador configurado com um adaptador de Agrupamento NIC, você receberá um erro de instalação. Se desejar instalar o sensor do Azure ATP em um computador configurado com Agrupamento NIC, confira [Problemas do Agrupamento NIC do Sensor do Azure ATP](troubleshooting-atp-known-issues.md#nic-teaming).
 
--    Recomendado: o usuário deve ter permissões de leitura somente no contêiner Objetos Excluídos. Isso permite que o Azure ATP detecte exclusões do usuário do seu Active Directory. Para saber mais sobre como configurar permissões de somente leitura no contêiner Objetos Excluídos, confira a seção **Alterar permissões em um contêiner de objetos excluídos** no artigo [Exibir ou definir permissões em um Objeto de Diretório](https://technet.microsoft.com/library/cc816824%28v=ws.10%29.aspx).
+-    Recomendado: O usuário deve ter permissões de somente leitura no contêiner de Objetos Excluídos. Isso permite que o Azure ATP detecte exclusões do usuário do seu Active Directory. Para saber mais sobre como configurar permissões de somente leitura no contêiner Objetos Excluídos, confira a seção **Alterar permissões em um contêiner de objetos excluídos** no artigo [Exibir ou definir permissões em um Objeto de Diretório](https://technet.microsoft.com/library/cc816824%28v=ws.10%29.aspx).
 
--   Opcional: uma conta de usuário que não tem nenhuma atividade de rede. Essa conta está configurada como um usuário Honeytoken do Azure ATP. Para obter mais informações, consulte [Configurar exclusões e usuário Honeytoken](install-atp-step7.md).
+-   Opcional: Uma conta de usuário que não tem nenhuma atividade de rede. Essa conta está configurada como um usuário Honeytoken do Azure ATP. Para obter mais informações, consulte [Configurar exclusões e usuário Honeytoken](install-atp-step7.md).
 
--   Opcional: ao implantar o sensor autônomo, é necessário encaminhar os eventos do Windows 4776, 4732, 4733, 4728, 4729, 4756, 4757 e 7045 para o ATP do Azure para melhorar ainda mais as detecções de Pass-the-Hash, força bruta, modificação de grupos confidenciais, Honey Tokens e criação de serviços mal-intencionados do ATP do Azure. O sensor do Azure ATP recebe esses eventos automaticamente. No sensor autônomo do Azure ATP, esses eventos podem ser recebidos do SIEM ou definindo o Encaminhamento de Eventos do Windows no controlador de domínio. Os eventos coletados fornecem ao Azure ATP informações adicionais que não estão disponíveis por meio do tráfego de rede do controlador de domínio.
+-   Opcional: Ao implantar o sensor autônomo, é necessário encaminhar os eventos do Windows 4776, 4732, 4733, 4728, 4729, 4756, 4757 e 7045 para o ATP do Azure para melhorar ainda mais as detecções de Pass-the-Hash, força bruta, modificação de grupos confidenciais, Honey Tokens e criação de serviços mal-intencionados do ATP do Azure. O sensor do Azure ATP recebe esses eventos automaticamente. No sensor autônomo do Azure ATP, esses eventos podem ser recebidos do SIEM ou definindo o Encaminhamento de Eventos do Windows no controlador de domínio. Os eventos coletados fornecem ao Azure ATP informações adicionais que não estão disponíveis por meio do tráfego de rede do controlador de domínio.
 
 ## <a name="azure-atp-portal-requirements"></a>Requisitos do portal do Azure ATP
 O acesso ao portal do Azure ATP ocorre por meio de um navegador que dá suporte aos seguintes navegadores e configurações:
@@ -133,6 +133,10 @@ A tabela abaixo lista o mínimo de portas que o sensor do Azure ATP exige:
 |Syslog (opcional)|TCP/UDP|514, dependendo da configuração|Servidor SIEM|Entrada|
 |RADIUS|UDP|1813|RADIUS|Entrada|
 |Porta TLS para RDP|TCP|3389|Todos os dispositivos na rede|Ambos|
+
+### <a name="windows-event-logs"></a>Log de eventos do Windows
+A detecção de ATP do Azure baseia-se em Logs de Eventos do Windows específicos o sensor pode analisar do controlador de domínio. Para que os eventos corretos sejam auditados e incluídos no Log de Eventos do Windows, seus controladores de domínio exigem configurações precisas de política de auditoria avançada. Para obter mais informações, confira [Verificação de Política de Auditoria Avançada](atp-advanced-audit-policy.md).
+
 
 > [!NOTE]
 > - Usando a conta de usuário do serviço de diretório, o sensor consulta pontos de extremidade em sua organização para administradores locais usando SAM-R (logon de rede) para criar o [gráfico de caminho de movimento lateral](use-case-lateral-movement-path.md). Para obter mais informações, consulte [Configurar permissões necessárias do SAM-R](install-atp-step8-samr.md).

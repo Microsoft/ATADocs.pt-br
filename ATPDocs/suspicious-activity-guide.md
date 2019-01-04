@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 12/09/2018
+ms.date: 12/19/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: ca5d1c7b-11a9-4df3-84a5-f53feaf6e561
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 8604e3cfead3b52fd9f0d1ed38bb7d806cf50f46
-ms.sourcegitcommit: d1c9c3e69b196f6086a8f100e527553cf0d95aac
+ms.openlocfilehash: 5e4c8ccc1af72a1951b1437f0d19468b7ca1382f
+ms.sourcegitcommit: d68a44b3230dc4c522d8d895eb3bc93feacae62e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53125125"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53615300"
 ---
 *Aplica-se a: Proteção Avançada contra Ameaças do Azure*
 
@@ -37,7 +37,7 @@ Para saber mais sobre como trabalhar com alertas de segurança do Azure ATP, con
 
 ## <a name="security-alert-name-mapping-and-unique-externalid"></a>Mapeamento de nome do alerta de segurança e externalId exclusiva
 
-Na versão 2.56, todos os alertas de segurança da ATP do Azure existentes foram renomeados para facilitar a compreensão dos nomes. O mapeamento entre os nomes antigos e novos e suas externalIds exclusivas correspondentes estão listados na tabela a seguir. A Microsoft recomenda o uso de externalIds de alertas em vez de nomes de alertas para scripts ou automação, pois somente as externalIds de alertas de segurança são permanentes e não estão sujeitas a alterações. 
+Na versão 2.56, todos os alertas de segurança da ATP do Azure existentes foram renomeados para facilitar a compreensão dos nomes. O mapeamento entre os nomes antigos e novos e suas externalIds exclusivas correspondentes estão listados na tabela a seguir. A Microsoft recomenda o uso de externalIds de alertas em vez de nomes de alertas para scripts ou automação, pois somente as externalIds de alertas de segurança são permanentes e não estão sujeitas a alterações.
 
 > [!div class="mx-tableFixed"] 
 
@@ -55,26 +55,30 @@ Na versão 2.56, todos os alertas de segurança da ATP do Azure existentes foram
 |Suspeita de uso de Golden Ticket (downgrade de criptografia)|Atividade de downgrade de criptografia (possível ataque golden ticket)|2009|
 |Suspeita de uso de Golden Ticket (dados de autorização forjados) |Elevação de privilégios usando dados de autorização forjados|2013|
 |Suspeita de uso de Golden Ticket (conta inexistente)|Golden Ticket do Kerberos – conta não existente|2027|
-|Suspeita de uso de Golden Ticket (anomalia de tíquete) |Golden Ticket Kerberos – anomalia de tíquete|2022|
-|Suspeita de uso de Golden Ticket (anomalia de tempo) – versão prévia| NA|2032|
+|Suspeita de uso de Golden Ticket (anomalia de tempo) |Golden Ticket do Kerberos – anomalia de tempo|2022|
+|Suspeita de uso de Golden Ticket (anomalia de tíquete) – versão prévia|NA|2032|
 |Suspeita de roubo de identidade (Pass-the-Hash)|Roubo de identidade usando o ataque de passagem de Hash|2017|
 |Suspeita de roubo de identidade (Pass-the-Ticket)|Roubo de identidade usando o ataque Pass-the-Ticket|2018|
+|Suspeita de ataque de força bruta (SMB)|Implementação de protocolo incomum (possível uso de ferramentas mal-intencionadas, como a Hydra)|2033|
+|Suspeita de ataque de força bruta (NTLM do Kerberos)|Falhas de autenticação suspeitas|2023|
 |Suspeita de ataque de Overpass-the-Hash (downgrade de criptografia)|Atividade de downgrade de criptografia (possível ataque overpass-the-hash)|2008|
+|Suspeita de ataque de Overpass-the-Hash (Kerberos)|Implementação incomum de protocolo Kerberos (possível ataque de overpass-the-hash)|2002|
+|Suspeita de uso da estrutura de hacker Metasploit|Implementação de protocolo incomum (possível uso das ferramentas de invasão Metasploit)|2034|
 |Suspeita de ataque de Skeleton Key (downgrade de criptografia)|Atividade de downgrade de criptografia (possível ataque de skeleton key)|2010|
+|Suspeita de ataque do ransomware WannaCry|Implementação de protocolo incomum (possível ataque do ransomware WannaCry)|2035|
 |Comunicação suspeita por DNS|Comunicação suspeita por DNS|2031|
 |Modificação suspeita de grupos confidenciais|Modificação suspeita de grupos confidenciais|2024|
 |Criação de serviço suspeito|Criação de serviço suspeito|2026|
 |Conexão de VPN suspeita|Conexão de VPN suspeita|2025|
-|Suspeita de ataque do ransomware WannaCry|Implementação de protocolo incomum (possível ataque do ransomware WannaCry)|2002|
-|Suspeita de ataque de força bruta (SMB)|Implementação de protocolo incomum (possível uso de ferramentas mal-intencionadas, como a Hydra)|2002|
-|Suspeita de uso da estrutura de hacker Metasploit|Implementação de protocolo incomum (possível uso das ferramentas de invasão Metasploit)|2002|
-|Suspeita de ataque de Overpass-the-Hash (Kerberos)|Implementação incomum de protocolo Kerberos (possível ataque de overpass-the-hash)|2002|
 |Reconhecimento de usuário e de associação a um grupo (SAMR)|Reconhecimento usando consultas de serviços de diretório|2021|
 |Reconhecimento de endereço IP e de usuário (SMB) |Reconhecimento usando a enumeração da sessão SMB|2012|
 
 
+
+
 ## <a name="account-enumeration-reconnaissance"></a>Reconhecimento de enumeração de conta
 <a name="reconnaissance-using-account-enumeration"></a>
+
 *Nome anterior:* Reconhecimento de enumeração de conta
 
 **Descrição**
@@ -141,9 +145,9 @@ Nessa detecção, um alerta é acionado quando o DPAPI é usado para recuperar a
 
 1. O computador de origem está executando uma verificação de segurança avançada aprovada pela organização em relação ao Active Directory?
 
-2. Se sim e sempre precisar fazer isso, **Feche e exclua** a atividade suspeita.
+2. Se sim e sempre precisar fazer isso, **feche e exclua** o alerta.
 
-3. Se sim e não precisar fazer isso, **Feche** a atividade suspeita.
+3. Se sim e não precisar fazer isso, **feche** o alerta.
 
 **Remediação**
 
@@ -189,16 +193,16 @@ Nessa detecção, um alerta é disparado quando ocorrem diversas falhas de auten
 
 **Investigação**
 
-1.  Clique em **Baixar detalhes** para exibir as informações completas em uma planilha do Excel. As informações a seguir estão disponíveis: 
+1. Clique em **Baixar detalhes** para exibir as informações completas em uma planilha do Excel. As informações a seguir estão disponíveis: 
    -    Lista das contas atacadas
    -    Lista de contas adivinhadas em que as tentativas de logon terminaram com a autenticação bem-sucedida
    -    Se as tentativas de autenticação tiverem sido realizadas usando NTLM, você verá as atividades de eventos relevantes 
    -    Se as tentativas de autenticação tiverem sido realizadas usando Kerberos, você verá as atividades de rede relevantes
    -  Se as tentativas de autenticação tiverem usado uma pulverização de senhas, você verá as atividades de rede relevantes
 
-2.  Clique no computador de origem para acessar a página de perfil. Verifique o que aconteceu no momento dessas tentativas, pesquisando atividades incomuns, como: quem estava conectado e quais recursos foram acessados. Se você tiver habilitado a integração do Windows Defender ATP, clique no selo do Windows Defender ATP ![Selo do Windows Defender ATP](./media/wd-badge.png) para continuar a investigar o computador. No Windows Defender ATP, você pode ver quais processos e alertas ocorreram no momento do alerta. 
+2. Clique no computador de origem para acessar a página de perfil. Verifique o que aconteceu no momento dessas tentativas, pesquisando atividades incomuns, como: quem estava conectado e quais recursos foram acessados. Se você tiver habilitado a integração do Windows Defender ATP, clique no selo do Windows Defender ATP ![Selo do Windows Defender ATP](./media/wd-badge.png) para continuar a investigar o computador. No Windows Defender ATP, você pode ver quais processos e alertas ocorreram no momento do alerta. 
 
-3.  Se a autenticação tiver sido executada usando NTLM e você perceber que o alerta ocorre muitas vezes e não houver informações suficientes disponíveis sobre o servidor que o computador de origem tentou acessar, habilite a **Auditoria de NTLM** nos controladores de domínio envolvidos. Para fazer isso, ative o evento 8004. Esse é o evento de autenticação de NTLM que inclui informações sobre o computador de origem, a conta de usuário e o **servidor que o computador de origem tentou acessar. Depois de saber qual servidor enviou a validação de autenticação, investigue-o verificando eventos como o 4624 para compreender melhor o processo de autenticação. 
+3. Se a autenticação tiver sido executada usando NTLM e você perceber que o alerta ocorre muitas vezes e não houver informações suficientes disponíveis sobre o servidor que o computador de origem tentou acessar, habilite a **Auditoria de NTLM** nos controladores de domínio envolvidos. Para fazer isso, ative o evento 8004. Esse é o evento de autenticação de NTLM que inclui informações sobre o computador de origem, a conta de usuário e o **servidor que o computador de origem tentou acessar. Depois de saber qual servidor enviou a validação de autenticação, investigue-o verificando eventos como o 4624 para compreender melhor o processo de autenticação. 
 
 **Remediação**
 
@@ -317,9 +321,9 @@ Você pode utilizar o  [Scanner ACL do AD](https://blogs.technet.microsoft.com/
 
 *Nome anterior:* Atividade de downgrade de criptografia
 
-**Descrição** o downgrade de criptografia é um método de enfraquecer o Kerberos fazendo downgrade do nível de criptografia de diferentes campos do protocolo que são criptografados usando o nível mais alto de criptografia. Um campo criptografado enfraquecido pode ser um alvo mais fácil para tentativas de força bruta offline. Vários métodos de ataque utilizam criptografias Kerberos fracas. Nessa detecção, o ATP do Azure aprende os tipos de criptografia Kerberos usados por computadores e usuários e alerta você quando é usada uma criptografia mais fraca que: (1) seja incomum para o computador de origem e/ou o usuário; e (2) corresponda a técnicas de ataque conhecidas. 
+**Descrição** o downgrade de criptografia é um método de enfraquecer o Kerberos fazendo downgrade do nível de criptografia de diferentes campos do protocolo que são criptografados usando o nível mais alto de criptografia. Um campo criptografado enfraquecido pode ser um alvo mais fácil para tentativas de força bruta offline. Vários métodos de ataque utilizam criptografias Kerberos fracas. Nessa detecção, o ATP do Azure aprende os tipos de criptografia Kerberos usados por computadores e usuários e alerta você quando é usada uma criptografia mais fraca que: (1) seja incomum para o computador de origem e/ou o usuário e (2) corresponda a técnicas de ataque conhecidas. 
 
-Em um alerta de Golden Ticket, o método de criptografia do campo TGT da mensagem TGS_REQ (solicitação de serviço) do computador de origem sofreu um downgrade em comparação com o comportamento aprendido anteriormente. Isso não tem base em uma anomalia de tempo (como na outra detecção Golden Ticket). Além disso, não houve nenhuma solicitação de autenticação Kerberos associada à solicitação de serviço anterior detectada pelo ATP.
+Em um alerta Golden Ticket, o método de criptografia do campo TGT (tíquete de concessão de tíquete) da mensagem TGS_REQ (solicitação de serviço) do computador de origem foi desatualizado em comparação com o comportamento aprendido anteriormente. Isso não tem base em uma anomalia de tempo (como na outra detecção Golden Ticket). Além disso, não houve nenhuma solicitação de autenticação Kerberos associada à solicitação de serviço anterior detectada pelo ATP.
 
 **Investigação**
 1. Alguns recursos não permitem métodos de criptografia fortes e podem disparar esse alerta.
@@ -600,7 +604,7 @@ Se o domínio de consulta registrado for considerado não confiável após a inv
 
 **Descrição**
 
-Os invasores adicionam usuários a grupos altamente privilegiados. Eles fazem isso para obter acesso a mais recursos e obter persistência. A detecção conta com a criação de perfil de atividades de modificação do grupo de usuários e com o alerta para quando uma adição anormal a um grupo confidencial é vista. A criação de perfil é executada continuamente pelo Azure ATP. O período mínimo antes do acionamento de um alerta é de um mês por cada controlador de domínio.
+Os invasores normalmente adicionam usuários a grupos altamente privilegiados. Eles fazem isso para obter acesso a mais recursos e obter persistência. A detecção conta com a criação de perfil de atividades de modificação do grupo de usuários e com o alerta para quando uma adição anormal a um grupo confidencial é vista. A criação de perfil é executada continuamente pelo Azure ATP. O período mínimo antes do acionamento de um alerta é de um mês por cada controlador de domínio.
 
 Para ver uma definição de grupos confidenciais no Azure ATP, consulte [Trabalhando com contas confidenciais](sensitive-accounts.md).
 
@@ -706,7 +710,7 @@ Isso é um *verdadeiro positivo*, um *positivo verdadeiro benigno* ou um *falso 
 
 1. Contenha o computador de origem. 
       - [Remover WannaCry](https://support.microsoft.com/help/890830/remove-specific-prevalent-malware-with-windows-malicious-software-remo)
-      - O WanaKiwi poderá descriptografar os dados nas mãos de algum ransomware, mas apenas se o usuário não tiver reiniciado ou desligado o computador. Para obter mais informações, consulte [Ransomware Wanna Cry](https://answers.microsoft.com/en-us/windows/forum/windows_10-security/wanna-cry-ransomware/5afdb045-8f36-4f55-a992-53398d21ed07?auth=1)
+      - O WanaKiwi poderá descriptografar os dados nas mãos de algum ransomware, mas apenas se o usuário não tiver reiniciado ou desligado o computador. Para obter mais informações, confira [Ransomware WannaCry](https://answers.microsoft.com/en-us/windows/forum/windows_10-security/wanna-cry-ransomware/5afdb045-8f36-4f55-a992-53398d21ed07?auth=1)
       - Pesquise usuários que estavam conectados no horário da atividade, pois é provável que eles também possam estar comprometidos. Redefina as senhas e habilite a MFA 
 2. Corrija todos os computadores, lembrando-se de aplicar atualizações de segurança. 
       - [Desabilitar SMBv1](https://blogs.technet.microsoft.com/filecab/2016/09/16/stop-using-smb1/)
@@ -816,10 +820,70 @@ Isso é um *verdadeiro positivo*, *positivo verdadeiro benigno ou *falso positiv
 4. Implemente senhas complexas e longas na organização. As senhas complexas e longas fornecem o primeiro nível necessário de segurança contra ataques de força bruta futuros.
 5. [Desabilitar SMBv1](https://blogs.technet.microsoft.com/filecab/2016/09/16/stop-using-smb1/)
 
+## <a name="suspected-brute-force-attack-kerberos-ntlm"></a>Suspeita de ataque de força bruta (NTLM do Kerberos)
+<a name="suspicious-authentication-failures"></a>
+
+*Nome anterior:* Falhas de autenticação suspeitas
+
+**Descrição** Em um ataque de força bruta, o invasor tenta autenticar com muitas senhas diferentes para diferentes contas até que uma senha correta seja encontrada para pelo menos uma conta. Uma vez encontrada, um invasor pode fazer logon usando essa conta.
+
+Nessa detecção, um alerta é disparado quando diversas falhas de autenticação usando Kerberos ou NTLM são detectadas. Isso pode ser horizontalmente, com um pequeno conjunto de senhas entre vários usuários, verticalmente, com um grande conjunto de senhas em apenas alguns usuários ou com qualquer combinação dessas duas opções.
+
+**Período de tempo** O período mínimo antes que esse alerta específico possa ser disparado é no mínimo uma semana após a implantação do sensor.
+
+**Investigação**
+
+1. Clique no alerta para exibir: 
+   - Lista das contas atacadas
+   - Lista de contas adivinhadas em que as tentativas de logon terminaram com a autenticação bem-sucedida
+   - Se as tentativas de autenticação tiverem sido realizadas usando NTLM, você verá as atividades de eventos relevantes
+   - Se as tentativas de autenticação tiverem sido realizadas usando Kerberos, você verá as atividades de rede relevantes
+2. Clique no computador de origem para acessar a página de perfil. Verifique o que aconteceu no momento dessas tentativas, pesquisando atividades incomuns, como: quem estava conectado e quais recursos foram acessados. Se você tiver habilitado a integração do Windows Defender ATP, clique no selo do Windows Defender ATP para continuar a investigar o computador. Use o Windows Defender ATP para ver quais processos e alertas ocorreram no momento do alerta.
+
+3. Se a autenticação tiver sido executada usando NTLM e você perceber que o alerta ocorre muitas vezes sem informações suficientes sobre o servidor que o computador de origem tentou acessar, habilite a Auditoria de NTLM nos controladores de domínio envolvidos. Habilite a auditoria de NTLM nos controladores de domínio envolvidos ativando o evento 8004. Esse é o evento de autenticação de NTLM que inclui informações sobre o computador de origem, a conta de usuário e o servidor que o computador de origem tentou acessar. Depois de saber qual servidor enviou a validação de autenticação, investigue-o verificando eventos como o 4624 para compreender melhor o processo de autenticação.
+<br>
+1. Clique em **Baixar detalhes** para vê-los em uma planilha do Excel. 
+
+**Remediação**
+
+Senhas complexas e longas fornecem o primeiro nível de segurança necessário contra ataques de força bruta.
+
+## <a name="user-and-group-membership-reconnaissance-samr"></a>Reconhecimento de usuário e de associação a um grupo (SAMR)
+
+*Nome anterior:* Reconhecimento usando consultas de serviços de diretório <a name="reconnaissance-using-directory-service-queries"></a>
+
+**Descrição** O reconhecimento de associação de usuários e grupos é usado pelos invasores para mapear a estrutura de diretório e visar contas com privilégios para as etapas posteriores em um ataque. O protocolo SAM-R (Remoto do Gerenciador de Contas de Segurança) é um dos métodos usados para consultar o diretório para realizar esse tipo de mapeamento.  
+Nessa detecção, nenhum alerta é disparado no primeiro mês após a implantação do ATP do Azure (período de aprendizado). Durante o período de aprendizado, o Azure ATP cria perfis de quais consultas SAM-R são feitas de quais computadores, de consultas de enumeração e individuais de contas confidenciais. 
+
+**Período de aprendizado** Quatro semanas por controlador de domínio, contadas da primeira atividade de SAMR no controlador de domínio específico de rede. 
+
+Esse alerta é um **verdadeiro positivo**, um **positivo verdadeiro benigno** ou um **falso positivo**? 
+
+1. Clique no computador de origem para acessar a página de perfil.        – O computador de origem deve gerar atividades desse tipo?  
+      - Se sim, você poderá *fechar* o alerta de segurança e excluir esse computador, pois essa provavelmente é uma atividade de positiva verdadeira benigna. 
+2. Verifique os usuários que realizaram a operação. 
+      - Eles normalmente se registram nesse computador de origem ou eles são administradores que deveriam estar realizando essas ações específicas?   
+      - Verifique o perfil do usuário e suas atividades de usuário relacionadas. Entenda o comportamento normal e pesquise por atividades suspeitas adicionais usando o guia de investigação de usuário. 
+      - Em caso afirmativo, *feche* o alerta de segurança como uma atividade benigna. 
+  
+**Entender o escopo da violação**
+
+1. Verifique quais consultas foram executadas (por exemplo, administradores corporativos ou administrador) e determine se elas foram bem-sucedidas. 
+2. Investigue cada usuário exposto usando o guia de investigação de usuário. 
+3. Investigue o computador de origem.  
+  
+**Correção sugerida e etapas de prevenção**
+
+1. Contenha o computador de origem. 
+2. Encontre a ferramenta que realizou o ataque e remova-a. 
+3. Procure por usuários que estavam conectados em horário próximo àquele da atividade, pois eles também podem estar comprometidos. Redefina as senhas e habilite o MFA. 
+4. Redefina a senha do usuário de origem e habilite o MFA. 
+5. Aplique o acesso à rede: Restrinja os clientes com permissão para efetuar chamadas remotas para a política de grupo de SAM.
 
 ## <a name="user-and-ip-address-reconnaissance-smb"></a>Reconhecimento de endereço IP e de usuário (SMB)
-<a name="reconnaissance-using-smb-session-enumeration"></a> Reconhecimento usando a Enumeração da Sessão SMB
+<a name="reconnaissance-using-smb-session-enumeration"></a>
 
+*Nome anterior:* Reconhecimento usando a enumeração da sessão SMB
 
 **Descrição**
 
@@ -835,9 +899,9 @@ Nessa detecção, um alerta é acionado quando uma enumeração de sessão SMB �
 
 2. Verifique quais usuários envolvidos realizaram a operação. Eles normalmente se registram no computador de origem ou eles são administradores que deveriam realizar essas ações?  
 
-3. Se sim e se o alerta for atualizado, **Suprima** a atividade suspeita.  
+3. Se sim e se o alerta for atualizado, **suprima** o alerta de segurança.  
 
-4. Se sim e se não precisar fazer mais isso, **Feche** a atividade suspeita.
+4. Se sim e não precisar fazer isso, **feche** o alerta de segurança.
 
 5. Se a resposta para todas as perguntas acima for não, suponha que ele seja mal-intencionado.
 
