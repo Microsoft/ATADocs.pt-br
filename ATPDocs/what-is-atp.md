@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 10/23/2018
+ms.date: 1/3/2019
 ms.topic: article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 2d14d0e9-1b03-4bcc-ae97-8fd41526ffc5
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: e11e0e75c8c7fd4a0be592ad45b961f7046ec5e2
-ms.sourcegitcommit: e783df4c9d928fedf6dc3c65d58d9b530cdd2ff2
+ms.openlocfilehash: f4138a8649bbb278453114f606d034a0123cbdd7
+ms.sourcegitcommit: 1ba4e327784c6267db5a708592c4d81ca23376ba
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49800059"
+ms.lasthandoff: 01/03/2019
+ms.locfileid: "53996869"
 ---
 *Aplica-se a: Proteção Avançada contra Ameaças do Azure*
 
@@ -39,14 +39,14 @@ O Azure ATP fornece insights valiosos sobre as configurações de identidade e a
 Normalmente, os ataques são iniciados contra qualquer entidade acessível, como um usuário com poucos privilégios e, em seguida, se movem lateralmente com rapidez até que o invasor obtenha acesso a ativos valiosos – como contas confidenciais, administradores de domínio e dados altamente confidenciais. O Azure ATP identifica essas ameaças avançadas na origem em toda a cadeia de ataque cibernético: 
 ### <a name="reconnaissance"></a>Reconhecimento 
 Identifique os usuários invasores e as tentativas de invasores para obter informações. Os invasores estão buscando informações sobre nomes de usuário, associação de grupo de usuários, endereços IP atribuídos aos dispositivos, recursos e muito mais, usando uma variedade de métodos.  
-### <a name="compromised-users"></a>Usuários comprometidos
+### <a name="compromised-credentials"></a>Credenciais comprometidas
 Identifique as tentativas de comprometer as credenciais do usuário usando ataques de força bruta, autenticações com falha, alterações na associação de grupo e outros métodos.  
 
 ### <a name="lateral-movements"></a>Movimentação lateral
 Detecte as tentativas de se mover lateralmente na rede para obter mais controle sobre usuários confidenciais utilizando métodos como Pass-the-Ticket, Pass-the-Hash, Overpass-the-Hash e muito mais.  
 
 ### <a name="domain-dominance"></a>Predominância de domínio
-Destaque o comportamento do invasor caso ele venha comandar o domínio, por meio de execução remota de código no controlador de domínio e métodos como Sombra do controlador de domínio, replicação do controlador de domínio mal-intencionado, atividades de Golden Ticket e muito mais.   
+Destaque o comportamento do invasor caso ele venha comandar o domínio, por meio de execução remota de código no controlador de domínio e métodos como Sombra do controlador de domínio, replicação do controlador de domínio mal-intencionado, atividades de Golden Ticket e muito mais.
 
 ## <a name="investigate-alerts-and-user-activities"></a>Investigar alertas e atividades do usuário  
 O ATP do Azure foi projetado para reduzir o ruído de alerta geral, fornecendo apenas alertas de segurança importantes e relevantes em uma linha do tempo de ataque organizacional simples e em tempo real. A exibição da linha do tempo do ataque do Azure ATP permite que você mantenha facilmente o foco no que importa, aproveitando a inteligência de análise inteligente. Os profissionais de segurança que usam o ATP do Azure podem investigar ameaças rapidamente e receber insights de toda a organização para usuários, dispositivos e recursos de rede. A integração perfeita com o Windows Defender ATP fornece outra camada de segurança reforçada com a detecção adicional e a proteção contra ameaças persistentes avançadas no sistema operacional.  
@@ -87,7 +87,7 @@ Para obter um resumo dos anúncios do ATP do Azure que foram feitos no Ignite 20
 ### <a name="phase-1"></a>Fase 1
 
 1. Configure o ATP do Azure para proteger seus ambientes primários. O modelo de implantação rápida do Azure ATP permite a você começar a proteger sua organização hoje mesmo. [Instalar o Azure ATP](install-atp-step1.md)  
-2. Defina as [contas confidenciais](sensitive-accounts.md) e as [contas de honeytoken](install-atp-step7.md).   
+2. Defina as [contas confidenciais](sensitive-accounts.md) e as [contas de honeytoken](install-atp-step7.md).
 3. Examine os relatórios e os [caminhos de movimentação lateral](use-case-lateral-movement-path.md).  
 
 
@@ -95,12 +95,12 @@ Para obter um resumo dos anúncios do ATP do Azure que foram feitos no Ignite 20
 
 1. Proteja todos os controladores de domínio e [florestas](atp-multi-forest.md) na sua organização.  
 2.  Monitore todos os [alertas](working-with-suspicious-activities.md) – investigue os alertas de movimentação lateral e de comando de domínio.  
-3. Trabalhe com o [Guia de Alerta de Segurança](suspicious-activity-guide.md) para entender as ameaças e os ataques em potencial da triagem.   
+3. Trabalhe com o [Guia de Alerta de Segurança](suspicious-activity-guide.md) para entender as ameaças e os ataques em potencial da triagem.
 
 
 ### <a name="phase-3"></a>Fase 3
 
-1. Integre os alertas do Azure ATP em seus fluxos de trabalho do SecOp. 
+1. Integre os alertas do Azure ATP em seus fluxos de trabalho do SecOp.
 
 ## <a name="see-also"></a>Consulte Também
 - [Perguntas frequentes sobre o Azure ATP](atp-technical-faq.md)
