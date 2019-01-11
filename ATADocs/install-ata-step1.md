@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 10/31/2018
+ms.date: 1/9/2019
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
 ms.service: ''
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: b3cceb18-0f3c-42ac-8630-bdc6b310f1d6
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 04a25e6f0a73e45b4358566f15f38c20d291a153
-ms.sourcegitcommit: 1b914a85cfa33dc0c5005f9dc68e6ea08a0164ac
+ms.openlocfilehash: b138f533b1ce804af08479a961a791c4069e5a27
+ms.sourcegitcommit: fd6c8a28e6bf3a6031835aebd0b9278e495d3e0b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50411622"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54142430"
 ---
 *Aplica-se a: Advanced Threat Analytics versão 1.9*
 
@@ -94,9 +94,16 @@ Como você está fazendo logon no site usando um endereço IP, você recebe um a
 
 ### <a name="set-anti-virus-exclusions"></a>Definir as exclusões de antivírus
 
-Depois de instalar a Central do ATA, você deve excluir o diretório de banco de dados do MongoDB da análise contínua realizada pelo seu aplicativo de antivírus. A localização padrão no banco de dados é: **C:\Program Files\Microsoft Advanced Threat Analytics\Center\MongoDB\bin\data**.
+Depois de instalar a Central do ATA, você deve excluir o diretório de banco de dados do MongoDB da análise contínua realizada pelo seu aplicativo de antivírus. O local padrão no banco de dados é: **C:\Arquivos de Programas\Microsoft Advanced Threat Analytics\Center\MongoDB\bin\data**.
 
+Verifique se você também excluiu estas pastas d verificação do AV:
 
+C:\Arquivos de Programas\Microsoft Advanced Threat Analytics\Center\ParentKerberosAsBloomFilters
+<br>C:\Arquivos de Programas\Microsoft Advanced Threat Analytics\Center\ParentKerberosTgsBloomFilters
+<br>C:\Arquivos de Programas\Microsoft Advanced Threat Analytics\Center\Backup
+<br>C:\Arquivos de Programas\Microsoft Advanced Threat Analytics\Center\Logs
+
+Se você instalou o ATA em um diretório diferente, não deixe de alterar os caminhos de pasta de acordo com a sua instalação. 
 
 > [!div class="step-by-step"]
 > [« Pré-instalação](configure-port-mirroring.md)

@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 11/29/2018
+ms.date: 1/7/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 8ae459ac-9fca-4923-9a1a-dc10d5c50b29
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 566b7ac598dcdd0d44d30c50c01846c42d0b643f
-ms.sourcegitcommit: f4f2a1b2c674c4dba7a46ece0624f5ea10c4865e
+ms.openlocfilehash: 7d7be8cb236a58e6f0576d3b283fb8eff137ac96
+ms.sourcegitcommit: fd6c8a28e6bf3a6031835aebd0b9278e495d3e0b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2018
-ms.locfileid: "52744788"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54142396"
 ---
 *Aplica-se a: Proteção Avançada contra Ameaças do Azure*
 
@@ -60,7 +60,7 @@ Para obter opções de suporte adicionais, fale com seu contato da Microsoft.
 
 ### <a name="self-help"></a>Autoajuda
 
-#### <a name="system-status-page"></a>Página Status do sistema 
+#### <a name="system-status-page"></a>Página Status do sistema
 
 Para exibir o status do sistema para o Azure ATP, acesse a página [**Status do sistema**](https://health.atp.azure.com/). Essa página fornece informações sobre se o Portal do Azure ATP está funcionando e ativo, se há problemas com as detecções e se o sensor pode enviar tráfego para a nuvem. Você pode acessar o **Status do sistema** na barra de menus do Azure ATP.
 
@@ -80,4 +80,4 @@ Solução de problemas:
 
 ### <a name="community-resources"></a>Recursos da comunidade
 
-Recomendamos o  [grupo do Yammer da Proteção Avançada contra Ameaças do Azure](https://www.yammer.com/AskIPTeam). Esse recurso fornece resposta diretas da equipe da Proteção Avançada contra Ameaças do Azure, além do benefício da experiência e do conhecimento compartilhados de outros administradores e consultores.
+Recomendamos o  [grupo da comunidade de tecnologia da Proteção Avançada contra Ameaças do Azure](https://aka.ms/azureatpcommunity). Esse recurso fornece resposta diretas da equipe da Proteção Avançada contra Ameaças do Azure, além do benefício da experiência e do conhecimento compartilhados de outros administradores e consultores.

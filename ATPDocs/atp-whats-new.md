@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 12/21/2018
+ms.date: 1/6/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,19 +13,21 @@ ms.technology: ''
 ms.assetid: 7d0f33db-2513-4146-a395-290e001f4199
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: af08c371f19288043eba2377ea03d1a90bd2eaab
-ms.sourcegitcommit: 39822aa24bddb72eea55f484d9df290cce2e19d9
+ms.openlocfilehash: f5ce0643c502b94bb6a09cc353b8e0eadb0d6737
+ms.sourcegitcommit: b33c1860baa39e9d6d287e33940d579d7a728463
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2018
-ms.locfileid: "53737042"
+ms.lasthandoff: 01/06/2019
+ms.locfileid: "54058847"
 ---
 *Aplica-se a: Proteção Avançada contra Ameaças do Azure*
 
 # <a name="whats-new-in-azure-atp"></a>Novidades do Azure ATP
 
 ## <a name="azure-atp-release-260"></a>ATP do Azure versão 2.60
-O ATP do Azure Versão 2.60 está atualmente planejado para lançamento durante a primeira semana de 2019. Durante esse tempo, se forem encontrados problemas críticos que exijam uma atualização provisória, as atualizações serão feitas conforme necessário.
+Lançado em 6 de janeiro de 2019
+
+- Essa versão inclui aprimoramentos e correções de bug da infraestrutura do sensor interno.
 
 ## <a name="azure-atp-release-259"></a>ATP do Azure versão 2.59
 Lançado em 16 de dezembro de 2018
@@ -38,13 +40,13 @@ Lançado em 16 de dezembro de 2018
 Lançado em 9 de dezembro de 2018
 
 - **Aprimoramento do alerta de segurança: Divisão do alerta da Implementação de Protocolo Incomum**<br>
-A série de alertas de segurança de Implementação de Protocolo Incomum do ATP do Azure que anteriormente compartilhava uma externalId (2002), agora está dividida em 4 alertas distintos, com uma externalId exclusiva correspondente. 
+A série de alertas de segurança de Implementação de Protocolo Incomum do ATP do Azure que anteriormente compartilhava uma externalId (2002), agora está dividida em quatro alertas distintos, com uma ID externa exclusiva correspondente. 
 
 ### <a name="new-alert-externalids"></a>Novas externalIds de alerta
 
 > [!div class="mx-tableFixed"] 
 
-|Novo nome do alerta de segurança|Antigo nome do alerta de segurança|ExternalId exclusiva|
+|Novo nome do alerta de segurança|Antigo nome do alerta de segurança|ID externa exclusiva|
 |---------|----------|---------|
 |Suspeita de ataque de força bruta (SMB)|Implementação de protocolo incomum (possível uso de ferramentas mal-intencionadas, como a Hydra)|2033
 |Suspeita de ataque de Overpass-the-Hash (Kerberos)|Implementação incomum de protocolo Kerberos (possível ataque de overpass-the-hash)|2002|
