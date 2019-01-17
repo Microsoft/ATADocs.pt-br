@@ -13,15 +13,13 @@ ms.technology: ''
 ms.assetid: 9295dc09-ecdb-44c0-906b-cba4c5c8f17c
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 4201ccc187b0f06522cc46aefb1518ff22012c86
-ms.sourcegitcommit: 1ba4e327784c6267db5a708592c4d81ca23376ba
+ms.openlocfilehash: d108974a930aa8aad737e9348dc228f384858eb1
+ms.sourcegitcommit: 6a0ac21f59e72db8615811da2c886f54cf3727f5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/03/2019
-ms.locfileid: "53996903"
+ms.lasthandoff: 01/13/2019
+ms.locfileid: "54249905"
 ---
-*Aplica-se a: Proteção Avançada contra Ameaças do Azure*
-
 # <a name="tutorial-use-lateral-movement-paths-lmps"></a>Tutorial: Usar LMPs (caminhos de movimento lateral)
 
 Os ataques de movimento lateral normalmente são realizados usando uma série de técnicas diferentes. Alguns dos métodos mais populares usados pelos invasores são o [roubo de credencial](suspicious-activity-guide.md#) e os ataques de [Pass-the-Ticket](suspicious-activity-guide.md). Em ambos os métodos, as contas não confidenciais são usadas pelos invasores para realizar movimentos laterais explorando computadores não confidenciais que compartilham credenciais de logon armazenadas em contas, grupos e computadores com contas confidenciais.
