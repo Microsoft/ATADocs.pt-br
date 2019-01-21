@@ -1,11 +1,11 @@
 ---
 title: Atualizar seus sensores da Azure ATP | Microsoft Docs
-description: Descreve como atualizar os sensores na Azure ATP.
+description: Descreve como atualizar e atrasar a atualização dos sensores do ATP do Azure.
 keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 10/04/2018
+ms.date: 1/14/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 603d9e09-a07d-4357-862f-d5682c8bc3dd
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: a24210415929b69152377d34aeec1bdc8906d08c
-ms.sourcegitcommit: f4f2a1b2c674c4dba7a46ece0624f5ea10c4865e
+ms.openlocfilehash: f2df8f8f59edff7ebda3f86aae26b899913d57f8
+ms.sourcegitcommit: e2daa0f93d97d552cfbf1577fbd05a547b63e95b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2018
-ms.locfileid: "52744431"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54314322"
 ---
 *Aplica-se a: Proteção Avançada contra Ameaças do Azure*
 
@@ -60,7 +60,7 @@ Geralmente, os sensores são atualizados automaticamente quando o serviço de nu
 Assim, é possível selecionar sensores específicos nos quais a atualização ocorrerá automaticamente e atualizar o restante dos sensores de forma atrasada, somente depois que você verificar que a atualização inicial ocorreu sem problemas.
 
 > [!NOTE]
-> Se ocorrer algum erro e o sensor não for atualizado, abra um tíquete de suporte. Para proteger ainda mais seu proxy para comunicar-se apenas com sua instância, confira [Configuração de proxy](configure-proxy.md)
+> Se ocorrer algum erro e o sensor não for atualizado, abra um tíquete de suporte. Para proteger ainda mais seu proxy para comunicar-se somente com sua instância, confira [Configuração de proxy](configure-proxy.md).
 
 Para configurar um sensor para atualização atrasada:
 
@@ -87,12 +87,12 @@ A cada poucos minutos, os sensores da Azure ATP verificam se eles têm a versão
   7. Um sensor recebe uma permissão do serviço de nuvem do Azure. Isso pode ser verificado na página **Atualizações**.
   8. O próximo sensor inicia o processo de atualização. 
 
-4. 24 horas depois que o serviço de nuvem Azure ATP é atualizado, os sensores selecionados para **Atualização atrasada** iniciam o processo de atualização.
+4. 24 horas depois que o serviço de nuvem do ATP do Azure é atualizado, os sensores selecionados para **Atualização atrasada** começam o processo de atualização.
 
 ![atualização do sensor](./media/sensor-update.png)
 
 
-Em caso de falha, se o sensor não concluir o processo de atualização, um alerta de monitoramento relevante será disparado e enviado como uma notificação.
+Em caso de falha de atualização, se o sensor não concluir o processo de atualização, um alerta de monitoramento relevante será disparado e enviado como uma notificação.
 
 ![sensor desatualizado](./media/sensor-outdated.png)
 
