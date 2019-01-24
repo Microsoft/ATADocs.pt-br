@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 1/15/2019
+ms.date: 1/20/2019
 ms.topic: tutorial
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 0b3a1db5-0d43-49af-b356-7094cc85f0a5
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: e2a8eb9ada18e14bbe88cdd6c0081c86e5733648
-ms.sourcegitcommit: e2daa0f93d97d552cfbf1577fbd05a547b63e95b
+ms.openlocfilehash: 929dfae084bbce8f831c55d042f7765ddfd64019
+ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54314407"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54840838"
 ---
 # <a name="tutorial-domain-dominance-alerts"></a>Tutorial: Alertas de predominância de domínio  
 
@@ -299,22 +299,23 @@ Em um alerta de Golden Ticket, o método de criptografia do campo TGT da mensage
 **TP, B-TP ou FP**
 <br>Alguns recursos legítimos não permitem codificações de criptografia forte e podem disparar o alerta. 
 
-2. Todos os usuários de origem compartilham algo em comum? 
-    1. Por exemplo, todos os membros da equipe de marketing estão acessando um recurso específico que pode fazer com que o alerta seja disparado?
-    2. Verifique os recursos acessados por esses tíquetes. 
-        - Confira isso no Active Directory verificando o atributo *msDS-SupportedEncryptionTypes*, da conta de serviço do recurso.
-    3. Se houver apenas um recurso sendo acessado, verifique se é um recurso válido que esses usuários devem acessar.  
 
-    Se a resposta a uma das perguntas anteriores for **sim**, provavelmente essa será uma atividade **T-BP**. Verifique se o recurso pode dar suporte a uma codificação de criptografia forte, implemente uma codificação de criptografia mais forte sempre que possível e **feche** o alerta de segurança.
+1. Todos os usuários de origem compartilham algo em comum? 
+   1. Por exemplo, todos os membros da equipe de marketing estão acessando um recurso específico que pode fazer com que o alerta seja disparado?
+   2. Verifique os recursos acessados por esses tíquetes. 
+       - Confira isso no Active Directory verificando o atributo *msDS-SupportedEncryptionTypes*, da conta de serviço do recurso.
+   3. Se houver apenas um recurso sendo acessado, verifique se é um recurso válido que esses usuários devem acessar.  
+
+      Se a resposta a uma das perguntas anteriores for **sim**, provavelmente essa será uma atividade **T-BP**. Verifique se o recurso pode dar suporte a uma codificação de criptografia forte, implemente uma codificação de criptografia mais forte sempre que possível e **feche** o alerta de segurança.
 
 Os aplicativos podem ser autenticados usando uma codificação de criptografia inferior. Alguns estão autenticando em nome dos usuários, como servidores do IIS e SQL. 
 
 1. Verifique se todos os usuários de origem compartilham algo em comum.         
-    - Por exemplo, todos os membros de sua equipe de vendas usam um aplicativo específico que pode disparar o alerta?
-    - Verifique se há aplicativos desse tipo no computador de origem. 
-    - Verifique as funções do computador. <br>Eles são servidores que funcionam com esses tipos de aplicativos? 
+   - Por exemplo, todos os membros de sua equipe de vendas usam um aplicativo específico que pode disparar o alerta?
+   - Verifique se há aplicativos desse tipo no computador de origem. 
+   - Verifique as funções do computador. <br>Eles são servidores que funcionam com esses tipos de aplicativos? 
 
-    Se a resposta a uma das perguntas anteriores for **sim**, provavelmente essa será uma atividade **T-BP**. Verifique se o recurso pode dar suporte a uma codificação de criptografia forte, implemente uma codificação de criptografia mais forte sempre que possível e **feche** o alerta de segurança.
+     Se a resposta a uma das perguntas anteriores for **sim**, provavelmente essa será uma atividade **T-BP**. Verifique se o recurso pode dar suporte a uma codificação de criptografia forte, implemente uma codificação de criptografia mais forte sempre que possível e **feche** o alerta de segurança.
 
 
 **Entender o escopo da violação**
@@ -420,9 +421,9 @@ Os serviços de federação podem gerar tíquetes que disparam esse alerta.
     - Se o Windows Defender ATP estiver instalado – use **klist.exe purge** para excluir todos os tíquetes da sessão de logon especificada e evitar o uso dos tíquetes no futuro.
 2. Contenha os recursos que foram acessados por esse tíquete.
 3. Altere o Tíquete de concessão de tíquete Kerberos (KRBTGT) duas vezes de acordo com as diretrizes em [Scripts de redefinição de senha da conta KRBTGT disponíveis agora para clientes](https://cloudblogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/) usando a [ferramenta Redefinir chaves/senha da conta KRBTGT](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51). 
-    - A redefinição dupla do KRBTGT invalida todos os tíquetes Kerberos nesse domínio. A invalidação de todos os tíquetes Kerberos no domínio significa que **todos** os serviços são interrompidos e não funcionam novamente até que sejam renovados ou em alguns casos, que o serviço seja reiniciado. 
+   - A redefinição dupla do KRBTGT invalida todos os tíquetes Kerberos nesse domínio. A invalidação de todos os tíquetes Kerberos no domínio significa que **todos** os serviços são interrompidos e não funcionam novamente até que sejam renovados ou em alguns casos, que o serviço seja reiniciado. 
 
-    **Planeje cuidadosamente antes de executar uma redefinição dupla do KRBTGT. A redefinição afeta todos os computadores, servidores e usuários no ambiente.**
+     **Planeje cuidadosamente antes de executar uma redefinição dupla do KRBTGT. A redefinição afeta todos os computadores, servidores e usuários no ambiente.**
 
 ## <a name="suspected-golden-ticket-usage-time-anomaly-external-id-2022"></a>Suspeita de uso de Golden Ticket (anomalia de tempo) – (ID externa 2022) 
 
@@ -448,11 +449,11 @@ Se a resposta às perguntas anteriores for **sim**, **feche** o alerta de segura
     - Encontre a ferramenta que realizou o ataque e remova-a.
     - Procure por usuários que estavam conectados em horário próximo àquele da atividade, pois eles também podem estar comprometidos. Redefina as senhas e habilite o MFA.
     - Se o Windows Defender ATP estiver instalado – use **klist.exe purge** para excluir todos os tíquetes da sessão de logon especificada e evitar o uso dos tíquetes no futuro.
-3. Contém os recursos acessados por esse tíquete.
-4. Altere o Tíquete de concessão de tíquete Kerberos (KRBTGT) duas vezes de acordo com as diretrizes em [Scripts de redefinição de senha da conta KRBTGT disponíveis agora para clientes](https://cloudblogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/) usando a [ferramenta Redefinir chaves/senha da conta KRBTGT](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51). 
-    - A redefinição dupla do KRBTGT invalida todos os tíquetes Kerberos nesse domínio. A invalidação de todos os tíquetes Kerberos no domínio significa que **todos** os serviços são interrompidos e não funcionam novamente até que sejam renovados ou, em alguns casos, que o serviço seja reiniciado. 
+2. Contém os recursos acessados por esse tíquete.
+3. Altere o Tíquete de concessão de tíquete Kerberos (KRBTGT) duas vezes de acordo com as diretrizes em [Scripts de redefinição de senha da conta KRBTGT disponíveis agora para clientes](https://cloudblogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/) usando a [ferramenta Redefinir chaves/senha da conta KRBTGT](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51). 
+   - A redefinição dupla do KRBTGT invalida todos os tíquetes Kerberos nesse domínio. A invalidação de todos os tíquetes Kerberos no domínio significa que **todos** os serviços são interrompidos e não funcionam novamente até que sejam renovados ou, em alguns casos, que o serviço seja reiniciado. 
 
-    **Planeje cuidadosamente antes de executar uma redefinição dupla do KRBTGT. A redefinição afeta todos os computadores, servidores e usuários no ambiente.**
+     **Planeje cuidadosamente antes de executar uma redefinição dupla do KRBTGT. A redefinição afeta todos os computadores, servidores e usuários no ambiente.**
 
 ## <a name="suspected-skeleton-key-attack-encryption-downgrade-external-id-2010"></a>Suspeita de ataque de skeleton key (downgrade de criptografia) (ID externa 2010) 
 

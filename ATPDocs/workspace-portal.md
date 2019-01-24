@@ -13,17 +13,13 @@ ms.technology: ''
 ms.assetid: 4ba46d60-3a74-480e-8f0f-9a082d62f343
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 525e6879c7b683d833f5e2f73fa229f6e7580e3a
-ms.sourcegitcommit: c3ee9495b9d4db985783dcabcc4fa77c7c8eaed4
+ms.openlocfilehash: 20aa3616fa4b178982dc7a68ea753f2dd70c03ab
+ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/17/2018
-ms.locfileid: "53454505"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54840396"
 ---
-*Aplica-se a: Proteção Avançada contra Ameaças do Azure*
-
-
-
 # <a name="working-with-the-azure-atp-portal"></a>Trabalhando com o portal do Azure ATP
 
 Use o portal do Azure ATP para monitorar e responder a atividades suspeitas detectadas pelo ATP.
@@ -43,10 +39,10 @@ Para fazer logon com êxito no portal do Azure ATP, é necessário fazer logon c
 1. Você pode entrar no portal do ATP do Azure fazendo logon no portal [https://portal.atp.azure.com](https://portal.atp.azure.com) e selecionando sua instância ou navegando até a URL da instância: [https://*instancename*.atp.azure.com](https://*instancename*.atp.azure.com).
 
 
-2.  O Azure ATP é compatível com o logon único integrado com a autenticação do Windows – se você já fez logon em seu computador, o Azure ATP usa esse token para fazer logon no portal do Azure ATP. Você também pode fazer logon usando um cartão inteligente. Suas permissões no Azure ATP correspondem à sua [função de administrador](atp-role-groups.md).
+2. O Azure ATP é compatível com o logon único integrado com a autenticação do Windows – se você já fez logon em seu computador, o Azure ATP usa esse token para fazer logon no portal do Azure ATP. Você também pode fazer logon usando um cartão inteligente. Suas permissões no Azure ATP correspondem à sua [função de administrador](atp-role-groups.md).
 
- > [!NOTE]
- > Faça logon no computador do qual deseja acessar o portal do Azure ATP usando seu nome de usuário administrador e senha do Azure ATP. Como alternativa, você pode executar seu navegador como um usuário diferente ou se desconectar do Windows e fazer logon com o usuário administrador do Azure ATP. 
+   > [!NOTE]
+   > Faça logon no computador do qual deseja acessar o portal do Azure ATP usando seu nome de usuário administrador e senha do Azure ATP. Como alternativa, você pode executar seu navegador como um usuário diferente ou se desconectar do Windows e fazer logon com o usuário administrador do Azure ATP. 
 
 
 ### <a name="attack-time-line"></a>Linha do tempo de ataque

@@ -13,15 +13,13 @@ ms.technology: ''
 ms.assetid: de15c920-8904-4124-8bdc-03abd9f667cf
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 40faae88e209b8b737dbc7ef364f17a8b82a4d52
-ms.sourcegitcommit: eac0aa855270b550dfb4b8c61b9cf0953f1e5204
+ms.openlocfilehash: 88a7d5e23cc6b3f1202f522e40060e71f676397f
+ms.sourcegitcommit: a0ebb0b6f140d4abf091ebd9d756b975b3d96b9d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52298105"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54459066"
 ---
-*Aplica-se a: Proteção Avançada contra Ameaças do Azure*
-
 # <a name="azure-atp-lateral-movement-paths-lmps"></a>LMPs (caminhos de movimento lateral) da ATP do Azure 
 
 O movimento lateral ocorre quando um invasor usa contas não confidenciais para obter acesso a contas confidenciais em toda a rede. O movimento lateral é usado pelos invasores para identificar e obter acesso a contas e computadores confidenciais na rede que compartilham credenciais de logon armazenadas em contas, grupos e computadores. Depois que um invasor faz movimentos laterais bem-sucedidos em busca dos destinos principais, ele também pode aproveitar a oportunidade para obter acesso aos controladores de domínio. Os ataques de movimento lateral são realizados usando muitos dos métodos descritos no [Guia de atividades suspeitas](suspicious-activity-guide.md).

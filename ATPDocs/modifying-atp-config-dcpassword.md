@@ -13,17 +13,13 @@ ms.technology: ''
 ms.assetid: e7f065fa-1ad1-4e87-bd80-99cc695efbf5
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: a5b0befaa484a94cf307559296c887370228abb4
-ms.sourcegitcommit: f4f2a1b2c674c4dba7a46ece0624f5ea10c4865e
+ms.openlocfilehash: 795677a2a8cc81335811cc800195588512241de7
+ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2018
-ms.locfileid: "52744295"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54840498"
 ---
-*Aplica-se a: Proteção Avançada contra Ameaças do Azure*
-
-
-
 # <a name="change-azure-atp-portal-configuration---domain-connectivity-password"></a>Alterar a configuração do portal do ATP do Azure – senha de conectividade de domínio
 
 
@@ -38,24 +34,24 @@ Siga este procedimento para atualizar a senha da Conectividade de domínio no po
 > [!NOTE]
 > Trata-se do nome de usuário e senha da implantação local do Active Directory e não do Azure AD.
 
-1.  Abra o portal do ATP do Azure, acessando o portal de URL.
+1. Abra o portal do ATP do Azure, acessando o portal de URL.
 
-2.  Selecione a opção de configurações na barra de ferramentas e escolha **Configuração**.
+2. Selecione a opção de configurações na barra de ferramentas e escolha **Configuração**.
 
-    ![Ícone de definições de configuração do Azure ATP](media/atp-config-menu.png)
+   ![Ícone de definições de configuração do Azure ATP](media/atp-config-menu.png)
 
-3.  Selecione **Serviços de Diretório**.
+3. Selecione **Serviços de Diretório**.
 
-    ![Imagem da senha de alteração do sensor autônomo do Azure ATP](media/directory-services.png)
+   ![Imagem da senha de alteração do sensor autônomo do Azure ATP](media/directory-services.png)
 
-4.  Em **Senha**, altere a senha.
+4. Em **Senha**, altere a senha.
 
- > [!NOTE]
- > Insira aqui um usuário e senha do Active Directory e não no Azure Active Directory.
+   > [!NOTE]
+   > Insira aqui um usuário e senha do Active Directory e não no Azure Active Directory.
 
-5.  Clique em **Salvar**.
+5. Clique em **Salvar**.
 
-6.  Depois de alterar a senha, verifique manualmente se o serviço do sensor autônomo do Azure ATP está em execução nos servidores do sensor autônomo do Azure ATP.
+6. Depois de alterar a senha, verifique manualmente se o serviço do sensor autônomo do Azure ATP está em execução nos servidores do sensor autônomo do Azure ATP.
 
 7. No portal do Azure ATP, em **Configuração**, vá até a página **Sensor** e verifique o status dos sensores.
 

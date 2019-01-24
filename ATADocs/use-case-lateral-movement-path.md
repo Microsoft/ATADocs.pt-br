@@ -13,16 +13,17 @@ ms.technology: ''
 ms.assetid: 710f01bd-c878-4406-a7b2-ce13f98736ea
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 0d247671c43e4c62f740eca263f2e0e680c7d319
-ms.sourcegitcommit: 959b1f7753b9a8ad94870d2014376d55296fbbd4
+ms.openlocfilehash: b6aaaf1a93fe635f4e159f88e7d55a110bcef0d2
+ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46133936"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54840481"
 ---
-*Aplica-se a: Advanced Threat Analytics versão 1.9*
-
 # <a name="investigating-lateral-movement-paths-with-ata"></a>Investigando caminhos de movimento lateral com o ATA
+
+
+*Aplica-se a: Advanced Threat Analytics versão 1.9*
 
 Mesmo que você faça o melhor para proteger os usuários confidenciais e seus administradores tenham senhas complexas alteradas com frequência, computadores protegidos e dados armazenados com segurança, os invasores ainda podem usar caminhos de movimento lateral para acessar contas confidenciais. Em ataques de movimento lateral, o invasor tira proveito de situações em que os usuários confidenciais fazem logon em um computador no qual um usuário não confidencial tem direitos locais. Os invasores podem mover-se lateralmente acessando o usuário menos confidencial e, em seguida, movendo-se pelo computador para obter credenciais de usuários confidenciais. 
 
@@ -40,11 +41,11 @@ Para descobrir quais contas confidenciais na sua rede estavam vulneráveis devid
 
 2. Em **Caminhos de movimento lateral para contas confidenciais**, se não forem encontrados caminhos de movimento lateral, o relatório ficará indisponível. Se houver caminhos de movimento lateral, as datas do relatório selecionarão automaticamente a primeira data em que há dados relevantes. 
 
- ![relatórios](./media/reports.png)
+   ![relatórios](./media/reports.png)
 
 3. Clique em **Baixar**.
 
-3. O arquivo do Excel que é criado fornece detalhes sobre suas contas confidenciais que estão em risco. A guia **Resumo** fornece gráficos que detalham o número de contas confidenciais, computadores e médias de recursos em risco. A guia **Detalhes** fornece uma lista das contas confidenciais com que você deve se preocupar. Observe que os caminhos são caminhos que existiam anteriormente e podem não estar disponível atualmente.
+4. O arquivo do Excel que é criado fornece detalhes sobre suas contas confidenciais que estão em risco. A guia **Resumo** fornece gráficos que detalham o número de contas confidenciais, computadores e médias de recursos em risco. A guia **Detalhes** fornece uma lista das contas confidenciais com que você deve se preocupar. Observe que os caminhos são caminhos que existiam anteriormente e podem não estar disponível atualmente.
 
 
 ## <a name="investigate"></a>Investigar
@@ -59,7 +60,7 @@ Agora que você sabe quais contas confidenciais estão em risco, aprofunde-se no
 
 4. Examine o gráfico para ver o que você pode aprender sobre a exposição das credenciais de seus usuários confidenciais. Por exemplo, neste mapa, é possível seguir as setas cinzas **Conectado por** para ver onde Samira se conectou com suas credenciais privilegiadas. Nesse caso, as credenciais confidenciais de Samira foram salvas no computador REDMOND-WA-DEV. Em seguida, veja quais outros usuários se conectaram em quais computadores e criaram mais exposição e vulnerabilidade. Você pode ver isso examinando as setas pretas **Administrador em** para ver quem tem privilégios de administrador no recurso. Neste exemplo, todos no grupo **Contoso All** podem acessar as credenciais do usuário desse recurso.  
 
- ![caminhos de movimento lateral do perfil do usuário](media/user-profile-lateral-movement-paths.png)
+   ![caminhos de movimento lateral do perfil do usuário](media/user-profile-lateral-movement-paths.png)
 
 
 ## <a name="preventative-best-practices"></a>Melhores práticas recomendadas

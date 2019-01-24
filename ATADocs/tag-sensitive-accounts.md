@@ -13,18 +13,17 @@ ms.technology: ''
 ms.assetid: 40a1c5c4-b8d6-477c-8ae5-562b37661624
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: cea6d666d3d969070541fc8dcc4fd59726ac8c38
-ms.sourcegitcommit: 959b1f7753b9a8ad94870d2014376d55296fbbd4
+ms.openlocfilehash: 8a7c5120f72a341fd4784b68fedb0231de6e98c4
+ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46134069"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54840188"
 ---
-*Aplica-se a: Advanced Threat Analytics versão 1.9*
-
-
-
 # <a name="tag-sensitive-accounts"></a>Marcar contas confidenciais
+
+
+*Aplica-se a: Advanced Threat Analytics versão 1.9*
 
 Você pode marcar manualmente grupos ou contas como confidenciais para aprimorar as detecções. É importante verificar se ele está atualizado porque algumas detecções do ATA, como a detecção de modificação de grupos confidenciais e o caminho de movimento lateral, dependem de quais grupos e contas são considerados confidenciais. Antes, o ATA considerava automaticamente uma entidade *confidencial* se ela fosse membro de uma lista específica de grupos. Agora, você pode marcar manualmente outros usuários ou grupos como confidenciais, como membros da diretoria, executivos ou diretores de vendas da empresa, entre outros, e o ATA os considerará confidenciais.
 

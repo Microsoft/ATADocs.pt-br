@@ -13,16 +13,13 @@ ms.technology: ''
 ms.assetid: 0d9d2a1d-6c76-4909-b6f9-58523df16d4f
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 9fe9011f0fbdf29e80e1957c4e1535f497061aa2
-ms.sourcegitcommit: f4f2a1b2c674c4dba7a46ece0624f5ea10c4865e
+ms.openlocfilehash: 947f816d30dbc8e8de817eccf8213d25c026f833
+ms.sourcegitcommit: a0ebb0b6f140d4abf091ebd9d756b975b3d96b9d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2018
-ms.locfileid: "52744856"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54458778"
 ---
-*Aplica-se a: Proteção Avançada contra Ameaças do Azure*
-
-
 # <a name="integrate-vpn"></a>Integrar a VPN
 
 O Azure ATP (Proteção Avançada contra Ameaças) pode coletar informações de contabilidade de soluções de VPN. Quando configurada, a página de perfil do usuário inclui informações de conexões de VPN, tais como os endereços IP e os locais de origem das conexões. Isso complementa o processo de investigação, fornecendo informações adicionais sobre a atividade de usuário, bem como uma nova detecção para conexões de VPN anormais. A chamada para resolver um endereço IP externo de um local é anônima. Nenhuma identificação pessoal será enviada nesta chamada.

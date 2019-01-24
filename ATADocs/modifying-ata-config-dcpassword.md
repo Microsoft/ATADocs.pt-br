@@ -13,22 +13,19 @@ ms.technology: ''
 ms.assetid: 4a25561b-a5ed-44aa-9b72-366976b3c72a
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 5c84806dd12e516d1d7b61064906ed57bfd6db72
-ms.sourcegitcommit: 959b1f7753b9a8ad94870d2014376d55296fbbd4
+ms.openlocfilehash: 8dfee189f0be42e2d488506a0eaf950107061357
+ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46133269"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54839904"
 ---
-*Aplica-se a: Advanced Threat Analytics versão 1.9*
-
-
-
 # <a name="change-ata-configuration---domain-connectivity-password"></a>Alteração da configuração do ATA - senha de conectividade do domínio
 
-
+*Aplica-se a: Advanced Threat Analytics versão 1.9*
 
 ## <a name="change-the-domain-connectivity-password"></a>Alterar a senha de conectividade do domínio
+
 Se você modificar a senha de conectividade do domínio, certifique-se de que a senha digitada esteja correta. Se não estiver, o serviço do Gateway do ATA deixará de ser executado em Gateways do ATA.
 
 Se você suspeitar que isso aconteceu, no Gateway do ATA, examine o arquivo Microsoft.Tri.Gateway-Errors.log em busca dos seguintes erros: `The supplied credential is invalid.`

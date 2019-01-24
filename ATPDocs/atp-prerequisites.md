@@ -13,17 +13,13 @@ ms.technology: ''
 ms.assetid: 62c99622-2fe9-4035-9839-38fec0a353da
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 1fc3930fc4b38b396bda2c3ff50795d835910439
-ms.sourcegitcommit: 1c657f269aaece71b2126df55a37f8c43851539a
+ms.openlocfilehash: 06e31d44afba18cb44d2df6cde167c9a8babc92b
+ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53335414"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54840719"
 ---
-*Aplica-se a: Proteção Avançada contra Ameaças do Azure*
-
-
-
 # <a name="azure-atp-prerequisites"></a>Pré-requisitos do Azure ATP
 Este artigo descreve os requisitos para uma implantação bem-sucedida do Azure ATP em seu ambiente.
 
@@ -69,13 +65,13 @@ Esta seção mostra as informações que você deve obter, bem como as contas e 
 
 ## <a name="azure-atp-portal-requirements"></a>Requisitos do portal do Azure ATP
 O acesso ao portal do Azure ATP ocorre por meio de um navegador que dá suporte aos seguintes navegadores e configurações:
--   Microsoft Edge
--   Internet Explorer versão 10 e posterior
--   Google Chrome 4.0 e posterior
--   Resolução de largura mínima da tela de 1.700 pixels
--   Firewall/proxy aberto – para se comunicar com o serviço de nuvem do Azure ATP, você deve abrir *. atp.azure.com porta 443 no firewall/proxy.
+- Microsoft Edge
+- Internet Explorer versão 10 e posterior
+- Google Chrome 4.0 e posterior
+- Resolução de largura mínima da tela de 1.700 pixels
+- Firewall/proxy aberto – para se comunicar com o serviço de nuvem do Azure ATP, você deve abrir *. atp.azure.com porta 443 no firewall/proxy.
 
- ![diagrama da arquitetura do Azure ATP](media/ATP-architecture-topology.png)
+  ![diagrama da arquitetura do Azure ATP](media/ATP-architecture-topology.png)
 
 
 > [!NOTE]

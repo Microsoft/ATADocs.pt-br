@@ -13,16 +13,13 @@ ms.technology: ''
 ms.assetid: 1b7e72c3-a538-443f-981c-398ffafa5ab8
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 2bd20b9c8cfcea82f1fed91bb5bf2baafbf572f4
-ms.sourcegitcommit: 1ba4e327784c6267db5a708592c4d81ca23376ba
+ms.openlocfilehash: 5900f9450fe74292bd03f29d5e51bcf16300ee6a
+ms.sourcegitcommit: a0ebb0b6f140d4abf091ebd9d756b975b3d96b9d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/03/2019
-ms.locfileid: "53996835"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54458437"
 ---
-*Aplica-se a: Proteção Avançada contra Ameaças do Azure*
-
-
 # <a name="work-with-azure-atp-health-and-events"></a>Trabalhar com eventos e integridade do ATP do Azure
 
 ## <a name="azure-atp-health-center"></a>Centro de integridade do ATP do Azure 

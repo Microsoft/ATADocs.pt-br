@@ -13,17 +13,17 @@ ms.technology: ''
 ms.assetid: 5d639e84-2e37-43a9-9667-49be6c4fa8b7
 ms.reviewer: arzinger
 ms.suite: ems
-ms.openlocfilehash: e21e2b984db3d58703cf6503817401f1bab0fda1
-ms.sourcegitcommit: c390d36d75f13607698c2a8d7ac757ecef4c748e
+ms.openlocfilehash: 9698f3905eebb9e1271ea3a401890b7829bde9a9
+ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53709907"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54840584"
 ---
-*Aplica-se a: Advanced Threat Analytics versão 1.9*
-
-
 # <a name="ata-event-id-reference"></a>Referência de ID do evento ATA
+
+
+*Aplica-se a: Advanced Threat Analytics versão 1.9*
 
 O visualizador de eventos da Central do ATA registra eventos para o ATA. Este artigo fornece uma lista de IDs de eventos e fornece uma descrição de cada um deles.
 
@@ -101,5 +101,5 @@ Os eventos podem ser encontrados aqui:
 - [Pré-requisitos do ATA](ata-prerequisites.md)
 - [Planejamento da capacidade do ATA](ata-capacity-planning.md)
 - [Configurar coleta de eventos](configure-event-collection.md)
-- [Configuração do encaminhamento de eventos do Windows](configure-event-collection.md#configuring-windows-event-forwarding)
+- [Configuração do encaminhamento de eventos do Windows](configure-event-collection.md)
 - [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

@@ -13,17 +13,13 @@ ms.technology: ''
 ms.assetid: 17458706-79fb-4c23-aa42-66979164a45f
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: a36afd4997a2f148bc5a31726aee22914a3607b4
-ms.sourcegitcommit: f4f2a1b2c674c4dba7a46ece0624f5ea10c4865e
+ms.openlocfilehash: 8c80529c5111c909bd5e2b1b0ff17933e4f30b18
+ms.sourcegitcommit: a0ebb0b6f140d4abf091ebd9d756b975b3d96b9d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2018
-ms.locfileid: "52744363"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54458641"
 ---
-*Aplica-se a: Proteção Avançada contra Ameaças do Azure*
-
-
-
 # <a name="understanding-entity-profiles"></a>Noções básicas sobre perfis de entidade
 
 O perfil da entidade fornece uma página da entidade abrangente, projetada para investigações completas e aprofundadas sobre usuários, computadores e dispositivos e sobre os recursos aos quais eles têm acesso e seus históricos. A página de perfil aproveita o novo conversor de atividade lógica do Azure ATP, que pode examinar um grupo de atividades em andamento (agregadas até um minuto) e agrupá-las em uma única atividade lógica para fornecer uma melhor compreensão das atividades reais de seus usuários.

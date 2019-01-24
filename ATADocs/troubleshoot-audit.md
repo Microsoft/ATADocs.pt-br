@@ -13,16 +13,17 @@ ms.technology: ''
 ms.assetid: 1d186a96-ef70-4787-aa64-c03d1db94ce0
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 55712dfcb74e8779c2e06137ac3ea08f132a4f0f
-ms.sourcegitcommit: 959b1f7753b9a8ad94870d2014376d55296fbbd4
+ms.openlocfilehash: 630045525ce344920032ef0245692ed9ca5e5ef1
+ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46133422"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54839515"
 ---
-*Aplica-se a: Advanced Threat Analytics versão 1.9*
-
 # <a name="working-with-ata-audit-logs"></a>Trabalhando com logs de auditoria do ATA
+
+
+*Aplica-se a: Advanced Threat Analytics versão 1.9*
 
 Os logs de auditoria do ATA são mantidos nos Logs de Eventos do Windows em **Aplicativos e Serviços** e **Microsoft ATA** tanto nos computadores do Gateway do ATA quanto no Centro do ATA.
 

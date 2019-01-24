@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: e9cf68d2-36bd-4b0d-b36e-7cf7ded2618e
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: afd113d68a15d376e7665d66915a423e54bb170a
-ms.sourcegitcommit: e2daa0f93d97d552cfbf1577fbd05a547b63e95b
+ms.openlocfilehash: 6df7a945771fed8640eac773e46d2b886758d011
+ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54314356"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54841178"
 ---
 # <a name="tutorial-compromised-credential-alerts"></a>Tutorial: Alertas de credencial comprometida  
 
@@ -90,10 +90,10 @@ Em uma pulverização de senhas, depois de enumerar com êxito uma lista de usu�
 É importante verificar se alguma tentativa de logon terminou com uma autenticação bem-sucedida.
 
 1. Se quaisquer tentativas de logon terminaram com êxito, verifique se qualquer uma das  **contas adivinhadas** normalmente são usadas desse computador de origem.
-    - Há alguma chance dessas contas falharem porque uma senha incorreta foi usada?  
-    - Verifique com os usuários se eles geraram a atividade (falha ao fazer logon algumas vezes e, em seguida, êxito). 
+   - Há alguma chance dessas contas falharem porque uma senha incorreta foi usada?  
+   - Verifique com os usuários se eles geraram a atividade (falha ao fazer logon algumas vezes e, em seguida, êxito). 
 
-    Se a resposta às perguntas acima for **sim**, **feche** o alerta de segurança como uma atividade B-TP.
+     Se a resposta às perguntas acima for **sim**, **feche** o alerta de segurança como uma atividade B-TP.
 
 2. Se não houver nenhuma **Conta adivinhada**, verifique se alguma das **Contas atacadas** é normalmente usada no computador de origem.
     - Verifique se há um script em execução no computador de origem com credenciais erradas/antigas?
@@ -132,15 +132,15 @@ Nesta detecção, um alerta é disparado quando o Azure ATP detecta um grande n�
 É importante verificar se alguma tentativa de logon terminou com uma autenticação bem-sucedida.
 
 1. Se quaisquer tentativas de logon terminaram com êxito, alguma das  **contas adivinhadas** são normalmente usadas desse computador de origem?
-    - Há alguma chance dessas contas falharem porque uma senha incorreta foi usada?  
-    - Verifique com os usuários se eles geraram a atividade (falha ao fazer logon algumas vezes e, em seguida, êxito).
+   - Há alguma chance dessas contas falharem porque uma senha incorreta foi usada?  
+   - Verifique com os usuários se eles geraram a atividade (falha ao fazer logon algumas vezes e, em seguida, êxito).
 
-    Se a resposta às perguntas anteriores for **sim**, **feche** o alerta de segurança como uma atividade B-TP.
+     Se a resposta às perguntas anteriores for **sim**, **feche** o alerta de segurança como uma atividade B-TP.
 
 2. Se não houver nenhuma **Conta adivinhada**, verifique se alguma das **Contas atacadas** é normalmente usada no computador de origem.
-    - Verifique se há um script em execução no computador de origem com credenciais erradas/antigas?
+   - Verifique se há um script em execução no computador de origem com credenciais erradas/antigas?
 
-    Se a resposta à pergunta anterior for **Sim**, interrompa e edite o script ou exclua-o. **Feche** o alerta de segurança como uma atividade B-TP.
+     Se a resposta à pergunta anterior for **Sim**, interrompa e edite o script ou exclua-o. **Feche** o alerta de segurança como uma atividade B-TP.
 
 **Entender o escopo da violação**
 

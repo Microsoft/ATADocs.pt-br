@@ -13,17 +13,13 @@ ms.technology: ''
 ms.assetid: 51911e39-76c7-4dcd-bc0b-ec6235d0403f
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: fa65a796100c23f2b113410fd30f9adf22e79268
-ms.sourcegitcommit: fd6c8a28e6bf3a6031835aebd0b9278e495d3e0b
+ms.openlocfilehash: e5e1ee510ba52f541fb224754f82ebfddf553365
+ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54142413"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54840499"
 ---
-*Aplica-se a: Proteção Avançada contra Ameaças do Azure*
-
-
-
 # <a name="install-azure-atp---step-4"></a>Instalar o Azure ATP – etapa 4
 
 > [!div class="step-by-step"]
@@ -38,44 +34,44 @@ ms.locfileid: "54142413"
 Execute as etapas a seguir no controlador de domínio.
 
 1. Verifique se a máquina tem conectividade com os pontos de extremidade de serviço de nuvem do ATP do Azure relevantes:
-  - [https://triprd1wceuw1sensorapi.atp.azure.com](https://triprd1wceuw1sensorapi.atp.azure.com) 
-  - [https://triprd1wceun1sensorapi.atp.azure.com](https://triprd1wceun1sensorapi.atp.azure.com)
-<br>(na Europa)  
-  - [https://triprd1wcuse1sensorapi.atp.azure.com](https://triprd1wcuse1sensorapi.atp.azure.com)
-  - [https://triprd1wcusw1sensorapi.atp.azure.com](https://triprd1wcusw1sensorapi.atp.azure.com)
-  - [https://triprd1wcuswb1sensorapi.atp.azure.com](https://triprd1wcuswb1sensorapi.atp.azure.com)
-<br>(nos EUA)
-  - [https://triprd1wcasse1sensorapi.atp.azure.com](https://triprd1wcasse1sensorapi.atp.azure.com)<br>(na Ásia)
+   - [https://triprd1wceuw1sensorapi.atp.azure.com](https://triprd1wceuw1sensorapi.atp.azure.com) 
+   - [https://triprd1wceun1sensorapi.atp.azure.com](https://triprd1wceun1sensorapi.atp.azure.com)
+   <br>(na Europa)  
+   - [https://triprd1wcuse1sensorapi.atp.azure.com](https://triprd1wcuse1sensorapi.atp.azure.com)
+   - [https://triprd1wcusw1sensorapi.atp.azure.com](https://triprd1wcusw1sensorapi.atp.azure.com)
+   - [https://triprd1wcuswb1sensorapi.atp.azure.com](https://triprd1wcuswb1sensorapi.atp.azure.com)
+   <br>(nos EUA)
+   - [https://triprd1wcasse1sensorapi.atp.azure.com](https://triprd1wcasse1sensorapi.atp.azure.com)<br>(na Ásia)
 
 2. Extraia os arquivos de instalação do arquivo zip. 
-> [!NOTE] 
-> A instalação diretamente do arquivo zip falha.
+   > [!NOTE] 
+   > A instalação diretamente do arquivo zip falha.
 
 3. Execute **Azure ATP sensor setup.exe** e siga o assistente de instalação.
 
-4.  Na página **Boas-vindas**, selecione seu idioma e clique em **Avançar**.
+4. Na página **Boas-vindas**, selecione seu idioma e clique em **Avançar**.
 
-     ![Idioma de instalação do sensor autônomo do Azure ATP](media/sensor-install-language.png)
+    ![Idioma de instalação do sensor autônomo do Azure ATP](media/sensor-install-language.png)
 
 
-5.  O assistente de instalação verifica automaticamente se o servidor é um controlador de domínio ou um servidor dedicado. Se for um controlador de domínio, o sensor do Azure ATP será instalado, se for um servidor dedicado, o sensor autônomo do Azure ATP será instalado. 
+5. O assistente de instalação verifica automaticamente se o servidor é um controlador de domínio ou um servidor dedicado. Se for um controlador de domínio, o sensor do Azure ATP será instalado, se for um servidor dedicado, o sensor autônomo do Azure ATP será instalado. 
     
-    Por exemplo, para um sensor autônomo do Azure ATP, a tela a seguir será exibida informando que um sensor autônomo do Azure ATP está instalado em seu servidor dedicado:
+   Por exemplo, para um sensor autônomo do Azure ATP, a tela a seguir será exibida informando que um sensor autônomo do Azure ATP está instalado em seu servidor dedicado:
     
-    ![Instalação do sensor autônomo do Azure ATP](media/sensor-install-deployment-type.png)
+   ![Instalação do sensor autônomo do Azure ATP](media/sensor-install-deployment-type.png)
 
-    Clique em **Avançar**.
+   Clique em **Avançar**.
 
-    > [!NOTE] 
-    > Se o controlador de domínio ou servidor dedicado não atender aos requisitos mínimos de hardware para a instalação, você receberá um aviso. Isso não impede você de clicar em **Avançar** e prosseguir com a instalação. Essa pode ser a opção certa para a instalação do Azure ATP em um ambiente de teste de laboratório pequeno, no qual você não precisará de tanto espaço para armazenamento de dados. Para ambientes de produção, é altamente recomendável trabalhar com o guia de [planejamento de capacidade](atp-capacity-planning.md) do Azure ATP para certificar-se de que seus controladores de domínio ou servidores dedicados atendam aos requisitos necessários.
+   > [!NOTE] 
+   > Se o controlador de domínio ou servidor dedicado não atender aos requisitos mínimos de hardware para a instalação, você receberá um aviso. Isso não impede você de clicar em **Avançar** e prosseguir com a instalação. Essa pode ser a opção certa para a instalação do Azure ATP em um ambiente de teste de laboratório pequeno, no qual você não precisará de tanto espaço para armazenamento de dados. Para ambientes de produção, é altamente recomendável trabalhar com o guia de [planejamento de capacidade](atp-capacity-planning.md) do Azure ATP para certificar-se de que seus controladores de domínio ou servidores dedicados atendam aos requisitos necessários.
 
-6.  Em **Configurar o sensor**, insira o caminho de instalação e a chave de acesso que você copiou na etapa anterior, com base em seu ambiente:
+6. Em **Configurar o sensor**, insira o caminho de instalação e a chave de acesso que você copiou na etapa anterior, com base em seu ambiente:
 
-    ![Imagem de configuração de sensor autônomo do Azure ATP](media/sensor-install-config.png)
+   ![Imagem de configuração de sensor autônomo do Azure ATP](media/sensor-install-config.png)
 
-      - Caminho da instalação: É o localização em que o sensor autônomo do ATP do Azure é instalada. Por padrão, é %programfiles%\Azure Advanced Threat Protection sensor. Mantenha o valor padrão.
+     - Caminho da instalação: É o localização em que o sensor autônomo do ATP do Azure é instalada. Por padrão, é %programfiles%\Azure Advanced Threat Protection sensor. Mantenha o valor padrão.
 
-      - Chave de acesso: É recuperada por meio do portal do ATP do Azure na etapa anterior.
+     - Chave de acesso: É recuperada por meio do portal do ATP do Azure na etapa anterior.
     
 7. Clique em **Instalar**. Os componentes a seguir serão instalados e configurados durante a instalação do sensor autônomo do Azure ATP:
 
@@ -88,7 +84,7 @@ Execute as etapas a seguir no controlador de domínio.
     -   Serviço de sensor do Azure ATP e serviço do atualizador do sensor do Azure ATP
     -   Microsoft Visual C++ 2013 Redistributable
 
-8.  Após a conclusão da instalação, clique em **Iniciar** para abrir o navegador e faça logon portal do Azure ATP.
+8. Após a conclusão da instalação, clique em **Iniciar** para abrir o navegador e faça logon portal do Azure ATP.
 
 
 > [!div class="step-by-step"]

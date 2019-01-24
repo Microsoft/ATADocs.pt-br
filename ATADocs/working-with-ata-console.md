@@ -13,18 +13,17 @@ ms.technology: ''
 ms.assetid: 1bf264d9-9697-44b5-9533-e1c498da4f07
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 08cf7ea6b2d1c32c952a973e9781a24fc9e87230
-ms.sourcegitcommit: 959b1f7753b9a8ad94870d2014376d55296fbbd4
+ms.openlocfilehash: f25cdcf03be079f17adaf16b43be62b29c904bc2
+ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46133847"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54841059"
 ---
-*Aplica-se a: Advanced Threat Analytics versão 1.9*
-
-
-
 # <a name="working-with-the-ata-console"></a>Trabalhando com o Console do ATA
+
+
+*Aplica-se a: Advanced Threat Analytics versão 1.9*
 
 Use o Console do ATA para monitorar e responder a atividades suspeitas detectadas pelo ATA.
 
@@ -42,13 +41,13 @@ Para fazer logon com êxito no Console do ATA, você precisa fazer logon com um 
 
     ![Ícone do servidor de ATA](media/ata-server-icon.png)
 
- >[!NOTE]
- > Também é possível abrir um navegador na Central do ATA ou no Gateway do ATA e navegar até o endereço IP configurado na instalação da Central do ATA para o Console do ATA.    
+   >[!NOTE]
+   > Também é possível abrir um navegador na Central do ATA ou no Gateway do ATA e navegar até o endereço IP configurado na instalação da Central do ATA para o Console do ATA.    
 
-2.  Se o computador no qual o Centro do ATA está instalado e o computador do qual você está tentando acessar o Console do ATA estiverem ingressados no domínio, o ATA dará suporte ao logon único integrado com a autenticação do Windows, se você já estiver conectado no computador, o ATA usará esse token para conectá-lo ao Console do ATA. Você também pode fazer logon usando um cartão inteligente. Suas permissões no ATA correspondem à sua [função de administrador](ata-role-groups.md).
+2. Se o computador no qual o Centro do ATA está instalado e o computador do qual você está tentando acessar o Console do ATA estiverem ingressados no domínio, o ATA dará suporte ao logon único integrado com a autenticação do Windows, se você já estiver conectado no computador, o ATA usará esse token para conectá-lo ao Console do ATA. Você também pode fazer logon usando um cartão inteligente. Suas permissões no ATA correspondem à sua [função de administrador](ata-role-groups.md).
 
- > [!NOTE]
- > Faça logon no computador do qual deseja acessar o Console do ATA usando seu nome de usuário administrador e senha do ATA. Como alternativa, você pode executar seu navegador como um usuário diferente ou desconectar do Windows e fazer logon com o usuário administrador do ATA. Para solicitar que o Console do ATA peça credenciais, acesse o console usando um endereço IP e você receberá uma solicitação para inserir as credenciais.
+   > [!NOTE]
+   > Faça logon no computador do qual deseja acessar o Console do ATA usando seu nome de usuário administrador e senha do ATA. Como alternativa, você pode executar seu navegador como um usuário diferente ou desconectar do Windows e fazer logon com o usuário administrador do ATA. Para solicitar que o Console do ATA peça credenciais, acesse o console usando um endereço IP e você receberá uma solicitação para inserir as credenciais.
 
 3. Para fazer logon usando o SSO, certifique-se de que o site do Console do ATA esteja definido como um site de intranet local no seu navegador e de acessá-lo usando um nome curto ou um localhost.
 

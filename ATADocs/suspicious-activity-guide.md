@@ -13,17 +13,17 @@ ms.technology: ''
 ms.assetid: 1fe5fd6f-1b79-4a25-8051-2f94ff6c71c1
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 4e0102e8a19f5f5bd303c00c4ebdb6190bcc5eb3
-ms.sourcegitcommit: d68a44b3230dc4c522d8d895eb3bc93feacae62e
+ms.openlocfilehash: 033333fe332f879e5f5c34bdf487e7893db586e4
+ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53615283"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54841042"
 ---
-*Aplica-se a: Advanced Threat Analytics versão 1.9*
-
-
 # <a name="advanced-threat-analytics-suspicious-activity-guide"></a>Guia de atividades suspeitas Advanced Threat Analytics
+
+
+*Aplica-se a: Advanced Threat Analytics versão 1.9*
 
 Após investigação adequada, qualquer atividade suspeita pode ser classificada como:
 
@@ -349,11 +349,11 @@ Nessa detecção, nenhum alerta será disparado no primeiro mês após a implant
 
 5. Se não houver informações sobre a conta envolvida: essas consultas devem ser feitas por essa conta ou essa conta normalmente faz logon no computador de origem?
 
- - Se sim e se o alerta for atualizado, **Suprima** a atividade suspeita.
+   - Se sim e se o alerta for atualizado, **Suprima** a atividade suspeita.
 
- - Se sim e se não precisar fazer mais isso, **Feche** a atividade suspeita.
+   - Se sim e se não precisar fazer mais isso, **Feche** a atividade suspeita.
 
- - Se a resposta para todas as perguntas acima for não, suponha que ele seja mal-intencionado.
+   - Se a resposta para todas as perguntas acima for não, suponha que ele seja mal-intencionado.
 
 6. Se não houver informações sobre a conta envolvida, você poderá ir até o ponto de extremidade e verificar qual conta estava conectada no momento do alerta.
 
@@ -397,7 +397,7 @@ Nessa detecção, um alerta é acionado quando uma enumeração de sessão SMB �
 
 1. Clique no alerta para ver sua página de detalhes. Verifique as contas que realizaram a operação e quais contas foram expostas, se houver.
 
- - Há algum tipo de verificador de segurança em execução no computador de origem? Se sim, **Feche e exclua** a atividade suspeita.
+   - Há algum tipo de verificador de segurança em execução no computador de origem? Se sim, **Feche e exclua** a atividade suspeita.
 
 2. Verifique quais usuários envolvidos realizaram a operação. Eles normalmente se registram no computador de origem ou eles são administradores que deveriam realizar essas ações?  
 
@@ -420,10 +420,10 @@ Os invasores que comprometem credenciais de administrador ou que usam uma explor
 **Investigação**
 
 1. Isso é comum para membros da equipe de TI, de estações de trabalho administrativas e contas de serviço que executam tarefas administrativas nos controladores de domínio. Se for esse o caso e se o alerta for atualizado porque o mesmo administrador ou computador está executando a tarefa, **Suprima** o alerta.
-2.  O computador em questão tem permissão para realizar essa execução remota em seu controlador de domínio?
-  - A conta em questão tem permissão para realizar essa execução remota em seu controlador de domínio?
-  - Se a resposta a ambas as perguntas for sim, **Feche** o alerta.
-3.  Se a resposta a uma das perguntas for não, essa atividade deverá ser considerada um positivo verdadeiro. Tente localizar a origem da tentativa verificando perfis de computador e conta. Clique no computador de origem ou na conta para acessar a página de perfil. Verifique o que aconteceu no momento dessas tentativas, pesquisando atividades incomuns, como: quem estava conectado e quais recursos foram acessados.
+2. O computador em questão tem permissão para realizar essa execução remota em seu controlador de domínio?
+   - A conta em questão tem permissão para realizar essa execução remota em seu controlador de domínio?
+   - Se a resposta a ambas as perguntas for sim, **Feche** o alerta.
+3. Se a resposta a uma das perguntas for não, essa atividade deverá ser considerada um positivo verdadeiro. Tente localizar a origem da tentativa verificando perfis de computador e conta. Clique no computador de origem ou na conta para acessar a página de perfil. Verifique o que aconteceu no momento dessas tentativas, pesquisando atividades incomuns, como: quem estava conectado e quais recursos foram acessados.
 
 
 **Remediação**
@@ -461,13 +461,13 @@ Nesta detecção, um alerta é disparado quando ocorrem diversas falhas de auten
 
 **Investigação**
 
-1.  Clique em **Baixar detalhes** para exibir as informações completas em uma planilha do Excel. Você pode obter as seguintes informações: 
-  - Lista das contas atacadas
-  - Lista de contas adivinhadas em que as tentativas de logon terminaram com a autenticação bem-sucedida
-  - Se as tentativas de autenticação tiverem sido realizadas usando NTLM, você verá as atividades de eventos relevantes 
-  - Se as tentativas de autenticação tiverem sido realizadas usando Kerberos, você verá as atividades de rede relevantes
-2.  Clique no computador de origem para acessar a página de perfil. Verifique o que aconteceu no momento dessas tentativas, pesquisando atividades incomuns, como: quem estava conectado e quais recursos foram acessados. 
-3.  Se a autenticação tiver sido executada usando NTLM, você vir que o alerta ocorre muitas vezes e não houver informações suficientes disponíveis sobre o servidor que tentou acessar o computador de origem, você deverá habilitar a **Auditoria de NTLM** nos controladores de domínio envolvidos. Para fazer isso, ative o evento 8004. Esse é o evento de autenticação de NTLM que inclui informações sobre o computador de origem, a conta de usuário e o **servidor** que o computador de origem tentou acessar. Depois que saber qual servidor enviou a validação de autenticação, você deverá investigar o servidor, verificando seus eventos, como 4624, para compreender melhor o processo de autenticação. 
+1. Clique em **Baixar detalhes** para exibir as informações completas em uma planilha do Excel. Você pode obter as seguintes informações: 
+   - Lista das contas atacadas
+   - Lista de contas adivinhadas em que as tentativas de logon terminaram com a autenticação bem-sucedida
+   - Se as tentativas de autenticação tiverem sido realizadas usando NTLM, você verá as atividades de eventos relevantes 
+   - Se as tentativas de autenticação tiverem sido realizadas usando Kerberos, você verá as atividades de rede relevantes
+2. Clique no computador de origem para acessar a página de perfil. Verifique o que aconteceu no momento dessas tentativas, pesquisando atividades incomuns, como: quem estava conectado e quais recursos foram acessados. 
+3. Se a autenticação tiver sido executada usando NTLM, você vir que o alerta ocorre muitas vezes e não houver informações suficientes disponíveis sobre o servidor que tentou acessar o computador de origem, você deverá habilitar a **Auditoria de NTLM** nos controladores de domínio envolvidos. Para fazer isso, ative o evento 8004. Esse é o evento de autenticação de NTLM que inclui informações sobre o computador de origem, a conta de usuário e o **servidor** que o computador de origem tentou acessar. Depois que saber qual servidor enviou a validação de autenticação, você deverá investigar o servidor, verificando seus eventos, como 4624, para compreender melhor o processo de autenticação. 
 
 
 **Remediação**
@@ -486,9 +486,9 @@ Os invasores tentam executar serviços suspeitos em sua rede. O ATA emite um ale
 
 2. O serviço é algo que você reconhece neste computador?
 
- - A **conta** em questão tem permissão para instalar esse serviço?
+   - A **conta** em questão tem permissão para instalar esse serviço?
 
- - Se a resposta para ambas as perguntas for *sim*, **Feche** o alerta ou adicione-o à lista de Exclusões.
+   - Se a resposta para ambas as perguntas for *sim*, **Feche** o alerta ou adicione-o à lista de Exclusões.
 
 3. Se a resposta a uma das perguntas for *não*, então, isso deverá ser considerado um positivo verdadeiro.
 

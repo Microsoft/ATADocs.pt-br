@@ -13,17 +13,13 @@ ms.technology: ''
 ms.assetid: a06004bd-9f77-4e8e-a0e5-4727d6651a0f
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 8ff32e742dc1ff1ce48077206b78d4badd10f74e
-ms.sourcegitcommit: 1ba4e327784c6267db5a708592c4d81ca23376ba
+ms.openlocfilehash: 6a46250d8249f8faa1510cd0c67db2bd42c917fc
+ms.sourcegitcommit: a0ebb0b6f140d4abf091ebd9d756b975b3d96b9d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/03/2019
-ms.locfileid: "53996818"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54458710"
 ---
-*Aplica-se a: Proteção Avançada contra Ameaças do Azure*
-
-
-
 # <a name="working-with-security-alerts"></a>Trabalhando com alertas de segurança
 
 Este artigo explica noções básicas de como trabalhar com os alertas de segurança do ATP do Azure.

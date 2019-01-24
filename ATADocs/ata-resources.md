@@ -13,16 +13,17 @@ ms.technology: ''
 ms.assetid: 42a1a34f-ed6b-4538-befb-452168a30e8c
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 069ee0f367c52de897486291f761bf0dde6016e0
-ms.sourcegitcommit: 8ecb76ddfbf48c361d3637d15bd48313a3e68685
+ms.openlocfilehash: 92768392fffb2485a3043ca49fa0c7d494a26df7
+ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2018
-ms.locfileid: "49634742"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54840991"
 ---
+# <a name="ata-readiness-roadmap"></a>Roteiro de preparação do ATA 
+
 *Aplica-se a: Advanced Threat Analytics versão 1.9*
 
-# <a name="ata-readiness-roadmap"></a>Roteiro de preparação do ATA 
 Este artigo fornece um roteiro de preparação que ajudará você a se familiarizar com o Advanced Threat Analytics.
 
 ## <a name="understanding-ata"></a>Compreendendo o ATA
@@ -77,7 +78,7 @@ As configurações básicas necessárias no ATA são configuradas como parte do 
 
 Depois que o ATA estiver em execução, você poderá exibir as atividades suspeitas detectadas na linha do tempo do Ataque. Essa é a página de aterrissagem exibida quando você entra no Console do ATA. Por padrão, todas as atividades suspeitas abertas são mostradas na linha do tempo de ataque. Você também pode ver a severidade atribuída a cada atividade. Investigue cada atividade suspeita, analisando as entidades (computadores, dispositivos, usuários) para abrir suas páginas de perfil que fornecem mais informações. Esses recursos ajudarão você a trabalhar com as atividades suspeitas do ATA:
 
-[Guia estratégico de atividades suspeitas do ATA](http://aka.ms/ataplaybook) – Este artigo o orienta por meio de técnicas de ataque de roubo de credenciais usando as ferramentas de pesquisa prontamente disponíveis na Internet. Em cada ponto de ataque, você pode ver como o ATA ajuda você a obter visibilidade nessas ameaças.
+[Guia estratégico de atividades suspeitas do ATA](http://aka.ms/ataplaybook) – Este artigo o orienta por meio de técnicas de ataque de roubo de credenciais usando as ferramentas de pesquisa prontamente disponíveis na Internet. Em cada ponto de ataque, você pode ver como o ATA ajuda você a obter visibilidade nessas ameaças.
 
 [Guia de atividade suspeita do ATA](suspicious-activity-guide.md)
 

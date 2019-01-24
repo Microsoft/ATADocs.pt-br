@@ -13,24 +13,23 @@ ms.technology: ''
 ms.assetid: 8980e724-06a6-40b0-8477-27d4cc29fd2b
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: b45012f82a2457d09a616c2bd9e7e8866d0f5cdc
-ms.sourcegitcommit: b283bf66e63d76e6dba4564a229e804792794c6d
+ms.openlocfilehash: 76c149c351400c57d8d70274d152d23ca6f729df
+ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/29/2018
-ms.locfileid: "47453928"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54839887"
 ---
-*Aplica-se a: Advanced Threat Analytics versão 1.9*
-
-
-
 # <a name="install-ata---step-8"></a>Instalação do ATA - Etapa 8
+
+*Aplica-se a: Advanced Threat Analytics versão 1.9*
 
 > [!div class="step-by-step"]
 > [« Etapa 7](vpn-integration-install-step.md)
 > [Etapa 9 »](install-ata-step9-samr.md)
 
 ## <a name="step-8-configure-ip-address-exclusions-and-honeytoken-user"></a>Etapa 8. Configurar as exclusões de endereço IP e o usuário Honeytoken
+
 O ATA permite a exclusão de endereços IP ou de usuários específicos de várias detecções. 
 
 Por exemplo, uma **exclusão por Reconhecimento de DNS** poderia ser um verificador de segurança que usa o DNS como um mecanismo de verificação. A exclusão ajuda o ATA a ignorar esses verificadores. Um exemplo de uma exclusão por *Passagem de tíquete* é um dispositivo NAT.    

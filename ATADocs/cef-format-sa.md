@@ -13,17 +13,17 @@ ms.technology: ''
 ms.assetid: 601b48ba-a327-4aff-a1f9-2377a2bb7a42
 ms.reviewer: ort
 ms.suite: ems
-ms.openlocfilehash: f96bd9222a803a21efee5def935ecbe3244e0611
-ms.sourcegitcommit: c390d36d75f13607698c2a8d7ac757ecef4c748e
+ms.openlocfilehash: 357f3517a864114c0aaa83a074c0b061d21259c2
+ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53709924"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54840923"
 ---
-*Aplica-se a: Advanced Threat Analytics versão 1.9*
-
-
 # <a name="ata-siem-log-reference"></a>Referência de log do SIEM do ATA
+
+
+*Aplica-se a: Advanced Threat Analytics versão 1.9*
 
 O ATA pode encaminhar eventos de alerta de monitoramento e de segurança para o SIEM. Os alertas são encaminhados no formato CEF. Abaixo, temos um exemplo de cada tipo de log de alerta de segurança a ser enviado para o SIEM.
 
@@ -155,5 +155,5 @@ Prioridades: 3=Baixa 5=Média 10=Alta
 - [Pré-requisitos do ATA](ata-prerequisites.md)
 - [Planejamento da capacidade do ATA](ata-capacity-planning.md)
 - [Configurar coleta de eventos](configure-event-collection.md)
-- [Configuração do encaminhamento de eventos do Windows](configure-event-collection.md#configuring-windows-event-forwarding)
+- [Configuração do encaminhamento de eventos do Windows](configure-event-collection.md)
 - [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

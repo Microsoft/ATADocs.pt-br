@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: e9cf68d2-36bd-4b0d-b36e-7cf7ded2618e
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: e61fb5c54dc17baf0005ea6137f7d21096e1c520
-ms.sourcegitcommit: e2daa0f93d97d552cfbf1577fbd05a547b63e95b
+ms.openlocfilehash: caf64977da89c88f3640430bf4aa68a76a51026e
+ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54314339"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54841144"
 ---
 # <a name="tutorial-reconnaissance-alerts"></a>Tutorial: Alertas de reconhecimento  
 
@@ -62,28 +62,28 @@ Para determinar se essa consulta foi um **TP**, **BTP** ou **FP**, clique no ale
 1. Verifique se o computador de origem deveria ter realizado esse tipo de consulta. Exemplos de um **B-TP**, nesse caso, podem ser servidores Microsoft Exchange ou sistemas de recursos humanos.
 
 2. Verifique os domínios de conta.
-    - Há usuários adicionais que pertencem a um domínio diferente? 
-    <br>Um erro de configuração do servidor, como Exchange, Skype ou ADSF, pode causar a presença de usuários adicionais que pertençam a domínios diferentes.
-    - Examine a configuração do serviço com problema para corrigir o erro de configuração.
+   - Há usuários adicionais que pertencem a um domínio diferente? 
+     <br>Um erro de configuração do servidor, como Exchange, Skype ou ADSF, pode causar a presença de usuários adicionais que pertençam a domínios diferentes.
+   - Examine a configuração do serviço com problema para corrigir o erro de configuração.
 
-    Se você respondeu **sim** às perguntas acima, essa é uma atividade **B-TP**. *Feche* o alerta de segurança.<br>
+     Se você respondeu **sim** às perguntas acima, essa é uma atividade **B-TP**. *Feche* o alerta de segurança.<br>
 
 Como próxima etapa, examine o computador de origem: 
 
 1. Há algum script ou aplicativo em execução no computador de origem que possa estar gerando esse comportamento?  
-    - Trata-se de um script antigo em execução com credenciais antigas? <br>Em caso afirmativo, interrompa e edite ou exclua o script. 
-    - O aplicativo é um script ou um aplicativo administrativo ou de segurança que deve ser executado no ambiente?
+   - Trata-se de um script antigo em execução com credenciais antigas? <br>Em caso afirmativo, interrompa e edite ou exclua o script. 
+   - O aplicativo é um script ou um aplicativo administrativo ou de segurança que deve ser executado no ambiente?
  
-    Se você respondeu **sim** à pergunta anterior, *feche* o alerta de segurança e exclua esse computador. Provavelmente, essa é uma atividade **B-TP**.
+     Se você respondeu **sim** à pergunta anterior, *feche* o alerta de segurança e exclua esse computador. Provavelmente, essa é uma atividade **B-TP**.
 
 Agora, examine as contas:<br>
 <br>Os invasores são conhecidos por usar um dicionário de nomes de conta aleatórios para localizar nomes de conta existentes em uma organização.
 
 1. As contas inexistentes são familiares?  
-    - Se as contas inexistentes forem familiares, talvez sejam contas desabilitadas ou pertencentes a funcionários que saíram da empresa.
-    - Verifique se há um aplicativo ou script que possa determinar quais contas ainda existem no Active Directory.
+   - Se as contas inexistentes forem familiares, talvez sejam contas desabilitadas ou pertencentes a funcionários que saíram da empresa.
+   - Verifique se há um aplicativo ou script que possa determinar quais contas ainda existem no Active Directory.
 
-    Se você respondeu **Sim** a uma das perguntas anteriores, *feche* o alerta de segurança. Provavelmente, essa é uma atividade **B-TP**.
+     Se você respondeu **Sim** a uma das perguntas anteriores, *feche* o alerta de segurança. Provavelmente, essa é uma atividade **B-TP**.
 
 2. Se qualquer uma das tentativas de suposição corresponder nomes de contas existentes, o invasor sabe da existência de contas em seu ambiente e pode tentar usar força bruta para acessar seu domínio usando os nomes de usuário descobertos. 
     - Verifique os nomes de conta que foram adivinhados para ver se há atividades suspeitas adicionais. 
@@ -187,13 +187,13 @@ Quatro semanas por controlador de domínio, começando com a primeira atividade 
 **TP, B-TP ou FP** 
 
 1. Clique no computador de origem para acessar sua página de perfil.        
-    - O computador de origem deve gerar atividades desse tipo?
-      - Se sim, *feche* o alerta de segurança e exclua esse computador como uma atividade **B-TP**. 
-    - Verifique os usuários que realizaram a operação.
-      - Esses usuários normalmente se registram nesse computador de origem ou eles são administradores que deveriam estar realizando essas ações específicas?   
-      - Verifique o perfil do usuário e suas atividades de usuário relacionadas. Entenda o comportamento normal do usuário e pesquise outras atividades suspeitas usando o [guia de investigação de usuário](investigate-a-user.md). 
+   - O computador de origem deve gerar atividades desse tipo?
+     - Se sim, *feche* o alerta de segurança e exclua esse computador como uma atividade **B-TP**. 
+   - Verifique os usuários que realizaram a operação.
+     - Esses usuários normalmente se registram nesse computador de origem ou eles são administradores que deveriam estar realizando essas ações específicas?   
+     - Verifique o perfil do usuário e suas atividades de usuário relacionadas. Entenda o comportamento normal do usuário e pesquise outras atividades suspeitas usando o [guia de investigação de usuário](investigate-a-user.md). 
     
-    Se você respondeu **sim** às perguntas acima, *feche* o alerta como uma atividade **B-TP**. 
+     Se você respondeu **sim** às perguntas acima, *feche* o alerta como uma atividade **B-TP**. 
   
 **Entender o escopo da violação**
 

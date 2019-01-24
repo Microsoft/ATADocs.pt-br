@@ -13,16 +13,13 @@ ms.technology: ''
 ms.assetid: ab1e8dd9-a6c2-4c68-89d5-343b8ec56142
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 9d9294a22d1e3fd1847d42bd376e65fd114b04bf
-ms.sourcegitcommit: a2f6b52f66c89b9f2ca7410426b759a0b0de8d31
+ms.openlocfilehash: 8d7d8bc8ce6c1aefb95b5770a103859fed74efe1
+ms.sourcegitcommit: a0ebb0b6f140d4abf091ebd9d756b975b3d96b9d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/06/2018
-ms.locfileid: "52981931"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54458624"
 ---
-*Aplica-se a: Proteção Avançada contra Ameaças do Azure*
-
-
 # <a name="azure-atp-advanced-audit-policy-check"></a>Verificação de política de auditoria avançada da ATP do Azure
 
 A detecção da ATP do Azure depende de Logs de Eventos do Windows para obter visibilidade em determinados cenários, tais como logons de NTLM, modificações de grupos de segurança e eventos semelhantes. Para que os eventos corretos sejam auditados e incluídos no Log de Eventos do Windows, seus controladores de domínio exigem configurações precisas de política de auditoria avançada. Configurações de política de auditoria avançada incorretas fazem com que eventos críticos fiquem de fora de seus logs e resultam em uma cobertura incompleta da ATP do Azure.
@@ -46,7 +43,7 @@ A Política de Auditoria de Segurança Avançada é habilitada por meio do GPO d
 
 4. Na janela que é aberta, vá para **Configuração do computador** > **Políticas** > **Configurações do Windows** > **Configurações de segurança** > **Configuração de política de auditoria avançada**.
 
-    ![Configuração Avançada de Política de Auditoria](media/atp-advanced-audit-policy-check-step-2.png)
+    ![Configuração de Política de Auditoria Avançada](media/atp-advanced-audit-policy-check-step-2.png)
 
 5. Vá para Logon na conta, clique duas vezes em **Validação de credenciais de auditoria** e selecione **Configurar estes eventos de auditoria**, tanto para eventos de êxito quanto para os de falha. 
 
@@ -64,5 +61,5 @@ A Política de Auditoria de Segurança Avançada é habilitada por meio do GPO d
 ## <a name="see-also"></a>Consulte Também
 - [Pré-requisitos do Azure ATP](atp-prerequisites.md)
 - [Configurar coleta de eventos](configure-event-collection.md)
-- [Configuração do encaminhamento de eventos do Windows](configure-event-forwarding.md#configuring-windows-event-forwarding)
+- [Configuração do encaminhamento de eventos do Windows](configure-event-forwarding.md)
 - [Confira o fórum do ATP do Azure!](https://aka.ms/azureatpcommunity)

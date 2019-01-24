@@ -13,19 +13,19 @@ ms.technology: ''
 ms.assetid: d6c783b2-46c5-4211-b21a-d6b17f08d03d
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 12d1a3f10cc3b9d99a20a2562ae4f81425ec9578
-ms.sourcegitcommit: 959b1f7753b9a8ad94870d2014376d55296fbbd4
+ms.openlocfilehash: 9d043ac8c780505f6e3443c354e02b89d3040b4c
+ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46133487"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54839967"
 ---
-*Aplica-se a: Advanced Threat Analytics versão 1.9*
-
-
 # <a name="working-with-ata-system-health-and-events"></a>Trabalhando com eventos e a integridade do sistema ATA
 
+*Aplica-se a: Advanced Threat Analytics versão 1.9*
+
 ## <a name="ata-health-center"></a>Centro de Integridade de ATA
+
 A Central de Integridade de ATA permite saber como seu serviço ATA está sendo executado e alerta-o para os problemas.
 
 ## <a name="working-with-the-ata-health-center"></a>Trabalhando com a Central de Integridade de ATA
@@ -38,16 +38,16 @@ Para verificar a integridade geral do sistema, clique no ícone Central de Integ
 
 -   Todos os alertas abertos podem ser gerenciados configurando-os para **Fechar**, **Suprimir** ou **Excluir** clicando nos três pontos no canto do alerta e fazendo sua escolha.
 
--   **Abrir**: todas as novas atividades suspeitas aparecem nesta lista.
+-   **Abrir**: Todas as novas atividades suspeitas aparecem nesta lista.
 
--   **Fechar**: é usado para rastrear atividades suspeitas que você identificou, pesquisou e corrigiu como mitigado.
+-   **Fechar**: É usado para rastrear atividades suspeitas que você identificou, pesquisou e corrigiu como mitigadas.
 
     > [!NOTE]
     > O ATA pode reabrir uma atividade fechada se a mesma atividade for novamente detectada em um curto período de tempo.
 
--   **Suprimir**: suprimir uma atividade significa que você deseja ignorá-la por enquanto e apenas ser alertado novamente se houver uma nova instância. Se houver um alerta semelhante, o ATA não reabrirá. Mas, se o alerta parar por sete dias e for observado novamente, você será alertado novamente.
+-   **Suprimir**: Suprimir uma atividade significa que você deseja ignorá-la por enquanto e apenas ser alertado novamente se houver uma nova instância. Se houver um alerta semelhante, o ATA não reabrirá. Mas, se o alerta parar por sete dias e for observado novamente, você será alertado novamente.
 
-- **Excluir**: se você excluir um alerta, ele será excluído do sistema, do banco de dados e você NÃO poderá restaurá-lo. Depois de clicar em Excluir, você poderá excluir todas as atividades suspeitas do mesmo tipo.
+- **Excluir**: Se você excluir um alerta, ele será excluído do sistema, do banco de dados e você NÃO poderá restaurá-lo. Depois de clicar em Excluir, você poderá excluir todas as atividades suspeitas do mesmo tipo.
 
 
 

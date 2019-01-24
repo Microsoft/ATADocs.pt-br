@@ -13,18 +13,17 @@ ms.technology: ''
 ms.assetid: 44d7c899-816c-4f7f-91d3-84a09d291a24
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: cf847d04ea87beddc9e33a086f998abd51e680fb
-ms.sourcegitcommit: 8f9d6c517b91b9b389b604cd85f2482593b36fcf
+ms.openlocfilehash: 17f01c13fc42888bc76b57f26fc90a8d36c13218
+ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53654902"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54841093"
 ---
+# <a name="working-with-suspicious-activities"></a>Trabalhando com atividades suspeitas
+
 *Aplica-se a: Advanced Threat Analytics versão 1.9*
 
-
-
-# <a name="working-with-suspicious-activities"></a>Trabalhando com atividades suspeitas
 Este artigo explica as noções básicas de como trabalhar com a Advanced Threat Analytics.
 
 ## <a name="review-suspicious-activities-on-the-attack-time-line"></a>Examinar atividades suspeitas na linha do tempo de ataque
@@ -81,20 +80,20 @@ Para fazer isso, clique nos três pontos no canto superior direito de uma ativid
 
 **Status de atividade suspeita**
 
--   **Abrir**: Todas as novas atividades suspeitas aparecem nesta lista.
+- **Abrir**: Todas as novas atividades suspeitas aparecem nesta lista.
 
--   **Fechar**: É usado para rastrear atividades suspeitas que você identificou, pesquisou e corrigiu como mitigadas.
+- **Fechar**: É usado para rastrear atividades suspeitas que você identificou, pesquisou e corrigiu como mitigadas.
 
-    > [!NOTE]
-    > Se a mesma atividade for detectada novamente dentro de um curto período, o ATA poderá reabrir uma atividade fechada.
+  > [!NOTE]
+  > Se a mesma atividade for detectada novamente dentro de um curto período, o ATA poderá reabrir uma atividade fechada.
 
--   **Suprimir**: Suprimir uma atividade significa que você deseja ignorá-la por enquanto e apenas ser alertado novamente se houver uma nova instância. Isso significa que, se houver um alerta semelhante, o ATA não reabrirá. Mas, se o alerta parar por sete dias e for observado novamente, você será alertado novamente.
+- **Suprimir**: Suprimir uma atividade significa que você deseja ignorá-la por enquanto e apenas ser alertado novamente se houver uma nova instância. Isso significa que, se houver um alerta semelhante, o ATA não reabrirá. Mas, se o alerta parar por sete dias e for observado novamente, você será alertado novamente.
 
 - **Excluir**: Se você excluir um alerta, ele será excluído do sistema, do banco de dados e você NÃO poderá restaurá-lo. Depois de clicar em Excluir, você poderá excluir todas as atividades suspeitas do mesmo tipo.
 
 - **Excluir**: A capacidade de excluir uma entidade de gerar mais de um determinado tipo de alertas. Por exemplo, você pode definir o ATA para excluir uma entidade específica (usuário ou computador) de emitir um alerta novamente para um determinado tipo de atividade suspeita, como um administrador específico que executa o código remoto ou um scanner de segurança que o reconhecimento de DNS. Além de ser capaz de adicionar exclusões diretamente na atividade suspeita conforme ela é detectada na linha do tempo, você também pode acessar a página Configuração até **Exclusões** e para cada atividade suspeita, você pode adicionar e remover manualmente entidades ou sub-redes excluídas (por exemplo, para Passagem de Tíquete). 
-> [!NOTE]
-> As páginas de configuração podem ser modificadas apenas por administradores do ATA.
+  > [!NOTE]
+  > As páginas de configuração podem ser modificadas apenas por administradores do ATA.
 
 
 ## <a name="related-videos"></a>Vídeos Relacionados
