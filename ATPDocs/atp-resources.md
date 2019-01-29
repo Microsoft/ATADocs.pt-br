@@ -13,17 +13,13 @@ ms.technology: ''
 ms.assetid: 34dc152c-6b7f-4128-93fe-aad56c282730
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: b61e840efc1b2ee14c2d367d1492b57836e2d144
-ms.sourcegitcommit: f4f2a1b2c674c4dba7a46ece0624f5ea10c4865e
+ms.openlocfilehash: a61434b7b9c15516c115dcbc9ae58e8cc9815111
+ms.sourcegitcommit: a0ebb0b6f140d4abf091ebd9d756b975b3d96b9d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2018
-ms.locfileid: "52744448"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54459032"
 ---
-*Aplica-se a: Proteção Avançada contra Ameaças do Azure*
-
-
-
 # <a name="azure-atp-readiness-guide"></a>Guia de preparação do Azure ATP
 
 Este artigo contém um roteiro de preparação que lista os recursos que ajudam a começar a usar a Proteção Avançada contra Ameaças do Azure. 
@@ -70,11 +66,11 @@ Depois que o ATP do Azure estiver em funcionamento, exiba os alertas de seguran�
 
 ## <a name="community-resources"></a>Recursos da comunidade
 
-Blog: [Blog do Azure ATP](https://aka.ms/aatpblog)
+Blog: [Blog do ATP do Azure](https://aka.ms/aatpblog)
 
-Comunidade pública: [Comunidade Tecnológica do Azure ATP](https://aka.ms/AatpCom)
+Comunidade pública: [Comunidade Tecnológica do ATP do Azure](https://aka.ms/AatpCom)
 
-Comunidade privada: [Grupo do Azure ATP no Yammer](https://www.yammer.com/azureadvisors/#/threads/inGroup?type=in_group&feedId=9386893&view=all)
+Comunidade particular: [Comunidade Yammer do ATP do Azure](https://www.yammer.com/azureadvisors/#/threads/inGroup?type=in_group&feedId=9386893&view=all)
 
 Channel 9: [Página do Microsoft Security Channel 9](https://channel9.msdn.com/Shows/Microsoft-Security/)
 

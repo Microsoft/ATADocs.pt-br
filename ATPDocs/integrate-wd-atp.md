@@ -13,26 +13,24 @@ ms.technology: ''
 ms.assetid: f6f3ed75-d6bb-4966-a9a7-5339c4f3ebac
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 52445e15a4465f0fa4b399cf99ccf6620db7a572
-ms.sourcegitcommit: 59ed430fa0cd8ac34a70609026ec5fc2f5972f57
+ms.openlocfilehash: 2ff18759e23462a2b01a10f45729b5a282495347
+ms.sourcegitcommit: a0ebb0b6f140d4abf091ebd9d756b975b3d96b9d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/21/2018
-ms.locfileid: "49480677"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54458799"
 ---
-*Aplica-se a: Proteção Avançada contra Ameaças do Azure*
-
 # <a name="integrate-azure-atp-with-windows-defender-atp"></a>Integrar o Azure ATP ao Windows Defender ATP
 
 A Proteção Avançada contra Ameaças do Azure permite que você integre o Azure ATP ao Windows Defender ATP para uma solução de proteção contra ameaças ainda mais completa. Enquanto o Azure ATP monitora o tráfego em seus controladores de domínio, o Windows Defender ATP monitora seus pontos de extremidade. Juntos, eles fornecem uma única interface na qual você pode proteger seu ambiente.
 
 Integrando o Windows Defender ATP ao Azure ATP, você pode aproveitar todo o potencial dos dois serviços e proteger seu ambiente, incluindo:
 
-- Sensores e sensores autônomos do Azure ATP: podem ser colocados diretamente em seus controladores de domínio ou espelhamento de porta de seus controladores de domínio para o ATP, a fim de capturar e analisar o tráfego de rede de vários protocolos (por exemplo, Kerberos, DNS, RPC, NTLM e outros) para autenticação, autorização e coleta de informações. 
+- Sensores do ATP do Azure e sensores autônomos: podem ser colocados diretamente em seus controladores de domínio ou espelhamento de porta de seus controladores de domínio para o ATP, a fim de capturar e analisar o tráfego de rede de vários protocolos (por exemplo, Kerberos, DNS, RPC, NTLM e outros) para autenticação, autorização e coleta de informações. 
 
 -   Sensores de comportamento de ponto de extremidade: inseridos no Windows 10, esses sensores coletam e processam sinais comportamentais do sistema operacional (por exemplo, processo, Registro, arquivo e comunicações de rede) e enviam esses dados do sensor à sua instância de nuvem privada e isolada do Windows Defender ATP.
 
-- Análise de segurança de nuvem: aproveitando Big Data, machine learning e uma visão única da Microsoft de todo o ecossistema do Windows (como a [Ferramenta de Remoção de Software Mal-Intencionado da Microsoft](https://www.microsoft.com/download/malicious-software-removal-tool-details.aspx)), produtos de nuvem corporativos (como o Office 365) e ativos online (como reputação de URLs do SmartScreen e o Bing), os sinais comportamentais são traduzidos em insights, detecções e respostas recomendadas a ameaças avançadas.
+- Análise de segurança da nuvem: aproveitando Big Data, machine learning e uma visão única da Microsoft de todo o ecossistema do Windows (como a [Ferramenta de Remoção de Software Mal-Intencionado da Microsoft](https://www.microsoft.com/download/malicious-software-removal-tool-details.aspx)), produtos de nuvem corporativos (como o Office 365) e ativos online (como reputação de URLs do SmartScreen e o Bing), os sinais comportamentais são traduzidos em insights, detecções e respostas recomendadas a ameaças avançadas.
 
 - Inteligência contra ameaças: gerada por equipes de segurança e caçadores da Microsoft e ampliada pela inteligência contra ameaças fornecida por parceiros, a inteligência contra ameaças permite que o Windows Defender ATP identifique ferramentas, técnicas e procedimentos do invasor e gere alertas quando essas atividades forem observadas nos dados coletados pelo sensor.
 

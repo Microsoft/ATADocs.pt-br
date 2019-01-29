@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 671747d5-faed-4352-a871-17b58fdc6574
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: d8cbbba3f034dac7679d77a645545374bfad643c
-ms.sourcegitcommit: 6a0ac21f59e72db8615811da2c886f54cf3727f5
+ms.openlocfilehash: b40cdeb52f26e3fae32185c3168c5e3073bf5929
+ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/13/2019
-ms.locfileid: "54250049"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54840841"
 ---
 # <a name="tutorial-understanding-security-alerts"></a>Tutorial: entendendo os alertas de segurança
 
@@ -119,7 +119,7 @@ Em cada alerta, a última guia fornece as **Entidades Relacionadas**. As entidad
  
 **JSON da entidade exclusiva**
  
-Inclui os dados que o ATP do Azure aprendeu com o Active Directory sobre a conta. Isso inclui todos os atributos como *Nome Diferenciado*, *SID*, *LockoutTime e *PasswordExpiryTime*. Para contas de usuário, inclui dados como *Departamento*, *Email* e *PhoneNumber*. Para contas de computador, inclui dados como *OperatingSystem*, *IsDomainController e *DnsName*.
+Inclui os dados que o ATP do Azure aprendeu com o Active Directory sobre a conta. Isso inclui todos os atributos como *Nome Diferenciado*, *SID*, <em>LockoutTime e *PasswordExpiryTime</em>. Para contas de usuário, inclui dados como *Departamento*, *Email* e *PhoneNumber*. Para contas de computador, inclui dados como *OperatingSystem*, <em>IsDomainController e *DnsName</em>.
 
 **JSON do perfil da entidade exclusiva**
 

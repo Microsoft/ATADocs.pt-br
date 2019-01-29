@@ -13,17 +13,17 @@ ms.technology: ''
 ms.assetid: b04fb8a4-b366-4b55-9d4c-6f054fa58a90
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: cf3090ae1248125c9ff4d55bc1db7540ae532720
-ms.sourcegitcommit: 959b1f7753b9a8ad94870d2014376d55296fbbd4
+ms.openlocfilehash: 1ce2fde6e459aa11f3d61d8331ece53469ee3e21
+ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46133887"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54841127"
 ---
+# <a name="understanding-ata-monitoring-alerts"></a>Entendendo os alertas de monitoramento do ATA
+
 *Aplica-se a: Advanced Threat Analytics versão 1.9*
 
-
-# <a name="understanding-ata-monitoring-alerts"></a>Entendendo os alertas de monitoramento do ATA
 O Centro de Integridade do ATA permite saber quando há um problema com a implantação do ATA gerando um alerta de monitoramento.
 Este artigo descreve todos os alertas de monitoramento para cada componente, listando a causa e as etapas necessárias para resolver o problema.
 ## <a name="ata-center-issues"></a>Problemas do Centro do ATA
@@ -48,11 +48,11 @@ Este artigo descreve todos os alertas de monitoramento para cada componente, lis
 ### <a name="center-certificate-is-about-to-expire"></a>O certificado do Centro está prestes a expirar
 |Alerta|Descrição|Resolução|Severidade|
 |----|----|----|----|
-|O certificado do Centro do ATA expirará em menos de três semanas.|Após a expiração do certificado: a conectividade de Gateways do ATA com o Centro do ATA falhará. O processo do Centro do ATA falhará e toda a funcionalidade do ATA será interrompida.|[Substitua o certificado do Centro do ATA](modifying-ata-center-configuration.md)|Média|
+|O certificado do Centro do ATA expirará em menos de três semanas.|Após a expiração do certificado: a conectividade de Gateways do ATA com o ATA Center falhará. O processo do Centro do ATA falhará e toda a funcionalidade do ATA será interrompida.|[Substitua o certificado do Centro do ATA](modifying-ata-center-configuration.md)|Média|
 ### <a name="ata-center-certificate-expired"></a>Certificado do Centro de ATA expirado
 |Alerta|Descrição|Resolução|Severidade|
 |----|----|----|----|
-|O certificado do Centro de ATA expirou.|Após a expiração do certificado: a conectividade de Gateways do ATA com o Centro do ATA falhará. O processo do Centro do ATA falha e toda a funcionalidade do ATA é interrompida.|[Substitua o certificado do Centro do ATA](modifying-ata-center-configuration.md)|Alta|
+|O certificado do Centro de ATA expirou.|Após a expiração do certificado: a conectividade de Gateways do ATA com o ATA Center falhará. O processo do Centro do ATA falha e toda a funcionalidade do ATA é interrompida.|[Substitua o certificado do Centro do ATA](modifying-ata-center-configuration.md)|Alta|
 ## <a name="ata-gateway-issues"></a>Problemas do Gateway do ATA
 ### <a name="read-only-user-password-to-expire-shortly"></a>Senha de usuário somente leitura a expirar em breve
 |Alerta|Descrição|Resolução|Severidade|
@@ -123,5 +123,5 @@ Este artigo descreve todos os alertas de monitoramento para cada componente, lis
 - [Pré-requisitos do ATA](ata-prerequisites.md)
 - [Planejamento da capacidade do ATA](ata-capacity-planning.md)
 - [Configurar coleta de eventos](configure-event-collection.md)
-- [Configuração do encaminhamento de eventos do Windows](configure-event-collection.md#configuring-windows-event-forwarding)
+- [Configuração do encaminhamento de eventos do Windows](configure-event-collection.md)
 - [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

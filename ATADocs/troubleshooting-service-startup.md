@@ -13,18 +13,16 @@ ms.technology: ''
 ms.assetid: 5a65285c-d1de-4025-9bb4-ef9c20b13cfa
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: e3f59bc7c6873407d8764dc5ab64bfd7a52fdebe
-ms.sourcegitcommit: 959b1f7753b9a8ad94870d2014376d55296fbbd4
+ms.openlocfilehash: 21afd487fbf15b3fc1f5d618e0e6b98d50d07cae
+ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46133337"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54839556"
 ---
-*Aplica-se a: Advanced Threat Analytics versão 1.9*
-
-
-
 # <a name="troubleshooting-service-startup"></a>Solução de problemas de inicialização do serviço
+
+*Aplica-se a: Advanced Threat Analytics versão 1.9*
 
 ## <a name="troubleshooting-ata-center-service-startup"></a>Solução de problemas de inicialização de serviço do Centro de ATA
 
@@ -51,7 +49,7 @@ Se puder iniciar, provavelmente a plataforma estará bem. Caso contrário, a pla
 **Sintoma**
 
 Seu Gateway do ATA não inicia e você receberá esse erro:<br></br>
-*System.Net.Http.HttpRequestException: o código de status de resposta não indica êxito: 500 (erro interno do servidor)*
+*System.Net.Http.HttpRequestException: código de status de resposta não indica êxito: 500 (Erro Interno do Servidor)*
 
 **Descrição**
 
@@ -69,5 +67,5 @@ Isso acontece porque, como parte do processo de instalação do Gateway Lightwei
 - [Pré-requisitos do ATA](ata-prerequisites.md)
 - [Planejamento da capacidade do ATA](ata-capacity-planning.md)
 - [Configurar coleta de eventos](configure-event-collection.md)
-- [Configuração do encaminhamento de eventos do Windows](configure-event-collection.md#configuring-windows-event-forwarding)
+- [Configuração do encaminhamento de eventos do Windows](configure-event-collection.md)
 - [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

@@ -44,6 +44,7 @@
 ## [Gerenciar contas confidenciais](sensitive-accounts.md)
 ## [Pesquisar e filtrar atividades monitoradas](atp-activities-search.md)
 ## [Usar contas de honeytoken e exclusões](install-atp-step7.md)
+## [Monitorar controladores de domínio](atp-sensor-monitoring.md)
 ## [Alterar a senha de conectividade do domínio](modifying-atp-config-dcpassword.md)
 ## [Definir notificações do Azure ATP](notifications.md)
 ## [Trabalhar com a central de integridade do ATP do Azure](atp-health-center.md)

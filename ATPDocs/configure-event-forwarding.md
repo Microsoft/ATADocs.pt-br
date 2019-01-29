@@ -13,24 +13,20 @@ ms.technology: ''
 ms.assetid: 3547519f-8d9c-40a9-8f0e-c7ba21081203
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: c17fbe10bea696711bd3dc011893bdcd3dbc87f4
-ms.sourcegitcommit: eb144ce1331ec3404fd2f75025cdbe802a73890b
+ms.openlocfilehash: cad1cff6b9e46676a2f92b3304dbc55440bfa1d9
+ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52620839"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54840430"
 ---
-*Aplica-se a: Proteção Avançada contra Ameaças do Azure*
-
-
-
 # <a name="configuring-windows-event-forwarding"></a>Configuração do encaminhamento de eventos do Windows
 
 > [!NOTE]
 > O sensor do Azure ATP lê automaticamente os eventos localmente, sem a necessidade de configurar o encaminhamento de eventos.
 
 
-Para aprimorar as funcionalidades de detecção, o Azure ATP precisa dos seguintes eventos do Windows: 4776, 4732, 4733, 4728, 4729, 4756, 4757 e 7045. Eles podem ser lidos automaticamente pelo sensor do Azure ATP ou, caso o sensor do Azure ATP não esteja implantado, ele poderá ser encaminhado para o sensor autônomo do Azure ATP de duas maneiras: configurando o sensor autônomo do Azure ATP para escutar eventos do SIEM ou configurando o Encaminhamento de Eventos do Windows.
+Para aprimorar as funcionalidades de detecção, ATP do Azure precisa dos seguintes eventos do Windows: 4776, 4732, 4733, 4728, 4729, 4756, 4757 e 7045. Eles podem ser lidos automaticamente pelo sensor do Azure ATP ou, caso o sensor do Azure ATP não esteja implantado, ele poderá ser encaminhado para o sensor autônomo do Azure ATP de duas maneiras: configurando o sensor autônomo do Azure ATP para escutar eventos do SIEM ou configurando o Encaminhamento de Eventos do Windows.
 
 > [!NOTE]
 > Verifique se o controlador de domínio está configurado corretamente para capturar os eventos necessários.
@@ -39,7 +35,7 @@ Para aprimorar as funcionalidades de detecção, o Azure ATP precisa dos seguint
 
 Após configurar o espelhamento de porta dos controladores de domínio para o Azure ATP, siga as instruções a seguir para configurar o Encaminhamento de Eventos do Windows usando a configuração Origem Iniciada. Essa é uma maneira para configurar o Encaminhamento de eventos do Windows. 
 
-**Etapa 1: Adicionar a conta de serviço de rede ao Grupo de Leitores de Log de Eventos do domínio.** 
+**Etapa 1: adicionar a conta de serviço de rede ao Grupo de Leitores de Log de Eventos do domínio.** 
 
 Neste cenário, suponha que o sensor autônomo do Azure ATP seja membro do domínio.
 
@@ -49,28 +45,28 @@ Neste cenário, suponha que o sensor autônomo do Azure ATP seja membro do domí
 
 Após adicionar o **Serviço de Rede** ao grupo **Leitores de Log de Eventos**, reinicie os controladores de domínio para que a alteração tenha efeito.
 
-**Etapa 2: Criar uma política nos controladores de domínio para definir a configuração Configurar Gerenciador de Assinaturas de destino.** 
+**Etapa 2: criar uma política nos controladores de domínio para definir a configuração Configurar Gerenciador de Assinaturas de destino.** 
 > [!Note] 
 > Você pode criar uma política de grupo para essas configurações e aplicá-la a cada controlador de domínio monitorado pelo sensor autônomo do Azure ATP. As etapas a seguir modificam a política local do controlador de domínio.     
 
-1.  Execute o seguinte comando em cada controlador de domínio: *winrm quickconfig*
-2.  Em um prompt de comando, digite *gpedit.msc*.
-3.  Expanda **Configuração do Computador > Modelos Administrativos > Componentes do Windows > Encaminhamento de Evento**
+1. Execute o seguinte comando em cada controlador de domínio: *winrm quickconfig*
+2. Em um prompt de comando, digite *gpedit.msc*.
+3. Expanda **Configuração do Computador > Modelos Administrativos > Componentes do Windows > Encaminhamento de Evento**
 
- ![Imagem do editor de grupo de política local](media/wef%201%20local%20group%20policy%20editor.png)
+   ![Imagem do editor de grupo de política local](media/wef%201%20local%20group%20policy%20editor.png)
 
-4.  Clique duas vezes em **Configurar Gerenciador de assinatura de destino**.
+4. Clique duas vezes em **Configurar Gerenciador de assinatura de destino**.
    
-    1.  Selecione **Habilitado**.
-    2.  Em **Opções**, clique em **Mostrar**.
-    3.  Em **SubscriptionManagers**, insira o seguinte valor e clique em **OK**: Server= http\://\<fqdnATPSensor>:5985/wsman/SubscriptionManager/WEC,Refresh=10` (Por exemplo: Server=http\://atpsensor9.contoso.com:5985/wsman/SubscriptionManager/WEC,Refresh=10)
+   1.  Selecione **Habilitado**.
+   2.  Em **Opções**, clique em **Mostrar**.
+   3.  Em **SubscriptionManagers**, insira o seguinte valor e clique em **OK**: Server= http\://\<fqdnATPSensor>:5985/wsman/SubscriptionManager/WEC,Refresh=10` (Por exemplo: Server=http\://atpsensor9.contoso.com:5985/wsman/SubscriptionManager/WEC,Refresh=10)
     
-    ![Configurar a imagem de assinatura de destino](media/wef%202%20config%20target%20sub%20manager.png)
+   ![Configurar a imagem de assinatura de destino](media/wef%202%20config%20target%20sub%20manager.png)
     
-5.  Clique em **OK**.
-6.  Em um prompt de comandos com privilégios elevados, digite *gpupdate /force*. 
+5. Clique em **OK**.
+6. Em um prompt de comandos com privilégios elevados, digite *gpupdate /force*. 
 
-**Etapa 3: Executar as seguintes etapas no sensor autônomo do Azure ATP** 
+**Etapa 3: executar as seguintes etapas no sensor autônomo do ATP do Azure** 
 
 1. Em um prompt de comandos com privilégios elevados, digite *wecutil qc*
 2. Abra o **Visualizador de Eventos**. 
@@ -91,7 +87,7 @@ Após adicionar o **Serviço de Rede** ao grupo **Leitores de Log de Eventos**, 
     6. Depois de alguns minutos, verifique se os eventos definidos para serem encaminhados aparecem nos Eventos Encaminhados no sensor autônomo do Azure ATP.
 
 
-Para saber mais, confira: [Configurar computadores para encaminhar e coletar eventos](https://technet.microsoft.com/library/cc748890)
+Para obter mais informações, consulte: [Configurar computadores para encaminhar e coletar eventos](https://technet.microsoft.com/library/cc748890)
 
 ## <a name="see-also"></a>Consulte Também
 

@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 1/14/2019
+ms.date: 1/20/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,54 +13,56 @@ ms.technology: ''
 ms.assetid: 603d9e09-a07d-4357-862f-d5682c8bc3dd
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: f2df8f8f59edff7ebda3f86aae26b899913d57f8
-ms.sourcegitcommit: e2daa0f93d97d552cfbf1577fbd05a547b63e95b
+ms.openlocfilehash: c7b131bffdca092d6355a7f8cb4d280c2388b8eb
+ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54314322"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54840804"
 ---
-*Aplica-se a: Proteção Avançada contra Ameaças do Azure*
-
-
 # <a name="update-azure-atp-sensors"></a>Atualizar sensores da Azure ATP
-É fundamental manter a Proteção Avançada contra Ameaças do Azure atualizada para garantir a melhor proteção possível para sua organização.
 
-O serviço Azure ATP é atualizado algumas vezes ao mês com correções de bugs, melhorias de desempenho e novas detecções. Ocasionalmente, essas atualizações exigem uma atualização correspondente dos sensores. 
+Manter a Proteção Avançada contra Ameaças do Azure atualizada garante a melhor proteção possível para sua organização.
 
-Se você não atualizar os sensores, talvez eles não consigam se comunicar com o serviço de nuvem Azure ATP, o que poderá resultar na degradação do serviço. 
+O serviço ATP do Azure é atualizado algumas vezes ao mês com novas detecções, recursos e melhorias de desempenho. Essas atualizações normalmente exigem uma atualização menor correspondente nos sensores. Os sensores do ATP do Azure e as atualizações correspondentes nunca têm permissões de gravação nos controladores de domínio. Os pacotes de atualização do sensor controlam apenas o sensor do ATP do Azure e recursos de detecção de sensor. 
 
+### <a name="azure-atp-sensor-update-types"></a>Tipos de atualização de sensor da Azure ATP   
+
+Os sensores do ATP do Azure são compatíveis com dois tipos de atualizações:
+- Atualizações de versão secundárias: 
+    - Frequentes 
+    - não exige nenhuma instalação de MSI e nenhuma alteração do Registro
+    - Com reinicialização: serviços do sensor do ATP do Azure 
+    - Sem reinicialização: serviços de controlador de domínio e sistema operacional de servidor
+
+- Atualizações de versão principais:
+    - Raras
+    - Contém alterações significativas 
+    - Com reinicialização: serviços do sensor do ATP do Azure
+    - Possível reinicialização necessária: serviços de controlador de domínio e sistema operacional de servidor
+
+> [!NOTE]
+>- Controle as reinicializações automáticas de sensor (para atualizações **principais**) na página de configuração do portal do ATP do Azure. 
+> - O sensor do ATP do Azure reserva sempre pelo menos 15% da memória e da CPU disponíveis no controlador de domínio no qual está instalado. Se o serviço do ATP do Azure consumir uma quantidade muito grande de memória, ele será automaticamente interrompido e reiniciado pelo serviço do atualizador de sensor do ATP do Azure.
+
+### <a name="update-requirement"></a>Requisitos da atualização
+
+Uma falha ao atualizar seus sensores por mais de uma atualização de versão significa que seus sensores podem não mais se comunicar com o serviço de nuvem do ATP do Azure, o que pode resultar em indisponibilidade de serviço do ATP do Azure e queda da proteção em sua organização.  
+
+## <a name="delayed-sensor-update"></a>Atualização de sensor atrasada
+
+Dada a velocidade rápida de atualizações contínuas de desenvolvimento e lançamento do ATP do Azure, você pode decidir definir um grupo de subconjuntos em seus sensores como um grupo de atualização com atraso, permitindo um processo de atualização gradual de sensores. O ATP do Azure permite que você escolha como os sensores são atualizados e defina cada sensor como um candidato a **Atualização atrasada**.  
+
+Os sensores não selecionados para atualização atrasada são atualizados automaticamente sempre que o serviço do ATP do Azure for atualizado. Os sensores definidos como **Atualização atrasada** são atualizados com um atraso de 72 horas após o lançamento oficial de cada atualização de serviço. 
+
+A opção **Atualização atrasada** permite que você selecione sensores específicos como um grupo de atualização automática, no qual todas as atualizações são distribuídas automaticamente, e que você defina o restante de seus sensores para atualizar em atraso, proporcionando tempo para confirmar que o sensores automaticamente atualizados foram bem-sucedidos.
+
+> [!NOTE]
+> Se ocorrer algum erro e o sensor não for atualizado, abra um tíquete de suporte. Para proteger ainda mais seu proxy para comunicar-se somente com sua instância, confira [Configuração de proxy](configure-proxy.md).
 A autenticação entre os sensores e o serviço de nuvem do Azure usa autenticação mútua forte baseada em certificado. 
 
 Cada atualização é testada e validada em todos os sistemas operacionais compatíveis para causar o mínimo de impacto na rede e nas operações.
 
-### <a name="azure-atp-sensor-update-types"></a>Tipos de atualização de sensor da Azure ATP   
-
-Os sensores da Azure ATP são compatíveis com dois tipos de atualizações:
-- Atualizações de versão secundárias: 
-  - Frequentes 
-  - Não exige nenhuma instalação de MSI e nenhuma alteração do Registro
-  - Reinicializações do serviço de sensor da Azure ATP
-  - Os controladores de domínio e o servidor não precisam ser reiniciados
-
-- Atualizações de versão principais:
- - Raras
- - Podem exigir uma reinicialização dos controladores de domínio e dos servidores
- - Contêm alterações significativas 
-
-> [!NOTE]
->- A reinicialização automática dos sensores (nas atualizações principais) pode ser controlada na página de configuração. 
-> - O sensor da Azure ATP sempre preserva pelo menos 15% da memória e da CPU disponíveis. Se o serviço consumir uma quantidade muito grande de memória, ele será reiniciado automaticamente pelo serviço de atualizador de sensor da Azure ATP.
-
-## <a name="delayed-sensor-update"></a>Atualização de sensor atrasada
-Para que o processo de atualização seja mais gradual, a Azure ATP permite configurar um sensor como candidato à **Atualização atrasada**. 
-
-Geralmente, os sensores são atualizados automaticamente quando o serviço de nuvem Azure ATP é atualizado. Os sensores configurados para a **Atualização atrasada** serão atualizados 24 horas após a atualização inicial do serviço de nuvem.
-
-Assim, é possível selecionar sensores específicos nos quais a atualização ocorrerá automaticamente e atualizar o restante dos sensores de forma atrasada, somente depois que você verificar que a atualização inicial ocorreu sem problemas.
-
-> [!NOTE]
-> Se ocorrer algum erro e o sensor não for atualizado, abra um tíquete de suporte. Para proteger ainda mais seu proxy para comunicar-se somente com sua instância, confira [Configuração de proxy](configure-proxy.md).
 
 Para configurar um sensor para atualização atrasada:
 
@@ -73,28 +75,28 @@ Para configurar um sensor para atualização atrasada:
 
 A cada poucos minutos, os sensores da Azure ATP verificam se eles têm a versão mais recente. Depois que o serviço de nuvem Azure ATP é atualizado para uma versão mais recente, o serviço de sensor da Azure ATP inicia o processo de atualização:
 
-1. O serviço de nuvem Azure ATP é atualizado para a versão mais recente.
-2. O serviço de atualizador de sensor da Azure ATP reconhece que existe uma versão atualizada.
-3. Os sensores que não estão definidos como **Atualização atrasada** começam o processo de atualização:
-  1. O serviço de atualizador de sensor da Azure ATP recebe a versão atualizada do serviço de nuvem (em um formato de arquivo cab).
-  2. O atualizador de sensor da Azure ATP valida a assinatura do arquivo.
-  3. O serviço de atualizador de sensor da Azure ATP extrai o arquivo cab para uma nova pasta na pasta de instalação do sensor. Por padrão, ele será extraído para *C:\Arquivos de Programas\Sensor da Proteção Avançada contra Ameaças do Azure\<número de versão>*
-  4. O serviço de atualizador de sensor da Azure ATP reinicia o serviço de sensor da Azure ATP.
-  5. O serviço de sensor da Azure ATP aponta para os novos arquivos extraídos do arquivo cab.
-  > [!NOTE]
-  >Uma atualização secundária dos sensores não instala um MSI e não altera nenhum valor do Registro nem os arquivos do sistema. Nem mesmo uma reinicialização pendente afetará a atualização dos sensores. 
-  6. Os sensores são executados com base na versão recém-atualizada.
-  7. Um sensor recebe uma permissão do serviço de nuvem do Azure. Isso pode ser verificado na página **Atualizações**.
-  8. O próximo sensor inicia o processo de atualização. 
+1. O serviço de nuvem do ATP do Azure é atualizado para a versão mais recente.
+2. O serviço de atualizador de sensor do ATP do Azure reconhece que existe uma versão atualizada.
+3. Os sensores que não estejam definidos com **Atualização atrasada** começam o processo de atualização em uma base de sensor a sensor:
+   1. O serviço de atualizador de sensor do ATP do Azure recebe a versão atualizada do serviço de nuvem (no formato de arquivo cab).
+   2. O atualizador de sensor do ATP do Azure valida a assinatura do arquivo.
+   3. O serviço de atualizador de sensor do ATP do Azure extrai o arquivo cab para uma nova pasta na própria pasta de instalação do sensor. Por padrão, ele será extraído em *C:\Arquivos de Programas\Sensor da Proteção Avançada contra Ameaças do Azure\<número de versão>*
+   4. O serviço de sensor do ATP do Azure aponta para os novos arquivos extraídos do arquivo cab.    
+   5. O serviço de atualizador de sensor do ATP do Azure reinicia o serviço de sensor do ATP do Azure.
+       > [!NOTE]
+      >Os sensores de atualizações menores não instalam o MSI e não alteram nenhum valor de registro ou os arquivos do sistema. Até mesmo uma reinicialização pendente não tem impacto sobre uma atualização do sensor. 
+   6. Os sensores são executados com base na versão recém-atualizada.
+   7. O sensor recebe uma permissão do serviço de nuvem do Azure. Você pode verificar o status do sensor na página **Atualizações**.
+   8. O próximo sensor inicia o processo de atualização. 
 
-4. 24 horas depois que o serviço de nuvem do ATP do Azure é atualizado, os sensores selecionados para **Atualização atrasada** começam o processo de atualização.
+4. Em 72 horas após a atualização do serviço de nuvem do ATP do Azure, os sensores selecionados para a **Atualização atrasada** iniciam seu processo de atualização de acordo com o mesmo processo de atualização dos sensores atualizados automaticamente.
 
-![atualização do sensor](./media/sensor-update.png)
+![Atualização do sensor](./media/sensor-update.png)
 
 
-Em caso de falha de atualização, se o sensor não concluir o processo de atualização, um alerta de monitoramento relevante será disparado e enviado como uma notificação.
+Se algum sensor não concluir o processo de atualização, o alerta de monitoramento relevante será disparado e enviado como uma notificação.
 
-![sensor desatualizado](./media/sensor-outdated.png)
+![Falha na atualização do sensor](./media/sensor-outdated.png)
 
 
 ## <a name="see-also"></a>Consulte Também

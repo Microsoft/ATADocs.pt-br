@@ -13,17 +13,17 @@ ms.technology: ''
 ms.assetid: 283e7b4e-996a-4491-b7f6-ff06e73790d2
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 1aa60326ed3c26e29d2188acb5b766fe34b474ba
-ms.sourcegitcommit: 959b1f7753b9a8ad94870d2014376d55296fbbd4
+ms.openlocfilehash: ab2b6fa569f0c639b63ceb0317ecf0ae7a53411d
+ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46133116"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54840906"
 ---
+# <a name="what-is-advanced-threat-analytics"></a>O que é o Advanced Threat Analytics?
+
 *Aplica-se a: Advanced Threat Analytics versão 1.9*
 
-
-# <a name="what-is-advanced-threat-analytics"></a>O que é o Advanced Threat Analytics?
 O ATA (Advanced Threat Analytics) é uma plataforma local que ajuda a proteger sua empresa contra vários tipos de ataques cibernéticos avançados e ameaças internas.
 
 ## <a name="how-ata-works"></a>Como o ATA funciona
@@ -52,7 +52,7 @@ A tecnologia do ATA detecta várias atividades suspeitas, concentrando-se em vá
 -   Controle do domínio (persistência), durante o qual um invasor captura as informações que permitem retomar sua campanha usando vários conjuntos de pontos de entrada, credenciais e técnicas. 
 
 Essas fases de um ataque cibernético são semelhantes e previsíveis, independentemente do tipo de empresa que está sob ataque ou do tipo de informação visado.
-O ATA procura três tipos de ataques principais: ataques mal-intencionados, comportamento anormal e riscos e problemas de segurança.
+O ATA procura três tipos principais de ataques: Ataques mal-intencionados, comportamento anormal e riscos e problemas de segurança.
 
 Os **ataques mal-intencionados** são detectados de forma determinista, olhando a lista completa de tipos de ataques conhecidos, incluindo:
 

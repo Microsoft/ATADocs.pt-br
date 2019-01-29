@@ -13,16 +13,13 @@ ms.technology: ''
 ms.assetid: 2c2d6b1a-fc8c-4ff7-b07d-64ce6159f84d
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: d101856cdc3a5bd1ba02fbbb215d120382da6c05
-ms.sourcegitcommit: eac0aa855270b550dfb4b8c61b9cf0953f1e5204
+ms.openlocfilehash: 41f66dce4b7aea6654b28f9d82a167439f29eabb
+ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52298051"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54840821"
 ---
-*Aplica-se a: Proteção Avançada contra Ameaças do Azure*
-
-
 # <a name="azure-atp-reports"></a>Relatórios do Azure ATP
 
 A seção de relatórios da ATP do Azure no portal da ATP do Azure permite que você agende ou imediatamente gere e baixe relatórios que fornecem informações de status do sistema e da entidade. Com o recurso de relatórios, você pode criar relatórios sobre a integridade do sistema, alertas de segurança e possíveis caminhos de movimento lateral detectados em seu ambiente.
@@ -54,8 +51,8 @@ Para definir um relatório agendado:
 
    ![Agendar relatórios](./media/atp-sched-reports.png)
  
- > [!NOTE]
- > Por padrão, os relatórios diários foram criados para serem enviados logo após a meia-noite (UTC). Escolha seu próprio horário usando a opção de seleção de horário. 
+   > [!NOTE]
+   > Por padrão, os relatórios diários foram criados para serem enviados logo após a meia-noite (UTC). Escolha seu próprio horário usando a opção de seleção de horário. 
 
 2. Clique em **Agendar** ao lado do tipo de relatório selecionado para definir a frequência e o endereço de email para entrega dos relatórios. A frequência do relatório que você selecionar determinará as informações incluídas nele. Para adicionar emails, clique no sinal de adição ao lado do campo de endereço de email, insira o endereço e clique em **Salvar**.
 
@@ -66,5 +63,5 @@ Para definir um relatório agendado:
 - [Pré-requisitos do Azure ATP](atp-prerequisites.md)
 - [Planejamento de capacidade do Azure ATP](atp-capacity-planning.md)
 - [Configurar coleta de eventos](configure-event-collection.md)
-- [Configuração do encaminhamento de eventos do Windows](configure-event-forwarding.md#configuring-windows-event-forwarding)
+- [Configuração do encaminhamento de eventos do Windows](configure-event-forwarding.md)
 - [Confira o fórum do ATP do Azure!](https://aka.ms/azureatpcommunity)

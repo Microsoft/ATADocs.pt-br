@@ -13,18 +13,16 @@ ms.technology: ''
 ms.assetid: 8980e724-06a6-40b0-8477-27d4cc29fd2b
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 3ef2d163ae96e5bf8f893367095eacd9a44c3411
-ms.sourcegitcommit: 1a5880de35422d050fc1bc7a918dedc4180c45ad
+ms.openlocfilehash: d7c1a2cb171caf732ba4b49ddf50b7eaa2daaa1a
+ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51265672"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54840189"
 ---
-*Aplica-se a: Advanced Threat Analytics versão 1.9*
-
-
-
 # <a name="install-ata---step-6"></a>Instalação do ATA - Etapa 6
+
+*Aplica-se a: Advanced Threat Analytics versão 1.9*
 
 > [!div class="step-by-step"]
 > [«Etapa 5](install-ata-step5.md)
@@ -32,6 +30,7 @@ ms.locfileid: "51265672"
 
 ## <a name="step-6-configure-event-collection"></a>Etapa 6. Configurar coleta de eventos
 ### <a name="configure-event-collection"></a>Configurar coleta de eventos
+
 Para aprimorar as funcionalidades de detecção, o ATA precisa dos seguintes eventos do Windows: 4776, 4732, 4733, 4728, 4729, 4756, 4757 e 7045. Eles podem ser lidos automaticamente pelo Gateway Lightweight do ATA ou no caso de o Gateway Lightweight do ATA não estar implantado, podem ser encaminhados para o Gateway do ATA de duas maneiras: configurando o Gateway do ATA para escutar o SIEM ou [Configurando o Encaminhamento de Eventos do Windows](configure-event-collection.md). 
 
 > [!NOTE]
@@ -46,9 +45,8 @@ Para o ATA poder consumir dados de um servidor Syslog, você precisa executar as
 
 > [!NOTE]
 > ATA escuta somente IPv4, não IPv6. 
-
--   Configurar seu servidor Syslog/SIEM para encaminhar eventos específicos ao Gateway do ATA.
-
+> -   Configurar seu servidor Syslog/SIEM para encaminhar eventos específicos ao Gateway do ATA.
+> 
 > [!IMPORTANT]
 > -   Não encaminhe todos os dados de Syslog para o Gateway do ATA.
 > -   O ATA oferece suporte ao tráfego UDP do servidor SIEM/Syslog.
@@ -133,9 +131,9 @@ CEF:0|Microsoft|Microsoft Windows||Microsoft-Windows-Security-Auditing:4776|O co
 
 O computador tentou validar as credenciais de uma conta.
 
-Pacote de autenticação:              MICROSOFT_AUTHENTICATION_PACKAGE_V1_0
+Página de autenticação:              MICROSOFT_AUTHENTICATION_PACKAGE_V1_0
 
-Conta de Logon: Administrador
+Conta de logon: Administrador
 
 Estação de Trabalho de Origem:       SIEM
 
@@ -166,7 +164,7 @@ Código de erro:         0x0
 -   A ordem não é importante para os pares de chave=valor
 
 #### <a name="qradar"></a>QRadar
-O QRadar permite a coleta de eventos por meio de um agente. Se os dados forem reunidos usando um agente, o formato de hora será coletado sem dados de milissegundos. Uma vez que o ATA precisa dos dados de milissegundos, é necessário definir o QRadar para usar a coleta de eventos do Windows sem agente. Para obter mais informações, veja [http://www-01.ibm.com/support/docview.wss?uid=swg21700170](http://www-01.ibm.com/support/docview.wss?uid=swg21700170 "QRadar: Agentless Windows Events Collection using the MSRPC Protocol") (QRadar: Coleção de eventos do Windows sem agente usando o protocolo MSRPC).
+O QRadar permite a coleta de eventos por meio de um agente. Se os dados forem reunidos usando um agente, o formato de hora será coletado sem dados de milissegundos. Uma vez que o ATA precisa dos dados de milissegundos, é necessário definir o QRadar para usar a coleta de eventos do Windows sem agente. Para saber mais, confira [http://www-01.ibm.com/support/docview.wss?uid=swg21700170](http://www-01.ibm.com/support/docview.wss?uid=swg21700170 "QRadar: Coleta de Eventos do Windows sem Agente usando o protocolo MSRPC").
 
     <13>Feb 11 00:00:00 %IPADDRESS% AgentDevice=WindowsLog AgentLogFile=Security Source=Microsoft-Windows-Security-Auditing Computer=%FQDN% User= Domain= EventID=4776 EventIDCode=4776 EventType=8 EventCategory=14336 RecordNumber=1961417 TimeGenerated=1456144380009 TimeWritten=1456144380009 Message=The computer attempted to validate the credentials for an account. Authentication Package: MICROSOFT_AUTHENTICATION_PACKAGE_V1_0 Logon Account: Administrator Source Workstation: HOSTNAME Error Code: 0x0
 

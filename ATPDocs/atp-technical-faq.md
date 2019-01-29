@@ -13,15 +13,13 @@ ms.technology: ''
 ms.assetid: 6a9b5273-eb26-414e-9cdd-f64406e24ed8
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 0001be015d45809a0ca550287452cfc4c366778d
-ms.sourcegitcommit: f4f2a1b2c674c4dba7a46ece0624f5ea10c4865e
+ms.openlocfilehash: 4f551e27d6417f0fa1a65427998e8d1cb33dcf7c
+ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2018
-ms.locfileid: "52744771"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54840566"
 ---
-*Aplica-se a: Proteção Avançada contra Ameaças do Azure*
-
 # <a name="azure-atp-frequently-asked-questions"></a>Perguntas frequentes sobre o Azure ATP
 Este artigo fornece uma lista de perguntas frequentes sobre o Azure ATP e dividido nas seguintes categorias: 
 - [O que é o Azure ATP](#what-is-azure-atp)
@@ -136,18 +134,18 @@ Procure o erro mais recente no [log](troubleshooting-atp-using-logs.md) de erros
 ### <a name="how-can-i-test-azure-atp"></a>Como posso testar o Azure ATP?
 Você pode simular atividades suspeitas como um teste de ponta a ponta. No cenário a seguir, o reconhecimento DNS é simulado:
 
-1.  Verifique se os sensores do Azure ATP estão instalados e configurados nos controladores de domínio (ou se os sensores autônomos e o espelhamento de porta relacionado estão instalados e configurados)
-2.  Abra o CMD
-3.  Execute o seguinte comando: nslookup -<DC iP address>
-    -   Pressione Enter
-    -   Digite: Is -d <FQDN>
-    -   Dependendo da configuração do ambiente, as respostas irão variar de "Consulta recusada" para uma lista dos registros DNS. 
+1. Verifique se os sensores do Azure ATP estão instalados e configurados nos controladores de domínio (ou se os sensores autônomos e o espelhamento de porta relacionado estão instalados e configurados)
+2. Abra o CMD
+3. Execute o seguinte comando: nslookup -<DC iP address>
+   - Pressione Enter
+   - Tipo: Is -d <FQDN>
+   - Dependendo da configuração do ambiente, as respostas irão variar de "Consulta recusada" para uma lista dos registros DNS. 
 4. Exiba o alerta relacionado ao reconhecimento de DNS simulado no portal do Azure ATP. 
 
 ## <a name="see-also"></a>Consulte Também
 - [Pré-requisitos do Azure ATP](atp-prerequisites.md)
 - [Planejamento de capacidade do Azure ATP](atp-capacity-planning.md)
 - [Configurar coleta de eventos](configure-event-collection.md)
-- [Configuração do encaminhamento de eventos do Windows](configure-event-forwarding.md#configuring-windows-event-forwarding)
+- [Configuração do encaminhamento de eventos do Windows](configure-event-forwarding.md)
 - [Solução de problemas](troubleshooting-atp-known-issues.md)
 - [Confira o fórum do ATP do Azure!](https://aka.ms/azureatpcommunity)

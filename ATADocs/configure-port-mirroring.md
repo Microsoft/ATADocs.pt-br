@@ -13,21 +13,20 @@ ms.technology: ''
 ms.assetid: cdaddca3-e26e-4137-b553-8ed3f389c460
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: b8b9f3b1eeb36e3a4af949d7165ce0a46225b858
-ms.sourcegitcommit: 59ed430fa0cd8ac34a70609026ec5fc2f5972f57
+ms.openlocfilehash: 31bb8affe271ec51f922cf67632988dfc1265ba3
+ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/21/2018
-ms.locfileid: "49480643"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54840230"
 ---
+# <a name="configure-port-mirroring"></a>Configurar o espelhamento de porta
+
 *Aplica-se a: Advanced Threat Analytics versão 1.9*
 
-
-
-# <a name="configure-port-mirroring"></a>Configurar o espelhamento de porta
 > [!NOTE] 
 > Este artigo somente é relevante se você implanta Gateways do ATA em vez de Gateways Lightweight do ATA. Para determinar se você precisa usar Gateways do ATA, confira [Choosing the right gateways for your deployment](ata-capacity-planning.md#choosing-the-right-gateway-type-for-your-deployment) (Escolhendo os gateways certos para sua implantação).
- 
+
 A fonte de dados principal usada pelo ATA é uma inspeção profunda de pacotes do tráfego de rede para e dos controladores de domínio. Para que o ATA veja o tráfego de rede, você deve configurar o espelhamento de porta ou usar uma TAP de Rede.
 
 Para o espelhamento de porta, configure **espelhamento de porta** para cada controlador de domínio a ser monitorado, como a **origem** do tráfego de rede. Normalmente, você precisa trabalhar com a equipe de virtualização ou de rede para configurar o espelhamento de porta.
@@ -68,7 +67,7 @@ Seus controladores de domínio e Gateways do ATA podem ser físicos ou virtuais.
 > [!NOTE]
 > Caso seu ambiente dê suporte a RSPAN (virtual para virtual em hosts diferentes), você não precisa se preocupar com afinidade.
 
--   Para verificar se os Gateways do ATA estão com um tamanho correto que os permita lidar com o monitoramento de todos os controladores de domínio, tente esta opção: instalar uma máquina virtual em cada host de virtualização e instalar um Gateway do ATA em cada host. Configure cada Gateway do ATA para monitorar todos os controladores de domínio executados no cluster. Dessa forma, qualquer host no qual os controladores de domínio são executados será monitorado.
+-   Para garantir que o ATP Gateways esteja dimensionado corretamente para lidar com o monitoramento de todos os controladores de domínio por si só, tente esta opção: instale uma máquina virtual em cada host de virtualização e um ATA Gateway em cada host. Configure cada Gateway do ATA para monitorar todos os controladores de domínio executados no cluster. Dessa forma, qualquer host no qual os controladores de domínio são executados será monitorado.
 
 Depois de configurar o espelhamento de porta, verifique se está funcionando antes de instalar o Gateway do ATA.
 

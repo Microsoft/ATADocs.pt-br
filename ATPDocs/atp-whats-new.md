@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 1/13/2019
+ms.date: 1/20/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,16 +13,25 @@ ms.technology: ''
 ms.assetid: 7d0f33db-2513-4146-a395-290e001f4199
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 5248ab54c8fd8d03035e1f6451597c5e8cfc63b2
-ms.sourcegitcommit: 6a0ac21f59e72db8615811da2c886f54cf3727f5
+ms.openlocfilehash: 7bf903b1fde595e41c3b57d8163ed0f06f8e8ac8
+ms.sourcegitcommit: a0ebb0b6f140d4abf091ebd9d756b975b3d96b9d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/13/2019
-ms.locfileid: "54250024"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54459168"
 ---
-*Aplica-se a: Proteção Avançada contra Ameaças do Azure*
-
 # <a name="whats-new-in-azure-atp"></a>Novidades do Azure ATP
+
+## <a name="azure-atp-release-262"></a>ATP do Azure versão 2.62
+Lançado em 20 de janeiro de 2019
+
+- **Novo alerta de segurança: Execução remota de código sobre DNS – (versão prévia)**<br>
+O alerta de segurança [Execução remota de código sobre DNS ](atp-lateral-movement-alerts.md#remote-code-execution-over-dns-external-id-2036---preview) do ATP do Azure está agora na versão prévia pública. <br> Nessa detecção, um alerta de segurança do ATP do Azure é disparado quando as consultas DNS suspeitas de explorar a vulnerabilidade de segurança [CVE-2018-8626](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2018-8626) são feitas em um controlador de domínio na rede.
+
+- **Aprimoramento do recurso: Atualização de sensor atrasada por 72 horas** <br> Opção alterada para adiar atualizações de sensor em sensores selecionados por 72 horas (em vez do adiamento anterior de 24 horas) após cada atualização de versão do ATP do Azure. Ver [atualização do sensor do ATP do Azure](sensor-update.md) para obter instruções de configuração. 
+
+
+- Essa versão também inclui aprimoramentos e correções de bug da infraestrutura do sensor interno.
 
 ## <a name="azure-atp-release-261"></a>ATP do Azure versão 2.61
 Lançado em 13 de janeiro de 2019

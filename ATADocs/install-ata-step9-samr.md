@@ -13,16 +13,16 @@ ms.technology: ''
 ms.assetid: 7597ed25-87f5-472c-a496-d5f205c9c391
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 7fae5fa320aab6a2ad6db4695b0087eab72344e8
-ms.sourcegitcommit: b283bf66e63d76e6dba4564a229e804792794c6d
+ms.openlocfilehash: 39d1e03eda182b797412e94ff5427bc74956113a
+ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/29/2018
-ms.locfileid: "47453945"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54841008"
 ---
-*Aplica-se a: Advanced Threat Analytics versão 1.9*
-
 # <a name="install-ata---step-9"></a>Instalar o ATA – Etapa 9
+
+*Aplica-se a: Advanced Threat Analytics versão 1.9*
 
 > [!div class="step-by-step"]
 > [« Etapa 8](install-ata-step7.md)
@@ -35,21 +35,21 @@ Para garantir que clientes e servidores Windows permitam que a conta de serviço
 
 1. Localize a política:
 
- - Nome da política: Acesso à rede – restringir clientes com permissão para efetuar chamadas remotas para SAM
- - Local: Configuração do computador, Configurações do Windows, Configurações de segurança, Políticas locais, Opções de segurança
+   - Nome da política: Acesso à rede – restringir clientes com permissão para efetuar chamadas remotas para SAM
+   - Local: Configuração do computador, Configurações do Windows, Configurações de segurança, Políticas locais, Opções de segurança
   
-  ![Localize a política](./media/samr-policy-location.png)
+   ![Localize a política](./media/samr-policy-location.png)
 
 2. Adicione o serviço do ATA à lista de contas aprovadas que podem executar essa ação em seus sistemas modernos do Windows.
  
-  ![Adicione o serviço](./media/samr-add-service.png)
+   ![Adicione o serviço](./media/samr-add-service.png)
 
 3. Agora, o **Serviço do ATA** (o serviço do ATA criado durante a instalação) tem os privilégios apropriados para executar o SAM-R no ambiente.
 
 > [!NOTE]
 > Antes de aplicar as novas políticas, certifique-se de que seu ambiente permaneça seguro, sem afetar a compatibilidade de aplicativos, ao permitir e verificar as alterações propostas no modo de auditoria. 
 
- Saiba mais sobre SAM-R e Política de Grupo em [Acesso à rede: restringir clientes com permissão para efetuar chamadas remotas para SAM](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/network-access-restrict-clients-allowed-to-make-remote-sam-calls).
+ Para saber mais sobre SAM-R e Política de Grupo, confira [Acesso à rede: restringir clientes com permissão para efetuar chamadas remotas para SAM](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/network-access-restrict-clients-allowed-to-make-remote-sam-calls).
 
 
 > [!div class="step-by-step"]

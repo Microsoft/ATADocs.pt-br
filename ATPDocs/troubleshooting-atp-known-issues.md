@@ -13,28 +13,25 @@ ms.technology: ''
 ms.assetid: 23386e36-2756-4291-923f-fa8607b5518a
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: e65133fdd09f821c633a3095ae419df01da98b16
-ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
+ms.openlocfilehash: 6592d381f8a7e6d3f661a67a101ed5d1191a2b66
+ms.sourcegitcommit: a0ebb0b6f140d4abf091ebd9d756b975b3d96b9d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48783705"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54458488"
 ---
-*Aplica-se a: Proteção Avançada contra Ameaças do Azure*
-
-
 # <a name="troubleshooting-azure-atp-known-issues"></a>Solução de problemas conhecidos da ATP do Azure 
 
 
 ## <a name="deployment-log-location"></a>Local do log de implantação
  
-Os logs de implantação do Azure ATP estão localizados no diretório temp do usuário que instalou o produto. No local de instalação padrão, ele pode ser encontrado em: C:\Users\Administrator\AppData\Local\Temp (ou um diretório acima de %temp%). Para saber mais, veja [Solucionar problemas do ATP usando logs](troubleshooting-atp-using-logs.md)
+Os logs de implantação do Azure ATP estão localizados no diretório temp do usuário que instalou o produto. O local de instalação padrão é: C:\Usuários\Administrator\AppData\Local\Temp (ou um diretório acima de %temp%). Para saber mais, veja [Solucionar problemas do ATP usando logs](troubleshooting-atp-using-logs.md)
 
 ## <a name="proxy-authentication-problem-presents-as-a-licensing-error"></a>Problema de autenticação de proxy apresentado como erro de licenciamento
 
-Se, durante a instalação de sensor, você receber o seguinte erro: **Falha no registro do sensor devido a problemas de licenciamento.**
+Se o seguinte erro surgir durante a instalação do sensor:  **O sensor falhou ao registrar devido a problemas de licenciamento.**
 
-Entradas do log de implantação: [1C60:1AA8][2018-03-24T23:59:13]i000: 2018-03-25 02:59:13.1237 Info  InteractiveDeploymentManager ValidateCreateSensorAsync retornou [\[]validateCreateSensorResult=LicenseInvalid[\]] [1C60:1AA8][2018-03-24T23:59:56]i000: 2018-03-25 02:59:56.4856 Info  InteractiveDeploymentManager ValidateCreateSensorAsync retornou [\[]validateCreateSensorResult=LicenseInvalid[\]] [1C60:1AA8][2018-03-25T00:27:56]i000: 2018-03-25 03:27:56.7399 Debug SensorBootstrapperApplication Engine.Quit [\[]deploymentResultStatus=1602 isRestartRequired=False[\]] [1C60:15B8][2018-03-25T00:27:56]i500: Desligando, código de saída: 0x642
+Entradas de log de implantação: [1C60:1AA8][2018-03-24T23:59:13]i000: 2018-03-25 02:59:13.1237 Informações  InteractiveDeploymentManager ValidateCreateSensorAsync retornaram [\[]validateCreateSensorResult=LicenseInvalid[\]] [1C60:1AA8][2018-03-24T23:59:56]i000: 2018-03-25 02:59:56.4856 Informações  InteractiveDeploymentManager ValidateCreateSensorAsync retornaram [\[]validateCreateSensorResult=LicenseInvalid[\]] [1C60:1AA8][2018-03-25T00:27:56]i000: 2018-03-25 03:27:56.7399 Depurar SensorBootstrapperApplication Engine.Quit [\[]deploymentResultStatus=1602 isRestartRequired=False[\]] [1C60:15B8][2018-03-25T00:27:56]i500: Desligando, código de saída: 0x642
 
 
 **Causa:**
@@ -77,7 +74,7 @@ Caso tenha um sensor da ATP do Azure em Máquinas Virtuais VMware, talvez você 
 
 Para resolver esse problema:
 
-Defina as configurações a seguir como **0** ou **Desabilitado** na configuração NIC da máquina virtual: TsoEnable, LargeSendOffload, Descarregamento TSO, Descarregamento TSO gigante.
+Defina as configurações a seguir como **0** ou **Desabilitado** na configuração de NIC da máquina virtual: TsoEnable, LargeSendOffload, Descarregamento do TSO Offload, Descarregamento Gigante do TSO.
 > [!NOTE]
 > No caso dos sensores da ATP do Azure, é necessário desabilitar apenas o **Descarregamento TSO IPv4** na configuração NIC.
 
@@ -87,5 +84,5 @@ Defina as configurações a seguir como **0** ou **Desabilitado** na configuraç
 - [Pré-requisitos do Azure ATP](atp-prerequisites.md)
 - [Planejamento de capacidade do Azure ATP](atp-capacity-planning.md)
 - [Configurar coleta de eventos](configure-event-collection.md)
-- [Configuração do encaminhamento de eventos do Windows](configure-event-forwarding.md#configuring-windows-event-forwarding)
-- [Confira o fórum do Azure ATP!](https://aka.ms/azureatpcommunity)
+- [Configuração do encaminhamento de eventos do Windows](configure-event-forwarding.md)
+- [Confira o fórum do ATP do Azure!](https://aka.ms/azureatpcommunity)

@@ -13,19 +13,17 @@ ms.technology: ''
 ms.assetid: 892b16d2-58a6-49f9-8693-1e5f69d8299c
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: a71491fc717aca3f9b418750b78657e83ac65ecf
-ms.sourcegitcommit: 1b914a85cfa33dc0c5005f9dc68e6ea08a0164ac
+ms.openlocfilehash: 8b158f9656e2c47583cfcc8218a78091cf158221
+ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50411639"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54840685"
 ---
+# <a name="ata-architecture"></a>Arquitetura do ATA
+
 *Aplica-se a: Advanced Threat Analytics versão 1.9*
 
-
-
-
-# <a name="ata-architecture"></a>Arquitetura do ATA
 A arquitetura da Advanced Threat Analytics é detalhada neste diagrama:
 
 ![Diagrama de topologia da arquitetura do ATA](media/ATA-architecture-topology.jpg)
@@ -53,9 +51,9 @@ Uma implantação do ATA pode consistir em uma único Centro do ATA conectado a 
 Você pode implantar o ATA usando a seguinte combinação de gateways:
 
 -   **Usando somente os Gateways do ATA** <br>
-Sua implantação do ATA pode conter apenas Gateways do ATA, sem os Gateways Lightweight do ATA: todos os controladores de domínio devem ser configurados para habilitar o espelhamento de porta para um Gateway do ATA ou TAPs de rede devem estar em funcionamento.
+A implantação do ATA pode conter apenas Gateways de ATA, sem todos os Gateways Lightweight do ATA: Todos os controladores de domínio devem ser configurados para habilitar o espelhamento de porta para um ATA Gateway ou TAPs de rede devem estar em vigor.
 -   **Usando somente Gateways Lightweight do ATA**<br>
-Sua implantação do ATA pode conter somente Gateways Lightweight do ATA: eles são implantados em cada controlador de domínio e não há a necessidade de servidores adicionais ou de configuração de espelhamento de porta.
+A implantação do ATA pode conter apenas ATA Lightweight Gateways: eles são implantados em cada controlador de domínio e não há a necessidade de servidores adicionais ou de configuração de espelhamento de porta.
 -   **Usando tanto Gateways do ATA quanto Gateways Lightweight do ATA**<br>
 Sua implantação do ATA inclui Gateways do ATA e Gateways Lightweight do ATA. Os Gateways Lightweight do ATA são instalados em alguns de seus controladores de domínio (por exemplo, todos os controladores de domínio em seus sites de branch). Ao mesmo tempo, outros controladores de domínio são monitorados pelos Gateways do ATA (por exemplo, os maiores controladores de domínio em seus data centers principais).
 
@@ -79,7 +77,7 @@ O **Centro de ATA** executa as seguintes funções:
 
 -   Executa o Console do ATA.
 
--   Opcional: o Centro de ATA pode ser configurado para enviar emails e eventos quando uma atividade suspeita é detectada.
+-   Opcional: O ATA Center pode ser configurado para enviar emails e eventos quando uma atividade suspeita é detectada.
 
 O Centro do ATA recebe tráfego analisado do Gateway do ATA e do Gateway Lightweight do ATA. Ele realiza então a criação de perfil, executa detecção determinística e executa algoritmos comportamentais e de aprendizado de máquina para conhecer sua rede, permitindo a detecção de anomalias e avisando sobre atividades suspeitas.
 
@@ -173,11 +171,11 @@ Os controladores de domínio e os Gateways do ATA podem ser físicos ou virtuais
 
 
 ### <a name="events"></a>Eventos
-Para melhorar a detecção do ATA de Pass-the-Hash, Força Bruta, Modificação para grupos confidenciais e Honey Tokens, o ATA precisa dos seguintes eventos do Windows: 4776, 4732, 4733, 4728, 4729, 4756, 4757. Eles podem ser lidos automaticamente pelo Gateway Lightweight do ATA ou no caso de o Gateway Lightweight do ATA não estar implantado, podem ser encaminhados para o Gateway do ATA de duas maneiras: configurando o Gateway do ATA para escutar o SIEM ou [Configurando o Encaminhamento de Eventos do Windows](#configuring-windows-event-forwarding).
+Para melhorar a detecção do ATA de Pass-the-Hash, Força Bruta, Modificação para grupos confidenciais e Honey Tokens, o ATA precisa dos seguintes eventos do Windows: 4776, 4732, 4733, 4728, 4729, 4756 e 4757. Eles podem ser lidos automaticamente pelo Gateway Lightweight do ATA ou no caso de o Gateway Lightweight do ATA não estar implantado, podem ser encaminhados para o Gateway do ATA de duas maneiras: configurando o Gateway do ATA para escutar o SIEM ou [Configurando o Encaminhamento de Eventos do Windows](configure-event-collection.md).
 
 -   Configuração do Gateway de ATA para escutar eventos SIEM <br>Configure o SIEM para encaminhar eventos específicos do Windows para o ATA. O ATA oferece suporte a vários fornecedores SIEM. Para obter mais informações, confira [Configurar coleta de eventos](configure-event-collection.md).
 
--   Configuração do encaminhamento de eventos do Windows<br>Outra maneira de o ATA conseguir obter seus eventos é configurando seus controladores de domínio para encaminhar eventos do Windows 4776, 4732, 4733, 4728, 4729, 4756 and 4757 para seu Gateway do ATA. Isso é especialmente útil se você não tiver um SIEM ou se o SIEM não for atualmente suportado pelo ATA. Para completar a configuração do Encaminhamento de Eventos do Windows no ATA, confira [Configurando o encaminhamento de eventos do Windows](configure-event-collection.md#configuring-windows-event-forwarding). Isso se aplica apenas a Gateways do ATA físicos, não ao Gateway Lightweight do ATA.
+-   Configuração do encaminhamento de eventos do Windows<br>Outra maneira de o ATA conseguir obter seus eventos é configurando seus controladores de domínio para encaminhar eventos do Windows 4776, 4732, 4733, 4728, 4729, 4756 and 4757 para seu Gateway do ATA. Isso é especialmente útil se você não tiver um SIEM ou se o SIEM não for atualmente suportado pelo ATA. Para completar a configuração do Encaminhamento de Eventos do Windows no ATA, confira [Configurando o encaminhamento de eventos do Windows](configure-event-collection.md). Isso se aplica apenas a Gateways do ATA físicos, não ao Gateway Lightweight do ATA.
 
 ## <a name="related-videos"></a>Vídeos Relacionados
 - [Como escolher o tipo certo de Gateway do ATA](https://channel9.msdn.com/Shows/Microsoft-Security/ATA-Deployment-Choose-the-Right-Gateway-Type)
@@ -188,6 +186,6 @@ Para melhorar a detecção do ATA de Pass-the-Hash, Força Bruta, Modificação 
 - [Ferramenta de dimensionamento do ATA](http://aka.ms/atasizingtool)
 - [Planejamento da capacidade do ATA](ata-capacity-planning.md)
 - [Configurar coleta de eventos](configure-event-collection.md)
-- [Configuração do encaminhamento de eventos do Windows](configure-event-collection.md#configuring-windows-event-forwarding)
+- [Configuração do encaminhamento de eventos do Windows](configure-event-collection.md)
 - [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 

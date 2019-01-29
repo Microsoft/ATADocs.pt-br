@@ -13,18 +13,17 @@ ms.technology: ''
 ms.assetid: ebd41719-c91a-4fdd-bcab-2affa2a2cace
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: d37fade3dd287be77bda16ebcd2cda204de265f6
-ms.sourcegitcommit: 959b1f7753b9a8ad94870d2014376d55296fbbd4
+ms.openlocfilehash: d40c21dc761b624eea2412bdfc0778774f2840ca
+ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46133779"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54839613"
 ---
+# <a name="validate-port-mirroring"></a>Validação do espelhamento de porta
+
 *Aplica-se a: Advanced Threat Analytics versão 1.9*
 
-
-
-# <a name="validate-port-mirroring"></a>Validação do espelhamento de porta
 > [!NOTE] 
 > Este artigo somente é relevante se você implanta Gateways do ATA em vez de Gateways Lightweight do ATA. Para determinar se você precisa usar Gateways do ATA, confira [Choosing the right gateways for your deployment](ata-capacity-planning.md#choosing-the-right-gateway-type-for-your-deployment) (Escolhendo os gateways certos para sua implantação).
  
@@ -208,7 +207,7 @@ Exemplo de como executar o script:
 
         ![Criar nova imagem da guia de captura](media/ATA-Port-Mirroring-Capture.jpg)
 
-3.  Na janela Filtro de exibição, digite o seguinte filtro: **KerberosV5 OU LDAP** e, em seguida, **Aplicar**.
+3.  Na janela Exibir Filtro, insira o seguinte filtro: **KerberosV5 OU LDAP** e clique em **Aplicar**.
 
     ![Aplicar imagem de filtro KerberosV5 ou LDAP](media/ATA-Port-Mirroring-filter-settings.jpg)
 

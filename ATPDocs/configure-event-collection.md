@@ -13,20 +13,16 @@ ms.technology: ''
 ms.assetid: 88692d1a-45a3-4d54-a549-4b5bba6c037b
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: eaf798149c828b641ba037ffbb6854ca07c6732a
-ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
+ms.openlocfilehash: 640ea2ab75d4388381f9789dcac5399fa1327d05
+ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48783586"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54840634"
 ---
-*Aplica-se a: Proteção Avançada contra Ameaças do Azure*
-
-
-
 # <a name="configure-event-collection"></a>Configurar coleta de eventos
 
-Para aprimorar as funcionalidades de detecção, o Azure ATP precisa dos seguintes eventos do Windows: 4776, 4732, 4733, 4728, 4729, 4756, 4757 e 7045. Eles podem ser lidos automaticamente pelo sensor do Azure ATP ou, caso o sensor do Azure ATP não esteja implantado, ele poderá ser encaminhado para o sensor autônomo do Azure ATP de duas maneiras: configurando o sensor autônomo do Azure ATP para escutar eventos do SIEM ou [Configurando o Encaminhamento de Eventos do Windows](configure-event-forwarding.md).
+Para aprimorar as funcionalidades de detecção, ATP do Azure precisa dos seguintes eventos do Windows: 4776, 4732, 4733, 4728, 4729, 4756, 4757 e 7045. Eles podem ser lidos automaticamente pelo sensor do Azure ATP ou, caso o sensor do Azure ATP não esteja implantado, ele poderá ser encaminhado para o sensor autônomo do Azure ATP de duas maneiras: configurando o sensor autônomo do Azure ATP para escutar eventos do SIEM ou [Configurando o Encaminhamento de Eventos do Windows](configure-event-forwarding.md).
 
 > [!NOTE]
 > É importante executar o script de auditoria do Azure ATP antes de configurar a coleta de eventos para garantir que os controladores de domínio estejam configurados corretamente para registrar os eventos necessários. 
@@ -36,12 +32,12 @@ Além de coletar e analisar o tráfego de rede para e dos controladores de domí
 ## <a name="siemsyslog"></a>SIEM/Syslog
 Para que o Azure ATP possa consumir dados de um servidor Syslog, você precisa executar as seguintes etapas:
 
--   Configurar seus servidores do sensor do Azure ATP para escutar e aceitar eventos encaminhados do servidor de SIEM/Sylog.
+- Configurar seus servidores do sensor do Azure ATP para escutar e aceitar eventos encaminhados do servidor de SIEM/Sylog.
 
- > [!NOTE]
- > O Azure ATP escuta somente IPv4, não IPv6. 
+  > [!NOTE]
+  > O Azure ATP escuta somente IPv4, não IPv6. 
 
--   Configurar seu servidor de SIEM/Syslog para encaminhar eventos específicos ao sensor do Azure ATP.
+- Configurar seu servidor de SIEM/Syslog para encaminhar eventos específicos ao sensor do Azure ATP.
 
 > [!IMPORTANT]
 > -   Não encaminhe todos os dados de Syslog para o sensor do Azure ATP.
@@ -127,9 +123,9 @@ CEF:0|Microsoft|Microsoft Windows||Microsoft-Windows-Security-Auditing:4776|O co
 
 O computador tentou validar as credenciais de uma conta.
 
-Pacote de autenticação:              MICROSOFT_AUTHENTICATION_PACKAGE_V1_0
+Página de autenticação:              MICROSOFT_AUTHENTICATION_PACKAGE_V1_0
 
-Conta de Logon: Administrador
+Conta de logon: Administrador
 
 Estação de Trabalho de Origem:       SIEM
 
@@ -160,7 +156,7 @@ Código de erro:         0x0
 -   A ordem não é importante para os pares de chave=valor
 
 ## <a name="qradar"></a>QRadar
-O QRadar permite a coleta de eventos por meio de um agente. Se os dados forem reunidos usando um agente, o formato de hora será coletado sem dados de milissegundos. Uma vez que o Azure ATP precisa de dados de milissegundos, é necessário configurar o QRadar para usar a coleta de eventos do Windows sem agente. Para obter mais informações, veja [http://www-01.ibm.com/support/docview.wss?uid=swg21700170](http://www-01.ibm.com/support/docview.wss?uid=swg21700170 "QRadar: Agentless Windows Events Collection using the MSRPC Protocol") (QRadar: Coleção de eventos do Windows sem agente usando o protocolo MSRPC).
+O QRadar permite a coleta de eventos por meio de um agente. Se os dados forem reunidos usando um agente, o formato de hora será coletado sem dados de milissegundos. Uma vez que o Azure ATP precisa de dados de milissegundos, é necessário configurar o QRadar para usar a coleta de eventos do Windows sem agente. Para saber mais, confira [http://www-01.ibm.com/support/docview.wss?uid=swg21700170](http://www-01.ibm.com/support/docview.wss?uid=swg21700170 "QRadar: Coleta de Eventos do Windows sem Agente usando o protocolo MSRPC").
 
     <13>Feb 11 00:00:00 %IPADDRESS% AgentDevice=WindowsLog AgentLogFile=Security Source=Microsoft-Windows-Security-Auditing Computer=%FQDN% User= Domain= EventID=4776 EventIDCode=4776 EventType=8 EventCategory=14336 RecordNumber=1961417 TimeGenerated=1456144380009 TimeWritten=1456144380009 Message=The computer attempted to validate the credentials for an account. Authentication Package: MICROSOFT_AUTHENTICATION_PACKAGE_V1_0 Logon Account: Administrator Source Workstation: HOSTNAME Error Code: 0x0
 
@@ -188,4 +184,4 @@ Certifique-se de ter \t entre os pares de chave=valor.
 - [Ferramenta de dimensionamento do Azure ATP](http://aka.ms/aatpsizingtool)
 - [Referência de logs de SIEM do Azure ATP](cef-format-sa.md)
 - [Pré-requisitos do Azure ATP](atp-prerequisites.md)
-- [Confira o fórum do Azure ATP!](https://aka.ms/azureatpcommunity)
+- [Confira o fórum do ATP do Azure!](https://aka.ms/azureatpcommunity)

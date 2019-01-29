@@ -12,17 +12,13 @@ ms.prod: ''
 ms.assetid: da0ee438-35f8-4097-b3a1-1354ad59eb32
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 9485e3dd70708caf6e3ebbe60d9c006fac0b0163
-ms.sourcegitcommit: f4f2a1b2c674c4dba7a46ece0624f5ea10c4865e
+ms.openlocfilehash: 51ce0ca62d29c58475f8f426ee715515cf106193
+ms.sourcegitcommit: a0ebb0b6f140d4abf091ebd9d756b975b3d96b9d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2018
-ms.locfileid: "52744720"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54459083"
 ---
-*Aplica-se a: Proteção Avançada contra Ameaças do Azure*
-
-
-
 # <a name="azure-atp-capacity-planning"></a>Planejamento de capacidade do Azure ATP
 Este artigo ajuda você a determinar quantos sensores e quantos sensores autônomos do Azure ATP são necessários.
 

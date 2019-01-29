@@ -13,17 +13,13 @@ ms.technology: ''
 ms.assetid: 9ec7eb4c-3cad-4543-bbf0-b951d8fc8ffe
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 5ca24df927bc91383449926bdcd67a1c29585618
-ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
+ms.openlocfilehash: a9b69db461dc322010fcb8aa446a95151b7a276f
+ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48783569"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54840532"
 ---
-*Aplica-se a: Proteção Avançada contra Ameaças do Azure*
-
-
-
 # <a name="configure-port-mirroring"></a>Configurar o espelhamento de porta
 > [!NOTE] 
 > Este artigo será relevante apenas se você implantar sensores autônomos do Azure ATP, em vez de sensores do Azure ATP. Para determinar se você precisa usar sensores autônomos do Azure ATP, confira [Choosing the right sensors for your deployment](atp-capacity-planning.md#choosing-the-right-sensor-type-for-your-deployment) (Escolhendo os sensores certos para sua implantação).
@@ -63,15 +59,15 @@ Seus controladores de domínio e o sensor autônomo do Azure ATP podem ser físi
 
 **Se você estiver trabalhando com clusters de virtualização:**
 
--   Para cada controlador de domínio em execução no cluster de virtualização em uma máquina virtual com o sensor autônomo do Azure ATP, configure a afinidade entre o controlador de domínio e o sensor autônomo do Azure ATP. Dessa forma, quando o controlador de domínio for para outro host no cluster, o sensor autônomo do Azure ATP o seguirá. Isso funciona bem quando há alguns controladores de domínio.
+- Para cada controlador de domínio em execução no cluster de virtualização em uma máquina virtual com o sensor autônomo do Azure ATP, configure a afinidade entre o controlador de domínio e o sensor autônomo do Azure ATP. Dessa forma, quando o controlador de domínio for para outro host no cluster, o sensor autônomo do Azure ATP o seguirá. Isso funciona bem quando há alguns controladores de domínio.
 
- > [!NOTE]
- > Caso seu ambiente dê suporte a RSPAN (virtual para virtual em hosts diferentes), você não precisa se preocupar com afinidade.
+  > [!NOTE]
+  > Caso seu ambiente dê suporte a RSPAN (virtual para virtual em hosts diferentes), você não precisa se preocupar com afinidade.
  
--   Para garantir que o sensor autônomo do Azure ATP tenha um tamanho correto para lidar com o monitoramento de todos os controladores de domínio por si só, tente esta opção: instalar uma máquina virtual em cada host de virtualização e instalar um sensor autônomo do Azure ATP em cada host. Configure cada sensor autônomo do Azure ATP para monitorar todos os controladores de domínio executados no cluster. Dessa forma, qualquer host no qual os controladores de domínio são executados será monitorado.
+- Para garantir que o sensor autônomo do ATP do Azure esteja dimensionado corretamente para lidar com o monitoramento de todos os controladores de domínio por si só, tente esta opção: instale uma máquina virtual em cada host de virtualização e um sensor autônomo do ATP do Azure em cada host. Configure cada sensor autônomo do Azure ATP para monitorar todos os controladores de domínio executados no cluster. Dessa forma, qualquer host no qual os controladores de domínio são executados será monitorado.
 
 Depois de configurar o espelhamento de porta, verifique se ele está funcionando antes de instalar o sensor autônomo do Azure ATP.
 
 ## <a name="see-also"></a>Consulte Também
 - [Configurar o encaminhamento de eventos](configure-event-forwarding.md)
-- [Confira o fórum do Azure ATP!](https://aka.ms/azureatpcommunity)
+- [Confira o fórum do ATP do Azure!](https://aka.ms/azureatpcommunity)

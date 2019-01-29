@@ -13,23 +13,22 @@ ms.technology: ''
 ms.assetid: 1d27dba8-fb30-4cce-a68a-f0b1df02b977
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 3abe18d7da00e5af0373d74db2dc2dc1f91a6fc9
-ms.sourcegitcommit: 959b1f7753b9a8ad94870d2014376d55296fbbd4
+ms.openlocfilehash: b470bc1a7de358d5326539aaf91d71ef08cb1282
+ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46133303"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54839925"
 ---
+# <a name="export-and-import-the-ata-configuration"></a>Exportar e importar a configuração do ATA
+
 *Aplica-se a: Advanced Threat Analytics versão 1.9*
 
-
-
-# <a name="export-and-import-the-ata-configuration"></a>Exportar e importar a configuração do ATA
 A configuração do ATA é armazenada na coleção "SystemProfile" no banco de dados.
-A cada hora, o backup dessa coleção é feito a cada quatro horas pelo serviço da Central do ATA para arquivos chamados: **SystemProfile_*carimbo_de_data/hora*.json**. As 300 versões mais recentes estão armazenadas.
-Esse arquivo está localizado em uma subpasta chamada **Backup**. No local de instalação padrão do ATA, ele pode ser encontrado aqui: *C:\Arquivos de Programas\Microsoft Advanced Threat Analytics\Center\Backup\SystemProfile_* timestamp *.json*. 
+o backup dessa coleta é feito a cada quatro horas pelo serviço do ATA Center para arquivos chamados: **SystemProfile_*timestamp*.json**. As 300 versões mais recentes estão armazenadas.
+Esse arquivo está localizado em uma subpasta chamada **Backup**. O local de instalação padrão do ATA está em:  <em>C:\Arquivos de Programas\Microsoft Advanced Threat Analytics\Center\Backup\SystemProfile_</em>timestamp<em>.json</em>. 
 
-**Observação**: é recomendável fazer o backup desse arquivo sempre que você fizer alterações importantes no ATA.
+**Observação**: Recomendamos o backup deste arquivo sempre que você fizer alterações importantes no ATA.
 
 É possível restaurar todas as configurações executando o seguinte comando:
 

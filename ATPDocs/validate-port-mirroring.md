@@ -12,17 +12,13 @@ ms.technology: ''
 ms.assetid: 0a56cf27-9eaa-4ad0-ae6c-9d0484c69094
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 0d9e2bcbbe2635765f1bcce9ee1367c1d3895080
-ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
+ms.openlocfilehash: f11a80edae80eb12c8973965ee9f55fcad6d3da6
+ms.sourcegitcommit: a0ebb0b6f140d4abf091ebd9d756b975b3d96b9d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48783433"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54458386"
 ---
-*Aplica-se a: Proteção Avançada contra Ameaças do Azure*
-
-
-
 # <a name="validate-port-mirroring"></a>Validação do espelhamento de porta
 > [!NOTE] 
 > Este artigo é relevante apenas se você implantar o sensor autônomo da ATP em vez do sensor da ATP do Azure. Para determinar se você precisa usar o sensor da ATP do Azure, confira [Escolhendo o sensor certo para a implantação](atp-capacity-planning.md#choosing-the-right-sensor-type-for-your-deployment).
@@ -45,7 +41,7 @@ As etapas a seguir guiarão você pelo processo de validação da configuração
 
         ![Criar nova imagem da guia de captura](media/atp-port-mirroring-capture.png)
 
-3.  Na janela Filtro de exibição, digite o seguinte filtro: **KerberosV5 OU LDAP** e, em seguida, **Aplicar**.
+3.  Na janela Exibir Filtro, insira o seguinte filtro: **KerberosV5 OU LDAP** e clique em **Aplicar**.
 
     ![Aplicar imagem de filtro KerberosV5 ou LDAP](media/atp-port-mirroring-filter-settings.png)
 
@@ -63,4 +59,4 @@ As etapas a seguir guiarão você pelo processo de validação da configuração
 
 - [Configurar o encaminhamento de eventos](configure-event-forwarding.md)
 - [Configurar o espelhamento de porta](configure-port-mirroring.md)
-- [Confira o fórum do Azure ATP!](https://aka.ms/azureatpcommunity)
+- [Confira o fórum do ATP do Azure!](https://aka.ms/azureatpcommunity)

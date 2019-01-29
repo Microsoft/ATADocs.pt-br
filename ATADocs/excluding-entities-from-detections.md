@@ -13,18 +13,17 @@ ms.technology: ''
 ms.assetid: 344c0f33-45e1-42e2-a051-f722a4504531
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 3b731593e08cfb1b52e01b83f52b0403dd74aadc
-ms.sourcegitcommit: 959b1f7753b9a8ad94870d2014376d55296fbbd4
+ms.openlocfilehash: ad8a33701938ed846bcdf1d435f25c50d91e27ab
+ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46133031"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54841076"
 ---
+# <a name="excluding-entities-from-detections"></a>Excluindo entidades de detecções
+
 *Aplica-se a: Advanced Threat Analytics versão 1.9*
 
-
-
-# <a name="excluding-entities-from-detections"></a>Excluindo entidades de detecções
 Este artigo explica como excluir entidades de disparar alertas para minimizar verdadeiros positivos benignos mas ao mesmo tempo, capturar os verdadeiros positivos. Para impedir que o ATA seja ruidoso sobre as atividades que, de usuários específicos, podem ser parte de seu ritmo normal de negócios, você pode silenciar ou excluir entidades específicas da geração de alertas.
 
 Por exemplo, se você tiver um verificador de segurança que realiza reconhecimento DNS ou um administrador que executa scripts remotamente no controlador de domínio, essas serão atividades sancionadas cujo objetivo é parte das operações de TI normais em sua organização.
@@ -37,7 +36,7 @@ Há duas maneiras em que você pode excluir entidades, na atividade suspeita em 
 
     ![Excluir entidades](./media/exclude-in-sa.png)
 
-- **Na página Configuração**: para examinar ou modificar qualquer exclusão: em **Configuração** clique em **Exclusões** e, em seguida, selecione a atividade suspeita, como **Credenciais de conta confidencial expostas**.
+- **Na página Configuração**:  para examinar ou modificar qualquer exclusão: em **Configuração** clique em **Exclusões** e, em seguida, selecione a atividade suspeita, como **Credenciais de conta confidencial expostas**.
 
     ![Configuração de exclusão](./media/exclusions-config-page.png)
 

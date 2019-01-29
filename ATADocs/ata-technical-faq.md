@@ -13,16 +13,17 @@ ms.technology: ''
 ms.assetid: a7d378ec-68ed-4a7b-a0db-f5e439c3e852
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: e31f7552bed4d794ee24131557342105eb2ced43
-ms.sourcegitcommit: 959b1f7753b9a8ad94870d2014376d55296fbbd4
+ms.openlocfilehash: 2806bdd4c457628d9202e494ac1a064365cf61db
+ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46133813"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54839996"
 ---
+# <a name="ata-frequently-asked-questions"></a>Perguntas frequentes sobre o ATA
+
 *Aplica-se a: Advanced Threat Analytics versão 1.9*
 
-# <a name="ata-frequently-asked-questions"></a>Perguntas frequentes sobre o ATA
 Este artigo fornece uma lista de perguntas frequentes sobre o ATA e também as respostas e outras informações.
 
 
@@ -162,6 +163,6 @@ Sim, é possível exibir a integridade geral da implantação, bem como os probl
 - [Pré-requisitos do ATA](ata-prerequisites.md)
 - [Planejamento da capacidade do ATA](ata-capacity-planning.md)
 - [Configurar coleta de eventos](configure-event-collection.md)
-- [Configuração do encaminhamento de eventos do Windows](configure-event-collection.md#configuring-windows-event-forwarding)
+- [Configuração do encaminhamento de eventos do Windows](configure-event-collection.md)
 - [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 

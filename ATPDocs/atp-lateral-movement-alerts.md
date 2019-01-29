@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 1/15/2019
+ms.date: 1/20/2019
 ms.topic: tutorial
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 2257eb00-8614-4577-b6a1-5c65085371f2
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 7816dba02c2fea07afc080c7aed5ede073c88fac
-ms.sourcegitcommit: e2daa0f93d97d552cfbf1577fbd05a547b63e95b
+ms.openlocfilehash: e564307a62361cd8b1c872818225a2e1e63585fb
+ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54314305"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54840770"
 ---
 # <a name="tutorial-lateral-movement-alerts"></a>Tutorial: Alertas de movimento lateral  
 
@@ -35,10 +35,48 @@ Para entender melhor a estrutura e os componentes comuns de todos os alertas de 
 Os alertas de segurança a seguir ajudam a identificar e corrigir atividades suspeitas da fase de **Movimento lateral** detectadas pelo ATP do Azure em sua rede. Neste tutorial, você aprenderá como entender, classificar, corrigir e impedir os seguintes tipos de ataques:
 
 > [!div class="checklist"]
+> * Execução remota de código sobre DNS – versão prévia (ID externa 2036)
 > * Suspeita de roubo de identidade (Pass-the-Hash) (ID 2017 externa)
 > * Suspeita de roubo de identidade (Pass-the-Ticket) (ID 2018 externa)
 > * Suspeita de ataque de Overpass-the-Hash (downgrade de criptografia) (ID 2008 externa)
 > * Suspeita de ataque de Overpass-the-Hash (Kerberos) (ID 2002 externa)
+
+## <a name="remote-code-execution-over-dns-external-id-2036---preview"></a>Execução remota de código sobre DNS (ID externa 2036) – versão prévia
+
+**Descrição**
+
+Em 11/12/2018, a Microsoft publicou o anúncio [CVE-2018-8626](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2018-8626) sobre uma vulnerabilidade de execução remota de código recém-descoberta que existe nos servidores de DNS (Sistema de Nomes de Domínio) do Windows. Nessa vulnerabilidade, os servidores falham em lidar adequadamente com solicitações. Um invasor que explorar com êxito essa vulnerabilidade poderá executar código arbitrário no contexto da Conta do Sistema Local. Servidores Windows configurados atualmente como servidores DNS estão em risco com essa vulnerabilidade.
+
+Nessa detecção, um alerta de segurança do ATP do Azure é disparado quando as consultas DNS suspeitas de explorar a vulnerabilidade de segurança CVE-2018-8626 são feitas em um controlador de domínio na rede.
+
+**TP, B-TP ou FP**
+
+1. Os computadores de destino estão atualizados e corrigidos em relação a CVE-2018-8626? 
+    - Se os computadores estiverem atualizados e com as correções, **Feche** o alerta de segurança como uma atividade **FP**.
+2. Foi um serviço criado ou um processo desconhecido executado no momento do ataque
+    - Se nenhum novo serviço ou processo desconhecido for encontrado, opte por **Fechar** o alerta de segurança como um **FP**. 
+3. Esse tipo de ataque pode travar o serviço DNS antes de causar a execução do código com êxito.
+    - Verifique se o serviço DNS foi reiniciado algumas vezes em torno do momento do ataque.
+    - Se o DNS foi reiniciado, provavelmente foi uma tentativa de explorar a CVE-2018-8626. Considere este alerta um **TP** e siga as instruções em **Entender o escopo da violação**. 
+
+**Entender o escopo da violação**
+
+- Investigue os [computadores de origem e de destino](investigate-a-computer.md).
+
+**Correção sugerida e etapas de prevenção**
+
+**Remediação**
+
+1. Conter os controladores de domínio. 
+    1. Corrija a tentativa de execução remota de código.
+    2. Procure usuários que estavam conectados no mesmo período da atividade suspeita, pois eles também podem estar comprometidos. Redefina as senhas e habilite o MFA. 
+2. Contenha o computador de origem.
+    1. Encontre a ferramenta que realizou o ataque e remova-a.
+    2. Procure usuários que estavam conectados no mesmo período da atividade suspeita, pois eles também podem estar comprometidos. Redefina as senhas e habilite o MFA.
+
+**Prevenção**
+
+- Verifique se todos os servidores DNS no ambiente estão atualizados e corrigidos em relação a [CVE-2018-8626](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2018-8626). 
 
 ## <a name="suspected-identity-theft-pass-the-hash-external-id-2017"></a>Suspeita de roubo de identidade (Pass-the-Hash) (ID 2017 externa)
 
@@ -114,19 +152,19 @@ Em um ataque de Overpass-the-Hash, um invasor pode usar um hash roubado fraco pa
 
 **TP, B-TP ou FP?**
 1. Determine se a configuração do cartão inteligente foi alterada recentemente. 
-    - As contas envolvidas recentemente sofreram alterações de configurações de cartão inteligente?  
+   - As contas envolvidas recentemente sofreram alterações de configurações de cartão inteligente?  
     
-    Se a resposta for sim, **feche** o alerta de segurança como uma atividade **T-BP**. 
+     Se a resposta for sim, **feche** o alerta de segurança como uma atividade **T-BP**. 
 
 Alguns recursos legítimos não permitem codificações de criptografia forte e podem disparar o alerta. 
 
 2. Todos os usuários do código-fonte compartilham algo? 
-    1. Por exemplo, todos os membros da equipe de marketing estão acessando um recurso específico que pode fazer com que o alerta seja disparado?
-    2. Verifique os recursos acessados por esses tíquetes. 
-        - Confira isso no Active Directory verificando o atributo *msDS-SupportedEncryptionTypes*, da conta de serviço do recurso.
-    3. Se houver apenas um recurso acessado, verifique se é um recurso válido para o acesso desses usuários.   
+   1. Por exemplo, todos os membros da equipe de marketing estão acessando um recurso específico que pode fazer com que o alerta seja disparado?
+   2. Verifique os recursos acessados por esses tíquetes. 
+       - Confira isso no Active Directory verificando o atributo *msDS-SupportedEncryptionTypes*, da conta de serviço do recurso.
+   3. Se houver apenas um recurso acessado, verifique se é um recurso válido para o acesso desses usuários.   
 
-    Se a resposta a uma das perguntas anteriores for **sim**, provavelmente essa será uma atividade **T-BP**. Verifique se o recurso pode dar suporte a uma codificação de criptografia forte, implemente uma codificação de criptografia mais forte sempre que possível e **feche** o alerta de segurança.
+      Se a resposta a uma das perguntas anteriores for **sim**, provavelmente essa será uma atividade **T-BP**. Verifique se o recurso pode dar suporte a uma codificação de criptografia forte, implemente uma codificação de criptografia mais forte sempre que possível e **feche** o alerta de segurança.
 
 **Entender o escopo da violação**
 

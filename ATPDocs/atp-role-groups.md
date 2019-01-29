@@ -13,21 +13,16 @@ ms.technology: ''
 ms.assetid: effca0f2-fcae-4fca-92c1-c37306decf84
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 4481f8896791e98f76a6fb6f0b93796337b15ed1
-ms.sourcegitcommit: f4f2a1b2c674c4dba7a46ece0624f5ea10c4865e
+ms.openlocfilehash: bb577283303437db1e524f1e1f5a112be2bb8bcf
+ms.sourcegitcommit: a0ebb0b6f140d4abf091ebd9d756b975b3d96b9d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2018
-ms.locfileid: "52744324"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54458692"
 ---
-*Aplica-se a: Proteção Avançada contra Ameaças do Azure*
-
-
-
-
 # <a name="azure-atp-role-groups"></a>Grupos de função do Azure ATP
 
-O Azure ATP oferece segurança baseada em funções para proteger os dados de acordo com as necessidades específicas de segurança e conformidade de uma organização. O Azure ATP dá suporte a três funções distintas: Administradores, Usuários e Visualizadores. 
+O Azure ATP oferece segurança baseada em funções para proteger os dados de acordo com as necessidades específicas de segurança e conformidade de uma organização. O ATP do Azure dá suporte a três funções separadas: Administradores, Usuários e Visualizadores. 
 
 [!INCLUDE [Handle personal data](../includes/gdpr-intro-sentence.md)]
 
@@ -38,7 +33,7 @@ Grupos de função permitem o gerenciamento de acesso para o Azure ATP. Com os g
 
 ## <a name="accessing-the-azure-atp-portal"></a>Acessando o portal do Azure ATP
 
-O acesso ao portal do Azure ATP (portal.atp.azure.com) só pode ser realizado por um usuário do Azure AD com a função do diretório de administrador global ou administrador de segurança. Depois de entrar no portal com a função necessária, você poderá criar sua instância do ATP do Azure. O serviço do Azure ATP cria três grupos de segurança no locatário do Azure Active Directory: Administradores, Usuários e Visualizadores. 
+O acesso ao portal do Azure ATP (portal.atp.azure.com) só pode ser realizado por um usuário do Azure AD com a função do diretório de administrador global ou administrador de segurança. Depois de entrar no portal com a função necessária, você poderá criar sua instância do ATP do Azure. O serviço do ATP do Azure cria três grupos de segurança no locatário do Azure Active Directory: Administradores, Usuários, Visualizadores. 
 
 > [!NOTE]
 > O acesso ao portal do ATP do Azure é permitido somente a usuários dentro dos grupos de segurança do ATP do Azure dentro do Azure Active Directory e para administradores globais e de segurança do locatário.
@@ -46,7 +41,7 @@ O acesso ao portal do Azure ATP (portal.atp.azure.com) só pode ser realizado po
 
 ## <a name="types-of-azure-atp-security-groups"></a>Tipos de grupos de segurança do Azure ATP 
 
-O ATP do Azure fornece três tipos de grupos de segurança: Administradores do *(nome da instância)* do ATP do Azure, Usuários do *(nome da instância)* do ATP do Azure e Visualizadores do *(nome da instância)* do ATP do Azure. A tabela a seguir descreve o tipo de acesso no portal do Azure ATP disponível para cada função. Dependendo de qual função você atribuir, várias telas e opções de menu no portal do Azure ATP não estarão disponíveis para esses usuários, da seguinte maneira:
+O ATP do Azure fornece três tipos de grupos de segurança: Os Administradores do *(nome da instância)* do ATP do Azure, Usuários do *(nome da instância)* do ATP do Azure e Visualizadores do *(nome da instância)* do ATP do Azure. A tabela a seguir descreve o tipo de acesso no portal do Azure ATP disponível para cada função. Dependendo de qual função você atribuir, várias telas e opções de menu no portal do Azure ATP não estarão disponíveis para esses usuários, da seguinte maneira:
 
 |Atividade |Administradores do *(nome da instância)* do ATP do Azure|Usuários do *(nome da instância)* do ATP do Azure|Visualizadores do *(nome da instância)* do ATP do Azure|
 |----|----|----|----|

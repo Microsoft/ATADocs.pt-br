@@ -13,17 +13,13 @@ ms.technology: ''
 ms.assetid: cae3ed45-8fbc-4f25-ba24-3cc407c6ea93
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 0a27d87f758940e25b463d2514031c5c342a3114
-ms.sourcegitcommit: 2afc1486b40431f442d51a53df06e289796de87e
+ms.openlocfilehash: 8ca74bdf85cc48a1d2175b6f67e9e83fd6528f83
+ms.sourcegitcommit: a0ebb0b6f140d4abf091ebd9d756b975b3d96b9d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51560670"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54458795"
 ---
-*Aplica-se a: Proteção Avançada contra Ameaças do Azure*
-
-
-
 # <a name="excluding-entities-from-detections"></a>Excluindo entidades de detecções
 Este artigo explica como excluir entidades do disparo de alertas. Determinadas entidades são excluídas para minimizar verdadeiros positivos benignos, assegurando que você possa capturar os verdadeiros positivos. Para impedir que o ATP do Azure crie ruído sobre atividades que, vindas de usuários específicos, podem fazer parte de seu ritmo normal de negócios, você pode silenciar ou excluir entidades específicas da geração de alertas. Além disso, determinadas entidades populares são excluídas por padrão. 
 
@@ -38,12 +34,12 @@ Por exemplo, se você tiver um verificador de segurança que realiza reconhecime
 
 Há duas maneiras para você excluir entidades manualmente, seja diretamente do alerta de segurança ou da guia **Exclusões** na página **Configuração**. 
 
-- **No alerta de segurança**: na linha do tempo de Atividade, quando você recebe um alerta em uma atividade para um usuário, computador ou endereço IP que **tem** permissão para executar uma atividade específica e pode fazer isso com frequência, faça o seguinte:
+- **No alerta de segurança**: na linha do tempo de Atividade, ao receber um alerta em uma atividade para um usuário, computador ou endereço IP que **tem** permissão para executar uma atividade específica e pode fazer isso com frequência, faça o seguinte:
   - Clique com o botão direito do mouse nos três pontos no final da linha para o alerta de segurança nessa entidade e selecione **Fechar e excluir**. Isso adiciona o usuário, computador ou endereço IP à lista de exclusões desse alerta de segurança. Ele fecha o alerta de segurança e o alerta não está mais listado na lista de eventos **Aberto** na **linha do tempo de Alerta**.
 
     ![Excluir entidades](./media/exclude-in-sa.png)
 
-- **Na página Configuração**: para examinar ou modificar exclusões: em **Configuração**, clique em **Exclusões** e, em seguida, selecione o alerta de segurança ao qual aplicar a exclusão, assim como **Reconhecimento de DNS**.
+- **Na página Configuração**:  para examinar ou modificar exclusões: em **Configuração**, clique em **Exclusões** e, em seguida, selecione o alerta de segurança ao qual aplicar a exclusão, assim como **Reconhecimento de DNS**.
 
     ![Configuração de exclusão](./media/exclusions.png)
 

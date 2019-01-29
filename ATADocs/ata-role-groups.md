@@ -13,19 +13,17 @@ ms.technology: ''
 ms.assetid: 3715b69e-e631-449b-9aed-144d0f9bcee7
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: ed4d112cda614053aa20a6a486cb29baa1fed58a
-ms.sourcegitcommit: 959b1f7753b9a8ad94870d2014376d55296fbbd4
+ms.openlocfilehash: 1e5818e4e37b7d22669721341f3f31a94cd78baa
+ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46133626"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54841025"
 ---
-*Aplica-se a: Advanced Threat Analytics versão 1.9*
-
-
-
-
 # <a name="ata-role-groups"></a>Grupos de função do ATA
+
+
+*Aplica-se a: Advanced Threat Analytics versão 1.9*
 
 Os grupos de função permitem o gerenciamento de acesso para o ATA. Com os grupos de função, você pode separar as tarefas dentro de sua equipe de segurança e conceder apenas a quantidade de acesso que os usuários precisam para realizar seus trabalhos. Este artigo explica o gerenciamento de acesso e a autorização de função do ATA, e ajuda você a colocar em funcionamento os grupos de função no ATA.
 
@@ -34,7 +32,7 @@ Os grupos de função permitem o gerenciamento de acesso para o ATA. Com os grup
 
 ## <a name="types-of-ata-role-groups"></a>Tipos de Grupos de função do ATA 
 
-O ATA apresenta três tipos de Grupos de função: Administradores do ATA, Usuários do ATA e Visualizadores do ATA. A tabela a seguir descreve o tipo de acesso no ATA disponível por função. Dependendo de qual função você atribuir, várias telas e opções de menu no ATA não estarão disponíveis. Veja a seguir:
+O ATA apresenta três tipos de grupos de Função: administradores do ATA, usuários do ATA e visualizadores do ATA. A tabela a seguir descreve o tipo de acesso no ATA disponível por função. Dependendo de qual função você atribuir, várias telas e opções de menu no ATA não estarão disponíveis. Veja a seguir:
 
 |Atividade |Administradores do Microsoft Advanced Threat Analytics|Usuários do Microsoft Advanced Threat Analytics|Visualizadores do Microsoft Advanced Threat Analytics|
 |----|----|----|----|

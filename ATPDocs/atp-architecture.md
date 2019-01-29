@@ -13,16 +13,13 @@ ms.technology: ''
 ms.assetid: 90f68f2c-d421-4339-8e49-1888b84416e6
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: d41eac8700e334989594639880a0f85d5c725578
-ms.sourcegitcommit: f4f2a1b2c674c4dba7a46ece0624f5ea10c4865e
+ms.openlocfilehash: 10cbb1fcb30f40a41d17a9995e4e132c4afbf332
+ms.sourcegitcommit: a0ebb0b6f140d4abf091ebd9d756b975b3d96b9d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2018
-ms.locfileid: "52744414"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54458998"
 ---
-*Aplica-se a: Proteção Avançada contra Ameaças do Azure*
-
-
 # <a name="azure-atp-architecture"></a>Arquitetura do Azure ATP
 
 O ATP do Azure monitora seus controladores de domínio capturando e analisando o tráfego de rede e aproveitando os eventos do Windows diretamente de seus controladores de domínio, em seguida, analisa os dados em busca de ataques e ameaças. Utilizando criação de perfil, detecção determinística, aprendizado de máquina e algoritmos comportamentais que do Azure ATP aprende sobre sua rede, habilita a detecção de anomalias e avisa sobre atividades suspeitas.
@@ -89,7 +86,7 @@ O sensor do Azure ATP lê eventos localmente, sem necessidade de comprar e mante
 
 -  Eventos do Windows
 
-    Para aprimorar a cobertura de detecção do ATP do Azure de suspeita de roubo de identidade (pass-the-hash), falhas de autenticação suspeitas, modificação de grupos confidenciais, criação de serviços suspeitos e tipos ataque de atividade de Honeytoken, o ATP do Azure precisa analisar os logs dos seguintes eventos do Windows: 4776, 4732, 4733, 4728, 4729, 4756, 4757 e 7045. Esses eventos são lidos automaticamente pelos sensores do Azure ATP com as [configurações corretas de política de auditoria avançada](atp-advanced-audit-policy.md). 
+    Para aprimorar a cobertura de detecção do ATP do Azure de suspeita de roubo de identidade (pass-the-hash), falhas de autenticação suspeitas, modificação de grupos confidenciais, criação de serviços suspeitos e tipos ataque de atividade de Honeytoken, o ATP do Azure precisa analisar os logs dos seguintes eventos do Windows: 4776,4732,4733,4728,4729,4756,4757 e 7045. Esses eventos são lidos automaticamente pelos sensores do Azure ATP com as [configurações corretas de política de auditoria avançada](atp-advanced-audit-policy.md). 
 
 ## <a name="see-also"></a>Consulte Também
 - [Pré-requisitos do Azure ATP](atp-prerequisites.md)

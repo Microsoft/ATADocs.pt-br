@@ -13,17 +13,17 @@ ms.technology: ''
 ms.assetid: 38ea49b5-cd5e-43e5-bc39-5071f759633b
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: eaa579a6b82bab27bba0ddb79b39f06bd495debc
-ms.sourcegitcommit: 959b1f7753b9a8ad94870d2014376d55296fbbd4
+ms.openlocfilehash: ea63b6966cc933fcb0a4c748e5b4de511895c483
+ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46133218"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54840328"
 ---
-*Aplica-se a: Advanced Threat Analytics versão 1.9*
-
-
 # <a name="ata-reports"></a>Relatórios do ATA
+
+
+*Aplica-se a: Advanced Threat Analytics versão 1.9*
 
 A seção de relatórios do ATA no console permite gerar relatórios que fornecem informações do status do sistema, a integridade do sistema e um relatório de atividades suspeitas detectadas em seu ambiente.
 
@@ -53,8 +53,8 @@ Para definir um relatório agendado:
 
    ![Agendar relatórios](./media/ata-sched-reports.png)
 
-  > [!NOTE]
-  > Os relatórios diários foram criados para serem enviados logo após a meia-noite (UTC).
+   > [!NOTE]
+   > Os relatórios diários foram criados para serem enviados logo após a meia-noite (UTC).
 
 2. Clique em **Agendar** ao lado do tipo de relatório selecionado para definir a frequência e o endereço de email para a entrega dos relatórios, clique no sinal de adição ao lado dos endereços de email para adicioná-los e clique em **Salvar**.
 
@@ -69,5 +69,5 @@ Para definir um relatório agendado:
 - [Pré-requisitos do ATA](ata-prerequisites.md)
 - [Planejamento da capacidade do ATA](ata-capacity-planning.md)
 - [Configurar coleta de eventos](configure-event-collection.md)
-- [Configuração do encaminhamento de eventos do Windows](configure-event-collection.md#configuring-windows-event-forwarding)
+- [Configuração do encaminhamento de eventos do Windows](configure-event-collection.md)
 - [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
