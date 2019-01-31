@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 15ee7d0b-9a0c-46b9-bc71-98d0b4619ed0
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 4c178d4ed874ae3d826e97a154ae2e17bd52f48c
-ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
+ms.openlocfilehash: df3e75970a797307991620e21629df589406cc40
+ms.sourcegitcommit: 19ff0ed88e450506b5725bbcbb0d0bd2f0c5e4bb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54840362"
+ms.lasthandoff: 01/27/2019
+ms.locfileid: "55085207"
 ---
 # <a name="creating-your-azure-atp-instance-in-the-azure-atp-portal---step-1"></a>Criando sua instância do ATP do Azure no portal do ATP do Azure – Etapa 1
 
@@ -32,7 +32,7 @@ No ATP do Azure, uma única instância permite gerenciar várias florestas em um
 > [!NOTE]
 > No momento, os data centers do Azure ATP são implantados na Europa, na América do Norte/América Central/Caribe e na Ásia. A instância é criada automaticamente no data center geograficamente mais próximo ao seu AAD. Após a criação, as instâncias do ATP do Azure não podem ser movidas. 
 
-## <a name="step-1-enter-the-azure-atp-portal"></a>Etapa 1. Entrar no portal do Azure ATP
+## <a name="enter-the-azure-atp-portal"></a>Entrar no portal do Azure ATP
 
 Depois de verificar que sua rede atende aos requisitos do sensor, continue com a criação da instância do ATP do Azure.
 
@@ -44,7 +44,7 @@ Depois de verificar que sua rede atende aos requisitos do sensor, continue com a
 
 2.  Faça logon com sua conta de usuário do Azure Active Directory.
 
-## <a name="step-2-create-your-instance"></a>Etapa 2. Criar sua instância
+## <a name="create-your-instance"></a>Criar sua instância
 
 1. Clique em **Criar instância**. 
 

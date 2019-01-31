@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 95bb4ec1-841f-41b7-92fe-fbd144085724
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: dae89e22e7d5e331af3ec6d82455581396289486
-ms.sourcegitcommit: a0ebb0b6f140d4abf091ebd9d756b975b3d96b9d
+ms.openlocfilehash: 4816fe56b8a28d349c970be5a304d025875de748
+ms.sourcegitcommit: 19ff0ed88e450506b5725bbcbb0d0bd2f0c5e4bb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54458964"
+ms.lasthandoff: 01/27/2019
+ms.locfileid: "55085224"
 ---
 # <a name="install-azure-atp---step-3"></a>Instalar o Azure ATP – etapa 3
 
@@ -26,7 +26,7 @@ ms.locfileid: "54458964"
 > [« Etapa 2](install-atp-step2.md)
 > [Etapa 4 »](install-atp-step4.md)
 
-## <a name="step-3-download-the-azure-atp-sensor-setup-package"></a>Etapa 3. Baixar o pacote de instalação do sensor do Azure ATP
+## <a name="download-the-azure-atp-sensor-setup-package"></a>Baixar o pacote de instalação do sensor do Azure ATP
 Após definir as configurações de conectividade do domínio, você poderá baixar o pacote de instalação do sensor do Azure ATP. O pacote de instalação do sensor do Azure ATP pode ser instalado em um servidor dedicado ou em um controlador de domínio. Ao instalar diretamente em um controlador de domínio, ele é instalado como um sensor do Azure ATP e ao instalar em um servidor dedicado usando o espelhamento de porta, ele é instalado como um sensor autônomo do Azure ATP. Para obter mais informações sobre o sensor do Azure ATP, consulte [Arquitetura do Azure ATP](atp-architecture.md). 
 
 Clique em **Baixar** na lista de etapas na parte superior da página para ir para a página **Sensor**.

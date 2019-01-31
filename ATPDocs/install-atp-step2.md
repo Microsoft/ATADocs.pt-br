@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: ae8a95f0-278c-4a12-ae69-14282364fba1
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 7ff0324da5cff1ac9ff6aa73fd32d0328279c12b
-ms.sourcegitcommit: a0ebb0b6f140d4abf091ebd9d756b975b3d96b9d
+ms.openlocfilehash: ada659d86088cb9f93eba4aca54dd2553e8fb69a
+ms.sourcegitcommit: 19ff0ed88e450506b5725bbcbb0d0bd2f0c5e4bb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54458667"
+ms.lasthandoff: 01/27/2019
+ms.locfileid: "55085445"
 ---
 # <a name="install-azure-atp---step-2"></a>Instalar o Azure ATP – etapa 2
 
@@ -26,7 +26,7 @@ ms.locfileid: "54458667"
 > [« Etapa 1](install-atp-step1.md)
 > [Etapa 3 »](install-atp-step3.md)
 
-## <a name="step-2-provide-a-username-and-password-to-connect-to-your-active-directory-forest"></a>Etapa 2. Fornecer um nome de usuário e uma senha para se conectar à sua Floresta do Active Directory
+## <a name="provide-a-username-and-password-to-connect-to-your-active-directory-forest"></a>Fornecer um nome de usuário e uma senha para se conectar à sua Floresta do Active Directory
 
 Na primeira vez em que você abre o portal do Azure ATP, a tela a seguir é exibida:
 
@@ -44,7 +44,7 @@ Na primeira vez em que você abre o portal do Azure ATP, a tela a seguir é exib
     |**Senha** (obrigatório)|Digite a senha para o usuário somente leitura, por exemplo: **Lápis1**.|
     |**Domínio** (obrigatório)|Digite o domínio para o usuário somente leitura, por exemplo: **contoso.com**. **Observação:** É importante que você insira o FQDN completo do domínio onde o usuário está localizado. Por exemplo, se a conta do usuário estiver no domínio corp.contoso.com, você precisará inserir `corp.contoso.com` e não contoso.com|
 
-3. No portal do Azure ATP, clique em **Baixar instalação do sensor e instalar o primeiro sensor** para continuar.
+2. No portal do Azure ATP, clique em **Baixar instalação do sensor e instalar o primeiro sensor** para continuar.
 
 
 > [!div class="step-by-step"]
