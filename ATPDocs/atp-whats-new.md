@@ -1,11 +1,11 @@
 ---
-title: Novidades do Azure ATP | Microsoft Docs
+title: Novidades no ATP do Azure (Proteção Avançada contra Ameaças do Azure) | Microsoft Docs
 description: Descreve as versões mais recentes do Azure ATP e fornece informações sobre as novidades de cada versão.
 keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 1/20/2019
+ms.date: 1/27/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,19 +13,43 @@ ms.technology: ''
 ms.assetid: 7d0f33db-2513-4146-a395-290e001f4199
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 7bf903b1fde595e41c3b57d8163ed0f06f8e8ac8
-ms.sourcegitcommit: a0ebb0b6f140d4abf091ebd9d756b975b3d96b9d
+ms.openlocfilehash: 9d1a0f992bcb0d21ed31d5cdc5ed3e034c6bee8d
+ms.sourcegitcommit: 19ff0ed88e450506b5725bbcbb0d0bd2f0c5e4bb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54459168"
+ms.lasthandoff: 01/27/2019
+ms.locfileid: "55085428"
 ---
 # <a name="whats-new-in-azure-atp"></a>Novidades do Azure ATP
+
+### <a name="azure-atp-release-263"></a>ATP do Azure versão 2.63
+Lançado em 27 de janeiro de 2019
+
+- **Novo recurso: suporte para floresta não confiável – (versão prévia)**<br>
+O suporte do ATP do Azure para sensores em florestas não confiáveis agora está em versão prévia pública. Na página **Serviços de diretório** do portal do ATP do Azure, defina conjuntos de credenciais adicionais para permitir que os sensores do ATP do Azure se conectem a diferentes florestas do Active Directory e relatem ao serviço do ATP do Azure. Confira [Várias florestas do ATP do Azure](atp-multi-forest.md) para saber mais. 
+
+- **Novo recurso: cobertura do controlador de domínio**<br>
+O ATP do Azure agora fornece informações de cobertura para controladores de domínio monitorados do ATP do Azure.  
+Na página **Sensores** do portal do ATP do Azure, veja o número de controladores de domínio não monitorados e monitorados detectados pelo ATP do Azure em seu ambiente. Baixe a lista de controladores de domínio monitorados para análise posterior e para a criação de um plano de ação. Confira o guia de instruções [Monitoramento de controlador de domínio](atp-sensor-monitoring.md) para saber mais. 
+
+- **Aprimoramento do recurso: reconhecimento de enumeração de conta**<br>
+Agora, a detecção de reconhecimento de enumeração de conta do ATP do Azure detecta e emite alertas de tentativas de enumeração usando o Kerberos e o NTLM. Antes, a detecção funcionava apenas para tentativas que usavam o Kerberos. Confira [Alertas de reconhecimento do ATP do Azure](atp-reconnaissance-alerts.md#account-enumeration-reconnaissance-external-id-2003) para saber mais. 
+
+- **Aprimoramento do recurso: alerta de tentativa de execução remota de código**<br>
+    - Todas as atividades de execução remota, como a criação de serviços, a execução de WMI e a nova execução **PowerShell**, foram adicionadas à linha do tempo do perfil do computador de destino. O computador de destino é o controlador de domínio no qual o comando foi executado. 
+    - A execução do **PowerShell** foi adicionada à lista de atividades de execução remota de código listadas na linha do tempo de alerta do perfil da entidade.
+    - Confira [Tentativa de execução remota de código](atp-domain-dominance-alerts.md#remote-code-execution-attempt-external-id-2019) para saber mais.  
+
+- **Problema do LSASS do Windows Server 2019 e do ATP do Azure**<br>
+Em resposta aos comentários dos clientes sobre o uso do ATP do Azure com controladores de domínio que executam o Windows Server 2019, esta atualização inclui uma lógica adicional para evitar que o comportamento relatado nos computadores Windows Server 2019 seja disparado. O suporte completo para o sensor do ATP do Azure no Windows Server 2019 está planejado para uma atualização futura do ATP do Azure, no entanto, **não** há suporte para a instalação e a execução do ATP do Azure nos Windows Servers 2019 no momento. Confira [Requisitos do sensor do ATP do Azure](atp-prerequisites.md#azure-atp-sensor-requirements) para saber mais. 
+
+- Essa versão também inclui aprimoramentos e correções de bug da infraestrutura do sensor interno.
+
 
 ## <a name="azure-atp-release-262"></a>ATP do Azure versão 2.62
 Lançado em 20 de janeiro de 2019
 
-- **Novo alerta de segurança: Execução remota de código sobre DNS – (versão prévia)**<br>
+- **Novo alerta de segurança: Execução remota de código com DNS – (versão prévia)**<br>
 O alerta de segurança [Execução remota de código sobre DNS ](atp-lateral-movement-alerts.md#remote-code-execution-over-dns-external-id-2036---preview) do ATP do Azure está agora na versão prévia pública. <br> Nessa detecção, um alerta de segurança do ATP do Azure é disparado quando as consultas DNS suspeitas de explorar a vulnerabilidade de segurança [CVE-2018-8626](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2018-8626) são feitas em um controlador de domínio na rede.
 
 - **Aprimoramento do recurso: Atualização de sensor atrasada por 72 horas** <br> Opção alterada para adiar atualizações de sensor em sensores selecionados por 72 horas (em vez do adiamento anterior de 24 horas) após cada atualização de versão do ATP do Azure. Ver [atualização do sensor do ATP do Azure](sensor-update.md) para obter instruções de configuração. 

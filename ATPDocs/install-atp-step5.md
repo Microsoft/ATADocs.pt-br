@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: d7c95f8c-04f8-4946-9bae-c27ed362fcb0
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: c296dbe566676342c6b67be5adb1f54df7897675
-ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
+ms.openlocfilehash: cb9987645ffd1546b50117c984a138e8d3169657
+ms.sourcegitcommit: 19ff0ed88e450506b5725bbcbb0d0bd2f0c5e4bb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54840957"
+ms.lasthandoff: 01/27/2019
+ms.locfileid: "55085258"
 ---
 # <a name="install-azure-atp---step-5"></a>Instalar o Azure ATP – etapa 5
 
@@ -28,10 +28,10 @@ ms.locfileid: "54840957"
 
 
 
-## <a name="step-5-configure-the-azure-atp-sensor-settings"></a>Etapa 5. Definir configurações do sensor do Azure ATP
+## <a name="configure-azure-atp-sensor-settings"></a>Definir as configurações do sensor do ATP do Azure
 Após a instalação do sensor do Azure ATP, execute as etapas a seguir para definir as configurações do sensor do Azure ATP.
 
-1. No portal do ATP do Azure, vá em **Configuração** e, em **Sistema**, selecione **sensor**.
+1.  No portal do ATP do Azure, acesse **Configuração** e, na seção **Sistema**, selecione **Sensores**.
    
     ![Imagem de definição das configurações do sensor](media/atp-sensor-config.png)
 
@@ -49,14 +49,18 @@ Após a instalação do sensor do Azure ATP, execute as etapas a seguir para def
 
    - **Capturar adaptadores de rede** (obrigatório):
    
-     - Para um sensor do Azure ATP, trata-se de todos os adaptadores de rede usados para comunicação com outros computadores da organização.
-   - Para um sensor autônomo do Azure ATP em um servidor dedicado, selecione os adaptadores de rede que estão configurados como a porta de espelho do destino. Eles recebem o tráfego do controlador de domínio espelhado.
+    - Para os sensores do ATP do Azure, todos os adaptadores de rede usados para comunicação com outros computadores da organização.
+    - Para um sensor autônomo do ATP do Azure em um servidor dedicado, selecione os adaptadores de rede configurados como a porta de espelho de destino. Eles recebem o tráfego do controlador de domínio espelhado.
 
-   - **Candidato ao sincronizador de domínio**: por padrão, os sensores do ATP do Azure não são candidatos ao sincronizador do domínio, embora os sensores autônomos do ATP do Azure sejam. Para selecionar manualmente um sensor do ATP do Azure como um candidato de sincronizador do domínio, alterne a opção **Candidato a sincronizador de domínio** para **LIGADO** na tela de configuração. 
+  - **Candidato ao sincronizador de domínio**: 
     
-       O sincronizador de domínio é responsável pela sincronização entre o Azure ATP e o domínio do Active Directory. Dependendo do tamanho do domínio, a sincronização inicial pode ser demorada e consumir muitos recursos. 
-     É recomendável desabilitar que os sensores do Azure ATP do site remoto sejam candidatos a sincronizador de domínio.
-     Se o controlador de domínio for somente leitura, não o defina como um candidato ao sincronizador do domínio. Para obter mais informações sobre a sincronização de domínio do Azure ATP, veja [arquitetura do Azure ATP](atp-architecture.md#azure-atp-sensor-features)
+    - O sincronizador de domínio é responsável pela sincronização entre o Azure ATP e o domínio do Active Directory. Dependendo do tamanho do domínio, a sincronização inicial pode ser demorada e consumir muitos recursos. O ATP do Azure recomenda a configuração de pelo menos um controlador de domínio como o candidato a sincronizador de domínio por domínio. Se pelo menos um controlador de domínio não for selecionado como o candidato a sincronizador de domínio, o ATP do Azure verificará a rede apenas passivamente e poderá não ser capaz de coletar todas as alterações e os detalhes de entidade do Active Directory. Pelo menos um **candidato a sincronizador de domínio** designado por domínio garante que o ATP do Azure sempre esteja verificando ativamente a rede e seja capaz de coletar todas as alterações e os valores de entidade do Active Directory.
+  
+    - por padrão, os sensores do ATP do Azure não são candidatos ao sincronizador do domínio, embora os sensores autônomos do ATP do Azure sejam. Para definir manualmente um sensor do ATP do Azure como um candidato a sincronizador de domínio, mude a opção **Candidato a sincronizador de domínio** para **HABILITADO** na tela de configuração.   
+        
+    - É recomendável desabilitar que os sensores do Azure ATP do site remoto sejam candidatos a sincronizador de domínio.
+   
+    - Não defina os controladores de domínio somente leitura como candidatos a sincronizador de domínio. Para obter mais informações sobre a sincronização de domínio do ATP do Azure, confira [Arquitetura do ATP do Azure](atp-architecture.md#azure-atp-sensor-features).
   
 3. Clique em **Salvar**.
 

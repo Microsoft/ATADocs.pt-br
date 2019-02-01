@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 1/7/2019
+ms.date: 1/27/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 8ae459ac-9fca-4923-9a1a-dc10d5c50b29
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 6e9ffb02c515c34dfa2847c9b93f55c3fa38fa44
-ms.sourcegitcommit: a0ebb0b6f140d4abf091ebd9d756b975b3d96b9d
+ms.openlocfilehash: 8c294c20efeac4fae17df84c6a3d6d8d656c9554
+ms.sourcegitcommit: 19ff0ed88e450506b5725bbcbb0d0bd2f0c5e4bb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54459202"
+ms.lasthandoff: 01/27/2019
+ms.locfileid: "55085462"
 ---
 # <a name="azure-advanced-threat-protection-information-and-support"></a>Informações e suporte da Proteção Avançada contra Ameaças do Azure 
 
@@ -27,7 +27,7 @@ Use os seguintes recursos para ajudá-lo a saber mais, implantar e dar suporte �
 
 |Para fazer isso...|...faça isto:|
 |----|----|
-|Consulte as documentações mais populares|Leia as cinco principais páginas:<br>- [O que é a Proteção Avançada contra Ameaças do Azure?](what-is-atp.md)<br>- [Pré-requisitos do Azure ATP](atp-prerequisites.md)<br>- [Arquitetura do Azure ATP](atp-architecture.md)<br>- [Planejamento de capacidade do Azure ATP](atp-capacity-planning.md)<br>- [Criando uma instância](install-atp-step1.md)|
+|Consulte as documentações mais populares|Leia as dez páginas principais:<br>- [O que é a Proteção Avançada contra Ameaças do Azure?](what-is-atp.md)<br>- [Pré-requisitos do Azure ATP](atp-prerequisites.md)<br>- [Arquitetura do Azure ATP](atp-architecture.md)<br>- [Planejamento de capacidade do Azure ATP](atp-capacity-planning.md)<br>-[Criando uma instância](install-atp-step1.md)<br>-[Entendendo os alertas de segurança](understanding-security-alerts.md)<br>-[Alertas de segurança do ATP do Azure](suspicious-activity-guide.md)<br>-[Investigar um computador](investigate-a-computer.md)<br>-[Investigar um usuário](investigate-a-user.md)<br>-[Investigar um caminho de movimento lateral](investigate-lateral-movement-path.md)
 |Entre em contato com a equipe de produto e seus colegas|Visite a  [Comunidade de Tecnologia](https://techcommunity.microsoft.com/t5/Azure-Advanced-Threat-Protection/bd-p/AzureAdvancedThreatProtection)  da Proteção Avançada contra Ameaças do Azure.|
 |Verifique as informações da assinatura e quais recursos são compatíveis|Confira as  [informações da assinatura](https://www.microsoft.com/cloud-platform/azure-information-protection-pricing)  e a  [lista de recursos](https://www.microsoft.com/cloud-platform/azure-information-protection-features)  no site da Proteção Avançada contra Ameaças do Azure.|
 
@@ -36,7 +36,7 @@ Use os seguintes recursos para ajudá-lo a saber mais, implantar e dar suporte �
 A equipe do produto Proteção Avançada contra Ameaças do Azure publica comunicados sobre novas versões e atualizações no  [Blog do Enterprise Mobility + Security.](https://cloudblogs.microsoft.com/enterprisemobility/author/microsoft-advanced-threat-analytics-team/)
 Essas postagens de blog complementam a documentação do produto e as informações de suporte.
 
-Para uma lista atualizada de recursos lançados recentemente e alterações no Azure ATP, veja o artigo [Novidades da Proteção Avançada contra Ameaças do Azure](atp-whats-new.md).
+Para obter uma lista atualizada de recursos lançados recentemente e alterações recentes no ATP do Azure, confira o artigo [Novidades da Proteção Avançada contra Ameaças do Azure](atp-whats-new.md).
 
 ## <a name="support-options-and-community-resources"></a>Opções de suporte e recursos da comunidade
 

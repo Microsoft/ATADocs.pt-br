@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 62c99622-2fe9-4035-9839-38fec0a353da
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 06e31d44afba18cb44d2df6cde167c9a8babc92b
-ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
+ms.openlocfilehash: 829c3685d06ec49182895b4786c89b8281e2de2f
+ms.sourcegitcommit: 19ff0ed88e450506b5725bbcbb0d0bd2f0c5e4bb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54840719"
+ms.lasthandoff: 01/27/2019
+ms.locfileid: "55085377"
 ---
 # <a name="azure-atp-prerequisites"></a>Pré-requisitos do Azure ATP
 Este artigo descreve os requisitos para uma implantação bem-sucedida do Azure ATP em seu ambiente.
@@ -110,7 +110,7 @@ Os servidores e controladores de domínio nos quais o sensor é instalado devem 
 ### <a name="network-adapters"></a>Adaptadores de rede
 
 O sensor do Azure ATP monitora o tráfego local em todos os adaptadores de rede do controlador de domínio. <br>
-Após a implantação, será possível usar o portal da Proteção Avançada contra Ameaças do Azure se desejar modificar os adaptadores de rede a ser monitorados.
+Após a implantação, use o portal do ATP do Azure para modificar quais adaptadores de rede são monitorados.
 
 Não há suporte para o sensor em controles de domínio que executem o Windows 2008 R2 com o Broadcom Network Adapter Teaming habilitado.
 
