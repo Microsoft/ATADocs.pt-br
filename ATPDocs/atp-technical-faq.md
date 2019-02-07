@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 11/29/2018
+ms.date: 02/04/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 6a9b5273-eb26-414e-9cdd-f64406e24ed8
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 4f551e27d6417f0fa1a65427998e8d1cb33dcf7c
-ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
+ms.openlocfilehash: 2e8405f46e404ef6d08ac2ce2517259ad20828b1
+ms.sourcegitcommit: 9236d279f5e01424b498ce23e9d84c407ebfcdf3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54840566"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "55689312"
 ---
 # <a name="azure-atp-frequently-asked-questions"></a>Perguntas frequentes sobre o Azure ATP
 Este artigo fornece uma lista de perguntas frequentes sobre o Azure ATP e dividido nas seguintes categorias: 
@@ -131,16 +131,6 @@ Com a Proteção Avançada contra Ameaças do Azure, não é necessário criar r
 ### <a name="what-should-i-do-if-the-azure-atp-sensor-or-standalone-sensor-doesnt-start"></a>O que devo fazer se o sensor ou o sensor autônomo do Azure ATP não for iniciado?
 Procure o erro mais recente no [log](troubleshooting-atp-using-logs.md) de erros atual (onde o Azure ATP está instalado, na pasta "Logs").
 
-### <a name="how-can-i-test-azure-atp"></a>Como posso testar o Azure ATP?
-Você pode simular atividades suspeitas como um teste de ponta a ponta. No cenário a seguir, o reconhecimento DNS é simulado:
-
-1. Verifique se os sensores do Azure ATP estão instalados e configurados nos controladores de domínio (ou se os sensores autônomos e o espelhamento de porta relacionado estão instalados e configurados)
-2. Abra o CMD
-3. Execute o seguinte comando: nslookup -<DC iP address>
-   - Pressione Enter
-   - Tipo: Is -d <FQDN>
-   - Dependendo da configuração do ambiente, as respostas irão variar de "Consulta recusada" para uma lista dos registros DNS. 
-4. Exiba o alerta relacionado ao reconhecimento de DNS simulado no portal do Azure ATP. 
 
 ## <a name="see-also"></a>Consulte Também
 - [Pré-requisitos do Azure ATP](atp-prerequisites.md)
