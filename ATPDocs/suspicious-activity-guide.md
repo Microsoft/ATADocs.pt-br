@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 1/20/2019
+ms.date: 02/03/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: ca5d1c7b-11a9-4df3-84a5-f53feaf6e561
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 974a67fbc105714acc73c4b489fe5b5a2ee6e74d
-ms.sourcegitcommit: 443e6c07788938960555046def389a1503c259a4
+ms.openlocfilehash: f84e49846a0c144da0674b8a4594eab2ee33efba
+ms.sourcegitcommit: 9236d279f5e01424b498ce23e9d84c407ebfcdf3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/20/2019
-ms.locfileid: "54417194"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "55689346"
 ---
 # <a name="azure-atp-security-alerts"></a>Alertas de segurança do ATP do Azure
 
@@ -57,7 +57,7 @@ Na versão 2.56, todos os alertas de segurança da ATP do Azure existentes foram
 |[Suspeita de uso de Golden Ticket (downgrade de criptografia)](atp-domain-dominance-alerts.md#suspected-golden-ticket-usage-encryption-downgrade-external-id-2009)|Atividade de downgrade de criptografia (possível ataque golden ticket)|2009|
 |[Suspeita de uso de Golden Ticket (dados de autorização forjados)](atp-domain-dominance-alerts.md#suspected-golden-ticket-usage-forged-authorization-data-external-id-2013) |Elevação de privilégios usando dados de autorização forjados|2013|
 |[Suspeita de uso de Golden Ticket (conta inexistente)](atp-domain-dominance-alerts.md#suspected-golden-ticket-usage-nonexistent-account-external-id-2027)|Golden Ticket do Kerberos – conta não existente|2027|
-|[Suspeita de uso de Golden Ticket – anomalia de tíquete (versão prévia)](atp-domain-dominance-alerts.md#suspected-golden-ticket-usage-ticket-anomaly-external-id-2032--preview)|NA|2032|
+|[Suspeita de uso de Golden Ticket (anomalia de tíquete)](atp-domain-dominance-alerts.md#suspected-golden-ticket-usage-ticket-anomaly-external-id-2032)|NA|2032|
 |[Suspeita de uso de Golden Ticket (anomalia de tempo)](atp-domain-dominance-alerts.md#suspected-golden-ticket-usage-time-anomaly-external-id-2022)|Golden Ticket do Kerberos – anomalia de tempo|2022|
 |[Suspeita de roubo de identidade (Pass-the-Hash)](atp-lateral-movement-alerts.md#suspected-identity-theft-pass-the-hash-external-id-2017)|Roubo de identidade usando o ataque de passagem de Hash|2017|
 |[Suspeita de roubo de identidade (Pass-the-Ticket)](atp-lateral-movement-alerts.md#suspected-identity-theft-pass-the-ticket-external-id-2018)|Roubo de identidade usando o ataque Pass-the-Ticket|2018|

@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 1/15/2019
+ms.date: 02/04/2019
 ms.topic: tutorial
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: e9cf68d2-36bd-4b0d-b36e-7cf7ded2618e
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 016388807b2e5d027e3fc113c7e34ebaa546e9d5
-ms.sourcegitcommit: 19ff0ed88e450506b5725bbcbb0d0bd2f0c5e4bb
+ms.openlocfilehash: c8e4d9fbc094e5bd1b58253b771cb5d693b7361c
+ms.sourcegitcommit: 9236d279f5e01424b498ce23e9d84c407ebfcdf3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/27/2019
-ms.locfileid: "55085335"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "55689295"
 ---
 # <a name="tutorial-reconnaissance-alerts"></a>Tutorial: Alertas de reconhecimento  
 
@@ -115,7 +115,11 @@ Agora, examine as contas:<br>
 
 O servidor DNS contém um mapa de todos os computadores, endereços IP e serviços em sua rede. Essas informações são usadas pelos invasores para mapear sua estrutura de rede e visar computadores interessantes para etapas posteriores no ataque. 
  
-Há vários tipos de consulta no protocolo DNS. Esse alerta de segurança do ATP do Azure detecta a solicitação AXFR (transferência) originada de servidores que não são DNS.
+Há vários tipos de consulta no protocolo DNS. Esse alerta de segurança do ATP do Azure detecta solicitações suspeitas de AXFR (transferência) provenientes de servidores que não são DNS.
+
+**Período de aprendizado**
+
+Esse alerta tem um período de aprendizado de oito dias, a partir do momento em que o controlador de domínio inicia o monitoramento. 
 
 **TP, B-TP ou FP**
 

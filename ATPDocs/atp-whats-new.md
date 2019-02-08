@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 1/27/2019
+ms.date: 02/04/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,16 +13,39 @@ ms.technology: ''
 ms.assetid: 7d0f33db-2513-4146-a395-290e001f4199
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 9d1a0f992bcb0d21ed31d5cdc5ed3e034c6bee8d
-ms.sourcegitcommit: 19ff0ed88e450506b5725bbcbb0d0bd2f0c5e4bb
+ms.openlocfilehash: ef2aa85c8695b86ba47d0c42c0a82208b188b893
+ms.sourcegitcommit: 9236d279f5e01424b498ce23e9d84c407ebfcdf3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/27/2019
-ms.locfileid: "55085428"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "55689414"
 ---
 # <a name="whats-new-in-azure-atp"></a>Novidades do Azure ATP
 
-### <a name="azure-atp-release-263"></a>ATP do Azure versão 2.63
+## <a name="azure-atp-release-264"></a>ATP do Azure, lançamento 2.64
+Lançado em 4 de fevereiro de 2019
+
+
+- **Disponibilidade geral: Suspeita de uso de Golden Ticket (anomalia de tíquete)**<br>
+Esse alerta já está em disponibilidade geral. Para ver mais detalhes e recursos de alerta, confira a [página de descrição do alerta "Suspeita de uso de Golden Ticket (anomalia de tíquete)"](atp-domain-dominance-alerts.md#suspected-golden-ticket-usage-ticket-anomaly-external-id-2032). 
+
+- **Aprimoramento do recurso: Reconhecimento de mapeamento de rede (DNS)**<br>
+A lógica de detecção de alerta aprimorada foi implantada para este alerta para reduzir falsos positivos e ruído de alerta. Agora, esse alerta tem um período de aprendizado de oito dias, antes que ele seja disparado pela primeira vez. Para saber mais sobre esse alerta, confira a [página de descrição do alerta "Reconhecimento de mapeamento de rede (DNS)"](atp-reconnaissance-alerts.md#network-mapping-reconnaissance-dns-external-id-2007). 
+
+    **Devido ao aprimoramento desse alerta, o método nslookup não deve mais ser usado para testar a conectividade do ATP do Azure durante a configuração inicial.** 
+
+- **Aprimoramento do recurso:**<br>
+Esta versão inclui páginas de alerta reprojetadas e novas evidências, fornecendo uma melhor investigação de alertas. 
+    - [Suspeita de ataque de força bruta (SMB)](atp-compromised-credentials-alerts.md#suspected-brute-force-attack-smb-external-id-2033)
+    - [Página de descrição do alerta Suspeita de uso de Golden Ticket (anomalia de tempo)](atp-domain-dominance-alerts.md#suspected-golden-ticket-usage-time-anomaly-external-id-2022)
+    - [Suspeita de ataque de Overpass-the-Hash (Kerberos)](atp-lateral-movement-alerts.md#suspected-overpass-the-hash-attack-kerberos-external-id-2002)
+    - [Suspeita de uso da estrutura de hacker Metasploit](atp-compromised-credentials-alerts.md#suspected-use-of-metasploit-hacking-framework-external-id-2034)
+    - [Suspeita de ataque do ransomware WannaCry](atp-compromised-credentials-alerts.md#suspected-wannacry-ransomware-attack-external-id-2035)
+
+- Essa versão também inclui aprimoramentos e correções de bug da infraestrutura do sensor interno.
+
+
+## <a name="azure-atp-release-263"></a>ATP do Azure versão 2.63
 Lançado em 27 de janeiro de 2019
 
 - **Novo recurso: suporte para floresta não confiável – (versão prévia)**<br>
@@ -52,7 +75,7 @@ Lançado em 20 de janeiro de 2019
 - **Novo alerta de segurança: Execução remota de código com DNS – (versão prévia)**<br>
 O alerta de segurança [Execução remota de código sobre DNS ](atp-lateral-movement-alerts.md#remote-code-execution-over-dns-external-id-2036---preview) do ATP do Azure está agora na versão prévia pública. <br> Nessa detecção, um alerta de segurança do ATP do Azure é disparado quando as consultas DNS suspeitas de explorar a vulnerabilidade de segurança [CVE-2018-8626](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2018-8626) são feitas em um controlador de domínio na rede.
 
-- **Aprimoramento do recurso: Atualização de sensor atrasada por 72 horas** <br> Opção alterada para adiar atualizações de sensor em sensores selecionados por 72 horas (em vez do adiamento anterior de 24 horas) após cada atualização de versão do ATP do Azure. Ver [atualização do sensor do ATP do Azure](sensor-update.md) para obter instruções de configuração. 
+- **Aprimoramento do recurso: Atualização de sensor atrasada por 72 horas** <br> Opção alterada para adiar atualizações de sensor, em sensores selecionados por 72 horas (em vez do adiamento anterior de 24 horas), após cada atualização de lançamento do ATP do Azure. Ver [atualização do sensor do ATP do Azure](sensor-update.md) para obter instruções de configuração. 
 
 
 - Essa versão também inclui aprimoramentos e correções de bug da infraestrutura do sensor interno.
@@ -304,7 +327,7 @@ Lançado em 12 de agosto de 2018
 
 ## <a name="azure-atp-release-243"></a>Azure ATP versão 2.43
 
-Lançado em 5 de agosto de 2018
+Lançamento de 5 de agosto de 2018
 
 - Essa versão inclui correções e melhorias para vários problemas.
 
@@ -321,7 +344,7 @@ Lançado em 29 de julho de 2018
 
 Lançado em 22 de julho de 2018
 
-- **O suporte de várias florestas do Azure ATP está sendo distribuído gradualmente (visualização)** <br> Agora o Azure ATP pode dar suporte a organizações com várias florestas, permitindo monitorar a atividade e os perfis de usuário entre florestas. Essa nova funcionalidade permite que você:
+- **O suporte de várias florestas do Azure ATP está sendo distribuído gradualmente (visualização)** <br> Agora, o ATP do Azure pode dar suporte a organizações com várias florestas, permitindo monitorar a atividade e os perfis de usuário entre florestas. Essa nova funcionalidade permite que você:
 
   - Exiba e investigue as atividades executadas pelos usuários em várias florestas de um único painel de controle.
   - Melhore a detecção e reduza os falsos positivos, fornecendo integração avançada do Active Directory e a resolução de conta.

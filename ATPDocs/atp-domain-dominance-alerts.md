@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 1/20/2019
+ms.date: 02/03/2019
 ms.topic: tutorial
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 0b3a1db5-0d43-49af-b356-7094cc85f0a5
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 929dfae084bbce8f831c55d042f7765ddfd64019
-ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
+ms.openlocfilehash: ae0d59748a4caaecd7c9f4e3cc1276c042a875c1
+ms.sourcegitcommit: 9236d279f5e01424b498ce23e9d84c407ebfcdf3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54840838"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "55689431"
 ---
 # <a name="tutorial-domain-dominance-alerts"></a>Tutorial: Alertas de predominância de domínio  
 
@@ -43,7 +43,7 @@ Os alertas de segurança a seguir ajudam você a identificar e corrigir atividad
 > * Suspeita de uso de Golden Ticket (downgrade de criptografia) (ID externa 2009)
 > * Suspeita de uso de Golden Ticket (dados de autorização forjados) (ID externa 2013)
 > * Suspeita de uso de Golden Ticket (conta inexistente) (ID externa 2027)
-> * Suspeita de uso de Golden Ticket – anomalia de tíquete (versão prévia) – versão prévia (ID externa 2032)
+> * Suspeita de uso de Golden Ticket (anomalia de tíquete) (ID externa 2032)
 > * Suspeita de uso de Golden Ticket (anomalia de tempo) – (ID externa 2022)
 > * Suspeita de ataque de Skeleton Key (downgrade de criptografia) (ID externa)
 > * Modificação suspeita de grupos confidenciais (ID externa 2024)
@@ -399,7 +399,7 @@ Se a resposta a qualquer uma das perguntas anteriores for **sim**, **feche** o a
     - A redefinição dupla do KRBTGT invalida todos os tíquetes Kerberos nesse domínio. A invalidação de todos os tíquetes Kerberos no domínio significa que **todos** os serviços serão interrompidos e não funcionarão novamente até que sejam renovados ou em alguns casos, que o serviço seja reiniciado. Planeje cuidadosamente antes de realizar a redefinição dupla do KRBTGT, porque ela afeta todos os computadores, servidores e usuários no ambiente.
 
  
-## <a name="suspected-golden-ticket-usage-ticket-anomaly-external-id-2032--preview"></a>Suspeita de uso de Golden Ticket – anomalia de tíquete – versão prévia (ID externa 2032) – versão prévia 
+## <a name="suspected-golden-ticket-usage-ticket-anomaly-external-id-2032"></a>Suspeita de uso de Golden Ticket (anomalia de tíquete) (ID externa 2032) 
 
 **Descrição**: os invasores com direitos de administrador de domínio podem comprometer a conta KRBTGT. Ao usar a conta KRBTGT, eles podem criar um tíquete de concessão de tíquete Kerberos (TGT) que fornece autorização para qualquer recurso e define a expiração do tíquete para qualquer momento arbitrário. Esse TGT falso é chamado de "Golden Ticket" e permite que os invasores obtenham persistência na rede. Os Golden Tickets forjados desse tipo têm características exclusivas que essa detecção foi projetada especificamente para identificar.  
  

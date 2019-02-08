@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 12/13/2018
+ms.date: 02/04/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,13 +13,17 @@ ms.technology: ''
 ms.assetid: 62c99622-2fe9-4035-9839-38fec0a353da
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 829c3685d06ec49182895b4786c89b8281e2de2f
-ms.sourcegitcommit: 19ff0ed88e450506b5725bbcbb0d0bd2f0c5e4bb
+ms.openlocfilehash: 20281444e969cce2adb9e3458e040dd4c9d36fd3
+ms.sourcegitcommit: 9236d279f5e01424b498ce23e9d84c407ebfcdf3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/27/2019
-ms.locfileid: "55085377"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "55689363"
 ---
+*Aplica-se a: Proteção Avançada contra Ameaças do Azure*
+
+
+
 # <a name="azure-atp-prerequisites"></a>Pré-requisitos do Azure ATP
 Este artigo descreve os requisitos para uma implantação bem-sucedida do Azure ATP em seu ambiente.
 
@@ -46,14 +50,14 @@ Esta seção mostra as informações que você deve obter, bem como as contas e 
 
 - Adquira uma licença do EMS E5 (Enterprise Mobility + Security 5) diretamente por meio do [Portal do Office 365](https://www.microsoft.com/cloud-platform/enterprise-mobility-security-pricing) ou do modelo de licenciamento do CSP (Parceiro de Soluções na Nuvem).  
 
-- Verifique se os controladores de domínio nos quais você pretende instalar sensores do Azure ATP têm conectividade com a Internet para o Serviço de Nuvem do Azure ATP. O sensor do Azure ATP dá suporte ao uso de um proxy. Para obter mais informações sobre a configuração de proxy, confira [Configuring a proxy for Azure ATP](configure-proxy.md) (Configurando um proxy para o Azure ATP).  
+- Verifique se os controladores de domínio nos quais você pretende instalar sensores do Azure ATP têm conectividade com a Internet para o Serviço de Nuvem do Azure ATP. O sensor do ATP do Azure tem suporte para o uso de um proxy. Para obter mais informações sobre a configuração de proxy, confira [Configuring a proxy for Azure ATP](configure-proxy.md) (Configurando um proxy para o Azure ATP).  
 
 -   Uma conta de usuário e senha **local** do Microsoft Azure AD com acesso de leitura para todos os objetos nos domínios monitorados.
 
     > [!NOTE]
     > Se você tiver definido ACLs personalizadas em várias Unidades Organizacionais (UO) em seu domínio, verifique se o usuário selecionado tem permissões de leitura para essas UOs.
 
--   Se executar o Wireshark no sensor autônomo do Azure ATP, você precisará reiniciar o serviço de sensor da Proteção Avançada contra Ameaças do Azure após parar a captura do Wireshark. Caso contrário, o sensor para de capturar o tráfego.
+-   Se executar o Wireshark no sensor autônomo do ATP do Azure, reinicie o serviço de sensor da Proteção Avançada contra Ameaças do Azure quando interromper a captura do Wireshark. Se não reiniciar o serviço de sensor, o sensor interromperá a captura de tráfego.
 
 - Se tentar instalar o sensor do ATP do Azure em um computador configurado com um adaptador de Agrupamento NIC, você receberá um erro de instalação. Se desejar instalar o sensor do Azure ATP em um computador configurado com Agrupamento NIC, confira [Problemas do Agrupamento NIC do Sensor do Azure ATP](troubleshooting-atp-known-issues.md#nic-teaming).
 
@@ -65,13 +69,13 @@ Esta seção mostra as informações que você deve obter, bem como as contas e 
 
 ## <a name="azure-atp-portal-requirements"></a>Requisitos do portal do Azure ATP
 O acesso ao portal do Azure ATP ocorre por meio de um navegador que dá suporte aos seguintes navegadores e configurações:
-- Microsoft Edge
-- Internet Explorer versão 10 e posterior
-- Google Chrome 4.0 e posterior
-- Resolução de largura mínima da tela de 1.700 pixels
-- Firewall/proxy aberto – para se comunicar com o serviço de nuvem do Azure ATP, você deve abrir *. atp.azure.com porta 443 no firewall/proxy.
+-   Microsoft Edge
+-   Internet Explorer versão 10 e posterior
+-   Google Chrome 4.0 e posterior
+-   Resolução de largura mínima da tela de 1.700 pixels
+-   Firewall/proxy aberto – para se comunicar com o serviço de nuvem do Azure ATP, você deve abrir *. atp.azure.com porta 443 no firewall/proxy.
 
-  ![diagrama da arquitetura do Azure ATP](media/ATP-architecture-topology.png)
+ ![diagrama da arquitetura do Azure ATP](media/ATP-architecture-topology.png)
 
 
 > [!NOTE]
@@ -79,6 +83,7 @@ O acesso ao portal do Azure ATP ocorre por meio de um navegador que dá suporte 
 
 ## <a name="azure-atp-sensor-requirements"></a>Requisitos do sensor do Azure ATP
 Esta seção lista os requisitos do sensor do Azure ATP.
+
 ### <a name="general"></a>Geral
 O sensor do Azure ATP dá suporte à instalação em um controlador de domínio que executa o Windows Server 2008 R2 SP1 (sem incluir o Server Core), o Windows Server 2012, o Windows Server 2012 R2, o Windows Server 2016 (incluindo o Core, mas não o Nano).
 
@@ -94,9 +99,9 @@ Durante a instalação, o .Net Framework 4.7 é instalado e poderá exigir uma r
 
 ### <a name="server-specifications"></a>Especificações do servidor
 
-O sensor do Azure ATP requer um mínimo de dois núcleos e 6 GB de RAM instalados no controlador de domínio.
+O sensor do ATP do Azure requer um mínimo de dois núcleos e 6 GB de RAM instalados no controlador de domínio.
 Para ter um melhor desempenho, defina a **Opção de Energia** do sensor do Azure ATP como **Alto Desempenho**.
-O sensor do Azure ATP pode ser implantado em controladores de domínio de vários tamanhos e cargas, dependendo da quantidade de tráfego de rede dos controladores de domínio e da quantidade de recursos instalados no controlador de domínio.
+É possível implantar o sensor do ATP do Azure em controladores de domínio de vários tamanhos e cargas, dependendo da quantidade de recursos instalados e da quantidade de tráfego de rede dos controladores de domínio.
 
 >[!NOTE] 
 > Durante a execução como uma máquina virtual, memória dinâmica ou qualquer outra memória, não há suporte para o recurso de inchamento.
@@ -131,7 +136,7 @@ A tabela abaixo lista o mínimo de portas que o sensor do Azure ATP exige:
 |Porta TLS para RDP|TCP|3389|Todos os dispositivos na rede|Ambos|
 
 ### <a name="windows-event-logs"></a>Log de eventos do Windows
-A detecção de ATP do Azure baseia-se em Logs de Eventos do Windows específicos o sensor pode analisar do controlador de domínio. Para que os eventos corretos sejam auditados e incluídos no Log de Eventos do Windows, seus controladores de domínio exigem configurações precisas de política de auditoria avançada. Para obter mais informações, confira [Verificação de Política de Auditoria Avançada](atp-advanced-audit-policy.md).
+A detecção de ATP do Azure baseia-se em Logs de Eventos do Windows específicos o sensor pode analisar do controlador de domínio. Para que os eventos corretos sejam auditados e incluídos no Log de Eventos do Windows, seus controladores de domínio exigem configurações precisas de política de auditoria avançada. Para saber mais, confira [Verificação Avançada da Política de Auditoria](atp-advanced-audit-policy.md).
 
 
 > [!NOTE]
@@ -143,6 +148,7 @@ A detecção de ATP do Azure baseia-se em Logs de Eventos do Windows específico
 
 ## <a name="azure-atp-standalone-sensor-requirements"></a>Requisitos do sensor autônomo do Azure ATP
 Esta seção lista os requisitos do sensor autônomo do Azure ATP.
+
 ### <a name="general"></a>Geral
 O sensor autônomo do Azure ATP dá suporte à instalação em um servidor executando o Windows Server 2012 R2 ou o Windows Server 2016 (incluindo o Server Core).
 A sensor autônomo do Azure ATP pode ser instalado em um servidor que é membro de um domínio ou grupo de trabalho.
@@ -158,7 +164,7 @@ Para obter informações sobre como usar máquinas virtuais com o sensor autôno
 
 ### <a name="server-specifications"></a>Especificações do servidor
 Para ter um melhor desempenho, defina a **Opção de Energia** do sensor autônomo do Azure ATP como **Alto Desempenho**.<br>
-Um sensor autônomo do Azure ATP pode dar suporte ao monitoramento de vários controladores de domínio, dependendo da quantidade de tráfego de rede dos controladores de domínio.
+Um sensor autônomo do ATP do Azure pode ter suporte para monitoramento de vários controladores de domínio, dependendo da quantidade de tráfego de rede dos controladores de domínio.
 
 >[!NOTE] 
 > Durante a execução como uma máquina virtual, memória dinâmica ou qualquer outra memória, não há suporte para o recurso de inchamento.

@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 1/20/2018
+ms.date: 02/04/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 3261155c-3c72-4327-ba29-c113c63a4e6d
 ms.reviewer: arzinger
 ms.suite: ems
-ms.openlocfilehash: 2c957f90215b6c251eadff67f3e66fc450711373
-ms.sourcegitcommit: a0ebb0b6f140d4abf091ebd9d756b975b3d96b9d
+ms.openlocfilehash: 39b5394c876af8034317bc857ee33c93547d9262
+ms.sourcegitcommit: 9236d279f5e01424b498ce23e9d84c407ebfcdf3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54459185"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "55689448"
 ---
 # <a name="azure-atp-siem-log-reference"></a>Referência de logs de SIEM do Azure ATP
 
@@ -72,7 +72,7 @@ Os campos a seguir e seus valores são encaminhados para o SIEM:
 |[Suspeita de uso de Golden Ticket (downgrade de criptografia)](atp-domain-dominance-alerts.md#suspected-golden-ticket-usage-encryption-downgrade-external-id-2009)|Atividade de downgrade de criptografia (possível ataque golden ticket)|2009|
 |[Suspeita de uso de Golden Ticket (dados de autorização forjados)](atp-domain-dominance-alerts.md#suspected-golden-ticket-usage-forged-authorization-data-external-id-2013) |Elevação de privilégios usando dados de autorização forjados|2013|
 |[Suspeita de uso de Golden Ticket (conta inexistente)](atp-domain-dominance-alerts.md#suspected-golden-ticket-usage-nonexistent-account-external-id-2027)|Golden Ticket do Kerberos – conta não existente|2027|
-|[Suspeita de uso de Golden Ticket – anomalia de tíquete (versão prévia)](atp-domain-dominance-alerts.md#suspected-golden-ticket-usage-ticket-anomaly-external-id-2032--preview)|NA|2032|
+|[Suspeita de uso de Golden Ticket (anomalia de tíquete)](atp-domain-dominance-alerts.md#suspected-golden-ticket-usage-ticket-anomaly-external-id-2032)|NA|2032|
 |[Suspeita de uso de Golden Ticket (anomalia de tempo)](atp-domain-dominance-alerts.md#suspected-golden-ticket-usage-time-anomaly-external-id-2022)|Golden Ticket do Kerberos – anomalia de tempo|2022|
 |[Suspeita de roubo de identidade (Pass-the-Hash)](atp-lateral-movement-alerts.md#suspected-identity-theft-pass-the-hash-external-id-2017)|Roubo de identidade usando o ataque de passagem de Hash|2017|
 |[Suspeita de roubo de identidade (Pass-the-Ticket)](atp-lateral-movement-alerts.md#suspected-identity-theft-pass-the-ticket-external-id-2018)|Roubo de identidade usando o ataque Pass-the-Ticket|2018|
@@ -134,7 +134,7 @@ Prioridades:
 ### <a name="suspected-golden-ticket-usage-non-existent-account"></a>Suspeita de uso de Golden Ticket (conta inexistente)
 07-01-2018  14:28:49    Auth.Error  192.168.0.100   1 2018-07-01T11:28:35.546638+00:00 CENTER CEF 38768 ForgedPrincipalSecurityAlert ï»¿0|Microsoft|Azure ATP|2.39.0.0|ForgedPrincipalSecurityAlert|Kerberos Golden Ticket - non-existing account|10|start=2018-07-01T09:48:31.2567987Z app=Kerberos suser=domain1.test.local\fake msg=domain1.test.local\fake, which does not exist in Active Directory, used a Kerberos ticket. O tíquete foi detectado em dois computadores para acessar três recursos. Isso pode indicar um possível ataque de Golden Ticket. externalId=2027 cs1Label=url cs1=https\://contoso-corp.atp.azure.com:13000/securityAlert/98f050d4-9134-429c-8e54-d8eeb19849c4 cs2Label=trigger cs2=update
 
-### <a name="suspected-golden-ticket-usage-ticket-anomaly---preview"></a>Suspeita de uso de Golden Ticket (anomalia de tíquete) – versão prévia
+### <a name="suspected-golden-ticket-usage-ticket-anomaly"></a>Suspeita de uso de Golden Ticket (anomalia de tíquete) 
 1 2018-11-18T10:46:23.346946+00:00 MAXIMG-7050 CEF 24284 GoldenTicketSizeAnomalySecurityA 0|Microsoft|ATP do Azure|2.56.0.0|GoldenTicketSizeAnomalySecurityAlert|[PREVIEW] Suspeita de uso de Golden Ticket (anomalia de tíquete)|10|start=2018-11-18T10:44:12.9317797Z app=Kerberos shost=CLIENT2 suser=RFosdyke msg=Renzo Fosdyke (Engenheiro de Software) usou um tíquete Kerberos suspeito do CLIENT2 para acessar ldap/domain1.test.local. externalId=2032 cs1Label=url cs1=https\://contoso-corp.atp.azure.com:13000/securityAlert/63600e03-f423-49bf-a92d-4010e1d52b9f cs2Label=trigger cs2=update
 
 ### <a name="suspected-golden-ticket-usage-time-anomaly"></a>Suspeita de uso de Golden Ticket (anomalia de tempo) 

@@ -1,43 +1,50 @@
 ---
-title: Planejamento da implantação da Proteção Avançada contra Ameaças do Azure | Microsoft Docs
+title: Guia de início rápido para planejamento de implantação da Proteção Avançada contra Ameaças do Azure | Microsoft Docs
 description: Ajuda você a planejar a implantação e a decidir quantos servidores do Azure ATP serão necessários para dar suporte à sua rede
 keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
 ms.date: 1/24/2019
-ms.topic: conceptual
+ms.topic: quickstart
 ms.service: azure-advanced-threat-protection
 ms.prod: ''
-ms.assetid: da0ee438-35f8-4097-b3a1-1354ad59eb32
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: c53fb85570a053fa6414855b2ababa0b8e75cdee
-ms.sourcegitcommit: 19ff0ed88e450506b5725bbcbb0d0bd2f0c5e4bb
+ms.openlocfilehash: c9930cff1341b0c721b4aaecae50ce00e99cb80f
+ms.sourcegitcommit: c16aab563149bbdfd99ae5b46e168cec700d3ae3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/27/2019
-ms.locfileid: "55085190"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "55703326"
 ---
-# <a name="azure-atp-capacity-planning"></a>Planejamento de capacidade do Azure ATP
-Este artigo ajuda você a determinar quantos sensores e quantos sensores autônomos do Azure ATP são necessários.
+# <a name="quickstart-plan-capacity-for-azure-atp"></a>Início Rápido: Planejar capacidade para o ATP do Azure
 
-## <a name="using-the-sizing-tool"></a>Usando a ferramenta de dimensionamento
-A maneira recomendada e mais simples de determinar a capacidade de sua implantação do Azure ATP é usar o [Ferramenta de dimensionamento do Azure ATP](http://aka.ms/aatpsizingtool). Execute a Ferramenta de dimensionamento do Azure ATP e, nos resultados do arquivo do Excel, use os campos a seguir para determinar a memória e a CPU usadas pelo sensor:
+Neste guia de início rápido, você determinará quantos sensores do ATP do Azure e quantos sensores autônomos serão necessários.
 
-> [!NOTE] 
-> A ferramenta de dimensionamento tem duas folhas, uma para o ATP do Azure e outra para o ATA. Verifique se você está na folha correta.
+## <a name="prerequisites"></a>Pré-requisitos
 
-- Sensor do ATP do Azure: faça a correspondência entre o campo **Pacotes Ocupados/s** na tabela do sensor do ATP do Azure no arquivo de resultados com o campo **PACOTES POR SEGUNDO** na [Tabela do sensor do ATP do Azure](#azure-atp-standalone-sensor-sizing) ou na [Tabela do sensor autônomo do ATP do Azure](#azure-atp-sensor-sizing), dependendo do [tipo de sensor que você escolher](#choosing-the-right-sensor-type-for-your-deployment).
-
-
-![Ferramenta de planejamento de capacidade de amostra](media/capacity-tool.png)
+- Baixe a [ferramenta de dimensionamento do ATP do Azure](http://aka.ms/aatpsizingtool).
+- Confira o artigo sobre a [arquitetura do ATP do Azure](atp-architecture.md).
+- Confira o artigo sobre os [pré-requisitos do ATP do Azure](atp-prerequisites.md). 
 
 
-Se, por alguma razão, você não puder usar a Ferramenta de Dimensionamento do ATP do Azure, reúna manualmente as informações do contador de pacotes/s de todos os controladores de domínio durante 24 horas com um intervalo de coleta baixo (aproximadamente 5 segundos). Em seguida, para cada controlador de domínio, calcule a média diária e a média mais ocupada do período (15 minutos).
-As seções a seguir apresentam instruções de como coletar o contador de pacotes/s de um controlador de domínio.
+## <a name="use-the-sizing-tool"></a>Usar a ferramenta de dimensionamento
+
+A maneira recomendada e mais simples de determinar a capacidade da implantação do ATP do Azure é usar a ferramenta de dimensionamento. Caso isso não seja possível, colete informações sobre o tráfego manualmente. Para saber mais sobre o método manual, confira a seção [Estimador de tráfego do controlador de domínio](#manual-sizing), no final deste artigo.
+
+1. Execute a ferramenta de dimensionamento do ATP do Azure, **TriSizingTool.exe**, do arquivo zip que você baixou. 
+2. Quando concluir a execução da ferramenta, abra os resultados de arquivo do Excel.
+3. No arquivo do Excel, localize e clique na planilha **Resumo do ATP do Azure**. A outra planilha não é necessária, pois ela se destina ao planejamento do ATP do Azure.
+   ![Ferramenta de planejamento de capacidade de amostra](media/capacity-tool.png)
+
+4. Localize o campo **Pacotes ocupados/s**, na tabela do sensor do ATP do Azure, no arquivo de resultados do Excel, e anote isso.
+5. Escolha o tipo de sensor. Use as informações da seção [Como escolher o tipo de sensor correto](#choosing-the-right-sensor-type-for-your-deployment) para escolher os sensores que pretende usar. Considere os **Pacotes ocupados/s** quando escolher o tipo de sensor.
+6. Compare o campo **Pacotes ocupados/s** com o campo **PACOTES POR SEGUNDO**, na seção [Tabela do sensor do ATP do Azure](#sizing) deste artigo. Use os campos para determinar a capacidade de memória e CPU que será usada pelo sensor.
+
 
 ## Escolher o tipo certo de sensor para a implantação<a name="choosing-the-right-sensor-type-for-your-deployment"></a>
+
 Em uma implantação do ATP do Azure, há suporte para qualquer combinação dos tipos de sensores do ATP do Azure:
 
 - Somente sensores do ATP do Azure
@@ -49,26 +56,23 @@ Ao decidir o tipo de implantação do sensor, considere os seguintes benefícios
 |Tipo de sensor|Vantagens|Custo|Topologia de implantação|Uso do controlador de domínio|
 |----|----|----|----|-----|
 |Sensor do Azure ATP|Não exige uma configuração de espelhamento de porta e servidor dedicado|Inferior|Instalado em um controlador de domínio|Dá suporte a até 100.000 pacotes por segundo|
-|Sensor autônomo do Azure ATP|A implantação Fora de banda dificulta o trabalho dos invasores de descobrir se o Azure ATP está presente|Mais alto|Instalado junto com o controlador de domínio (fora de banda)|Dá suporte a até 100.000 pacotes por segundo|
+|Sensor autônomo do Azure ATP|A implantação fora de banda dificulta o trabalho dos invasores em descobrir se o ATP do Azure está presente|Mais alto|Instalado junto com o controlador de domínio (fora de banda)|Dá suporte a até 100.000 pacotes por segundo|
 
 
-Considere as seguintes questões ao decidir quantos sensores autônomos do Azure ATP implantar.
+Considere as seguintes questões ao decidir quantos sensores autônomos do ATP do Azure deverá implantar:
 
--   **Florestas e domínios do Active Directory**<br>
-    O ATP do Azure pode monitorar o tráfego de vários domínios em várias florestas do Active Directory para cada instância do ATP do Azure que você cria. 
+- **Domínios e florestas do Active Directory** – O ATP do Azure pode monitorar o tráfego de vários domínios, em várias florestas do Active Directory, para cada instância criada do ATP do Azure.
 
--   **Espelhamento de porta**<br>
-    Considerações de espelhamento de porta podem exigir que você implante vários sensores autônomos do Azure ATP por data center ou site de filial.
+- **Espelhamento de porta** – Considerações de espelhamento de porta podem exigir a implantação de vários sensores autônomos do ATP do Azure por data center ou Site de Filial.
 
--   **Capacidade**<br>
-    Um sensor autônomo do Azure ATP pode dar suporte ao monitoramento de vários controladores de domínio, dependendo da quantidade de tráfego de rede dos controladores de domínio sendo monitorados. 
+- **Capacidade** – Um sensor autônomo do ATP do Azure pode ter suporte para monitoramento de vários controladores de domínio, dependendo da quantidade de tráfego de rede dos controladores de domínio que estão sendo monitorados.
+
+## <a name="sizing"></a> Sensor do ATP do Azure e dimensionamento de sensor autônomo 
+
+Um sensor do ATP do Azure pode ter suporte para monitoramento de um controlador de domínio com base na quantidade de tráfego de rede gerado pelo controlador de domínio. A tabela a seguir representa uma estimativa. O valor final que o sensor analisa depende da quantidade de tráfego e da distribuição desse tráfego.
 
 
-## Sensor do Azure ATP e dimensionamento de sensor autônomo <a name="sizing"></a>
-
-Um sensor do Azure ATA pode dar suporte ao monitoramento de um controlador de domínio com base na quantidade de tráfego de rede gerado pelo controlador de domínio. A tabela a seguir é uma estimativa, o valor final que o sensor analisa depende da quantidade de tráfego que você tem e da distribuição desse tráfego. 
-> [!NOTE]
-> A capacidade de CPU e memória a seguir se refere ao consumo do próprio sensor – e não à capacidade do controlador de domínio.
+A capacidade de CPU e memória a seguir se refere ao **consumo do próprio sensor**, e não à capacidade do controlador de domínio.
 
 |Pacotes por segundo*|CPU (núcleos)|Memória (GB)|
 |----|----|-----|
@@ -80,20 +84,23 @@ Um sensor do Azure ATA pode dar suporte ao monitoramento de um controlador de do
 |50k - 75k |3.50|9.50|
 |75k - 100k|3.50 |9.50|
 
-> [!NOTE]
-> - Número total de núcleos a serem usados pelo serviço de sensor.<br>Recomendamos não trabalhar com núcleos hyper-threaded.
-> - Número total de memória a ser usada pelo serviço de sensor.
-> -   Se o controlador de domínio não tiver os recursos exigidos pelo sensor do Azure ATP, o desempenho do controlador de domínio não será afetado, mas o sensor do Azure ATP poderá não operar conforme o esperado.
-> -   Durante a execução como uma memória dinâmica da máquina virtual ou qualquer outra memória, não há suporte para o recurso de inchamento.
-> -   Para ter um melhor desempenho, defina a **Opção de Energia** do sensor do Azure ATP como **Alto Desempenho**.
-> -   É necessário um mínimo de dois núcleos e 6 GB de espaço, e 10 GB são recomendados, incluindo o espaço necessário para os binários e logs do Azure ATP.
+Quando determinar o dimensionamento, observe os seguintes itens: 
+
+- Número total de núcleos a serem usados pelo serviço de sensor.<br>Recomendamos não trabalhar com núcleos hyper-threaded.
+- Número total de memória a ser usada pelo serviço de sensor.
+- Se o controlador de domínio não tiver os recursos exigidos pelo sensor do ATP do Azure, o desempenho do controlador de domínio não será afetado, mas o sensor do ATP do Azure poderá não operar conforme o esperado.
+- Durante a execução como uma máquina virtual, não há suporte para memória dinâmica ou outro recurso de aumento de memória.
+- Para ter um melhor desempenho, defina a **Opção de Energia** do sensor do Azure ATP como **Alto Desempenho**.
+- São necessários no mínimo dois núcleos e 6 GB de espaço. No entanto, recomendamos 10 GB, incluindo o espaço necessário para os binários e logs do ATP do Azure.
 
 
-## <a name="domain-controller-traffic-estimation"></a>Estimativa de tráfego do controlador de domínio
+## <a name="manual-sizing"></a> Estimativa de tráfego do controlador de domínio
 
-Há várias ferramentas que você pode usar para descobrir a média de pacotes por segundo dos controladores de domínio. Se você não tiver as ferramentas que acompanham este contador, poderá usar o Monitor de Desempenho para coletar as informações necessárias.
+Se, por alguma razão, não for possível usar a ferramenta de dimensionamento do ATP do Azure, reúna manualmente as informações do contador de pacotes/s de todos os controladores de domínio. Reúna as informações durante 24 horas com um pequeno intervalo de coleta de aproximadamente cinco segundos. Em seguida, calcule a média diária e a média mais ocupada do período (15 minutos) de cada controlador de domínio. As seções a seguir apresentam instruções de como coletar o contador de pacotes/s de um controlador de domínio.
 
-Para determinar os pacotes por segundo, execute as etapas a seguir em cada controlador de domínio:
+Há várias ferramentas que você pode usar para descobrir a média de pacotes por segundo dos controladores de domínio. Caso não tenha as ferramentas que controlam este contador, use o monitor de desempenho para coletar as informações necessárias.
+
+Para determinar os pacotes por segundo, faça os seguintes procedimentos em cada controlador de domínio:
 
 1.  Abra o Monitor de Desempenho.
 
@@ -115,7 +122,7 @@ Para determinar os pacotes por segundo, execute as etapas a seguir em cada contr
 
 6.  Em **Que contadores de desempenho deseja registrar em log?**, clique em **Adicionar**.
 
-7.  Expanda **Adaptador de Rede**, selecione **Pacotes/s** e escolha a instância apropriada. Se não tiver certeza, você poderá selecionar **&lt;Todas as instâncias&gt;** e clicar em **Adicionar** e **OK**.
+7.  Expanda **Adaptador de Rede**, selecione **Pacotes/s** e escolha a instância apropriada. Se não tiver certeza, selecione **&lt;Todas as instâncias&gt;**, clique em **Adicionar** e em **OK**.
 
     > [!NOTE]
     > Para executar essa operação em uma linha de comando, execute `ipconfig /all` para ver o nome do adaptador e a configuração.
@@ -128,7 +135,7 @@ Para determinar os pacotes por segundo, execute as etapas a seguir em cada contr
 
 10. Em **Criar conjunto de coletores de dados**, selecione **Iniciar conjunto de coletores de dados agora** e clique em **Concluir**.
 
-    Agora, você deverá ver o conjunto de coletores de dados que criou com um triângulo verde, indicando que ele está funcionando.
+    Agora, você deverá ver o conjunto de coletores de dados criado com um triângulo verde, indicando que ele está funcionando.
 
 11. Após 24 horas, pare o conjunto de coletores de dados clicando com o botão direito do mouse no conjunto de coletores de dados e selecionando **Parar**.
 
@@ -142,8 +149,14 @@ Para determinar os pacotes por segundo, execute as etapas a seguir em cada contr
 
 
 
-## <a name="see-also"></a>Consulte Também
-- [Ferramenta de dimensionamento do Azure ATP](http://aka.ms/aatpsizingtool)
-- [Pré-requisitos do Azure ATP](atp-prerequisites.md)
-- [Arquitetura do Azure ATP](atp-architecture.md)
-- [Confira o fórum do ATP do Azure!](https://aka.ms/azureatpcommunity)
+## <a name="next-steps"></a>Próximas etapas
+
+Neste guia de início rápido, você determinou quantos sensores do ATP do Azure e quantos sensores autônomos foram necessários. Determinou também o dimensionamento dos sensores. Avance para o guia de início rápido seguinte para criar uma instância do ATP do Azure.
+
+> [!div class="nextstepaction"]
+> [Tutoriais de Máquinas Virtuais do Microsoft Azure](install-atp-step1.md)
+
+
+## <a name="join-the-community"></a>Participe da comunidade
+
+Tem mais perguntas ou interesse em discutir sobre o ATP do Azure e a segurança relacionada com outras pessoas? Participe da [Comunidade do ATP do Azure](https://aka.ms/azureatpcommunity) hoje mesmo!

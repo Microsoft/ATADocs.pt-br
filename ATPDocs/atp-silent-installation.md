@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 24eca4c6-c949-42ea-97b9-41ef0fb611f1
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 9bd886f4c8929af85a3f77e25052ff0fbc7a4c56
-ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
+ms.openlocfilehash: 1710b5f2f96814f2dbe3229473b06c8a963fd380
+ms.sourcegitcommit: cc5017770583042ef8bf90c9c0ece020a0166b91
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54840668"
+ms.lasthandoff: 01/31/2019
+ms.locfileid: "55480974"
 ---
 # <a name="azure-atp-switches-and-silent-installation"></a>Instalação silenciosa e opções do Azure ATP
 Este artigo fornece diretrizes e instruções para a instalação silenciosa e opções do Azure ATP.
@@ -50,11 +50,10 @@ Use o seguinte comando para realizar uma instalação silenciosa completa do sen
 
 **Sintaxe**:
 
-    Azure ATP sensor Setup.exe /AccessKey=<Access Key> /quiet NetFrameworkCommandLineArguments ="/q" 
-
+    "Azure ATP sensor Setup.exe" /quiet NetFrameworkCommandLineArguments="/q" AccessKey="<Access Key>"
 
 > [!NOTE]
-> Copie a chave de acesso do portal do Azure ATP em **Configuração** e, em seguida, **sensor**.
+> Copie a chave de acesso do portal do ATP do Azure, na seção **Configuração**, na página **Sensor**.
 
 
 **Opções de instalação**:
@@ -77,8 +76,7 @@ Use o seguinte comando para realizar uma instalação silenciosa completa do sen
 
 **Exemplos**: Use o seguinte comando para instalar silenciosamente o sensor do Azure ATP:
 
-    "Azure ATP sensor Setup.exe" /quiet NetFrameworkCommandLineArguments="/q" 
-    AccessKey="3WlO0uKW7lY6Lk0+dfkfkJQ0qZV6aSq5WxLf71+fuBhggCl/BMs9JxfAwi7oy9vYGviazUS1EPpzte7z8s4grw==" 
+    "Azure ATP sensor Setup.exe" /quiet NetFrameworkCommandLineArguments="/q" AccessKey="mmAOkLYCzfH8L/zUIsH24BIJBevlAWu7wUcSfIkRJufpuEojaDHYdjrNs0P3zpD+/bObKfLS0puD7biT5KDf3g=="
 
 
 ## <a name="update-the-azure-atp-sensor"></a>Atualizar o sensor do Azure ATP
