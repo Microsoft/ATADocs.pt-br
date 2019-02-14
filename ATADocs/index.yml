@@ -1,10 +1,10 @@
 ### YamlMime:YamlDocument
-ms.openlocfilehash: 4e80667b81e8350acd9820ab59a4de8ac33b8fcc
-ms.sourcegitcommit: d1b2c44e8455100015bfc1ec9e51a6f1cfab12af
+ms.openlocfilehash: dc9974c3f0da9b3ac65139c1a043a223aa007bcd
+ms.sourcegitcommit: 78748bfd75ae68230d72ad11010ead37d96b0c58
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2019
-ms.locfileid: "55479483"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56076820"
 documentType: LandingData
 title: Documentação do Advanced Threat Analytics
 metadata:
@@ -12,7 +12,7 @@ metadata:
   description: Proteja sua empresa usando as informações de várias fontes de dados de sua rede a fim de aprender o comportamento dos usuários e de outras entidades na organização
   services: advanced-threat-analytics
   author: msmbaldwin
-  manager: mbaldwin
+  manager: barbkess
   ms.prod: advanced-threat-analytics
   ms.tgt_pltfrm: na
   ms.devlang: na

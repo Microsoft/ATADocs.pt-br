@@ -4,7 +4,7 @@ description: Descreve suas opções para configurar o Encaminhamento de Eventos 
 keywords: ''
 author: mlottner
 ms.author: mlottner
-manager: mbaldwin
+manager: barbkess
 ms.date: 11/29/2018
 ms.topic: conceptual
 ms.prod: ''
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 3547519f-8d9c-40a9-8f0e-c7ba21081203
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: cad1cff6b9e46676a2f92b3304dbc55440bfa1d9
-ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
+ms.openlocfilehash: 654d9d5dcbfda2d7691026ed05a00f40a44a834d
+ms.sourcegitcommit: 78748bfd75ae68230d72ad11010ead37d96b0c58
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54840430"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56076888"
 ---
 # <a name="configuring-windows-event-forwarding"></a>Configuração do encaminhamento de eventos do Windows
 

@@ -4,7 +4,7 @@ description: Descreve como você pode usar os logs do ATA para solucionar proble
 keywords: ''
 author: rkarlin
 ms.author: rkarlin
-manager: mbaldwin
+manager: barbkess
 ms.date: 3/21/2018
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: b04fb8a4-b366-4b55-9d4c-6f054fa58a90
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 1ce2fde6e459aa11f3d61d8331ece53469ee3e21
-ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
+ms.openlocfilehash: b62ee7b8b3ab4ee93f05d81efbac983824d9adcd
+ms.sourcegitcommit: 78748bfd75ae68230d72ad11010ead37d96b0c58
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54841127"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56078367"
 ---
 # <a name="understanding-ata-monitoring-alerts"></a>Entendendo os alertas de monitoramento do ATA
 

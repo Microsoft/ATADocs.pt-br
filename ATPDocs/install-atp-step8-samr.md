@@ -4,7 +4,7 @@ description: Explica como configurar o Azure ATP para realizar chamadas remotas 
 keywords: ''
 author: mlottner
 ms.author: mlottner
-manager: mbaldwin
+manager: barbkess
 ms.date: 12/02/2018
 ms.topic: conceptual
 ms.prod: ''
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: b09adce3-0fbc-40e3-a53f-31f57fe79ca3
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 4b0cdf2bd9294a2acb70bb8c3ce5e2e55e480f23
-ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
+ms.openlocfilehash: db00eab0102a144c0cbf58fee10fbd1e672d1cbd
+ms.sourcegitcommit: 78748bfd75ae68230d72ad11010ead37d96b0c58
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54839665"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56078163"
 ---
 # <a name="configure-azure-atp-to-make-remote-calls-to-sam"></a>Configurar o Azure ATP para realizar chamadas remotas para SAM
 A detecção de [caminho de movimento lateral](use-case-lateral-movement-path.md) do ATP do Azure baseia-se em consultas que identificam os administradores locais em computadores específicos. Essas consultas são executadas com o protocolo SAM-R usando a conta de serviço do Azure ATP criada durante a instalação do Azure ATP [Etapa 2. Conectar-se ao AD](install-atp-step2.md).

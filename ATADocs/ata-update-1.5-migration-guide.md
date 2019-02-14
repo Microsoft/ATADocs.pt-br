@@ -4,7 +4,7 @@ description: Procedimentos para atualizar o ATA para a versão 1.5
 keywords: ''
 author: rkarlin
 ms.author: rkarlin
-manager: mbaldwin
+manager: barbkess
 ms.date: 01/23/2017
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: fb65eb41-b215-4530-93a2-0b8991f4e980
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: cdf7966b9e3cfc68a9cb593cb12ef76aecddb1d9
-ms.sourcegitcommit: 59ed430fa0cd8ac34a70609026ec5fc2f5972f57
+ms.openlocfilehash: dee659bb3940a177084eae93411a4cf2c65f6aae
+ms.sourcegitcommit: 78748bfd75ae68230d72ad11010ead37d96b0c58
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/21/2018
-ms.locfileid: "49480711"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56076842"
 ---
 # <a name="ata-update-to-15-migration-guide"></a>Guia de migração de atualização do ATA para 1.5
 A atualização 1.5 do ATA fornece melhorias nas seguintes áreas:
@@ -59,7 +59,7 @@ Execute estas etapas para atualizar para o ATA versão 1.5:
     > [!IMPORTANT]
     > Atualize todos os Gateways do ATA para ter certeza de o ATA funciona corretamente.
 
-### <a name="step-1-update-the-ata-center"></a>Etapa 1: Atualizar o Centro do ATA
+### <a name="step-1-update-the-ata-center"></a>Etapa 1: Atualize o Centro do ATA
 
 1.  Faça backup do seu banco de dados: (opcional)
 

@@ -4,7 +4,7 @@ description: Descreve como investigar entidades na tela de perfis de usuários n
 keywords: ''
 author: rkarlin
 ms.author: rkarlin
-manager: mbaldwin
+manager: barbkess
 ms.date: 3/25/2018
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 581a3257-32dc-453f-b84e-b9f99186f5d3
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: bc5eda18d9b126fbde8e79c0b65aa04bdc42e90c
-ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
+ms.openlocfilehash: 61f086a3a35a172ec9e884046a427da018c67184
+ms.sourcegitcommit: 78748bfd75ae68230d72ad11010ead37d96b0c58
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54839807"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56077195"
 ---
 # <a name="investigating-entity-profiles"></a>Investigando perfis de entidade
 

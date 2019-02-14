@@ -4,7 +4,7 @@ description: Descreve como impedir que o Azure ATP detecte atividades de entidad
 keywords: ''
 author: mlottner
 ms.author: mlottner
-manager: mbaldwin
+manager: barbkess
 ms.date: 11/11/2018
 ms.topic: conceptual
 ms.prod: ''
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: cae3ed45-8fbc-4f25-ba24-3cc407c6ea93
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 8ca74bdf85cc48a1d2175b6f67e9e83fd6528f83
-ms.sourcegitcommit: a0ebb0b6f140d4abf091ebd9d756b975b3d96b9d
+ms.openlocfilehash: 4d0bce01b7c6762c2b109680f0360a9ef6b52d9e
+ms.sourcegitcommit: 78748bfd75ae68230d72ad11010ead37d96b0c58
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54458795"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56076174"
 ---
 # <a name="excluding-entities-from-detections"></a>Excluindo entidades de detecções
 Este artigo explica como excluir entidades do disparo de alertas. Determinadas entidades são excluídas para minimizar verdadeiros positivos benignos, assegurando que você possa capturar os verdadeiros positivos. Para impedir que o ATP do Azure crie ruído sobre atividades que, vindas de usuários específicos, podem fazer parte de seu ritmo normal de negócios, você pode silenciar ou excluir entidades específicas da geração de alertas. Além disso, determinadas entidades populares são excluídas por padrão. 

@@ -1,22 +1,17 @@
 ---
 title: Guia de início rápido para planejamento de implantação da Proteção Avançada contra Ameaças do Azure | Microsoft Docs
 description: Ajuda você a planejar a implantação e a decidir quantos servidores do Azure ATP serão necessários para dar suporte à sua rede
-keywords: ''
 author: mlottner
 ms.author: mlottner
-manager: mbaldwin
 ms.date: 1/24/2019
 ms.topic: quickstart
 ms.service: azure-advanced-threat-protection
-ms.prod: ''
-ms.reviewer: itargoet
-ms.suite: ems
-ms.openlocfilehash: c9930cff1341b0c721b4aaecae50ce00e99cb80f
-ms.sourcegitcommit: c16aab563149bbdfd99ae5b46e168cec700d3ae3
+ms.openlocfilehash: d161b9655a5be09567fb50a837f7d2063d11ee11
+ms.sourcegitcommit: 96752da28f43896e7b8e5945947b32c4810bdff6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55703326"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55831507"
 ---
 # <a name="quickstart-plan-capacity-for-azure-atp"></a>Início Rápido: Planejar capacidade para o ATP do Azure
 
@@ -154,7 +149,7 @@ Para determinar os pacotes por segundo, faça os seguintes procedimentos em cada
 Neste guia de início rápido, você determinou quantos sensores do ATP do Azure e quantos sensores autônomos foram necessários. Determinou também o dimensionamento dos sensores. Avance para o guia de início rápido seguinte para criar uma instância do ATP do Azure.
 
 > [!div class="nextstepaction"]
-> [Tutoriais de Máquinas Virtuais do Microsoft Azure](install-atp-step1.md)
+> [Criar sua instância do ATP do Azure](install-atp-step1.md)
 
 
 ## <a name="join-the-community"></a>Participe da comunidade

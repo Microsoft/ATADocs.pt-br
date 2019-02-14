@@ -4,7 +4,7 @@ description: Descreve como atualizar e atrasar a atualização dos sensores do A
 keywords: ''
 author: mlottner
 ms.author: mlottner
-manager: mbaldwin
+manager: barbkess
 ms.date: 1/20/2019
 ms.topic: conceptual
 ms.prod: ''
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 603d9e09-a07d-4357-862f-d5682c8bc3dd
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: c7b131bffdca092d6355a7f8cb4d280c2388b8eb
-ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
+ms.openlocfilehash: 80715cbacea342cfe40b876eb517116d10184d1d
+ms.sourcegitcommit: 78748bfd75ae68230d72ad11010ead37d96b0c58
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54840804"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56078350"
 ---
 # <a name="update-azure-atp-sensors"></a>Atualizar sensores da Azure ATP
 

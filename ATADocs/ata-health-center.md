@@ -4,7 +4,7 @@ description: Use a Central de Integridade de ATA para verificar como o serviço 
 keywords: ''
 author: rkarlin
 ms.author: rkarlin
-manager: mbaldwin
+manager: barbkess
 ms.date: 3/21/2018
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: d6c783b2-46c5-4211-b21a-d6b17f08d03d
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 9d043ac8c780505f6e3443c354e02b89d3040b4c
-ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
+ms.openlocfilehash: 5f30ab0077c099b946b592a18a2cff92633b431c
+ms.sourcegitcommit: 78748bfd75ae68230d72ad11010ead37d96b0c58
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54839967"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56076106"
 ---
 # <a name="working-with-ata-system-health-and-events"></a>Trabalhando com eventos e a integridade do sistema ATA
 

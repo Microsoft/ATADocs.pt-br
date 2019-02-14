@@ -4,7 +4,7 @@ description: Este artigo descreve os possíveis LMPs (caminhos de movimento late
 keywords: ''
 author: mlottner
 ms.author: mlottner
-manager: mbaldwin
+manager: barbkess
 ms.date: 11/25/2018
 ms.topic: conceptual
 ms.prod: ''
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: de15c920-8904-4124-8bdc-03abd9f667cf
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 88a7d5e23cc6b3f1202f522e40060e71f676397f
-ms.sourcegitcommit: a0ebb0b6f140d4abf091ebd9d756b975b3d96b9d
+ms.openlocfilehash: 77350fbe802d56ca828d693eaa83b3966f5b3727
+ms.sourcegitcommit: 78748bfd75ae68230d72ad11010ead37d96b0c58
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54459066"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56077585"
 ---
 # <a name="azure-atp-lateral-movement-paths-lmps"></a>LMPs (caminhos de movimento lateral) da ATP do Azure 
 

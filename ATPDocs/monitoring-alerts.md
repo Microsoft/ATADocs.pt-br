@@ -4,7 +4,7 @@ description: Descreve como você pode usar os logs do Azure ATP para solucionar 
 keywords: ''
 author: mlottner
 ms.author: mlottner
-manager: mbaldwin
+manager: barbkess
 ms.date: 12/02/2018
 ms.topic: conceptual
 ms.prod: ''
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: d0551e91-3b21-47d5-ad9d-3362df6d47c0
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 084e3752953077b4be8678e6c98a73cb99bc9587
-ms.sourcegitcommit: a0ebb0b6f140d4abf091ebd9d756b975b3d96b9d
+ms.openlocfilehash: ae4d5bce540ab00f935992b1e9c9a471f038fcf0
+ms.sourcegitcommit: 78748bfd75ae68230d72ad11010ead37d96b0c58
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54459100"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56078316"
 ---
 # <a name="understanding-azure-atp-sensor-and-standalone-sensor-monitoring-alerts"></a>Entendendo os alertas de monitoramento do sensor autônomo e do sensor do Azure ATP
 
