@@ -4,7 +4,7 @@ description: Lista as novidades na versão 1.5 do ATA e seus problemas conhecido
 keywords: ''
 author: rkarlin
 ms.author: rkarlin
-manager: mbaldwin
+manager: barbkess
 ms.date: 01/23/2017
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: a0d64aff-ca9e-4300-b3f8-eb3c8b8ae045
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 800d5d0ebf7eb044982c35e1f348b6c2faf14b07
-ms.sourcegitcommit: 959b1f7753b9a8ad94870d2014376d55296fbbd4
+ms.openlocfilehash: 987d73a4ad3fc970d6e4f03a19f9ef5f9a8fd59e
+ms.sourcegitcommit: 78748bfd75ae68230d72ad11010ead37d96b0c58
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46133235"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56076650"
 ---
 # <a name="whats-new-in-ata-version-15"></a>Novidades na versão 1.5 do ATA
 Essas notas de versão fornecem informações sobre problemas conhecidos nesta versão da Advanced Threat Analytics.
@@ -44,11 +44,11 @@ A atualização 1.5 do ATA fornece melhorias nas seguintes áreas:
 A seguir estão os problemas conhecidos existentes nesta versão.
 
 ### <a name="new-ata-gateway-installation-fails"></a>Falha na instalação do novo Gateway do ATA
-Depois de atualizar sua implantação do ATA para a versão 1.5, você obterá o seguinte erro ao instalar um novo Gateway do ATA: o gateway do Microsoft Advanced Threat Analytics não está instalado
+Depois de atualizar sua implantação do ATA para a versão 1.5, você obtém o seguinte erro ao instalar um novo Gateway do ATA: O Gateway do Microsoft Advanced Threat Analytics não está instalado
 
 ![Erro de GW do ATA](media/ata-install-error.png)
 
-<b>Solução alternativa:</b> envie um email para <ataeval@microsoft.com> e solicite as etapas de solução alternativa.
+<b>Solução alternativa:</b> Envie um email para <ataeval@microsoft.com> para solicitar as etapas de solução alternativa.
 ### <a name="deployment"></a>Implantação
 A pasta especificada para o "Caminho de dados do banco de dados" e "Caminho de diário do banco de dados" deve estar vazia (sem arquivos ou subpastas).
 Se não estiver vazia, a implantação não poderá avançar.

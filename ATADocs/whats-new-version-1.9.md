@@ -4,7 +4,7 @@ description: Lista as novidades da nova versão 1.9 do ATA e os problemas conhec
 keywords: ''
 author: rkarlin
 ms.author: rkarlin
-manager: mbaldwin
+manager: barbkess
 ms.date: 3/25/2018
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 51de491c-49ba-4aff-aded-cc133a8ccf0b
 ms.reviewer: ''
 ms.suite: ems
-ms.openlocfilehash: 423f79ffc29af84fcb45a7103a07b1ef0ee0c546
-ms.sourcegitcommit: 959b1f7753b9a8ad94870d2014376d55296fbbd4
+ms.openlocfilehash: 4a21dbf96ae7897c6ab45feb306f43986f84c5f2
+ms.sourcegitcommit: 78748bfd75ae68230d72ad11010ead37d96b0c58
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46133354"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56077347"
 ---
 # <a name="whats-new-in-ata-version-19"></a>Novidades da versão 1.9 do ATA
 
@@ -28,7 +28,7 @@ Essas notas de versão fornecem informações sobre atualizações, novos recurs
 
 ## <a name="new--updated-detections"></a>Detecções novas e atualizadas
 
--  **Criação de serviços suspeitos**: invasores tentam executar serviços suspeitos na sua rede. Agora, o ATA emite um alerta quando identifica que alguém executa um novo serviço, que parece suspeito, em um controlador de domínio. Essa detecção é baseada em eventos (e não em tráfego de rede). Para obter mais informações, veja o [Guia de atividades suspeitas](suspicious-activity-guide.md#suspicious-service-creation).
+-  **Criação de serviço suspeito**: Os invasores tentam executar um serviço suspeito em sua rede. Agora, o ATA emite um alerta quando identifica que alguém executa um novo serviço, que parece suspeito, em um controlador de domínio. Essa detecção é baseada em eventos (e não em tráfego de rede). Para obter mais informações, veja o [Guia de atividades suspeitas](suspicious-activity-guide.md#suspicious-service-creation).
 
 
 ## <a name="new-reports-to-help-you-investigate"></a>Novos relatórios para ajudá-lo a investigar 

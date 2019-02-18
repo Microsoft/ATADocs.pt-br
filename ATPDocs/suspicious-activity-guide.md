@@ -4,7 +4,7 @@ d|Description: This article provides a list of the security alerts issued by Azu
 keywords: ''
 author: mlottner
 ms.author: mlottner
-manager: mbaldwin
+manager: barbkess
 ms.date: 02/03/2019
 ms.topic: conceptual
 ms.prod: ''
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: ca5d1c7b-11a9-4df3-84a5-f53feaf6e561
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: f84e49846a0c144da0674b8a4594eab2ee33efba
-ms.sourcegitcommit: 9236d279f5e01424b498ce23e9d84c407ebfcdf3
+ms.openlocfilehash: 5c799892e7713cd1b5198deb23099cc690827517
+ms.sourcegitcommit: 78748bfd75ae68230d72ad11010ead37d96b0c58
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55689346"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56077840"
 ---
 # <a name="azure-atp-security-alerts"></a>Alertas de segurança do ATP do Azure
 
@@ -42,12 +42,12 @@ Na versão 2.56, todos os alertas de segurança da ATP do Azure existentes foram
 |Novo nome do alerta de segurança|Antigo nome do alerta de segurança|ID externa exclusiva|
 |---------|----------|---------|
 |[Reconhecimento de enumeração de conta](atp-reconnaissance-alerts.md#account-enumeration-reconnaissance-external-id-2003)|Reconhecimento de enumeração de conta|2003|
-|[Exportação de dados por SMB](atp-exfiltration-alerts.md#data-exfiltration-over-smb---preview-external-id-2030)| NA| 2030|
+|[Exportação de dados por SMB](atp-exfiltration-alerts.md#data-exfiltration-over-smb-external-id-2030)| NA| 2030|
 |[Atividade de Honeytoken](atp-compromised-credentials-alerts.md#honeytoken-activity-external-id-2014)|Atividade de Honeytoken|2014|
 |[Solicitação mal-intencionada de chave mestra da API de Proteção de Dados](atp-domain-dominance-alerts.md#malicious-request-of-data-protection-api-master-key-external-id-2020)|Solicitação de informações privadas para proteção contra dados mal-intencionados|2020|
 |[Reconhecimento de mapeamento de rede (DNS)](atp-reconnaissance-alerts.md#network-mapping-reconnaissance-dns-external-id-2007)|Reconhecimento usando DNS|2007|
 |[Tentativa de execução remota de código](atp-domain-dominance-alerts.md#remote-code-execution-attempt-external-id-2019)|Tentativa de execução remota de código|2019|
-|[Execução remota de código sobre DNS – versão prévia](atp-lateral-movement-alerts.md#remote-code-execution-over-dns-external-id-2036---preview)|NA|2036|
+|[Execução remota de código sobre DNS](atp-lateral-movement-alerts.md#remote-code-execution-over-dns-external-id-2036)|NA|2036|
 |[Suspeita de LDAP (ataque de força bruta)](atp-compromised-credentials-alerts.md#suspected-brute-force-attack-ldap-external-id-2004)|Ataque de força bruta usando associação simples LDAP|2004|
 |[Suspeita de ataque de força bruta (NTLM do Kerberos)](atp-compromised-credentials-alerts.md#suspected-brute-force-attack-kerberos-ntlm-external-id-2023)|Falhas de autenticação suspeitas|2023|
 |[Suspeita de ataque de força bruta (SMB)](atp-compromised-credentials-alerts.md#suspected-brute-force-attack-smb-external-id-2033)|Implementação de protocolo incomum (possível uso de ferramentas mal-intencionadas, como a Hydra)|2033|
@@ -66,6 +66,7 @@ Na versão 2.56, todos os alertas de segurança da ATP do Azure existentes foram
 |[Suspeita de uso da estrutura de hacker Metasploit](atp-compromised-credentials-alerts.md#suspected-use-of-metasploit-hacking-framework-external-id-2034)|Implementação de protocolo incomum (possível uso das ferramentas de invasão Metasploit)|2034|
 |[Suspeita de ataque de Skeleton Key (downgrade de criptografia)](atp-domain-dominance-alerts.md#suspected-skeleton-key-attack-encryption-downgrade-external-id-2010)|Atividade de downgrade de criptografia (possível ataque de skeleton key)|2010|
 |[Suspeita de ataque do ransomware WannaCry](atp-compromised-credentials-alerts.md#suspected-wannacry-ransomware-attack-external-id-2035)|Implementação de protocolo incomum (possível ataque do ransomware WannaCry)|2035|
+|[Suspeita de ataque de retransmissão de NTLM (conta do Exchange) — versão prévia](atp-lateral-movement-alerts.md#suspected-ntlm-relay-attack-exchange-account-external-id-2037---preview)|NA|2037|
 |[Comunicação suspeita por DNS](atp-exfiltration-alerts.md#suspicious-communication-over-dns-external-id-2031)|Comunicação suspeita por DNS|2031|
 |[Modificação suspeita de grupos confidenciais](atp-domain-dominance-alerts.md#suspicious-modification-of-sensitive-groups-external-id-2024)|Modificação suspeita de grupos confidenciais|2024|
 |[Criação de serviço suspeito](atp-domain-dominance-alerts.md#suspicious-service-creation-external-id-2026)|Criação de serviço suspeito|2026|

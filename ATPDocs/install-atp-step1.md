@@ -1,48 +1,42 @@
 ---
-title: Instalar a Proteção Avançada contra Ameaças do Azure | Microsoft Docs
-description: A primeira etapa para instalar a ATP do Azure envolve a criação de um espaço de trabalho para sua implantação da ATP do Azure.
+title: Início rápido para criar sua instância do ATP do Azure | Microsoft Docs
+description: Início rápido para criar a instância para sua implantação do ATP do Azure, que é a primeira etapa para instalar o ATP do Azure.
 keywords: ''
 author: mlottner
 ms.author: mlottner
-manager: mbaldwin
-ms.date: 12/02/2018
-ms.topic: conceptual
-ms.prod: ''
+ms.date: 02/05/2019
+ms.topic: quickstart
 ms.service: azure-advanced-threat-protection
-ms.technology: ''
-ms.assetid: 15ee7d0b-9a0c-46b9-bc71-98d0b4619ed0
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: df3e75970a797307991620e21629df589406cc40
-ms.sourcegitcommit: 19ff0ed88e450506b5725bbcbb0d0bd2f0c5e4bb
+ms.openlocfilehash: 6a8c8458274243d254198914cb7339893a8d890b
+ms.sourcegitcommit: 96752da28f43896e7b8e5945947b32c4810bdff6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/27/2019
-ms.locfileid: "55085207"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55831490"
 ---
-# <a name="creating-your-azure-atp-instance-in-the-azure-atp-portal---step-1"></a>Criando sua instância do ATP do Azure no portal do ATP do Azure – Etapa 1
+# <a name="quickstart-create-your-azure-atp-instance"></a>Início Rápido: Criar sua instância do Azure ATP
 
-> [!div class="step-by-step"]
-> [Etapa 2 »](install-atp-step2.md)
+Neste início rápido, você criará sua instância do ATP do Azure no portal do ATP do Azure. No ATP do Azure, você terá uma única instância, anteriormente chamada de workspace. Uma única instância permite gerenciar várias florestas em um único painel de exibição.
 
-O procedimento de instalação oferece instruções para criar e gerenciar sua instância (chamada anteriormente de workspace) do ATP do Azure. Para obter informações sobre a arquitetura do Azure ATP, consulte [Arquitetura do Azure ATP](atp-architecture.md).
+> [!IMPORTANT]
+> No momento, os data centers do Azure ATP são implantados na Europa, na América do Norte/América Central/Caribe e na Ásia. A instância é criada automaticamente no data center geograficamente mais próximo ao seu Azure AD (Azure Active Directory). Após a criação, as instâncias do ATP do Azure não podem ser movidas.
 
-No ATP do Azure, uma única instância permite gerenciar várias florestas em um único painel de exibição. 
+## <a name="prerequisites"></a>Pré-requisitos
 
-> [!NOTE]
-> No momento, os data centers do Azure ATP são implantados na Europa, na América do Norte/América Central/Caribe e na Ásia. A instância é criada automaticamente no data center geograficamente mais próximo ao seu AAD. Após a criação, as instâncias do ATP do Azure não podem ser movidas. 
+- Uma [licença do ATP do Azure](atp-technical-faq.md#licensing-and-privacy).
+- Para acessar o portal do ATP do Azure, você precisa ser [administrador global ou de segurança no locatário](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles#available-roles).
+- Confira o artigo sobre a [arquitetura do ATP do Azure](atp-architecture.md).
+- Confira o artigo sobre os [pré-requisitos do ATP do Azure](atp-prerequisites.md). 
 
-## <a name="enter-the-azure-atp-portal"></a>Entrar no portal do Azure ATP
+## <a name="sign-in-to-the-azure-atp-portal"></a>Entrar no portal do ATP do Azure
 
-Depois de verificar que sua rede atende aos requisitos do sensor, continue com a criação da instância do ATP do Azure.
+Depois de verificar que sua rede atende aos requisitos do sensor, inicie a criação da instância do ATP do Azure.
 
-> [!NOTE]
->Para acessar o portal do ATP do Azure, você precisa ser administrador global ou de segurança no locatário.
+1. Vá para [o portal do ATP do Azure](https://portal.atp.azure.com).
 
-
-1.  Entre no [portal da ATP do Azure](https://portal.atp.azure.com).
-
-2.  Faça logon com sua conta de usuário do Azure Active Directory.
+2. Entre com sua conta de usuário do Azure Active Directory.
 
 ## <a name="create-your-instance"></a>Criar sua instância
 
@@ -50,28 +44,26 @@ Depois de verificar que sua rede atende aos requisitos do sensor, continue com a
 
     ![Criar uma instância do ATP do Azure](media/create-instance.png)
 
-2. Sua instância do ATP do Azure é nomeada automaticamente com o nome de domínio inicial do AAD, alocada ao data center localizado mais perto de seu AAD e criada. 
+2. Sua instância do ATP do Azure é nomeada automaticamente com o nome de domínio inicial do Azure AD e criada no data center mais próximo do seu Azure AD. 
 
     ![Instância do Azure criada](media/instance-created.png)
 
     > [!NOTE]
-    > Para fazer logon no ATP do Azure, você precisará fazer logon com um usuário atribuído a uma função do ATP do Azure com direitos para acessar o portal do ATP do Azure. Para obter mais informações sobre o RBAC (controle de acesso baseado em função) no Azure ATP, consulte [Como trabalhar com grupos de função do Azure ATP](atp-role-groups.md).
+    > Para entrar no ATP do Azure, você precisará entrar com um usuário atribuído a uma função do ATP do Azure com direitos para acessar o portal do ATP do Azure. Para obter mais informações sobre o RBAC (controle de acesso baseado em função) no Azure ATP, consulte [Como trabalhar com grupos de função do Azure ATP](atp-role-groups.md).
  
-3. Clique em **Configuração**, **Gerenciar grupos de funções** e use o link [Centro de Administração do Azure AD](https://docs.microsoft.com/azure/active-directory/active-directory-assign-admin-roles-azure-portal) para gerenciar seus grupos de funções. .
+3. Clique em **Configuração**, **Gerenciar grupos de funções** e use o link [Centro de Administração do Azure AD](https://docs.microsoft.com/azure/active-directory/active-directory-assign-admin-roles-azure-portal) para gerenciar seus grupos de funções.
 
     ![Gerenciar grupos de funções](media/creation-manage-role-groups.png)
 
 - Retenção de dados – as instâncias do ATP do Azure já excluídas não são exibidas na interface do usuário. Para obter mais informações sobre a retenção de dados do Azure ATP, veja [privacidade e segurança de dados do Azure ATP](atp-privacy-compliance.md).
 
+## <a name="next-steps"></a>Próximas etapas
 
 > [!div class="step-by-step"]
-> [« Pré-instalação](atp-prerequisites.md)
-> [Etapa 2 »](install-atp-step2.md)
+> [« Pré-requisitos](atp-prerequisites.md)
+> [Etapa 2 — Conectar ao Active Directory »](install-atp-step2.md)
 
+## <a name="join-the-community"></a>Participe da comunidade
 
+Tem mais perguntas ou interesse em discutir sobre o ATP do Azure e a segurança relacionada com outras pessoas? Participe da [Comunidade do ATP do Azure](https://aka.ms/azureatpcommunity) hoje mesmo!
 
-## <a name="see-also"></a>Consulte Também
-- [Ferramenta de dimensionamento do Azure ATP](http://aka.ms/aatpsizingtool)
-- [Configurar coleta de eventos](configure-event-collection.md)
-- [Pré-requisitos do Azure ATP](atp-prerequisites.md)
-- [Confira o fórum do ATP do Azure!](https://aka.ms/azureatpcommunity)

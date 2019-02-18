@@ -4,25 +4,27 @@ d|Description: This article explains how to user Azure ATP security alerts to in
 keywords: ''
 author: mlottner
 ms.author: mlottner
-manager: mbaldwin
-ms.date: 1/14/2019
+ms.date: 02/07/2019
 ms.topic: tutorial
-ms.prod: ''
 ms.service: azure-advanced-threat-protection
-ms.technology: ''
-ms.assetid: e9cf68d2-36bd-4b0d-b36e-7cf7ded2618e
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 126653dd2831e0e3dbd9c777d84d32b1c2e74bd9
-ms.sourcegitcommit: 1ee052c4c6b04b290e2d5384c24b65a108b1f1f3
+ms.openlocfilehash: 99ebcfeb4220e547be06e8161636b12c843f292c
+ms.sourcegitcommit: 1da2f5414d27d58ac01ad43cafdb6bed242ce7c0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54253394"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "55889866"
 ---
 # <a name="tutorial-investigate-a-user"></a>Tutorial: investigar um usuário
 
-A evidência de alerta e os caminhos de movimento lateral do ATP do Azure fornecem indicações claras de quando os usuários executaram atividades suspeitas ou de quando existem indicações de que sua conta foi comprometida. Use as sugestões de investigação para identificar o risco para a organização, decidir como corrigir e determinar a melhor maneira de evitar ataques semelhantes no futuro.  
+A evidência de alerta e os caminhos de movimento lateral do ATP do Azure fornecem indicações claras de quando os usuários executaram atividades suspeitas ou de quando existem indicações de que sua conta foi comprometida. Neste tutorial, você usará as sugestões de investigação para identificar o risco para a organização, decidir como corrigir e determinar a melhor maneira de evitar ataques futuros semelhantes.  
+
+> [!div class="checklist"]
+> * Reúna mais informações sobre o usuário.
+> * Investigue as atividades que o usuário executou.
+> * Investigue os recursos que o usuário acessou.
+> * Investigue os caminhos de movimento lateral.
 
 ## <a name="recommended-investigation-steps-for-suspicious-users"></a>Etapas de investigação recomendadas para usuários suspeitos
 

@@ -4,8 +4,8 @@ d|Description: This article explains the Azure ATP alerts issued when attacks ty
 keywords: ''
 author: mlottner
 ms.author: mlottner
-manager: mbaldwin
-ms.date: 1/15/2019
+manager: barbkess
+ms.date: 02/11/2019
 ms.topic: tutorial
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 452d951c-5f49-4a21-ae10-9fb38c3de302
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 67ba3c285577b683bc820ab272a498443b02c493
-ms.sourcegitcommit: e2daa0f93d97d552cfbf1577fbd05a547b63e95b
+ms.openlocfilehash: 214e3e10979f3508fad5f2b674d5d39b08a5715f
+ms.sourcegitcommit: 78748bfd75ae68230d72ad11010ead37d96b0c58
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54314288"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56075834"
 ---
 # <a name="tutorial-exfiltration-alerts"></a>Tutorial: Alertas de exfiltração  
 
@@ -36,7 +36,7 @@ Os alertas de segurança a seguir ajudam você a identificar e corrigir atividad
 
 > [!div class="checklist"]
 > * Comunicação suspeita por DNS (ID 2031 externa)
-> * Exportação de dados por SMB – versão prévia (ID 2030 externa)
+> * Exportação de dados por SMB (ID 2030 externa)
 
 ## <a name="suspicious-communication-over-dns-external-id-2031"></a>Comunicação suspeita por DNS (ID 2031 externa) 
 
@@ -72,7 +72,7 @@ Algumas empresas usam o DNS legitimamente para a comunicação regular. Para det
 > [!NOTE]
 > Os alertas de segurança da *comunicação suspeita em DNS* listam o domínio suspeito. Novos domínios, ou domínios recentemente adicionados que ainda não sejam conhecidos nem reconhecidos pelo Azure ATP, mas que fazem parte ou são conhecidos por fazer parte de sua organização podem ser fechados.
 
-## <a name="data-exfiltration-over-smb---preview-external-id-2030"></a>Exportação de dados por SMB – versão prévia (ID 2030 externa)
+## <a name="data-exfiltration-over-smb-external-id-2030"></a>Exportação de dados por SMB (ID 2030 externa)
 
 **Descrição** Os controladores de domínio têm os dados organizacionais mais confidenciais. Para a maioria dos invasores, uma das principais prioridades é obter acesso de controlador de domínio, para roubar seus dados mais confidenciais. Por exemplo, a exportação do arquivo Ntds.dit, armazenado no controlador de domínio, permite que um invasor falsifique o TGT (tíquetes que concedem tíquete) Kerberos fornecendo autorização para qualquer recurso. Os TGTs Kerberos forjados permite que o invasor defina a expiração do tíquete para qualquer momento arbitrário. Um alerta de **Exportação de dados por SMB** do ATP do Azure é disparado quando transferências de dados suspeitas são observadas em seus controladores de domínio monitorados.
 

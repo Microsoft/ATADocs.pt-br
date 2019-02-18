@@ -4,8 +4,8 @@ d|Description: This article explains the Azure ATP alerts issued when attacks ty
 keywords: ''
 author: mlottner
 ms.author: mlottner
-manager: mbaldwin
-ms.date: 1/20/2019
+manager: barbkess
+ms.date: 02/11/2019
 ms.topic: tutorial
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 2257eb00-8614-4577-b6a1-5c65085371f2
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: e564307a62361cd8b1c872818225a2e1e63585fb
-ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
+ms.openlocfilehash: f3a8766a87070c460ca73fa73aad74643f27fb07
+ms.sourcegitcommit: 78748bfd75ae68230d72ad11010ead37d96b0c58
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54840770"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56078384"
 ---
 # <a name="tutorial-lateral-movement-alerts"></a>Tutorial: Alertas de movimento lateral  
 
@@ -35,13 +35,14 @@ Para entender melhor a estrutura e os componentes comuns de todos os alertas de 
 Os alertas de segurança a seguir ajudam a identificar e corrigir atividades suspeitas da fase de **Movimento lateral** detectadas pelo ATP do Azure em sua rede. Neste tutorial, você aprenderá como entender, classificar, corrigir e impedir os seguintes tipos de ataques:
 
 > [!div class="checklist"]
-> * Execução remota de código sobre DNS – versão prévia (ID externa 2036)
+> * Execução remota de código sobre DNS (ID 2036 externa)
 > * Suspeita de roubo de identidade (Pass-the-Hash) (ID 2017 externa)
 > * Suspeita de roubo de identidade (Pass-the-Ticket) (ID 2018 externa)
+> * Suspeita de ataque de retransmissão de NTLM (conta do Exchange) (ID 2037 externa) — versão prévia
 > * Suspeita de ataque de Overpass-the-Hash (downgrade de criptografia) (ID 2008 externa)
 > * Suspeita de ataque de Overpass-the-Hash (Kerberos) (ID 2002 externa)
 
-## <a name="remote-code-execution-over-dns-external-id-2036---preview"></a>Execução remota de código sobre DNS (ID externa 2036) – versão prévia
+## <a name="remote-code-execution-over-dns-external-id-2036"></a>Execução remota de código sobre DNS (ID 2036 externa)
 
 **Descrição**
 
@@ -139,6 +140,34 @@ Há aplicativos personalizados que encaminham tíquetes em nome de usuários. Es
 3. Encontre a ferramenta que realizou o ataque e remova-a.
 4. Procure por usuários que estavam conectados em horário próximo àquele da atividade, pois eles também podem estar comprometidos. Redefina as senhas e habilite o MFA.
 5. Se o Windows Defender ATP estiver instalado – use **klist.exe purge** para excluir todos os tíquetes da sessão de logon especificada e evitar o uso dos tíquetes no futuro.
+
+## <a name="suspected-ntlm-relay-attack-exchange-account-external-id-2037---preview"></a>Suspeita de ataque de retransmissão de NTLM (conta do Exchange) (ID 2037 externa) — versão prévia
+
+**Descrição**
+
+Um Exchange Server pode ser configurado para disparar a autenticação de NTLM com a conta do Exchange Server para um servidor remoto http executado por um invasor. Este servidor aguarda a comunicação do Exchange Server para retransmitir sua própria autenticação confidencial para qualquer outro servidor, ou ainda mais interessante, para o Active Directory por LDAP, e captura as informações de autenticação.
+
+Depois que o servidor de retransmissão recebe a autenticação NTLM, ele fornece um desafio que foi originalmente criado pelo servidor de destino. O cliente responde ao desafio, impedindo que um invasor obtenha a resposta e a use para continuar a negociação de NTLM com o controlador de domínio de destino. 
+
+Nessa detecção, um alerta é disparado quando o ATP do Azure identifica o uso das credenciais de conta do Exchange de uma fonte suspeita.
+
+**TP, B-TP ou FP?**
+
+1. Verifique os computadores de origem por trás dos endereços IP. 
+    1. Se o computador de origem for um Exchange Server, **feche** o alerta de segurança como uma atividade de **FP**.
+    2. Determinar se a conta de origem deve autenticar usando NTLM desses computadores? Se ela precisar se autenticar, **feche** o alerta de segurança e exclua esses computadores como uma atividade **B-TP**.
+
+**Entender o escopo da violação**
+
+1. Continue [investigando os computadores de origem](investigate-a-computer.md) por trás dos endereços IP envolvidos.  
+2. Investigue a [conta de origem](investigate-a-user.md).
+
+**Correção sugerida e etapas de prevenção**
+
+1. Conter os computadores de origem
+    1. Encontre a ferramenta que realizou o ataque e remova-a.
+    2. Procure por usuários que estavam conectados em horário próximo ao que a atividade ocorreu, pois eles também podem estar comprometidos. Redefina as senhas e habilite o MFA.
+2. Force o uso do NTLMv2 selado no domínio, usando a política de grupo **Segurança de rede: nível de autenticação do LAN Manager**. Para obter mais informações, consulte as [Instruções de nível de autenticação do LAN Manager](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/network-security-lan-manager-authentication-level) para definir a política de grupo para controladores de domínio. 
 
 ## <a name="suspected-overpass-the-hash-attack-encryption-downgrade-external-id-2008"></a>Suspeita de ataque de Overpass-the-Hash (downgrade de criptografia) (ID 2008 externa) 
 

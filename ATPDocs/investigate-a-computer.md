@@ -4,25 +4,28 @@ d|Description: This article explains how to use Azure ATP security alerts to inv
 keywords: ''
 author: mlottner
 ms.author: mlottner
-manager: mbaldwin
-ms.date: 1/14/2019
+ms.date: 02/07/2019
 ms.topic: tutorial
-ms.prod: ''
 ms.service: azure-advanced-threat-protection
-ms.technology: ''
-ms.assetid: ca5d1c7b-11a9-4df3-84a5-f53feaf6e561
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 3c707376635facd0fe9ba8e3c3f32f36f5a71c25
-ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
+ms.openlocfilehash: 92364369e26356f514927d9dafc9a31c9468d663
+ms.sourcegitcommit: 1da2f5414d27d58ac01ad43cafdb6bed242ce7c0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54839539"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "55889883"
 ---
 # <a name="tutorial-investigate-a-computer"></a>Tutorial: Investigar um computador
 
-A evidência de alerta do ATP do Azure fornece indicações claras de quando computadores foram envolvidos em atividades suspeitas ou de quando há informações de que um computador está comprometido. Use as sugestões de investigação para identificar o risco para a organização, decidir como corrigir e determinar a melhor maneira de evitar ataques semelhantes no futuro.  
+A evidência de alerta do ATP do Azure fornece indicações claras de quando computadores foram envolvidos em atividades suspeitas ou de quando há informações de que um computador está comprometido. Neste tutorial, você usará as sugestões de investigação para identificar o risco para a organização, decidir como corrigir e determinar a melhor maneira de evitar ataques semelhantes no futuro.  
+
+> [!div class="checklist"]
+> * Verifique o computador quanto ao usuário conectado.
+> * Verifique se o usuário normalmente acessa os computadores.
+> * Investigue as atividades suspeitas do computador.
+> * Houve outros alertas por volta do mesmo horário?
+
 
 ## <a name="investigation-steps-for-suspicious-computers"></a>Etapas de investigação para computadores suspeitos
 
@@ -46,7 +49,7 @@ Verifique e investigue o perfil do computador para obter as atividades e os deta
 - Se a integração do Windows Defender ATP estiver habilitada, clique no selo do Windows Defender ATP para investigar o computador. No Windows Defender ATP, você pode ver quais processos e alertas ocorreram no mesmo período que o alerta.
     1. Novos programas foram implantados ou instalados?
 
-## <a name="see-also"></a>Consulte Também
+## <a name="next-steps"></a>Próximas etapas
 
 - [Investigar um usuário](investigate-a-user.md)
 - [Trabalhando com alertas de segurança](working-with-suspicious-activities.md)

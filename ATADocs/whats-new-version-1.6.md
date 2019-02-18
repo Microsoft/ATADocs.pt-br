@@ -4,7 +4,7 @@ description: Lista as novidades na nova versão 1.6 do ATA e seus problemas conh
 keywords: ''
 author: rkarlin
 ms.author: rkarlin
-manager: mbaldwin
+manager: barbkess
 ms.date: 01/23/2017
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 27b139e5-12b9-4953-8f53-eb58e8ce0038
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 5fd3b7a0abb3c70e87634e28273fe5ce8b6d4d9a
-ms.sourcegitcommit: 959b1f7753b9a8ad94870d2014376d55296fbbd4
+ms.openlocfilehash: 7b615f3f6e0fd3a7402a0c87a5df118431d566f3
+ms.sourcegitcommit: 78748bfd75ae68230d72ad11010ead37d96b0c58
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46133609"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56078027"
 ---
 # <a name="whats-new-in-ata-version-16"></a>Novidades na versão 1.6 do ATA
 Essas notas de versão fornecem informações sobre problemas conhecidos nesta versão da Advanced Threat Analytics.
@@ -100,11 +100,11 @@ Em implantações nas quais o caminho do banco de dados é movido manualmente, a
 ### <a name="migration-failure-when-updating-from-ata-15"></a>Falha na migração ao atualizar do ATA 1.5
 Ao atualizar para o ATA 1.6, o processo de atualização pode falhar com o seguinte código de erro:
 
-![Erro ao atualizar para o ATA 1.6](http://i.imgur.com/QrLSApr.png) Se você receber esse erro, examine o log de implantação em: **C:Usuários\<Usuário>\AppData\Local\Temp** e procure pela seguinte exceção:
+![Erro ao atualizar o ATA para 1.6](http://i.imgur.com/QrLSApr.png) Se você vir esse erro, examine o log de implantação em: **C:\Users\<User>\AppData\Local\Temp** e procure a seguinte exceção:
 
     System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> MongoDB.Driver.MongoWriteException: A write operation resulted in an error. E11000 duplicate key error index: ATA.UniqueEntityProfile.$_id_ dup key: { : "<guid>" } ---> MongoDB.Driver.MongoBulkWriteException`1: A bulk write operation resulted in one or more errors.  E11000 duplicate key error index: ATA.UniqueEntityProfile.$_id_ dup key: { : " <guid> " }
 
-Você também pode ver este erro: System.ArgumentNullException: o valor não pode ser nulo.
+Você também pode ver esse erro: System.ArgumentNullException: O valor não pode ser nulo.
     
 Se você ver algum desses erros, execute a seguinte solução alternativa:
 
