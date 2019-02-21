@@ -2,23 +2,24 @@
 title: Entendendo os alertas de monitoramento do ATA | Microsoft Docs
 description: Descreve como você pode usar os logs do ATA para solucionar problemas
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: barbkess
-ms.date: 3/21/2018
+ms.date: 02/20/2019
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.prod: advanced-threat-analytics
 ms.service: ''
 ms.technology: ''
 ms.assetid: b04fb8a4-b366-4b55-9d4c-6f054fa58a90
-ms.reviewer: bennyl
+ms.reviewer: elofek
 ms.suite: ems
-ms.openlocfilehash: b62ee7b8b3ab4ee93f05d81efbac983824d9adcd
-ms.sourcegitcommit: 78748bfd75ae68230d72ad11010ead37d96b0c58
+ms.openlocfilehash: 736951f8f74f9493bb07a75e68601c9814793ed3
+ms.sourcegitcommit: c59d67fc58e759b5597917f96089d67e28e4cce8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56078367"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56443463"
 ---
 # <a name="understanding-ata-monitoring-alerts"></a>Entendendo os alertas de monitoramento do ATA
 
@@ -52,7 +53,7 @@ Este artigo descreve todos os alertas de monitoramento para cada componente, lis
 ### <a name="ata-center-certificate-expired"></a>Certificado do Centro de ATA expirado
 |Alerta|Descrição|Resolução|Severidade|
 |----|----|----|----|
-|O certificado do Centro de ATA expirou.|Após a expiração do certificado: a conectividade de Gateways do ATA com o ATA Center falhará. O processo do Centro do ATA falha e toda a funcionalidade do ATA é interrompida.|[Substitua o certificado do Centro do ATA](modifying-ata-center-configuration.md)|Alta|
+|O certificado do Centro de ATA expirou.|Após a expiração do certificado: a conectividade de Gateways do ATA com o ATA Center falhará. O processo do Centro do ATA falha e toda a funcionalidade do ATA é interrompida.|[Reimplantar o Centro do ATA](install-ata-step1.md)|Alta|
 ## <a name="ata-gateway-issues"></a>Problemas do Gateway do ATA
 ### <a name="read-only-user-password-to-expire-shortly"></a>Senha de usuário somente leitura a expirar em breve
 |Alerta|Descrição|Resolução|Severidade|

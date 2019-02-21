@@ -1,30 +1,31 @@
 ---
-title: Monitorando controladores de domínio e sensores instalados em seus controladores de domínio usando a Proteção Avançada contra Ameaças do Azure | Microsoft Docs
+title: Monitorar controladores de domínio e sensores instalados em seus controladores de domínio, usando a Proteção Avançada contra Ameaças do Azure | Microsoft Docs
 description: Descreve como monitorar os sensores do ATP do Azure e a cobertura dos sensores usando o ATP do Azure
 keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: barbkess
-ms.date: 1/27/2019
+ms.date: 02/13/2019
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
 ms.technology: ''
 ms.assetid: 92decce8-b3ae-4d32-8407-a95314a66863
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: e4e33e79a5ed4dbb80214e50dbccee0f067670fd
-ms.sourcegitcommit: 78748bfd75ae68230d72ad11010ead37d96b0c58
+ms.openlocfilehash: b371cb5f2bfeef9ddc14ee11623b609c3f49dbfb
+ms.sourcegitcommit: 5d3607b3a2c9d1a35dd36287f4a5fc68fca67eb0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56077908"
+ms.lasthandoff: 02/18/2019
+ms.locfileid: "56334418"
 ---
 # <a name="monitoring-your-domain-controller-coverage"></a>Monitorando a cobertura do controlador de domínio
 
-Assim que o primeiro sensor do ATP do Azure é instalado e configurado em qualquer controlador de domínio na rede, o ATP do Azure começa a monitorar os controladores de domínio do ambiente. 
+Assim que o primeiro sensor do ATP do Azure é instalado e configurado em um controlador de domínio na rede, o ATP do Azure começa a monitorar os controladores de domínio do ambiente. 
 
-Durante a instalação, é recomendado selecionar pelo menos um controlador de domínio de sensor do ATP do Azure como o candidato a sincronizador de domínio por domínio. Um dos trabalhos do sensor do sincronizador de domínio é garantir que os controladores de domínio sejam pesquisados ativamente por esse sensor específico. Os controladores de domínio podem adquirir e perder o status de candidato a sincronizador de domínio após a configuração inicial. Confira [Configuração do sensor do ATP do Azure](install-atp-step5.md) para obter mais informações de como configurar um sensor do Azure e defini-lo como um **candidato a sincronizador de domínio**. 
+Durante a instalação, é recomendado selecionar pelo menos um controlador de domínio de sensor do ATP do Azure como o candidato a sincronizador de domínio por domínio. Um dos trabalhos do sensor do sincronizador de domínio é garantir que os controladores de domínio sejam pesquisados ativamente por esse sensor específico. Os controladores de domínio podem adquirir e perder o status de candidato a sincronizador de domínio após a configuração inicial. Quando nenhum controlador de domínio é selecionado como candidato a sincronizador de domínio, apenas o monitoramento passivo da atividade de rede nos seus controladores de domínio está ocorrendo. Confira [Configuração do sensor do ATP do Azure](install-atp-step5.md) para obter mais informações de como configurar um sensor do Azure e defini-lo como um **candidato a sincronizador de domínio**. 
 
 Assim que um sensor do ATP do Azure estiver instalado e configurado em um controlador de domínio na rede, o sensor passará a se comunicar com o serviço ATP do Azure constantemente enviando informações de status, integridade e a versão do sensor, além de eventos e alterações do Active Directory.  
 
@@ -59,5 +60,5 @@ O download do Excel da cobertura do controlador de domínio fornece as seguintes
 
 - [Arquitetura do ATP do Azure](atp-architecture.md)
 - [Configurando os sensores do ATP do Azure](install-atp-step5.md)
-- [Suporte para várias florestas](atp-multi-forest.md)
+- [Suporte a várias florestas](atp-multi-forest.md)
 - [Confira o fórum do ATP do Azure!](https://aka.ms/azureatpcommunity)

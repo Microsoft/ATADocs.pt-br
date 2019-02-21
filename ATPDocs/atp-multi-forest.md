@@ -7,20 +7,21 @@ ms.author: mlottner
 manager: barbkess
 ms.date: 1/24/2019
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
 ms.technology: ''
 ms.assetid: effca0f2-fcae-4fca-92c1-c37306decf84
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: a8dfd4852b5a6bf5414876547212a3c5b0a07034
-ms.sourcegitcommit: 78748bfd75ae68230d72ad11010ead37d96b0c58
+ms.openlocfilehash: e35cb4cc277253543bf24eaccfe67d9808b64af4
+ms.sourcegitcommit: 5d3607b3a2c9d1a35dd36287f4a5fc68fca67eb0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56077296"
+ms.lasthandoff: 02/18/2019
+ms.locfileid: "56334435"
 ---
-# <a name="azure-advanced-threat-protection-multi-forest-support"></a>Suporte para várias florestas da Proteção Avançada contra Ameaças do Azure
+# <a name="azure-advanced-threat-protection-multi-forest-support"></a>Suporte a várias florestas da Proteção Avançada contra Ameaças do Azure
 
 
 ## <a name="multi-forest-support-set-up"></a>Configuração de suporte a várias florestas 
@@ -43,6 +44,7 @@ Para detectar atividades entre florestas, os sensores do ATP do Azure consultam 
 - Adicione credenciais na página Serviços de diretório para todas as florestas em seu ambiente. 
     - Uma credencial é necessária para cada floresta com relação de confiança bidirecional. 
     - Credenciais adicionais são necessárias para cada floresta sem a confiança Kerberos ou não confiáveis. 
+    - Limite de dez florestas por instância do ATP do Azure. Fale com o suporte se sua organização tiver mais de dez florestas. 
 
 ![Estágio 1 de boas-vindas do Azure ATP](media/directory-services-add-no-trust-forests.png)
 
@@ -80,7 +82,7 @@ Quando o Azure ATP mapeia suas florestas, ele usa um processo que afeta o seguin
 
 ## <a name="see-also"></a>Consulte Também
 - [Ferramenta de dimensionamento do Azure ATP](http://aka.ms/aatpsizingtool)
-- [Arquitetura do Azure ATP](atp-architecture.md)
+- [Arquitetura do ATP do Azure](atp-architecture.md)
 - [Instalar o Azure ATP](install-atp-step1.md)
 - [Confira o fórum do ATP do Azure!](https://aka.ms/azureatpcommunity)
 

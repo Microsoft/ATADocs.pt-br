@@ -5,20 +5,21 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: barbkess
-ms.date: 02/04/2019
+ms.date: 02/13/2019
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
 ms.technology: ''
 ms.assetid: 6a9b5273-eb26-414e-9cdd-f64406e24ed8
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 0a45773df74bb4effb5b89e3e1bd9d6fb969dfda
-ms.sourcegitcommit: 78748bfd75ae68230d72ad11010ead37d96b0c58
+ms.openlocfilehash: db9792192c1f56d13327d57747622e79c72a1c3e
+ms.sourcegitcommit: 5d3607b3a2c9d1a35dd36287f4a5fc68fca67eb0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56077670"
+ms.lasthandoff: 02/18/2019
+ms.locfileid: "56334452"
 ---
 # <a name="azure-atp-frequently-asked-questions"></a>Perguntas frequentes sobre o Azure ATP
 Este artigo fornece uma lista de perguntas frequentes sobre o Azure ATP e dividido nas seguintes categorias: 
@@ -109,7 +110,7 @@ Para seus controladores de domínio se comunicarem com o serviço de nuvem, voc�
 Sim, você pode usar o sensor do Azure ATP para monitorar controladores de domínio em qualquer solução IaaS.
 
 ### <a name="can-azure-atp-support-multi-domain-and-multi-forest"></a>O Azure ATP pode dar suporte a vários domínios e várias florestas?
-A Proteção Avançada contra Ameaças do Azure dá suporte a ambientes com vários domínios e com várias florestas. Este recurso está em visualização pública no momento. Confira mais informações e limitações conhecidas em [Suporte a várias florestas](atp-multi-forest.md).
+A Proteção Avançada contra Ameaças do Azure dá suporte a ambientes com vários domínios e com várias florestas. Confira mais informações e requisitos de confiança em [Suporte a várias florestas](atp-multi-forest.md).
 
 ### <a name="can-you-see-the-overall-health-of-the-deployment"></a>Você pode ver a integridade geral da implantação?
 Sim, é possível exibir a integridade geral da implantação, bem como os problemas específicos relacionados à configuração, à conectividade e a outros aspectos. Você recebe alertas de integridade do ATP do Azure conforme eles ocorrem.

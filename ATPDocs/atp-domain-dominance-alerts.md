@@ -7,18 +7,19 @@ ms.author: mlottner
 manager: barbkess
 ms.date: 02/03/2019
 ms.topic: tutorial
+ms.collection: M365-security-compliance
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
 ms.technology: ''
 ms.assetid: 0b3a1db5-0d43-49af-b356-7094cc85f0a5
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 04c0bebbb017441b7494535a7c970478e8de12f8
-ms.sourcegitcommit: 78748bfd75ae68230d72ad11010ead37d96b0c58
+ms.openlocfilehash: 4360441bc078fa9d0cc09a9be8874d3d9999fab7
+ms.sourcegitcommit: 5d3607b3a2c9d1a35dd36287f4a5fc68fca67eb0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56077772"
+ms.lasthandoff: 02/18/2019
+ms.locfileid: "56334503"
 ---
 # <a name="tutorial-domain-dominance-alerts"></a>Tutorial: Alertas de predominância de domínio  
 
@@ -45,7 +46,7 @@ Os alertas de segurança a seguir ajudam você a identificar e corrigir atividad
 > * Suspeita de uso de Golden Ticket (conta inexistente) (ID externa 2027)
 > * Suspeita de uso de Golden Ticket (anomalia de tíquete) (ID externa 2032)
 > * Suspeita de uso de Golden Ticket (anomalia de tempo) – (ID externa 2022)
-> * Suspeita de ataque de Skeleton Key (downgrade de criptografia) (ID externa)
+> * Suspeita de ataque de Skeleton Key (downgrade de criptografia) (ID externa 2010)
 > * Modificação suspeita de grupos confidenciais (ID externa 2024)
 > * Criação de serviço suspeito (ID externa 2026)
 
@@ -354,7 +355,7 @@ Descrição: as vulnerabilidades conhecidas em versões mais antigas do Windows 
 Sabe-se que alguns sistemas operacionais ou aplicativos modificam os dados de autorização. Por exemplo, serviços de Linux e Unix têm seu próprio mecanismo de autorização, o qual pode disparar o alerta. 
 
 1. O computador de origem está executando um sistema operacional ou aplicativo que tem seu próprio mecanismo de autorização?  
-    - Se o computador de origem estiver executando esse tipo de computador, considere atualizar o sistema operacional ou corrigir a configuração do aplicativo. **Feche** o alerta como uma atividade **B-TP**. 
+    - Se o computador de origem estiver executando esse tipo de mecanismo de autorização, considere atualizar o sistema operacional ou corrigir a configuração do aplicativo. **Feche** o alerta como uma atividade **B-TP**. 
   
 **Entender o escopo da violação**
 1. Investigue o [computador de origem](investigate-a-computer.md). 

@@ -5,22 +5,31 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: barbkess
-ms.date: 02/04/2019
+ms.date: 02/17/2019
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
 ms.technology: ''
 ms.assetid: 7d0f33db-2513-4146-a395-290e001f4199
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: c12cb4836e401fbfb788cc243bdc6d29622552bb
-ms.sourcegitcommit: 78748bfd75ae68230d72ad11010ead37d96b0c58
+ms.openlocfilehash: be11b073171a192e71656d731619797f077054ab
+ms.sourcegitcommit: 5d3607b3a2c9d1a35dd36287f4a5fc68fca67eb0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56077925"
+ms.lasthandoff: 02/18/2019
+ms.locfileid: "56334520"
 ---
 # <a name="whats-new-in-azure-atp"></a>Novidades do Azure ATP
+
+## <a name="azure-atp-release-266"></a>ATP do Azure versão 2.66
+Lançado em 17 de fevereiro de 2019
+
+- **Aprimoramento do recurso: alerta Suspeita de ataque de DCSync (replicação de serviços de diretório)**<br>
+Foram feitas melhorias de usabilidade nesse alerta de segurança, inclusive uma descrição revisada, fornecimento de informações de origem adicionais, novo infográfico e mais evidências. Saiba mais sobre os alertas de segurança [Suspeita de ataque de DCSync (replicação de serviços de diretório)](atp-domain-dominance-alerts.md#suspected-dcsync-attack-replication-of-directory-services-external-id-2006). 
+
+- Essa versão também inclui aprimoramentos e correções de bug da infraestrutura do sensor interno.
 
 ## <a name="azure-atp-release-265"></a>ATP do Azure versão 2.65
 Lançado em 10 de fevereiro de 2019
@@ -29,10 +38,10 @@ Lançado em 10 de fevereiro de 2019
 O alerta de segurança [Suspeita de ataque de retransmissão de NTLM (conta do Exchange) — versão prévia](atp-lateral-movement-alerts.md#suspected-ntlm-relay-attack-exchange-account-external-id-2037---preview) do ATP do Azure agora está na versão prévia pública. <br> Nessa detecção, um alerta de segurança do ATP do Azure é disparado quando o uso de credenciais de conta do Exchange de uma fonte suspeita é identificado. Esses tipos de ataques tentam utilizar técnicas de retransmissão do NTLM para obter privilégios do Exchange do controlador de domínio e são conhecidos como **ExchangePriv**. Saiba mais sobre a técnica **ExchangePriv** do [comunicado ADV190007](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/ADV190007) publicado pela primeira vez em 31 de janeiro de 2019 e a [resposta do alerta do ATP do Azure](https://techcommunity.microsoft.com/t5/Enterprise-Mobility-Security/How-to-win-the-latest-security-race-over-NTLM-relay/ba-p/334511).  
 
 - **Disponibilidade geral: Execução remota de código sobre DNS**<br>
-Esse alerta já está em disponibilidade geral. Consulte a [página de descrição do alerta Execução remota de código sobre DNS](atp-lateral-movement-alerts.md#remote-code-execution-over-dns-external-id-2036) para obter mais detalhes e recursos do alerta. 
+Esse alerta já está em disponibilidade geral. Confira mais informações e recursos de alerta na [página de descrição do alerta Execução remota de código sobre DNS](atp-lateral-movement-alerts.md#remote-code-execution-over-dns-external-id-2036). 
 
 - **Disponibilidade geral: Exportação de dados por SMB**<br>
-Esse alerta já está em disponibilidade geral. Consulte a [página de descrição do alerta Exportação de dados por SMB](atp-exfiltration-alerts.md#data-exfiltration-over-smb-external-id-2030) para obter mais detalhes e recursos do alerta.
+Esse alerta já está em disponibilidade geral. Confira mais informações e recursos de alerta na [página de descrição do alerta Exportação de dados por SMB](atp-exfiltration-alerts.md#data-exfiltration-over-smb-external-id-2030).
 
 
 - Essa versão também inclui aprimoramentos e correções de bug da infraestrutura do sensor interno.
@@ -41,7 +50,7 @@ Esse alerta já está em disponibilidade geral. Consulte a [página de descriç�
 Lançado em 4 de fevereiro de 2019
 
 - **Disponibilidade geral: Suspeita de uso de Golden Ticket (anomalia de tíquete)**<br>
-Esse alerta já está em disponibilidade geral. Para ver mais detalhes e recursos de alerta, confira a [página de descrição do alerta "Suspeita de uso de Golden Ticket (anomalia de tíquete)"](atp-domain-dominance-alerts.md#suspected-golden-ticket-usage-ticket-anomaly-external-id-2032). 
+Esse alerta já está em disponibilidade geral. Confira mais informações e recursos de alerta na [página de descrição do alerta Suspeita de uso de Golden Ticket (anomalia de tíquete)](atp-domain-dominance-alerts.md#suspected-golden-ticket-usage-ticket-anomaly-external-id-2032). 
 
 - **Aprimoramento do recurso: Reconhecimento de mapeamento de rede (DNS)**<br>
 A lógica de detecção de alerta aprimorada foi implantada para este alerta para reduzir falsos positivos e ruído de alerta. Agora, esse alerta tem um período de aprendizado de oito dias, antes que ele seja disparado pela primeira vez. Para saber mais sobre esse alerta, confira a [página de descrição do alerta "Reconhecimento de mapeamento de rede (DNS)"](atp-reconnaissance-alerts.md#network-mapping-reconnaissance-dns-external-id-2007). 
