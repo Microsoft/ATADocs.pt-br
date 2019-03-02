@@ -13,7 +13,6 @@
 ## [Instalar o sensor do Azure ATP](install-atp-step4.md)
 ## [Configurar o sensor do Azure ATP](install-atp-step5.md)
 # Tutoriais
-## [Entender os alertas de segurança](understanding-security-alerts.md)
 ## [Alertas de reconhecimento](atp-reconnaissance-alerts.md)
 ## [Alertas de credencial comprometida](atp-compromised-credentials-alerts.md)
 ## [Alertas de movimento lateral](atp-lateral-movement-alerts.md)
@@ -59,6 +58,13 @@
 ### [Validação do espelhamento de porta](validate-port-mirroring.md)
 ### [Configurar coleta de eventos](configure-event-collection.md)
 ### [Configurar o encaminhamento de eventos do Windows](configure-event-forwarding.md)
+## [Entender os alertas de segurança](understanding-security-alerts.md)
+## Laboratório de alerta de segurança
+### [Visão geral do laboratório](atp-playbook-lab-overview.md)
+### [1 – Configuração do laboratório](atp-playbook-setup-lab.md)
+### [2 – Guia estratégico de reconhecimento](atp-playbook-reconnaissance.md)
+### [3 – Guia estratégico de movimento lateral](atp-playbook-lateral-movement.md)
+### [4 – Guia estratégico de predominância de domínio](atp-playbook-domain-dominance.md)
 # Referência
 ## [Referência de log do SIEM do ATA](cef-format-sa.md)
 ## [Problemas conhecidos da ATP do Azure](known-issues.md)
