@@ -14,12 +14,12 @@ ms.technology: ''
 ms.assetid: 0b3a1db5-0d43-49af-b356-7094cc85f0a5
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 4360441bc078fa9d0cc09a9be8874d3d9999fab7
-ms.sourcegitcommit: 5d3607b3a2c9d1a35dd36287f4a5fc68fca67eb0
+ms.openlocfilehash: 1c3e4fbf435c22ec57a90653d7a1e8133d9acbf3
+ms.sourcegitcommit: 478878e685d1e4d52b5cd0429b9bf7304e5d8552
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/18/2019
-ms.locfileid: "56334503"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56852690"
 ---
 # <a name="tutorial-domain-dominance-alerts"></a>Tutorial: Alertas de predominância de domínio  
 
@@ -433,11 +433,11 @@ Nome anterior: Golden Ticket do Kerberos
 **Descrição**: os invasores com direitos de administrador de domínio podem comprometer a conta KRBTGT. Ao usar a conta KRBTGT, eles podem criar um tíquete de concessão de tíquete Kerberos (TGT) que fornece autorização para qualquer recurso e define a expiração do tíquete para qualquer momento arbitrário. Esse TGT falso é chamado de "Golden Ticket" e permite que os invasores obtenham persistência na rede. Esse alerta é disparado quando um tíquete de concessão de tíquete Kerberos é usado por mais tempo do que o permitido pela especificação Máximo tempo de vida do tíquete de usuário. 
  
 **TP, B-TP ou FP**
-1. Nas últimas horas, houve alguma alteração à configuração **Tempo de vida máximo para tíquete de usuário** na política de grupo que fosse capaz de afetar o alerta?  
+1. Nas últimas horas, houve alguma alteração à configuração**Tempo de vida máximo para tíquete de usuário** na política de grupo que fosse capaz de afetar o alerta?  
 2. O sensor autônomo do ATP do Azure envolvido neste alerta é uma máquina virtual? 
     - Se o sensor autônomo do ATP do Azure está envolvido, ele foi recentemente retomado de um estado salvo?  
 3. Há um problema de sincronização de horário na rede, em que nem todos os computadores estão sincronizados? 
-    - Clique no botão  **Detalhes do download** para exibir o alerta de segurança do arquivo do Excel de relatório, exibir as atividades de rede relacionadas e verificar se há uma diferença entre "StartTime" e "DomainControllerStartTime".
+    - Clique no botão **Detalhes do download** para exibir o alerta de segurança do arquivo do Excel de relatório, exibir as atividades de rede relacionadas e verificar se há uma diferença entre "StartTime" e "DomainControllerStartTime".
 
 Se a resposta às perguntas anteriores for **sim**, **feche** o alerta de segurança como uma atividade **B-TP**. 
  

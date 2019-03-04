@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: barbkess
-ms.date: 02/04/2019
+ms.date: 02/24/2019
 ms.topic: tutorial
 ms.collection: M365-security-compliance
 ms.prod: ''
@@ -14,12 +14,12 @@ ms.technology: ''
 ms.assetid: e9cf68d2-36bd-4b0d-b36e-7cf7ded2618e
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 09649f57041ca53ae7cdd183e60584ff37be9c9f
-ms.sourcegitcommit: c48db18274edb2284e281960c6262d97f96e01d2
+ms.openlocfilehash: 36f7d273273e11d57c681e75cc762e853a127616
+ms.sourcegitcommit: 5e954f2f0cc14e42d68d2575dd1c2ed9eaabe891
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56264025"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56754405"
 ---
 # <a name="tutorial-reconnaissance-alerts"></a>Tutorial: Alertas de reconhecimento  
 
@@ -40,8 +40,10 @@ Neste tutorial, aprenda como entender, classificar, corrigir e impedir os seguin
 > [!div class="checklist"]
 > * Reconhecimento de enumeração de conta (ID 2003 externa)
 > * Reconhecimento de mapeamento de rede (DNS) (ID 2007 externa)
+> * Reconhecimento de entidade de segurança (LDAP) (ID 2038 externa) – versão prévia
 > * Reconhecimento de endereço IP e de usuário (SMB) (ID 2012 externa)
 > * Reconhecimento de usuário e de associação a um grupo (SAMR) (ID 2021 externa)
+> * 
 
 ## <a name="account-enumeration-reconnaissance-external-id-2003"></a>Reconhecimento de enumeração de conta (ID 2003 externa) 
 
@@ -109,14 +111,13 @@ Agora, examine as contas:<br>
 
 ## <a name="network-mapping-reconnaissance-dns-external-id-2007"></a>Reconhecimento de mapeamento de rede (DNS) (ID 2007 externa) 
 
-
 *Nome anterior:* Reconhecimento usando DNS
 
 **Descrição**
 
 O servidor DNS contém um mapa de todos os computadores, endereços IP e serviços em sua rede. Essas informações são usadas pelos invasores para mapear sua estrutura de rede e visar computadores interessantes para etapas posteriores no ataque. 
  
-Há vários tipos de consulta no protocolo DNS. Esse alerta de segurança do ATP do Azure detecta solicitações suspeitas de AXFR (transferência) provenientes de servidores que não são DNS.
+Há vários tipos de consulta no protocolo DNS. Esse alerta de segurança do ATP do Azure detecta solicitações suspeitas, seja em solicitações que usam uma AXFR (transferência) proveniente de servidores não DNS ou naquelas que usam uma quantidade excessiva de solicitações.
 
 **Período de aprendizado**
 
@@ -142,16 +143,43 @@ Verificadores de segurança e aplicativos legítimos podem gerar consultas DNS.
 **Correção sugerida e etapas de prevenção**
 
 **Correção:**
-1. Contenha o computador de origem. 
+- Contenha o computador de origem. 
     - Encontre a ferramenta que realizou o ataque e remova-a.
     - Procure usuários que estavam conectados no mesmo período em que a atividade ocorreu, pois eles também podem estar comprometidos. Redefina as senhas e habilite o MFA.
 
-**Prevenção:** é importante evitar ataques futuros que usem consultas AXFR protegendo seu servidor DNS interno.
+**Prevenção:**<br>
+é importante evitar ataques futuros que usem consultas AXFR protegendo seu servidor DNS interno.
 
-1. Proteja seu servidor DNS interno para impedir o reconhecimento usando DNS desabilitando a transferências de zona ou [restringindo as transferências de zona](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee649273(v=ws.10)) apenas a endereços IP especificados. A modificação de transferências de zona é uma tarefa entre uma lista de verificação que deve ser resolvida para [proteger seus servidores DNS contra ataques internos e externos](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee649273(v=ws.10)).
+- Proteja seu servidor DNS interno para impedir o reconhecimento usando DNS desabilitando a transferências de zona ou [restringindo as transferências de zona](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee649273(v=ws.10)) apenas a endereços IP especificados. A modificação de transferências de zona é uma tarefa entre uma lista de verificação que deve ser resolvida para [proteger seus servidores DNS contra ataques internos e externos](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee649273(v=ws.10)).
+
+## <a name="security-principal-reconnaissance-ldap-external-id-2038---preview"></a>Reconhecimento de entidade de segurança (LDAP) (ID 2038 externa) – versão prévia
+
+**Descrição** O reconhecimento de entidade de segurança é usado pelos invasores para obter informações essenciais sobre o ambiente de domínio. As informações que ajudam os invasores a mapear a estrutura de domínio, bem como identificar contas privilegiadas para uso em etapas posteriores em sua cadeia de encerramento do ataque. O protocolo LDAP (Lightweight Directory Access Protocol) é um dos métodos mais populares usados para fins legítimos e mal-intencionados para consultar o Active Directory Domain Services.  O reconhecimento de entidade de segurança focada no LDAP é normalmente usado como a primeira fase de um ataque Kerberoasting. Os ataques de Kerberoasting são usados para obter uma lista de destino de SPNs (nome da entidade de serviço), que os invasores tentam, então, obter tíquetes do TGS (servidor de concessão de tíquete).
+
+Para permitir que o ATP do Azure crie o perfil com precisão e aprenda os usuários legítimos, nenhum alerta desse tipo é acionado nos primeiros 10 dias após a implantação do ATP do Azure. Depois que a fase de aprendizado inicial do ATP do Azure é concluída, os alertas são gerados em computadores que executam consultas de enumeração de LDAP suspeitas ou consultas destinadas a grupos confidenciais usando métodos não observados anteriormente.  
+
+**Período de aprendizado** Dez dias por computador, desde o dia do primeiro evento observado da máquina. 
+
+**TP, B-TP ou FP**
+1.  Clique no computador de origem e acesse a página de perfil. 
+    1. Este computador de origem deve gerar essa atividade? 
+    2. Se o computador e a atividade forem esperados, **Feche** o alerta de segurança e exclua esse computador como uma atividade **B-TP**. 
+
+**Entender o escopo da violação**
+
+1.  Verifique as consultas que foram executadas (como administradores de domínio ou todos os usuários em um domínio) e determine se as consultas foram bem-sucedidas. Investigue cada pesquisa de grupo exposto por atividades suspeitas realizadas no grupo ou por usuários membros do grupo.
+2. Investigue o [computador de origem](investigate-a-computer.md). 
+    - Usando as consultas LDAP, verifique se todas as atividades de acesso ao recurso ocorreram em qualquer um dos SPNs expostos.
+
+**Correção sugerida e etapas de prevenção**
+
+1.  Conter o computador de origem
+    1. Encontre a ferramenta que realizou o ataque e remova-a.
+    2. O computador está executando uma ferramenta de verificação que realiza várias consultas LDAP?
+    3. Procure por usuários que estavam conectados em horário próximo ao que a atividade ocorreu, pois eles também podem estar comprometidos. Redefina as senhas e habilite o MFA.
+2.  Redefina a senha se o acesso aos recursos do SPN foi feito e executado sob uma conta de usuário (não na conta do computador).
 
 ## <a name="user-and-ip-address-reconnaissance-smb-external-id-2012"></a>Reconhecimento de endereço IP e de usuário (SMB) (ID 2012 externa) 
-
 
 *Nome anterior:* Reconhecimento usando a enumeração da sessão SMB
 

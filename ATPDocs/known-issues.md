@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: barbkess
-ms.date: 12/17/2018
+ms.date: 02/25/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.prod: ''
@@ -14,18 +14,25 @@ ms.technology: ''
 ms.assetid: feea1982-ba23-48be-a468-98d2586cf840
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 1689d2d2bd4becd42812010dc8fd6e13f0483ef5
-ms.sourcegitcommit: c48db18274edb2284e281960c6262d97f96e01d2
+ms.openlocfilehash: 916a7a2b8f9782b66867860cdb7575e0069a30d4
+ms.sourcegitcommit: 5e954f2f0cc14e42d68d2575dd1c2ed9eaabe891
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56263923"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56754354"
 ---
 # <a name="azure-atp-known-issues"></a>Problemas conhecidos do ATP do Azure
 
 Ocasionalmente, o ATP do Azure tem limitações de engenharia ou recurso que podem limitar ou alterar a maneira como sua organização usa os serviços do ATP do Azure. Limitações conhecidas do problema que não têm nenhuma solução alternativa ou um status de trabalho em andamento sem uma linha do tempo de atualização específica são descritos aqui. 
 
 Para problemas conhecidos do ATP do Azure com soluções alternativas conhecidas, veja [Solução de problemas conhecidos do ATP do Azure](troubleshooting-atp-known-issues.md). Para verificar o status do seu locatário do ATP do Azure, visite o [Centro de integridade do ATP do Azure](atp-health-center.md). 
+
+## <a name="dns-reconnaissance-alert"></a>Alerta de reconhecimento de DNS
+> [!div class="mx-tableFixed"] 
+
+|Problema|Status|
+|----|----|
+O problema do alerta de segurança de *reconhecimento de DNS* afeta os clientes emitindo **alertas de reconhecimento DNS** falsos positivos repetitivos de um único computador. Se um pico de **alertas de reconhecimento DNS** for gerado a partir de um único computador, feche ou exclua esses alertas até que a atualização 2.67 seja implantada e resolva esse problema. | A atualização 2.67 resolve esse problema.|
 
 ## <a name="suspected-brute-force-attack-ldap-security-alert-display"></a>Exibição de alerta de segurança de suspeita de LDAP (ataque de força bruta)
 > [!div class="mx-tableFixed"] 

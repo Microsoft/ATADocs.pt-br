@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: barbkess
-ms.date: 02/17/2019
+ms.date: 02/25/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.prod: ''
@@ -14,14 +14,31 @@ ms.technology: ''
 ms.assetid: 7d0f33db-2513-4146-a395-290e001f4199
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: be11b073171a192e71656d731619797f077054ab
-ms.sourcegitcommit: 5d3607b3a2c9d1a35dd36287f4a5fc68fca67eb0
+ms.openlocfilehash: 27c0513a5a70e09b7c890eda42b14f5b7265e663
+ms.sourcegitcommit: 5e954f2f0cc14e42d68d2575dd1c2ed9eaabe891
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/18/2019
-ms.locfileid: "56334520"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56754439"
 ---
 # <a name="whats-new-in-azure-atp"></a>Novidades do Azure ATP
+
+## <a name="azure-atp-release-267"></a>ATP do Azure versão 2.67
+Lançado em 24 de fevereiro de 2019
+
+- **Novo alerta de segurança: Reconhecimento de entidade de segurança (LMP) – (versão prévia)**<br>
+
+    O alerta de segurança de [Reconhecimento de entidade de segurança (LDAP) – versão prévia](atp-reconnaissance-alerts.md#security-principal-reconnaissance-ldap-external-id-2038---preview) do ATP do Azure está agora em versão prévia pública. <br> Nessa detecção, um alerta de segurança do ATP do Azure é disparado quando o reconhecimento de entidade de segurança é usado pelos invasores para obter informações essenciais sobre o ambiente de domínio. Estas informações ajudam os invasores a mapear a estrutura de domínio, bem como identificar contas privilegiadas para uso em etapas posteriores em sua cadeia de encerramento do ataque. 
+
+    O protocolo LDAP (Lightweight Directory Access Protocol) é um dos métodos mais populares usados para fins legítimos e mal-intencionados para consultar o Active Directory Domain Services. O reconhecimento de entidade de segurança focada no LDAP é normalmente usado como a primeira fase de um ataque Kerberoasting. Os ataques de Kerberoasting são usados para obter uma lista de destino de SPNs (nome da entidade de serviço), que os invasores tentam, então, obter tíquetes do TGS (servidor de concessão de tíquete).
+
+- **Aprimoramento do recurso: Alerta de reconhecimento de enumeração de conta (NTLM)** <br> 
+    Alerta aprimorado de **reconhecimento de enumeração de conta (NTLM)** usando a análise adicional e a lógica de detecção aprimorada para reduzir os resultados de alertas **B-TP** e **FP**. 
+ 
+- **Aprimoramento do recurso: Alerta de reconhecimento de mapeamento de rede (DNS)** <br>
+    Novos tipos de detecções adicionados aos alertas de reconhecimento de mapeamento de rede (DNS). Além de detectar solicitações suspeitas de AXFR, agora o ATP do Azure detecta tipos de suspeitos de solicitações originadas de servidores não DNS usando uma quantidade excessiva de solicitações.
+
+ - Essa versão também inclui aprimoramentos e correções de bug da infraestrutura do sensor interno.
 
 ## <a name="azure-atp-release-266"></a>ATP do Azure versão 2.66
 Lançado em 17 de fevereiro de 2019
