@@ -3,18 +3,18 @@ title: Início rápido para instalar o sensor do ATP do Azure | Microsoft Docs
 description: A etapa quatro da instalação do Azure ATP ajuda a instalar o sensor do Azure ATP.
 author: mlottner
 ms.author: mlottner
-ms.date: 02/06/2019
+ms.date: 03/03/2019
 ms.topic: quickstart
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 8a09346a4529a5368d3f8521a77d1fba274786c8
-ms.sourcegitcommit: c48db18274edb2284e281960c6262d97f96e01d2
+ms.openlocfilehash: 99045c4d8982c34d3defa681417a3b3963c563ac
+ms.sourcegitcommit: 929f28783110c7e114ab36d4cccd50563f4030df
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56263703"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57253922"
 ---
 # <a name="quickstart-install-the-azure-atp-sensor"></a>Início Rápido: Instalar o sensor do Azure ATP
 
@@ -80,7 +80,6 @@ Execute as etapas a seguir no controlador de domínio.
     - Serviço de sensor do Azure ATP e serviço do atualizador do sensor do Azure ATP
     - Microsoft Visual C++ 2013 Redistributable
 
-8. Após a conclusão da instalação, clique em **Iniciar** para abrir o navegador e entre no portal do ATP do Azure.
 
 ## <a name="next-steps"></a>Próximas etapas
 
