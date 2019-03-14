@@ -14,12 +14,12 @@ ms.technology: ''
 ms.assetid: e9cf68d2-36bd-4b0d-b36e-7cf7ded2618e
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 80cc0a73712d12f3d4f2722f8756c1b403f90c44
-ms.sourcegitcommit: c48db18274edb2284e281960c6262d97f96e01d2
+ms.openlocfilehash: d20359547696f7fe3cafd75a638563d400f0ed82
+ms.sourcegitcommit: 0e77ed44ee73ac84923fa7379e555f5ed9602aca
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56264002"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57017295"
 ---
 # <a name="tutorial-compromised-credential-alerts"></a>Tutorial: Alertas de credencial comprometida  
 
@@ -132,7 +132,7 @@ Nesta detecção, um alerta é disparado quando o Azure ATP detecta um grande n�
 
 É importante verificar se alguma tentativa de logon terminou com uma autenticação bem-sucedida.
 
-1. Se quaisquer tentativas de logon terminaram com êxito, alguma das  **contas adivinhadas** são normalmente usadas desse computador de origem?
+1. Se quaisquer tentativas de logon terminaram com êxito, alguma das **Contas adivinhadas** serão normalmente usadas desse computador de origem?
    - Há alguma chance dessas contas falharem porque uma senha incorreta foi usada?  
    - Verifique com os usuários se eles geraram a atividade (falha ao fazer logon algumas vezes e, em seguida, êxito).
 

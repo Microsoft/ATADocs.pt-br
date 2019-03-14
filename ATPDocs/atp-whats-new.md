@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: barbkess
-ms.date: 02/25/2019
+ms.date: 03/03/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.prod: ''
@@ -14,19 +14,33 @@ ms.technology: ''
 ms.assetid: 7d0f33db-2513-4146-a395-290e001f4199
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 27c0513a5a70e09b7c890eda42b14f5b7265e663
-ms.sourcegitcommit: 5e954f2f0cc14e42d68d2575dd1c2ed9eaabe891
+ms.openlocfilehash: 1edc9d7848721426e47cb82730b6de1db87e1874
+ms.sourcegitcommit: 929f28783110c7e114ab36d4cccd50563f4030df
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56754439"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57253990"
 ---
 # <a name="whats-new-in-azure-atp"></a>Novidades do Azure ATP
+
+## <a name="azure-atp-release-268"></a>Azure ATP versão 2.68
+Lançada em 3 de março de 2019
+
+- **Aprimoramento do recurso: Alerta de suspeita de LDAP (ataque de força bruta)**<br>
+Foram feitas melhorias de usabilidade consideráveis nesse alerta de segurança, incluindo uma descrição revisada, fornecimento de informações de origem adicionais e detalhes da tentativa de adivinhação para correção mais ágil. Saiba mais sobre alertas de segurança de [Suspeita de LDAP (ataque de força bruta)](atp-compromised-credentials-alerts.md#suspected-brute-force-attack-ldap-external-id-2004). 
+
+- **Nova documentação: Laboratório de alerta de segurança**<br>
+
+    Para explicar o poder do ATP do Azure na detecção de ameaças reais ao seu ambiente de trabalho, adicionamos um novo **Laboratório de alerta de segurança** a esta documentação. O **Laboratório de alerta de segurança** ajuda você a configurar rapidamente um laboratório ou ambiente de teste, e explica a melhor postura de defesa contra ataques e ameaças comuns e reais.  
+
+    O [laboratório passo a passo](atp-playbook-lab-overview.md) foi projetado para garantir que você gaste o mínimo de tempo criando e o máximo de tempo aprendendo sobre o panorama de ameaças e os alertas e proteção disponíveis no ATP do Azure. Estamos ansiosos para receber seus comentários.
+
+- Essa versão também inclui aprimoramentos e correções de bug da infraestrutura do sensor interno.
 
 ## <a name="azure-atp-release-267"></a>ATP do Azure versão 2.67
 Lançado em 24 de fevereiro de 2019
 
-- **Novo alerta de segurança: Reconhecimento de entidade de segurança (LMP) – (versão prévia)**<br>
+- **Novo alerta de segurança: Reconhecimento de entidade de segurança (LDAP) - (versão prévia)**<br>
 
     O alerta de segurança de [Reconhecimento de entidade de segurança (LDAP) – versão prévia](atp-reconnaissance-alerts.md#security-principal-reconnaissance-ldap-external-id-2038---preview) do ATP do Azure está agora em versão prévia pública. <br> Nessa detecção, um alerta de segurança do ATP do Azure é disparado quando o reconhecimento de entidade de segurança é usado pelos invasores para obter informações essenciais sobre o ambiente de domínio. Estas informações ajudam os invasores a mapear a estrutura de domínio, bem como identificar contas privilegiadas para uso em etapas posteriores em sua cadeia de encerramento do ataque. 
 

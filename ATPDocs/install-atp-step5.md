@@ -3,18 +3,18 @@ title: Início rápido para definir as configurações do sensor do ATP do Azure
 description: A etapa cinco da instalação do Azure ATP ajuda a definir as configurações do sensor autônomo do Azure ATP.
 author: mlottner
 ms.author: mlottner
-ms.date: 02/06/2018
+ms.date: 03/03/2018
 ms.topic: quickstart
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 381cf39f29edb36c704ce2de7f6c2aca31d4f19d
-ms.sourcegitcommit: c48db18274edb2284e281960c6262d97f96e01d2
+ms.openlocfilehash: 9b51c781cee16d4f158cc0e0528d4f80683aabad
+ms.sourcegitcommit: 929f28783110c7e114ab36d4cccd50563f4030df
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56263338"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57253939"
 ---
 # <a name="quickstart-configure-azure-atp-sensor-settings"></a>Início Rápido: Definir as configurações do sensor do ATP do Azure
 
@@ -27,14 +27,16 @@ Neste início rápido, você vai definir as configurações do sensor do ATP do 
 
 ## <a name="configure-sensor-settings"></a>Definir as configurações do sensor
 
-Após a instalação do sensor do ATP do Azure, execute as etapas a seguir para definir as configurações do sensor do ATP do Azure.
+Após a instalação do sensor do ATP do Azure, faça o seguinte para definir as configurações do sensor do ATP do Azure.
 
-1.  No portal do ATP do Azure, acesse **Configuração** e, na seção **Sistema**, selecione **Sensores**.
+1. Clique em **Iniciar** para abrir o navegador e entrar no portal do ATP do Azure.
+
+2.  No portal do ATP do Azure, acesse **Configuração** e, na seção **Sistema**, selecione **Sensores**.
    
     ![Imagem de definição das configurações do sensor](media/atp-sensor-config.png)
 
 
-2. Clique no sensor que deseja configurar e insira as seguintes informações:
+3. Clique no sensor que deseja configurar e insira as seguintes informações:
 
    ![Imagem de definição das configurações do sensor](media/atp-sensor-config-2.png)
 
@@ -64,7 +66,7 @@ Após a instalação do sensor do ATP do Azure, execute as etapas a seguir para 
 
 
 ## <a name="validate-installations"></a>Validar instalações
-Para validar a implantação bem-sucedida do sensor do Azure ATP, verifique as seguintes etapas:
+Para validar a implantação bem-sucedida do sensor do Azure ATP, verifique o seguinte:
 
 1. Verifique se o serviço chamado **Sensor de Proteção Avançada contra Ameaças do Azure** está em execução. Após você salvar as configurações do sensor do Azure ATP, talvez demore alguns minutos até que o serviço seja iniciado.
 
@@ -74,6 +76,19 @@ Para validar a implantação bem-sucedida do sensor do Azure ATP, verifique as s
    > A versão do ATP do Azure é atualizada com frequência. Para verificar a versão mais recente, no portal do ATP do Azure, vá em **Configuração** e, em seguida, **Sobre**. 
 
 3. Acesse a URL da instância do ATP do Azure. No portal do ATP do Azure, pesquise algo na barra de pesquisa, como um usuário ou um grupo em seu domínio.
+
+4. Verifique a conectividade do ATP em qualquer dispositivo de domínio usando as seguintes etapas:
+    1. Abra um prompt de comando
+    2. Digitar ```nslookup```
+    3. Digite **server**, depois o endereço IP ou FQDN do controlador de domínio no qual o sensor do ATP está instalado. Por exemplo, ```server contosodc.contoso.azure```.
+        - Substitua contosodc.contoso.azure e contoso.azure pelo FQDN do sensor e do nome domínio do ATP do Azure, respectivamente.
+    4. Digitar ```ls -d contoso.azure```
+    5. Repita as etapas 3 e 4 para cada sensor que você quer testar.  
+    6. No console do ATP do Azure, abra o perfil de entidade do computador a partir do qual você executou o teste de conectividade. 
+    7. Verifique a atividade lógica relacionada e confirme a conectividade. 
+
+    > [!NOTE] 
+    >Se o controlador de domínio que você quer testar for o primeiro sensor implantado, aguarde pelo menos 15 minutos para permitir que o back-end do banco de dados conclua a implantação inicial dos microsserviços necessários antes de tentar verificar a atividade lógica relacionada desse controlador de domínio.
 
 ## <a name="next-steps"></a>Próximas etapas
 

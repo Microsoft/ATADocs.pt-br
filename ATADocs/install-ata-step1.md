@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: barbkess
-ms.date: 1/17/2019
+ms.date: 02/28/2019
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
 ms.service: ''
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: b3cceb18-0f3c-42ac-8630-bdc6b310f1d6
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: a2f880c4e0df1647f99b0847a8eec71c6b8428bc
-ms.sourcegitcommit: 78748bfd75ae68230d72ad11010ead37d96b0c58
+ms.openlocfilehash: dc1ee8c4c0610f1d6289319fadf92e2b7aae6072
+ms.sourcegitcommit: 8681c4ed6ede58ace737f31eeff9a680b8e4256d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56077993"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "57007476"
 ---
 # <a name="install-ata---step-1"></a>Instalação do ATA - Etapa 1
 
@@ -71,6 +71,9 @@ Execute as seguintes etapas no servidor do Centro do ATA.
    |Certificado SSL do Serviço da Central|Esse é o certificado usado pelo serviço do Centro do ATA e pelo Console do ATA.|Clique no ícone de chave para selecionar um certificado instalado ou use a caixa de seleção para criar um certificado autoassinado.|
         
    ![Imagem de configuração do Centro do ATA](media/ATA-Center-Configuration.png)
+
+> [!NOTE]   
+> Preste atenção aos alertas de monitoramento sobre os avisos de status e de expiração do Certificado SSL do Serviço da Central. Se o certificado expirar, você precisará reimplantar completamente o ATA. 
 
 10. Clique em **Instalar** para instalar o Centro do ATA e seus componentes.
    Os seguintes componentes serão instalados e configurados durante a instalação do Centro do ATA:
