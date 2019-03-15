@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: barbkess
-ms.date: 02/04/2019
+ms.date: 03/10/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.prod: ''
@@ -14,12 +14,12 @@ ms.technology: ''
 ms.assetid: 62c99622-2fe9-4035-9839-38fec0a353da
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: c8a62ab09451deaeb6ffbf82052c047bb3cc007b
-ms.sourcegitcommit: c48db18274edb2284e281960c6262d97f96e01d2
+ms.openlocfilehash: 073a7e6c6d0257e4dddcae726b939109884f8b6d
+ms.sourcegitcommit: aad7a417addae3f21f81ea2b7336c3d83659f592
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56264044"
+ms.lasthandoff: 03/10/2019
+ms.locfileid: "57725581"
 ---
 # <a name="azure-atp-prerequisites"></a>Pré-requisitos do Azure ATP
 
@@ -46,7 +46,7 @@ Este guia de pré-requisitos é dividido nas seguintes seções para garantir qu
 ## <a name="before-you-start"></a>Antes de começar
 Esta seção mostra as informações que você deve obter, bem como as contas e informações sobre entidades de rede que deve ter antes de iniciar a instalação do ATP do Azure.
 
-- Adquira uma licença do EMS E5 (Enterprise Mobility + Security 5) diretamente por meio do [Portal do Office 365](https://www.microsoft.com/cloud-platform/enterprise-mobility-security-pricing) ou do modelo de licenciamento do CSP (Parceiro de Soluções na Nuvem).  
+- Adquira uma licença do EMS E5 (Enterprise Mobility + Security 5) diretamente por meio do [Portal Microsoft 365](https://www.microsoft.com/cloud-platform/enterprise-mobility-security-pricing) ou do modelo de licenciamento do CSP (Parceiro de Soluções na Nuvem).  
 
 - Verifique se os controladores de domínio nos quais você pretende instalar sensores do Azure ATP têm conectividade com a Internet para o Serviço de Nuvem do Azure ATP. O sensor do ATP do Azure tem suporte para o uso de um proxy. Para obter mais informações sobre a configuração de proxy, confira [Configuring a proxy for Azure ATP](configure-proxy.md) (Configurando um proxy para o Azure ATP).  
 
@@ -83,7 +83,7 @@ O acesso ao portal do Azure ATP ocorre por meio de um navegador que dá suporte 
 Esta seção lista os requisitos do sensor do Azure ATP.
 
 ### <a name="general"></a>Geral
-O sensor do Azure ATP dá suporte à instalação em um controlador de domínio que executa o Windows Server 2008 R2 SP1 (sem incluir o Server Core), o Windows Server 2012, o Windows Server 2012 R2, o Windows Server 2016 (incluindo o Core, mas não o Nano).
+O sensor do Azure ATP dá suporte à instalação em um controlador de domínio que executa o Windows Server 2008 R2 SP1 (sem incluir o Server Core), o Windows Server 2012, o Windows Server 2012 R2, o Windows Server 2016 (incluindo o Core, mas não o Nano). Atualmente não há suporte para o Windows Server 2019. 
 
 O controlador de domínio pode ser um RODC (controlador de domínio somente leitura).
 

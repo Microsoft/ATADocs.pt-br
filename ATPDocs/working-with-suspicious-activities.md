@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: barbkess
-ms.date: 1/1/2019
+ms.date: 03/10/2019
 ms.topic: article
 ms.collection: M365-security-compliance
 ms.prod: ''
@@ -14,12 +14,12 @@ ms.technology: ''
 ms.assetid: a06004bd-9f77-4e8e-a0e5-4727d6651a0f
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: f6782a5096349974a5810b5fe9f816f6762f5c4d
-ms.sourcegitcommit: c48db18274edb2284e281960c6262d97f96e01d2
+ms.openlocfilehash: e37bc18c93d8dad04d0e51c1bdb07b2147bcd2bc
+ms.sourcegitcommit: aad7a417addae3f21f81ea2b7336c3d83659f592
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56264065"
+ms.lasthandoff: 03/10/2019
+ms.locfileid: "57725580"
 ---
 # <a name="working-with-security-alerts"></a>Trabalhando com alertas de segurança
 
@@ -46,8 +46,8 @@ Cada alerta de segurança tem as seguintes informações:
     - Baixe o alerta de segurança em formato do Excel.
 
 > [!NOTE]
-> - Quando você passa o mouse sobre um usuário ou computador, é exibido um perfil simplificado da entidade que fornece informações adicionais sobre a entidade e inclui o número de alertas de segurança vinculado à entidade.
-> - Se você clicar em uma entidade, ela levará você ao perfil de entidade de usuário ou computador.
+> - Quando você passa o mouse sobre um usuário ou computador, um miniperfil de entidade é exibido. O miniperfil fornece informações adicionais sobre a entidade e inclui o número de alertas de segurança vinculados à entidade.
+> - Clicar na entidade leva ao perfil de entidade do usuário ou do computador.
 
 ![Imagem da linha do tempo de alertas de segurança do Azure ATP](media/atp-sa-timeline.png)
 
@@ -55,11 +55,11 @@ Cada alerta de segurança tem as seguintes informações:
 
 Os alertas de segurança do ATP do Azure são divididos nas categorias ou fases a seguir, assim como as fases vistas em uma cadeia de eliminação de ataque cibernético típica. 
 
-- Alertas de reconhecimento
-- Alertas de credencial comprometida
-- Alertas de movimento lateral
-- Alertas de predominância de domínio
-- Alertas de exfiltração
+- [Alertas de reconhecimento](atp-reconnaissance-alerts.md)
+- [Alertas de credencial comprometida](atp-compromised-credentials-alerts.md)
+- [Alertas de movimento lateral](atp-lateral-movement-alerts.md)
+- [Alertas de predominância de domínio](atp-domain-dominance-alerts.md)
+- [Alertas de exfiltração](atp-exfiltration-alerts.md)
 
 ## Detecções de versão prévia <a name="preview-detections"></a>
 

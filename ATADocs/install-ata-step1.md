@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: barbkess
-ms.date: 02/28/2019
+ms.date: 03/07/2019
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
 ms.service: ''
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: b3cceb18-0f3c-42ac-8630-bdc6b310f1d6
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: dc1ee8c4c0610f1d6289319fadf92e2b7aae6072
-ms.sourcegitcommit: 8681c4ed6ede58ace737f31eeff9a680b8e4256d
+ms.openlocfilehash: 81029f1f651f3138688b6952d47bba05a32e7efd
+ms.sourcegitcommit: 76b818e4a95842e2175e0efb4db142704b66daa2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "57007476"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57562254"
 ---
 # <a name="install-ata---step-1"></a>Instalação do ATA - Etapa 1
 
@@ -37,7 +37,7 @@ O procedimento de instalação fornece instruções para executar uma nova insta
 Depois de verificar que o servidor atende aos requisitos, você pode prosseguir com a instalação do Centro do ATA.
     
 > [!NOTE]
->Se você tiver adquirido uma licença para EMS (Enterprise Mobility + Security) diretamente pelo portal do Office 365 ou pelo modelo de licenciamento CSP (Parceiro de Solução de Nuvem) e não tiver acesso ao ATA pelo VLSC (Centro de Licenciamento por Volume da Microsoft), entre em contato com o Atendimento ao Cliente Microsoft para obter o processo para ativar o ATA (Advanced Threat Analytics).
+>Se você adquiriu uma licença para o Enterprise Mobility + Security (EMS) diretamente pelo portal Microsoft 365 ou por meio do modelo de licença do CSP(Cloud Solution Partner) e não tiver acesso ao ATA por meio do Microsoft VLSC (Volume Licensing Center), entre em contato com o atendimento ao cliente da Microsoft para obter o processo para ativar o ATA (Advanced Threat Analytics).
 
 Execute as seguintes etapas no servidor do Centro do ATA.
 

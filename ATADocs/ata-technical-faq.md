@@ -2,10 +2,10 @@
 title: Perguntas frequentes sobre o Advanced Threat Analytics | Microsoft Docs
 description: Fornece uma lista de perguntas frequentes sobre o ATA e as respostas associadas.
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: barbkess
-ms.date: 5/6/2018
+ms.date: 03/07/2019
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
 ms.service: ''
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: a7d378ec-68ed-4a7b-a0db-f5e439c3e852
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: b69d78bc5af42b8775c30f49838ba8c7754fe313
-ms.sourcegitcommit: 78748bfd75ae68230d72ad11010ead37d96b0c58
+ms.openlocfilehash: 3db8a52c87e45635d632ad5b2d2f1ba7a82d2706
+ms.sourcegitcommit: 76b818e4a95842e2175e0efb4db142704b66daa2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56077857"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57562271"
 ---
 # <a name="ata-frequently-asked-questions"></a>Perguntas frequentes sobre o ATA
 
@@ -31,7 +31,7 @@ Este artigo fornece uma lista de perguntas frequentes sobre o ATA e também as r
 
 Se você tiver um Enterprise Agreement ativo, poderá baixar o software do VLSC (Centro de Licenciamento por Volume da Microsoft).
 
-Se você tiver adquirido uma licença para EMS (Enterprise Mobility + Security) diretamente pelo portal do Office 365 ou pelo modelo de licenciamento CSP (Parceiro de Solução de Nuvem) e não tiver acesso ao ATA pelo VLSC (Centro de Licenciamento por Volume da Microsoft), entre em contato com o Atendimento ao Cliente Microsoft para obter o processo para ativar o ATA (Advanced Threat Analytics).
+Se você adquiriu uma licença para o Enterprise Mobility + Security (EMS) diretamente pelo portal Microsoft 365 ou por meio do modelo de licença do CSP(Cloud Solution Partner) e não tiver acesso ao ATA por meio do Microsoft VLSC (Volume Licensing Center), entre em contato com o atendimento ao cliente da Microsoft para obter o processo para ativar o ATA (Advanced Threat Analytics).
 
 ## <a name="what-should-i-do-if-the-ata-gateway-wont-start"></a>O que devo fazer se o Gateway do ATA não inicia?
 Procure o erro mais recente no log de erros atual (No local onde o ATA está instalado, na pasta "Logs").

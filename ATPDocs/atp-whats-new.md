@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: barbkess
-ms.date: 03/03/2019
+ms.date: 03/10/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.prod: ''
@@ -14,14 +14,27 @@ ms.technology: ''
 ms.assetid: 7d0f33db-2513-4146-a395-290e001f4199
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 1edc9d7848721426e47cb82730b6de1db87e1874
-ms.sourcegitcommit: 929f28783110c7e114ab36d4cccd50563f4030df
+ms.openlocfilehash: 804f8855ae11b36c01ac52f30590dc36aa4160e1
+ms.sourcegitcommit: aad7a417addae3f21f81ea2b7336c3d83659f592
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57253990"
+ms.lasthandoff: 03/10/2019
+ms.locfileid: "57725664"
 ---
 # <a name="whats-new-in-azure-atp"></a>Novidades do Azure ATP
+
+## <a name="azure-atp-release-269"></a>ATP do Azure versão 2.69
+Lançada em 10 de março de 2019
+
+- **Aprimoramento do recurso: Alerta de suspeita de roubo de identidade (Pass-the-Ticket)**<br> Esse alerta agora apresenta nova evidência mostrando os detalhes das conexões feitas usando o protocolo RDP (Área de Trabalho Remota). A evidência adicionada facilita a correção do problema conhecido de alertas benignos verdadeiro positivo (B-TP) causado pelo uso da credencial da Credential Guard remota através de conexões de RDP. 
+
+- **Aprimoramento do recurso: Alerta de execução remota de código sobre DNS**<br> Esse alerta agora apresenta nova evidência mostrando ao seu controlador de domínio as atualizações de status de segurança, informando quando atualizações são necessárias.   
+
+- **Nova documentação: Alerta de segurança do MITRE ATT & CK Matrix™ do ATP do Azure**<br>
+
+    Para explicar e facilitar o mapeamento da relação entre alertas de segurança do ATP do Azure e o MITRE ATT & CK Matrix conhecido, adicionamos as técnicas MITRE relevantes para listagens de alertas de segurança do ATP do Azure. Essa referência adicional facilita o reconhecimento da técnica de ataque suspeito potencialmente em uso quando um alerta de segurança do ATP do Azure é acionado. Saiba mais sobre o [guia de alerta de segurança do ATP do Azure](suspicious-activity-guide.md).  
+
+- Essa versão também inclui aprimoramentos e correções de bug da infraestrutura do sensor interno.
 
 ## <a name="azure-atp-release-268"></a>Azure ATP versão 2.68
 Lançada em 3 de março de 2019
