@@ -14,12 +14,12 @@ ms.technology: ''
 ms.assetid: e9cf68d2-36bd-4b0d-b36e-7cf7ded2618e
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: d20359547696f7fe3cafd75a638563d400f0ed82
-ms.sourcegitcommit: 0e77ed44ee73ac84923fa7379e555f5ed9602aca
+ms.openlocfilehash: de426a06fb7d0893d56b82fcaa9599f523054774
+ms.sourcegitcommit: 9252c74620abb99d8fa2b8d2cc2169018078bec9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57017295"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "57981197"
 ---
 # <a name="tutorial-compromised-credential-alerts"></a>Tutorial: Alertas de credencial comprometida  
 
@@ -90,7 +90,7 @@ Em uma pulverização de senhas, depois de enumerar com êxito uma lista de usu�
 
 É importante verificar se alguma tentativa de logon terminou com uma autenticação bem-sucedida.
 
-1. Se quaisquer tentativas de logon terminaram com êxito, verifique se qualquer uma das  **contas adivinhadas** normalmente são usadas desse computador de origem.
+1. Se alguma tentativa de logon terminar com êxito, verifique se alguma das **Contas adivinhadas** é usada normalmente nesse computador de origem.
    - Há alguma chance dessas contas falharem porque uma senha incorreta foi usada?  
    - Verifique com os usuários se eles geraram a atividade (falha ao fazer logon algumas vezes e, em seguida, êxito). 
 

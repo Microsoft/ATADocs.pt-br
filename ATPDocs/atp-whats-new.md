@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: barbkess
-ms.date: 03/10/2019
+ms.date: 03/17/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.prod: ''
@@ -14,14 +14,31 @@ ms.technology: ''
 ms.assetid: 7d0f33db-2513-4146-a395-290e001f4199
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 804f8855ae11b36c01ac52f30590dc36aa4160e1
-ms.sourcegitcommit: aad7a417addae3f21f81ea2b7336c3d83659f592
+ms.openlocfilehash: 0da5dd11c8d342b6342c06631a73e8c5f119c42c
+ms.sourcegitcommit: 9252c74620abb99d8fa2b8d2cc2169018078bec9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/10/2019
-ms.locfileid: "57725664"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "57981214"
 ---
 # <a name="whats-new-in-azure-atp"></a>Novidades do Azure ATP
+
+## <a name="azure-atp-release-270"></a>ATP do Azure versão 2.70
+Lançado em 17 de março de 2019
+
+- **Aprimoramento do recurso: nível de confiança de NNR (Resolução de Nomes de Rede) adicionado a vários alertas**<br> A NNR (Resolução de Nomes de Rede) é usada para ajudar a identificar positivamente a identidade da entidade de origem das suspeitas de ataque. Adicionando os níveis de confiança de NNR às listas de evidências de alerta do ATP do Azure, agora você pode avaliar e compreender instantaneamente o nível de confiança de NNR relacionado às possíveis origens identificadas e aplicar as correções adequadas. 
+
+    A evidência no nível de confiança de NNR foi adicionada aos seguintes alertas:
+  - [Reconhecimento de mapeamento de rede (DNS)](atp-reconnaissance-alerts.md#network-mapping-reconnaissance-dns-external-id-2007)
+  - [Suspeita de roubo de identidade (Pass-the-Ticket)](atp-lateral-movement-alerts.md#suspected-identity-theft-pass-the-ticket-external-id-2018) 
+
+  - [Suspeita de ataque de retransmissão de NTLM (conta do Exchange) — versão prévia](atp-lateral-movement-alerts.md#suspected-ntlm-relay-attack-exchange-account-external-id-2037---preview)
+  - [Suspeita de ataque de DCSync (replicação de serviços de diretório)](atp-domain-dominance-alerts.md#suspected-dcsync-attack-replication-of-directory-services-external-id-2006)
+
+- **Cenário adicional de alerta de integridade: falha ao iniciar o serviço do sensor do ATP do Azure**<br>Agora, quando o sensor do ATP do Azure não pode ser iniciado devido a um problema de driver de captura de rede, um alerta de integridade do sensor é disparado. Confira [Solução de problemas do sensor do ATP do Azure com logs do ATP do Azure](troubleshooting-atp-using-logs.md), para obter mais informações sobre os logs do ATP do Azure e como usá-los. 
+
+  
+- Essa versão também inclui aprimoramentos e correções de bug da infraestrutura do sensor interno.
 
 ## <a name="azure-atp-release-269"></a>ATP do Azure versão 2.69
 Lançada em 10 de março de 2019

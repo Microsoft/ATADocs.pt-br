@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: barbkess
-ms.date: 02/24/2019
+ms.date: 03/17/2019
 ms.topic: tutorial
 ms.collection: M365-security-compliance
 ms.prod: ''
@@ -14,12 +14,12 @@ ms.technology: ''
 ms.assetid: e9cf68d2-36bd-4b0d-b36e-7cf7ded2618e
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: ee5daa580b37db15fde0e4b276e49f4688c7189b
-ms.sourcegitcommit: aad7a417addae3f21f81ea2b7336c3d83659f592
+ms.openlocfilehash: 8d61fb120179ee8e53aa42e50d2a0841197b8032
+ms.sourcegitcommit: 9252c74620abb99d8fa2b8d2cc2169018078bec9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/10/2019
-ms.locfileid: "57725579"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58136852"
 ---
 # <a name="tutorial-reconnaissance-alerts"></a>Tutorial: Alertas de reconhecimento  
 
@@ -143,24 +143,31 @@ Verificadores de segurança e aplicativos legítimos podem gerar consultas DNS.
 **Correção sugerida e etapas de prevenção**
 
 **Correção:**
+
 - Contenha o computador de origem. 
     - Encontre a ferramenta que realizou o ataque e remova-a.
     - Procure usuários que estavam conectados no mesmo período em que a atividade ocorreu, pois eles também podem estar comprometidos. Redefina as senhas e habilite o MFA.
 
 **Prevenção:**<br>
+
 é importante evitar ataques futuros que usem consultas AXFR protegendo seu servidor DNS interno.
 
 - Proteja seu servidor DNS interno para impedir o reconhecimento usando DNS desabilitando a transferências de zona ou [restringindo as transferências de zona](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee649273(v=ws.10)) apenas a endereços IP especificados. A modificação de transferências de zona é uma tarefa entre uma lista de verificação que deve ser resolvida para [proteger seus servidores DNS contra ataques internos e externos](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee649273(v=ws.10)).
 
 ## <a name="security-principal-reconnaissance-ldap-external-id-2038---preview"></a>Reconhecimento de entidade de segurança (LDAP) (ID 2038 externa) – versão prévia
 
-**Descrição** O reconhecimento de entidade de segurança é usado pelos invasores para obter informações essenciais sobre o ambiente de domínio. As informações que ajudam os invasores a mapear a estrutura de domínio, bem como identificar contas privilegiadas para uso em etapas posteriores em sua cadeia de encerramento do ataque. O protocolo LDAP (Lightweight Directory Access Protocol) é um dos métodos mais populares usados para fins legítimos e mal-intencionados para consultar o Active Directory Domain Services.  O reconhecimento de entidade de segurança focada no LDAP é normalmente usado como a primeira fase de um ataque Kerberoasting. Os ataques de Kerberoasting são usados para obter uma lista de destino de SPNs (nome da entidade de serviço), que os invasores tentam, então, obter tíquetes do TGS (servidor de concessão de tíquete).
+**Descrição**
+
+O reconhecimento de entidade de segurança é usado pelos invasores para obter informações críticas sobre o ambiente de domínio. As informações que ajudam os invasores a mapear a estrutura de domínio, bem como identificar contas privilegiadas para uso em etapas posteriores em sua cadeia de encerramento do ataque. O protocolo LDAP (Lightweight Directory Access Protocol) é um dos métodos mais populares usados para fins legítimos e mal-intencionados para consultar o Active Directory Domain Services.  O reconhecimento de entidade de segurança focada no LDAP é normalmente usado como a primeira fase de um ataque Kerberoasting. Os ataques de Kerberoasting são usados para obter uma lista de destino de SPNs (nome da entidade de serviço), que os invasores tentam, então, obter tíquetes do TGS (servidor de concessão de tíquete).
 
 Para permitir que o ATP do Azure crie o perfil com precisão e aprenda os usuários legítimos, nenhum alerta desse tipo é acionado nos primeiros 10 dias após a implantação do ATP do Azure. Depois que a fase de aprendizado inicial do ATP do Azure é concluída, os alertas são gerados em computadores que executam consultas de enumeração de LDAP suspeitas ou consultas destinadas a grupos confidenciais usando métodos não observados anteriormente.  
 
-**Período de aprendizado** Dez dias por computador, desde o dia do primeiro evento observado da máquina. 
+**Período de aprendizado**
+
+10 dias por computador, desde o dia do primeiro evento observado pelo computador. 
 
 **TP, B-TP ou FP**
+
 1.  Clique no computador de origem e acesse a página de perfil. 
     1. Este computador de origem deve gerar essa atividade? 
     2. Se o computador e a atividade forem esperados, **Feche** o alerta de segurança e exclua esse computador como uma atividade **B-TP**. 
@@ -214,7 +221,9 @@ Use a [ferramenta Net Cease](https://gallery.technet.microsoft.com/Net-Cease-Blo
 
 *Nome anterior:* Reconhecimento usando consultas de serviços de diretório 
 
-**Descrição** O reconhecimento de usuário e de associação a um grupo é usado por invasores para mapear a estrutura de diretório e visar contas com privilégios para as próximas etapas do ataque. O protocolo SAM-R (Remoto do Gerenciador de Contas de Segurança) é um dos métodos usados para consultar o diretório para realizar esse tipo de mapeamento.  
+**Descrição**
+ 
+O reconhecimento de usuário e de associação a um grupo é usado pelos invasores para mapear a estrutura de diretório e visar contas com privilégios para as próximas etapas do ataque. O protocolo SAM-R (Remoto do Gerenciador de Contas de Segurança) é um dos métodos usados para consultar o diretório para realizar esse tipo de mapeamento.  
 Nessa detecção, nenhum alerta é disparado no primeiro mês após a implantação do ATP do Azure (período de aprendizado). Durante o período de aprendizado, o Azure ATP cria perfis de quais consultas SAM-R são feitas de quais computadores, de consultas de enumeração e individuais de contas confidenciais. 
 
 **Período de aprendizado**

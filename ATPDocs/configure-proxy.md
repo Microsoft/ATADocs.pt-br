@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: barbkess
-ms.date: 12/02/2018
+ms.date: 03/17/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.prod: ''
@@ -14,12 +14,12 @@ ms.technology: ''
 ms.assetid: 9c173d28-a944-491a-92c1-9690eb06b151
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: bc4e207a636d6c6641ccb8c6ac4e1695d82ec0d6
-ms.sourcegitcommit: c48db18274edb2284e281960c6262d97f96e01d2
+ms.openlocfilehash: 5490688653edddae020a8b63191a1c9a7b6e9f8a
+ms.sourcegitcommit: 9252c74620abb99d8fa2b8d2cc2169018078bec9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56263736"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58136800"
 ---
 # <a name="configure-endpoint-proxy-and-internet-connectivity-settings-for-your-azure-atp-sensor"></a>Configurar o proxy do ponto de extremidade e configurações de conectividade de Internet para o Sensor de ATP do Azure
 
@@ -58,18 +58,19 @@ O proxy estático é configurável por meio do Registro. Você deve copiar a con
 
 ## <a name="enable-access-to-azure-atp-service-urls-in-the-proxy-server"></a>Habilitar o acesso a URLs de serviço do Azure ATP no servidor proxy
 
-Se um proxy ou firewall estiver bloqueando todo o tráfego por padrão e permitindo somente domínios específicos ou se a verificação de HTTPS (inspeção de SSL) estiver habilitada, verifique se as seguintes URLs estão na lista de permissão para permitir a comunicação com o serviço do Azure ATP na porta 443:
+Para habilitar o acesso ao ATP do Azure, permita o tráfego às URLs a seguir:
 
-|Local do serviço|Registro DNS .Atp.Azure.com|
+- \<nome-da-sua-instância>.atp.azure.com – para conectividade do console. Por exemplo, "Contoso-corp.atp.azure.com"
+
+- \<nome-da-sua-instância>sensorapi.atp.azure.com – para conectividade de sensores. Por exemplo, "contoso-corpsensorapi.atp.azure.com"
+
+As URLs anteriores são mapeadas automaticamente para o local do serviço correto da instância do ATP do Azure. Se você precisar de um controle mais granular, considere permitir o tráfego para os pontos de extremidade relevantes da tabela a seguir:
+
+|Local do serviço|Registro DNS *.atp.azure.com|
 |----|----|
 |EUA |triprd1wcusw1sensorapi.atp.azure.com<br>triprd1wcuswb1sensorapi.atp.azure.com<br>triprd1wcuse1sensorapi.atp.azure.com|
 |Ocidental|triprd1wceun1sensorapi.atp.azure.com<br>triprd1wceuw1sensorapi.atp.azure.com|
 |Ásia|triprd1wcasse1sensorapi.atp.azure.com|
-
-
-Também é possível fortalecer as regras de firewall ou de proxy para uma instância específica criado por você definindo uma regra para os seguintes registros DNS:
-- \<nome-da-sua-instância>.atp.azure.com – para conectividade do console. Por exemplo, "Contoso-corp.atp.azure.com"
-- \<nome-da-sua-instância>sensorapi.atp.azure.com – para conectividade de sensores. Por exemplo, "contoso-corpsensorapi.atp.azure.com"
 
  
 > [!NOTE]

@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: barbkess
-ms.date: 02/11/2019
+ms.date: 03/18/2019
 ms.topic: tutorial
 ms.collection: M365-security-compliance
 ms.prod: ''
@@ -14,12 +14,12 @@ ms.technology: ''
 ms.assetid: 2257eb00-8614-4577-b6a1-5c65085371f2
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 58c8445fc47a7dfb45730c96b4c438f32d539ee5
-ms.sourcegitcommit: c48db18274edb2284e281960c6262d97f96e01d2
+ms.openlocfilehash: 3e2dffff3d9c2c784709c323877ec74601781a05
+ms.sourcegitcommit: 9252c74620abb99d8fa2b8d2cc2169018078bec9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56263192"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58136851"
 ---
 # <a name="tutorial-lateral-movement-alerts"></a>Tutorial: Alertas de movimento lateral  
 
@@ -121,6 +121,12 @@ A resolução bem-sucedida de IPs nos computadores da organização é fundament
 3. O sensor não está resolvendo um ou mais dos endereços IP de destino? Se um endereço IP de destino não for resolvido, isso poderá indicar que as portas certas entre os dispositivos e o sensor não estão abertas corretamente. 
 
     Se a resposta a uma das perguntas anteriores for **sim**, verifique se os computadores de origem e de destinos são os mesmos. Se eles forem o mesmo, esse será um **FP** e indicando que não houve nenhuma tentativa real de **Pass-the-Ticket**. 
+
+O recurso [Remote Credential Guard](https://docs.microsoft.com/windows/security/identity-protection/remote-credential-guard) de conexões de RDP, quando usado com o Windows 10 no Windows Server 2016 e mais recentes, pode causar alertas **B-TP**. Usando a evidência de alerta, verifique se o usuário fez uma conexão de área de trabalho remota do computador de origem para o computador de destino.
+
+1. Verifique se há alguma evidência de correlação.
+2. Se houver evidência de correlação, verifique se a conexão de RDP foi feita usando o Remote Credential Guard. 
+3. Se a resposta for sim, **feche** o alerta de segurança como uma atividade **T-BP**. 
 
 Há aplicativos personalizados que encaminham tíquetes em nome de usuários. Esses aplicativos têm direitos de delegação para tíquetes de usuário.
 
