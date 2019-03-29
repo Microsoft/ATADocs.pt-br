@@ -14,12 +14,12 @@ ms.technology: ''
 ms.assetid: 3261155c-3c72-4327-ba29-c113c63a4e6d
 ms.reviewer: arzinger
 ms.suite: ems
-ms.openlocfilehash: eeb158ed3da07b57a3071b5fa9f60b8ec9d20db7
-ms.sourcegitcommit: 9252c74620abb99d8fa2b8d2cc2169018078bec9
+ms.openlocfilehash: b057fdc6362e8b5199b1323f09e3c81a09291e5d
+ms.sourcegitcommit: 6975497acaf298af393f96573e1790ab617fa5b4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "58136885"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58406613"
 ---
 # <a name="azure-atp-siem-log-reference"></a>Referência de logs de SIEM do Azure ATP
 
@@ -51,7 +51,7 @@ Os campos a seguir e seus valores são encaminhados para o SIEM:
 > [!NOTE]
 > Caso planeje criar automação ou scripts para logs de SIEM do ATP do Azure, é recomendável usar o campo **externalId** para identificar o tipo de alerta em vez de usar o nome do alerta para essa finalidade. Nomes de alertas, ocasionalmente, podem ser modificados, enquanto o **externalId** de cada alerta é permanente.  
 
-## <a name="azure-atp-security-alert-unique-externalids"></a>ExternalIds exclusivas de alerta de segurança do ATP do Azure
+## <a name="azure-atp-security-alert-unique-external-ids"></a>IDs externas exclusivas de alerta de segurança do ATP do Azure
 
 > [!div class="mx-tableFixed"] 
 
@@ -59,7 +59,7 @@ Os campos a seguir e seus valores são encaminhados para o SIEM:
 |---------|----------|---------|---------|
 |[Reconhecimento de enumeração de conta](atp-reconnaissance-alerts.md#account-enumeration-reconnaissance-external-id-2003)|Reconhecimento de enumeração de conta|2003|Descoberta|
 |[Exportação de dados por SMB](atp-exfiltration-alerts.md#data-exfiltration-over-smb-external-id-2030)| NA| 2030|Exportação,<br>Movimentação lateral,<br>Comando e controle|
-|[Atividade de Honeytoken](atp-compromised-credentials-alerts.md#honeytoken-activity-external-id-2014)|Atividade de Honeytoken|2014||
+|[Atividade de Honeytoken](atp-compromised-credentials-alerts.md#honeytoken-activity-external-id-2014)|Atividade de Honeytoken|2014|Credencial de acesso,<br> Descoberta|
 |[Solicitação mal-intencionada de chave mestra da API de Proteção de Dados](atp-domain-dominance-alerts.md#malicious-request-of-data-protection-api-master-key-external-id-2020)|Solicitação de informações privadas para proteção contra dados mal-intencionados|2020|Credencial de acesso|
 |[Reconhecimento de mapeamento de rede (DNS)](atp-reconnaissance-alerts.md#network-mapping-reconnaissance-dns-external-id-2007)|Reconhecimento usando DNS|2007|Descoberta|
 |[Tentativa de execução remota de código](atp-domain-dominance-alerts.md#remote-code-execution-attempt-external-id-2019)|Tentativa de execução remota de código|2019|Execução,<br> Persistência,<br> Elevação de privilégios,<br> Evasão de defesa,<br> Movimentação lateral|
@@ -70,20 +70,20 @@ Os campos a seguir e seus valores são encaminhados para o SIEM:
 |[Suspeita de ataque de força bruta (SMB)](atp-compromised-credentials-alerts.md#suspected-brute-force-attack-smb-external-id-2033)|Implementação de protocolo incomum (possível uso de ferramentas mal-intencionadas, como a Hydra)|2033|Movimentação lateral|
 |[Suspeita de ataque de DCShadow (promoção do controlador de domínio)](atp-domain-dominance-alerts.md#suspected-dcshadow-attack-domain-controller-promotion-external-id-2028)|Promoção do controlador de domínio suspeito (possível ataque DCShadow)|2028|Evasão de defesa|
 |[Suspeita de ataque de DCShadow (solicitação de replicação do controlador de domínio)](atp-domain-dominance-alerts.md#suspected-dcshadow-attack-domain-controller-replication-request-external-id-2029)|Solicitação de replicação de controlador de domínio suspeita (possível ataque DCShadow)|2029|Evasão de defesa|
-|[Suspeita de ataque de DCSync (replicação de serviços de diretório)](atp-domain-dominance-alerts.md#suspected-dcsync-attack-replication-of-directory-services-external-id-2006)|Replicação mal-intencionada de serviços de diretório|2006||
-|[Suspeita de uso de Golden Ticket (downgrade de criptografia)](atp-domain-dominance-alerts.md#suspected-golden-ticket-usage-encryption-downgrade-external-id-2009)|Atividade de downgrade de criptografia (possível ataque golden ticket)|2009|
-|[Suspeita de uso de Golden Ticket (dados de autorização forjados)](atp-domain-dominance-alerts.md#suspected-golden-ticket-usage-forged-authorization-data-external-id-2013) |Elevação de privilégios usando dados de autorização forjados|2013|Elevação de privilégios,<br>Movimentação lateral||
-|[Suspeita de uso de Golden Ticket (conta inexistente)](atp-domain-dominance-alerts.md#suspected-golden-ticket-usage-nonexistent-account-external-id-2027)|Golden Ticket do Kerberos – conta não existente|2027||
-|[Suspeita de uso de Golden Ticket (anomalia de tíquete)](atp-domain-dominance-alerts.md#suspected-golden-ticket-usage-ticket-anomaly-external-id-2032)|NA|2032||
-|[Suspeita de uso de Golden Ticket (anomalia de tempo)](atp-domain-dominance-alerts.md#suspected-golden-ticket-usage-time-anomaly-external-id-2022)|Golden Ticket do Kerberos – anomalia de tempo|2022||
+|[Suspeita de ataque de DCSync (replicação de serviços de diretório)](atp-domain-dominance-alerts.md#suspected-dcsync-attack-replication-of-directory-services-external-id-2006)|Replicação mal-intencionada de serviços de diretório|2006|Persistência,<br> Credencial de acesso|
+|[Suspeita de uso de Golden Ticket (downgrade de criptografia)](atp-domain-dominance-alerts.md#suspected-golden-ticket-usage-encryption-downgrade-external-id-2009)|Atividade de downgrade de criptografia (possível ataque golden ticket)|2009|Elevação de privilégios,<br> Movimentação lateral,<br>Persistência|
+|[Suspeita de uso de Golden Ticket (dados de autorização forjados)](atp-domain-dominance-alerts.md#suspected-golden-ticket-usage-forged-authorization-data-external-id-2013)|Elevação de privilégios usando dados de autorização forjados|2013|Elevação de privilégios,<br>Movimentação lateral,<br>Persistência|
+|[Suspeita de uso de Golden Ticket (conta inexistente)](atp-domain-dominance-alerts.md#suspected-golden-ticket-usage-nonexistent-account-external-id-2027)|Golden Ticket do Kerberos – conta não existente|2027|Elevação de privilégios,<br> Movimentação lateral,<br>Persistência|
+|[Suspeita de uso de Golden Ticket (anomalia de tíquete)](atp-domain-dominance-alerts.md#suspected-golden-ticket-usage-ticket-anomaly-external-id-2032)|NA|2032|Elevação de privilégios,<br> Movimentação lateral,<br>Persistência|
+|[Suspeita de uso de Golden Ticket (anomalia de tempo)](atp-domain-dominance-alerts.md#suspected-golden-ticket-usage-time-anomaly-external-id-2022)|Golden Ticket do Kerberos – anomalia de tempo|2022|Elevação de privilégios,<br> Movimentação lateral,<br>Persistência|
 |[Suspeita de roubo de identidade (Pass-the-Hash)](atp-lateral-movement-alerts.md#suspected-identity-theft-pass-the-hash-external-id-2017)|Roubo de identidade usando o ataque de passagem de Hash|2017|Movimentação lateral|
 |[Suspeita de roubo de identidade (Pass-the-Ticket)](atp-lateral-movement-alerts.md#suspected-identity-theft-pass-the-ticket-external-id-2018)|Roubo de identidade usando o ataque Pass-the-Ticket|2018|Movimentação lateral|
-|[Suspeita de ataque de Overpass-the-Hash (downgrade de criptografia)](atp-lateral-movement-alerts.md#suspected-overpass-the-hash-attack-encryption-downgrade-external-id-2008)|Atividade de downgrade de criptografia (possível ataque overpass-the-hash)|2008||
+|[Suspeita de ataque de Overpass-the-Hash (downgrade de criptografia)](atp-lateral-movement-alerts.md#suspected-overpass-the-hash-attack-encryption-downgrade-external-id-2008)|Atividade de downgrade de criptografia (possível ataque overpass-the-hash)|2008|Movimentação lateral|
 |[Suspeita de ataque de Overpass-the-Hash (Kerberos)](atp-lateral-movement-alerts.md#suspected-overpass-the-hash-attack-kerberos-external-id-2002)|Implementação incomum de protocolo Kerberos (possível ataque de overpass-the-hash)|2002|Movimentação lateral|
-|[Suspeita de ataque de Skeleton Key (downgrade de criptografia)](atp-domain-dominance-alerts.md#suspected-skeleton-key-attack-encryption-downgrade-external-id-2010)|Atividade de downgrade de criptografia (possível ataque de skeleton key)|2010||
+|[Suspeita de ataque de Skeleton Key (downgrade de criptografia)](atp-domain-dominance-alerts.md#suspected-skeleton-key-attack-encryption-downgrade-external-id-2010)|Atividade de downgrade de criptografia (possível ataque de skeleton key)|2010|Movimentação lateral,<br> Persistência|
 |[Suspeita de uso da estrutura de hacker Metasploit](atp-compromised-credentials-alerts.md#suspected-use-of-metasploit-hacking-framework-external-id-2034)|Implementação de protocolo incomum (possível uso das ferramentas de invasão Metasploit)|2034|Movimentação lateral|
-|[Suspeita de ataque do ransomware WannaCry](atp-compromised-credentials-alerts.md#suspected-wannacry-ransomware-attack-external-id-2035)|Implementação de protocolo incomum (possível ataque do ransomware WannaCry)|2035||
-|[Suspeita de ataque de retransmissão de NTLM (conta do Exchange) — versão prévia](atp-lateral-movement-alerts.md#suspected-ntlm-relay-attack-exchange-account-external-id-2037---preview)|NA|2037||
+|[Suspeita de ataque de retransmissão de NTLM (conta do Exchange) — versão prévia](atp-lateral-movement-alerts.md#suspected-ntlm-relay-attack-exchange-account-external-id-2037---preview)|NA|2037|Elevação de privilégios, <br> Movimentação lateral|
+|[Suspeita de ataque do ransomware WannaCry](atp-compromised-credentials-alerts.md#suspected-wannacry-ransomware-attack-external-id-2035)|Implementação de protocolo incomum (possível ataque do ransomware WannaCry)|2035|Movimentação lateral|
 |[Comunicação suspeita por DNS](atp-exfiltration-alerts.md#suspicious-communication-over-dns-external-id-2031)|Comunicação suspeita por DNS|2031|Exfiltração|
 |[Modificação suspeita de grupos confidenciais](atp-domain-dominance-alerts.md#suspicious-modification-of-sensitive-groups-external-id-2024)|Modificação suspeita de grupos confidenciais|2024|Credencial de acesso,<br>Persistência|
 |[Criação de serviço suspeito](atp-domain-dominance-alerts.md#suspicious-service-creation-external-id-2026)|Criação de serviço suspeito|2026|Execução,<br> Persistência,<br> Elevação de privilégios,<br> Evasão de defesa,<br>Movimentação lateral|
