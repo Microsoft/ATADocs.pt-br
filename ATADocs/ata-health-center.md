@@ -8,17 +8,16 @@ manager: barbkess
 ms.date: 3/21/2018
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
-ms.service: ''
 ms.technology: ''
 ms.assetid: d6c783b2-46c5-4211-b21a-d6b17f08d03d
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 5f30ab0077c099b946b592a18a2cff92633b431c
-ms.sourcegitcommit: 78748bfd75ae68230d72ad11010ead37d96b0c58
+ms.openlocfilehash: fd38d7c9f0a64b07dbb5ee497a7030e830816117
+ms.sourcegitcommit: 62b631f64a639f5df04bf805755f26c69b40e8e4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56076106"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58638667"
 ---
 # <a name="working-with-ata-system-health-and-events"></a>Trabalhando com eventos e a integridade do sistema ATA
 

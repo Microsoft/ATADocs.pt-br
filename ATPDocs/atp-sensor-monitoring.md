@@ -8,18 +8,16 @@ manager: barbkess
 ms.date: 02/13/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
-ms.prod: ''
 ms.service: azure-advanced-threat-protection
-ms.technology: ''
 ms.assetid: 92decce8-b3ae-4d32-8407-a95314a66863
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: b371cb5f2bfeef9ddc14ee11623b609c3f49dbfb
-ms.sourcegitcommit: 5d3607b3a2c9d1a35dd36287f4a5fc68fca67eb0
+ms.openlocfilehash: 4bab4db1735d84a568e300bdeb57436f230edbb5
+ms.sourcegitcommit: b468d9060eb784c16b64a9cc46dbe2d246046cdd
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/18/2019
-ms.locfileid: "56334418"
+ms.lasthandoff: 03/30/2019
+ms.locfileid: "58674292"
 ---
 # <a name="monitoring-your-domain-controller-coverage"></a>Monitorando a cobertura do controlador de domínio
 
@@ -43,7 +41,7 @@ O download do Excel da cobertura do controlador de domínio fornece as seguintes
 
 |Título|Descrição|
 |----|----|
-|Nome do host|Nome do computador|
+|nome_do_host|Nome do computador|
 |Nome de domínio|Nome de domínio|
 |Monitorado|Status de monitoramento do ATP do Azure|
 |Tipo de sensor|Sensor do ATP do Azure ou sensor autônomo do ATP do Azure|
@@ -60,5 +58,5 @@ O download do Excel da cobertura do controlador de domínio fornece as seguintes
 
 - [Arquitetura do ATP do Azure](atp-architecture.md)
 - [Configurando os sensores do ATP do Azure](install-atp-step5.md)
-- [Suporte a várias florestas](atp-multi-forest.md)
+- [Suporte para várias florestas](atp-multi-forest.md)
 - [Confira o fórum do ATP do Azure!](https://aka.ms/azureatpcommunity)

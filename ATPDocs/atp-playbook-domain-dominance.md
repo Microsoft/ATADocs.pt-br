@@ -7,12 +7,12 @@ author: mlottner
 ms.author: mlottner
 ms.date: 02/28/2019
 ms.reviewer: itargoet
-ms.openlocfilehash: 2bfbbc994ea4ec9aea57541f8f5a35590c397f84
-ms.sourcegitcommit: 8681c4ed6ede58ace737f31eeff9a680b8e4256d
+ms.openlocfilehash: b3ea5b1d2f33f9647fb9dea8927a80aeae76ee03
+ms.sourcegitcommit: 38b68d96fbf04fe40e1f9a62a1af3d1d00e63614
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "57007459"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58808250"
 ---
 # <a name="tutorial-domain-dominance-playbook"></a>Tutorial: Guia estratégico de predominância de domínio
 
@@ -194,7 +194,7 @@ O ATP do Azure detectou o método de criptografia de pré-autenticação suspeit
 
 ### <a name="golden-ticket---existing-user"></a>Golden Ticket - Usuário existente
 
-Depois de roubar o "Golden Ticket", (conta "krbtgt" explicada [aqui por meio da Replicação mal-intencionada](#Malicious-Replication)), um invasor é capaz de assinar tíquetes *como se fosse o controlador de domínio*. **Mimikatz**, o SID do Domínio e a conta "krbtgt" roubada são necessários para realizar esse ataque. Além de podermos gerar tíquetes para um usuário, podemos gerar tíquetes para usuários que nem existem.
+Depois de roubar o "Golden Ticket", (conta "krbtgt" explicada [aqui por meio da Replicação mal-intencionada](#malicious-replication)), um invasor é capaz de assinar tíquetes *como se fosse o controlador de domínio*. **Mimikatz**, o SID do Domínio e a conta "krbtgt" roubada são necessários para realizar esse ataque. Além de podermos gerar tíquetes para um usuário, podemos gerar tíquetes para usuários que nem existem.
 
 1. Como DiogoM, execute o comando abaixo no **VictimPC** para adquirir o SID do domínio:
 

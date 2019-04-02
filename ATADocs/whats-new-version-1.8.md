@@ -8,17 +8,16 @@ manager: barbkess
 ms.date: 9/03/2017
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
-ms.service: ''
 ms.technology: ''
 ms.assetid: 9592d413-df0e-4cec-8e03-be1ae00ba5dc
 ms.reviewer: ''
 ms.suite: ems
-ms.openlocfilehash: c787db603f8a6dc0e531d5c27b4b582b2d86753c
-ms.sourcegitcommit: 78748bfd75ae68230d72ad11010ead37d96b0c58
+ms.openlocfilehash: 8b13fe8b96021086859beaf73ff08b7d104f584a
+ms.sourcegitcommit: b468d9060eb784c16b64a9cc46dbe2d246046cdd
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56077058"
+ms.lasthandoff: 03/30/2019
+ms.locfileid: "58674394"
 ---
 # <a name="whats-new-in-ata-version-18"></a>Novidades na versão 1.8 do ATA
 
