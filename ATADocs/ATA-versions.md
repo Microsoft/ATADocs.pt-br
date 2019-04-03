@@ -1,30 +1,29 @@
 ---
 title: Versões do Advanced Threat Analytics | Microsoft Docs
 description: Explica as diferentes opções para versões do Microsoft Advanced Threat Analytics (ATA).
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: barbkess
-ms.date: 7/15/2018
+ms.date: 03/28/2019
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
-ms.service: ''
 ms.technology: ''
 ms.assetid: a8afbd91-c888-4dfc-94ab-72e38745163e
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 7aa52107302dc3fafe568d020fa618007491302a
-ms.sourcegitcommit: 78748bfd75ae68230d72ad11010ead37d96b0c58
+ms.openlocfilehash: 5ac40a7a6d170dab23630283d31704eb18507e45
+ms.sourcegitcommit: a0d1ae7e221fd8bbaf81bf8ae4833ae77fb80ae8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56076752"
+ms.lasthandoff: 03/31/2019
+ms.locfileid: "58752249"
 ---
 # <a name="support-for-microsoft-advanced-threat-analytics-ata-versions"></a>Suporte para versões do Microsoft Advanced Threat Analytics (ATA)
 
 
 *Aplica-se a: Advanced Threat Analytics versão 1.9*
 
-A Microsoft pretende lançar atualizações do ATA algumas vezes por ano, com cada versão de atualização com suporte por 12 meses, a partir da data de lançamento da GA (disponibilidade geral). O suporte técnico será fornecido por 12 meses. No entanto, nossa estrutura de suporte agora é dinâmica, evoluindo em duas fases de manutenção distintas, que dependem da disponibilidade da versão mais recente.
+O Microsoft ATA atualiza algumas vezes por ano, e cada versão de atualização tem suporte por 12 meses, a partir da data de lançamento da GA (disponibilidade geral). O suporte técnico será fornecido por 12 meses. No entanto, nossa estrutura de suporte agora é dinâmica, evoluindo em duas fases de manutenção distintas, que dependem da disponibilidade da versão mais recente.
 
 -   Fase de manutenção das Atualizações Críticas e de Segurança – ao executar a versão mais recente do ATA, você recebe as Atualizações Críticas e de Segurança.
 
@@ -48,6 +47,7 @@ A Microsoft pretende lançar atualizações do ATA algumas vezes por ano, com ca
 |1.8.1|1.8.6765|02 DE AGOSTO DE 2017|02 DE AGOSTO DE 2018|
 |1.9|1.9.7312|21 DE MARÇO DE 2018|21 DE MARÇO DE 2019|
 |1.9.1|1.9.7412|1º DE JULHO DE 2018|1º DE JULHO DE 2019|
+|1.9.2|1.9.7475|28 DE MARÇO DE 2019|28 DE MARÇO DE 2020|
 
 
 

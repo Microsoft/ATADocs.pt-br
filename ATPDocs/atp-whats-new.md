@@ -5,23 +5,31 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: barbkess
-ms.date: 03/24/2019
+ms.date: 03/31/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
-ms.prod: ''
 ms.service: azure-advanced-threat-protection
-ms.technology: ''
 ms.assetid: 7d0f33db-2513-4146-a395-290e001f4199
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: b39c51d725a652fe1e936437ad3d0bf0c7d86db7
-ms.sourcegitcommit: 6975497acaf298af393f96573e1790ab617fa5b4
+ms.openlocfilehash: ec0a64b0b4467ae27642dd59281b150fc6953f64
+ms.sourcegitcommit: db60935a92fe43fe149f6a4d3114fe0edaa1d331
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58406630"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58764062"
 ---
 # <a name="whats-new-in-azure-atp"></a>Novidades do Azure ATP
+
+## <a name="azure-atp-release-272"></a>ATP do Azure, versão 2.72
+Lançada em 31 de março de 2019
+
+- **Aprimoramento do recurso: profundidade com escopo do LMP (caminho de movimento lateral)**<br>
+Os caminhos de movimento lateral (LMP) é um método principal para a descoberta de ameaças e riscos na ATP do Azure. Para ajudar a manter o foco em riscos críticos para os usuários mais confidenciais, essa atualização torna mais fácil e rápido analisar e corrigir riscos para esses usuários em cada LMP, limitando o escopo e a profundidade de cada gráfico exibido.   
+
+    Confira os [caminhos de movimento lateral](use-case-lateral-movement-path.md) para saber mais sobre como a ATP do Azure usa os LMPs para expor riscos de acesso a cada entidade em seu ambiente.   
+
+- Essa versão também inclui aprimoramentos e correções de bug da infraestrutura do sensor interno.
 
 ## <a name="azure-atp-release-271"></a>ATP do Azure versão 2.71
 Lançado em 24 de março de 2019

@@ -5,20 +5,19 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: barbkess
-ms.date: 7/25/2018
+ms.date: 03/31/2019
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
-ms.service: ''
 ms.technology: ''
 ms.assetid: d89e7aff-a6ef-48a3-ae87-6ac2e39f3bdb
 ms.reviewer: arzinger
 ms.suite: ems
-ms.openlocfilehash: bf014e43711d45b74d5bb5efa7a93d7c3e1532d7
-ms.sourcegitcommit: 78748bfd75ae68230d72ad11010ead37d96b0c58
+ms.openlocfilehash: edac28031e9faa3e5c23bbbd82ef4ce023f1f249
+ms.sourcegitcommit: db60935a92fe43fe149f6a4d3114fe0edaa1d331
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56077721"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58763994"
 ---
 # <a name="troubleshooting-ata-known-issues"></a>Solução de problemas conhecidos do ATA
 
@@ -65,6 +64,8 @@ Esta seção detalha os possíveis erros nas implantações do ATA e as etapas n
 > |System.Net.Http.HttpRequestException: ocorreu um erro ao enviar a solicitação. System.Net.WebException: o servidor remoto retornou um erro: (407) Autenticação de Proxy Necessária.|O processo de implantação atingiu o tempo limite, uma vez que ele não pôde acessar o Centro do ATA devido à configuração incorreta de proxy.|Desabilite a configuração de proxy antes da implantação e habilite a configuração de proxy novamente. Como alternativa, você pode configurar uma exceção no proxy.|
 > |System.Net.Sockets.SocketException: uma conexão existente foi fechada à força pelo host remoto||Use uma das seguintes opções: </br>Habilitar o TLS 1.0 no Gateway ATA </br>Habilite o TLS 1.2 no .Net definindo as chaves de registro para usar os padrões do sistema operacional para SSL e TLS, da seguinte forma:</br> `[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\v4.0.30319] "SystemDefaultTlsVersions"=dword:00000001`</br> `[HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\.NETFramework\v4.0.30319] "SystemDefaultTlsVersions"=dword:00000001`</br>`[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\v4.0.30319] "SchUseStrongCrypto"=dword:00000001` </br>`[HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\.NETFramework\v4.0.30319] " SchUseStrongCrypto"=dword:00000001`|
 > |Erro [\[]DeploymentModel[\]] Falha na autenticação de gerenciamento [\[]CurrentlyLoggedOnUser=<domain>\<username>Status=FailedAuthentication Exception=[\]]|O processo de implantação do Gateway do ATA ou do Gateway Lightweight do ATA não conseguiu autenticar com sucesso o ATA Center|Abra um navegador no computador no qual o processo de implantação falhou e veja se você pode alcançar o Console do ATA. </br>Se não, inicie a solução de problemas para ver o motivo de o navegador não conseguir autenticar o Centro do ATA. </br>Verifique a: </br>Configuração de proxy</br>Problemas de rede</br>Configurações de política de grupo para a autenticação no computador que difere do Centro do ATA.|
+> | Erro [\[] DeploymentModel [\]] Falha na autenticação de gerenciamento|Falha na autenticação de certificado do Centro|O certificado do Centro requer uma conexão de internet para validação. Verifique se o serviço de Gateway tem a configuração de proxy adequada para habilitar a conexão e a validação.|
+
 
 
 ## <a name="ata-center-errors"></a>Erros do Centro do ATA

@@ -1,25 +1,23 @@
 ---
-title: Apresentando os caminhos de movimento lateral com a ATP do Azure | Microsoft Docs
+title: Entender e usar os Caminhos de Movimento Lateral com a ATP do Azure| Microsoft Docs
 description: Este artigo descreve os possíveis LMPs (caminhos de movimento lateral) da ATP (Proteção Avançada contra Ameaças) do Azure.
 keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: barbkess
-ms.date: 11/25/2018
+ms.date: 03/31/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
-ms.prod: ''
 ms.service: azure-advanced-threat-protection
-ms.technology: ''
 ms.assetid: de15c920-8904-4124-8bdc-03abd9f667cf
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: c115584dd4898e7453325125888667a1bb9a53d6
-ms.sourcegitcommit: c48db18274edb2284e281960c6262d97f96e01d2
+ms.openlocfilehash: 4a24f542576a716ff7a9ffdcde542e6317d394c0
+ms.sourcegitcommit: db60935a92fe43fe149f6a4d3114fe0edaa1d331
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56263396"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58764011"
 ---
 # <a name="azure-atp-lateral-movement-paths-lmps"></a>LMPs (caminhos de movimento lateral) da ATP do Azure 
 
@@ -50,12 +48,11 @@ Descubra quando os possíveis LMPs foram identificados e quais entidades relacio
 ## <a name="lmp-discovery"></a>Descoberta de LMP
 
 Na guia Atividades, uma indicação é fornecida quando um novo possível LMP é identificado:
-- Usuários confidenciais – quando foi identificado um novo caminho até um usuário confidencial
+- Usuários confidenciais – quando um novo caminho é identificado a um usuário confidencial
 
 ![LMP (caminho de movimento lateral) confidencial da ATP do Azure identificado](./media/atp-lmp-activities.png)
 
-
-- Usuários e computadores não confidenciais – quando essa entidade foi identificada em um possível LMP que leva a um usuário confidencial.
+- Usuários e computadores não confidenciais – quando essa entidade é identificada em um possível LMP que leva a um usuário confidencial.
 
 ![LMP (caminho de movimento lateral) não confidencial da ATP do Azure identificado](./media/atp-lateral-non-sensitive.png)
 

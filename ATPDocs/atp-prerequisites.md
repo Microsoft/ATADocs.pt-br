@@ -5,21 +5,19 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: barbkess
-ms.date: 03/24/2019
+ms.date: 03/31/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
-ms.prod: ''
 ms.service: azure-advanced-threat-protection
-ms.technology: ''
 ms.assetid: 62c99622-2fe9-4035-9839-38fec0a353da
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 7619c0bf7f1e8a6cf90956124c683400bc5c686d
-ms.sourcegitcommit: 6975497acaf298af393f96573e1790ab617fa5b4
+ms.openlocfilehash: 63d9c5c565c2f241ad7387f1cb64824ee825b025
+ms.sourcegitcommit: db60935a92fe43fe149f6a4d3114fe0edaa1d331
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58406596"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58764028"
 ---
 # <a name="azure-atp-prerequisites"></a>Pré-requisitos do Azure ATP
 
@@ -30,6 +28,8 @@ Este artigo descreve os requisitos para uma implantação bem-sucedida do Azure 
 
 
 O Azure ATP é composto pelo serviço de nuvem do Azure ATP, que consiste no portal do Azure ATP, no sensor do Azure ATP e/ou no sensor autônomo do Azure ATP. Para obter mais informações sobre cada componente do Azure ATP, confira [Arquitetura do Azure ATP](atp-architecture.md).
+
+A ATP do Azure protege seus usuários locais do Active Directory e/ou os usuários sincronizados com o Azure Active Directory. Para proteger um ambiente composto apenas por usuários do AAD, confira a [Proteção de Identidade do AAD] (https://docs.microsoft.com/azure/active-directory/identity-protection/overview). 
 
 Para criar sua instância do Azure ATP, será necessário um locatário do AAD com pelo menos um administrador da segurança/global. Cada instância do Azure ATP dá suporte a vários limites de floresta do Active Directory e dá suporte ao FFL (Nível funcional da floresta) do Windows 2003 e posteriores. 
 
@@ -77,7 +77,7 @@ O acesso ao portal do Azure ATP ocorre por meio de um navegador que dá suporte 
 
 
 > [!NOTE]
-> Por padrão, o Azure ATP é compatível com até 100 sensores. Caso deseje instalar mais, entre em contato com o suporte do Azure ATP.
+> Por padrão, a ATP do Azure dá suporte a até 200 sensores. Caso deseje instalar mais, entre em contato com o suporte do Azure ATP.
 
 ## <a name="azure-atp-sensor-requirements"></a>Requisitos do sensor do Azure ATP
 Esta seção lista os requisitos do sensor do Azure ATP.
@@ -85,9 +85,9 @@ Esta seção lista os requisitos do sensor do Azure ATP.
 ### <a name="general"></a>Geral
 
 > [!NOTE]
-> O KB4487044 deve estar instalado durante o uso do Server 2019. Os Sensores do ATP do Azure já instalados nos servidores 2019 sem o KB4487044 serão interrompidos automaticamente.
+> Verifique se a [KB4487044](https://support.microsoft.com/help/4487044/windows-10-update-kb4487044) está instalada ao usar o Server 2019 ou uma KB que inclua a KB4487044, como a [KB4489899](https://support.microsoft.com/help/4489899/windows-10-update-kb4489899). Os sensores da ATP do Azure já instalados nos servidores 2019 sem essa atualização serão interrompidos automaticamente.
  
-O sensor do ATP do Azure é compatível com a instalação em um controlador de domínio que executa o Windows Server 2008 R2 SP1 (sem incluir o Server Core), o Windows Server 2012, o Windows Server 2012 R2, o Windows Server 2016 (incluindo o Core, mas não o Nano) e o Windows Server 2019 (incluindo o Core, mas não o Nano).
+O sensor da ATP do Azure dá suporte à instalação em um controlador de domínio que executa o Windows Server 2008 R2 SP1 (sem incluir o Server Core), o Windows Server 2012, o Windows Server 2012 R2, o Windows Server 2016 (incluindo o Windows Server Core, mas não o Windows Nano Server) e o Windows Server 2019 (incluindo o Windows Core, mas não o Windows Nano Server).
 
 O controlador de domínio pode ser um RODC (controlador de domínio somente leitura).
 

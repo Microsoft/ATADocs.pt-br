@@ -8,18 +8,16 @@ manager: barbkess
 ms.date: 1/15/2019
 ms.topic: tutorial
 ms.collection: M365-security-compliance
-ms.prod: ''
 ms.service: azure-advanced-threat-protection
-ms.technology: ''
 ms.assetid: e9cf68d2-36bd-4b0d-b36e-7cf7ded2618e
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: de426a06fb7d0893d56b82fcaa9599f523054774
-ms.sourcegitcommit: 9252c74620abb99d8fa2b8d2cc2169018078bec9
+ms.openlocfilehash: 23de55308ffe48f73b7db06a1a15790c14ecc8a0
+ms.sourcegitcommit: 38b68d96fbf04fe40e1f9a62a1af3d1d00e63614
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "57981197"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58808233"
 ---
 # <a name="tutorial-compromised-credential-alerts"></a>Tutorial: Alertas de credencial comprometida  
 
@@ -169,7 +167,7 @@ Os invasores usam ferramentas que implementam vários protocolos como SMB, Kerbe
 **TP, B-TP ou FP**
 
 1. Verifique se o computador de origem está executando uma ferramenta de ataque como Hydra.
-   1. Se o computador de origem está executando uma ferramenta de ataque, esse alerta é um **TP**. Siga as instruções em [Entender o escopo da violação](#understand-the-scope-of-the-breach).
+   1. Se o computador de origem está executando uma ferramenta de ataque, esse alerta é um **TP**. Siga as instruções acima, em **Entender o escopo da violação**.
 
 Ocasionalmente, os aplicativos implementam sua própria pilha NTLM ou SMB.
 
@@ -204,7 +202,7 @@ Os invasores usam ferramentas que implementam vários protocolos de maneiras nã
 
 1. Verifique se o WannaCry está em execução no computador de origem. 
 
-    - Se o WannaCry estiver em execução, esse alerta será um **TP**. Siga as instruções em [Entender o escopo da violação](#understand-the-scope-of-the-breach).
+    - Se o WannaCry estiver em execução, esse alerta será um **TP**. Siga as instruções acima, em **Entender o escopo da violação**.
 
 Ocasionalmente, os aplicativos implementam sua própria pilha NTLM ou SMB.
 
@@ -238,7 +236,7 @@ Os invasores usam ferramentas que implementam vários protocolos (SMB, Kerberos,
 
 1. Verifique se o computador de origem está executando uma ferramenta de ataque como Metasploit ou Medusa.
 
-2. Em caso afirmativo, é um verdadeiro positivo. Siga as instruções em [Entender o escopo da violação](#understand-the-scope-of-the-breach).
+2. Em caso afirmativo, é um verdadeiro positivo. Siga as instruções acima, em **Entender o escopo da violação**.
 
 Ocasionalmente, os aplicativos implementam sua própria pilha NTLM ou SMB.
 
