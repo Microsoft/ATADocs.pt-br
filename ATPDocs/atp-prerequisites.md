@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 62c99622-2fe9-4035-9839-38fec0a353da
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 63d9c5c565c2f241ad7387f1cb64824ee825b025
-ms.sourcegitcommit: db60935a92fe43fe149f6a4d3114fe0edaa1d331
+ms.openlocfilehash: b4a5f7c74329d846caaa25a8b1181e0e516d2b08
+ms.sourcegitcommit: c4a0b3eff3e9c4de37e3ca53405ba47992c22b46
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58764028"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58872878"
 ---
 # <a name="azure-atp-prerequisites"></a>Pré-requisitos do Azure ATP
 
@@ -85,7 +85,7 @@ Esta seção lista os requisitos do sensor do Azure ATP.
 ### <a name="general"></a>Geral
 
 > [!NOTE]
-> Verifique se a [KB4487044](https://support.microsoft.com/help/4487044/windows-10-update-kb4487044) está instalada ao usar o Server 2019 ou uma KB que inclua a KB4487044, como a [KB4489899](https://support.microsoft.com/help/4489899/windows-10-update-kb4489899). Os sensores da ATP do Azure já instalados nos servidores 2019 sem essa atualização serão interrompidos automaticamente.
+> Certifique-se de que o [KB4487044](https://support.microsoft.com/help/4487044/windows-10-update-kb4487044) esteja instalado ao usar o Server 2019. Os sensores da ATP do Azure já instalados nos servidores 2019 sem essa atualização serão interrompidos automaticamente.
  
 O sensor da ATP do Azure dá suporte à instalação em um controlador de domínio que executa o Windows Server 2008 R2 SP1 (sem incluir o Server Core), o Windows Server 2012, o Windows Server 2012 R2, o Windows Server 2016 (incluindo o Windows Server Core, mas não o Windows Nano Server) e o Windows Server 2019 (incluindo o Windows Core, mas não o Windows Nano Server).
 
@@ -176,7 +176,6 @@ Para obter mais informações sobre os requisitos de hardware do sensor autônom
 ### <a name="time-synchronization"></a>Sincronização da hora
 
 Os servidores e controladores de domínio nos quais o sensor é instalado devem ter a hora sincronizada em um espaço de cinco minutos entre si.
-
 
 ### <a name="network-adapters"></a>Adaptadores de rede
 O sensor autônomo do Azure ATP requer pelo menos um adaptador de gerenciamento e pelo menos um adaptador de captura:
