@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: e9cf68d2-36bd-4b0d-b36e-7cf7ded2618e
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 72c5a0de163e53ed60fb3871e3a70cb691513806
-ms.sourcegitcommit: b468d9060eb784c16b64a9cc46dbe2d246046cdd
+ms.openlocfilehash: 2b2d78f7f9f6191f13a9a187ce7e1e7f60dfcaf7
+ms.sourcegitcommit: 7a32dcb65edc38fb9b3d340763045b21ea92feee
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2019
-ms.locfileid: "58675193"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59577255"
 ---
 # <a name="tutorial-reconnaissance-alerts"></a>Tutorial: Alertas de reconhecimento  
 
@@ -178,11 +178,18 @@ Para permitir que o ATP do Azure crie o perfil com precisão e aprenda os usuár
 
 **Correção sugerida e etapas de prevenção**
 
-1.  Conter o computador de origem
+1. Conter o computador de origem
     1. Encontre a ferramenta que realizou o ataque e remova-a.
     2. O computador está executando uma ferramenta de verificação que realiza várias consultas LDAP?
     3. Procure por usuários que estavam conectados em horário próximo ao que a atividade ocorreu, pois eles também podem estar comprometidos. Redefina as senhas e habilite o MFA.
-2.  Redefina a senha se o acesso aos recursos do SPN foi feito e executado sob uma conta de usuário (não na conta do computador).
+2. Redefina a senha se o acesso aos recursos do SPN foi feito e executado sob uma conta de usuário (não na conta do computador).
+
+**Etapas sugeridas específicas de Kerberoasting para prevenção e correção**
+
+1. Forçar redefinição de senha na conta comprometida  
+2. Exija o uso de [senhas longas e complexas para usuários com contas de entidade de serviço](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/minimum-password-length).  
+3. [Substitua a conta de usuário pela gMSA (conta de serviço gerenciado de grupo)](https://docs.microsoft.com/windows-server/security/group-managed-service-accounts/group-managed-service-accounts-overview). 
+
 
 ## <a name="user-and-ip-address-reconnaissance-smb-external-id-2012"></a>Reconhecimento de endereço IP e de usuário (SMB) (ID 2012 externa) 
 
