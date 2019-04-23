@@ -13,11 +13,11 @@ ms.assetid: 1ac873fc-b763-41d7-878e-7c08da421cb5
 ms.reviewer: itargoet
 ms.suite: ems
 ms.openlocfilehash: c985dfc4a7d847113838befb3040931434603a7f
-ms.sourcegitcommit: 4072bb8accd439590412f1380694f19aeaaa7a28
+ms.sourcegitcommit: 7a32dcb65edc38fb9b3d340763045b21ea92feee
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59233166"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59745466"
 ---
 # <a name="what-is-network-name-resolution"></a>O que é a Resolução de nomes de rede?
 

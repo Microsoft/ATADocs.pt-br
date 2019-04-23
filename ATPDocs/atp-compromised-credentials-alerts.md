@@ -13,11 +13,11 @@ ms.assetid: e9cf68d2-36bd-4b0d-b36e-7cf7ded2618e
 ms.reviewer: itargoet
 ms.suite: ems
 ms.openlocfilehash: 23de55308ffe48f73b7db06a1a15790c14ecc8a0
-ms.sourcegitcommit: 38b68d96fbf04fe40e1f9a62a1af3d1d00e63614
+ms.sourcegitcommit: 7a32dcb65edc38fb9b3d340763045b21ea92feee
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58808233"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59745748"
 ---
 # <a name="tutorial-compromised-credential-alerts"></a>Tutorial: Alertas de credencial comprometida  
 
@@ -82,7 +82,7 @@ Nessa detecção, um alerta é disparado quando ocorrem diversas falhas de auten
 Em uma pulverização de senhas, depois de enumerar com êxito uma lista de usuários válidos do controlador de domínio, os invasores tentam UMA senha cuidadosamente concebida em TODAS as contas de usuário conhecidas (uma senha para várias contas). Se a pulverização de senhas inicial falhar, eles tentam novamente utilizando uma senha diferente cuidadosamente concebida, normalmente após aguardar 30 minutos entre as tentativas. Esse tempo de espera permite que os invasores evitem disparar a maioria dos limites de bloqueio de conta que se baseiam no tempo. A pulverização de senhas tornou-se rapidamente uma técnica de preferência entre os invasores e testadores de intrusão. Os ataques de pulverização de senhas se mostraram eficazes na conquista de uma entrada na organização e por fazer movimentos laterais posteriores, tentando aumentar os privilégios. O período mínimo antes que um alerta possa ser disparado é de uma semana.
 
 **Período de aprendizado**
- <br>Uma semana
+ <br>1 semana
 
 **TP, B-TP ou FP**
 

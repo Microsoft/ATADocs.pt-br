@@ -8,11 +8,11 @@ ms.author: mlottner
 ms.date: 02/28/2019
 ms.reviewer: itargoet
 ms.openlocfilehash: 9ae630711b6ee7b7f84a233998d188e498af0a9e
-ms.sourcegitcommit: 38b68d96fbf04fe40e1f9a62a1af3d1d00e63614
+ms.sourcegitcommit: 7a32dcb65edc38fb9b3d340763045b21ea92feee
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58808267"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59745578"
 ---
 # <a name="tutorial-setup-an-atp-security-alert-lab"></a>Tutorial: Configurar um laboratório de alerta de segurança do ATP 
 
