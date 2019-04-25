@@ -5,19 +5,19 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: barbkess
-ms.date: 03/31/2019
+ms.date: 04/18/2019
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
 ms.technology: ''
 ms.assetid: d89e7aff-a6ef-48a3-ae87-6ac2e39f3bdb
 ms.reviewer: arzinger
 ms.suite: ems
-ms.openlocfilehash: edac28031e9faa3e5c23bbbd82ef4ce023f1f249
-ms.sourcegitcommit: db60935a92fe43fe149f6a4d3114fe0edaa1d331
+ms.openlocfilehash: b7769c953a27e3739db32c6db0bcbc0ef82679d4
+ms.sourcegitcommit: 8fa812fb4e898e40239febc6dc0fb0bdfcae3e55
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58763994"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59902100"
 ---
 # <a name="troubleshooting-ata-known-issues"></a>Solução de problemas conhecidos do ATA
 
@@ -63,9 +63,8 @@ Esta seção detalha os possíveis erros nas implantações do ATA e as etapas n
 > |System.Threading.Tasks.TaskCanceledException: a tarefa foi cancelada|O processo de implantação atingiu o tempo limite, uma vez que ele não pôde acessar o Centro do ATA.|1.    Verifique a conectividade de rede com o Centro do ATA navegando até ele usando seu endereço IP. <br></br>2.    Verifique a configuração de proxy ou firewall.|
 > |System.Net.Http.HttpRequestException: ocorreu um erro ao enviar a solicitação. System.Net.WebException: o servidor remoto retornou um erro: (407) Autenticação de Proxy Necessária.|O processo de implantação atingiu o tempo limite, uma vez que ele não pôde acessar o Centro do ATA devido à configuração incorreta de proxy.|Desabilite a configuração de proxy antes da implantação e habilite a configuração de proxy novamente. Como alternativa, você pode configurar uma exceção no proxy.|
 > |System.Net.Sockets.SocketException: uma conexão existente foi fechada à força pelo host remoto||Use uma das seguintes opções: </br>Habilitar o TLS 1.0 no Gateway ATA </br>Habilite o TLS 1.2 no .Net definindo as chaves de registro para usar os padrões do sistema operacional para SSL e TLS, da seguinte forma:</br> `[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\v4.0.30319] "SystemDefaultTlsVersions"=dword:00000001`</br> `[HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\.NETFramework\v4.0.30319] "SystemDefaultTlsVersions"=dword:00000001`</br>`[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\v4.0.30319] "SchUseStrongCrypto"=dword:00000001` </br>`[HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\.NETFramework\v4.0.30319] " SchUseStrongCrypto"=dword:00000001`|
-> |Erro [\[]DeploymentModel[\]] Falha na autenticação de gerenciamento [\[]CurrentlyLoggedOnUser=<domain>\<username>Status=FailedAuthentication Exception=[\]]|O processo de implantação do Gateway do ATA ou do Gateway Lightweight do ATA não conseguiu autenticar com sucesso o ATA Center|Abra um navegador no computador no qual o processo de implantação falhou e veja se você pode alcançar o Console do ATA. </br>Se não, inicie a solução de problemas para ver o motivo de o navegador não conseguir autenticar o Centro do ATA. </br>Verifique a: </br>Configuração de proxy</br>Problemas de rede</br>Configurações de política de grupo para a autenticação no computador que difere do Centro do ATA.|
-> | Erro [\[] DeploymentModel [\]] Falha na autenticação de gerenciamento|Falha na autenticação de certificado do Centro|O certificado do Centro requer uma conexão de internet para validação. Verifique se o serviço de Gateway tem a configuração de proxy adequada para habilitar a conexão e a validação.|
-
+> |Erro [\\[]DeploymentModel[\\]] Falha na autenticação de gerenciamento      [\\[]CurrentlyLoggedOnUser=<domain>\\<username>Status=FailedAuthentication Exception=[\\]]|O processo de implantação do Gateway do ATA ou do Gateway Lightweight do ATA não conseguiu autenticar com sucesso o ATA Center|Abra um navegador no computador no qual o processo de implantação falhou e veja se você pode alcançar o Console do ATA. </br>Se não, inicie a solução de problemas para ver o motivo de o navegador não conseguir autenticar o Centro do ATA. </br>Verifique a: </br>Configuração de proxy</br>Problemas de rede</br>Configurações de política de grupo para a autenticação no computador que difere do Centro do ATA.|
+> | Erro [\\[]DeploymentModel[\\]] Falha na autenticação de gerenciamento|Falha na validação do certificado do Centro|O certificado do Centro pode requerer uma conexão com a Internet para validação. Verifique se o serviço de Gateway tem a configuração de proxy adequada para habilitar a conexão e a validação.|
 
 
 ## <a name="ata-center-errors"></a>Erros do Centro do ATA
@@ -73,7 +72,7 @@ Esta seção detalha os possíveis erros nas implantações do ATA e as etapas n
 > 
 > |Erro do|Descrição|Resolução|
 > |-------------|----------|---------|
-> |System.Security.Cryptography.CryptographicException: Acesso negado|O Centro do ATA falha ao usar o certificado emitido para descriptografia. Isso provavelmente ocorreu devido ao uso de um certificado com KeySpec (KeyNumber) definido como Assinatura (AT\_SIGNATURE) que não tem suporte para a descriptografia, em vez de usar o KeyExchange (AT\_KEYEXCHANGE).|1.    Interrompa o serviço do Centro ATA. <br></br>2.     Exclua o certificado do centro de ATA do repositório de certificados do centro. (Antes de excluir, verifique se você tem o backup do certificado com a chave privada em um arquivo PFX). <br></br>3.    Abra um prompt de comando com privilégios elevados e execute certutil -importpfx "CenterCertificate.pfx" AT\_KEYEXCHANGE <br></br>4.     Inicie o serviço do Centro ATA. <br></br>5.     Verifique se agora tudo funciona conforme o esperado.|
+> |System.Security.Cryptography.CryptographicException: Acesso negado|O Centro do ATA falha ao usar o certificado emitido para descriptografia. Isso provavelmente ocorreu devido ao uso de um certificado com KeySpec (KeyNumber) definido como Assinatura (AT\\_SIGNATURE) que não é compatível com a descriptografia, em vez de usar o KeyExchange (AT\\_KEYEXCHANGE).|1.    Interrompa o serviço do Centro ATA. <br></br>2.     Exclua o certificado do centro de ATA do repositório de certificados do centro. (Antes de excluir, verifique se você tem o backup do certificado com a chave privada em um arquivo PFX). <br></br>3.    Abra um prompt de comandos com privilégios elevados e execute      certutil -importpfx "CenterCertificate.pfx" AT\\_KEYEXCHANGE <br></br>4.     Inicie o serviço do Centro ATA. <br></br>5.     Verifique se agora tudo funciona conforme o esperado.|
 
 
 ## <a name="ata-gateway-and-lightweight-gateway-issues"></a>Erros do Gateway do ATA e do Gateway Lightweight
@@ -84,6 +83,7 @@ Esta seção detalha os possíveis erros nas implantações do ATA e as etapas n
 > |-------------|----------|---------|
 > |Nenhum tráfego recebido do controlador de domínio, mas são observados alertas de monitoramento|    Nenhum tráfego foi recebido de um controlador de domínio usando o espelhamento de porta por meio de um Gateway do ATA|Na NIC de captura no Gateway do ATA, desabilite esses recursos em **Configurações Avançadas**:<br></br>União de Segmentos de Recebimento (IPv4)<br></br>União de Segmentos de Recebimento (IPv6)|
 > |Esse alerta de monitoramento é exibido: Parte do tráfego de rede não está sendo analisado|Se você tiver um Gateway de ATA ou Gateway do Lightweight em máquinas virtuais VMware, você poderá receber este alerta de monitoramento. Isso ocorre devido a uma incompatibilidade de configuração no VMware.|Defina as configurações a seguir como 0 ou Desabilitado na configuração de NIC de máquina virtual: TsoEnable, LargeSendOffload, Descarregamento do TSO, Descarregamento Gigante do TSO TLS 1.0 está desabilitado no ATA Gateway, mas o .Net está configurado para usar TLS 1.2|
+
 
 
 

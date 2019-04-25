@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 62c99622-2fe9-4035-9839-38fec0a353da
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: b4a5f7c74329d846caaa25a8b1181e0e516d2b08
-ms.sourcegitcommit: c4a0b3eff3e9c4de37e3ca53405ba47992c22b46
+ms.openlocfilehash: 40caca1ff6ac2648b3f7c3d4921cfb35a5f5ba39
+ms.sourcegitcommit: 279884f436bf0d10d906f4fac950d28f0ada8a45
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/03/2019
-ms.locfileid: "58872878"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "60164705"
 ---
 # <a name="azure-atp-prerequisites"></a>Pré-requisitos do Azure ATP
 

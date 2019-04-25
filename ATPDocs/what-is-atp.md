@@ -12,15 +12,15 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 2d14d0e9-1b03-4bcc-ae97-8fd41526ffc5
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 309e77b9595f425470194778f946e0f707b1a72e
-ms.sourcegitcommit: 4072bb8accd439590412f1380694f19aeaaa7a28
+ms.openlocfilehash: 2afa9c293271d04eb7c61883dcbb5777e4c0d510
+ms.sourcegitcommit: 279884f436bf0d10d906f4fac950d28f0ada8a45
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59233132"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "60164688"
 ---
 # <a name="what-is-azure-advanced-threat-protection"></a>O que é a Proteção Avançada contra Ameaças do Azure?
-A Proteção Avançada contra Ameaças (ATP) do Azure é uma solução de segurança baseada em nuvem que aprimora os sinais locais do Active Directory para identificar, detectar e investigar ameaças avançadas, identidades comprometidas e ações de pessoas internas mal-intencionadas, direcionadas à sua organização. O Azure ATP permite aos analistas de SecOp e profissionais de segurança que lutam para detectar ataques avançados em ambientes híbridos:  
+A ATP (Proteção Avançada contra Ameaças) do Azure é uma solução de segurança baseada em nuvem que aprimora os sinais locais do Active Directory para identificar, detectar e investigar ameaças avançadas, identidades comprometidas e ações de pessoas internas mal-intencionadas, direcionadas à sua organização. O Azure ATP permite aos analistas de SecOp e profissionais de segurança que lutam para detectar ataques avançados em ambientes híbridos:  
 - Monitorar usuários, comportamento de entidade e atividades com a análise baseada em aprendizado  
 - Proteger as identidades do usuário e as credenciais armazenadas no Active Directory  
 - Identificar e investigar atividades de usuário suspeitas e ataques avançados em toda a cadeia do ataque cibernético 
