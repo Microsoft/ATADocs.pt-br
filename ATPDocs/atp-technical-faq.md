@@ -4,7 +4,7 @@ description: Fornece uma lista de perguntas frequentes sobre o Azure ATP e as re
 keywords: ''
 author: mlottner
 ms.author: mlottner
-manager: barbkess
+manager: rkarlin
 ms.date: 04/07/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 6a9b5273-eb26-414e-9cdd-f64406e24ed8
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 677dec4468fa272b55d5f9c20c3163fea5770f20
-ms.sourcegitcommit: 7a32dcb65edc38fb9b3d340763045b21ea92feee
+ms.openlocfilehash: c844aa445378643200997d4389a3bee1aae45099
+ms.sourcegitcommit: ae9db212f268f067b217d33b0c3f991b6531c975
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59745799"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65195513"
 ---
 # <a name="azure-atp-frequently-asked-questions"></a>Perguntas frequentes sobre o Azure ATP
 Este artigo fornece uma lista de perguntas frequentes sobre o Azure ATP e dividido nas seguintes categorias: 

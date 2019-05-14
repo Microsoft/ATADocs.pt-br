@@ -4,7 +4,7 @@ description: Descreve os problemas atuais conhecidos no ATP do Azure
 keywords: ''
 author: mlottner
 ms.author: mlottner
-manager: barbkess
+manager: rkarlin
 ms.date: 02/25/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: feea1982-ba23-48be-a468-98d2586cf840
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: dfba534cd12a1071bce4debf577ee7d12824fffb
-ms.sourcegitcommit: b468d9060eb784c16b64a9cc46dbe2d246046cdd
+ms.openlocfilehash: a2bfa219334960300901ac47129800d52a80a69a
+ms.sourcegitcommit: ae9db212f268f067b217d33b0c3f991b6531c975
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2019
-ms.locfileid: "58674513"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65193532"
 ---
 # <a name="azure-atp-known-issues"></a>Problemas conhecidos do ATP do Azure
 

@@ -4,20 +4,20 @@ description: Explica o que é o Azure ATP (Proteção Avançada contra Ameaças)
 keywords: ''
 author: mlottner
 ms.author: mlottner
-manager: barbkess
-ms.date: 04/07/2019
+manager: rkarlin
+ms.date: 05/07/2019
 ms.topic: article
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 2d14d0e9-1b03-4bcc-ae97-8fd41526ffc5
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 2afa9c293271d04eb7c61883dcbb5777e4c0d510
-ms.sourcegitcommit: 279884f436bf0d10d906f4fac950d28f0ada8a45
+ms.openlocfilehash: fe56aac6dae4b5f54134a3542c18495dbb44aacf
+ms.sourcegitcommit: fa9b880e52d4b615409cc247fc73993407df0ae5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "60164688"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65226775"
 ---
 # <a name="what-is-azure-advanced-threat-protection"></a>O que é a Proteção Avançada contra Ameaças do Azure?
 A ATP (Proteção Avançada contra Ameaças) do Azure é uma solução de segurança baseada em nuvem que aprimora os sinais locais do Active Directory para identificar, detectar e investigar ameaças avançadas, identidades comprometidas e ações de pessoas internas mal-intencionadas, direcionadas à sua organização. O Azure ATP permite aos analistas de SecOp e profissionais de segurança que lutam para detectar ataques avançados em ambientes híbridos:  

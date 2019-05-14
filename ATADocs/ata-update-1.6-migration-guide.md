@@ -4,7 +4,7 @@ description: Procedimentos para atualizar o ATA para a versão 1.6
 keywords: ''
 author: rkarlin
 ms.author: rkarlin
-manager: barbkess
+manager: rkarlin
 ms.date: 01/23/2017
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 0756ef64-3aef-4a69-8981-24fa8f285c6a
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 7142c944ab0eacd299d4db720a08cc6705f564dc
-ms.sourcegitcommit: 62b631f64a639f5df04bf805755f26c69b40e8e4
+ms.openlocfilehash: 17bc38ad4af1e0e185b1607a5d0002d5bfa613ea
+ms.sourcegitcommit: ae9db212f268f067b217d33b0c3f991b6531c975
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58638942"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65196113"
 ---
 # <a name="ata-update-to-16-migration-guide"></a>Guia de migração de atualização do ATA para 1.6
 A atualização 1.6 do ATA fornece melhorias nas seguintes áreas:

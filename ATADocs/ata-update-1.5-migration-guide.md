@@ -4,7 +4,7 @@ description: Procedimentos para atualizar o ATA para a versão 1.5
 keywords: ''
 author: rkarlin
 ms.author: rkarlin
-manager: barbkess
+manager: rkarlin
 ms.date: 01/23/2017
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: fb65eb41-b215-4530-93a2-0b8991f4e980
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: ed876730dd23ba53c0c486a92e16a98fa4232a42
-ms.sourcegitcommit: 62b631f64a639f5df04bf805755f26c69b40e8e4
+ms.openlocfilehash: d71cfd283d89f6b1d1413f4d9832fb4302504622
+ms.sourcegitcommit: ae9db212f268f067b217d33b0c3f991b6531c975
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58638806"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65196184"
 ---
 # <a name="ata-update-to-15-migration-guide"></a>Guia de migração de atualização do ATA para 1.5
 A atualização 1.5 do ATA fornece melhorias nas seguintes áreas:

@@ -4,7 +4,7 @@ description: Explica passo a passo como trabalhar com grupos de função do Azur
 keywords: ''
 author: mlottner
 ms.author: mlottner
-manager: barbkess
+manager: rkarlin
 ms.date: 11/29/2018
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: effca0f2-fcae-4fca-92c1-c37306decf84
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 43e5a60723b5c688ee27a7d5b5e6de0bda3fb0b0
-ms.sourcegitcommit: b468d9060eb784c16b64a9cc46dbe2d246046cdd
+ms.openlocfilehash: e2e3b35373bdfaaa0d13c1c175deea12bf24a34d
+ms.sourcegitcommit: ae9db212f268f067b217d33b0c3f991b6531c975
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2019
-ms.locfileid: "58675244"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65195469"
 ---
 # <a name="azure-atp-role-groups"></a>Grupos de função do Azure ATP
 

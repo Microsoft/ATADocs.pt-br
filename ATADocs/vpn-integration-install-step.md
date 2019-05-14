@@ -4,7 +4,7 @@ description: Nesta etapa da instalação do ATA, você integra sua VPN.
 keywords: ''
 author: rkarlin
 ms.author: rkarlin
-manager: barbkess
+manager: rkarlin
 ms.date: 3/21/2018
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: e0aed853-ba52-46e1-9c55-b336271a68e7
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 9a01cde1de4a340bca60908f5ff57e4e78efc5ca
-ms.sourcegitcommit: b468d9060eb784c16b64a9cc46dbe2d246046cdd
+ms.openlocfilehash: f98dfb3f5688f143a490a8ab7abb7eea7d8da5d9
+ms.sourcegitcommit: ae9db212f268f067b217d33b0c3f991b6531c975
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2019
-ms.locfileid: "58674615"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65197019"
 ---
 # <a name="install-ata---step-7"></a>Instalação do ATA – Etapa 7
 

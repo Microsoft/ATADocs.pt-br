@@ -4,7 +4,7 @@ description: Este artigo descreve como instalar silenciosamente o Azure ATP.
 keywords: ''
 author: mlottner
 ms.author: mlottner
-manager: barbkess
+manager: rkarlin
 ms.date: 12/05/2018
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 24eca4c6-c949-42ea-97b9-41ef0fb611f1
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: ba000ae4ac118b8591a97b456d791966e2c53550
-ms.sourcegitcommit: b468d9060eb784c16b64a9cc46dbe2d246046cdd
+ms.openlocfilehash: a15129852315fa958b8f5bed810c9f69e185e73e
+ms.sourcegitcommit: ae9db212f268f067b217d33b0c3f991b6531c975
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2019
-ms.locfileid: "58674734"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65195473"
 ---
 # <a name="azure-atp-switches-and-silent-installation"></a>Instalação silenciosa e opções do Azure ATP
 Este artigo fornece diretrizes e instruções para a instalação silenciosa e opções do Azure ATP.

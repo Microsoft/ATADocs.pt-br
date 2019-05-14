@@ -2,20 +2,21 @@
 title: Planejamento da implantação do Advanced Threat Analytics | Microsoft Docs
 description: Ajuda você a planejar a implantação e decidir quantos servidores ATA serão necessários para oferecer suporte à sua rede
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
-manager: barbkess
-ms.date: 3/21/2018
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
+ms.date: 05/12/2019
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
+ms.assetid: 1b5b24ff-0df8-4660-b4f8-64d68cc72f65
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 3679dfd71653c607fbb16bec6545640dcd015e95
-ms.sourcegitcommit: 62b631f64a639f5df04bf805755f26c69b40e8e4
+ms.openlocfilehash: 069f6b179ab48b2c19b06e1bbcc64f4336954574
+ms.sourcegitcommit: ae9db212f268f067b217d33b0c3f991b6531c975
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58639078"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65195863"
 ---
 # <a name="ata-capacity-planning"></a>Planejamento da capacidade de ATA
 
@@ -35,7 +36,7 @@ A maneira recomendada e mais simples para determinar a capacidade para sua impla
 - ATA Gateway: corresponda o campo **Pacotes Ocupados/s** na tabela do ATA Gateway no arquivo de resultados com o campo **PACOTES POR SEGUNDO** na [tabela do ATA Gateway](#ata-gateway-sizing) ou na [tabela do ATA Lightweight Gateway](#ata-lightweight-gateway-sizing), dependendo do [tipo de gateway que você escolher](#choosing-the-right-gateway-type-for-your-deployment).
 
 
-![Ferramenta de planejamento de capacidade de amostra](media/capacity tool.png)
+![Ferramenta de planejamento de capacidade de amostra](media/capacity-tool.png)
 
 
 > [!NOTE]

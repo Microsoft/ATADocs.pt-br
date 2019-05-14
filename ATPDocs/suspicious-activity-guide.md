@@ -4,7 +4,7 @@ d|Description: This article provides a list of the security alerts issued by Azu
 keywords: ''
 author: mlottner
 ms.author: mlottner
-manager: barbkess
+manager: rkarlin
 ms.date: 04/07/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -12,18 +12,19 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: ca5d1c7b-11a9-4df3-84a5-f53feaf6e561
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 0dcdd37bdad7c52325c527b3fa768f851000ff3a
-ms.sourcegitcommit: 7a32dcb65edc38fb9b3d340763045b21ea92feee
+ms.openlocfilehash: 0dd8d987472ef88108f2cb3541bd590d1a816726
+ms.sourcegitcommit: ae9db212f268f067b217d33b0c3f991b6531c975
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59745816"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65196651"
 ---
 # <a name="azure-atp-security-alerts"></a>Alertas de segurança do ATP do Azure
 
 Os alertas de segurança do ATP do Azure explicam as atividades suspeitas detectadas pelo sensores do ATP do Azure em sua rede e os atores e os computadores envolvidos na cada ameaça.   As listas de evidências dos alertas contêm links diretos para os computadores e os usuários envolvidos para ajudar a tornar suas investigações fáceis e diretas.
 
 Os alertas de segurança do ATP do Azure são divididos nas categorias ou fases a seguir, assim como as fases vistas em uma cadeia de eliminação de ataque cibernético típica. Saiba mais sobre cada fase, os alertas projetados para detectar cada ataque e como usar os alertas para ajudar a proteger sua rede usando os links a seguir:
+
   1. [Alertas de fase de reconhecimento](atp-reconnaissance-alerts.md)
   2. [Alertas de fase de credencial comprometida](atp-compromised-credentials-alerts.md)
   3. [Alertas de fase de movimento lateral](atp-lateral-movement-alerts.md)
