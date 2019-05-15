@@ -4,22 +4,38 @@ description: Descreve as versões mais recentes do Azure ATP e fornece informaç
 keywords: ''
 author: mlottner
 ms.author: mlottner
-manager: barbkess
-ms.date: 04/14/2019
+manager: rkarlin
+ms.date: 05/07/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 7d0f33db-2513-4146-a395-290e001f4199
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 426f89a61d2cdcd5b52d12e8c7a9c2cfede69940
-ms.sourcegitcommit: 7a32dcb65edc38fb9b3d340763045b21ea92feee
+ms.openlocfilehash: 86c76a14403e7539156c7f882a30d022842a5771
+ms.sourcegitcommit: fa9b880e52d4b615409cc247fc73993407df0ae5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59577273"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65226788"
 ---
 # <a name="whats-new-in-azure-atp"></a>Novidades do Azure ATP
+
+## <a name="azure-atp-release-276"></a>ATP do Azure versão 2.76
+
+Lançada em 6 de maio de 2019
+
+- Essa versão inclui aprimoramentos e correções de bug da infraestrutura do sensor interno.
+
+## <a name="azure-atp-release-275"></a>ATP do Azure versão 2.75
+
+Lançada em 28 de abril de 2019
+
+- **Aprimoramento do recurso: entidades confidenciais**<br> A partir desta versão (2.75), os computadores identificados como servidores do Exchange pelo ATP do Azure serão marcados automaticamente como **Confidenciais**.  
+
+    As entidades marcadas automaticamente como **Confidenciais** por funcionarem como servidores do Exchange listam essa classificação como o motivo pelo qual são marcadas. 
+
+- Essa versão inclui aprimoramentos e correções de bug da infraestrutura do sensor interno.
 
 ## <a name="azure-atp-release-274"></a>ATP do Azure versão 2.74
 

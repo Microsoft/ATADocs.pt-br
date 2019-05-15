@@ -4,26 +4,26 @@ description: Descreve como marcar contas confidenciais usando o Azure ATP (Prote
 keywords: ''
 author: mlottner
 ms.author: mlottner
-manager: barbkess
-ms.date: 10/04/2018
+manager: rkarlin
+ms.date: 04/29/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 43e57f87-ca85-4922-8ed0-9830139fe7cb
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: d7f0d0d677692aeb7406824f5bd18e493934a195
-ms.sourcegitcommit: b468d9060eb784c16b64a9cc46dbe2d246046cdd
+ms.openlocfilehash: 2342a10f932664568065d2ef906d863a875c8096
+ms.sourcegitcommit: ae9db212f268f067b217d33b0c3f991b6531c975
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2019
-ms.locfileid: "58673697"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65196454"
 ---
 # <a name="working-with-sensitive-accounts"></a>Trabalhando com contas confidenciais
 
-## <a name="sensitive-groups"></a>Grupos confidenciais
+## <a name="sensitive-entites"></a>Entidades confidenciais
 
-A lista de grupos a seguir é considerada confidencial pelo Azure ATP. Qualquer entidade que é um membro desses grupos é considerada confidencial:
+A lista de grupos a seguir é considerada **Confidencial** pelo ATP do Azure. Toda entidade membro de um desses grupos é considerada confidencial:
 
 - Administradores
 - Usuários avançados
@@ -41,13 +41,14 @@ A lista de grupos a seguir é considerada confidencial pelo Azure ATP. Qualquer 
 - Controladores de domínio somente leitura da empresa 
 - Administradores de esquemas 
 - Administrador corporativo
+- Servidores do Microsoft Exchange
 
   > [!NOTE]
   > Até setembro de 2018, usuários da Área de Trabalho Remota eram automaticamente considerados confidenciais pelo ATP do Azure. Entidades ou grupos da Área de Trabalho Remota adicionados após essa data não são mais marcados como confidenciais automaticamente, enquanto as entidades e grupos da Área de Trabalho Remota adicionados antes dessa data podem permanecer marcados como Confidenciais. Essa configuração Confidencial agora pode ser alterada manualmente.  
 
 ## <a name="tagging-sensitive-accounts"></a>Marcando contas confidenciais
 
-Além desses grupos, você pode marcar manualmente grupos ou contas como confidenciais para aprimorar as detecções. Isso é importante porque algumas detecções do Azure ATP, como a detecção de modificação de grupos confidenciais e o caminho de movimentação lateral, dependem de quais grupos e contas são consideradas confidenciais. Você pode marcar manualmente outros usuários ou grupos como confidenciais, como membros da diretoria, executivos ou diretores de vendas da empresa, entre outros, e o Azure ATP os considerará como confidenciais.
+Além desses grupos, você pode marcar manualmente grupos ou contas como confidenciais para aprimorar as detecções. Isso é importante porque algumas detecções do ATP do Azure, como a detecção de modificação de grupos confidenciais e os caminhos de movimentação lateral, dependem de quais grupos e contas são considerados confidenciais. Você pode marcar manualmente outros usuários ou grupos como confidenciais, como membros da diretoria, executivos ou diretores de vendas da empresa, entre outros, e o Azure ATP os considerará como confidenciais.
 
 1.  No portal do Azure ATP, clique na engrenagem de **Configuração** na barra de menus.
 

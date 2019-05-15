@@ -4,20 +4,20 @@ description: Descreve os requisitos para uma implantação bem-sucedida do Azure
 keywords: ''
 author: mlottner
 ms.author: mlottner
-manager: barbkess
-ms.date: 03/31/2019
+manager: rkarlin
+ms.date: 05/01/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 62c99622-2fe9-4035-9839-38fec0a353da
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 40caca1ff6ac2648b3f7c3d4921cfb35a5f5ba39
-ms.sourcegitcommit: 279884f436bf0d10d906f4fac950d28f0ada8a45
+ms.openlocfilehash: 420c162e3dc5b7869b46453e3eeda67e1fdc692c
+ms.sourcegitcommit: ae9db212f268f067b217d33b0c3f991b6531c975
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "60164705"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65195556"
 ---
 # <a name="azure-atp-prerequisites"></a>Pré-requisitos do Azure ATP
 
@@ -63,7 +63,7 @@ Esta seção mostra as informações que você deve obter, bem como as contas e 
 
 - Opcional: Uma conta de usuário que não tem nenhuma atividade de rede. Essa conta está configurada como um usuário Honeytoken do Azure ATP. Para obter mais informações, consulte [Configurar exclusões e usuário Honeytoken](install-atp-step7.md).
 
-- Opcional: Ao implantar o sensor autônomo, é necessário encaminhar os eventos do Windows 4776, 4732, 4733, 4728, 4729, 4756, 4757 e 7045 para o ATP do Azure para melhorar ainda mais as detecções de Pass-the-Hash, força bruta, modificação de grupos confidenciais, Honey Tokens e criação de serviços mal-intencionados do ATP do Azure. O sensor do Azure ATP recebe esses eventos automaticamente. No sensor autônomo do Azure ATP, esses eventos podem ser recebidos do SIEM ou definindo o Encaminhamento de Eventos do Windows no controlador de domínio. Os eventos coletados fornecem ao Azure ATP informações adicionais que não estão disponíveis por meio do tráfego de rede do controlador de domínio.
+- Opcional: Ao implantar o sensor autônomo, é necessário encaminhar os eventos do Windows 4776, 4732, 4733, 4728, 4729, 4756, 4757 e 7045 para o ATP do Azure para melhorar ainda mais as detecções de Pass-the-Hash, força bruta, modificação de grupos confidenciais, Honeytokens e criação de serviços mal-intencionados do ATP do Azure. O sensor do Azure ATP recebe esses eventos automaticamente. No sensor autônomo do Azure ATP, esses eventos podem ser recebidos do SIEM ou definindo o Encaminhamento de Eventos do Windows no controlador de domínio. Os eventos coletados fornecem ao Azure ATP informações adicionais que não estão disponíveis por meio do tráfego de rede do controlador de domínio.
 
 ## <a name="azure-atp-portal-requirements"></a>Requisitos do portal do Azure ATP
 O acesso ao portal do Azure ATP ocorre por meio de um navegador que dá suporte aos seguintes navegadores e configurações:
@@ -143,7 +143,7 @@ A detecção de ATP do Azure baseia-se em Logs de Eventos do Windows específico
 
 > [!NOTE]
 > - Usando a conta de usuário do serviço de diretório, o sensor consulta pontos de extremidade em sua organização para administradores locais usando SAM-R (logon de rede) para criar o [gráfico de caminho de movimento lateral](use-case-lateral-movement-path.md). Para obter mais informações, consulte [Configurar permissões necessárias do SAM-R](install-atp-step8-samr.md).
-> - As seguintes portas precisam estar abertas para entrada em dispositivos na rede de sensores autônomos do Azure ATP:
+> - As seguintes portas precisam estar abertas para entrada em dispositivos na rede de sensores do Azure ATP:
 >   -   NTLM via RPC (porta TCP 135) para fins de resolução
 >   -   NetBIOS (porta UDP 137) para fins de resolução
 >   -   RDP (porta TCP 3389), apenas o primeiro pacote *Client Hello*, para fins de resolução<br> Observe que nenhuma autenticação é realizada em nenhuma porta.

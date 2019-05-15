@@ -4,7 +4,7 @@ description: Lista as novidades na nova versão 1.7 do ATA e seus problemas conh
 keywords: ''
 author: rkarlin
 ms.author: rkarlin
-manager: barbkess
+manager: rkarlin
 ms.date: 1/23/2017
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: be9ee613-4eb3-40f1-8973-e7f0a707ff57
 ms.reviewer: ''
 ms.suite: ems
-ms.openlocfilehash: 34c96fd2a9f517749655d27aba553b5aa6d94e25
-ms.sourcegitcommit: b468d9060eb784c16b64a9cc46dbe2d246046cdd
+ms.openlocfilehash: 0570ac2574dfca2fbc22a332228d52fcd429652d
+ms.sourcegitcommit: ae9db212f268f067b217d33b0c3f991b6531c975
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2019
-ms.locfileid: "58674819"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65195948"
 ---
 # <a name="whats-new-in-ata-version-17"></a>Novidades na versão 1.7 do ATA
 Estas notas de versão fornecem informações sobre problemas conhecidos nesta versão da Advanced Threat Analytics.
