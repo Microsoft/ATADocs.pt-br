@@ -5,19 +5,19 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 03/31/2019
+ms.date: 05/19/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 1ac873fc-b763-41d7-878e-7c08da421cb5
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 1489f1b24065a153734bdd46975576d469b57f24
-ms.sourcegitcommit: ae9db212f268f067b217d33b0c3f991b6531c975
+ms.openlocfilehash: 0c497d55142eb13867e904917aca890bc157ad63
+ms.sourcegitcommit: 122974e5bec49a1d613a38debc37d91ff838b05f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65196939"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65933693"
 ---
 # <a name="what-is-network-name-resolution"></a>O que é a Resolução de nomes de rede?
 
@@ -25,12 +25,12 @@ A Resolução de nomes de rede ou NNR é um componente principal da funcionalida
 
 Usando a NNR, o ATP do Azure é capaz de correlacionar atividades brutas (que contêm endereços IP) e os computadores relevantes envolvidos em cada atividade. Com base nas atividades brutas, o ATP do Azure cria perfis de entidades, incluindo computadores, e gera alertas de segurança de atividades suspeitas.
 
-Para resolver endereços IP de nomes do computador, os sensores do ATP consultam o endereço IP do nome do computador "por atrás" do IP, usando um dos seguintes métodos:
+Para resolver endereços IP de nomes do computador, os sensores do ATP do Azure consultam o endereço IP do nome do computador "por atrás" do IP, usando um dos seguintes métodos:
 
 1. NTLM sobre RPC (porta TCP 135)
 2. NetBIOS (porta UDP 137)
-3. RDP (porta TCP 3389), apenas o primeiro pacote do **Client hello**
-4. Consulta ao servidor DNS usando a pesquisa de DNS reverso do endereço IP (UDP 53)
+3. RDP (porta TCP 3389): apenas o primeiro pacote do **Client hello**
+4. Consultas ao servidor DNS usando a pesquisa de DNS reverso do endereço IP (UDP 53)
 
 > [!NOTE]
 >Nenhuma autenticação é realizada em quaisquer das portas.
@@ -77,11 +77,11 @@ Cada alerta de monitoramento oferece detalhes específicos sobre o método, os s
 ### <a name="configuration-recommendations"></a>Recomendações de configuração
 
 - RPC sobre NTLM:
-    - A porta 135 deve estar aberta para a comunicação de entrada de Sensores do ATP do Azure em todos os computadores no ambiente.
+    - verifique se a porta TCP 135 está aberta para a comunicação de entrada de sensores do ATP do Azure em todos os computadores no ambiente.
     - Verifique todas as configurações de rede (firewalls), pois isso pode impedir a comunicação com as portas relevantes.
 
 - NetBIOS:
-    - A porta 137 deve estar aberta para a comunicação de entrada de sensores do ATP do Azure em todos os computadores no ambiente.
+    - verifique se a porta UDP 137 está aberta para a comunicação de entrada de sensores do ATP do Azure em todos os computadores no ambiente.
     - Verifique todas as configurações de rede (firewalls), pois isso pode impedir a comunicação com as portas relevantes.
 - DNS inverso:
     - O Sensor deve ser capaz de alcançar o servidor DNS e as Zonas de Pesquisa Inversa devem estar habilitadas.

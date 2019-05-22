@@ -5,19 +5,19 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 1/15/2019
+ms.date: 05/20/2019
 ms.topic: tutorial
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: e9cf68d2-36bd-4b0d-b36e-7cf7ded2618e
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: aa4f9c18e0695092ddbaa9ef8505b403e206cb8c
-ms.sourcegitcommit: ae9db212f268f067b217d33b0c3f991b6531c975
+ms.openlocfilehash: a977ff49c385ababfd753d05caf3518825e9def9
+ms.sourcegitcommit: 122974e5bec49a1d613a38debc37d91ff838b05f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65196854"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65933639"
 ---
 # <a name="tutorial-compromised-credential-alerts"></a>Tutorial: Alertas de credencial comprometida  
 
@@ -103,10 +103,13 @@ Em uma pulverização de senhas, depois de enumerar com êxito uma lista de usu�
 1. Investigue o computador de origem.  
 2. Na página de alerta, verifique quais usuários, se houver, foram adivinhados com êxito.
     - Para cada usuário adivinhado com êxito, [verifique seu perfil](investigate-a-user.md) para investigar mais.
-3. Se um alerta ocorrer muitas vezes e a autenticação tiver sido executada usando NTLM, às vezes, não haverá informações suficientes disponíveis sobre o servidor que o computador de origem tentou acessar.
-    1. Para obter essas informações, certifique-se de habilitar auditoria NTLM nos controladores de domínio envolvidos.  
-    2. Para habilitar auditoria NTLM, ative o evento 8004 (o evento de autenticação de NTLM que inclui informações sobre o computador de origem, a conta de usuário e o servidor que o computador de origem tentou acessar).
-    3. Depois de saber qual servidor enviou a validação de autenticação, investigue-o verificando eventos como o 4624 para compreender melhor o processo de autenticação.
+1. Se a autenticação tiver sido feita usando o NTLM, poderá não haver informações suficientes disponíveis sobre o servidor que o computador de origem tentou acessar em alguns cenários. O ATP do Azure captura os dados do computador de origem com base no Evento 4776 do Windows, que contém o nome do computador de origem.
+
+    Para obter o nome do computador de origem, habilite a auditoria NTLM nos controladores de domínio relevantes.
+    
+    Para habilitar a auditoria NTLM, ative o Evento do Windows 8004 (o evento de autenticação NTLM que inclui informações sobre o computador de origem, a conta de usuário e o servidor que o computador de origem tentou acessar).
+    
+    Depois de saber qual servidor enviou a validação de autenticação, investigue-o verificando eventos como o Evento 4624 do Windows para compreender melhor o processo de autenticação. Verifique se esse servidor está exposto à Internet usando quaisquer portas abertas. Por exemplo, o servidor aberto está usando o RDP para a Internet?
 
 **Correção sugerida e etapas de prevenção**
 
@@ -124,6 +127,7 @@ Em uma pulverização de senhas, depois de enumerar com êxito uma lista de usu�
 **Descrição**
 
 Em um ataque de força bruta, o invasor tenta autenticar com muitas senhas diferentes para diferentes contas até que uma senha correta seja encontrada para pelo menos uma conta. Uma vez encontrada, um invasor pode fazer logon usando essa conta.  
+
 Nesta detecção, um alerta é disparado quando o Azure ATP detecta um grande número de autenticações de associação simples. Esse alerta detecta ataques de força bruta realizados, seja *horizontalmente*, com um pequeno conjunto de senhas entre vários usuários, *verticalmente*, com um grande conjunto de senhas em apenas alguns usuários ou com qualquer combinação dessas duas opções.
 
 **TP, B-TP ou FP**

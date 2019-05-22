@@ -5,19 +5,19 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 9/27/2018
+ms.date: 05/12/2019
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
 ms.technology: ''
 ms.assetid: a5f90544-1c70-4aff-8bf3-c59dd7abd687
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: ec1e15804aed63209b1cd675c902fc91dab376bd
-ms.sourcegitcommit: ae9db212f268f067b217d33b0c3f991b6531c975
+ms.openlocfilehash: 153f53715bc33b735bb7cf2796dcb1f983d67915
+ms.sourcegitcommit: 5d93b0e59080c2d872672bf77a1a40c548c1016d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65196697"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65760324"
 ---
 # <a name="ata-prerequisites"></a>Pré-requisitos do ATA
 
@@ -31,12 +31,12 @@ Este artigo descreve os requisitos para uma implantação bem-sucedida do ATA no
 
 O ATA é composto pelo Centro do ATA, pelo Gateway do ATA e/ou o Gateway Lightweight do ATA. Para saber mais sobre os componentes do ATA, confira [Arquitetura do ATA](ata-architecture.md).
 
-O Sistema do ATA funciona nos limites da floresta do active directory e oferece suporte a FFL (Nível funcional da floresta) do Windows 2003 e superior.
+O Sistema do ATA funciona nos limites da floresta do active directory e é compatível com o FFL (Nível funcional da floresta) do Windows 2003 e superior.
 
 
 [Antes de começar](#before-you-start): Esta seção lista as informações que você deve obter, as contas e entidades de rede que você deve ter antes de iniciar a instalação do ATA.
 
-[ATA Center](#ata-center-requirements): esta seção lista o hardware do ATA Center, os requisitos de software e as configurações que precisam ser definidas em seu servidor do ATA Center.
+[ATA Center](#ata-center-requirements): Esta seção lista o hardware da Central do ATA, os requisitos de software e as configurações que precisam ser definidas em seu servidor da Central do ATA.
 
 [ATA Gateway](#ata-gateway-requirements): esta seção lista o hardware do ATA Gateway, os requisitos de software e as configurações que precisam ser definidas em seu servidor do ATA Gateway.
 
@@ -67,7 +67,7 @@ Esta seção mostra as informações que você deve obter, bem como as contas e 
 ## <a name="ata-center-requirements"></a>Requisitos da Central de ATA
 Esta seção lista os requisitos para a Central de ATA.
 ### <a name="general"></a>Geral
-A Central de ATA dá suporte à instalação em um servidor executando o Windows Server 2012 R2 ou o Windows Server 2016. 
+A Central do ATA pode ser instalada em um servidor executando o Windows Server 2012 R2 ou o Windows Server 2016 e o Windows Server 2019. 
 
  > [!NOTE]
  > A Central do ATA não é compatível com o núcleo do Windows Server.
@@ -78,10 +78,10 @@ Antes de instalar o ATA Center em execução no Windows 2012 R2, confirme se a s
 
 Você pode verificar executando o seguinte cmdlet do Windows PowerShell: `[Get-HotFix -Id kb2919355]`.
 
-A instalação do ATA Center como uma máquina virtual tem suporte. 
+É permitida a instalação do ATA Center como uma máquina virtual. 
 
 > [!NOTE] 
-> Durante a execução como uma memória dinâmica da máquina virtual ou qualquer outra memória, não há suporte para o recurso de inchamento.
+> Durante a execução como uma memória dinâmica da máquina virtual ou qualquer outra memória, o recurso de inchamento não é suportado.
 
 Se você executar a Central de ATA como uma máquina virtual, deverá finalizar o servidor antes de criar um novo ponto de verificação para evitar uma possível corrupção do banco de dados.
 
@@ -137,12 +137,12 @@ O certificado deve ter:
 -   Um tipo de provedor do CSP (Provedor de Serviços de Criptografia) ou KSP (Provedor de Armazenamento de Chaves)
 -   Um comprimento de chave pública de 2048 bits
 -   Um valor definido para os sinalizadores de uso KeyEncipherment e ServerAuthentication
--   O valor KeySpec (KeyNumber) de "KeyExchange" (AT\_KEYEXCHANGE). Observe que o valor de "Signature" (AT\_SIGNATURE) não tem suporte. 
+-   O valor KeySpec (KeyNumber) de "KeyExchange" (AT\_KEYEXCHANGE). Observe que o valor de "Signature" (AT\_SIGNATURE) não é compatível. 
 
 Por exemplo, você pode usar os modelos padrão **servidor Web** ou **Computador**.
 
 > [!WARNING]
-> Não há suporte para o processo de renovação de um certificado existente. A única maneira de renovar um certificado é criando um novo certificado e configurando o ATA para usar o novo certificado.
+> O processo de renovação de um certificado existente não é suportado. A única maneira de renovar um certificado é criando um novo certificado e configurando o ATA para usar o novo certificado.
 
 
 > [!NOTE]
@@ -152,7 +152,7 @@ Por exemplo, você pode usar os modelos padrão **servidor Web** ou **Computador
 ## <a name="ata-gateway-requirements"></a>Requisitos do Gateway do ATA
 Esta seção lista os requisitos para o Gateway do ATA.
 ### <a name="general"></a>Geral
-O Gateway do ATA permite instalação em um servidor executando o Windows Server 2012 R2 ou o Windows Server 2016 (incluindo o núcleo do servidor).
+O Gateway do ATA pode ser instalado em um servidor executando o Windows Server 2012 R2 ou o Windows Server 2016 e o Windows Server 2019 (incluindo o núcleo do servidor).
 O Gateway do ATA pode ser instalado em um servidor que seja membro de um domínio ou grupo de trabalho.
 O Gateway do ATA pode ser usado para monitorar Controladores de Domínio com o Nível de Domínio Funcional do Windows 2003 e posterior.
 
@@ -168,10 +168,10 @@ Para obter informações sobre como usar máquinas virtuais com o Gateway do ATA
 
 ### <a name="server-specifications"></a>Especificações do servidor
 Para ter um melhor desempenho, defina a **Opção de Energia** do Gateway de ATA para **Alto Desempenho**.<br>
-Um Gateway do ATA pode dar suporte ao monitoramento de vários controladores de domínio, dependendo da quantidade de tráfego de rede para e a partir dos controladores de domínio.
+Um Gateway do ATA pode ser compatível com o monitoramento de vários controladores de domínio, dependendo da quantidade de tráfego de rede para e a partir dos controladores de domínio.
 
 > [!NOTE] 
-> Durante a execução como uma memória dinâmica da máquina virtual ou qualquer outra memória, não há suporte para o recurso de inchamento.
+> Durante a execução como uma memória dinâmica da máquina virtual ou qualquer outra memória, o recurso de inchamento não é suportado.
 
 Para saber mais sobre os requisitos de hardware do Gateway do ATA, confira [Planejamento de capacidade do ATA](ata-capacity-planning.md).
 
@@ -232,7 +232,7 @@ A tabela abaixo lista as portas mínimas que o Gateway do ATA requer configurada
 ## <a name="ata-lightweight-gateway-requirements"></a>Requisitos do Gateway Lightweight do ATA
 Esta seção lista os requisitos para o Gateway Lightweight do ATA.
 ### <a name="general"></a>Geral
-O Gateway Lightweight do ATA dá suporte à instalação em um controlador de domínio que executa o Windows Server 2008 R2 SP1 (sem incluir o Server Core), o Windows Server 2012, o Windows Server 2012 R2, o Windows Server 2016 (incluindo o Core, mas não o Nano).
+O Gateway Lightweight do ATA pode ser instalado em um controlador de domínio que executa o Windows Server 2008 R2 SP1 (não incluindo o Server Core), o Windows Server 2012, o Windows Server 2012 R2, o Windows Server 2016 e o Windows Server 2019 (incluindo o Core, mas não o Nano).
 
 O controlador de domínio pode ser um RODC (controlador de domínio somente leitura).
 
@@ -258,7 +258,7 @@ Para ter um melhor desempenho, defina a **Opção de Energia** do Gateway Lightw
 O Gateway Lightweight do ATA pode ser implantado em controladores de domínio de vários tamanhos e cargas, dependendo da quantidade de tráfego de rede dos controladores de domínio e da quantidade de recursos instalados no controlador de domínio.
 
 > [!NOTE] 
-> Durante a execução como uma memória dinâmica da máquina virtual ou qualquer outra memória, não há suporte para o recurso de inchamento.
+> Durante a execução como uma memória dinâmica da máquina virtual ou qualquer outra memória, o recurso de inchamento não é suportado.
 
 Para saber mais sobre os requisitos de hardware do Gateway Lightweight do ATA, confira [Planejamento de capacidade do ATA](ata-capacity-planning.md).
 
@@ -272,7 +272,7 @@ O Gateway Lightweight do ATA monitora o tráfego local em todos os adaptadores d
 Após a implantação, você pode usar o Console do ATA para modificar quais adaptadores de rede são monitorados.
 
 > [!NOTE]
-> Não há suporte para o Gateway Lightweight em controles de domínio que executem o Windows 2008 R2 com o Broadcom Network Adapter Teaming habilitado.
+> O Gateway Lightweight não é compatível com controles de domínio que executem o Windows 2008 R2 com o Broadcom Network Adapter Teaming habilitado.
 
 ### <a name="ports"></a>Portas
 A tabela abaixo lista o mínimo de portas que o Gateway Lightweight do ATA exige:

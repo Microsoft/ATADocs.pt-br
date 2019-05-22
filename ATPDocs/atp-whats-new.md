@@ -5,21 +5,44 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 05/07/2019
+ms.date: 05/20/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 7d0f33db-2513-4146-a395-290e001f4199
-ms.reviewer: itargoet
+ms.reviewer: ort
 ms.suite: ems
-ms.openlocfilehash: 86c76a14403e7539156c7f882a30d022842a5771
-ms.sourcegitcommit: fa9b880e52d4b615409cc247fc73993407df0ae5
+ms.openlocfilehash: 8f9426a51f0bd709685c365a39d2f4aad1dbf8cb
+ms.sourcegitcommit: 122974e5bec49a1d613a38debc37d91ff838b05f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65226788"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65933667"
 ---
 # <a name="whats-new-in-azure-atp"></a>Novidades do Azure ATP
+
+## <a name="azure-atp-release-278"></a>ATP do Azure versão 2.78
+
+Lançado em 19 de maio de 2019
+
+- **Aprimoramento do recurso: entidades confidenciais**<br> Marcação Confidencial Manual para Servidores Exchange
+
+    Agora você pode marcar manualmente entidades como Servidores Exchange durante a configuração.
+
+    Para marcar manualmente uma entidade como um Servidor Exchange:
+    1. No portal do ATP do Azure, acesse o menu **Configuração**.
+    2. Em **Detecção**, escolha **Marcas de entidade** e, em seguida, escolha **Confidencial**.
+    3. Escolha **Exchange Servers** e, em seguida, adicione a entidade que você deseja marcar.
+
+    Depois de marcar um computador como um Exchange Server, ele será marcado como Confidencial e exibirá que foi marcado como um Servidor Exchange.  A marcação Confidencial será exibida no perfil da entidade do computador e o computador será analisado em todas as detecções baseadas em contas confidenciais e Caminhos de Movimentação Lateral.
+
+- Essa versão também inclui aprimoramentos e correções de bug da infraestrutura do sensor interno.
+
+## <a name="azure-atp-release-277"></a>ATP do Azure versão 2.77
+
+Lançado em 12 de maio de 2019
+
+- Essa versão inclui aprimoramentos e correções de bug da infraestrutura do sensor interno.
 
 ## <a name="azure-atp-release-276"></a>ATP do Azure versão 2.76
 
