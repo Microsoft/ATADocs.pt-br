@@ -5,19 +5,19 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 05/14/2019
+ms.date: 05/26/2019
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
 ms.technology: ''
 ms.assetid: 88720401-1fb2-4353-ad39-32bc0088f0de
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 76ffdf048fd59fecba08b14083dca1e6b98236c5
-ms.sourcegitcommit: ef6d041d5ecde7ec909fd0f90848ce422c0c4774
-ms.translationtype: HT
+ms.openlocfilehash: 7168e8a073473bacd659e662d71ac7984ac2a45c
+ms.sourcegitcommit: 07abbd941d91299475df2af469ee5a9a99e07e0f
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65613413"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66264963"
 ---
 # <a name="recommended-upgrade-path-for-ata"></a>Caminho de atualização recomendado para o ATA
 
@@ -28,7 +28,7 @@ Este artigo fornece informações sobre as versões disponíveis do Advanced Thr
 
 ## <a name="ata-versions"></a>Versões do ATA
 
-|Versão|Nº do build|
+|Version|Nº do build|
 |----|----|
 |1.6|1.6.4103|
 |1.6 Atualização 1|1.6.4317|
@@ -41,8 +41,13 @@ Este artigo fornece informações sobre as versões disponíveis do Advanced Thr
 |1.9 Atualização 1|1.9.7412|
 |1.9 Atualização 2|1.9.7478|
 
+## <a name="upgrade-paths"></a>Caminhos de atualização
 
-## <a name="see-also"></a>Consulte Também
+Consulte o diagrama de caminho de atualização para determinar o caminho de atualização correto para sua instalação atual. 
+
+![Caminho de atualização de versão do ATA](./media/upgrade-path-ata.png)
+
+## <a name="see-also"></a>Consulte também
 - [Pré-requisitos do ATA](ata-prerequisites.md)
 - [Planejamento da capacidade do ATA](ata-capacity-planning.md)
 - [Configurar coleta de eventos](configure-event-collection.md)

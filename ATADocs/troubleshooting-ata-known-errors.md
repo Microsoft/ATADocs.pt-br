@@ -5,19 +5,19 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 04/18/2019
+ms.date: 05/29/2019
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
 ms.technology: ''
 ms.assetid: d89e7aff-a6ef-48a3-ae87-6ac2e39f3bdb
 ms.reviewer: arzinger
 ms.suite: ems
-ms.openlocfilehash: 9a788e76c4cc7d15d43d90b023927d9e76c422b9
-ms.sourcegitcommit: ae9db212f268f067b217d33b0c3f991b6531c975
-ms.translationtype: HT
+ms.openlocfilehash: e6a286b4468476cd0b2ac9a350c018e4c04a265e
+ms.sourcegitcommit: b021f8dfc54e59de429f93cc5fc0d733d92b00b8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65195762"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66403604"
 ---
 # <a name="troubleshooting-ata-known-issues"></a>Solução de problemas conhecidos do ATA
 
@@ -46,7 +46,7 @@ Esta seção detalha os possíveis erros nas implantações do ATA e as etapas n
 > |System.InvalidOperationException: a instância'Microsoft.Tri.Gateway' não existe na Categoria especificada.|PIDs foi habilitado para nomes de processo no Gateway do ATA|Use [KB281884](https://support.microsoft.com/kb/281884) para desabilitar os PIDs em nomes de processo|
 > |System.InvalidOperationException: categoria não existe.|Os contadores podem estar desabilitados no registro|Use [KB2554336](https://support.microsoft.com/kb/2554336) para recriar os Contadores de desempenho|
 > |System.ApplicationException: não é possível iniciar a sessão do ETW MMA-ETW-Livecapture-a4f595bd-f567-49a7-b963-20fa4e370329|Há uma entrada do host no arquivo HOSTS que aponta para o nome curto do computador|Remova a entrada do host do arquivo C:\Windows\System32\drivers\etc\HOSTS ou altere-a para um FQDN.|
-> |System.IO.IOException: a autenticação falhou porque a parte remota fechou o fluxo de transporte.|O TLS 1.0 está desabilitado no Gateway de ATA, mas o .Net está configurado para usar o TLS 1.2|Use uma das seguintes opções: </br> Habilitar o TLS 1.0 no Gateway ATA </br>Habilite o TLS 1.2 no .Net definindo as chaves de registro para usar os padrões do sistema operacional para SSL e TLS, da seguinte forma: </br>`[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\v4.0.30319] "SystemDefaultTlsVersions"=dword:00000001` </br>`[HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\.NETFramework\v4.0.30319] "SystemDefaultTlsVersions"=dword:00000001`</br>`[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\v4.0.30319] "SchUseStrongCrypto"=dword:00000001 `</br>`[HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\.NETFramework\v4.0.30319] " SchUseStrongCrypto"=dword:00000001`|
+> |System.IO.IOException: A autenticação falhou porque a parte remota fechou o fluxo de transporte ou não foi possível criar um canal seguro de SSL/TLS|O TLS 1.0 está desabilitado no Gateway de ATA, mas o .Net está configurado para usar o TLS 1.2|Use uma das seguintes opções: </br> Habilitar o TLS 1.0 no Gateway ATA </br>Habilite o TLS 1.2 no .Net definindo as chaves de registro para usar os padrões do sistema operacional para SSL e TLS, da seguinte forma: </br>`[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\v4.0.30319] "SystemDefaultTlsVersions"=dword:00000001` </br>`[HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\.NETFramework\v4.0.30319] "SystemDefaultTlsVersions"=dword:00000001`</br>`[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\v4.0.30319] "SchUseStrongCrypto"=dword:00000001 `</br>`[HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\.NETFramework\v4.0.30319] " SchUseStrongCrypto"=dword:00000001`|
 > |System.TypeLoadException: não foi possível carregar o tipo 'Microsoft.Opn.Runtime.Values.BinaryValueBufferManager' do assembly 'Microsoft.Opn.Runtime, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35'|Falha do Gateway do ATA ao carregar os arquivos de análise necessários.|Verifique se o Microsoft Message Analyzer está instalado no momento. Não há suporte para o Message Analyzer ser instalado com o Gateway/Gateway Lightweight do ATA. Desinstale o Message Analyzer e reinicie o serviço de Gateway.|
 > |System.Net.WebException: o servidor remoto retornou um erro: (407) Autenticação de Proxy Necessária|A comunicação de Gateway do ATA no centro do ATA está sendo interrompida por um servidor proxy.|Desabilite o proxy no computador do Gateway do ATA. <br></br>Observe que as configurações de proxy podem ser por conta.|
 > |System.IO.DirectoryNotFoundException: O sistema não pode localizar o caminho especificado. (Exceção de HRESULT: 0x80070003)|Um ou mais dos serviços necessários para operar o ATA não foram iniciados.|Inicie os seguintes serviços: <br></br>Logs e Alertas de Desempenho (PLA), Agendador de Tarefas (agenda).|
@@ -89,7 +89,7 @@ Esta seção detalha os possíveis erros nas implantações do ATA e as etapas n
 
 
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Consulte também
 - [Pré-requisitos do ATA](ata-prerequisites.md)
 - [Planejamento da capacidade do ATA](ata-capacity-planning.md)
 - [Configurar coleta de eventos](configure-event-collection.md)
