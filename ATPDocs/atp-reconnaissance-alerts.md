@@ -5,19 +5,19 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 05/20/2019
+ms.date: 05/30/2019
 ms.topic: tutorial
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: e9cf68d2-36bd-4b0d-b36e-7cf7ded2618e
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 95b34c65c0f13c58034e29acb662c77d65253c70
-ms.sourcegitcommit: 122974e5bec49a1d613a38debc37d91ff838b05f
+ms.openlocfilehash: 848922f0fb7d31a72d3dc2f8371a39be3b125ad0
+ms.sourcegitcommit: b021f8dfc54e59de429f93cc5fc0d733d92b00b8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65933690"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66403591"
 ---
 # <a name="tutorial-reconnaissance-alerts"></a>Tutorial: Alertas de reconhecimento  
 
@@ -38,7 +38,7 @@ Neste tutorial, aprenda como entender, classificar, corrigir e impedir os seguin
 > [!div class="checklist"]
 > * Reconhecimento de enumeração de conta (ID 2003 externa)
 > * Reconhecimento de mapeamento de rede (DNS) (ID 2007 externa)
-> * Reconhecimento de entidade de segurança (LDAP) (ID 2038 externa) – versão prévia
+> * Reconhecimento de entidade de segurança (LDAP) (ID 2038 externa)
 > * Reconhecimento de endereço IP e de usuário (SMB) (ID 2012 externa)
 > * Reconhecimento de usuário e de associação a um grupo (SAMR) (ID 2021 externa)
  
@@ -54,7 +54,7 @@ No reconhecimento de enumeração de conta, um invasor usa um dicionário com mi
 
 **Kerberos**: O invasor faz solicitações Kerberos usando esses nomes para tentar localizar um nome de usuário válido no domínio. Quando uma adivinhação determina um nome de usuário com êxito, o invasor recebe o erro do Kerberos **Pré-autenticação necessária** em vez de **Entidade de segurança desconhecida**.
 
-**NTLM**: O invasor faz solicitações de autenticação NTLM usando o dicionário de nomes para tentar localizar um nome de usuário válido no domínio. Quando uma adivinhação determina com êxito um nome de usuário, o invasor obtém o erro do NTLM **WrongPassword (0xc000006a)** em vez de **NoSuchUser (0xc0000064)**.
+**NTLM**: O invasor faz solicitações de autenticação NTLM usando o dicionário de nomes para tentar localizar um nome de usuário válido no domínio. Quando uma adivinhação determina com êxito um nome de usuário, o invasor obtém o erro do NTLM **WrongPassword (0xc000006a)** em vez de **NoSuchUser (0xc0000064)** .
 
 Nessa detecção de alerta, o ATP do Azure detecta de onde veio o ataque de enumeração de conta, o número total de tentativas de adivinhação e quantas tentativas foram correspondidas. Se houver muitos usuários desconhecidos, o Azure ATP considerará isso uma atividade suspeita.
 
@@ -98,15 +98,14 @@ Agora, examine as contas:<br>
 
 1. Investigue o computador de origem
 1. Se uma das tentativas de adivinhação corresponder a nomes de contas existentes, o invasor saberá da existência das contas em seu ambiente e poderá usar a força bruta para tentar acessar seu domínio usando os nomes de usuário descobertos. Investigue as contas existentes usando o [guia de investigação do usuário](investigate-a-user.md).
-1. Se a autenticação tiver sido feita usando o NTLM, poderá não haver informações suficientes disponíveis sobre o servidor que o computador de origem tentou acessar em alguns cenários. O ATP do Azure captura os dados do computador de origem com base no Evento 4776 do Windows, que contém o nome do computador de origem.
+    > [!NOTE]
+    > Se a autenticação tiver sido feita usando o NTLM, poderá não haver informações suficientes disponíveis sobre o servidor que o computador de origem tentou acessar em alguns cenários. A ATP do Azure captura os dados do computador de origem com base no Evento 4776 do Windows, que contém o nome do computador de origem definido pelo computador.
+    > Ao usar o Evento 4776 do Windows para capturar essas informações, o campo de origem dessa informação, ocasionalmente, é substituído pelo dispositivo ou software para exibir apenas Estação de trabalho ou MSTSC. Se você tiver com frequência dispositivos que são exibidos como Estação de trabalho ou MSTSC, certifique-se de habilitar a auditoria de NTLM nos controladores de domínio relevantes para obter o nome do computador de origem real.    
+    > Para habilitar a auditoria NTLM, ative o Evento do Windows 8004 (o evento de autenticação NTLM que inclui informações sobre o computador de origem, a conta de usuário e o servidor que o computador de origem tentou acessar).
 
-    Para obter o nome do computador de origem, habilite a auditoria NTLM nos controladores de domínio relevantes.
+1. Depois de saber qual servidor enviou a validação de autenticação, investigue-o verificando eventos como o Evento 4624 do Windows para compreender melhor o processo de autenticação. 
 
-    Para habilitar a auditoria NTLM, ative o Evento do Windows 8004 (o evento de autenticação NTLM que inclui informações sobre o computador de origem, a conta de usuário e o servidor que o computador de origem tentou acessar).
-
-    Depois de saber qual servidor enviou a validação de autenticação, investigue-o verificando eventos como o Evento 4624 do Windows para compreender melhor o processo de autenticação. 
-
-    Verifique se esse servidor está exposto à Internet usando quaisquer portas abertas. Por exemplo, o servidor aberto está usando o RDP para a Internet? 
+1. Verifique se esse servidor está exposto à Internet usando quaisquer portas abertas. Por exemplo, o servidor aberto está usando o RDP para a Internet? 
 
 ### <a name="suggested-remediation-and-steps-for-prevention"></a>Correção sugerida e etapas de prevenção
 
@@ -161,7 +160,7 @@ Verificadores de segurança e aplicativos legítimos podem gerar consultas DNS.
 
 - Proteja seu servidor DNS interno para impedir o reconhecimento usando DNS desabilitando a transferências de zona ou [restringindo as transferências de zona](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee649273(v=ws.10)) apenas a endereços IP especificados. A modificação de transferências de zona é uma tarefa entre uma lista de verificação que deve ser resolvida para [proteger seus servidores DNS contra ataques internos e externos](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee649273(v=ws.10)).
 
-## <a name="security-principal-reconnaissance-ldap-external-id-2038---preview"></a>Reconhecimento de entidade de segurança (LDAP) (ID 2038 externa) – versão prévia
+## <a name="security-principal-reconnaissance-ldap-external-id-2038"></a>Reconhecimento de entidade de segurança (LDAP) (ID 2038 externa)
 
 **Descrição**
 

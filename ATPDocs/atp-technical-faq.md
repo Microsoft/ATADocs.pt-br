@@ -5,19 +5,19 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 04/07/2019
+ms.date: 05/30/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 6a9b5273-eb26-414e-9cdd-f64406e24ed8
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: c844aa445378643200997d4389a3bee1aae45099
-ms.sourcegitcommit: ae9db212f268f067b217d33b0c3f991b6531c975
+ms.openlocfilehash: 297df34b92ebbe1be93667d54eedd51a605e5bf1
+ms.sourcegitcommit: b021f8dfc54e59de429f93cc5fc0d733d92b00b8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65195513"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66403515"
 ---
 # <a name="azure-atp-frequently-asked-questions"></a>Perguntas frequentes sobre o Azure ATP
 Este artigo fornece uma lista de perguntas frequentes sobre o Azure ATP e dividido nas seguintes categorias: 
@@ -90,7 +90,7 @@ Além disso, a Microsoft realiza verificações de histórico de determinados fu
 Cada controlador de domínio no ambiente deve ser coberto por um sensor ou sensor autônomo do ATP. Para obter mais informações, confira [Azure ATP sensor sizing](atp-capacity-planning.md#sizing) (Dimensionamento do sensor do Azure ATP). 
 
 ### <a name="does-azure-atp-work-with-encrypted-traffic"></a>O Azure ATP funciona com tráfego criptografado?
-Os protocolos de rede com tráfego criptografado (por exemplo, LDAPS e IPSEC) não são descriptografados, mas são analisados pelos sensores.
+Os protocolos de rede com tráfego criptografado (por exemplo, AtSvc e WMI) não são descriptografados, mas são analisados pelos sensores.
 
 ### <a name="does-azure-atp-work-with-kerberos-armoring"></a>O Azure ATP funciona com Kerberos Armoring?
 Há suporte para a habilitação do Kerberos Armoring, também conhecido como FAST (Flexible Authentication Secure Tunneling), pelo Azure ATP, com exceção da detecção de passagem pelo hash, que não funciona com o Kerberos Armoring.
@@ -142,7 +142,7 @@ O ATP do Azure gera tráfego dos controladores de domínio para os computadores 
     - RDP (TCP porta 3389)
     - Consulta ao servidor DNS usando a pesquisa de DNS reverso do endereço IP (UDP 53)
     
-    Depois de receber o nome do computador, os sensores do ATP do Azure executam uma verificação cruzada dos detalhes no Active Directory para ver se há um objeto de computador correlacionado com o mesmo nome do computador. Se encontrarem a correspondência, é feita uma associação entre o endereço IP e o objeto do computador correspondido.
+    Depois de obter o nome do computador, os sensores do ATP do Azure executam uma verificação cruzada dos detalhes no Active Directory para ver se há um objeto de computador correlacionado com o mesmo nome do computador. Se encontrarem a correspondência, é feita uma associação entre o endereço IP e o objeto do computador correspondido.
 2. **LMP (caminho de movimento lateral)**<br>
     Para criar LMPs potenciais para usuários confidenciais, o ATP do Azure requer informações sobre os administradores locais nos computadores. Neste cenário, o sensor do ATP do Azure usa SAM-R (TCP 445) para consultar o endereço IP identificado no tráfego de rede a fim de determinar os administradores locais do computador. Para saber mais sobre o ATP do Azure e SAM-R, confira [Configurar permissões necessárias do SAM-R](install-atp-step8-samr.md). 
 

@@ -5,19 +5,19 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 04/07/2019
+ms.date: 05/27/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: ca5d1c7b-11a9-4df3-84a5-f53feaf6e561
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 0dd8d987472ef88108f2cb3541bd590d1a816726
-ms.sourcegitcommit: ae9db212f268f067b217d33b0c3f991b6531c975
+ms.openlocfilehash: e72e3e03d52f41eae1fe9823feae6dffd181b31f
+ms.sourcegitcommit: 07abbd941d91299475df2af469ee5a9a99e07e0f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65196651"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66264934"
 ---
 # <a name="azure-atp-security-alerts"></a>Alertas de segurança do ATP do Azure
 
@@ -48,7 +48,7 @@ Na versão 2.56, todos os alertas de segurança da ATP do Azure existentes foram
 |[Reconhecimento de mapeamento de rede (DNS)](atp-reconnaissance-alerts.md#network-mapping-reconnaissance-dns-external-id-2007)|Reconhecimento usando DNS|2007|Média|Descoberta|
 |[Tentativa de execução remota de código](atp-domain-dominance-alerts.md#remote-code-execution-attempt-external-id-2019)|Tentativa de execução remota de código|2019|Média|Execução,<br> Persistência,<br> Elevação de privilégios,<br> Evasão de defesa,<br> Movimentação lateral|
 |[Execução remota de código sobre DNS](atp-lateral-movement-alerts.md#remote-code-execution-over-dns-external-id-2036)|NA|2036|Média|Elevação de privilégios,<br> Movimentação lateral|
-|[Reconhecimento de entidade de segurança (LDAP) – versão prévia](atp-reconnaissance-alerts.md#security-principal-reconnaissance-ldap-external-id-2038---preview)|NA|2038|Média|Credencial de acesso|
+|[Reconhecimento de entidade de segurança (LDAP)](atp-reconnaissance-alerts.md#security-principal-reconnaissance-ldap-external-id-2038)|NA|2038|Média|Credencial de acesso|
 |[Suspeita de ataque de força bruta (NTLM do Kerberos)](atp-compromised-credentials-alerts.md#suspected-brute-force-attack-kerberos-ntlm-external-id-2023)|Falhas de autenticação suspeitas|2023|Média|Credencial de acesso|
 |[Suspeita de LDAP (ataque de força bruta)](atp-compromised-credentials-alerts.md#suspected-brute-force-attack-ldap-external-id-2004)|Ataque de força bruta usando associação simples LDAP|2004|Média|Credencial de acesso|
 |[Suspeita de ataque de força bruta (SMB)](atp-compromised-credentials-alerts.md#suspected-brute-force-attack-smb-external-id-2033)|Implementação de protocolo incomum (possível uso de ferramentas mal-intencionadas, como a Hydra)|2033|Média|Movimentação lateral|

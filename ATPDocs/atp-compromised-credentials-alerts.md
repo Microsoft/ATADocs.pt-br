@@ -5,19 +5,19 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 05/20/2019
+ms.date: 05/30/2019
 ms.topic: tutorial
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: e9cf68d2-36bd-4b0d-b36e-7cf7ded2618e
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: a977ff49c385ababfd753d05caf3518825e9def9
-ms.sourcegitcommit: 122974e5bec49a1d613a38debc37d91ff838b05f
+ms.openlocfilehash: 6e55ebfaeac540d15a8539ee2c5b1450ee0c3f10
+ms.sourcegitcommit: b021f8dfc54e59de429f93cc5fc0d733d92b00b8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65933639"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66403550"
 ---
 # <a name="tutorial-compromised-credential-alerts"></a>Tutorial: Alertas de credencial comprometida  
 
@@ -63,6 +63,11 @@ Para obter mais informações sobre contas de honeytoken, confira [Configurar ex
 1. Investigue o [usuário de origem](investigate-a-user.md).
 2. Investigue o [computador de origem](investigate-a-computer.md).
 
+> [!NOTE]
+    > Se a autenticação tiver sido feita usando o NTLM, poderá não haver informações suficientes disponíveis sobre o servidor que o computador de origem tentou acessar em alguns cenários. A ATP do Azure captura os dados do computador de origem com base no Evento 4776 do Windows, que contém o nome do computador de origem definido pelo computador.
+    > Ao usar o Evento 4776 do Windows para capturar essas informações, o campo de origem dessa informação, ocasionalmente, é substituído pelo dispositivo ou software para exibir apenas Estação de trabalho ou MSTSC. Se você tiver com frequência dispositivos que são exibidos como Estação de trabalho ou MSTSC, certifique-se de habilitar a auditoria de NTLM nos controladores de domínio relevantes para obter o nome do computador de origem real.    
+    > Para habilitar a auditoria NTLM, ative o Evento do Windows 8004 (o evento de autenticação NTLM que inclui informações sobre o computador de origem, a conta de usuário e o servidor que o computador de origem tentou acessar).
+
 **Correção sugerida e etapas de prevenção**
 
 1. Contenha o computador de origem.
@@ -101,15 +106,17 @@ Em uma pulverização de senhas, depois de enumerar com êxito uma lista de usu�
 **Entender o escopo da violação**
 
 1. Investigue o computador de origem.  
-2. Na página de alerta, verifique quais usuários, se houver, foram adivinhados com êxito.
+1. Na página de alerta, verifique quais usuários, se houver, foram adivinhados com êxito.
     - Para cada usuário adivinhado com êxito, [verifique seu perfil](investigate-a-user.md) para investigar mais.
-1. Se a autenticação tiver sido feita usando o NTLM, poderá não haver informações suficientes disponíveis sobre o servidor que o computador de origem tentou acessar em alguns cenários. O ATP do Azure captura os dados do computador de origem com base no Evento 4776 do Windows, que contém o nome do computador de origem.
 
-    Para obter o nome do computador de origem, habilite a auditoria NTLM nos controladores de domínio relevantes.
+    > [!NOTE]
+    > Se a autenticação tiver sido feita usando o NTLM, poderá não haver informações suficientes disponíveis sobre o servidor que o computador de origem tentou acessar em alguns cenários. A ATP do Azure captura os dados do computador de origem com base no Evento 4776 do Windows, que contém o nome do computador de origem definido pelo computador.
+    > Ao usar o Evento 4776 do Windows para capturar essas informações, o campo de origem dessa informação, ocasionalmente, é substituído pelo dispositivo ou software para exibir apenas Estação de trabalho ou MSTSC. Se você tiver com frequência dispositivos que são exibidos como Estação de trabalho ou MSTSC, certifique-se de habilitar a auditoria de NTLM nos controladores de domínio relevantes para obter o nome do computador de origem real.    
+    > Para habilitar a auditoria NTLM, ative o Evento do Windows 8004 (o evento de autenticação NTLM que inclui informações sobre o computador de origem, a conta de usuário e o servidor que o computador de origem tentou acessar).
     
-    Para habilitar a auditoria NTLM, ative o Evento do Windows 8004 (o evento de autenticação NTLM que inclui informações sobre o computador de origem, a conta de usuário e o servidor que o computador de origem tentou acessar).
-    
-    Depois de saber qual servidor enviou a validação de autenticação, investigue-o verificando eventos como o Evento 4624 do Windows para compreender melhor o processo de autenticação. Verifique se esse servidor está exposto à Internet usando quaisquer portas abertas. Por exemplo, o servidor aberto está usando o RDP para a Internet?
+1. Depois de saber qual servidor enviou a validação de autenticação, investigue-o verificando eventos como o Evento 4624 do Windows para compreender melhor o processo de autenticação. 
+1. Verifique se esse servidor está exposto à Internet usando quaisquer portas abertas. 
+    Por exemplo, o servidor aberto está usando o RDP para a Internet?
 
 **Correção sugerida e etapas de prevenção**
 

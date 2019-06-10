@@ -5,21 +5,30 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 05/20/2019
+ms.date: 05/27/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 7d0f33db-2513-4146-a395-290e001f4199
 ms.reviewer: ort
 ms.suite: ems
-ms.openlocfilehash: 8f9426a51f0bd709685c365a39d2f4aad1dbf8cb
-ms.sourcegitcommit: 122974e5bec49a1d613a38debc37d91ff838b05f
+ms.openlocfilehash: 63a1dfa60d96e7f34cb406b0ccbc5a3584fbbb5b
+ms.sourcegitcommit: 07abbd941d91299475df2af469ee5a9a99e07e0f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65933667"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66264919"
 ---
 # <a name="whats-new-in-azure-atp"></a>Novidades do Azure ATP
+
+## <a name="azure-atp-release-279"></a>Azure ATP versão 2.79
+Lançado em 26 de maio de 2019
+
+- **Disponibilidade geral: Reconhecimento de entidade de segurança (LDAP) (ID 2038 externa)**
+
+    Esse alerta já está em disponibilidade geral. Para obter mais informações sobre o alerta, os recursos do alerta e a correção e prevenção sugeridas, confira a [descrição do alerta Reconhecimento de entidade de segurança (LDAP)](atp-reconnaissance-alerts.md#security-principal-reconnaissance-ldap-external-id-2038)
+
+- Essa versão também inclui aprimoramentos e correções de bug da infraestrutura do sensor interno.
 
 ## <a name="azure-atp-release-278"></a>ATP do Azure versão 2.78
 
@@ -147,7 +156,7 @@ Lançado em 24 de fevereiro de 2019
 
 - **Novo alerta de segurança: Reconhecimento de entidade de segurança (LDAP) - (versão prévia)**<br>
 
-    O alerta de segurança de [Reconhecimento de entidade de segurança (LDAP) – versão prévia](atp-reconnaissance-alerts.md#security-principal-reconnaissance-ldap-external-id-2038---preview) do ATP do Azure está agora em versão prévia pública. <br> Nessa detecção, um alerta de segurança do ATP do Azure é disparado quando o reconhecimento de entidade de segurança é usado pelos invasores para obter informações essenciais sobre o ambiente de domínio. Estas informações ajudam os invasores a mapear a estrutura de domínio, bem como identificar contas privilegiadas para uso em etapas posteriores em sua cadeia de encerramento do ataque. 
+    O alerta de segurança de [Reconhecimento de entidade de segurança (LDAP) – versão prévia](atp-reconnaissance-alerts.md#security-principal-reconnaissance-ldap-external-id-2038) do ATP do Azure está agora em versão prévia pública. <br> Nessa detecção, um alerta de segurança do ATP do Azure é disparado quando o reconhecimento de entidade de segurança é usado pelos invasores para obter informações essenciais sobre o ambiente de domínio. Estas informações ajudam os invasores a mapear a estrutura de domínio, bem como identificar contas privilegiadas para uso em etapas posteriores em sua cadeia de encerramento do ataque. 
 
     O protocolo LDAP (Lightweight Directory Access Protocol) é um dos métodos mais populares usados para fins legítimos e mal-intencionados para consultar o Active Directory Domain Services. O reconhecimento de entidade de segurança focada no LDAP é normalmente usado como a primeira fase de um ataque Kerberoasting. Os ataques de Kerberoasting são usados para obter uma lista de destino de SPNs (nome da entidade de serviço), que os invasores tentam, então, obter tíquetes do TGS (servidor de concessão de tíquete).
 

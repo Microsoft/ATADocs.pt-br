@@ -5,19 +5,19 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 04/07/2019
+ms.date: 05/29/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: d0551e91-3b21-47d5-ad9d-3362df6d47c0
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: bee49565645f463496c82f01d46e0aded6502b55
-ms.sourcegitcommit: ae9db212f268f067b217d33b0c3f991b6531c975
+ms.openlocfilehash: 46778e0dcafca7fcff8b7f7611a50ca0e23140d8
+ms.sourcegitcommit: b021f8dfc54e59de429f93cc5fc0d733d92b00b8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65196491"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66403570"
 ---
 # <a name="understanding-azure-atp-sensor-and-standalone-sensor-monitoring-alerts"></a>Entendendo os alertas de monitoramento do sensor autônomo e do sensor do Azure ATP
 
@@ -33,7 +33,7 @@ O Centro de Integridade do ATP do Azure permite que você saiba quando há um pr
 
 |Alerta|Descrição|Resolução|Severidade|
 |----|----|----|----|
-|O sensor do Azure ATP está offline no momento devido a problemas de conectividade com todos os controladores de domínio configurados.|Isso afeta a capacidade do Azure ATP de detectar atividades suspeitas relacionadas aos controladores de domínio monitorados por esse sensor do Azure ATP.| Certifique-se de que os controladores de domínio estejam em funcionamento e de que esse sensor do Azure ATP possa abrir conexões LDAP para eles.|Média|
+|O sensor do Azure ATP está offline no momento devido a problemas de conectividade com todos os controladores de domínio configurados.|Isso afeta a capacidade do Azure ATP de detectar atividades suspeitas relacionadas aos controladores de domínio monitorados por esse sensor do Azure ATP.| Certifique-se de que os controladores de domínio estejam em funcionamento e de que esse sensor do Azure ATP possa abrir conexões LDAP para eles. Além disso, em **Configurações**, certifique-se de configurar uma conta de serviço de diretório para cada floresta implantada.|Média|
 
 ## <a name="allsome-of-the-capture-network-adapters-on-a-sensor-are-not-available"></a>Todos ou alguns dos adaptadores de rede de captura em um sensor não estão disponíveis
 

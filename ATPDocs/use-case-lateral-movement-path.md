@@ -5,19 +5,19 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 03/31/2019
+ms.date: 05/22/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: de15c920-8904-4124-8bdc-03abd9f667cf
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 13bf3d9fb517c5ba20a6ec07f1cdf7e7e42ccb23
-ms.sourcegitcommit: ae9db212f268f067b217d33b0c3f991b6531c975
+ms.openlocfilehash: ad82a095d62de0c1d48abfa9d36fcf909dd68cd9
+ms.sourcegitcommit: 07abbd941d91299475df2af469ee5a9a99e07e0f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65196634"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66264990"
 ---
 # <a name="azure-atp-lateral-movement-paths-lmps"></a>LMPs (caminhos de movimento lateral) da ATP do Azure 
 
@@ -71,7 +71,7 @@ Os insights de segurança são sempre oportunos para impedir um próximo ataque 
 
 - Verifique se as pessoas têm acesso apenas aos recursos necessários. No exemplo, Ron Harper amplia significativamente a exposição de Nick Cowley. É necessário que Ron Harper seja incluído no grupo? Há subgrupos que podem ser criados para minimizar a exposição ao movimento lateral?
 
-**Dica** – quando não for detectada nenhuma possível atividade de caminho de movimento lateral para uma entidade nas últimas 48 horas, escolha **Exibir uma data diferente** e verifique se há possíveis caminhos de movimento lateral anteriores. O **Relatório de LMP para usuários confidenciais** está sempre disponível com os LMPs onde foram descobertos e fornece informações sobre possíveis caminhos de movimento lateral detectados para usuários confidenciais. 
+**Dica** – quando não for detectada nenhuma possível atividade de caminho de movimento lateral para uma entidade nas últimas 48 horas, escolha **Exibir uma data diferente** e verifique se há possíveis caminhos de movimento lateral anteriores. O **Relatório de LMP para usuários confidenciais** está sempre disponível, se os LMPs tiverem sido descobertos, e fornece informações sobre possíveis caminhos de movimento lateral detectados para usuários confidenciais. 
 
 **Dica** – para obter instruções sobre como configurar seus servidores e clientes para permitir que o Azure ATP execute as operações de SAM-R necessárias para detectar caminhos de movimento lateral, veja [Configurar SAM-R](install-atp-step8-samr.md).
 
