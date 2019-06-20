@@ -12,18 +12,18 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: de796346-647d-48e1-970a-8f072e990f1e
 ms.reviewer: ''
 ms.suite: ''
-ms.openlocfilehash: 2590e877ba39fda2fee41d8e617690a2b8d4a892
-ms.sourcegitcommit: ae9db212f268f067b217d33b0c3f991b6531c975
+ms.openlocfilehash: e461aa7302ee515f33e2ad69f0f2c0c9f83ceaf8
+ms.sourcegitcommit: 139e8dd63c06a5d9c9a3c348958e4f7fd74041b8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65196567"
+ms.lasthandoff: 06/17/2019
+ms.locfileid: "67155902"
 ---
 # <a name="troubleshooting-azure-advanced-threat-protection-atp-sensor-using-the-atp-logs"></a>Solução de problemas do sensor do ATP (Proteção Avançada contra Ameaças) ao Azure usando os logs do ATP
 Os logs do ATP fornecem informações sobre o que cada componente do sensor do Azure ATP está fazendo a qualquer hora.
 
 
-Os logs do ATP do Azure estão localizados na subpasta **Logs** onde o ATP está instalado; o local padrão é: **C:\Arquivos de Programa\Sensor da Proteção Avançada contra Ameaças do Azure\\**. O local de instalação padrão é: **C:\Arquivos de Programa\Azure Advanced Threat Protection Sensor\número da versão\Logs**.
+Os logs do ATP do Azure estão localizados na subpasta **Logs** onde o ATP está instalado; o local padrão é: **C:\Arquivos de Programa\Sensor da Proteção Avançada contra Ameaças do Azure\\** . O local de instalação padrão é: **C:\Arquivos de Programa\Azure Advanced Threat Protection Sensor\número da versão\Logs**.
 
 O sensor do Azure ATP tem os seguintes logs:
 
@@ -43,6 +43,8 @@ O sensor do Azure ATP tem os seguintes logs:
 Os logs de implantação do Azure ATP estão localizados no diretório temp do usuário que instalou o produto. O local de instalação padrão é: **C:\Usuários\Administrator\AppData\Local\Temp** (ou um diretório acima de %temp%).
 
 Logs de implantação do sensor do Azure ATP:
+
+-  **Proteção Avançada contra Ameaças do Azure Microsoft.Tri.Sensor.Deployment.Deployer_YYYYMMDDHHMMSS.log** - esse arquivo de log fornece todo o processo de implantação do sensor e pode ser encontrado na pasta temporária mencionada anteriormente ou em C:\Windows\Temp. 
 
 -   **Azure Advanced Threat Protection Sensor_YYYYMMDDHHMMSS.log** – Esse log lista as etapas no processo de implantação do sensor do Azure ATP. Usado principalmente para acompanhar o processo de implantação do sensor do Azure ATP.
 

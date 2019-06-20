@@ -5,19 +5,19 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 05/01/2019
+ms.date: 06/11/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 62c99622-2fe9-4035-9839-38fec0a353da
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 420c162e3dc5b7869b46453e3eeda67e1fdc692c
-ms.sourcegitcommit: ae9db212f268f067b217d33b0c3f991b6531c975
+ms.openlocfilehash: 515ab93de375f6ac286cb11e6394e868e095cf48
+ms.sourcegitcommit: 3e0a19e496bc7713bb227c501ca4dd7da223aac8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65195556"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66830397"
 ---
 # <a name="azure-atp-prerequisites"></a>Pré-requisitos do Azure ATP
 
@@ -29,7 +29,7 @@ Este artigo descreve os requisitos para uma implantação bem-sucedida do Azure 
 
 O Azure ATP é composto pelo serviço de nuvem do Azure ATP, que consiste no portal do Azure ATP, no sensor do Azure ATP e/ou no sensor autônomo do Azure ATP. Para obter mais informações sobre cada componente do Azure ATP, confira [Arquitetura do Azure ATP](atp-architecture.md).
 
-A ATP do Azure protege seus usuários locais do Active Directory e/ou os usuários sincronizados com o Azure Active Directory. Para proteger um ambiente composto apenas por usuários do AAD, confira a [Proteção de Identidade do AAD] (https://docs.microsoft.com/azure/active-directory/identity-protection/overview). 
+A ATP do Azure protege seus usuários locais do Active Directory e/ou os usuários sincronizados com o Azure Active Directory. Para proteger um ambiente composto apenas por usuários do AAD, confira a [Proteção de Identidade do AAD](https://docs.microsoft.com/azure/active-directory/identity-protection/overview). 
 
 Para criar sua instância do Azure ATP, será necessário um locatário do AAD com pelo menos um administrador da segurança/global. Cada instância do Azure ATP dá suporte a vários limites de floresta do Active Directory e dá suporte ao FFL (Nível funcional da floresta) do Windows 2003 e posteriores. 
 

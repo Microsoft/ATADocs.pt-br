@@ -5,19 +5,19 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 05/19/2019
+ms.date: 06/17/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 1ac873fc-b763-41d7-878e-7c08da421cb5
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 0c497d55142eb13867e904917aca890bc157ad63
-ms.sourcegitcommit: 122974e5bec49a1d613a38debc37d91ff838b05f
+ms.openlocfilehash: 0bf34a64f1140b0d2e3358196d23589de629588d
+ms.sourcegitcommit: 139e8dd63c06a5d9c9a3c348958e4f7fd74041b8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65933693"
+ms.lasthandoff: 06/17/2019
+ms.locfileid: "67155863"
 ---
 # <a name="what-is-network-name-resolution"></a>O que é a Resolução de nomes de rede?
 
@@ -35,7 +35,11 @@ Para resolver endereços IP de nomes do computador, os sensores do ATP do Azure 
 > [!NOTE]
 >Nenhuma autenticação é realizada em quaisquer das portas.
 
-Depois de recuperar o nome do computador, o sensor do ATP do Azure verifica o Active Directory Domain Services para ver se há um objeto de computador correlacionado com o mesmo nome do computador. Se o sensor encontrar a correlação, ele associará esse IP ao objeto do computador.
+Nos casos em que nenhum nome é recuperado, um **perfil de computador não resolvido por IP** é criado com o IP e a atividade relevante detectada.
+
+Depois de recuperar o nome do computador, o sensor do ATP do Azure verifica o Active Directory Domain Services para ver se há um objeto de computador correlacionado com o mesmo nome do computador. Se o sensor encontrar a correlação, ele associará esse IP ao objeto do computador. Nos casos em que nenhum objeto de computador com esse nome é encontrado, um **perfil de computador não resolvido pelo nome** é criado com esse nome e a atividade relevante detectada. 
+
+![Perfil de computador não resolvido](media/unresolved-computer-profile.png)
 
 Os dados da NNR são cruciais para a detecção das seguintes ameaças:
 
@@ -43,7 +47,7 @@ Os dados da NNR são cruciais para a detecção das seguintes ameaças:
 - Suspeita de ataque de DCSync (replicação de serviços de diretório)
 - Reconhecimento de mapeamento de rede (DNS)
 
-Para melhorar a capacidade de determinar se um alerta é um **Verdadeiro Positivo (TP)** ou um **Falso Positivo (FP)**, a ATP do Azure inclui o grau de certeza de resolução do nome do computador na evidência de todos os alertas de segurança. 
+Para melhorar a capacidade de determinar se um alerta é um **Verdadeiro Positivo (TP)** ou um **Falso Positivo (FP)** , a ATP do Azure inclui o grau de certeza de resolução do nome do computador na evidência de todos os alertas de segurança. 
  
 Por exemplo, quando os nomes dos computadores são resolvidos com **certeza alta**, ela aumenta a confiança no resultado do alerta de segurança como um **Verdadeiro Positivo** ou **TP**. 
 
