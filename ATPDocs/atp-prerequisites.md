@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 62c99622-2fe9-4035-9839-38fec0a353da
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 515ab93de375f6ac286cb11e6394e868e095cf48
-ms.sourcegitcommit: 3e0a19e496bc7713bb227c501ca4dd7da223aac8
+ms.openlocfilehash: 7fc42aaf16e269b2d61f6a321e6a4e4af4f5b8ca
+ms.sourcegitcommit: 3b59121a37328f80389c993f2e31622e6f1a9f13
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66830397"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67486378"
 ---
 # <a name="azure-atp-prerequisites"></a>Pré-requisitos do Azure ATP
 
@@ -146,7 +146,7 @@ A detecção de ATP do Azure baseia-se em Logs de Eventos do Windows específico
 > - As seguintes portas precisam estar abertas para entrada em dispositivos na rede de sensores do Azure ATP:
 >   -   NTLM via RPC (porta TCP 135) para fins de resolução
 >   -   NetBIOS (porta UDP 137) para fins de resolução
->   -   RDP (porta TCP 3389), apenas o primeiro pacote *Client Hello*, para fins de resolução<br> Observe que nenhuma autenticação é realizada em nenhuma porta.
+<br> Observe que nenhuma autenticação é realizada em nenhuma porta.
 
 ## <a name="azure-atp-standalone-sensor-requirements"></a>Requisitos do sensor autônomo do Azure ATP
 Esta seção lista os requisitos do sensor autônomo do Azure ATP.
@@ -219,14 +219,14 @@ A tabela abaixo lista as portas mínimas que o sensor autônomo do Azure ATP req
 |NetBIOS|UDP|137|Todos os dispositivos na rede|Ambos|
 |Syslog (opcional)|TCP/UDP|514, dependendo da configuração|Servidor SIEM|Entrada|
 |RADIUS|UDP|1813|RADIUS|Entrada|
-|TLS para RDP|TCP|3389|Todos os dispositivos na rede|Ambos|
+|
 
 > [!NOTE]
 > - Usando a conta de usuário do serviço de diretório, o sensor consulta pontos de extremidade em sua organização para administradores locais usando SAM-R (logon de rede) para criar o [gráfico de caminho de movimento lateral](use-case-lateral-movement-path.md). Para obter mais informações, consulte [Configurar permissões necessárias do SAM-R](install-atp-step8-samr.md).
 > - As seguintes portas precisam estar abertas para entrada em dispositivos na rede de sensores autônomos do Azure ATP:
 >   -   NTLM via RPC (porta TCP 135) para fins de resolução
 >   -   NetBIOS (porta UDP 137) para fins de resolução
->   -   RDP (porta TCP 3389), apenas o primeiro pacote *Client Hello*, para fins de resolução<br> Observe que nenhuma autenticação é realizada em nenhuma porta.
+<br> Observe que nenhuma autenticação é realizada em nenhuma porta.
 
 
 
