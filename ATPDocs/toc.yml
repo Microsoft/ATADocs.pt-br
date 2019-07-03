@@ -141,6 +141,10 @@
           href: configure-event-collection.md
         - name: Configurar o encaminhamento de eventos do Windows
           href: configure-event-forwarding.md
+    - name: Mover do ATA para o ATP do Azure
+      items:
+        - name: ATA (Microsoft Advanced Threat Analytics) para o ATP do Azure
+          href: ata-atp-move-overview.md
 - name: Referência
   items:
     - name: Referência de log do SIEM
