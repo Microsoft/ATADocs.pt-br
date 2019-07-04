@@ -5,21 +5,33 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 06/10/2019
+ms.date: 06/18/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 7d0f33db-2513-4146-a395-290e001f4199
 ms.reviewer: ort
 ms.suite: ems
-ms.openlocfilehash: faf89ddb152e002a818d79a83b5447c65a143b32
-ms.sourcegitcommit: 3e0a19e496bc7713bb227c501ca4dd7da223aac8
+ms.openlocfilehash: 1fed88a774b1ffa88b52879a44de6697b1b615f6
+ms.sourcegitcommit: 87756e27894570997b7039d128f223de0664639f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66830371"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67192781"
 ---
 # <a name="whats-new-in-azure-atp"></a>Novidades do Azure ATP
+
+## <a name="azure-atp-release-282"></a>ATP do Azure versão 2.82
+
+Lançado em 18 de junho de 2019
+
+- **Nova versão prévia pública**<br>
+A experiência de investigação de ameaça de identidade do ATP do Azure agora está em **Versão prévia pública** e está disponível para todos os locatários protegidos do ATP do Azure. Confira [Experiência de investigação do Microsoft Cloud App Security do ATP do Azure](atp-mcas-integration.md) para saber mais. 
+
+- **Disponibilidade geral**<br>
+O suporte do ATP do Azure para florestas não confiáveis está agora em disponibilidade geral. Confira [Várias florestas do ATP do Azure](atp-multi-forest.md) para saber mais. 
+
+- Essa versão inclui aprimoramentos e correções de bug da infraestrutura do sensor interno.
 
 ## <a name="azure-atp-release-281"></a>Azure ATP versão 2.81
 
