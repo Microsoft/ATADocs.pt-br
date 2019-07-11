@@ -5,21 +5,49 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 06/18/2019
+ms.date: 07/03/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 7d0f33db-2513-4146-a395-290e001f4199
 ms.reviewer: ort
 ms.suite: ems
-ms.openlocfilehash: 1fed88a774b1ffa88b52879a44de6697b1b615f6
-ms.sourcegitcommit: 87756e27894570997b7039d128f223de0664639f
+ms.openlocfilehash: d6fb2a51a47c97c52a3665c55522094fd5a856f1
+ms.sourcegitcommit: 52bc20dfa1f64ff3e8c16eb5edea2813d54ba308
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67192781"
+ms.lasthandoff: 07/04/2019
+ms.locfileid: "67562188"
 ---
 # <a name="whats-new-in-azure-atp"></a>Novidades do Azure ATP
+
+## <a name="azure-atp-release-284"></a>ATP do Azure versão 2.84
+
+Lançado em 1º de julho de 2019
+
+- **Suporte a novo local: data center do Azure no Reino Unido**<br>
+    Agora as instâncias do ATP do Azure são compatíveis com o data center do Azure no Reino Unido. Para saber mais como criar instâncias do ATP do Azure e seus locais de data center correspondentes, confira a [Etapa 1 da instalação do ATP do Azure](https://docs.microsoft.com/azure-advanced-threat-protection/install-atp-step10).
+
+- **Aprimoramento do recurso: novo nome e recursos para o alerta Adições suspeitas a grupos confidenciais (ID externa 2024)**<br> 
+    O alerta **Adições suspeitas a grupos confidenciais** era denominado alerta **Modificações suspeitas modificações em grupos confidenciais**. A ID externa do alerta (ID 2024) permanece a mesma. A alteração do nome descritivo reflete com maior precisão a finalidade dos alertas em adições aos seus grupos **confidenciais**. O alerta aprimorado também conta com novas evidências e descrições aprimoradas. Para saber mais, confira [Adições suspeitas a grupos confidenciais](https://docs.microsoft.com/azure-advanced-threat-protection/atp-domain-dominance-alerts#suspicious-additions-to-sensitive-groups-external-id-2024).  
+
+- **Nova documentação: guia para migrar do Advanced Threat Analytics para o ATP do Azure**<br>
+    Este novo artigo inclui pré-requisitos, diretrizes de planejamento e etapas de configuração e verificação para migrar do ATA para o serviço de ATP do Azure. Para saber mais, confira [Migrar do ATA para o ATP do Azure](https://docs.microsoft.com/azure-advanced-threat-protection/ata-atp-move-overview).   
+
+- Essa versão também inclui aprimoramentos e correções de bug da infraestrutura do sensor interno.
+
+## <a name="azure-atp-release-283"></a>ATP do Azure versão 2.83
+
+Lançado em 23 de junho de 2019
+
+- **Aprimoramento do recurso: alerta Criação de serviço suspeito (ID externa 2026)**<br> 
+    Este alerta agora conta com uma página de alerta aprimorada com evidência adicional e uma nova descrição. Para saber mais, confira [Alerta de segurança da criação de serviço suspeito](https://docs.microsoft.com/azure-advanced-threat-protection/atp-domain-dominance-alerts#suspicious-service-creation-external-id-2026).
+
+-  **Suporte à nomenclatura de instância: suporte adicionado para prefixo de domínio de apenas dígitos**<br>
+    Suporte adicionado para criação de instâncias do ATP do Azure usando prefixos de domínio inicial que contêm apenas dígitos. Por exemplo, agora há suporte ao uso de prefixos de domínio inicial de apenas dígitos como 123456.contoso.com. 
+
+- Essa versão também inclui aprimoramentos e correções de bug da infraestrutura do sensor interno.
+
 
 ## <a name="azure-atp-release-282"></a>ATP do Azure versão 2.82
 

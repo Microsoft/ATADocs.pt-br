@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: ca5d1c7b-11a9-4df3-84a5-f53feaf6e561
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: e72e3e03d52f41eae1fe9823feae6dffd181b31f
-ms.sourcegitcommit: 07abbd941d91299475df2af469ee5a9a99e07e0f
+ms.openlocfilehash: 7d8550113e1ea7cce6cb7ca1c6e497a9fc8e3708
+ms.sourcegitcommit: 52bc20dfa1f64ff3e8c16eb5edea2813d54ba308
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66264934"
+ms.lasthandoff: 07/04/2019
+ms.locfileid: "67562179"
 ---
 # <a name="azure-atp-security-alerts"></a>Alertas de segurança do ATP do Azure
 
@@ -69,7 +69,7 @@ Na versão 2.56, todos os alertas de segurança da ATP do Azure existentes foram
 |[Suspeita de ataque de retransmissão de NTLM (conta do Exchange) — versão prévia](atp-lateral-movement-alerts.md#suspected-ntlm-relay-attack-exchange-account-external-id-2037---preview)|NA|2037|Médio ou baixo se observado usando o protocolo NTLM v2 assinado|Elevação de privilégios, <br> Movimentação lateral|
 |[Suspeita de ataque do ransomware WannaCry](atp-compromised-credentials-alerts.md#suspected-wannacry-ransomware-attack-external-id-2035)|Implementação de protocolo incomum (possível ataque do ransomware WannaCry)|2035|Média|Movimentação lateral|
 |[Comunicação suspeita por DNS](atp-exfiltration-alerts.md#suspicious-communication-over-dns-external-id-2031)|Comunicação suspeita por DNS|2031|Média|Exfiltração|
-|[Modificação suspeita de grupos confidenciais](atp-domain-dominance-alerts.md#suspicious-modification-of-sensitive-groups-external-id-2024)|Modificação suspeita de grupos confidenciais|2024|Média|Credencial de acesso,<br>Persistência|
+|[Adições suspeitas a grupos confidenciais](atp-domain-dominance-alerts.md#suspicious-additions-to-sensitive-groups-external-id-2024)|Adições suspeitas a grupos confidenciais|2024|Média|Credencial de acesso,<br>Persistência|
 |[Criação de serviço suspeito](atp-domain-dominance-alerts.md#suspicious-service-creation-external-id-2026)|Criação de serviço suspeito|2026|Média|Execução,<br> Persistência,<br> Elevação de privilégios,<br> Evasão de defesa,<br>Movimentação lateral|
 |[Conexão de VPN suspeita](atp-compromised-credentials-alerts.md#suspicious-vpn-connection-external-id-2025)|Conexão de VPN suspeita|2025|Média|Persistência,<br>Evasão de defesa|
 |[Reconhecimento de usuário e de associação a um grupo (SAMR)](atp-reconnaissance-alerts.md#user-and-group-membership-reconnaissance-samr-external-id-2021)|Reconhecimento usando consultas de serviços de diretório|2021|Média|Descoberta|

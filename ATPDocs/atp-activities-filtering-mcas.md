@@ -5,19 +5,19 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 06/18/2019
+ms.date: 07/01/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 397e5a77-2bc7-454c-9fe5-649ebaab16b3
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 2ad66219c1eb6dcfcec99d0bf995b71bb2d81577
-ms.sourcegitcommit: 87756e27894570997b7039d128f223de0664639f
+ms.openlocfilehash: 1508cb558f16adf54f80cec0c13631059dbf45bf
+ms.sourcegitcommit: f60835d655e68ffaa8ed8c43bd9fa20233d7e495
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67193481"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67506523"
 ---
 # <a name="use-activity-filters-and-create-action-policies-with-azure-atp-in-microsoft-cloud-app-security"></a>Usar filtros de atividade e criar políticas de ação com o ATP do Azure no Microsoft Cloud App Security 
 
@@ -25,7 +25,7 @@ Este artigo foi criado para ajudá-lo a entender como filtrar e criar políticas
 
 Para saber mais sobre como concluir sua integração, confira [Integração do Cloud App Security do ATP do Azure](https://docs.microsoft.com/cloud-app-security/aatp-integration/enable-azure-advanced-threat-protection).  
 
-Usar o ATP do Azure com o Microsoft Cloud App Security oferece análise de atividades e alertas com base na análise de comportamento de entidade e usuário (UEBA), identificando os comportamentos mais arriscados na sua empresa, fornecendo uma pontuação de prioridade de investigação abrangente além de filtragem de atividade e políticas personalizáveis de atividades. 
+Usar o ATP do Azure com o Microsoft Cloud App Security oferece análise de atividades e alertas com base na UEBA (análise de comportamento de entidade e usuário), identificando os comportamentos mais arriscados na sua empresa, fornecendo uma pontuação de prioridade de investigação abrangente além de filtragem de atividade e políticas personalizáveis de atividades. 
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
@@ -55,15 +55,17 @@ Após filtrar as atividades e identificar as políticas de atividade que você g
 
 Para criar uma nova política de atividade:
 
-1. Em qualquer página do log de atividades, clique no botão **Nova política da pesquisa**.  
-    ![Criar nova política de atividade](media/atp-mcas-activity-log.png)
+1. Em qualquer página do **Log de atividades**, aplique um filtro (como Aplicativo, Nome de Usuário, Tipo de atividade) etc. 
+    - Para filtrar as atividades do ATP do Azure, selecione a opção **Active Directory** no filtro Aplicativo. 
+    ![Criar nova política de atividade](media/atp-mcas-create-new-policy.png)
+1. Clique no botão **Nova política da pesquisa**.    
 1. Adicione um **Nome da política**. 
     ![Criar nova política de atividade -etapa 2](media/atp-mcas-create-policy.png)
 1. Adicione uma **Descrição** da política.  
-1. Atribua a gravidade da política.
-1. Selecione uma categoria para a política.
-1. Escolha os filtros a serem criados para a política.
-1. Refine ou adicione filtros. 
+1. Atribua a **severidade** da política.
+1. Selecione uma **categoria** para a política.
+1. Escolha ou modifique os filtros para criar e atribuir da política.
+1. Refine ou adicione mais filtros. 
 1. Salve e aplique a nova política.  
 
 

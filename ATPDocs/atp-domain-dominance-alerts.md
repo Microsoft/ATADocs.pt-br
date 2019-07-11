@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 0b3a1db5-0d43-49af-b356-7094cc85f0a5
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: ec1d2bc0de905a32181749e435d0f88afe5a80fc
-ms.sourcegitcommit: ae9db212f268f067b217d33b0c3f991b6531c975
+ms.openlocfilehash: a415e880f669d4f02cd2cd319f49137ba26da1d7
+ms.sourcegitcommit: 52bc20dfa1f64ff3e8c16eb5edea2813d54ba308
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65195525"
+ms.lasthandoff: 07/04/2019
+ms.locfileid: "67562148"
 ---
 # <a name="tutorial-domain-dominance-alerts"></a>Tutorial: Alertas de predominância de domínio  
 
@@ -45,7 +45,7 @@ Os alertas de segurança a seguir ajudam você a identificar e corrigir atividad
 > * Suspeita de uso de Golden Ticket (anomalia de tíquete) (ID externa 2032)
 > * Suspeita de uso de Golden Ticket (anomalia de tempo) – (ID externa 2022)
 > * Suspeita de ataque de Skeleton Key (downgrade de criptografia) (ID externa 2010)
-> * Modificação suspeita de grupos confidenciais (ID externa 2024)
+> * Adições suspeitas a grupos confidenciais (ID 2024 externa)
 > * Criação de serviço suspeito (ID externa 2026)
 
 ## <a name="malicious-request-of-data-protection-api-master-key-external-id-2020"></a>Solicitação mal-intencionada de chave mestra da API de Proteção de Dados (ID externa 2020) 
@@ -474,7 +474,7 @@ Skeleton Key é um malware que é executado nos controladores de domínio e perm
     - Remover o malware. Para saber mais, veja [Análise do malware Skeleton Key](https://www.virusbulletin.com/virusbulletin/2016/01/paper-digital-bian-lian-face-changing-skeleton-key-malware).
     - Procure usuários que estavam conectados no mesmo período em que a atividade suspeita ocorreu, pois eles também podem estar comprometidos. Redefina as senhas e habilite o MFA.
 
-## <a name="suspicious-modification-of-sensitive-groups-external-id-2024"></a>Modificação suspeita de grupos confidenciais (ID externa 2024)
+## <a name="suspicious-additions-to-sensitive-groups-external-id-2024"></a>Adições suspeitas a grupos confidenciais (ID 2024 externa)
 
 **Descrição**: os invasores adicionam usuários a grupos altamente privilegiados. A adição de usuários é realizada para obter acesso a mais recursos e obter persistência. Essa detecção conta com a criação de perfil de atividades de modificação do grupo de usuários e com o alerta para quando uma adição anormal a um grupo confidencial é vista. O ATP do Azure cria perfis continuamente.  
  

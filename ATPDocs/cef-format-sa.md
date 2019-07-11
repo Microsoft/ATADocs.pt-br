@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 3261155c-3c72-4327-ba29-c113c63a4e6d
 ms.reviewer: arzinger
 ms.suite: ems
-ms.openlocfilehash: 750d593e635df3921e27258943e778ce87b7ebcc
-ms.sourcegitcommit: 07abbd941d91299475df2af469ee5a9a99e07e0f
+ms.openlocfilehash: 6904572852598e9151a6857961c079f7cd3da953
+ms.sourcegitcommit: 52bc20dfa1f64ff3e8c16eb5edea2813d54ba308
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66264897"
+ms.lasthandoff: 07/04/2019
+ms.locfileid: "67562213"
 ---
 # <a name="azure-atp-siem-log-reference"></a>Referência de logs de SIEM do Azure ATP
 
@@ -83,7 +83,7 @@ Os campos a seguir e seus valores são encaminhados para o SIEM:
 |[Suspeita de ataque de retransmissão de NTLM (conta do Exchange) — versão prévia](atp-lateral-movement-alerts.md#suspected-ntlm-relay-attack-exchange-account-external-id-2037---preview)|NA|2037|Médio ou baixo se observado usando o protocolo NTLM v2 assinado|Elevação de privilégios, <br> Movimentação lateral|
 |[Suspeita de ataque do ransomware WannaCry](atp-compromised-credentials-alerts.md#suspected-wannacry-ransomware-attack-external-id-2035)|Implementação de protocolo incomum (possível ataque do ransomware WannaCry)|2035|Média|Movimentação lateral|
 |[Comunicação suspeita por DNS](atp-exfiltration-alerts.md#suspicious-communication-over-dns-external-id-2031)|Comunicação suspeita por DNS|2031|Média|Exfiltração|
-|[Modificação suspeita de grupos confidenciais](atp-domain-dominance-alerts.md#suspicious-modification-of-sensitive-groups-external-id-2024)|Modificação suspeita de grupos confidenciais|2024|Média|Credencial de acesso,<br>Persistência|
+|[Adições suspeitas a grupos confidenciais](atp-domain-dominance-alerts.md#suspicious-additions-to-sensitive-groups-external-id-2024)|Adições suspeitas a grupos confidenciais|2024|Média|Credencial de acesso,<br>Persistência|
 |[Criação de serviço suspeito](atp-domain-dominance-alerts.md#suspicious-service-creation-external-id-2026)|Criação de serviço suspeito|2026|Média|Execução,<br> Persistência,<br> Elevação de privilégios,<br> Evasão de defesa,<br>Movimentação lateral|
 |[Conexão de VPN suspeita](atp-compromised-credentials-alerts.md#suspicious-vpn-connection-external-id-2025)|Conexão de VPN suspeita|2025|Média|Persistência,<br>Evasão de defesa|
 |[Reconhecimento de usuário e de associação a um grupo (SAMR)](atp-reconnaissance-alerts.md#user-and-group-membership-reconnaissance-samr-external-id-2021)|Reconhecimento usando consultas de serviços de diretório|2021|Média|Descoberta|
@@ -172,7 +172,7 @@ Prioridades:
 ### <a name="suspicious-domain-controller-promotion-potential-dcshadow-attack"></a>Promoção do controlador de domínio suspeito (possível ataque DCShadow)
 07-12-2018  11:18:07    Auth.Error  192.168.0.200    1 2018-07-12T08:18:06.883880+00:00 DC1 CEF 3868 DirectoryServicesRoguePromotionS ï»¿0|Microsoft|Azure ATP|2.40.0.0|DirectoryServicesRoguePromotionSecurityAlert| **Promoção do controlador de domínio suspeito (possível ataque DcShadow)** |10|start=2018-07-12T08:17:55.4067092Z app=Ldap shost=CLIENT1 msg=CLIENT1, que é um computador em domain1.test.local, registrado como um controlador de domínio em DC1. externalId=2028 cs1Label=url cs1=https\://contoso-corp.atp.azure.com:13000/securityAlert/97c59b43-dc18-44ee-9826-8fd5d03bd53 cs2Label=trigger cs2=update
 
-### <a name="suspicious-modification-of-sensitive-groups"></a>Modificação suspeita de grupos confidenciais
+### <a name="suspicious-additions-to-sensitive-groups"></a>Adições suspeitas a grupos confidenciais
 10-29-2018  11:21:03    Auth.Warning    192.168.0.202   1 2018-10-29T09:20:49.667014+00:00 DC3 CEF 3908 AbnormalSensitiveGroupMembership ï»¿0|Microsoft|Azure ATP|2.52.5704.46184|AbnormalSensitiveGroupMembershipChangeSecurityAlert|Suspicious modification of sensitive groups|5|start=2018-10-29T09:19:43.3013729Z app=GroupMembershipChangeEvent suser=user1 msg=user1 has uncharacteristically modified sensitive group memberships. externalId=2024 cs1Label=url cs1=https\://contoso-corp.atp.azure.com/securityAlert/6f7e677e-f068-41e5-bada-708cd5a322b9 cs2Label=trigger cs2=new
 
 ### <a name="suspicious-replication-of-directory-services"></a>Replicação suspeita de serviços de diretório
