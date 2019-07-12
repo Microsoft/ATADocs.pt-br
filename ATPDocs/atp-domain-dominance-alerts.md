@@ -5,19 +5,19 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 02/03/2019
+ms.date: 07/07/2019
 ms.topic: tutorial
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 0b3a1db5-0d43-49af-b356-7094cc85f0a5
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: a415e880f669d4f02cd2cd319f49137ba26da1d7
-ms.sourcegitcommit: 52bc20dfa1f64ff3e8c16eb5edea2813d54ba308
+ms.openlocfilehash: f53d4930ed6fc4492f6360b3aab12e9c3655b390
+ms.sourcegitcommit: 09275d3400534200fa6ea572e89e440b3cc58360
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/04/2019
-ms.locfileid: "67562148"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67786410"
 ---
 # <a name="tutorial-domain-dominance-alerts"></a>Tutorial: Alertas de predominância de domínio  
 
@@ -100,7 +100,7 @@ Membros da equipe de TI, de estações de trabalho administrativas ou contas de 
 **Entender o escopo da violação**
 
 1. Investigue o [usuário](investigate-a-user.md) e o [computador de origem](investigate-a-computer.md).
-2. Investigar o [controlador de domínio](investigate-a-computer.md)
+2. Investigue o [controlador de domínio](investigate-a-computer.md).
 
 **Correção sugerida e etapas de prevenção:**
 
@@ -478,12 +478,12 @@ Skeleton Key é um malware que é executado nos controladores de domínio e perm
 
 **Descrição**: os invasores adicionam usuários a grupos altamente privilegiados. A adição de usuários é realizada para obter acesso a mais recursos e obter persistência. Essa detecção conta com a criação de perfil de atividades de modificação do grupo de usuários e com o alerta para quando uma adição anormal a um grupo confidencial é vista. O ATP do Azure cria perfis continuamente.  
  
-Para ver uma definição de grupos confidenciais no ATP do Azure, confira Trabalhando com contas confidenciais.
+Para ver uma definição de grupos confidenciais no Azure ATP, consulte [Trabalhando com contas confidenciais](sensitive-accounts.md).
  
-A detecção depende de eventos auditados em controladores de domínio. Verifique se os controladores de domínio estão auditando os eventos necessários para auditar os eventos necessários.
+A detecção depende de eventos auditados em controladores de domínio. Verifique se os controladores de domínio estão [auditando os eventos necessários](atp-advanced-audit-policy.md).
  
 **Período de aprendizado**
-<br>Quatro semanas por controlador de domínio, começando do primeiro evento.
+<br>Quatro semanas por controlador de domínio, começando no primeiro evento.
  
 **TP, B-TP ou FP**
 <br>Modificações de grupo legítimas que raramente ocorrem e que o sistema não aprende como "normais" podem disparar um alerta. Esses alertas seriam considerados **B-TP**. 
