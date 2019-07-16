@@ -5,19 +5,19 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 07/10/2019
+ms.date: 07/14/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 7d0f33db-2513-4146-a395-290e001f4199
 ms.reviewer: ort
 ms.suite: ems
-ms.openlocfilehash: 84443d57cb1333e870c33cf01879188eb52bd707
-ms.sourcegitcommit: 09275d3400534200fa6ea572e89e440b3cc58360
+ms.openlocfilehash: 5315d7778413b9da0f642fb2c34db8fbe0a52ab4
+ms.sourcegitcommit: 68118b00d039db56f69ed7c0b96cf85f9b7a8065
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67786422"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67880456"
 ---
 # <a name="whats-new-in-azure-atp"></a>Novidades do Azure ATP
 
@@ -25,16 +25,7 @@ ms.locfileid: "67786422"
 
 Lançado em 7 de julho de 2019
 
-- **Nova versão prévia pública do recurso: Avaliações de postura de segurança de identidade do ATP do Azure**<br>
-    O ATP do Azure, usando o portal do Microsoft Cloud App Security, apresenta como **versão prévia pública** seis novos relatórios de avaliação para avaliar, investigar, corrigir e melhorar sua postura de segurança organizacional. Saiba mais sobre como [habilitar](https://docs.microsoft.com/cloud-app-security/aatp-integration) e [começar a usar](atp-mcas-integration.md) as avaliações de postura de segurança de identidade do ATP do Azure no Cloud App Security e [use](atp-ispm-overview.md) cada uma das novas avaliações:
-    - [Entidades inativas](atp-mcas-ispm-dormant-entities.md)
-    - [Limpar texto](atp-mcas-ispm-clear-text.md)
-    - [Uso de criptografia fraca](atp-mcas-ispm-weak-cipher.md)
-    - [Delegação irrestrita de Kerberos](atp-mcas-ispm-unconstrained-kerberos.md)
-    - [Spooler de impressão](atp-mcas-ispm-print-spooler.md)
-    - [Protocolos herdados](atp-mcas-ispm-legacy-protocols.md)
-
-- Essa versão também inclui aprimoramentos e correções de bug da infraestrutura do sensor interno.
+- Essa versão inclui aprimoramentos e correções de bug da infraestrutura do sensor interno.
 
 ## <a name="azure-atp-release-284"></a>ATP do Azure versão 2.84
 
@@ -44,7 +35,7 @@ Lançado em 1º de julho de 2019
     Agora as instâncias do ATP do Azure são compatíveis com o data center do Azure no Reino Unido. Para saber mais como criar instâncias do ATP do Azure e seus locais de data center correspondentes, confira a [Etapa 1 da instalação do ATP do Azure](https://docs.microsoft.com/azure-advanced-threat-protection/install-atp-step10).
 
 - **Aprimoramento do recurso: novo nome e recursos para o alerta Adições suspeitas a grupos confidenciais (ID externa 2024)**<br> 
-    O alerta **Adições suspeitas a grupos confidenciais era denominado alerta **Modificações suspeitas em grupos confidenciais**. A ID externa do alerta (ID 2024) permanece a mesma. A alteração do nome descritivo reflete com maior precisão a finalidade dos alertas em adições aos seus grupos **confidenciais**. O alerta aprimorado também conta com novas evidências e descrições aprimoradas. Para saber mais, confira [Adições suspeitas a grupos confidenciais](https://docs.microsoft.com/azure-advanced-threat-protection/atp-domain-dominance-alerts#suspicious-additions-to-sensitive-groups-external-id-2024).  
+    O alerta **Adições suspeitas a grupos confidenciais** era denominado alerta **Modificações suspeitas modificações em grupos confidenciais**. A ID externa do alerta (ID 2024) permanece a mesma. A alteração do nome descritivo reflete com maior precisão a finalidade dos alertas em adições aos seus grupos **confidenciais**. O alerta aprimorado também conta com novas evidências e descrições aprimoradas. Para saber mais, confira [Adições suspeitas a grupos confidenciais](https://docs.microsoft.com/azure-advanced-threat-protection/atp-domain-dominance-alerts#suspicious-additions-to-sensitive-groups-external-id-2024).  
 
 - **Nova documentação: guia para migrar do Advanced Threat Analytics para o ATP do Azure**<br>
     Este novo artigo inclui pré-requisitos, diretrizes de planejamento e etapas de configuração e verificação para migrar do ATA para o serviço de ATP do Azure. Para saber mais, confira [Migrar do ATA para o ATP do Azure](https://docs.microsoft.com/azure-advanced-threat-protection/ata-atp-move-overview).   
