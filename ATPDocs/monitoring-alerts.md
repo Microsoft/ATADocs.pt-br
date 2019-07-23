@@ -5,29 +5,23 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 05/29/2019
+ms.date: 07/17/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: d0551e91-3b21-47d5-ad9d-3362df6d47c0
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 46778e0dcafca7fcff8b7f7611a50ca0e23140d8
-ms.sourcegitcommit: b021f8dfc54e59de429f93cc5fc0d733d92b00b8
+ms.openlocfilehash: 65279895689e230a3a28871a61f4cffe36d6042c
+ms.sourcegitcommit: b7b3d4a401faaa3edb4bd669a1a003a6d21a4322
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66403570"
+ms.lasthandoff: 07/17/2019
+ms.locfileid: "68298763"
 ---
 # <a name="understanding-azure-atp-sensor-and-standalone-sensor-monitoring-alerts"></a>Entendendo os alertas de monitoramento do sensor autônomo e do sensor do Azure ATP
 
 O Centro de Integridade do ATP do Azure permite que você saiba quando há um problema em sua instância do ATP do Azure gerando um alerta de monitoramento. Este artigo descreve todos os alertas de monitoramento para cada componente, listando a causa e as etapas necessárias para resolver o problema.
-
-## <a name="domain-synchronizer-not-assigned"></a>Sincronizador de domínio não atribuído
-
-|Alerta|Descrição|Resolução|Severidade|
-|----|----|----|----|
-|Não há nenhum sincronizador de domínio atribuído a um sensor do Azure ATP. Isso pode ocorrer se não houver nenhum sensor do Azure ATP configurado como um candidato a sincronizador de domínio.|Quando o domínio não está sincronizado, alterações em entidades podem fazer com que as informações da entidade no Azure ATP fiquem desatualizadas ou ausentes, mas isso não afeta nenhuma detecção.|Certifique-se de que pelo menos um sensor do Azure ATP esteja definido como [Sincronizador de domínio](install-atp-step5.md).|Baixo|
 
 ## <a name="all-domain-controllers-are-unreachable-by-a-sensor"></a>Todos os controladores de domínio ficam inacessíveis por um sensor
 

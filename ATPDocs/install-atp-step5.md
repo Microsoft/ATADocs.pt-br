@@ -3,18 +3,18 @@ title: Início rápido para definir as configurações do sensor do ATP do Azure
 description: A etapa cinco da instalação do Azure ATP ajuda a definir as configurações do sensor autônomo do Azure ATP.
 author: mlottner
 ms.author: mlottner
-ms.date: 03/03/2018
+ms.date: 07/17/2019
 ms.topic: quickstart
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 9b51c781cee16d4f158cc0e0528d4f80683aabad
-ms.sourcegitcommit: 929f28783110c7e114ab36d4cccd50563f4030df
+ms.openlocfilehash: 1c9f8d0928e7439afe9eb0745c07fad2c515169a
+ms.sourcegitcommit: b7b3d4a401faaa3edb4bd669a1a003a6d21a4322
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57253939"
+ms.lasthandoff: 07/17/2019
+ms.locfileid: "68298930"
 ---
 # <a name="quickstart-configure-azure-atp-sensor-settings"></a>Início Rápido: Definir as configurações do sensor do ATP do Azure
 
@@ -31,12 +31,12 @@ Após a instalação do sensor do ATP do Azure, faça o seguinte para definir as
 
 1. Clique em **Iniciar** para abrir o navegador e entrar no portal do ATP do Azure.
 
-2.  No portal do ATP do Azure, acesse **Configuração** e, na seção **Sistema**, selecione **Sensores**.
+1.  No portal do ATP do Azure, acesse **Configuração** e, na seção **Sistema**, selecione **Sensores**.
    
     ![Imagem de definição das configurações do sensor](media/atp-sensor-config.png)
 
 
-3. Clique no sensor que deseja configurar e insira as seguintes informações:
+1. Clique no sensor que deseja configurar e insira as seguintes informações:
 
    ![Imagem de definição das configurações do sensor](media/atp-sensor-config-2.png)
 
@@ -52,17 +52,8 @@ Após a instalação do sensor do ATP do Azure, faça o seguinte para definir as
     - Para os sensores do ATP do Azure, todos os adaptadores de rede usados para comunicação com outros computadores da organização.
     - Para um sensor autônomo do ATP do Azure em um servidor dedicado, selecione os adaptadores de rede configurados como a porta de espelho de destino. Esses adaptadores de rede recebem o tráfego do controlador de domínio espelhado.
 
-  - **Candidato ao sincronizador de domínio**: 
-    
-    - O sincronizador de domínio é responsável pela sincronização entre o Azure ATP e o domínio do Active Directory. Dependendo do tamanho do domínio, a sincronização inicial pode ser demorada e consumir muitos recursos. O ATP do Azure recomenda a configuração de pelo menos um controlador de domínio como o candidato a sincronizador de domínio por domínio. Se pelo menos um controlador de domínio não for selecionado como o candidato a sincronizador de domínio, o ATP do Azure verificará a rede apenas passivamente e poderá não ser capaz de coletar todas as alterações e os detalhes de entidade do Active Directory. Pelo menos um **candidato a sincronizador de domínio** designado por domínio garante que o ATP do Azure sempre esteja verificando ativamente a rede e seja capaz de coletar todas as alterações e os valores de entidade do Active Directory.
-  
-    - Por padrão, os sensores do ATP do Azure não são candidatos ao sincronizador do domínio, embora os sensores autônomos do ATP do Azure sejam. Para definir manualmente um sensor do ATP do Azure como um candidato a sincronizador de domínio, mude a opção **Candidato a sincronizador de domínio** para **HABILITADO** na tela de configuração.
-        
-    - É recomendável desabilitar que os sensores do ATP do Azure do site remoto sejam candidatos a sincronizador de domínio.
-   
-    - Não defina os controladores de domínio somente leitura como candidatos a sincronizador de domínio. Para obter mais informações sobre a sincronização de domínio do ATP do Azure, confira [Arquitetura do ATP do Azure](atp-architecture.md#azure-atp-sensor-features).
-  
-3. Clique em **Salvar**.
+ 
+1. Clique em **Salvar**.
 
 
 ## <a name="validate-installations"></a>Validar instalações
@@ -70,22 +61,22 @@ Para validar a implantação bem-sucedida do sensor do Azure ATP, verifique o se
 
 1. Verifique se o serviço chamado **Sensor de Proteção Avançada contra Ameaças do Azure** está em execução. Após você salvar as configurações do sensor do Azure ATP, talvez demore alguns minutos até que o serviço seja iniciado.
 
-2. Se o serviço não iniciar, examine o arquivo “Microsoft.Tri.sensor-Errors.log” localizado na pasta padrão a seguir “%programfiles%\Azure Advanced Threat Protection sensor\Version X\Logs”.
+1. Se o serviço não iniciar, examine o arquivo “Microsoft.Tri.sensor-Errors.log” localizado na pasta padrão a seguir “%programfiles%\Azure Advanced Threat Protection sensor\Version X\Logs”.
  
    >[!NOTE]
    > A versão do ATP do Azure é atualizada com frequência. Para verificar a versão mais recente, no portal do ATP do Azure, vá em **Configuração** e, em seguida, **Sobre**. 
 
-3. Acesse a URL da instância do ATP do Azure. No portal do ATP do Azure, pesquise algo na barra de pesquisa, como um usuário ou um grupo em seu domínio.
+1. Acesse a URL da instância do ATP do Azure. No portal do ATP do Azure, pesquise algo na barra de pesquisa, como um usuário ou um grupo em seu domínio.
 
-4. Verifique a conectividade do ATP em qualquer dispositivo de domínio usando as seguintes etapas:
+1. Verifique a conectividade do ATP em qualquer dispositivo de domínio usando as seguintes etapas:
     1. Abra um prompt de comando
-    2. Digitar ```nslookup```
-    3. Digite **server**, depois o endereço IP ou FQDN do controlador de domínio no qual o sensor do ATP está instalado. Por exemplo, ```server contosodc.contoso.azure```.
+    1. Digitar ```nslookup```
+    1. Digite **server**, depois o endereço IP ou FQDN do controlador de domínio no qual o sensor do ATP está instalado. Por exemplo, ```server contosodc.contoso.azure```.
         - Substitua contosodc.contoso.azure e contoso.azure pelo FQDN do sensor e do nome domínio do ATP do Azure, respectivamente.
-    4. Digitar ```ls -d contoso.azure```
-    5. Repita as etapas 3 e 4 para cada sensor que você quer testar.  
-    6. No console do ATP do Azure, abra o perfil de entidade do computador a partir do qual você executou o teste de conectividade. 
-    7. Verifique a atividade lógica relacionada e confirme a conectividade. 
+    1. Digitar ```ls -d contoso.azure```
+    1. Repita as etapas 3 e 4 para cada sensor que você quer testar.  
+    1. No console do ATP do Azure, abra o perfil de entidade do computador a partir do qual você executou o teste de conectividade. 
+    1. Verifique a atividade lógica relacionada e confirme a conectividade. 
 
     > [!NOTE] 
     >Se o controlador de domínio que você quer testar for o primeiro sensor implantado, aguarde pelo menos 15 minutos para permitir que o back-end do banco de dados conclua a implantação inicial dos microsserviços necessários antes de tentar verificar a atividade lógica relacionada desse controlador de domínio.
