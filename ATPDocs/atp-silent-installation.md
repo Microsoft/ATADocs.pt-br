@@ -5,19 +5,19 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 12/05/2018
+ms.date: 07/17/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 24eca4c6-c949-42ea-97b9-41ef0fb611f1
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: a15129852315fa958b8f5bed810c9f69e185e73e
-ms.sourcegitcommit: ae9db212f268f067b217d33b0c3f991b6531c975
+ms.openlocfilehash: d60a2ecf2302e6db39baccbc394bf8db14fa87f6
+ms.sourcegitcommit: b7b3d4a401faaa3edb4bd669a1a003a6d21a4322
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65195473"
+ms.lasthandoff: 07/17/2019
+ms.locfileid: "68298809"
 ---
 # <a name="azure-atp-switches-and-silent-installation"></a>Instalação silenciosa e opções do Azure ATP
 Este artigo fornece diretrizes e instruções para a instalação silenciosa e opções do Azure ATP.
@@ -77,6 +77,20 @@ Use o seguinte comando para realizar uma instalação silenciosa completa do sen
 
     "Azure ATP sensor Setup.exe" /quiet NetFrameworkCommandLineArguments="/q" AccessKey="mmAOkLYCzfH8L/zUIsH24BIJBevlAWu7wUcSfIkRJufpuEojaDHYdjrNs0P3zpD+/bObKfLS0puD7biT5KDf3g=="
 
+## <a name="proxy-authentication"></a>Autenticação de proxy
+
+Use os seguintes comandos para concluir a autenticação de proxy:
+
+**Sintaxe**:
+
+
+> [!div class="mx-tableFixed"]
+> 
+> |Nome|Sintaxe|Obrigatório para instalação silenciosa?|Descrição|
+> |-------------|----------|---------|---------|
+> |ProxyUrl|/quiet|Sim|Especifica o ProxyUrl e o número da porta para o sensor do ATP do Azure.|
+> |ProxyUserName|/help|Não|Se o seu serviço de proxy exigir autenticação, forneça um nome de usuário no formato DOMÍNIO\usuário.|
+> |ProxyUserPassword|NetFrameworkCommandLineArguments="/q"|Sim|Especifica a senha para o nome de usuário do proxy. *As credenciais são criptografadas e armazenadas localmente pelo sensor do ATP do Azure.|
 
 ## <a name="update-the-azure-atp-sensor"></a>Atualizar o sensor do Azure ATP
 

@@ -12,14 +12,31 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 7d0f33db-2513-4146-a395-290e001f4199
 ms.reviewer: ort
 ms.suite: ems
-ms.openlocfilehash: 5315d7778413b9da0f642fb2c34db8fbe0a52ab4
-ms.sourcegitcommit: 68118b00d039db56f69ed7c0b96cf85f9b7a8065
+ms.openlocfilehash: b445d44aa64e2b4d0811029d4eed7e87046c52d0
+ms.sourcegitcommit: b7b3d4a401faaa3edb4bd669a1a003a6d21a4322
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67880456"
+ms.lasthandoff: 07/17/2019
+ms.locfileid: "68298872"
 ---
 # <a name="whats-new-in-azure-atp"></a>Novidades do Azure ATP
+
+## <a name="azure-atp-release-286"></a>ATP do Azure versão 2.86 
+
+Lançado em 14 de julho de 2019
+
+- **Novo alerta de segurança: Suspeita de violação da autenticação NTLM (ID externa 2039) – versão prévia**<br>
+O novo alerta de segurança de [suspeita de violação de autenticação do NTLM](atp-lateral-movement-alerts.md#suspected-ntlm-authentication-tampering-external-id-2039---preview) do ATP do Azure agora está em versão prévia pública. <br> Nessa detecção, um alerta de segurança do ATP do Azure é disparado quando há suspeita de que o uso de um ataque man-in-the-middle tenha ignorado com êxito a MIC (verificação de integridade da mensagem) do NTLM, uma vulnerabilidade de segurança detalhada no Microsoft [CVE-2019-040](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2019-1040). Esses tipos de ataques tentam fazer downgrade dos recursos de segurança do NTLM e se autenticam com êxito, com a meta final de fazer movimentos laterais bem-sucedidos. 
+
+- **Aprimoramento do recurso: impressão digital de TCP**<br> Até agora, o ATP do Azure forneceu informações do sistema operacional do dispositivo de entidade com base no atributo disponível no Active Directory. Anteriormente, se as informações do sistema operacional não estavam disponíveis no Active Directory, elas também não ficavam disponíveis nas páginas de entidade do ATP do Azure. Desta versão em diante, graças ao uso das impressões digitais de TCP, o ATP do Azure agora fornece essas informações para dispositivos em que o Active Directory não tem as informações ou que não estão registrados no Active Directory. 
+ 
+    A adição dos dados de impressões digitais de TCP ajuda a identificar dispositivos não registrados e não Windows, auxiliando simultaneamente em seu processo de investigação. Para saber mais sobre a resolução de nomes de rede no ATP do Azure, confira [Noções básicas sobre a NRR (resolução de nomes de rede)](atp-nnr-policy.md).  
+
+- **Novo recurso: Proxy autenticado – versão prévia**<br> O ATP do Azure agora é compatível com proxy autenticado. Especifique a URL do proxy usando a linha de comando do sensor e especifique o nome de usuário/senha para usar proxies que exigem autenticação. Para obter mais informações sobre como usar o proxy autenticado, confira [instalação silenciosa do ATP do Azure](https://docs.microsoft.com/azure-advanced-threat-protection/atp-silent-installation#proxy-authetication).
+
+- **Aprimoramento do recurso: Processo sincronizador de domínio automatizado**<br> O processo de designação e marcação de controladores de domínio como candidatos do sincronizador de domínio durante a instalação e a configuração contínua agora é totalmente automatizado. A opção de alternância para selecionar manualmente os controladores de domínio como candidatos do sincronizador de domínio foi removida. 
+
+- Essa versão também inclui aprimoramentos e correções de bug da infraestrutura do sensor interno.
 
 ## <a name="azure-atp-release-285"></a>ATP do Azure versão 2.85
 

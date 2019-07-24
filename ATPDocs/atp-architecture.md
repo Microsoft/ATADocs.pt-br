@@ -5,19 +5,19 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 1/27/2019
+ms.date: 07/17/2019
 ms.topic: article
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 90f68f2c-d421-4339-8e49-1888b84416e6
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: c80fe761b9e54b2031e6385bcc32d845ccf52872
-ms.sourcegitcommit: ae9db212f268f067b217d33b0c3f991b6531c975
+ms.openlocfilehash: 38a1790194d739ac31c66df60cf0d9c2911344c7
+ms.sourcegitcommit: b7b3d4a401faaa3edb4bd669a1a003a6d21a4322
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65197188"
+ms.lasthandoff: 07/17/2019
+ms.locfileid: "68298902"
 ---
 # <a name="azure-atp-architecture"></a>Arquitetura do Azure ATP
 
@@ -68,16 +68,12 @@ O sensor do Azure ATP tem as seguintes funcionalidades principais:
 
 O sensor do Azure ATP lê eventos localmente, sem necessidade de comprar e manter hardware ou configurações adicionais. O sensor do ATP do Azure também dá suporte para o Rastreamento de Eventos para Windows (ETW), o qual fornece as informações de log para várias detecções. As detecções baseadas no ETW incluem Suspeita de ataques de DCShadow tentados usando a promoção do controlador de domínio e as solicitações de replicação do controlador de domínio.
 
-### <a name="domain-synchronizer-candidate"></a>Candidato ao sincronizador de domínio
+### <a name="domain-synchronizer-process"></a>Processo sincronizador de domínio
 
-O candidato de sincronizador de domínio é responsável por sincronizar todas as entidades de um determinado domínio do Active Directory de forma proativa (semelhante ao mecanismo utilizado pelos próprios controladores de domínio para replicação). Um sensor é escolhido aleatoriamente, na lista de candidatos, para servir como sincronizador de domínio. 
+O processo sincronizador de domínio é responsável por sincronizar todas as entidades de um determinado domínio do Active Directory de forma proativa (semelhante ao mecanismo utilizado pelos próprios controladores de domínio para replicação). Um sensor é automaticamente escolhido de forma aleatória entre todos os seus sensores qualificados para servir como o sincronizador de domínio. 
 
-Se o sincronizador estiver offline por mais de 30 minutos, outro candidato é escolhido em seu lugar. Se não houver nenhum sincronizador de domínio disponível para um domínio específico, o ATP do Azure sincronizará proativamente entidades e suas alterações, no entanto, o ATP do Azure recuperará novas entidades reativamente conforme elas forem detectadas no tráfego monitorado.
+Se o sincronizador de domínio estiver offline por mais de 30 minutos, outro sensor será escolhido automaticamente em seu lugar. 
     
-Se nenhum sincronizador de domínio estiver disponível e você pesquisar por uma entidade que não tem qualquer tráfego relacionado a ela, nenhum resultado da pesquisa será exibido.
-
-Por padrão, sensores do ATP do Azure não são candidatos a sincronizador. Para definir manualmente um sensor do ATP do Azure como um candidato a sincronizador de domínio, siga as etapas no [fluxo de trabalho de instalação do Azure ATP](install-atp-step5.md).
-
 ### <a name="resource-limitations"></a>Limitações de recursos
 
 O sensor do ATP do Azure inclui um componente de monitoramento que avalia a capacidade de computação e de memória disponível no controlador de domínio no qual ele está sendo executado. O processo de monitoramento é executado a cada 10 segundos e atualiza dinamicamente a cota de utilização de CPU e memória no processo de sensor do Azure ATP. O processo de monitoramento verifica se o controlador de domínio sempre tem pelo menos 15% de recursos de computação e memória livres disponíveis.
