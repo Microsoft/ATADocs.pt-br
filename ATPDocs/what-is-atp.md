@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 2d14d0e9-1b03-4bcc-ae97-8fd41526ffc5
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: fe56aac6dae4b5f54134a3542c18495dbb44aacf
-ms.sourcegitcommit: fa9b880e52d4b615409cc247fc73993407df0ae5
+ms.openlocfilehash: 1148e4644ac49da31f2ba62e7bb972f3f9cfbbdf
+ms.sourcegitcommit: 4662ad41addf92727367874d909937fa331fb866
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65226775"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68484954"
 ---
 # <a name="what-is-azure-advanced-threat-protection"></a>O que é a Proteção Avançada contra Ameaças do Azure?
 A ATP (Proteção Avançada contra Ameaças) do Azure é uma solução de segurança baseada em nuvem que aprimora os sinais locais do Active Directory para identificar, detectar e investigar ameaças avançadas, identidades comprometidas e ações de pessoas internas mal-intencionadas, direcionadas à sua organização. O Azure ATP permite aos analistas de SecOp e profissionais de segurança que lutam para detectar ataques avançados em ambientes híbridos:  
@@ -94,7 +94,7 @@ Para obter um resumo dos anúncios do ATP do Azure que foram feitos no Ignite 20
 ### <a name="phase-2"></a>Fase 2
 
 1. Proteja todos os controladores de domínio e [florestas](atp-multi-forest.md) na sua organização.  
-2.  Monitore todos os [alertas](working-with-suspicious-activities.md) – investigue os alertas de movimentação lateral e de comando de domínio.  
+2. Monitore todos os [alertas](working-with-suspicious-activities.md) – investigue os alertas de movimentação lateral e de comando de domínio.  
 3. Trabalhe com o [Guia de Alerta de Segurança](suspicious-activity-guide.md) para entender as ameaças e os ataques em potencial da triagem.
 
 
