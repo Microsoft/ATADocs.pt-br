@@ -5,19 +5,19 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 05/12/2019
+ms.date: 07/29/2019
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
 ms.technology: ''
 ms.assetid: a5f90544-1c70-4aff-8bf3-c59dd7abd687
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 153f53715bc33b735bb7cf2796dcb1f983d67915
-ms.sourcegitcommit: 5d93b0e59080c2d872672bf77a1a40c548c1016d
-ms.translationtype: HT
+ms.openlocfilehash: 9d1dfcf20a45dde213db7db2d43ff973ebfcbe11
+ms.sourcegitcommit: dd8c94db68e85752c20bba3446b678cd1edcd932
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65760324"
+ms.lasthandoff: 07/29/2019
+ms.locfileid: "68604389"
 ---
 # <a name="ata-prerequisites"></a>Pré-requisitos do ATA
 
@@ -31,7 +31,7 @@ Este artigo descreve os requisitos para uma implantação bem-sucedida do ATA no
 
 O ATA é composto pelo Centro do ATA, pelo Gateway do ATA e/ou o Gateway Lightweight do ATA. Para saber mais sobre os componentes do ATA, confira [Arquitetura do ATA](ata-architecture.md).
 
-O Sistema do ATA funciona nos limites da floresta do active directory e é compatível com o FFL (Nível funcional da floresta) do Windows 2003 e superior.
+O Sistema do ATA funciona nos limites da floresta do active directory e oferece suporte a FFL (Nível funcional da floresta) do Windows 2003 e superior.
 
 
 [Antes de começar](#before-you-start): Esta seção lista as informações que você deve obter, as contas e entidades de rede que você deve ter antes de iniciar a instalação do ATA.
@@ -78,10 +78,17 @@ Antes de instalar o ATA Center em execução no Windows 2012 R2, confirme se a s
 
 Você pode verificar executando o seguinte cmdlet do Windows PowerShell: `[Get-HotFix -Id kb2919355]`.
 
-É permitida a instalação do ATA Center como uma máquina virtual. 
+A instalação do ATA Center como uma máquina virtual tem suporte. 
 
 > [!NOTE] 
-> Durante a execução como uma memória dinâmica da máquina virtual ou qualquer outra memória, o recurso de inchamento não é suportado.
+> Ao executar o centro como uma máquina virtual (VM), o centro exige que toda a memória seja alocada para a VM, o tempo todo. 
+
+|VM em execução em|Descrição|
+|------------|-------------|
+|Hyper-V|Verifique se **habilitar memória dinâmica** não está habilitado para a VM.|
+|Produtos|Verifique se a quantidade de memória configurada e a memória reservada são iguais ou selecione a opção a seguir na configuração de VM – **reservar toda a memória de convidado (todas bloqueadas**.|
+|Outro host de virtualização|Consulte a documentação fornecida pelo fornecedor sobre como garantir que a memória seja totalmente alocada para a VM em todos os momentos. |
+|
 
 Se você executar a Central de ATA como uma máquina virtual, deverá finalizar o servidor antes de criar um novo ponto de verificação para evitar uma possível corrupção do banco de dados.
 
@@ -108,7 +115,7 @@ Você deve ter o seguinte:
 ### <a name="ports"></a>Portas
 A tabela a seguir lista as portas mínimas que devem ser abertas para que a Central de ATA funcione corretamente.
 
-|Protocolo|Transport|Porta|Para/De|Direção|
+|Protocol|Transport|Porta|Para/De|Direção|
 |------------|-------------|--------|-----------|-------------|
 |**SSL** (Comunicações do ATA)|TCP|443|Gateway do ATA|Entrada|
 |**HTTP** (opcional)|TCP|80|Rede da Empresa|Entrada|
@@ -137,12 +144,12 @@ O certificado deve ter:
 -   Um tipo de provedor do CSP (Provedor de Serviços de Criptografia) ou KSP (Provedor de Armazenamento de Chaves)
 -   Um comprimento de chave pública de 2048 bits
 -   Um valor definido para os sinalizadores de uso KeyEncipherment e ServerAuthentication
--   O valor KeySpec (KeyNumber) de "KeyExchange" (AT\_KEYEXCHANGE). Observe que o valor de "Signature" (AT\_SIGNATURE) não é compatível. 
+-   O valor KeySpec (KeyNumber) de "KeyExchange" (AT\_KEYEXCHANGE). Observe que o valor de "Signature" (AT\_SIGNATURE) não tem suporte. 
 
 Por exemplo, você pode usar os modelos padrão **servidor Web** ou **Computador**.
 
 > [!WARNING]
-> O processo de renovação de um certificado existente não é suportado. A única maneira de renovar um certificado é criando um novo certificado e configurando o ATA para usar o novo certificado.
+> Não há suporte para o processo de renovação de um certificado existente. A única maneira de renovar um certificado é criando um novo certificado e configurando o ATA para usar o novo certificado.
 
 
 > [!NOTE]
@@ -168,10 +175,10 @@ Para obter informações sobre como usar máquinas virtuais com o Gateway do ATA
 
 ### <a name="server-specifications"></a>Especificações do servidor
 Para ter um melhor desempenho, defina a **Opção de Energia** do Gateway de ATA para **Alto Desempenho**.<br>
-Um Gateway do ATA pode ser compatível com o monitoramento de vários controladores de domínio, dependendo da quantidade de tráfego de rede para e a partir dos controladores de domínio.
+Um Gateway do ATA pode dar suporte ao monitoramento de vários controladores de domínio, dependendo da quantidade de tráfego de rede para e a partir dos controladores de domínio.
 
 > [!NOTE] 
-> Durante a execução como uma memória dinâmica da máquina virtual ou qualquer outra memória, o recurso de inchamento não é suportado.
+> Durante a execução como uma memória dinâmica da máquina virtual ou qualquer outra memória, não há suporte para o recurso de inchamento.
 
 Para saber mais sobre os requisitos de hardware do Gateway do ATA, confira [Planejamento de capacidade do ATA](ata-capacity-planning.md).
 
@@ -203,7 +210,7 @@ O Gateway de ATA requer pelo menos um Adaptador de gerenciamento e pelo menos um
 ### <a name="ports"></a>Portas
 A tabela abaixo lista as portas mínimas que o Gateway do ATA requer configuradas no adaptador de gerenciamento:
 
-|Protocolo|Transport|Porta|Para/De|Direção|
+|Protocol|Transport|Porta|Para/De|Direction|
 |------------|-------------|--------|-----------|-------------|
 |LDAP|TCP e UDP|389|Controladores de domínio|Saída|
 |LDAP seguro (LDAPS)|TCP|636|Controladores de domínio|Saída|
@@ -258,7 +265,7 @@ Para ter um melhor desempenho, defina a **Opção de Energia** do Gateway Lightw
 O Gateway Lightweight do ATA pode ser implantado em controladores de domínio de vários tamanhos e cargas, dependendo da quantidade de tráfego de rede dos controladores de domínio e da quantidade de recursos instalados no controlador de domínio.
 
 > [!NOTE] 
-> Durante a execução como uma memória dinâmica da máquina virtual ou qualquer outra memória, o recurso de inchamento não é suportado.
+> Durante a execução como uma memória dinâmica da máquina virtual ou qualquer outra memória, não há suporte para o recurso de inchamento.
 
 Para saber mais sobre os requisitos de hardware do Gateway Lightweight do ATA, confira [Planejamento de capacidade do ATA](ata-capacity-planning.md).
 
@@ -272,12 +279,12 @@ O Gateway Lightweight do ATA monitora o tráfego local em todos os adaptadores d
 Após a implantação, você pode usar o Console do ATA para modificar quais adaptadores de rede são monitorados.
 
 > [!NOTE]
-> O Gateway Lightweight não é compatível com controles de domínio que executem o Windows 2008 R2 com o Broadcom Network Adapter Teaming habilitado.
+> Não há suporte para o Gateway Lightweight em controles de domínio que executem o Windows 2008 R2 com o Broadcom Network Adapter Teaming habilitado.
 
 ### <a name="ports"></a>Portas
 A tabela abaixo lista o mínimo de portas que o Gateway Lightweight do ATA exige:
 
-|Protocolo|Transport|Porta|Para/De|Direção|
+|Protocol|Transport|Porta|Para/De|Direction|
 |------------|-------------|--------|-----------|-------------|
 |DNS|TCP e UDP|53|Servidores DNS|Saída|
 |NTLM via RPC|TCP|135|Todos os dispositivos na rede|Ambos|
@@ -311,7 +318,7 @@ O acesso ao Console do ATA é por meio de um navegador, oferecendo suporte a def
 - [Como escolher o tipo certo de Gateway do ATA](https://channel9.msdn.com/Shows/Microsoft-Security/ATA-Deployment-Choose-the-Right-Gateway-Type)
 
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Consulte também
 - [Ferramenta de dimensionamento do ATA](http://aka.ms/atasizingtool)
 - [Arquitetura do ATA](ata-architecture.md)
 - [Instalar o ATA](install-ata-step1.md)

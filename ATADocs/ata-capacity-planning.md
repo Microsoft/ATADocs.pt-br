@@ -5,18 +5,18 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 05/12/2019
+ms.date: 07/28/2019
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
 ms.assetid: 1b5b24ff-0df8-4660-b4f8-64d68cc72f65
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: cd6dbac4fec45b4e3bc3e4ee6818ac0a5e9d18a4
-ms.sourcegitcommit: ef6d041d5ecde7ec909fd0f90848ce422c0c4774
-ms.translationtype: HT
+ms.openlocfilehash: c77f855066f8385925dc9039c6532f1981ac0dfe
+ms.sourcegitcommit: dd8c94db68e85752c20bba3446b678cd1edcd932
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65613471"
+ms.lasthandoff: 07/29/2019
+ms.locfileid: "68604361"
 ---
 # <a name="ata-capacity-planning"></a>Planejamento da capacidade de ATA
 
@@ -59,10 +59,10 @@ A Central de ATA requer um mínimo recomendado de 30 dias de dados para a análi
 |---------------------------|-------------------------|-------------------|---------------------------------|-----------------------------------|-----------------------------------|
 |1,000|2|32|0.3|9|30 (100)
 |40.000|4|48|12|360|500 (750)
-|200.000|8|64|60|1.800|1.000 (1.500)
-|400.000|12|96|120|3.600|2.000 (2.500)
-|750.000|24|112|225|6.750|2.500 (3.000)
-|1.000.000|40|128|300|9.000|4.000 (5.000)
+|200,000|8|64|60|1\.800|1\.000 (1.500)
+|400,000|12|96|120|3\.600|2\.000 (2.500)
+|750.000|24|112|225|6\.750|2\.500 (3.000)
+|1\.000.000|40|128|300|9\.000|4\.000 (5.000)
 
 &#42;Isso inclui os núcleos físicos, não os núcleos com hyper-threading.
 
@@ -73,7 +73,7 @@ A Central de ATA requer um mínimo recomendado de 30 dias de dados para a análi
 > - O ATA Center pode ser implantado em qualquer fornecedor de IaaS, desde que os requisitos de desempenho descritos neste artigo sejam atendidos.
 > - A latência de armazenamento para a leitura e a gravação das atividades deve estar abaixo de 10 ms.
 > - A taxa entre as atividades de leitura e gravação é de, aproximadamente, 1:3 abaixo de 100.000 pacotes por segundo e 1:6 acima de 100.000 pacotes por segundo.
-> - Durante a execução como uma memória dinâmica da máquina virtual ou qualquer outra memória, não há suporte para o recurso de inchamento.
+> - Durante a execução como uma memória dinâmica da máquina virtual ou qualquer outra memória, não há suporte para o recurso de inchamento. Para obter mais informações sobre como executar o centro do ATA como uma máquina virtual, consulte [requisitos do centro do ATA](https://docs.microsoft.com/advanced-threat-analytics/ata-prerequisites#ata-center-requirements)
 > - Para ter um melhor desempenho, defina a **Opção de Energia** do Centro do ATA como **Alto Desempenho**.<br>
 > - Ao trabalhar em um servidor físico, o banco de dados do ATA precisa que você **desabilite** o NUMA (acesso não uniforme à memória) no BIOS. O sistema pode referir-se ao NUMA como Intercalação de Nó, caso em que você precisará **habilitar** a Intercalação de Nó para desabilitar o NUMA. Para obter mais informações, confira a documentação do BIOS. Isso não é pertinente quando o Centro do ATA está em execução em um servidor virtual.
 
@@ -125,7 +125,7 @@ Um Gateway Lightweight do ATA pode oferecer suporte ao monitoramento de um contr
 
 > [!NOTE]   
 > -   Se o controlador de domínio não tiver os recursos exigidos pelo Gateway Lightweight do ATA, o desempenho do controlador de domínio não será afetado, mas o Gateway Lightweight do ATA poderá não operar conforme o esperado.
-> -   Durante a execução como uma memória dinâmica da máquina virtual ou qualquer outra memória, não há suporte para o recurso de inchamento.
+> -   Durante a execução como uma memória dinâmica da máquina virtual ou qualquer outra memória, não há suporte para o recurso de inchamento. Para obter mais informações sobre como executar o centro do ATA como uma máquina virtual, consulte [requisitos do centro do ATA](https://docs.microsoft.com/advanced-threat-analytics/ata-prerequisites#ata-center-requirements)
 > -   Para ter um melhor desempenho, defina a **Opção de Energia** do Gateway Lightweight do ATA como **Alto Desempenho**.
 > -   É necessário um mínimo de 5 GB de espaço e é recomendável 10 GB de espaço, incluindo o espaço necessário para os binários do ATA, [logs do ATA](troubleshooting-ata-using-logs.md) e [logs de desempenho](troubleshooting-ata-using-perf-counters.md).
 
@@ -171,7 +171,7 @@ As considerações de espelhamento de porta podem exigir que você implante vár
 - [Como escolher o tipo certo de Gateway do ATA](https://channel9.msdn.com/Shows/Microsoft-Security/ATA-Deployment-Choose-the-Right-Gateway-Type)
 
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Consulte também
 - [Ferramenta de dimensionamento do ATA](http://aka.ms/atasizingtool)
 - [Pré-requisitos do ATA](ata-prerequisites.md)
 - [Arquitetura do ATA](ata-architecture.md)
