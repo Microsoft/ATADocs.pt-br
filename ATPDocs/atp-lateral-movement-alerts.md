@@ -5,19 +5,19 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 07/17/2019
+ms.date: 07/25/2019
 ms.topic: tutorial
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 2257eb00-8614-4577-b6a1-5c65085371f2
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 7e791dafcd8c3e05a7e05d5d50e82fae05aa5c89
-ms.sourcegitcommit: c1368baac1fa4e54eb9eb4e34a7b471e56b22ac2
+ms.openlocfilehash: cf6d57113fc3457d7aeb097e77b7668fa012b546
+ms.sourcegitcommit: 4662ad41addf92727367874d909937fa331fb866
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/17/2019
-ms.locfileid: "68299364"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68485015"
 ---
 # <a name="tutorial-lateral-movement-alerts"></a>Tutorial: Alertas de movimento lateral  
 
@@ -38,7 +38,7 @@ Os alertas de segurança a seguir ajudam a identificar e corrigir atividades sus
 > * Suspeita de roubo de identidade (Pass-the-Hash) (ID 2017 externa)
 > * Suspeita de roubo de identidade (Pass-the-Ticket) (ID 2018 externa)
 > * Suspeita de violação da autenticação NTLM (ID externa 2039) – versão prévia
-> * Suspeita de ataque de retransmissão de NTLM (conta do Exchange) (ID 2037 externa) — versão prévia
+> * Suspeita de ataque de retransmissão de NTLM (conta do Exchange) (ID 2037 externa)
 > * Suspeita de ataque de Overpass-the-Hash (downgrade de criptografia) (ID 2008 externa)
 > * Suspeita de ataque de Overpass-the-Hash (Kerberos) (ID 2002 externa)
 
@@ -173,7 +173,7 @@ Nessa detecção, um alerta de segurança do ATP do Azure é disparado quando so
  
 **Prevenção** • Verifique se todos os dispositivos no ambiente estão atualizados e corrigidos em relação à [CVE-2019-1040](https://portal.msrc.microsoft.com/security-guidance/advisory/CVE-2019-1040).
 
-## <a name="suspected-ntlm-relay-attack-exchange-account-external-id-2037---preview"></a>Suspeita de ataque de retransmissão de NTLM (conta do Exchange) (ID 2037 externa) — versão prévia
+## <a name="suspected-ntlm-relay-attack-exchange-account-external-id-2037"></a>Suspeita de ataque de retransmissão de NTLM (conta do Exchange) (ID 2037 externa)
 
 **Descrição**
 

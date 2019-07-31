@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 24eca4c6-c949-42ea-97b9-41ef0fb611f1
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: d60a2ecf2302e6db39baccbc394bf8db14fa87f6
-ms.sourcegitcommit: b7b3d4a401faaa3edb4bd669a1a003a6d21a4322
+ms.openlocfilehash: 6fca63fb488aef6fb26f4f501c4f6af896e223bd
+ms.sourcegitcommit: 4662ad41addf92727367874d909937fa331fb866
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/17/2019
-ms.locfileid: "68298809"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68485055"
 ---
 # <a name="azure-atp-switches-and-silent-installation"></a>Instalação silenciosa e opções do Azure ATP
 Este artigo fornece diretrizes e instruções para a instalação silenciosa e opções do Azure ATP.
@@ -88,9 +88,9 @@ Use os seguintes comandos para concluir a autenticação de proxy:
 > 
 > |Nome|Sintaxe|Obrigatório para instalação silenciosa?|Descrição|
 > |-------------|----------|---------|---------|
-> |ProxyUrl|/quiet|Sim|Especifica o ProxyUrl e o número da porta para o sensor do ATP do Azure.|
-> |ProxyUserName|/help|Não|Se o seu serviço de proxy exigir autenticação, forneça um nome de usuário no formato DOMÍNIO\usuário.|
-> |ProxyUserPassword|NetFrameworkCommandLineArguments="/q"|Sim|Especifica a senha para o nome de usuário do proxy. *As credenciais são criptografadas e armazenadas localmente pelo sensor do ATP do Azure.|
+> |ProxyUrl|ProxyUrl="https\://proxy.contoso.com:8080"|Não|Especifica o ProxyUrl e o número da porta para o sensor do ATP do Azure.|
+> |ProxyUserName|ProxyUserName="Contoso\ProxyUser"|Não|Se o seu serviço de proxy exigir autenticação, forneça um nome de usuário no formato DOMÍNIO\usuário.|
+> |ProxyUserPassword|ProxyUserPassword="P@ssw0rd"|Não|Especifica a senha para o nome de usuário do proxy. *As credenciais são criptografadas e armazenadas localmente pelo sensor do ATP do Azure.|
 
 ## <a name="update-the-azure-atp-sensor"></a>Atualizar o sensor do Azure ATP
 
