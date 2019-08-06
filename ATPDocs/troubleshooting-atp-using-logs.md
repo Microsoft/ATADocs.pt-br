@@ -5,19 +5,19 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 10/04/2018
+ms.date: 08/05/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: de796346-647d-48e1-970a-8f072e990f1e
 ms.reviewer: ''
 ms.suite: ''
-ms.openlocfilehash: e461aa7302ee515f33e2ad69f0f2c0c9f83ceaf8
-ms.sourcegitcommit: 139e8dd63c06a5d9c9a3c348958e4f7fd74041b8
+ms.openlocfilehash: 0105630931c6cbebfe2b919946f305ba031bb755
+ms.sourcegitcommit: 8df26fb312472b8df1da70e581517223d26de8c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "67155902"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68781921"
 ---
 # <a name="troubleshooting-azure-advanced-threat-protection-atp-sensor-using-the-atp-logs"></a>Solução de problemas do sensor do ATP (Proteção Avançada contra Ameaças) ao Azure usando os logs do ATP
 Os logs do ATP fornecem informações sobre o que cada componente do sensor do Azure ATP está fazendo a qualquer hora.
@@ -28,8 +28,6 @@ Os logs do ATP do Azure estão localizados na subpasta **Logs** onde o ATP está
 O sensor do Azure ATP tem os seguintes logs:
 
 -   **Microsoft.Tri.Sensor.log** – Esse log contém tudo o que acontece no sensor do Azure ATP (inclusive resolução e erros). Usado principalmente para obter o status geral de todas as operações em ordem cronológica de ocorrência.
-
--   **Microsoft.Tri.Sensor-Resolution.log** – Esse log contém os detalhes da resolução das entidades vistas no tráfego pelo sensor do ATP. Usado principalmente para investigar problemas de resolução de entidades.
 
 -   **Microsoft.Tri.Sensor-Errors.log** – Esse log contém apenas os erros que são detectados pelo sensor do ATP. Usado principalmente para executar verificações de integridade e investigar problemas que precisam estar correlacionados a horários específicos.
 

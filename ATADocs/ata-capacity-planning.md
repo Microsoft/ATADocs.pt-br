@@ -5,18 +5,18 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 07/28/2019
+ms.date: 08/05/2019
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
 ms.assetid: 1b5b24ff-0df8-4660-b4f8-64d68cc72f65
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: c77f855066f8385925dc9039c6532f1981ac0dfe
-ms.sourcegitcommit: dd8c94db68e85752c20bba3446b678cd1edcd932
+ms.openlocfilehash: 3f5e493993acfb6bbb440691f11053d46bf5e1ba
+ms.sourcegitcommit: 8df26fb312472b8df1da70e581517223d26de8c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/29/2019
-ms.locfileid: "68604361"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68781813"
 ---
 # <a name="ata-capacity-planning"></a>Planejamento da capacidade de ATA
 
@@ -73,7 +73,7 @@ A Central de ATA requer um mínimo recomendado de 30 dias de dados para a análi
 > - O ATA Center pode ser implantado em qualquer fornecedor de IaaS, desde que os requisitos de desempenho descritos neste artigo sejam atendidos.
 > - A latência de armazenamento para a leitura e a gravação das atividades deve estar abaixo de 10 ms.
 > - A taxa entre as atividades de leitura e gravação é de, aproximadamente, 1:3 abaixo de 100.000 pacotes por segundo e 1:6 acima de 100.000 pacotes por segundo.
-> - Durante a execução como uma memória dinâmica da máquina virtual ou qualquer outra memória, não há suporte para o recurso de inchamento. Para obter mais informações sobre como executar o centro do ATA como uma máquina virtual, consulte [requisitos do centro do ATA](https://docs.microsoft.com/advanced-threat-analytics/ata-prerequisites#ata-center-requirements)
+> - Ao executar o centro como uma máquina virtual (VM), o centro exige que toda a memória seja alocada para a VM, o tempo todo. Para obter mais informações sobre como executar o centro do ATA como uma máquina virtual, consulte [requisitos do centro do ATA](https://docs.microsoft.com/advanced-threat-analytics/ata-prerequisites#dynamic-memory)
 > - Para ter um melhor desempenho, defina a **Opção de Energia** do Centro do ATA como **Alto Desempenho**.<br>
 > - Ao trabalhar em um servidor físico, o banco de dados do ATA precisa que você **desabilite** o NUMA (acesso não uniforme à memória) no BIOS. O sistema pode referir-se ao NUMA como Intercalação de Nó, caso em que você precisará **habilitar** a Intercalação de Nó para desabilitar o NUMA. Para obter mais informações, confira a documentação do BIOS. Isso não é pertinente quando o Centro do ATA está em execução em um servidor virtual.
 
@@ -125,7 +125,7 @@ Um Gateway Lightweight do ATA pode oferecer suporte ao monitoramento de um contr
 
 > [!NOTE]   
 > -   Se o controlador de domínio não tiver os recursos exigidos pelo Gateway Lightweight do ATA, o desempenho do controlador de domínio não será afetado, mas o Gateway Lightweight do ATA poderá não operar conforme o esperado.
-> -   Durante a execução como uma memória dinâmica da máquina virtual ou qualquer outra memória, não há suporte para o recurso de inchamento. Para obter mais informações sobre como executar o centro do ATA como uma máquina virtual, consulte [requisitos do centro do ATA](https://docs.microsoft.com/advanced-threat-analytics/ata-prerequisites#ata-center-requirements)
+> -   Ao executar o centro como uma máquina virtual (VM), o centro exige que toda a memória seja alocada para a VM, o tempo todo. Para obter mais informações sobre como executar o centro do ATA como uma máquina virtual, consulte [requisitos do centro do ATA](https://docs.microsoft.com/advanced-threat-analytics/ata-prerequisites#dynamic-memory))
 > -   Para ter um melhor desempenho, defina a **Opção de Energia** do Gateway Lightweight do ATA como **Alto Desempenho**.
 > -   É necessário um mínimo de 5 GB de espaço e é recomendável 10 GB de espaço, incluindo o espaço necessário para os binários do ATA, [logs do ATA](troubleshooting-ata-using-logs.md) e [logs de desempenho](troubleshooting-ata-using-perf-counters.md).
 
@@ -161,7 +161,7 @@ As considerações de espelhamento de porta podem exigir que você implante vár
 &#42;&#42;O hyper-threading deve ser desabilitado.
 
 > [!NOTE] 
-> -   Não há suporte para memória dinâmica.
+> -   Ao executar o centro como uma máquina virtual (VM), o centro exige que toda a memória seja alocada para a VM, o tempo todo. Para obter mais informações sobre como executar o centro do ATA como uma máquina virtual, consulte [requisitos do centro do ATA](https://docs.microsoft.com/advanced-threat-analytics/ata-prerequisites#dynamic-memory)
 > -   Para ter um melhor desempenho, defina a **Opção de Energia** do Gateway de ATA para **Alto Desempenho**.
 > -   É necessário um mínimo de 5 GB de espaço e é recomendável 10 GB de espaço, incluindo o espaço necessário para os binários do ATA, [logs do ATA](troubleshooting-ata-using-logs.md) e [logs de desempenho](troubleshooting-ata-using-perf-counters.md).
 

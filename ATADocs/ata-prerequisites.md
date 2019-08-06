@@ -5,19 +5,19 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 07/29/2019
+ms.date: 08/05/2019
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
 ms.technology: ''
 ms.assetid: a5f90544-1c70-4aff-8bf3-c59dd7abd687
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 9d1dfcf20a45dde213db7db2d43ff973ebfcbe11
-ms.sourcegitcommit: dd8c94db68e85752c20bba3446b678cd1edcd932
+ms.openlocfilehash: 3f0076091ced915776ea54578a58ea3a3fa5856f
+ms.sourcegitcommit: 8df26fb312472b8df1da70e581517223d26de8c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/29/2019
-ms.locfileid: "68604389"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68781857"
 ---
 # <a name="ata-prerequisites"></a>Pré-requisitos do ATA
 
@@ -66,6 +66,7 @@ Esta seção mostra as informações que você deve obter, bem como as contas e 
 
 ## <a name="ata-center-requirements"></a>Requisitos da Central de ATA
 Esta seção lista os requisitos para a Central de ATA.
+
 ### <a name="general"></a>Geral
 A Central do ATA pode ser instalada em um servidor executando o Windows Server 2012 R2 ou o Windows Server 2016 e o Windows Server 2019. 
 
@@ -80,8 +81,10 @@ Você pode verificar executando o seguinte cmdlet do Windows PowerShell: `[Get-H
 
 A instalação do ATA Center como uma máquina virtual tem suporte. 
 
+### <a name="dynamic-memory"></a>Memória dinâmica
+
 > [!NOTE] 
-> Ao executar o centro como uma máquina virtual (VM), o centro exige que toda a memória seja alocada para a VM, o tempo todo. 
+> Ao executar o centro como uma máquina virtual (VM), o centro exige que toda a memória seja alocada para a VM, o tempo todo.
 
 |VM em execução em|Descrição|
 |------------|-------------|
@@ -177,8 +180,7 @@ Para obter informações sobre como usar máquinas virtuais com o Gateway do ATA
 Para ter um melhor desempenho, defina a **Opção de Energia** do Gateway de ATA para **Alto Desempenho**.<br>
 Um Gateway do ATA pode dar suporte ao monitoramento de vários controladores de domínio, dependendo da quantidade de tráfego de rede para e a partir dos controladores de domínio.
 
-> [!NOTE] 
-> Durante a execução como uma memória dinâmica da máquina virtual ou qualquer outra memória, não há suporte para o recurso de inchamento.
+Para saber mais sobre a memória dinâmica ou qualquer outro recurso de balão de memória, consulte [memória dinâmica](#dynamic-memory).
 
 Para saber mais sobre os requisitos de hardware do Gateway do ATA, confira [Planejamento de capacidade do ATA](ata-capacity-planning.md).
 
@@ -264,8 +266,7 @@ O Gateway Lightweight do ATA requer um mínimo de dois núcleos e 6 GB de RAM in
 Para ter um melhor desempenho, defina a **Opção de Energia** do Gateway Lightweight do ATA como **Alto Desempenho**.
 O Gateway Lightweight do ATA pode ser implantado em controladores de domínio de vários tamanhos e cargas, dependendo da quantidade de tráfego de rede dos controladores de domínio e da quantidade de recursos instalados no controlador de domínio.
 
-> [!NOTE] 
-> Durante a execução como uma memória dinâmica da máquina virtual ou qualquer outra memória, não há suporte para o recurso de inchamento.
+Para saber mais sobre a memória dinâmica ou qualquer outro recurso de balão de memória, consulte [memória dinâmica](#dynamic-memory).
 
 Para saber mais sobre os requisitos de hardware do Gateway Lightweight do ATA, confira [Planejamento de capacidade do ATA](ata-capacity-planning.md).
 
