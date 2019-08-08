@@ -5,21 +5,33 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 07/28/2019
+ms.date: 08/05/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 7d0f33db-2513-4146-a395-290e001f4199
 ms.reviewer: ort
 ms.suite: ems
-ms.openlocfilehash: 6f96afa04a3f9179246caddb82dfca1115e20164
-ms.sourcegitcommit: dd8c94db68e85752c20bba3446b678cd1edcd932
+ms.openlocfilehash: 23feedf3b48c3b21f594d764321f0e241e8408cb
+ms.sourcegitcommit: 8df26fb312472b8df1da70e581517223d26de8c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/29/2019
-ms.locfileid: "68604419"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68781916"
 ---
 # <a name="whats-new-in-azure-atp"></a>Novidades do Azure ATP
+
+Lançado em 4 de agosto de 2019
+
+## <a name="azure-atp-release-289"></a>ATP do Azure versão 2.89
+
+- **Melhorias do método de detecção**<br>Para evitar o excesso de geração de tráfego NTLM na criação de avaliações de LMP (Caminho de movimento lateral) preciso, foram feitas melhorias na lógica do sensor do ATP do Azure para confiar menos no uso do NTLM e fazer um uso mais significativo do Kerberos.  
+
+- **Melhoria de alerta: uso suspeito do Golden Ticket (conta inexistente)**<br>Foram adicionadas alterações de nome SAM aos tipos de evidência de suporte listados neste tipo de alerta. Para saber mais sobre o alerta, incluindo como evitar e corrigir esse tipo de atividade, confira [Uso suspeito do Golden Ticket (conta inexistente)](atp-domain-dominance-alerts.md#suspected-golden-ticket-usage-nonexistent-account-external-id-2027).
+
+- **Disponibilidade geral: suspeita de violação da autenticação NTLM**<br> O alerta de [Suspeita de violação da autenticação NTLM](atp-lateral-movement-alerts.md#suspected-ntlm-authentication-tampering-external-id-2039) não está mais no modo de versão prévia e agora está disponível para o público em geral. 
+
+- Essa versão inclui melhorias e correções de bugs da infraestrutura do sensor interno.
 
 
 Lançado em 28 de julho de 2019
@@ -40,8 +52,8 @@ Lançado em 21 de julho de 2019
 
 Lançado em 14 de julho de 2019
 
-- **Novo alerta de segurança: Suspeita de violação da autenticação NTLM (ID externa 2039) – versão prévia**<br>
-O novo alerta de segurança de [suspeita de violação de autenticação do NTLM](atp-lateral-movement-alerts.md#suspected-ntlm-authentication-tampering-external-id-2039---preview) do ATP do Azure agora está em versão prévia pública. <br> Nessa detecção, um alerta de segurança do ATP do Azure é disparado quando há suspeita de que o uso de um ataque man-in-the-middle tenha ignorado com êxito a MIC (verificação de integridade da mensagem) do NTLM, uma vulnerabilidade de segurança detalhada no Microsoft [CVE-2019-040](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2019-1040). Esses tipos de ataques tentam fazer downgrade dos recursos de segurança do NTLM e se autenticam com êxito, com a meta final de fazer movimentos laterais bem-sucedidos. 
+- **Novo alerta de segurança: suspeita de violação da autenticação NTLM (ID externa 2039)**<br>
+O novo alerta de segurança de [suspeita de violação de autenticação do NTLM](atp-lateral-movement-alerts.md#suspected-ntlm-authentication-tampering-external-id-2039) do ATP do Azure agora está em versão prévia pública. <br> Nessa detecção, um alerta de segurança do ATP do Azure é disparado quando há suspeita de que o uso de um ataque man-in-the-middle tenha ignorado com êxito a MIC (verificação de integridade da mensagem) do NTLM, uma vulnerabilidade de segurança detalhada no Microsoft [CVE-2019-040](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2019-1040). Esses tipos de ataques tentam fazer downgrade dos recursos de segurança do NTLM e se autenticam com êxito, com a meta final de fazer movimentos laterais bem-sucedidos. 
 
 - **Aprimoramento do recurso: Identificação do sistema operacional do dispositivo aprimorado**<br> Até agora, o ATP do Azure forneceu informações do sistema operacional do dispositivo de entidade com base no atributo disponível no Active Directory. Anteriormente, se as informações do sistema operacional não estavam disponíveis no Active Directory, elas também não ficavam disponíveis nas páginas de entidade do ATP do Azure. Desta versão em diante, graças ao uso dos métodos de identificação de sistema operacional de dispositivo aprimorado, o ATP do Azure agora fornece essas informações para dispositivos em que o Active Directory não tem as informações ou que não estão registrados no Active Directory. 
  

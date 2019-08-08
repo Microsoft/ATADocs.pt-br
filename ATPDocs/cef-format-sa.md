@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 3261155c-3c72-4327-ba29-c113c63a4e6d
 ms.reviewer: arzinger
 ms.suite: ems
-ms.openlocfilehash: eedc9c5ddae1947ace50b15efc6a8e0967af357a
-ms.sourcegitcommit: 4662ad41addf92727367874d909937fa331fb866
+ms.openlocfilehash: 3b2df6ec2beddd276e1e4acdb0a38feb4a3511a3
+ms.sourcegitcommit: 8df26fb312472b8df1da70e581517223d26de8c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68485076"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68781884"
 ---
 # <a name="azure-atp-siem-log-reference"></a>Referência de logs de SIEM do Azure ATP
 
@@ -76,7 +76,7 @@ Os campos a seguir e seus valores são encaminhados para o SIEM:
 |[Suspeita de uso de Golden Ticket (anomalia de tempo)](atp-domain-dominance-alerts.md#suspected-golden-ticket-usage-time-anomaly-external-id-2022)|Golden Ticket do Kerberos – anomalia de tempo|2022|Alta|Elevação de privilégios,<br> Movimentação lateral,<br>Persistência|
 |[Suspeita de roubo de identidade (Pass-the-Hash)](atp-lateral-movement-alerts.md#suspected-identity-theft-pass-the-hash-external-id-2017)|Roubo de identidade usando o ataque de passagem de Hash|2017|Alta|Movimentação lateral|
 |[Suspeita de roubo de identidade (Pass-the-Ticket)](atp-lateral-movement-alerts.md#suspected-identity-theft-pass-the-ticket-external-id-2018)|Roubo de identidade usando o ataque Pass-the-Ticket|2018|Alto ou médio|Movimentação lateral|
-|[Suspeita de violação da autenticação NTLM – versão prévia](atp-lateral-movement-alerts.md#suspected-ntlm-authentication-tampering-external-id-2039---preview)|NA|2039|Média|Elevação de privilégios,<br> Movimentação lateral|
+|[Suspeita de violação da autenticação NTLM](atp-lateral-movement-alerts.md#suspected-ntlm-authentication-tampering-external-id-2039)|NA|2039|Média|Elevação de privilégios,<br> Movimentação lateral|
 |[Suspeita de ataque de retransmissão de NTLM](atp-lateral-movement-alerts.md#suspected-ntlm-relay-attack-exchange-account-external-id-2037)|NA|2037|Médio ou baixo se observado usando o protocolo NTLM v2 assinado|Elevação de privilégios, <br> Movimentação lateral|
 |[Suspeita de ataque de Overpass-the-Hash (downgrade de criptografia)](atp-lateral-movement-alerts.md#suspected-overpass-the-hash-attack-encryption-downgrade-external-id-2008)|Atividade de downgrade de criptografia (possível ataque overpass-the-hash)|2008|Média|Movimentação lateral|
 |[Suspeita de ataque de Overpass-the-Hash (Kerberos)](atp-lateral-movement-alerts.md#suspected-overpass-the-hash-attack-kerberos-external-id-2002)|Implementação incomum de protocolo Kerberos (possível ataque de overpass-the-hash)|2002|Média|Movimentação lateral|
@@ -125,7 +125,7 @@ Prioridades:
 ### <a name="remote-code-execution-over-dns"></a>Execução remota de código sobre DNS
 1-17-2019   08:24:54    Auth.Warning    192.168.0.202   1 2019-01-17T08:24:54.100856+00:00 DC3 CEF 3908 DnsRemoteCodeExecutionSecurityAlert ï»¿0|Microsoft|Azure ATP|2.63.0.0|DnsRemoteCodeExecutionSecurityAlert|[PREVIEW] Execução remota de código sobre DNS|5|start=2019-01-17T08:24:54.5293800Z app=Dns shost=CLIENT1 msg=Um agente tentou executar remotamente comandos em CLIENT1 a partir de DC1 sobre o protocolo DNS. externalId=2036 cs1Label=url cs1=https\:////contoso-corp.atp.azure.com:13000/securityAlert/591f9769-d904-40b1-89fa-c307c2ca814f cs2Label=trigger cs2=new
 
-### <a name="security-principal-reconnaissance-ldap---preview"></a>Reconhecimento de entidade de segurança (LDAP) – versão prévia 
+### <a name="security-principal-reconnaissance-ldap"></a>Reconhecimento de entidade de segurança (LDAP)
 02-18-2019  16:48:08 Auth.Warning  127.0.0.1  1 2019-02-18T14:48:02.912264+00:00 DC1 CEF 4656 LdapSearchReconnaissanceSecurity ï»¿0|Microsoft|Azure ATP|2.66.0.0|LdapSearchReconnaissanceSecurityAlert|[PREVIEW] Reconhecimento usando consultas LDAP Queries|5|start=2019-02-18T14:46:29.4644276Z app=LdapSearch shost=CLIENT1 msg=um ator em CLIENT1 enviou consultas LDAP suspeitas para DC1, procurando por 4 tipos de enumerações e Operadores de Servidor (os membros podem administrar servidores do domínio) em 2 domínios externId=2038 cs1Label=url cs1=https\://contoso-corp.atp.azure..com:13000/securityAlert/81ea99c4-ce1f-4581-ac8f-7440fbed7cd0 cs2Label=trigger cs2=new
 
 ### <a name="suspected-brute-force-attack-ldap"></a>Suspeita de LDAP (ataque de força bruta)
@@ -158,7 +158,7 @@ Prioridades:
 ### <a name="suspected-identity-theft-pass-the-ticket"></a>Suspeita de roubo de identidade (Pass-the-Ticket) 
 02-21-2018  17:04:47    Auth.Error  192.168.0.220   1 2018-02-21T15:04:33.537583+00:00 CENTER CEF 6076 PassTheTicketSecurityAlert ï»¿0|Microsoft|Azure ATP|2.22.4228.22540|PassTheTicketSecurityAlert|Identity theft using Pass-the-Ticket attack|10|start=2018-02-21T15:02:22.2577465Z app=Kerberos suser=Eugene Jenkins msg=Eugene Jenkins (Software Engineer)'s Kerberos tickets were stolen from Admin-PC to Victim-PC and used to access krbtgt/DOMAIN1.TEST.LOCAL. externalId=2018 cs1Label=url cs1=https\://contoso-corp.atp.azure.com/securityAlert/511f1487-2915-477d-be2e-04cfba702ccd cs2Label=trigger cs2=new
 
-### <a name="suspected-ntlm-authentication-tampering-preview"></a>Suspeita de violação da autenticação NTLM (versão prévia)
+### <a name="suspected-ntlm-authentication-tampering"></a>Suspeita de violação da autenticação NTLM
 07-17-2019  18:18:44    Auth.Warning   192.168.0.77       1 2019-07-09T15:18:30.967118+00:00 CENTER CEF 7144 AbnormalNtlmSigningSecurityAlert ï»¿0|Microsoft|ATP do Azure|2.86.0.0|AbnormalNtlmSigningSecurityAlert|[PREVIEW] Suspeita de violação da autenticação NTLM|5|start=2019-07-09T15:14:57.5280720Z app=Ntlm shost=CLIENT1 msg=2 contas no CLIENT1 estão tentando se autenticar com 2 computadores por NTLM de modo suspeito. externalId=2039 cs1Label=url cs1=https\://contoso-corp.atp.azure.com:13000/securityAlert/d4ce6252-2c0f-47f6-a534-47ee8ad983be cs2Label=trigger cs2=new
 
 ### <a name="suspected-over-pass-the-hash-attack-encryption-downgrade"></a>Suspeita de ataque de Overpass-the-Hash (downgrade de criptografia) 

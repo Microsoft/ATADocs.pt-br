@@ -5,19 +5,19 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 07/25/2019
+ms.date: 08/05/2019
 ms.topic: tutorial
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 2257eb00-8614-4577-b6a1-5c65085371f2
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: cf6d57113fc3457d7aeb097e77b7668fa012b546
-ms.sourcegitcommit: 4662ad41addf92727367874d909937fa331fb866
+ms.openlocfilehash: dd78f2d18010b043dc58bfb6fac24429a36ba2f1
+ms.sourcegitcommit: 8df26fb312472b8df1da70e581517223d26de8c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68485015"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68781836"
 ---
 # <a name="tutorial-lateral-movement-alerts"></a>Tutorial: Alertas de movimento lateral  
 
@@ -37,7 +37,7 @@ Os alertas de segurança a seguir ajudam a identificar e corrigir atividades sus
 > * Execução remota de código sobre DNS (ID 2036 externa)
 > * Suspeita de roubo de identidade (Pass-the-Hash) (ID 2017 externa)
 > * Suspeita de roubo de identidade (Pass-the-Ticket) (ID 2018 externa)
-> * Suspeita de violação da autenticação NTLM (ID externa 2039) – versão prévia
+> * Suspeita de violação da autenticação NTLM (ID externa 2039) 
 > * Suspeita de ataque de retransmissão de NTLM (conta do Exchange) (ID 2037 externa)
 > * Suspeita de ataque de Overpass-the-Hash (downgrade de criptografia) (ID 2008 externa)
 > * Suspeita de ataque de Overpass-the-Hash (Kerberos) (ID 2002 externa)
@@ -147,7 +147,7 @@ Há aplicativos personalizados que encaminham tíquetes em nome de usuários. Es
 4. Procure por usuários que estavam conectados em horário próximo àquele da atividade, pois eles também podem estar comprometidos. Redefina as senhas e habilite o MFA.
 5. Se o Windows Defender ATP estiver instalado – use **klist.exe purge** para excluir todos os tíquetes da sessão de logon especificada e evitar o uso dos tíquetes no futuro.
 
-## <a name="suspected-ntlm-authentication-tampering-external-id-2039---preview"></a>Suspeita de violação da autenticação NTLM (ID externa 2039) – versão prévia
+## <a name="suspected-ntlm-authentication-tampering-external-id-2039"></a>Suspeita de violação da autenticação NTLM (ID externa 2039)
 
 Em junho de 2019, a Microsoft publicou a [Vulnerabilidade de segurança CVE-2019-1040](https://portal.msrc.microsoft.com/security-guidance/advisory/CVE-2019-1040), anunciando a descoberta de uma nova vulnerabilidade de violação no Microsoft Windows, quando um ataque man-in-the-middle é capaz de ignorar com êxito a proteção de MIC (verificação de integridade da mensagem) do NTLM.
 
