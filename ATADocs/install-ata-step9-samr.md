@@ -5,19 +5,19 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 7/30/2018
+ms.date: 08/08/2019
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
 ms.technology: ''
 ms.assetid: 7597ed25-87f5-472c-a496-d5f205c9c391
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 623e5b3623238ec8a1e12c1154a76e0aeb6b57bb
-ms.sourcegitcommit: ae9db212f268f067b217d33b0c3f991b6531c975
-ms.translationtype: HT
+ms.openlocfilehash: bd47ebbe059014015b180ad568e4c519ba1b95b7
+ms.sourcegitcommit: db35bae8354fa35644e9334bfc37b9ffbafdaacc
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65195882"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68862592"
 ---
 # <a name="install-ata---step-9"></a>Instalar o ATA – Etapa 9
 
@@ -25,6 +25,9 @@ ms.locfileid: "65195882"
 
 > [!div class="step-by-step"]
 > [« Etapa 8](install-ata-step7.md)
+
+> [!NOTE]
+> Antes de impor qualquer nova política, sempre certifique-se de que seu ambiente permaneça seguro, sem afetar a compatibilidade do aplicativo, primeiro Habilitando e verificando as alterações propostas no modo de auditoria. 
 
 ## <a name="step-9-configure-sam-r-required-permissions"></a>Etapa 9. Configurar permissões necessárias do SAM-R
 
@@ -45,16 +48,13 @@ Para garantir que clientes e servidores Windows permitam que a conta de serviço
 
 3. Agora, o **Serviço do ATA** (o serviço do ATA criado durante a instalação) tem os privilégios apropriados para executar o SAM-R no ambiente.
 
-> [!NOTE]
-> Antes de aplicar as novas políticas, certifique-se de que seu ambiente permaneça seguro, sem afetar a compatibilidade de aplicativos, ao permitir e verificar as alterações propostas no modo de auditoria. 
-
  Para saber mais sobre SAM-R e Política de Grupo, confira [Acesso à rede: restringir clientes com permissão para efetuar chamadas remotas para SAM](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/network-access-restrict-clients-allowed-to-make-remote-sam-calls).
 
 
 > [!div class="step-by-step"]
 > [« Etapa 8](install-ata-step7.md)
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Consulte também
 - [Guia de implantação da POC (prova de conceito) do ATA](http://aka.ms/atapoc)
 - [Ferramenta de dimensionamento do ATA](http://aka.ms/atasizingtool)
 - [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

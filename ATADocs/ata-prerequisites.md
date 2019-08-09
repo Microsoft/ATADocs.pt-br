@@ -5,19 +5,19 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 08/05/2019
+ms.date: 08/07/2019
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
 ms.technology: ''
 ms.assetid: a5f90544-1c70-4aff-8bf3-c59dd7abd687
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 3f0076091ced915776ea54578a58ea3a3fa5856f
-ms.sourcegitcommit: 8df26fb312472b8df1da70e581517223d26de8c2
+ms.openlocfilehash: 139ea7e4eaecadeaf3fd57fb8ed7afe1dd8ea096
+ms.sourcegitcommit: db35bae8354fa35644e9334bfc37b9ffbafdaacc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68781857"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68862560"
 ---
 # <a name="ata-prerequisites"></a>Pré-requisitos do ATA
 
@@ -89,7 +89,7 @@ A instalação do ATA Center como uma máquina virtual tem suporte.
 |VM em execução em|Descrição|
 |------------|-------------|
 |Hyper-V|Verifique se **habilitar memória dinâmica** não está habilitado para a VM.|
-|Produtos|Verifique se a quantidade de memória configurada e a memória reservada são iguais ou selecione a opção a seguir na configuração de VM – **reservar toda a memória de convidado (todas bloqueadas**.|
+|Produtos|Verifique se a quantidade de memória configurada e a memória reservada são iguais ou selecione a opção a seguir na configuração de VM – **reservar toda a memória de convidado (todas bloqueadas)** .|
 |Outro host de virtualização|Consulte a documentação fornecida pelo fornecedor sobre como garantir que a memória seja totalmente alocada para a VM em todos os momentos. |
 |
 
@@ -180,7 +180,7 @@ Para obter informações sobre como usar máquinas virtuais com o Gateway do ATA
 Para ter um melhor desempenho, defina a **Opção de Energia** do Gateway de ATA para **Alto Desempenho**.<br>
 Um Gateway do ATA pode dar suporte ao monitoramento de vários controladores de domínio, dependendo da quantidade de tráfego de rede para e a partir dos controladores de domínio.
 
-Para saber mais sobre a memória dinâmica ou qualquer outro recurso de balão de memória, consulte [memória dinâmica](#dynamic-memory).
+Para saber mais sobre a memória dinâmica ou qualquer outro recurso de gerenciamento de memória de máquina virtual, consulte [memória dinâmica](#dynamic-memory).
 
 Para saber mais sobre os requisitos de hardware do Gateway do ATA, confira [Planejamento de capacidade do ATA](ata-capacity-planning.md).
 
@@ -266,7 +266,7 @@ O Gateway Lightweight do ATA requer um mínimo de dois núcleos e 6 GB de RAM in
 Para ter um melhor desempenho, defina a **Opção de Energia** do Gateway Lightweight do ATA como **Alto Desempenho**.
 O Gateway Lightweight do ATA pode ser implantado em controladores de domínio de vários tamanhos e cargas, dependendo da quantidade de tráfego de rede dos controladores de domínio e da quantidade de recursos instalados no controlador de domínio.
 
-Para saber mais sobre a memória dinâmica ou qualquer outro recurso de balão de memória, consulte [memória dinâmica](#dynamic-memory).
+Para saber mais sobre a memória dinâmica ou qualquer outro recurso de gerenciamento de memória de máquina virtual, consulte [memória dinâmica](#dynamic-memory).
 
 Para saber mais sobre os requisitos de hardware do Gateway Lightweight do ATA, confira [Planejamento de capacidade do ATA](ata-capacity-planning.md).
 
