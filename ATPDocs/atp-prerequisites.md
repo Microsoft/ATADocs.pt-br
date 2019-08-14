@@ -5,19 +5,19 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 06/11/2019
+ms.date: 08/11/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 62c99622-2fe9-4035-9839-38fec0a353da
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 7fc42aaf16e269b2d61f6a321e6a4e4af4f5b8ca
-ms.sourcegitcommit: 3b59121a37328f80389c993f2e31622e6f1a9f13
+ms.openlocfilehash: b4e9b7af867693dd41740fcf54dd0cdb47b06e34
+ms.sourcegitcommit: e185d6cf13ef0c40206a5d1980e3953ef8834a48
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67486378"
+ms.lasthandoff: 08/12/2019
+ms.locfileid: "68951268"
 ---
 # <a name="azure-atp-prerequisites"></a>Pré-requisitos do Azure ATP
 
@@ -46,7 +46,7 @@ Este guia de pré-requisitos é dividido nas seguintes seções para garantir qu
 ## <a name="before-you-start"></a>Antes de começar
 Esta seção mostra as informações que você deve obter, bem como as contas e informações sobre entidades de rede que deve ter antes de iniciar a instalação do ATP do Azure.
 
-- Adquira uma licença do EMS E5 (Enterprise Mobility + Security 5) diretamente por meio do [Portal Microsoft 365](https://www.microsoft.com/cloud-platform/enterprise-mobility-security-pricing) ou do modelo de licenciamento do CSP (Parceiro de Soluções na Nuvem).  
+- Adquira uma licença do EMS E5 (Enterprise Mobility + Security 5) diretamente usando o [portal do Microsoft 365](https://www.microsoft.com/cloud-platform/enterprise-mobility-security-pricing) ou use o modelo de licenciamento do CSP (Parceiro de Soluções na Nuvem). As licenças autônomas do ATP do Azure também estão disponíveis.  
 
 - Verifique se os controladores de domínio nos quais você pretende instalar sensores do Azure ATP têm conectividade com a Internet para o Serviço de Nuvem do Azure ATP. O sensor do ATP do Azure tem suporte para o uso de um proxy. Para obter mais informações sobre a configuração de proxy, confira [Configuring a proxy for Azure ATP](configure-proxy.md) (Configurando um proxy para o Azure ATP).  
 
@@ -59,9 +59,9 @@ Esta seção mostra as informações que você deve obter, bem como as contas e 
 
 - Se tentar instalar o sensor do ATP do Azure em um computador configurado com um adaptador de Agrupamento NIC, você receberá um erro de instalação. Se desejar instalar o sensor do Azure ATP em um computador configurado com Agrupamento NIC, confira [Problemas do Agrupamento NIC do Sensor do Azure ATP](troubleshooting-atp-known-issues.md#nic-teaming).
 
-- Recomendado: O usuário deve ter permissões de somente leitura no contêiner de Objetos Excluídos. Isso permite que o Azure ATP detecte exclusões do usuário do seu Active Directory. Para saber mais sobre como configurar permissões de somente leitura no contêiner Objetos Excluídos, confira a seção **Alterar permissões em um contêiner de objetos excluídos** no artigo [Exibir ou definir permissões em um Objeto de Diretório](https://technet.microsoft.com/library/cc816824%28v=ws.10%29.aspx).
+- Recomendação de contêiner de **Objetos Excluídos**: O usuário deve ter permissões de somente leitura no contêiner de Objetos Excluídos. Permissões somente leitura neste contêiner permitem que a ATP do Azure detecte exclusões de usuários do seu Active Directory. Para obter informações sobre como configurar permissões somente leitura no contêiner Objetos Excluídos, confira a seção **Como alterar permissões em um contêiner de objetos excluídos** do artigo [Exibir ou definir permissões em um objeto do directory](https://technet.microsoft.com/library/cc816824%28v=ws.10%29.aspx).
 
-- Opcional: Uma conta de usuário que não tem nenhuma atividade de rede. Essa conta está configurada como um usuário Honeytoken do Azure ATP. Para obter mais informações, consulte [Configurar exclusões e usuário Honeytoken](install-atp-step7.md).
+- **Honeytoken** opcional: Uma conta de usuário que não tem nenhuma atividade de rede. Essa conta está configurada como um usuário Honeytoken do Azure ATP. Para obter mais informações sobre como usar Honeytokens, confira [Configurar exclusões e usuário do Honeytoken](install-atp-step7.md).
 
 - Opcional: Ao implantar o sensor autônomo, é necessário encaminhar os eventos do Windows 4776, 4732, 4733, 4728, 4729, 4756, 4757 e 7045 para o ATP do Azure para melhorar ainda mais as detecções de Pass-the-Hash, força bruta, modificação de grupos confidenciais, Honeytokens e criação de serviços mal-intencionados do ATP do Azure. O sensor do Azure ATP recebe esses eventos automaticamente. No sensor autônomo do Azure ATP, esses eventos podem ser recebidos do SIEM ou definindo o Encaminhamento de Eventos do Windows no controlador de domínio. Os eventos coletados fornecem ao Azure ATP informações adicionais que não estão disponíveis por meio do tráfego de rede do controlador de domínio.
 
