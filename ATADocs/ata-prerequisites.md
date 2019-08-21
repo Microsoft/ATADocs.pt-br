@@ -5,19 +5,19 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 08/07/2019
+ms.date: 08/20/2019
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
 ms.technology: ''
 ms.assetid: a5f90544-1c70-4aff-8bf3-c59dd7abd687
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 139ea7e4eaecadeaf3fd57fb8ed7afe1dd8ea096
-ms.sourcegitcommit: db35bae8354fa35644e9334bfc37b9ffbafdaacc
+ms.openlocfilehash: e08668199056c59093caa202123cf01a4ed303cc
+ms.sourcegitcommit: 2aab3c4244db694616ec02a9b8ae2e266d6fdddc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68862560"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69629336"
 ---
 # <a name="ata-prerequisites"></a>Pré-requisitos do ATA
 
@@ -102,6 +102,7 @@ Ao trabalhar em um servidor físico, o banco de dados do ATA precisa que você *
 Para ter um melhor desempenho, defina a **Opção de Energia** do Centro do ATA como **Alto Desempenho**.<br>
 O número de controladores de domínio que você está monitorando e a carga em cada um dos controladores de domínio determina as especificações de servidor necessárias. Para saber mais, confira [Planejamento de capacidade de ATA](ata-capacity-planning.md).
 
+Para os sistemas operacionais Windows 2008R2 e 2012, não há suporte para o gateway em um modo de [grupo de vários processadores](https://docs.microsoft.com/windows/win32/procthread/processor-groups) . Para obter mais informações sobre o modo de grupo de vários processadores, consulte [solução de problemas](troubleshooting-ata-known-errors.md##multi-processor-group-mode). 
 
 ### <a name="time-synchronization"></a>Sincronização da hora
 
