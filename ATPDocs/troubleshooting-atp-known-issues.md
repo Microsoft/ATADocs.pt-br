@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 23386e36-2756-4291-923f-fa8607b5518a
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 639dc38eeb9f4944cdd011074463953a13a49966
-ms.sourcegitcommit: e185d6cf13ef0c40206a5d1980e3953ef8834a48
+ms.openlocfilehash: b78b7f39b7d5c94e2709e080677344919dd422cf
+ms.sourcegitcommit: 2aab3c4244db694616ec02a9b8ae2e266d6fdddc
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/12/2019
-ms.locfileid: "65196657"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69629321"
 ---
 # <a name="troubleshooting-azure-atp-known-issues"></a>Solução de problemas conhecidos da ATP do Azure 
 
@@ -62,6 +62,14 @@ Após instalar o sensor:
 3.  Desinstale o WinPcap.
 4.  Instale o Npcap com as seguintes opções: loopback_support=no & winpcap_mode=yes
 5.  Reinstale o pacote do sensor.
+
+## <a name="multi-processor-group-mode"></a>Modo Grupo de multiprocessadores 
+Para os sistemas operacionais Windows 2008R2 e 2012, o sensor do ATP do Azure não tem suporte em um modo Grupo de multiprocessadores.
+
+Soluções alternativas possíveis sugeridas:
+- Se o Hyper Threading estiver ativado, desative-o. Isso pode reduzir o número de núcleos lógicos o suficiente para evitar a necessidade de execução no modo **Grupo de multiprocessadores**. 
+
+- Se seu computador tiver menos de 64 núcleos lógicos e estiver em execução em um host HP, você poderá alterar a configuração do BIOS de **Otimização do Tamanho do Grupo NUMA** do padrão **Clusterizado** para **Simples**. 
 
 ## <a name="windows-defender-atp-integration-issue"></a>Problemas de integração do Windows Defender ATP
 
