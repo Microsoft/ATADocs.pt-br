@@ -445,8 +445,8 @@ O alerta de segurança [Suspeita de uso de Golden Ticket – anomalia de tíquet
 <br>Esse TGT forjado é chamado de "Golden Ticket" porque permite que os invasores obtenham uma persistência duradoura na rede. Os Golden Tickets forjados desse tipo têm características exclusivas que essa detecção foi projetada para identificar. 
 
 
-- **Aprimoramento do recurso: criação automatizada de instância (espaço de trabalho) do ATP do Azure** <br>
-A partir de hoje, os *workspaces* do ATP do Azure foram renomeados para *instâncias* do ATP do Azure. O ATP do Azure agora dá suporte a uma instância do ATP do Azure por conta do ATP do Azure. As instâncias de novos clientes são criadas usando o assistente de criação de instância no [portal do ATP do Azure](https://portal.atp.azure.com). Os espaços de trabalho existentes do ATP do Azure são convertidos automaticamente em instâncias do ATP do Azure com essa atualização.  
+- **Aprimoramento do recurso: criação automatizada de instância (workspace) do ATP do Azure** <br>
+A partir de hoje, os *workspaces* do ATP do Azure foram renomeados para *instâncias* do ATP do Azure. O ATP do Azure agora dá suporte a uma instância do ATP do Azure por conta do ATP do Azure. As instâncias de novos clientes são criadas usando o assistente de criação de instância no [portal do ATP do Azure](https://portal.atp.azure.com). Os workspaces existentes do ATP do Azure são convertidos automaticamente em instâncias do ATP do Azure com essa atualização.  
 
   - Criação de instância simplificada para acelerar a implantação e a proteção usando [Criar sua instância do ATP do Azure](install-atp-step1.md). 
   - Todos os aspectos de [conformidade e privacidade de dados](atp-privacy-compliance.md) permanecem iguais. 
