@@ -5,19 +5,19 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 07/17/2019
+ms.date: 08/28/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 24eca4c6-c949-42ea-97b9-41ef0fb611f1
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 6fca63fb488aef6fb26f4f501c4f6af896e223bd
-ms.sourcegitcommit: 4662ad41addf92727367874d909937fa331fb866
+ms.openlocfilehash: d45d08cc2a059fa231194f7aa334d4f557996ba4
+ms.sourcegitcommit: f7c75bc5715c5bda0b3110364e2aebddddce8a13
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68485055"
+ms.lasthandoff: 09/01/2019
+ms.locfileid: "70209189"
 ---
 # <a name="azure-atp-switches-and-silent-installation"></a>Instalação silenciosa e opções do Azure ATP
 Este artigo fornece diretrizes e instruções para a instalação silenciosa e opções do Azure ATP.
@@ -46,10 +46,16 @@ Para acompanhar o progresso da implantação, monitore os logs do instalador do 
 
 Use o seguinte comando para realizar uma instalação silenciosa completa do sensor do Azure ATP:
 
-
-**Sintaxe**:
+**cmd.exe syntax**:
 
     "Azure ATP sensor Setup.exe" /quiet NetFrameworkCommandLineArguments="/q" AccessKey="<Access Key>"
+
+**Sintaxe do PowerShell**:
+
+    ./"Azure ATP sensor Setup.exe" /quiet NetFrameworkCommandLineArguments="/q" AccessKey="<Access Key>"
+
+> [!NOTE]
+> Ao usar a sintaxe do PowerShell, omitir o prefácio **./** resulta em um erro que impede a instalação silenciosa.
 
 > [!NOTE]
 > Copie a chave de acesso do portal do ATP do Azure, na seção **Configuração**, na página **Sensor**.

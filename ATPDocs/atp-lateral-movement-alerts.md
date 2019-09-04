@@ -5,19 +5,19 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 08/05/2019
+ms.date: 08/26/2019
 ms.topic: tutorial
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 2257eb00-8614-4577-b6a1-5c65085371f2
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: dd78f2d18010b043dc58bfb6fac24429a36ba2f1
-ms.sourcegitcommit: 8df26fb312472b8df1da70e581517223d26de8c2
+ms.openlocfilehash: a20c26d45f8cc0ddda05b103e03fa16f9de569b8
+ms.sourcegitcommit: 033ac9277effa00c4423caf6f2a3febd796ca3db
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68781836"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70052436"
 ---
 # <a name="tutorial-lateral-movement-alerts"></a>Tutorial: Alertas de movimento lateral  
 
@@ -177,7 +177,7 @@ Nessa detecção, um alerta de segurança do ATP do Azure é disparado quando so
 
 **Descrição**
 
-Um Exchange Server pode ser configurado para disparar a autenticação de NTLM com a conta do Exchange Server para um servidor remoto http executado por um invasor. Este servidor aguarda a comunicação do Exchange Server para retransmitir sua própria autenticação confidencial para qualquer outro servidor, ou ainda mais interessante, para o Active Directory por LDAP, e captura as informações de autenticação.
+Um Exchange Server pode ser configurado para disparar a autenticação de NTLM com a conta do Exchange Server para um servidor remoto http executado por um invasor. O servidor aguarda a comunicação do Exchange Server para retransmitir a própria autenticação confidencial para qualquer outro servidor, ou ainda mais interessante, para o Active Directory por LDAP, e captura as informações de autenticação.
 
 Depois que o servidor de retransmissão recebe a autenticação NTLM, ele fornece um desafio que foi originalmente criado pelo servidor de destino. O cliente responde ao desafio, impedindo que um invasor obtenha a resposta e a use para continuar a negociação de NTLM com o controlador de domínio de destino. 
 

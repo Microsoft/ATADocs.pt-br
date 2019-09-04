@@ -5,14 +5,14 @@ ms.service: azure-advanced-threat-protection
 ms.topic: tutorial
 author: mlottner
 ms.author: mlottner
-ms.date: 03/03/2019
+ms.date: 09/01/2019
 ms.reviewer: itargoet
-ms.openlocfilehash: 20e91bc710dc184fa710cf7fd59cb9bd9d625d20
-ms.sourcegitcommit: 929f28783110c7e114ab36d4cccd50563f4030df
+ms.openlocfilehash: 11312f033261dd74f13dc0b3b9c093617e2c281c
+ms.sourcegitcommit: f7c75bc5715c5bda0b3110364e2aebddddce8a13
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57253956"
+ms.lasthandoff: 09/01/2019
+ms.locfileid: "70209234"
 ---
 # <a name="tutorial-reconnaissance-playbook"></a>Tutorial: Guia estratégico de reconhecimento
 
@@ -46,6 +46,8 @@ Métodos de teste do ataque de reconhecimento:
 
 Uma das primeiras coisas que um invasor tentará fazer é obter uma cópia de todas as informações de DNS. Mediante o êxito, o invasor terá acesso a informações abrangentes sobre seu ambiente que podem incluir informações semelhantes sobre seus outros ambientes ou redes.
 
+A ATP do Azure suprime a atividade de reconhecimento de mapeamento de rede da sua **linha do tempo de atividade suspeita** até que um período de aprendizado de oito dias passe. No período de aprendizado, o ATP do Azure aprende o que é normal e anormal em sua rede. Após o período de aprendizado de oito dias, os eventos de reconhecimento de mapeamento de rede anormais invocam um alerta de segurança relacionado. 
+
 ### <a name="run-nslookup-from-victimpc"></a>Executar nslookup no VictimPC
 
 Para testar o reconhecimento de DNS, usaremos a ferramenta de linha de comando nativa, *nslookup*, para iniciar uma transferência de zona de DNS. Os servidores DNS com a configuração correta recusarão consultas desse tipo e não permitirão a tentativa de transferência de zona.  
@@ -76,14 +78,14 @@ Se **ContosoDC** for o primeiro sensor implantado, aguarde 15 minutos para permi
 
 ### <a name="network-mapping-reconnaissance-dns-detected-in-azure-atp"></a>Reconhecimento de mapeamento de rede (DNS) detectado no ATP do Azure
 
-Obter visibilidade desse tipo de tentativa (com êxito ou falha) é essencial para a proteção contra ameaças do domínio. Como acabamos de instalar o ambiente, precisaremos acessar a linha do tempo de Atividades Lógicas para ver a atividade. 
+Obter visibilidade desse tipo de tentativa (com êxito ou falha) é essencial para a proteção contra ameaças do domínio. Após a instalação recente do ambiente, você precisará ir para a linha do tempo **Atividades lógicas** para ver a atividade detectada. 
 
 Na Pesquisa do ATP do Azure, digite **VictimPC**, depois clique para exibir a linha do tempo.
 
 ![Reconhecimento de DNS detectado pelo AATP, exibição de alto nível](media/playbook-recon-nslookupdetection1.png)
 
 Procure a atividade "Consulta AXFR". O ATP do Azure detecta esse tipo de reconhecimento em seu DNS. 
-  - Se você tiver muitas atividades, clique em **Filtrar por** e desmarque todos os tipos exceto "Consulta DNS".
+  - Se você tiver muitas atividades, clique em **Filtrar por** e desmarque todos os tipos exceto **Consulta DNS**.
 
 ![Exibição detalhada da detecção de reconhecimento de DNS em AATP](media/playbook-recon-nslookupdetection2.png)
 

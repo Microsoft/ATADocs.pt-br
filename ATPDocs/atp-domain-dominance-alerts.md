@@ -5,19 +5,19 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 07/07/2019
+ms.date: 08/26/2019
 ms.topic: tutorial
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 0b3a1db5-0d43-49af-b356-7094cc85f0a5
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: f53d4930ed6fc4492f6360b3aab12e9c3655b390
-ms.sourcegitcommit: 09275d3400534200fa6ea572e89e440b3cc58360
+ms.openlocfilehash: 1bfed94e29200a52eba6de8758e1241b14084264
+ms.sourcegitcommit: 033ac9277effa00c4423caf6f2a3febd796ca3db
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67786410"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70052398"
 ---
 # <a name="tutorial-domain-dominance-alerts"></a>Tutorial: Alertas de predominância de domínio  
 
@@ -339,9 +339,9 @@ Os aplicativos podem ser autenticados usando uma codificação de criptografia i
 
 ## <a name="suspected-golden-ticket-usage-forged-authorization-data-external-id-2013"></a>Suspeita de uso de Golden Ticket (dados de autorização forjados) (ID externa 2013)
 
-*Nome anterior:* Elevação de privilégios usando dados de autorização forjados
+Nome anterior: Elevação de privilégios usando dados de autorização forjados
 
-Descrição: as vulnerabilidades conhecidas em versões mais antigas do Windows Server permitem que os invasores manipulem o PAC (Certificado de Atributo Privilegiado), um campo no tíquete Kerberos que contém os dados de autorização do usuário (no Active Directory essa é a associação de grupo), concedendo ao invasor privilégios adicionais. 
+**Descrição:** as vulnerabilidades conhecidas em versões mais antigas do Windows Server permitem que os invasores manipulem o PAC (Certificado de Atributo Privilegiado), um campo no tíquete Kerberos que contém os dados de autorização do usuário (no Active Directory essa é a associação de grupo), concedendo ao invasor privilégios adicionais. 
  
 **TP, B-TP ou FP**
 <br>Em computadores nos quais foram aplicados os patches MS14-068 (controlador de domínio) ou MS11-013 (servidor), tentativas de ataque não terão êxito e gerarão o erro de Kerberos. 

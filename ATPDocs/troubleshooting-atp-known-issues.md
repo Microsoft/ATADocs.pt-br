@@ -5,19 +5,19 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 10/04/2018
+ms.date: 08/28/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 23386e36-2756-4291-923f-fa8607b5518a
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: b78b7f39b7d5c94e2709e080677344919dd422cf
-ms.sourcegitcommit: 2aab3c4244db694616ec02a9b8ae2e266d6fdddc
+ms.openlocfilehash: b5709955763015870067490ab458c1e94cdf567b
+ms.sourcegitcommit: bb33e24591acf11688955318b5938bc3d662a398
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69629321"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70076657"
 ---
 # <a name="troubleshooting-azure-atp-known-issues"></a>Solução de problemas conhecidos da ATP do Azure 
 
@@ -41,8 +41,18 @@ em alguns casos, ao se comunicar por meio de um proxy durante a autenticação, 
 
 o sensor deve poder navegar até *.atp.azure.com por meio do proxy configurado sem autenticação. Saiba mais em [Configurar o proxy para habilitar a comunicação](configure-proxy.md).
 
+## <a name="silent-installation-error-when-attempting-to-use-powershell"></a>Erro de instalação silenciosa ao tentar usar o PowerShell  
+
+Se durante a instalação do sensor silenciosa você tentar usar o PowerShell e receber o seguinte erro: 
 
 
+    "Azure ATP sensor Setup.exe" "/quiet" NetFrameworkCommandLineArguments="/q" Acce ...           Unexpected token '"/quiet"' in expression or statement."
+
+**Causa:** ao usar o PowerShell há falha ao incluir o prefixo ./ obrigatório na instalação. 
+
+**Resolução:** use o comando completo para instalar com êxito. 
+
+    ./"Azure ATP sensor Setup.exe" /quiet NetFrameworkCommandLineArguments="/q" AccessKey="<Access Key>"
 
 ## Problema de agrupamento NIC do sensor da ATP do Azure <a name="nic-teaming"></a>
 

@@ -5,19 +5,19 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 08/11/2019
+ms.date: 09/01/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 62c99622-2fe9-4035-9839-38fec0a353da
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: ad130b0956020696c30709627e9671ff1e46b1cc
-ms.sourcegitcommit: 2aab3c4244db694616ec02a9b8ae2e266d6fdddc
+ms.openlocfilehash: d4b54dfc9f64f296925889147c72db6c23819c20
+ms.sourcegitcommit: 298a0ce02c2f22faa5b03acf909aa0dd73f38993
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69629326"
+ms.lasthandoff: 09/02/2019
+ms.locfileid: "70210937"
 ---
 # <a name="azure-atp-prerequisites"></a>Pré-requisitos do Azure ATP
 
@@ -73,11 +73,20 @@ O acesso ao portal do Azure ATP ocorre por meio de um navegador que dá suporte 
 -   Resolução de largura mínima da tela de 1.700 pixels
 -   Firewall/proxy aberto – para se comunicar com o serviço de nuvem do Azure ATP, você deve abrir *. atp.azure.com porta 443 no firewall/proxy.
 
- ![diagrama da arquitetura do Azure ATP](media/ATP-architecture-topology.png)
-
+ ![diagrama da arquitetura do Azure ATP](media/azure-atp-architecture.png)
 
 > [!NOTE]
-> Por padrão, a ATP do Azure dá suporte a até 200 sensores. Caso deseje instalar mais, entre em contato com o suporte do Azure ATP.
+> Por padrão, a ATP do Azure dá suporte a até 200 sensores. Para instalar mais sensores, fale com o suporte da ATP do Azure.
+
+
+## <a name="azure-atp-network-name-resolution-nnr-requirements"></a>Requisitos da NNR (resolução de nome de rede) da ATP do Azure
+A NNR (resolução de nomes de rede) é um componente principal da funcionalidade da ATP do Azure. Para que o serviço da ATP do Azure funcione corretamente, pelo menos um dos seguintes métodos NNR deve ser acessível para sensores da ATP do Azure:
+1. **NTLM sobre RPC** (porta TCP 135)
+2. **NetBIOS** (porta UDP 137)
+3. **RDP** (porta TCP 3389): apenas o primeiro pacote do Client hello
+4. **Consultas do servidor DNS usando a pesquisa de DNS reverso do endereço IP** (UDP 53)
+
+Para que os métodos 1, 2 e 3 funcionem, as portas relevantes devem ser abertas para entrada dos sensores da ATP do Azure para dispositivos na rede. Saiba mais sobre a ATP do Azure e a NNR em [Política da NNR da ATP do Azure](atp-nnr-policy.md). 
 
 ## <a name="azure-atp-sensor-requirements"></a>Requisitos do sensor do Azure ATP
 Esta seção lista os requisitos do sensor do Azure ATP.
@@ -134,8 +143,6 @@ A tabela abaixo lista o mínimo de portas que o sensor do Azure ATP exige:
 |**Portas internas**|||||
 |DNS|TCP e UDP|53|Servidores DNS|Saída|
 |Netlogon (SMB, CIFS, SAM-R)|TCP/UDP|445|Todos os dispositivos na rede|Saída|
-|NTLM via RPC|TCP|135|Todos os dispositivos na rede|Ambos|
-|NetBIOS|UDP|137|Todos os dispositivos na rede|Ambos|
 |Syslog (opcional)|TCP/UDP|514, dependendo da configuração|Servidor SIEM|Entrada|
 |RADIUS|UDP|1813|RADIUS|Entrada|
 |
@@ -146,10 +153,6 @@ A detecção de ATP do Azure baseia-se em Logs de Eventos do Windows específico
 
 > [!NOTE]
 > - Usando a conta de usuário do serviço de diretório, o sensor consulta pontos de extremidade em sua organização para administradores locais usando SAM-R (logon de rede) para criar o [gráfico de caminho de movimento lateral](use-case-lateral-movement-path.md). Para obter mais informações, consulte [Configurar permissões necessárias do SAM-R](install-atp-step8-samr.md).
-> - As seguintes portas precisam estar abertas para entrada em dispositivos na rede de sensores do Azure ATP:
->   -   NTLM via RPC (porta TCP 135) para fins de resolução
->   -   NetBIOS (porta UDP 137) para fins de resolução
-<br> Observe que nenhuma autenticação é realizada em nenhuma porta.
 
 ## <a name="azure-atp-standalone-sensor-requirements"></a>Requisitos do sensor autônomo do Azure ATP
 Esta seção lista os requisitos do sensor autônomo do Azure ATP.
@@ -218,24 +221,19 @@ A tabela abaixo lista as portas mínimas que o sensor autônomo do Azure ATP req
 |Netlogon (SMB, CIFS, SAM-R)|TCP e UDP|445|Todos os dispositivos na rede|Saída|
 |Tempo do Windows|UDP|123|Controladores de domínio|Saída|
 |DNS|TCP e UDP|53|Servidores DNS|Saída|
-|NTLM via RPC|TCP|135|Todos os dispositivos na rede|Ambos|
-|NetBIOS|UDP|137|Todos os dispositivos na rede|Ambos|
 |Syslog (opcional)|TCP/UDP|514, dependendo da configuração|Servidor SIEM|Entrada|
 |RADIUS|UDP|1813|RADIUS|Entrada|
 |
 
 > [!NOTE]
 > - Usando a conta de usuário do serviço de diretório, o sensor consulta pontos de extremidade em sua organização para administradores locais usando SAM-R (logon de rede) para criar o [gráfico de caminho de movimento lateral](use-case-lateral-movement-path.md). Para obter mais informações, consulte [Configurar permissões necessárias do SAM-R](install-atp-step8-samr.md).
-> - As seguintes portas precisam estar abertas para entrada em dispositivos na rede de sensores autônomos do Azure ATP:
->   -   NTLM via RPC (porta TCP 135) para fins de resolução
->   -   NetBIOS (porta UDP 137) para fins de resolução
-<br> Observe que nenhuma autenticação é realizada em nenhuma porta.
-
 
 
 ## <a name="see-also"></a>Consulte Também
 - [Ferramenta de dimensionamento do Azure ATP](http://aka.ms/aatpsizingtool)
 - [Arquitetura do Azure ATP](atp-architecture.md)
 - [Instalar o Azure ATP](install-atp-step1.md)
+- [NNR (resolução de nomes de rede)](atp-nnr-policy.md)
 - [Confira o fórum do ATP do Azure!](https://aka.ms/azureatpcommunity)
+
 
