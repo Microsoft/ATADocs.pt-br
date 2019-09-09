@@ -2,22 +2,22 @@
 title: Instalação do Advanced Threat Analytics – Etapa 6 | Microsoft Docs
 description: Nesta etapa da instalação do ATA, você configura fontes de dados.
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: rkarlin
-ms.date: 3/21/2018
+ms.date: 09/08/2019
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
 ms.technology: ''
 ms.assetid: 8980e724-06a6-40b0-8477-27d4cc29fd2b
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: bd6cc7021a024755a931fd9a56db27c0825d10a4
-ms.sourcegitcommit: ae9db212f268f067b217d33b0c3f991b6531c975
-ms.translationtype: HT
+ms.openlocfilehash: ccea2b41e99e4d3ab19efc703f337115740c2e0d
+ms.sourcegitcommit: e4f108aec3cbfd88562217e36195b5d1250a1bbd
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65195926"
+ms.lasthandoff: 09/08/2019
+ms.locfileid: "70803180"
 ---
 # <a name="install-ata---step-6"></a>Instalação do ATA - Etapa 6
 
@@ -30,10 +30,10 @@ ms.locfileid: "65195926"
 ## <a name="step-6-configure-event-collection"></a>Etapa 6. Configurar coleta de eventos
 ### <a name="configure-event-collection"></a>Configurar coleta de eventos
 
-Para aprimorar as funcionalidades de detecção, o ATA precisa dos seguintes eventos do Windows: 4776, 4732, 4733, 4728, 4729, 4756, 4757 e 7045. Eles podem ser lidos automaticamente pelo Gateway Lightweight do ATA ou no caso de o Gateway Lightweight do ATA não estar implantado, podem ser encaminhados para o Gateway do ATA de duas maneiras: configurando o Gateway do ATA para escutar o SIEM ou [Configurando o Encaminhamento de Eventos do Windows](configure-event-collection.md). 
+Para aprimorar as funcionalidades de detecção, o ATA precisa dos seguintes eventos do Windows: 4776, 4732, 4733, 4728, 4729, 4756, 4757 e 7045. Esses eventos do Windows são lidos automaticamente pelo gateway Lightweight do ATA ou, caso o gateway Lightweight do ATA não esteja implantado, eles podem ser encaminhados para o gateway do ATA de uma das duas maneiras, seja ao configurar o gateway do ATA para escutar eventos do SIEM ou por [ Configurando o encaminhamento de eventos do Windows](configure-event-collection.md).  
 
 > [!NOTE]
-> Para as versões 1.8 e mais recentes do ATA, a configuração de coleta de eventos não é mais necessária para Gateways Lightweight do ATA. O Gateway Lightweight do ATA poderá ler eventos localmente, sem a necessidade de configurar o encaminhamento de eventos.
+> Para as versões 1,8 e superiores do ATA, a configuração da coleta de eventos do Windows não é mais necessária para gateways Lightweight do ATA. O Gateway Lightweight do ATA realiza a leitura de eventos localmente, sem a necessidade de configurar o encaminhamento de eventos.
 
 Além de coletar e analisar o tráfego de rede para e nos controladores de domínio, o ATA pode usar os eventos do Windows para aprimorar ainda mais as detecções. Ele usa o evento 4776 para NTLM que melhora várias detecções e os eventos 4732, 4733, 4728, 4729, 4756 e 4757 para aprimorar a detecção de modificações de grupo confidencial. Isso pode ser recebido de seu SIEM definindo o Encaminhamento de Eventos do Windows no controlador de domínio. Os eventos coletados fornecem à ATA informações adicionais que não estão disponíveis por meio do tráfego de rede do controlador de domínio.
 
@@ -197,7 +197,7 @@ Certifique-se de ter \t entre os pares de chave=valor.
 - [Como escolher o tipo certo de Gateway do ATA](https://channel9.msdn.com/Shows/Microsoft-Security/ATA-Deployment-Choose-the-Right-Gateway-Type)
 
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Consulte também
 - [Guia de implantação da POC (prova de conceito) do ATA](http://aka.ms/atapoc)
 - [Ferramenta de dimensionamento do ATA](http://aka.ms/atasizingtool)
 - [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
