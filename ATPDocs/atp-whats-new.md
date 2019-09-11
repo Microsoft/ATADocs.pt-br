@@ -5,19 +5,19 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 09/01/2019
+ms.date: 09/08/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 7d0f33db-2513-4146-a395-290e001f4199
 ms.reviewer: ort
 ms.suite: ems
-ms.openlocfilehash: 0d3d1dcc2fddf493331473b4ef98e1a1dc721e5e
-ms.sourcegitcommit: f7c75bc5715c5bda0b3110364e2aebddddce8a13
+ms.openlocfilehash: 946cfdeafd6f2ef0cba5c16d290ac922ccf68f4b
+ms.sourcegitcommit: e4f108aec3cbfd88562217e36195b5d1250a1bbd
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/01/2019
-ms.locfileid: "70209207"
+ms.lasthandoff: 09/08/2019
+ms.locfileid: "70803165"
 ---
 # <a name="whats-new-in-azure-advanced-threat-protection-azure-atp"></a>Novidades no ATP do Azure (Proteção Avançada contra Ameaças do Azure)
 
@@ -25,14 +25,23 @@ Este artigo é atualizado com frequência para mantê-lo informado das novidades
 
 RSS feed: receba uma notificação quando esta página for atualizada copiando e colando a seguinte URL em seu leitor de feeds: `https://docs.microsoft.com/api/search/rss?search=%22This+article+is+updated+frequently+to+let+you+know+what%27s+new+in+the+latest+release+of+Azure+ATP%22&locale=en-us`
 
+Lançado em 8 de setembro de 2019
+
+# <a name="azure-atp-release-294"></a>ATP do Azure versão 2.94
+
+- Essa versão inclui melhorias e correções de bugs da infraestrutura do sensor interno.
+
+
 Lançado em 1º de setembro de 2019
 
 ## <a name="azure-atp-release-293"></a>ATP do Azure versão 2.93
+
 - Essa versão inclui melhorias e correções de bugs da infraestrutura do sensor interno.
 
 Lançado em 25 de agosto de 2019
 
 ## <a name="azure-atp-release-292"></a>ATP do Azure versão 2.92
+
 - Essa versão inclui melhorias e correções de bugs da infraestrutura do sensor interno.
 
 Lançado em 18 de agosto de 2019

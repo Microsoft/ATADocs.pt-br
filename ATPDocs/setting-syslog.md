@@ -1,5 +1,5 @@
 ---
-title: Definição de configurações do syslog na Proteção Avançada contra Ameaças do Azure | Microsoft Docs
+title: Definição das configurações do Syslog na Proteção Avançada contra Ameaças do Azure | Microsoft Docs
 description: Descreve como fazer com que o Azure ATP notifique você (por email ou pelo encaminhamento de eventos do Azure ATP) quando detectar atividades suspeitas
 keywords: ''
 author: mlottner
@@ -12,16 +12,16 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: a2d29c9c-7ecb-4804-b74b-fde899b28648
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: d87950cae8918338468258df77e14a503d7db8df
-ms.sourcegitcommit: b7b3d4a401faaa3edb4bd669a1a003a6d21a4322
+ms.openlocfilehash: 0d2befa95ca0bc8fd87cb5fa2dc6563646892945
+ms.sourcegitcommit: e4f108aec3cbfd88562217e36195b5d1250a1bbd
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/17/2019
-ms.locfileid: "68298784"
+ms.lasthandoff: 09/08/2019
+ms.locfileid: "70803219"
 ---
 # <a name="integrate-with-syslog"></a>Integrar com o Syslog
 
-O ATP do Azure poderá notificar você quando detectar atividades suspeitas e alertas de segurança de problemas, bem como com alertas de integridade, enviando a notificação para seu servidor Syslog. Se você habilitar as notificações do Syslog, poderá definir o seguinte:
+O ATP do Azure poderá notificar você quando detectar atividades suspeitas e alertas de segurança de problemas, bem como com alertas de integridade, enviando a notificação do sensor selecionado para seu servidor Syslog. Se você habilitar as notificações do Syslog, poderá definir o seguinte:
 
    |Campo|Descrição|
    |---------|---------------|
