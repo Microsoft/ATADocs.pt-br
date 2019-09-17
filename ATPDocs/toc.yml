@@ -13,8 +13,6 @@
 - name: Guias de início rápido
   expanded: true
   items:
-    - name: Planejar a capacidade do ATP do Azure
-      href: atp-capacity-planning.md
     - name: Criar sua instância do Azure ATP
       href: install-atp-step1.md
     - name: Conectar-se ao Active Directory
@@ -23,8 +21,6 @@
       href: install-atp-step3.md
     - name: Instalar o sensor do Azure ATP
       href: install-atp-step4.md
-    - name: Configurar o sensor do ATP do Azure
-      href: install-atp-step5.md
 - name: Tutoriais
   items:
     - name: Alertas de reconhecimento
@@ -87,7 +83,7 @@
               href: atp-cas-isp-print-spooler.md
             - name: Impedir avaliação de uso de criptografia fraca
               href: atp-cas-isp-weak-cipher.md
-            - name: Impedir a avaliação de delegação Kerberos sem restrições
+            - name: Impedir avaliação não segura de delegação Kerberos
               href: atp-cas-isp-unconstrained-kerberos.md
     - name: Laboratório de alerta de segurança
       items:
@@ -103,6 +99,8 @@
           href: atp-playbook-domain-dominance.md
     - name: entendendo os alertas de segurança
       href: understanding-security-alerts.md
+    - name: Planejar a capacidade do ATP do Azure
+      href: atp-capacity-planning.md
     - name: Gerenciar alertas de segurança
       href: working-with-suspicious-activities.md
     - name: Excluir entidades das detecções
@@ -141,6 +139,8 @@
       href: ATP-silent-installation.md
     - name: Configurando os sensores do ATP do Azure
       items:
+        - name: Configurar o sensor do ATP do Azure
+          href: install-atp-step5.md
         - name: Configuração de proxy
           href: configure-proxy.md
         - name: Verificação de política de auditoria avançada
