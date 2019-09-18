@@ -4,20 +4,23 @@ d|Description: This article explains how to user Azure ATP security alerts to in
 keywords: ''
 author: mlottner
 ms.author: mlottner
-ms.date: 02/07/2019
+ms.date: 09/15/2019
 ms.topic: tutorial
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: d130cc6c52f27052305ae012409363e8437db5f6
-ms.sourcegitcommit: c48db18274edb2284e281960c6262d97f96e01d2
+ms.openlocfilehash: fdf0c4cc32137b23f7c2170a2c8dd0132b3b6462
+ms.sourcegitcommit: 939c098dd02a1f4191c528d10d69d059a62042b2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56264062"
+ms.lasthandoff: 09/15/2019
+ms.locfileid: "71004754"
 ---
 # <a name="tutorial-investigate-a-user"></a>Tutorial: investigar um usuário
+
+> [!NOTE]
+> Os recursos do ATP do Azure explicados nesta página também podem ser acessados usando o novo [portal](https://portal.cloudappsecurity.com).
 
 A evidência de alerta e os caminhos de movimento lateral do ATP do Azure fornecem indicações claras de quando os usuários executaram atividades suspeitas ou de quando existem indicações de que sua conta foi comprometida. Neste tutorial, você usará as sugestões de investigação para identificar o risco para a organização, decidir como corrigir e determinar a melhor maneira de evitar ataques futuros semelhantes.  
 

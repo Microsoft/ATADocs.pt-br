@@ -9,12 +9,12 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 99045c4d8982c34d3defa681417a3b3963c563ac
-ms.sourcegitcommit: 929f28783110c7e114ab36d4cccd50563f4030df
+ms.openlocfilehash: f3af1034b73d1fc058a966c5d90eaf24dd282140
+ms.sourcegitcommit: 939c098dd02a1f4191c528d10d69d059a62042b2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57253922"
+ms.lasthandoff: 09/15/2019
+ms.locfileid: "71004887"
 ---
 # <a name="quickstart-install-the-azure-atp-sensor"></a>Início Rápido: Instalar o sensor do Azure ATP
 
@@ -83,9 +83,8 @@ Execute as etapas a seguir no controlador de domínio.
 
 ## <a name="next-steps"></a>Próximas etapas
 
-> [!div class="step-by-step"]
-> [« Etapa 3 — Baixar a instalação do sensor](install-atp-step3.md)
-> [Etapa 5 — Definir as configurações do sensor »](install-atp-step5.md)
+O sensor do ATP do Azure foi projetado para ter um impacto mínimo sobre os recursos do controlador de domínio e a atividade de rede. Para criar uma avaliação de desempenho, consulte a [capacidade do plano para sua solução do ATP do Azure](install-atp-step5.md).
+
 
 ## <a name="join-the-community"></a>Participe da comunidade
 

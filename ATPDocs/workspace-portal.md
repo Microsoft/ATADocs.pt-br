@@ -5,21 +5,24 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 12/02/2018
+ms.date: 09/15/2018
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 4ba46d60-3a74-480e-8f0f-9a082d62f343
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 130d60b31e97a16fbd1ff372d124d0411ce7b25a
-ms.sourcegitcommit: ae9db212f268f067b217d33b0c3f991b6531c975
+ms.openlocfilehash: 08bab9d934b38859221f7f89df1580b21a8b22a2
+ms.sourcegitcommit: 939c098dd02a1f4191c528d10d69d059a62042b2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65196539"
+ms.lasthandoff: 09/15/2019
+ms.locfileid: "71004905"
 ---
 # <a name="working-with-the-azure-atp-portal"></a>Trabalhando com o portal do Azure ATP
+
+> [!NOTE]
+> Os recursos do ATP do Azure explicados nesta página também podem ser acessados usando o novo [portal](https://portal.cloudappsecurity.com).
 
 Use o portal do Azure ATP para monitorar e responder a atividades suspeitas detectadas pelo ATP.
 
@@ -41,7 +44,7 @@ Para fazer logon com êxito no portal do Azure ATP, é necessário fazer logon c
 2. O Azure ATP é compatível com o logon único integrado com a autenticação do Windows – se você já fez logon em seu computador, o Azure ATP usa esse token para fazer logon no portal do Azure ATP. Você também pode fazer logon usando um cartão inteligente. Suas permissões no Azure ATP correspondem à sua [função de administrador](atp-role-groups.md).
 
    > [!NOTE]
-   > Faça logon no computador do qual deseja acessar o portal do Azure ATP usando seu nome de usuário administrador e senha do Azure ATP. Como alternativa, você pode executar seu navegador como um usuário diferente ou se desconectar do Windows e fazer logon com o usuário administrador do Azure ATP. 
+   > Faça logon no computador do qual deseja acessar o portal do Azure ATP usando seu nome de usuário administrador e senha do Azure ATP. Como alternativa, execute seu navegador como um usuário diferente ou se desconecte do Windows e faça logon com o usuário administrador do ATP do Azure. 
 
 
 ### <a name="attack-time-line"></a>Linha do tempo de ataque
@@ -50,7 +53,7 @@ A linha do tempo de ataque Essa é a página de aterrissagem padrão exibida qua
 
 ![Imagem da linha do tempo de ataques do Azure ATP](media/atp-sa-timeline.png)
 
-Para saber mais, confira [Trabalhando com atividades suspeitas](working-with-suspicious-activities.md).
+Para obter mais informações, consulte [Trabalhando com alertas de segurança](working-with-suspicious-activities.md).
 
 ### <a name="whats-new"></a>Novidades
 

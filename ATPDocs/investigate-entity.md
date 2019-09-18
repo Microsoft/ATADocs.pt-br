@@ -5,21 +5,24 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 1/3/2019
+ms.date: 09/15/2019
 ms.topic: tutorial
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 43e57f87-ca85-4922-8ed0-9830139fe7cb
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 4868282aaf5dc45c5f25740e26d6c3c7f0403952
-ms.sourcegitcommit: ae9db212f268f067b217d33b0c3f991b6531c975
+ms.openlocfilehash: 6144f9f35e8ee3b7cec4b7522fe03a6a3e8673b0
+ms.sourcegitcommit: 939c098dd02a1f4191c528d10d69d059a62042b2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65193538"
+ms.lasthandoff: 09/15/2019
+ms.locfileid: "71004740"
 ---
 # <a name="tutorial-investigate-an-entity"></a>Tutorial: Investigar uma entidade
+
+> [!NOTE]
+> Os recursos do ATP do Azure explicados nesta página também podem ser acessados usando o novo [portal](https://portal.cloudappsecurity.com).
 
 Neste tutorial, você aprenderá a investigar entidades conectadas a atividades suspeitas detectadas pelo ATP (Proteção Avançada contra Ameaças) do Azure. Após exibir um alerta de segurança na linha do tempo, você aprenderá a fazer drill down na entidade envolvida no alerta e a usar os seguintes parâmetros e detalhes para saber mais sobre o que aconteceu e o que você precisará fazer para minimizar o risco.
 

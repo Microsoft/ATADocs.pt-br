@@ -5,21 +5,24 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 1/13/2018
+ms.date: 09/15/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 37d1a032-65e7-4a89-be0b-c3f9cc2bacdb
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: ea50c7f490b2bca757a8da80006cebd7d6d1cd46
-ms.sourcegitcommit: ae9db212f268f067b217d33b0c3f991b6531c975
+ms.openlocfilehash: b8000ff54b6be0dc6cb7079302e006193dcfcab9
+ms.sourcegitcommit: 939c098dd02a1f4191c528d10d69d059a62042b2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65196351"
+ms.lasthandoff: 09/15/2019
+ms.locfileid: "71004821"
 ---
 # <a name="azure-atp-monitored-activities"></a>Atividades monitoradas do ATP do Azure
+
+> [!NOTE]
+> Os recursos do ATP do Azure explicados nesta página também podem ser acessados usando o novo [portal](https://portal.cloudappsecurity.com).
 
 A Proteção Avançada contra Ameaças do Azure monitora informações geradas do Active Directory e das atividades de rede e de eventos da sua organização para detectar atividades suspeitas. As informações de atividades monitoradas permitem que o ATP do Azure ajude a determinar a validade de cada possível ameaça e a realizar a triagem e a responder corretamente. 
 

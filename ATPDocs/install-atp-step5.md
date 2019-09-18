@@ -1,24 +1,24 @@
 ---
-title: Início rápido para definir as configurações do sensor do ATP do Azure | Microsoft Docs
+title: Descrição conceitual das configurações do sensor do ATP do Azure | Microsoft Docs
 description: A etapa cinco da instalação do Azure ATP ajuda a definir as configurações do sensor autônomo do Azure ATP.
 author: mlottner
 ms.author: mlottner
-ms.date: 07/17/2019
-ms.topic: quickstart
+ms.date: 09/15/2019
+ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 1c9f8d0928e7439afe9eb0745c07fad2c515169a
-ms.sourcegitcommit: b7b3d4a401faaa3edb4bd669a1a003a6d21a4322
+ms.openlocfilehash: 8e39e37aa42aea40de024f53dd892da398984f5b
+ms.sourcegitcommit: 939c098dd02a1f4191c528d10d69d059a62042b2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/17/2019
-ms.locfileid: "68298930"
+ms.lasthandoff: 09/15/2019
+ms.locfileid: "71004848"
 ---
-# <a name="quickstart-configure-azure-atp-sensor-settings"></a>Início Rápido: Definir as configurações do sensor do ATP do Azure
+# <a name="configure-azure-atp-sensor-settings"></a>Definir as configurações do sensor do ATP do Azure
 
-Neste início rápido, você vai definir as configurações do sensor do ATP do Azure para começar a ver os dados. Você precisará fazer configurações e integrações adicionais para aproveitar os recursos do ATP do Azure.  
+Neste artigo, você aprenderá a definir corretamente as configurações do sensor do ATP do Azure para começar a ver os dados. Você precisará fazer configurações e integrações adicionais para aproveitar as funcionalidades completas do ATP do Azure.  
 
 ## <a name="prerequisites"></a>Pré-requisitos
 

@@ -5,21 +5,24 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 1/3/2019
+ms.date: 09/15/2019
 ms.topic: tutorial
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 9295dc09-ecdb-44c0-906b-cba4c5c8f17c
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: e11362c25d0d61925101db2f3f7f896f233931ca
-ms.sourcegitcommit: ae9db212f268f067b217d33b0c3f991b6531c975
+ms.openlocfilehash: 3428a95fd77252bf7384c8e733842134bc8141d2
+ms.sourcegitcommit: 939c098dd02a1f4191c528d10d69d059a62042b2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65196746"
+ms.lasthandoff: 09/15/2019
+ms.locfileid: "71004722"
 ---
 # <a name="tutorial-use-lateral-movement-paths-lmps"></a>Tutorial: Usar LMPs (caminhos de movimento lateral)
+
+> [!NOTE]
+> Os recursos do ATP do Azure explicados nesta página também podem ser acessados usando o novo [portal](https://portal.cloudappsecurity.com).
 
 Os ataques de movimento lateral normalmente são realizados usando uma série de técnicas diferentes. Alguns dos métodos mais populares usados pelos invasores são o [roubo de credencial](suspicious-activity-guide.md#) e os ataques de [Pass-the-Ticket](suspicious-activity-guide.md). Em ambos os métodos, as contas não confidenciais são usadas pelos invasores para realizar movimentos laterais explorando computadores não confidenciais que compartilham credenciais de logon armazenadas em contas, grupos e computadores com contas confidenciais.
 
