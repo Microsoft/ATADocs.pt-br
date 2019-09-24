@@ -73,17 +73,17 @@
           items:
             - name: Noções básicas sobre situação de segurança de identidade
               href: atp-isp-overview.md
-            - name: Impedir avaliação de exposição de credenciais de texto não criptografado
+            - name: Avaliação de entidades expondo credenciais em texto não criptografado
               href: atp-cas-isp-clear-text.md
-            - name: Remover entidades inativas da avaliação de grupos confidenciais
+            - name: Avaliação de entidades inativas em grupos confidenciais
               href: atp-cas-isp-dormant-entities.md
-            - name: Impedir avaliação de comunicação de protocolos herdados
+            - name: Avaliação de uso de protocolos herdados
               href: atp-cas-isp-legacy-protocols.md
-            - name: Desabilitar o serviço spooler de impressão na avaliação de controladores de domínio
+            - name: Avaliação de controladores de domínio com serviço de spooler de impressão disponível
               href: atp-cas-isp-print-spooler.md
-            - name: Impedir avaliação de uso de criptografia fraca
+            - name: Avaliação de uso de criptografia fraca
               href: atp-cas-isp-weak-cipher.md
-            - name: Impedir avaliação não segura de delegação Kerberos
+            - name: Avaliação de delegação não segura de Kerberos
               href: atp-cas-isp-unconstrained-kerberos.md
     - name: Laboratório de alerta de segurança
       items:
