@@ -12,19 +12,19 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: cc82212b-7d25-4ec7-828d-2475ff40d685
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 784f381ef8209bef885bb2e8944a60a23d21ec8c
-ms.sourcegitcommit: 475df3e87d8476ff13e48ebc7a722f46f29dab70
+ms.openlocfilehash: 97ea6d080d2aae84bcf0675da853f503fd10b314
+ms.sourcegitcommit: 15f882cf45776877fdaca8367a7a0fe7f06a7917
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "71007400"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71185511"
 ---
 # <a name="security-assessment-weak-cipher-usage---preview"></a>Avaliação de segurança: Uso de criptografia fraca – versão prévia
 
 
 ## <a name="what-are-weak-ciphers"></a>O que é criptografia fraca? 
 
-A criptografia depende da codificação para criptografar dados. Por exemplo, o RC4 (Rivest Cipher 4, também conhecido como ARC4 ou ARCFOUR, que significa Alleged RC4) é um deles.   Embora o RC4 seja notável por sua simplicidade e velocidade, várias vulnerabilidades foram descobertas desde sua versão original, tornando-o inseguro. O RC4 é especialmente vulnerável quando o início do fluxo de chave de saída não é descartado ou quando chaves relacionadas ou não aleatórias são usadas. 
+A criptografia depende da codificação para criptografar dados. Por exemplo, o RC4 (Rivest Cipher 4, também conhecido como ARC4 ou ARCFOUR, que significa Alleged RC4) é um deles. Embora o RC4 seja notável por sua simplicidade e velocidade, várias vulnerabilidades foram descobertas desde sua versão original, tornando-o inseguro. O RC4 é especialmente vulnerável quando o início do fluxo de chave de saída não é descartado ou quando chaves relacionadas ou não aleatórias são usadas. 
 
 ## <a name="how-do-i-use-this-security-assessment-to-improve-my-organizational-security-posture"></a>Como usar esta avaliação de segurança para aprimorar minha situação de segurança organizacional? 
 
