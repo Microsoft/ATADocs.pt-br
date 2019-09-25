@@ -5,28 +5,39 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 07/25/2019
+ms.date: 09/23/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 88692d1a-45a3-4d54-a549-4b5bba6c037b
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 3ac34f82800b2d09243169d99812b27eef41b2b5
-ms.sourcegitcommit: dd8c94db68e85752c20bba3446b678cd1edcd932
+ms.openlocfilehash: 8416c2d6e3b12d15f52a0f27381d845fdb268cdd
+ms.sourcegitcommit: 15f882cf45776877fdaca8367a7a0fe7f06a7917
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/29/2019
-ms.locfileid: "68604402"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71185532"
 ---
 # <a name="configure-event-collection"></a>Configurar coleta de eventos
 
-Para aprimorar as funcionalidades de detecção, ATP do Azure precisa dos seguintes eventos do Windows: 4776, 4732, 4733, 4728, 4729, 4756, 4757 e 7045. Eles podem ser lidos automaticamente pelo sensor do Azure ATP ou, caso o sensor do Azure ATP não esteja implantado, ele poderá ser encaminhado para o sensor autônomo do Azure ATP de duas maneiras: configurando o sensor autônomo do Azure ATP para escutar eventos do SIEM ou [Configurando o Encaminhamento de Eventos do Windows](configure-event-forwarding.md).
+Para aprimorar as funcionalidades de detecção, ATP do Azure precisa dos seguintes eventos do Windows: 4776, 4732, 4733, 4728, 4729, 4756, 4757, 7045 e 8004. Esses eventos podem ser lidos automaticamente pelo sensor do Azure ATP ou, caso o sensor do Azure ATP não esteja implantado, ele poderá ser encaminhado para o sensor autônomo do Azure ATP de duas maneiras: configurando o sensor autônomo do Azure ATP para escutar eventos do SIEM ou [Configurando o encaminhamento de eventos do Windows](configure-event-forwarding.md).
 
 > [!NOTE]
 > É importante executar o script de auditoria do Azure ATP antes de configurar a coleta de eventos para garantir que os controladores de domínio estejam configurados corretamente para registrar os eventos necessários. 
 
-Além de coletar e analisar o tráfego de rede para e dos controladores de domínio, o Azure ATP pode usar eventos do Windows para aprimorar ainda mais as detecções. Ele usa o evento 4776 para NTLM, o que melhora várias detecções e os eventos 4732, 4733, 4728, 4729, 4756, 4757 e 7045 para aprimorar a detecção de modificações de grupos confidenciais e a criação de serviços. Isso pode ser recebido de seu SIEM definindo o Encaminhamento de Eventos do Windows no controlador de domínio. Os eventos coletados fornecem ao Azure ATP informações adicionais que não estão disponíveis por meio do tráfego de rede do controlador de domínio.
+Além de coletar e analisar o tráfego de rede para e dos controladores de domínio, o Azure ATP pode usar eventos do Windows para aprimorar ainda mais as detecções. A ATP do Azure usa os eventos 4776 e 8004 para NTLM, o que melhora várias detecções, e os eventos 4732, 4733, 4728, 4729, 4756, 4757 e 7045 para aprimorar a detecção de modificações de grupos confidenciais e a criação de serviços. Eles podem ser recebidos de seu SIEM ou definindo o Encaminhamento de Eventos do Windows no controlador de domínio. Os eventos coletados fornecem ao Azure ATP informações adicionais que não estão disponíveis por meio do tráfego de rede do controlador de domínio.
+
+## <a name="ntlm-authentication-using-windows-event-8004"></a>Autenticação NTLM usando o evento 8004 do Windows
+
+Para configurar a coleção 8004 de eventos do Windows:
+1. Navegue para: Configuração do computador\Políticas\ Configurações do Windows\Configurações de segurança\Políticas locais\Opções de segurança
+2. Defina a **política de grupo do domínio** da seguinte forma:
+   - Segurança de rede: restringir NTLM: tráfego de NTLM de saída para servidores remotos = **Auditar todos**
+   - Segurança de rede: restringir NTLM: auditar a autenticação NTLM neste domínio = **Habilitar todos**
+   - Segurança de rede: restringir NTLM: auditar o tráfego NTLM de entrada = **Habilitar a auditoria de todas as contas**
+
+Quando o evento 8004 do Windows é analisado pelo sensor da ATP do Azure, as atividades de autenticação NTLM da ATP do Azure são aprimoradas com os dados acessados pelo servidor.
 
 ## <a name="siemsyslog"></a>SIEM/Syslog
 Para que o Azure ATP possa consumir dados de um servidor Syslog, você precisa executar as seguintes etapas:

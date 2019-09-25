@@ -5,19 +5,19 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 09/01/2019
+ms.date: 09/23/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 62c99622-2fe9-4035-9839-38fec0a353da
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: d4b54dfc9f64f296925889147c72db6c23819c20
-ms.sourcegitcommit: 298a0ce02c2f22faa5b03acf909aa0dd73f38993
+ms.openlocfilehash: edc59ab0d8ec813b4f957e6391e37da18ba4dbb0
+ms.sourcegitcommit: 15f882cf45776877fdaca8367a7a0fe7f06a7917
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/02/2019
-ms.locfileid: "70210937"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71185637"
 ---
 # <a name="azure-atp-prerequisites"></a>Pré-requisitos do Azure ATP
 
@@ -63,7 +63,7 @@ Esta seção mostra as informações que você deve obter, bem como as contas e 
 
 - **Honeytoken** opcional: Uma conta de usuário que não tem nenhuma atividade de rede. Essa conta está configurada como um usuário Honeytoken do Azure ATP. Para obter mais informações sobre como usar Honeytokens, confira [Configurar exclusões e usuário do Honeytoken](install-atp-step7.md).
 
-- Opcional: Ao implantar o sensor autônomo, é necessário encaminhar os eventos do Windows 4776, 4732, 4733, 4728, 4729, 4756, 4757 e 7045 para o ATP do Azure para melhorar ainda mais as detecções de Pass-the-Hash, força bruta, modificação de grupos confidenciais, Honeytokens e criação de serviços mal-intencionados do ATP do Azure. O sensor do Azure ATP recebe esses eventos automaticamente. No sensor autônomo do Azure ATP, esses eventos podem ser recebidos do SIEM ou definindo o Encaminhamento de Eventos do Windows no controlador de domínio. Os eventos coletados fornecem ao Azure ATP informações adicionais que não estão disponíveis por meio do tráfego de rede do controlador de domínio.
+- Opcional: Ao implantar o sensor autônomo, é necessário encaminhar os eventos do Windows 4776, 4732, 4733, 4728, 4729, 4756, 4757 e 7045 e 8004 para o ATP do Azure para melhorar ainda mais as detecções baseadas na autenticação da ATP do Azure, adições a grupos confidenciais e detecções de criação de serviço suspeitos.  O sensor do Azure ATP recebe esses eventos automaticamente. No sensor autônomo do Azure ATP, esses eventos podem ser recebidos do SIEM ou definindo o Encaminhamento de Eventos do Windows no controlador de domínio. Os eventos coletados fornecem ao Azure ATP informações adicionais que não estão disponíveis por meio do tráfego de rede do controlador de domínio.
 
 ## <a name="azure-atp-portal-requirements"></a>Requisitos do portal do Azure ATP
 O acesso ao portal do Azure ATP ocorre por meio de um navegador que dá suporte aos seguintes navegadores e configurações:
@@ -148,7 +148,7 @@ A tabela abaixo lista o mínimo de portas que o sensor do Azure ATP exige:
 |
 
 ### <a name="windows-event-logs"></a>Log de eventos do Windows
-A detecção de ATP do Azure baseia-se em Logs de Eventos do Windows específicos o sensor pode analisar do controlador de domínio. Para que os eventos corretos sejam auditados e incluídos no Log de Eventos do Windows, seus controladores de domínio exigem configurações precisas de política de auditoria avançada. Para saber mais, confira [Verificação Avançada da Política de Auditoria](atp-advanced-audit-policy.md).
+A detecção da ATP do Azure depende dos seguintes logs de eventos específicos do Windows que o sensor analisa dos controladores de domínio: 4776, 4732, 4733, 4728, 4729, 4756, 4757, 7045 e 8004. Para que os eventos corretos sejam auditados e incluídos no log de eventos do Windows, seus controladores de domínio exigem configurações precisas de política de auditoria avançada. Para saber mais sobre como configurar as políticas corretas, confira [Verificação avançada da política de auditoria](atp-advanced-audit-policy.md). Para [verificar se o evento 8004 do Windows foi auditado](configure-event-collection.md##ntlm-authentication-using-windows-event-8004) conforme necessário pelo serviço, examine as [configurações de auditoria do NTLM](https://blogs.technet.microsoft.com/askds/2009/10/08/ntlm-blocking-and-you-application-analysis-and-auditing-methodologies-in-windows-7/).  
 
 
 > [!NOTE]

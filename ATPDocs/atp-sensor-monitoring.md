@@ -5,19 +5,19 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 02/13/2019
+ms.date: 09/23/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 92decce8-b3ae-4d32-8407-a95314a66863
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 6b3c8e978f16893d70c44c0fd3d04ce381c1bb5d
-ms.sourcegitcommit: ae9db212f268f067b217d33b0c3f991b6531c975
+ms.openlocfilehash: 6970908b95fe31ecd24b4cdc1005180e39495913
+ms.sourcegitcommit: 15f882cf45776877fdaca8367a7a0fe7f06a7917
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65196779"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71185625"
 ---
 # <a name="monitoring-your-domain-controller-coverage"></a>Monitorando a cobertura do controlador de domínio
 
@@ -33,7 +33,7 @@ O ATP do Azure monitora seu ambiente continuamente em busca de controladores de 
 
 1. Para verificar o status dos controladores de domínio monitorados e não monitorados detectados e seus status, acesse a área **Configuração** do portal do ATP do Azure, na seção **Sistema** e selecione **Sensores**.
    
-     ![Monitoramento de status do sensor do ATP do Azure](media/atp-sensors-status-monitoring.png)
+    ![Monitoramento de status do sensor do ATP do Azure](media/atp-sensors-status-monitoring.png)
 
 2. Os controladores de domínio atuais monitorados e não monitorados são exibidos na parte superior da tela. Para baixar os detalhes de status de monitoramento dos controladores de domínio, selecione **Baixar detalhes**. 
 
@@ -49,6 +49,15 @@ O download do Excel da cobertura do controlador de domínio fornece as seguintes
 |Versão do sistema operacional| Versão do sistema operacional detectado|
 |Endereço IP|Endereço IP detectado| 
 
+### <a name="search-domain-controllers"></a>Pesquisar controladores de domínio
+
+Gerenciar sua frota de sensores e controladores de domínio pode ser desafiador. Para facilitar a localização e a identificação, os controladores de domínio podem ser pesquisados usando o recurso de pesquisa na lista de sensores da ATP do Azure. 
+
+1. Para pesquisar os controladores de domínio, vá para a área de **Configuração** do portal da ATP do Azure, na seção **Sistema**, selecione **Sensores**.
+1. Selecione a opção de filtros na coluna **Controlador de domínio** na lista tabela do controlador de domínio. 
+1. Insira o nome que você deseja pesquisar. Atualmente, não há suporte para caracteres curinga no campo de pesquisa. 
+
+    ![Controlador de domínio de pesquisa da ATP do Azure](media/search-sensor.png)
 
 > [!NOTE]
 > As páginas de configuração do portal do ATP do Azure podem ser modificadas apenas por administradores do ATP do Azure.

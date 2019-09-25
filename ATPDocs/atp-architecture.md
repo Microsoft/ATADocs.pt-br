@@ -5,19 +5,19 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 07/17/2019
+ms.date: 09/23/2019
 ms.topic: article
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 90f68f2c-d421-4339-8e49-1888b84416e6
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 38a1790194d739ac31c66df60cf0d9c2911344c7
-ms.sourcegitcommit: b7b3d4a401faaa3edb4bd669a1a003a6d21a4322
+ms.openlocfilehash: d1b0d9a5db7fe94170cedf274a36ec036c4910c4
+ms.sourcegitcommit: 15f882cf45776877fdaca8367a7a0fe7f06a7917
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/17/2019
-ms.locfileid: "68298902"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71185667"
 ---
 # <a name="azure-atp-architecture"></a>Arquitetura do Azure ATP
 
@@ -84,7 +84,7 @@ Se o processo de monitoramento fizer o sensor do Azure ATP ficar sem recursos, a
 
 ### <a name="windows-events"></a>Eventos do Windows
 
-Para aprimorar a cobertura de detecção do ATP do Azure de suspeita de roubo de identidade (pass-the-hash), falhas de autenticação suspeitas, modificação de grupos confidenciais, criação de serviços suspeitos e tipos ataque de atividade de Honeytoken, o ATP do Azure precisa analisar os logs dos seguintes eventos do Windows: 4776,4732,4733,4728,4729,4756,4757 e 7045. Esses eventos são lidos automaticamente pelos sensores do Azure ATP com as [configurações corretas de política de auditoria avançada](atp-advanced-audit-policy.md). 
+Para melhorar a cobertura de detecção da ATP do Azure relacionada a autenticações NTLM, modificações a grupos confidenciais e criação de serviços suspeitos, a ATP do Azure precisa analisar os logs dos seguintes eventos do Windows: 4776,4732,4733,4728,4729,4756,4757,7045 e 8004. Esses eventos são lidos automaticamente pelos sensores do Azure ATP com as [configurações corretas de política de auditoria avançada](atp-advanced-audit-policy.md). Para [verificar se o evento 8004 do Windows foi auditado](configure-event-collection.md##ntlm-authentication-using-windows-event-8004) conforme necessário pelo serviço, examine as [configurações de auditoria do NTLM](https://blogs.technet.microsoft.com/askds/2009/10/08/ntlm-blocking-and-you-application-analysis-and-auditing-methodologies-in-windows-7/).
 
 ## <a name="next-steps"></a>Próximas etapas
 

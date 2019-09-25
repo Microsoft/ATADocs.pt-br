@@ -12,19 +12,19 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: a2d29c9c-7ecb-4804-b74b-fde899b28648
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: e36388fadd11df8a1e4b138481cb40c18b8990a5
-ms.sourcegitcommit: 475df3e87d8476ff13e48ebc7a722f46f29dab70
+ms.openlocfilehash: ab96c0a17344d93c00f25ca5ca97a1fb2c0a22b7
+ms.sourcegitcommit: 15f882cf45776877fdaca8367a7a0fe7f06a7917
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "71007573"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71185741"
 ---
 # <a name="integrate-with-syslog"></a>Integrar com o Syslog
 
 > [!NOTE]
 > Os recursos do ATP do Azure explicados nesta página também podem ser acessados usando o novo [portal](https://portal.cloudappsecurity.com).
 
-O ATP do Azure poderá notificar você quando detectar atividades suspeitas e alertas de segurança de problemas, bem como com alertas de integridade, enviando notificações para seu servidor Syslog. Os alertas são enviados do sensor que detectou a atividade diretamente para o servidor syslog. 
+O ATP do Azure poderá notificar você quando detectar atividades suspeitas e alertas de segurança de problemas, bem como com alertas de integridade, enviando notificações para seu servidor Syslog. Os alertas são enviados do sensor da ATP do Azure que detectou a atividade diretamente para o servidor Syslog. 
 
 
 Após habilitar as notificações do Syslog, você poderá definir o seguinte:
