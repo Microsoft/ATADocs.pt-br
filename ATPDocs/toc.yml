@@ -137,14 +137,16 @@
       href: setting-syslog.md
     - name: Instalação silenciosa
       href: ATP-silent-installation.md
-    - name: Configurando os sensores do ATP do Azure
+    - name: Configurar o sensor do ATP do Azure
       items:
         - name: Configurar o sensor do ATP do Azure
           href: install-atp-step5.md
-        - name: Configuração de proxy
-          href: configure-proxy.md
         - name: Verificação de política de auditoria avançada
           href: atp-advanced-audit-policy.md
+        - name: Configurar a coleção de Eventos do Windows
+          href: configure-windows-event-collection.md
+        - name: Configuração de proxy
+          href: configure-proxy.md
         - name: Configurar o Azure ATP para realizar chamadas remotas para SAM
           href: install-atp-step8-samr.md
     - name: Instalação do sensor autônomo do Azure ATP
