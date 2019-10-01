@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 62c99622-2fe9-4035-9839-38fec0a353da
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: edc59ab0d8ec813b4f957e6391e37da18ba4dbb0
-ms.sourcegitcommit: 15f882cf45776877fdaca8367a7a0fe7f06a7917
+ms.openlocfilehash: 763f27e9fb3e134f97b716306c747ecce7edf411
+ms.sourcegitcommit: 0a98c0c151be2a81a3bb9ff1301d35a3091079ea
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71185637"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71217675"
 ---
 # <a name="azure-atp-prerequisites"></a>Pré-requisitos do Azure ATP
 
@@ -148,7 +148,7 @@ A tabela abaixo lista o mínimo de portas que o sensor do Azure ATP exige:
 |
 
 ### <a name="windows-event-logs"></a>Log de eventos do Windows
-A detecção da ATP do Azure depende dos seguintes logs de eventos específicos do Windows que o sensor analisa dos controladores de domínio: 4776, 4732, 4733, 4728, 4729, 4756, 4757, 7045 e 8004. Para que os eventos corretos sejam auditados e incluídos no log de eventos do Windows, seus controladores de domínio exigem configurações precisas de política de auditoria avançada. Para saber mais sobre como configurar as políticas corretas, confira [Verificação avançada da política de auditoria](atp-advanced-audit-policy.md). Para [verificar se o evento 8004 do Windows foi auditado](configure-event-collection.md##ntlm-authentication-using-windows-event-8004) conforme necessário pelo serviço, examine as [configurações de auditoria do NTLM](https://blogs.technet.microsoft.com/askds/2009/10/08/ntlm-blocking-and-you-application-analysis-and-auditing-methodologies-in-windows-7/).  
+A detecção da ATP do Azure depende dos seguintes logs de eventos específicos do Windows que o sensor analisa dos controladores de domínio: 4776, 4732, 4733, 4728, 4729, 4756, 4757, 7045 e 8004. Para que os eventos corretos sejam auditados e incluídos no log de eventos do Windows, seus controladores de domínio exigem configurações precisas de política de auditoria avançada. Para saber mais sobre como configurar as políticas corretas, confira [Verificação avançada da política de auditoria](atp-advanced-audit-policy.md). Para [verificar se o evento 8004 do Windows foi auditado](configure-windows-event-collection.md##ntlm-authentication-using-windows-event-8004) conforme necessário pelo serviço, examine as [configurações de auditoria do NTLM](https://blogs.technet.microsoft.com/askds/2009/10/08/ntlm-blocking-and-you-application-analysis-and-auditing-methodologies-in-windows-7/).  
 
 
 > [!NOTE]

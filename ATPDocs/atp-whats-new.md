@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 7d0f33db-2513-4146-a395-290e001f4199
 ms.reviewer: ort
 ms.suite: ems
-ms.openlocfilehash: 77d33b429cc728ef24341b53bb20974368a35235
-ms.sourcegitcommit: 15f882cf45776877fdaca8367a7a0fe7f06a7917
+ms.openlocfilehash: 3b88aeca4d86ad527da6d966e766ee37126bf079
+ms.sourcegitcommit: 0a98c0c151be2a81a3bb9ff1301d35a3091079ea
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71185589"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71217696"
 ---
 # <a name="whats-new-in-azure-advanced-threat-protection-azure-atp"></a>Novidades no ATP do Azure (Proteção Avançada contra Ameaças do Azure)
 
@@ -32,7 +32,7 @@ Lançado em 22 de setembro de 2019
 
 Os sensores da ATP do Azure agora podem ler e enriquecer automaticamente as atividades de autenticações NTLM com seus dados de servidor acessados quando a auditoria NTLM está habilitada e o evento 8004 do Windows está ativado. A ATP do Azure analisa o evento 8004 do Windows para autenticações NTLM a fim de enriquecer os dados de autenticação NTLM usados para análise de ameaças e alertas da ATP do Azure. Esse recurso avançado fornece atividade de acesso a recursos sobre dados NTLM, bem como atividades de logon com falha aprimoradas, incluindo o computador de destino que o usuário tentou, mas falhou ao acessar.
 
-Saiba mais sobre as atividades de autenticação NTLM [usando o evento 8004 do Windows](configure-event-collection.md##ntlm-authentication-using-windows-event-8004).
+Saiba mais sobre as atividades de autenticação NTLM [usando o evento 8004 do Windows](configure-windows-event-collection.md##ntlm-authentication-using-windows-event-8004).
 
 - A versão também inclui aprimoramentos e correções de bug da infraestrutura do sensor interno.
 
