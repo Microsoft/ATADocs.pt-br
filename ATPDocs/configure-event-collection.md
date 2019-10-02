@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 88692d1a-45a3-4d54-a549-4b5bba6c037b
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 8416c2d6e3b12d15f52a0f27381d845fdb268cdd
-ms.sourcegitcommit: 15f882cf45776877fdaca8367a7a0fe7f06a7917
+ms.openlocfilehash: f7ab5a51fc599280a9a21181efc72684230d3c3a
+ms.sourcegitcommit: ecf2d5e83f550a73dabed135d27b34edc15d57db
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71185532"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71682219"
 ---
 # <a name="configure-event-collection"></a>Configurar coleta de eventos
 
@@ -26,7 +26,7 @@ Para aprimorar as funcionalidades de detecção, ATP do Azure precisa dos seguin
 > [!NOTE]
 > É importante executar o script de auditoria do Azure ATP antes de configurar a coleta de eventos para garantir que os controladores de domínio estejam configurados corretamente para registrar os eventos necessários. 
 
-Além de coletar e analisar o tráfego de rede para e dos controladores de domínio, o Azure ATP pode usar eventos do Windows para aprimorar ainda mais as detecções. A ATP do Azure usa os eventos 4776 e 8004 para NTLM, o que melhora várias detecções, e os eventos 4732, 4733, 4728, 4729, 4756, 4757 e 7045 para aprimorar a detecção de modificações de grupos confidenciais e a criação de serviços. Eles podem ser recebidos de seu SIEM ou definindo o Encaminhamento de Eventos do Windows no controlador de domínio. Os eventos coletados fornecem ao Azure ATP informações adicionais que não estão disponíveis por meio do tráfego de rede do controlador de domínio.
+Além de coletar e analisar o tráfego de rede para e dos controladores de domínio, o Azure ATP pode usar eventos do Windows para aprimorar ainda mais as detecções. A ATP do Azure usa os eventos 4776 e 8004 para NTLM, o que melhora várias detecções, e os eventos 4732, 4733, 4728, 4729, 4756, 4757, 7045 e 8004 para aprimorar a detecção de modificações de grupos confidenciais e a criação de serviços. Eles podem ser recebidos de seu SIEM ou definindo o Encaminhamento de Eventos do Windows no controlador de domínio. Os eventos coletados fornecem ao Azure ATP informações adicionais que não estão disponíveis por meio do tráfego de rede do controlador de domínio.
 
 ## <a name="ntlm-authentication-using-windows-event-8004"></a>Autenticação NTLM usando o evento 8004 do Windows
 
@@ -166,7 +166,7 @@ Código de erro:         0x0
 -   A ordem não é importante para os pares de chave=valor
 
 ## <a name="qradar"></a>QRadar
-O QRadar permite a coleta de eventos por meio de um agente. Se os dados forem reunidos usando um agente, o formato de hora será coletado sem dados de milissegundos. Uma vez que o Azure ATP precisa de dados de milissegundos, é necessário configurar o QRadar para usar a coleta de eventos do Windows sem agente. Para saber mais, confira [http://www-01.ibm.com/support/docview.wss?uid=swg21700170](http://www-01.ibm.com/support/docview.wss?uid=swg21700170 "QRadar: Coleta de Eventos do Windows sem Agente usando o protocolo MSRPC").
+O QRadar permite a coleta de eventos por meio de um agente. Se os dados forem reunidos usando um agente, o formato de hora será coletado sem dados de milissegundos. Uma vez que o Azure ATP precisa de dados de milissegundos, é necessário configurar o QRadar para usar a coleta de eventos do Windows sem agente. Para obter mais informações, confira [http://www-01.ibm.com/support/docview.wss?uid=swg21700170](http://www-01.ibm.com/support/docview.wss?uid=swg21700170 "QRadar: Coleção de Eventos do Windows sem Agente usando o protocolo MSRPC").
 
     <13>Feb 11 00:00:00 %IPADDRESS% AgentDevice=WindowsLog AgentLogFile=Security Source=Microsoft-Windows-Security-Auditing Computer=%FQDN% User= Domain= EventID=4776 EventIDCode=4776 EventType=8 EventCategory=14336 RecordNumber=1961417 TimeGenerated=1456144380009 TimeWritten=1456144380009 Message=The computer attempted to validate the credentials for an account. Authentication Package: MICROSOFT_AUTHENTICATION_PACKAGE_V1_0 Logon Account: Administrator Source Workstation: HOSTNAME Error Code: 0x0
 
