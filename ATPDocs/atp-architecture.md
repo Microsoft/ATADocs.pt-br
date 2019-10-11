@@ -12,14 +12,14 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 90f68f2c-d421-4339-8e49-1888b84416e6
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: f0730bd0ecedc93bdacca2c3fef025c09f809e4a
-ms.sourcegitcommit: 0a98c0c151be2a81a3bb9ff1301d35a3091079ea
+ms.openlocfilehash: 90edd77a40b6d87e37c6635ced246ae2c5540e93
+ms.sourcegitcommit: 4b89831dc3f17e594c0c824f94f6d2debb07c516
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71217650"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71997548"
 ---
-# <a name="azure-atp-architecture"></a>Arquitetura do Azure ATP
+# <a name="azure-atp-architecture"></a>Arquitetura do ATP do Azure
 
 O ATP do Azure monitora seus controladores de domínio capturando e analisando o tráfego de rede e aproveitando os eventos do Windows diretamente de seus controladores de domínio, em seguida, analisa os dados em busca de ataques e ameaças. Utilizando criação de perfil, detecção determinística, aprendizado de máquina e algoritmos comportamentais que do Azure ATP aprende sobre sua rede, habilita a detecção de anomalias e avisa sobre atividades suspeitas.
 
@@ -31,7 +31,7 @@ Esta seção descreve como o fluxo de captura de eventos e rede do ATP do Azure 
 
 Instalado diretamente em seus controladores de domínio, o sensor do ATP do Azure acessa os logs de eventos necessários diretamente do controlador de domínio. Depois que o tráfego de rede e os logs forem analisados pelo sensor, o Azure ATP enviará apenas as informações analisadas ao serviço de nuvem do Azure ATP (apenas um percentual dos logs é enviado). 
 
-## <a name="azure-atp-components"></a>Componentes do Azure ATP
+## <a name="azure-atp-components"></a>Componentes da Azure ATP
 O Azure ATP é formado pelos seguintes componentes:
 
 -   **Portal do Azure ATP** <br>
@@ -64,7 +64,7 @@ O sensor do Azure ATP tem as seguintes funcionalidades principais:
 - Transferir dados relevantes para o serviço de nuvem do Azure ATP
 
  
-## <a name="azure-atp-sensor-features"></a>Funcionalidades do Sensor do Azure ATP
+## <a name="azure-atp-sensor-features"></a>Funcionalidades do sensor do Azure ATP
 
 O sensor do Azure ATP lê eventos localmente, sem necessidade de comprar e manter hardware ou configurações adicionais. O sensor do ATP do Azure também dá suporte para o Rastreamento de Eventos para Windows (ETW), o qual fornece as informações de log para várias detecções. As detecções baseadas no ETW incluem Suspeita de ataques de DCShadow tentados usando a promoção do controlador de domínio e as solicitações de replicação do controlador de domínio.
 

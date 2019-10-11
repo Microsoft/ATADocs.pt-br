@@ -5,19 +5,19 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 09/23/2019
+ms.date: 10/07/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 88692d1a-45a3-4d54-a549-4b5bba6c037b
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 0478ab7dea7a8476faf61175654e6c50b10e9418
-ms.sourcegitcommit: 0a98c0c151be2a81a3bb9ff1301d35a3091079ea
+ms.openlocfilehash: 34d75bfd53f9c119e685390bd933b6e642c45b6c
+ms.sourcegitcommit: 4b89831dc3f17e594c0c824f94f6d2debb07c516
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71217732"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71997455"
 ---
 # <a name="configure-windows-event-collection"></a>Configurar a coleção de Eventos do Windows
 
@@ -28,16 +28,20 @@ Para aprimorar os recursos de detecção de ameaças, a ATP do Azure (Proteção
 
 Além de coletar e analisar o tráfego de rede para e dos controladores de domínio, o Azure ATP pode usar eventos do Windows para aprimorar ainda mais as detecções. A ATP do Azure usa os eventos 4776 e 8004 para NTLM, o que melhora várias detecções, e os eventos 4732, 4733, 4728, 4729, 4756, 4757, 7045 e 8004 para aprimorar a detecção de modificações de grupos confidenciais e a criação de serviços. Eles podem ser recebidos de seu SIEM ou definindo o Encaminhamento de Eventos do Windows no controlador de domínio. Os eventos coletados fornecem ao Azure ATP informações adicionais que não estão disponíveis por meio do tráfego de rede do controlador de domínio.
 
+> [!NOTE]
+>  As políticas de grupo de domínio para coletar o Evento 8004 do Windows devem ser aplicadas **somente** aos controladores de domínio.  
+
 ## <a name="ntlm-authentication-using-windows-event-8004"></a>Autenticação NTLM usando o evento 8004 do Windows
 
 Para configurar a coleção 8004 de eventos do Windows:
 1. Navegue para: Configuração do computador\Políticas\ Configurações do Windows\Configurações de segurança\Políticas locais\Opções de segurança
-2. Defina a **política de grupo do domínio** da seguinte forma:
+2. Configure ou crie uma **política de grupo de domínio** que é aplicada aos controladores de domínio em cada domínio da seguinte maneira:
    - Segurança de rede: restringir NTLM: tráfego de NTLM de saída para servidores remotos = **Auditar todos**
    - Segurança de rede: restringir NTLM: auditar a autenticação NTLM neste domínio = **Habilitar todos**
    - Segurança de rede: restringir NTLM: auditar o tráfego NTLM de entrada = **Habilitar a auditoria de todas as contas**
 
 Quando o evento 8004 do Windows é analisado pelo sensor da ATP do Azure, as atividades de autenticação NTLM da ATP do Azure são aprimoradas com os dados acessados pelo servidor.
+
 
 ## <a name="see-also"></a>Consulte Também
 - [Ferramenta de dimensionamento do Azure ATP](http://aka.ms/aatpsizingtool)

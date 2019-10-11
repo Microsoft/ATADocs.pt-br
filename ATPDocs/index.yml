@@ -1,8 +1,8 @@
 ### YamlMime:Landing
-title: Documentação do Azure Advanced Threat Protection
+title: Documentação da Proteção Avançada contra Ameaças do Azure
 summary: O serviço de nuvem da ATP do Azure (Proteção Avançada contra Ameaças) ajuda a proteger seus ambientes híbridos corporativos de vários tipos de ameaças internas e ataques cibernéticos direcionados avançados.
 metadata:
-  title: Documentação do Azure Advanced Threat Protection
+  title: Documentação da Proteção Avançada contra Ameaças do Azure
   description: O serviço de nuvem da ATP do Azure (Proteção Avançada contra Ameaças) ajuda a proteger seus ambientes híbridos corporativos de vários tipos de ameaças internas e ataques cibernéticos direcionados avançados.
   services: service
   ms.service: azure-advanced-threat-protection
@@ -12,12 +12,12 @@ metadata:
   author: mlottner
   ms.author: mlottner
   ms.date: 09/23/2019
-  ms.openlocfilehash: 7a21cc57174fcc3342f9349c23a918b7a8cf3b07
-  ms.sourcegitcommit: ecf2d5e83f550a73dabed135d27b34edc15d57db
+  ms.openlocfilehash: a379e4880203b1fc41d7a9b8dcda6cf020324513
+  ms.sourcegitcommit: 8f085179ea099a8000c982fbac39ca3f570520fb
   ms.translationtype: HT
   ms.contentlocale: pt-BR
-  ms.lasthandoff: 09/30/2019
-  ms.locfileid: "71682214"
+  ms.lasthandoff: 10/02/2019
+  ms.locfileid: "71721066"
 landingContent:
 - title: Sobre a ATP do Azure (Proteção Avançada contra Ameaças do Azure)
   linkLists:

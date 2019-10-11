@@ -5,19 +5,19 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 08/28/2019
+ms.date: 10/07/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 23386e36-2756-4291-923f-fa8607b5518a
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: b5709955763015870067490ab458c1e94cdf567b
-ms.sourcegitcommit: bb33e24591acf11688955318b5938bc3d662a398
+ms.openlocfilehash: 049d125e8d9cd458f2116c61770893d4b2d596e8
+ms.sourcegitcommit: 4b89831dc3f17e594c0c824f94f6d2debb07c516
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70076657"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71997581"
 ---
 # <a name="troubleshooting-azure-atp-known-issues"></a>Solução de problemas conhecidos da ATP do Azure 
 
@@ -91,9 +91,7 @@ Caso tenha um sensor da ATP do Azure em Máquinas Virtuais VMware, talvez você 
 
 Para resolver esse problema:
 
-Defina as configurações a seguir como **0** ou **Desabilitado** na configuração de NIC da máquina virtual: TsoEnable, LargeSendOffload, Descarregamento do TSO Offload, Descarregamento Gigante do TSO.
-> [!NOTE]
-> No caso dos sensores da ATP do Azure, é necessário desabilitar apenas o **Descarregamento TSO IPv4** na configuração NIC.
+Defina as configurações a seguir como **Desabilitado** na configuração de NIC da máquina virtual: **Descarregamento de TSO do IPv4**.
 
  ![Problema de sensor VMware](./media/vm-sensor-issue.png)
 
