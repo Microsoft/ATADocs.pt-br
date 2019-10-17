@@ -1,23 +1,23 @@
 ---
-title: Instalação do Advanced Threat Analytics Silenciosamente | Microsoft Docs
-description: Este artigo descreve como instalar o ATA silenciosamente.
+title: Instalar o Advanced Threat Analytics silenciosamente | Microsoft Docs
+description: Este artigo descreve como instalar silenciosamente o ATA.
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: rkarlin
-ms.date: 08/28/2019
+ms.date: 10/15/2019
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
 ms.technology: ''
 ms.assetid: b3cceb18-0f3c-42ac-8630-bdc6b310f1d6
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 9778cfa171ca6f5bc9b7597af935d15456504c62
-ms.sourcegitcommit: bb33e24591acf11688955318b5938bc3d662a398
+ms.openlocfilehash: 51234265f30cb71c0421a9aa80a9288fe7a77b2e
+ms.sourcegitcommit: 91ab82b0813a5e7c6ec94f1766f909ef9a524d32
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70076676"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72442166"
 ---
 # <a name="ata-silent-installation"></a>Instalação silenciosa do ATA
 
@@ -27,7 +27,7 @@ Este artigo fornece instruções de como instalar silenciosamente o ATA.
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
-O ATA versão 1.8 requer a instalação do Microsoft .NET Framework 4.6.1. 
+A versão 1,9 do ATA requer a instalação do Microsoft .NET Framework 4.6.1. 
 
 Quando você instala ou atualiza o ATA, o .Net Framework 4.6.1 é instalado automaticamente como parte da implantação do Microsoft ATA.
 
@@ -51,7 +51,7 @@ Use o seguinte comando para instalar o Centro do ATA:
 
 > [!div class="mx-tableFixed"]
 > 
-> |Nome|Sintaxe|Obrigatório para instalação silenciosa?|Descrição|
+> |Nome|Sintaxe|Obrigatório para instalação silenciosa?|Description|
 > |-------------|----------|---------|---------|
 > |Quiet|/quiet|Sim|Executa o instalador sem exibir a interface do usuário nem solicitações.|
 > |Ajuda|/help|Não|Fornece ajuda e referência rápida. Exibe o uso correto do comando de configuração, incluindo uma lista de todas as opções e comportamentos.|
@@ -62,7 +62,7 @@ Use o seguinte comando para instalar o Centro do ATA:
 
 > [!div class="mx-tableFixed"]
 > 
-> |             Nome             |                      Sintaxe                      | Obrigatório para instalação silenciosa? |                                                                                                        Descrição                                                                                                         |
+> |             Nome             |                      Sintaxe                      | Obrigatório para instalação silenciosa? |                                                                                                        Description                                                                                                         |
 > |------------------------------|--------------------------------------------------|------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 > |       InstallationPath       |         InstallationPath=“<InstallPath>”         |                 Não                 |                                               Define o caminho para a instalação dos binários do ATA. Caminho padrão: C:\Arquivos de Programas\Microsoft Advanced Threat Analytics\Center                                                |
 > |       DatabaseDataPath       |           DatabaseDataPath= “<DBPath>”           |                 Não                 |                                         Define o caminho para a pasta de dados do Banco de Dados do ATA. Caminho padrão: C:\Arquivos de Programas\Microsoft Advanced Threat Analytics\Center\MongoDB\bin\data                                         |
@@ -72,7 +72,7 @@ Use o seguinte comando para instalar o Centro do ATA:
 > |       ConsoleIpAddress       |       ConsoleIpAddress=<ConsoleIPAddress>        |                Sim                 |                                                                                           Define o endereço IP do Console do ATA                                                                                           |
 > | ConsoleCertificateThumbprint | ConsoleCertificateThumbprint=”<CertThumbprint >” |                 Não                 |       Especifica a impressão digital do certificado para o Console do ATA. Esse Certificado é usado para validar a identidade do site do Console do ATA. Se não for definido, a instalação gerará um certificado autoassinado       |
 
-**Exemplos**: para instalar o Centro do ATA com caminhos de instalação padrão e um único endereço IP:
+**Exemplos**: instalar a Central do ATA com caminhos de instalação padrão e um único endereço IP:
 
     "Microsoft ATA Center Setup.exe" /quiet --LicenseAccepted NetFrameworkCommandLineArguments="/q" CenterIpAddress=192.168.0.10
     CenterPort=444 ConsoleIpAddress=192.168.0.10
@@ -95,7 +95,7 @@ Use o seguinte comando para atualizar o Centro do ATA:
 
 > [!div class="mx-tableFixed"]
 > 
-> |Nome|Sintaxe|Obrigatório para instalação silenciosa?|Descrição|
+> |Nome|Sintaxe|Obrigatório para instalação silenciosa?|Description|
 > |-------------|----------|---------|---------|
 > |Quiet|/quiet|Sim|Executa o instalador sem exibir a interface do usuário nem solicitações.|
 > |Ajuda|/help|Não|Fornece ajuda e referência rápida. Exibe o uso correto do comando de configuração, incluindo uma lista de todas as opções e comportamentos.|
@@ -104,13 +104,13 @@ Use o seguinte comando para atualizar o Centro do ATA:
 
 Na atualização do ATA, o instalador detecta automaticamente que o ATA já está instalado no servidor, e nenhuma opção de instalação de atualização é obrigatória.
 
-**Exemplos**: para atualizar o Centro do ATA silenciosamente. Em ambientes grandes, a atualização do Centro do ATA pode demorar um pouco para ser concluída. Monitore os logs do ATA para acompanhar o andamento da atualização.
+**Exemplos**: atualizar a Central do ATA no modo silencioso. Em ambientes grandes, a atualização do Centro do ATA pode demorar um pouco para ser concluída. Monitore os logs do ATA para acompanhar o andamento da atualização.
 
         "Microsoft ATA Center Setup.exe" /quiet NetFrameworkCommandLineArguments="/q"
 
 ## <a name="uninstall-the-ata-center-silently"></a>Desinstalar o Centro do ATA silenciosamente
 
-Use o seguinte comando para executar uma desinstalação silenciosa do Centro do ATA: **Sintaxe**:
+Use o seguinte comando para realizar uma desinstalação silenciosa da Central do ATA: **Sintaxe**:
 
     Microsoft ATA Center Setup.exe [/quiet] [/Uninstall] [/Help]
      [--DeleteExistingDatabaseData]
@@ -119,7 +119,7 @@ Use o seguinte comando para executar uma desinstalação silenciosa do Centro do
 
 > [!div class="mx-tableFixed"]
 > 
-> |Nome|Sintaxe|Obrigatório para desinstalação silenciosa?|Descrição|
+> |Nome|Sintaxe|Obrigatório para desinstalação silenciosa?|Description|
 > |-------------|----------|---------|---------|
 > |Quiet|/quiet|Sim|Executa o desinstalador sem exibir a interface do usuário nem solicitações.|
 > |Desinstalar|/uninstall|Sim|Executa a desinstalação silenciosa do Centro do ATA no servidor.|
@@ -129,16 +129,16 @@ Use o seguinte comando para executar uma desinstalação silenciosa do Centro do
 
 > [!div class="mx-tableFixed"]
 > 
-> |Nome|Sintaxe|Obrigatório para desinstalação silenciosa?|Descrição|
+> |Nome|Sintaxe|Obrigatório para desinstalação silenciosa?|Description|
 > |-------------|----------|---------|---------|
 > |DeleteExistingDatabaseData|DeleteExistingDatabaseData|Não|Exclui todos os arquivos do banco de dados existente.|
 
-**Exemplos**: para desinstalar silenciosamente o Centro do ATA do servidor, removendo todos os dados do banco de dados existente:
+**Exemplos**: desinstalar a Central do ATA do servidor no modo silencioso, removendo todos os dados do banco de dados existente:
 
 
     "Microsoft ATA Center Setup.exe" /quiet /uninstall --DeleteExistingDatabaseData
 
-## <a name="ata-gateway-silent-installation"></a>Instalação silenciosa do Gateway do ATA
+## <a name="ata-gateway-silent-installation"></a>Instalação silenciosa do gateway do ATA
 
 > [!NOTE]
 > Ao implantar silenciosamente o Gateway Lightweight do ATA por meio do System Center Configuration Manager ou de outro sistema de implantação de software, é recomendável criar dois pacotes de implantação:</br>– Net Framework 4.6.1 incluindo inicializar o controlador de domínio</br>– Gateway do ATA. </br>Torne o pacote Gateway do ATA dependente da implantação do pacote .Net Framework. </br>Obtenha o pacote [de implantação offline do .Net Framework 4.6.1](https://www.microsoft.com/download/details.aspx?id=49982). 
@@ -160,7 +160,7 @@ Use o seguinte comando para instalar silenciosamente o Gateway do ATA:
 
 > [!div class="mx-tableFixed"]
 > 
-> |Nome|Sintaxe|Obrigatório para instalação silenciosa?|Descrição|
+> |Nome|Sintaxe|Obrigatório para instalação silenciosa?|Description|
 > |-------------|----------|---------|---------|
 > |Quiet|/quiet|Sim|Executa o instalador sem exibir a interface do usuário nem solicitações.|
 > |Ajuda|/help|Não|Fornece ajuda e referência rápida. Exibe o uso correto do comando de configuração, incluindo uma lista de todas as opções e comportamentos.|
@@ -170,12 +170,13 @@ Use o seguinte comando para instalar silenciosamente o Gateway do ATA:
 
 > [!div class="mx-tableFixed"]
 > 
-> |          Nome          |                   Sintaxe                   | Obrigatório para instalação silenciosa? |                                                      Descrição                                                       |
+> |          Nome          |                   Sintaxe                   | Obrigatório para instalação silenciosa? |                                                      Description                                                       |
 > |------------------------|--------------------------------------------|------------------------------------|------------------------------------------------------------------------------------------------------------------------|
+> |       InstallationPath       |         InstallationPath=“<InstallPath>”         |                 Não                 |                                               Define o caminho para a instalação dos binários do ATA. Caminho padrão: C:\Arquivos de Programas\Microsoft Advanced Threat Analytics\Center
 > |   ConsoleAccountName   |     ConsoleAccountName=”<AccountName>”     |                Sim                 |   Define o nome da conta do usuário (user@domain.com) usada para registrar o Gateway do ATA no Centro do ATA.    |
 > | ConsoleAccountPassword | ConsoleAccountPassword=”<AccountPassword>” |                Sim                 | Define a senha para a conta do usuário (user@domain.com) usada para registrar o Gateway do ATA no Centro do ATA. |
 
-**Exemplos**: Para instalar silenciosamente o ATA Gateway, entre no computador no domínio com suas credenciais de administrador do ATA de modo que não seja necessário especificar as credenciais como parte da instalação. Caso contrário, registre-o no Centro do ATA usando as credenciais especificadas:
+**Exemplos**: para instalar silenciosamente o log do Gateway do ATA no computador ingressado no domínio com suas credenciais de administrador do ATA, de modo que não seja necessário especificar as credenciais como parte da instalação. Caso contrário, registre-o no Centro do ATA usando as credenciais especificadas:
 
     "Microsoft ATA Gateway Setup.exe" /quiet NetFrameworkCommandLineArguments="/q" 
     ConsoleAccountName="user@contoso.com" ConsoleAccountPassword="userpwd"
@@ -194,20 +195,23 @@ Use o seguinte comando para atualizar silenciosamente o Gateway do ATA:
 
 > [!div class="mx-tableFixed"]
 > 
-> |Nome|Sintaxe|Obrigatório para instalação silenciosa?|Descrição|
+> |Nome|Sintaxe|Obrigatório para instalação silenciosa?|Description|
 > |-------------|----------|---------|---------|
 > |Quiet|/quiet|Sim|Executa o instalador sem exibir a interface do usuário nem solicitações.|
 > |Ajuda|/help|Não|Fornece ajuda e referência rápida. Exibe o uso correto do comando de configuração, incluindo uma lista de todas as opções e comportamentos.|
 > |NetFrameworkCommandLineArguments="/q"|NetFrameworkCommandLineArguments="/q"|Sim|Especifica os parâmetros para a instalação do .Net Framework. Deve ser definido para impor a instalação silenciosa do .Net Framework.|
 
 
-**Exemplos**: para atualizar o Gateway do ATA silenciosamente:
+**Exemplos**: atualizar o Gateway do ATA no modo silencioso:
 
         Microsoft ATA Gateway Setup.exe /quiet NetFrameworkCommandLineArguments="/q"
 
 ## <a name="uninstall-the-ata-gateway-silently"></a>Desinstalar o Gateway do ATA silenciosamente
 
-Use o seguinte comando para executar uma desinstalação silenciosa do Gateway do ATA: **Sintaxe**:
+Use o seguinte comando para executar uma desinstalação silenciosa do Gateway do ATA:
+
+
+**Sintaxe**:
 
     Microsoft ATA Gateway Setup.exe [/quiet] [/Uninstall] [/Help]
 
@@ -215,13 +219,13 @@ Use o seguinte comando para executar uma desinstalação silenciosa do Gateway d
 
 > [!div class="mx-tableFixed"]
 > 
-> |Nome|Sintaxe|Obrigatório para desinstalação silenciosa?|Descrição|
+> |Nome|Sintaxe|Obrigatório para desinstalação silenciosa?|Description|
 > |-------------|----------|---------|---------|
 > |Quiet|/quiet|Sim|Executa o desinstalador sem exibir a interface do usuário nem solicitações.|
 > |Desinstalar|/uninstall|Sim|Executa a desinstalação silenciosa do Gateway do ATA do servidor.|
 > |Ajuda|/help|Não|Fornece ajuda e referência rápida. Exibe o uso correto do comando de configuração, incluindo uma lista de todas as opções e comportamentos.|
 
-**Exemplos**: para desinstalar silenciosamente o Gateway do ATA do servidor:
+**Exemplos**: desinstalar o Gateway do ATA do servidor no modo silencioso:
 
 
     Microsoft ATA Gateway Setup.exe /quiet /uninstall
@@ -235,7 +239,7 @@ Use o seguinte comando para executar uma desinstalação silenciosa do Gateway d
 
 
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira Também
 
 - [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Configurar coleta de eventos](configure-event-collection.md)
