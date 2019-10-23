@@ -5,22 +5,22 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 05/30/2019
+ms.date: 10/16/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 6a9b5273-eb26-414e-9cdd-f64406e24ed8
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 297df34b92ebbe1be93667d54eedd51a605e5bf1
-ms.sourcegitcommit: b021f8dfc54e59de429f93cc5fc0d733d92b00b8
+ms.openlocfilehash: 2ad5ff4ad50e9b1afb5db3df0ce3928bb090986b
+ms.sourcegitcommit: dd8db49bc54acc5483a3fa889379230d144b0623
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66403515"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72690203"
 ---
 # <a name="azure-atp-frequently-asked-questions"></a>Perguntas frequentes sobre o Azure ATP
-Este artigo fornece uma lista de perguntas frequentes sobre o Azure ATP e dividido nas seguintes categorias: 
+Este artigo fornece uma lista de perguntas frequentes e respostas sobre o ATP do Azure, divididas nas seguintes categorias: 
 - [O que é o Azure ATP](#what-is-azure-atp)
 - [Licenciamento e privacidade](#licensing-and-privacy)
 - [Implantação](#deployment)
@@ -55,6 +55,24 @@ Não. O Azure ATP monitora todos os dispositivos na rede que executam solicitaç
 
 ### <a name="does-azure-atp-monitor-computer-accounts-as-well-as-user-accounts"></a>O Azure ATP monitora as contas de computador, bem como as contas de usuário?
 Sim. Como as contas computador (bem como quaisquer outras entidades) podem ser usadas para executar atividades mal-intencionadas, o Azure ATP monitora todo o comportamento das contas de computador e todas as outras entidades no ambiente.
+
+### <a name="what-is-the-difference-between-advanced-threat-analytics-ata-and-azure-atp"></a>Qual é a diferença entre o ATA (Advanced Threat Analytics) e o ATP do Azure?
+O ATA é uma solução autônoma, instalada no local. O ATP do Azure, com sua conectividade em nuvem, possui atualizações contínuas de recursos, incluindo novas detecções, recursos de UEBA, avaliações de segurança e uma experiência de investigação em soluções da Segurança do Microsoft 365.
+
+
+Recursos adicionais do ATP do Azure: 
+- O ATP do Azure detecta mais ataques avançados e comportamentos suspeitos no local do que o ATA e fornece relatórios de **avaliação de segurança de identidade**.
+- Sensor reformulado com fontes de dados adicionais (como **Rastreamento de Eventos para Windows**). 
+- O ATP do Azure protege ambientes de várias florestas. 
+
+O ATP do Azure faz parte da Segurança do Microsoft 365 – protegendo a organização híbrida:
+- O ATP do Azure, junto com o MCAS (Microsoft Cloud App Security) e o Azure AD Identity Protection, proporciona uma experiência de investigação unificada para atividades do usuário, locais e na nuvem, e fornece detecções aprimoradas de UEBA (Análise de Comportamento de Usuários e Entidades).
+- O ATA não tem integração com outras soluções de segurança online da Microsoft 
+  
+Escalonável e seguro, aproveitando o potencial da nuvem: 
+- O ATP do Azure permite que os clientes aproveitem os benefícios de uma solução baseada em nuvem, sem limitações de dimensionamento e com atualizações contínuas. 
+- O ATA é baseado em um servidor de gerenciamento central local que exige um hardware dedicado para que o centro de gerenciamento seja implantado no local e, normalmente, recebe uma ou duas atualizações de versão por ano.
+
 
 ## <a name="licensing-and-privacy"></a>Licenciamento e privacidade 
 
