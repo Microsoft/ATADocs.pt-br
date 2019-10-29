@@ -5,19 +5,19 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 07/17/2019
+ms.date: 10/22/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 1ac873fc-b763-41d7-878e-7c08da421cb5
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 9cef9a1eb7035f1db61ab6c3c0b90d4e73278d36
-ms.sourcegitcommit: 15f882cf45776877fdaca8367a7a0fe7f06a7917
+ms.openlocfilehash: cb9275c90afda7a5ec98cf238205232b2bcfb66f
+ms.sourcegitcommit: 17bea648092fedaad08384442d237e766c472a70
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71185651"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72776603"
 ---
 # <a name="what-is-network-name-resolution"></a>O que é a Resolução de nomes de rede?
 
@@ -27,13 +27,13 @@ Usando a NNR, o ATP do Azure é capaz de correlacionar atividades brutas (que co
 
 Para resolver endereços IP de nomes do computador, os sensores do ATP do Azure consultam o endereço IP do nome do computador "por atrás" do IP, usando um dos seguintes métodos:
 
-1. NTLM sobre RPC (porta TCP 135)
-2. NetBIOS (porta UDP 137)
-3. RDP (porta TCP 3389): apenas o primeiro pacote do **Client hello**
-4. Consultas ao servidor DNS usando a pesquisa de DNS reverso do endereço IP (UDP 53)
+- NTLM sobre RPC (porta TCP 135)
+- NetBIOS (porta UDP 137)
+- RDP (porta TCP 3389): apenas o primeiro pacote do **Client hello**
+- Consultas ao servidor DNS usando a pesquisa de DNS reverso do endereço IP (UDP 53)
 
 > [!NOTE]
->Nenhuma autenticação é realizada em quaisquer das portas.
+> Nenhuma autenticação é realizada em quaisquer das portas.
 
 O ATP do Azure avalia e determina o sistema operacional do dispositivo com base no tráfego de rede. Depois de recuperar o nome do computador, o sensor do ATP do Azure verifica o Active Directory e usa impressões digitais de TCP para ver se há um objeto de computador correlacionado com o mesmo nome do computador. O uso de impressões digitais de TCP ajuda a identificar dispositivos não registrados e não Windows, auxiliando em seu processo de investigação. Quando o sensor do ATP do Azure encontra a correlação, ele associa esse IP ao objeto de computador. 
 
@@ -61,6 +61,7 @@ A evidência inclui a hora, o IP e o nome do computador para o qual o IP foi res
     ![Certeza da evidência](media/nnr-high-certainty.png)
 
 
+
 ### <a name="prerequisites"></a>Pré-requisitos
 |Protocolo|  Transport|  Porta|   Dispositivo| Direção|
 |--------|--------|------|-------|------|
@@ -74,9 +75,13 @@ Abrir a porta 3389 **não é um requisito**, é apenas um método adicional que 
 
 Para se certificar de que o ATP do Azure está funcionando de forma ideal e que o ambiente está configurado corretamente, o ATP do Azure verifica o status de resolução de cada Sensor e emite um alerta de monitoramento por método, fornecendo uma lista de sensores do ATP do Azure com baixas taxas de sucesso de resolução de nomes ativas que usam cada método.
 
+> [!NOTE]
+> Abra uma chamada de suporte para desabilitar um método NNR opcional no ATP do Azure para atender às necessidades do seu ambiente. 
+
 Cada alerta de monitoramento oferece detalhes específicos sobre o método, os sensores e a política problemática além de recomendações de configuração.
 
 ![Alerta de baixa taxa de sucesso da Resolução de Nomes de Rede (NNR)](media/atp-nnr-success-rate.png)
+
 
 
 ### <a name="configuration-recommendations"></a>Recomendações de configuração

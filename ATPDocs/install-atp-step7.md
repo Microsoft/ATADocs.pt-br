@@ -5,19 +5,19 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 12/02/2018
+ms.date: 10/22/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 1ad5e923-9bbd-4f56-839a-b11a9f387d4b
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 0fdf6b312c51949a1a104336518cc55f924020aa
-ms.sourcegitcommit: ae9db212f268f067b217d33b0c3f991b6531c975
+ms.openlocfilehash: 2177a4c5e7281bd87f87009307b675b9d649c295
+ms.sourcegitcommit: 17bea648092fedaad08384442d237e766c472a70
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65197140"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72776628"
 ---
 # <a name="configure-detection-exclusions-and-honeytoken-accounts"></a>Configurar exclusões de detecção e contas de honeytoken
 
@@ -35,7 +35,7 @@ Para configurar, execute estas etapas:
 
 2.  Em **Detecção**, clique em **Marcas de entidade**.
 
-3. Em **Contas de honeytoken**, insira o nome da conta de honeytoken e clique no sinal **+**. O campo de contas Honeytoken é pesquisável e exibe automaticamente entidades em sua rede. Clique em **Salvar**.
+3. Em **Contas de honeytoken**, insira o nome da conta de honeytoken e clique no sinal **+** . O campo de contas Honeytoken é pesquisável e exibe automaticamente entidades em sua rede. Clique em **Salvar**.
 
    ![Honeytoken](media/honeytoken-sensitive.png)
 
@@ -49,13 +49,13 @@ Para configurar, execute estas etapas:
 
 Parabéns, você implantou a Proteção Avançada contra Ameaças do Azure!
 
-Verifique a linha do tempo de ataque para exibir os alertas de segurança detectados e pesquisar por usuários ou computadores e exibir seus perfis.
+Verifique a linha do tempo de ataque para visualizar os alertas de segurança gerados das atividades detectadas e procure os usuários ou computadores exibindo os perfis deles.
 
-A verificação do ATP do Azure é iniciada imediatamente. Algumas detecções, como Modificações de grupo anormais, requerem um período de aprendizado e não estão disponíveis imediatamente após a implantação do Azure ATP.
+A verificação do ATP do Azure é iniciada imediatamente. Algumas detecções, como [Adições suspeitas a grupos confidenciais](atp-domain-dominance-alerts.md#suspicious-additions-to-sensitive-groups-external-id-2024), requerem um período de aprendizado e não estão disponíveis imediatamente após a implantação do ATP do Azure. Esse período para cada alerta aparece em detalhes no [guia de alerta de segurança](suspicious-activity-guide.md). 
 
 
 ## <a name="see-also"></a>Consulte Também
 - [Ferramenta de dimensionamento do Azure ATP](http://aka.ms/aatpsizingtool)
 - [Configurar coleta de eventos](configure-event-collection.md)
 - [Pré-requisitos do Azure ATP](atp-prerequisites.md)
-- [Confira o fórum do Azure ATP!](https://aka.ms/azureatpcommunity)
+- [Confira o fórum do ATP do Azure!](https://aka.ms/azureatpcommunity)
