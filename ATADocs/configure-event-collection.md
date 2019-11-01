@@ -14,7 +14,7 @@ ms.reviewer: bennyl
 ms.suite: ems
 ms.openlocfilehash: 825185a2aaf792e6b9c1fe58e022174c2f98bb0c
 ms.sourcegitcommit: ae9db212f268f067b217d33b0c3f991b6531c975
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/07/2019
 ms.locfileid: "65196827"
