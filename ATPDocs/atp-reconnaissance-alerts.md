@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: e9cf68d2-36bd-4b0d-b36e-7cf7ded2618e
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 848922f0fb7d31a72d3dc2f8371a39be3b125ad0
-ms.sourcegitcommit: b021f8dfc54e59de429f93cc5fc0d733d92b00b8
+ms.openlocfilehash: 442bad8e2dc7c587e665a233083859e86185d3e7
+ms.sourcegitcommit: e25979884395e7143492d604b7d195649aff410c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66403591"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73046916"
 ---
 # <a name="tutorial-reconnaissance-alerts"></a>Tutorial: Alertas de reconhecimento  
 
@@ -198,6 +198,8 @@ Para permitir que o ATP do Azure crie o perfil com precisão e aprenda os usuár
 2. Exija o uso de [senhas longas e complexas para usuários com contas de entidade de serviço](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/minimum-password-length).  
 3. [Substitua a conta de usuário pela gMSA (conta de serviço gerenciado de grupo)](https://docs.microsoft.com/windows-server/security/group-managed-service-accounts/group-managed-service-accounts-overview). 
 
+> [!NOTE]
+> Os alertas LDAP (reconhecimento de entidade de segurança) são compatíveis somente com os sensores do ATP.
 
 ## <a name="user-and-ip-address-reconnaissance-smb-external-id-2012"></a>Reconhecimento de endereço IP e de usuário (SMB) (ID 2012 externa) 
 
