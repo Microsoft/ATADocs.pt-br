@@ -5,21 +5,21 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 09/23/2019
+ms.date: 11/05/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 62c99622-2fe9-4035-9839-38fec0a353da
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 763f27e9fb3e134f97b716306c747ecce7edf411
-ms.sourcegitcommit: 0a98c0c151be2a81a3bb9ff1301d35a3091079ea
+ms.openlocfilehash: 7c1dfa8cfda0bb6fb39770a58a7cc1b54dbc2298
+ms.sourcegitcommit: ef68a774d2756719bce8747e65f8bde2b9afdd5d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71217675"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73618441"
 ---
-# <a name="azure-atp-prerequisites"></a>Pré-requisitos do Azure ATP
+# <a name="azure-atp-prerequisites"></a>Pré-requisitos do ATP do Azure
 
 Este artigo descreve os requisitos para uma implantação bem-sucedida do Azure ATP em seu ambiente.
 
@@ -140,6 +140,7 @@ A tabela abaixo lista o mínimo de portas que o sensor do Azure ATP exige:
 |------------|-------------|--------|-----------|-------------|
 |**Portas de Internet**|||||
 |SSL (*.atp.azure.com)|TCP|443|Serviço de nuvem do Azure ATP|Saída|
+|SSL (localhost)|TCP|444|localhost|Ambos|
 |**Portas internas**|||||
 |DNS|TCP e UDP|53|Servidores DNS|Saída|
 |Netlogon (SMB, CIFS, SAM-R)|TCP/UDP|445|Todos os dispositivos na rede|Saída|
@@ -230,7 +231,7 @@ A tabela abaixo lista as portas mínimas que o sensor autônomo do Azure ATP req
 
 
 ## <a name="see-also"></a>Consulte Também
-- [Ferramenta de dimensionamento do Azure ATP](http://aka.ms/aatpsizingtool)
+- [Ferramenta de dimensionamento do Azure ATP](https://aka.ms/aatpsizingtool)
 - [Arquitetura do Azure ATP](atp-architecture.md)
 - [Instalar o Azure ATP](install-atp-step1.md)
 - [NNR (resolução de nomes de rede)](atp-nnr-policy.md)

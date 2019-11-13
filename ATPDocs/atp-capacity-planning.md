@@ -3,16 +3,16 @@ title: Guia de início rápido para planejamento de implantação da Proteção 
 description: Ajuda você a planejar a implantação e a decidir quantos servidores do Azure ATP serão necessários para dar suporte à sua rede
 author: mlottner
 ms.author: mlottner
-ms.date: 1/24/2019
+ms.date: 11/05/2019
 ms.topic: quickstart
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
-ms.openlocfilehash: 66f30b3657cc78b8ad209703746115eb75593709
-ms.sourcegitcommit: c48db18274edb2284e281960c6262d97f96e01d2
+ms.openlocfilehash: 0d149b74724ecddcce88bc932626d6bd395d4202
+ms.sourcegitcommit: ef68a774d2756719bce8747e65f8bde2b9afdd5d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56263756"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73618484"
 ---
 # <a name="quickstart-plan-capacity-for-azure-atp"></a>Início Rápido: Planejar capacidade para o ATP do Azure
 
@@ -20,7 +20,7 @@ Neste guia de início rápido, você determinará quantos sensores do ATP do Azu
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
-- Baixe a [ferramenta de dimensionamento do ATP do Azure](http://aka.ms/aatpsizingtool).
+- Baixe a [ferramenta de dimensionamento do ATP do Azure](https://aka.ms/aatpsizingtool).
 - Confira o artigo sobre a [arquitetura do ATP do Azure](atp-architecture.md).
 - Confira o artigo sobre os [pré-requisitos do ATP do Azure](atp-prerequisites.md). 
 
@@ -67,10 +67,9 @@ Considere as seguintes questões ao decidir quantos sensores autônomos do ATP d
 
 Um sensor do ATP do Azure pode ter suporte para monitoramento de um controlador de domínio com base na quantidade de tráfego de rede gerado pelo controlador de domínio. A tabela a seguir representa uma estimativa. O valor final que o sensor analisa depende da quantidade de tráfego e da distribuição desse tráfego.
 
-
 A capacidade de CPU e memória a seguir se refere ao **consumo do próprio sensor**, e não à capacidade do controlador de domínio.
 
-|Pacotes por segundo*|CPU (núcleos)|Memória (GB)|
+|Pacotes por segundo*|CPU (núcleos)**|Memória (GB)|
 |----|----|-----|
 |0 - 1k|0.25|2.50|
 |1k - 5k|0.75|6.00|
@@ -79,16 +78,31 @@ A capacidade de CPU e memória a seguir se refere ao **consumo do próprio senso
 |20k - 50k|3.50|9.50|
 |50k - 75k |3.50|9.50|
 |75k - 100k|3.50 |9.50|
+|
+** Isso inclui os núcleos físicos, não os núcleos com hyper-threading. 
 
 Quando determinar o dimensionamento, observe os seguintes itens: 
 
-- Número total de núcleos a serem usados pelo serviço de sensor.<br>Recomendamos não trabalhar com núcleos hyper-threaded.
+- Número total de núcleos a serem usados pelo serviço de sensor.<br>Recomendamos não trabalhar com núcleos hyper-threaded. Trabalhar com núcleos com hyper-threading pode resultar em problemas de integridade do sensor do ATP do Azure. 
 - Número total de memória a ser usada pelo serviço de sensor.
 - Se o controlador de domínio não tiver os recursos exigidos pelo sensor do ATP do Azure, o desempenho do controlador de domínio não será afetado, mas o sensor do ATP do Azure poderá não operar conforme o esperado.
-- Durante a execução como uma máquina virtual, não há suporte para memória dinâmica ou outro recurso de aumento de memória.
+- Na execução como uma máquina virtual, toda a memória precisa ser alocada para a máquina virtual em todos os momentos.
 - Para ter um melhor desempenho, defina a **Opção de Energia** do sensor do Azure ATP como **Alto Desempenho**.
 - São necessários no mínimo dois núcleos e 6 GB de espaço. No entanto, recomendamos 10 GB, incluindo o espaço necessário para os binários e logs do ATP do Azure.
 
+### <a name="dynamic-memory"></a>Memória dinâmica
+
+> [!NOTE] 
+> Na execução como uma VM (máquina virtual), toda a memória precisa ser alocada para a VM em todos os momentos. 
+
+|VM em execução em|Descrição|
+|------------|-------------|
+|Hyper-V|Garanta que a opção **Habilitar Memória Dinâmica** não esteja habilitada para a VM.|
+|VMWare|Verifique se a quantidade de memória configurada e a memória reservada são iguais ou selecione a seguinte opção na configuração da VM – **Reservar toda a memória de convidado (Tudo bloqueado)** .|
+|Outro host de virtualização|Confira a documentação fornecida pelo fornecedor sobre como garantir que a memória seja totalmente alocada para a VM em todos os momentos. |
+|
+
+Na execução como uma máquina virtual, desligue o servidor antes de criar um novo ponto de verificação para evitar uma possível corrupção do banco de dados.
 
 ## <a name="manual-sizing"></a> Estimativa de tráfego do controlador de domínio
 
@@ -110,15 +124,15 @@ Para determinar os pacotes por segundo, faça os seguintes procedimentos em cada
 
     ![Imagem do novo conjunto de coletores de dados](media/atp-traffic-estimation-3.png)
 
-4.  Insira um nome para o conjunto de coletores e selecione **Criar Manualmente (Avançado)**.
+4.  Insira um nome para o conjunto de coletores e selecione **Criar Manualmente (Avançado)** .
 
-5.  Em **Que tipo de dados deseja incluir?**, selecione **Criar logs de dados e Contador de desempenho**.
+5.  Em **Que tipo de dados deseja incluir?** , selecione **Criar logs de dados e Contador de desempenho**.
 
     ![Imagem do tipo de dados do novo conjunto de coletores de dados](media/atp-traffic-estimation-5.png)
 
-6.  Em **Que contadores de desempenho deseja registrar em log?**, clique em **Adicionar**.
+6.  Em **Que contadores de desempenho deseja registrar em log?** , clique em **Adicionar**.
 
-7.  Expanda **Adaptador de Rede**, selecione **Pacotes/s** e escolha a instância apropriada. Se não tiver certeza, selecione **&lt;Todas as instâncias&gt;**, clique em **Adicionar** e em **OK**.
+7.  Expanda **Adaptador de Rede**, selecione **Pacotes/s** e escolha a instância apropriada. Se não tiver certeza, selecione **&lt;Todas as instâncias&gt;** , clique em **Adicionar** e em **OK**.
 
     > [!NOTE]
     > Para executar essa operação em uma linha de comando, execute `ipconfig /all` para ver o nome do adaptador e a configuração.

@@ -5,22 +5,31 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 10/07/2019
+ms.date: 11/05/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 23386e36-2756-4291-923f-fa8607b5518a
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 049d125e8d9cd458f2116c61770893d4b2d596e8
-ms.sourcegitcommit: 4b89831dc3f17e594c0c824f94f6d2debb07c516
+ms.openlocfilehash: d764d466e0981c673874386d7b28019f48d79827
+ms.sourcegitcommit: ef68a774d2756719bce8747e65f8bde2b9afdd5d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "71997581"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73618429"
 ---
 # <a name="troubleshooting-azure-atp-known-issues"></a>Solução de problemas conhecidos da ATP do Azure 
 
+
+## <a name="sensor-failure-communication-error"></a>Erro de comunicação de falha no sensor
+Se você receber o seguinte erro de falha no sensor: 
+
+System.Net.Http.HttpRequestException: ocorreu um erro ao enviar a solicitação. System.Net.WebException: Não é possível se conectar ao servidor remoto ---> System.Net.Sockets.SocketException: falha em uma tentativa de conexão porque a parte conectada não respondeu corretamente após um período ou houve falha na conexão estabelecida devido a uma falha na resposta do host conectado...
+
+**Resolução:**
+
+Verifique se a comunicação não está bloqueada para localhost, porta TCP 444. Para saber mais sobre os pré-requisitos do ATP do Azure, confira [portas](atp-prerequisites.md#ports).
 
 ## <a name="deployment-log-location"></a>Local do log de implantação
  

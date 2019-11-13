@@ -5,24 +5,24 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 09/15/2018
+ms.date: 11/05/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 4ba46d60-3a74-480e-8f0f-9a082d62f343
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 08bab9d934b38859221f7f89df1580b21a8b22a2
-ms.sourcegitcommit: 939c098dd02a1f4191c528d10d69d059a62042b2
+ms.openlocfilehash: 8cc8dccbaedbe0b87d60c041eb8001ef82cf2904
+ms.sourcegitcommit: ef68a774d2756719bce8747e65f8bde2b9afdd5d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2019
-ms.locfileid: "71004905"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73618476"
 ---
 # <a name="working-with-the-azure-atp-portal"></a>Trabalhando com o portal do Azure ATP
 
 > [!NOTE]
-> Os recursos do ATP do Azure explicados nesta página também podem ser acessados usando o novo [portal](https://portal.cloudappsecurity.com).
+> Todos os recursos do ATP do Azure explicados nesta página também podem ser acessados, usando o novo [portal do Cloud App Security](https://portal.cloudappsecurity.com).
 
 Use o portal do Azure ATP para monitorar e responder a atividades suspeitas detectadas pelo ATP.
 
@@ -44,12 +44,12 @@ Para fazer logon com êxito no portal do Azure ATP, é necessário fazer logon c
 2. O Azure ATP é compatível com o logon único integrado com a autenticação do Windows – se você já fez logon em seu computador, o Azure ATP usa esse token para fazer logon no portal do Azure ATP. Você também pode fazer logon usando um cartão inteligente. Suas permissões no Azure ATP correspondem à sua [função de administrador](atp-role-groups.md).
 
    > [!NOTE]
-   > Faça logon no computador do qual deseja acessar o portal do Azure ATP usando seu nome de usuário administrador e senha do Azure ATP. Como alternativa, execute seu navegador como um usuário diferente ou se desconecte do Windows e faça logon com o usuário administrador do ATP do Azure. 
+   > Faça logon no computador do qual deseja acessar o portal do Azure ATP usando seu nome de usuário administrador e senha do Azure ATP. Como alternativa, execute seu navegador como um usuário diferente ou se desconecte do Windows e faça logon com o usuário administrador do ATP do Azure. Ao contrário do portal do ATP do Azure, o novo [portal do Cloud App Security](https://portal.cloudappsecurity.com) oferece logon de vários usuários e não requer licença adicional para uso com o ATP do Azure.  
 
 
 ### <a name="attack-time-line"></a>Linha do tempo de ataque
 
-A linha do tempo de ataque Essa é a página de aterrissagem padrão exibida quando você entra no portal do ATP do Azure. Por padrão, todas as atividades suspeitas abertas são mostradas na linha do tempo de ataque. Você pode filtrar a linha do tempo de ataque para mostrar as atividades suspeitas com status Tudo, Aberto, Descartado ou Suprimido. Você também pode ver a severidade atribuída a cada atividade.
+A linha do tempo de ataque é a página de aterrissagem padrão exibida quando você entra no portal do ATP do Azure. Por padrão, todas as atividades suspeitas abertas são mostradas na linha do tempo de ataque. Você pode filtrar a linha do tempo de ataque para mostrar as atividades suspeitas com status Tudo, Aberto, Descartado ou Suprimido. Você também pode ver a severidade atribuída a cada atividade.
 
 ![Imagem da linha do tempo de ataques do Azure ATP](media/atp-sa-timeline.png)
 
