@@ -5,19 +5,19 @@ keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: rkarlin
-ms.date: 3/21/2018
+ms.date: 11/07/2019
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
 ms.technology: ''
 ms.assetid: e0aed853-ba52-46e1-9c55-b336271a68e7
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: f98dfb3f5688f143a490a8ab7abb7eea7d8da5d9
-ms.sourcegitcommit: ae9db212f268f067b217d33b0c3f991b6531c975
-ms.translationtype: HT
+ms.openlocfilehash: d582d45007cc288844c26c03d90195e4b741025a
+ms.sourcegitcommit: 814af2addf833d40d10f7594275a132f888eea9b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65197019"
+ms.lasthandoff: 11/17/2019
+ms.locfileid: "74153103"
 ---
 # <a name="install-ata---step-7"></a>Instalação do ATA – Etapa 7
 
@@ -29,13 +29,16 @@ ms.locfileid: "65197019"
 
 ## <a name="step-7-integrate-vpn"></a>Etapa 7. Integrar a VPN
 
-O Microsoft Advanced Threat Analytics (ATA) versão 1.8 pode coletar informações contábeis de soluções de VPN. Quando configurada, a página de perfil do usuário inclui informações de conexões de VPN, tais como os endereços IP e os locais de origem das conexões. Isso complementa o processo de investigação, fornecendo informações adicionais sobre a atividade de usuário. A chamada para resolver um endereço IP externo de um local é anônima. Nenhuma identificação pessoal será enviada nesta chamada.
+O Microsoft Advanced Threat Analytics (ATA) versão 1,8 e superior pode coletar informações de contabilidade de soluções de VPN. Quando configurada, a página de perfil do usuário inclui informações de conexões de VPN, tais como os endereços IP e os locais de origem das conexões. Isso complementa o processo de investigação, fornecendo informações adicionais sobre a atividade de usuário. A chamada para resolver um endereço IP externo de um local é anônima. Nenhuma identificação pessoal será enviada nesta chamada.
 
 O ATA integra-se à solução de VPN escutando eventos contábeis do RADIUS encaminhados para os Gateways do ATA. Este mecanismo é baseado em Contabilização RADIUS padrão ([RFC 2866](https://tools.ietf.org/html/rfc2866)) e têm suporte dos seguintes fornecedores de VPN:
 
 -   Microsoft
 -   F5
 -   Cisco ASA
+
+> [!IMPORTANT]
+> A partir de setembro de 2019, o serviço de localização geográfica de VPN do Advanced Threat Analytics responsável por detectar locais de VPN agora dá suporte exclusivamente a TLS 1,2. Verifique se o centro do ATA está configurado para dar suporte a TLS 1,2, já que as versões 1,1 e 1,0 não têm mais suporte.   
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
@@ -101,9 +104,9 @@ Depois que o Gateway do ATA recebe os eventos de VPN e os envia ao centro do ATA
 - [Como escolher o tipo certo de Gateway do ATA](https://channel9.msdn.com/Shows/Microsoft-Security/ATA-Deployment-Choose-the-Right-Gateway-Type)
 
 
-## <a name="see-also"></a>Consulte Também
-- [Guia de implantação da POC (prova de conceito) do ATA](http://aka.ms/atapoc)
-- [Ferramenta de dimensionamento do ATA](http://aka.ms/aatpsizingtool)
+## <a name="see-also"></a>Confira Também
+- [Guia de implantação da POC (prova de conceito) do ATA](https://aka.ms/atapoc)
+- [Ferramenta de dimensionamento do ATA](https://aka.ms/aatpsizingtool)
 - [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Configurar coleta de eventos](configure-event-collection.md)
 - [Pré-requisitos do ATA](ata-prerequisites.md)
