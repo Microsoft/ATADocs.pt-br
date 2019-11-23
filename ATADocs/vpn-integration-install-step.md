@@ -104,7 +104,7 @@ Depois que o Gateway do ATA recebe os eventos de VPN e os envia ao centro do ATA
 - [Como escolher o tipo certo de Gateway do ATA](https://channel9.msdn.com/Shows/Microsoft-Security/ATA-Deployment-Choose-the-Right-Gateway-Type)
 
 
-## <a name="see-also"></a>Confira Também
+## <a name="see-also"></a>Consulte também
 - [Guia de implantação da POC (prova de conceito) do ATA](https://aka.ms/atapoc)
 - [Ferramenta de dimensionamento do ATA](https://aka.ms/aatpsizingtool)
 - [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

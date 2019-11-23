@@ -30,7 +30,7 @@ ms.locfileid: "70803180"
 ## <a name="step-6-configure-event-collection"></a>Etapa 6. Configurar coleta de eventos
 ### <a name="configure-event-collection"></a>Configurar coleta de eventos
 
-Para aprimorar as funcionalidades de detecção, o ATA precisa dos seguintes eventos do Windows: 4776, 4732, 4733, 4728, 4729, 4756, 4757 e 7045. Esses eventos do Windows são lidos automaticamente pelo gateway Lightweight do ATA ou, caso o gateway Lightweight do ATA não esteja implantado, eles podem ser encaminhados para o gateway do ATA de uma das duas maneiras, seja ao configurar o gateway do ATA para escutar eventos do SIEM ou por [ Configurando o encaminhamento de eventos do Windows](configure-event-collection.md).  
+Para aprimorar as funcionalidades de detecção, o ATA precisa dos seguintes eventos do Windows: 4776, 4732, 4733, 4728, 4729, 4756, 4757 e 7045. Esses eventos do Windows são lidos automaticamente pelo gateway Lightweight do ATA ou, caso o gateway Lightweight do ATA não esteja implantado, eles podem ser encaminhados para o gateway do ATA de uma das duas maneiras, seja Configurando o gateway do ATA para escutar eventos do SIEM ou [Configurando o encaminhamento de eventos do Windows](configure-event-collection.md).  
 
 > [!NOTE]
 > Para as versões 1,8 e superiores do ATA, a configuração da coleta de eventos do Windows não é mais necessária para gateways Lightweight do ATA. O Gateway Lightweight do ATA realiza a leitura de eventos localmente, sem a necessidade de configurar o encaminhamento de eventos.
@@ -130,9 +130,9 @@ CEF:0|Microsoft|Microsoft Windows||Microsoft-Windows-Security-Auditing:4776|O co
 
 O computador tentou validar as credenciais de uma conta.
 
-Página de autenticação:              MICROSOFT_AUTHENTICATION_PACKAGE_V1_0
+Pacote de autenticação:              MICROSOFT_AUTHENTICATION_PACKAGE_V1_0
 
-Conta de logon: Administrador
+Conta de Logon: Administrador
 
 Estação de Trabalho de Origem:       SIEM
 
@@ -163,7 +163,7 @@ Código de erro:         0x0
 -   A ordem não é importante para os pares de chave=valor
 
 #### <a name="qradar"></a>QRadar
-O QRadar permite a coleta de eventos por meio de um agente. Se os dados forem reunidos usando um agente, o formato de hora será coletado sem dados de milissegundos. Uma vez que o ATA precisa dos dados de milissegundos, é necessário definir o QRadar para usar a coleta de eventos do Windows sem agente. Para saber mais, confira [http://www-01.ibm.com/support/docview.wss?uid=swg21700170](http://www-01.ibm.com/support/docview.wss?uid=swg21700170 "QRadar: Coleta de Eventos do Windows sem Agente usando o protocolo MSRPC").
+O QRadar permite a coleta de eventos por meio de um agente. Se os dados forem reunidos usando um agente, o formato de hora será coletado sem dados de milissegundos. Uma vez que o ATA precisa dos dados de milissegundos, é necessário definir o QRadar para usar a coleta de eventos do Windows sem agente. Para obter mais informações, veja [http://www-01.ibm.com/support/docview.wss?uid=swg21700170](http://www-01.ibm.com/support/docview.wss?uid=swg21700170 "QRadar: Agentless Windows Events Collection using the MSRPC Protocol") (QRadar: Coleção de eventos do Windows sem agente usando o protocolo MSRPC).
 
     <13>Feb 11 00:00:00 %IPADDRESS% AgentDevice=WindowsLog AgentLogFile=Security Source=Microsoft-Windows-Security-Auditing Computer=%FQDN% User= Domain= EventID=4776 EventIDCode=4776 EventType=8 EventCategory=14336 RecordNumber=1961417 TimeGenerated=1456144380009 TimeWritten=1456144380009 Message=The computer attempted to validate the credentials for an account. Authentication Package: MICROSOFT_AUTHENTICATION_PACKAGE_V1_0 Logon Account: Administrator Source Workstation: HOSTNAME Error Code: 0x0
 
