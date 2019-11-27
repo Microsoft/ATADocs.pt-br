@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: e9cf68d2-36bd-4b0d-b36e-7cf7ded2618e
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 442bad8e2dc7c587e665a233083859e86185d3e7
-ms.sourcegitcommit: e25979884395e7143492d604b7d195649aff410c
+ms.openlocfilehash: b19abab8774f79d18b9d82b4048625dd72b3af43
+ms.sourcegitcommit: be4525a93601d9356a4e487398262a2ffaf8c202
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73046916"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74206223"
 ---
 # <a name="tutorial-reconnaissance-alerts"></a>Tutorial: Alertas de reconhecimento  
 
@@ -99,9 +99,9 @@ Agora, examine as contas:<br>
 1. Investigue o computador de origem
 1. Se uma das tentativas de adivinhação corresponder a nomes de contas existentes, o invasor saberá da existência das contas em seu ambiente e poderá usar a força bruta para tentar acessar seu domínio usando os nomes de usuário descobertos. Investigue as contas existentes usando o [guia de investigação do usuário](investigate-a-user.md).
     > [!NOTE]
-    > Se a autenticação tiver sido feita usando o NTLM, poderá não haver informações suficientes disponíveis sobre o servidor que o computador de origem tentou acessar em alguns cenários. A ATP do Azure captura os dados do computador de origem com base no Evento 4776 do Windows, que contém o nome do computador de origem definido pelo computador.
-    > Ao usar o Evento 4776 do Windows para capturar essas informações, o campo de origem dessa informação, ocasionalmente, é substituído pelo dispositivo ou software para exibir apenas Estação de trabalho ou MSTSC. Se você tiver com frequência dispositivos que são exibidos como Estação de trabalho ou MSTSC, certifique-se de habilitar a auditoria de NTLM nos controladores de domínio relevantes para obter o nome do computador de origem real.    
-    > Para habilitar a auditoria NTLM, ative o Evento do Windows 8004 (o evento de autenticação NTLM que inclui informações sobre o computador de origem, a conta de usuário e o servidor que o computador de origem tentou acessar).
+    > Examine a evidência para conhecer o protocolo de autenticação usado. Se a autenticação NTLM tiver sido usada, habilite a auditoria NTLM do evento 8004 do Windows no controlador de domínio para determinar o servidor de recursos que os usuários tentaram acessar.<br>
+    > O evento 8004 do Windows é o evento de autenticação NTLM que inclui informações sobre o computador de origem, a conta de usuário e o servidor que a conta de usuário de origem tentou acessar. <br>
+    > A ATP do Azure captura os dados do computador de origem com base no Evento 4776 do Windows, que contém o nome do computador de origem definido pelo computador. Usando o evento 4776 do Windows para capturar essas informações, o campo de origem de informações é ocasionalmente substituído pelo dispositivo ou software e só exibe a Estação de trabalho ou o MSTSC como a fonte de informações. Além disso, o computador de origem pode não existir de fato em sua rede. Isso é possível porque os adversários geralmente se destinam a servidores abertos, acessíveis pela Internet de fora da rede, depois o utilizam para enumerar os usuários. Se você tiver com frequência dispositivos que são exibidos como Estação de trabalho ou MSTSC, habilite a auditoria NTLM nos controladores de domínio para obter o nome do servidor do recurso acessado. Você também deve investigar esse servidor, verificar se está aberto na Internet e, se possível, fechá-lo.
 
 1. Depois de saber qual servidor enviou a validação de autenticação, investigue-o verificando eventos como o Evento 4624 do Windows para compreender melhor o processo de autenticação. 
 
@@ -111,9 +111,9 @@ Agora, examine as contas:<br>
 
 1. Contém o [computador](investigate-a-computer.md) de origem. 
     1. Encontre a ferramenta que realizou o ataque e remova-a.
-    2. Procure usuários que estavam conectados no mesmo período em que a atividade ocorreu, pois eles também podem estar comprometidos. 
-    3. Redefina as senhas e habilite o MFA.
-2. Imponha [senhas complexas e longas](https://docs.microsoft.com/windows/device-security/security-policy-settings/password-policy) na organização. As senhas complexas e longas fornecem o primeiro nível de segurança necessário contra ataques de força bruta. Os ataques de força bruta geralmente são a próxima etapa na cadeia de ataque cibernético após a enumeração. 
+    1. Procure usuários que estavam conectados no mesmo período em que a atividade ocorreu, pois eles também podem estar comprometidos. 
+    1. Redefina as senhas e habilite o MFA.
+1. Imponha [senhas complexas e longas](https://docs.microsoft.com/windows/device-security/security-policy-settings/password-policy) na organização. As senhas complexas e longas fornecem o primeiro nível de segurança necessário contra ataques de força bruta. Os ataques de força bruta geralmente são a próxima etapa na cadeia de ataque cibernético após a enumeração. 
 
 ## <a name="network-mapping-reconnaissance-dns-external-id-2007"></a>Reconhecimento de mapeamento de rede (DNS) (ID 2007 externa) 
 
