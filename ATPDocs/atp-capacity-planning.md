@@ -7,12 +7,12 @@ ms.date: 11/05/2019
 ms.topic: quickstart
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
-ms.openlocfilehash: b9fa681e61d7e723ca3c942e406ed61c837cfe44
-ms.sourcegitcommit: 814af2addf833d40d10f7594275a132f888eea9b
+ms.openlocfilehash: b07800cfc3b2df6fdb290fff27a9e807be15056f
+ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2019
-ms.locfileid: "74153119"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74540881"
 ---
 # <a name="quickstart-plan-capacity-for-azure-atp"></a>Início Rápido: Planejar capacidade para o ATP do Azure
 
@@ -31,7 +31,7 @@ A maneira recomendada e mais simples de determinar a capacidade da implantação
 
 1. Execute a ferramenta de dimensionamento do ATP do Azure, **TriSizingTool.exe**, do arquivo zip que você baixou. 
 2. Quando concluir a execução da ferramenta, abra os resultados de arquivo do Excel.
-3. No arquivo do Excel, localize e clique na planilha **Resumo do ATP do Azure**. A outra planilha não é necessária, pois ela se destina ao planejamento do ATP do Azure.
+3. No arquivo do Excel, localize e clique na planilha **Resumo do ATP do Azure**. A outra planilha não é necessária, pois ela se destina ao planejamento do ATA.
    ![Ferramenta de planejamento de capacidade de amostra](media/capacity-tool.png)
 
 4. Localize o campo **Pacotes ocupados/s**, na tabela do sensor do ATP do Azure, no arquivo de resultados do Excel, e anote isso.

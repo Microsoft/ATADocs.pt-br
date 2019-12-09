@@ -5,19 +5,19 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 11/17/2019
+ms.date: 11/26/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 7d0f33db-2513-4146-a395-290e001f4199
 ms.reviewer: ort
 ms.suite: ems
-ms.openlocfilehash: e15949e904f16d6382c91aa880de17576dc52408
-ms.sourcegitcommit: 814af2addf833d40d10f7594275a132f888eea9b
+ms.openlocfilehash: 20587f66df9e4d21e5f0860b322acaab84491d22
+ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2019
-ms.locfileid: "74153101"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74540864"
 ---
 # <a name="whats-new-in-azure-advanced-threat-protection-azure-atp"></a>Novidades no ATP do Azure (Proteção Avançada contra Ameaças do Azure)
 
@@ -26,6 +26,11 @@ Este artigo é atualizado com frequência para manter você informado sobre as n
 Para obter detalhes das versões anteriores do ATP do Azure até (e incluindo) a versão 2.55, confira a [referência de versão do ATP do Azure](atp-release-reference.md).
 
 RSS feed: Receba uma notificação quando esta página for atualizada copiando e colando a seguinte URL em seu leitor de feed: <br>`https://docs.microsoft.com/api/search/rss?search=%22This+article+is+updated+frequently+to+let+you+know+what%27s+new+in+the+latest+release+of+Azure+ATP%22&locale=en-us`
+
+Lançado em 22 de novembro de 2019
+## <a name="azure-atp-release-2101"></a>ATP do Azure versão 2.101
+
+- Essa versão inclui melhorias e correções de bugs da infraestrutura do sensor interno.
 
 
 Lançado em 17 de novembro de 2019
