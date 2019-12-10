@@ -8,10 +8,10 @@ ms.author: mlottner
 ms.date: 02/28/2019
 ms.reviewer: itargoet
 ms.openlocfilehash: 116f4648026d8f291a1576bb0cbd4bf392ff8a9a
-ms.sourcegitcommit: 8681c4ed6ede58ace737f31eeff9a680b8e4256d
+ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "57007442"
 ---
 # <a name="tutorial-overview-atp-security-alert-lab"></a>Visão geral do tutorial: Laboratório de alerta de segurança do ATP

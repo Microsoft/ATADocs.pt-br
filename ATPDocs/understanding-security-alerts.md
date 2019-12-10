@@ -13,10 +13,10 @@ ms.assetid: 671747d5-faed-4352-a871-17b58fdc6574
 ms.reviewer: itargoet
 ms.suite: ems
 ms.openlocfilehash: f215639ea72d0c767f32bd9628e1c404da23aaa0
-ms.sourcegitcommit: ae9db212f268f067b217d33b0c3f991b6531c975
+ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "65196390"
 ---
 # <a name="tutorial-understanding-security-alerts"></a>Tutorial: entendendo os alertas de segurança
@@ -49,11 +49,11 @@ Cada alerta de segurança do ATP do Azure inclui:
 
 Após investigação adequada, todos os alertas de segurança do ATP do Azure podem ser classificados como um dos seguintes tipos de atividade:
 
-- **TP (verdadeiro positivo)**: uma ação mal-intencionada detectada pelo ATP do Azure.
+- **TP (verdadeiro positivo)** : uma ação mal-intencionada detectada pelo ATP do Azure.
 
-- **B-TP (verdadeiro positivo benigno)**: uma ação detectada pelo ATP do Azure que é real, mas não é mal-intencionada, como um teste de penetração ou uma atividade conhecida gerada por um aplicativo aprovado.
+- **B-TP (verdadeiro positivo benigno)** : uma ação detectada pelo ATP do Azure que é real, mas não é mal-intencionada, como um teste de penetração ou uma atividade conhecida gerada por um aplicativo aprovado.
 
-- **FP (falso positivo)**: um alarme falso, indicando que a atividade não ocorreu.
+- **FP (falso positivo)** : um alarme falso, indicando que a atividade não ocorreu.
 
 ### <a name="is-the-security-alert-a-tp-b-tp-or-fp"></a>O alerta de segurança é um TP, B-TP ou FP
 

@@ -8,10 +8,10 @@ ms.author: mlottner
 ms.date: 02/28/2019
 ms.reviewer: itargoet
 ms.openlocfilehash: 9ae630711b6ee7b7f84a233998d188e498af0a9e
-ms.sourcegitcommit: 7a32dcb65edc38fb9b3d340763045b21ea92feee
+ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "59745578"
 ---
 # <a name="tutorial-setup-an-atp-security-alert-lab"></a>Tutorial: Configurar um laboratório de alerta de segurança do ATP 
@@ -110,7 +110,7 @@ New-ADUser -Name AatpService -DisplayName "Azure ATP/ATA Service" -PasswordNever
 
 Para permitir que o serviço do ATP do Azure execute corretamente a enumeração de SAM-R e crie caminhos de Movimentação Lateral, você precisará editar a política de SAM.
 
-1. Encontre sua política de SAM em: **Políticas\> Configurações do Windows \> Configurações de Segurança \> Políticas Locais \> Opções de segurança\> "Acesso à rede: restringir clientes com permissão para efetuar chamadas remotas para SAM"**_
+1. Encontre sua política de SAM em: **Políticas\> Configurações do Windows \> Configurações de Segurança \> Políticas Locais \> Opções de segurança\> "Acesso à rede: restringir clientes com permissão para efetuar chamadas remotas para SAM"** _
 
     ![Modifique a Política de Grupo para permitir que o ATP do Azure use os recursos do caminho de Movimentação Lateral.](media/playbook-labsetup-localgrouppolicies3.png)
 

@@ -13,10 +13,10 @@ ms.assetid: 603d9e09-a07d-4357-862f-d5682c8bc3dd
 ms.reviewer: itargoet
 ms.suite: ems
 ms.openlocfilehash: 408c46d620f7b7f5da21d9dcfaf17097660dcc4c
-ms.sourcegitcommit: ae9db212f268f067b217d33b0c3f991b6531c975
+ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "65196386"
 ---
 # <a name="update-azure-atp-sensors"></a>Atualizar sensores da Azure ATP
