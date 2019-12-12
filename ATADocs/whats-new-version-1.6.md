@@ -13,10 +13,10 @@ ms.assetid: 27b139e5-12b9-4953-8f53-eb58e8ce0038
 ms.reviewer: bennyl
 ms.suite: ems
 ms.openlocfilehash: 3ef4f8061970c1d69b9f25479d762bb4c423a4fd
-ms.sourcegitcommit: ae9db212f268f067b217d33b0c3f991b6531c975
-ms.translationtype: HT
+ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "65196970"
 ---
 # <a name="whats-new-in-ata-version-16"></a>Novidades na versão 1.6 do ATA
@@ -99,11 +99,11 @@ Em implantações nas quais o caminho do banco de dados é movido manualmente, a
 ### <a name="migration-failure-when-updating-from-ata-15"></a>Falha na migração ao atualizar do ATA 1.5
 Ao atualizar para o ATA 1.6, o processo de atualização pode falhar com o seguinte código de erro:
 
-![Erro ao atualizar o ATA para 1.6](http://i.imgur.com/QrLSApr.png) Se você vir esse erro, examine o log de implantação em: **C:\Users\<User>\AppData\Local\Temp** e procure a seguinte exceção:
+![Erro ao atualizar para o ATA 1.6](http://i.imgur.com/QrLSApr.png) Se você receber esse erro, examine o log de implantação em: **C:Usuários\<Usuário>\AppData\Local\Temp** e procure pela seguinte exceção:
 
     System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> MongoDB.Driver.MongoWriteException: A write operation resulted in an error. E11000 duplicate key error index: ATA.UniqueEntityProfile.$_id_ dup key: { : "<guid>" } ---> MongoDB.Driver.MongoBulkWriteException`1: A bulk write operation resulted in one or more errors.  E11000 duplicate key error index: ATA.UniqueEntityProfile.$_id_ dup key: { : " <guid> " }
 
-Você também pode ver esse erro: System.ArgumentNullException: O valor não pode ser nulo.
+Você também pode ver este erro: System.ArgumentNullException: o valor não pode ser nulo.
     
 Se você ver algum desses erros, execute a seguinte solução alternativa:
 
@@ -121,7 +121,7 @@ Se você ver algum desses erros, execute a seguinte solução alternativa:
     1.  MongoDB
     2.  Central do Microsoft Advanced Threat Analytics
 7.  Revise os logs para verificar se o produto está sendo executado sem erros.
-8.  [Baixe](http://aka.ms/ataremoveduplicateprofiles "Baixe") a ferramenta "RemoveDuplicateProfiles.exe" e copie-a para o caminho de instalação principal (%ProgramFiles%\Microsoft Advanced Threat Analytics\Center)
+8.  [Baixe](http://aka.ms/ataremoveduplicateprofiles "Download") a ferramenta "RemoveDuplicateProfiles. exe" e copie-a para o caminho de instalação principal (%ProgramFiles%\Microsoft Advanced Threat Analytics\Center)
 9.  Em um prompt de comandos com privilégios elevados, execute `RemoveDuplicateProfiles.exe` e aguarde até que ela seja concluída com êxito.
 10. Do diretório: …\Microsoft Advanced Threat Analytics\Center\MongoDB\bin: **Mongo ATA**, digite o seguinte comando:
 
@@ -141,7 +141,7 @@ Essa versão do ATA apresenta um mecanismo de detecção aprimorado, que fornece
 O mecanismo de detecção novo e melhorado utiliza tecnologia de detecção embutida, permitindo detecção sem acessar o histórico de atividades de rede, para aumentar consideravelmente o desempenho do ATA Center. Isso também significa que é desnecessário migrar o histórico de atividades de rede durante o procedimento de atualização.
 O procedimento de atualização do ATA exporta os dados, caso você os queira para investigação futura, para `<Center Installation Path>\Migration` como um arquivo JSON.
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Confira Também
 [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
 [Atualizar o ATA para a versão 1.6 — guia de migração](ata-update-1.6-migration-guide.md)

@@ -13,10 +13,10 @@ ms.assetid: 88720401-1fb2-4353-ad39-32bc0088f0de
 ms.reviewer: bennyl
 ms.suite: ems
 ms.openlocfilehash: 7168e8a073473bacd659e662d71ac7984ac2a45c
-ms.sourcegitcommit: 07abbd941d91299475df2af469ee5a9a99e07e0f
+ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/28/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "66264963"
 ---
 # <a name="recommended-upgrade-path-for-ata"></a>Caminho de atualização recomendado para o ATA
@@ -28,7 +28,7 @@ Este artigo fornece informações sobre as versões disponíveis do Advanced Thr
 
 ## <a name="ata-versions"></a>Versões do ATA
 
-|Version|Nº do build|
+|Versão|Nº do build|
 |----|----|
 |1.6|1.6.4103|
 |1.6 Atualização 1|1.6.4317|
@@ -43,11 +43,11 @@ Este artigo fornece informações sobre as versões disponíveis do Advanced Thr
 
 ## <a name="upgrade-paths"></a>Caminhos de atualização
 
-Consulte o diagrama de caminho de atualização para determinar o caminho de atualização correto para sua instalação atual. 
+Consulte o diagrama de caminho de atualização para determinar o caminho de atualização correto para a instalação atual. 
 
-![Caminho de atualização de versão do ATA](./media/upgrade-path-ata.png)
+![Caminho de atualização da versão do ATA](./media/upgrade-path-ata.png)
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira Também
 - [Pré-requisitos do ATA](ata-prerequisites.md)
 - [Planejamento da capacidade do ATA](ata-capacity-planning.md)
 - [Configurar coleta de eventos](configure-event-collection.md)

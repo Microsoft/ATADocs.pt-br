@@ -13,10 +13,10 @@ ms.assetid: 05e49e23-6e0a-4ec0-9a63-a2093173c8a1
 ms.reviewer: bennyl
 ms.suite: ems
 ms.openlocfilehash: e2e57f5816ff1f250ba04cddb65848b31673a71e
-ms.sourcegitcommit: ae9db212f268f067b217d33b0c3f991b6531c975
-ms.translationtype: HT
+ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "65196330"
 ---
 # <a name="ata-database-management"></a>Gerenciamento do Banco de Dados de ATA
@@ -39,7 +39,7 @@ Consulte a [documentação relevante do MongoDB](http://docs.mongodb.org/manual/
 
 2. Pare o serviço **MongoDB**.
 
-3. Abra o arquivo de configuração Mongo localizado por padrão em: C:\Arquivos de Programas\Microsoft Advanced Threat Analytics\Center\MongoDB\bin\mongod.cfg.
+3. Abra o arquivo de configuração Mongo localizado, por padrão, em C:\Arquivos de Programas\Microsoft Advanced Threat Analytics\Center\MongoDB\bin\mongod.cfg.
 
    Localize o parâmetro `storage: dbPath`
 
@@ -53,7 +53,7 @@ Consulte a [documentação relevante do MongoDB](http://docs.mongodb.org/manual/
 
 7. Inicie o serviço **Centro do Microsoft Advanced Threat Analytics**.
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Confira Também
 - [Arquitetura do ATA](ata-architecture.md)
 - [Pré-requisitos do ATA](ata-prerequisites.md)
 - [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

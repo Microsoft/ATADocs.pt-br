@@ -13,10 +13,10 @@ ms.assetid: 14cb7513-5dc8-49cb-b3e0-94f469c443dd
 ms.reviewer: bennyl
 ms.suite: ems
 ms.openlocfilehash: 7dbc98d61319c40a3d3691ace28e1300bce72b73
-ms.sourcegitcommit: ae9db212f268f067b217d33b0c3f991b6531c975
-ms.translationtype: HT
+ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "65197084"
 ---
 # <a name="set-ata-notifications"></a>Definir notificações do ATA
@@ -37,7 +37,7 @@ Para receber notificações, defina os seguintes parâmetros:
     
     ![Ícone Definições de configuração do ATA](media/ATA-config-icon.png)
     
-1. Na seção **Notifications & Reports (Notificações e Relatórios)**, selecione **Notificações**.
+1. Na seção **Notifications & Reports (Notificações e Relatórios)** , selecione **Notificações**.
 1. Em **Notificações por Email**, especifique quais notificações devem ser enviadas por email: novas atividades suspeitas e novos problemas de integridade. Você pode definir um endereço de email separado para o qual enviar as atividades suspeitas e para os alertas de integridade para que, por exemplo, notificações de atividades suspeitas possam ser enviadas para o analista de segurança e as notificações de alerta de integridade possam ser enviadas para o administrador de TI.
     
     > [!NOTE]
@@ -51,5 +51,5 @@ Para receber notificações, defina os seguintes parâmetros:
 
 
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Confira Também
 [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

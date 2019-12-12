@@ -13,10 +13,10 @@ ms.assetid: 5a65285c-d1de-4025-9bb4-ef9c20b13cfa
 ms.reviewer: bennyl
 ms.suite: ems
 ms.openlocfilehash: 6669e23e2948997c452a44bfbe4fc08d659b3e8b
-ms.sourcegitcommit: ae9db212f268f067b217d33b0c3f991b6531c975
-ms.translationtype: HT
+ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "65197180"
 ---
 # <a name="troubleshooting-service-startup"></a>Solução de problemas de inicialização do serviço
@@ -48,7 +48,7 @@ Se puder iniciar, provavelmente a plataforma estará bem. Caso contrário, a pla
 **Sintoma**
 
 Seu Gateway do ATA não inicia e você receberá esse erro:<br></br>
-*System.Net.Http.HttpRequestException: código de status de resposta não indica êxito: 500 (Erro Interno do Servidor)*
+*System.Net.Http.HttpRequestException: o código de status de resposta não indica êxito: 500 (erro interno do servidor)*
 
 **Descrição**
 
@@ -62,7 +62,7 @@ Isso acontece porque, como parte do processo de instalação do Gateway Lightwei
 2. Em seguida, reinicie o serviço de PLA. O Gateway Lightweight do ATA automaticamente detectará a mudança e reiniciará o serviço.
 
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Confira Também
 - [Pré-requisitos do ATA](ata-prerequisites.md)
 - [Planejamento da capacidade do ATA](ata-capacity-planning.md)
 - [Configurar coleta de eventos](configure-event-collection.md)

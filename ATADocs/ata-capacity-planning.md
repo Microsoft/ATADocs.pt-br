@@ -12,17 +12,17 @@ ms.assetid: 1b5b24ff-0df8-4660-b4f8-64d68cc72f65
 ms.reviewer: bennyl
 ms.suite: ems
 ms.openlocfilehash: 99d02aeb30cac449c4e9ac19c3824e8ebd97d0d5
-ms.sourcegitcommit: dd8db49bc54acc5483a3fa889379230d144b0623
+ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/21/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72690219"
 ---
 # <a name="ata-capacity-planning"></a>Planejamento da capacidade de ATA
 
 *Aplica-se a: Advanced Threat Analytics versão 1.9*
 
-Este artigo ajuda você a determinar quantos servidores do ATA são necessários para monitorar sua rede. Ele ajuda a estimar quantos gateways do ATA e/ou gateways Lightweight do ATA são necessários e a capacidade do servidor para o centro do ATA e os gateways do ATA.
+Este artigo ajuda a determinar quantos servidores do ATA são necessários para monitorar a rede. Ele ajuda a estimar quantos gateways do ATA e/ou gateways Lightweight do ATA são necessários e a capacidade do servidor para o centro do ATA e os gateways do ATA.
 
 > [!NOTE] 
 > O ATA Center pode ser implantado em qualquer fornecedor de IaaS, desde que os requisitos de desempenho descritos neste artigo sejam atendidos.
@@ -76,7 +76,7 @@ A Central de ATA requer um mínimo recomendado de 30 dias de dados para a análi
 > - A taxa entre as atividades de leitura e gravação é de, aproximadamente, 1:3 abaixo de 100.000 pacotes por segundo e 1:6 acima de 100.000 pacotes por segundo.
 > - Ao executar o centro como uma máquina virtual (VM), o centro exige que toda a memória seja alocada para a VM, o tempo todo. Para obter mais informações sobre como executar o centro do ATA como uma máquina virtual, consulte [requisitos do centro do ATA](https://docs.microsoft.com/advanced-threat-analytics/ata-prerequisites#dynamic-memory)
 > - Para ter um melhor desempenho, defina a **Opção de Energia** do Centro do ATA como **Alto Desempenho**.<br>
-> - Ao trabalhar em um servidor físico, o banco de dados do ATA precisa que você **desabilite** o NUMA (acesso não uniforme à memória) no BIOS. O sistema pode referir-se ao NUMA como Intercalação de Nó, caso em que você precisará **habilitar** a Intercalação de Nó para desabilitar o NUMA. Para obter mais informações, consulte a documentação do BIOS. Isso não é pertinente quando o Centro do ATA está em execução em um servidor virtual.
+> - Ao trabalhar em um servidor físico, o banco de dados do ATA precisa que você **desabilite** o NUMA (acesso não uniforme à memória) no BIOS. O sistema pode referir-se ao NUMA como Intercalação de Nó, caso em que você precisará **habilitar** a Intercalação de Nó para desabilitar o NUMA. Para obter mais informações, confira a documentação do BIOS. Isso não é pertinente quando o Centro do ATA está em execução em um servidor virtual.
 
 
 ## <a name="choosing-the-right-gateway-type-for-your-deployment"></a>Escolhendo o tipo certo de gateway para sua implantação
@@ -91,7 +91,7 @@ Ao decidir sobre o tipo de implantação do Gateway, considere os seguintes bene
 |Tipo de gateway|Vantagens|Custo|Topologia de implantação|Uso do controlador de domínio|
 |----|----|----|----|-----|
 |Gateway do ATA|A implantação Fora de banda dificulta o trabalho dos invasores em descobrir se o ATA está presente|Mais alto|Instalado junto com o controlador de domínio (fora de banda)|Dá suporte a até 50.000 pacotes por segundo|
-|Gateway Lightweight do ATA|Não exige uma configuração de espelhamento de porta e servidor dedicado|canto|Instalado em um controlador de domínio|Dá suporte a até 10.000 pacotes por segundo|
+|Gateway Lightweight do ATA|Não exige uma configuração de espelhamento de porta e servidor dedicado|Inferior|Instalado em um controlador de domínio|Dá suporte a até 10.000 pacotes por segundo|
 
 Veja a seguir exemplos de cenários nos quais os controladores de domínio devem ser cobertos pelo Gateway Lightweight do ATA:
 
@@ -128,7 +128,7 @@ Um Gateway Lightweight do ATA pode oferecer suporte ao monitoramento de um contr
 > -   Se o controlador de domínio não tiver os recursos exigidos pelo Gateway Lightweight do ATA, o desempenho do controlador de domínio não será afetado, mas o Gateway Lightweight do ATA poderá não operar conforme o esperado.
 > -   Ao executar o centro como uma máquina virtual (VM), o centro exige que toda a memória seja alocada para a VM, o tempo todo. Para obter mais informações sobre como executar o centro do ATA como uma máquina virtual, consulte [requisitos do centro do ATA](https://docs.microsoft.com/advanced-threat-analytics/ata-prerequisites#dynamic-memory))
 > -   Para ter um melhor desempenho, defina a **Opção de Energia** do Gateway Lightweight do ATA como **Alto Desempenho**.
-> -   É necessário um mínimo de 5 GB de espaço e é recomendável 10 GB, incluindo o espaço necessário para os binários do ATA, [logs do ATA](troubleshooting-ata-using-logs.md)e [logs de desempenho](troubleshooting-ata-using-perf-counters.md).
+> -   É necessário um mínimo de 5 GB de espaço e é recomendável 10 GB de espaço, incluindo o espaço necessário para os binários do ATA, [logs do ATA](troubleshooting-ata-using-logs.md) e [logs de desempenho](troubleshooting-ata-using-perf-counters.md).
 
 
 ### <a name="ata-gateway-sizing"></a>Dimensionamento do Gateway de ATA
@@ -155,21 +155,21 @@ As considerações de espelhamento de porta podem exigir que você implante vár
 |20.000|6|24|
 |50.000|16|48|
 
-&#42;Número médio total de pacotes por segundo de todos os controladores de domínio que estão sendo monitorados pelo gateway do ATA específico durante sua hora de mais ocupado do dia.
+&#42;Número médio total de pacotes por segundo de todos os controladores de domínio que estão sendo monitorados pelo Gateway do ATA específico durante a respectiva hora do dia mais ocupada.
 
-&#42;A quantidade total de tráfego espelhado da porta do controlador de domínio não pode exceder a capacidade da NIC de captura no gateway do ATA.
+&#42;A quantidade total de tráfego espelhado pela porta do controlador de domínio não pode exceder a capacidade do NIC de captura no Gateway de ATA.
 
-&#42;&#42;O hyperthreading deve ser desabilitado.
+&#42;&#42;O hyper-threading deve ser desabilitado.
 
 > [!NOTE] 
 > -   Ao executar o centro como uma máquina virtual (VM), o centro exige que toda a memória seja alocada para a VM, o tempo todo. Para obter mais informações sobre como executar o centro do ATA como uma máquina virtual, consulte [requisitos do centro do ATA](https://docs.microsoft.com/advanced-threat-analytics/ata-prerequisites#dynamic-memory)
 > -   Para ter um melhor desempenho, defina a **Opção de Energia** do Gateway de ATA para **Alto Desempenho**.
-> -   É necessário um mínimo de 5 GB de espaço e é recomendável 10 GB, incluindo o espaço necessário para os binários do ATA, [logs do ATA](troubleshooting-ata-using-logs.md)e [logs de desempenho](troubleshooting-ata-using-perf-counters.md).
+> -   É necessário um mínimo de 5 GB de espaço e é recomendável 10 GB de espaço, incluindo o espaço necessário para os binários do ATA, [logs do ATA](troubleshooting-ata-using-logs.md) e [logs de desempenho](troubleshooting-ata-using-perf-counters.md).
 
 
 
 ## <a name="related-videos"></a>Vídeos Relacionados
-- [Escolhendo o tipo certo de gateway do ATA](https://channel9.msdn.com/Shows/Microsoft-Security/ATA-Deployment-Choose-the-Right-Gateway-Type)
+- [Como escolher o tipo certo de Gateway do ATA](https://channel9.msdn.com/Shows/Microsoft-Security/ATA-Deployment-Choose-the-Right-Gateway-Type)
 
 
 ## <a name="see-also"></a>Confira Também

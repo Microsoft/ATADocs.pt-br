@@ -13,10 +13,10 @@ ms.assetid: 1fe5fd6f-1b79-4a25-8051-2f94ff6c71c1
 ms.reviewer: bennyl
 ms.suite: ems
 ms.openlocfilehash: b5e5e8c5f42f786ca869ed2a29572e4512faf26f
-ms.sourcegitcommit: ae9db212f268f067b217d33b0c3f991b6531c975
-ms.translationtype: HT
+ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "65197225"
 ---
 # <a name="advanced-threat-analytics-suspicious-activity-guide"></a>Guia de atividades suspeitas Advanced Threat Analytics
@@ -26,9 +26,9 @@ ms.locfileid: "65197225"
 
 Após investigação adequada, qualquer atividade suspeita pode ser classificada como:
 
--   **Verdadeiro positivo**: uma ação mal-intencionada detectada pelo ATA.
+-   **Verdadeiro positivo**: uma ação mal intencionada detectada pelo ATA.
 
--   **Verdadeiro positivo benigno**: Uma ação detectada pelo ATA que é real, mas não é mal-intencionada, como um teste de penetração.
+-   **Verdadeiro positivo benigno**: uma ação detectada pelo ATA que é real, mas não é mal intencionada, como um teste de penetração.
 
 -   **Falso positivo**: um alarme falso, indicando que a atividade não ocorreu.
 
@@ -107,7 +107,7 @@ Nessa detecção, um alerta é disparado quando o ATA detecta um grande número 
 
 **Descrição**
 
-O downgrade de criptografia é um método para enfraquecer o Kerberos fazendo um downgrade do nível de criptografia de diferentes campos do protocolo que normalmente são criptografados usando o nível mais elevado de criptografia. Um campo criptografado enfraquecido pode ser um alvo mais fácil para tentativas de força bruta offline. Vários métodos de ataque utilizam criptografias Kerberos fracas. Nessa detecção, o ATA aprende os tipos de criptografia Kerberos usados por computadores e usuários e alerta você quando é usada uma criptografia mais fraca que: (1) seja incomum para o computador de origem e/ou o usuário e (2) corresponda a técnicas de ataque conhecidas.
+O downgrade de criptografia é um método para enfraquecer o Kerberos fazendo um downgrade do nível de criptografia de diferentes campos do protocolo que normalmente são criptografados usando o nível mais elevado de criptografia. Um campo criptografado enfraquecido pode ser um alvo mais fácil para tentativas de força bruta offline. Vários métodos de ataque utilizam criptografias Kerberos fracas. Nessa detecção, o ATA aprende os tipos de criptografia Kerberos usados por computadores e usuários e alerta você quando uma criptografia mais fraca é usada que: (1) seja incomum para o computador de origem e/ou o usuário; e (2) corresponda a técnicas de ataque conhecidas.
 
 Há três tipos de detecção:
 
@@ -119,12 +119,12 @@ Há três tipos de detecção:
 
 **Investigação**
 
-Primeiro, verifique a descrição do alerta para ver com qual dos três tipos de detecção acima você está lidando. Para saber mais, baixe a planilha do Excel.
+Primeiro, verifique a descrição do alerta para ver com qual dos três tipos de detecção acima você está lidando. Para obter mais informações, baixe a planilha do Excel.
 1.  Skeleton Key – você pode verificar se a Skeleton Key afetou os controladores de domínio usando o [analisador gravado pela equipe do ATA](https://gallery.technet.microsoft.com/Aorato-Skeleton-Key-24e46b73). Se o analisador encontrar malware em 1 ou mais controladores de domínio, é um verdadeiro positivo.
-2.  Golden Ticket – na planilha do Excel, vá para a guia de **Atividade de rede**. Você verá que o campo de downgrade relevante é **Solicitar Tipo de Criptografia de Tíquete** e **Tipos de Criptografia com Suporte no Computador de Origem** apresenta os métodos de criptografia mais fortes.
-  a.    Verifique o computador de origem e a conta ou, se houver vários computadores de origem e contas, verifique se eles têm algo em comum (por exemplo, toda a equipe de marketing usa um aplicativo específico que pode fazer o alerta ser disparado). Há casos em que um aplicativo personalizado raramente usado faz autenticação usando uma codificação de criptografia inferior. Verifique se há algum desses aplicativos personalizados no computador de origem. Nesse caso, ele é provavelmente um positivo verdadeiro benigno e pode ser **Suprimido**.
+2.  Bilhete dourado – na planilha do Excel, vá para a guia **atividade de rede** . Você verá que o campo de downgrade relevante é **solicitar tipo de criptografia de tíquete**e **tipos de criptografia com suporte do computador de origem** lista métodos de criptografia mais fortes.
+  a.    Verifique o computador de origem e a conta ou, se houver vários computadores de origem e contas, verifique se eles têm algo em comum (por exemplo, toda a equipe de marketing usa um aplicativo específico que pode estar fazendo o alerta ser disparado). Há casos em que um aplicativo personalizado raramente usado faz autenticação usando uma codificação de criptografia inferior. Verifique se há algum desses aplicativos personalizados no computador de origem. Nesse caso, ele é provavelmente um positivo verdadeiro benigno e pode ser **Suprimido**.
   b.    Verifique o recurso acessado por essas permissões. Se houver um recurso que todas elas estão acessando, valide-o e verifique se é um recurso válido que elas precisam acessar. Além disso, verifique se o recurso de destino é compatível com métodos de criptografia forte. Você pode verificar isso no Active Directory verificando o atributo `msDS-SupportedEncryptionTypes`, da conta de serviço do recurso.
-3.  Overpass-the-Hash – na planilha do Excel, vá para a guia de **Atividade de rede**. Você verá que o campo de downgrade relevante é **Tipo de Criptografia de Carimbo de Data/Hora Criptografado** e **Tipos de Criptografia com Suporte no Computador de Origem** contém métodos de criptografia mais fortes.
+3.  Overpass-The-hash – na planilha do Excel, vá para a guia **atividade de rede** . Você verá que o campo downgrade relevante é o **tipo de criptografia de carimbo de data/hora criptografado** e os tipos de **criptografia com suporte do computador de origem** contêm métodos de criptografia mais fortes
   a.    Há casos em que esse alerta pode ser disparado quando os usuários fazem logon usando cartões inteligentes, se a configuração do cartão inteligente foi alterada recentemente. Verifique se ocorreram alterações como essa para a(s) conta(s) envolvida(s). Nesse caso, ele é provavelmente um positivo verdadeiro benigno e pode ser **Suprimido**.
   b.    Verifique o recurso acessado por essas permissões. Se houver um recurso que todas elas estão acessando, valide-o e verifique se é um recurso válido que elas precisam acessar. Além disso, verifique se o recurso de destino é compatível com métodos de criptografia forte. Você pode verificar isso no Active Directory verificando o atributo `msDS-SupportedEncryptionTypes`, da conta de serviço do recurso.
 
@@ -466,7 +466,7 @@ Nesta detecção, um alerta é disparado quando ocorrem diversas falhas de auten
    - Se as tentativas de autenticação tiverem sido realizadas usando NTLM, você verá as atividades de eventos relevantes 
    - Se as tentativas de autenticação tiverem sido realizadas usando Kerberos, você verá as atividades de rede relevantes
 2. Clique no computador de origem para acessar a página de perfil. Verifique o que aconteceu no momento dessas tentativas, pesquisando atividades incomuns, como: quem estava conectado e quais recursos foram acessados. 
-3. Se a autenticação tiver sido executada usando NTLM, você vir que o alerta ocorre muitas vezes e não houver informações suficientes disponíveis sobre o servidor que tentou acessar o computador de origem, você deverá habilitar a **Auditoria de NTLM** nos controladores de domínio envolvidos. Para fazer isso, ative o evento 8004. Esse é o evento de autenticação de NTLM que inclui informações sobre o computador de origem, a conta de usuário e o **servidor** que o computador de origem tentou acessar. Depois que saber qual servidor enviou a validação de autenticação, você deverá investigar o servidor, verificando seus eventos, como 4624, para compreender melhor o processo de autenticação. 
+3. Se a autenticação tiver sido executada usando NTLM, você vir que o alerta ocorre muitas vezes e não houver informações suficientes disponíveis sobre o servidor que tentou acessar o computador de origem, você deverá habilitar a **Auditoria de NTLM** nos controladores de domínio envolvidos. Para fazer isso, ative o evento 8004. Esse é o evento de autenticação de NTLM que inclui informações sobre o computador de origem, a conta de usuário e o **servidor** que o computador de origem tentou acessar. Depois que souber qual servidor enviou a validação de autenticação, você deverá investigar o servidor, verificando seus eventos, como 4624, para compreender melhor o processo de autenticação. 
 
 
 **Remediação**
@@ -524,9 +524,9 @@ Os invasores usam ferramentas que implementam vários protocolos (SMB, Kerberos,
 
 Identifique o protocolo que seja incomum – na linha do tempo de atividade suspeita, clique na atividade suspeita para acessar a página de detalhes; o protocolo é exibido acima da seta: Kerberos ou NTLM.
 
-- **Kerberos**: Geralmente disparado se uma ferramenta de invasão como Mimikatz for potencialmente usada no ataque de Overpass-the-Hash. Verifique se o computador de origem está executando um aplicativo que implementa a sua própria pilha de Kerberos, isto não está de acordo com o RFC Kerberos. Nesse caso, ele é um positivo verdadeiro benigno e o alerta pode ser **Fechado**. Se o alerta continuar sendo disparado e esse ainda for o caso, você poderá **Suprimir** o alerta.
+- **Kerberos**: geralmente disparado se uma ferramenta de invasão como Mimikatz foi potencialmente usada no ataque de Overpass-the-Hash. Verifique se o computador de origem está executando um aplicativo que implementa a sua própria pilha de Kerberos, isto não está de acordo com o RFC Kerberos. Nesse caso, ele é um positivo verdadeiro benigno e o alerta pode ser **Fechado**. Se o alerta continuar sendo disparado e esse ainda for o caso, você poderá **Suprimir** o alerta.
 
-- **NTLM**: Pode ser WannaCry ou ferramentas como Metasploit, Medusa e Hydra.  
+- **NTLM**: pode ser WannaCry ou ferramentas como Metasploit, Medusa e Hydra.  
 
 Para determinar se esta atividade é um ataque WannaCry, realize as seguintes etapas:
 
@@ -556,7 +556,7 @@ Aplique as correções mais recentes a todas as suas máquinas e verifique se to
 - [Participar da comunidade de segurança](https://channel9.msdn.com/Shows/Microsoft-Security/Join-the-Security-Community)
 
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Confira Também
 - [Manual da atividade suspeita do ATA](http://aka.ms/ataplaybook)
 - [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Trabalhando com atividades suspeitas](working-with-suspicious-activities.md)

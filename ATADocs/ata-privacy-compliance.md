@@ -13,10 +13,10 @@ ms.assetid: 1b2d185c-62cd-45f0-b0dd-687b51317f32
 ms.reviewer: ophirp
 ms.suite: ems
 ms.openlocfilehash: 27f51d2b649f1a2bc3e1b6f2a36498fd73c0d77a
-ms.sourcegitcommit: ae9db212f268f067b217d33b0c3f991b6531c975
-ms.translationtype: HT
+ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "65196189"
 ---
 # <a name="ata-data-security-and-privacy"></a>Privacidade e segurança de dados do ATA
@@ -31,11 +31,11 @@ Todos os dados no ATA relacionados a entidades são derivados do AD (Active Dire
 
 No Centro do ATA, use a barra de pesquisa para exibir os dados de identificação pessoais que estão armazenados no banco de dados. Os usuários podem pesquisar um usuário ou dispositivo específico. Clicar na entidade abrirá a página de perfil do dispositivo ou do usuário. O perfil fornece detalhes abrangentes sobre a entidade, seu histórico e a atividade de rede relacionada, derivados do AD. 
 
-## <a name="updating-personal-data"></a>Atualizando dados pessoais 
+## <a name="updating-personal-data"></a>Atualização de dados pessoais 
 
 Os dados pessoais sobre usuários e entidades no ATA são derivados do objeto do usuário no AD da organização. Por isso, as alterações feitas no perfil do usuário no AD são refletidas no ATA. 
 
-## <a name="deleting-personal-data"></a>Excluindo dados pessoais 
+## <a name="deleting-personal-data"></a>Exclusão de dados pessoais 
 
 Embora os dados no ATA sejam replicados e sempre atualizados do AD, quando uma entidade é excluída no AD, os dados da entidade no ATA são mantidos para fins de investigação de segurança. 
 
@@ -67,7 +67,7 @@ Por exemplo:
 
 Esse script remove do banco de dados todos os dados de todas as atividades e alertas de segurança da entidade com mais de 30 dias. Somente os últimos 30 dias de dados serão retidos.
 
-## <a name="exporting-personal-data"></a>Exportando dados pessoais 
+## <a name="exporting-personal-data"></a>Exportação de dados pessoais 
 
 Como os dados relacionados a entidades no ATA são derivados do AD, apenas um subconjunto desses dados é armazenado no banco de dados do ATA. Por esse motivo, você deve exportar os dados relacionados a entidades do AD. 
 

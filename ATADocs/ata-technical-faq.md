@@ -13,10 +13,10 @@ ms.assetid: a7d378ec-68ed-4a7b-a0db-f5e439c3e852
 ms.reviewer: bennyl
 ms.suite: ems
 ms.openlocfilehash: 96087f0124825f1b6feb641085317ee89ac3e6ee
-ms.sourcegitcommit: ae9db212f268f067b217d33b0c3f991b6531c975
-ms.translationtype: HT
+ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "65196614"
 ---
 # <a name="ata-frequently-asked-questions"></a>Perguntas frequentes sobre o ATA
@@ -116,7 +116,7 @@ Para obter a lista completa das detecções do ATA, consulte [Quais detecções 
 Recomendamos o armazenamento rápido (discos de 7200 RPM não são recomendados) com acesso ao disco de baixa latência (menos de 10 ms). A configuração de RAID deve dar suporte a cargas pesadas de gravação (RAID-5/6 e seus derivados não são recomendados).
 
 ## <a name="how-many-nics-does-the-ata-gateway-require"></a>De quantos NICs o Gateway de ATA precisa?
-O Gateway de ATA requer um mínimo de dois adaptadores de rede:<br>1. Uma NIC para se conectar à rede interna e à Central de ATA<br>2. Uma NIC usada para capturar o tráfego de rede do controlador de domínio por meio do espelhamento de porta.<br>* Isso não se aplica ao Gateway Lightweight do ATA, que usa nativamente todos os adaptadores de rede que o controlador de domínio usa.
+O Gateway de ATA requer um mínimo de dois adaptadores de rede:<br>1. uma NIC para se conectar à rede interna e ao centro do ATA<br>2. uma NIC que é usada para capturar o tráfego de rede do controlador de domínio por meio do espelhamento de porta.<br>* Isso não se aplica ao Gateway Lightweight do ATA, que usa nativamente todos os adaptadores de rede que o controlador de domínio usa.
 
 ## <a name="what-kind-of-integration-does-ata-have-with-siems"></a>Que tipo de integração o ATA tem com o SIEMs?
 O ATA tem uma integração bidirecional com o SIEMs, da seguinte maneira:
@@ -158,7 +158,7 @@ O Microsoft Advanced Threat Analytics oferece suporte a ambientes com vários do
 Sim, é possível exibir a integridade geral da implantação, bem como os problemas específicos relacionados à configuração, conectividade, etc., e você recebe um alerta quando ocorrerem.
 
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Confira Também
 - [Pré-requisitos do ATA](ata-prerequisites.md)
 - [Planejamento da capacidade do ATA](ata-capacity-planning.md)
 - [Configurar coleta de eventos](configure-event-collection.md)

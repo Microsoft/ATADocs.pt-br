@@ -13,10 +13,10 @@ ms.assetid: a5f90544-1c70-4aff-8bf3-c59dd7abd687
 ms.reviewer: bennyl
 ms.suite: ems
 ms.openlocfilehash: 213f098fe878afda763eebce6080909b63c3cf91
-ms.sourcegitcommit: ef68a774d2756719bce8747e65f8bde2b9afdd5d
+ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "73618456"
 ---
 # <a name="ata-prerequisites"></a>Pré-requisitos do ATA
@@ -88,9 +88,9 @@ A instalação do ATA Center como uma máquina virtual tem suporte.
 
 |VM em execução em|Description|
 |------------|-------------|
-|Hyper-V|Verifique se **habilitar memória dinâmica** não está habilitado para a VM.|
-|VMWare|Verifique se a quantidade de memória configurada e a memória reservada são iguais ou selecione a opção a seguir na configuração de VM – **reservar toda a memória de convidado (todas bloqueadas)** .|
-|Outro host de virtualização|Consulte a documentação fornecida pelo fornecedor sobre como garantir que a memória seja totalmente alocada para a VM em todos os momentos. |
+|Hyper-V|Garanta que a opção **Habilitar Memória Dinâmica** não esteja habilitada para a VM.|
+|VMWare|Verifique se a quantidade de memória configurada e a memória reservada são iguais ou selecione a seguinte opção na configuração da VM – **Reservar toda a memória de convidado (Tudo bloqueado)** .|
+|Outro host de virtualização|Confira a documentação fornecida pelo fornecedor sobre como garantir que a memória seja totalmente alocada para a VM em todos os momentos. |
 |
 
 Se você executar a Central de ATA como uma máquina virtual, deverá finalizar o servidor antes de criar um novo ponto de verificação para evitar uma possível corrupção do banco de dados.

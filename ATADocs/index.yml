@@ -13,10 +13,10 @@ metadata:
   ms.author: mlottner
   ms.date: 10/01/2019
   ms.openlocfilehash: 85fdb8c87afd48ce651983e4b52f3849b64d4454
-  ms.sourcegitcommit: 8f085179ea099a8000c982fbac39ca3f570520fb
+  ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
   ms.translationtype: MT
   ms.contentlocale: pt-BR
-  ms.lasthandoff: 10/02/2019
+  ms.lasthandoff: 12/05/2019
   ms.locfileid: "71721090"
 landingContent:
 - title: Sobre a análise avançada de ameaças
@@ -53,7 +53,7 @@ landingContent:
       url: use-case-lateral-movement-path.md
     - text: Gerenciar configurações de telemetria
       url: manage-telemetry-settings.md
-- title: Investigue as ameaças
+- title: Investigar as ameaças
   linkLists:
   - linkListType: how-to-guide
     links:

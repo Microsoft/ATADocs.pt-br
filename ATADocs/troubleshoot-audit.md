@@ -13,10 +13,10 @@ ms.assetid: 1d186a96-ef70-4787-aa64-c03d1db94ce0
 ms.reviewer: bennyl
 ms.suite: ems
 ms.openlocfilehash: 3fb9303f33342349d72d1d30e69b87c8d4e003bb
-ms.sourcegitcommit: ae9db212f268f067b217d33b0c3f991b6531c975
-ms.translationtype: HT
+ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "65197059"
 ---
 # <a name="working-with-ata-audit-logs"></a>Trabalhando com logs de auditoria do ATA
@@ -40,6 +40,6 @@ O log de auditoria do Gateway do ATA contém:
 *O log de auditoria de alterações de configuração contém a configuração anterior e a nova configuração.
 
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Confira Também
 - [Trabalhando com atividades suspeitas](working-with-suspicious-activities.md)
 - [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

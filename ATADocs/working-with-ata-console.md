@@ -13,10 +13,10 @@ ms.assetid: 1bf264d9-9697-44b5-9533-e1c498da4f07
 ms.reviewer: bennyl
 ms.suite: ems
 ms.openlocfilehash: 3908cc6ad907111fc7f6e32fd562ce0d6298dea7
-ms.sourcegitcommit: ae9db212f268f067b217d33b0c3f991b6531c975
-ms.translationtype: HT
+ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "65197120"
 ---
 # <a name="working-with-the-ata-console"></a>Trabalhando com o Console do ATA
@@ -112,12 +112,12 @@ A lista de grupos a seguir é considerada **Confidencial** pelo ATA. Qualquer en
 - Administradores  
 - Usuários avançados  
 - Opers. de contas  
-- Operadores de Servidores   
+- Opers. de servidores   
 - Operadores de impressão,
 - Operadores de backup,
 - Replicadores 
 - Usuários da Área de Trabalho Remota 
-- Operadores de Configuração de Rede 
+- Operadores de configuração de rede 
 - Criadores de confiança de floresta de entrada 
 - Administradores do DNS 
 
@@ -140,5 +140,5 @@ Se você passar o mouse sobre a entidade, em qualquer lugar no console onde exis
 
 
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Confira Também
 [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

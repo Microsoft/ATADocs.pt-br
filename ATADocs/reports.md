@@ -13,10 +13,10 @@ ms.assetid: 38ea49b5-cd5e-43e5-bc39-5071f759633b
 ms.reviewer: bennyl
 ms.suite: ems
 ms.openlocfilehash: 279c8cc8f44e0c2803966709511d3089bce5d3a8
-ms.sourcegitcommit: ae9db212f268f067b217d33b0c3f991b6531c975
-ms.translationtype: HT
+ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "65197086"
 ---
 # <a name="ata-reports"></a>Relatórios do ATA
@@ -64,7 +64,7 @@ Para definir um relatório agendado:
 > Os relatórios agendados são entregues por email e poderão ser enviados apenas se você já tiver configurado um servidor de email em **Configuração** e, em seguida, em **Notificações e Relatórios**, selecione **Servidor de email**.
 
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Confira Também
 - [Pré-requisitos do ATA](ata-prerequisites.md)
 - [Planejamento da capacidade do ATA](ata-capacity-planning.md)
 - [Configurar coleta de eventos](configure-event-collection.md)

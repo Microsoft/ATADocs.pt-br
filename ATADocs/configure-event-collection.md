@@ -13,10 +13,10 @@ ms.assetid: 3f0498f9-061d-40e6-ae07-98b8dcad9b20
 ms.reviewer: bennyl
 ms.suite: ems
 ms.openlocfilehash: 825185a2aaf792e6b9c1fe58e022174c2f98bb0c
-ms.sourcegitcommit: ae9db212f268f067b217d33b0c3f991b6531c975
+ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "65196827"
 ---
 # <a name="configuring-windows-event-forwarding"></a>Configuração do encaminhamento de eventos do Windows
@@ -26,7 +26,7 @@ ms.locfileid: "65196827"
 > [!NOTE]
 > Para as versões 1.8 e mais recentes do ATA, a configuração de coleta de eventos não é mais necessária para Gateways Lightweight do ATA. O Gateway Lightweight do ATA realiza a leitura de eventos localmente, sem a necessidade de configurar o encaminhamento de eventos.
 
-Para aprimorar as funcionalidades de detecção, o ATA precisa dos seguintes eventos do Windows: 4776, 4732, 4733, 4728, 4729, 4756, 4757, 7045. Eles podem ser lidos automaticamente pelo Gateway Lightweight do ATA ou no caso de o Gateway Lightweight do ATA não estar implantado, podem ser encaminhados para o Gateway do ATA de duas maneiras: configurando o Gateway do ATA para escutar os eventos do SIEM ou configurando o Encaminhamento de Eventos do Windows.
+Para aprimorar as funcionalidades de detecção, o ATA precisa dos seguintes eventos do Windows: 4776, 4732, 4733, 4728, 4729, 4756, 4757 e 7045. Eles podem ser lidos automaticamente pelo Gateway Lightweight do ATA ou no caso de o Gateway Lightweight do ATA não estar implantado, podem ser encaminhados para o Gateway do ATA de duas maneiras: configurando o Gateway do ATA para escutar os eventos do SIEM ou configurando o Encaminhamento de Eventos do Windows.
 
 > [!NOTE]
 > Se você estiver usando o Server Core, o [wecutil](https://docs.microsoft.com/windows-server/administration/windows-commands/wecutil) poderá ser usado para criar e gerenciar assinaturas de eventos que são encaminhados de computadores remotos.
@@ -35,7 +35,7 @@ Para aprimorar as funcionalidades de detecção, o ATA precisa dos seguintes eve
 
 Após a configuração do espelhamento de porta dos controladores de domínio para o Gateway do ATA, siga as instruções a seguir para configurar o Encaminhamento de Eventos do Windows usando a configuração Iniciada pela Origem. Essa é uma maneira para configurar o Encaminhamento de eventos do Windows. 
 
-**Etapa 1: adicionar a conta de serviço de rede ao Grupo de Leitores de Log de Eventos do domínio.** 
+**Etapa 1: Adicionar a conta de serviço de rede ao Grupo de Leitores de Log de Eventos do domínio.** 
 
 Neste cenário, supomos que o Gateway ATA seja membro do domínio.
 
@@ -45,7 +45,7 @@ Neste cenário, supomos que o Gateway ATA seja membro do domínio.
 
 Após adicionar o **Serviço de Rede** ao grupo **Leitores de Log de Eventos**, reinicie os controladores de domínio para que a alteração tenha efeito.
 
-**Etapa 2: criar uma política nos controladores de domínio para definir a configuração Configurar Gerenciador de Assinaturas de destino.** 
+**Etapa 2: Criar uma política nos controladores de domínio para definir a configuração Configurar Gerenciador de Assinaturas de destino.** 
 > [!Note] 
 > Você pode criar uma política de grupo para essas configurações e aplicá-la a cada controlador de domínio monitorado pelo Gateway do ATA. As etapas a seguir modificarão a política local do controlador de domínio.     
 
@@ -60,7 +60,7 @@ Após adicionar o **Serviço de Rede** ao grupo **Leitores de Log de Eventos**, 
    1.  Selecione **Habilitado**.
    2.  Em **Opções**, clique em **Mostrar**.
 
-   3.  Em **SubscriptionManagers**, insira o seguinte valor e clique em **OK**: *Server=http://<fqdnATAGateway>:5985/wsman/SubscriptionManager/WEC,Refresh=10* 
+   3.  Em **SubscriptionManagers**, digite o seguinte valor e clique em **OK**: *Server=http://<fqdnATAGateway>:5985/wsman/SubscriptionManager/WEC,Refresh=10* 
       
         *(Por exemplo: Server=`http://atagateway9.contoso.com:5985/wsman/SubscriptionManager/WEC,Refresh=10`)*
       
@@ -69,7 +69,7 @@ Após adicionar o **Serviço de Rede** ao grupo **Leitores de Log de Eventos**, 
    4.  Clique em **OK**.
    5.  Em um prompt de comandos com privilégios elevados, digite *gpupdate /force*. 
 
-**Etapa 3: executar as seguintes etapas no ATA Gateway** 
+**Etapa 3: Executar as seguintes etapas no Gateway do ATA** 
 
 1.  Em um prompt de comandos com privilégios elevados, digite *wecutil qc*
 2.  Abra o **Visualizador de Eventos**. 
@@ -88,12 +88,12 @@ Após adicionar o **Serviço de Rede** ao grupo **Leitores de Log de Eventos**, 
 
         ![Imagem do filtro de consulta](media/wef%204%20query%20filter.png)
 
-    5.  Clique com o botão direito do mouse na assinatura criada e selecione **Status de Tempo de Execução** para verificar se há problemas com o status. 
+    5.  Clique com o botão direito do mouse na assinatura criada e selecione **Status de Runtime** para verificar se há problemas com o status. 
     6.  Depois de alguns minutos, verifique se os eventos definidos para serem encaminhados aparecem nos Eventos Encaminhados no Gateway do ATA.
 
 
-Para obter mais informações, consulte: [Configurar computadores para encaminhar e coletar eventos](https://technet.microsoft.com/library/cc748890)
+Para saber mais, confira: [Configurar computadores para encaminhar e coletar eventos](https://technet.microsoft.com/library/cc748890)
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Confira Também
 - [Instalar o ATA](install-ata-step1.md)
 - [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
