@@ -13,10 +13,10 @@ ms.assetid: bff20bf7-8b53-49da-81e5-b818a1c3b24e
 ms.reviewer: bennyl
 ms.suite: ems
 ms.openlocfilehash: 2f60b7450c430793c9c14139f9cf268908a5dbc4
-ms.sourcegitcommit: ae9db212f268f067b217d33b0c3f991b6531c975
-ms.translationtype: HT
+ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "65195689"
 ---
 # <a name="provide-ata-with-your-email-server-settings"></a>Forneça ao ATA suas configurações do servidor de emails
@@ -36,11 +36,11 @@ O ATA pode notificar você quando detectar uma atividade suspeita. Para que o AT
 4. Na seção **Notificações**, em **Servidor de email**, insira as seguintes informações:
 
 
-   |              Campo              |                                                                                                 Descrição                                                                                                  |               Valor                |
+   |              Campo              |                                                                                                 Description                                                                                                  |               Valor                |
    |---------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------|
    | Ponto de extremidade do servidor SMTP (obrigatório) |                                                            Digite o FQDN do servidor SMTP e, opcionalmente, altere o número da porta (padrão: 25).                                                            | Por exemplo:<br />smtp.contoso.com |
-   |               SSL               |                                              Ativar SSL se o servidor SMTP exigir SSL. **Observação:** Se você habilitar o SSL, também precisará alterar o número da Porta.                                               |        O padrão é desabilitado         |
-   |         Autenticação          | Habilite se o seu servidor SMTP exigir autenticação. **Observação:** Se você habilitar a autenticação, será necessário fornecer um nome de usuário e senha de uma conta de email que tenha permissão para se conectar ao servidor SMTP. |        O padrão é desabilitado         |
+   |               SSL               |                                              Ativar SSL se o servidor SMTP exigir SSL. **Observação:** se você habilitar o SSL, também precisará alterar o número da Porta.                                               |        O padrão é desabilitado         |
+   |         Authentication          | Habilite se o seu servidor SMTP exigir autenticação. **Observação:** se você habilitar a autenticação, será necessário fornecer um nome de usuário e senha de uma conta de email que tenha permissão para se conectar ao servidor SMTP. |        O padrão é desabilitado         |
    |      Enviar de (obrigatório)       |                                                                        Digite um endereço de email a partir do qual o email será enviado.                                                                         | Por exemplo:<br />ATA@contoso.com  |
 
    ![Imagem das configurações do servidor de emails do ATA](media/ata-email-server.png)
@@ -54,7 +54,7 @@ O ATA pode notificar você quando detectar uma atividade suspeita, enviando a no
 
    -   Porta na qual o servidor SIEM está escutando
 
-   -   Qual transporte usar: UDP, TCP ou TLS (Syslog protegido)
+   -   O transporte a ser usado: UDP, TCP ou TLS (Syslog protegido)
 
    -   Formato no qual enviar os dados, RFC 3164 ou 5424
 
@@ -68,7 +68,7 @@ O ATA pode notificar você quando detectar uma atividade suspeita, enviando a no
 
 5. Na seção Notificações, selecione **Servidor Syslog** insira as seguintes informações:
 
-   |Campo|Descrição|
+   |Campo|Description|
    |---------|---------------|
    |Ponto de extremidade de servidor Syslog|FQDN do servidor Syslog e, opcionalmente, altere o número da porta (padrão: 514)|
    |Transport|Pode ser UDP, TCP ou TLS (Syslog protegido)|
@@ -78,5 +78,5 @@ O ATA pode notificar você quando detectar uma atividade suspeita, enviando a no
 
 
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Confira Também
 [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

@@ -13,10 +13,10 @@ ms.assetid: 7620e171-76d5-4e3f-8b03-871678217a3a
 ms.reviewer: arzinger
 ms.suite: ems
 ms.openlocfilehash: e42811432fe01e0eddcfe0acf5dc1c47a3f34379
-ms.sourcegitcommit: 4fdee32cea25e126db91ba89f09c40a3bbbc7b3b
-ms.translationtype: HT
+ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "65044060"
 ---
 # <a name="ata-disaster-recovery"></a>Recuperação de desastre de ATA
@@ -32,7 +32,7 @@ Este artigo descreve como recuperar rapidamente seu Centro de ATA e restaurar a 
 
 1. A configuração do Centro de ATA é armazenada em backup em um arquivo a cada quatro horas. Localize a última cópia de backup da configuração do Centro de ATA e salve-a em um computador à parte. Para obter uma explicação completa de como localizar esses arquivos, confira [Exportar e importar a configuração de ATA](ata-configuration-file.md). 
 2. Exportação do certificado do Centro de ATA.
-    1. No gerenciador de certificados, navegue até **Certificados (Computador Local)** -> **Pessoal** ->**Certificados** e selecione **Centro de ATA**.
+    1. No gerenciador de certificados, navegue até **Certificados (Computador Local)**  -> **Pessoal** ->**Certificados** e selecione **Centro de ATA**.
     2. Clique com o botão direito do mouse em **Centro de ATA** e selecione **Todas as Tarefas** e, em seguida, **Exportar**. 
      ![Certificado do Centro de ATA](media/ata-center-cert.png)
     3. Siga as instruções para exportar o certificado, certificando-se de exportar também a chave privada.
@@ -65,7 +65,7 @@ Este artigo descreve como recuperar rapidamente seu Centro de ATA e restaurar a 
 
 
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Confira Também
 - [Pré-requisitos do ATA](ata-prerequisites.md)
 - [Planejamento da capacidade do ATA](ata-capacity-planning.md)
 - [Configurar coleta de eventos](install-ata-step6.md)

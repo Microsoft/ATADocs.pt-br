@@ -13,10 +13,10 @@ ms.assetid: 344c0f33-45e1-42e2-a051-f722a4504531
 ms.reviewer: bennyl
 ms.suite: ems
 ms.openlocfilehash: 41f7d2e17d45e931c9472df2225f46f460f03a95
-ms.sourcegitcommit: ae9db212f268f067b217d33b0c3f991b6531c975
-ms.translationtype: HT
+ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "65195624"
 ---
 # <a name="excluding-entities-from-detections"></a>Excluindo entidades de detecções
@@ -35,7 +35,7 @@ Há duas maneiras em que você pode excluir entidades, na atividade suspeita em 
 
     ![Excluir entidades](./media/exclude-in-sa.png)
 
-- **Na página Configuração**:  para examinar ou modificar qualquer exclusão: em **Configuração** clique em **Exclusões** e, em seguida, selecione a atividade suspeita, como **Credenciais de conta confidencial expostas**.
+- **Na página Configuração**: para examinar ou modificar qualquer exclusão: em **Configuração** clique em **Exclusões** e, em seguida, selecione a atividade suspeita, como **Credenciais de conta confidencial expostas**.
 
     ![Configuração de exclusão](./media/exclusions-config-page.png)
 
@@ -56,6 +56,6 @@ Quando você tiver a possibilidade de exclusão de um endereço IP ou de um comp
 > As páginas de configuração podem ser modificadas apenas por administradores do ATA.
 
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Confira Também
 - [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Modificando a configuração do ATA](modifying-ata-center-configuration.md)

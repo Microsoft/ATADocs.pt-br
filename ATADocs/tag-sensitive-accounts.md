@@ -13,10 +13,10 @@ ms.assetid: 40a1c5c4-b8d6-477c-8ae5-562b37661624
 ms.reviewer: bennyl
 ms.suite: ems
 ms.openlocfilehash: 39ad944d4517cbfe73cc7ac95f0cf7ceb6a3f213
-ms.sourcegitcommit: ae9db212f268f067b217d33b0c3f991b6531c975
-ms.translationtype: HT
+ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "65196041"
 ---
 # <a name="tag-sensitive-accounts"></a>Marcar contas confidenciais
@@ -48,12 +48,12 @@ A lista de grupos a seguir é considerada Confidencial pelo ATA. Qualquer entida
 -   Administradores
 -   Usuários avançados
 -   Opers. de contas
--   Operadores de Servidores
+-   Opers. de servidores
 -   Operadores de Impressão
 -   Operadores de cópia
 -   Replicadores
 -   Usuários da Área de Trabalho Remota 
--   Operadores de Configuração de Rede 
+-   Operadores de configuração de rede 
 -   Criadores de confiança de floresta de entrada
 -   Administradores do domínio
 -   Controladores de Domínio

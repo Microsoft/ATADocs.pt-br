@@ -13,10 +13,10 @@ ms.assetid: 51de491c-49ba-4aff-aded-cc133a8ccf0b
 ms.reviewer: ''
 ms.suite: ems
 ms.openlocfilehash: b10c2814fcac064d50bce292e86397ea5a0da21e
-ms.sourcegitcommit: ae9db212f268f067b217d33b0c3f991b6531c975
-ms.translationtype: HT
+ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "65196056"
 ---
 # <a name="whats-new-in-ata-version-19"></a>Novidades da versão 1.9 do ATA
@@ -27,7 +27,7 @@ Essas notas de versão fornecem informações sobre atualizações, novos recurs
 
 ## <a name="new--updated-detections"></a>Detecções novas e atualizadas
 
--  **Criação de serviço suspeito**: Os invasores tentam executar um serviço suspeito em sua rede. Agora, o ATA emite um alerta quando identifica que alguém executa um novo serviço, que parece suspeito, em um controlador de domínio. Essa detecção é baseada em eventos (e não em tráfego de rede). Para obter mais informações, veja o [Guia de atividades suspeitas](suspicious-activity-guide.md#suspicious-service-creation).
+-  **Criação de serviços suspeitos**: invasores tentam executar serviços suspeitos na sua rede. Agora, o ATA emite um alerta quando identifica que alguém executa um novo serviço, que parece suspeito, em um controlador de domínio. Essa detecção é baseada em eventos (e não em tráfego de rede). Para obter mais informações, veja o [Guia de atividades suspeitas](suspicious-activity-guide.md#suspicious-service-creation).
 
 
 ## <a name="new-reports-to-help-you-investigate"></a>Novos relatórios para ajudá-lo a investigar 
@@ -60,7 +60,7 @@ Essas notas de versão fornecem informações sobre atualizações, novos recurs
 
 
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Confira Também
 [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
 [Atualizar o ATA para a versão 1.9 — guia de migração](ata-update-1.9-migration-guide.md)

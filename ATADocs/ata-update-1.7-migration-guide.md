@@ -13,10 +13,10 @@ ms.assetid: 8eefcd45-7a4b-4074-ac5b-1ffc48e6654a
 ms.reviewer: bennyl
 ms.suite: ems
 ms.openlocfilehash: 10c2cc0858ba2403fc16721437f39cdd6dd2cc7c
-ms.sourcegitcommit: ae9db212f268f067b217d33b0c3f991b6531c975
-ms.translationtype: HT
+ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "65196153"
 ---
 # <a name="ata-update-to-17-migration-guide"></a>Guia de migração de atualização do ATA para 1.7
@@ -49,7 +49,7 @@ Nessa versão, o mesmo arquivo de instalação (Microsoft ATA Center Setup.exe) 
     > [!IMPORTANT]
     > Atualize todos os Gateways do ATA para ter certeza de o ATA funciona corretamente.
 
-### <a name="step-1-update-the-ata-center"></a>Etapa 1: Atualize o Centro do ATA
+### <a name="step-1-update-the-ata-center"></a>Etapa 1: Atualizar o Centro do ATA
 
 1.  Faça backup do seu banco de dados: (opcional)
 
@@ -61,7 +61,7 @@ Nessa versão, o mesmo arquivo de instalação (Microsoft ATA Center Setup.exe) 
 
     -  Na página **Boas-vindas**, selecione seu idioma e clique em **Avançar**.
 
-    -  Se você não tiver habilitado as atualizações automáticas na versão 1.6, será necessário definir o ATA para usar o Microsoft Update para ATA a fim de permanecer atualizado.  Na página do Microsoft Update, selecione **Usar o Microsoft Update ao verificar se há atualizações (recomendado)**.
+    -  Se você não tiver habilitado as atualizações automáticas na versão 1.6, será necessário definir o ATA para usar o Microsoft Update para ATA a fim de permanecer atualizado.  Na página do Microsoft Update, selecione **Usar o Microsoft Update ao verificar se há atualizações (recomendado)** .
     ![Imagem Manter o ATA atualizado](media/ata_ms_update.png) Isso ajustará as configurações do Windows para habilitar atualizações para os outros produtos da Microsoft (incluindo o ATA), como visto aqui. 
      ![Imagem de atualização automática do Windows](media/ata_installupdatesautomatically.png)
 
@@ -83,10 +83,10 @@ Nessa versão, o mesmo arquivo de instalação (Microsoft ATA Center Setup.exe) 
 > A porta de escuta Syslog configurada em todos os Gateways será alterada para 514.
  
 > [!NOTE] 
-> Para instalar novos Gateways ATA, acesse a tela **Gateways** e clique em **Baixar a instalação do Gateway** para obter o pacote de instalação ATA 1.7 e seguis as instruções para uma nova instalação do Gateway, conforme descrito na [Etapa 4. Instalar o Gateway do ATA](install-ata-step4.md).
+> Para instalar novos gateways do ATA, acesse a tela **gateways** e clique em **baixar a instalação do gateway** para obter o pacote de instalação do ATA 1,7 e siga as instruções para a nova instalação do gateway, conforme descrito na [etapa 4. Instale o gateway do ATA](install-ata-step4.md).
 
 
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Confira Também
 
 - [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

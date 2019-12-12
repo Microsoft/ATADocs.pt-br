@@ -13,10 +13,10 @@ ms.assetid: 2a5b6652-2aef-464c-ac17-c7e5f12f920f
 ms.reviewer: bennyl
 ms.suite: ems
 ms.openlocfilehash: c0f15942dd3888d092d8236b78261de1645e5dc0
-ms.sourcegitcommit: ae9db212f268f067b217d33b0c3f991b6531c975
-ms.translationtype: HT
+ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "65195741"
 ---
 # <a name="install-ata---step-5"></a>Instalação do ATA - Etapa 5
@@ -41,8 +41,8 @@ Após a instalação do Gateway do ATA, execute as etapas a seguir para definir 
 
    ![Imagem de definição das configurações do gateway](media/ATA-Gateways-config-2.png)
 
-   - **Descrição**: digite uma descrição do ATA Gateway (opcional).
-   - **Controladores de Domínio Espelhados da Porta (FQDN)** (obrigatórios para o ATA Gateway; não podem ser alterados para o ATA Lightweight Gateway): Digite o FQDN completo de seu controlador de domínio e clique no sinal de adição para acrescentá-lo à lista. Por exemplo, **dc01.contoso.com**
+   - **Descrição**: insira uma descrição para o Gateway do ATA (opcional).
+   - **Controladores de Domínio com porta espelhada (FQDN)** (exigidos para o Gateway do ATA, isso não pode ser alterado para o Gateway Lightweight do ATA): insira o FQDN completo de seu controlador de domínio e clique no sinal de adição para adicioná-lo à lista. Por exemplo, **dc01.contoso.com**
 
    As informações a seguir se aplicam aos servidores digitados na lista **Controladores de Domínio**:  
 
@@ -53,7 +53,7 @@ Após a instalação do Gateway do ATA, execute as etapas a seguir para definir 
    - Para um Gateway do ATA em um servidor dedicado, selecione os adaptadores de rede que são configurados como a porta de espelho do destino. Eles recebem o tráfego do controlador de domínio espelhado.
    - Para um Gateway Lightweight do ATA, trata-se de todos os adaptadores de rede que são usados para comunicação com outros computadores da organização.
   
-   - **Candidato ao sincronizador de domínio**: Qualquer Gateway do ATA definido para ser um candidato ao sincronizador de domínio pode ser responsável pela sincronização entre o ATA e o domínio do Active Directory. Dependendo do tamanho do domínio, a sincronização inicial pode ser demorada e consumir muitos recursos. Por padrão, somente Gateways do ATA são definidos como Candidatos ao sincronizador do domínio.
+   - **Candidato ao sincronizador de domínio**: qualquer Gateway do ATA definido para ser um candidato ao sincronizador de domínio pode ser responsável pela sincronização entre o ATA e o domínio do Active Directory. Dependendo do tamanho do domínio, a sincronização inicial pode ser demorada e consumir muitos recursos. Por padrão, somente Gateways do ATA são definidos como Candidatos ao sincronizador do domínio.
    É recomendável impedir que os Gateways do ATA do site remoto sejam candidatos ao Sincronizador de domínio.
    Se o controlador de domínio for somente leitura, não o defina como um candidato ao sincronizador do domínio. Para saber mais, confira [Arquitetura do ATA](ata-architecture.md#ata-lightweight-gateway-features).
 
@@ -94,7 +94,7 @@ Para validar a implantação bem-sucedida do Gateway do ATA, verifique as seguin
 - [Como escolher o tipo certo de Gateway do ATA](https://channel9.msdn.com/Shows/Microsoft-Security/ATA-Deployment-Choose-the-Right-Gateway-Type)
 
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Confira Também
 - [Guia de implantação da POC (prova de conceito) do ATA](http://aka.ms/atapoc)
 - [Ferramenta de dimensionamento do ATA](http://aka.ms/atasizingtool)
 - [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

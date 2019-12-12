@@ -13,10 +13,10 @@ ms.assetid: a0d64aff-ca9e-4300-b3f8-eb3c8b8ae045
 ms.reviewer: bennyl
 ms.suite: ems
 ms.openlocfilehash: c0658b0d9320116bf8a752ce360994946300947a
-ms.sourcegitcommit: ae9db212f268f067b217d33b0c3f991b6531c975
-ms.translationtype: HT
+ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "65195743"
 ---
 # <a name="whats-new-in-ata-version-15"></a>Novidades na versão 1.5 do ATA
@@ -43,11 +43,11 @@ A atualização 1.5 do ATA fornece melhorias nas seguintes áreas:
 A seguir estão os problemas conhecidos existentes nesta versão.
 
 ### <a name="new-ata-gateway-installation-fails"></a>Falha na instalação do novo Gateway do ATA
-Depois de atualizar sua implantação do ATA para a versão 1.5, você obtém o seguinte erro ao instalar um novo Gateway do ATA: O Gateway do Microsoft Advanced Threat Analytics não está instalado
+Depois de atualizar sua implantação do ATA para a versão 1.5, você obterá o seguinte erro ao instalar um novo Gateway do ATA: o gateway do Microsoft Advanced Threat Analytics não está instalado
 
 ![Erro de GW do ATA](media/ata-install-error.png)
 
-<b>Solução alternativa:</b> Envie um email para <ataeval@microsoft.com> para solicitar as etapas de solução alternativa.
+<b>Solução alternativa:</b> envie um email para <ataeval@microsoft.com> e solicite as etapas de solução alternativa.
 ### <a name="deployment"></a>Implantação
 A pasta especificada para o "Caminho de dados do banco de dados" e "Caminho de diário do banco de dados" deve estar vazia (sem arquivos ou subpastas).
 Se não estiver vazia, a implantação não poderá avançar.
@@ -59,12 +59,12 @@ Ao instalar o Gateway de ATA, certifique-se de extrair os arquivos do arquivo zi
 Depois de definir a configuração de um Gateway do ATA, ele é iniciado pela primeira vez, o rótulo "Não sincronizado" é exibido até o serviço ter sido totalmente iniciado, o que pode levar até 10 minutos na primeira vez que o serviço é iniciado.
 
 ### <a name="network-capture-software"></a>Software de captura de rede
-No Gateway do ATA, o único software de captura de rede com suporte que pode ser instalado é o [Microsoft Network Monitor 3.4](http://www.microsoft.com/download/details.aspx?id=4865). Não instale o Microsoft Message Analyzer ou qualquer outro software de captura de rede. A instalação de outro software fará com que o Gateway de ATA pare de funcionar corretamente.
+No Gateway de ATA, o único software de captura de rede suportado que você pode instalar é o [Microsoft Network Monitor 3.4](http://www.microsoft.com/download/details.aspx?id=4865). Não instale o Microsoft Message Analyzer ou qualquer outro software de captura de rede. A instalação de outro software fará com que o Gateway de ATA pare de funcionar corretamente.
 
 ### <a name="kb-on-virtualization-host"></a>Base de dados de conhecimento sobre host de virtualização
 Não instale a Base de dados de conhecimento 3047154 em um host de virtualização. Isso pode fazer com que o espelhamento de porta pare de funcionar corretamente.
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Confira Também
 
 [Atualizar o ATA para a versão 1.5 — guia de migração](ata-update-1.5-migration-guide.md)
 

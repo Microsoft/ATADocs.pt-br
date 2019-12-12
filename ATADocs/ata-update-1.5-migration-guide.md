@@ -13,10 +13,10 @@ ms.assetid: fb65eb41-b215-4530-93a2-0b8991f4e980
 ms.reviewer: bennyl
 ms.suite: ems
 ms.openlocfilehash: d71cfd283d89f6b1d1413f4d9832fb4302504622
-ms.sourcegitcommit: ae9db212f268f067b217d33b0c3f991b6531c975
-ms.translationtype: HT
+ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "65196184"
 ---
 # <a name="ata-update-to-15-migration-guide"></a>Guia de migração de atualização do ATA para 1.5
@@ -58,7 +58,7 @@ Execute estas etapas para atualizar para o ATA versão 1.5:
     > [!IMPORTANT]
     > Atualize todos os Gateways do ATA para ter certeza de o ATA funciona corretamente.
 
-### <a name="step-1-update-the-ata-center"></a>Etapa 1: Atualize o Centro do ATA
+### <a name="step-1-update-the-ata-center"></a>Etapa 1: Atualizar o Centro do ATA
 
 1.  Faça backup do seu banco de dados: (opcional)
 
@@ -128,6 +128,6 @@ Você saberá que todos os Gateways do ATA foram atualizados com êxito quando t
 
 ![Imagem de gateways atualizados](media/ATA-gw-updated.png)
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Confira Também
 
 - [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

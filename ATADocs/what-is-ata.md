@@ -13,10 +13,10 @@ ms.assetid: 283e7b4e-996a-4491-b7f6-ff06e73790d2
 ms.reviewer: bennyl
 ms.suite: ems
 ms.openlocfilehash: 67e265c4785e5b2b3cc6fe267e72953e8817020f
-ms.sourcegitcommit: ae9db212f268f067b217d33b0c3f991b6531c975
-ms.translationtype: HT
+ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "65195996"
 ---
 # <a name="what-is-advanced-threat-analytics"></a>O que é o Advanced Threat Analytics?
@@ -51,7 +51,7 @@ A tecnologia do ATA detecta várias atividades suspeitas, concentrando-se em vá
 -   Controle do domínio (persistência), durante o qual um invasor captura as informações que permitem retomar sua campanha usando vários conjuntos de pontos de entrada, credenciais e técnicas. 
 
 Essas fases de um ataque cibernético são semelhantes e previsíveis, independentemente do tipo de empresa que está sob ataque ou do tipo de informação visado.
-O ATA procura três tipos principais de ataques: Ataques mal-intencionados, comportamento anormal e riscos e problemas de segurança.
+O ATA procura três tipos de ataques principais: ataques mal-intencionados, comportamento anormal e riscos e problemas de segurança.
 
 Os **ataques mal-intencionados** são detectados de forma determinista, olhando a lista completa de tipos de ataques conhecidos, incluindo:
 
@@ -104,7 +104,7 @@ Você pode exibir as atividades suspeitas desse tipo no Painel do ATA. No exempl
 
 ## <a name="whats-next"></a>Novidades
 
--   Para saber mais sobre como o ATA se adapta à sua rede: [Arquitetura do ATA](ata-architecture.md)
+-   Para mais informações sobre como o ATA se adapta à sua rede, consulte: [Arquitetura de ATA](ata-architecture.md)
 
 -   Para começar a implantar o ATA: [Instalar o ATA](install-ata-step1.md)
 
@@ -113,6 +113,6 @@ Você pode exibir as atividades suspeitas desse tipo no Painel do ATA. No exempl
 - [Visão geral da implantação do ATA](https://channel9.msdn.com/Shows/Microsoft-Security/Overview-of-ATA-Deployment-in-10-Minutes)
 
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Confira Também
 [Manual de atividade suspeita do ATA](http://aka.ms/ataplaybook)
 [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

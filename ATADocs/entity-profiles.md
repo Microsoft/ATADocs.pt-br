@@ -13,10 +13,10 @@ ms.assetid: 581a3257-32dc-453f-b84e-b9f99186f5d3
 ms.reviewer: bennyl
 ms.suite: ems
 ms.openlocfilehash: 1f8f2c507ea45ddb422868f8b86a973c8454509e
-ms.sourcegitcommit: ae9db212f268f067b217d33b0c3f991b6531c975
-ms.translationtype: HT
+ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "65195835"
 ---
 # <a name="investigating-entity-profiles"></a>Investigando perfis de entidade
@@ -75,5 +75,5 @@ O mapa fornece uma lista de quantos saltos entre computadores ou usuários um in
  ![caminhos de movimento lateral do perfil do usuário](media/user-profile-lateral-movement-paths.png)
 
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Confira Também
 [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

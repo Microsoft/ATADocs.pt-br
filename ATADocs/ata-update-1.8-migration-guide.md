@@ -13,10 +13,10 @@ ms.assetid: e5a9718c-b22e-41f7-a614-f00fc4997682
 ms.reviewer: bennyl
 ms.suite: ems
 ms.openlocfilehash: d35961d0ec70402fe27d0d418fd583d60b960464
-ms.sourcegitcommit: ae9db212f268f067b217d33b0c3f991b6531c975
-ms.translationtype: HT
+ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "65196128"
 ---
 # <a name="updating-ata-to-version-18"></a>Atualizando o ATA para a versão 1.8
@@ -41,7 +41,7 @@ Na versão de migração, o arquivo pode ser usado apenas para a atualização d
     > [!IMPORTANT]
     > Atualize todos os Gateways do ATA para ter certeza de o ATA funciona corretamente.
 
-### <a name="step-1-update-the-ata-center"></a>Etapa 1: Atualize o Centro do ATA
+### <a name="step-1-update-the-ata-center"></a>Etapa 1: Atualizar o Centro do ATA
 
 1. Faça backup do seu banco de dados: (opcional)
 
@@ -53,7 +53,7 @@ Na versão de migração, o arquivo pode ser usado apenas para a atualização d
 
    - Na página **Boas-vindas**, escolha seu idioma e clique em **Avançar**.
 
-   - Se você não tiver habilitado as atualizações automáticas na versão 1.7, será necessário definir o ATA para usar o Microsoft Update para ATA a fim de permanecer atualizado.  Na página do Microsoft Update, selecione **Usar o Microsoft Update ao verificar se há atualizações (recomendado)**.
+   - Se você não tiver habilitado as atualizações automáticas na versão 1.7, será necessário definir o ATA para usar o Microsoft Update para ATA a fim de permanecer atualizado.  Na página do Microsoft Update, selecione **Usar o Microsoft Update ao verificar se há atualizações (recomendado)** .
      ![Imagem Manter o ATA atualizado](media/ata_ms_update.png)
      
      Isso ajusta as configurações do Windows para habilitar as atualizações para o ATA. 
@@ -79,9 +79,9 @@ Na versão de migração, o arquivo pode ser usado apenas para a atualização d
 > Atualize todos os Gateways do ATA para ter certeza de o ATA funciona corretamente.
  
 > [!NOTE] 
-> Para instalar novos Gateways do ATA, acesse a tela **Gateways** e clique em **Baixar a instalação do Gateway** para obter o pacote de instalação do Gateway do ATA 1.8 e siga as instruções para uma nova instalação do Gateway, conforme descrito na [Etapa 4. Instalar o Gateway do ATA](install-ata-step4.md).
+> Para instalar novos gateways do ATA, acesse a tela **gateways** e clique em **baixar a instalação do gateway** para obter o pacote de instalação do gateway 1,8 do ATA e siga as instruções para nova instalação do gateway, conforme descrito na [etapa 4. Instale o gateway do ATA](install-ata-step4.md).
 
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Confira Também
 
 - [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

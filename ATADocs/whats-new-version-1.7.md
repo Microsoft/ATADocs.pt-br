@@ -13,10 +13,10 @@ ms.assetid: be9ee613-4eb3-40f1-8973-e7f0a707ff57
 ms.reviewer: ''
 ms.suite: ems
 ms.openlocfilehash: 0570ac2574dfca2fbc22a332228d52fcd429652d
-ms.sourcegitcommit: ae9db212f268f067b217d33b0c3f991b6531c975
-ms.translationtype: HT
+ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "65195948"
 ---
 # <a name="whats-new-in-ata-version-17"></a>Novidades na versão 1.7 do ATA
@@ -63,15 +63,15 @@ A atualização 1.7 do ATA fornece melhorias nas seguintes áreas:
 A seguir estão os problemas conhecidos existentes nesta versão.
 
 ### <a name="gateway-automatic-update-may-fail"></a>Atualização automática do Gateway pode falhar
-**Sintomas**: em ambientes com links WAN lentos, a atualização do ATA Gateway pode atingir o tempo limite para a atualização (100 segundos) e não ser concluída.
+**Sintomas:** em ambientes com links WAN lentos, a atualização do Gateway do ATA pode atingir o tempo limite para a atualização (100 segundos) e não ser concluída.
 No Console do ATA, o Gateway do ATA terá o status de "Atualizando (baixando pacote)" por um longo período e, eventualmente, falhará.
-**Solução alternativa:** para contornar esse problema, baixe o pacote mais recente do ATA Gateway no Console do ATA e atualize manualmente o ATA Gateway.
+**Solução alternativa:** para contornar esse problema, baixe o pacote mais recente do Gateway do ATA no Console do ATA e atualize o Gateway do ATA manualmente.
 
 > [!IMPORTANT]
 >  Não há suporte para a renovação automática de certificados para os certificados usados pelo ATA. O uso desses certificados pode fazer com que o ATA deixe de funcionar quando o certificado é renovado automaticamente. 
 
 ### <a name="no-browser-support-for-jis-encoding"></a>Não há suporte do navegador para codificação JIS
-**Sintomas**: o Console ATA pode não funcionar conforme o esperado em navegadores que usam a codificação JIS **Solução:** alterar a codificação do navegador Unicode UTF-8.
+**Sintomas:** o Console ATA podem não funcionar conforme o esperado em navegadores que usam a codificação JIS **Solução:** alterar a codificação do navegador Unicode UTF-8.
  
 ### <a name="dropped-port-mirror-traffic-when-using-vmware"></a>Tráfego espelhado por porta descartado ao usar o VMware
 
@@ -89,7 +89,7 @@ Além disso, considere desabilitar o Descarregamento TSO gigante do IPv4. Para o
 
 Ao atualizar do ATA 1.7 para o ATA 1.7 atualização 1, o processo de atualização automática do Gateway do ATA e a instalação manual dos Gateways usando o pacote do Gateway podem não funcionar conforme o esperado.
 Esse problema ocorrerá se o certificado usado pelo Centro do ATA foi alterado antes de atualizar o ATA.
-Para verificar esse problema, examine **Microsoft.Tri.Gateway.Updater.log** no ATA Gateway e procure as seguintes exceções: **System.Net.Http.HttpRequestException: ocorreu um erro ao enviar a solicitação. ---> System.Net.WebException: A conexão subjacente estava fechada: ocorreu um erro inesperado em um envio. ---> System.IdentityModel.Tokens.SecurityTokenValidationException: falha ao validar a impressão digital do certificado**
+Para verificar esse problema, examine o **Microsoft.Tri.Gateway.Updater.log** no Gateway do ATA e procure as seguintes exceções: **System.Net.Http.HttpRequestException: Ocorreu um erro ao enviar a solicitação. ---> System.Net.WebException: A conexão subjacente estava fechada: Ocorreu um erro inesperado em um envio. ---> System.IdentityModel.Tokens.SecurityTokenValidationException: Falha ao validar a impressão digital do certificado**
 
 ![Bug de gateway da atualização do ATA](media/17update_gatewaybug.png)
 
@@ -102,7 +102,7 @@ Para resolver esse problema, depois de alterar o certificado em um prompt de com
 3. db.SystemProfile.update({_t:"ServiceSystemProfile"},{$set:{"Configuration.ManagementClientConfiguration.ServerCertificateThumbprint":CenterThumbprint}}, {multi: true})
 
 ### <a name="export-suspicious-activity-details-to-excel-may-fail"></a>Exportar detalhes de atividade suspeita para o Excel pode falhar
-Ao tentar exportar os detalhes de atividade suspeita para um arquivo do Excel, a operação pode falhar e apresentar o seguinte erro: *Erro [BsonClassMapSerializer`1] System.FormatException: ocorreu um erro ao desserializar a propriedade Atividade da classe Microsoft.Tri.Common.Data.NetworkActivities.SuspiciousActivityActivity: o elemento 'ResourceIdentifier' não corresponde a qualquer campo ou propriedade da classe Microsoft.Tri.Common.Data.EventActivities.NtlmEvent. ---> System.FormatException: o elemento 'ResourceIdentifier' não corresponde a qualquer campo ou propriedade da classe Microsoft.Tri.Common.Data.EventActivities.NtlmEvent.*
+Ao tentar exportar os detalhes de atividade suspeita para um arquivo do Excel, a operação pode falhar com o seguinte erro: *Erro [BsonClassMapSerializer`1] System.FormatException: Um erro ocorreu ao desserializar a propriedade Atividade da classe Microsoft.Tri.Common.Data.NetworkActivities.SuspiciousActivityActivity: Elemento 'ResourceIdentifier' não corresponde a nenhum campo ou propriedade de classe Microsoft.Tri.Common.Data.EventActivities.NtlmEvent. ---> System.FormatException: O Elemento 'ResourceIdentifier' não corresponde a nenhum campo ou propriedade da classe Microsoft.Tri.Common.Data.EventActivities.NtlmEvent.*
 
 Para resolver esse problema, em um prompt de comandos com privilégios elevados, navegue até o seguinte local: **%ProgramFiles%\Microsoft Advanced Threat Analytics\Center\MongoDB\bin** e execute os seguintes comandos:
 1.  `Mongo.exe ATA` (ATA deve estar em letras maiúsculas)
@@ -114,7 +114,7 @@ Para resolver esse problema, em um prompt de comandos com privilégios elevados,
 - Se o serviço Centro de ATA estiver inativo, não será possível acessar o Console do ATA.
 - As sub-redes de concessão de curto prazo não serão mais necessárias devido a alterações no NNR do ATA.
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Confira Também
 [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
 [Atualizar o ATA para a versão 1.7 — guia de migração](ata-update-1.7-migration-guide.md)

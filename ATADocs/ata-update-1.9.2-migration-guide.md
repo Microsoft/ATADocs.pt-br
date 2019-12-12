@@ -12,10 +12,10 @@ ms.assetid: 2946310a-8e4e-48fc-9450-fc9647efeb22
 ms.reviewer: ort
 ms.suite: ems
 ms.openlocfilehash: 22420ea90bc922684a4e99ad303bba831f3a45e7
-ms.sourcegitcommit: ae9db212f268f067b217d33b0c3f991b6531c975
-ms.translationtype: HT
+ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "65196075"
 ---
 # <a name="ata-version-192"></a>ATA versão 1.9.2
@@ -45,7 +45,7 @@ Esta atualização também inclui melhorias de desempenho e estabilidade, juntam
 
 ## <a name="get-this-update"></a>Obter essa atualização
 
-Para ter acesso o pacote autônomo para essa atualização, vá para o site do Centro de Download da Microsoft: [Baixe agora o pacote do ATA 1.9.2](https://www.microsoft.com/en-us/download/details.aspx?id=56725).
+Para obter o pacote autônomo para esta atualização, vá para o site do centro de download da Microsoft: [Baixe o pacote 1.9.2 do ATA agora](https://www.microsoft.com/en-us/download/details.aspx?id=56725).
 
 ### <a name="prerequisites"></a>Pré-requisitos
 

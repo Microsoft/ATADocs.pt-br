@@ -13,10 +13,10 @@ ms.assetid: b3cceb18-0f3c-42ac-8630-bdc6b310f1d6
 ms.reviewer: bennyl
 ms.suite: ems
 ms.openlocfilehash: 25ccbe5c1cd37a46e88335fc1e293b0e426ced4e
-ms.sourcegitcommit: ae9db212f268f067b217d33b0c3f991b6531c975
-ms.translationtype: HT
+ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "65196093"
 ---
 # <a name="install-ata---step-1"></a>Instalação do ATA - Etapa 1
@@ -40,7 +40,7 @@ Depois de verificar que o servidor atende aos requisitos, você pode prosseguir 
 
 Execute as seguintes etapas no servidor do Centro do ATA.
 
-1.  Baixe o ATA no [Centro de Serviços de Licenciamento por Volume da Microsoft](https://www.microsoft.com/Licensing/servicecenter/default.aspx), no [Centro de avaliação do TechNet](http://www.microsoft.com/evalcenter/) ou no [MSDN](https://msdn.microsoft.com/subscriptions/downloads).
+1.  Baixe o ATA no [Centro de Serviços de Licenciamento por Volume da Microsoft](https://www.microsoft.com/Licensing/servicecenter/default.aspx), no [Centro de avaliação TechNet](http://www.microsoft.com/evalcenter/) ou no [MSDN](https://msdn.microsoft.com/subscriptions/downloads).
 
 2.  Entre no computador no qual você está instalando o Centro do ATA como um usuário que seja membro do grupo Administradores local.
 
@@ -63,10 +63,10 @@ Execute as seguintes etapas no servidor do Centro do ATA.
 
 9. Na página **Configure the Center (Configurar o Centro)** insira as informações a seguir com base em seu ambiente:
 
-   |Campo|Descrição|Comentários|
+   |Campo|Description|Comentários|
    |---------|---------------|------------|
    |Caminho da Instalação|Esse é o local onde o Centro do ATA será instalado. Por padrão, é %programfiles%\Microsoft Advanced Threat Analytics\Center|Mantenha o valor padrão|
-   |Caminho de Dados do Banco de Dados|Esse é o local onde os arquivos de banco de dados do MongoDB estão localizados. Por padrão, é %programfiles%\Microsoft Advanced Threat Analytics\Center\MongoDB\bin\data|Altere o local para um local onde você tem espaço para crescer com base em seu tamanho. **Observação:** <ul><li>Em ambientes de produção, você deve usar uma unidade que tenha espaço suficiente com base em um planejamento de capacidade.</li><li>Para implantações de grande porte, o banco de dados deve estar em um disco físico separado.</li></ul>Confira [Planejamento de capacidade do ATA](ata-capacity-planning.md) para obter informações sobre dimensionamento.|
+   |Caminho de Dados do Banco de Dados|Esse é o local onde os arquivos de banco de dados do MongoDB estão localizados. Por padrão, é %programfiles%\Microsoft Advanced Threat Analytics\Center\MongoDB\bin\data|Altere o local para um local onde você tem espaço para crescer com base em seu tamanho. **Observação**: <ul><li>Em ambientes de produção, você deve usar uma unidade que tenha espaço suficiente com base em um planejamento de capacidade.</li><li>Para implantações de grande porte, o banco de dados deve estar em um disco físico separado.</li></ul>Confira [Planejamento de capacidade do ATA](ata-capacity-planning.md) para obter informações sobre dimensionamento.|
    |Certificado SSL do Serviço da Central|Esse é o certificado usado pelo serviço do Centro do ATA e pelo Console do ATA.|Clique no ícone de chave para selecionar um certificado instalado ou use a caixa de seleção para criar um certificado autoassinado.|
         
    ![Imagem de configuração do Centro do ATA](media/ATA-Center-Configuration.png)
@@ -96,7 +96,7 @@ Execute as seguintes etapas no servidor do Centro do ATA.
 
 ### <a name="set-anti-virus-exclusions"></a>Definir as exclusões de antivírus
 
-Depois de instalar o ATA Center, exclua o diretório de banco de dados do MongoDB da análise contínua realizada pelo seu aplicativo de antivírus. O local padrão no banco de dados é: **C:\Arquivos de Programas\Microsoft Advanced Threat Analytics\Center\MongoDB\bin\data**.
+Depois de instalar o ATA Center, exclua o diretório de banco de dados do MongoDB da análise contínua realizada pelo seu aplicativo de antivírus. A localização padrão no banco de dados é: **C:\Program Files\Microsoft Advanced Threat Analytics\Center\MongoDB\bin\data**.
 
 Exclua as pastas e os processos a seguir da verificação do AV:
 
@@ -121,7 +121,7 @@ Se você instalou o ATA em um diretório diferente, não deixe de alterar os cam
 - [Visão geral da implantação do ATA](https://channel9.msdn.com/Shows/Microsoft-Security/Overview-of-ATA-Deployment-in-10-Minutes)
 
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Confira Também
 - [Guia de implantação da POC (prova de conceito) do ATA](http://aka.ms/atapoc)
 - [Ferramenta de dimensionamento do ATA](http://aka.ms/atasizingtool)
 - [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

@@ -13,10 +13,10 @@ ms.assetid: ebd41719-c91a-4fdd-bcab-2affa2a2cace
 ms.reviewer: bennyl
 ms.suite: ems
 ms.openlocfilehash: 233fe317294be1e407995cdd48fe9eda2157d08c
-ms.sourcegitcommit: ae9db212f268f067b217d33b0c3f991b6531c975
-ms.translationtype: HT
+ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "65195674"
 ---
 # <a name="validate-port-mirroring"></a>Validação do espelhamento de porta
@@ -206,7 +206,7 @@ Exemplo de como executar o script:
 
         ![Criar nova imagem da guia de captura](media/ATA-Port-Mirroring-Capture.jpg)
 
-3.  Na janela Exibir Filtro, insira o seguinte filtro: **KerberosV5 OU LDAP** e clique em **Aplicar**.
+3.  Na janela Filtro de exibição, digite o seguinte filtro: **KerberosV5 OU LDAP** e, em seguida, **Aplicar**.
 
     ![Aplicar imagem de filtro KerberosV5 ou LDAP](media/ATA-Port-Mirroring-filter-settings.jpg)
 
@@ -220,7 +220,7 @@ Exemplo de como executar o script:
 
 5.  Se você vir somente o tráfego em uma direção, você deve trabalhar com as equipes de rede ou de virtualização para ajudar a solucionar os problemas de sua configuração de espelhamento de porta.
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Confira Também
 
 - [Configurar o espelhamento de porta](configure-port-mirroring.md)
 - [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
