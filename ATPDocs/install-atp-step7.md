@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 1ad5e923-9bbd-4f56-839a-b11a9f387d4b
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 2177a4c5e7281bd87f87009307b675b9d649c295
-ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.openlocfilehash: eeb9886c572d7c87038ce537b7e280d189255641
+ms.sourcegitcommit: 0f3ee3241895359d5cecd845827cfba1fdca9317
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72776628"
+ms.lasthandoff: 12/29/2019
+ms.locfileid: "75544080"
 ---
 # <a name="configure-detection-exclusions-and-honeytoken-accounts"></a>Configurar exclusões de detecção e contas de honeytoken
 
@@ -55,7 +55,7 @@ A verificação do ATP do Azure é iniciada imediatamente. Algumas detecções, 
 
 
 ## <a name="see-also"></a>Consulte Também
-- [Ferramenta de dimensionamento do Azure ATP](http://aka.ms/aatpsizingtool)
+- [Ferramenta de dimensionamento do Azure ATP](https://aka.ms/aatpsizingtool)
 - [Configurar coleta de eventos](configure-event-collection.md)
 - [Pré-requisitos do Azure ATP](atp-prerequisites.md)
 - [Confira o fórum do ATP do Azure!](https://aka.ms/azureatpcommunity)

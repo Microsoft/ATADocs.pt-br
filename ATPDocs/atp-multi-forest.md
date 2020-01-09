@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: effca0f2-fcae-4fca-92c1-c37306decf84
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 00718998299590f658f8cdd6c7e2fc21c553210c
-ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.openlocfilehash: 590977f36cae014d60ada6abe160b012bc7ebc35
+ms.sourcegitcommit: 0f3ee3241895359d5cecd845827cfba1fdca9317
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "65195577"
+ms.lasthandoff: 12/29/2019
+ms.locfileid: "75543866"
 ---
 # <a name="azure-advanced-threat-protection-multi-forest-support"></a>Suporte para várias florestas da Proteção Avançada contra Ameaças do Azure
 
@@ -79,7 +79,7 @@ Quando o Azure ATP mapeia suas florestas, ele usa um processo que afeta o seguin
 
 
 ## <a name="see-also"></a>Consulte Também
-- [Ferramenta de dimensionamento do Azure ATP](http://aka.ms/aatpsizingtool)
+- [Ferramenta de dimensionamento do Azure ATP](https://aka.ms/aatpsizingtool)
 - [Arquitetura do Azure ATP](atp-architecture.md)
 - [Instalar o Azure ATP](install-atp-step1.md)
 - [Confira o fórum do ATP do Azure!](https://aka.ms/azureatpcommunity)

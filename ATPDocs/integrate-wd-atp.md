@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: f6f3ed75-d6bb-4966-a9a7-5339c4f3ebac
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 87995b9162f787a05b82507e34cf3dbdaf4a3f07
-ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.openlocfilehash: 221ace13505bd9eab33422358abb764e7a7485ff
+ms.sourcegitcommit: 0f3ee3241895359d5cecd845827cfba1fdca9317
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "65196716"
+ms.lasthandoff: 12/29/2019
+ms.locfileid: "75544379"
 ---
 # <a name="integrate-azure-atp-with-windows-defender-atp"></a>Integrar o Azure ATP ao Windows Defender ATP
 
@@ -70,7 +70,7 @@ Para habilitar esse recurso, você precisa de uma licença para o Azure ATP e o 
 
 4. Para verificar o status da integração, no portal do ATP do Azure, vá até **Configurações** > **Integração do Windows Defender ATP**. Você pode ver o status da integração e, se algo estiver errado, você verá um erro. 
 
-## <a name="how-it-works"></a>Como funciona
+## <a name="how-it-works"></a>Como isso funciona
 
 Após o Azure ATP e o Windows Defender ATP serem totalmente integrados, no portal do Azure ATP, no pop-up do miniperfil e na página do perfil de entidade, cada entidade que existir no Windows Defender ATP incluirá uma notificação para mostrar que ela foi integrada ao Windows Defender ATP. 
 
@@ -95,7 +95,7 @@ No portal do Windows Defender ATP, clique em um ponto de extremidade para exibir
 ## <a name="see-also"></a>Consulte Também
 
 - [Investigando caminhos de movimento lateral com o Azure ATP](use-case-lateral-movement-path.md)
-- [Ferramenta de dimensionamento do Azure ATP](http://aka.ms/aatpsizingtool)
+- [Ferramenta de dimensionamento do Azure ATP](https://aka.ms/aatpsizingtool)
 - [Arquitetura do Azure ATP](atp-architecture.md)
 - [Instalar o ATP](install-atp-step1.md)
 - [Confira o fórum do ATP do Azure!](https://aka.ms/azureatpcommunity)

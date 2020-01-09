@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 88692d1a-45a3-4d54-a549-4b5bba6c037b
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: f7ab5a51fc599280a9a21181efc72684230d3c3a
-ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.openlocfilehash: 32e5edd6de397015b0cc4e9bb977fe39d1b617e4
+ms.sourcegitcommit: 0f3ee3241895359d5cecd845827cfba1fdca9317
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "71682219"
+ms.lasthandoff: 12/29/2019
+ms.locfileid: "75544172"
 ---
 # <a name="configure-event-collection"></a>Configurar coleta de eventos
 
@@ -191,7 +191,7 @@ Certifique-se de ter \t entre os pares de chave=valor.
 
 
 ## <a name="see-also"></a>Consulte Também
-- [Ferramenta de dimensionamento do Azure ATP](http://aka.ms/aatpsizingtool)
+- [Ferramenta de dimensionamento do Azure ATP](https://aka.ms/aatpsizingtool)
 - [Referência de logs de SIEM do Azure ATP](cef-format-sa.md)
 - [Pré-requisitos do Azure ATP](atp-prerequisites.md)
 - [Confira o fórum do ATP do Azure!](https://aka.ms/azureatpcommunity)

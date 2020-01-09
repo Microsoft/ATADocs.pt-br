@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 0d9d2a1d-6c76-4909-b6f9-58523df16d4f
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: ba750ca2984d3060f2bef3d2816f5d86fd8f1c2e
-ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.openlocfilehash: 21566ec63865dc233229a0dabecbe83ce75104df
+ms.sourcegitcommit: 0f3ee3241895359d5cecd845827cfba1fdca9317
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "65193545"
+ms.lasthandoff: 12/29/2019
+ms.locfileid: "75544101"
 ---
 # <a name="integrate-vpn"></a>Integrar a VPN
 
@@ -77,7 +77,7 @@ Depois que isso for habilitado, todos os sensores do ATP do Azure passarão a es
 
 
 ## <a name="see-also"></a>Consulte Também
-- [Ferramenta de dimensionamento do Azure ATP](http://aka.ms/aatpsizingtool)
+- [Ferramenta de dimensionamento do Azure ATP](https://aka.ms/aatpsizingtool)
 - [Configurar coleta de eventos](configure-event-collection.md)
 - [Pré-requisitos do Azure ATP](atp-prerequisites.md)
 - [Confira o fórum do ATP do Azure!](https://aka.ms/azureatpcommunity)

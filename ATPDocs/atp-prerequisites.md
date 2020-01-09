@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 62c99622-2fe9-4035-9839-38fec0a353da
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 7c1dfa8cfda0bb6fb39770a58a7cc1b54dbc2298
-ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.openlocfilehash: ffafa24c4c20f52947b4f2d0317ea81f51789010
+ms.sourcegitcommit: 0f3ee3241895359d5cecd845827cfba1fdca9317
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73618441"
+ms.lasthandoff: 12/29/2019
+ms.locfileid: "75544364"
 ---
 # <a name="azure-atp-prerequisites"></a>Pré-requisitos do ATP do Azure
 
@@ -115,7 +115,7 @@ Para ter um melhor desempenho, defina a **Opção de Energia** do sensor do Azur
 
 É possível implantar o sensor do ATP do Azure em controladores de domínio de vários tamanhos e cargas, dependendo da quantidade de recursos instalados e da quantidade de tráfego de rede dos controladores de domínio.
 
-Para os sistemas operacionais Windows 2008R2 e 2012, o sensor do ATP do Azure não tem suporte em um modo [Grupo de multiprocessadores](https://docs.microsoft.com/windows/win32/procthread/processor-groups). Para obter mais informações sobre o modo de grupo de multiprocessadores,confira [solução de problemas](troubleshooting-atp-known-issues.md##multi-processor-group-mode). 
+Para os sistemas operacionais Windows 2008R2 e 2012, o sensor do ATP do Azure não tem suporte em um modo [Grupo de multiprocessadores](https://docs.microsoft.com/windows/win32/procthread/processor-groups). Para obter mais informações sobre o modo de grupo de multiprocessadores,confira [solução de problemas](troubleshooting-atp-known-issues.md#multi-processor-group-mode). 
 
 >[!NOTE] 
 > Durante a execução como uma máquina virtual, memória dinâmica ou qualquer outra memória, não há suporte para o recurso de inchamento.
@@ -145,11 +145,11 @@ A tabela abaixo lista o mínimo de portas que o sensor do Azure ATP exige:
 |DNS|TCP e UDP|53|Servidores DNS|Saída|
 |Netlogon (SMB, CIFS, SAM-R)|TCP/UDP|445|Todos os dispositivos na rede|Saída|
 |Syslog (opcional)|TCP/UDP|514, dependendo da configuração|Servidor SIEM|Entrada|
-|RADIUS|UDP|1813|RADIUS|Entrada|
+|RAIO|UDP|1813|RADIUS|Entrada|
 |
 
 ### <a name="windows-event-logs"></a>Log de eventos do Windows
-A detecção da ATP do Azure depende dos seguintes logs de eventos específicos do Windows que o sensor analisa dos controladores de domínio: 4776, 4732, 4733, 4728, 4729, 4756, 4757, 7045 e 8004. Para que os eventos corretos sejam auditados e incluídos no log de eventos do Windows, seus controladores de domínio exigem configurações precisas de política de auditoria avançada. Para saber mais sobre como configurar as políticas corretas, confira [Verificação avançada da política de auditoria](atp-advanced-audit-policy.md). Para [verificar se o evento 8004 do Windows foi auditado](configure-windows-event-collection.md##ntlm-authentication-using-windows-event-8004) conforme necessário pelo serviço, examine as [configurações de auditoria do NTLM](https://blogs.technet.microsoft.com/askds/2009/10/08/ntlm-blocking-and-you-application-analysis-and-auditing-methodologies-in-windows-7/).  
+A detecção da ATP do Azure depende dos seguintes logs de eventos específicos do Windows que o sensor analisa dos controladores de domínio: 4776, 4732, 4733, 4728, 4729, 4756, 4757, 7045 e 8004. Para que os eventos corretos sejam auditados e incluídos no log de eventos do Windows, seus controladores de domínio exigem configurações precisas de política de auditoria avançada. Para saber mais sobre como configurar as políticas corretas, confira [Verificação avançada da política de auditoria](atp-advanced-audit-policy.md). Para [verificar se o evento 8004 do Windows foi auditado](configure-windows-event-collection.md#ntlm-authentication-using-windows-event-8004) conforme necessário pelo serviço, examine as [configurações de auditoria do NTLM](https://blogs.technet.microsoft.com/askds/2009/10/08/ntlm-blocking-and-you-application-analysis-and-auditing-methodologies-in-windows-7/).  
 
 
 > [!NOTE]
@@ -223,7 +223,7 @@ A tabela abaixo lista as portas mínimas que o sensor autônomo do Azure ATP req
 |Tempo do Windows|UDP|123|Controladores de domínio|Saída|
 |DNS|TCP e UDP|53|Servidores DNS|Saída|
 |Syslog (opcional)|TCP/UDP|514, dependendo da configuração|Servidor SIEM|Entrada|
-|RADIUS|UDP|1813|RADIUS|Entrada|
+|RAIO|UDP|1813|RADIUS|Entrada|
 |
 
 > [!NOTE]

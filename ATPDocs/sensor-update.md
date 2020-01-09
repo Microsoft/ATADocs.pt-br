@@ -5,19 +5,19 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 1/20/2019
+ms.date: 12/24/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 603d9e09-a07d-4357-862f-d5682c8bc3dd
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 408c46d620f7b7f5da21d9dcfaf17097660dcc4c
-ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.openlocfilehash: 6c8edd2b48fbc10347bd77df06ae1f7c4ecacb52
+ms.sourcegitcommit: 0f3ee3241895359d5cecd845827cfba1fdca9317
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "65196386"
+ms.lasthandoff: 12/29/2019
+ms.locfileid: "75544017"
 ---
 # <a name="update-azure-atp-sensors"></a>Atualizar sensores da Azure ATP
 
@@ -43,10 +43,6 @@ Os sensores do ATP do Azure são compatíveis com dois tipos de atualizações:
 > [!NOTE]
 >- Controle as reinicializações automáticas de sensor (para atualizações **principais**) na página de configuração do portal do ATP do Azure. 
 > - O sensor do ATP do Azure reserva sempre pelo menos 15% da memória e da CPU disponíveis no controlador de domínio no qual está instalado. Se o serviço do ATP do Azure consumir uma quantidade muito grande de memória, ele será automaticamente interrompido e reiniciado pelo serviço do atualizador de sensor do ATP do Azure.
-
-### <a name="update-requirement"></a>Requisitos da atualização
-
-Uma falha ao atualizar seus sensores por mais de uma atualização de versão significa que seus sensores podem não mais se comunicar com o serviço de nuvem do ATP do Azure, o que pode resultar em indisponibilidade de serviço do ATP do Azure e queda da proteção em sua organização.  
 
 ## <a name="delayed-sensor-update"></a>Atualização de sensor atrasada
 

@@ -7,12 +7,12 @@ author: mlottner
 ms.author: mlottner
 ms.date: 02/28/2019
 ms.reviewer: itargoet
-ms.openlocfilehash: b3ea5b1d2f33f9647fb9dea8927a80aeae76ee03
-ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.openlocfilehash: 800b72e0bb06a95e10a0c52885d78ebe276e00b7
+ms.sourcegitcommit: 0f3ee3241895359d5cecd845827cfba1fdca9317
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "59745579"
+ms.lasthandoff: 12/29/2019
+ms.locfileid: "75543830"
 ---
 # <a name="tutorial-domain-dominance-playbook"></a>Tutorial: Guia estratégico de predominância de domínio
 
@@ -239,7 +239,7 @@ O ATP do Azure usa vários métodos para detectar ataques suspeitos desse tipo. 
 ![Golden Ticket sendo detectado](media/playbook-dominance-golden_detected.png)
 
 > [!Important]
->Lembrete. Desde que o KRBTGT coletado por um invasor permaneça válido dentro de um ambiente, os tíquetes gerados com ele também permanecerão válidos. Nesse caso, o invasor obtém a predominância de domínio persistente até que o [KRBTGT seja redefinido duas vezes](https://docs.microsoft.com/en-us/windows-server/identity/ad-ds/manage/ad-forest-recovery-resetting-the-krbtgt-password).
+>Lembrete. Desde que o KRBTGT coletado por um invasor permaneça válido dentro de um ambiente, os tíquetes gerados com ele também permanecerão válidos. Nesse caso, o invasor obtém a predominância de domínio persistente até que o [KRBTGT seja redefinido duas vezes](https://docs.microsoft.com/windows-server/identity/ad-ds/manage/ad-forest-recovery-resetting-the-krbtgt-password).
 
 ## <a name="next-steps"></a>Próximas etapas
 

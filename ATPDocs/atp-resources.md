@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 34dc152c-6b7f-4128-93fe-aad56c282730
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 205fb58cbb06e6a219aa39b92275761ad9d1304d
-ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.openlocfilehash: 2249505a80eca230e9b5b54689414c445f169afc
+ms.sourcegitcommit: 0f3ee3241895359d5cecd845827cfba1fdca9317
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "65196795"
+ms.lasthandoff: 12/29/2019
+ms.locfileid: "75544358"
 ---
 # <a name="azure-atp-readiness-guide"></a>Guia de preparação do Azure ATP
 
@@ -35,13 +35,13 @@ Para saber mais sobre o Azure ATP:
 ## <a name="deployment-decisions"></a>Decisões de implantação
 
 O ATP do Azure é composto por um serviço de nuvem que reside no Azure e por sensores integrados que podem ser instalados em um controlador de domínio ou em sensores autônomos em servidores dedicados. Antes de executar o Azure ATP, é importante escolher o tipo de sensor que se adapta melhor à sua implantação e às suas necessidades. Os sensores integrados do Azure ATP (sensores do Azure ATP) fornecem segurança aprimorada, custos operacionais mais baixos e implantação mais fácil do que os sensores autônomos do Azure ATP. Os sensores autônomos do ATP do Azure exigem um hardware físico, etapas de configuração adicionais e maiores custos operacionais. <br>Se você estiver usando servidores físicos, o planejamento de capacidade é fundamental. Obtenha ajuda da ferramenta de dimensionamento para alocar espaço para os sensores: 
-- [Ferramenta de dimensionamento do Azure ATP](http://aka.ms/aatpsizingtool) – a ferramenta de dimensionamento automatiza a coleta da quantidade de tráfego que a Azure ATP monitora. Ela fornece automaticamente o suporte e as recomendações do recurso para sensores. 
+- [Ferramenta de dimensionamento do Azure ATP](https://aka.ms/aatpsizingtool) – a ferramenta de dimensionamento automatiza a coleta da quantidade de tráfego que a Azure ATP monitora. Ela fornece automaticamente o suporte e as recomendações do recurso para sensores. 
 - [Diretrizes de planejamento da capacidade do ATP](atp-capacity-planning.md)
 
 ## <a name="deploy-azure-atp"></a>Implantar o Azure ATP
 
 Use esses recursos para configurar o ATP do Azure, conectar ao Active Directory, baixar o pacote do sensor, configurar a coleta de eventos e, opcionalmente, integrar à sua VPN e configurar contas e exclusões de honeytoken. 
-- [Teste o Azure ATP (parte do EMS E5)](http://aka.ms/aatptrial) A avaliação é válida por 90 dias.
+- [Teste o Azure ATP (parte do EMS E5)](https://aka.ms/aatptrial) A avaliação é válida por 90 dias.
 - [Configuração do ATP do Azure](install-atp-step1.md) Siga essas etapas para implantar o ATP do Azure em seu ambiente.
 - [Integrar o Azure ATP ao Windows Defender ATP](integrate-wd-atp.md)
 

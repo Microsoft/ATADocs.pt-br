@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: effca0f2-fcae-4fca-92c1-c37306decf84
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: e2e3b35373bdfaaa0d13c1c175deea12bf24a34d
-ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.openlocfilehash: a615574ba0f74af8a01806bfffa44f343bba1151
+ms.sourcegitcommit: 0f3ee3241895359d5cecd845827cfba1fdca9317
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "65195469"
+ms.lasthandoff: 12/29/2019
+ms.locfileid: "75543560"
 ---
 # <a name="azure-atp-role-groups"></a>Grupos de função do Azure ATP
 
@@ -69,7 +69,7 @@ Quando tentam acessar uma página que não está disponível para seus grupos de
 O Azure ATP usa grupos de segurança do Azure AD como uma base para os grupos de função. Os grupos de funções podem ser gerenciados por meio do [https://aad.portal.azure.com/#blade/Microsoft_AAD_IAM/GroupsManagementMenuBlade/All%20groups](https://aad.portal.azure.com/#blade/Microsoft_AAD_IAM/GroupsManagementMenuBlade/All%20groups). Somente os usuários do Azure AD podem ser adicionados ou removidos de grupos de segurança. 
 
 ## <a name="see-also"></a>Consulte Também
-- [Ferramenta de dimensionamento do ATP](http://aka.ms/aatpsizingtool)
+- [Ferramenta de dimensionamento do ATP](https://aka.ms/aatpsizingtool)
 - [Arquitetura do ATP](atp-architecture.md)
 - [Instalar o Azure ATP](install-atp-step1.md)
 - [Confira o fórum do ATP do Azure!](https://aka.ms/azureatpcommunity)
