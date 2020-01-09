@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: e1c5ff41-d989-46cb-aa38-5a3938f03c0f
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 313e0ceb9a0d49a708930dd020481262e7471404
-ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.openlocfilehash: 4e098c0da30b7a3cc38e2ba857e9297a52d2bb10
+ms.sourcegitcommit: 0f3ee3241895359d5cecd845827cfba1fdca9317
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "65195918"
+ms.lasthandoff: 12/29/2019
+ms.locfileid: "75543847"
 ---
 # <a name="install-ata---step-2"></a>Instalação do ATA - Etapa 2
 
@@ -60,8 +60,8 @@ Na primeira vez que você abrir o Console do ATA, a tela a seguir será exibida:
 
 
 ## <a name="see-also"></a>Confira Também
-- [Guia de implantação da POC (prova de conceito) do ATA](http://aka.ms/atapoc)
-- [Ferramenta de dimensionamento do ATA](http://aka.ms/atasizingtool)
+- [Guia de implantação da POC (prova de conceito) do ATA](https://aka.ms/atapoc)
+- [Ferramenta de dimensionamento do ATA](https://aka.ms/atasizingtool)
 - [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Configurar coleta de eventos](configure-event-collection.md)
 - [Pré-requisitos do ATA](ata-prerequisites.md)
