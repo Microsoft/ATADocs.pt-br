@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 0756ef64-3aef-4a69-8981-24fa8f285c6a
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 17bc38ad4af1e0e185b1607a5d0002d5bfa613ea
-ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.openlocfilehash: ea37da339e5c78e4fbcb4cdd3351403cf0d4d49c
+ms.sourcegitcommit: 0f3ee3241895359d5cecd845827cfba1fdca9317
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "65196113"
+ms.lasthandoff: 12/29/2019
+ms.locfileid: "75543241"
 ---
 # <a name="ata-update-to-16-migration-guide"></a>Guia de migração de atualização do ATA para 1.6
 A atualização 1.6 do ATA fornece melhorias nas seguintes áreas:
@@ -49,7 +49,7 @@ Execute estas etapas para atualizar para o ATA versão 1.6:
 
 1. Para evitar problemas de atualização, lembre-se de seguir as etapas 8 a 10 de **Falha na migração ao atualizar para a versão 1.6 do ATA** descrito em [Novidades na versão 1.6 do ATA](whats-new-version-1.6.md).
 2. Tenha certeza de que há espaço livre necessário para concluir a atualização. Você pode executar a instalação até a verificação de preparação para obter uma estimativa de quanto espaço livre é necessário e, em seguida, reiniciar a atualização depois de alocar o espaço em disco necessário.
-1.  [Baixar a atualização 1.6](http://www.microsoft.com/evalcenter/evaluate-microsoft-advanced-threat-analytics)<br>
+1.  [Baixar a atualização 1.6](https://www.microsoft.com/evalcenter/evaluate-microsoft-advanced-threat-analytics)<br>
 Nessa versão, o mesmo arquivo de instalação (Microsoft ATA Center Setup.exe) é usado para instalar uma nova implantação do ATA e para atualizar as implantações existentes.
 
 2.  Atualize o Centro do ATA

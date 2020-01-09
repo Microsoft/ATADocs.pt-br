@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 1fe5fd6f-1b79-4a25-8051-2f94ff6c71c1
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: b5e5e8c5f42f786ca869ed2a29572e4512faf26f
-ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.openlocfilehash: 59fe86e50a583278880d977aa7282003de39faac
+ms.sourcegitcommit: 0f3ee3241895359d5cecd845827cfba1fdca9317
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "65197225"
+ms.lasthandoff: 12/29/2019
+ms.locfileid: "75543771"
 ---
 # <a name="advanced-threat-analytics-suspicious-activity-guide"></a>Guia de atividades suspeitas Advanced Threat Analytics
 
@@ -123,10 +123,10 @@ Primeiro, verifique a descrição do alerta para ver com qual dos três tipos de
 1.  Skeleton Key – você pode verificar se a Skeleton Key afetou os controladores de domínio usando o [analisador gravado pela equipe do ATA](https://gallery.technet.microsoft.com/Aorato-Skeleton-Key-24e46b73). Se o analisador encontrar malware em 1 ou mais controladores de domínio, é um verdadeiro positivo.
 2.  Bilhete dourado – na planilha do Excel, vá para a guia **atividade de rede** . Você verá que o campo de downgrade relevante é **solicitar tipo de criptografia de tíquete**e **tipos de criptografia com suporte do computador de origem** lista métodos de criptografia mais fortes.
   a.    Verifique o computador de origem e a conta ou, se houver vários computadores de origem e contas, verifique se eles têm algo em comum (por exemplo, toda a equipe de marketing usa um aplicativo específico que pode estar fazendo o alerta ser disparado). Há casos em que um aplicativo personalizado raramente usado faz autenticação usando uma codificação de criptografia inferior. Verifique se há algum desses aplicativos personalizados no computador de origem. Nesse caso, ele é provavelmente um positivo verdadeiro benigno e pode ser **Suprimido**.
-  b.    Verifique o recurso acessado por essas permissões. Se houver um recurso que todas elas estão acessando, valide-o e verifique se é um recurso válido que elas precisam acessar. Além disso, verifique se o recurso de destino é compatível com métodos de criptografia forte. Você pode verificar isso no Active Directory verificando o atributo `msDS-SupportedEncryptionTypes`, da conta de serviço do recurso.
+  b.    Verifique o recurso acessado por essas permissões. Se houver um recurso que todas elas estão acessando, valide-o e verifique se é um recurso válido que elas precisam acessar. Além disso, verifique se o recurso de destino dá suporte a métodos de criptografia forte. Você pode verificar isso no Active Directory verificando o atributo `msDS-SupportedEncryptionTypes`, da conta de serviço do recurso.
 3.  Overpass-The-hash – na planilha do Excel, vá para a guia **atividade de rede** . Você verá que o campo downgrade relevante é o **tipo de criptografia de carimbo de data/hora criptografado** e os tipos de **criptografia com suporte do computador de origem** contêm métodos de criptografia mais fortes
   a.    Há casos em que esse alerta pode ser disparado quando os usuários fazem logon usando cartões inteligentes, se a configuração do cartão inteligente foi alterada recentemente. Verifique se ocorreram alterações como essa para a(s) conta(s) envolvida(s). Nesse caso, ele é provavelmente um positivo verdadeiro benigno e pode ser **Suprimido**.
-  b.    Verifique o recurso acessado por essas permissões. Se houver um recurso que todas elas estão acessando, valide-o e verifique se é um recurso válido que elas precisam acessar. Além disso, verifique se o recurso de destino é compatível com métodos de criptografia forte. Você pode verificar isso no Active Directory verificando o atributo `msDS-SupportedEncryptionTypes`, da conta de serviço do recurso.
+  b.    Verifique o recurso acessado por essas permissões. Se houver um recurso que todas elas estão acessando, valide-o e verifique se é um recurso válido que elas precisam acessar. Além disso, verifique se o recurso de destino dá suporte a métodos de criptografia forte. Você pode verificar isso no Active Directory verificando o atributo `msDS-SupportedEncryptionTypes`, da conta de serviço do recurso.
 
 **Remediação**
 
@@ -557,6 +557,6 @@ Aplique as correções mais recentes a todas as suas máquinas e verifique se to
 
 
 ## <a name="see-also"></a>Confira Também
-- [Manual da atividade suspeita do ATA](http://aka.ms/ataplaybook)
+- [Manual da atividade suspeita do ATA](https://aka.ms/ataplaybook)
 - [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Trabalhando com atividades suspeitas](working-with-suspicious-activities.md)

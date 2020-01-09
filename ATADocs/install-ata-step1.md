@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: b3cceb18-0f3c-42ac-8630-bdc6b310f1d6
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 25ccbe5c1cd37a46e88335fc1e293b0e426ced4e
-ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.openlocfilehash: 2a665450d68dd814931a3153a1b3cde4411cf20b
+ms.sourcegitcommit: 0f3ee3241895359d5cecd845827cfba1fdca9317
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "65196093"
+ms.lasthandoff: 12/29/2019
+ms.locfileid: "75543199"
 ---
 # <a name="install-ata---step-1"></a>Instalação do ATA - Etapa 1
 
@@ -40,7 +40,7 @@ Depois de verificar que o servidor atende aos requisitos, você pode prosseguir 
 
 Execute as seguintes etapas no servidor do Centro do ATA.
 
-1.  Baixe o ATA no [Centro de Serviços de Licenciamento por Volume da Microsoft](https://www.microsoft.com/Licensing/servicecenter/default.aspx), no [Centro de avaliação TechNet](http://www.microsoft.com/evalcenter/) ou no [MSDN](https://msdn.microsoft.com/subscriptions/downloads).
+1.  Baixe o ATA no [Centro de Serviços de Licenciamento por Volume da Microsoft](https://www.microsoft.com/Licensing/servicecenter/default.aspx), no [Centro de avaliação do TechNet](https://www.microsoft.com/evalcenter/) ou no [MSDN](https://msdn.microsoft.com/subscriptions/downloads).
 
 2.  Entre no computador no qual você está instalando o Centro do ATA como um usuário que seja membro do grupo Administradores local.
 
@@ -122,8 +122,8 @@ Se você instalou o ATA em um diretório diferente, não deixe de alterar os cam
 
 
 ## <a name="see-also"></a>Confira Também
-- [Guia de implantação da POC (prova de conceito) do ATA](http://aka.ms/atapoc)
-- [Ferramenta de dimensionamento do ATA](http://aka.ms/atasizingtool)
+- [Guia de implantação da POC (prova de conceito) do ATA](https://aka.ms/atapoc)
+- [Ferramenta de dimensionamento do ATA](https://aka.ms/atasizingtool)
 - [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Configurar coleta de eventos](configure-event-collection.md)
 - [Pré-requisitos do ATA](ata-prerequisites.md)

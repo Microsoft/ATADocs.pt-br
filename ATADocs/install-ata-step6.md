@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 8980e724-06a6-40b0-8477-27d4cc29fd2b
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: ccea2b41e99e4d3ab19efc703f337115740c2e0d
-ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.openlocfilehash: 3038b5064b3d8f611e970796d2962d50f604f64d
+ms.sourcegitcommit: 0f3ee3241895359d5cecd845827cfba1fdca9317
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "70803180"
+ms.lasthandoff: 12/29/2019
+ms.locfileid: "75544043"
 ---
 # <a name="install-ata---step-6"></a>Instalação do ATA - Etapa 6
 
@@ -198,8 +198,8 @@ Certifique-se de ter \t entre os pares de chave=valor.
 
 
 ## <a name="see-also"></a>Confira Também
-- [Guia de implantação da POC (prova de conceito) do ATA](http://aka.ms/atapoc)
-- [Ferramenta de dimensionamento do ATA](http://aka.ms/atasizingtool)
+- [Guia de implantação da POC (prova de conceito) do ATA](https://aka.ms/atapoc)
+- [Ferramenta de dimensionamento do ATA](https://aka.ms/atasizingtool)
 - [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Configurar coleta de eventos](configure-event-collection.md)
 - [Pré-requisitos do ATA](ata-prerequisites.md)

@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 6bbc50c3-bfa8-41db-a2f9-56eed68ef5d2
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 55279f066b093e975d33d9d392530dc1a3238112
-ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.openlocfilehash: 83234808b39c8c2e92ca4268c2ad64474f3462be
+ms.sourcegitcommit: 0f3ee3241895359d5cecd845827cfba1fdca9317
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "65195712"
+ms.lasthandoff: 12/29/2019
+ms.locfileid: "75543893"
 ---
 # <a name="install-ata---step-4"></a>Instalação do ATA - Etapa 4
 
@@ -33,7 +33,7 @@ Antes de instalar o Gateway do ATA, verifique se o espelhamento de porta está c
 
 
 > [!IMPORTANT]
-> Verifique se o [KB2919355](http://support.microsoft.com/kb/2919355/) foi instalado.  Execute o seguinte cmdlet do PowerShell para verificar se o hotfix foi instalado:
+> Verifique se o [KB2919355](https://support.microsoft.com/kb/2919355/) foi instalado.  Execute o seguinte cmdlet do PowerShell para verificar se o hotfix foi instalado:
 >
 > `Get-HotFix -Id kb2919355`
 
@@ -92,8 +92,8 @@ Execute as seguintes etapas no servidor do Gateway do ATA.
 - [Como escolher o tipo certo de Gateway do ATA](https://channel9.msdn.com/Shows/Microsoft-Security/ATA-Deployment-Choose-the-Right-Gateway-Type)
 
 ## <a name="see-also"></a>Confira Também
-- [Guia de implantação da POC (prova de conceito) do ATA](http://aka.ms/atapoc)
-- [Ferramenta de dimensionamento do ATA](http://aka.ms/atasizingtool)
+- [Guia de implantação da POC (prova de conceito) do ATA](https://aka.ms/atapoc)
+- [Ferramenta de dimensionamento do ATA](https://aka.ms/atasizingtool)
 - [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Configurar coleta de eventos](configure-event-collection.md)
 - [Pré-requisitos do ATA](ata-prerequisites.md)

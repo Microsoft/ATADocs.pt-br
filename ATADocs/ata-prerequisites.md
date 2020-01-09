@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: a5f90544-1c70-4aff-8bf3-c59dd7abd687
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 213f098fe878afda763eebce6080909b63c3cf91
-ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.openlocfilehash: e84bbb84859d316d4900d0f09e71142627df1ae8
+ms.sourcegitcommit: 0f3ee3241895359d5cecd845827cfba1fdca9317
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73618456"
+ms.lasthandoff: 12/29/2019
+ms.locfileid: "75543176"
 ---
 # <a name="ata-prerequisites"></a>Pré-requisitos do ATA
 
@@ -29,7 +29,7 @@ Este artigo descreve os requisitos para uma implantação bem-sucedida do ATA no
 > Para obter informações sobre como planejar a capacidade e os recursos, confira [Planejamento de capacidade do ATA](ata-capacity-planning.md).
 
 
-O ATA é composto pelo Centro do ATA, pelo Gateway do ATA e/ou o Gateway Lightweight do ATA. Para saber mais sobre os componentes do ATA, confira [Arquitetura do ATA](ata-architecture.md).
+O ATA é composto pelo Centro do ATA, pelo Gateway do ATA e/ou o Gateway Lightweight do ATA. Para obter mais informações sobre os componentes do ATA, confira [Arquitetura do ATA](ata-architecture.md).
 
 O Sistema do ATA funciona nos limites da floresta do active directory e oferece suporte a FFL (Nível funcional da floresta) do Windows 2003 e superior.
 
@@ -102,7 +102,7 @@ Ao trabalhar em um servidor físico, o banco de dados do ATA precisa que você *
 Para ter um melhor desempenho, defina a **Opção de Energia** do Centro do ATA como **Alto Desempenho**.<br>
 O número de controladores de domínio que você está monitorando e a carga em cada um dos controladores de domínio determina as especificações de servidor necessárias. Para saber mais, confira [Planejamento de capacidade de ATA](ata-capacity-planning.md).
 
-Para os sistemas operacionais Windows 2008R2 e 2012, não há suporte para o gateway em um modo de [grupo de vários processadores](https://docs.microsoft.com/windows/win32/procthread/processor-groups) . Para obter mais informações sobre o modo de grupo de multiprocessadores,confira [solução de problemas](troubleshooting-ata-known-errors.md##multi-processor-group-mode). 
+Para os sistemas operacionais Windows 2008R2 e 2012, não há suporte para o gateway em um modo de [grupo de vários processadores](https://docs.microsoft.com/windows/win32/procthread/processor-groups) . Para obter mais informações sobre o modo de grupo de multiprocessadores,confira [solução de problemas](troubleshooting-ata-known-errors.md#multi-processor-group-mode). 
 
 ### <a name="time-synchronization"></a>Sincronização da hora
 
@@ -119,9 +119,9 @@ Você deve ter o seguinte:
 ### <a name="ports"></a>Portas
 A tabela a seguir lista as portas mínimas que devem ser abertas para que a Central de ATA funcione corretamente.
 
-|Protocolo|Transport|Porta|Para/De|Direção|
+|Protocolo|Transport|Porta|Para/De|Direction|
 |------------|-------------|--------|-----------|-------------|
-|**SSL** (Comunicações do ATA)|TCP|443|Gateway do ATA|Entrada|
+|**SSL** (Comunicações do ATA)|TCP|443|Gateway de ATA|Entrada|
 |**HTTP** (opcional)|TCP|80|Rede da Empresa|Entrada|
 |**HTTPS**|TCP|443|Rede da Empresa e Gateway de ATA|Entrada|
 |**SMTP** (opcional)|TCP|25|Servidor SMTP|Saída|
@@ -215,7 +215,7 @@ O Gateway de ATA requer pelo menos um Adaptador de gerenciamento e pelo menos um
 ### <a name="ports"></a>Portas
 A tabela abaixo lista as portas mínimas que o Gateway do ATA requer configuradas no adaptador de gerenciamento:
 
-|Protocolo|Transport|Porta|Para/De|Direção|
+|Protocolo|Transport|Porta|Para/De|Direction|
 |------------|-------------|--------|-----------|-------------|
 |LDAP|TCP e UDP|389|Controladores de domínio|Saída|
 |LDAP seguro (LDAPS)|TCP|636|Controladores de domínio|Saída|
@@ -288,7 +288,7 @@ Após a implantação, você pode usar o Console do ATA para modificar quais ada
 ### <a name="ports"></a>Portas
 A tabela abaixo lista o mínimo de portas que o Gateway Lightweight do ATA exige:
 
-|Protocolo|Transport|Porta|Para/De|Direção|
+|Protocolo|Transport|Porta|Para/De|Direction|
 |------------|-------------|--------|-----------|-------------|
 |DNS|TCP e UDP|53|Servidores DNS|Saída|
 |NTLM via RPC|TCP|135|Todos os dispositivos na rede|Ambos|

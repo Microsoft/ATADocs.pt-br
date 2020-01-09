@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 7597ed25-87f5-472c-a496-d5f205c9c391
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 5d266de0344a699ed3c3934246311f21b1b00c09
-ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.openlocfilehash: 0d46ad26af75f56a2f85de863c4689307cda6493
+ms.sourcegitcommit: 0f3ee3241895359d5cecd845827cfba1fdca9317
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "70803188"
+ms.lasthandoff: 12/29/2019
+ms.locfileid: "75543811"
 ---
 # <a name="install-ata---step-9"></a>Instalar o ATA – Etapa 9
 
@@ -55,8 +55,8 @@ Para garantir que clientes e servidores Windows permitam que a conta de serviço
 > [« Etapa 8](install-ata-step7.md)
 
 ## <a name="see-also"></a>Confira Também
-- [Guia de implantação da POC (prova de conceito) do ATA](http://aka.ms/atapoc)
-- [Ferramenta de dimensionamento do ATA](http://aka.ms/atasizingtool)
+- [Guia de implantação da POC (prova de conceito) do ATA](https://aka.ms/atapoc)
+- [Ferramenta de dimensionamento do ATA](https://aka.ms/atasizingtool)
 - [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Configurar coleta de eventos](configure-event-collection.md)
 - [Pré-requisitos do ATA](ata-prerequisites.md)

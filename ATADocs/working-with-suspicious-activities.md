@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 44d7c899-816c-4f7f-91d3-84a09d291a24
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 11d7ace698d7f2f1df376af0e26afeb6b9e1f960
-ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.openlocfilehash: 2ee7687feac6e8b703a2e17b3b60418e96dcee71
+ms.sourcegitcommit: 0f3ee3241895359d5cecd845827cfba1fdca9317
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "65195781"
+ms.lasthandoff: 12/29/2019
+ms.locfileid: "75544339"
 ---
 # <a name="working-with-suspicious-activities"></a>Trabalhando com atividades suspeitas
 
@@ -100,6 +100,6 @@ Para fazer isso, clique nos três pontos no canto superior direito de uma ativid
 
 
 ## <a name="see-also"></a>Confira Também
-- [Manual da atividade suspeita do ATA](http://aka.ms/ataplaybook)
+- [Manual da atividade suspeita do ATA](https://aka.ms/ataplaybook)
 - [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Modificando a configuração do ATA](modifying-ata-center-configuration.md)

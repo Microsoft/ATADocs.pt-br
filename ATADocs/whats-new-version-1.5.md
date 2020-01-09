@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: a0d64aff-ca9e-4300-b3f8-eb3c8b8ae045
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: c0658b0d9320116bf8a752ce360994946300947a
-ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.openlocfilehash: c3cbce98ef0b0fa75dcc0df813582d4d46dac4fb
+ms.sourcegitcommit: 0f3ee3241895359d5cecd845827cfba1fdca9317
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "65195743"
+ms.lasthandoff: 12/29/2019
+ms.locfileid: "75544265"
 ---
 # <a name="whats-new-in-ata-version-15"></a>Novidades na versão 1.5 do ATA
 Essas notas de versão fornecem informações sobre problemas conhecidos nesta versão da Advanced Threat Analytics.
@@ -59,7 +59,7 @@ Ao instalar o Gateway de ATA, certifique-se de extrair os arquivos do arquivo zi
 Depois de definir a configuração de um Gateway do ATA, ele é iniciado pela primeira vez, o rótulo "Não sincronizado" é exibido até o serviço ter sido totalmente iniciado, o que pode levar até 10 minutos na primeira vez que o serviço é iniciado.
 
 ### <a name="network-capture-software"></a>Software de captura de rede
-No Gateway de ATA, o único software de captura de rede suportado que você pode instalar é o [Microsoft Network Monitor 3.4](http://www.microsoft.com/download/details.aspx?id=4865). Não instale o Microsoft Message Analyzer ou qualquer outro software de captura de rede. A instalação de outro software fará com que o Gateway de ATA pare de funcionar corretamente.
+No Gateway do ATA, o único software de captura de rede com suporte que pode ser instalado é o [Microsoft Network Monitor 3.4](https://www.microsoft.com/download/details.aspx?id=4865). Não instale o Microsoft Message Analyzer ou qualquer outro software de captura de rede. A instalação de outro software fará com que o Gateway de ATA pare de funcionar corretamente.
 
 ### <a name="kb-on-virtualization-host"></a>Base de dados de conhecimento sobre host de virtualização
 Não instale a Base de dados de conhecimento 3047154 em um host de virtualização. Isso pode fazer com que o espelhamento de porta pare de funcionar corretamente.

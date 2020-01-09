@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 283e7b4e-996a-4491-b7f6-ff06e73790d2
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 67e265c4785e5b2b3cc6fe267e72953e8817020f
-ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.openlocfilehash: a17b6e5788f4250b824519ebd9b979936a46b999
+ms.sourcegitcommit: 0f3ee3241895359d5cecd845827cfba1fdca9317
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "65195996"
+ms.lasthandoff: 12/29/2019
+ms.locfileid: "75544239"
 ---
 # <a name="what-is-advanced-threat-analytics"></a>O que é o Advanced Threat Analytics?
 
@@ -104,7 +104,7 @@ Você pode exibir as atividades suspeitas desse tipo no Painel do ATA. No exempl
 
 ## <a name="whats-next"></a>Novidades
 
--   Para mais informações sobre como o ATA se adapta à sua rede, consulte: [Arquitetura de ATA](ata-architecture.md)
+-   Para saber mais sobre como o ATA se adapta à sua rede: [Arquitetura do ATA](ata-architecture.md)
 
 -   Para começar a implantar o ATA: [Instalar o ATA](install-ata-step1.md)
 
@@ -114,5 +114,5 @@ Você pode exibir as atividades suspeitas desse tipo no Painel do ATA. No exempl
 
 
 ## <a name="see-also"></a>Confira Também
-[Manual de atividade suspeita do ATA](http://aka.ms/ataplaybook)
+[Manual de atividade suspeita do ATA](https://aka.ms/ataplaybook)
 [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
