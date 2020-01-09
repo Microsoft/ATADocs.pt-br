@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 892b16d2-58a6-49f9-8693-1e5f69d8299c
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 9579108bd0bb2fa91e2e196ab90284f396025db1
-ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.openlocfilehash: f953a163be460184c7b585e71cd973bbdcc71e6f
+ms.sourcegitcommit: 0f3ee3241895359d5cecd845827cfba1fdca9317
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "70803114"
+ms.lasthandoff: 12/29/2019
+ms.locfileid: "75543029"
 ---
 # <a name="ata-architecture"></a>Arquitetura do ATA
 
@@ -84,7 +84,7 @@ O Centro do ATA recebe tráfego analisado do Gateway do ATA e do Gateway Lightwe
 |Processador de atividade de rede|Processa todas as atividades de rede em cada lote recebido. Por exemplo, a correspondência entre as diversas etapas do Kerberos executadas em computadores potencialmente diferentes|
 |Criador de perfil de entidade|Cria o perfil de todas as entidades exclusivas de acordo com o tráfego e os eventos. Por exemplo, o ATA atualiza a lista de computadores conectados para cada perfil do usuário.|
 |Banco de dados central|Gerencia o processo de gravação de atividades de rede e os eventos no banco de dados. |
-|Banco de dados|O ATA utiliza o MongoDB para armazenar todos os dados no sistema:<br /><br />-   Atividade de rede<br />-   Atividades evento<br />-   Entidades exclusivas<br />-   Atividades suspeitas<br />-   Configuração do ATA|
+|Banco de Dados|O ATA utiliza o MongoDB para armazenar todos os dados no sistema:<br /><br />-   Atividade de rede<br />-   Atividades evento<br />-   Entidades exclusivas<br />-   Atividades suspeitas<br />-   Configuração do ATA|
 |Detectores|Os detectores usam algoritmos de aprendizado de máquina e regras determinísticas para localizar atividades suspeitas e comportamento anormal do usuário em sua rede.|
 |Console do ATA|O Console do ATA é para configurar o ATA e monitorar atividades suspeitas detectadas pelo ATA em sua rede. O Console do ATA não é dependente do serviço do Centro do ATA e é executado mesmo quando o serviço é interrompido, contanto que ele possa se comunicar com o banco de dados.|
 
@@ -164,7 +164,7 @@ Se você estiver usando Gateways do ATA, precisará configurar o espelhamento de
 
 Enquanto o espelhamento de portas espelha todo o tráfego de rede do controlador de domínio para o Gateway do ATA, apenas uma pequena porcentagem desse tráfego é compactada e enviada para o Centro do ATA para análise.
 
-Os controladores de domínio e os Gateways de ATA podem ser físicos ou virtuais, consulte [Configurar o espelhamento de porta](configure-port-mirroring.md) para obter mais informações.
+Os controladores de domínio e os Gateways do ATA podem ser físicos ou virtuais, consulte [Configurar o espelhamento de porta](configure-port-mirroring.md) para obter mais informações.
 
 
 ### <a name="events"></a>Eventos
@@ -180,7 +180,7 @@ Para melhorar a detecção do ATA de Pass-the-Hash, Força Bruta, Modificação 
 
 ## <a name="see-also"></a>Confira Também
 - [Pré-requisitos do ATA](ata-prerequisites.md)
-- [Ferramenta de dimensionamento do ATA](http://aka.ms/atasizingtool)
+- [Ferramenta de dimensionamento do ATA](https://aka.ms/atasizingtool)
 - [Planejamento da capacidade do ATA](ata-capacity-planning.md)
 - [Configurar coleta de eventos](configure-event-collection.md)
 - [Configuração do encaminhamento de eventos do Windows](configure-event-collection.md)

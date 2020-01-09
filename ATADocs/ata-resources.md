@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 42a1a34f-ed6b-4538-befb-452168a30e8c
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: f83b0e7576a1edbf3e973889cf06d5bc325ae519
-ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.openlocfilehash: e3b83699fdafd8fd34cea3a4407422e27118d9a0
+ms.sourcegitcommit: 0f3ee3241895359d5cecd845827cfba1fdca9317
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "65196216"
+ms.lasthandoff: 12/29/2019
+ms.locfileid: "75543011"
 ---
 # <a name="ata-readiness-roadmap"></a>Roteiro de preparação do ATA 
 
@@ -59,9 +59,9 @@ Se você estiver usando servidores físicos, você deverá planejar a capacidade
 
 Esses recursos ajudarão você a baixar e instalar o Centro do ATA, a se conectar ao Active Directory, a baixar o pacote de Gateway do ATA, a configurar a coleta de eventos e, opcionalmente, integrar com a sua VPN e configurar contas de honeytoken e exclusões.
 
-[Baixar o ATA](http://aka.ms/ataeval) – Antes de implantar o ATA, se você ainda não fez a decisão de compra do ATA, você poderá baixar a versão de avaliação. 
+[Baixar o ATA](https://aka.ms/ataeval) – Antes de implantar o ATA, se você ainda não fez a decisão de compra do ATA, você poderá baixar a versão de avaliação. 
 
-[Guia estratégico de POC do ATA](http://aka.ms/atapoc) – Guia para todas as etapas necessárias para fazer uma implantação de POC bem-sucedida do ATA.
+[Guia estratégico de POC do ATA](https://aka.ms/atapoc) – Guia para todas as etapas necessárias para fazer uma implantação de POC bem-sucedida do ATA.
 
 [Vídeo de implantação do ATA](https://channel9.msdn.com/Shows/Microsoft-Security/Overview-of-ATA-Deployment-in-10-Minutes) – Este vídeo oferece uma visão geral das etapas de implantação do ATA em menos de 10 minutos.
 
@@ -77,7 +77,7 @@ As configurações básicas necessárias no ATA são configuradas como parte do 
 
 Depois que o ATA estiver em execução, você poderá exibir as atividades suspeitas detectadas na linha do tempo do Ataque. Essa é a página de aterrissagem exibida quando você entra no Console do ATA. Por padrão, todas as atividades suspeitas abertas são mostradas na linha do tempo de ataque. Você também pode ver a severidade atribuída a cada atividade. Investigue cada atividade suspeita, analisando as entidades (computadores, dispositivos, usuários) para abrir suas páginas de perfil que fornecem mais informações. Esses recursos ajudarão você a trabalhar com as atividades suspeitas do ATA:
 
-[Guia estratégico de atividades suspeitas do ATA](http://aka.ms/ataplaybook) – Este artigo o orienta por meio de técnicas de ataque de roubo de credenciais usando as ferramentas de pesquisa prontamente disponíveis na Internet. Em cada ponto do ataque, você pode ver como o ATA ajuda você a obter visibilidade dessas ameaças.
+[Guia estratégico de atividades suspeitas do ATA](https://aka.ms/ataplaybook) – Este artigo o orienta por meio de técnicas de ataque de roubo de credenciais usando as ferramentas de pesquisa prontamente disponíveis na Internet. Em cada ponto do ataque, você pode ver como o ATA ajuda você a obter visibilidade dessas ameaças.
 
 [Guia de atividade suspeita do ATA](suspicious-activity-guide.md)
 

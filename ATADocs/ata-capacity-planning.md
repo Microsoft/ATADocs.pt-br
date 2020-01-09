@@ -11,12 +11,12 @@ ms.prod: advanced-threat-analytics
 ms.assetid: 1b5b24ff-0df8-4660-b4f8-64d68cc72f65
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 99d02aeb30cac449c4e9ac19c3824e8ebd97d0d5
-ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.openlocfilehash: 4725be4c0254225d6ca92e11d62c283948ccfc46
+ms.sourcegitcommit: 0f3ee3241895359d5cecd845827cfba1fdca9317
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72690219"
+ms.lasthandoff: 12/29/2019
+ms.locfileid: "75543057"
 ---
 # <a name="ata-capacity-planning"></a>Planejamento da capacidade de ATA
 
@@ -28,7 +28,7 @@ Este artigo ajuda a determinar quantos servidores do ATA são necessários para 
 > O ATA Center pode ser implantado em qualquer fornecedor de IaaS, desde que os requisitos de desempenho descritos neste artigo sejam atendidos.
 
 ## <a name="using-the-sizing-tool"></a>Usando a ferramenta de dimensionamento
-A maneira recomendada e mais simples para determinar a capacidade para sua implantação ATA é usar o [Ferramenta de Dimensionamento de ATA](http://aka.ms/atasizingtool). Execute a Ferramenta de Dimensionamento ATA e resultados de arquivo do Excel, use os campos a seguir para determinar a capacidade ATA que você precisa:
+A maneira recomendada e mais simples para determinar a capacidade para sua implantação ATA é usar o [Ferramenta de Dimensionamento de ATA](https://aka.ms/atasizingtool). Execute a Ferramenta de Dimensionamento ATA e resultados de arquivo do Excel, use os campos a seguir para determinar a capacidade ATA que você precisa:
 
 - CPU e Memória do Centro do ATA: corresponda o campo **Pacotes Ocupado/s** na tabela do Centro do ATA no arquivo de resultados ao campo **PACOTES POR SEGUNDO** na [tabela do Centro do ATA](#ata-center-sizing).
 
@@ -90,7 +90,7 @@ Ao decidir sobre o tipo de implantação do Gateway, considere os seguintes bene
 
 |Tipo de gateway|Vantagens|Custo|Topologia de implantação|Uso do controlador de domínio|
 |----|----|----|----|-----|
-|Gateway do ATA|A implantação Fora de banda dificulta o trabalho dos invasores em descobrir se o ATA está presente|Mais alto|Instalado junto com o controlador de domínio (fora de banda)|Dá suporte a até 50.000 pacotes por segundo|
+|Gateway de ATA|A implantação Fora de banda dificulta o trabalho dos invasores em descobrir se o ATA está presente|Mais alto|Instalado junto com o controlador de domínio (fora de banda)|Dá suporte a até 50.000 pacotes por segundo|
 |Gateway Lightweight do ATA|Não exige uma configuração de espelhamento de porta e servidor dedicado|Inferior|Instalado em um controlador de domínio|Dá suporte a até 10.000 pacotes por segundo|
 
 Veja a seguir exemplos de cenários nos quais os controladores de domínio devem ser cobertos pelo Gateway Lightweight do ATA:
@@ -116,7 +116,7 @@ Um Gateway Lightweight do ATA pode oferecer suporte ao monitoramento de um contr
 |---------------------------|-------------------------|---------------|
 |1,000|2|6|
 |5,000|6|16|
-    |10.000|10|24|
+    |10,000|10|24|
 
 &#42;Número total de pacotes por segundo no controlador de domínio sendo monitorado pelo Gateway Lightweight do ATA específico.
 
@@ -151,7 +151,7 @@ As considerações de espelhamento de porta podem exigir que você implante vár
 |---------------------------|-------------------------|---------------|
 |1,000|1|6|
 |5,000|2|10|
-|10.000|3|12|
+|10,000|3|12|
 |20.000|6|24|
 |50.000|16|48|
 
@@ -173,7 +173,7 @@ As considerações de espelhamento de porta podem exigir que você implante vár
 
 
 ## <a name="see-also"></a>Confira Também
-- [Ferramenta de dimensionamento do ATA](http://aka.ms/atasizingtool)
+- [Ferramenta de dimensionamento do ATA](https://aka.ms/atasizingtool)
 - [Pré-requisitos do ATA](ata-prerequisites.md)
 - [Arquitetura do ATA](ata-architecture.md)
 - [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
