@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 27b139e5-12b9-4953-8f53-eb58e8ce0038
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 3ef4f8061970c1d69b9f25479d762bb4c423a4fd
-ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.openlocfilehash: 21b7fda6747fdb2c2590afe148a5f883e22410a5
+ms.sourcegitcommit: 0f3ee3241895359d5cecd845827cfba1fdca9317
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "65196970"
+ms.lasthandoff: 12/29/2019
+ms.locfileid: "75544305"
 ---
 # <a name="whats-new-in-ata-version-16"></a>Novidades na versão 1.6 do ATA
 Essas notas de versão fornecem informações sobre problemas conhecidos nesta versão da Advanced Threat Analytics.
@@ -121,7 +121,7 @@ Se você ver algum desses erros, execute a seguinte solução alternativa:
     1.  MongoDB
     2.  Central do Microsoft Advanced Threat Analytics
 7.  Revise os logs para verificar se o produto está sendo executado sem erros.
-8.  [Baixe](http://aka.ms/ataremoveduplicateprofiles "Download") a ferramenta "RemoveDuplicateProfiles. exe" e copie-a para o caminho de instalação principal (%ProgramFiles%\Microsoft Advanced Threat Analytics\Center)
+8.  [Baixe](https://aka.ms/ataremoveduplicateprofiles "Download") a ferramenta "RemoveDuplicateProfiles. exe" e copie-a para o caminho de instalação principal (%ProgramFiles%\Microsoft Advanced Threat Analytics\Center)
 9.  Em um prompt de comandos com privilégios elevados, execute `RemoveDuplicateProfiles.exe` e aguarde até que ela seja concluída com êxito.
 10. Do diretório: …\Microsoft Advanced Threat Analytics\Center\MongoDB\bin: **Mongo ATA**, digite o seguinte comando:
 
