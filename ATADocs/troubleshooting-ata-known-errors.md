@@ -2,8 +2,8 @@
 title: Solução de problemas conhecidos do ATA | Microsoft Docs
 description: Descreve como solucionar os problemas conhecidos no Advanced Threat Analytics
 keywords: ''
-author: mlottner
-ms.author: mlottner
+author: shsagir
+ms.author: shsagir
 manager: rkarlin
 ms.date: 08/20/2019
 ms.topic: conceptual
@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: d89e7aff-a6ef-48a3-ae87-6ac2e39f3bdb
 ms.reviewer: arzinger
 ms.suite: ems
-ms.openlocfilehash: d20aecfd55dd5b348c459373cb69c37bba91d458
-ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.openlocfilehash: e7b0a5c83926c1d730d8de6467fa692a27f4d50d
+ms.sourcegitcommit: 9673eb49729a06d3a25d52c0f43c76ac61b9cf89
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "69629271"
+ms.lasthandoff: 01/12/2020
+ms.locfileid: "75908125"
 ---
 # <a name="troubleshooting-ata-known-issues"></a>Solução de problemas conhecidos do ATA
 

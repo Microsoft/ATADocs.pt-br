@@ -2,8 +2,8 @@
 title: Gerenciar logs gerados pelo sistema do Advanced Threat Analytics | Microsoft Docs
 description: Descreve os dados coletados pelo ATA e fornece etapas para desativar a coleta de dados.
 keywords: ''
-author: mlottner
-ms.author: mlottner
+author: shsagir
+ms.author: shsagir
 manager: rkarlin
 ms.date: 8/19/2018
 ms.topic: article
@@ -11,12 +11,12 @@ ms.prod: advanced-threat-analytics
 ms.assetid: 8c1c7a1b-a3de-4105-9fd0-08a061952172
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: d39fef746d27871a5c45877edb33d64c2a3e4f19
-ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.openlocfilehash: ea4dcdeaedf4ba0a8b907acdc727a428a72aaa02
+ms.sourcegitcommit: 9673eb49729a06d3a25d52c0f43c76ac61b9cf89
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "65195896"
+ms.lasthandoff: 01/12/2020
+ms.locfileid: "75908012"
 ---
 # <a name="manage-system-generated-logs"></a>Gerenciar logs gerados pelo sistema
 

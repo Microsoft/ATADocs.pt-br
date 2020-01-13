@@ -2,8 +2,8 @@
 title: Instalar o Advanced Threat Analytics silenciosamente | Microsoft Docs
 description: Este artigo descreve como instalar silenciosamente o ATA.
 keywords: ''
-author: mlottner
-ms.author: mlottner
+author: shsagir
+ms.author: shsagir
 manager: rkarlin
 ms.date: 10/15/2019
 ms.topic: conceptual
@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: b3cceb18-0f3c-42ac-8630-bdc6b310f1d6
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 51234265f30cb71c0421a9aa80a9288fe7a77b2e
-ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.openlocfilehash: a757371dd23dd7692b6ce09fd27c8711d43ce306
+ms.sourcegitcommit: 9673eb49729a06d3a25d52c0f43c76ac61b9cf89
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72442166"
+ms.lasthandoff: 01/12/2020
+ms.locfileid: "75905621"
 ---
 # <a name="ata-silent-installation"></a>Instalação silenciosa do ATA
 
@@ -51,7 +51,7 @@ Use o seguinte comando para instalar o Centro do ATA:
 
 > [!div class="mx-tableFixed"]
 > 
-> |Nome|Sintaxe|Obrigatório para instalação silenciosa?|Description|
+> |Name|Sintaxe|Obrigatório para instalação silenciosa?|Description|
 > |-------------|----------|---------|---------|
 > |Quiet|/quiet|Sim|Executa o instalador sem exibir a interface do usuário nem solicitações.|
 > |Ajuda|/help|Não|Fornece ajuda e referência rápida. Exibe o uso correto do comando de configuração, incluindo uma lista de todas as opções e comportamentos.|
@@ -62,7 +62,7 @@ Use o seguinte comando para instalar o Centro do ATA:
 
 > [!div class="mx-tableFixed"]
 > 
-> |             Nome             |                      Sintaxe                      | Obrigatório para instalação silenciosa? |                                                                                                        Description                                                                                                         |
+> |             Name             |                      Sintaxe                      | Obrigatório para instalação silenciosa? |                                                                                                        Description                                                                                                         |
 > |------------------------------|--------------------------------------------------|------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 > |       InstallationPath       |         InstallationPath=“<InstallPath>”         |                 Não                 |                                               Define o caminho para a instalação dos binários do ATA. Caminho padrão: C:\Arquivos de Programas\Microsoft Advanced Threat Analytics\Center                                                |
 > |       DatabaseDataPath       |           DatabaseDataPath= “<DBPath>”           |                 Não                 |                                         Define o caminho para a pasta de dados do Banco de Dados do ATA. Caminho padrão: C:\Arquivos de Programas\Microsoft Advanced Threat Analytics\Center\MongoDB\bin\data                                         |
@@ -95,7 +95,7 @@ Use o seguinte comando para atualizar o Centro do ATA:
 
 > [!div class="mx-tableFixed"]
 > 
-> |Nome|Sintaxe|Obrigatório para instalação silenciosa?|Description|
+> |Name|Sintaxe|Obrigatório para instalação silenciosa?|Description|
 > |-------------|----------|---------|---------|
 > |Quiet|/quiet|Sim|Executa o instalador sem exibir a interface do usuário nem solicitações.|
 > |Ajuda|/help|Não|Fornece ajuda e referência rápida. Exibe o uso correto do comando de configuração, incluindo uma lista de todas as opções e comportamentos.|
@@ -119,7 +119,7 @@ Use o seguinte comando para realizar uma desinstalação silenciosa da Central d
 
 > [!div class="mx-tableFixed"]
 > 
-> |Nome|Sintaxe|Obrigatório para desinstalação silenciosa?|Description|
+> |Name|Sintaxe|Obrigatório para desinstalação silenciosa?|Description|
 > |-------------|----------|---------|---------|
 > |Quiet|/quiet|Sim|Executa o desinstalador sem exibir a interface do usuário nem solicitações.|
 > |Desinstalar|/uninstall|Sim|Executa a desinstalação silenciosa do Centro do ATA no servidor.|
@@ -129,7 +129,7 @@ Use o seguinte comando para realizar uma desinstalação silenciosa da Central d
 
 > [!div class="mx-tableFixed"]
 > 
-> |Nome|Sintaxe|Obrigatório para desinstalação silenciosa?|Description|
+> |Name|Sintaxe|Obrigatório para desinstalação silenciosa?|Description|
 > |-------------|----------|---------|---------|
 > |DeleteExistingDatabaseData|DeleteExistingDatabaseData|Não|Exclui todos os arquivos do banco de dados existente.|
 
@@ -160,7 +160,7 @@ Use o seguinte comando para instalar silenciosamente o Gateway do ATA:
 
 > [!div class="mx-tableFixed"]
 > 
-> |Nome|Sintaxe|Obrigatório para instalação silenciosa?|Description|
+> |Name|Sintaxe|Obrigatório para instalação silenciosa?|Description|
 > |-------------|----------|---------|---------|
 > |Quiet|/quiet|Sim|Executa o instalador sem exibir a interface do usuário nem solicitações.|
 > |Ajuda|/help|Não|Fornece ajuda e referência rápida. Exibe o uso correto do comando de configuração, incluindo uma lista de todas as opções e comportamentos.|
@@ -170,7 +170,7 @@ Use o seguinte comando para instalar silenciosamente o Gateway do ATA:
 
 > [!div class="mx-tableFixed"]
 > 
-> |          Nome          |                   Sintaxe                   | Obrigatório para instalação silenciosa? |                                                      Description                                                       |
+> |          Name          |                   Sintaxe                   | Obrigatório para instalação silenciosa? |                                                      Description                                                       |
 > |------------------------|--------------------------------------------|------------------------------------|------------------------------------------------------------------------------------------------------------------------|
 > |       InstallationPath       |         InstallationPath=“<InstallPath>”         |                 Não                 |                                               Define o caminho para a instalação dos binários do ATA. Caminho padrão: C:\Arquivos de Programas\Microsoft Advanced Threat Analytics\Center
 > |   ConsoleAccountName   |     ConsoleAccountName=”<AccountName>”     |                Sim                 |   Define o nome da conta do usuário (user@domain.com) usada para registrar o Gateway do ATA no Centro do ATA.    |
@@ -195,7 +195,7 @@ Use o seguinte comando para atualizar silenciosamente o Gateway do ATA:
 
 > [!div class="mx-tableFixed"]
 > 
-> |Nome|Sintaxe|Obrigatório para instalação silenciosa?|Description|
+> |Name|Sintaxe|Obrigatório para instalação silenciosa?|Description|
 > |-------------|----------|---------|---------|
 > |Quiet|/quiet|Sim|Executa o instalador sem exibir a interface do usuário nem solicitações.|
 > |Ajuda|/help|Não|Fornece ajuda e referência rápida. Exibe o uso correto do comando de configuração, incluindo uma lista de todas as opções e comportamentos.|
@@ -219,7 +219,7 @@ Use o seguinte comando para executar uma desinstalação silenciosa do Gateway d
 
 > [!div class="mx-tableFixed"]
 > 
-> |Nome|Sintaxe|Obrigatório para desinstalação silenciosa?|Description|
+> |Name|Sintaxe|Obrigatório para desinstalação silenciosa?|Description|
 > |-------------|----------|---------|---------|
 > |Quiet|/quiet|Sim|Executa o desinstalador sem exibir a interface do usuário nem solicitações.|
 > |Desinstalar|/uninstall|Sim|Executa a desinstalação silenciosa do Gateway do ATA do servidor.|

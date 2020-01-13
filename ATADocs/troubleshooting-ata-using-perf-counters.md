@@ -2,8 +2,8 @@
 title: Solução de problemas do Advanced Threat Analytics usando os contadores de desempenho | Microsoft Docs
 description: Descreve como você pode usar os contadores de desempenho para solucionar problemas com o ATA
 keywords: ''
-author: mlottner
-ms.author: mlottner
+author: shsagir
+ms.author: shsagir
 manager: rkarlin
 ms.date: 9/25/2018
 ms.topic: conceptual
@@ -12,19 +12,19 @@ ms.technology: ''
 ms.assetid: df162a62-f273-4465-9887-94271f5000d2
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 7d7dedf5e6f24c322cd81ed8a3ecb23f96bdc43c
-ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.openlocfilehash: 495813678b18b71af45240e18c40fdab5a5154a3
+ms.sourcegitcommit: 9673eb49729a06d3a25d52c0f43c76ac61b9cf89
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "65195966"
+ms.lasthandoff: 01/12/2020
+ms.locfileid: "75908232"
 ---
 # <a name="troubleshooting-ata-using-the-performance-counters"></a>Solução de problemas do ATA usando contadores de desempenho
 
 *Aplica-se a: Advanced Threat Analytics versão 1.9*
 
 Os contadores de desempenho do ATA fornecem informações sobre como está o desempenho de cada componente do ATA. Os componentes no ATA processam dados sequencialmente, para que quando houver um problema, ele possa causar um descarte de tráfego parcial em algum ponto da cadeia de componentes. Para corrigir o problema, você precisa descobrir qual componente está dando problema e corrigi-lo no início da cadeia. Use os dados encontrados nos contadores de desempenho para entender o funcionamento de cada componente.
-Consulte a [arquitetura do ATA](ata-architecture.md) para entender o fluxo de componentes internos do ATA.
+Consulte a [arquitetura de ATA](ata-architecture.md) para entender o fluxo de componentes internos do ATA.
 
 **Processo de componente do ATA**:
 

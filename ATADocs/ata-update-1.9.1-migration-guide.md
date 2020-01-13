@@ -2,8 +2,8 @@
 title: Guia de migração de atualização do Advanced Threat Analytics para 1.9.1 | Microsoft Docs
 description: Procedimentos para atualizar o ATA para a versão 1.9.1
 keywords: ''
-author: mlottner
-ms.author: mlottner
+author: shsagir
+ms.author: shsagir
 manager: rkarlin
 ms.date: 12/10/2018
 ms.topic: conceptual
@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 2946310a-8e4e-48fc-9450-fc9647efeb22
 ms.reviewer: ort
 ms.suite: ems
-ms.openlocfilehash: 42ed42e15ead2e14ed1bcf65ca449a92b0bdd12c
-ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.openlocfilehash: 86566cbb893fc92f87fbd085e5087714d647f646
+ms.sourcegitcommit: 9673eb49729a06d3a25d52c0f43c76ac61b9cf89
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "65196136"
+ms.lasthandoff: 01/12/2020
+ms.locfileid: "75907256"
 ---
 # <a name="ata-version-191"></a>ATA versão 1.9.1
 
@@ -59,7 +59,7 @@ O computador pode exigir uma reinicialização depois de aplicar essa atualizaç
 Esta atualização substitui o ATA versão 1.9 (1.9.7312).
 
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Versões do ATA](ata-versions.md)

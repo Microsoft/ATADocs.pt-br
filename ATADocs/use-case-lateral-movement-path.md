@@ -2,8 +2,8 @@
 title: Investigar ataques de caminho de movimento lateral com o ATA | Microsoft Docs
 description: Este artigo descreve como detectar ataques de caminho de movimento lateral com o ATA (Advanced Threat Analytics).
 keywords: ''
-author: mlottner
-ms.author: mlottner
+author: shsagir
+ms.author: shsagir
 manager: rkarlin
 ms.date: 06/14/2019
 ms.topic: conceptual
@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 710f01bd-c878-4406-a7b2-ce13f98736ea
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 2f020838d182b99b1f5f42455330b2b0ce5aa88f
-ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.openlocfilehash: 53c81575202bbccc9eacf5bb26c5fa624fb7e667
+ms.sourcegitcommit: 9673eb49729a06d3a25d52c0f43c76ac61b9cf89
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "66500653"
+ms.lasthandoff: 01/12/2020
+ms.locfileid: "75908248"
 ---
 # <a name="investigate-lateral-movement-paths-with-ata"></a>Investigar caminhos de movimento lateral com o ATA
 
@@ -79,6 +79,6 @@ Agora que você sabe quais contas confidenciais estão em risco, aprofunde-se no
 
 
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 - [Trabalhar com atividades suspeitas](working-with-suspicious-activities.md)
 - [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

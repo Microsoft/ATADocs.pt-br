@@ -2,8 +2,8 @@
 title: Instalação do Advanced Threat Analytics – Etapa 2 | Microsoft Docs
 description: A etapa dois da instalação do ATA ajuda você a definir as configurações de conectividade do domínio em seu servidor do Centro do ATA
 keywords: ''
-author: mlottner
-ms.author: mlottner
+author: shsagir
+ms.author: shsagir
 manager: rkarlin
 ms.date: 12/30/2018
 ms.topic: conceptual
@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: e1c5ff41-d989-46cb-aa38-5a3938f03c0f
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 4e098c0da30b7a3cc38e2ba857e9297a52d2bb10
-ms.sourcegitcommit: 0f3ee3241895359d5cecd845827cfba1fdca9317
+ms.openlocfilehash: 68ad769851926eed137108ff65663666cbf4fad0
+ms.sourcegitcommit: 9673eb49729a06d3a25d52c0f43c76ac61b9cf89
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/29/2019
-ms.locfileid: "75543847"
+ms.lasthandoff: 01/12/2020
+ms.locfileid: "75907908"
 ---
 # <a name="install-ata---step-2"></a>Instalação do ATA - Etapa 2
 

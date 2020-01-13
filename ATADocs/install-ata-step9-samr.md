@@ -2,8 +2,8 @@
 title: Configurar SAM-R para habilitar a detecção de caminho de movimento lateral no Advanced Threat Analytics | Microsoft Docs
 description: Descreve como configurar o SAM-R para habilitar a detecção de caminho de movimento lateral no ATA (Advanced Threat Analytics)
 keywords: ''
-author: mlottner
-ms.author: mlottner
+author: shsagir
+ms.author: shsagir
 manager: rkarlin
 ms.date: 09/08/2019
 ms.topic: conceptual
@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 7597ed25-87f5-472c-a496-d5f205c9c391
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 0d46ad26af75f56a2f85de863c4689307cda6493
-ms.sourcegitcommit: 0f3ee3241895359d5cecd845827cfba1fdca9317
+ms.openlocfilehash: 1b8e8924fe0cd00985252c04edfb92ec51759b48
+ms.sourcegitcommit: 9673eb49729a06d3a25d52c0f43c76ac61b9cf89
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/29/2019
-ms.locfileid: "75543811"
+ms.lasthandoff: 01/12/2020
+ms.locfileid: "75907976"
 ---
 # <a name="install-ata---step-9"></a>Instalar o ATA – Etapa 9
 
