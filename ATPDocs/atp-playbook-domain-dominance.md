@@ -3,16 +3,16 @@ title: Guia estratégico de predominância de domínio do ATP do Azure | Microso
 description: O guia estratégico de predominância de domínio do ATP do Azure descreve como simular ataques de dominância do domínio para detecção do ATP do Azure
 ms.service: azure-advanced-threat-protection
 ms.topic: tutorial
-author: mlottner
-ms.author: mlottner
+author: shsagir
+ms.author: shsagir
 ms.date: 02/28/2019
 ms.reviewer: itargoet
-ms.openlocfilehash: 800b72e0bb06a95e10a0c52885d78ebe276e00b7
-ms.sourcegitcommit: 0f3ee3241895359d5cecd845827cfba1fdca9317
+ms.openlocfilehash: 5eb15b0eeda7fec50c898550a683ef1cdbccfdb7
+ms.sourcegitcommit: 9673eb49729a06d3a25d52c0f43c76ac61b9cf89
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/29/2019
-ms.locfileid: "75543830"
+ms.lasthandoff: 01/12/2020
+ms.locfileid: "75908356"
 ---
 # <a name="tutorial-domain-dominance-playbook"></a>Tutorial: Guia estratégico de predominância de domínio
 

@@ -2,8 +2,8 @@
 title: Monitorar eventos e a integridade do sistema da Proteção Avançada contra Ameaças do Azure | Microsoft Docs
 description: Use o centro de integridade do ATP do Azure para verificar como o serviço do ATP do Azure está funcionando, ser alertado sobre possíveis problemas e exibir eventos de sistema no Visualizador de Eventos.
 keywords: ''
-author: mlottner
-ms.author: mlottner
+author: shsagir
+ms.author: shsagir
 manager: rkarlin
 ms.date: 1/3/2019
 ms.topic: conceptual
@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 1b7e72c3-a538-443f-981c-398ffafa5ab8
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: b1ad4963e3863cd89a78834e8fc98cec3490b1b0
-ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.openlocfilehash: 9fbcdbd6434ed1fcaa91719547d1926adc0cbd51
+ms.sourcegitcommit: 9673eb49729a06d3a25d52c0f43c76ac61b9cf89
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "65195590"
+ms.lasthandoff: 01/12/2020
+ms.locfileid: "75908289"
 ---
 # <a name="work-with-azure-atp-health-and-events"></a>Trabalhar com eventos e integridade do ATP do Azure
 

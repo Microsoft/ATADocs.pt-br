@@ -3,16 +3,16 @@ title: Tutorial do guia estratégico de reconhecimento do ATP do Azure | Microso
 description: O tutorial do guia estratégico de Reconhecimento do ATP do Azure descreve como simular ameaças de Reconhecimento para detecção pelo Azure ATP.
 ms.service: azure-advanced-threat-protection
 ms.topic: tutorial
-author: mlottner
-ms.author: mlottner
+author: shsagir
+ms.author: shsagir
 ms.date: 09/01/2019
 ms.reviewer: itargoet
-ms.openlocfilehash: 11312f033261dd74f13dc0b3b9c093617e2c281c
-ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.openlocfilehash: 53ff08105d688275dad6b2283e3d30e0db8df002
+ms.sourcegitcommit: 9673eb49729a06d3a25d52c0f43c76ac61b9cf89
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "70209234"
+ms.lasthandoff: 01/12/2020
+ms.locfileid: "75908198"
 ---
 # <a name="tutorial-reconnaissance-playbook"></a>Tutorial: Guia estratégico de reconhecimento
 

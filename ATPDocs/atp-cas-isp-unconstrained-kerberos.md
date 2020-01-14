@@ -2,8 +2,8 @@
 title: Avaliação de situação de segurança de identidade irrestrita de Kerberos da Proteção Avançada contra Ameaças do Azure | Microsoft Docs
 description: Neste artigo, você tem uma visão geral dos relatórios de avaliação da situação de segurança de identidade irrestrita de Kerberos da ATP do Azure.
 keywords: ''
-author: mlottner
-ms.author: mlottner
+author: shsagir
+ms.author: shsagir
 manager: rkarlin
 ms.date: 09/15/2019
 ms.topic: conceptual
@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 7eea354b-7a50-40d9-bfa7-dcccaef23179
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 949f99c2ab19a5765a69c21121a274257c20efb6
-ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.openlocfilehash: 7249c8a5c320720bad7e8f90ab49fbdaaabcf279
+ms.sourcegitcommit: 9673eb49729a06d3a25d52c0f43c76ac61b9cf89
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74206306"
+ms.lasthandoff: 01/12/2020
+ms.locfileid: "75905567"
 ---
 # <a name="security-assessment-unsecure-kerberos-delegation"></a>Avaliação de segurança: delegação de Kerberos não segura
 

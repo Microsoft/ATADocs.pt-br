@@ -2,8 +2,8 @@
 title: Atividades de domínio monitoradas do ATP do Azure | Microsoft Docs
 description: Descreve cada tipo de atividade monitorado pela Proteção Avançada contra Ameaças do Azure
 keywords: ''
-author: mlottner
-ms.author: mlottner
+author: shsagir
+ms.author: shsagir
 manager: rkarlin
 ms.date: 09/15/2019
 ms.topic: conceptual
@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 37d1a032-65e7-4a89-be0b-c3f9cc2bacdb
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: b8000ff54b6be0dc6cb7079302e006193dcfcab9
-ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.openlocfilehash: 42117b549684a5f092450dc0af5b81facc3430ca
+ms.sourcegitcommit: 9673eb49729a06d3a25d52c0f43c76ac61b9cf89
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "71004821"
+ms.lasthandoff: 01/12/2020
+ms.locfileid: "75906085"
 ---
 # <a name="azure-atp-monitored-activities"></a>Atividades monitoradas do ATP do Azure
 

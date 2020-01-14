@@ -2,8 +2,8 @@
 title: Configurar o espelhamento de porta ao implantar a Proteção Avançada contra Ameaças do Azure | Microsoft Docs
 description: Descreve as opções de espelhamento de porta e como configurá-las para o Azure ATP
 keywords: ''
-author: mlottner
-ms.author: mlottner
+author: shsagir
+ms.author: shsagir
 manager: rkarlin
 ms.date: 10/4/2018
 ms.topic: conceptual
@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 9ec7eb4c-3cad-4543-bbf0-b951d8fc8ffe
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 4571e1d44c7b497fd3ed19264643ec4b436191f5
-ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.openlocfilehash: 17df701b408e49556b4517c01c6308b3ba1304e8
+ms.sourcegitcommit: 9673eb49729a06d3a25d52c0f43c76ac61b9cf89
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "65195439"
+ms.lasthandoff: 01/12/2020
+ms.locfileid: "75906838"
 ---
 # <a name="configure-port-mirroring"></a>Configurar o espelhamento de porta
 > [!NOTE] 

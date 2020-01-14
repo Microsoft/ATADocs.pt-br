@@ -2,8 +2,8 @@
 title: Migração do Advanced Threat Analytics para a Proteção Avançada contra Ameaças do Azure | Microsoft Docs
 description: Saiba como migrar uma instalação existente do Advanced Threat Analytics para a ATP do Azure.
 keywords: ''
-author: mlottner
-ms.author: mlottner
+author: shsagir
+ms.author: shsagir
 manager: rkarlin
 ms.date: 10/16/2019
 ms.topic: conceptual
@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: e734e382-c4b1-43ca-9a8d-96c91daf2578
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 0a5c01f665b167bb9eabc5a9e0a67b99bb6d56fa
-ms.sourcegitcommit: 0f3ee3241895359d5cecd845827cfba1fdca9317
+ms.openlocfilehash: 5c784226b8cf9ee19797103d3e0b9cfe23a629bd
+ms.sourcegitcommit: 9673eb49729a06d3a25d52c0f43c76ac61b9cf89
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/29/2019
-ms.locfileid: "75543132"
+ms.lasthandoff: 01/12/2020
+ms.locfileid: "75908337"
 ---
 # <a name="advanced-threat-analytics-ata-to-azure-advanced-threat-protection-azure-atp"></a>ATA (Advanced Threat Analytics) para o ATP do Azure (Proteção Avançada contra Ameaças do Azure) 
 

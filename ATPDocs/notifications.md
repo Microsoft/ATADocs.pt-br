@@ -2,8 +2,8 @@
 title: Definir notificações da Proteção Avançada contra Ameaças do Azure | Microsoft Docs
 description: Descreve como definir alertas de segurança do Azure ATP para que você seja notificado quando atividades suspeitas forem detectadas.
 keywords: ''
-author: mlottner
-ms.author: mlottner
+author: shsagir
+ms.author: shsagir
 manager: rkarlin
 ms.date: 10/04/2018
 ms.topic: conceptual
@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 4308f03e-b2a7-4e38-a750-540ff94faa81
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 5aaf4ad892944b81944639c1f401c0ea9e127bf6
-ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.openlocfilehash: 39b1c0835402ff4ff688a28451fd7505f2cd364c
+ms.sourcegitcommit: 9673eb49729a06d3a25d52c0f43c76ac61b9cf89
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "65196685"
+ms.lasthandoff: 01/12/2020
+ms.locfileid: "75906129"
 ---
 # <a name="set-azure-atp-notifications"></a>Definir notificações do Azure ATP
 

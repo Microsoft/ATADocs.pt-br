@@ -2,8 +2,8 @@
 title: Trabalhando com relatórios do Azure ATP | Microsoft Docs
 description: Descreve como você pode gerar relatórios no Azure ATP para monitorar sua rede.
 keywords: ''
-author: mlottner
-ms.author: mlottner
+author: shsagir
+ms.author: shsagir
 manager: rkarlin
 ms.date: 11/26/2018
 ms.topic: conceptual
@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 2c2d6b1a-fc8c-4ff7-b07d-64ce6159f84d
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: d51447eafcd6e267fef65798ff25e2f75fb71ec2
-ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.openlocfilehash: 76db7841745c7da555caa356808464d9d45b8107
+ms.sourcegitcommit: 9673eb49729a06d3a25d52c0f43c76ac61b9cf89
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "65196490"
+ms.lasthandoff: 01/12/2020
+ms.locfileid: "75907843"
 ---
 # <a name="azure-atp-reports"></a>Relatórios do Azure ATP
 

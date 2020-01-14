@@ -1,20 +1,20 @@
 ---
 title: Início rápido para instalar o sensor do ATP do Azure | Microsoft Docs
 description: A etapa quatro da instalação do Azure ATP ajuda a instalar o sensor do Azure ATP.
-author: mlottner
-ms.author: mlottner
+author: shsagir
+ms.author: shsagir
 ms.date: 10/31/2019
 ms.topic: quickstart
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 124bc127242d97197239cb37fddda154c1bcb445
-ms.sourcegitcommit: 44ce78c9d7f156dd0c0798823bba53e092f5abdf
+ms.openlocfilehash: 56c74fbacac2bb0bc9affa5b3443be7c7900316e
+ms.sourcegitcommit: 9673eb49729a06d3a25d52c0f43c76ac61b9cf89
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/16/2019
-ms.locfileid: "75034077"
+ms.lasthandoff: 01/12/2020
+ms.locfileid: "75908572"
 ---
 # <a name="quickstart-install-the-azure-atp-sensor"></a>Início Rápido: Instalar o sensor do Azure ATP
 
@@ -22,7 +22,7 @@ Neste início rápido, você instalará o sensor do ATP do Azure em um controlad
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
-- Uma [instância do ATP do Azure](install-atp-step1.md) [conectada ao Active Directory](install-atp-step2.md).
+- Uma [instância do ATP do Azure](install-atp-step1.md)[conectada ao Active Directory](install-atp-step2.md).
 - Uma cópia baixada de seu [pacote de instalação do sensor do ATP](install-atp-step3.md) e a chave de acesso.
 - Verifique se o Microsoft .NET Framework 4.7 está instalado no computador. Se o .NET Framework 4.7 não estiver instalado, o pacote de instalação do sensor do ATP do Azure o instalará, o que poderá exigir uma reinicialização do servidor.
 

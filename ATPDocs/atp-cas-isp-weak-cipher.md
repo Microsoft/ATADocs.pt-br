@@ -2,8 +2,8 @@
 title: Relatório de avaliação de situação de segurança de identidade de criptografia fraca da Proteção Avançada contra Ameaças do Azure | Microsoft Docs
 description: Neste artigo, você tem uma visão geral do relatório de avaliação de situação de segurança de identidade de criptografia fraca da ATP do Azure.
 keywords: ''
-author: mlottner
-ms.author: mlottner
+author: shsagir
+ms.author: shsagir
 manager: rkarlin
 ms.date: 07/08/2019
 ms.topic: conceptual
@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: cc82212b-7d25-4ec7-828d-2475ff40d685
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 5461b2ad5f0ddc41df3b65497f3a9b2f392babb7
-ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.openlocfilehash: d755668f3460e5dd3213f601d74ecf88e37df7d6
+ms.sourcegitcommit: 9673eb49729a06d3a25d52c0f43c76ac61b9cf89
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74206258"
+ms.lasthandoff: 01/12/2020
+ms.locfileid: "75908391"
 ---
 # <a name="security-assessment-weak-cipher-usage"></a>Avaliação de segurança: Uso de criptografia fraca
 

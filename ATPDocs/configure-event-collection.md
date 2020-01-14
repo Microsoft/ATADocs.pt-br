@@ -2,8 +2,8 @@
 title: Instalar a Proteção Avançada contra Ameaças do Azure | Microsoft Docs
 description: Nesta etapa da instalação do ATP, você configura fontes de dados.
 keywords: ''
-author: mlottner
-ms.author: mlottner
+author: shsagir
+ms.author: shsagir
 manager: rkarlin
 ms.date: 09/23/2019
 ms.topic: conceptual
@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 88692d1a-45a3-4d54-a549-4b5bba6c037b
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 32e5edd6de397015b0cc4e9bb977fe39d1b617e4
-ms.sourcegitcommit: 0f3ee3241895359d5cecd845827cfba1fdca9317
+ms.openlocfilehash: a4150ce673ce73142139d7c85935e711a64e5046
+ms.sourcegitcommit: 9673eb49729a06d3a25d52c0f43c76ac61b9cf89
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/29/2019
-ms.locfileid: "75544172"
+ms.lasthandoff: 01/12/2020
+ms.locfileid: "75907035"
 ---
 # <a name="configure-event-collection"></a>Configurar coleta de eventos
 

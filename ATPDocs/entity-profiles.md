@@ -2,8 +2,8 @@
 title: Trabalhando com perfis de usuário no portal da Proteção Avançada contra Ameaças do Azure | Microsoft Docs
 description: Descreve como investigar os usuários na tela de perfis de usuário no portal do ATP do Azure
 keywords: ''
-author: mlottner
-ms.author: mlottner
+author: shsagir
+ms.author: shsagir
 manager: rkarlin
 ms.date: 09/15/2019
 ms.topic: conceptual
@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 17458706-79fb-4c23-aa42-66979164a45f
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 0bff9c9081951c234d2d0076d154a984898a0a31
-ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.openlocfilehash: 789e185638bef59847c7ba78b3fbbf3c7f962850
+ms.sourcegitcommit: 9673eb49729a06d3a25d52c0f43c76ac61b9cf89
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "71004491"
+ms.lasthandoff: 01/12/2020
+ms.locfileid: "75906713"
 ---
 # <a name="understanding-entity-profiles"></a>Noções básicas sobre perfis de entidade
 

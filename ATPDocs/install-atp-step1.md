@@ -2,20 +2,20 @@
 title: Início rápido para criar sua instância do ATP do Azure | Microsoft Docs
 description: Início rápido para criar a instância para sua implantação do ATP do Azure, que é a primeira etapa para instalar o ATP do Azure.
 keywords: ''
-author: mlottner
-ms.author: mlottner
+author: shsagir
+ms.author: shsagir
 ms.date: 10/31/2019
 ms.topic: quickstart
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 18a9feba8344ce88c4afb2ed3911b51aea0b9e07
-ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.openlocfilehash: d50774470dba20f523959da04f370ff34bcd87bb
+ms.sourcegitcommit: 9673eb49729a06d3a25d52c0f43c76ac61b9cf89
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73462318"
+ms.lasthandoff: 01/12/2020
+ms.locfileid: "75905159"
 ---
 # <a name="quickstart-create-your-azure-atp-instance"></a>Início Rápido: Criar sua instância do Azure ATP
 

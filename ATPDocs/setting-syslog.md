@@ -2,8 +2,8 @@
 title: Definição das configurações do Syslog na Proteção Avançada contra Ameaças do Azure | Microsoft Docs
 description: Descreve como fazer com que o Azure ATP notifique você (por email ou pelo encaminhamento de eventos do Azure ATP) quando detectar atividades suspeitas
 keywords: ''
-author: mlottner
-ms.author: mlottner
+author: shsagir
+ms.author: shsagir
 manager: rkarlin
 ms.date: 09/16/2019
 ms.topic: conceptual
@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: a2d29c9c-7ecb-4804-b74b-fde899b28648
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: ab96c0a17344d93c00f25ca5ca97a1fb2c0a22b7
-ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.openlocfilehash: 8e67b1c0c7b645982f6d8afc1ac0abdae51d4a43
+ms.sourcegitcommit: 9673eb49729a06d3a25d52c0f43c76ac61b9cf89
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "71185741"
+ms.lasthandoff: 01/12/2020
+ms.locfileid: "75906038"
 ---
 # <a name="integrate-with-syslog"></a>Integrar com o Syslog
 
