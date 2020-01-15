@@ -2,22 +2,22 @@
 title: Entendendo os alertas de monitoramento do Azure ATP | Microsoft Docs
 description: Descreve como você pode usar os logs do Azure ATP para solucionar problemas
 keywords: ''
-author: mlottner
-ms.author: mlottner
+author: shsagir
+ms.author: shsagir
 manager: rkarlin
-ms.date: 07/17/2019
+ms.date: 12/24/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: d0551e91-3b21-47d5-ad9d-3362df6d47c0
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 65279895689e230a3a28871a61f4cffe36d6042c
-ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.openlocfilehash: 22380f67b4a3f913bd80ded72f06db9ce57e0a11
+ms.sourcegitcommit: 9673eb49729a06d3a25d52c0f43c76ac61b9cf89
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "68298763"
+ms.lasthandoff: 01/12/2020
+ms.locfileid: "75907829"
 ---
 # <a name="understanding-azure-atp-sensor-and-standalone-sensor-monitoring-alerts"></a>Entendendo os alertas de monitoramento do sensor autônomo e do sensor do Azure ATP
 
@@ -57,7 +57,7 @@ O Centro de Integridade do ATP do Azure permite que você saiba quando há um pr
 
 |Alerta|Descrição|Resolução|Severidade|
 |----|----|----|----|
-|Um sensor do Azure ATP está desatualizado.|Um sensor do Azure ATP está executando uma versão desatualizada há três ou mais versões.|Atualize manualmente o sensor e verifique por que ele não está sendo atualizado automaticamente. Se isso não funcionar, baixe o pacote de instalação mais recente do sensor e desinstale e reinstale o sensor. Para obter mais informações, consulte [Instalando o sensor do Azure ATP](install-atp-step4.md).|Média|
+|Um sensor do Azure ATP está desatualizado.|Um sensor do ATP do Azure está executando uma versão que não pode se comunicar com a infraestrutura de nuvem do ATP do Azure.|Atualize manualmente o sensor e verifique por que ele não está sendo atualizado automaticamente. Se isso não funcionar, baixe o pacote de instalação mais recente do sensor e desinstale e reinstale o sensor. Para obter mais informações, consulte [Instalando o sensor do Azure ATP](install-atp-step4.md).|Média|
 
 ## <a name="sensor-reached-a-memory-resource-limit"></a>O sensor atingiu o limite de um recurso de memória
 

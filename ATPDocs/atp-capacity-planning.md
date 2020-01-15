@@ -3,16 +3,16 @@ title: Guia de início rápido para planejamento de implantação da Proteção 
 description: Ajuda você a planejar a implantação e a decidir quantos servidores do Azure ATP serão necessários para dar suporte à sua rede
 author: mlottner
 ms.author: mlottner
-ms.date: 11/05/2019
+ms.date: 12/26/2019
 ms.topic: quickstart
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
-ms.openlocfilehash: b07800cfc3b2df6fdb290fff27a9e807be15056f
-ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.openlocfilehash: 5edb88ebc9db10abec7e8064be4af37f66111afc
+ms.sourcegitcommit: 0f3ee3241895359d5cecd845827cfba1fdca9317
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/26/2019
-ms.locfileid: "74540881"
+ms.lasthandoff: 12/29/2019
+ms.locfileid: "75543916"
 ---
 # <a name="quickstart-plan-capacity-for-azure-atp"></a>Início Rápido: Planejar capacidade para o ATP do Azure
 
@@ -103,8 +103,6 @@ Quando determinar o dimensionamento, observe os seguintes itens:
 |Outro host de virtualização|Confira a documentação fornecida pelo fornecedor sobre como garantir que a memória seja totalmente alocada para a VM em todos os momentos. |
 |
 
-Na execução como uma máquina virtual, desligue o servidor antes de criar um novo ponto de verificação para evitar uma possível corrupção do banco de dados.
-
 ## <a name="manual-sizing"></a> Estimativa de tráfego do controlador de domínio
 
 Se, por alguma razão, não for possível usar a ferramenta de dimensionamento do ATP do Azure, reúna manualmente as informações do contador de pacotes/s de todos os controladores de domínio. Reúna as informações durante 24 horas com um pequeno intervalo de coleta de aproximadamente cinco segundos. Em seguida, calcule a média diária e a média mais ocupada do período (15 minutos) de cada controlador de domínio. As seções a seguir apresentam instruções de como coletar o contador de pacotes/s de um controlador de domínio.
@@ -121,7 +119,7 @@ Para determinar os pacotes por segundo, faça os seguintes procedimentos em cada
 
     ![Imagem dos conjuntos de coletores de dados](media/atp-traffic-estimation-2.png)
 
-3.  Clique com botão direito do mouse em **Definido pelo Usuário** e selecione **Novo** &gt; **Conjunto de Coletores de Dados**.
+3.  Clique com botão direito do mouse em **Usuário Definido** e selecione **Novo** &gt; **Conjunto de Coletores de Dados**.
 
     ![Imagem do novo conjunto de coletores de dados](media/atp-traffic-estimation-3.png)
 

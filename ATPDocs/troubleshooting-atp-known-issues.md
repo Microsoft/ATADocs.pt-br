@@ -5,24 +5,25 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 11/05/2019
+ms.date: 12/26/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 23386e36-2756-4291-923f-fa8607b5518a
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: d764d466e0981c673874386d7b28019f48d79827
-ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.openlocfilehash: 9ff42bce05809c442d519871f90ae911fb400670
+ms.sourcegitcommit: 0f3ee3241895359d5cecd845827cfba1fdca9317
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73618429"
+ms.lasthandoff: 12/29/2019
+ms.locfileid: "75543973"
 ---
 # <a name="troubleshooting-azure-atp-known-issues"></a>Solução de problemas conhecidos da ATP do Azure 
 
 
 ## <a name="sensor-failure-communication-error"></a>Erro de comunicação de falha no sensor
+
 Se você receber o seguinte erro de falha no sensor: 
 
 System.Net.Http.HttpRequestException: ocorreu um erro ao enviar a solicitação. System.Net.WebException: Não é possível se conectar ao servidor remoto ---> System.Net.Sockets.SocketException: falha em uma tentativa de conexão porque a parte conectada não respondeu corretamente após um período ou houve falha na conexão estabelecida devido a uma falha na resposta do host conectado...
@@ -67,20 +68,24 @@ Se durante a instalação do sensor silenciosa você tentar usar o PowerShell e 
 
 Se tentar instalar o sensor do ATP em um computador configurado com um adaptador de agrupamento NIC, você receberá um erro de instalação. Se desejar instalar o sensor da ATP em um computador configurado com Agrupamento NIC, siga estas instruções:
 
+1.  Baixe a versão mais recente do instalador do Npcap [https://nmap.org/npcap/](https://nmap.org/npcap/).
+    - Como alternativa, solicite a versão OEM do driver Npcap (que dá suporte à instalação silenciosa) com a equipe de suporte.
+    - As cópias do Npcap não contarão para a limitação de cinco cópias, cinco computadores ou cinco licenças de usuário se estiverem instaladas e forem usadas exclusivamente em conjunto com o ATP do Azure. Para obter mais informações, confira [Licenciamento do NPCAP](https://github.com/nmap/npcap/blob/master/LICENSE). 
+
 Se você ainda não tiver instalado o sensor:
 
-1.  Baixar Npcap de [https://nmap.org/npcap/](https://nmap.org/npcap/).
-2.  Desinstale o WinPcap, caso esteja instalado.
-3.  Instale o Npcap com as seguintes opções: loopback_support=no & winpcap_mode=yes
-4.  Instale o pacote do sensor.
+1.  Desinstale o WinPcap, caso esteja instalado.
+1.  Instale o Npcap com as seguintes opções: loopback_support=no & winpcap_mode=yes.
+    - Se estiver usando o instalador de GUI, desmarque **suporte de loopback** e marque o modo **WinPcap**.
+1.  Instale o pacote do sensor.
 
 Após instalar o sensor:
 
-1.  Baixar Npcap de [https://nmap.org/npcap/](https://nmap.org/npcap/).
-2.  Desinstale o sensor.
-3.  Desinstale o WinPcap.
-4.  Instale o Npcap com as seguintes opções: loopback_support=no & winpcap_mode=yes
-5.  Reinstale o pacote do sensor.
+1.  Desinstale o sensor.
+1.  Desinstale o WinPcap.
+1.  Instale o Npcap com as seguintes opções: loopback_support=no & winpcap_mode=yes
+    - Se estiver usando o instalador de GUI, desmarque **suporte de loopback** e marque o modo **WinPcap**.
+1.  Reinstale o pacote do sensor.
 
 ## <a name="multi-processor-group-mode"></a>Modo Grupo de multiprocessadores 
 Para os sistemas operacionais Windows 2008R2 e 2012, o sensor do ATP do Azure não tem suporte em um modo Grupo de multiprocessadores.
@@ -96,13 +101,26 @@ A Proteção Avançada contra Ameaças do Azure permite integrar esse recurso ao
 
 ## <a name="vmware-virtual-machine-sensor-issue"></a>Problema de sensor da Máquina Virtual VMware
 
-Caso tenha um sensor da ATP do Azure em Máquinas Virtuais VMware, talvez você receba o alerta de monitoramento **Parte do tráfego de rede não está sendo analisado**. Isso ocorre devido a uma incompatibilidade de configuração no VMware.
+Caso tenha um sensor da ATP do Azure em Máquinas Virtuais VMware, talvez você receba o alerta de monitoramento **Parte do tráfego de rede não está sendo analisado**. Isso pode ocorrer devido a uma incompatibilidade de configuração no VMware.
 
-Para resolver esse problema:
+Para resolver o problema:
 
 Defina as configurações a seguir como **Desabilitado** na configuração de NIC da máquina virtual: **Descarregamento de TSO do IPv4**.
 
  ![Problema de sensor VMware](./media/vm-sensor-issue.png)
+
+Use o seguinte comando para verificar se o LSO (Descarregamento de Envio Grande) está habilitado ou desabilitado:
+
+`Get-NetAdapterAdvancedProperty | Where-Object DisplayName -Match "^Large*"`
+
+![Verificar o status do LSO](./media/missing-network-traffic-health-alert.png)
+
+Se o LSO estiver habilitado, use o seguinte comando para desabilitá-lo:
+
+`Disable-NetAdapterLso -Name {name of adapter}` 
+
+![Desabilitar o status do LSO](./media/disable-lso-vmware.png)
+
 
 ## <a name="see-also"></a>Consulte Também
 - [Pré-requisitos do Azure ATP](atp-prerequisites.md)

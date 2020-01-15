@@ -5,19 +5,19 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 08/28/2019
+ms.date: 11/26/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 24eca4c6-c949-42ea-97b9-41ef0fb611f1
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: d45d08cc2a059fa231194f7aa334d4f557996ba4
-ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.openlocfilehash: 5ade84a193e198a88f3cb41411746146595a4203
+ms.sourcegitcommit: a7e3fdd7bf0f1d8f269cdbfe3931c937a436392b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "70209189"
+ms.lasthandoff: 01/05/2020
+ms.locfileid: "75663934"
 ---
 # <a name="azure-atp-switches-and-silent-installation"></a>Instalação silenciosa e opções do Azure ATP
 Este artigo fornece diretrizes e instruções para a instalação silenciosa e opções do Azure ATP.
@@ -65,7 +65,7 @@ Use o seguinte comando para realizar uma instalação silenciosa completa do sen
 
 > [!div class="mx-tableFixed"]
 > 
-> |Nome|Sintaxe|Obrigatório para instalação silenciosa?|Descrição|
+> |Name|Sintaxe|Obrigatório para instalação silenciosa?|Descrição|
 > |-------------|----------|---------|---------|
 > |Quiet|/quiet|Sim|Executa o instalador sem exibir a interface do usuário nem solicitações.|
 > |Ajuda|/help|Não|Fornece ajuda e referência rápida. Exibe o uso correto do comando de configuração, incluindo uma lista de todas as opções e comportamentos.|
@@ -75,8 +75,9 @@ Use o seguinte comando para realizar uma instalação silenciosa completa do sen
 
 > [!div class="mx-tableFixed"]
 > 
-> |Nome|Sintaxe|Obrigatório para instalação silenciosa?|Descrição|
+> |Name|Sintaxe|Obrigatório para instalação silenciosa?|Descrição|
 > |-------------|----------|---------|---------|
+> |InstallationPath|InstallationPath=“”|Não|Define o caminho para a instalação dos binários do sensor AATP. Caminho padrão: %programfiles%\Sensor da Proteção Avançada contra Ameaças do Azure
 > |AccessKey|AccessKey="\*\*"|Sim|Define a chave de acesso que é usada para registrar o sensor do ATP do Azure na instância do ATP do Azure.|
 
 **Exemplos**: Use o seguinte comando para instalar silenciosamente o sensor do Azure ATP:
@@ -92,7 +93,7 @@ Use os seguintes comandos para concluir a autenticação de proxy:
 
 > [!div class="mx-tableFixed"]
 > 
-> |Nome|Sintaxe|Obrigatório para instalação silenciosa?|Descrição|
+> |Name|Sintaxe|Obrigatório para instalação silenciosa?|Descrição|
 > |-------------|----------|---------|---------|
 > |ProxyUrl|ProxyUrl="https\://proxy.contoso.com:8080"|Não|Especifica o ProxyUrl e o número da porta para o sensor do ATP do Azure.|
 > |ProxyUserName|ProxyUserName="Contoso\ProxyUser"|Não|Se o seu serviço de proxy exigir autenticação, forneça um nome de usuário no formato DOMÍNIO\usuário.|
@@ -111,7 +112,7 @@ Use o seguinte comando para atualizar silenciosamente o sensor do Azure ATP:
 
 > [!div class="mx-tableFixed"]
 > 
-> |Nome|Sintaxe|Obrigatório para instalação silenciosa?|Descrição|
+> |Name|Sintaxe|Obrigatório para instalação silenciosa?|Descrição|
 > |-------------|----------|---------|---------|
 > |Quiet|/quiet|Sim|Executa o instalador sem exibir a interface do usuário nem solicitações.|
 > |Ajuda|/help|Não|Fornece ajuda e referência rápida. Exibe o uso correto do comando de configuração, incluindo uma lista de todas as opções e comportamentos.|
@@ -132,7 +133,7 @@ Use o comando a seguir para realizar uma desinstalação silenciosa do sensor do
 
 > [!div class="mx-tableFixed"]
 > 
-> |Nome|Sintaxe|Obrigatório para desinstalação silenciosa?|Descrição|
+> |Name|Sintaxe|Obrigatório para desinstalação silenciosa?|Descrição|
 > |-------------|----------|---------|---------|
 > |Quiet|/quiet|Sim|Executa o desinstalador sem exibir a interface do usuário nem solicitações.|
 > |Desinstalar|/uninstall|Sim|Executa a desinstalação silenciosa do sensor do Azure ATP do servidor.|

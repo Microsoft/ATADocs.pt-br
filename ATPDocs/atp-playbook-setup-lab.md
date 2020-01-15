@@ -7,12 +7,12 @@ author: mlottner
 ms.author: mlottner
 ms.date: 02/28/2019
 ms.reviewer: itargoet
-ms.openlocfilehash: 9ae630711b6ee7b7f84a233998d188e498af0a9e
-ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.openlocfilehash: 8a968e290cd031d837b4edadab78c307e7fe0796
+ms.sourcegitcommit: 0f3ee3241895359d5cecd845827cfba1fdca9317
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "59745578"
+ms.lasthandoff: 12/29/2019
+ms.locfileid: "75544066"
 ---
 # <a name="tutorial-setup-an-atp-security-alert-lab"></a>Tutorial: Configurar um laboratório de alerta de segurança do ATP 
 
@@ -32,7 +32,7 @@ Neste tutorial, você vai:
 
 1. [Um controlador de domínio de laboratório e duas estações de trabalho de laboratório](#servers-and-computers).
    - Vá em frente e [hidrate o Active Directory (AD) com usuários](#bkmk_hydrate).
-1. Uma [instância do ATP do Azure](install-atp-step1.md) [conectada ao AD](install-atp-step2.md).
+1. Uma [instância do ATP do Azure](install-atp-step1.md)[conectada ao AD](install-atp-step2.md).
 1. [Baixe](install-atp-step3.md) e [instale a versão mais recente do sensor do ATP do Azure](install-atp-step4.md) no controlador de domínio do seu laboratório.
 1. Familiaridade com [Estações de trabalho com acesso privilegiado](https://docs.microsoft.com/windows-server/identity/securing-privileged-access/privileged-access-workstations) e [política SAMR](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/network-access-restrict-clients-allowed-to-make-remote-sam-calls).
 
@@ -199,8 +199,8 @@ Para executar os guias estratégicos de Alerta de Segurança do ATP do Azure, vo
 |----|-----|
 | Mimikatz | [GitHub - Mimikatz](https://github.com/gentilkiwi/mimikatz) |
 | PowerSploit | [GitHub - PowerSploit](https://github.com/PowerShellMafia/PowerSploit) |
-| PsExec | [Microsoft Docs](https://docs.microsoft.com/en-us/sysinternals/downloads/psexec) |
-| NetSess | [JoeWare Tools](http://www.joeware.net/freetools) |
+| PsExec | [Microsoft Docs](https://docs.microsoft.com/sysinternals/downloads/psexec) |
+| NetSess | [JoeWare Tools](https://www.joeware.net/freetools) |
 
 Agradecemos aos criadores dessas ferramentas de pesquisa por ajudar a comunidade a entender melhor os riscos e impactos cibernéticos.
 

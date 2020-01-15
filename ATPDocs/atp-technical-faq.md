@@ -2,8 +2,8 @@
 title: Perguntas frequentes sobre a Proteção Avançada contra Ameaças do Azure | Microsoft Docs
 description: Fornece uma lista de perguntas frequentes sobre o Azure ATP e as respostas associadas
 keywords: ''
-author: mlottner
-ms.author: mlottner
+author: shsagir
+ms.author: shsagir
 manager: rkarlin
 ms.date: 10/16/2019
 ms.topic: conceptual
@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 6a9b5273-eb26-414e-9cdd-f64406e24ed8
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 2ad5ff4ad50e9b1afb5db3df0ce3928bb090986b
-ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.openlocfilehash: 7d8d47c9a4c60f62e32ce826ce7b12f240fc672f
+ms.sourcegitcommit: 9673eb49729a06d3a25d52c0f43c76ac61b9cf89
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72690203"
+ms.lasthandoff: 01/12/2020
+ms.locfileid: "75908281"
 ---
 # <a name="azure-atp-frequently-asked-questions"></a>Perguntas frequentes sobre o Azure ATP
 Este artigo fornece uma lista de perguntas frequentes e respostas sobre o ATP do Azure, divididas nas seguintes categorias: 
@@ -51,12 +51,15 @@ A Microsoft não explora seus dados para fornecer anúncios ou para qualquer out
 Além de analisar o tráfego do Active Directory usando a tecnologia de inspeção profunda de pacotes, o Azure ATP também coleta eventos do Windows relevantes do controlador de domínio e cria perfis de entidade com base nas informações do Active Directory Domain Services. O Azure ATP também dá suporte ao recebimento contabilidade RADIUS de logs VPN de vários fornecedores (Microsoft, Cisco, F5 e Checkpoint).
 
 ### <a name="does-azure-atp-monitor-only-domain-joined-devices"></a>O Azure ATP monitora somente dispositivos ingressados em domínio?
+
 Não. O Azure ATP monitora todos os dispositivos na rede que executam solicitações de autenticação e autorização no Active Directory, incluindo dispositivos móveis e que não são do Windows.
 
 ### <a name="does-azure-atp-monitor-computer-accounts-as-well-as-user-accounts"></a>O Azure ATP monitora as contas de computador, bem como as contas de usuário?
+
 Sim. Como as contas computador (bem como quaisquer outras entidades) podem ser usadas para executar atividades mal-intencionadas, o Azure ATP monitora todo o comportamento das contas de computador e todas as outras entidades no ambiente.
 
 ### <a name="what-is-the-difference-between-advanced-threat-analytics-ata-and-azure-atp"></a>Qual é a diferença entre o ATA (Advanced Threat Analytics) e o ATP do Azure?
+
 O ATA é uma solução autônoma, instalada no local. O ATP do Azure, com sua conectividade em nuvem, possui atualizações contínuas de recursos, incluindo novas detecções, recursos de UEBA, avaliações de segurança e uma experiência de investigação em soluções da Segurança do Microsoft 365.
 
 
@@ -80,7 +83,12 @@ Escalonável e seguro, aproveitando o potencial da nuvem:
 
 O ATP do Azure está disponível no pacote Enterprise Mobility + Security 5 (EMS E5) e como uma licença autônoma. Você pode adquirir uma licença diretamente no [Portal do Microsoft 365](https://www.microsoft.com/cloud-platform/enterprise-mobility-security-pricing) ou por meio do CSP (Parceiro de Soluções na Nuvem).
 
+### <a name="does-azure-atp-need-only-a-single-license-or-does-it-require-a-license-for-every-user-i-want-to-protect"></a>O ATP do Azure precisa de uma única licença ou requer uma licença para cada usuário que desejo proteger?
+
+O ATP do Azure requer licenciamento para cada usuário. 
+
 ### <a name="is-this-going-to-be-a-part-of-azure-active-directory-or-on-premises-active-directory"></a>Isto fará parte do Azure Active Directory ou do Active Directory local?
+
 A solução ATP do Azure é uma oferta autônoma no momento. Ela não faz parte do Azure Active Directory ou do Active Directory local.
 
 ### <a name="is-my-data-isolated-from-other-customer-data"></a>Meus dados são isolados de outros dados do cliente? 
