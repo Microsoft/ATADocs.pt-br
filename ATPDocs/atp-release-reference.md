@@ -2,8 +2,8 @@
 title: Referência de versões mais antigas no ATP do Azure (Proteção Avançada contra Ameaças do Azure) | Microsoft Docs
 description: Este artigo é uma referência de atualizações de versões anteriores do ATP do Azure (Proteção Avançada contra Ameaças do Azure).
 keywords: ''
-author: mlottner
-ms.author: mlottner
+author: shsagir
+ms.author: shsagir
 manager: rkarlin
 ms.date: 11/17/2019
 ms.topic: reference
@@ -11,12 +11,12 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: ort
 ms.suite: ems
-ms.openlocfilehash: 12e05c54b4237aa04d285d342c960e536a248cdc
-ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.openlocfilehash: 9b7c4e8e6619df992f0336d3b67ca0cdfc7c750b
+ms.sourcegitcommit: 9673eb49729a06d3a25d52c0f43c76ac61b9cf89
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74153136"
+ms.lasthandoff: 01/12/2020
+ms.locfileid: "75908532"
 ---
 # <a name="release-reference-of-azure-advanced-threat-protection-azure-atp"></a>Referência de versão do ATP do Azure (Proteção Avançada contra Ameaças do Azure) 
 
@@ -167,7 +167,7 @@ Lançado em 12 de agosto de 2018
 
 ## <a name="azure-atp-release-243"></a>Azure ATP versão 2.43
 
-Lançamento de 5 de agosto de 2018
+Lançado em 5 de agosto de 2018
 
 - Essa versão inclui correções e melhorias para vários problemas.
 

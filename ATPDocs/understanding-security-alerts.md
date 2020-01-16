@@ -2,8 +2,8 @@
 title: Tutorial de alerta de segurança do ATP do Azure | Microsoft Docs
 d|Description: This article explains how to use and understand Azure ATP security alerts.
 keywords: ''
-author: mlottner
-ms.author: mlottner
+author: shsagir
+ms.author: shsagir
 manager: rkarlin
 ms.date: 1/13/2019
 ms.topic: tutorial
@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 671747d5-faed-4352-a871-17b58fdc6574
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: f215639ea72d0c767f32bd9628e1c404da23aaa0
-ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.openlocfilehash: baefea19a50cec6a6d14835ac3cb8754671ec85c
+ms.sourcegitcommit: 9673eb49729a06d3a25d52c0f43c76ac61b9cf89
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "65196390"
+ms.lasthandoff: 01/12/2020
+ms.locfileid: "75907489"
 ---
 # <a name="tutorial-understanding-security-alerts"></a>Tutorial: entendendo os alertas de segurança
 
@@ -94,11 +94,11 @@ O download do Excel de cada alerta do ATP do Azure fornece as seguintes informa�
 - Todas as entidades envolvidas (contas, computadores e recursos) são listadas, separadas por função. 
     - Origem, destino ou atacado, dependendo do alerta. 
 - A maioria das guias inclui os seguintes dados por entidade: 
-  - Nome
+  - Name
   - Detalhes 
-  - Tipo 
+  - Digite 
   - SamName  
-  - Computador de Origem
+  - Computador de origem
   - Usuário de origem (se disponível)
   - Controladores de Domínio
   - Recurso acessado: Tempo, Computador, Nome, Detalhes, Tipo, Serviço.

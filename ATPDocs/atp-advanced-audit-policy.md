@@ -2,8 +2,8 @@
 title: Verificação de política de auditoria avançada da Proteção Avançada contra Ameaças do Azure | Microsoft Docs
 description: Este artigo fornece uma visão geral da verificação de política de auditoria avançada da ATP do Azure.
 keywords: ''
-author: mlottner
-ms.author: mlottner
+author: shsagir
+ms.author: shsagir
 manager: rkarlin
 ms.date: 04/07/2019
 ms.topic: conceptual
@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: ab1e8dd9-a6c2-4c68-89d5-343b8ec56142
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: cae5f5687c205c2128b652e674dce1531c57588b
-ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.openlocfilehash: 9f22034e3e8bb3e69836290a0cb11d79577a5bde
+ms.sourcegitcommit: 9673eb49729a06d3a25d52c0f43c76ac61b9cf89
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "65195542"
+ms.lasthandoff: 01/12/2020
+ms.locfileid: "75908202"
 ---
 # <a name="azure-atp-advanced-audit-policy-check"></a>Verificação de política de auditoria avançada da ATP do Azure
 
@@ -50,7 +50,7 @@ Modifique as políticas de auditoria avançadas do seu controlador de domínio u
 
 6. Vá para Gerenciamento da Conta, clique duas vezes em **Gerenciamento do Grupo de Segurança de Auditoria** e selecione **Configurar estes eventos de auditoria**, tanto para eventos de êxito quanto para os de falha.
 
-    ![Auditoria de gerenciamento do grupo de distribuição](media/atp-advanced-audit-policy-check-step-4.png)
+    ![Auditoria de gerenciamento de grupo de segurança](media/atp-advanced-audit-policy-check-step-4.png)
 
     > [!NOTE]
     > Se você optar por usar a política local, adicione os logs de auditoria de **Logon da Conta** e **Gerenciamento de Conta** em sua política local. Se você estiver configurando a política de auditoria avançada, force a [subcategoria de política de auditoria](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/audit-force-audit-policy-subcategory-settings-to-override).

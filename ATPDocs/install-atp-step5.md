@@ -1,20 +1,20 @@
 ---
 title: Descrição conceitual das configurações do sensor do ATP do Azure | Microsoft Docs
 description: A etapa cinco da instalação do Azure ATP ajuda a definir as configurações do sensor autônomo do Azure ATP.
-author: mlottner
-ms.author: mlottner
+author: shsagir
+ms.author: shsagir
 ms.date: 09/15/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 8e39e37aa42aea40de024f53dd892da398984f5b
-ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.openlocfilehash: b50dc7247e17831c3b083090787b85c228c13a77
+ms.sourcegitcommit: 9673eb49729a06d3a25d52c0f43c76ac61b9cf89
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "71004848"
+ms.lasthandoff: 01/12/2020
+ms.locfileid: "75907762"
 ---
 # <a name="configure-azure-atp-sensor-settings"></a>Definir as configurações do sensor do ATP do Azure
 
@@ -22,7 +22,7 @@ Neste artigo, você aprenderá a definir corretamente as configurações do sens
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
-- Uma [instância do ATP do Azure](install-atp-step1.md) [conectada ao Active Directory](install-atp-step2.md).
+- Uma [instância do ATP do Azure](install-atp-step1.md)[conectada ao Active Directory](install-atp-step2.md).
 - Uma cópia baixada de seu [pacote de instalação do sensor do ATP](install-atp-step3.md) e a chave de acesso.
 
 ## <a name="configure-sensor-settings"></a>Definir as configurações do sensor
@@ -70,10 +70,10 @@ Para validar a implantação bem-sucedida do sensor do Azure ATP, verifique o se
 
 1. Verifique a conectividade do ATP em qualquer dispositivo de domínio usando as seguintes etapas:
     1. Abra um prompt de comando
-    1. Digitar ```nslookup```
-    1. Digite **server**, depois o endereço IP ou FQDN do controlador de domínio no qual o sensor do ATP está instalado. Por exemplo, ```server contosodc.contoso.azure```.
+    1. Digite ```nslookup```
+    1. Digite **server**, depois o endereço IP ou FQDN do controlador de domínio no qual o sensor do ATP está instalado. Por exemplo, ```server contosodc.contoso.azure```
         - Substitua contosodc.contoso.azure e contoso.azure pelo FQDN do sensor e do nome domínio do ATP do Azure, respectivamente.
-    1. Digitar ```ls -d contoso.azure```
+    1. Digite ```ls -d contoso.azure```
     1. Repita as etapas 3 e 4 para cada sensor que você quer testar.  
     1. No console do ATP do Azure, abra o perfil de entidade do computador a partir do qual você executou o teste de conectividade. 
     1. Verifique a atividade lógica relacionada e confirme a conectividade. 

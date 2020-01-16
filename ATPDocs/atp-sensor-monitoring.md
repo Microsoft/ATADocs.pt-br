@@ -2,8 +2,8 @@
 title: Monitorar controladores de domínio e sensores instalados em seus controladores de domínio, usando a Proteção Avançada contra Ameaças do Azure | Microsoft Docs
 description: Descreve como monitorar os sensores do ATP do Azure e a cobertura dos sensores usando o ATP do Azure
 keywords: ''
-author: mlottner
-ms.author: mlottner
+author: shsagir
+ms.author: shsagir
 manager: rkarlin
 ms.date: 09/23/2019
 ms.topic: conceptual
@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 92decce8-b3ae-4d32-8407-a95314a66863
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 6970908b95fe31ecd24b4cdc1005180e39495913
-ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.openlocfilehash: bdb731d3f5b509eaad9f4c3046f73e52220ba096
+ms.sourcegitcommit: 9673eb49729a06d3a25d52c0f43c76ac61b9cf89
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "71185625"
+ms.lasthandoff: 01/12/2020
+ms.locfileid: "75908542"
 ---
 # <a name="monitoring-your-domain-controller-coverage"></a>Monitorando a cobertura do controlador de domínio
 
@@ -41,7 +41,7 @@ O download do Excel da cobertura do controlador de domínio fornece as seguintes
 
 |Título|Descrição|
 |----|----|
-|nome_do_host|Nome do computador|
+|Nome do host|Nome do computador|
 |Nome de domínio|Nome de domínio|
 |Monitorado|Status de monitoramento do ATP do Azure|
 |Tipo de sensor|Sensor do ATP do Azure ou sensor autônomo do ATP do Azure|
