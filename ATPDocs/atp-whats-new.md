@@ -5,18 +5,18 @@ keywords: ''
 author: shsagir
 ms.author: shsagir
 manager: rkarlin
-ms.date: 01/19/2020
+ms.date: 01/26/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: ort
 ms.suite: ems
-ms.openlocfilehash: 1019591a3ad775a2cd3e54df99aa84ae55ac7e53
-ms.sourcegitcommit: 450295f4ee87db835c9921d2595ae9d291f727c5
+ms.openlocfilehash: ef493165f939bd037e12361d7eec403ad397b0fc
+ms.sourcegitcommit: 409680586343ab7fdd46da96f343305d22eb8936
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/20/2020
-ms.locfileid: "76281756"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76818219"
 ---
 # <a name="whats-new-in-azure-advanced-threat-protection-azure-atp"></a>Novidades no ATP do Azure (Proteção Avançada contra Ameaças do Azure)
 
@@ -26,14 +26,15 @@ Para obter detalhes das versões anteriores do ATP do Azure até (e incluindo) a
 
 Feed RSS: Receba uma notificação quando esta página for atualizada copiando e colando a seguinte URL em seu leitor de feed:   `https://docs.microsoft.com/api/search/rss?search=%22This+article+is+updated+frequently+to+let+you+know+what%27s+new+in+the+latest+release+of+Azure+ATP%22&locale=en-us`
 
-<!-- Rollback
-## Azure ATP release 2.107
+## <a name="azure-atp-release-2107"></a>ATP do Azure versão 2.107
 
-Released Jan 26, 2020
+Lançado em 26 de janeiro de 2020
 
-- **New monitored activity: SID history change**  
-SID history change is now a monitored and filterable activity. Learn more about which [activities Azure ATP monitors](monitored-activities.md), and how to [filter and search monitored activities](atp-activities-search.md) in the portal.
--->
+- **Nova atividade monitorada: Alteração do histórico de SID**  
+    A alteração do histórico de SID agora é uma atividade monitorada e filtrável. Saiba mais sobre quais [atividades o ATP do Azure monitora](monitored-activities.md) e como [filtrar e pesquisar atividades monitoradas](atp-activities-search.md) no portal.
+
+- **Aprimoramento do recurso: Alertas fechados ou suprimidos não são mais reabertos**  
+    Depois que um alerta é fechado ou suprimido no portal da ATP do Azure, se a mesma atividade for detectada novamente em um curto período, um novo alerta será aberto. Anteriormente, sob as mesmas condições, o alerta era reaberto.
 
 ## <a name="azure-atp-release-2106"></a>Versão 2.106 do Azure ATP
 
