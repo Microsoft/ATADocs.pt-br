@@ -1,27 +1,27 @@
 ---
-title: Entendendo os alertas de monitoramento do Azure ATP | Microsoft Docs
+title: Reconhecer os alertas de integridade do ATP do Azure
 description: Descreve como você pode usar os logs do Azure ATP para solucionar problemas
 keywords: ''
 author: shsagir
 ms.author: shsagir
 manager: rkarlin
-ms.date: 12/24/2019
+ms.date: 02/13/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: d0551e91-3b21-47d5-ad9d-3362df6d47c0
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 22380f67b4a3f913bd80ded72f06db9ce57e0a11
-ms.sourcegitcommit: 9673eb49729a06d3a25d52c0f43c76ac61b9cf89
+ms.openlocfilehash: 9f800d1ec6003b5d69ba9ee1cc7482fb6511300d
+ms.sourcegitcommit: e281d63e3406e02325645234ad0a4880056b2351
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/12/2020
-ms.locfileid: "75907829"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77259386"
 ---
-# <a name="understanding-azure-atp-sensor-and-standalone-sensor-monitoring-alerts"></a>Entendendo os alertas de monitoramento do sensor autônomo e do sensor do Azure ATP
+# <a name="understanding-azure-atp-sensor-and-standalone-sensor-health-alerts"></a>Reconhecer os alertas de integridade do sensor autônomo e do sensor do ATP do Azure
 
-O Centro de Integridade do ATP do Azure permite que você saiba quando há um problema em sua instância do ATP do Azure gerando um alerta de monitoramento. Este artigo descreve todos os alertas de monitoramento para cada componente, listando a causa e as etapas necessárias para resolver o problema.
+O Centro de Integridade do ATP do Azure permite que você saiba quando há um problema em sua instância do ATP do Azure gerando um alerta de integridade. Este artigo descreve todos os alertas de integridade para cada componente, listando a causa e as etapas necessárias para resolver o problema.
 
 ## <a name="all-domain-controllers-are-unreachable-by-a-sensor"></a>Todos os controladores de domínio ficam inacessíveis por um sensor
 
@@ -34,6 +34,12 @@ O Centro de Integridade do ATP do Azure permite que você saiba quando há um pr
 |Alerta|Descrição|Resolução|Severidade|
 |----|----|----|----|
 |Todos ou alguns dos adaptadores de rede de captura selecionados no sensor do Azure ATP estão desabilitados ou desconectados.|O tráfego de rede para alguns ou todos os controladores de domínio não é capturado pelo sensor do Azure ATP. Isso afeta a capacidade de detectar atividades suspeitas, relacionadas aos controladores de domínio.|Certifique-se de que esses adaptadores de rede de captura selecionados no sensor do Azure ATP estejam habilitados e conectados.|Média|
+
+## <a name="directory-services-user-credentials-are-incorrect"></a>As credenciais de usuário de serviços de diretório estão incorretas
+
+|Alerta|Descrição|Resolução|Severidade|
+|----|----|----|----|
+|As credenciais da conta de usuário de serviços de diretório estão incorretas.|Isso afeta a capacidade dos sensores de detectar atividades usando consultas LDAP em controladores de domínio.|– Para contas do AD **padrão**: verifique se o nome de usuário, a senha e o domínio na página de configuração dos **Serviços de diretório** estão corretos.<br>– Para **Contas de Serviço Gerenciado de Grupo:** verifique se o nome de usuário e o domínio na página de configuração dos **Serviços de Diretório** estão corretos. Confira também todos os outros pré-requisitos da **conta gMSA** descritos na página [Conectar à sua floresta do Active Directory](install-atp-step2.md#prerequisites).|Média|
 
 ## <a name="no-traffic-received-from-domain-controller"></a>Nenhum tráfego recebido do controlador de domínio
 

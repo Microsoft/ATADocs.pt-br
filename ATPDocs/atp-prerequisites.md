@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 62c99622-2fe9-4035-9839-38fec0a353da
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 50a14aeb6b91fc94c71f6be69bf66db13528c9f1
-ms.sourcegitcommit: 1a0cc214568bf12041d11e037dfe56a8d9e707c2
+ms.openlocfilehash: eb6484eeaa9bd5ed4e04f90a5a8dc1ed4327b8b5
+ms.sourcegitcommit: e281d63e3406e02325645234ad0a4880056b2351
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2020
-ms.locfileid: "76706232"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77259443"
 ---
 # <a name="azure-atp-prerequisites"></a>Pré-requisitos do ATP do Azure
 
@@ -50,10 +50,24 @@ Esta seção mostra as informações que você deve obter, bem como as contas e 
 
 - Verifique se os controladores de domínio nos quais você pretende instalar sensores do Azure ATP têm conectividade com a Internet para o Serviço de Nuvem do Azure ATP. O sensor do ATP do Azure tem suporte para o uso de um proxy. Para obter mais informações sobre a configuração de proxy, confira [Configuring a proxy for Azure ATP](configure-proxy.md) (Configurando um proxy para o Azure ATP).
 
-- Uma conta de usuário e senha **local** do Microsoft Azure AD com acesso de leitura para todos os objetos nos domínios monitorados.
+- Pelo menos uma das seguintes contas de serviços de diretório com acesso de leitura a todos os objetos nos domínios monitorados:
+  - Uma conta de usuário do AD **padrão** e senha. Exigidas para sensores que executam o Windows Server 2008 R2 SP1.
+  - Uma **gMSA (Conta de Serviço Gerenciado de Grupo)** . Requer Windows Server 2012 ou posterior.  
+  Todos os sensores devem ter permissões para recuperar a senha da conta gMSA.  
+  Para saber mais sobre contas gMSA, confira [Introdução às Contas de Serviço Gerenciado de Grupo](/windows-server/security/group-managed-service-accounts/getting-started-with-group-managed-service-accounts#BKMK_CreateGMSA).
+
+    A tabela a seguir mostra quais contas de usuário do AD podem ser usadas com quais versões de servidor:
+
+    |Tipo de conta|Windows Server 2008 R2 SP1|Windows Server 2012 ou posterior|
+    |---|---|---|
+    |Conta de usuário do AD **padrão**|Sim|Sim|
+    |Conta **gMSA**|Não|Sim|
 
     > [!NOTE]
-    > Se você tiver definido ACLs personalizadas em várias Unidades Organizacionais (UO) em seu domínio, verifique se o usuário selecionado tem permissões de leitura para essas UOs.
+    >
+    > - Para computadores sensores que executam o Windows Server 2012 e posterior, recomendamos usar uma conta **gMSA** devido à segurança aprimorada e ao gerenciamento automático de senhas.
+    > - Se você tiver vários sensores, alguns executando o Windows Server 2008 e outros executando o Windows Server 2012 ou posterior, além da recomendação para usar uma conta **gMSA**, você também deverá usar pelo menos uma conta de usuário do AD **padrão**.
+    > - Se você tiver definido ACLs personalizadas em várias Unidades Organizacionais (UO) em seu domínio, verifique se o usuário selecionado tem permissões de leitura para essas UOs.
 
 - Se executar o Wireshark no sensor autônomo do ATP do Azure, reinicie o serviço de sensor da Proteção Avançada contra Ameaças do Azure quando interromper a captura do Wireshark. Se não reiniciar o serviço de sensor, o sensor interromperá a captura de tráfego.
 
@@ -69,9 +83,10 @@ Esta seção mostra as informações que você deve obter, bem como as contas e 
 
 O acesso ao portal do Azure ATP ocorre por meio de um navegador que dá suporte aos seguintes navegadores e configurações:
 
-- Microsoft Edge
-- Internet Explorer versão 10 e posterior
-- Google Chrome 4.0 e posterior
+- Um navegador compatível com TLS 1.2, como:
+  - Microsoft Edge
+  - Internet Explorer versão 11 e posterior
+  - Google Chrome 30.0 e posterior
 - Resolução de largura mínima da tela de 1.700 pixels
 - Firewall/proxy aberto – para se comunicar com o serviço de nuvem do ATP do Azure, você deve abrir a porta 443 de *.atp.azure.com no firewall/proxy.
 
