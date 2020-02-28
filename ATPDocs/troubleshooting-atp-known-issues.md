@@ -5,19 +5,19 @@ keywords: ''
 author: shsagir
 ms.author: shsagir
 manager: rkarlin
-ms.date: 02/06/2020
+ms.date: 02/18/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 23386e36-2756-4291-923f-fa8607b5518a
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: d84102528e3423ed149cdc64c010a7f190a40f68
-ms.sourcegitcommit: 20cf564885aa01985524c9c995ae5ba282606fac
+ms.openlocfilehash: 671920475245e99c788a733e2d445947649c7def
+ms.sourcegitcommit: d9abce00e781d47009e317767698d1729f70dc35
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/06/2020
-ms.locfileid: "77045125"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77478556"
 ---
 # <a name="troubleshooting-azure-atp-known-issues"></a>Solução de problemas conhecidos da ATP do Azure
 
@@ -39,8 +39,12 @@ Os logs de implantação do Azure ATP estão localizados no diretório temp do u
 
 Se o seguinte erro surgir durante a instalação do sensor:  **O sensor falhou ao registrar devido a problemas de licenciamento.**
 
-Entradas de log de implantação: [1C60:1AA8][2018-03-24T23:59:13]i000: 2018-03-25 02:59:13.1237 Informações  InteractiveDeploymentManager ValidateCreateSensorAsync retornaram [\[]validateCreateSensorResult=LicenseInvalid[\]] [1C60:1AA8][2018-03-24T23:59:56]i000: 2018-03-25 02:59:56.4856 Informações  InteractiveDeploymentManager ValidateCreateSensorAsync retornaram [\[]validateCreateSensorResult=LicenseInvalid[\]] [1C60:1AA8][2018-03-25T00:27:56]i000: 2018-03-25 03:27:56.7399 Depurar SensorBootstrapperApplication Engine.Quit [\[]deploymentResultStatus=1602 isRestartRequired=False[\]] [1C60:15B8][2018-03-25T00:27:56]i500: Desligando, código de saída: 0x642
+**Entradas de log de implantação:**
 
+[1C60:1AA8][2018-03-24T23:59:13]i000: 2018-03-25 02:59:13.1237 Info  InteractiveDeploymentManager ValidateCreateSensorAsync returned [validateCreateSensorResult=LicenseInvalid]]  
+[1C60:1AA8][2018-03-24T23:59:56]i000: 2018-03-25 02:59:56.4856 Info  InteractiveDeploymentManager ValidateCreateSensorAsync returned [validateCreateSensorResult=LicenseInvalid]]  
+[1C60:1AA8][2018-03-25T00:27:56]i000: 2018-03-25 03:27:56.7399 Debug SensorBootstrapperApplication Engine.Quit [deploymentResultStatus=1602 isRestartRequired=False]]  
+[1C60:15B8][2018-03-25T00:27:56]i500: Desligando, código de saída: 0x642
 
 **Causa:**
 
@@ -54,13 +58,15 @@ o sensor deve poder navegar até *.atp.azure.com por meio do proxy configurado s
 
 Se durante a instalação do sensor silenciosa você tentar usar o PowerShell e receber o seguinte erro:
 
-    "Azure ATP sensor Setup.exe" "/quiet" NetFrameworkCommandLineArguments="/q" Acce ...           Unexpected token '"/quiet"' in expression or statement."
+    "Azure ATP sensor Setup.exe" "/quiet" NetFrameworkCommandLineArguments="/q" Acce ... Unexpected token '"/quiet"' in expression or statement."
 
 **Causa:** ao usar o PowerShell há falha ao incluir o prefixo ./ obrigatório na instalação.
 
 **Resolução:** use o comando completo para instalar com êxito.
 
-    ./"Azure ATP sensor Setup.exe" /quiet NetFrameworkCommandLineArguments="/q" AccessKey="<Access Key>"
+```powershell
+./"Azure ATP sensor Setup.exe" /quiet NetFrameworkCommandLineArguments="/q" AccessKey="<Access Key>"
+```
 
 ## Problema de agrupamento NIC do sensor da ATP do Azure <a name="nic-teaming"></a>
 
@@ -86,9 +92,11 @@ Após instalar o sensor:
 1. Reinstale o pacote do sensor.
 
 ## <a name="multi-processor-group-mode"></a>Modo Grupo de multiprocessadores
+
 Para os sistemas operacionais Windows 2008R2 e 2012, o sensor do ATP do Azure não tem suporte em um modo Grupo de multiprocessadores.
 
 Soluções alternativas possíveis sugeridas:
+
 - Se o Hyper Threading estiver ativado, desative-o. Isso pode reduzir o número de núcleos lógicos o suficiente para evitar a necessidade de execução no modo **Grupo de multiprocessadores**.
 
 - Se seu computador tiver menos de 64 núcleos lógicos e estiver em execução em um host HP, você poderá alterar a configuração do BIOS de **Otimização do Tamanho do Grupo NUMA** do padrão **Clusterizado** para **Simples**.
@@ -119,8 +127,29 @@ Se o LSO estiver habilitado, use o seguinte comando para desabilitá-lo:
 
 ![Desabilitar o status do LSO](./media/disable-lso-vmware.png)
 
+## <a name="sensor-failed-to-retrieve-group-managed-service-account-gmsa-credentials"></a>Falha do sensor ao tentar recuperar as credenciais da gMSA (conta de serviço gerenciado do grupo)
+
+Se você receber o seguinte alerta de monitoramento: **As credenciais de usuário dos serviços de diretório estão incorretas**
+
+**Entradas de log do sensor:**
+
+2020-02-17 14:01:36.5315 Info ImpersonationManager CreateImpersonatorAsync started [UserName=account_name Domain=domain1.test.local IsGroupManagedServiceAccount=True]  
+2020-02-17 14:01:36.5750 Info ImpersonationManager CreateImpersonatorAsync finished [UserName=account_name Domain=domain1.test.local IsSuccess=False]
+
+**Entradas de log do Atualizador do Sensor:**
+
+2020-02-17 14:02:19.6258 Warn GroupManagedServiceAccountImpersonationHelper GetGroupManagedServiceAccountAccessTokenAsync failed GMSA password could not be retrieved [errorCode=AccessDenied AccountName=account_name DomainDnsName=domain1.test.local]
+
+**Causa:**
+
+O sensor falhou ao tentar recuperar a gMSA designada no portal do ATP do Azure.
+
+**Resolução:**
+
+Verifique se as credenciais da gMSA estão corretas e se o sensor recebeu as permissões para recuperar as credenciais da conta.
 
 ## <a name="see-also"></a>Consulte Também
+
 - [Pré-requisitos do Azure ATP](atp-prerequisites.md)
 - [Planejamento de capacidade do Azure ATP](atp-capacity-planning.md)
 - [Configurar coleta de eventos](configure-event-collection.md)

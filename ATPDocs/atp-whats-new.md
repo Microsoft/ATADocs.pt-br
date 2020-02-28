@@ -11,12 +11,12 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: ort
 ms.suite: ems
-ms.openlocfilehash: 50bbf3fda8b0e91a94cd917b4bf4174ccd31e9ca
-ms.sourcegitcommit: 173b9fc26592efec2113c6ee585b04311ddfdbf1
+ms.openlocfilehash: 3787274ba5fc75ffebdf670f3fdb58b7497a4485
+ms.sourcegitcommit: 55adde8edff43f3df2402149335c16d43f45e1a9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "77421989"
+ms.lasthandoff: 02/24/2020
+ms.locfileid: "77567910"
 ---
 # <a name="whats-new-in-azure-advanced-threat-protection-azure-atp"></a>Novidades no ATP do Azure (Proteção Avançada contra Ameaças do Azure)
 
@@ -25,6 +25,13 @@ Este artigo é atualizado com frequência para manter você informado sobre as n
 Para obter detalhes das versões anteriores do ATP do Azure até (e incluindo) a versão 2.55, confira a [referência de versão do ATP do Azure](atp-release-reference.md).
 
 Feed RSS: Receba uma notificação quando esta página for atualizada copiando e colando a seguinte URL em seu leitor de feed:   `https://docs.microsoft.com/api/search/rss?search=%22This+article+is+updated+frequently+to+let+you+know+what%27s+new+in+the+latest+release+of+Azure+ATP%22&locale=en-us`
+
+## <a name="azure-atp-release-2110"></a>ATP do Azure versão 2.110
+
+Lançado em 23 de fevereiro de 2020
+
+- **Nova avaliação de segurança: controladores de domínio não monitorados**  
+As avaliações de segurança do ATP do Azure agora incluem um relatório sobre controladores de domínio não monitorados, servidores sem um sensor, para ajudá-lo a gerenciar a cobertura total do seu ambiente. Para saber mais, confira [Controladores de domínio não monitorados](atp-cas-isp-unmonitored-domain-controller.md).
 
 ## <a name="azure-atp-release-2109"></a>ATP do Azure versão 2.109
 
@@ -536,7 +543,8 @@ Lançado em 13 de janeiro de 2019
 - **Novo alerta de segurança: Exportação de dados por SMB – (versão prévia)**  
 O alerta de segurança [Exportação de dados por SMB](atp-exfiltration-alerts.md) do ATP do Azure está agora na versão prévia pública. Os invasores com direitos de administrador de domínio podem comprometer a conta KRBTGT. Usando a conta KRBTGT, os invasores podem criar um TGT (tíquete de concessão de tíquetes) Kerberos que fornece autorização para qualquer recurso.
 
-- **Aprimoramento do recurso: Alerta de segurança de tentativa de execução remota de código** Uma nova descrição do alerta e uma evidência extra foram adicionadas para facilitar a compreensão do alerta e fornecer melhores fluxos de trabalho de investigação.
+- **Aprimoramento do recurso: alerta de segurança Tentativa de execução remota de código**  
+Uma nova descrição de alerta e uma evidência adicional foram adicionadas para facilitar a compreensão do alerta e melhorar os fluxos de trabalho de investigação.
 
 - **Aprimoramento do recurso: atividades lógicas de consulta DNS**  
 Tipos de consulta adicionais foram adicionados às [atividades monitoradas pelo ATP do Azure](monitored-activities.md) incluindo: **TXT**, **MX**, **NS**, **SRV**, **ANY**, **DNSKEY**.
