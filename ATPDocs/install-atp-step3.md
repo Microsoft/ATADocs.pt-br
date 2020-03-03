@@ -4,17 +4,17 @@ description: A etapa três da instalação do Azure ATP ajuda a baixar o pacote 
 keywords: ''
 author: shsagir
 ms.author: shsagir
-ms.date: 02/05/2019
+ms.date: 02/19/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 95bb4ec1-841f-41b7-92fe-fbd144085724
-ms.openlocfilehash: 758fd23c1f6300305fad7e209909810977f81627
-ms.sourcegitcommit: 9673eb49729a06d3a25d52c0f43c76ac61b9cf89
+ms.openlocfilehash: d698432aa8955fb46ed25940bacce39026a543e4
+ms.sourcegitcommit: c625acd3e44a3ba9619638f84264b3b271383e3a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/12/2020
-ms.locfileid: "75907782"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77590532"
 ---
 # <a name="quickstart-download-the-azure-atp-sensor-setup-package"></a>Início Rápido: Baixar o pacote de instalação do sensor do Azure ATP
 
@@ -26,7 +26,7 @@ Neste início rápido, você baixará o pacote de instalação do sensor do ATP 
 
 ## <a name="download-the-setup-package"></a>Baixar o pacote de instalação
 
-Após definir as configurações de conectividade do domínio, você poderá baixar o pacote de instalação do sensor do Azure ATP. O pacote de instalação do sensor do Azure ATP pode ser instalado em um servidor dedicado ou em um controlador de domínio. Ao instalar diretamente em um controlador de domínio, ele é instalado como um sensor do ATP do Azure e ao instalar em um servidor dedicado usando o espelhamento de porta, ele é instalado como um sensor autônomo do ATP do Azure. Para obter mais informações sobre o sensor do Azure ATP, consulte [Arquitetura do Azure ATP](atp-architecture.md). 
+Após definir as configurações de conectividade do domínio, você poderá baixar o pacote de instalação do sensor do Azure ATP. Para obter mais informações sobre o sensor do Azure ATP, consulte [Arquitetura do Azure ATP](atp-architecture.md).
 
 Clique em **Baixar** na lista de etapas na parte superior da página para ir para a página **Sensor**.
 
