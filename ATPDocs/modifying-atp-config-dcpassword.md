@@ -5,28 +5,27 @@ keywords: ''
 author: shsagir
 ms.author: shsagir
 manager: rkarlin
-ms.date: 12/02/2018
+ms.date: 02/19/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: e7f065fa-1ad1-4e87-bd80-99cc695efbf5
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: c482ce154817418ad3843e6329a8660cc75f1b98
-ms.sourcegitcommit: 9673eb49729a06d3a25d52c0f43c76ac61b9cf89
+ms.openlocfilehash: f18a2a1a4a3cd7b9e5dec5dacdce3c88ffe296a8
+ms.sourcegitcommit: c625acd3e44a3ba9619638f84264b3b271383e3a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/12/2020
-ms.locfileid: "75907868"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77590583"
 ---
 # <a name="change-azure-atp-portal-configuration---domain-connectivity-password"></a>Alterar a configuração do portal do ATP do Azure – senha de conectividade de domínio
 
-
-
 ## <a name="change-the-domain-connectivity-password"></a>Alterar a senha de conectividade do domínio
+
 Se você precisar modificar a senha de conectividade de domínio, certifique-se de que a senha digitada esteja correta. Se não estiver, o serviço de sensor do Azure ATP será interrompido para todos os sensores implantados.
 
-Se você suspeitar que isso aconteceu, no sensor autônomo do Azure ATP, examine o arquivo Microsoft.Tri.sensor-Errors.log em busca dos seguintes erros: `The supplied credential is invalid.`
+Se você suspeitar que isso aconteceu, examine o arquivo Microsoft.Tri.sensor-Errors.log em busca dos seguintes erros: `The supplied credential is invalid.`
 
 Siga este procedimento para atualizar a senha da Conectividade de domínio no portal do Azure ATP:
 
@@ -35,24 +34,22 @@ Siga este procedimento para atualizar a senha da Conectividade de domínio no po
 
 1. Abra o portal do ATP do Azure, acessando o portal de URL.
 
-2. Selecione a opção de configurações na barra de ferramentas e escolha **Configuração**.
+1. Selecione a opção de configurações na barra de ferramentas e escolha **Configuração**.
 
-   ![Ícone de definições de configuração do Azure ATP](media/atp-config-menu.png)
+    ![Ícone de definições de configuração do Azure ATP](media/atp-config-menu.png)
 
-3. Selecione **Serviços de Diretório**.
+1. Selecione **Serviços de Diretório**.
 
-   ![Imagem da senha de alteração do sensor autônomo do Azure ATP](media/directory-services.png)
+    ![Imagem da senha de alteração do sensor autônomo do Azure ATP](media/directory-services.png)
 
-4. Em **Senha**, altere a senha.
+1. Em **Senha**, altere a senha.
 
-   > [!NOTE]
-   > Insira aqui um usuário e senha do Active Directory e não no Azure Active Directory.
+    > [!NOTE]
+    > Insira aqui um usuário e senha do Active Directory e não no Azure Active Directory.
 
-5. Clique em **Salvar**.
+1. Clique em **Salvar**.
 
-6. Depois de alterar a senha, verifique manualmente se o serviço do sensor autônomo do Azure ATP está em execução nos servidores do sensor autônomo do Azure ATP.
-
-7. No portal do Azure ATP, em **Configuração**, vá até a página **Sensor** e verifique o status dos sensores.
+1. No portal do Azure ATP, em **Configuração**, vá até a página **Sensor** e verifique o status dos sensores.
 
 ## <a name="see-also"></a>Consulte Também
 

@@ -5,21 +5,21 @@ keywords: ''
 author: shsagir
 ms.author: shsagir
 manager: rkarlin
-ms.date: 02/13/2020
+ms.date: 02/19/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: d0551e91-3b21-47d5-ad9d-3362df6d47c0
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 9f800d1ec6003b5d69ba9ee1cc7482fb6511300d
-ms.sourcegitcommit: e281d63e3406e02325645234ad0a4880056b2351
+ms.openlocfilehash: 48dad2ec51850e67a69c5dec4dfb14abec5c8237
+ms.sourcegitcommit: 4381148c0487b473e23fe9b425b133c42acde881
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77259386"
+ms.lasthandoff: 03/01/2020
+ms.locfileid: "78208066"
 ---
-# <a name="understanding-azure-atp-sensor-and-standalone-sensor-health-alerts"></a>Reconhecer os alertas de integridade do sensor autônomo e do sensor do ATP do Azure
+# <a name="understanding-azure-atp-sensor-health-alerts"></a>Reconhecer os alertas de integridade do sensor do ATP do Azure
 
 O Centro de Integridade do ATP do Azure permite que você saiba quando há um problema em sua instância do ATP do Azure gerando um alerta de integridade. Este artigo descreve todos os alertas de integridade para cada componente, listando a causa e as etapas necessárias para resolver o problema.
 
@@ -40,6 +40,12 @@ O Centro de Integridade do ATP do Azure permite que você saiba quando há um pr
 |Alerta|Descrição|Resolução|Severidade|
 |----|----|----|----|
 |As credenciais da conta de usuário de serviços de diretório estão incorretas.|Isso afeta a capacidade dos sensores de detectar atividades usando consultas LDAP em controladores de domínio.|– Para contas do AD **padrão**: verifique se o nome de usuário, a senha e o domínio na página de configuração dos **Serviços de diretório** estão corretos.<br>– Para **Contas de Serviço Gerenciado de Grupo:** verifique se o nome de usuário e o domínio na página de configuração dos **Serviços de Diretório** estão corretos. Confira também todos os outros pré-requisitos da **conta gMSA** descritos na página [Conectar à sua floresta do Active Directory](install-atp-step2.md#prerequisites).|Média|
+
+## <a name="low-success-rate-of-active-name-resolution"></a>Taxa de êxito baixa de resolução de nomes ativa
+
+|Alerta|Descrição|Resolução|Severidade|
+|----|----|----|----|
+|Os sensores do ATP do Azure listados não estão conseguindo resolver endereços IP para nomes de dispositivos mais de 90% das vezes usando os seguintes métodos:<br />– NTLM via RPC<br />– NetBios<br />– DNS inverso|Isso afeta os recursos de detecções do ATP do Azure e pode aumentar a quantidade de alarmes falsos positivos.|– Para NTLM via RPC: A porta 135 deve estar aberta para a comunicação de entrada de sensores do ATP do Azure em todos os computadores no ambiente.<br />– Para DNS inverso: Os sensores devem ser capazes de alcançar o servidor DNS, e as Zonas de Pesquisa Inversa devem estar habilitadas.<br />– Para NetBIOS: A porta 137 deve estar aberta para a comunicação de entrada de sensores do ATP do Azure em todos os computadores no ambiente.<br />Além disso, garanta que a configuração de rede (como firewalls) não esteja impedindo a comunicação com as portas relevantes.|Baixo|
 
 ## <a name="no-traffic-received-from-domain-controller"></a>Nenhum tráfego recebido do controlador de domínio
 
@@ -102,11 +108,10 @@ O Centro de Integridade do ATP do Azure permite que você saiba quando há um pr
 |O sensor do Azure ATP está recebendo mais tráfego de rede do que pode processar.|Parte do tráfego de rede não está sendo analisado, o que pode afetar a capacidade de detectar atividades suspeitas provenientes dos controladores de domínio monitorados por este sensor do Azure ATP.|Considere [adicionar mais processadores e memória](atp-capacity-planning.md) conforme necessário. Se esse for um sensor autônomo do Azure ATP, reduza o número de controladores de domínio monitorados.<br></br>Isso também pode ocorrer se você estiver usando controladores de domínio em máquinas virtuais VMware. Para evitar esses alertas, verifique se as configurações a seguir estão definidas como 0 ou Desabilitado na máquina virtual:<br></br>– TsoEnable<br></br>– LargeSendOffload(IPv4)<br></br>– Descarregamento de TSO do IPv4<br></br>Além disso, considere desabilitar o Descarregamento TSO gigante do IPv4. Para obter mais informações, consulte a documentação do VMware.|Média|
 
 ## <a name="windows-events-missing-from-domain-controller-audit-policy"></a>Eventos do Windows ausentes da política de auditoria do controlador de domínio
+
 |Alerta|Descrição|Resolução|Severidade|
 |----|----|----|----|
 | Eventos do Windows ausentes da política de auditoria do controlador de domínio|Para que os eventos corretos sejam auditados e incluídos no Log de Eventos do Windows, seus controladores de domínio exigem configurações precisas de política de auditoria avançada. Configurações de política de auditoria avançada incorretas fazem com que eventos críticos fiquem de fora de seus logs e resultam em uma cobertura incompleta da ATP do Azure.|Revise sua [Política de Auditoria Avançada](atp-advanced-audit-policy.md) e modifique como necessário. | Média|
-
-
 
 ## <a name="see-also"></a>Consulte Também
 

@@ -5,56 +5,58 @@ keywords: ''
 author: shsagir
 ms.author: shsagir
 manager: rkarlin
-ms.date: 10/04/2018
+ms.date: 02/19/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 0a56cf27-9eaa-4ad0-ae6c-9d0484c69094
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 875262885aae39cc34dcf3fc62332cbbe0d3ccb9
-ms.sourcegitcommit: 9673eb49729a06d3a25d52c0f43c76ac61b9cf89
+ms.openlocfilehash: e2bd44e604657fb0a8ee4c8e356c6ac23ce680bf
+ms.sourcegitcommit: c625acd3e44a3ba9619638f84264b3b271383e3a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/12/2020
-ms.locfileid: "75907307"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77590566"
 ---
 # <a name="validate-port-mirroring"></a>Validação do espelhamento de porta
-> [!NOTE] 
-> Este artigo é relevante apenas se você implantar o sensor autônomo da ATP em vez do sensor da ATP do Azure. Para determinar se você precisa usar o sensor da ATP do Azure, confira [Escolhendo o sensor certo para a implantação](atp-capacity-planning.md#choosing-the-right-sensor-type-for-your-deployment).
- 
+
+Este artigo é relevante apenas se você implantar o sensor autônomo da ATP em vez do sensor da ATP do Azure.
+
+> [!NOTE]
+> Os sensores autônomos do ATP do Azure não são compatíveis com todos os tipos de fonte de dados, resultando em detecções perdidas. Para cobertura completa do seu ambiente, é recomendável implantar o sensor do ATP do Azure.
+
 As etapas a seguir guiarão você pelo processo de validação da configuração correta do espelhamento de porta. Para que a ATP do Azure funcione corretamente, o respectivo sensor autônomo deve ter capacidade de reconhecer o tráfego de entrada e saída do controlador de domínio. A fonte de dados principal usada pelo Azure ATP é uma inspeção profunda de pacotes do tráfego de rede para e dos controladores de domínio. Para que a ATP do Azure reconheça o tráfego de rede, é necessário configurar o espelhamento de porta. O espelhamento de porta copia o tráfego de uma porta (de origem) para outra porta (de destino).
 
 ## <a name="validate-port-mirroring-using-net-mon"></a>Validar o espelhamento de porta usando Net Mon
 
-1.  Instale o [Monitor de Rede da Microsoft 3.4](https://www.microsoft.com/download/details.aspx?id=4865) no sensor autônomo da ATP que você deseja validar.
+1. Instale o [Monitor de Rede da Microsoft 3.4](https://www.microsoft.com/download/details.aspx?id=4865) no sensor autônomo da ATP que você deseja validar.
 
     > [!IMPORTANT]
     > Se optar por instalar o Wireshark a fim de validar o espelhamento de porta, reinicie o serviço do sensor autônomo da ATP do Azure após a validação.
 
-2.  Abra o Monitor de Rede e crie uma nova guia de captura.
+1. Abra o Monitor de Rede e crie uma nova guia de captura.
 
-    1.  Selecione apenas o adaptador de rede de **captura** ou o adaptador de rede que estiver conectado à porta do comutador configurado como o destino do espelhamento de porta.
+    1. Selecione apenas o adaptador de rede de **captura** ou o adaptador de rede que estiver conectado à porta do comutador configurado como o destino do espelhamento de porta.
 
-    2.  Verifique se o Modo-P está habilitado.
+    1. Verifique se o Modo-P está habilitado.
 
-    3.  Clique em **Nova captura**.
+    1. Clique em **Nova captura**.
 
         ![Criar nova imagem da guia de captura](media/atp-port-mirroring-capture.png)
 
-3.  Na janela Exibir Filtro, insira o seguinte filtro: **KerberosV5 OU LDAP** e clique em **Aplicar**.
+1. Na janela Exibir Filtro, insira o seguinte filtro: **KerberosV5 OU LDAP** e clique em **Aplicar**.
 
     ![Aplicar imagem de filtro KerberosV5 ou LDAP](media/atp-port-mirroring-filter-settings.png)
 
-4.  Clique em **Iniciar** para iniciar a sessão de captura. Se você não vir o tráfego para e do controlador de domínio, examine a configuração do espelhamento de porta.
+1. Clique em **Iniciar** para iniciar a sessão de captura. Se você não vir o tráfego para e do controlador de domínio, examine a configuração do espelhamento de porta.
 
     ![Iniciar a captura de imagem de sessão](media/atp-port-mirroring-capture-traffic.png)
 
     > [!NOTE]
     > É importante ter certeza de que você vê o tráfego para e dos controladores de domínio.
-    
 
-5.  Se você vir o tráfego apenas em uma direção, você deve trabalhar com as equipes de rede ou de virtualização para ajudar a solucionar os problemas com a configuração do espelhamento de porta.
+1. Se você vir o tráfego apenas em uma direção, você deve trabalhar com as equipes de rede ou de virtualização para ajudar a solucionar os problemas com a configuração do espelhamento de porta.
 
 ## <a name="see-also"></a>Consulte Também
 
