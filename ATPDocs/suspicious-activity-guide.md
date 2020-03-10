@@ -13,11 +13,11 @@ ms.assetid: ca5d1c7b-11a9-4df3-84a5-f53feaf6e561
 ms.reviewer: itargoet
 ms.suite: ems
 ms.openlocfilehash: 39fbd3f42cfccd60a007b8640421a8af1c178243
-ms.sourcegitcommit: 8bb80eaef3c2a1085834b98839564c5d37334f56
+ms.sourcegitcommit: c8b1e584ef42559a40afd62dac1b5ca9056c5602
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76515673"
+ms.lasthandoff: 03/08/2020
+ms.locfileid: "78926524"
 ---
 # <a name="azure-atp-security-alerts"></a>Alertas de segurança do ATP do Azure
 
@@ -40,7 +40,7 @@ Para saber mais sobre a estrutura e os componentes comuns de todos os alertas de
 
 A tabela a seguir lista o mapeamento entre nomes de alerta, suas IDs externas exclusivas correspondentes e suas IDs de alerta do Microsoft Cloud App Security. Quando usadas com scripts ou automação, a Microsoft recomenda o uso de IDs externas de alertas em vez de nomes de alertas, já que apenas IDs externas de alertas são permanentes e não estão sujeitas a alterações.
 
-# <a name="external-idstabexternal"></a>[IDs externas](#tab/external)
+# <a name="external-ids"></a>[IDs externas](#tab/external)
 
 > [!div class="mx-tdBreakAll"]
 > |Novo nome do alerta de segurança|ID externa exclusiva|Severidade|MITRE ATT&CK Matrix™|
@@ -80,7 +80,7 @@ A tabela a seguir lista o mapeamento entre nomes de alerta, suas IDs externas ex
 > |[Reconhecimento de usuário e de associação a um grupo (SAMR)](atp-reconnaissance-alerts.md#user-and-group-membership-reconnaissance-samr-external-id-2021)|2021|Média|Descoberta|
 > |[Reconhecimento de endereço IP e de usuário (SMB)](atp-reconnaissance-alerts.md#user-and-ip-address-reconnaissance-smb-external-id-2012)|2012|Média|Descoberta|
 
-# <a name="cloud-app-security-idstabcloud-app-security"></a>[IDs do Cloud App Security](#tab/cloud-app-security)
+# <a name="cloud-app-security-ids"></a>[IDs do Cloud App Security](#tab/cloud-app-security)
 
 > [!div class="mx-tdBreakAll"]
 > |Novo nome do alerta de segurança|ID do alerta do Cloud App Security|
