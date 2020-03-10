@@ -13,11 +13,11 @@ ms.assetid: 1bf264d9-9697-44b5-9533-e1c498da4f07
 ms.reviewer: bennyl
 ms.suite: ems
 ms.openlocfilehash: 3908cc6ad907111fc7f6e32fd562ce0d6298dea7
-ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.sourcegitcommit: c8b1e584ef42559a40afd62dac1b5ca9056c5602
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "65197120"
+ms.lasthandoff: 03/08/2020
+ms.locfileid: "78926475"
 ---
 # <a name="working-with-the-ata-console"></a>Trabalhando com o Console do ATA
 
@@ -112,12 +112,12 @@ A lista de grupos a seguir é considerada **Confidencial** pelo ATA. Qualquer en
 - Administradores  
 - Usuários avançados  
 - Opers. de contas  
-- Opers. de servidores   
+- Operadores de Servidores   
 - Operadores de impressão,
 - Operadores de backup,
 - Replicadores 
 - Usuários da Área de Trabalho Remota 
-- Operadores de configuração de rede 
+- Operadores de Configuração de Rede 
 - Criadores de confiança de floresta de entrada 
 - Administradores do DNS 
 
@@ -128,7 +128,7 @@ Se você passar o mouse sobre a entidade, em qualquer lugar no console onde exis
 
 ![Imagem de miniperfil do ATA](media/ATA-mini-profile.jpg)
 
--   Nome
+-   {1&gt;Nome&lt;1}
 
 -   Imagem
 
