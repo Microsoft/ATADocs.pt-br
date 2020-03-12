@@ -5,18 +5,18 @@ keywords: ''
 author: shsagir
 ms.author: shsagir
 manager: rkarlin
-ms.date: 02/16/2020
+ms.date: 03/01/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: ort
 ms.suite: ems
-ms.openlocfilehash: 3787274ba5fc75ffebdf670f3fdb58b7497a4485
-ms.sourcegitcommit: 55adde8edff43f3df2402149335c16d43f45e1a9
+ms.openlocfilehash: de73b8e121b185b01be8ad83fc7c8606c03cb2c6
+ms.sourcegitcommit: 40179a7206773a40de96caffe6c5f3fbcb4a1c27
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/24/2020
-ms.locfileid: "77567910"
+ms.lasthandoff: 03/09/2020
+ms.locfileid: "78938883"
 ---
 # <a name="whats-new-in-azure-advanced-threat-protection-azure-atp"></a>Novidades no ATP do Azure (Proteção Avançada contra Ameaças do Azure)
 
@@ -25,6 +25,12 @@ Este artigo é atualizado com frequência para manter você informado sobre as n
 Para obter detalhes das versões anteriores do ATP do Azure até (e incluindo) a versão 2.55, confira a [referência de versão do ATP do Azure](atp-release-reference.md).
 
 Feed RSS: Receba uma notificação quando esta página for atualizada copiando e colando a seguinte URL em seu leitor de feed:   `https://docs.microsoft.com/api/search/rss?search=%22This+article+is+updated+frequently+to+let+you+know+what%27s+new+in+the+latest+release+of+Azure+ATP%22&locale=en-us`
+
+## <a name="azure-atp-release-2111"></a>ATP do Azure versão 2.111
+
+Lançado em 1º de março de 2020
+
+- Essa versão inclui melhorias e correções de bugs da infraestrutura do sensor interno.
 
 ## <a name="azure-atp-release-2110"></a>ATP do Azure versão 2.110
 
@@ -51,7 +57,7 @@ O ATP do Azure agora dá suporte ao uso de gMSA (Contas de Serviço Gerenciado d
 Quando um relatório agendado tem muitos dados, o email agora informa sobre o fato, exibindo o seguinte texto: havia dados em excesso durante o período especificado para gerar um relatório. Isso substitui o comportamento anterior de apenas descobrir o fato depois de clicar no link do relatório no email.
 
 - **Aprimoramento do recurso: lógica de cobertura do controlador de domínio atualizada**  
-Atualizamos nossa lógica do relatório de cobertura do controlador de domínio para incluir informações adicionais do AAD, resultando em uma exibição mais precisa dos controladores de domínio sem sensores neles. Essa nova lógica também deve ter um efeito positivo no Microsoft Secure Score correspondente.
+Atualizamos nossa lógica do relatório de cobertura do controlador de domínio para incluir informações adicionais do Azure AD, resultando em uma exibição mais precisa dos controladores de domínio sem sensores neles. Essa nova lógica também deve ter um efeito positivo no Microsoft Secure Score correspondente.
 
 ## <a name="azure-atp-release-2107"></a>ATP do Azure versão 2.107
 
@@ -168,13 +174,13 @@ Lançado em 8 de setembro de 2019
 
 Lançado em 1º de setembro de 2019
 
-- Essa versão inclui melhorias e correções de bugs da infraestrutura do sensor interno.
+-   Essa versão inclui melhorias e correções de bugs da infraestrutura do sensor interno.
 
 ## <a name="azure-atp-release-292"></a>ATP do Azure versão 2.92
 
 Lançado em 25 de agosto de 2019
 
-- Essa versão inclui melhorias e correções de bugs da infraestrutura do sensor interno.
+-   Essa versão inclui melhorias e correções de bugs da infraestrutura do sensor interno.
 
 ## <a name="azure-atp-release-291"></a>ATP do Azure versão 2.91
 
@@ -322,7 +328,7 @@ Marcação Confidencial Manual para Servidores Exchange
     2. Em **Detecção**, escolha **Marcas de entidade** e, em seguida, escolha **Confidencial**.
     3. Escolha **Exchange Servers** e, em seguida, adicione a entidade que você deseja marcar.
 
-    Depois de marcar um computador como um Exchange Server, ele será marcado como Confidencial e exibirá que foi marcado como um Servidor Exchange.  A marcação Confidencial será exibida no perfil da entidade do computador e o computador será analisado em todas as detecções baseadas em contas confidenciais e Caminhos de Movimentação Lateral.
+    Depois de marcar um computador como um Exchange Server, ele será marcado como Confidencial e exibirá que foi marcado como um Servidor Exchange.  A marcação Confidencial será exibida no perfil da entidade do computador, e o computador será analisado em todas as detecções baseadas em contas confidenciais e Caminhos de Movimentação Lateral.
 
 - Essa versão também inclui aprimoramentos e correções de bug da infraestrutura do sensor interno.
 
@@ -415,7 +421,7 @@ Lançada em 10 de março de 2019
 - **Aprimoramento do recurso: Alerta de execução remota de código sobre DNS**  
 Esse alerta agora apresenta nova evidência mostrando ao seu controlador de domínio as atualizações de status de segurança, informando quando atualizações são necessárias.
 
-- **Nova documentação: Alerta de segurança do MITRE ATT & CK Matrix™ do ATP do Azure**  
+- **Nova documentação: Alerta de segurança do MITRE ATT & CK Matrix&trade;** do ATP do Azure  
 Para explicar e facilitar o mapeamento da relação entre alertas de segurança do ATP do Azure e o MITRE ATT & CK Matrix conhecido, adicionamos as técnicas MITRE relevantes para listagens de alertas de segurança do ATP do Azure. Essa referência adicional facilita o reconhecimento da técnica de ataque suspeito potencialmente em uso quando um alerta de segurança do ATP do Azure é acionado. Saiba mais sobre o [guia de alerta de segurança do ATP do Azure](suspicious-activity-guide.md).  
 
 - Essa versão também inclui aprimoramentos e correções de bug da infraestrutura do sensor interno.
@@ -529,7 +535,7 @@ Em resposta aos comentários dos clientes sobre o uso do ATP do Azure com contro
 Lançado em 20 de janeiro de 2019
 
 - **Novo alerta de segurança: Execução remota de código com DNS – (versão prévia)**  
-O alerta de segurança [Execução remota de código sobre DNS ](atp-lateral-movement-alerts.md#remote-code-execution-over-dns-external-id-2036) do ATP do Azure está agora na versão prévia pública.    Nessa detecção, um alerta de segurança do ATP do Azure é disparado quando as consultas DNS suspeitas de explorar a vulnerabilidade de segurança [CVE-2018-8626](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2018-8626) são feitas em um controlador de domínio na rede.
+O alerta de segurança [Execução remota de código sobre DNS](atp-lateral-movement-alerts.md#remote-code-execution-over-dns-external-id-2036) do ATP do Azure está agora na versão prévia pública.    Nessa detecção, um alerta de segurança do ATP do Azure é disparado quando as consultas DNS suspeitas de explorar a vulnerabilidade de segurança [CVE-2018-8626](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2018-8626) são feitas em um controlador de domínio na rede.
 
 - **Aprimoramento do recurso: Atualização de sensor atrasada por 72 horas**  
 Opção alterada para adiar atualizações de sensor, em sensores selecionados por 72 horas (em vez do adiamento anterior de 24 horas), após cada atualização de lançamento do ATP do Azure. Ver [atualização do sensor do ATP do Azure](sensor-update.md) para obter instruções de configuração.

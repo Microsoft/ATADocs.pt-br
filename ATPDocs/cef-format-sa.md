@@ -5,19 +5,19 @@ keywords: ''
 author: shsagir
 ms.author: shsagir
 manager: rkarlin
-ms.date: 01/22/2020
+ms.date: 03/05/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 3261155c-3c72-4327-ba29-c113c63a4e6d
 ms.reviewer: arzinger
 ms.suite: ems
-ms.openlocfilehash: e27505cfb801ebda0376d716d4156364b1af1a74
-ms.sourcegitcommit: 8bb80eaef3c2a1085834b98839564c5d37334f56
+ms.openlocfilehash: b53e7f63949896908834a55985988c9a7dffaca5
+ms.sourcegitcommit: 594cba9674559beebd82e0c0eb08792000f97e87
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76515690"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78332057"
 ---
 # <a name="azure-atp-siem-log-reference"></a>Referência de logs de SIEM do Azure ATP
 
@@ -51,7 +51,7 @@ O campo cs2 identifica se o alerta é novo ou atualizado.
 
 ## <a name="sample-logs"></a>Logs de exemplo
 
-Os exemplos de logs estão em conformidade com o RFC 5242, mas o ATP do Azure também dá suporte ao RFC 3164.
+Os exemplos de logs estão em conformidade com o RFC 5424, mas o ATP do Azure também dá suporte ao RFC 3164.
 
 Prioridades:
 
