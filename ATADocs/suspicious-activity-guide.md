@@ -13,11 +13,11 @@ ms.assetid: 1fe5fd6f-1b79-4a25-8051-2f94ff6c71c1
 ms.reviewer: bennyl
 ms.suite: ems
 ms.openlocfilehash: bc0dafbb95fb8ea2328d2b005802aff003b9ec97
-ms.sourcegitcommit: 9673eb49729a06d3a25d52c0f43c76ac61b9cf89
+ms.sourcegitcommit: 05f23a0add8d24ae92176e13c2a4ae8ada1844da
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/12/2020
-ms.locfileid: "75908164"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79319169"
 ---
 # <a name="advanced-threat-analytics-suspicious-activity-guide"></a>Guia de atividades suspeitas Advanced Threat Analytics
 
@@ -552,8 +552,8 @@ Aplique as correções mais recentes a todas as suas máquinas e verifique se to
 >[!NOTE]
 > Para desabilitar um alerta de atividade suspeita, contate o suporte.
 
-## <a name="related-videos"></a>Vídeos Relacionados
-- [Participar da comunidade de segurança](https://channel9.msdn.com/Shows/Microsoft-Security/Join-the-Security-Community)
+## <a name="related-videos"></a>Vídeos relacionados
+- [Unindo a comunidade de segurança](https://channel9.msdn.com/Shows/Microsoft-Security/Join-the-Security-Community)
 
 
 ## <a name="see-also"></a>Confira Também

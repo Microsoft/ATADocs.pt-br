@@ -12,11 +12,11 @@ ms.assetid: 1b5b24ff-0df8-4660-b4f8-64d68cc72f65
 ms.reviewer: bennyl
 ms.suite: ems
 ms.openlocfilehash: 0ec953c4311c12a44686cbbf4f4394492f74dd7f
-ms.sourcegitcommit: 9673eb49729a06d3a25d52c0f43c76ac61b9cf89
+ms.sourcegitcommit: 05f23a0add8d24ae92176e13c2a4ae8ada1844da
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/12/2020
-ms.locfileid: "75905480"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79319149"
 ---
 # <a name="ata-capacity-planning"></a>Planejamento da capacidade de ATA
 
@@ -88,9 +88,9 @@ Em uma implantação do ATA, há suporte para qualquer combinação dos tipos de
 
 Ao decidir sobre o tipo de implantação do Gateway, considere os seguintes benefícios:
 
-|Tipo de gateway|Vantagens|Custo|Topologia de implantação|Uso do controlador de domínio|
+|Tipo de gateway|Benefícios|Custo|Topologia de implantação|Uso do controlador de domínio|
 |----|----|----|----|-----|
-|Gateway de ATA|A implantação Fora de banda dificulta o trabalho dos invasores em descobrir se o ATA está presente|Mais alto|Instalado junto com o controlador de domínio (fora de banda)|Dá suporte a até 50.000 pacotes por segundo|
+|Gateway do ATA|A implantação Fora de banda dificulta o trabalho dos invasores em descobrir se o ATA está presente|Mais alto|Instalado junto com o controlador de domínio (fora de banda)|Dá suporte a até 50.000 pacotes por segundo|
 |Gateway Lightweight do ATA|Não exige uma configuração de espelhamento de porta e servidor dedicado|Inferior|Instalado em um controlador de domínio|Dá suporte a até 10.000 pacotes por segundo|
 
 Veja a seguir exemplos de cenários nos quais os controladores de domínio devem ser cobertos pelo Gateway Lightweight do ATA:
@@ -168,7 +168,7 @@ As considerações de espelhamento de porta podem exigir que você implante vár
 
 
 
-## <a name="related-videos"></a>Vídeos Relacionados
+## <a name="related-videos"></a>Vídeos relacionados
 - [Como escolher o tipo certo de Gateway do ATA](https://channel9.msdn.com/Shows/Microsoft-Security/ATA-Deployment-Choose-the-Right-Gateway-Type)
 
 

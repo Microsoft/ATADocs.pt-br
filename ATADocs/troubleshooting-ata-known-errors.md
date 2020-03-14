@@ -13,11 +13,11 @@ ms.assetid: d89e7aff-a6ef-48a3-ae87-6ac2e39f3bdb
 ms.reviewer: arzinger
 ms.suite: ems
 ms.openlocfilehash: e7b0a5c83926c1d730d8de6467fa692a27f4d50d
-ms.sourcegitcommit: 9673eb49729a06d3a25d52c0f43c76ac61b9cf89
+ms.sourcegitcommit: 05f23a0add8d24ae92176e13c2a4ae8ada1844da
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/12/2020
-ms.locfileid: "75908125"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79319209"
 ---
 # <a name="troubleshooting-ata-known-issues"></a>Solução de problemas conhecidos do ATA
 
@@ -30,7 +30,7 @@ Esta seção detalha os possíveis erros nas implantações do ATA e as etapas n
 
 > [!div class="mx-tableFixed"]
 > 
-> |Erro do|Description|Resolução|
+> |Erro|Descrição|Resolução|
 > |-------------|----------|---------|
 > |System.DirectoryServices.Protocols.LdapException: ocorreu um erro local|Falha do Gateway do ATA ao autenticar no controlador de domínio.|1. Confirme se o registro DNS do controlador de domínio está configurado corretamente no servidor DNS. <br>2. Verifique se a hora do gateway do ATA está sincronizada com a hora do controlador de domínio.|
 > |System.IdentityModel.Tokens.SecurityTokenValidationException: falha ao validar cadeia de certificados|Falha do Gateway do ATA ao validar o certificado do Centro do ATA.|1. Verifique se o certificado de autoridade de certificação raiz está instalado no repositório de certificados da autoridade de certificação confiável no gateway do ATA. <br>2. valide se a CRL (lista de certificados revogados) está disponível e se a validação de revogação de certificado pode ser executada.|
@@ -57,7 +57,7 @@ Esta seção detalha os possíveis erros nas implantações do ATA e as etapas n
 ## <a name="deployment-errors"></a>Erros de implantação
 > [!div class="mx-tableFixed"]
 > 
-> |Erro do|Description|Resolução|
+> |Erro|Descrição|Resolução|
 > |-------------|----------|---------|
 > |Falha na instalação do .Net Framework 4.6.1 com o erro 0x800713ec|Os pré-requisitos do .Net Framework 4.6.1 não estão instalados no servidor. |Antes de instalar o ATA, verifique se as atualizações do Windows [KB2919442](https://www.microsoft.com/download/details.aspx?id=42135) e [KB2919355](https://support.microsoft.com/kb/2919355) estão instaladas no servidor.|
 > |System.Threading.Tasks.TaskCanceledException: uma tarefa foi cancelada|O processo de implantação atingiu o tempo limite, uma vez que ele não pôde acessar o Centro do ATA.|1. Verifique a conectividade de rede para o centro do ATA navegando até ele usando seu endereço IP. <br></br>2. Verifique a configuração do proxy ou do firewall.|
@@ -70,7 +70,7 @@ Esta seção detalha os possíveis erros nas implantações do ATA e as etapas n
 ## <a name="ata-center-errors"></a>Erros do Centro do ATA
 > [!div class="mx-tableFixed"]
 > 
-> |Erro do|Description|Resolução|
+> |Erro|Descrição|Resolução|
 > |-------------|----------|---------|
 > |System.Security.Cryptography.CryptographicException: acesso negado.|O Centro do ATA falha ao usar o certificado emitido para descriptografia. Isso provavelmente ocorreu devido ao uso de um certificado com KeySpec (KeyNumber) definido como Assinatura (AT\\_SIGNATURE) que não é compatível com a descriptografia, em vez de usar o KeyExchange (AT\\_KEYEXCHANGE).|1. pare o serviço do centro do ATA. <br></br>2. exclua o certificado do centro do ATA do repositório de certificados do centro. (Antes de excluir, verifique se você tem o backup do certificado com a chave privada em um arquivo PFX). <br></br>3. Abra um prompt de comando com privilégios elevados e execute certutil-importpfx "CenterCertificate. pfx" em\\_KEYEXCHANGE <br></br>4. Inicie o serviço do centro do ATA. <br></br>5. Verifique se tudo agora funciona conforme o esperado.|
 
@@ -79,7 +79,7 @@ Esta seção detalha os possíveis erros nas implantações do ATA e as etapas n
 
 > [!div class="mx-tableFixed"]
 > 
-> |Problema|Description|Resolução|
+> |Problema|Descrição|Resolução|
 > |-------------|----------|---------|
 > |Nenhum tráfego recebido do controlador de domínio, mas são observados alertas de monitoramento|    Nenhum tráfego foi recebido de um controlador de domínio usando o espelhamento de porta por meio de um Gateway do ATA|Na NIC de captura no Gateway do ATA, desabilite esses recursos em **Configurações Avançadas**:<br></br>União de Segmentos de Recebimento (IPv4)<br></br>União de Segmentos de Recebimento (IPv6)|
 > |Esse alerta de monitoramento é exibido: Parte do tráfego de rede não está sendo analisado|Se você tiver um Gateway de ATA ou Gateway do Lightweight em máquinas virtuais VMware, você poderá receber este alerta de monitoramento. Isso ocorre devido a uma incompatibilidade de configuração no VMware.|Defina as configurações a seguir como 0 ou Desabilitado na configuração de NIC da máquina virtual: TsoEnable, LargeSendOffload, TSO Offload, Giant TSO Offload TLS 1.0 fica desabilitado no Gateway do ATA, mas o .Net fica configurado para usar o TLS 1.2|

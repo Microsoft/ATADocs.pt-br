@@ -13,11 +13,11 @@ ms.assetid: 892b16d2-58a6-49f9-8693-1e5f69d8299c
 ms.reviewer: bennyl
 ms.suite: ems
 ms.openlocfilehash: 179cf31a6f9c8c62670ea96d671f209712325f56
-ms.sourcegitcommit: 9673eb49729a06d3a25d52c0f43c76ac61b9cf89
+ms.sourcegitcommit: 05f23a0add8d24ae92176e13c2a4ae8ada1844da
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/12/2020
-ms.locfileid: "75905201"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79319199"
 ---
 # <a name="ata-architecture"></a>Arquitetura do ATA
 
@@ -84,7 +84,7 @@ O Centro do ATA recebe tráfego analisado do Gateway do ATA e do Gateway Lightwe
 |Processador de atividade de rede|Processa todas as atividades de rede em cada lote recebido. Por exemplo, a correspondência entre as diversas etapas do Kerberos executadas em computadores potencialmente diferentes|
 |Criador de perfil de entidade|Cria o perfil de todas as entidades exclusivas de acordo com o tráfego e os eventos. Por exemplo, o ATA atualiza a lista de computadores conectados para cada perfil do usuário.|
 |Banco de dados central|Gerencia o processo de gravação de atividades de rede e os eventos no banco de dados. |
-|Banco de Dados|O ATA utiliza o MongoDB para armazenar todos os dados no sistema:<br /><br />-   Atividade de rede<br />-   Atividades evento<br />-   Entidades exclusivas<br />-   Atividades suspeitas<br />-   Configuração do ATA|
+|Banco de dados|O ATA utiliza o MongoDB para armazenar todos os dados no sistema:<br /><br />-   Atividade de rede<br />-   Atividades evento<br />-   Entidades exclusivas<br />-   Atividades suspeitas<br />-   Configuração do ATA|
 |Detectores|Os detectores usam algoritmos de aprendizado de máquina e regras determinísticas para localizar atividades suspeitas e comportamento anormal do usuário em sua rede.|
 |Console do ATA|O Console do ATA é para configurar o ATA e monitorar atividades suspeitas detectadas pelo ATA em sua rede. O Console do ATA não é dependente do serviço do Centro do ATA e é executado mesmo quando o serviço é interrompido, contanto que ele possa se comunicar com o banco de dados.|
 
@@ -92,7 +92,7 @@ Considere os seguintes critérios ao decidir quantos Centros do ATA você quer i
 
 -   Um Centro de ATA pode monitorar uma única floresta do Active Directory. Se você tiver mais de uma floresta do Active Directory, será necessário pelo menos um Centro do ATA por floresta do Active Directory.
 
--    Em grandes implantações do Active Directory, um único Centro de ATA pode não ser capaz de lidar com todo o tráfego de todos os controladores de domínio. Nesse caso, serão necessários vários Centros do ATA. O número de Centrais do ATA deve ser determinado pelo [planejamento de capacidade do ATA](ata-capacity-planning.md).
+-    Em grandes implantações do Active Directory, um único Centro de ATA pode não ser capaz de lidar com todo o tráfego de todos os controladores de domínio. Nesse caso, serão necessários vários Centros do ATA. O número de Centros de ATA devem ser determinados pelo [planejamento de capacidade de ATA](ata-capacity-planning.md).
 
 ## <a name="ata-gateway-and-ata-lightweight-gateway"></a>Gateway do ATA e Gateway Lightweight do ATA
 
@@ -164,7 +164,7 @@ Se você estiver usando Gateways do ATA, precisará configurar o espelhamento de
 
 Enquanto o espelhamento de portas espelha todo o tráfego de rede do controlador de domínio para o Gateway do ATA, apenas uma pequena porcentagem desse tráfego é compactada e enviada para o Centro do ATA para análise.
 
-Os controladores de domínio e os Gateways do ATA podem ser físicos ou virtuais, consulte [Configurar o espelhamento de porta](configure-port-mirroring.md) para obter mais informações.
+Os controladores de domínio e os Gateways de ATA podem ser físicos ou virtuais, consulte [Configurar o espelhamento de porta](configure-port-mirroring.md) para obter mais informações.
 
 
 ### <a name="events"></a>Eventos
@@ -174,7 +174,7 @@ Para melhorar a detecção do ATA de Pass-the-Hash, Força Bruta, Modificação 
 
 -   Configuração do encaminhamento de eventos do Windows<br>Outra maneira de o ATA conseguir obter seus eventos é configurando seus controladores de domínio para encaminhar eventos do Windows 4776, 4732, 4733, 4728, 4729, 4756 and 4757 para seu Gateway do ATA. Isso é especialmente útil se você não tiver um SIEM ou se o SIEM não for atualmente suportado pelo ATA. Para completar a configuração do Encaminhamento de Eventos do Windows no ATA, confira [Configurando o encaminhamento de eventos do Windows](configure-event-collection.md). Isso se aplica apenas a Gateways do ATA físicos, não ao Gateway Lightweight do ATA.
 
-## <a name="related-videos"></a>Vídeos Relacionados
+## <a name="related-videos"></a>Vídeos relacionados
 - [Como escolher o tipo certo de Gateway do ATA](https://channel9.msdn.com/Shows/Microsoft-Security/ATA-Deployment-Choose-the-Right-Gateway-Type)
 
 
