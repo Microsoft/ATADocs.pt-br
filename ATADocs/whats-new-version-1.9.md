@@ -1,5 +1,5 @@
 ---
-title: Novidades da versão 1.9 do ATA | Microsoft Docs
+title: Novidades da versão 1.9 do ATA
 description: Lista as novidades da nova versão 1.9 do ATA e os problemas conhecidos
 keywords: ''
 author: rkarlin
@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 51de491c-49ba-4aff-aded-cc133a8ccf0b
 ms.reviewer: ''
 ms.suite: ems
-ms.openlocfilehash: 80d8e42b98c0c4cb57beae33ce238d4b466593b5
-ms.sourcegitcommit: 0f3ee3241895359d5cecd845827cfba1fdca9317
+ms.openlocfilehash: 40193c0aa8c0ee10dd129d4153dd63df9f8eb926
+ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/29/2019
-ms.locfileid: "75544309"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79412798"
 ---
 # <a name="whats-new-in-ata-version-19"></a>Novidades da versão 1.9 do ATA
 

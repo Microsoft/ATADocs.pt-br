@@ -1,5 +1,5 @@
 ---
-title: Trabalhando com perfis de entidade no console do Advanced Threat Analytics | Microsoft Docs
+title: Trabalhando com perfis de entidade no console do Advanced Threat Analytics
 description: Descreve como investigar entidades na tela de perfis de usuários no console do ATA
 keywords: ''
 author: rkarlin
@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 581a3257-32dc-453f-b84e-b9f99186f5d3
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 1f8f2c507ea45ddb422868f8b86a973c8454509e
-ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.openlocfilehash: de4916e94593dd823c7cf754874c7d5c3eed7135
+ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "65195835"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79412339"
 ---
 # <a name="investigating-entity-profiles"></a>Investigando perfis de entidade
 
@@ -49,11 +49,11 @@ Na parte superior, você pode exibir os blocos de resumo que fornecem uma visão
 
 Para computadores, você verá:
 - Quantas atividades suspeitas abertas existem para o computador
-- Quantos usuários fizeram logon no computador
+-  Quantos usuários fizeram logon no computador
 - Quantos recursos o computador acessou
-- Quantas VPN de locais foram acessadas do computador
+-  Quantas VPN de locais foram acessadas do computador
 - Uma lista de quais endereços IP o computador foi usado
-
+  
   ![computador de menu de entidade](media/entity-computer.png)
 
 Usando o botão **Filtrar por** acima da linha do tempo de atividades, você pode filtrar as atividades por tipo de atividade. Também é possível filtrar um tipo específico de atividade (ruído). Isso é muito útil para fazer investigações quando você quiser entender o básico do que uma entidade está fazendo na rede. Você também pode ir para uma data específica e pode exportar as atividades filtradas para o Excel. O arquivo exportado fornece uma página de alterações de serviços de diretório (itens alterados no Active Directory para a conta) e uma página separada de atividades. 
@@ -77,3 +77,4 @@ O mapa fornece uma lista de quantos saltos entre computadores ou usuários um in
 
 ## <a name="see-also"></a>Confira Também
 [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
+      

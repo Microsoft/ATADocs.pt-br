@@ -1,5 +1,5 @@
 ---
-title: Solução de problemas do Advanced Threat Analytics usando os contadores de desempenho | Microsoft Docs
+title: Solução de problemas de análise avançada de ameaças com contadores de desempenho
 description: Descreve como você pode usar os contadores de desempenho para solucionar problemas com o ATA
 keywords: ''
 author: shsagir
@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: df162a62-f273-4465-9887-94271f5000d2
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 495813678b18b71af45240e18c40fdab5a5154a3
-ms.sourcegitcommit: 9673eb49729a06d3a25d52c0f43c76ac61b9cf89
+ms.openlocfilehash: 14ec1e07a3a9240cd28d1cfce39ed3922c71f752
+ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/12/2020
-ms.locfileid: "75908232"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79411778"
 ---
 # <a name="troubleshooting-ata-using-the-performance-counters"></a>Solução de problemas do ATA usando contadores de desempenho
 
@@ -56,7 +56,7 @@ Aqui está a lista dos principais contadores do Gateway de ATA a ter em atençã
 
 > [!div class="mx-tableFixed"]
 > 
-> |Contador|Description|Limite|Solução de problemas|
+> |Contador|Descrição|Limite|Solução de Problemas|
 > |-----------|---------------|-------------|-------------------|
 > |Mensagens\s do PEF analisado do NetworkListener\Gateway de ATA da Microsoft|A quantidade de tráfego processada pelo Gateway de ATA a cada segundo.|Sem limite|Ajuda a entender a quantidade de tráfego que está sendo analisada pelo Gateway de ATA.|
 > |Eventos descartados por PEF do NetworkListener\s|A quantidade de tráfego descartada pelo Gateway de ATA a cada segundo.|Esse número deve ser sempre zero (intermitência rara e curta de descartes é aceitável).|Verifique se há qualquer componente que atingiu seu tamanho máximo e está bloqueando componentes anteriores até o NetworkListener. Consulte o **Processo de componente do ATA** acima.<br /><br />Verifique se não há nenhum problema com a CPU ou a memória.|
@@ -78,7 +78,7 @@ Para fazer isso, abra o **Monitor de Desempenho** e adicione todos os contadores
 
 > [!div class="mx-tableFixed"]
 > 
-> |Contador|Description|Limite|Solução de problemas|
+> |Contador|Descrição|Limite|Solução de Problemas|
 > |-----------|---------------|-------------|-------------------|
 > |% Máxima de Tempo de CPU do Microsoft ATA Gateway Updater\GatewayUpdaterResourceManager|A quantidade máxima de tempo da CPU (em porcentagem) que o processo do Gateway Lightweight pode consumir. |Sem limite. | Esta é a limitação que impede que os recursos do controlador de domínio sejam usados pelo Gateway Lightweight do ATA. Se você perceber que o processo atinge frequentemente o limite máximo durante um período (o processo atinge o limite e, em seguida, começa a descartar tráfego), significa que você precisa adicionar mais recursos ao servidor que está executando o controlador de domínio.|
 > |Microsoft ATA Gateway Updater\GatewayUpdaterResourceManager Commit Memory Max Size|A quantidade máxima de memória confirmada (em bytes) que o processo do Gateway Lightweight pode consumir.|Sem limite. | Esta é a limitação que impede que os recursos do controlador de domínio sejam usados pelo Gateway Lightweight do ATA. Se você perceber que o processo atinge frequentemente o limite máximo durante um período (o processo atinge o limite e, em seguida, começa a descartar tráfego), significa que você precisa adicionar mais recursos ao servidor que está executando o controlador de domínio.| 
@@ -91,7 +91,7 @@ Para ver seu consumo real, consulte os seguintes contadores:
 
 > [!div class="mx-tableFixed"]
 > 
-> |Contador|Description|Limite|Solução de problemas|
+> |Contador|Descrição|Limite|Solução de Problemas|
 > |-----------|---------------|-------------|-------------------|
 > |Process(Microsoft.Tri.Gateway)\%Tempo do Processador|A quantidade de tempo da CPU (em porcentagem) que o processo do Gateway Lightweight está consumindo. |Sem limite. | Compare os resultados desse contador com o limite encontrado em GatewayUpdaterResourceManager CPU Time Max %. Se você perceber que o processo atinge frequentemente o limite máximo durante um período (o processo atinge o limite e, em seguida, começa a descartar tráfego), significa que você precisa dedicar mais recursos ao Gateway Lightweight.|
 > |Process(Microsoft.Tri.Gateway)Bytes Privados|A quantidade de memória confirmada (em bytes) que o processo do Gateway Lightweight está consumindo.|Sem limite. | Compare os resultados desse contador com o limite encontrado em Tamanho Máximo de Memória de Confirmação do GatewayUpdaterResourceManager. Se você perceber que o processo atinge frequentemente o limite máximo durante um período (o processo atinge o limite e, em seguida, começa a descartar tráfego), significa que você precisa dedicar mais recursos ao Gateway Lightweight.| 
@@ -106,7 +106,7 @@ Aqui está a lista dos principais contadores do Centro de ATA a ter em atenção
 
 > [!div class="mx-tableFixed"]
 > 
-> |Contador|Description|Limite|Solução de problemas|
+> |Contador|Descrição|Limite|Solução de Problemas|
 > |-----------|---------------|-------------|-------------------|
 > |Tamanho do Bloco do Lote de Entidade do Centro do Microsoft ATA/EntityReceiver|O número de lotes de entidade colocados em fila pelo Centro de ATA.|Deve ser menor que o máximo de 1 (máximo padrão: 10.000)|Verifique se há qualquer componente que atingiu seu tamanho máximo e está bloqueando componentes anteriores até o NetworkListener.  Veja o **Processo de componente do ATA** anterior.<br /><br />Verifique se não há nenhum problema com a CPU ou a memória.|
 > |Tamanho do Bloco de Atividade de Rede do Centro do Microsoft ATA\NetworkActivityProcessor|O número de atividades de rede (NAs) na fila de processamento.|Deve ser menor que o máximo de 1 (máximo padrão: 50.000)|Verifique se há qualquer componente que atingiu seu tamanho máximo e está bloqueando componentes anteriores até o NetworkListener. Veja o **Processo de componente do ATA** anterior.<br /><br />Verifique se não há nenhum problema com a CPU ou a memória.|
@@ -123,7 +123,7 @@ A tabela a seguir lista os principais contadores do sistema operacional nos quai
 
 > [!div class="mx-tableFixed"]
 > 
-> |Contador|Description|Limite|Solução de problemas|
+> |Contador|Descrição|Limite|Solução de Problemas|
 > |-----------|---------------|-------------|-------------------|
 > |Processador(_Total)\% Tempo do Processador|Percentual de tempo decorrido que o processador gasta para executar um thread não ocioso.|Menos de 80% em média|Verifique se há um processo específico que está levando muito mais tempo de processamento do que deveria.<br /><br />Adicione mais processadores.<br /><br />Reduza a quantidade de tráfego por servidor.<br /><br />O contador "Processador(_Total)\% Tempo do Processador" pode ser menos preciso em servidores virtuais. Nesse caso, a maneira mais precisa de medir a falta de energia do processador é por meio do contador "Sistema\Comprimento da Fila do Processador".|
 > |Sistema\Comutações de contexto\s|A taxa combinada na qual todos os processadores alternam de um thread para outro.|Menos de 5.000&#42;núcleos (núcleos físicos)|Verifique se há um processo específico que está levando muito mais tempo de processamento do que deveria.<br /><br />Adicione mais processadores.<br /><br />Reduza a quantidade de tráfego por servidor.<br /><br />O contador "Processador(_Total)\% Tempo do Processador" pode ser menos preciso em servidores virtuais. Nesse caso, a maneira mais precisa de medir a falta de energia do processador é por meio do contador "Sistema\Comprimento da Fila do Processador".|

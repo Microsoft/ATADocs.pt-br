@@ -1,5 +1,5 @@
 ---
-title: Roteiro de preparação e recursos do Advanced Threat Analytics | Microsoft Docs
+title: Roteiro de preparação e recursos do Advanced Threat Analytics
 description: Fornece uma lista de recursos do ATA, vídeos, introdução, implantação e links do roteiro de preparação.
 keywords: ''
 author: rkarlin
@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 42a1a34f-ed6b-4538-befb-452168a30e8c
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: e3b83699fdafd8fd34cea3a4407422e27118d9a0
-ms.sourcegitcommit: 0f3ee3241895359d5cecd845827cfba1fdca9317
+ms.openlocfilehash: 7ebf92ba3d6977dd9aad79d8e87818c5f84795b9
+ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/29/2019
-ms.locfileid: "75543011"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79412050"
 ---
 # <a name="ata-readiness-roadmap"></a>Roteiro de preparação do ATA 
 

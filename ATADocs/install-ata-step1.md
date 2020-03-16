@@ -1,5 +1,5 @@
 ---
-title: Instalação do Advanced Threat Analytics – Etapa 1 | Microsoft Docs
+title: Instalar o Advanced Threat Analytics – etapa 1
 description: A primeira etapa da instalação do ATA envolve baixar e instalar o Centro do ATA em seu servidor escolhido.
 keywords: ''
 author: shsagir
@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: b3cceb18-0f3c-42ac-8630-bdc6b310f1d6
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 61f210562cb1af4ed6a28d1f0ee0bf61f49bedc4
-ms.sourcegitcommit: 9673eb49729a06d3a25d52c0f43c76ac61b9cf89
+ms.openlocfilehash: 8a6841b3999938300217ae4d859e94853aed7bca
+ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/12/2020
-ms.locfileid: "75907877"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79413869"
 ---
 # <a name="install-ata---step-1"></a>Instalação do ATA - Etapa 1
 
@@ -63,10 +63,10 @@ Execute as seguintes etapas no servidor do Centro do ATA.
 
 9. Na página **Configure the Center (Configurar o Centro)** insira as informações a seguir com base em seu ambiente:
 
-   |Campo|Description|Comentários|
+   |Campo|Descrição|Comentários|
    |---------|---------------|------------|
    |Caminho da Instalação|Esse é o local onde o Centro do ATA será instalado. Por padrão, é %programfiles%\Microsoft Advanced Threat Analytics\Center|Mantenha o valor padrão|
-   |Caminho de Dados do Banco de Dados|Esse é o local onde os arquivos de banco de dados do MongoDB estão localizados. Por padrão, é %programfiles%\Microsoft Advanced Threat Analytics\Center\MongoDB\bin\data|Altere o local para um local onde você tem espaço para crescer com base em seu tamanho. **Observação**: <ul><li>Em ambientes de produção, você deve usar uma unidade que tenha espaço suficiente com base em um planejamento de capacidade.</li><li>Para implantações de grande porte, o banco de dados deve estar em um disco físico separado.</li></ul>Confira [Planejamento de capacidade do ATA](ata-capacity-planning.md) para obter informações sobre dimensionamento.|
+   |Caminho de Dados do Banco de Dados|Esse é o local onde os arquivos de banco de dados do MongoDB estão localizados. Por padrão, é %programfiles%\Microsoft Advanced Threat Analytics\Center\MongoDB\bin\data|Altere o local para um local onde você tem espaço para crescer com base em seu tamanho. **Observação:** <ul><li>Em ambientes de produção, você deve usar uma unidade que tenha espaço suficiente com base em um planejamento de capacidade.</li><li>Para implantações de grande porte, o banco de dados deve estar em um disco físico separado.</li></ul>Confira [Planejamento de capacidade de ATA](ata-capacity-planning.md) para obter informações de dimensionamento.|
    |Certificado SSL do Serviço da Central|Esse é o certificado usado pelo serviço do Centro do ATA e pelo Console do ATA.|Clique no ícone de chave para selecionar um certificado instalado ou use a caixa de seleção para criar um certificado autoassinado.|
         
    ![Imagem de configuração do Centro do ATA](media/ATA-Center-Configuration.png)
@@ -116,7 +116,7 @@ Se você instalou o ATA em um diretório diferente, não deixe de alterar os cam
 > [« Pré-instalação](configure-port-mirroring.md)
 > [Etapa 2 »](install-ata-step2.md)
 
-## <a name="related-videos"></a>Vídeos Relacionados
+## <a name="related-videos"></a>Vídeos relacionados
 - [Como escolher o tipo certo de Gateway do ATA](https://channel9.msdn.com/Shows/Microsoft-Security/ATA-Deployment-Choose-the-Right-Gateway-Type)
 - [Visão geral da implantação do ATA](https://channel9.msdn.com/Shows/Microsoft-Security/Overview-of-ATA-Deployment-in-10-Minutes)
 

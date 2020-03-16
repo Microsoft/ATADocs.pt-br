@@ -1,5 +1,5 @@
 ---
-title: Novidades na versão 1.4 do Advanced Threat Analytics | Microsoft Docs
+title: O que há de novo na versão 1,4 do Advanced Threat Analytics
 description: Lista as novidades na versão 1.4 do ATA e seus problemas conhecidos
 keywords: ''
 author: rkarlin
@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: cbea47f9-34c1-42b6-ae9e-6a472b49e1a5
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 0515c9467889f7c83a52030b47a217b7bfb11732
-ms.sourcegitcommit: 0f3ee3241895359d5cecd845827cfba1fdca9317
+ms.openlocfilehash: 9a06773002de2b0b830ba179899373543b2bfbff
+ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/29/2019
-ms.locfileid: "75544220"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79414192"
 ---
 # <a name="what39s-new-in-ata-version-14"></a>Novidades na versão 1.4 do ATA
 Essas notas de versão fornecem informações sobre problemas conhecidos na versão 1.4 da Advanced Threat Analytics.

@@ -1,5 +1,5 @@
 ---
-title: Investigar ataques de caminho de movimento lateral com o ATA | Microsoft Docs
+title: Investigar ataques de caminho de movimento lateral com o ATA
 description: Este artigo descreve como detectar ataques de caminho de movimento lateral com o ATA (Advanced Threat Analytics).
 keywords: ''
 author: shsagir
@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 710f01bd-c878-4406-a7b2-ce13f98736ea
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 53c81575202bbccc9eacf5bb26c5fa624fb7e667
-ms.sourcegitcommit: 9673eb49729a06d3a25d52c0f43c76ac61b9cf89
+ms.openlocfilehash: 4c937a99da6bd26d58fc112eb1c154b59d8d53a1
+ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/12/2020
-ms.locfileid: "75908248"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79412033"
 ---
 # <a name="investigate-lateral-movement-paths-with-ata"></a>Investigar caminhos de movimento lateral com o ATA
 
@@ -51,7 +51,7 @@ Para descobrir quais contas confidenciais em sua rede estão vulneráveis devido
 
 Agora que você sabe quais contas confidenciais estão em risco, aprofunde-se no ATA para saber mais e tomar medidas preventivas.
 
-1. No console do ATA, pesquise a notificação de Movimentação lateral que foi adicionada ao perfil da entidade quando ela está em um caminho de movimentação lateral ![ícone lateral](./media/lateral-movement-icon.png) , ![ícone do caminho](./media/paths-icon.png). Isso estará disponível se tiver ocorrido um caminho de movimentação lateral nos últimos dois dias.
+1. No console do ATA, pesquise a notificação de Movimentação lateral que foi adicionada ao perfil da entidade quando ela está em um caminho de movimentação lateral ![ícone lateral](./media/lateral-movement-icon.png) ou ![ícone do caminho](./media/paths-icon.png). Isso estará disponível se tiver ocorrido um caminho de movimentação lateral nos últimos dois dias.
 
 2. Na página de perfil do usuário que é aberta, clique na guia **Caminhos de movimento lateral**.
 

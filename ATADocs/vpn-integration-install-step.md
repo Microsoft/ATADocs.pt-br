@@ -1,5 +1,5 @@
 ---
-title: Instalação do Advanced Threat Analytics – Etapa 7 | Microsoft Docs
+title: Instalar o Advanced Threat Analytics-etapa 7
 description: Nesta etapa da instalação do ATA, você integra sua VPN.
 keywords: ''
 author: rkarlin
@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: e0aed853-ba52-46e1-9c55-b336271a68e7
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: d582d45007cc288844c26c03d90195e4b741025a
-ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.openlocfilehash: d8ebc54fc2c82bbe99b79f1c736f17e15629fc6a
+ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74153103"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79410418"
 ---
 # <a name="install-ata---step-7"></a>Instalação do ATA – Etapa 7
 
@@ -40,7 +40,7 @@ O ATA integra-se à solução de VPN escutando eventos contábeis do RADIUS enca
 > [!IMPORTANT]
 > A partir de setembro de 2019, o serviço de localização geográfica de VPN do Advanced Threat Analytics responsável por detectar locais de VPN agora dá suporte exclusivamente a TLS 1,2. Verifique se o centro do ATA está configurado para dar suporte a TLS 1,2, já que as versões 1,1 e 1,0 não têm mais suporte.   
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 
 Para habilitar a integração de VPN, verifique se você definiu os seguintes parâmetros:
 
@@ -99,7 +99,7 @@ Depois que o Gateway do ATA recebe os eventos de VPN e os envia ao centro do ATA
 
 
 
-## <a name="related-videos"></a>Vídeos Relacionados
+## <a name="related-videos"></a>Vídeos relacionados
 - [Visão geral da implantação do ATA](https://channel9.msdn.com/Shows/Microsoft-Security/Overview-of-ATA-Deployment-in-10-Minutes)
 - [Como escolher o tipo certo de Gateway do ATA](https://channel9.msdn.com/Shows/Microsoft-Security/ATA-Deployment-Choose-the-Right-Gateway-Type)
 

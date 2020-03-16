@@ -1,5 +1,5 @@
 ---
-title: Noções básicas sobre o console do Advanced Threat Analytics | Microsoft Docs
+title: Noções básicas sobre o console do Advanced Threat Analytics
 description: Descreve como entrar no Console do ATA e os componentes do console
 keywords: ''
 author: rkarlin
@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 1bf264d9-9697-44b5-9533-e1c498da4f07
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 3908cc6ad907111fc7f6e32fd562ce0d6298dea7
-ms.sourcegitcommit: 05f23a0add8d24ae92176e13c2a4ae8ada1844da
+ms.openlocfilehash: a1db61a38cf87e6c1d8989e5ee591a0741f25f4e
+ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79319189"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79414362"
 ---
 # <a name="working-with-the-ata-console"></a>Trabalhando com o Console do ATA
 

@@ -1,5 +1,5 @@
 ---
-title: Novidades na versão 1.7 do ATA | Microsoft Docs
+title: Novidades na versão 1.7 do ATA
 description: Lista as novidades na nova versão 1.7 do ATA e seus problemas conhecidos
 keywords: ''
 author: rkarlin
@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: be9ee613-4eb3-40f1-8973-e7f0a707ff57
 ms.reviewer: ''
 ms.suite: ems
-ms.openlocfilehash: 0570ac2574dfca2fbc22a332228d52fcd429652d
-ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.openlocfilehash: db393df81a922cf7362e5705376c9d72fe13e363
+ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "65195948"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79414379"
 ---
 # <a name="whats-new-in-ata-version-17"></a>Novidades na versão 1.7 do ATA
 Estas notas de versão fornecem informações sobre problemas conhecidos nesta versão da Advanced Threat Analytics.
@@ -27,7 +27,7 @@ A atualização 1.7 do ATA fornece melhorias nas seguintes áreas:
 
 -   Detecções novas e atualizadas
 
--   Controle de acesso baseado em função
+-   Controle de acesso baseado em funções
 
 -   Suporte para Windows Server 2016 e Windows Server 2016 Core
 
@@ -56,7 +56,7 @@ A atualização 1.7 do ATA fornece melhorias nas seguintes áreas:
 
 - **Suporte para Windows Server 2016 e Windows Server Core** O ATA 1.7 dá suporte à implantação de Lightweight Gateways em controladores de domínio que executam o Windows Server 2008 R2 SP1 (sem incluir o Server Core), o Windows Server 2012, o Windows Server 2012 R2, o Windows Server 2016 (incluindo o Core, mas não o Nano). Além disso, esta versão oferece suporte ao Windows Server 2016 para os componentes do Centro de ATA e do Gateway do ATA.
 
-### <a name="user-experience"></a>Experiência de usuário
+### <a name="user-experience"></a>Experiência do usuário
 - **Experiência de configuração** Nesta versão, a experiência de configuração do ATA foi reprojetada para proporcionar uma experiência de usuário melhor e para oferecer um suporte mais adequado a ambientes com vários Gateways do ATA. Esta versão também apresenta a página de atualização do Gateway do ATA para um gerenciamento mais simples das atualizações automáticas para os diversos Gateways.
 
 ## <a name="known-issues"></a>Problemas conhecidos

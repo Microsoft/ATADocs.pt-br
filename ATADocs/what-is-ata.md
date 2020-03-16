@@ -1,5 +1,5 @@
 ---
-title: O que é o Microsoft Advanced Threat Analytics (ATA)? | Microsoft Docs
+title: O que é o Microsoft Advanced Threat Analytics (ATA)?
 description: Explica o que é o Microsoft Advanced Threat Analytics (ATA) e os tipos de atividades suspeitas que ele pode detectar
 keywords: ''
 author: shsagir
@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 283e7b4e-996a-4491-b7f6-ff06e73790d2
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: bb6af26ba5e77ab66009ae3330f36a30e9d9d880
-ms.sourcegitcommit: 9673eb49729a06d3a25d52c0f43c76ac61b9cf89
+ms.openlocfilehash: b88ca23b2d01d08357b3decb1e8e91c07848f5d8
+ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/12/2020
-ms.locfileid: "75908303"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79410589"
 ---
 # <a name="what-is-advanced-threat-analytics"></a>O que é o Advanced Threat Analytics?
 
@@ -104,12 +104,12 @@ Você pode exibir as atividades suspeitas desse tipo no Painel do ATA. No exempl
 
 ## <a name="whats-next"></a>Novidades
 
--   Para saber mais sobre como o ATA se adapta à sua rede: [Arquitetura do ATA](ata-architecture.md)
+-   Para mais informações sobre como o ATA se adapta à sua rede, consulte: [Arquitetura de ATA](ata-architecture.md)
 
 -   Para começar a implantar o ATA: [Instalar o ATA](install-ata-step1.md)
 
-## <a name="related-videos"></a>Vídeos Relacionados
-- [Participar da comunidade de segurança](https://channel9.msdn.com/Shows/Microsoft-Security/Join-the-Security-Community)
+## <a name="related-videos"></a>Vídeos relacionados
+- [Unindo a comunidade de segurança](https://channel9.msdn.com/Shows/Microsoft-Security/Join-the-Security-Community)
 - [Visão geral da implantação do ATA](https://channel9.msdn.com/Shows/Microsoft-Security/Overview-of-ATA-Deployment-in-10-Minutes)
 
 

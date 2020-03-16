@@ -1,5 +1,5 @@
 ---
-title: Monitorar os eventos e a integridade do sistema do Advanced Threat Analytics | Microsoft Docs
+title: Monitorar eventos e a integridade do sistema de análise avançada de ameaças
 description: Use a Central de Integridade de ATA para verificar como o serviço do ATA está funcionando e seja alertado sobre possíveis problemas e exibir eventos de sistema no Visualizador de Eventos.
 keywords: ''
 author: rkarlin
@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: d6c783b2-46c5-4211-b21a-d6b17f08d03d
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: b425e4cbd923cfe75269eb22e47da3128fbf4d78
-ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.openlocfilehash: 1951fd66dd2af52f62dd48fb9c67831adf78dbd8
+ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "65196257"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79411489"
 ---
 # <a name="working-with-ata-system-health-and-events"></a>Trabalhando com eventos e a integridade do sistema ATA
 

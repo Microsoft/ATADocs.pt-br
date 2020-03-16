@@ -1,5 +1,5 @@
 ---
-title: Caminho de atualização recomendado do Advanced Threat Analytics | Microsoft Docs
+title: Caminho de atualização recomendado do Advanced Threat Analytics
 description: Fornece instruções para atualizar sua versão do Advanced Threat Analytics (ATA).
 keywords: ''
 author: shsagir
@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 88720401-1fb2-4353-ad39-32bc0088f0de
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 591394f08412737528d05d6984560b792072f9ae
-ms.sourcegitcommit: 9673eb49729a06d3a25d52c0f43c76ac61b9cf89
+ms.openlocfilehash: 6225e2482a6b5caf109660a3ccb71e3fd52423f4
+ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/12/2020
-ms.locfileid: "75908148"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79414311"
 ---
 # <a name="recommended-upgrade-path-for-ata"></a>Caminho de atualização recomendado para o ATA
 

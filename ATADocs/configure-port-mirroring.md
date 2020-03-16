@@ -1,5 +1,5 @@
 ---
-title: Configuração do espelhamento de porta ao implantar o Advanced Threat Analytics | Microsoft Docs
+title: Configurar o espelhamento de porta ao implantar a análise avançada de ameaças
 description: Descreve as opções de espelhamento de porta e como configurá-las para o ATA
 keywords: ''
 author: rkarlin
@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: cdaddca3-e26e-4137-b553-8ed3f389c460
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 632724dd1df84e1764b5a382fce556c9d6baf43a
-ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.openlocfilehash: 1070bdf8415211c72c1be05960a39d2c05c67de5
+ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "65196306"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79411166"
 ---
 # <a name="configure-port-mirroring"></a>Configurar o espelhamento de porta
 
@@ -45,7 +45,7 @@ Seus controladores de domínio e Gateways do ATA podem ser físicos ou virtuais.
 
 ## <a name="supported-port-mirroring-options"></a>Opções de espelhamento de porta com suporte
 
-|Gateway do ATA|Controlador de domínio|Considerações|
+|Gateway do ATA|Controlador de Domínio|Considerações|
 |---------------|---------------------|------------------|
 |Máquina|Virtual no mesmo host|O comutador virtual precisa oferecer suporte ao espelhamento de porta.<br /><br />Mover uma das máquinas virtuais para outro host por si só pode quebrar o espelhamento de porta.|
 |Máquina|Virtuais em hosts diferentes|Verifique se o comutador virtual oferece suporte a esse cenário.|

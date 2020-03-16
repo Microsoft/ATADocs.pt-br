@@ -1,5 +1,5 @@
 ---
-title: Configuração de notificações do Advanced Threat Analytics | Microsoft Docs
+title: Definir notificações do Advanced Threat Analytics
 description: Descreve como definir alertas do ATA para que você seja notificado quando atividades suspeitas forem detectadas.
 keywords: ''
 author: rkarlin
@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 14cb7513-5dc8-49cb-b3e0-94f469c443dd
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 7dbc98d61319c40a3d3691ace28e1300bce72b73
-ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.openlocfilehash: 2c1ae942edbd904715b1ebb76f3b3ecd0720bc05
+ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "65197084"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79412866"
 ---
 # <a name="set-ata-notifications"></a>Definir notificações do ATA
 

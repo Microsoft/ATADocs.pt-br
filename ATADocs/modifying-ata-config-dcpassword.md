@@ -1,5 +1,5 @@
 ---
-title: Alteração da configuração do Advanced Threat Analytics – senha de conectividade do domínio | Microsoft Docs
+title: Alterar configuração do Advanced Threat Analytics-senha de conectividade do domínio
 description: Descreve como alterar a Senha de conectividade do domínio no Gateway do ATA.
 keywords: ''
 author: rkarlin
@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 4a25561b-a5ed-44aa-9b72-366976b3c72a
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 345d888047b10777239efaf96b789c477a62a81b
-ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.openlocfilehash: fa89acd842632c4a23d34f73aa6fe21abbc7878f
+ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "65197110"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79414090"
 ---
 # <a name="change-ata-configuration---domain-connectivity-password"></a>Alteração da configuração do ATA - senha de conectividade do domínio
 

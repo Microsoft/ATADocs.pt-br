@@ -1,5 +1,5 @@
 ---
-title: Solução de problemas do Advanced Threat Analytics usando o banco de dados | Microsoft Docs
+title: Solução de problemas da análise avançada de ameaças usando o banco de dados
 description: Descreve como você pode usar o banco de dados do ATA para solucionar problemas
 keywords: ''
 author: rkarlin
@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 377a3c81-5c1d-486f-8942-85249aacf560
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: fd929ff7c2a11997997b2c5107e66f9e8a1d2038
-ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.openlocfilehash: 1efc5aee15527212a6f2eb53c147fe8fa1d62ea3
+ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "65195805"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79414209"
 ---
 # <a name="troubleshooting-ata-using-the-ata-database"></a>Solução de problemas do ATA usando o banco de dados do ATA
 

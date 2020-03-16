@@ -1,5 +1,5 @@
 ---
-title: Instalação do Advanced Threat Analytics – Etapa 2 | Microsoft Docs
+title: Instalar o Advanced Threat Analytics – etapa 2
 description: A etapa dois da instalação do ATA ajuda você a definir as configurações de conectividade do domínio em seu servidor do Centro do ATA
 keywords: ''
 author: shsagir
@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: e1c5ff41-d989-46cb-aa38-5a3938f03c0f
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 68ad769851926eed137108ff65663666cbf4fad0
-ms.sourcegitcommit: 9673eb49729a06d3a25d52c0f43c76ac61b9cf89
+ms.openlocfilehash: ff20bf7da1586090d2728015f08cf94d432df38f
+ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/12/2020
-ms.locfileid: "75907908"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79410452"
 ---
 # <a name="install-ata---step-2"></a>Instalação do ATA - Etapa 2
 
@@ -54,7 +54,7 @@ Na primeira vez que você abrir o Console do ATA, a tela a seguir será exibida:
 
 
 ## <a name="see-also"></a>Confira Também
-## <a name="related-videos"></a>Vídeos Relacionados
+## <a name="related-videos"></a>Vídeos relacionados
 - [Visão geral da implantação do ATA](https://channel9.msdn.com/Shows/Microsoft-Security/Overview-of-ATA-Deployment-in-10-Minutes)
 - [Como escolher o tipo certo de Gateway do ATA](https://channel9.msdn.com/Shows/Microsoft-Security/ATA-Deployment-Choose-the-Right-Gateway-Type)
 

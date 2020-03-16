@@ -1,5 +1,5 @@
 ---
-title: Marcar contas confidenciais com o ATA | Microsoft Docs
+title: Marcar contas confidenciais com o ATA
 description: Descreve como marcar contas confidenciais usando o ATA (Advanced Threat Analytics)
 keywords: ''
 author: rkarlin
@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 40a1c5c4-b8d6-477c-8ae5-562b37661624
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 39ad944d4517cbfe73cc7ac95f0cf7ceb6a3f213
-ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.openlocfilehash: 4897bee445099b21dabac7ffbbbf3e607254b237
+ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "65196041"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79414158"
 ---
 # <a name="tag-sensitive-accounts"></a>Marcar contas confidenciais
 
@@ -48,12 +48,12 @@ A lista de grupos a seguir é considerada Confidencial pelo ATA. Qualquer entida
 -   Administradores
 -   Usuários avançados
 -   Opers. de contas
--   Opers. de servidores
+-   Operadores de Servidores
 -   Operadores de Impressão
 -   Operadores de cópia
 -   Replicadores
 -   Usuários da Área de Trabalho Remota 
--   Operadores de configuração de rede 
+-   Operadores de Configuração de Rede 
 -   Criadores de confiança de floresta de entrada
 -   Administradores do domínio
 -   Controladores de Domínio
@@ -63,5 +63,5 @@ A lista de grupos a seguir é considerada Confidencial pelo ATA. Qualquer entida
 -   Administradores de esquemas 
 -   Administrador corporativo
      
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

@@ -1,5 +1,5 @@
 ---
-title: Novidades na versão 1.6 do Advanced Threat Analytics | Microsoft Docs
+title: O que há de novo na versão 1,6 do Advanced Threat Analytics
 description: Lista as novidades na nova versão 1.6 do ATA e seus problemas conhecidos
 keywords: ''
 author: rkarlin
@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 27b139e5-12b9-4953-8f53-eb58e8ce0038
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 21b7fda6747fdb2c2590afe148a5f883e22410a5
-ms.sourcegitcommit: 0f3ee3241895359d5cecd845827cfba1fdca9317
+ms.openlocfilehash: c87966ee2d8f53187bcc412cb027b19c4ddcf891
+ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/29/2019
-ms.locfileid: "75544305"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79412543"
 ---
 # <a name="whats-new-in-ata-version-16"></a>Novidades na versão 1.6 do ATA
 Essas notas de versão fornecem informações sobre problemas conhecidos nesta versão da Advanced Threat Analytics.

@@ -1,5 +1,5 @@
 ---
-title: Instalação do Advanced Threat Analytics – Etapa 6 | Microsoft Docs
+title: Instalar o Advanced Threat Analytics-etapa 6
 description: Nesta etapa da instalação do ATA, você configura fontes de dados.
 keywords: ''
 author: shsagir
@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 8980e724-06a6-40b0-8477-27d4cc29fd2b
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: d95dc3755e5aaeadd979b9c71cbc09a9a01637b9
-ms.sourcegitcommit: 9673eb49729a06d3a25d52c0f43c76ac61b9cf89
+ms.openlocfilehash: de80ecf737d387f6917dc9c8ec5035045ddc5ad6
+ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/12/2020
-ms.locfileid: "75907943"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79413920"
 ---
 # <a name="install-ata---step-6"></a>Instalação do ATA - Etapa 6
 
@@ -192,7 +192,7 @@ Certifique-se de ter \t entre os pares de chave=valor.
 
 
 
-## <a name="related-videos"></a>Vídeos Relacionados
+## <a name="related-videos"></a>Vídeos relacionados
 - [Visão geral da implantação do ATA](https://channel9.msdn.com/Shows/Microsoft-Security/Overview-of-ATA-Deployment-in-10-Minutes)
 - [Como escolher o tipo certo de Gateway do ATA](https://channel9.msdn.com/Shows/Microsoft-Security/ATA-Deployment-Choose-the-Right-Gateway-Type)
 

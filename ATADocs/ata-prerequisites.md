@@ -1,5 +1,5 @@
 ---
-title: Pré-requisitos do Advanced Threat Analytics | Microsoft Docs
+title: Pré-requisitos do Advanced Threat Analytics
 description: Descreve os requisitos para uma implantação bem-sucedida do ATA em seu ambiente
 keywords: ''
 author: shsagir
@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: a5f90544-1c70-4aff-8bf3-c59dd7abd687
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 00a00492960d4535ce66c98aceb9b2d5daf3bdd7
-ms.sourcegitcommit: 9673eb49729a06d3a25d52c0f43c76ac61b9cf89
+ms.openlocfilehash: 94d30c768273b51aef0e8b7a75affbf2b5db85df
+ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/12/2020
-ms.locfileid: "75905609"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79412067"
 ---
 # <a name="ata-prerequisites"></a>Pré-requisitos do ATA
 
@@ -29,7 +29,7 @@ Este artigo descreve os requisitos para uma implantação bem-sucedida do ATA no
 > Para obter informações sobre como planejar a capacidade e os recursos, confira [Planejamento de capacidade do ATA](ata-capacity-planning.md).
 
 
-O ATA é composto pelo Centro do ATA, pelo Gateway do ATA e/ou o Gateway Lightweight do ATA. Para obter mais informações sobre os componentes do ATA, confira [Arquitetura do ATA](ata-architecture.md).
+O ATA é composto pelo Centro do ATA, pelo Gateway do ATA e/ou o Gateway Lightweight do ATA. Para saber mais sobre os componentes do ATA, confira [Arquitetura do ATA](ata-architecture.md).
 
 O Sistema do ATA funciona nos limites da floresta do active directory e oferece suporte a FFL (Nível funcional da floresta) do Windows 2003 e superior.
 
@@ -86,7 +86,7 @@ A instalação do ATA Center como uma máquina virtual tem suporte.
 > [!NOTE] 
 > Ao executar o centro como uma máquina virtual (VM), o centro exige que toda a memória seja alocada para a VM, o tempo todo.
 
-|VM em execução em|Description|
+|VM em execução em|Descrição|
 |------------|-------------|
 |Hyper-V|Garanta que a opção **Habilitar Memória Dinâmica** não esteja habilitada para a VM.|
 |VMWare|Verifique se a quantidade de memória configurada e a memória reservada são iguais ou selecione a seguinte opção na configuração da VM – **Reservar toda a memória de convidado (Tudo bloqueado)** .|
@@ -100,7 +100,7 @@ Se você executar a Central de ATA como uma máquina virtual, deverá finalizar 
 Ao trabalhar em um servidor físico, o banco de dados do ATA precisa que você **desabilite** o NUMA (acesso não uniforme a memória) no BIOS. O sistema pode referir-se ao NUMA como Nó de Intercalação, caso em que você precisará **habilitar** a Intercalação de Nó para desabilitar o NUMA. Para obter mais informações, confira a documentação do BIOS.<br>
 
 Para ter um melhor desempenho, defina a **Opção de Energia** do Centro do ATA como **Alto Desempenho**.<br>
-O número de controladores de domínio que você está monitorando e a carga em cada um dos controladores de domínio determina as especificações de servidor necessárias. Para saber mais, confira [Planejamento de capacidade de ATA](ata-capacity-planning.md).
+O número de controladores de domínio que você está monitorando e a carga em cada um dos controladores de domínio determina as especificações de servidor necessárias. Para obter mais informações, consulte [Planejamento de capacidade de ATA](ata-capacity-planning.md).
 
 Para os sistemas operacionais Windows 2008R2 e 2012, não há suporte para o gateway em um modo de [grupo de vários processadores](https://docs.microsoft.com/windows/win32/procthread/processor-groups) . Para obter mais informações sobre o modo de grupo de multiprocessadores,confira [solução de problemas](troubleshooting-ata-known-errors.md#multi-processor-group-mode). 
 
@@ -109,7 +109,7 @@ Para os sistemas operacionais Windows 2008R2 e 2012, não há suporte para o gat
 O servidor do Centro do ATA, os servidores do Gateway do ATA e os controladores de domínio devem ter a hora sincronizada no espaço de cinco minutos entre si.
 
 
-### <a name="network-adapters"></a>Adaptadores de Rede
+### <a name="network-adapters"></a>Adaptadores de rede
 
 Você deve ter o seguinte:
 -   Pelo menos um adaptador de rede (se estiver usando o servidor físico no ambiente de VLAN, recomendamos o uso de dois adaptadores de rede)
@@ -119,9 +119,9 @@ Você deve ter o seguinte:
 ### <a name="ports"></a>Portas
 A tabela a seguir lista as portas mínimas que devem ser abertas para que a Central de ATA funcione corretamente.
 
-|Protocolo|Transport|Porta|Para/De|Direction|
+|Protocolo|Transport|Porta|Para/De|Direção|
 |------------|-------------|--------|-----------|-------------|
-|**SSL** (Comunicações do ATA)|TCP|443|Gateway de ATA|Entrada|
+|**SSL** (Comunicações do ATA)|TCP|443|Gateway do ATA|Entrada|
 |**HTTP** (opcional)|TCP|80|Rede da Empresa|Entrada|
 |**HTTPS**|TCP|443|Rede da Empresa e Gateway de ATA|Entrada|
 |**SMTP** (opcional)|TCP|25|Servidor SMTP|Saída|
@@ -174,7 +174,7 @@ Antes de instalar o Gateway do ATA executando o Windows 2012 R2, confirme se a s
 Você pode verificar executando o seguinte cmdlet do Windows PowerShell: `[Get-HotFix -Id kb2919355]`.
 
 
-Para obter informações sobre como usar máquinas virtuais com o Gateway do ATA, confira [Configurar o espelhamento de porta](configure-port-mirroring.md).
+Para obter informações sobre como usar máquinas virtuais com o Gateway de ATA, confira [Configurar o espelhamento de porta](configure-port-mirroring.md).
 
 > [!NOTE]
 > É necessário um mínimo de 5 GB de espaço e recomenda-se 10 GB. Isso inclui o espaço necessário para os binários do ATA, os logs do ATA e os [logs de desempenho](troubleshooting-ata-using-perf-counters.md).
@@ -190,7 +190,7 @@ Para saber mais sobre os requisitos de hardware do Gateway do ATA, confira [Plan
 ### <a name="time-synchronization"></a>Sincronização da hora
 O servidor do Centro do ATA, os servidores do Gateway do ATA e os controladores de domínio devem ter a hora sincronizada no espaço de cinco minutos entre si.
 
-### <a name="network-adapters"></a>Adaptadores de Rede
+### <a name="network-adapters"></a>Adaptadores de rede
 O Gateway de ATA requer pelo menos um Adaptador de gerenciamento e pelo menos um adaptador de captura:
 
 -   **Adaptador de gerenciamento** - usado para as comunicações em sua rede corporativa. Esse adaptador deve ser configurado com as seguintes definições:
@@ -215,7 +215,7 @@ O Gateway de ATA requer pelo menos um Adaptador de gerenciamento e pelo menos um
 ### <a name="ports"></a>Portas
 A tabela abaixo lista as portas mínimas que o Gateway do ATA requer configuradas no adaptador de gerenciamento:
 
-|Protocolo|Transport|Porta|Para/De|Direction|
+|Protocolo|Transport|Porta|Para/De|Direção|
 |------------|-------------|--------|-----------|-------------|
 |LDAP|TCP e UDP|389|Controladores de domínio|Saída|
 |LDAP seguro (LDAPS)|TCP|636|Controladores de domínio|Saída|
@@ -277,7 +277,7 @@ Para saber mais sobre os requisitos de hardware do Gateway Lightweight do ATA, c
 
 O servidor do Centro do ATA, os servidores do Gateway Lightweight do ATA e os controladores de domínio devem ter a hora sincronizada no espaço de cinco minutos entre si.
 
-### <a name="network-adapters"></a>Adaptadores de Rede
+### <a name="network-adapters"></a>Adaptadores de rede
 
 O Gateway Lightweight do ATA monitora o tráfego local em todos os adaptadores de rede do controlador de domínio. <br>
 Após a implantação, você pode usar o Console do ATA para modificar quais adaptadores de rede são monitorados.
@@ -288,7 +288,7 @@ Após a implantação, você pode usar o Console do ATA para modificar quais ada
 ### <a name="ports"></a>Portas
 A tabela abaixo lista o mínimo de portas que o Gateway Lightweight do ATA exige:
 
-|Protocolo|Transport|Porta|Para/De|Direction|
+|Protocolo|Transport|Porta|Para/De|Direção|
 |------------|-------------|--------|-----------|-------------|
 |DNS|TCP e UDP|53|Servidores DNS|Saída|
 |NTLM via RPC|TCP|135|Todos os dispositivos na rede|Ambos|
@@ -318,7 +318,7 @@ O acesso ao Console do ATA é por meio de um navegador, oferecendo suporte a def
 
 -   Resolução de largura mínima da tela de 1.700 pixels
 
-## <a name="related-videos"></a>Vídeos Relacionados
+## <a name="related-videos"></a>Vídeos relacionados
 - [Como escolher o tipo certo de Gateway do ATA](https://channel9.msdn.com/Shows/Microsoft-Security/ATA-Deployment-Choose-the-Right-Gateway-Type)
 
 

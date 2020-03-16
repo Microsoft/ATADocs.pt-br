@@ -1,5 +1,5 @@
 ---
-title: Como trabalhar com atividades suspeitas no Advanced Threat Analytics | Microsoft Docs
+title: Trabalhando com atividades suspeitas no Advanced Threat Analytics
 description: Descreve como examinar atividades suspeitas identificadas pelo ATA
 keywords: ''
 author: rkarlin
@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 44d7c899-816c-4f7f-91d3-84a09d291a24
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 2ee7687feac6e8b703a2e17b3b60418e96dcee71
-ms.sourcegitcommit: 0f3ee3241895359d5cecd845827cfba1fdca9317
+ms.openlocfilehash: 377f7243a26821f07852805ce73f8d5860023dbd
+ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/29/2019
-ms.locfileid: "75544339"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79414396"
 ---
 # <a name="working-with-suspicious-activities"></a>Trabalhando com atividades suspeitas
 
@@ -95,8 +95,8 @@ Para fazer isso, clique nos três pontos no canto superior direito de uma ativid
   > As páginas de configuração podem ser modificadas apenas por administradores do ATA.
 
 
-## <a name="related-videos"></a>Vídeos Relacionados
-- [Participar da comunidade de segurança](https://channel9.msdn.com/Shows/Microsoft-Security/Join-the-Security-Community)
+## <a name="related-videos"></a>Vídeos relacionados
+- [Unindo a comunidade de segurança](https://channel9.msdn.com/Shows/Microsoft-Security/Join-the-Security-Community)
 
 
 ## <a name="see-also"></a>Confira Também

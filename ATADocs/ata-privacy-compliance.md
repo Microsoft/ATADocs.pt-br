@@ -1,5 +1,5 @@
 ---
-title: Política de dados pessoais do Advanced Threat Analytics | Microsoft Docs
+title: Política de dados pessoais do Advanced Threat Analytics
 description: Fornece links para informações sobre como excluir informações particulares e dados pessoais do ATA.
 keywords: ''
 author: shsagir
@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 1b2d185c-62cd-45f0-b0dd-687b51317f32
 ms.reviewer: ophirp
 ms.suite: ems
-ms.openlocfilehash: f6280764ca16ef3c29f22f7f91767aa6c3637a4f
-ms.sourcegitcommit: 9673eb49729a06d3a25d52c0f43c76ac61b9cf89
+ms.openlocfilehash: da4b81d0a812a9fe8c1f86982445ce017f5e290f
+ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/12/2020
-ms.locfileid: "75905545"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79412101"
 ---
 # <a name="ata-data-security-and-privacy"></a>Privacidade e segurança de dados do ATA
 
@@ -31,11 +31,11 @@ Todos os dados no ATA relacionados a entidades são derivados do AD (Active Dire
 
 No Centro do ATA, use a barra de pesquisa para exibir os dados de identificação pessoais que estão armazenados no banco de dados. Os usuários podem pesquisar um usuário ou dispositivo específico. Clicar na entidade abrirá a página de perfil do dispositivo ou do usuário. O perfil fornece detalhes abrangentes sobre a entidade, seu histórico e a atividade de rede relacionada, derivados do AD. 
 
-## <a name="updating-personal-data"></a>Atualização de dados pessoais 
+## <a name="updating-personal-data"></a>Atualizando dados pessoais 
 
 Os dados pessoais sobre usuários e entidades no ATA são derivados do objeto do usuário no AD da organização. Por isso, as alterações feitas no perfil do usuário no AD são refletidas no ATA. 
 
-## <a name="deleting-personal-data"></a>Exclusão de dados pessoais 
+## <a name="deleting-personal-data"></a>Excluindo dados pessoais 
 
 Embora os dados no ATA sejam replicados e sempre atualizados do AD, quando uma entidade é excluída no AD, os dados da entidade no ATA são mantidos para fins de investigação de segurança. 
 
@@ -67,7 +67,7 @@ Por exemplo:
 
 Esse script remove do banco de dados todos os dados de todas as atividades e alertas de segurança da entidade com mais de 30 dias. Somente os últimos 30 dias de dados serão retidos.
 
-## <a name="exporting-personal-data"></a>Exportação de dados pessoais 
+## <a name="exporting-personal-data"></a>Exportando dados pessoais 
 
 Como os dados relacionados a entidades no ATA são derivados do AD, apenas um subconjunto desses dados é armazenado no banco de dados do ATA. Por esse motivo, você deve exportar os dados relacionados a entidades do AD. 
 

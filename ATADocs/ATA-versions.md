@@ -1,5 +1,5 @@
 ---
-title: Versões do Advanced Threat Analytics | Microsoft Docs
+title: Versões avançadas do Threat Analytics
 description: Explica as diferentes opções para versões do Microsoft Advanced Threat Analytics (ATA).
 author: shsagir
 ms.author: shsagir
@@ -11,12 +11,12 @@ ms.technology: ''
 ms.assetid: a8afbd91-c888-4dfc-94ab-72e38745163e
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: d72e42512026049f5cd88c82f81b27eb0f4f7bdb
-ms.sourcegitcommit: f1a11982e2ee806d2a29420901f9ddac64d7dd51
+ms.openlocfilehash: a961f0831c659dc0e2db9584b4bac4c3162da496
+ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/26/2020
-ms.locfileid: "76762938"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79411234"
 ---
 # <a name="support-for-microsoft-advanced-threat-analytics-ata-versions"></a>Suporte para versões do Microsoft Advanced Threat Analytics (ATA)
 

@@ -1,5 +1,5 @@
 ---
-title: Instalação do Advanced Threat Analytics – Etapa 4 | Microsoft Docs
+title: Instalar o Advanced Threat Analytics – etapa 4
 description: A Etapa quatro da instalação do ATA ajuda você a instalar o Gateway do ATA.
 keywords: ''
 author: rkarlin
@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 6bbc50c3-bfa8-41db-a2f9-56eed68ef5d2
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 83234808b39c8c2e92ca4268c2ad64474f3462be
-ms.sourcegitcommit: 0f3ee3241895359d5cecd845827cfba1fdca9317
+ms.openlocfilehash: 6c36bc1778c267e01ea98a916d17370a62d905d2
+ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/29/2019
-ms.locfileid: "75543893"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79410622"
 ---
 # <a name="install-ata---step-4"></a>Instalação do ATA - Etapa 4
 
@@ -87,7 +87,7 @@ Execute as seguintes etapas no servidor do Gateway do ATA.
 > [Etapa 5 »](install-ata-step5.md)
 
 
-## <a name="related-videos"></a>Vídeos Relacionados
+## <a name="related-videos"></a>Vídeos relacionados
 - [Visão geral da implantação do ATA](https://channel9.msdn.com/Shows/Microsoft-Security/Overview-of-ATA-Deployment-in-10-Minutes)
 - [Como escolher o tipo certo de Gateway do ATA](https://channel9.msdn.com/Shows/Microsoft-Security/ATA-Deployment-Choose-the-Right-Gateway-Type)
 
