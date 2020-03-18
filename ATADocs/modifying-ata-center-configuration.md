@@ -1,5 +1,5 @@
 ---
-title: Alterar a configuração do Centro do ATA do Advanced Threat Analytics | Microsoft Docs
+title: Alterar a configuração do Centro do ATA do Advanced Threat Analytics
 description: Descreve como alterar o endereço IP, a porta, a URL do console ou o certificado de seu Centro do ATA.
 keywords: ''
 author: rkarlin
@@ -11,12 +11,12 @@ ms.prod: advanced-threat-analytics
 ms.technology: ''
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 8a228463c422ac7f62d3fc18395aa0b61df0a731
-ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.openlocfilehash: 498eea7cfe1393bd0b616fc5cfbb11bd18334f8f
+ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "65196025"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79414005"
 ---
 # <a name="modifying-the-ata-center-configuration"></a>Modificar a configuração do Centro do ATA
 

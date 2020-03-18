@@ -1,5 +1,5 @@
 ---
-title: Suporte a várias florestas da Proteção Avançada contra Ameaças do Azure | Microsoft Docs
+title: Suporte para várias florestas da Proteção Avançada contra Ameaças do Azure
 description: Suporte para várias florestas do Active Directory no Azure ATP.
 keywords: ''
 author: shsagir
@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: effca0f2-fcae-4fca-92c1-c37306decf84
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: cee14a8fe693cdd3035038884b6c9ba2370bf5a5
-ms.sourcegitcommit: e281d63e3406e02325645234ad0a4880056b2351
+ms.openlocfilehash: ecac12f266a424e55266d1343a2d03a75bca8840
+ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77259464"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79413988"
 ---
 # <a name="azure-advanced-threat-protection-multi-forest-support"></a>Suporte para várias florestas da Proteção Avançada contra Ameaças do Azure
 
