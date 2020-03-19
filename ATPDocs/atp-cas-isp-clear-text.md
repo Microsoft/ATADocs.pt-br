@@ -1,5 +1,5 @@
 ---
-title: Avaliação de exposição de texto não criptografado da Proteção Avançada contra Ameaças do Azure | Microsoft Docs
+title: Avaliação de exposição de texto não criptografado da Proteção Avançada contra Ameaças do Azure
 description: Neste artigo, você tem uma visão geral do relatório de avaliação da situação de segurança de identidade da exposição de texto não criptografado da ATP do Azure.
 keywords: ''
 author: shsagir
@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 124957bb-5882-4fcf-bab2-b74b0c69571d
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 6b4663f71c0d30acd0fdc696650d359ec33b1227
-ms.sourcegitcommit: 9673eb49729a06d3a25d52c0f43c76ac61b9cf89
+ms.openlocfilehash: 6993c0caf30c1ea783cf47304219f1203648e3c5
+ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/12/2020
-ms.locfileid: "75908456"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79411319"
 ---
 # <a name="security-assessment-entities-exposing-credentials-in-clear-text"></a>Avaliação de segurança: entidades que expõem credenciais em texto não criptografado 
 

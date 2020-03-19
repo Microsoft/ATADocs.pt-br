@@ -1,5 +1,5 @@
 ---
-title: Trabalhando com alertas de segurança na Proteção Avançada contra Ameaças do Azure | Microsoft Docs
+title: Trabalhar com alertas de segurança na Proteção Avançada contra Ameaças do Azure
 description: Descreve como examinar os alertas de segurança emitidos pelo Azure ATP
 keywords: ''
 author: shsagir
@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: a06004bd-9f77-4e8e-a0e5-4727d6651a0f
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 6d8a18b7e2268945dcfd254afb5580a180ad0204
-ms.sourcegitcommit: c8b1e584ef42559a40afd62dac1b5ca9056c5602
+ms.openlocfilehash: 98ea2a517f5cc223086ca448c8b532dd29257d78
+ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/08/2020
-ms.locfileid: "78926537"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79410554"
 ---
 # <a name="working-with-security-alerts"></a>Trabalhando com alertas de segurança
 

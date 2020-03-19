@@ -1,5 +1,5 @@
 ---
-title: Proteção Avançada contra Ameaças do Azure para US Government GCC High | Microsoft Docs
+title: Proteção Avançada contra Ameaças do Azure para US Government GCC High
 description: Neste artigo, você terá uma visão geral da oferta US Government GCC High do ATP do Azure.
 keywords: ''
 author: shsagir
@@ -11,12 +11,12 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 3059ff053fdb0c6db879b2ed789a1b4d5d886ce5
-ms.sourcegitcommit: d9abce00e781d47009e317767698d1729f70dc35
+ms.openlocfilehash: 319bbc01c20ae2837cc711fd32c4627650d2c59e
+ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77478578"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79411626"
 ---
 # <a name="azure-atp-for-us-government-gcc-high"></a>ATP do Azure para US Government GCC High
 

@@ -1,5 +1,5 @@
 ---
-title: Configurar a coleção de Eventos do Windows na Proteção Avançada contra Ameaças do Azure | Microsoft Docs
+title: Configurar a coleção de Eventos do Windows na Proteção Avançada contra Ameaças do Azure
 description: Nesta etapa da instalação da ATP, você configura a coleção de Eventos do Windows.
 keywords: ''
 author: shsagir
@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 88692d1a-45a3-4d54-a549-4b5bba6c037b
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 54a1d8311c0c0a717ad5a205248d366c65fc010a
-ms.sourcegitcommit: c8b1e584ef42559a40afd62dac1b5ca9056c5602
+ms.openlocfilehash: da3465fa197157dd8502e0558fa0c03b825c6e56
+ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/08/2020
-ms.locfileid: "78926394"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79413801"
 ---
 # <a name="configure-windows-event-collection"></a>Configurar a coleção de Eventos do Windows
 

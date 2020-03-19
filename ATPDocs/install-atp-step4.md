@@ -1,5 +1,5 @@
 ---
-title: Início rápido para instalar o sensor do ATP do Azure | Microsoft Docs
+title: Início rápido para instalar o sensor do ATP do Azure
 description: A etapa quatro da instalação do Azure ATP ajuda a instalar o sensor do Azure ATP.
 author: shsagir
 ms.author: shsagir
@@ -9,12 +9,12 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 56c74fbacac2bb0bc9affa5b3443be7c7900316e
-ms.sourcegitcommit: 9673eb49729a06d3a25d52c0f43c76ac61b9cf89
+ms.openlocfilehash: 6a38a61e5028003ba10ad6929e24e63e81418f7b
+ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/12/2020
-ms.locfileid: "75908572"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79413699"
 ---
 # <a name="quickstart-install-the-azure-atp-sensor"></a>Início Rápido: Instalar o sensor do Azure ATP
 

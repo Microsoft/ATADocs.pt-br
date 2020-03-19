@@ -1,5 +1,5 @@
 ---
-title: Guia Estratégico de Movimentação Lateral de Alerta de Segurança do ATP do Azure | Microsoft Docs
+title: Guia Estratégico de Movimentação Lateral de Alerta de Segurança do ATP do Azure
 description: O guia estratégico do ATP do Azure descreve como simular ameaças de Movimentação Lateral para detecção do ATP do Azure.
 ms.service: azure-advanced-threat-protection
 ms.topic: tutorial
@@ -7,12 +7,12 @@ author: shsagir
 ms.author: shsagir
 ms.date: 03/03/2019
 ms.reviewer: itargoet
-ms.openlocfilehash: 1ac1a5652305d17f65fee7a4e5c7e0b73b0b1473
-ms.sourcegitcommit: 9673eb49729a06d3a25d52c0f43c76ac61b9cf89
+ms.openlocfilehash: 998b932dc88ca14bed4fd008ea5d1d6574e385a0
+ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/12/2020
-ms.locfileid: "75908079"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79410682"
 ---
 # <a name="tutorial-lateral-movement-playbook"></a>Tutorial: Guia estratégico de movimentação lateral
 

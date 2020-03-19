@@ -1,5 +1,5 @@
 ---
-title: Integração da Proteção Avançada contra Ameaças do Azure com o Windows Defender ATP | Microsoft Docs
+title: Integração da Proteção Avançada contra Ameaças do Azure com o Windows Defender ATP
 description: Como integrar a Proteção Avançada contra Ameaças do Azure com o Windows Defender ATP para cobertura completa de detecção de ameaças
 keywords: ''
 author: shsagir
@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: f6f3ed75-d6bb-4966-a9a7-5339c4f3ebac
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 01899ea7c6cae155dc1cc9e559a2cc27cc74c9d8
-ms.sourcegitcommit: c8b1e584ef42559a40afd62dac1b5ca9056c5602
+ms.openlocfilehash: 0671e72baf9138d88d6fbf71bc8328cf2fbb2336
+ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/08/2020
-ms.locfileid: "78926580"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79413597"
 ---
 # <a name="integrate-azure-atp-with-windows-defender-atp"></a>Integrar o Azure ATP ao Windows Defender ATP
 

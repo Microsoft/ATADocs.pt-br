@@ -1,5 +1,5 @@
 ---
-title: Avaliações de segurança de entidades inativas da Proteção Avançada contra Ameaças do Azure | Microsoft Docs
+title: Avaliações de segurança de entidades inativas da Proteção Avançada contra Ameaças do Azure
 description: Neste artigo, você tem uma visão geral do relatório de avaliação da situação de segurança de identidade de grupos confidenciais nas entidades inativas da ATP do Azure.
 keywords: ''
 author: shsagir
@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 2fe62047-75ef-4b2e-b4aa-72860e39b4e4
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 5a4e8ea1119387392f2588f3753390086a257b09
-ms.sourcegitcommit: 9673eb49729a06d3a25d52c0f43c76ac61b9cf89
+ms.openlocfilehash: 34938ff60ebc75812f44a7c014a960c89f2441a5
+ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/12/2020
-ms.locfileid: "75908431"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79414447"
 ---
 # <a name="security-assessment-dormant-entities-in-sensitive-groups"></a>Avaliação de segurança: entidades inativas em grupos **confidenciais** 
 

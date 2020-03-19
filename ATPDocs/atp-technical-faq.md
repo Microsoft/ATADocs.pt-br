@@ -1,23 +1,23 @@
 ---
-title: Perguntas frequentes sobre a Proteção Avançada contra Ameaças do Azure | Microsoft Docs
+title: Perguntas frequentes sobre a Proteção Avançada contra Ameaças do Azure
 description: Fornece uma lista de perguntas frequentes sobre o Azure ATP e as respostas associadas
 keywords: ''
 author: shsagir
 ms.author: shsagir
 manager: rkarlin
-ms.date: 03/01/2020
+ms.date: 03/15/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 6a9b5273-eb26-414e-9cdd-f64406e24ed8
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: b8db17d50269463dda6340496463ac673a053462
-ms.sourcegitcommit: c8b1e584ef42559a40afd62dac1b5ca9056c5602
+ms.openlocfilehash: 64d23884189d68e69805133c8411e1ff0e8f95e8
+ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/08/2020
-ms.locfileid: "78926502"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79414039"
 ---
 # <a name="azure-atp-frequently-asked-questions"></a>Perguntas frequentes sobre o Azure ATP
 
@@ -47,6 +47,10 @@ A Microsoft usa esses dados para:
 - Forneça a suas operações de segurança uma visão das entidades relacionadas aos sinais de ameaça de sua rede, permitindo que você investigue e explore a presença de ameaças à segurança na rede.
 
 A Microsoft não explora seus dados para fornecer anúncios ou para qualquer outra finalidade que não seja fornecer o serviço.
+
+### <a name="how-many-directory-service-credentials-does-azure-atp-support"></a>Para quantas credenciais de Serviço de Diretório o ATP do Azure dá suporte?
+
+Atualmente, o ATP do Azure aceita a adição de até 10 credenciais diferentes do Serviço de Diretório para dar suporte a ambientes do Active Directory com florestas não confiáveis. Se você precisar de mais contas, abra um tíquete de suporte.
 
 ### <a name="does-azure-atp-only-leverage-traffic-from-active-directory"></a>O Azure ATP aproveita apenas tráfego do Active Directory?
 
@@ -130,10 +134,8 @@ Há suporte para a habilitação do Kerberos Armoring, também conhecido como FA
 
 A maioria dos controladores de domínio virtuais pode ser coberta pelo sensor do Azure ATP. Para determinar se o sensor do Azure ATP é apropriado para seu ambiente, consulte [Planejamento de capacidade do Azure ATP](atp-capacity-planning.md).
 
-Se um controlador de domínio virtual não puder ser coberto pelo sensor do Azure ATP, você pode ter um sensor autônomo do Azure ATP físico ou virtual, conforme descrito em [Configurar o espelhamento de porta](configure-port-mirroring.md).
-
-A maneira mais fácil é ter um sensor autônomo do Azure ATP virtual em cada host no qual o controlador de domínio virtual existe.
-
+Se um controlador de domínio virtual não puder ser coberto pelo sensor do Azure ATP, você pode ter um sensor autônomo do Azure ATP físico ou virtual, conforme descrito em [Configurar o espelhamento de porta](configure-port-mirroring.md).  
+A maneira mais fácil é ter um sensor autônomo do Azure ATP virtual em cada host no qual o controlador de domínio virtual existe.  
 Se os controladores de domínio virtuais se movimentarem entre os hosts, será necessário executar uma destas etapas:
 
 - Quando o controlador de domínio virtual for movido para outro host, pré-configure o sensor autônomo do Azure ATP nesse host para receber o tráfego do controlador de domínio virtual movimentado recentemente.
@@ -170,16 +172,16 @@ Para entender por que uma conta é confidencial, você pode examinar sua associa
 
 ### <a name="do-you-have-to-write-your-own-rules-and-create-a-thresholdbaseline"></a>Você precisa escrever suas próprias regras e criar um limite/linha de base?
 
-Com a Proteção Avançada contra Ameaças do Azure, não é necessário criar regras, limites ou linhas de base e, em seguida, ajustar. O ATP do Azure analisa os comportamentos entre os usuários, dispositivos e recursos, bem como o relacionamento entre eles, e pode detectar atividades suspeitas e ataques conhecidos rapidamente. Embora algumas detecções incluam um período de aprendizado, para muitas detecções, o ATP do Azure começará a detectar os ataques mal-intencionados conhecidos e os problemas de segurança imediatamente após a implantação. Todos os períodos de aprendizado estão documentados nos tópicos de alerta relevantes listados no [Guia de alertas de segurança](suspicious-activity-guide.md).
+Com a Proteção Avançada contra Ameaças do Azure, não é necessário criar regras, limites ou linhas de base e, em seguida, ajustar. O ATP do Azure analisa os comportamentos entre os usuários, dispositivos e recursos, bem como o relacionamento entre eles, e pode detectar atividades suspeitas e ataques conhecidos rapidamente. Três semanas após a implantação, o Azure ATP começa a detectar as atividades suspeitas do comportamento. Por outro lado, o Azure ATP começará a detectar os ataques mal-intencionados conhecidos e os problemas de segurança imediatamente após a implantação.
 
 ### <a name="which-traffic-does-azure-atp-generate-in-the-network-from-domain-controllers-and-why"></a>Qual tráfego o ATP do Azure gera na rede dos controladores de domínio e por quê?
 
 O ATP do Azure gera tráfego dos controladores de domínio para os computadores da organização em um dos três cenários:
 
 1. **Resolução de Nomes de Rede**  
-   O ATP do Azure captura o tráfego e os eventos, aprendendo e criando perfis para usuários e atividades de computadores na rede. Para aprender e criar perfis das atividades de acordo com os computadores da organização, o ATP do Azure precisa resolver os IPs de acordo com as contas dos computadores. Para resolver IPs dos nomes dos computadores, os sensores do ATP do Azure solicitam o endereço IP do nome do computador *por trás* do endereço IP.
+O ATP do Azure captura o tráfego e os eventos, aprendendo e criando perfis para usuários e atividades de computadores na rede. Para aprender e criar perfis das atividades de acordo com os computadores da organização, o ATP do Azure precisa resolver os IPs de acordo com as contas dos computadores. Para resolver IPs dos nomes dos computadores, os sensores do ATP do Azure solicitam o endereço IP do nome do computador *por trás* do endereço IP.
 
-   As solicitações são feitas com um dos quatro métodos a seguir:
+    As solicitações são feitas com um dos quatro métodos a seguir:
     - NTLM sobre RPC (porta TCP 135)
     - NetBIOS (porta UDP 137)
     - RDP (TCP porta 3389)
@@ -187,10 +189,10 @@ O ATP do Azure gera tráfego dos controladores de domínio para os computadores 
 
     Depois de obter o nome do computador, os sensores do ATP do Azure executam uma verificação cruzada dos detalhes no Active Directory para ver se há um objeto de computador correlacionado com o mesmo nome do computador. Se encontrarem a correspondência, é feita uma associação entre o endereço IP e o objeto do computador correspondido.
 2. **LMP (caminho de movimento lateral)**  
-    Para criar LMPs potenciais para usuários confidenciais, o ATP do Azure requer informações sobre os administradores locais nos computadores. Neste cenário, o sensor do ATP do Azure usa SAM-R (TCP 445) para consultar o endereço IP identificado no tráfego de rede a fim de determinar os administradores locais do computador. Para saber mais sobre o ATP do Azure e SAM-R, confira [Configurar permissões necessárias do SAM-R](install-atp-step8-samr.md).
+Para criar LMPs potenciais para usuários confidenciais, o ATP do Azure requer informações sobre os administradores locais nos computadores. Neste cenário, o sensor do ATP do Azure usa SAM-R (TCP 445) para consultar o endereço IP identificado no tráfego de rede a fim de determinar os administradores locais do computador. Para saber mais sobre o ATP do Azure e SAM-R, confira [Configurar permissões necessárias do SAM-R](install-atp-step8-samr.md).
 
 3. **Consulta ao Active Directory usando o LDAP** sobre dados de entidades  
-    Os sensores do ATP do Azure consultam o controlador de domínio a partir do domínio ao qual a entidade pertence. Pode ser no mesmo sensor ou em outro controlador de domínio daquele domínio.
+Os sensores do ATP do Azure consultam o controlador de domínio a partir do domínio ao qual a entidade pertence. Pode ser no mesmo sensor ou em outro controlador de domínio daquele domínio.
 
 |Protocolo|Serviço|Porta|Origem| Direção|
 |---------|---------|---------|---------|--------|
@@ -198,7 +200,6 @@ O ATP do Azure gera tráfego dos controladores de domínio para os computadores 
 |LDAP seguro (LDAPS)|TCP|636|Controladores de domínio|Saída|
 |LDAP para o Catálogo Global|TCP|3268|Controladores de domínio|Saída|
 |LDAPS para o Catálogo Global|TCP|3269|Controladores de domínio|Saída|
-|
 
 ### <a name="why-dont-activities-always-show-both-the-source-user-and-computer"></a>Por que as atividades sempre mostram o computador e o usuário da origem?
 

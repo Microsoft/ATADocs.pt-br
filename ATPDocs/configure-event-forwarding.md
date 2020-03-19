@@ -1,5 +1,5 @@
 ---
-title: Configurar o Encaminhamento de Eventos do Windows na Proteção Avançada contra Ameaças do Azure | Microsoft Docs
+title: Configurar o Encaminhamento de Eventos do Windows na Proteção Avançada contra Ameaças do Azure
 description: Descreve suas opções para configurar o Encaminhamento de Eventos do Windows com o Azure ATP
 keywords: ''
 author: shsagir
@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 3547519f-8d9c-40a9-8f0e-c7ba21081203
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 09b1f056ef40b663b55bf97e982a562503f5bf6d
-ms.sourcegitcommit: c625acd3e44a3ba9619638f84264b3b271383e3a
+ms.openlocfilehash: be65a11aa6ace79ec4f2e3cffdc8a196c87fa764
+ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/25/2020
-ms.locfileid: "77590685"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79414022"
 ---
 # <a name="configuring-windows-event-forwarding"></a>Configuração do encaminhamento de eventos do Windows
 

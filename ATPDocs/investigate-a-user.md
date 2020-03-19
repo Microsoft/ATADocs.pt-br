@@ -1,5 +1,5 @@
 ---
-title: Tutorial de investigação de usuário do ATP do Azure | Microsoft Docs
+title: Tutorial de investigação de usuário do ATP do Azure
 d|Description: This article explains how to user Azure ATP security alerts to investigate a suspicious user.
 keywords: ''
 author: shsagir
@@ -10,12 +10,12 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 404bb50fdf56351335f0083201b5cb538c50cc64
-ms.sourcegitcommit: 9673eb49729a06d3a25d52c0f43c76ac61b9cf89
+ms.openlocfilehash: 2bec6fbb12d78bbfd8dd04046f63df267391b1d1
+ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/12/2020
-ms.locfileid: "75906333"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79413410"
 ---
 # <a name="tutorial-investigate-a-user"></a>Tutorial: investigar um usuário
 

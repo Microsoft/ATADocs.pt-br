@@ -1,5 +1,5 @@
 ---
-title: Início rápido para conectar o ATP do Azure ao Active Directory | Microsoft Docs
+title: Início rápido para conectar o ATP do Azure ao Active Directory
 description: A etapa dois da instalação do Azure ATP ajuda a definir as configurações de conectividade do domínio em seu serviço de nuvem do Azure ATP
 author: shsagir
 ms.author: shsagir
@@ -7,12 +7,12 @@ ms.date: 01/15/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
-ms.openlocfilehash: 397dcd16313aba5ae2513633905f2f91d02ae0fa
-ms.sourcegitcommit: c8b1e584ef42559a40afd62dac1b5ca9056c5602
+ms.openlocfilehash: 4d3e65aaafea7cefd4ef564c0ee0a82b8d2fdfe4
+ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/08/2020
-ms.locfileid: "78926446"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79413733"
 ---
 # <a name="quickstart-connect-to-your-active-directory-forest"></a>Início Rápido: Conectar à sua floresta do Active Directory
 

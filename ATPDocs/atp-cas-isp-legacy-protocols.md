@@ -1,5 +1,5 @@
 ---
-title: Avaliação de situação de segurança de identidade de protocolos herdados da Proteção Avançada contra Ameaças do Azure | Microsoft Docs
+title: Avaliação de situação de segurança de identidade de protocolos herdados da Proteção Avançada contra Ameaças do Azure
 description: Neste artigo, você tem uma visão geral do relatório de avaliação de situação de segurança de identificação do protocolo herdado da ATP do Azure.
 keywords: ''
 author: shsagir
@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 6597b8c7-f83e-43c6-8149-fb4a914a845b
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 7a5f3b92114b27c7c2df11d5c2aa629317415a8c
-ms.sourcegitcommit: 9673eb49729a06d3a25d52c0f43c76ac61b9cf89
+ms.openlocfilehash: e1cd5eef793a801944f61c1fe2484bfc9a02b900
+ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/12/2020
-ms.locfileid: "75908088"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79414498"
 ---
 # <a name="security-assessment-legacy-protocols-usage"></a>Avaliação de segurança: uso de protocolos herdados 
  

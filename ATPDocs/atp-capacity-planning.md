@@ -1,5 +1,5 @@
 ---
-title: Guia de início rápido para planejamento de implantação da Proteção Avançada contra Ameaças do Azure | Microsoft Docs
+title: Guia de início rápido para planejamento de implantação da Proteção Avançada contra Ameaças do Azure
 description: Ajuda você a planejar a implantação e a decidir quantos servidores do Azure ATP serão necessários para dar suporte à sua rede
 author: shsagir
 ms.author: shsagir
@@ -7,12 +7,12 @@ ms.date: 02/19/2020
 ms.topic: quickstart
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
-ms.openlocfilehash: dafaeda31b59f8779958a9566fe748e8c86bb3fd
-ms.sourcegitcommit: c625acd3e44a3ba9619638f84264b3b271383e3a
+ms.openlocfilehash: e13dc696046ca095438297ad0aeb82e7f98a58d2
+ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/25/2020
-ms.locfileid: "77590634"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79414481"
 ---
 # <a name="quickstart-plan-capacity-for-azure-atp"></a>Início Rápido: Planejar capacidade para o ATP do Azure
 

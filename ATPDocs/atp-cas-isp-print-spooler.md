@@ -1,5 +1,5 @@
 ---
-title: Avaliações de situação de segurança de identidade de spooler de impressão da Proteção Avançada contra Ameaças do Azure | Microsoft Docs
+title: Avaliações de situação de segurança de identidade de spooler de impressão da Proteção Avançada contra Ameaças do Azure
 description: Neste artigo, você tem uma visão geral dos relatórios de avaliação de situação de segurança de identidade de spooler de impressão da ATP do Azure.
 keywords: ''
 author: shsagir
@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 1a7d9525-8923-4dae-af51-02a68aa61644
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 24077c21a6709d357a0b5b570f0d083fcd21dea8
-ms.sourcegitcommit: 9673eb49729a06d3a25d52c0f43c76ac61b9cf89
+ms.openlocfilehash: e5293dd937cf81bad992443373e4696dc8bc4a13
+ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/12/2020
-ms.locfileid: "75907916"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79414294"
 ---
 # <a name="security-assessment-domain-controllers-with-print-spooler-service-available"></a>Avaliação de segurança: Controladores de domínio com o serviço de spooler de impressão disponível 
 

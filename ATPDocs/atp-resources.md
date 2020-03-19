@@ -1,5 +1,5 @@
 ---
-title: Lista de recursos úteis da Proteção Avançada contra Ameaças do Azure | Microsoft Docs
+title: Lista de recursos úteis da Proteção Avançada contra Ameaças do Azure
 description: Este artigo contém uma lista de recursos úteis do Azure ATP
 keywords: ''
 author: shsagir
@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 34dc152c-6b7f-4128-93fe-aad56c282730
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: d94bffa83ccef6f15889b9619d9c7a9402b91e85
-ms.sourcegitcommit: c625acd3e44a3ba9619638f84264b3b271383e3a
+ms.openlocfilehash: 7d4d14b8f2710879833b8aca5310f939c784f2b3
+ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/25/2020
-ms.locfileid: "77590493"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79411736"
 ---
 # <a name="azure-atp-readiness-guide"></a>Guia de preparação do Azure ATP
 

@@ -1,5 +1,5 @@
 ---
-title: Política de dados pessoais da Proteção Avançada contra Ameaças do Azure | Microsoft Docs
+title: Política de dados pessoais da Proteção Avançada contra Ameaças do Azure
 description: Fornece links para informações sobre como excluir informações particulares e dados pessoais do Azure ATP.
 keywords: ''
 author: shsagir
@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 224e629a-0e82-458c-bb03-b67070a9241d
 ms.reviewer: ophirp
 ms.suite: ems
-ms.openlocfilehash: 13035874f4d40376c93dbc39020277716fe37d1d
-ms.sourcegitcommit: 9673eb49729a06d3a25d52c0f43c76ac61b9cf89
+ms.openlocfilehash: 159cc41bf31697c6da8ac3f1f307eda4f8d11ea3
+ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/12/2020
-ms.locfileid: "75908100"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79414056"
 ---
 # <a name="azure-atp-data-security-and-privacy"></a>Privacidade e segurança de dados do Azure ATP
 

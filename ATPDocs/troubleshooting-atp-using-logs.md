@@ -1,5 +1,5 @@
 ---
-title: Solução de problemas da Proteção Avançada contra Ameaças ao Azure usando os logs | Microsoft Docs
+title: Solução de problemas da Proteção Avançada contra Ameaças ao Azure usando os logs
 description: Descreve como você pode usar os logs do Azure ATP para solucionar problemas
 keywords: ''
 author: shsagir
@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: de796346-647d-48e1-970a-8f072e990f1e
 ms.reviewer: ''
 ms.suite: ''
-ms.openlocfilehash: 7ca158bbed1a8cc184d7a9d63f79ba9010f3837c
-ms.sourcegitcommit: 9673eb49729a06d3a25d52c0f43c76ac61b9cf89
+ms.openlocfilehash: eb5b16c17d2e52392f655ebbd4fa78ad03122047
+ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/12/2020
-ms.locfileid: "75905988"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79410877"
 ---
 # <a name="troubleshooting-azure-advanced-threat-protection-atp-sensor-using-the-atp-logs"></a>Solução de problemas do sensor do ATP (Proteção Avançada contra Ameaças) ao Azure usando os logs do ATP
 Os logs do ATP fornecem informações sobre o que cada componente do sensor do Azure ATP está fazendo a qualquer hora.

@@ -1,5 +1,5 @@
 ---
-title: Validar o espelhamento de porta na Proteção Avançada contra Ameaças do Azure | Microsoft Docs
+title: Validar o espelhamento de porta na Proteção Avançada contra Ameaças do Azure
 description: Descreve como validar que o espelhamento de porta está configurado corretamente na ATP do Azure
 keywords: ''
 author: shsagir
@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 0a56cf27-9eaa-4ad0-ae6c-9d0484c69094
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: e2bd44e604657fb0a8ee4c8e356c6ac23ce680bf
-ms.sourcegitcommit: c625acd3e44a3ba9619638f84264b3b271383e3a
+ms.openlocfilehash: a41c080847454af84d6622c53a28085e194823dd
+ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/25/2020
-ms.locfileid: "77590566"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79414600"
 ---
 # <a name="validate-port-mirroring"></a>Validação do espelhamento de porta
 

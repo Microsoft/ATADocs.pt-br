@@ -1,5 +1,5 @@
 ---
-title: Instalar a Integração de VPN da Proteção Avançada contra Ameaças do Azure | Microsoft Docs
+title: Instalar a Integração de VPN da Proteção Avançada contra Ameaças do Azure
 description: Colete informações de contabilidade para o Azure ATP integrando uma VPN.
 keywords: ''
 author: shsagir
@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 0d9d2a1d-6c76-4909-b6f9-58523df16d4f
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: a7af39b227f3bd79fb667b87602e3ac5154d6491
-ms.sourcegitcommit: 9673eb49729a06d3a25d52c0f43c76ac61b9cf89
+ms.openlocfilehash: c12678dcab848e04469f5fe494349f68814fb2c1
+ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/12/2020
-ms.locfileid: "75907756"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79413648"
 ---
 # <a name="integrate-vpn"></a>Integrar a VPN
 
