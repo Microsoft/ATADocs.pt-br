@@ -5,19 +5,19 @@ keywords: ''
 author: shsagir
 ms.author: shsagir
 manager: rkarlin
-ms.date: 01/19/2020
+ms.date: 03/19/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 37d1a032-65e7-4a89-be0b-c3f9cc2bacdb
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: bd669b3b0bcf1f505e69a65eecdb671b9f66845b
-ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
+ms.openlocfilehash: cc0b9ed79a26c1f77cb7d0a15866bb81744dbfe9
+ms.sourcegitcommit: 7b80b2eff4331f8e1e1403e4b5c751f406915624
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79414668"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "79989842"
 ---
 # <a name="azure-atp-monitored-activities"></a>Atividades monitoradas do ATP do Azure
 
@@ -92,12 +92,15 @@ As informações monitoradas pelo ATP do Azure são apresentadas na forma de ati
 |Tipo de logon|Atividade monitorada|Descrição|
 |---------------------|---------------------|------------------|
 |Tipo de logon 2|Validação de Credenciais|Evento de autenticação de conta de domínio usando os métodos de autenticação NTLM e Kerberos.|
-|Tipo de logon 2|Logon interativo|Usuário recebeu acesso à rede ao inserir um nome de usuário e senha (método de autenticação Kerberos).|
+|Tipo de logon 2|Logon interativo|O usuário recebeu acesso à rede ao inserir um nome de usuário e senha (método de autenticação Kerberos ou NTLM).|
+|Tipo de logon 2|Logon interativo com certificado|O usuário obteve acesso à rede usando um certificado.|
 |Tipo de logon 2|Conexão VPN|Usuário conectado por VPN – Autenticação usando o protocolo RADIUS.|
-|Tipo de logon 3|Acesso de Recurso|O usuário acessou um recurso usando a autenticação Kerberos.|
+|Tipo de logon 3|Acesso de Recurso|O usuário acessou um recurso usando a autenticação Kerberos ou NTLM.|
+|Tipo de logon 3|Acesso de recurso delegado|O usuário acessou um recurso usando a delegação Kerberos.|
 |Tipo de logon 8|Texto não criptografado LDAP|O usuário autenticou usando o LDAP com uma senha com texto não criptografado (autenticação simples).|
 |Tipo de logon 10|Área de Trabalho Remota|O usuário executou uma sessão RDP em um computador remoto usando a autenticação Kerberos.|
 |---|Falha no Logon|Falha na tentativa de autenticação da conta de domínio (via NTLM e Kerberos) porque a seguinte conta estava desabilitada/expirada/bloqueada ou usou um certificado não confiável ou devido a horas de logon inválidas/senha antiga/senha expirada/senha errada.|
+|---|Falha no logon com certificado|Falha na tentativa de autenticação da conta de domínio (via Kerberos) devido ao seguinte: a conta estava desabilitada/expirada/bloqueada ou usou um certificado não confiável ou devido a horas de logon inválidas/senha antiga/senha expirada/senha errada.|
 
 ## <a name="monitored-machine-activities-machine-account"></a>Atividades da máquina monitoradas: conta do computador
 

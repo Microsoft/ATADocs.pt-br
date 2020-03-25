@@ -5,21 +5,21 @@ keywords: ''
 author: shsagir
 ms.author: shsagir
 manager: rkarlin
-ms.date: 02/18/2020
+ms.date: 03/16/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 23386e36-2756-4291-923f-fa8607b5518a
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 61415f1a5f74a216dd0c505b6e92419601e08941
-ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
+ms.openlocfilehash: c40efc27e1740ef6e7b0aa9a98784631072f2c3b
+ms.sourcegitcommit: 93baa30e7f9f3b0e6a3ffcd2b9a25bc349798781
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79414634"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79504244"
 ---
-# <a name="troubleshooting-azure-atp-known-issues"></a>Solução de problemas conhecidos do ATP do Azure
+# <a name="troubleshooting-azure-atp-known-issues"></a>Solução de problemas conhecidos da ATP do Azure
 
 ## <a name="sensor-failure-communication-error"></a>Erro de comunicação de falha no sensor
 
@@ -68,7 +68,7 @@ Se durante a instalação do sensor silenciosa você tentar usar o PowerShell e 
 ./"Azure ATP sensor Setup.exe" /quiet NetFrameworkCommandLineArguments="/q" AccessKey="<Access Key>"
 ```
 
-## Problema de agrupamento NIC do sensor da ATP do Azure <a name="nic-teaming"></a>
+## <a name="azure-atp-sensor-nic-teaming-issue"></a>Problema de agrupamento NIC do sensor da ATP do Azure <a name="nic-teaming"></a>
 
 Se tentar instalar o sensor do ATP em um computador configurado com um adaptador de agrupamento NIC, você receberá um erro de instalação. Se desejar instalar o sensor da ATP em um computador configurado com Agrupamento NIC, siga estas instruções:
 
@@ -147,6 +147,18 @@ O sensor falhou ao tentar recuperar a gMSA designada no portal do ATP do Azure.
 **Resolução:**
 
 Verifique se as credenciais da gMSA estão corretas e se o sensor recebeu as permissões para recuperar as credenciais da conta.
+
+## <a name="report-downloads-cannot-contain-more-than-300000-entries"></a>Downloads de relatório não podem conter mais de 300.000 entradas
+
+O ATP do Azure não dá suporte a downloads de relatório que contêm mais de 300.000 entradas por relatório. Os relatórios serão renderizados como incompletos se mais de 300.000 entradas forem incluídas.
+
+**Causa:**
+
+essa é uma limitação de engenharia.
+
+**Resolução:**
+
+Não há solução conhecida.
 
 ## <a name="see-also"></a>Consulte Também
 
