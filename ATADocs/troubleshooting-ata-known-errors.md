@@ -12,15 +12,14 @@ ms.technology: ''
 ms.assetid: d89e7aff-a6ef-48a3-ae87-6ac2e39f3bdb
 ms.reviewer: arzinger
 ms.suite: ems
-ms.openlocfilehash: e7b0a5c83926c1d730d8de6467fa692a27f4d50d
-ms.sourcegitcommit: 05f23a0add8d24ae92176e13c2a4ae8ada1844da
+ms.openlocfilehash: 1326cfa0cadc28200f6c75645a8eeb332a29c168
+ms.sourcegitcommit: ae6c77923e7a2a7c4996a96d25ed977159f384cc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79319209"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80160049"
 ---
 # <a name="troubleshooting-ata-known-issues"></a>Solução de problemas conhecidos do ATA
-
 
 *Aplica-se a: Advanced Threat Analytics versão 1.9*
 
@@ -29,35 +28,36 @@ Esta seção detalha os possíveis erros nas implantações do ATA e as etapas n
 ## <a name="ata-gateway-and-lightweight-gateway-errors"></a>Erros do Gateway e do Gateway Lightweight do ATA
 
 > [!div class="mx-tableFixed"]
-> 
-> |Erro|Descrição|Resolução|
+>
+> |Error|Descrição|Resolução|
 > |-------------|----------|---------|
-> |System.DirectoryServices.Protocols.LdapException: ocorreu um erro local|Falha do Gateway do ATA ao autenticar no controlador de domínio.|1. Confirme se o registro DNS do controlador de domínio está configurado corretamente no servidor DNS. <br>2. Verifique se a hora do gateway do ATA está sincronizada com a hora do controlador de domínio.|
-> |System.IdentityModel.Tokens.SecurityTokenValidationException: falha ao validar cadeia de certificados|Falha do Gateway do ATA ao validar o certificado do Centro do ATA.|1. Verifique se o certificado de autoridade de certificação raiz está instalado no repositório de certificados da autoridade de certificação confiável no gateway do ATA. <br>2. valide se a CRL (lista de certificados revogados) está disponível e se a validação de revogação de certificado pode ser executada.|
+> |System.DirectoryServices.Protocols.LdapException: ocorreu um erro local|Falha do Gateway do ATA ao autenticar no controlador de domínio.|1. Confirme se o registro DNS do controlador de domínio está configurado corretamente no servidor DNS.<br>2. Verifique se a hora do gateway do ATA está sincronizada com a hora do controlador de domínio.|
+> |System.IdentityModel.Tokens.SecurityTokenValidationException: falha ao validar cadeia de certificados|Falha do Gateway do ATA ao validar o certificado do Centro do ATA.|1. Verifique se o certificado de autoridade de certificação raiz está instalado no repositório de certificados da autoridade de certificação confiável no gateway do ATA.<br>2. valide se a CRL (lista de certificados revogados) está disponível e se a validação de revogação de certificado pode ser executada.|
 > |Microsoft.Common.ExtendedException: falha ao analisar o tempo gerado|Falha do Gateway do ATA ao analisar as mensagens syslog que foram encaminhadas do SIEM.|Verifique se o SIEM está configurado para encaminhar as mensagens em um dos formatos compatíveis com o ATA.|
 > |System.ServiceModel.FaultException: ocorreu um erro ao verificar a segurança da mensagem.|Falha do Gateway do ATA ao autenticar no Centro do ATA.|Verifique se a hora do Gateway do ATA está sincronizada com a hora do Centro do ATA.|
 > |System.ServiceModel.EndpointNotFoundException: não foi possível se conectar ao net.tcp://center.ip.addr:443/IEntityReceiver|Falha do Gateway do ATA ao estabelecer conexão com o Centro do ATA.|Verifique se as configurações de rede estão corretas e se a conexão de rede entre o Gateway do ATA e o Centro do ATA está ativa.|
-> |System.DirectoryServices.Protocols.LdapException: o servidor LDAP não está disponível.|Falha do Gateway do ATA ao consultar o controlador de domínio usando o protocolo LDAP.|1. Verifique se a conta do usuário usada pelo ATA para se conectar ao domínio do Active Directory tem acesso de leitura a todos os objetos na árvore do Active Directory. <br>2. Certifique-se de que o controlador de domínio não esteja protegido contra consultas LDAP da conta de usuário usada pelo ATA.|
+> |System.DirectoryServices.Protocols.LdapException: o servidor LDAP não está disponível.|Falha do Gateway do ATA ao consultar o controlador de domínio usando o protocolo LDAP.|1. Verifique se a conta do usuário usada pelo ATA para se conectar ao domínio do Active Directory tem acesso de leitura a todos os objetos na árvore do Active Directory.<br>2. Certifique-se de que o controlador de domínio não esteja protegido contra consultas LDAP da conta de usuário usada pelo ATA.|
 > |Microsoft.Tri.Infrastructure.ContractException: exceção de contrato|Falha do Gateway do ATA ao sincronizar a configuração do Centro do ATA.|Conclua a configuração do Gateway do ATA no Console do ATA.|
 > |System.Reflection.ReflectionTypeLoadException: Não é possível carregar um ou mais dos tipos solicitados. Recupere a propriedade LoaderExceptions para maiores informações.|O Analisador de Mensagem é instalado no Gateway do ATA.| Desinstale o Analisador de Mensagem.|
 > |Erro [Layout] System.OutOfMemoryException: A exceção do tipo 'System.OutOfMemoryException' foi gerada.|O Gateway do ATA não tem memória suficiente.|Aumente a quantidade de memória no controlador de domínio.|
 > |Falha ao iniciar o consumidor ao vivo ---> Microsoft.Opn.Runtime.Monitoring.MessageSessionException: O provedor de eventos PEFNDIS não está pronto|O PEF (Analisador de Mensagem) não foi instalado corretamente.|Se você estiver usando o Hyper-V, tente atualizar os serviços de Integração do Hyper-V, caso contrário, contate o suporte para uma solução alternativa.|
 > |A instalação falhou com o erro: 0x80070652|Há outras instalações pendentes no seu computador.|Aguarde até que as outras instalações sejam concluídas e, se necessário, reinicie o computador.|
 > |System.InvalidOperationException: Instance 'Microsoft.Tri.Gateway' não existe na Categoria especificada.|PIDs foi habilitado para nomes de processo no Gateway do ATA|Use [KB281884](https://support.microsoft.com/kb/281884) para desabilitar os PIDs em nomes de processo|
-> |System.InvalidOperationException: Categoria não existe.|Os contadores podem estar desabilitados no registro|Use [KB2554336](https://support.microsoft.com/kb/2554336) para recriar os Contadores de desempenho|
+> A categoria ' System. InvalidOperationException: não existe.|Os contadores podem estar desabilitados no registro|Use [KB2554336](https://support.microsoft.com/kb/2554336) para recriar os Contadores de desempenho|
 > |System.ApplicationException: Não é possível iniciar a sessão do ETW MMA-ETW-Livecapture-a4f595bd-f567-49a7-b963-20fa4e370329|Há uma entrada do host no arquivo HOSTS que aponta para o nome curto do computador|Remova a entrada do host do arquivo C:\Windows\System32\drivers\etc\HOSTS ou altere-a para um FQDN.|
 > |System. IO. IOException: falha na autenticação porque a parte remota fechou o fluxo de transporte ou não pôde criar um canal seguro de SSL/TLS|O TLS 1.0 está desabilitado no Gateway de ATA, mas o .Net está configurado para usar o TLS 1.2|Use uma das seguintes opções: </br> Habilitar o TLS 1.0 no Gateway ATA </br>Habilite o TLS 1.2 no .Net definindo as chaves de registro para usar os padrões do sistema operacional para SSL e TLS, da seguinte forma: </br>`[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\v4.0.30319] "SystemDefaultTlsVersions"=dword:00000001` </br>`[HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\.NETFramework\v4.0.30319] "SystemDefaultTlsVersions"=dword:00000001`</br>`[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\v4.0.30319] "SchUseStrongCrypto"=dword:00000001 `</br>`[HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\.NETFramework\v4.0.30319] " SchUseStrongCrypto"=dword:00000001`|
 > |System.TypeLoadException: não foi possível carregar o tipo 'Microsoft.Opn.Runtime.Values.BinaryValueBufferManager' do assembly 'Microsoft.Opn.Runtime, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35'|Falha do Gateway do ATA ao carregar os arquivos de análise necessários.|Verifique se o Microsoft Message Analyzer está instalado no momento. Não há suporte para o Message Analyzer ser instalado com o Gateway/Gateway Lightweight do ATA. Desinstale o Message Analyzer e reinicie o serviço de Gateway.|
-> |System.Net.WebException: o servidor remoto retornou um erro: (407) Autenticação de proxy necessária|A comunicação de Gateway do ATA no centro do ATA está sendo interrompida por um servidor proxy.|Desabilite o proxy no computador do Gateway do ATA. <br></br>Observe que as configurações de proxy podem ser por conta.|
-> |System.IO.DirectoryNotFoundException: o sistema não pode localizar o caminho especificado. (Exceção de HRESULT: 0x80070003)|Um ou mais dos serviços necessários para operar o ATA não foram iniciados.|Inicie os seguintes serviços: <br></br>Logs e Alertas de Desempenho (PLA), Agendador de Tarefas (agenda).|
+> |System.Net.WebException: o servidor remoto retornou um erro: (407) Autenticação de proxy necessária|A comunicação de Gateway do ATA no centro do ATA está sendo interrompida por um servidor proxy.|Desabilite o proxy no computador do Gateway do ATA.<br></br>Observe que as configurações de proxy podem ser por conta.|
+> |System.IO.DirectoryNotFoundException: o sistema não pode localizar o caminho especificado. (Exceção de HRESULT: 0x80070003)|Um ou mais dos serviços necessários para operar o ATA não foram iniciados.|Inicie os seguintes serviços:<br></br>Logs e Alertas de Desempenho (PLA), Agendador de Tarefas (agenda).|
 > |System.Net.WebException: o servidor remoto retornou um erro: (403) Proibido|O Gateway de ATA ou o Gateway Lightweight foi proibido de estabelecer uma conexão HTTP porque o Centro do ATA não é confiável.|Adicione o nome NetBIOS e o FQDN do Centro do ATA à lista de sites confiáveis e limpe o cache no Internet Explorer (ou o nome do Centro do ATA, conforme especificado na configuração, se o configurado for diferente do NetBIOS/FQDN).|
 > |System.Net.Http.HttpRequestException: falha na PostAsync [requestTypeName=StopNetEventSessionRequest]|O Gateway do ATA ou o Gateway Lightweight do ATA não pode parar e iniciar a sessão do ETW (Rastreamento de Eventos para Windows) que coleta o tráfego de rede devido a um problema WMI (Instrumentação de Gerenciamento do Windows)|Siga as instruções no artigo [WMI: como recriar o repositório WMI](https://blogs.technet.microsoft.com/askperf/2009/04/13/wmi-rebuilding-the-wmi-repository/) para corrigir o problema WMI|
 > |System.Net.Sockets.SocketException: foi feita uma tentativa de acessar um soquete de uma maneira proibida pelas permissões de acesso dele|Outro aplicativo está usando a porta 514 no Gateway do ATA|Use `netstat -o` para estabelecer qual processo está usando essa porta.|
 
 ## <a name="deployment-errors"></a>Erros de implantação
+
 > [!div class="mx-tableFixed"]
-> 
-> |Erro|Descrição|Resolução|
+>
+> |Error|Descrição|Resolução|
 > |-------------|----------|---------|
 > |Falha na instalação do .Net Framework 4.6.1 com o erro 0x800713ec|Os pré-requisitos do .Net Framework 4.6.1 não estão instalados no servidor. |Antes de instalar o ATA, verifique se as atualizações do Windows [KB2919442](https://www.microsoft.com/download/details.aspx?id=42135) e [KB2919355](https://support.microsoft.com/kb/2919355) estão instaladas no servidor.|
 > |System.Threading.Tasks.TaskCanceledException: uma tarefa foi cancelada|O processo de implantação atingiu o tempo limite, uma vez que ele não pôde acessar o Centro do ATA.|1. Verifique a conectividade de rede para o centro do ATA navegando até ele usando seu endereço IP. <br></br>2. Verifique a configuração do proxy ou do firewall.|
@@ -66,36 +66,34 @@ Esta seção detalha os possíveis erros nas implantações do ATA e as etapas n
 > |Erro [\\[]DeploymentModel[\\]] Falha na autenticação de gerenciamento      [\\[]CurrentlyLoggedOnUser=<domain>\\<username>Status=FailedAuthentication Exception=[\\]]|O processo de implantação do Gateway do ATA ou do Gateway Lightweight do ATA não conseguiu autenticar com sucesso o ATA Center|Abra um navegador no computador no qual o processo de implantação falhou e veja se você pode alcançar o Console do ATA. </br>Se não, inicie a solução de problemas para ver o motivo de o navegador não conseguir autenticar o Centro do ATA. </br>Verifique a: </br>Configuração de proxy</br>Problemas de rede</br>Configurações de política de grupo para a autenticação no computador que difere do Centro do ATA.|
 > | Erro [\\[]DeploymentModel[\\]] Falha na autenticação de gerenciamento|Falha na validação do certificado do Centro|O certificado do Centro pode requerer uma conexão com a Internet para validação. Verifique se o serviço de Gateway tem a configuração de proxy adequada para habilitar a conexão e a validação.|
 
-
 ## <a name="ata-center-errors"></a>Erros do Centro do ATA
+
 > [!div class="mx-tableFixed"]
-> 
-> |Erro|Descrição|Resolução|
+>
+> |Error|Descrição|Resolução|
 > |-------------|----------|---------|
 > |System.Security.Cryptography.CryptographicException: acesso negado.|O Centro do ATA falha ao usar o certificado emitido para descriptografia. Isso provavelmente ocorreu devido ao uso de um certificado com KeySpec (KeyNumber) definido como Assinatura (AT\\_SIGNATURE) que não é compatível com a descriptografia, em vez de usar o KeyExchange (AT\\_KEYEXCHANGE).|1. pare o serviço do centro do ATA. <br></br>2. exclua o certificado do centro do ATA do repositório de certificados do centro. (Antes de excluir, verifique se você tem o backup do certificado com a chave privada em um arquivo PFX). <br></br>3. Abra um prompt de comando com privilégios elevados e execute certutil-importpfx "CenterCertificate. pfx" em\\_KEYEXCHANGE <br></br>4. Inicie o serviço do centro do ATA. <br></br>5. Verifique se tudo agora funciona conforme o esperado.|
-
 
 ## <a name="ata-gateway-and-lightweight-gateway-issues"></a>Erros do Gateway do ATA e do Gateway Lightweight
 
 > [!div class="mx-tableFixed"]
-> 
+>
 > |Problema|Descrição|Resolução|
 > |-------------|----------|---------|
 > |Nenhum tráfego recebido do controlador de domínio, mas são observados alertas de monitoramento|    Nenhum tráfego foi recebido de um controlador de domínio usando o espelhamento de porta por meio de um Gateway do ATA|Na NIC de captura no Gateway do ATA, desabilite esses recursos em **Configurações Avançadas**:<br></br>União de Segmentos de Recebimento (IPv4)<br></br>União de Segmentos de Recebimento (IPv6)|
-> |Esse alerta de monitoramento é exibido: Parte do tráfego de rede não está sendo analisado|Se você tiver um Gateway de ATA ou Gateway do Lightweight em máquinas virtuais VMware, você poderá receber este alerta de monitoramento. Isso ocorre devido a uma incompatibilidade de configuração no VMware.|Defina as configurações a seguir como 0 ou Desabilitado na configuração de NIC da máquina virtual: TsoEnable, LargeSendOffload, TSO Offload, Giant TSO Offload TLS 1.0 fica desabilitado no Gateway do ATA, mas o .Net fica configurado para usar o TLS 1.2|
+> |Esse alerta de monitoramento é exibido: Parte do tráfego de rede não está sendo analisado|Se você tiver um Gateway de ATA ou Gateway do Lightweight em máquinas virtuais VMware, você poderá receber este alerta de monitoramento. Isso ocorre devido a uma incompatibilidade de configuração no VMware.|Defina as seguintes configurações como 0 ou desabilitado na configuração da NIC da máquina virtual: TsoEnable, LargeSendOffload, descarregamento de TSO, descarregamento de TSO gigante|
 
-## <a name="multi-processor-group-mode"></a>Modo Grupo de multiprocessadores 
+## <a name="multi-processor-group-mode"></a>Modo Grupo de multiprocessadores
+
 Para os sistemas operacionais Windows 2008R2 e 2012, o gateway do ATA não tem suporte em um modo de grupo de vários processadores.
 
 Soluções alternativas possíveis sugeridas:
-- Se o Hyper Threading estiver ativado, desative-o. Isso pode reduzir o número de núcleos lógicos o suficiente para evitar a necessidade de execução no modo **Grupo de multiprocessadores**. 
 
-- Se seu computador tiver menos de 64 núcleos lógicos e estiver em execução em um host HP, você poderá alterar a configuração do BIOS de **Otimização do Tamanho do Grupo NUMA** do padrão **Clusterizado** para **Simples**. 
-
-
-
+- Se o Hyper Threading estiver ativado, desative-o. Isso pode reduzir o número de núcleos lógicos o suficiente para evitar a necessidade de execução no modo **Grupo de multiprocessadores**.
+- Se seu computador tiver menos de 64 núcleos lógicos e estiver em execução em um host HP, você poderá alterar a configuração do BIOS de **Otimização do Tamanho do Grupo NUMA** do padrão **Clusterizado** para **Simples**.
 
 ## <a name="see-also"></a>Confira Também
+
 - [Pré-requisitos do ATA](ata-prerequisites.md)
 - [Planejamento da capacidade do ATA](ata-capacity-planning.md)
 - [Configurar coleta de eventos](configure-event-collection.md)
