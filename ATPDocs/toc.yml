@@ -126,14 +126,14 @@
         - name: Trabalhar com o centro de integridade do ATP do Azure
           href: atp-health-center.md
         - name: Gerenciar alertas de integridade do ATP do Azure
-          href: monitoring-alerts.md
+          href: health-alerts.md
     - name: Atualização atrasada do sensor do ATP do Azure
       href: sensor-update.md
     - name: Solução de problemas conhecidos
       href: troubleshooting-atp-known-issues.md
     - name: Solucionar problemas usando logs
       href: troubleshooting-atp-using-logs.md
-    - name: Integrar com o Windows Defender ATP
+    - name: Integrar-se com o Microsoft Defender ATP
       href: integrate-wd-atp.md
     - name: Integração de VPN
       href: install-atp-step6-vpn.md
