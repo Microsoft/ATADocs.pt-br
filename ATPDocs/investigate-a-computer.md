@@ -10,12 +10,12 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: c1dd60e8855848493fdc9c349983a911896452fc
-ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
+ms.openlocfilehash: 038b31aa221f2807a149998e657065289a82c4a3
+ms.sourcegitcommit: bf5f58317121f1fb0fffc83d8b419cdd7ef27d9a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79413427"
+ms.lasthandoff: 04/05/2020
+ms.locfileid: "80669488"
 ---
 # <a name="tutorial-investigate-a-computer"></a>Tutorial: Investigar um computador
 
@@ -46,11 +46,11 @@ Verifique e investigue o perfil do computador para obter as atividades e os deta
   5. O [usuário](investigate-a-user.md) que acessou o computador executou outras atividades suspeitas?
 
 - Atividades suspeitas adicionais a serem investigadas:
-    1. Havia outros alertas abertos ao mesmo tempo que este alerta no ATP do Azure ou em outras ferramentas de segurança, como o Windows Defender ATP, a Central de Segurança do Azure e/ou o Microsoft CAS?
+    1. Havia outros alertas abertos ao mesmo tempo que este alerta no ATP do Azure ou em outras ferramentas de segurança, como o Microsoft Defender ATP, a Central de Segurança do Azure e/ou o Microsoft CAS?
     2. Houve logons com falha?
 
 
-- Se a integração do Windows Defender ATP estiver habilitada, clique no selo do Windows Defender ATP para investigar o computador. No Windows Defender ATP, você pode ver quais processos e alertas ocorreram no mesmo período que o alerta.
+- Se a integração do Microsoft Defender ATP estiver habilitada, clique na notificação do Microsoft Defender ATP para investigar o computador em mais detalhes. No Microsoft Defender ATP, você pode ver quais processos e alertas ocorreram no mesmo período que o alerta.
     1. Novos programas foram implantados ou instalados?
 
 ## <a name="next-steps"></a>Próximas etapas

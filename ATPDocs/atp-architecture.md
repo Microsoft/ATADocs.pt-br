@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 90f68f2c-d421-4339-8e49-1888b84416e6
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 0d737adb2c4d03fbeedb2277573f40d4a29b5de9
-ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
+ms.openlocfilehash: a6ae76dcee7b6a54f7721c77277387ac4f2e7fbb
+ms.sourcegitcommit: 8d5cd330564eeaf4bc9560db7814c85e71e0fb60
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79413274"
+ms.lasthandoff: 04/05/2020
+ms.locfileid: "80666229"
 ---
 # <a name="azure-atp-architecture"></a>Arquitetura do ATP do Azure
 
@@ -34,7 +34,7 @@ Instalado diretamente em seus controladores de domínio, o sensor do ATP do Azur
 ## <a name="azure-atp-components"></a>Componentes da Azure ATP
 O Azure ATP é formado pelos seguintes componentes:
 
--   **Portal do Azure ATP** <br>
+-    **Portal do Azure ATP** <br>
 O portal do ATP do Azure permite a criação da sua instância do ATP do Azure, exibe os dados recebidos de sensores do ATP do Azure e permite monitorar, gerenciar e investigar ameaças em seu ambiente de rede.  
 -   **Sensor do Azure ATP**<br>
 Sensores do Azure ATP são instalados diretamente em seus controladores de domínio. O sensor monitora diretamente o tráfego do controlador de domínio sem a necessidade de um servidor dedicado ou configuração de espelhamento de porta.
@@ -80,7 +80,7 @@ O sensor do ATP do Azure inclui um componente de monitoramento que avalia a capa
 
 Não importa o que ocorra no controlador de domínio, o processo de monitoramento libera continuamente os recursos para garantir que a funcionalidade principal do controlador de domínio nunca seja afetada.
 
-Se o processo de monitoramento fizer o sensor do Azure ATP ficar sem recursos, apenas tráfego parcial será monitorado e o alerta de monitoramento "Tráfego de rede espelhado na porta descartado" será exibido na página Integridade do portal do Azure ATP.
+Se o processo de monitoramento fizer o sensor do ATP do Azure ficar sem recursos, apenas parte do tráfego será monitorado e o alerta de integridade "Tráfego de rede espelhado na porta descartado" será exibido na página Integridade do portal do ATP do Azure.
 
 ### <a name="windows-events"></a>Eventos do Windows
 

@@ -11,12 +11,12 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: ort
 ms.suite: ems
-ms.openlocfilehash: efc6412bebeb839c577a3e65aac0d9386927a0a3
-ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
+ms.openlocfilehash: 347af29a8748446345455442741e8c7eb599ac5b
+ms.sourcegitcommit: bf5f58317121f1fb0fffc83d8b419cdd7ef27d9a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79414175"
+ms.lasthandoff: 04/05/2020
+ms.locfileid: "80669759"
 ---
 # <a name="release-reference-of-azure-advanced-threat-protection-azure-atp"></a>Referência de versão do ATP do Azure (Proteção Avançada contra Ameaças do Azure) 
 
@@ -27,16 +27,16 @@ Este artigo é uma referência de todas as versões do ATP do Azure até (e incl
 Lançado em 18 de novembro de 2018
 
 - **Alerta de segurança: comunicação suspeita sobre DNS - disponibilidade geral**<br>
-O alerta de segurança de [comunicação suspeita sobre DNS](suspicious-activity-guide.md) da Proteção Avançada contra Ameaças do Azure já está em disponibilidade geral. <br> Normalmente, o protocolo DNS não é monitorado na maioria das organizações e raramente é bloqueado para atividades mal-intencionadas. Isso permite que um invasor em um computador comprometido abuse do protocolo DNS. A comunicação mal-intencionada por DNS pode ser usada para extração, comando e controle de dados e/ou fuga de restrições de rede corporativa.
+O alerta de segurança de [comunicação suspeita sobre DNS](suspicious-activity-guide.md) do ATP do Azure já está em disponibilidade geral. <br> Normalmente, o protocolo DNS não é monitorado na maioria das organizações e raramente é bloqueado para atividades mal-intencionadas. Isso permite que um invasor em um computador comprometido abuse do protocolo DNS. A comunicação mal-intencionada por DNS pode ser usada para extração, comando e controle de dados e/ou fuga de restrições de rede corporativa.
 
 - Essa versão também inclui aprimoramentos e correções de bug da infraestrutura do sensor interno.
 
 ## <a name="azure-atp-release-254"></a>ATP do Azure versão 2.54
 Lançado em 11 de novembro de 2018
 
-- **Aprimoramento do recurso: exclusões de domínio padrão adicionadas ao alerta de Comunicação suspeita por DNS**<br>   Nova adição de três domínios populares à lista de exclusões de domínio padrão. A lista de exclusões permanece totalmente personalizável. Para saber mais, veja [Excluindo entidades de detecções](excluding-entities-from-detections.md). 
+- **Aprimoramento do recurso: exclusões de domínio padrão adicionadas ao alerta de Comunicação suspeita por DNS**<br> Nova adição de três domínios populares à lista de exclusões de domínio padrão. A lista de exclusões permanece totalmente personalizável. Para saber mais, veja [Excluindo entidades de detecções](excluding-entities-from-detections.md). 
 
-- **Aprimoramentos de documentação: atualização de log do SIEM, diretrizes de problemas conhecidos**<br>    Mapeamento de externalId e explicações adicionais foram adicionados a descrições de log do SIEM. Para saber mais, veja [referência de log do SIEM](cef-format-sa.md). <br>Um artigo adicional para obter diretrizes de problemas conhecidos atualmente não resolvidos foi adicionado. Para saber mais, veja [Problemas conhecidos do ATP do Azure](known-issues.md).  
+- **Aprimoramentos de documentação: atualização de log do SIEM, diretrizes de problemas conhecidos**<br> Mapeamento de externalId e explicações adicionais foram adicionados a descrições de log do SIEM. Para saber mais, veja [referência de log do SIEM](cef-format-sa.md). <br>Um artigo adicional para obter diretrizes de problemas conhecidos atualmente não resolvidos foi adicionado. Para saber mais, veja [Problemas conhecidos do ATP do Azure](known-issues.md).  
 
 - Essa versão inclui aprimoramentos e correções de bug da infraestrutura do sensor interno.
 
@@ -44,10 +44,10 @@ Lançado em 11 de novembro de 2018
 Lançado em 4 de novembro de 2018
 
 - **Aprimoramento do alerta de segurança: falhas de autenticação suspeitas**<br>
-O [alerta de segurança de falha de autenticação suspeita](suspicious-activity-guide.md) da Proteção Avançada contra Ameaças do Azure agora inclui o monitoramento para detecção de ataques de força bruta de pulverização de senhas.
+O [alerta de segurança de falha de autenticação suspeita](suspicious-activity-guide.md) do ATP do Azure agora inclui o monitoramento para detecção de ataques de força bruta de pulverização de senhas.
 Em um ataque típico de **pulverização de senhas**, depois de enumerar com êxito uma lista de usuários válidos do controlador de domínio, os invasores tentam UMA senha cuidadosamente concebida em TODAS as contas de usuário conhecidas (uma senha para várias contas). Quando a pulverização de senhas inicial não tem êxito, eles tentam novamente utilizando uma senha diferente cuidadosamente concebida, normalmente após aguardar 30 minutos entre as tentativas. Esse tempo de espera permite que os invasores evitem disparar a maioria dos limites de bloqueio de conta que se baseiam no tempo. A pulverização de senhas tornou-se rapidamente uma técnica de preferência entre os invasores e testadores de intrusão. Os ataques de pulverização de senhas se mostraram eficazes na conquista de uma entrada na organização e por fazer movimentos laterais posteriores, tentando aumentar os privilégios. 
 
-- **Aprimoramento do recurso: enviar uma mensagem de teste do Syslog**<br>   Nova funcionalidade de envio de mensagem de Syslog de teste durante o processo de configuração do SIEM. Saiba mais em [Integração com o Syslog](setting-syslog.md). 
+- **Aprimoramento do recurso: enviar uma mensagem de teste do Syslog**<br> Nova funcionalidade de envio de mensagem de Syslog de teste durante o processo de configuração do SIEM. Saiba mais em [Integração com o Syslog](setting-syslog.md). 
 
 - Essa versão também inclui aprimoramentos e correções de bug da infraestrutura do sensor interno.
 
@@ -56,7 +56,7 @@ Lançado em 28 de outubro de 2018
 
 
 - **Aprimoramento do alerta de segurança: tentativa de execução remota de código**<br>
-O [alerta de segurança de tentativa de execução remota de código](suspicious-activity-guide.md) do ATP do Azure agora inclui monitoramento para tentativas suspeitas de execução remota de código do PowerShell em seus controladores de domínio. O PowerShell Remoto é um método comum para a execução de comandos administrativos válidos, mas é com frequência usado maliciosamente em uma tentativa de executar scripts em pontos de extremidade remotos. 
+O [alerta de segurança de Tentativa de Execução Remota de Código](suspicious-activity-guide.md) do ATP do Azure agora inclui o monitoramento de tentativas suspeitas de execução remota de código do PowerShell em seus controladores de domínio. O PowerShell Remoto é um método comum para a execução de comandos administrativos válidos, mas é com frequência usado maliciosamente em uma tentativa de executar scripts em pontos de extremidade remotos. 
 
 - **Aprimoramento do recurso: definir o agendamento de relatórios**
 <br>Agora você pode definir uma hora específica para agendar seus relatórios do ATP do Azure usando a função [relatórios](reports.md#). 
@@ -75,7 +75,7 @@ O [alerta de segurança de tentativa de execução remota de código](suspicious
 ## <a name="azure-atp-release-251"></a>ATP do Azure versão 2.51
 Lançado em 21 de outubro de 2018
 
-- Você pode agora habilitar/desabilitar a **integração WD-ATP** na tela [Configuração](integrate-wd-atp.md#how-to-integrate-azure-atp-with-windows-defender-atp) do portal do ATP do Azure. (Para acessar essa funcionalidade, o usuário do ATP do Azure deve ser um Administrador de segurança ou Global no locatário do AAD).
+- Você pode agora habilitar/desabilitar a **integração WD-ATP** na tela [Configuração](integrate-wd-atp.md#how-to-integrate-azure-atp-with-microsoft-defender-atp) do portal do ATP do Azure. (Para acessar essa funcionalidade, o usuário do ATP do Azure deve ser um Administrador de segurança ou Global no locatário do AAD).
 
 - Essa versão também inclui aprimoramentos e correções de bug da infraestrutura do sensor interno.
 
@@ -86,9 +86,9 @@ Lançado em 14 de outubro de 2018
 
 ## <a name="azure-atp-release-249"></a>Azure ATP versão 2.49
 Lançado em 7 de outubro de 2018
--   **Novas detecções: comunicação suspeita de DNS** (versão prévia)<br>Nova detecção adicionada para ajudar a proteger contra ataques de comunicação suspeita de DNS:
+- **Novas detecções: comunicação suspeita de DNS** (versão prévia)<br>Nova detecção adicionada para ajudar a proteger contra ataques de comunicação suspeita de DNS:
 
-    -   Essa detecção ajuda a detectar ataques contra o protocolo DNS. Na maioria das organizações, o protocolo DNS não é monitorado e raramente é bloqueado para atividade mal-intencionada. Permitir que um invasor em um computador comprometido abuse do protocolo DNS. A comunicação mal-intencionada por DNS pode ser usada para extração, comando e controle de dados e/ou fuga de restrições de rede corporativa.
+    - Essa detecção ajuda a detectar ataques contra o protocolo DNS. Na maioria das organizações, o protocolo DNS não é monitorado e raramente é bloqueado para atividade mal-intencionada. Permitir que um invasor em um computador comprometido abuse do protocolo DNS. A comunicação mal-intencionada por DNS pode ser usada para extração, comando e controle de dados e/ou fuga de restrições de rede corporativa.
 
 - **Nova funcionalidade** <br>**Função de usuário** do Azure ATP aprimorada com as seguintes funcionalidades:
   - Alterar o status de alertas de segurança (abrir novamente, fechar, excluir, suprimir)
@@ -125,7 +125,7 @@ Lançado em 2 de setembro de 2018
 
 - **Verificação de política de auditoria avançada da ATP do Azure**
  
-A Proteção Avançada contra Ameaças agora verifica as políticas de auditoria avançadas existentes de seu controlador de domínio e recomenda alterações de política para fornecer a máxima cobertura do serviço de ATP do Azure para sua organização. 
+A Proteção Avançada contra Ameaças agora verifica as políticas de auditoria avançadas existentes de seu controlador de domínio e recomenda alterações de política para fornecer máxima cobertura do serviço de ATP do Azure para sua organização. 
 
 **Essa nova verificação permite que você:**
   -  Identifique eventos ausentes de seus Logs de Eventos do Windows que atualmente são excluídos da sua cobertura da ATP do Azure.
@@ -188,16 +188,16 @@ Lançado em 22 de julho de 2018
 
   - Exiba e investigue as atividades executadas pelos usuários em várias florestas de um único painel de controle.
   - Melhore a detecção e reduza os falsos positivos, fornecendo integração avançada do Active Directory e a resolução de conta.
-  - Obtenha melhores alertas de monitoramento e emissão de relatórios para cobertura entre organizações.
+  - Receba melhores alertas de integridade e emissão de relatórios para cobertura entre organizações.
 
 
--   **Novas detecções: DCShadow**<br>Duas novas detecções foram adicionadas para ajudar a proteger contra ataques de sombra do controlador de domínio (DCShadow):
+- **Novas detecções: DCShadow**<br>Duas novas detecções foram adicionadas para ajudar a proteger contra ataques de sombra do controlador de domínio (DCShadow):
 
-    -   Promoção do controlador de domínio suspeito (possível ataque DCShadow) – essa detecção ajuda a detectar ataques nos quais uma máquina representa um controlador de domínio e tenta usar a replicação para propagar alterações em outros controladores de domínio em seu domínio.
+    - Promoção do controlador de domínio suspeito (possível ataque DCShadow) – essa detecção ajuda a detectar ataques nos quais uma máquina representa um controlador de domínio e tenta usar a replicação para propagar alterações em outros controladores de domínio em seu domínio.
 
-    -   Solicitação de replicação suspeita (possível ataque DCShadow) – essa detecção ajuda a proteger contra ataques que tentam executar a promoção DC dos computadores que não são controladores de domínio para alterar objetos do directory.
+    - Solicitação de replicação suspeita (possível ataque DCShadow) – essa detecção ajuda a proteger contra ataques que tentam executar a promoção DC dos computadores que não são controladores de domínio para alterar objetos do directory.
 
--   **Informações aprimoradas de downgrade de criptografia**<br>Agora a detecção de downgrade de criptografia fornece mais informações sobre o tipo específico de ataque detectado: overpass-the-hash, golden ticket e skeleton key. Além disso, esses alertas foram agregados para permitir uma investigação mais fácil.
+- **Informações aprimoradas de downgrade de criptografia**<br>Agora a detecção de downgrade de criptografia fornece mais informações sobre o tipo específico de ataque detectado: overpass-the-hash, golden ticket e skeleton key. Além disso, esses alertas foram agregados para permitir uma investigação mais fácil.
 - Essa versão inclui correções e melhorias para vários problemas. 
 
 
@@ -212,7 +212,7 @@ Lançado em 15 de julho de 2018
 ## <a name="azure-atp-release-239"></a>Azure ATP versão 2.39
 
 Lançado em 5 de julho de 2018
--   **Nova detecção adicionada: Golden Ticket do Kerberos – conta não existente** (versão prévia)<br>Essa nova detecção ajuda a proteger sua organização contra ataques em que um golden ticket é criado para uma conta que não existe no seu domínio. Para saber mais, confira o [Guia de atividades suspeitas da Proteção Avançada contra Ameaças do Azure](suspicious-activity-guide.md)
+- **Nova detecção adicionada: Golden Ticket do Kerberos – conta não existente** (versão prévia)<br>Essa nova detecção ajuda a proteger sua organização contra ataques em que um golden ticket é criado para uma conta que não existe no seu domínio. Para saber mais, confira o [Guia de atividades suspeitas da Proteção Avançada contra Ameaças do Azure](suspicious-activity-guide.md)
 
 - Essa versão inclui correções e melhorias para vários problemas. 
 
@@ -248,7 +248,7 @@ Lançamento em 10 de junho de 2018
 
 - **A detecção de implementação de protocolo incomum foi atualizada**<br></br>A detecção de implementação de protocolo incomum agora fornece mais informações. Agora você pode ver qual ferramenta de possível ataque a Azure ATP suspeita que esteja ativa em sua rede. Para obter mais informações, confira o [Guia de atividades suspeitas](suspicious-activity-guide.md).
  
-- **Alerta de sensor desatualizado**<br></br>A Azure ATP inclui um novo alerta de monitoramento para informar se um sensor está mais de três versões desatualizado. Se esse alerta aparecer, você deverá atualizar o sensor ou investigar por que o sensor não está sendo atualizado automaticamente. Se o alerta persistir, desinstale e reinstale o sensor.
+- **Alerta de sensor desatualizado**<br></br>O ATP do Azure inclui um novo alerta de integridade para informar se um sensor está mais de três versões desatualizado. Se esse alerta aparecer, você deverá atualizar o sensor ou investigar por que o sensor não está sendo atualizado automaticamente. Se o alerta persistir, desinstale e reinstale o sensor.
 
 - Essa versão inclui correções e melhorias para vários problemas. 
 
@@ -297,7 +297,7 @@ Lançamento em 6 de maio de 2018
 Lançado em 29 de abril de 2018
  
 - Agora, as atividades suspeitas de downgrade de criptografia incluem uma seção de evidências que descreve os sintomas detectados pelo Azure ATP e que fazem com que ele suspeite de uma atividade de downgrade de criptografia. 
--   Agora, o Azure ATP usa o Azure Email Orchestrator para todos os emails enviados do Azure ATP, inclusive atividades suspeitas, alertas de monitoramento e relatórios. Você verá que essas notificações de email agora seguem um formato consistente para facilitar o uso e que arquivos do Excel terão um link para download no console.
+- O ATP do Azure agora usa o Azure Email Orchestrator para todos os emails enviados do ATP do Azure, inclusive atividades suspeitas, alertas de integridade e relatórios. Você verá que essas notificações de email agora seguem um formato consistente para facilitar o uso e que arquivos do Excel terão um link para download no console.
  
  
 ## <a name="azure-atp-release-229"></a>Azure ATP versão 2.29
@@ -311,7 +311,7 @@ Lançado em 22 de abril de 2018
 
 Lançado em 15 de abril de 2018
  
--   Os usuários que são membros dos grupos de funções Usuários do Azure ATP e Visualizadores do Azure ATP agora têm permissões para ver alertas de monitoramento.
+- Os usuários que são membros dos grupos de funções Usuários do ATP do Azure e Visualizadores do ATP do Azure agora têm permissões para ver os alertas de integridade.
 - Essa versão inclui correções e melhorias para vários problemas. 
 
 
@@ -329,8 +329,8 @@ Lançado em 8 de abril de 2018
 Lançado em 25 de março de 2018
 
 - Quando o ATP do Azure alerta sobre uma atividade suspeita que você identifica como um positivo benigno (uma ação legítima que não é uma atividade suspeita), você tem a opção de excluir computadores e endereços IP de mais detecções, como: downgrade de criptografia, força bruta de LDAP, PAC forjado, força bruta e Pass-the-hash.
--   O desempenho do sensor do Azure ATP foi aprimorado.
--   Uma nova região foi adicionada para a implantação do Workspace. Agora é possível implantar um workspace na Ásia. 
+- O desempenho do sensor do Azure ATP foi aprimorado.
+- Uma nova região foi adicionada para a implantação do Workspace. Agora é possível implantar um workspace na Ásia. 
 
 
 ## <a name="azure-atp-release-225"></a>Azure ATP versão 2.25
@@ -360,7 +360,7 @@ Lançada em 11 de março de 2018
 - Agora, é possível acessar facilmente a documentação em um link fornecido com um alerta de atividade suspeita, a fim de exibir as [etapas de investigação a serem seguidas](suspicious-activity-guide.md). 
 
 **Melhorias de desempenho**
- -  A infraestrutura do sensor do Azure ATP teve seu desempenho aprimorado: a exibição agregada do tráfego permite otimizar a CPU e o pipeline de pacotes. Além disso, reutiliza soquetes para os controladores de domínio minimizarem as sessões de SSL para o DC.
+ - A infraestrutura do sensor do Azure ATP teve seu desempenho aprimorado: a exibição agregada do tráfego permite otimizar a CPU e o pipeline de pacotes. Além disso, reutiliza soquetes para os controladores de domínio minimizarem as sessões de SSL para o DC.
 
 ## <a name="see-also"></a>Consulte Também
 - [O que é o Azure Advanced Threat Protection?](what-is-atp.md)

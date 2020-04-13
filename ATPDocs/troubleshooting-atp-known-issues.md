@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 23386e36-2756-4291-923f-fa8607b5518a
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: c40efc27e1740ef6e7b0aa9a98784631072f2c3b
-ms.sourcegitcommit: 93baa30e7f9f3b0e6a3ffcd2b9a25bc349798781
+ms.openlocfilehash: bb738a45889bbb2c509f6cf2b2d7e47f0782bd7a
+ms.sourcegitcommit: bf5f58317121f1fb0fffc83d8b419cdd7ef27d9a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79504244"
+ms.lasthandoff: 04/05/2020
+ms.locfileid: "80669730"
 ---
 # <a name="troubleshooting-azure-atp-known-issues"></a>Solução de problemas conhecidos da ATP do Azure
 
@@ -101,13 +101,13 @@ Soluções alternativas possíveis sugeridas:
 
 - Se seu computador tiver menos de 64 núcleos lógicos e estiver em execução em um host HP, você poderá alterar a configuração do BIOS de **Otimização do Tamanho do Grupo NUMA** do padrão **Clusterizado** para **Simples**.
 
-## <a name="windows-defender-atp-integration-issue"></a>Problemas de integração do Windows Defender ATP
+## <a name="microsoft-defender-atp-integration-issue"></a>Problema de integração do Microsoft Defender ATP
 
-A Proteção Avançada contra Ameaças do Azure permite integrar esse recurso ao Windows Defender ATP. Confira [Integrar o Azure ATP ao Windows Defender ATP](integrate-wd-atp.md) para obter mais informações.
+A Proteção Avançada contra Ameaças do Azure permite integrar esse recurso ao Microsoft Defender ATP. Confira [Integração do ATP do Azure com o Microsoft Defender ATP](integrate-wd-atp.md) para saber mais.
 
 ## <a name="vmware-virtual-machine-sensor-issue"></a>Problema de sensor da Máquina Virtual VMware
 
-Caso tenha um sensor da ATP do Azure em Máquinas Virtuais VMware, talvez você receba o alerta de monitoramento **Parte do tráfego de rede não está sendo analisado**. Isso pode ocorrer devido a uma incompatibilidade de configuração no VMware.
+Caso tenha um sensor do ATP do Azure em Máquinas Virtuais VMware, talvez você receba o alerta de integridade **Parte do tráfego de rede não está sendo analisado**. Isso pode ocorrer devido a uma incompatibilidade de configuração no VMware.
 
 Para resolver o problema:
 
@@ -129,7 +129,7 @@ Se o LSO estiver habilitado, use o seguinte comando para desabilitá-lo:
 
 ## <a name="sensor-failed-to-retrieve-group-managed-service-account-gmsa-credentials"></a>Falha do sensor ao tentar recuperar as credenciais da gMSA (conta de serviço gerenciado do grupo)
 
-Se você receber o seguinte alerta de monitoramento: **As credenciais de usuário dos serviços de diretório estão incorretas**
+Se você receber o seguinte alerta de integridade: **As credenciais de usuário dos serviços de diretório estão incorretas**
 
 **Entradas de log do sensor:**
 

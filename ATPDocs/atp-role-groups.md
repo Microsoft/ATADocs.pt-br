@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: effca0f2-fcae-4fca-92c1-c37306decf84
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: ea04be4c3a069822009a0602dab425123821e3e4
-ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
+ms.openlocfilehash: 1d325797ee7bce5dd5dca8b5c14987c73a4eab72
+ms.sourcegitcommit: bf5f58317121f1fb0fffc83d8b419cdd7ef27d9a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79413223"
+ms.lasthandoff: 04/05/2020
+ms.locfileid: "80669339"
 ---
 # <a name="azure-atp-role-groups"></a>Grupos de função do Azure ATP
 
@@ -43,7 +43,7 @@ O ATP do Azure fornece três tipos de grupos de segurança: Os Administradores d
 
 |Atividade |Administradores do *(nome da instância)* do ATP do Azure|Usuários do *(nome da instância)* do ATP do Azure|Visualizadores do *(nome da instância)* do ATP do Azure|
 |----|----|----|----|
-|Alterar o status dos Alertas de monitoramento|Disponível|Não disponível|Não disponível|
+|Alterar o status dos Alertas de Integridade|Disponível|Não disponível|Não disponível|
 |Alterar o status de Alertas de Segurança (abrir novamente, fechar, excluir, suprimir)|Disponível|Disponível|Não disponível|
 |Excluir instância|Disponível|Não disponível|Não disponível|
 |Baixar um relatório|Disponível|Disponível|Disponível|

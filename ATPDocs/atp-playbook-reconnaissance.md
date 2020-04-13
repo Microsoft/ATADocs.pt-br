@@ -7,12 +7,12 @@ author: shsagir
 ms.author: shsagir
 ms.date: 09/01/2019
 ms.reviewer: itargoet
-ms.openlocfilehash: 50aeef3f54285b24de308269f41be54aeb379067
-ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
+ms.openlocfilehash: e3a7f4553635ec2af2aec6bda10802f776b7e543
+ms.sourcegitcommit: bf5f58317121f1fb0fffc83d8b419cdd7ef27d9a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79411914"
+ms.lasthandoff: 04/05/2020
+ms.locfileid: "80669631"
 ---
 # <a name="tutorial-reconnaissance-playbook"></a>Tutorial: Guia estratégico de reconhecimento
 
@@ -157,7 +157,7 @@ Podemos ver quando DiogoM entrou no VictimPC usando o protocolo Kerberos. Além 
 
 ![Linha do tempo de atividade lógica do DiogoM](media/playbook-recon-dsenumeration-jeffvlogicalactivity.png)
 
-Muitas atividades são registradas na linha do tempo de Atividade Lógica, tornando-a um recurso importante para execução de DFIR (Resposta a incidente e análises forenses digitais). Você pode até ver as atividades quando a detecção inicial não era do ATP do Azure, mas do Windows Defender ATP, Office 365 e outros.
+Muitas atividades são registradas na linha do tempo de Atividade Lógica, tornando-a um recurso importante para execução de DFIR (Resposta a incidente e análises forenses digitais). Você pode até ver as atividades de quando a detecção inicial não era do ATP do Azure, mas do Microsoft Defender ATP, Office 365 e outros.
 
 Olhando a **página do ContosoDC**, também podemos ver os computadores nos quais DiogoM entrou.
 
@@ -171,13 +171,13 @@ Agora, nossa atenção mudará para a Enumeração de Sessão do SMB.
 
 ## <a name="user-and-ip-address-reconnaissance-smb"></a>Reconhecimento de endereço IP e de usuário (SMB)
 
-A pasta sysvol do Active Directory é um dos mais importantes, senão *o* mais importante, compartilhamento de rede no ambiente. Cada computador e usuário deve ser capaz de acessar esse compartilhamento de rede específico para efetuar pull das Políticas de Grupo. Um invasor pode obter muitas informações da enumeração de quem tem sessões ativas com a pasta sysvol.
+A pasta sysvol do Active Directory Domain Services é um dos mais importantes, senão *o* mais importante, compartilhamento de rede no ambiente. Cada computador e usuário deve ser capaz de acessar esse compartilhamento de rede específico para efetuar pull das Políticas de Grupo. Um invasor pode obter muitas informações da enumeração de quem tem sessões ativas com a pasta sysvol.
 
 Nossa próxima etapa é a Enumeração da Sessão SMB no recurso ContosoDC. Queremos saber quem mais tem sessões com o compartilhamento SMB, e *de qual IP*.
 
-### <a name="use-joewares-netsessexe-from-victimpc"></a>Usar NetSess.exe do JoeWare no VictimPC
+### <a name="use-joewares-netsessexe-from-victimpc"></a>Usar NetSess.exe da JoeWare no VictimPC
 
-Execute a ferramenta **NetSess** do JoeWare no ContosoDC no contexto de um usuário autenticado, nesse caso, ContosoDC:
+Execute a ferramenta **NetSess** da JoeWare no ContosoDC no contexto de um usuário autenticado, nesse caso, ContosoDC:
 
 ``` cmd
 NetSess.exe ContosoDC

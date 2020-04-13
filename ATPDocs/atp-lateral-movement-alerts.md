@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 2257eb00-8614-4577-b6a1-5c65085371f2
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 544d1708bb86372f7271b4d398f3aebaa74c790e
-ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
+ms.openlocfilehash: e646dd3b3f5f25fd2c19ffbd621fafe3ac960c0b
+ms.sourcegitcommit: bf5f58317121f1fb0fffc83d8b419cdd7ef27d9a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79413019"
+ms.lasthandoff: 04/05/2020
+ms.locfileid: "80669777"
 ---
 # <a name="tutorial-lateral-movement-alerts"></a>Tutorial: Alertas de movimento lateral
 
@@ -86,7 +86,7 @@ Nessa detecção, um alerta de segurança do ATP do Azure é disparado quando as
 
 **Descrição**
 
-Passagem de Hash é uma técnica de movimento lateral em que os invasores roubam o hash NTLM de um usuário de um computador e o usa para acessar outro computador.
+Pass-the-Hash é uma técnica de movimento lateral em que os invasores roubam o hash NTLM de um usuário de um computador e o usam para acessar outro computador.
 
 **TP, B-TP ou FP?**
 1. Determine se o hash foi usado dos computadores que o usuário está usando regularmente.
@@ -147,11 +147,11 @@ Há aplicativos personalizados que encaminham tíquetes em nome de usuários. Es
 2. Contêm os computadores de origem e de destino.
 3. Encontre a ferramenta que realizou o ataque e remova-a.
 4. Procure por usuários que estavam conectados em horário próximo àquele da atividade, pois eles também podem estar comprometidos. Redefina suas senhas e habilite a MFA ou, se você tiver configurado as políticas relevantes de usuário de alto risco no Azure Active Directory Identity Protection, poderá usar a ação [**Confirmar usuário comprometido**](/cloud-app-security/accounts#governance-actions) no portal de Cloud App Security.
-5. Se o Windows Defender ATP estiver instalado – use **klist.exe purge** para excluir todos os tíquetes da sessão de logon especificada e evitar o uso dos tíquetes no futuro.
+5. Se o Microsoft Defender ATP estiver instalado – use **klist.exe purge** para excluir todos os tíquetes da sessão de logon especificada e evitar o uso dos tíquetes no futuro.
 
 ## <a name="suspected-ntlm-authentication-tampering-external-id-2039"></a>Suspeita de violação da autenticação NTLM (ID externa 2039)
 
-Em junho de 2019, a Microsoft publicou a [Vulnerabilidade de segurança CVE-2019-1040](https://portal.msrc.microsoft.com/security-guidance/advisory/CVE-2019-1040), anunciando a descoberta de uma nova vulnerabilidade de violação no Microsoft Windows, quando um ataque man-in-the-middle é capaz de ignorar com êxito a proteção de MIC (verificação de integridade da mensagem) do NTLM.
+Em junho de 2019, a Microsoft publicou a [Vulnerabilidade de Segurança CVE-2019-1040](https://portal.msrc.microsoft.com/security-guidance/advisory/CVE-2019-1040), anunciando a descoberta de uma nova vulnerabilidade de violação no Microsoft Windows, quando um ataque man-in-the-middle é capaz de ignorar com êxito a proteção de MIC (verificação de integridade da mensagem) do NTLM.
 
 Os atores mal-intencionados que exploram com êxito essa vulnerabilidade têm a capacidade de fazer downgrade dos recursos de segurança do NTLM e podem criar sessões autenticadas com êxito em nome de outras contas. Os Windows Servers sem patch estão em risco devido a essa vulnerabilidade.
 
@@ -177,7 +177,7 @@ Nessa detecção, um alerta de segurança do ATP do Azure é disparado quando so
 
 **Prevenção**
 
-• Verifique se todos os dispositivos no ambiente estão atualizados e corrigidos em relação à [CVE-2019-1040](https://portal.msrc.microsoft.com/security-guidance/advisory/CVE-2019-1040).
+* Verifique se todos os dispositivos no ambiente estão atualizados e corrigidos em relação à [CVE-2019-1040](https://portal.msrc.microsoft.com/security-guidance/advisory/CVE-2019-1040).
 
 ## <a name="suspected-ntlm-relay-attack-exchange-account-external-id-2037"></a>Suspeita de ataque de retransmissão de NTLM (conta do Exchange) (ID 2037 externa)
 
@@ -224,7 +224,7 @@ Em um ataque de Overpass-the-Hash, um invasor pode usar um hash roubado fraco pa
 
       Se a resposta for sim, **feche** o alerta de segurança como uma atividade **T-BP**.
 
-Alguns recursos legítimos não permitem codificações de criptografia forte e podem disparar o alerta.
+Alguns recursos legítimos não dão suporte à criptografia forte e podem disparar este alerta.
 
 2. Todos os usuários do código-fonte compartilham algo?
     1. Por exemplo, todos os membros da equipe de marketing estão acessando um recurso específico que pode fazer com que o alerta seja disparado?

@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 8ae459ac-9fca-4923-9a1a-dc10d5c50b29
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 6193d8db3bb457be44508589f7ba89764d525e85
-ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
+ms.openlocfilehash: 81405d38badbd9fedda1ff54a9e0b09368689b83
+ms.sourcegitcommit: bf5f58317121f1fb0fffc83d8b419cdd7ef27d9a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79414566"
+ms.lasthandoff: 04/05/2020
+ms.locfileid: "80669497"
 ---
 # <a name="azure-advanced-threat-protection-information-and-support"></a>Informações e suporte da Proteção Avançada contra Ameaças do Azure 
 
@@ -50,7 +50,7 @@ Outros clientes devem usar estes canais de suporte:
 | Canais|Instruções|
 |------|-----|
 |Usar o portal do Azure|1. Selecione **Nova solicitação de suporte** de **Ajuda + suporte** no portal do Azure. <br>2. Quando solicitado, na folha **Básico**, escolha **Técnico** como **Tipo de problema**. Em "Segurança e Identidade", escolha **Proteção Avançada contra Ameaças do Azure** como **Serviço**. <br>3. Certifique-se de que uma das seguintes opções está selecionada:<br>- Assinatura com suporte técnico incluído. Você verá esta opção caso tenha uma assinatura paga ou de avaliação do Azure.<br>- Suporte técnico incluído. Você verá esta opção se não tiver uma assinatura do Azure.|
-|Use o Portal da Proteção Avançada contra Ameaças do Azure| 1. Clique no ícone "?" na barra de navegação superior no Portal da Proteção Avançada contra Ameaças do Azure<br>2. Pesquise por Proteção Avançada contra Ameaças do Azure.<br>3. Abra um tíquete de incidente.<br>- Selecione "Suporte"<br>4. Abra um tíquete de incidente. Se você conseguir entrar no Portal da Proteção Avançada contra Ameaças do Azure, será possível acessar o [Portal de Suporte Assistido Online (OAS)](https://support.microsoft.com/assistedsupportproducts). |
+|Use o Portal da Proteção Avançada contra Ameaças do Azure| 1. Clique no ícone "?" na barra de navegação superior no Portal da Proteção Avançada contra Ameaças do Azure<br>2. Pesquise por Proteção Avançada contra Ameaças do Azure.<br>3. Abra um tíquete de incidente.<br>– Selecione "Suporte"<br>4. Abra um tíquete de incidente. Se você conseguir entrar no Portal da Proteção Avançada contra Ameaças do Azure, será possível acessar o [Portal de Suporte Assistido Online (OAS)](https://support.microsoft.com/assistedsupportproducts). |
 
 Para obter opções de suporte adicionais, fale com seu contato da Microsoft.
 
@@ -70,7 +70,7 @@ Solução de problemas:
 
 - Se você tiver uma dúvida sobre um pré-requisito da Proteção Avançada contra Ameaças do Azure, consulte [Pré-requisitos do Azure ATP](atp-prerequisites.md).
 
-- Se você tiver o Windows Defender ATP implantado no seu ambiente e quiser integrá-lo à Proteção Avançada contra Ameaças do Azure, consulte [Integrando o Azure ATP ao Windows Defender ATP](integrate-wd-atp.md).
+- Se você tiver o Microsoft Defender ATP implantado no seu ambiente e quiser integrá-lo à Proteção Avançada contra Ameaças do Azure, confira [Integração do ATP do Azure com o Microsoft Defender ATP](integrate-wd-atp.md).
 
 - Para saber mais sobre a investigação de um alerta de segurança, confira o  [Guia de alerta de segurança](suspicious-activity-guide.md).
 

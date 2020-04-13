@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 603d9e09-a07d-4357-862f-d5682c8bc3dd
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 209202957877edf07de5309ae3e07143fc653452
-ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
+ms.openlocfilehash: 92c17776623beb3d03e37bb81ce12b433e5dc35e
+ms.sourcegitcommit: 8d5cd330564eeaf4bc9560db7814c85e71e0fb60
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79414651"
+ms.lasthandoff: 04/05/2020
+ms.locfileid: "80666193"
 ---
 # <a name="update-azure-atp-sensors"></a>Atualizar sensores da Azure ATP
 
@@ -25,7 +25,7 @@ Manter a Proteção Avançada contra Ameaças do Azure atualizada garante a melh
 
 O serviço ATP do Azure é atualizado algumas vezes ao mês com novas detecções, recursos e melhorias de desempenho. Essas atualizações normalmente exigem uma atualização menor correspondente nos sensores. Os sensores do ATP do Azure e as atualizações correspondentes nunca têm permissões de gravação nos controladores de domínio. Os pacotes de atualização do sensor controlam apenas o sensor do ATP do Azure e recursos de detecção de sensor. 
 
-### <a name="azure-atp-sensor-update-types"></a>Tipos de atualização de sensor da Azure ATP   
+### <a name="azure-atp-sensor-update-types"></a>Tipos de atualização de sensor da Azure ATP    
 
 Os sensores do ATP do Azure são compatíveis com dois tipos de atualizações:
 - Atualizações de versão secundárias: 
@@ -89,7 +89,7 @@ A cada poucos minutos, os sensores da Azure ATP verificam se eles têm a versão
 ![Atualização do sensor](./media/sensor-update.png)
 
 
-Se algum sensor não concluir o processo de atualização, o alerta de monitoramento relevante será disparado e enviado como uma notificação.
+Se algum sensor não concluir o processo de atualização, o alerta de integridade relevante será disparado e enviado como uma notificação.
 
 ![Falha na atualização do sensor](./media/sensor-outdated.png)
 

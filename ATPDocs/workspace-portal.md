@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 4ba46d60-3a74-480e-8f0f-9a082d62f343
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: c0b15763991dd3eb26773615f0938a89a535dc45
-ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
+ms.openlocfilehash: 5d6bd4b4c8bcceff9d06d98f2fe8125fe1f3d769
+ms.sourcegitcommit: bf5f58317121f1fb0fffc83d8b419cdd7ef27d9a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79410725"
+ms.lasthandoff: 04/05/2020
+ms.locfileid: "80669734"
 ---
 # <a name="working-with-the-azure-atp-portal"></a>Trabalhando com o portal do Azure ATP
 
@@ -63,7 +63,7 @@ Após uma nova versão do Azure ATP ser lançada, a janela **O que há de novo**
 
 Você pode filtrar quais atividades suspeitas são exibidas na linha do tempo de ataque ou exibidas na guia de atividades suspeitas de perfil de entidade com base no Status e na Severidade.
 
-### Barra de pesquisa <a name="search-bar"></a>
+### <a name="search-bar"></a>Barra de pesquisa <a name="search-bar"></a>
 
 No menu superior, há uma barra de pesquisa. Você pode pesquisar por um usuário, computador ou grupo específico no Azure ATP. Para experimentar, basta começa a digitar. Na parte inferior da barra de pesquisa, o número de resultados da pesquisa encontrados é indicado. 
 
@@ -106,7 +106,7 @@ Se você passar o mouse sobre uma entidade, em qualquer lugar no portal do ATP d
 - Visto pela primeira vez – a primeira vez em que o Azure ATP observou uma atividade desta entidade.
 - Visto pela última vez – a última vez em que o Azure ATP observou uma atividade desta entidade.
 - Notificação de SA – será exibida se houver atividades suspeitas associadas à entidade.
-- Notificação do WD ATP – será exibida se houver atividades suspeitas no Windows Defender ATP associadas à entidade.
+- Notificação do WD ATP – será exibida se houver atividades suspeitas no Microsoft Defender ATP associadas à entidade.
 - Notificação de caminhos de movimento lateral – será exibida se tiverem sido detectados caminhos de movimento lateral para esta entidade nos últimos dois dias.
 
 

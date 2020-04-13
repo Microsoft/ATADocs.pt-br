@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: cae3ed45-8fbc-4f25-ba24-3cc407c6ea93
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 67b6e79c96fecd114452ee1390bd430878836735
-ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
+ms.openlocfilehash: bc777fde6cdf12abb45b9608091166e3cf03ee2c
+ms.sourcegitcommit: bf5f58317121f1fb0fffc83d8b419cdd7ef27d9a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79413767"
+ms.lasthandoff: 04/05/2020
+ms.locfileid: "80669580"
 ---
 # <a name="excluding-entities-from-detections"></a>Excluindo entidades de detecções
 Este artigo explica como excluir entidades do disparo de alertas. Determinadas entidades são excluídas para minimizar verdadeiros positivos benignos, assegurando que você possa capturar os verdadeiros positivos. Para impedir que o ATP do Azure crie ruído sobre atividades que, vindas de usuários específicos, podem fazer parte de seu ritmo normal de negócios, você pode silenciar ou excluir entidades específicas da geração de alertas. Além disso, determinadas entidades populares são excluídas por padrão. 
@@ -55,7 +55,7 @@ Algumas das detecções fornecem dicas que ajudam você a decidir o que excluir.
 
 Cada exclusão depende do contexto, em alguns você pode definir os usuários enquanto em outros você pode configurar computadores ou endereços IP. 
 
-Quando você tiver a possibilidade de exclusão de um endereço IP ou de um computador (você pode excluir um ou outro), você não precisará fornecer os dois.
+Quando você tiver a possibilidade de exclusão de um endereço IP ou de um computador (você pode excluir um ou outro), não precisará fornecer os dois.
 
 > [!NOTE]
 > As páginas de configuração podem ser modificadas apenas por administradores do ATP do Azure.
@@ -64,5 +64,5 @@ Quando você tiver a possibilidade de exclusão de um endereço IP ou de um comp
 ## <a name="see-also"></a>Consulte Também
 
 - [Guia de alertas de segurança do ATP do Azure](suspicious-activity-guide.md)
-- [Integrando com o Windows Defender ATP](integrate-wd-atp.md)
+- [Integração com o Microsoft Defender ATP](integrate-wd-atp.md)
 - [Confira o fórum do ATP do Azure!](https://aka.ms/azureatpcommunity)
