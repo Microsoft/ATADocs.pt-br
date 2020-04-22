@@ -13,10 +13,10 @@ ms.assetid: a06004bd-9f77-4e8e-a0e5-4727d6651a0f
 ms.reviewer: itargoet
 ms.suite: ems
 ms.openlocfilehash: 98ea2a517f5cc223086ca448c8b532dd29257d78
-ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
+ms.sourcegitcommit: 63be53de5b84eabdeb8c006438dab45bd35a4ab7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79410554"
 ---
 # <a name="working-with-security-alerts"></a>Trabalhando com alertas de segurança
@@ -26,7 +26,7 @@ ms.locfileid: "79410554"
 
 Este artigo explica noções básicas de como trabalhar com os alertas de segurança do ATP do Azure.
 
-## Examinar os alertas de segurança na linha do tempo do ataque <a name="review-suspicious-activities-on-the-attack-time-line"></a>
+## <a name="review-security-alerts-on-the-attack-timeline"></a>Examinar os alertas de segurança na linha do tempo do ataque <a name="review-suspicious-activities-on-the-attack-time-line"></a>
 
 Após fazer logon no portal do ATP do Azure, você será levado automaticamente à **Linha do tempo de alertas de segurança** aberta. Os alertas de segurança são listados em ordem cronológica com o alerta mais recente na parte superior da linha do tempo.
 
@@ -63,7 +63,7 @@ Os alertas de segurança do ATP do Azure são divididos nas categorias ou fases 
 - [Alertas de predominância de domínio](atp-domain-dominance-alerts.md)
 - [Alertas de exfiltração](atp-exfiltration-alerts.md)
 
-## Detecções de versão prévia <a name="preview-detections"></a>
+## <a name="preview-detections"></a>Detecções de versão prévia <a name="preview-detections"></a>
 
 A equipe de pesquisa da Azure ATP (Proteção Avançada contra Ameaças do Azure) trabalha constantemente para implementar novas detecções para ataques recém-descobertos. Já que a ATP do Azure é um serviço de nuvem, essas novas detecções são lançadas rapidamente para permitir que os clientes da ATP do Azure se beneficiem das novas detecções o mais breve possível.
 

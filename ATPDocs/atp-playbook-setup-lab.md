@@ -8,10 +8,10 @@ ms.author: shsagir
 ms.date: 02/28/2019
 ms.reviewer: itargoet
 ms.openlocfilehash: 4a846962645d978fc7419650781624e7c5f4bf0b
-ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
+ms.sourcegitcommit: 63be53de5b84eabdeb8c006438dab45bd35a4ab7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79414515"
 ---
 # <a name="tutorial-setup-an-atp-security-alert-lab"></a>Tutorial: Configurar um laboratório de alerta de segurança do ATP 
@@ -73,7 +73,7 @@ Há um SG (Grupo de Segurança) "Helpdesk" do qual o Eduardo HelpDesk é membro.
 
 Para configurar esse laboratório base adicionaremos usuários e grupos ao Active Directory, editaremos uma política de SAM e um grupo confidencial no ATP do Azure.
 
-### <a name="bkmk_hydrate"></a> Hidratar os usuários do Active Directory no ContosoDC
+### <a name="hydrate-active-directory-users-on-contosodc"></a><a name="bkmk_hydrate"></a> Hidratar os usuários do Active Directory no ContosoDC
 
 Para simplificar o laboratório, automatizamos o processo para criar usuários e grupos fictícios no Active Directory. Esse script é executado como um pré-requisito para este tutorial. Você pode usar ou modificar o script para hidratar o ambiente do Active Directory do seu laboratório. Se você preferir não usar um script, faça tudo manualmente.
 
@@ -166,7 +166,7 @@ Inspecione o grupo de Administradores no **VictimPC** e verifique se ele tem pel
 
 ![Helpdesk e JeffV devem estar no grupo Administrador Local de VictimPC](media/playbook-labsetup-localgrouppolicies2.png)
 
-### <a name="helpdesk-simulation"></a> Simular o suporte de assistência técnica no VictimPC
+### <a name="simulate-helpdesk-support-on-victimpc"></a><a name="helpdesk-simulation"></a> Simular o suporte de assistência técnica no VictimPC
 
 Para simular uma rede funcional e gerenciada, crie uma Tarefa Agendada no computador **VictimPC** para executar o processo de "cmd.exe" como **EduardoHD**.
 

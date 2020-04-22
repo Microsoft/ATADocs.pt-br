@@ -13,10 +13,10 @@ ms.assetid: a546703b-d5a9-404d-9e87-125523bb8421
 ms.reviewer: itargoet
 ms.suite: ems
 ms.openlocfilehash: 39e9d4c6656d2e55389720ab86690cfcd705423f
-ms.sourcegitcommit: bf5f58317121f1fb0fffc83d8b419cdd7ef27d9a
+ms.sourcegitcommit: 63be53de5b84eabdeb8c006438dab45bd35a4ab7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80669535"
 ---
 # <a name="azure-atp-monitored-activities-search-and-filter"></a>Pesquisa e filtragem de atividades monitoradas do ATP do Azure 
@@ -38,7 +38,7 @@ Para filtrar alertas e atividades:
  5. Para redefinir a linha do tempo de entidade para exibir todas as atividades e alertas, clique em **Redefinir** ou feche o filtro. 
 
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Confira Também
 - [Investigar entidades](investigate-entity.md)
 - [Alertas de integridade](health-alerts.md)
 - [Trabalhar com alertas de segurança](working-with-suspicious-activities.md)

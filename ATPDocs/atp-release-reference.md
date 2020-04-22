@@ -12,10 +12,10 @@ ms.service: azure-advanced-threat-protection
 ms.reviewer: ort
 ms.suite: ems
 ms.openlocfilehash: 347af29a8748446345455442741e8c7eb599ac5b
-ms.sourcegitcommit: bf5f58317121f1fb0fffc83d8b419cdd7ef27d9a
+ms.sourcegitcommit: 63be53de5b84eabdeb8c006438dab45bd35a4ab7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80669759"
 ---
 # <a name="release-reference-of-azure-advanced-threat-protection-azure-atp"></a>Referência de versão do ATP do Azure (Proteção Avançada contra Ameaças do Azure) 
@@ -34,7 +34,7 @@ O alerta de segurança de [comunicação suspeita sobre DNS](suspicious-activity
 ## <a name="azure-atp-release-254"></a>ATP do Azure versão 2.54
 Lançado em 11 de novembro de 2018
 
-- **Aprimoramento do recurso: exclusões de domínio padrão adicionadas ao alerta de Comunicação suspeita por DNS**<br> Nova adição de três domínios populares à lista de exclusões de domínio padrão. A lista de exclusões permanece totalmente personalizável. Para saber mais, veja [Excluindo entidades de detecções](excluding-entities-from-detections.md). 
+- **Melhoria de recurso: exclusões de domínio padrão adicionadas ao alerta de Comunicação suspeita por DNS**<br> Nova adição de três domínios populares à lista de exclusões de domínio padrão. A lista de exclusões permanece totalmente personalizável. Para saber mais, veja [Excluindo entidades de detecções](excluding-entities-from-detections.md). 
 
 - **Aprimoramentos de documentação: atualização de log do SIEM, diretrizes de problemas conhecidos**<br> Mapeamento de externalId e explicações adicionais foram adicionados a descrições de log do SIEM. Para saber mais, veja [referência de log do SIEM](cef-format-sa.md). <br>Um artigo adicional para obter diretrizes de problemas conhecidos atualmente não resolvidos foi adicionado. Para saber mais, veja [Problemas conhecidos do ATP do Azure](known-issues.md).  
 
@@ -43,11 +43,11 @@ Lançado em 11 de novembro de 2018
 ## <a name="azure-atp-release-253"></a>ATP do Azure versão 2.53
 Lançado em 4 de novembro de 2018
 
-- **Aprimoramento do alerta de segurança: falhas de autenticação suspeitas**<br>
+- **Aprimoramento do alerta de segurança: falha de autenticação suspeita**<br>
 O [alerta de segurança de falha de autenticação suspeita](suspicious-activity-guide.md) do ATP do Azure agora inclui o monitoramento para detecção de ataques de força bruta de pulverização de senhas.
 Em um ataque típico de **pulverização de senhas**, depois de enumerar com êxito uma lista de usuários válidos do controlador de domínio, os invasores tentam UMA senha cuidadosamente concebida em TODAS as contas de usuário conhecidas (uma senha para várias contas). Quando a pulverização de senhas inicial não tem êxito, eles tentam novamente utilizando uma senha diferente cuidadosamente concebida, normalmente após aguardar 30 minutos entre as tentativas. Esse tempo de espera permite que os invasores evitem disparar a maioria dos limites de bloqueio de conta que se baseiam no tempo. A pulverização de senhas tornou-se rapidamente uma técnica de preferência entre os invasores e testadores de intrusão. Os ataques de pulverização de senhas se mostraram eficazes na conquista de uma entrada na organização e por fazer movimentos laterais posteriores, tentando aumentar os privilégios. 
 
-- **Aprimoramento do recurso: enviar uma mensagem de teste do Syslog**<br> Nova funcionalidade de envio de mensagem de Syslog de teste durante o processo de configuração do SIEM. Saiba mais em [Integração com o Syslog](setting-syslog.md). 
+- **Aprimoramento de recurso: enviar uma mensagem de Syslog de teste**<br> Nova funcionalidade de envio de mensagem de Syslog de teste durante o processo de configuração do SIEM. Saiba mais em [Integração com o Syslog](setting-syslog.md). 
 
 - Essa versão também inclui aprimoramentos e correções de bug da infraestrutura do sensor interno.
 
@@ -55,13 +55,13 @@ Em um ataque típico de **pulverização de senhas**, depois de enumerar com êx
 Lançado em 28 de outubro de 2018
 
 
-- **Aprimoramento do alerta de segurança: tentativa de execução remota de código**<br>
+- **Melhoria de alerta de segurança: tentativa de execução remota de código**<br>
 O [alerta de segurança de Tentativa de Execução Remota de Código](suspicious-activity-guide.md) do ATP do Azure agora inclui o monitoramento de tentativas suspeitas de execução remota de código do PowerShell em seus controladores de domínio. O PowerShell Remoto é um método comum para a execução de comandos administrativos válidos, mas é com frequência usado maliciosamente em uma tentativa de executar scripts em pontos de extremidade remotos. 
 
-- **Aprimoramento do recurso: definir o agendamento de relatórios**
+- **Melhoria de recurso: definir o agendamento de relatórios**
 <br>Agora você pode definir uma hora específica para agendar seus relatórios do ATP do Azure usando a função [relatórios](reports.md#). 
 
-- **Adição de configuração: RBAC (Controle de Acesso Baseado em Função)**
+- **Adição de configuração: RBAC (controle de acesso baseado em função) do locatário**
 <br>Configure as funções de segurança do seu locatário no Centro de administração do AAD (Azure Active Directory) diretamente do novo link de administrador no Portal do ATP do Azure. 
 
 - **Estrutura e conteúdo de documentação revisados**
@@ -106,7 +106,7 @@ Lançado em 7 de outubro de 2018
 
 ## <a name="azure-atp-release-248"></a>Azure ATP versão 2.48
 Lançado em 16 de setembro de 2018
-- **Alerta de segurança:** Reconhecimento usando consultas de serviços de diretório
+- **Alerta de segurança:** reconhecimento usando consultas de serviços de diretório
 
   Esse alerta de segurança melhorou os infográficos e as evidências. 
 
@@ -212,7 +212,7 @@ Lançado em 15 de julho de 2018
 ## <a name="azure-atp-release-239"></a>Azure ATP versão 2.39
 
 Lançado em 5 de julho de 2018
-- **Nova detecção adicionada: Golden Ticket do Kerberos – conta não existente** (versão prévia)<br>Essa nova detecção ajuda a proteger sua organização contra ataques em que um golden ticket é criado para uma conta que não existe no seu domínio. Para saber mais, confira o [Guia de atividades suspeitas da Proteção Avançada contra Ameaças do Azure](suspicious-activity-guide.md)
+- **Nova detecção adicionada: golden ticket do Kerberos – conta não existente** (visualização)<br>Essa nova detecção ajuda a proteger sua organização contra ataques em que um golden ticket é criado para uma conta que não existe no seu domínio. Para saber mais, confira o [Guia de atividades suspeitas da Proteção Avançada contra Ameaças do Azure](suspicious-activity-guide.md)
 
 - Essa versão inclui correções e melhorias para vários problemas. 
 
@@ -263,7 +263,7 @@ Lançado em 3 de junho de 2018
 
 Lançamento: 27 de maio de 2018
 
-- Recurso de versão prévia: o ATP do Azure agora é compatível com novos idiomas e 13 novas localidades:
+- Recurso de versão prévia: a Azure ATP agora é compatível com novos idiomas e 13 novas localidades:
     - Tcheco
     - Húngaro
     - Italiano
@@ -328,7 +328,7 @@ Lançado em 8 de abril de 2018
 
 Lançado em 25 de março de 2018
 
-- Quando o ATP do Azure alerta sobre uma atividade suspeita que você identifica como um positivo benigno (uma ação legítima que não é uma atividade suspeita), você tem a opção de excluir computadores e endereços IP de mais detecções, como: downgrade de criptografia, força bruta de LDAP, PAC forjado, força bruta e Pass-the-hash.
+- Quando o Azure ATP alerta sobre uma atividade suspeita que você identifica como um positivo benigno (uma ação legítima que não é uma atividade suspeita), você tem a opção de excluir computadores e endereços IP de mais detecções, como: downgrade de criptografia, força bruta de LDAP, PAC forjado, força bruta e Pass-the-hash.
 - O desempenho do sensor do Azure ATP foi aprimorado.
 - Uma nova região foi adicionada para a implantação do Workspace. Agora é possível implantar um workspace na Ásia. 
 
@@ -362,7 +362,7 @@ Lançada em 11 de março de 2018
 **Melhorias de desempenho**
  - A infraestrutura do sensor do Azure ATP teve seu desempenho aprimorado: a exibição agregada do tráfego permite otimizar a CPU e o pipeline de pacotes. Além disso, reutiliza soquetes para os controladores de domínio minimizarem as sessões de SSL para o DC.
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Confira Também
 - [O que é o Azure Advanced Threat Protection?](what-is-atp.md)
 - [Perguntas frequentes](atp-technical-faq.md)
 - [Pré-requisitos do Azure ATP](atp-prerequisites.md)

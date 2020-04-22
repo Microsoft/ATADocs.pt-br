@@ -13,10 +13,10 @@ ms.assetid: 34dc152c-6b7f-4128-93fe-aad56c282730
 ms.reviewer: itargoet
 ms.suite: ems
 ms.openlocfilehash: a4d4d9cf6bcd0fb6c8f321ab2388ed5a455c36f5
-ms.sourcegitcommit: bf5f58317121f1fb0fffc83d8b419cdd7ef27d9a
+ms.sourcegitcommit: 63be53de5b84eabdeb8c006438dab45bd35a4ab7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80669657"
 ---
 # <a name="azure-atp-readiness-guide"></a>Guia de preparação do Azure ATP
@@ -70,15 +70,15 @@ Depois que o ATP do Azure estiver em funcionamento, exiba os alertas de seguran�
 
 ## <a name="community-resources"></a>Recursos da comunidade
 
-Blog: [Blog do ATP do Azure](https://aka.ms/aatpblog)
+Blog: [Blog do Azure ATP](https://aka.ms/aatpblog)
 
-Comunidade pública: [Comunidade Tecnológica do ATP do Azure](https://aka.ms/AatpCom)
+Comunidade pública: [Comunidade Tecnológica do Azure ATP](https://aka.ms/AatpCom)
 
-Comunidade particular: [Comunidade Yammer do ATP do Azure](https://www.yammer.com/azureadvisors/#/threads/inGroup?type=in_group&feedId=9386893&view=all)
+Comunidade privada: [Grupo do Azure ATP no Yammer](https://www.yammer.com/azureadvisors/#/threads/inGroup?type=in_group&feedId=9386893&view=all)
 
 Channel 9: [Página do Microsoft Security Channel 9](https://channel9.msdn.com/Shows/Microsoft-Security/)
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Confira Também
 
-- [Trabalhando com contas confidenciais](sensitive-accounts.md)
+- [Como trabalhar com contas confidenciais](sensitive-accounts.md)
 - [Confira o fórum do ATP do Azure!](https://aka.ms/azureatpcommunity)

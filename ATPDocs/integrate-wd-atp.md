@@ -13,10 +13,10 @@ ms.assetid: f6f3ed75-d6bb-4966-a9a7-5339c4f3ebac
 ms.reviewer: itargoet
 ms.suite: ems
 ms.openlocfilehash: df24013a5796d342ffc42b6f2c68f729a590d183
-ms.sourcegitcommit: bf5f58317121f1fb0fffc83d8b419cdd7ef27d9a
+ms.sourcegitcommit: 63be53de5b84eabdeb8c006438dab45bd35a4ab7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80669584"
 ---
 # <a name="integrate-azure-atp-with-microsoft-defender-atp"></a>Integração do ATP do Azure com o Microsoft Defender ATP
@@ -69,7 +69,7 @@ Para habilitar esse recurso, é necessária uma licença para o ATP do Azure e o
 
 4. Para verificar o status da integração, no portal do ATP do Azure, vá até **Configurações** > **Integração do Microsoft Defender ATP**. Você pode ver o status da integração e, se algo estiver errado, você verá um erro.
 
-## <a name="how-it-works"></a>Como funciona
+## <a name="how-it-works"></a>Como isso funciona
 
 Após o ATP do Azure e o Microsoft Defender ATP serem totalmente integrados, no portal do ATP do Azure, no pop-up do miniperfil e na página do perfil de entidade, cada entidade que existir no Microsoft Defender ATP incluirá uma notificação para mostrar que ela foi integrada ao Microsoft Defender ATP.
 
@@ -77,7 +77,7 @@ Após o ATP do Azure e o Microsoft Defender ATP serem totalmente integrados, no 
 
 Se a entidade contiver alertas no Microsoft Defender ATP, haverá um número ao lado da notificação para informar quantos alertas foram gerados.
 
- ![Alertas do ATP do Azure](./media/atp-integrated-wd-icon-alerts.png)
+ ![Alertas do Azure ATP](./media/atp-integrated-wd-icon-alerts.png)
 
 Se clicar na notificação, você será direcionado para o portal do Microsoft Defender ATP, no qual poderá exibir e atenuar os alertas. Se a entidade não for reconhecida pelo Microsoft Defender ATP, a notificação será esmaecida.
 
