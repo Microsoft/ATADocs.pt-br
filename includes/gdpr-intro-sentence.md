@@ -9,11 +9,11 @@ ms.date: 04/24/2018
 ms.author: lizross
 ms.custom: include file
 ms.openlocfilehash: b049b3651f12b1a73a3511d030bbdbbfaceb2480
-ms.sourcegitcommit: 6dd002b5a34f230aaada55a6f6178c2f9e1584d9
+ms.sourcegitcommit: 63be53de5b84eabdeb8c006438dab45bd35a4ab7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "68862454"
 ---
 >[!Note] 
-> Este artigo fornece as etapas para excluir dados pessoais do dispositivo ou serviço, e pode ser usado para dar suporte às obrigações perante o RGPD. Se você estiver procurando informações gerais sobre RGPD, veja a [seção RGPD do Portal de Confiança do Serviço](https://servicetrust.microsoft.com/ViewPage/GDPRGetStarted).
+> Este artigo mostra as etapas de como excluir dados pessoais do dispositivo ou serviço e pode ser usado para dar suporte às suas obrigações de acordo com o GDPR. Se você estiver buscando informações gerais sobre o GDPR, confira a [seção GDPR do portal do serviço de confiança](https://servicetrust.microsoft.com/ViewPage/GDPRGetStarted).
