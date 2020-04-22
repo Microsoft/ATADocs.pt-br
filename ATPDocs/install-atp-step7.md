@@ -13,10 +13,10 @@ ms.assetid: 1ad5e923-9bbd-4f56-839a-b11a9f387d4b
 ms.reviewer: itargoet
 ms.suite: ems
 ms.openlocfilehash: 5af501b1d040c0c93b978882dc52d7f26921f8a2
-ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
+ms.sourcegitcommit: 63be53de5b84eabdeb8c006438dab45bd35a4ab7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79413665"
 ---
 # <a name="configure-detection-exclusions-and-honeytoken-accounts"></a>Configurar exclusões de detecção e contas de honeytoken
@@ -54,7 +54,7 @@ Verifique a linha do tempo de ataque para visualizar os alertas de segurança ge
 A verificação do ATP do Azure é iniciada imediatamente. Algumas detecções, como [Adições suspeitas a grupos confidenciais](atp-domain-dominance-alerts.md#suspicious-additions-to-sensitive-groups-external-id-2024), requerem um período de aprendizado e não estão disponíveis imediatamente após a implantação do ATP do Azure. Esse período para cada alerta aparece em detalhes no [guia de alerta de segurança](suspicious-activity-guide.md). 
 
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Confira Também
 - [Ferramenta de dimensionamento do Azure ATP](https://aka.ms/aatpsizingtool)
 - [Configurar coleta de eventos](configure-event-collection.md)
 - [Pré-requisitos do Azure ATP](atp-prerequisites.md)

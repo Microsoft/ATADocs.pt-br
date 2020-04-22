@@ -13,10 +13,10 @@ ms.assetid: ab1e8dd9-a6c2-4c68-89d5-343b8ec56142
 ms.reviewer: itargoet
 ms.suite: ems
 ms.openlocfilehash: a322b72aae6ead6e8fd5a08c731e3dd7c8ee7d10
-ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
+ms.sourcegitcommit: 63be53de5b84eabdeb8c006438dab45bd35a4ab7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79413886"
 ---
 # <a name="azure-atp-advanced-audit-policy-check"></a>Verificação de política de auditoria avançada da ATP do Azure
@@ -42,7 +42,7 @@ Modifique as políticas de auditoria avançadas do seu controlador de domínio u
 
 4. Na janela que é aberta, vá para **Configuração do computador** > **Políticas** > **Configurações do Windows** > **Configurações de segurança** > **Configuração de política de auditoria avançada**.
 
-    ![Configuração da política de auditoria avançada](media/atp-advanced-audit-policy-check-step-2.png)
+    ![Configuração de Política de Auditoria Avançada](media/atp-advanced-audit-policy-check-step-2.png)
 
 5. Vá para Logon na conta, clique duas vezes em **Validação de credenciais de auditoria** e selecione **Configurar estes eventos de auditoria**, tanto para eventos de êxito quanto para os de falha. 
 
@@ -60,7 +60,7 @@ Modifique as políticas de auditoria avançadas do seu controlador de domínio u
 
 7. Após a aplicação por meio do GPO, os novos eventos ficam visíveis nos **Logs de Eventos do Windows**.
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Confira Também
 - [Pré-requisitos do Azure ATP](atp-prerequisites.md)
 - [Configurar coleta de eventos](configure-event-collection.md)
 - [Configuração do encaminhamento de eventos do Windows](configure-event-forwarding.md)

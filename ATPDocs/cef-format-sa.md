@@ -13,10 +13,10 @@ ms.assetid: 3261155c-3c72-4327-ba29-c113c63a4e6d
 ms.reviewer: arzinger
 ms.suite: ems
 ms.openlocfilehash: 0f24d69946fbbaa1824eb7b38ac431a3be638fa9
-ms.sourcegitcommit: 8d5cd330564eeaf4bc9560db7814c85e71e0fb60
+ms.sourcegitcommit: 63be53de5b84eabdeb8c006438dab45bd35a4ab7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80666222"
 ---
 # <a name="azure-atp-siem-log-reference"></a>Referência de logs de SIEM do Azure ATP
@@ -199,7 +199,7 @@ Prioridades:
 
 002-21-2018 16:21:22 Auth.Warning 192.168.0.220 1 2018-02-21T14:21:13.916050+00:00 CENTER CEF 6076 AbnormalProtocolSecurityAlert ï»¿0|Microsoft|ATP do Azure|2.22.4228.22540|AbnormalProtocolSecurityAlert|ReconnaissanceusingSMBSessionEnumeration|5|start=2018-02-21T14:19:03.1981155Z app=Ntlm shost=CLIENT2 outcome=Success msg=Houve tentativas de autenticação de CLIENT2 em DC1 usando uma implementação de protocolo incomum. Pode ser um resultado de ferramentas mal-intencionadas usadas para executar ataques como o Metasploit. externalId=2034 cs1Label=url cs1=https\://contoso-corp.atp.azure.com/securityAlert/40fe98dd-aa42-4540-9d73-831486fdd1e4 cs2Label=trigger cs2=new
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Confira Também
 
 - [Pré-requisitos do Azure ATP](atp-prerequisites.md)
 - [Planejamento de capacidade do Azure ATP](atp-capacity-planning.md)

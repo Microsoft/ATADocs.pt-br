@@ -13,10 +13,10 @@ ms.assetid: cae3ed45-8fbc-4f25-ba24-3cc407c6ea93
 ms.reviewer: itargoet
 ms.suite: ems
 ms.openlocfilehash: bc777fde6cdf12abb45b9608091166e3cf03ee2c
-ms.sourcegitcommit: bf5f58317121f1fb0fffc83d8b419cdd7ef27d9a
+ms.sourcegitcommit: 63be53de5b84eabdeb8c006438dab45bd35a4ab7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80669580"
 ---
 # <a name="excluding-entities-from-detections"></a>Excluindo entidades de detecções
@@ -33,12 +33,12 @@ Por exemplo, se você tiver um verificador de segurança que realiza reconhecime
 
 Há duas maneiras para você excluir entidades manualmente, seja diretamente do alerta de segurança ou da guia **Exclusões** na página **Configuração**. 
 
-- **No alerta de segurança**: na linha do tempo de Atividade, ao receber um alerta em uma atividade para um usuário, computador ou endereço IP que **tem** permissão para executar uma atividade específica e pode fazer isso com frequência, faça o seguinte:
+- **No alerta de segurança**: na linha do tempo de Atividade, quando você recebe um alerta em uma atividade para um usuário, computador ou endereço IP que **tem** permissão para executar uma atividade específica e pode fazer isso com frequência, faça o seguinte:
   - Clique com o botão direito do mouse nos três pontos no final da linha para o alerta de segurança nessa entidade e selecione **Fechar e excluir**. Isso adiciona o usuário, computador ou endereço IP à lista de exclusões desse alerta de segurança. Ele fecha o alerta de segurança e o alerta não está mais listado na lista de eventos **Aberto** na **linha do tempo de Alerta**.
 
     ![Excluir entidades](./media/exclude-in-sa.png)
 
-- **Na página Configuração**:  para examinar ou modificar exclusões: em **Configuração**, clique em **Exclusões** e, em seguida, selecione o alerta de segurança ao qual aplicar a exclusão, assim como **Reconhecimento de DNS**.
+- **Na página Configuração**: para examinar ou modificar exclusões: em **Configuração**, clique em **Exclusões** e, em seguida, selecione o alerta de segurança ao qual aplicar a exclusão, assim como **Reconhecimento de DNS**.
 
     ![Configuração de exclusão](./media/exclusions.png)
 
@@ -61,7 +61,7 @@ Quando você tiver a possibilidade de exclusão de um endereço IP ou de um comp
 > As páginas de configuração podem ser modificadas apenas por administradores do ATP do Azure.
 
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Confira Também
 
 - [Guia de alertas de segurança do ATP do Azure](suspicious-activity-guide.md)
 - [Integração com o Microsoft Defender ATP](integrate-wd-atp.md)

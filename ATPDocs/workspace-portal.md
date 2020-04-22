@@ -13,10 +13,10 @@ ms.assetid: 4ba46d60-3a74-480e-8f0f-9a082d62f343
 ms.reviewer: itargoet
 ms.suite: ems
 ms.openlocfilehash: 5d6bd4b4c8bcceff9d06d98f2fe8125fe1f3d769
-ms.sourcegitcommit: bf5f58317121f1fb0fffc83d8b419cdd7ef27d9a
+ms.sourcegitcommit: 63be53de5b84eabdeb8c006438dab45bd35a4ab7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80669734"
 ---
 # <a name="working-with-the-azure-atp-portal"></a>Trabalhando com o portal do Azure ATP
@@ -71,7 +71,7 @@ No menu superior, há uma barra de pesquisa. Você pode pesquisar por um usuári
 
 Se clicar no número, você pode acessar a página de resultados da pesquisa, na qual pode filtrar os resultados por tipo de entidade para uma investigação mais detalhada.
 
-![pesquisar resultados](media/search-results.png)
+![resultados da pesquisa](media/search-results.png)
 
 ### <a name="health-center"></a>Centro de integridade
 
@@ -110,7 +110,7 @@ Se você passar o mouse sobre uma entidade, em qualquer lugar no portal do ATP d
 - Notificação de caminhos de movimento lateral – será exibida se tiverem sido detectados caminhos de movimento lateral para esta entidade nos últimos dois dias.
 
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Confira Também
 
 - [Criando instâncias do ATP do Azure](install-atp-step1.md)
 - [Confira o fórum do ATP do Azure!](https://aka.ms/azureatpcommunity)

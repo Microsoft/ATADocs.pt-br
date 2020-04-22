@@ -13,10 +13,10 @@ ms.assetid: 1ac873fc-b763-41d7-878e-7c08da421cb5
 ms.reviewer: itargoet
 ms.suite: ems
 ms.openlocfilehash: 35d3e630e8f8ff4752badc5e2dad09aec8058671
-ms.sourcegitcommit: 8d5cd330564eeaf4bc9560db7814c85e71e0fb60
+ms.sourcegitcommit: 63be53de5b84eabdeb8c006438dab45bd35a4ab7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80666202"
 ---
 # <a name="what-is-network-name-resolution"></a>O que é a Resolução de nomes de rede?
@@ -98,7 +98,7 @@ Cada alerta de integridade oferece detalhes específicos sobre o método, os sen
 - DNS inverso:
   - O Sensor deve ser capaz de alcançar o servidor DNS e as Zonas de Pesquisa Inversa devem estar habilitadas.
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Confira Também
 
 - [Pré-requisitos do Azure ATP](atp-prerequisites.md)
 - [Configurar coleta de eventos](configure-event-collection.md)

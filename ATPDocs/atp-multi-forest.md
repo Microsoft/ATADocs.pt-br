@@ -13,10 +13,10 @@ ms.assetid: effca0f2-fcae-4fca-92c1-c37306decf84
 ms.reviewer: itargoet
 ms.suite: ems
 ms.openlocfilehash: d33b9c03bc7d2a83760b64d32c7c810aa75d1908
-ms.sourcegitcommit: bf5f58317121f1fb0fffc83d8b419cdd7ef27d9a
+ms.sourcegitcommit: 63be53de5b84eabdeb8c006438dab45bd35a4ab7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80669428"
 ---
 # <a name="azure-advanced-threat-protection-multi-forest-support"></a>Suporte para várias florestas da Proteção Avançada contra Ameaças do Azure
@@ -75,7 +75,7 @@ Quando o Azure ATP mapeia suas florestas, ele usa um processo que afeta o seguin
 
 - Os logons interativos executados por usuários em uma floresta para acessar recursos em outra floresta não são exibidos no painel do Azure ATP.
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Confira Também
 
 - [Ferramenta de dimensionamento do Azure ATP](https://aka.ms/aatpsizingtool)
 - [Arquitetura do Azure ATP](atp-architecture.md)

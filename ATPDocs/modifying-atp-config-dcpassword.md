@@ -13,10 +13,10 @@ ms.assetid: e7f065fa-1ad1-4e87-bd80-99cc695efbf5
 ms.reviewer: itargoet
 ms.suite: ems
 ms.openlocfilehash: 77ec242769d15eb3681f9e511709a0e6953878e8
-ms.sourcegitcommit: bf5f58317121f1fb0fffc83d8b419cdd7ef27d9a
+ms.sourcegitcommit: 63be53de5b84eabdeb8c006438dab45bd35a4ab7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/05/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80669515"
 ---
 # <a name="change-azure-atp-portal-configuration---domain-connectivity-password"></a>Alterar a configuração do portal do ATP do Azure – senha de conectividade de domínio
@@ -51,7 +51,7 @@ Siga este procedimento para atualizar a senha da Conectividade de domínio no po
 
 1. No portal do Azure ATP, em **Configuração**, vá até a página **Sensor** e verifique o status dos sensores.
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Confira Também
 
 - [Integração com o Microsoft Defender ATP](integrate-wd-atp.md)
 - [Confira o fórum do ATP do Azure!](https://aka.ms/azureatpcommunity)

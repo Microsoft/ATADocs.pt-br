@@ -13,10 +13,10 @@ ms.assetid: 0a56cf27-9eaa-4ad0-ae6c-9d0484c69094
 ms.reviewer: bennyl
 ms.suite: ems
 ms.openlocfilehash: a41c080847454af84d6622c53a28085e194823dd
-ms.sourcegitcommit: 7b80b2eff4331f8e1e1403e4b5c751f406915624
+ms.sourcegitcommit: 63be53de5b84eabdeb8c006438dab45bd35a4ab7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/21/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79414600"
 ---
 # <a name="validate-port-mirroring"></a>Validação do espelhamento de porta
@@ -45,7 +45,7 @@ As etapas a seguir guiarão você pelo processo de validação da configuração
 
         ![Criar nova imagem da guia de captura](media/atp-port-mirroring-capture.png)
 
-1. Na janela Exibir Filtro, insira o seguinte filtro: **KerberosV5 OU LDAP** e clique em **Aplicar**.
+1. Na janela Filtro de exibição, digite o seguinte filtro: **KerberosV5 OU LDAP** e, em seguida, **Aplicar**.
 
     ![Aplicar imagem de filtro KerberosV5 ou LDAP](media/atp-port-mirroring-filter-settings.png)
 
@@ -58,7 +58,7 @@ As etapas a seguir guiarão você pelo processo de validação da configuração
 
 1. Se você vir o tráfego apenas em uma direção, você deve trabalhar com as equipes de rede ou de virtualização para ajudar a solucionar os problemas com a configuração do espelhamento de porta.
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Confira Também
 
 - [Configurar o encaminhamento de eventos](configure-event-forwarding.md)
 - [Configurar o espelhamento de porta](configure-port-mirroring.md)

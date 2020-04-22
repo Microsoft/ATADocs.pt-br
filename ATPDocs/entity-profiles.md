@@ -13,10 +13,10 @@ ms.assetid: 17458706-79fb-4c23-aa42-66979164a45f
 ms.reviewer: itargoet
 ms.suite: ems
 ms.openlocfilehash: f0f3467388454fa45b1b6e370c96e012c9b2af34
-ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
+ms.sourcegitcommit: 63be53de5b84eabdeb8c006438dab45bd35a4ab7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79413784"
 ---
 # <a name="understanding-entity-profiles"></a>Noções básicas sobre perfis de entidade
@@ -64,7 +64,7 @@ Para obter mais informações, consulte [Caminhos de movimento lateral](use-case
  ![caminhos de movimento lateral do perfil do usuário](media/user-profile-lateral-movement-paths.png)
 
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Confira Também
 
 - [Investigar caminhos de movimento lateral com o Azure ATP](use-case-lateral-movement-path.md)
 - [Confira o fórum do ATP do Azure!](https://aka.ms/azureatpcommunity)

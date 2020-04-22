@@ -13,10 +13,10 @@ ms.assetid: 9ec7eb4c-3cad-4543-bbf0-b951d8fc8ffe
 ms.reviewer: itargoet
 ms.suite: ems
 ms.openlocfilehash: 70c122d4983d4b5b32899d13ff81b81d38d65af8
-ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
+ms.sourcegitcommit: 63be53de5b84eabdeb8c006438dab45bd35a4ab7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79413835"
 ---
 # <a name="configure-port-mirroring"></a>Configurar o espelhamento de porta
@@ -66,11 +66,11 @@ Seus controladores de domínio e o sensor autônomo do Azure ATP podem ser físi
   > [!NOTE]
   > Caso seu ambiente dê suporte a RSPAN (virtual para virtual em hosts diferentes), você não precisa se preocupar com afinidade.
 
-- Para garantir que o sensor autônomo do ATP do Azure esteja dimensionado corretamente para lidar com o monitoramento de todos os controladores de domínio por si só, tente esta opção: instale uma máquina virtual em cada host de virtualização e um sensor autônomo do ATP do Azure em cada host. Configure cada sensor autônomo do Azure ATP para monitorar todos os controladores de domínio executados no cluster. Dessa forma, qualquer host no qual os controladores de domínio são executados será monitorado.
+- Para garantir que o sensor autônomo do Azure ATP tenha um tamanho correto para lidar com o monitoramento de todos os controladores de domínio por si só, tente esta opção: instalar uma máquina virtual em cada host de virtualização e instalar um sensor autônomo do Azure ATP em cada host. Configure cada sensor autônomo do Azure ATP para monitorar todos os controladores de domínio executados no cluster. Dessa forma, qualquer host no qual os controladores de domínio são executados será monitorado.
 
 Depois de configurar o espelhamento de porta, verifique se ele está funcionando antes de instalar o sensor autônomo do Azure ATP.
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Confira Também
 
 - [Configurar o encaminhamento de eventos](configure-event-forwarding.md)
 - [Confira o fórum do ATP do Azure!](https://aka.ms/azureatpcommunity)

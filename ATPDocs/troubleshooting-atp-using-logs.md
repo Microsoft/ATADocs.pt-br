@@ -13,17 +13,17 @@ ms.assetid: de796346-647d-48e1-970a-8f072e990f1e
 ms.reviewer: ''
 ms.suite: ''
 ms.openlocfilehash: eb5b16c17d2e52392f655ebbd4fa78ad03122047
-ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
+ms.sourcegitcommit: 63be53de5b84eabdeb8c006438dab45bd35a4ab7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79410877"
 ---
 # <a name="troubleshooting-azure-advanced-threat-protection-atp-sensor-using-the-atp-logs"></a>Solução de problemas do sensor do ATP (Proteção Avançada contra Ameaças) ao Azure usando os logs do ATP
 Os logs do ATP fornecem informações sobre o que cada componente do sensor do Azure ATP está fazendo a qualquer hora.
 
 
-Os logs do ATP do Azure estão localizados na subpasta **Logs** onde o ATP está instalado; o local padrão é: **C:\Arquivos de Programa\Sensor da Proteção Avançada contra Ameaças do Azure\\** . O local de instalação padrão é: **C:\Arquivos de Programa\Azure Advanced Threat Protection Sensor\número da versão\Logs**.
+Os logs do Azure ATP estão localizados na subpasta **Logs**, na qual o ATP está instalado; o local padrão é: **C:\Program Files\Azure Advanced Threat Protection Sensor\\** . No local de instalação padrão, ela pode ser encontrada em: **C:\Program Files\Azure Advanced Threat Protection Sensor\version number\Logs**.
 
 O sensor do Azure ATP tem os seguintes logs:
 
@@ -38,7 +38,7 @@ O sensor do Azure ATP tem os seguintes logs:
 > Os três primeiros arquivos de log têm um tamanho máximo de até 50 MB. Quando esse tamanho é atingido, um novo arquivo de log é aberto e o anterior é renomeado como "&lt;nome do arquivo original&gt;-Archived-00000". Esse número aumenta a cada renomeação. Por padrão, se já houver mais de 10 arquivos do mesmo tipo, os mais antigos serão excluídos.
 
 ## <a name="azure-atp-deployment-logs"></a>Logs de implantação do Azure ATP
-Os logs de implantação do Azure ATP estão localizados no diretório temp do usuário que instalou o produto. O local de instalação padrão é: **C:\Usuários\Administrator\AppData\Local\Temp** (ou um diretório acima de %temp%).
+Os logs de implantação do Azure ATP estão localizados no diretório temp do usuário que instalou o produto. No local de instalação padrão, ele pode ser encontrado em: **C:\Usuários\Administrator\AppData\Local\Temp** (ou um diretório acima de %temp%).
 
 Logs de implantação do sensor do Azure ATP:
 
@@ -53,7 +53,7 @@ Logs de implantação do sensor do Azure ATP:
 > Além dos logs de implantação mencionados aqui, há outros logs que começam com "Proteção Avançada contra Ameaças ao Azure" que também pode fornecer informações adicionais sobre o processo de implantação.
 
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Confira Também
 - [Pré-requisitos do Azure ATP](atp-prerequisites.md)
 - [Planejamento de capacidade do Azure ATP](atp-capacity-planning.md)
 - [Configurar coleta de eventos](configure-event-collection.md)

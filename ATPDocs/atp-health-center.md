@@ -13,10 +13,10 @@ ms.assetid: 1b7e72c3-a538-443f-981c-398ffafa5ab8
 ms.reviewer: itargoet
 ms.suite: ems
 ms.openlocfilehash: 743d2f6c147542ff2b57383e93c75474ea9524b9
-ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
+ms.sourcegitcommit: 63be53de5b84eabdeb8c006438dab45bd35a4ab7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79414532"
 ---
 # <a name="work-with-azure-atp-health-and-events"></a>Trabalhar com eventos e integridade do ATP do Azure
@@ -36,18 +36,18 @@ Para verificar a integridade geral da instância do ATP do Azure, clique no íco
 
 -   Todos os problemas abertos podem ser gerenciados configurando-os para **Fechar** ou **Suprimir** clicando nos três pontos no canto do alerta e fazendo sua escolha.
 
--   **Abrir**: Todas as novas atividades suspeitas aparecem nesta lista.
+-   **Abrir**: todas as novas atividades suspeitas aparecem nesta lista.
 
--   **Fechar**: É usado para rastrear atividades suspeitas que você identificou, pesquisou e corrigiu como mitigadas.
+-   **Fechar**: é usado para rastrear atividades suspeitas que você identificou, pesquisou e corrigiu como mitigado.
 
     > [!NOTE]
     > O Azure ATP poderá reabrir uma atividade fechada se a mesma atividade for detectada novamente em um curto período.
     
--   **Suprimir**: Suprimir uma atividade significa que você deseja ignorá-la por enquanto e apenas ser alertado novamente se houver uma nova instância. Se houver um alerta semelhante, o Azure ATP não o reabrirá. Mas, se o alerta parar por sete dias e, depois, for observado novamente, você será alertado novamente.
+-   **Suprimir**: suprimir uma atividade significa que você deseja ignorá-la por enquanto e apenas ser alertado novamente se houver uma nova instância. Se houver um alerta semelhante, o Azure ATP não o reabrirá. Mas, se o alerta parar por sete dias e, depois, for observado novamente, você será alertado novamente.
 
--   **Reabrir**: Você pode reabrir um alerta fechado ou suprimido para que ele seja exibido novamente como **Aberto** na linha do tempo.
+-   **Reabrir**: você pode reabrir um alerta fechado ou suprimido para que ele seja exibido novamente como **Aberto** na linha do tempo.
 
--   **Excluir**: Na linha do tempo de alerta de segurança, você também tem a opção de excluir um problema de integridade. Se você excluir um alerta, ele será excluído da instância e você NÃO poderá restaurá-lo. Após clicar em Excluir, será possível excluir todos os alertas de segurança do mesmo tipo.
+-   **Excluir**: na linha do tempo de alerta de segurança, você também tem a opção de excluir um problema de integridade. Se você excluir um alerta, ele será excluído da instância e você NÃO poderá restaurá-lo. Após clicar em Excluir, será possível excluir todos os alertas de segurança do mesmo tipo.
 
 
 
@@ -58,7 +58,7 @@ Para verificar a integridade geral da instância do ATP do Azure, clique no íco
 
 
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Confira Também
 
 - [Trabalhando com atividades suspeitas](working-with-suspicious-activities.md)
 - [Confira o fórum do ATP do Azure!](https://aka.ms/azureatpcommunity)

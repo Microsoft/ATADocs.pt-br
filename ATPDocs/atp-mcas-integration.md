@@ -12,10 +12,10 @@ ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
 ms.openlocfilehash: e8705fe48bf7ff32a59e33808d66de474d1b306d
-ms.sourcegitcommit: a7e3fdd7bf0f1d8f269cdbfe3931c937a436392b
+ms.sourcegitcommit: 63be53de5b84eabdeb8c006438dab45bd35a4ab7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/05/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "75663861"
 ---
 # <a name="using-azure-atp-with-microsoft-cloud-app-security"></a>Usando o ATP do Azure com o Microsoft Cloud App Security
@@ -65,7 +65,7 @@ Confira o [Início rápido do Cloud App Security](https://docs.microsoft.com/clo
 
 Acesse seus dados do ATP do Azure e novos recursos híbridos em páginas de usuário, atividades e alertas do Cloud App Security.
 
-## <a name="alerts"></a>Alertas
+## <a name="alerts"></a>Alerts
 
 Os alertas do ATP do Azure são exibidos dentro da fila de **Alertas** do Cloud App Security. As opções de filtragem de alerta adicionais estão disponíveis somente ao exibir alertas usando o Cloud App Security. Os alertas do ATP do Azure são filtrados usando o filtro de aplicativo para o **Active Directory**.
 

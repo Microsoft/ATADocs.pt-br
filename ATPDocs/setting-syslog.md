@@ -13,10 +13,10 @@ ms.assetid: a2d29c9c-7ecb-4804-b74b-fde899b28648
 ms.reviewer: itargoet
 ms.suite: ems
 ms.openlocfilehash: a6b1cfb304787fbed3d02968221e1eeada605712
-ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
+ms.sourcegitcommit: 63be53de5b84eabdeb8c006438dab45bd35a4ab7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79410928"
 ---
 # <a name="integrate-with-syslog"></a>Integrar com o Syslog
@@ -42,7 +42,7 @@ Após habilitar as notificações do Syslog, você poderá definir o seguinte:
 
    -   Porta na qual o servidor SIEM está escutando
 
-   -   Qual transporte usar: UDP, TCP ou TLS (Syslog protegido)
+   -   O transporte a ser usado: UDP, TCP ou TLS (Syslog protegido)
 
    -   Formato no qual enviar os dados, RFC 3164 ou 5424
 
@@ -69,7 +69,7 @@ Para revisar ou modificar suas configurações do Syslog.
 > Caso planeje criar automação ou scripts para logs de SIEM do ATP do Azure, é recomendável usar o campo **externalId** para identificar o tipo de alerta em vez de usar o nome do alerta para essa finalidade. Nomes de alertas, ocasionalmente, podem ser modificados, enquanto o **externalId** de cada alerta é permanente. Para saber mais, confira [Referência de logs SIEM da Proteção Avançada contra Ameaças do Azure](cef-format-sa.md). 
 
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Confira Também
 
-- [Trabalhando com contas confidenciais](sensitive-accounts.md)
+- [Como trabalhar com contas confidenciais](sensitive-accounts.md)
 - [Confira o fórum do ATP do Azure!](https://aka.ms/azureatpcommunity)

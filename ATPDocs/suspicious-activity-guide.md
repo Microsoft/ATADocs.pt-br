@@ -13,10 +13,10 @@ ms.assetid: ca5d1c7b-11a9-4df3-84a5-f53feaf6e561
 ms.reviewer: itargoet
 ms.suite: ems
 ms.openlocfilehash: 39fbd3f42cfccd60a007b8640421a8af1c178243
-ms.sourcegitcommit: 05f23a0add8d24ae92176e13c2a4ae8ada1844da
+ms.sourcegitcommit: 63be53de5b84eabdeb8c006438dab45bd35a4ab7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79318765"
 ---
 # <a name="azure-atp-security-alerts"></a>Alertas de segurança do ATP do Azure
@@ -45,40 +45,40 @@ A tabela a seguir lista o mapeamento entre nomes de alerta, suas IDs externas ex
 > [!div class="mx-tdBreakAll"]
 > |Novo nome do alerta de segurança|ID externa exclusiva|Severidade|MITRE ATT&CK Matrix™|
 > |---|---|---|---|
-> |[Reconhecimento de enumeração de conta](atp-reconnaissance-alerts.md#account-enumeration-reconnaissance-external-id-2003)|2003|Média|Descoberta|
+> |[Reconhecimento de enumeração de conta](atp-reconnaissance-alerts.md#account-enumeration-reconnaissance-external-id-2003)|2003|Médio|Descoberta|
 > |[Exportação de dados por SMB](atp-exfiltration-alerts.md#data-exfiltration-over-smb-external-id-2030)|2030|Alta|Exportação,<br>Movimentação lateral,<br>Comando e controle|
-> |[Atividade de Honeytoken](atp-compromised-credentials-alerts.md#honeytoken-activity-external-id-2014)|2014|Média|Acesso com credenciais,<br>Descoberta|
+> |[Atividade de Honeytoken](atp-compromised-credentials-alerts.md#honeytoken-activity-external-id-2014)|2014|Médio|Acesso com credenciais,<br>Descoberta|
 > |[Solicitação mal-intencionada de chave mestra da API de Proteção de Dados](atp-domain-dominance-alerts.md#malicious-request-of-data-protection-api-master-key-external-id-2020)|2020|Alta|Acesso com credenciais|
-> |[Reconhecimento de mapeamento de rede (DNS)](atp-reconnaissance-alerts.md#network-mapping-reconnaissance-dns-external-id-2007)|2007|Média|Descoberta|
-> |[Tentativa de execução remota de código](atp-domain-dominance-alerts.md#remote-code-execution-attempt-external-id-2019)|2019|Média|Execução,<br>Persistência,<br>Elevação de privilégios,<br>Evasão de defesa,<br>Movimentação lateral|
-> |[Execução remota de código no DNS](atp-lateral-movement-alerts.md#remote-code-execution-over-dns-external-id-2036)|2036|Média|Elevação de privilégios,<br>Movimentação lateral|
-> |[Reconhecimento de entidade de segurança (LDAP)](atp-reconnaissance-alerts.md#security-principal-reconnaissance-ldap-external-id-2038)|2038|Média|Acesso com credenciais|
-> |[Suspeita de ataque de força bruta (Kerberos e NTLM)](atp-compromised-credentials-alerts.md#suspected-brute-force-attack-kerberos-ntlm-external-id-2023)|2023|Média|Acesso com credenciais|
-> |[Suspeita de ataque de força bruta (LDAP)](atp-compromised-credentials-alerts.md#suspected-brute-force-attack-ldap-external-id-2004)|2004|Média|Acesso com credenciais|
-> |[Suspeita de ataque de força bruta (SMB)](atp-compromised-credentials-alerts.md#suspected-brute-force-attack-smb-external-id-2033)|2033|Média|Movimentação lateral|
+> |[Reconhecimento de mapeamento de rede (DNS)](atp-reconnaissance-alerts.md#network-mapping-reconnaissance-dns-external-id-2007)|2007|Médio|Descoberta|
+> |[Tentativa de execução remota de código](atp-domain-dominance-alerts.md#remote-code-execution-attempt-external-id-2019)|2019|Médio|Execução,<br>Persistência,<br>Elevação de privilégios,<br>Evasão de defesa,<br>Movimentação lateral|
+> |[Execução remota de código no DNS](atp-lateral-movement-alerts.md#remote-code-execution-over-dns-external-id-2036)|2036|Médio|Elevação de privilégios,<br>Movimentação lateral|
+> |[Reconhecimento de entidade de segurança (LDAP)](atp-reconnaissance-alerts.md#security-principal-reconnaissance-ldap-external-id-2038)|2038|Médio|Acesso com credenciais|
+> |[Suspeita de ataque de força bruta (Kerberos e NTLM)](atp-compromised-credentials-alerts.md#suspected-brute-force-attack-kerberos-ntlm-external-id-2023)|2023|Médio|Acesso com credenciais|
+> |[Suspeita de ataque de força bruta (LDAP)](atp-compromised-credentials-alerts.md#suspected-brute-force-attack-ldap-external-id-2004)|2004|Médio|Acesso com credenciais|
+> |[Suspeita de ataque de força bruta (SMB)](atp-compromised-credentials-alerts.md#suspected-brute-force-attack-smb-external-id-2033)|2033|Médio|Movimentação lateral|
 > |[Suspeita de ataque DCShadow (promoção do controlador de domínio)](atp-domain-dominance-alerts.md#suspected-dcshadow-attack-domain-controller-promotion-external-id-2028)|2028|Alta|Evasão de defesa|
 > |[Suspeito de ataque DCShadow (solicitação de replicação do controlador de domínio)](atp-domain-dominance-alerts.md#suspected-dcshadow-attack-domain-controller-replication-request-external-id-2029)|2029|Alta|Evasão de defesa|
 > |[Suspeita de ataque DCSync (replicação dos serviços de diretório)](atp-domain-dominance-alerts.md#suspected-dcsync-attack-replication-of-directory-services-external-id-2006)|2006|Alta|Persistência,<br>Acesso com credenciais|
-> |[Suspeita de uso de Golden Ticket (downgrade de criptografia)](atp-domain-dominance-alerts.md#suspected-golden-ticket-usage-encryption-downgrade-external-id-2009)|2009|Média|Elevação de privilégios,<br>Movimentação lateral,<br>Persistência|
+> |[Suspeita de uso de Golden Ticket (downgrade de criptografia)](atp-domain-dominance-alerts.md#suspected-golden-ticket-usage-encryption-downgrade-external-id-2009)|2009|Médio|Elevação de privilégios,<br>Movimentação lateral,<br>Persistência|
 > |[Suspeita de uso de Golden Ticket (dados de autorização forjados)](atp-domain-dominance-alerts.md#suspected-golden-ticket-usage-forged-authorization-data-external-id-2013)|2013|Alta|Elevação de privilégios,<br>Movimentação lateral,<br>Persistência|
 > |[Suspeita de uso de Golden Ticket (conta inexistente)](atp-domain-dominance-alerts.md#suspected-golden-ticket-usage-nonexistent-account-external-id-2027)|2027|Alta|Elevação de privilégios,<br>Movimentação lateral,<br>Persistência|
 > |[Suspeita de uso de Golden Ticket (anomalia de tíquete)](atp-domain-dominance-alerts.md#suspected-golden-ticket-usage-ticket-anomaly-external-id-2032)|2032|Alta|Elevação de privilégios,<br>Movimentação lateral,<br>Persistência|
 > |[Suspeita de uso de Golden Ticket (anomalia de tempo)](atp-domain-dominance-alerts.md#suspected-golden-ticket-usage-time-anomaly-external-id-2022)|2022|Alta|Elevação de privilégios,<br>Movimentação lateral,<br>Persistência|
 > |[Suspeita de roubo de identidade (Pass-the-Hash)](atp-lateral-movement-alerts.md#suspected-identity-theft-pass-the-hash-external-id-2017)|2017|Alta|Movimentação lateral|
 > |[Suspeita de roubo de identidade (Pass-the-Ticket)](atp-lateral-movement-alerts.md#suspected-identity-theft-pass-the-ticket-external-id-2018)|2018|Alta ou média|Movimentação lateral|
-> |[Suspeita de violação da autenticação NTLM](atp-lateral-movement-alerts.md#suspected-ntlm-authentication-tampering-external-id-2039)|2039|Média|Elevação de privilégios, <br>Movimentação lateral|
+> |[Suspeita de violação da autenticação NTLM](atp-lateral-movement-alerts.md#suspected-ntlm-authentication-tampering-external-id-2039)|2039|Médio|Elevação de privilégios, <br>Movimentação lateral|
 > |[Suspeita de ataque de retransmissão de NTLM](atp-lateral-movement-alerts.md#suspected-ntlm-relay-attack-exchange-account-external-id-2037)|2037|Média ou baixa se observado usando o protocolo NTLM v2 assinado|Elevação de privilégios, <br>Movimentação lateral|
-> |[Suspeita de ataque Overpass-the-Hash (downgrade de criptografia)](atp-lateral-movement-alerts.md#suspected-overpass-the-hash-attack-encryption-downgrade-external-id-2008)|2008|Média|Movimentação lateral|
-> |[Suspeita de ataque Overpass-the-Hash (Kerberos)](atp-lateral-movement-alerts.md#suspected-overpass-the-hash-attack-kerberos-external-id-2002)|2002|Média|Movimentação lateral|
-> |[Suspeita de ataque com chave de esqueleto (downgrade de criptografia)](atp-domain-dominance-alerts.md#suspected-skeleton-key-attack-encryption-downgrade-external-id-2010)|2010|Média|Movimentação lateral,<br>Persistência|
-> |[Uso suspeito da estrutura de hacker Metasploit](atp-compromised-credentials-alerts.md#suspected-use-of-metasploit-hacking-framework-external-id-2034)|2034|Média|Movimentação lateral|
-> |[Suspeita de ataque do ransomware WannaCry](atp-compromised-credentials-alerts.md#suspected-wannacry-ransomware-attack-external-id-2035)|2035|Média|Movimentação lateral|
-> |[Adições suspeitas a grupos confidenciais](atp-domain-dominance-alerts.md#suspicious-additions-to-sensitive-groups-external-id-2024)|2024|Média|Acesso com credenciais,<br>Persistência|
-> |[Comunicação suspeita por DNS](atp-exfiltration-alerts.md#suspicious-communication-over-dns-external-id-2031)|2031|Média|Exfiltração|
-> |[Criação de serviço suspeito](atp-domain-dominance-alerts.md#suspicious-service-creation-external-id-2026)|2026|Média|Execução,<br>Persistência,<br>Elevação de privilégios,<br>Evasão de defesa,<br>Movimentação lateral|
-> |[Conexão de VPN suspeita](atp-compromised-credentials-alerts.md#suspicious-vpn-connection-external-id-2025)|2025|Média|Persistência,<br>Evasão de defesa|
-> |[Reconhecimento de usuário e de associação a um grupo (SAMR)](atp-reconnaissance-alerts.md#user-and-group-membership-reconnaissance-samr-external-id-2021)|2021|Média|Descoberta|
-> |[Reconhecimento de endereço IP e de usuário (SMB)](atp-reconnaissance-alerts.md#user-and-ip-address-reconnaissance-smb-external-id-2012)|2012|Média|Descoberta|
+> |[Suspeita de ataque Overpass-the-Hash (downgrade de criptografia)](atp-lateral-movement-alerts.md#suspected-overpass-the-hash-attack-encryption-downgrade-external-id-2008)|2008|Médio|Movimentação lateral|
+> |[Suspeita de ataque Overpass-the-Hash (Kerberos)](atp-lateral-movement-alerts.md#suspected-overpass-the-hash-attack-kerberos-external-id-2002)|2002|Médio|Movimentação lateral|
+> |[Suspeita de ataque com chave de esqueleto (downgrade de criptografia)](atp-domain-dominance-alerts.md#suspected-skeleton-key-attack-encryption-downgrade-external-id-2010)|2010|Médio|Movimentação lateral,<br>Persistência|
+> |[Uso suspeito da estrutura de hacker Metasploit](atp-compromised-credentials-alerts.md#suspected-use-of-metasploit-hacking-framework-external-id-2034)|2034|Médio|Movimentação lateral|
+> |[Suspeita de ataque do ransomware WannaCry](atp-compromised-credentials-alerts.md#suspected-wannacry-ransomware-attack-external-id-2035)|2035|Médio|Movimentação lateral|
+> |[Adições suspeitas a grupos confidenciais](atp-domain-dominance-alerts.md#suspicious-additions-to-sensitive-groups-external-id-2024)|2024|Médio|Acesso com credenciais,<br>Persistência|
+> |[Comunicação suspeita por DNS](atp-exfiltration-alerts.md#suspicious-communication-over-dns-external-id-2031)|2031|Médio|Exfiltração|
+> |[Criação de serviço suspeito](atp-domain-dominance-alerts.md#suspicious-service-creation-external-id-2026)|2026|Médio|Execução,<br>Persistência,<br>Elevação de privilégios,<br>Evasão de defesa,<br>Movimentação lateral|
+> |[Conexão de VPN suspeita](atp-compromised-credentials-alerts.md#suspicious-vpn-connection-external-id-2025)|2025|Médio|Persistência,<br>Evasão de defesa|
+> |[Reconhecimento de usuário e de associação a um grupo (SAMR)](atp-reconnaissance-alerts.md#user-and-group-membership-reconnaissance-samr-external-id-2021)|2021|Médio|Descoberta|
+> |[Reconhecimento de endereço IP e de usuário (SMB)](atp-reconnaissance-alerts.md#user-and-ip-address-reconnaissance-smb-external-id-2012)|2012|Médio|Descoberta|
 
 # <a name="cloud-app-security-ids"></a>[IDs do Cloud App Security](#tab/cloud-app-security)
 
@@ -123,7 +123,7 @@ A tabela a seguir lista o mapeamento entre nomes de alerta, suas IDs externas ex
 > [!NOTE]
 > Para desabilitar um alerta de segurança, contate o suporte.
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Confira Também
 
 - [Trabalhando com alertas de segurança](working-with-suspicious-activities.md)
 - [Entender os alertas de segurança](understanding-security-alerts.md)
