@@ -10,12 +10,12 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 5638e10a23ae9ddec744d7730283c17be5fab322
-ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
+ms.openlocfilehash: 22e37d606ca5f6057408c59a7384082737fa0029
+ms.sourcegitcommit: 63be53de5b84eabdeb8c006438dab45bd35a4ab7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79413750"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81436117"
 ---
 # <a name="quickstart-create-your-azure-atp-instance"></a>Início Rápido: Criar sua instância do Azure ATP
 
@@ -58,7 +58,7 @@ Depois de verificar que sua rede atende aos requisitos do sensor, inicie a cria�
 
     ![Gerenciar grupos de funções](media/creation-manage-role-groups.png)
 
-- Retenção de dados – as instâncias do ATP do Azure já excluídas não são exibidas na interface do usuário. Para obter mais informações sobre a retenção de dados do Azure ATP, veja [privacidade e segurança de dados do Azure ATP](atp-privacy-compliance.md).
+- Retenção de dados – as instâncias do ATP do Azure já excluídas não são exibidas na interface do usuário. Para obter mais informações sobre a retenção de dados do Azure ATP, consulte [privacidade e segurança de dados do Azure ATP](atp-privacy-compliance.md).
 
 ## <a name="next-steps"></a>Próximas etapas
 
