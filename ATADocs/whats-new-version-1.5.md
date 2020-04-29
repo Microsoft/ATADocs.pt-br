@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: a0d64aff-ca9e-4300-b3f8-eb3c8b8ae045
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: f7e65f1da222de3b7a4cb05541bd2359e3046901
-ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
+ms.openlocfilehash: 76f6c7dcd083d1e84443fefcaff4c753ea6bf272
+ms.sourcegitcommit: 8c0222dc8333b5aa47430c5daee9bc7f1d82df31
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79414226"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81524711"
 ---
 # <a name="whats-new-in-ata-version-15"></a>Novidades na versão 1.5 do ATA
 Essas notas de versão fornecem informações sobre problemas conhecidos nesta versão da Advanced Threat Analytics.
@@ -35,7 +35,7 @@ A atualização 1.5 do ATA fornece melhorias nas seguintes áreas:
 
 -   Melhor capacidade de resposta da interface do usuário para atividades suspeitas com milhares de entidades envolvidas
 
--   Resolução automática de alertas de monitoramento aprimorada
+-   Resolução automática de alertas de integridade aprimorada
 
 -   Contadores de desempenho adicionais para monitoramento e solução de problemas avançados
 
@@ -47,7 +47,7 @@ Depois de atualizar sua implantação do ATA para a versão 1.5, você obterá o
 
 ![Erro de GW do ATA](media/ata-install-error.png)
 
-<b>Solução alternativa:</b> envie um email para <ataeval@microsoft.com> e solicite as etapas de solução alternativa.
+<b>Solução alternativa:</b> envie um email para <ataeval@microsoft.com> e solicite etapas de solicitação alternativa.
 ### <a name="deployment"></a>Implantação
 A pasta especificada para o "Caminho de dados do banco de dados" e "Caminho de diário do banco de dados" deve estar vazia (sem arquivos ou subpastas).
 Se não estiver vazia, a implantação não poderá avançar.
@@ -64,7 +64,7 @@ No Gateway do ATA, o único software de captura de rede com suporte que pode ser
 ### <a name="kb-on-virtualization-host"></a>Base de dados de conhecimento sobre host de virtualização
 Não instale a Base de dados de conhecimento 3047154 em um host de virtualização. Isso pode fazer com que o espelhamento de porta pare de funcionar corretamente.
 
-## <a name="see-also"></a>Confira Também
+## <a name="see-also"></a>Consulte Também
 
 [Atualizar o ATA para a versão 1.5 — guia de migração](ata-update-1.5-migration-guide.md)
 

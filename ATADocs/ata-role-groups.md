@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 3715b69e-e631-449b-9aed-144d0f9bcee7
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 050260b65b14ca425f536fdfc0c936c0fce885df
-ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
+ms.openlocfilehash: f50c6158031bfcc6215b33e9890fa42a35fe1487
+ms.sourcegitcommit: 8c0222dc8333b5aa47430c5daee9bc7f1d82df31
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79412288"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81524677"
 ---
 # <a name="ata-role-groups"></a>Grupos de função do ATA
 
@@ -39,7 +39,7 @@ O ATA apresenta três tipos de Grupos de função: Administradores do ATA, Usuá
 |Fornecer informações sobre atividades suspeitas|Disponível|Disponível|Não disponível|
 |Alterar o status de atividades suspeitas|Disponível|Disponível|Não disponível|
 |Compartilhar/Exportar atividade suspeita por email/link|Disponível|Disponível|Não disponível|
-|Alterar o status dos Alertas de monitoramento|Disponível|Disponível|Não disponível|
+|Alterar o status dos alertas de integridade|Disponível|Disponível|Não disponível|
 |Atualizar a configuração do ATA|Disponível|Não disponível|Não disponível|
 |Gateway – Adicionar|Disponível|Não disponível|Não disponível|
 |Gateway – Excluir |Disponível|Não disponível|Não disponível|

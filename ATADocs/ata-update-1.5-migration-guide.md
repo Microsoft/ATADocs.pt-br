@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: fb65eb41-b215-4530-93a2-0b8991f4e980
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: a008a345eb2c3a214f0f4f2352328ad60472e3ec
-ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
+ms.openlocfilehash: 6b87863ffa2cbb437c0ca9dedd52991b88c19b16
+ms.sourcegitcommit: 8c0222dc8333b5aa47430c5daee9bc7f1d82df31
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79412713"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81524847"
 ---
 # <a name="ata-update-to-15-migration-guide"></a>Guia de migração de atualização do ATA para 1.5
 A atualização 1.5 do ATA fornece melhorias nas seguintes áreas:
@@ -32,13 +32,13 @@ A atualização 1.5 do ATA fornece melhorias nas seguintes áreas:
 
 -   Melhor capacidade de resposta da interface do usuário para atividades suspeitas com milhares de entidades envolvidas
 
--   Resolução automática de alertas de monitoramento aprimorada
+-   Resolução automática de alertas de integridade aprimorada
 
 -   Contadores de desempenho adicionais para monitoramento e solução de problemas avançados
 
 ## <a name="updating-ata-to-version-15"></a>Atualização do ATA para a versão 1.5
 > [!NOTE]
-> Se o ATA não estiver instalado em seu ambiente, baixe a versão completa do ATA que inclui a versão 1.5 e siga o procedimento de instalação padrão descrito em [Instalar o ATA](install-ata-step1.md).
+> Se o ATA não estiver instalado em seu ambiente, baixe a versão completa do ATA, que inclui a versão 1,5 e siga o procedimento de instalação padrão descrito em [instalar o ATA](install-ata-step1.md).
 
 Se você já tiver a versão 1.4 do ATA implantada, esse procedimento explicará as etapas necessárias para atualizar sua instalação.
 
@@ -64,7 +64,7 @@ Execute estas etapas para atualizar para o ATA versão 1.5:
 
     -   Se a Central de ATA estiver sendo executada como uma máquina virtual e você quiser fazer um ponto de verificação, desligue a máquina virtual primeiro.
 
-    -   Se a Central de ATA estiver em execução em um servidor físico, siga o procedimento recomendado para [fazer backup do MongoDB](https://docs.mongodb.org/manual/core/backups/).
+    -   Se o centro do ATA estiver em execução em um servidor físico, siga o procedimento recomendado para [fazer backup do MongoDB](https://docs.mongodb.org/manual/core/backups/).
 
 2.  Execute o arquivo de atualização, Microsoft ATA Center Update.exe, e siga as instruções na tela para instalar a atualização.
 
@@ -96,11 +96,11 @@ Para baixar o pacote do Gateway do ATA:
 
 1.  Exclua todas as versões anteriores do pacote do Gateway do ATA baixado anteriormente.
 
-2.  No computador do Gateway do ATA, abra um navegador e digite o endereço IP configurado no Centro do ATA para o Console do ATA. Quando o Console do ATA for aberto, clique no ícone de configurações e selecione **Configuração**.
+2.  No computador do Gateway do ATA, abra um navegador e digite o endereço IP configurado no Centro do ATA para o Console do ATA. Quando o console do ATA for aberto, clique no ícone de configurações e selecione **configuração**.
 
     ![Ícone Definições de configuração](media/ATA-config-icon.png)
 
-3.  Na guia **Gateways do ATA**, clique em **Baixar Instalação do Gateway do ATA**.
+3.  Na guia **gateways do ATA** , clique em **baixar a instalação do gateway do ATA**.
 
 4.  Salve o pacote localmente.
 
@@ -128,6 +128,6 @@ Você saberá que todos os Gateways do ATA foram atualizados com êxito quando t
 
 ![Imagem de gateways atualizados](media/ATA-gw-updated.png)
 
-## <a name="see-also"></a>Confira Também
+## <a name="see-also"></a>Consulte Também
 
 - [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

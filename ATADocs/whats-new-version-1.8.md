@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 9592d413-df0e-4cec-8e03-be1ae00ba5dc
 ms.reviewer: ''
 ms.suite: ems
-ms.openlocfilehash: f13c603b25a58b81b8786734b0c11bf3f8da8f9c
-ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
+ms.openlocfilehash: dfc1266fd3687b6134ca79f083b2777083723798
+ms.sourcegitcommit: 8c0222dc8333b5aa47430c5daee9bc7f1d82df31
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79414277"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81524694"
 ---
 # <a name="whats-new-in-ata-version-18"></a>Novidades na versão 1.8 do ATA
 
@@ -63,7 +63,7 @@ Essas notas de versão fornecem informações sobre atualizações, novos recurs
 
 -   O desempenho do Centro do ATA foi aprimorado. No ATA 1.8 o Centro do ATA pode lidar com mais de um milhão de pacotes por segundo.
 -   O Gateway Lightweight do ATA poderá ler eventos localmente, sem a necessidade de configurar o encaminhamento de eventos.
--   Agora você pode configurar separadamente um email para alertas de monitoramento e para atividades suspeitas.
+-   Agora você pode configurar o email separadamente para alertas de integridade e atividades suspeitas.
 
 ## <a name="security-improvements"></a>Aprimoramentos de segurança
 
@@ -136,7 +136,7 @@ No Windows Server 2016 Core, você não poderá ver o erro, mas o processo falha
 **Solução alternativa**: antes de atualizar para o 1.8 atualização 1, faça uma cópia das configurações de relatório e as insira novamente, isso também pode ser feito por meio de um script, para saber mais, confira [Exportar e importar a configuração do ATA](ata-configuration-file.md).
 
 
-## <a name="see-also"></a>Confira Também
+## <a name="see-also"></a>Consulte Também
 [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
 [Atualizar o ATA para a versão 1.8 — guia de migração](ata-update-1.8-migration-guide.md)

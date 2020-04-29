@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 892b16d2-58a6-49f9-8693-1e5f69d8299c
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 6febcd07bfdea534f53d4b1479860c467c4455ae
-ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
+ms.openlocfilehash: b47f32a99d7257daed2f942346ac87dca4fccdcb
+ms.sourcegitcommit: 8c0222dc8333b5aa47430c5daee9bc7f1d82df31
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79411523"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81524745"
 ---
 # <a name="ata-architecture"></a>Arquitetura do ATA
 
@@ -92,7 +92,7 @@ Considere os seguintes critérios ao decidir quantos Centros do ATA você quer i
 
 -   Um Centro de ATA pode monitorar uma única floresta do Active Directory. Se você tiver mais de uma floresta do Active Directory, será necessário pelo menos um Centro do ATA por floresta do Active Directory.
 
--    Em grandes implantações do Active Directory, um único Centro de ATA pode não ser capaz de lidar com todo o tráfego de todos os controladores de domínio. Nesse caso, serão necessários vários Centros do ATA. O número de Centros de ATA devem ser determinados pelo [planejamento de capacidade de ATA](ata-capacity-planning.md).
+-    Em grandes implantações do Active Directory, um único Centro de ATA pode não ser capaz de lidar com todo o tráfego de todos os controladores de domínio. Nesse caso, serão necessários vários Centros do ATA. O número de Centrais do ATA deve ser determinado pelo [planejamento de capacidade do ATA](ata-capacity-planning.md).
 
 ## <a name="ata-gateway-and-ata-lightweight-gateway"></a>Gateway do ATA e Gateway Lightweight do ATA
 
@@ -128,18 +128,18 @@ Os recursos a seguir funcionam de modo diferente dependendo de você estar execu
 
 -   O Gateway Lightweight do ATA pode ler eventos localmente, sem a necessidade de configurar o encaminhamento de eventos.
 
--   **Candidato ao sincronizador de domínio**<br>
+-   **Candidato do sincronizador de domínio**<br>
 O gateway sincronizador de domínio é responsável por sincronizar todas as entidades de um determinado domínio do Active Directory de forma proativa (semelhante ao mecanismo utilizado pelos próprios controladores de domínio para replicação). Um gateway é escolhido aleatoriamente, na lista de candidatos, para servir como sincronizador de domínio. <br><br>
 Se o sincronizador estiver offline por mais de 30 minutos, outro candidato é escolhido em seu lugar. Se não houver nenhum candidato do sincronizador de domínio disponível para um domínio específico, o ATA sincronizará as entidades e suas alterações proativamente. no entanto, o ATA recuperará novas entidades reativamente conforme elas forem detectadas no tráfego monitorado. 
 <br>Quando nenhum sincronizador de domínio está disponível, a pesquisa de uma entidade sem tráfego relacionado a ela não exibe nenhum resultado.<br><br>
 Por padrão, todos os gateways do ATA são candidatos ao sincronizador de domínio.<br><br>
-Como todos os Gateways Lightweight do ATA têm maior probabilidade de serem implantados em filiais e em pequenos controladores de domínio, eles não são candidatos a sincronizador por padrão. <br><br>Em um ambiente com apenas gateways leves, é recomendável atribuir dois dos gateways como candidatos do sincronizador, em que um gateway Lightweight é o candidato do sincronizador padrão e um é o backup, caso o padrão esteja offline por mais de 30 alguns. 
+Como todos os Gateways Lightweight do ATA têm maior probabilidade de serem implantados em filiais e em pequenos controladores de domínio, eles não são candidatos a sincronizador por padrão. <br><br>Em um ambiente com apenas gateways leves, é recomendável atribuir dois dos gateways como candidatos ao sincronizador, em que um gateway Lightweight é o candidato do sincronizador padrão e um é o backup, caso o padrão esteja offline por mais de 30 minutos. 
 
 
 -   **Limitações de recursos**<br>
 O Gateway Lightweight do ATA inclui um componente de monitoramento que avalia a capacidade de computação e de memória disponível no controlador de domínio no qual ele está sendo executado. O processo de monitoramento é executado a cada 10 segundos e atualiza dinamicamente a cota de utilização de CPU e memória no processo de Gateway Lightweight do ATA para garantir que a qualquer hora o controlador de domínio tenha pelo menos 15% de recursos de computação e memória livres.<br><br>
 Não importa o que acontece no controlador de domínio, esse processo sempre libera os recursos para fazer com que a funcionalidade principal do controlador de domínio não seja afetada.<br><br>
-Se isso faz com que o Gateway Lightweight do ATA fique sem recursos, apenas o tráfego parcial é monitorado e o alerta de monitoramento "Tráfego de rede espelhado na porta descartado" é exibido na página Integridade.
+Se isso fizer com que o gateway Lightweight do ATA fique sem recursos, somente o tráfego parcial será monitorado e o alerta de integridade "tráfego de rede espelhado da porta descartada" aparecerá na página de integridade.
 
 A tabela abaixo fornece um exemplo de um controlador de domínio com recurso de computação suficiente disponível para permitir uma cota maior de recursos de computação necessária no momento, de forma que todo o tráfego é monitorado:
 
@@ -168,17 +168,17 @@ Os controladores de domínio e os Gateways de ATA podem ser físicos ou virtuais
 
 
 ### <a name="events"></a>Eventos
-Para melhorar a detecção do ATA de Pass-the-Hash, Força Bruta, Modificação para grupos confidenciais e Honey Tokens, o ATA precisa dos seguintes eventos do Windows: 4776, 4732, 4733, 4728, 4729, 4756, 4757. Eles podem ser lidos automaticamente pelo Gateway Lightweight do ATA ou no caso de o Gateway Lightweight do ATA não estar implantado, podem ser encaminhados para o Gateway do ATA de duas maneiras: configurando o Gateway do ATA para escutar o SIEM ou [Configurando o Encaminhamento de Eventos do Windows](configure-event-collection.md).
+Para melhorar a detecção do ATA de Pass-the-Hash, Força Bruta, Modificação para grupos confidenciais e Honey Tokens, o ATA precisa dos seguintes eventos do Windows: 4776, 4732, 4733, 4728, 4729, 4756, 4757. Eles podem ser lidos automaticamente pelo gateway Lightweight do ATA ou, caso o gateway Lightweight do ATA não esteja implantado, ele pode ser encaminhado para o gateway do ATA de uma das duas maneiras, configurando o gateway do ATA para escutar eventos do SIEM ou [Configurando o encaminhamento de eventos do Windows](configure-event-collection.md).
 
 -   Configuração do Gateway de ATA para escutar eventos SIEM <br>Configure o SIEM para encaminhar eventos específicos do Windows para o ATA. O ATA oferece suporte a vários fornecedores SIEM. Para obter mais informações, confira [Configurar coleta de eventos](configure-event-collection.md).
 
 -   Configuração do encaminhamento de eventos do Windows<br>Outra maneira de o ATA conseguir obter seus eventos é configurando seus controladores de domínio para encaminhar eventos do Windows 4776, 4732, 4733, 4728, 4729, 4756 and 4757 para seu Gateway do ATA. Isso é especialmente útil se você não tiver um SIEM ou se o SIEM não for atualmente suportado pelo ATA. Para completar a configuração do Encaminhamento de Eventos do Windows no ATA, confira [Configurando o encaminhamento de eventos do Windows](configure-event-collection.md). Isso se aplica apenas a Gateways do ATA físicos, não ao Gateway Lightweight do ATA.
 
-## <a name="related-videos"></a>Vídeos relacionados
+## <a name="related-videos"></a>Vídeos Relacionados
 - [Como escolher o tipo certo de Gateway do ATA](https://channel9.msdn.com/Shows/Microsoft-Security/ATA-Deployment-Choose-the-Right-Gateway-Type)
 
 
-## <a name="see-also"></a>Confira Também
+## <a name="see-also"></a>Consulte Também
 - [Pré-requisitos do ATA](ata-prerequisites.md)
 - [Ferramenta de dimensionamento do ATA](https://aka.ms/atasizingtool)
 - [Planejamento da capacidade do ATA](ata-capacity-planning.md)

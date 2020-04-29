@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 5d639e84-2e37-43a9-9667-49be6c4fa8b7
 ms.reviewer: arzinger
 ms.suite: ems
-ms.openlocfilehash: a5e417911afdc64a7e0693dc354eedeed517b316
-ms.sourcegitcommit: 9673eb49729a06d3a25d52c0f43c76ac61b9cf89
+ms.openlocfilehash: fb9d2f56cb2280fc060ff4ddcf6ac2cd233baa27
+ms.sourcegitcommit: 8c0222dc8333b5aa47430c5daee9bc7f1d82df31
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/12/2020
-ms.locfileid: "75907729"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81524728"
 ---
 # <a name="ata-event-id-reference"></a>Referência de ID do evento ATA
 
@@ -32,7 +32,7 @@ Os eventos podem ser encontrados aqui:
 
 ## <a name="ata-health-events"></a>Eventos de integridade do ATA
 
-|ID do evento de monitoramento| Nome do alerta de monitoramento|
+|ID do evento|Nome do alerta|
 |---------|---------------|
 |1001|Centro com pouco espaço em disco|
 |1003|Centro sobrecarregado|
@@ -58,7 +58,7 @@ Os eventos podem ser encontrados aqui:
  
 ## <a name="ata-security-alert-events"></a>Eventos do alerta de segurança ATA
 
-|Nome do alerta|IDs do evento de alerta|
+|ID do evento|Nome do alerta|
 |---------|---------------|
 |2001|Suspeita de roubo de identidade com base no comportamento anormal|
 |2002|Implementação de protocolo incomum|
@@ -86,7 +86,7 @@ Os eventos podem ser encontrados aqui:
 
 ## <a name="ata-auditing-events"></a>Eventos de auditoria de ATA
 
-|Nome do alerta|IDs do evento de alerta|
+|ID do evento|Nome do alerta|
 |---------|---------------|
 |3001|Alteração à configuração do ATA|
 |3002|Gateway do ATA adicionado|
@@ -96,7 +96,7 @@ Os eventos podem ser encontrados aqui:
 |3006|Alteração manual ao status da atividade de integridade|
 |3007|Alteração manual ao status da atividade suspeita|
 
-## <a name="see-also"></a>Confira Também
+## <a name="see-also"></a>Consulte Também
 - [Pré-requisitos do ATA](ata-prerequisites.md)
 - [Planejamento da capacidade do ATA](ata-capacity-planning.md)
 - [Configurar coleta de eventos](configure-event-collection.md)
