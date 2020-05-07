@@ -9,12 +9,12 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 6a38a61e5028003ba10ad6929e24e63e81418f7b
-ms.sourcegitcommit: 63be53de5b84eabdeb8c006438dab45bd35a4ab7
+ms.openlocfilehash: 5e2a9a05c4f8dbbeb83562266e3564d023cef79a
+ms.sourcegitcommit: 7be507dc6b6016ff9aa9df4b52a3542246e98209
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79413699"
+ms.lasthandoff: 05/03/2020
+ms.locfileid: "82736419"
 ---
 # <a name="quickstart-install-the-azure-atp-sensor"></a>Início Rápido: Instalar o sensor do Azure ATP
 
@@ -32,9 +32,9 @@ Execute as etapas a seguir no controlador de domínio.
 
 1. Verifique se a máquina tem conectividade com os pontos de extremidade de serviço de nuvem do ATP do Azure relevantes:
    - Ocidental
-      - [https://triprd1wceuw1sensorapi.atp.azure.com](https://triprd1wceuw1sensorapi.atp.azure.com) 
+      - [https://triprd1wceuw1sensorapi.atp.azure.com](https://triprd1wceuw1sensorapi.atp.azure.com)
       - [https://triprd1wceun1sensorapi.atp.azure.com](https://triprd1wceun1sensorapi.atp.azure.com)
-   - EUA 
+   - EUA
       - [https://triprd1wcuse1sensorapi.atp.azure.com](https://triprd1wcuse1sensorapi.atp.azure.com)
       - [https://triprd1wcusw1sensorapi.atp.azure.com](https://triprd1wcusw1sensorapi.atp.azure.com)
       - [https://triprd1wcuswb1sensorapi.atp.azure.com](https://triprd1wcuswb1sensorapi.atp.azure.com)
@@ -53,14 +53,14 @@ Execute as etapas a seguir no controlador de domínio.
 
 
 5. O assistente de instalação verifica automaticamente se o servidor é um controlador de domínio ou um servidor dedicado. Se for um controlador de domínio, o sensor do ATP do Azure será instalado. Se for um servidor dedicado, o sensor autônomo do ATP do Azure será instalado.
-    
+
     Por exemplo, para um sensor do ATP do Azure, a tela a seguir será exibida informando que um sensor do ATP do Azure está instalado em seu servidor dedicado:
-    
+
     ![Instalação do sensor do ATP do Azure](media/sensor-install-deployment-type.png)
 
    Clique em **Avançar**.
 
-    > [!NOTE] 
+    > [!NOTE]
     > Um aviso será emitido se o controlador de domínio ou o servidor dedicado não atender aos requisitos mínimos de hardware para a instalação. O aviso não impede que você clique em **Avançar** e prossiga com a instalação. Essa ainda pode ser a opção certa para a instalação do ATP do Azure em um ambiente de teste de laboratório pequeno, que não precisa de tanto espaço para armazenamento de dados. Para ambientes de produção, é altamente recomendável trabalhar com o guia de [planejamento de capacidade](atp-capacity-planning.md) do Azure ATP para certificar-se de que seus controladores de domínio ou servidores dedicados atendam aos requisitos necessários.
 
 6. Em **Configurar o sensor**, insira o caminho de instalação e a chave de acesso que você copiou na etapa anterior, com base em seu ambiente:
@@ -69,24 +69,22 @@ Execute as etapas a seguir no controlador de domínio.
 
       - Caminho da instalação: O local em que o sensor do ATP do Azure está instalado. Por padrão, o caminho é %programfiles%\Azure Advanced Threat Protection sensor. Mantenha o valor padrão.
 
-     - Chave de acesso: Recuperada por meio do portal do ATP do Azure na etapa anterior.
-    
+      - Chave de acesso: Recuperada por meio do portal do ATP do Azure na etapa anterior.
+
 7. Clique em **Instalar**. Os componentes a seguir serão instalados e configurados durante a instalação do sensor autônomo do Azure ATP:
 
     - KB 3047154 (somente para Windows Server 2012 R2)
 
         > [!IMPORTANT]
-        > - Não instale o KB 3047154 em um host de virtualização (o host que está executando a virtualização; não há problema em executá-lo em uma máquina virtual). Isso pode fazer com que o espelhamento de porta pare de funcionar corretamente. 
+        > - Não instale o KB 3047154 em um host de virtualização (o host que está executando a virtualização; não há problema em executá-lo em uma máquina virtual). Isso pode fazer com que o espelhamento de porta pare de funcionar corretamente.
         > - Se o Wireshark estiver instalado no computador do sensor do ATP, depois de executar o Wireshark, você precisará reiniciar o sensor do ATP, pois ela usa os mesmos drivers.
 
     - Serviço de sensor do Azure ATP e serviço do atualizador do sensor do Azure ATP
     - Microsoft Visual C++ 2013 Redistributable
 
-
 ## <a name="next-steps"></a>Próximas etapas
 
-O sensor do ATP do Azure foi projetado para ter um impacto mínimo sobre os recursos do controlador de domínio e a atividade de rede. Para criar uma avaliação de desempenho, consulte a [capacidade do plano para sua solução do ATP do Azure](install-atp-step5.md).
-
+O sensor do ATP do Azure foi projetado para ter um impacto mínimo sobre os recursos do controlador de domínio e a atividade de rede. Para criar uma avaliação de desempenho, consulte [Planejar a capacidade do ATP do Azure](atp-capacity-planning.md).
 
 ## <a name="join-the-community"></a>Participe da comunidade
 

@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 9c173d28-a944-491a-92c1-9690eb06b151
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: a1e8065f5a1898301439c160c2a877cabe750928
-ms.sourcegitcommit: 63be53de5b84eabdeb8c006438dab45bd35a4ab7
+ms.openlocfilehash: 484d3bba9ebb4c648e78413472b84100aa76d482
+ms.sourcegitcommit: 31fd8256f38cf69c51a9ba9cf8d38140b72a5ed7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79413818"
+ms.lasthandoff: 04/30/2020
+ms.locfileid: "82588387"
 ---
 # <a name="configure-endpoint-proxy-and-internet-connectivity-settings-for-your-azure-atp-sensor"></a>Configurar o proxy do ponto de extremidade e configurações de conectividade de Internet para o Sensor de ATP do Azure
 
@@ -42,7 +42,7 @@ Use os seguintes comandos para concluir a autenticação de proxy:
 >
 > |Name|Sintaxe|Obrigatório para instalação silenciosa?|Descrição|
 > |-------------|----------|---------|---------|
-> |ProxyUrl|ProxyUrl="https\://proxy.contoso.com:8080"|Não|Especifica o ProxyUrl e o número da porta para o sensor do ATP do Azure.|
+> |ProxyUrl|ProxyUrl="http\://proxy.contoso.com:8080"|Não|Especifica o ProxyUrl e o número da porta para o sensor do ATP do Azure.|
 > |ProxyUserName|ProxyUserName="Contoso\ProxyUser"|Não|Se o seu serviço de proxy exigir autenticação, forneça um nome de usuário no formato DOMÍNIO\usuário.|
 > |ProxyUserPassword|ProxyUserPassword="P@ssw0rd"|Não|Especifica a senha para o nome de usuário do proxy. *As credenciais são criptografadas e armazenadas localmente pelo sensor do ATP do Azure.|
 
@@ -89,7 +89,7 @@ As URLs anteriores são mapeadas automaticamente para o local do serviço corret
 > - Para garantir a segurança máxima e a privacidade dos dados, o ATP do Azure usa autenticação mútua baseada em certificado entre cada sensor e o back-end de nuvem do ATP do Azure. Se a inspeção SSL for usada em seu ambiente, verifique se ela está configurada para autenticação mútua, de modo que não interfira no processo de autenticação.
 > - Você também pode usar nossa marca de serviço do Azure (**AzureAdvancedThreatProtection**) para habilitar o acesso ao ATP do Azure. Para obter mais informações sobre marcas de serviço, confira [Marcas de serviço de rede virtual](https://docs.microsoft.com/azure/virtual-network/service-tags-overview) ou [baixe o arquivo de marcas de serviço](https://www.microsoft.com/download/details.aspx?id=56519).
 
-## <a name="see-also"></a>Confira Também
+## <a name="see-also"></a>Consulte Também
 
 - [Configurar o encaminhamento de eventos](configure-event-forwarding.md)
 - [Confira o fórum do ATP do Azure!](https://aka.ms/azureatpcommunity)
