@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 88692d1a-45a3-4d54-a549-4b5bba6c037b
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: da3465fa197157dd8502e0558fa0c03b825c6e56
-ms.sourcegitcommit: 63be53de5b84eabdeb8c006438dab45bd35a4ab7
+ms.openlocfilehash: b61a1d3236541e07f1cca86f9f1362a664e11e09
+ms.sourcegitcommit: 428e0694c862f92aed50a13b137db2aa49fe4439
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79413801"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82852210"
 ---
 # <a name="configure-windows-event-collection"></a>Configurar a coleção de Eventos do Windows
 
@@ -25,7 +25,7 @@ Para aprimorar os recursos de detecção de ameaças, a ATP do Azure (Proteção
 
 > [!NOTE]
 >
-> - Os sensores autônomos do ATP do Azure não são compatíveis com todos os tipos de fonte de dados, resultando em detecções perdidas. Para cobertura completa do seu ambiente, é recomendável implantar o sensor do ATP do Azure.
+> - Os sensores autônomos do ATP do Azure não dão suporte à coleção de entradas de log do ETW (Rastreamento de Eventos para Windows) que fornecem os dados para várias detecções. Para cobertura completa do seu ambiente, é recomendável implantar o sensor do ATP do Azure.
 > - É importante revisar e verificar suas [políticas de auditoria](atp-advanced-audit-policy.md) antes de configurar a coleta de eventos para garantir que os controladores de domínio estejam configurados corretamente para registrar os eventos necessários.
 
 Além de coletar e analisar o tráfego de rede para e dos controladores de domínio, o Azure ATP pode usar eventos do Windows para aprimorar ainda mais as detecções. A ATP do Azure usa os eventos 4776 e 8004 para NTLM, o que melhora várias detecções, e os eventos 4732, 4733, 4728, 4729, 4756, 4757, 7045 e 8004 para aprimorar a detecção de modificações de grupos confidenciais e a criação de serviços. Eles podem ser recebidos de seu SIEM ou definindo o Encaminhamento de Eventos do Windows no controlador de domínio. Os eventos coletados fornecem ao Azure ATP informações adicionais que não estão disponíveis por meio do tráfego de rede do controlador de domínio.

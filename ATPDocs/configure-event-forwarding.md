@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 3547519f-8d9c-40a9-8f0e-c7ba21081203
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 6ec95a6c9522710f31fc7e55c58a664f5b590914
-ms.sourcegitcommit: 63be53de5b84eabdeb8c006438dab45bd35a4ab7
+ms.openlocfilehash: 7f2d68c4fea2916a1b95353cc90b2eb59e113707
+ms.sourcegitcommit: 428e0694c862f92aed50a13b137db2aa49fe4439
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79510888"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82852295"
 ---
 # <a name="configuring-windows-event-forwarding"></a>Configuração do encaminhamento de eventos do Windows
 
@@ -28,7 +28,7 @@ Para aprimorar as funcionalidades de detecção, ATP do Azure precisa dos seguin
 
 > [!NOTE]
 >
-> - Os sensores autônomos do ATP do Azure não são compatíveis com todos os tipos de fonte de dados, resultando em detecções perdidas. Para cobertura completa do seu ambiente, é recomendável implantar o sensor do ATP do Azure.
+> - Os sensores autônomos do ATP do Azure não dão suporte à coleção de entradas de log do ETW (Rastreamento de Eventos para Windows) que fornecem os dados para várias detecções. Para cobertura completa do seu ambiente, é recomendável implantar o sensor do ATP do Azure.
 > - Verifique se o controlador de domínio está configurado corretamente para capturar os eventos necessários.
 
 ## <a name="wef-configuration-for-azure-atp-standalone-sensors-with-port-mirroring"></a>Configuração do WEF para o sensor autônomo do Azure ATP com espelhamento de porta

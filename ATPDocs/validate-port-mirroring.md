@@ -12,19 +12,19 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 0a56cf27-9eaa-4ad0-ae6c-9d0484c69094
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: a41c080847454af84d6622c53a28085e194823dd
-ms.sourcegitcommit: 63be53de5b84eabdeb8c006438dab45bd35a4ab7
+ms.openlocfilehash: 8fc752a2202216a2530005c0aa7e3b5609ebaa2f
+ms.sourcegitcommit: 428e0694c862f92aed50a13b137db2aa49fe4439
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79414600"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82852227"
 ---
 # <a name="validate-port-mirroring"></a>Validação do espelhamento de porta
 
 Este artigo é relevante apenas se você implantar o sensor autônomo da ATP em vez do sensor da ATP do Azure.
 
 > [!NOTE]
-> Os sensores autônomos do ATP do Azure não são compatíveis com todos os tipos de fonte de dados, resultando em detecções perdidas. Para cobertura completa do seu ambiente, é recomendável implantar o sensor do ATP do Azure.
+> Os sensores autônomos do ATP do Azure não dão suporte à coleção de entradas de log do ETW (Rastreamento de Eventos para Windows) que fornecem os dados para várias detecções. Para cobertura completa do seu ambiente, é recomendável implantar o sensor do ATP do Azure.
 
 As etapas a seguir guiarão você pelo processo de validação da configuração correta do espelhamento de porta. Para que a ATP do Azure funcione corretamente, o respectivo sensor autônomo deve ter capacidade de reconhecer o tráfego de entrada e saída do controlador de domínio. A fonte de dados principal usada pelo Azure ATP é uma inspeção profunda de pacotes do tráfego de rede para e dos controladores de domínio. Para que a ATP do Azure reconheça o tráfego de rede, é necessário configurar o espelhamento de porta. O espelhamento de porta copia o tráfego de uma porta (de origem) para outra porta (de destino).
 
@@ -45,7 +45,7 @@ As etapas a seguir guiarão você pelo processo de validação da configuração
 
         ![Criar nova imagem da guia de captura](media/atp-port-mirroring-capture.png)
 
-1. Na janela Filtro de exibição, digite o seguinte filtro: **KerberosV5 OU LDAP** e, em seguida, **Aplicar**.
+1. Na janela Exibir Filtro, insira o seguinte filtro: **KerberosV5 OU LDAP** e clique em **Aplicar**.
 
     ![Aplicar imagem de filtro KerberosV5 ou LDAP](media/atp-port-mirroring-filter-settings.png)
 
@@ -58,7 +58,7 @@ As etapas a seguir guiarão você pelo processo de validação da configuração
 
 1. Se você vir o tráfego apenas em uma direção, você deve trabalhar com as equipes de rede ou de virtualização para ajudar a solucionar os problemas com a configuração do espelhamento de porta.
 
-## <a name="see-also"></a>Confira Também
+## <a name="see-also"></a>Consulte Também
 
 - [Configurar o encaminhamento de eventos](configure-event-forwarding.md)
 - [Configurar o espelhamento de porta](configure-port-mirroring.md)

@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 88692d1a-45a3-4d54-a549-4b5bba6c037b
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: a1cb324f7641a175ad47e01f4fa87efe5764334f
-ms.sourcegitcommit: 63be53de5b84eabdeb8c006438dab45bd35a4ab7
+ms.openlocfilehash: 56c16de6e6ff4757bc152d6814dd6b54538bb68d
+ms.sourcegitcommit: 428e0694c862f92aed50a13b137db2aa49fe4439
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79546204"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82852261"
 ---
 # <a name="configure-event-collection"></a>Configurar coleta de eventos
 
@@ -25,7 +25,7 @@ Para aprimorar as funcionalidades de detecção, ATP do Azure precisa dos seguin
 
 > [!NOTE]
 >
-> - Os sensores autônomos do ATP do Azure não são compatíveis com todos os tipos de fonte de dados, resultando em detecções perdidas. Para cobertura completa do seu ambiente, é recomendável implantar o sensor do ATP do Azure.
+> - Os sensores autônomos do ATP do Azure não dão suporte à coleção de entradas de log do ETW (Rastreamento de Eventos para Windows) que fornecem os dados para várias detecções. Para cobertura completa do seu ambiente, é recomendável implantar o sensor do ATP do Azure.
 > - É importante executar o script de auditoria do Azure ATP antes de configurar a coleta de eventos para garantir que os controladores de domínio estejam configurados corretamente para registrar os eventos necessários.
 
 Além de coletar e analisar o tráfego de rede para e dos controladores de domínio, o Azure ATP pode usar eventos do Windows para aprimorar ainda mais as detecções. A ATP do Azure usa os eventos 4776 e 8004 para NTLM, o que melhora várias detecções, e os eventos4726, 4728, 4729, 4730, 4732, 4733, 4743, 4753, 4756, 4757, 4758, 4763, 4776, 7045 e 8004 para aprimorar a detecção de modificações de grupos confidenciais e a criação de serviços. Eles podem ser recebidos de seu SIEM ou definindo o Encaminhamento de Eventos do Windows no controlador de domínio. Os eventos coletados fornecem ao Azure ATP informações adicionais que não estão disponíveis por meio do tráfego de rede do controlador de domínio.
@@ -84,7 +84,7 @@ O Azure ATP dá suporte a eventos de SIEM nos seguintes formatos:
     9. O código resultante do NTLM
 - A ordem é importante, e nada mais deve ser incluído na mensagem.
 
-### <a name="hp-arcsight"></a>HP Arcsight
+### <a name="microfocus-arcsight"></a>MicroFocus ArcSight
 
 CEF:0|Microsoft|Microsoft Windows||Microsoft-Windows-Security-Auditing:4776|O controlador de domínio tentou validar as credenciais de uma conta.|Baixo| externalId=4776 cat=Security rt=1426218619000 shost=KKKKKK dhost=YYYYYY.subDomain.domain.com duser=XXXXXX cs2=Security cs3=Microsoft-Windows-Security-Auditing cs4=0x0 cs3Label=EventSource cs4Label=Motivo ou Código de erro
 
@@ -100,7 +100,6 @@ CEF:0|Microsoft|Microsoft Windows||Microsoft-Windows-Security-Auditing:4776|O co
   - dhost = o computador que está recebendo o evento (o controlador de domínio neste caso)
   - duser = o usuário que está autenticando
 - A ordem não é importante para a parte _Extensão_
-
 - Deve haver uma chave personalizada e um keyLable para esses dois campos:
   - "EventSource"
   - "Motivo ou Código de erro" = o código resultante do NTLM
@@ -142,6 +141,7 @@ O QRadar permite a coleta de eventos por meio de um agente. Se os dados forem re
 Os campos necessários são:
 
 - O tipo de agente para a coleta
+
 - O nome do provedor do log de eventos do Windows
 - A fonte do log de eventos do Windows
 - O nome de domínio totalmente qualificado do DC

@@ -12,19 +12,19 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 9ec7eb4c-3cad-4543-bbf0-b951d8fc8ffe
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 70c122d4983d4b5b32899d13ff81b81d38d65af8
-ms.sourcegitcommit: 63be53de5b84eabdeb8c006438dab45bd35a4ab7
+ms.openlocfilehash: e4873dbe0aa79456a55f5efff9c15e13141a2d9f
+ms.sourcegitcommit: 428e0694c862f92aed50a13b137db2aa49fe4439
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79413835"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82852244"
 ---
 # <a name="configure-port-mirroring"></a>Configurar o espelhamento de porta
 
 Este artigo será relevante apenas se você implantar sensores autônomos do Azure ATP, em vez de sensores do Azure ATP.
 
 > [!NOTE]
-> Os sensores autônomos do ATP do Azure não são compatíveis com todos os tipos de fonte de dados, resultando em detecções perdidas. Para cobertura completa do seu ambiente, é recomendável implantar o sensor do ATP do Azure.
+> Os sensores autônomos do ATP do Azure não dão suporte à coleção de entradas de log do ETW (Rastreamento de Eventos para Windows) que fornecem os dados para várias detecções. Para cobertura completa do seu ambiente, é recomendável implantar o sensor do ATP do Azure.
 
 A fonte de dados principal usada pelo Azure ATP é uma inspeção profunda de pacotes do tráfego de rede para e dos controladores de domínio. Para que o Azure ATP veja o tráfego de rede, você deve configurar o espelhamento de porta ou usar uma TAP de Rede.
 
@@ -66,11 +66,11 @@ Seus controladores de domínio e o sensor autônomo do Azure ATP podem ser físi
   > [!NOTE]
   > Caso seu ambiente dê suporte a RSPAN (virtual para virtual em hosts diferentes), você não precisa se preocupar com afinidade.
 
-- Para garantir que o sensor autônomo do Azure ATP tenha um tamanho correto para lidar com o monitoramento de todos os controladores de domínio por si só, tente esta opção: instalar uma máquina virtual em cada host de virtualização e instalar um sensor autônomo do Azure ATP em cada host. Configure cada sensor autônomo do Azure ATP para monitorar todos os controladores de domínio executados no cluster. Dessa forma, qualquer host no qual os controladores de domínio são executados será monitorado.
+- Para garantir que o sensor autônomo do ATP do Azure esteja dimensionado corretamente para lidar com o monitoramento de todos os controladores de domínio por si só, tente esta opção: instale uma máquina virtual em cada host de virtualização e um sensor autônomo do ATP do Azure em cada host. Configure cada sensor autônomo do Azure ATP para monitorar todos os controladores de domínio executados no cluster. Dessa forma, qualquer host no qual os controladores de domínio são executados será monitorado.
 
 Depois de configurar o espelhamento de porta, verifique se ele está funcionando antes de instalar o sensor autônomo do Azure ATP.
 
-## <a name="see-also"></a>Confira Também
+## <a name="see-also"></a>Consulte Também
 
 - [Configurar o encaminhamento de eventos](configure-event-forwarding.md)
 - [Confira o fórum do ATP do Azure!](https://aka.ms/azureatpcommunity)

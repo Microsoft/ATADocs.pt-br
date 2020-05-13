@@ -5,19 +5,19 @@ keywords: ''
 author: shsagir
 ms.author: shsagir
 manager: rkarlin
-ms.date: 03/01/2020
+ms.date: 04/23/2020
 ms.topic: tutorial
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 2257eb00-8614-4577-b6a1-5c65085371f2
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: e646dd3b3f5f25fd2c19ffbd621fafe3ac960c0b
-ms.sourcegitcommit: 63be53de5b84eabdeb8c006438dab45bd35a4ab7
+ms.openlocfilehash: 412603427b1b221c97c88556d2bdbf3fe3b562b8
+ms.sourcegitcommit: 9654502ea67f51ba5f00357f8464565ce424114e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80669777"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82794233"
 ---
 # <a name="tutorial-lateral-movement-alerts"></a>Tutorial: Alertas de movimento lateral
 
@@ -42,6 +42,7 @@ Os alertas de segurança a seguir ajudam a identificar e corrigir atividades sus
 > * Suspeita de ataque de retransmissão de NTLM (conta do Exchange) (ID 2037 externa)
 > * Suspeita de ataque de Overpass-the-Hash (downgrade de criptografia) (ID 2008 externa)
 > * Suspeita de ataque de Overpass-the-Hash (Kerberos) (ID 2002 externa)
+> * Suspeita de manipulação de pacote SMB (exploração de CVE-2020-0796) – (versão prévia) (ID 2406 externa)
 
 ## <a name="remote-code-execution-over-dns-external-id-2036"></a>Execução remota de código sobre DNS (ID 2036 externa)
 
@@ -151,15 +152,16 @@ Há aplicativos personalizados que encaminham tíquetes em nome de usuários. Es
 
 ## <a name="suspected-ntlm-authentication-tampering-external-id-2039"></a>Suspeita de violação da autenticação NTLM (ID externa 2039)
 
-Em junho de 2019, a Microsoft publicou a [Vulnerabilidade de Segurança CVE-2019-1040](https://portal.msrc.microsoft.com/security-guidance/advisory/CVE-2019-1040), anunciando a descoberta de uma nova vulnerabilidade de violação no Microsoft Windows, quando um ataque man-in-the-middle é capaz de ignorar com êxito a proteção de MIC (verificação de integridade da mensagem) do NTLM.
+Em junho de 2019, a Microsoft publicou a [Vulnerabilidade de segurança CVE-2019-1040](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2019-1040), anunciando a descoberta de uma nova vulnerabilidade de violação no Microsoft Windows, quando um ataque man-in-the-middle é capaz de ignorar com êxito a proteção de MIC (verificação de integridade da mensagem) do NTLM.
 
 Os atores mal-intencionados que exploram com êxito essa vulnerabilidade têm a capacidade de fazer downgrade dos recursos de segurança do NTLM e podem criar sessões autenticadas com êxito em nome de outras contas. Os Windows Servers sem patch estão em risco devido a essa vulnerabilidade.
 
-Nessa detecção, um alerta de segurança do ATP do Azure é disparado quando solicitações de autenticação do NTLM suspeitas de explorar a vulnerabilidade de segurança [CVE-2019-1040](https://portal.msrc.microsoft.com/security-guidance/advisory/CVE-2019-1040) são feitas em um controlador de domínio na rede.
+Nessa detecção, um alerta de segurança do ATP do Azure é disparado quando solicitações de autenticação do NTLM suspeitas de explorar a vulnerabilidade de segurança [CVE-2019-1040](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2019-1040) são feitas em um controlador de domínio na rede.
 
 **TP, B-TP ou FP?**
 
-1. Os computadores envolvidos, incluindo os controladores de domínio, são atualizados e corrigidos em relação à [CVE-2019-1040](https://portal.msrc.microsoft.com/security-guidance/advisory/CVE-2019-1040)? Caso os computadores estejam atualizados e com o patch aplicado, esperamos que a autenticação falhe. Se a autenticação falhou, **feche** o alerta de segurança como uma tentativa com falha.
+1. Os computadores envolvidos, incluindo os controladores de domínio, estão atualizados e corrigidos em relação a [CVE-2019-1040](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2019-1040)?
+  - Se os computadores estão atualizados e corrigidos, esperamos que a autenticação falhe. Se a autenticação falhou, **feche** o alerta de segurança como uma tentativa com falha.
 
 **Entender o escopo da violação**
 
@@ -177,7 +179,7 @@ Nessa detecção, um alerta de segurança do ATP do Azure é disparado quando so
 
 **Prevenção**
 
-* Verifique se todos os dispositivos no ambiente estão atualizados e corrigidos em relação à [CVE-2019-1040](https://portal.msrc.microsoft.com/security-guidance/advisory/CVE-2019-1040).
+• Verifique se todos os dispositivos no ambiente estão atualizados e corrigidos em relação à [CVE-2019-1040](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2019-1040).
 
 ## <a name="suspected-ntlm-relay-attack-exchange-account-external-id-2037"></a>Suspeita de ataque de retransmissão de NTLM (conta do Exchange) (ID 2037 externa)
 
@@ -228,9 +230,9 @@ Alguns recursos legítimos não dão suporte à criptografia forte e podem dispa
 
 2. Todos os usuários do código-fonte compartilham algo?
     1. Por exemplo, todos os membros da equipe de marketing estão acessando um recurso específico que pode fazer com que o alerta seja disparado?
-   2. Verifique os recursos acessados por esses tíquetes.
+    2. Verifique os recursos acessados por esses tíquetes.
        - Confira isso no Active Directory verificando o atributo *msDS-SupportedEncryptionTypes*, da conta de serviço do recurso.
-   3. Se houver apenas um recurso acessado, verifique se é um recurso válido para o acesso desses usuários.
+    3. Se houver apenas um recurso acessado, verifique se é um recurso válido para o acesso desses usuários.
 
       Se a resposta a uma das perguntas anteriores for **sim**, provavelmente essa será uma atividade **T-BP**. Verifique se o recurso pode dar suporte a uma codificação de criptografia forte, implemente uma codificação de criptografia mais forte sempre que possível e **feche** o alerta de segurança.
 
@@ -282,6 +284,39 @@ Os invasores usam ferramentas que implementam vários protocolos como SMB e Kerb
 3. Encontre a ferramenta que realizou o ataque e remova-a.
 4. Procure usuários que estavam conectados no mesmo período da atividade suspeita, pois eles também podem estar comprometidos. Redefina suas senhas e habilite a MFA ou, se você tiver configurado as políticas relevantes de usuário de alto risco no Azure Active Directory Identity Protection, poderá usar a ação [**Confirmar usuário comprometido**](/cloud-app-security/accounts#governance-actions) no portal de Cloud App Security.
 5. Redefina as senhas dos usuários de origem e habilite a MFA ou, se você tiver configurado as políticas relevantes de usuário de alto risco no Azure Active Directory Identity Protection, poderá usar a ação [**Confirmar usuário comprometido**](/cloud-app-security/accounts#governance-actions) no portal de Cloud App Security.
+
+<!-- REMOVE BOOKMARK FROM TITLE WHEN PREVIEW REMOVED -->
+
+## <a name="suspected-smb-packet-manipulation-cve-2020-0796-exploitation---preview-external-id-2406"></a><a name="suspected-smb-packet-manipulation-cve-2020-0796-exploitation-external-id-2406"></a>Suspeita de manipulação de pacote SMB (exploração de CVE-2020-0796) – (versão prévia) (ID 2406 externa)
+
+**Descrição**
+
+Em 12/03/2020, a Microsoft publicou o anúncio [CVE-2020-0796](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2020-0796), sobre uma vulnerabilidade de execução de código remota recém-descoberta na forma como o protocolo SMBv3 (Microsoft Server Message Block 3.1.1) lida com certas solicitações. Um invasor que explorou com êxito a vulnerabilidade pode executar códigos no servidor ou no cliente de destino. Os Windows Servers sem patch estão em risco devido a essa vulnerabilidade.
+
+Nessa detecção, é disparado um alerta de segurança do ATP do Azure quando um pacote SMBv3 suspeito de explorar a vulnerabilidade de segurança CVE-2020-0796 invade um controlador de domínio na rede.
+
+**TP, B-TP ou FP?**
+
+1. Os controladores de domínio envolvidos estão atualizados e corrigidos em relação a CVE-2020-1040?
+    - Se os computadores estão atualizados e corrigidos, esperamos que o ataque falhe. **Feche** o alerta de segurança como uma tentativa com falha.
+
+**Entender o escopo da violação**
+
+1. Investigue o [computador de origem](investigate-a-computer.md).
+2. Investigue o DC (controlador de destino) de destino.
+
+**Correção sugerida e etapas de prevenção**
+
+**Remediação**
+
+1. Contenha o computador de origem.
+2. Encontre a ferramenta que realizou o ataque e remova-a.
+3. Procure usuários que estavam conectados no mesmo período da atividade suspeita, pois eles também podem estar comprometidos. Redefina suas senhas e habilite a MFA ou, se você tiver configurado as políticas relevantes de usuário de alto risco no Azure Active Directory Identity Protection, poderá usar a ação [**Confirmar usuário comprometido**](/cloud-app-security/accounts#governance-actions) no portal de Cloud App Security.
+4. Se você tem computadores cujos sistemas operacionais não dão suporte à [KB4551762](https://www.catalog.update.microsoft.com/Search.aspx?q=KB4551762), recomendamos desabilitar o recurso de compactação do SMBv3 no ambiente, conforme descrito na seção [Soluções alternativas](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2020-0796).
+
+**Prevenção**
+
+1. Verifique se todos os dispositivos no ambiente estão atualizados e corrigidos em relação a [CVE-2020-0796](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2020-0796).
 
 > [!div class="nextstepaction"]
 > [Tutorial de alerta de comprometimento de domínio](atp-domain-dominance-alerts.md)

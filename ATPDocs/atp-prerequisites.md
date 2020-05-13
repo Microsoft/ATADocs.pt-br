@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 62c99622-2fe9-4035-9839-38fec0a353da
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 185d3e8c70c11e06d1125a634c3cd9c12e2076c8
-ms.sourcegitcommit: 63be53de5b84eabdeb8c006438dab45bd35a4ab7
+ms.openlocfilehash: d0a2b2fc517c30d337f2af9ce7fbd3a2753a2850
+ms.sourcegitcommit: 428e0694c862f92aed50a13b137db2aa49fe4439
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79414260"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82852278"
 ---
 # <a name="azure-atp-prerequisites"></a>Pré-requisitos do ATP do Azure
 
@@ -43,7 +43,7 @@ Este guia de pré-requisitos é dividido nas seguintes seções para garantir qu
 [Sensor autônomo do ATP do Azure](#azure-atp-standalone-sensor-requirements): O Sensor autônomo do ATP do Azure é instalado em um servidor dedicado e requer a configuração do espelhamento de porta do controlador de domínio para receber o tráfego de rede.
 
 > [!NOTE]
-> Os sensores autônomos do ATP do Azure não são compatíveis com todos os tipos de fonte de dados, resultando em detecções perdidas. Para cobertura completa do seu ambiente, é recomendável implantar o sensor do ATP do Azure.
+> Os sensores autônomos do ATP do Azure não dão suporte à coleção de entradas de log do ETW (Rastreamento de Eventos para Windows) que fornecem os dados para várias detecções. Para cobertura completa do seu ambiente, é recomendável implantar o sensor do ATP do Azure.
 
 ## <a name="before-you-start"></a>Antes de começar
 
@@ -185,7 +185,7 @@ A detecção da ATP do Azure depende dos seguintes logs de eventos específicos 
 Esta seção lista os requisitos do sensor autônomo do Azure ATP.
 
 > [!NOTE]
-> Os sensores autônomos do ATP do Azure não são compatíveis com todos os tipos de fonte de dados, resultando em detecções perdidas. Para cobertura completa do seu ambiente, é recomendável implantar o sensor do ATP do Azure.
+> Os sensores autônomos do ATP do Azure não dão suporte à coleção de entradas de log do ETW (Rastreamento de Eventos para Windows) que fornecem os dados para várias detecções. Para cobertura completa do seu ambiente, é recomendável implantar o sensor do ATP do Azure.
 
 ### <a name="general"></a>Geral
 
