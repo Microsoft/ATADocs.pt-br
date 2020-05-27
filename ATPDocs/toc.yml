@@ -75,20 +75,24 @@
           items:
             - name: Noções básicas sobre situação de segurança de identidade
               href: atp-isp-overview.md
-            - name: Avaliação de entidades expondo credenciais em texto não criptografado
-              href: atp-cas-isp-clear-text.md
-            - name: Avaliação de uso de protocolos herdados
-              href: atp-cas-isp-legacy-protocols.md
-            - name: Avaliação de uso de criptografia fraca
-              href: atp-cas-isp-weak-cipher.md
-            - name: Avaliação de delegação não segura de Kerberos
-              href: atp-cas-isp-unconstrained-kerberos.md
             - name: Avaliação de controladores de domínio com serviço de spooler de impressão disponível
               href: atp-cas-isp-print-spooler.md
             - name: Avaliação de entidades inativas em grupos confidenciais
               href: atp-cas-isp-dormant-entities.md
+            - name: Avaliação de entidades expondo credenciais em texto não criptografado
+              href: atp-cas-isp-clear-text.md
+            - name: Avaliação de uso do LAPS
+              href: atp-cas-isp-laps.md
+            - name: Avaliação de uso de protocolos herdados
+              href: atp-cas-isp-legacy-protocols.md
             - name: Controladores de domínio não monitorados
               href: atp-cas-isp-unmonitored-domain-controller.md
+            - name: Avaliação de delegação não segura de Kerberos
+              href: atp-cas-isp-unconstrained-kerberos.md
+            - name: Atributos do histórico de SID não seguros
+              href: atp-cas-isp-unsecure-sid-history-attribute.md
+            - name: Avaliação de uso de criptografia fraca
+              href: atp-cas-isp-weak-cipher.md
     - name: Laboratório de alerta de segurança
       items:
         - name: Visão geral do laboratório
