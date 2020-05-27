@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 62c99622-2fe9-4035-9839-38fec0a353da
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: d0a2b2fc517c30d337f2af9ce7fbd3a2753a2850
-ms.sourcegitcommit: 428e0694c862f92aed50a13b137db2aa49fe4439
+ms.openlocfilehash: 94521875a58d49277e801e730a0eace02264e86a
+ms.sourcegitcommit: 3162130a85b5c6e8bf16456f8255b95e1f52b869
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82852278"
+ms.lasthandoff: 05/25/2020
+ms.locfileid: "83825288"
 ---
 # <a name="azure-atp-prerequisites"></a>Pré-requisitos do ATP do Azure
 
@@ -135,7 +135,7 @@ Durante a instalação, o .Net Framework 4.7 é instalado e poderá exigir uma r
 ### <a name="server-specifications"></a>Especificações do servidor
 
 O sensor do ATP do Azure requer um mínimo de dois núcleos e 6 GB de RAM instalados no controlador de domínio.
-Para ter um melhor desempenho, defina a **Opção de Energia** do sensor do Azure ATP como **Alto Desempenho**.
+Para ter desempenho ideal, defina a **Opção de Energia** do computador que executa o sensor do ATP do Azure como **Alto Desempenho**.
 
 É possível implantar o sensor do ATP do Azure em controladores de domínio de vários tamanhos e cargas, dependendo da quantidade de recursos instalados e da quantidade de tráfego de rede dos controladores de domínio.
 
@@ -202,7 +202,7 @@ Para obter informações sobre como usar máquinas virtuais com o sensor autôno
 
 ### <a name="server-specifications"></a>Especificações do servidor
 
-Para ter um melhor desempenho, defina a **Opção de Energia** do sensor autônomo do Azure ATP como **Alto Desempenho**.<br>
+Para ter desempenho ideal, defina a **Opção de Energia** do computador que executa o sensor autônomo do ATP do Azure como **Alto Desempenho**.<br>
 Um sensor autônomo do ATP do Azure pode ter suporte para monitoramento de vários controladores de domínio, dependendo da quantidade de tráfego de rede dos controladores de domínio.
 
 >[!NOTE]

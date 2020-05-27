@@ -11,12 +11,12 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: ort
 ms.suite: ems
-ms.openlocfilehash: 178175373153ce162042cee3228628a9ca9ab2c8
-ms.sourcegitcommit: 2d1bdcc3adee8452aef7259a99c9aaa2f87c31cd
+ms.openlocfilehash: 77a0c0bb4470894aa7998c852a63fd5bade72433
+ms.sourcegitcommit: 3162130a85b5c6e8bf16456f8255b95e1f52b869
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82886540"
+ms.lasthandoff: 05/25/2020
+ms.locfileid: "83825317"
 ---
 # <a name="whats-new-in-azure-advanced-threat-protection-azure-atp"></a>Novidades no ATP do Azure (Proteção Avançada contra Ameaças do Azure)
 
@@ -25,6 +25,18 @@ Este artigo é atualizado com frequência para manter você informado sobre as n
 Para obter detalhes das versões anteriores do ATP do Azure até (e incluindo) a versão 2.55, confira a [referência de versão do ATP do Azure](atp-release-reference.md).
 
 Feed RSS: Receba uma notificação quando esta página for atualizada copiando e colando a seguinte URL em seu leitor de feed: `https://docs.microsoft.com/api/search/rss?search=%22This+article+is+updated+frequently+to+let+you+know+what%27s+new+in+the+latest+release+of+Azure+ATP%22&locale=en-us`
+
+## <a name="azure-atp-release-2115"></a>ATP do Azure versão 2.115
+
+Lançado em 24 de maio de 2020
+
+- Essa versão inclui melhorias e correções de bugs da infraestrutura do sensor interno.
+
+## <a name="azure-atp-release-2114"></a>ATP do Azure versão 2.114
+
+Lançado em 17 de maio de 2020
+
+- Essa versão inclui melhorias e correções de bugs da infraestrutura do sensor interno.
 
 ## <a name="azure-atp-release-2113"></a>ATP do Azure versão 2.113
 

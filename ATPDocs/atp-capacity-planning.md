@@ -3,16 +3,16 @@ title: Guia de início rápido para planejamento de implantação da Proteção 
 description: Ajuda você a planejar a implantação e a decidir quantos servidores do Azure ATP serão necessários para dar suporte à sua rede
 author: shsagir
 ms.author: shsagir
-ms.date: 02/19/2020
+ms.date: 05/20/2020
 ms.topic: quickstart
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
-ms.openlocfilehash: e13dc696046ca095438297ad0aeb82e7f98a58d2
-ms.sourcegitcommit: 63be53de5b84eabdeb8c006438dab45bd35a4ab7
+ms.openlocfilehash: 7bcebf2142980990bb71fb1c09faa986b4315fa7
+ms.sourcegitcommit: c3949c8f0332198753c14e3bcd7cb4ca6d288e25
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79414481"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83696024"
 ---
 # <a name="quickstart-plan-capacity-for-azure-atp"></a>Início Rápido: Planejar capacidade para o ATP do Azure
 
@@ -40,9 +40,9 @@ A maneira recomendada e mais simples de determinar a capacidade da implantação
 
 Um sensor do ATP do Azure pode ter suporte para monitoramento de um controlador de domínio com base na quantidade de tráfego de rede gerado pelo controlador de domínio. A tabela a seguir representa uma estimativa. O valor final que o sensor analisa depende da quantidade de tráfego e da distribuição desse tráfego.
 
-A capacidade de CPU e memória a seguir se refere ao **consumo do próprio sensor**, e não à capacidade do controlador de domínio.
+A capacidade da CPU e da memória RAM a seguir se refere ao **consumo do próprio sensor**, e não à capacidade do controlador de domínio.
 
-|Pacotes por segundo*|CPU (núcleos)**|Memória (GB)|
+|Pacotes por segundo|CPU (núcleos)\*|Memória\*\* (GB)|
 |----|----|-----|
 |0 - 1k|0.25|2.50|
 |1k - 5k|0.75|6.00|
@@ -52,16 +52,19 @@ A capacidade de CPU e memória a seguir se refere ao **consumo do próprio senso
 |50k - 75k |3.50|9.50|
 |75k - 100k|3.50|9.50|
 
-** Isso inclui os núcleos físicos, não os núcleos com hyper-threading.
+\* Isso inclui os núcleos físicos, não os núcleos com hyper-threading.  
+\*\* Memória RAM
 
 Quando determinar o dimensionamento, observe os seguintes itens:
 
-- Número total de núcleos a serem usados pelo serviço de sensor.<br>Recomendamos não trabalhar com núcleos hyper-threaded. Trabalhar com núcleos com hyper-threading pode resultar em problemas de integridade do sensor do ATP do Azure.
+- Número total de núcleos a serem usados pelo serviço de sensor.  
+Recomendamos não trabalhar com núcleos hyper-threaded. Trabalhar com núcleos com hyper-threading pode resultar em problemas de integridade do sensor do ATP do Azure.
 - Número total de memória a ser usada pelo serviço de sensor.
 - Se o controlador de domínio não tiver os recursos exigidos pelo sensor do ATP do Azure, o desempenho do controlador de domínio não será afetado, mas o sensor do ATP do Azure poderá não operar conforme o esperado.
 - Na execução como uma máquina virtual, toda a memória precisa ser alocada para a máquina virtual em todos os momentos.
 - Para ter um melhor desempenho, defina a **Opção de Energia** do sensor do Azure ATP como **Alto Desempenho**.
-- São necessários no mínimo dois núcleos e 6 GB de espaço. No entanto, recomendamos 10 GB, incluindo o espaço necessário para os binários e logs do ATP do Azure.
+- São necessários no mínimo dois núcleos e
+- 6 GB de espaço no disco rígido. No entanto, recomendamos 10 GB, incluindo o espaço necessário para os binários e logs do ATP do Azure.
 
 ### <a name="dynamic-memory"></a>Memória dinâmica
 
