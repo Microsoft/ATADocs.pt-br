@@ -2,9 +2,9 @@
 title: O que há de novo na versão 1,6 do Advanced Threat Analytics
 description: Lista as novidades na nova versão 1.6 do ATA e seus problemas conhecidos
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
-manager: rkarlin
+author: shsagir
+ms.author: shsagir
+manager: shsagir
 ms.date: 01/23/2017
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 27b139e5-12b9-4953-8f53-eb58e8ce0038
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: c87966ee2d8f53187bcc412cb027b19c4ddcf891
-ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
+ms.openlocfilehash: 3a9e339451271d491189480982313ab70354787d
+ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79412543"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84774733"
 ---
 # <a name="whats-new-in-ata-version-16"></a>Novidades na versão 1.6 do ATA
 Essas notas de versão fornecem informações sobre problemas conhecidos nesta versão da Advanced Threat Analytics.
@@ -99,7 +99,7 @@ Em implantações nas quais o caminho do banco de dados é movido manualmente, a
 ### <a name="migration-failure-when-updating-from-ata-15"></a>Falha na migração ao atualizar do ATA 1.5
 Ao atualizar para o ATA 1.6, o processo de atualização pode falhar com o seguinte código de erro:
 
-![Erro ao atualizar para o ATA 1.6](http://i.imgur.com/QrLSApr.png) Se você receber esse erro, examine o log de implantação em: **C:Usuários\<Usuário>\AppData\Local\Temp** e procure pela seguinte exceção:
+![Erro de atualização do ATA para 1,6 ](http://i.imgur.com/QrLSApr.png) se você vir esse erro, examine o log de implantação em: **C:\Users \<User> \AppData\Local\Temp**e procure a seguinte exceção:
 
     System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> MongoDB.Driver.MongoWriteException: A write operation resulted in an error. E11000 duplicate key error index: ATA.UniqueEntityProfile.$_id_ dup key: { : "<guid>" } ---> MongoDB.Driver.MongoBulkWriteException`1: A bulk write operation resulted in one or more errors.  E11000 duplicate key error index: ATA.UniqueEntityProfile.$_id_ dup key: { : " <guid> " }
 
@@ -107,7 +107,7 @@ Você também pode ver este erro: System.ArgumentNullException: o valor não pod
     
 Se você ver algum desses erros, execute a seguinte solução alternativa:
 
-**Solução alternativa**: 
+**Solução do problema**: 
 
 1.  Mova a pasta "data_old" para uma pasta temporária (geralmente localizada em %ProgramFiles%\Microsoft Advanced Threat Analytics\Center\MongoDB\bin).
 2.  Desinstale o Centro do ATA v1.5 e exclua todos os dados do banco de dados.
@@ -121,7 +121,7 @@ Se você ver algum desses erros, execute a seguinte solução alternativa:
     1.  MongoDB
     2.  Central do Microsoft Advanced Threat Analytics
 7.  Revise os logs para verificar se o produto está sendo executado sem erros.
-8.  [Baixe](https://aka.ms/ataremoveduplicateprofiles "Download") a ferramenta "RemoveDuplicateProfiles. exe" e copie-a para o caminho de instalação principal (%ProgramFiles%\Microsoft Advanced Threat Analytics\Center)
+8.  [Baixe](https://aka.ms/ataremoveduplicateprofiles "Baixar") a ferramenta "RemoveDuplicateProfiles.exe" e copie-a para o caminho de instalação principal (%ProgramFiles%\Microsoft Advanced Threat Analytics\Center)
 9.  Em um prompt de comandos com privilégios elevados, execute `RemoveDuplicateProfiles.exe` e aguarde até que ela seja concluída com êxito.
 10. Do diretório: …\Microsoft Advanced Threat Analytics\Center\MongoDB\bin: **Mongo ATA**, digite o seguinte comando:
 
@@ -141,7 +141,7 @@ Essa versão do ATA apresenta um mecanismo de detecção aprimorado, que fornece
 O mecanismo de detecção novo e melhorado utiliza tecnologia de detecção embutida, permitindo detecção sem acessar o histórico de atividades de rede, para aumentar consideravelmente o desempenho do ATA Center. Isso também significa que é desnecessário migrar o histórico de atividades de rede durante o procedimento de atualização.
 O procedimento de atualização do ATA exporta os dados, caso você os queira para investigação futura, para `<Center Installation Path>\Migration` como um arquivo JSON.
 
-## <a name="see-also"></a>Confira Também
+## <a name="see-also"></a>Consulte Também
 [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
 [Atualizar o ATA para a versão 1.6 — guia de migração](ata-update-1.6-migration-guide.md)

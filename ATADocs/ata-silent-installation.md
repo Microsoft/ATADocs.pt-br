@@ -4,7 +4,7 @@ description: Este artigo descreve como instalar silenciosamente o ATA.
 keywords: ''
 author: shsagir
 ms.author: shsagir
-manager: rkarlin
+manager: shsagir
 ms.date: 10/15/2019
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: b3cceb18-0f3c-42ac-8630-bdc6b310f1d6
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: ea408a1c9a4d8dc937bab7afda4cedc656da6f15
-ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
+ms.openlocfilehash: 7130b378178165eb834cf8874a477f97db3420d7
+ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79412475"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84775515"
 ---
 # <a name="ata-silent-installation"></a>Instalação silenciosa do ATA
 
@@ -25,7 +25,7 @@ ms.locfileid: "79412475"
 
 Este artigo fornece instruções de como instalar silenciosamente o ATA.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Pré-requisitos
 
 A versão 1,9 do ATA requer a instalação do Microsoft .NET Framework 4.6.1. 
 
@@ -35,7 +35,7 @@ Quando você instala ou atualiza o ATA, o .Net Framework 4.6.1 é instalado auto
 > A instalação do .Net Framework 4.6.1 pode exigir a reinicialização do servidor. Ao instalar o Gateway do ATA em Controladores de Domínio, considere o agendamento de uma janela de manutenção para esses Controladores de Domínio.
 Ao usar o método de instalação silenciosa do ATA, o instalador é configurado para reiniciar automaticamente o servidor no final da instalação (se necessário). Devido a um bug do Windows Installer, o sinalizador norestart não pode ser usado de forma confiável para garantir que o servidor não seja reiniciado, portanto, execute a instalação silenciosa somente durante uma janela de manutenção.
 
-Para acompanhar o andamento da implantação, monitore os logs do instalador do ATA localizados em **%AppData%\Local\Temp**.
+Para acompanhar o progresso da implantação, monitore os logs do instalador do ATA, que estão localizados em **%AppData%\Local\Temp**.
 
 
 ## <a name="install-the-ata-center"></a>Instalar a Central de ATA
@@ -53,8 +53,8 @@ Use o seguinte comando para instalar o Centro do ATA:
 > 
 > |Name|Sintaxe|Obrigatório para instalação silenciosa?|Descrição|
 > |-------------|----------|---------|---------|
-> |Quiet|/quiet|Sim|Executa o instalador sem exibir a interface do usuário nem solicitações.|
-> |Ajuda|/help|Não|Fornece ajuda e referência rápida. Exibe o uso correto do comando de configuração, incluindo uma lista de todas as opções e comportamentos.|
+> |Silenciosa|/quiet|Sim|Executa o instalador sem exibir a interface do usuário nem solicitações.|
+> |Help|/help|Não|Fornece ajuda e referência rápida. Exibe o uso correto do comando de configuração, incluindo uma lista de todas as opções e comportamentos.|
 > |NetFrameworkCommandLineArguments="/q"|NetFrameworkCommandLineArguments="/q"|Sim|Especifica os parâmetros para a instalação do .Net Framework. Deve ser definido para impor a instalação silenciosa do .Net Framework.|
 > |LicenseAccepted|--LicenseAccepted|Sim|Indica se a licença foi lida e aprovada. Deve ser definido na instalação silenciosa.|
 
@@ -97,8 +97,8 @@ Use o seguinte comando para atualizar o Centro do ATA:
 > 
 > |Name|Sintaxe|Obrigatório para instalação silenciosa?|Descrição|
 > |-------------|----------|---------|---------|
-> |Quiet|/quiet|Sim|Executa o instalador sem exibir a interface do usuário nem solicitações.|
-> |Ajuda|/help|Não|Fornece ajuda e referência rápida. Exibe o uso correto do comando de configuração, incluindo uma lista de todas as opções e comportamentos.|
+> |Silenciosa|/quiet|Sim|Executa o instalador sem exibir a interface do usuário nem solicitações.|
+> |Help|/help|Não|Fornece ajuda e referência rápida. Exibe o uso correto do comando de configuração, incluindo uma lista de todas as opções e comportamentos.|
 > |NetFrameworkCommandLineArguments="/q"|NetFrameworkCommandLineArguments="/q"|Sim|Especifica os parâmetros para a instalação do .Net Framework. Deve ser definido para impor a instalação silenciosa do .Net Framework.|
 
 
@@ -119,17 +119,17 @@ Use o seguinte comando para realizar uma desinstalação silenciosa da Central d
 
 > [!div class="mx-tableFixed"]
 > 
-> |Name|Sintaxe|Obrigatório para desinstalação silenciosa?|Descrição|
+> |Name|Sintaxe|Obrigatório para desinstalação silenciosa?|Description|
 > |-------------|----------|---------|---------|
-> |Quiet|/quiet|Sim|Executa o desinstalador sem exibir a interface do usuário nem solicitações.|
+> |Silenciosa|/quiet|Sim|Executa o desinstalador sem exibir a interface do usuário nem solicitações.|
 > |Desinstalar|/uninstall|Sim|Executa a desinstalação silenciosa do Centro do ATA no servidor.|
-> |Ajuda|/help|Não|Fornece ajuda e referência rápida. Exibe o uso correto do comando de configuração, incluindo uma lista de todas as opções e comportamentos.|
+> |Help|/help|Não|Fornece ajuda e referência rápida. Exibe o uso correto do comando de configuração, incluindo uma lista de todas as opções e comportamentos.|
 
 **Parâmetros de instalação**:
 
 > [!div class="mx-tableFixed"]
 > 
-> |Name|Sintaxe|Obrigatório para desinstalação silenciosa?|Descrição|
+> |Name|Sintaxe|Obrigatório para desinstalação silenciosa?|Description|
 > |-------------|----------|---------|---------|
 > |DeleteExistingDatabaseData|DeleteExistingDatabaseData|Não|Exclui todos os arquivos do banco de dados existente.|
 
@@ -162,8 +162,8 @@ Use o seguinte comando para instalar silenciosamente o Gateway do ATA:
 > 
 > |Name|Sintaxe|Obrigatório para instalação silenciosa?|Descrição|
 > |-------------|----------|---------|---------|
-> |Quiet|/quiet|Sim|Executa o instalador sem exibir a interface do usuário nem solicitações.|
-> |Ajuda|/help|Não|Fornece ajuda e referência rápida. Exibe o uso correto do comando de configuração, incluindo uma lista de todas as opções e comportamentos.|
+> |Silenciosa|/quiet|Sim|Executa o instalador sem exibir a interface do usuário nem solicitações.|
+> |Help|/help|Não|Fornece ajuda e referência rápida. Exibe o uso correto do comando de configuração, incluindo uma lista de todas as opções e comportamentos.|
 > |NetFrameworkCommandLineArguments="/q"|NetFrameworkCommandLineArguments="/q"|Sim|Especifica os parâmetros para a instalação do .Net Framework. Deve ser definido para impor a instalação silenciosa do .Net Framework.|
 
 **Parâmetros de instalação**:
@@ -197,8 +197,8 @@ Use o seguinte comando para atualizar silenciosamente o Gateway do ATA:
 > 
 > |Name|Sintaxe|Obrigatório para instalação silenciosa?|Descrição|
 > |-------------|----------|---------|---------|
-> |Quiet|/quiet|Sim|Executa o instalador sem exibir a interface do usuário nem solicitações.|
-> |Ajuda|/help|Não|Fornece ajuda e referência rápida. Exibe o uso correto do comando de configuração, incluindo uma lista de todas as opções e comportamentos.|
+> |Silenciosa|/quiet|Sim|Executa o instalador sem exibir a interface do usuário nem solicitações.|
+> |Help|/help|Não|Fornece ajuda e referência rápida. Exibe o uso correto do comando de configuração, incluindo uma lista de todas as opções e comportamentos.|
 > |NetFrameworkCommandLineArguments="/q"|NetFrameworkCommandLineArguments="/q"|Sim|Especifica os parâmetros para a instalação do .Net Framework. Deve ser definido para impor a instalação silenciosa do .Net Framework.|
 
 
@@ -219,11 +219,11 @@ Use o seguinte comando para executar uma desinstalação silenciosa do Gateway d
 
 > [!div class="mx-tableFixed"]
 > 
-> |Name|Sintaxe|Obrigatório para desinstalação silenciosa?|Descrição|
+> |Name|Sintaxe|Obrigatório para desinstalação silenciosa?|Description|
 > |-------------|----------|---------|---------|
-> |Quiet|/quiet|Sim|Executa o desinstalador sem exibir a interface do usuário nem solicitações.|
+> |Silenciosa|/quiet|Sim|Executa o desinstalador sem exibir a interface do usuário nem solicitações.|
 > |Desinstalar|/uninstall|Sim|Executa a desinstalação silenciosa do Gateway do ATA do servidor.|
-> |Ajuda|/help|Não|Fornece ajuda e referência rápida. Exibe o uso correto do comando de configuração, incluindo uma lista de todas as opções e comportamentos.|
+> |Help|/help|Não|Fornece ajuda e referência rápida. Exibe o uso correto do comando de configuração, incluindo uma lista de todas as opções e comportamentos.|
 
 **Exemplos**: desinstalar o Gateway do ATA do servidor no modo silencioso:
 
@@ -239,7 +239,7 @@ Use o seguinte comando para executar uma desinstalação silenciosa do Gateway d
 
 
 
-## <a name="see-also"></a>Confira Também
+## <a name="see-also"></a>Consulte Também
 
 - [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Configurar coleta de eventos](configure-event-collection.md)

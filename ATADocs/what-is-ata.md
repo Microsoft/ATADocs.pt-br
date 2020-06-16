@@ -4,7 +4,7 @@ description: Explica o que é o Microsoft Advanced Threat Analytics (ATA) e os t
 keywords: ''
 author: shsagir
 ms.author: shsagir
-manager: rkarlin
+manager: shsagir
 ms.date: 7/24/2018
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 283e7b4e-996a-4491-b7f6-ff06e73790d2
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: b88ca23b2d01d08357b3decb1e8e91c07848f5d8
-ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
+ms.openlocfilehash: d0f50163150f93baa0bd3084984705faf4fa6ea1
+ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79410589"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84774767"
 ---
 # <a name="what-is-advanced-threat-analytics"></a>O que é o Advanced Threat Analytics?
 
@@ -40,7 +40,7 @@ O ATA pode receber eventos e logs de:
 -   Diretamente do Coletor de Eventos do Windows (para o Gateway Lightweight)
 
 
-Para saber mais sobre a arquitetura do ATA, confira [Arquitetura do ATA](ata-architecture.md).
+Para obter mais informações sobre a arquitetura do ATA, consulte [arquitetura do ATA](ata-architecture.md).
 
 ## <a name="what-does-ata-do"></a>O que o ATA faz?
 
@@ -102,17 +102,17 @@ Você pode exibir as atividades suspeitas desse tipo no Painel do ATA. No exempl
 - Se você selecionar a opção para executar uma migração completa, ela poderá demorar muito tempo, dependendo do tamanho do banco de dados. Quando você estiver selecionando as opções de migração, o tempo estimado será exibido, anote-o antes de decidir qual opção selecionar. 
 
 
-## <a name="whats-next"></a>Novidades
+## <a name="whats-next"></a>O que vem a seguir?
 
--   Para mais informações sobre como o ATA se adapta à sua rede, consulte: [Arquitetura de ATA](ata-architecture.md)
+-   Para saber mais sobre como o ATA se adapta à sua rede: [Arquitetura do ATA](ata-architecture.md)
 
 -   Para começar a implantar o ATA: [Instalar o ATA](install-ata-step1.md)
 
-## <a name="related-videos"></a>Vídeos relacionados
-- [Unindo a comunidade de segurança](https://channel9.msdn.com/Shows/Microsoft-Security/Join-the-Security-Community)
+## <a name="related-videos"></a>Vídeos Relacionados
+- [Participar da comunidade de segurança](https://channel9.msdn.com/Shows/Microsoft-Security/Join-the-Security-Community)
 - [Visão geral da implantação do ATA](https://channel9.msdn.com/Shows/Microsoft-Security/Overview-of-ATA-Deployment-in-10-Minutes)
 
 
-## <a name="see-also"></a>Confira Também
-[Manual de atividade suspeita do ATA](https://aka.ms/ataplaybook)
-[Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
+## <a name="see-also"></a>Consulte Também
+Manual de atividade [suspeita do ATA](https://aka.ms/ataplaybook) 
+ [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

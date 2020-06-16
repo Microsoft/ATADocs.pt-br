@@ -2,9 +2,9 @@
 title: Solucionando problemas de inicialização do serviço do Advanced Threat Analytics
 description: Descreve como é possível solucionar problemas de inicialização do ATA
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
-manager: rkarlin
+author: shsagir
+ms.author: shsagir
+manager: shsagir
 ms.date: 3/21/2018
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 5a65285c-d1de-4025-9bb4-ef9c20b13cfa
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 97450fd93a8c881d5722365deab8b237df489091
-ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
+ms.openlocfilehash: 57f023a557bafff4653e00926fa0d0f813b5d041
+ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79413852"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84774852"
 ---
 # <a name="troubleshooting-service-startup"></a>Solução de problemas de inicialização do serviço
 
@@ -56,13 +56,13 @@ Isso acontece porque, como parte do processo de instalação do Gateway Lightwei
 
 **Resolução**
 
-1. Nas chaves do Registro, se houver um valor DWORD chamado **Desabilitar os Contadores de Desempenho**, verifique se ele está definido como **0**: `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\PerfOS\Performance\`
+1. Nas chaves do registro, se houver um valor DWORD chamado **desabilitar contadores de desempenho** , verifique se ele está definido como **0**:`HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\PerfOS\Performance\`
     `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\PerfProc\Performance`
  
 2. Em seguida, reinicie o serviço de PLA. O Gateway Lightweight do ATA automaticamente detectará a mudança e reiniciará o serviço.
 
 
-## <a name="see-also"></a>Confira Também
+## <a name="see-also"></a>Consulte Também
 - [Pré-requisitos do ATA](ata-prerequisites.md)
 - [Planejamento da capacidade do ATA](ata-capacity-planning.md)
 - [Configurar coleta de eventos](configure-event-collection.md)

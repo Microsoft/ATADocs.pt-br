@@ -2,9 +2,9 @@
 title: Instalar o Advanced Threat Analytics-etapa 5
 description: A Etapa cinco da instalação do ATA ajuda você a definir as configurações de seu Gateway do ATA.
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
-manager: rkarlin
+author: shsagir
+ms.author: shsagir
+manager: shsagir
 ms.date: 3/21/2018
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
@@ -12,20 +12,20 @@ ms.technology: ''
 ms.assetid: 2a5b6652-2aef-464c-ac17-c7e5f12f920f
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 2b784d34e505e39b9333bb0642de8a7bd061f6a1
-ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
+ms.openlocfilehash: de26eca5f9824b59dddffc9ad8856e03fdb08e2a
+ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79413937"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84775175"
 ---
 # <a name="install-ata---step-5"></a>Instalação do ATA - Etapa 5
 
 *Aplica-se a: Advanced Threat Analytics versão 1.9*
 
 > [!div class="step-by-step"]
-> [« Etapa 4](install-ata-step4.md)
-> [Etapa 6 »](install-ata-step6.md)
+> [«Etapa 4](install-ata-step4.md) 
+>  [Etapa 6»](install-ata-step6.md)
 
 
 ## <a name="step-5-configure-the-ata-gateway-settings"></a>Etapa 5. Definir as configurações do Gateway do ATA
@@ -55,7 +55,7 @@ Após a instalação do Gateway do ATA, execute as etapas a seguir para definir 
   
    - **Candidato ao sincronizador de domínio**: qualquer Gateway do ATA definido para ser um candidato ao sincronizador de domínio pode ser responsável pela sincronização entre o ATA e o domínio do Active Directory. Dependendo do tamanho do domínio, a sincronização inicial pode ser demorada e consumir muitos recursos. Por padrão, somente Gateways do ATA são definidos como Candidatos ao sincronizador do domínio.
    É recomendável impedir que os Gateways do ATA do site remoto sejam candidatos ao Sincronizador de domínio.
-   Se o controlador de domínio for somente leitura, não o defina como um candidato ao sincronizador do domínio. Para saber mais, confira [Arquitetura do ATA](ata-architecture.md#ata-lightweight-gateway-features).
+   Se o controlador de domínio for somente leitura, não o defina como um candidato ao sincronizador do domínio. Para obter mais informações, consulte [arquitetura do ATA](ata-architecture.md#ata-lightweight-gateway-features).
 
    > [!NOTE] 
    > Levará alguns minutos para que o serviço do Gateway do ATA inicie pela primeira vez após a instalação, pois ele cria o cache dos analisadores de captura de rede.
@@ -64,7 +64,7 @@ Após a instalação do Gateway do ATA, execute as etapas a seguir para definir 
 3. Se desejar, é possível definir o [Ouvinte do syslog e o Conjunto de Encaminhamento de Eventos do Windows](configure-event-collection.md). 
 4. Habilite **Atualizar Gateway do ATA automaticamente** para que nos lançamentos de versões futuras, quando você atualizar o Centro do ATA, esse Gateway do ATA seja atualizado automaticamente.
 
-5. Clique em **Salvar**.
+5. Clique em **Save** (Salvar).
 
 
 ## <a name="validate-installations"></a>Validar instalações
@@ -76,7 +76,7 @@ Para validar a implantação bem-sucedida do Gateway do ATA, verifique as seguin
 
 3.  Se esse for o primeiro Gateway do ATA instalado, após alguns minutos, faça logon no Console do ATA e abra o painel de notificação deslizando para abrir o lado direito da tela. Você deverá ver uma lista de **Entidades Recentemente Aprendidas** na barra de notificação no lado direito do console.
 
-4.  Na área de trabalho, clique no atalho do **Microsoft Advanced Threat Analytics** para se conectar ao Console do ATA. Faça logon com as mesmas credenciais de usuário que você usou para instalar o Centro do ATA.
+4.  Na área de trabalho, clique no atalho do **Microsoft Advanced Threat Analytics** para conectar-se ao console do ATA. Faça logon com as mesmas credenciais de usuário que você usou para instalar o Centro do ATA.
 5.  No console, procure algo na barra de pesquisa, por exemplo, um usuário ou um grupo em seu domínio.
 6.  Abra o Monitor de Desempenho. Na árvore de Desempenho, clique em **Monitor de Desempenho** e clique no ícone de adição para **Adicionar um Contador**. Expanda **Gateway do Microsoft ATA** e role para baixo até **Mensagens Capturadas PEF do Ouvinte de Rede/s** e adicione-o. Em seguida, verifique se a atividade aparece no gráfico.
 
@@ -84,17 +84,17 @@ Para validar a implantação bem-sucedida do Gateway do ATA, verifique as seguin
 
 
 > [!div class="step-by-step"]
-> [« Etapa 4](install-ata-step4.md)
-> [Etapa 6 »](install-ata-step6.md)
+> [«Etapa 4](install-ata-step4.md) 
+>  [Etapa 6»](install-ata-step6.md)
 
 
 
-## <a name="related-videos"></a>Vídeos relacionados
+## <a name="related-videos"></a>Vídeos Relacionados
 - [Visão geral da implantação do ATA](https://channel9.msdn.com/Shows/Microsoft-Security/Overview-of-ATA-Deployment-in-10-Minutes)
 - [Como escolher o tipo certo de Gateway do ATA](https://channel9.msdn.com/Shows/Microsoft-Security/ATA-Deployment-Choose-the-Right-Gateway-Type)
 
 
-## <a name="see-also"></a>Confira Também
+## <a name="see-also"></a>Consulte Também
 - [Guia de implantação da POC (prova de conceito) do ATA](https://aka.ms/atapoc)
 - [Ferramenta de dimensionamento do ATA](https://aka.ms/atasizingtool)
 - [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

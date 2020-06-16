@@ -4,7 +4,7 @@ description: A primeira etapa da instalação do ATA envolve baixar e instalar o
 keywords: ''
 author: shsagir
 ms.author: shsagir
-manager: rkarlin
+manager: shsagir
 ms.date: 03/07/2019
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: b3cceb18-0f3c-42ac-8630-bdc6b310f1d6
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: f3e8073f90be456d17d887491f5a3b9899c00912
-ms.sourcegitcommit: 8c0222dc8333b5aa47430c5daee9bc7f1d82df31
+ms.openlocfilehash: bd0027b675de261c4f531f50e113c8da6ba7d9e6
+ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81524779"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84775362"
 ---
 # <a name="install-ata---step-1"></a>Instalação do ATA - Etapa 1
 
@@ -113,8 +113,8 @@ Exclua as pastas e os processos a seguir da verificação do AV:
 Se você instalou o ATA em um diretório diferente, não deixe de alterar os caminhos de pasta de acordo com a sua instalação. 
 
 > [!div class="step-by-step"]
-> [«Pré-instalação](configure-port-mirroring.md)
-> [etapa 2»](install-ata-step2.md)
+> [«Pré-instalação](configure-port-mirroring.md) 
+>  [Etapa 2»](install-ata-step2.md)
 
 ## <a name="related-videos"></a>Vídeos Relacionados
 - [Como escolher o tipo certo de Gateway do ATA](https://channel9.msdn.com/Shows/Microsoft-Security/ATA-Deployment-Choose-the-Right-Gateway-Type)

@@ -4,7 +4,7 @@ description: Descreve como você pode usar os contadores de desempenho para solu
 keywords: ''
 author: shsagir
 ms.author: shsagir
-manager: rkarlin
+manager: shsagir
 ms.date: 9/25/2018
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: df162a62-f273-4465-9887-94271f5000d2
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 14ec1e07a3a9240cd28d1cfce39ed3922c71f752
-ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
+ms.openlocfilehash: 94a7ef9a31828e57417f0def62f0d9eadd8ed021
+ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79411778"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84774869"
 ---
 # <a name="troubleshooting-ata-using-the-performance-counters"></a>Solução de problemas do ATA usando contadores de desempenho
 
@@ -56,7 +56,7 @@ Aqui está a lista dos principais contadores do Gateway de ATA a ter em atençã
 
 > [!div class="mx-tableFixed"]
 > 
-> |Contador|Descrição|Limite|Solução de Problemas|
+> |Contador|Descrição|Limite|Solução de problemas|
 > |-----------|---------------|-------------|-------------------|
 > |Mensagens\s do PEF analisado do NetworkListener\Gateway de ATA da Microsoft|A quantidade de tráfego processada pelo Gateway de ATA a cada segundo.|Sem limite|Ajuda a entender a quantidade de tráfego que está sendo analisada pelo Gateway de ATA.|
 > |Eventos descartados por PEF do NetworkListener\s|A quantidade de tráfego descartada pelo Gateway de ATA a cada segundo.|Esse número deve ser sempre zero (intermitência rara e curta de descartes é aceitável).|Verifique se há qualquer componente que atingiu seu tamanho máximo e está bloqueando componentes anteriores até o NetworkListener. Consulte o **Processo de componente do ATA** acima.<br /><br />Verifique se não há nenhum problema com a CPU ou a memória.|
@@ -78,7 +78,7 @@ Para fazer isso, abra o **Monitor de Desempenho** e adicione todos os contadores
 
 > [!div class="mx-tableFixed"]
 > 
-> |Contador|Descrição|Limite|Solução de Problemas|
+> |Contador|Descrição|Limite|Solução de problemas|
 > |-----------|---------------|-------------|-------------------|
 > |% Máxima de Tempo de CPU do Microsoft ATA Gateway Updater\GatewayUpdaterResourceManager|A quantidade máxima de tempo da CPU (em porcentagem) que o processo do Gateway Lightweight pode consumir. |Sem limite. | Esta é a limitação que impede que os recursos do controlador de domínio sejam usados pelo Gateway Lightweight do ATA. Se você perceber que o processo atinge frequentemente o limite máximo durante um período (o processo atinge o limite e, em seguida, começa a descartar tráfego), significa que você precisa adicionar mais recursos ao servidor que está executando o controlador de domínio.|
 > |Microsoft ATA Gateway Updater\GatewayUpdaterResourceManager Commit Memory Max Size|A quantidade máxima de memória confirmada (em bytes) que o processo do Gateway Lightweight pode consumir.|Sem limite. | Esta é a limitação que impede que os recursos do controlador de domínio sejam usados pelo Gateway Lightweight do ATA. Se você perceber que o processo atinge frequentemente o limite máximo durante um período (o processo atinge o limite e, em seguida, começa a descartar tráfego), significa que você precisa adicionar mais recursos ao servidor que está executando o controlador de domínio.| 
@@ -91,7 +91,7 @@ Para ver seu consumo real, consulte os seguintes contadores:
 
 > [!div class="mx-tableFixed"]
 > 
-> |Contador|Descrição|Limite|Solução de Problemas|
+> |Contador|Descrição|Limite|Solução de problemas|
 > |-----------|---------------|-------------|-------------------|
 > |Process(Microsoft.Tri.Gateway)\%Tempo do Processador|A quantidade de tempo da CPU (em porcentagem) que o processo do Gateway Lightweight está consumindo. |Sem limite. | Compare os resultados desse contador com o limite encontrado em GatewayUpdaterResourceManager CPU Time Max %. Se você perceber que o processo atinge frequentemente o limite máximo durante um período (o processo atinge o limite e, em seguida, começa a descartar tráfego), significa que você precisa dedicar mais recursos ao Gateway Lightweight.|
 > |Process(Microsoft.Tri.Gateway)Bytes Privados|A quantidade de memória confirmada (em bytes) que o processo do Gateway Lightweight está consumindo.|Sem limite. | Compare os resultados desse contador com o limite encontrado em Tamanho Máximo de Memória de Confirmação do GatewayUpdaterResourceManager. Se você perceber que o processo atinge frequentemente o limite máximo durante um período (o processo atinge o limite e, em seguida, começa a descartar tráfego), significa que você precisa dedicar mais recursos ao Gateway Lightweight.| 
@@ -106,7 +106,7 @@ Aqui está a lista dos principais contadores do Centro de ATA a ter em atenção
 
 > [!div class="mx-tableFixed"]
 > 
-> |Contador|Descrição|Limite|Solução de Problemas|
+> |Contador|Descrição|Limite|Solução de problemas|
 > |-----------|---------------|-------------|-------------------|
 > |Tamanho do Bloco do Lote de Entidade do Centro do Microsoft ATA/EntityReceiver|O número de lotes de entidade colocados em fila pelo Centro de ATA.|Deve ser menor que o máximo de 1 (máximo padrão: 10.000)|Verifique se há qualquer componente que atingiu seu tamanho máximo e está bloqueando componentes anteriores até o NetworkListener.  Veja o **Processo de componente do ATA** anterior.<br /><br />Verifique se não há nenhum problema com a CPU ou a memória.|
 > |Tamanho do Bloco de Atividade de Rede do Centro do Microsoft ATA\NetworkActivityProcessor|O número de atividades de rede (NAs) na fila de processamento.|Deve ser menor que o máximo de 1 (máximo padrão: 50.000)|Verifique se há qualquer componente que atingiu seu tamanho máximo e está bloqueando componentes anteriores até o NetworkListener. Veja o **Processo de componente do ATA** anterior.<br /><br />Verifique se não há nenhum problema com a CPU ou a memória.|
@@ -123,20 +123,20 @@ A tabela a seguir lista os principais contadores do sistema operacional nos quai
 
 > [!div class="mx-tableFixed"]
 > 
-> |Contador|Descrição|Limite|Solução de Problemas|
+> |Contador|Descrição|Limite|Solução de problemas|
 > |-----------|---------------|-------------|-------------------|
 > |Processador(_Total)\% Tempo do Processador|Percentual de tempo decorrido que o processador gasta para executar um thread não ocioso.|Menos de 80% em média|Verifique se há um processo específico que está levando muito mais tempo de processamento do que deveria.<br /><br />Adicione mais processadores.<br /><br />Reduza a quantidade de tráfego por servidor.<br /><br />O contador "Processador(_Total)\% Tempo do Processador" pode ser menos preciso em servidores virtuais. Nesse caso, a maneira mais precisa de medir a falta de energia do processador é por meio do contador "Sistema\Comprimento da Fila do Processador".|
 > |Sistema\Comutações de contexto\s|A taxa combinada na qual todos os processadores alternam de um thread para outro.|Menos de 5.000&#42;núcleos (núcleos físicos)|Verifique se há um processo específico que está levando muito mais tempo de processamento do que deveria.<br /><br />Adicione mais processadores.<br /><br />Reduza a quantidade de tráfego por servidor.<br /><br />O contador "Processador(_Total)\% Tempo do Processador" pode ser menos preciso em servidores virtuais. Nesse caso, a maneira mais precisa de medir a falta de energia do processador é por meio do contador "Sistema\Comprimento da Fila do Processador".|
 > |Sistema por Comprimento da Fila do Processador|O número de threads que estão prontos para executar e estão aguardando para ser agendados.|Menos de cinco&#42;núcleos (núcleos físicos)|Verifique se há um processo específico que está levando muito mais tempo de processamento do que deveria.<br /><br />Adicione mais processadores.<br /><br />Reduza a quantidade de tráfego por servidor.<br /><br />O contador "Processador(_Total)\% Tempo do Processador" pode ser menos preciso em servidores virtuais. Nesse caso, a maneira mais precisa de medir a falta de energia do processador é por meio do contador "Sistema\Comprimento da Fila do Processador".|
 > |Memory\Available MBytes|A quantidade de memória física (RAM) disponível para alocação.|Deve ser superior a 512|Verifique se há um processo específico que está consumindo muito mais memória física do que deveria.<br /><br />Aumento da quantidade de memória física.<br /><br />Reduza a quantidade de tráfego por servidor.|
-> |Disco lógico&#42;() \Avg. sec\Read|A latência média de leitura dos dados do disco (você deve escolher a unidade de banco de dados como a instância).|Deve ser menor que 10 milissegundos|Verifique se há um processo específico que está utilizando a unidade de banco de dados mais do que deveria.<br /><br />Veja o fornecedor/equipe de armazenamento se esta unidade pode fornecer a carga de trabalho atual enquanto tem menos de 10 ms de latência. A carga de trabalho atual pode ser determinada usando os contadores de utilização do disco.|
-> |Disco lógico&#42;() \Avg. sec\Write|A latência média de gravação dos dados para o disco (você deve escolher a unidade de banco de dados como a instância).|Deve ser menor que 10 milissegundos|Verifique se há um processo específico que está utilizando a unidade de banco de dados mais do que deveria.<br /><br />Veja o fornecedor\equipe de armazenamento se esta unidade pode fornecer a carga de trabalho atual enquanto tem menos de 10 ms de latência. A carga de trabalho atual pode ser determinada usando os contadores de utilização do disco.|
+> |Disco lógico (&#42;) \Avg. sec\Read|A latência média de leitura dos dados do disco (você deve escolher a unidade de banco de dados como a instância).|Deve ser menor que 10 milissegundos|Verifique se há um processo específico que está utilizando a unidade de banco de dados mais do que deveria.<br /><br />Veja o fornecedor/equipe de armazenamento se esta unidade pode fornecer a carga de trabalho atual enquanto tem menos de 10 ms de latência. A carga de trabalho atual pode ser determinada usando os contadores de utilização do disco.|
+> |Disco lógico (&#42;) \Avg. sec\Write|A latência média de gravação dos dados para o disco (você deve escolher a unidade de banco de dados como a instância).|Deve ser menor que 10 milissegundos|Verifique se há um processo específico que está utilizando a unidade de banco de dados mais do que deveria.<br /><br />Veja o fornecedor\equipe de armazenamento se esta unidade pode fornecer a carga de trabalho atual enquanto tem menos de 10 ms de latência. A carga de trabalho atual pode ser determinada usando os contadores de utilização do disco.|
 > |\LogicalDisk(&#42;)\Leituras de Disco\s|A taxa de execução de operações de leitura para o disco.|Sem limite|Os contadores de utilização de disco podem adicionar informações ao solucionar problemas de latência de armazenamento.|
 > |\LogicalDisk(&#42;)\Bytes de Leitura de Disco\s|O número de bytes por segundo que estão sendo lidos no disco.|Sem limite|Os contadores de utilização de disco podem adicionar informações ao solucionar problemas de latência de armazenamento.|
 > |\LogicalDisk&#42;\Gravações em Disco\s|A taxa de execução de operações de gravação no disco.|Sem limite|Os contadores de utilização de disco (pode adicionar informações ao solucionar problemas de latência de armazenamento)|
 > |\LogicalDisk(&#42;)\Bytes de Gravação em Disco\s|O número de bytes por segundo que estão sendo gravados no disco.|Sem limite|Os contadores de utilização de disco podem adicionar informações ao solucionar problemas de latência de armazenamento.|
 
-## <a name="see-also"></a>Confira Também
+## <a name="see-also"></a>Consulte Também
 - [Pré-requisitos do ATA](ata-prerequisites.md)
 - [Planejamento da capacidade do ATA](ata-capacity-planning.md)
 - [Configurar coleta de eventos](configure-event-collection.md)

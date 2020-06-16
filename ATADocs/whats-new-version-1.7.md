@@ -2,9 +2,9 @@
 title: Novidades na versão 1.7 do ATA
 description: Lista as novidades na nova versão 1.7 do ATA e seus problemas conhecidos
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
-manager: rkarlin
+author: shsagir
+ms.author: shsagir
+manager: shsagir
 ms.date: 1/23/2017
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: be9ee613-4eb3-40f1-8973-e7f0a707ff57
 ms.reviewer: ''
 ms.suite: ems
-ms.openlocfilehash: db393df81a922cf7362e5705376c9d72fe13e363
-ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
+ms.openlocfilehash: 14fd7b13b61005ef215c6ba80920572ebcdf0b64
+ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79414379"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84774699"
 ---
 # <a name="whats-new-in-ata-version-17"></a>Novidades na versão 1.7 do ATA
 Estas notas de versão fornecem informações sobre problemas conhecidos nesta versão da Advanced Threat Analytics.
@@ -27,13 +27,13 @@ A atualização 1.7 do ATA fornece melhorias nas seguintes áreas:
 
 -   Detecções novas e atualizadas
 
--   Controle de acesso baseado em funções
+-   Controle de acesso baseado em função
 
 -   Suporte para Windows Server 2016 e Windows Server 2016 Core
 
 -   Aprimoramentos da experiência do usuário
 
--   Alterações secundárias
+-   Pequenas modificações
 
 
 ### <a name="new--updated-detections"></a>Detecções novas e atualizadas
@@ -56,7 +56,7 @@ A atualização 1.7 do ATA fornece melhorias nas seguintes áreas:
 
 - **Suporte para Windows Server 2016 e Windows Server Core** O ATA 1.7 dá suporte à implantação de Lightweight Gateways em controladores de domínio que executam o Windows Server 2008 R2 SP1 (sem incluir o Server Core), o Windows Server 2012, o Windows Server 2012 R2, o Windows Server 2016 (incluindo o Core, mas não o Nano). Além disso, esta versão oferece suporte ao Windows Server 2016 para os componentes do Centro de ATA e do Gateway do ATA.
 
-### <a name="user-experience"></a>Experiência do usuário
+### <a name="user-experience"></a>Experiência de usuário
 - **Experiência de configuração** Nesta versão, a experiência de configuração do ATA foi reprojetada para proporcionar uma experiência de usuário melhor e para oferecer um suporte mais adequado a ambientes com vários Gateways do ATA. Esta versão também apresenta a página de atualização do Gateway do ATA para um gerenciamento mais simples das atualizações automáticas para os diversos Gateways.
 
 ## <a name="known-issues"></a>Problemas conhecidos
@@ -108,13 +108,13 @@ Para resolver esse problema, em um prompt de comandos com privilégios elevados,
 1.  `Mongo.exe ATA` (ATA deve estar em letras maiúsculas)
 2.  `db.SuspiciousActivityActivity.update({ "Activity._t": "NtlmEvent" },{$unset: {"Activity.ResourceIdentifier": ""}}, {multi: true});`
 
-## <a name="minor-changes"></a>Alterações secundárias
+## <a name="minor-changes"></a>Pequenas modificações
 
 - Agora, o ATA está usando OWIN em vez de IIS para o Console de ATA.
 - Se o serviço Centro de ATA estiver inativo, não será possível acessar o Console do ATA.
 - As sub-redes de concessão de curto prazo não serão mais necessárias devido a alterações no NNR do ATA.
 
-## <a name="see-also"></a>Confira Também
+## <a name="see-also"></a>Consulte Também
 [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
 [Atualizar o ATA para a versão 1.7 — guia de migração](ata-update-1.7-migration-guide.md)

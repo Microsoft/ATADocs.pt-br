@@ -2,9 +2,9 @@
 title: Validar o espelhamento de porta no Advanced Threat Analytics
 description: Descreve como validar que o espelhamento de porta está configurado corretamente
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
-manager: rkarlin
+author: shsagir
+ms.author: shsagir
+manager: shsagir
 ms.date: 3/21/2018
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
@@ -12,19 +12,19 @@ ms.technology: ''
 ms.assetid: ebd41719-c91a-4fdd-bcab-2affa2a2cace
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 635c6b82dd983eb33a6238a3a9d14f63ffc9dacd
-ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
+ms.openlocfilehash: 022cb5fb51d7269a4dc33727d0b949a5ab2dcc88
+ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79414328"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84774801"
 ---
 # <a name="validate-port-mirroring"></a>Validação do espelhamento de porta
 
 *Aplica-se a: Advanced Threat Analytics versão 1.9*
 
 > [!NOTE] 
-> Este artigo somente é relevante se você implanta Gateways do ATA em vez de Gateways Lightweight do ATA. Para determinar se você precisa usar Gateways do ATA, confira [Choosing the right gateways for your deployment](ata-capacity-planning.md#choosing-the-right-gateway-type-for-your-deployment) (Escolhendo os gateways certos para sua implantação).
+> Este artigo somente é relevante se você implanta Gateways do ATA em vez de Gateways Lightweight do ATA. Para determinar se você precisa usar gateways do ATA, consulte [escolhendo os gateways corretos para sua implantação](ata-capacity-planning.md#choosing-the-right-gateway-type-for-your-deployment).
  
 As etapas a seguir guiarão você pelo processo de validação da configuração correta do espelhamento de porta. Para que o ATA funcione corretamente, o Gateway de ATA deve ser capaz de ver o tráfego para e do controlador de domínio. A fonte de dados principal usada pelo ATA é uma inspeção profunda de pacotes do tráfego de rede para e dos controladores de domínio. Para o ATA ver o tráfego de rede, o espelhamento de porta precisa ser configurado. O espelhamento de porta copia o tráfego de uma porta (de origem) para outra porta (de destino).
 
@@ -191,7 +191,7 @@ Exemplo de como executar o script:
     
     
 ## <a name="validate-port-mirroring-using-net-mon"></a>Validar o espelhamento de porta usando Net Mon
-1.  Instale o [Monitor de Rede da Microsoft 3.4](https://www.microsoft.com/download/details.aspx?id=4865) no Gateway do ATA que você deseja validar.
+1.  Instale o [Monitor de Rede da Microsoft 3,4](https://www.microsoft.com/download/details.aspx?id=4865) no gateway do ATA que você deseja validar.
 
     > [!IMPORTANT]
     > Não instale o Microsoft Message Analyzer ou qualquer outro software de captura de tráfego no Gateway de ATA.
@@ -206,7 +206,7 @@ Exemplo de como executar o script:
 
         ![Criar nova imagem da guia de captura](media/ATA-Port-Mirroring-Capture.jpg)
 
-3.  Na janela Filtro de exibição, digite o seguinte filtro: **KerberosV5 OU LDAP** e, em seguida, **Aplicar**.
+3.  Na janela Exibir Filtro, insira o seguinte filtro: **KerberosV5 OU LDAP** e clique em **Aplicar**.
 
     ![Aplicar imagem de filtro KerberosV5 ou LDAP](media/ATA-Port-Mirroring-filter-settings.jpg)
 
@@ -220,7 +220,7 @@ Exemplo de como executar o script:
 
 5.  Se você vir somente o tráfego em uma direção, você deve trabalhar com as equipes de rede ou de virtualização para ajudar a solucionar os problemas de sua configuração de espelhamento de porta.
 
-## <a name="see-also"></a>Confira Também
+## <a name="see-also"></a>Consulte Também
 
 - [Configurar o espelhamento de porta](configure-port-mirroring.md)
 - [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

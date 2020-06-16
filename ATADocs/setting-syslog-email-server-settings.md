@@ -2,9 +2,9 @@
 title: Definindo as configurações de notificação de email no Advanced Threat Analytics
 description: Descreve como fazer o ATA notificar você (por email ou por encaminhamento de eventos do ATA) quando ele detectar atividades suspeitas
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
-manager: rkarlin
+author: shsagir
+ms.author: shsagir
+manager: shsagir
 ms.date: 3/21/2018
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: bff20bf7-8b53-49da-81e5-b818a1c3b24e
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: a8769213bbc130299da99c852112af20ecad3267
-ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
+ms.openlocfilehash: 2a27025cb21892792c9502766ee90075df42efb6
+ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79412203"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84775022"
 ---
 # <a name="provide-ata-with-your-email-server-settings"></a>Forneça ao ATA suas configurações do servidor de emails
 
@@ -40,7 +40,7 @@ O ATA pode notificar você quando detectar uma atividade suspeita. Para que o AT
    |---------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------|
    | Ponto de extremidade do servidor SMTP (obrigatório) |                                                            Digite o FQDN do servidor SMTP e, opcionalmente, altere o número da porta (padrão: 25).                                                            | Por exemplo:<br />smtp.contoso.com |
    |               SSL               |                                              Ativar SSL se o servidor SMTP exigir SSL. **Observação:** se você habilitar o SSL, também precisará alterar o número da Porta.                                               |        O padrão é desabilitado         |
-   |         Autenticação          | Habilite se o seu servidor SMTP exigir autenticação. **Observação:** se você habilitar a autenticação, será necessário fornecer um nome de usuário e senha de uma conta de email que tenha permissão para se conectar ao servidor SMTP. |        O padrão é desabilitado         |
+   |         Autenticação          | Habilite se o seu servidor SMTP exigir autenticação. **Observação:** Se você habilitar a autenticação, deverá fornecer um nome de usuário e senha de uma conta de email que tenha permissão para se conectar ao servidor SMTP. |        O padrão é desabilitado         |
    |      Enviar de (obrigatório)       |                                                                        Digite um endereço de email a partir do qual o email será enviado.                                                                         | Por exemplo:<br />ATA@contoso.com  |
 
    ![Imagem das configurações do servidor de emails do ATA](media/ata-email-server.png)
@@ -72,11 +72,11 @@ O ATA pode notificar você quando detectar uma atividade suspeita, enviando a no
    |---------|---------------|
    |Ponto de extremidade de servidor Syslog|FQDN do servidor Syslog e, opcionalmente, altere o número da porta (padrão: 514)|
    |Transport|Pode ser UDP, TCP ou TLS (Syslog protegido)|
-   |Formato|Este é o formato usado pelo ATA para enviar eventos ao servidor SIEM - RFC 5424 ou RFC 3164.|
+   |Formatar|Este é o formato usado pelo ATA para enviar eventos ao servidor SIEM - RFC 5424 ou RFC 3164.|
 
    ![Imagem das configurações do servidor Syslog do ATA](media/ata-syslog-server-settings.png)
 
 
 
-## <a name="see-also"></a>Confira Também
+## <a name="see-also"></a>Consulte Também
 [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

@@ -4,19 +4,19 @@ description: Descreve os dados coletados pelo ATA e fornece etapas para desativa
 keywords: ''
 author: shsagir
 ms.author: shsagir
-manager: rkarlin
+manager: shsagir
 ms.date: 8/19/2018
 ms.topic: article
 ms.prod: advanced-threat-analytics
 ms.assetid: 8c1c7a1b-a3de-4105-9fd0-08a061952172
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: eef3aa45b9563a4fea09e5cebc0f4ece7c39d734
-ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
+ms.openlocfilehash: c17405cd1f3da619ad6942e082420e58c4e9c430
+ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79413954"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84775124"
 ---
 # <a name="manage-system-generated-logs"></a>Gerenciar logs gerados pelo sistema
 
@@ -53,11 +53,11 @@ Os dados anônimos coletados incluem os seguintes parâmetros:
 
     -   Número de grupos
 
-    -   Número de usuários
+    -   Número de Usuários
 
 -   Atividades suspeitas – os dados anônimos a seguir são coletados para cada atividade suspeita:
 
-    (Os nomes de computador, nomes de usuário e endereços IP **não** são coletados)
+    (Nomes de computador, nomes de usuário e endereços IP **não** são coletados)
 
     -   Tipo de atividade suspeita
 
@@ -84,13 +84,13 @@ Os dados anônimos coletados incluem os seguintes parâmetros:
 - Endereços de URL do Console do ATA - Endereços de URL ao usar o Console do ATA, ou seja, quais páginas no Console do ATA foram visitadas.
 
 
-### <a name="disable-data-collection"></a>Desabilitar coleta de dados
+### <a name="disable-data-collection"></a>Desativar coleta de dados
 Execute as etapas a seguir para interromper a coleta e o envio de dados de telemetria à Microsoft:
 
 1.  Faça logon no Console do ATA, clique nos três pontos na barra de ferramentas e escolha **Sobre**.
 
 2.  Desmarque a caixa para **Envie informações de uso para ajudar a melhorar a experiência do cliente no futuro**.
 
-## <a name="see-also"></a>Confira Também
+## <a name="see-also"></a>Consulte Também
 - [Troubleshooting ATA using the event log](troubleshooting-ata-using-logs.md) (Solução de problemas do ATA usando o log de eventos)
 - [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

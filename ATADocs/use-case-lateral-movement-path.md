@@ -4,7 +4,7 @@ description: Este artigo descreve como detectar ataques de caminho de movimento 
 keywords: ''
 author: shsagir
 ms.author: shsagir
-manager: rkarlin
+manager: shsagir
 ms.date: 06/14/2019
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 710f01bd-c878-4406-a7b2-ce13f98736ea
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 4c937a99da6bd26d58fc112eb1c154b59d8d53a1
-ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
+ms.openlocfilehash: f646f1ae2f1960b502d15b4ff59f68162e18970c
+ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79412033"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84774818"
 ---
 # <a name="investigate-lateral-movement-paths-with-ata"></a>Investigar caminhos de movimento lateral com o ATA
 
@@ -42,7 +42,7 @@ Para descobrir quais contas confidenciais em sua rede estão vulneráveis devido
 
    ![relatórios](./media/reports.png)
 
-3. Clique em **Baixar**.
+3. Clique em **Download**.
 
 4. O arquivo do Excel criado fornece detalhes sobre suas contas confidenciais em risco. A guia **Resumo** fornece gráficos que detalham o número de contas confidenciais, computadores e médias de recursos em risco. A guia **Detalhes** fornece uma lista das contas confidenciais com que você deve se preocupar. Observe que os caminhos são caminhos que existiam anteriormente e podem não estar disponível atualmente.
 
@@ -57,7 +57,7 @@ Agora que você sabe quais contas confidenciais estão em risco, aprofunde-se no
 
 3. O gráfico exibido fornece um mapa dos caminhos possíveis para o usuário confidencial. O grafo mostra conexões que foram feitas nos últimos dois dias.
 
-4. Examine o gráfico para ver o que você pode aprender sobre a exposição das credenciais de seus usuários confidenciais. Por exemplo, neste mapa, você pode seguir as setas de **logon em** cinza para ver onde Samira entrou com suas credenciais privilegiadas. Nesse caso, as credenciais confidenciais de Samira foram salvas no computador REDMOND-WA-DEV. Em seguida, veja quais outros usuários entraram em quais computadores criaram mais exposição e vulnerabilidade. Você pode ver isso examinando as setas pretas **Administrador em** para ver quem tem privilégios de administrador no recurso. Neste exemplo, todos no grupo **Contoso All** podem acessar as credenciais do usuário desse recurso.  
+4. Examine o gráfico para ver o que você pode aprender sobre a exposição das credenciais de seus usuários confidenciais. Por exemplo, neste mapa, você pode seguir as setas de **logon em** cinza para ver onde Samira entrou com suas credenciais privilegiadas. Nesse caso, as credenciais confidenciais de Samira foram salvas no computador REDMOND-WA-DEV. Em seguida, veja quais outros usuários entraram em quais computadores criaram mais exposição e vulnerabilidade. Você pode ver isso examinando as setas pretas **Administrador em** para ver quem tem privilégios de administrador no recurso. Neste exemplo, todos no grupo **contoso All** têm a capacidade de acessar as credenciais do usuário a partir desse recurso.  
 
    ![Caminhos de movimento lateral do perfil do usuário](media/user-profile-lateral-movement-paths.png)
 

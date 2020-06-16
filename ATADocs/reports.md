@@ -2,9 +2,9 @@
 title: Trabalhando com relatórios do ATA
 description: Descreve como você pode gerar relatórios no ATA para monitorar sua rede.
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
-manager: rkarlin
+author: shsagir
+ms.author: shsagir
+manager: shsagir
 ms.date: 3/27/2018
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 38ea49b5-cd5e-43e5-bc39-5071f759633b
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: e14a0ffa795f16fe2f5cd4a9cef06b98bb90bc74
-ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
+ms.openlocfilehash: 20332702453ef48b454303399dc7203ac61ea111
+ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79412900"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84775073"
 ---
 # <a name="ata-reports"></a>Relatórios do ATA
 
@@ -64,7 +64,7 @@ Para definir um relatório agendado:
 > Os relatórios agendados são entregues por email e poderão ser enviados apenas se você já tiver configurado um servidor de email em **Configuração** e, em seguida, em **Notificações e Relatórios**, selecione **Servidor de email**.
 
 
-## <a name="see-also"></a>Confira Também
+## <a name="see-also"></a>Consulte Também
 - [Pré-requisitos do ATA](ata-prerequisites.md)
 - [Planejamento da capacidade do ATA](ata-capacity-planning.md)
 - [Configurar coleta de eventos](configure-event-collection.md)

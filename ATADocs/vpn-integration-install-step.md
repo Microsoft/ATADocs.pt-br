@@ -2,9 +2,9 @@
 title: Instalar o Advanced Threat Analytics-etapa 7
 description: Nesta etapa da instalação do ATA, você integra sua VPN.
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
-manager: rkarlin
+author: shsagir
+ms.author: shsagir
+manager: shsagir
 ms.date: 11/07/2019
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
@@ -12,20 +12,20 @@ ms.technology: ''
 ms.assetid: e0aed853-ba52-46e1-9c55-b336271a68e7
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: d8ebc54fc2c82bbe99b79f1c736f17e15629fc6a
-ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
+ms.openlocfilehash: c36d312518a21664892293fc38c4c41a23614c5d
+ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79410418"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84774784"
 ---
 # <a name="install-ata---step-7"></a>Instalação do ATA – Etapa 7
 
 *Aplica-se a: Advanced Threat Analytics versão 1.9*
 
 > [!div class="step-by-step"]
-> [« Etapa 5](install-ata-step5.md)
-> [Etapa 8 »](install-ata-step7.md)
+> [«Etapa 5](install-ata-step5.md) 
+>  [Etapa 8»](install-ata-step7.md)
 
 ## <a name="step-7-integrate-vpn"></a>Etapa 7. Integrar a VPN
 
@@ -40,7 +40,7 @@ O ATA integra-se à solução de VPN escutando eventos contábeis do RADIUS enca
 > [!IMPORTANT]
 > A partir de setembro de 2019, o serviço de localização geográfica de VPN do Advanced Threat Analytics responsável por detectar locais de VPN agora dá suporte exclusivamente a TLS 1,2. Verifique se o centro do ATA está configurado para dar suporte a TLS 1,2, já que as versões 1,1 e 1,0 não têm mais suporte.   
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Pré-requisitos
 
 Para habilitar a integração de VPN, verifique se você definiu os seguintes parâmetros:
 
@@ -94,17 +94,17 @@ Depois que o Gateway do ATA recebe os eventos de VPN e os envia ao centro do ATA
 
 
 > [!div class="step-by-step"]
-> [«Etapa 6](install-ata-step5.md)
-> [Etapa 8»](install-ata-step7.md)
+> [«Etapa 6](install-ata-step5.md) 
+>  [Etapa 8»](install-ata-step7.md)
 
 
 
-## <a name="related-videos"></a>Vídeos relacionados
+## <a name="related-videos"></a>Vídeos Relacionados
 - [Visão geral da implantação do ATA](https://channel9.msdn.com/Shows/Microsoft-Security/Overview-of-ATA-Deployment-in-10-Minutes)
 - [Como escolher o tipo certo de Gateway do ATA](https://channel9.msdn.com/Shows/Microsoft-Security/ATA-Deployment-Choose-the-Right-Gateway-Type)
 
 
-## <a name="see-also"></a>Confira Também
+## <a name="see-also"></a>Consulte Também
 - [Guia de implantação da POC (prova de conceito) do ATA](https://aka.ms/atapoc)
 - [Ferramenta de dimensionamento do ATA](https://aka.ms/aatpsizingtool)
 - [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

@@ -2,9 +2,9 @@
 title: Quais ameaças o Advanced Threat Analytics detecta?
 description: Lista as ameaças detectadas pelo Advanced Threat Analytics
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
-manager: rkarlin
+author: shsagir
+ms.author: shsagir
+manager: shsagir
 ms.date: 3/21/2018
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 283e7b4e-996a-4491-b7f6-ff06e73790d2
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 4529401696dd07dffb04871c4da4214c3a2aa3c5
-ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
+ms.openlocfilehash: dcc7e65cbe7fee4d743ce1abd1d81d30a5406a7d
+ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79412526"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84775481"
 ---
 # <a name="what-threats-does-ata-look-for"></a>Que tipos de ameaças o ATA procura?
 
@@ -34,12 +34,12 @@ Essas fases na cadeia de extermínio, nas quais o ATA fornece atualmente as dete
 Para obter mais informações, confira [Trabalhando com atividades suspeitas](working-with-suspicious-activities.md) e o [Guia de atividade suspeita do ATA](suspicious-activity-guide.md).
 
 
-## <a name="whats-next"></a>Novidades
+## <a name="whats-next"></a>O que vem a seguir?
 
--   Para mais informações sobre como o ATA se adapta à sua rede, consulte: [Arquitetura de ATA](ata-architecture.md)
+-   Para saber mais sobre como o ATA se adapta à sua rede: [Arquitetura do ATA](ata-architecture.md)
 
 -   Para começar a implantar o ATA: [Instalar o ATA](install-ata-step1.md)
 
 
-## <a name="see-also"></a>Confira Também
+## <a name="see-also"></a>Consulte Também
 [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

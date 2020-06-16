@@ -2,9 +2,9 @@
 title: Instalar o Advanced Threat Analytics – etapa 4
 description: A Etapa quatro da instalação do ATA ajuda você a instalar o Gateway do ATA.
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
-manager: rkarlin
+author: shsagir
+ms.author: shsagir
+manager: shsagir
 ms.date: 3/21/2018
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 6bbc50c3-bfa8-41db-a2f9-56eed68ef5d2
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 6c36bc1778c267e01ea98a916d17370a62d905d2
-ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
+ms.openlocfilehash: 1b66474219101f9d5c7f9ce38b3a7e3ff34b6f50
+ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79410622"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84775192"
 ---
 # <a name="install-ata---step-4"></a>Instalação do ATA - Etapa 4
 
@@ -79,7 +79,7 @@ Execute as seguintes etapas no servidor do Gateway do ATA.
     -   Microsoft Visual C++ 2013 Redistributable
     -   Conjunto de coleta de dados do Monitor de Desempenho Personalizado
     
-7. Após a conclusão da instalação, para o Gateway do ATA, clique em **Iniciar** para abrir o navegador e entrar no Console do ATA. Para o Gateway Lightweight do ATA, clique em **Concluir**.
+7. Após a conclusão da instalação, para o gateway do ATA, clique em **Iniciar** para abrir o navegador e faça logon no console do ATA, para o gateway Lightweight do ATA, clique em **concluir**.
 
 
 > [!div class="step-by-step"]
@@ -87,11 +87,11 @@ Execute as seguintes etapas no servidor do Gateway do ATA.
 > [Etapa 5 »](install-ata-step5.md)
 
 
-## <a name="related-videos"></a>Vídeos relacionados
+## <a name="related-videos"></a>Vídeos Relacionados
 - [Visão geral da implantação do ATA](https://channel9.msdn.com/Shows/Microsoft-Security/Overview-of-ATA-Deployment-in-10-Minutes)
 - [Como escolher o tipo certo de Gateway do ATA](https://channel9.msdn.com/Shows/Microsoft-Security/ATA-Deployment-Choose-the-Right-Gateway-Type)
 
-## <a name="see-also"></a>Confira Também
+## <a name="see-also"></a>Consulte Também
 - [Guia de implantação da POC (prova de conceito) do ATA](https://aka.ms/atapoc)
 - [Ferramenta de dimensionamento do ATA](https://aka.ms/atasizingtool)
 - [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

@@ -4,7 +4,7 @@ description: Fornece instruções para atualizar sua versão do Advanced Threat 
 keywords: ''
 author: shsagir
 ms.author: shsagir
-manager: rkarlin
+manager: shsagir
 ms.date: 05/26/2019
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 88720401-1fb2-4353-ad39-32bc0088f0de
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 6225e2482a6b5caf109660a3ccb71e3fd52423f4
-ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
+ms.openlocfilehash: 1bdf5a33efb00fd592b6da9fc8696df3bcfe281b
+ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79414311"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84774835"
 ---
 # <a name="recommended-upgrade-path-for-ata"></a>Caminho de atualização recomendado para o ATA
 
@@ -28,7 +28,7 @@ Este artigo fornece informações sobre as versões disponíveis do Advanced Thr
 
 ## <a name="ata-versions"></a>Versões do ATA
 
-|Version|Nº do build|
+|Versão|Nº do build|
 |----|----|
 |1.6|1.6.4103|
 |1.6 Atualização 1|1.6.4317|
@@ -47,7 +47,7 @@ Consulte o diagrama de caminho de atualização para determinar o caminho de atu
 
 ![Caminho de atualização da versão do ATA](./media/upgrade-path-ata.png)
 
-## <a name="see-also"></a>Confira Também
+## <a name="see-also"></a>Consulte Também
 - [Pré-requisitos do ATA](ata-prerequisites.md)
 - [Planejamento da capacidade do ATA](ata-capacity-planning.md)
 - [Configurar coleta de eventos](configure-event-collection.md)

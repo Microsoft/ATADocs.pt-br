@@ -2,9 +2,9 @@
 title: Instalar o Advanced Threat Analytics – etapa 8
 description: Na etapa final da instalação do ATA, configure o usuário Honeytoken.
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
-manager: rkarlin
+author: shsagir
+ms.author: shsagir
+manager: shsagir
 ms.date: 6/14/2018
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
@@ -12,20 +12,20 @@ ms.technology: ''
 ms.assetid: 8980e724-06a6-40b0-8477-27d4cc29fd2b
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 367d40e57590ace725700de947f3c1fd31b9db5e
-ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
+ms.openlocfilehash: 9482053a183dfd41f20028d00c15c171cea725c7
+ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79411200"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84775141"
 ---
 # <a name="install-ata---step-8"></a>Instalação do ATA - Etapa 8
 
 *Aplica-se a: Advanced Threat Analytics versão 1.9*
 
 > [!div class="step-by-step"]
-> [« Etapa 7](vpn-integration-install-step.md)
-> [Etapa 9 »](install-ata-step9-samr.md)
+> [«Etapa 7](vpn-integration-install-step.md) 
+>  [Etapa 9»](install-ata-step9-samr.md)
 
 ## <a name="step-8-configure-ip-address-exclusions-and-honeytoken-user"></a>Etapa 8. Configurar as exclusões de endereço IP e o usuário Honeytoken
 
@@ -37,11 +37,11 @@ O ATA também permite a configuração de um usuário Honeytoken, que é usado c
 
 Para configurar isso, execute estas etapas:
 
-1.  No Console do ATA, clique no ícone de configurações e selecione **Configuração**.
+1.  No console do ATA, clique no ícone configurações e selecione **configuração**.
 
     ![Definições de configurações do ATA](media/ATA-config-icon.png)
 
-2.  Em **Detecção**, clique em **Marcas de entidade**.
+2.  Em **detecção**, clique em **marcas de entidade**.
 
 2. Em **Honeytoken accounts (Contas Honeytoken)** insira o nome da conta Honeytoken. O campo de contas Honeytoken é pesquisável e exibe automaticamente entidades em sua rede.
 
@@ -51,7 +51,7 @@ Para configurar isso, execute estas etapas:
 
    ![Exclusões](media/exclusions.png)
 
-4.  Clique em **Salvar**.
+4.  Clique em **Save** (Salvar).
 
 
 Parabéns, você implantou com êxito o Microsoft Advanced Threat Analytics!
@@ -64,16 +64,16 @@ Para verificar se ATA está funcionando e detectar violações em sua rede, é p
 
 
 > [!div class="step-by-step"]
-> [« Etapa 7](vpn-integration-install-step.md)
-> [Etapa 9 »](install-ata-step9-samr.md)
+> [«Etapa 7](vpn-integration-install-step.md) 
+>  [Etapa 9»](install-ata-step9-samr.md)
 
 
-## <a name="related-videos"></a>Vídeos relacionados
+## <a name="related-videos"></a>Vídeos Relacionados
 - [Visão geral da implantação do ATA](https://channel9.msdn.com/Shows/Microsoft-Security/Overview-of-ATA-Deployment-in-10-Minutes)
 - [Como escolher o tipo certo de Gateway do ATA](https://channel9.msdn.com/Shows/Microsoft-Security/ATA-Deployment-Choose-the-Right-Gateway-Type)
 
 
-## <a name="see-also"></a>Confira Também
+## <a name="see-also"></a>Consulte Também
 - [Guia de implantação da POC (prova de conceito) do ATA](https://aka.ms/atapoc)
 - [Ferramenta de dimensionamento do ATA](https://aka.ms/atasizingtool)
 - [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

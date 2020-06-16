@@ -2,9 +2,9 @@
 title: O que há de novo na versão 1,4 do Advanced Threat Analytics
 description: Lista as novidades na versão 1.4 do ATA e seus problemas conhecidos
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
-manager: rkarlin
+author: shsagir
+ms.author: shsagir
+manager: shsagir
 ms.date: 01/23/2017
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: cbea47f9-34c1-42b6-ae9e-6a472b49e1a5
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 9a06773002de2b0b830ba179899373543b2bfbff
-ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
+ms.openlocfilehash: 1ad136c9f028140d76fd42f62eeb7a11366af286
+ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79414192"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84774738"
 ---
 # <a name="what39s-new-in-ata-version-14"></a>Novidades na versão 1.4 do ATA
 Essas notas de versão fornecem informações sobre problemas conhecidos na versão 1.4 da Advanced Threat Analytics.
@@ -94,7 +94,7 @@ Se você tiver mais de um Gateway de ATA e tiver desconectado os alertas de Gate
 ### <a name="kb-on-virtualization-host"></a>Base de dados de conhecimento sobre host de virtualização
 Não instale a Base de dados de conhecimento 3047154 em um host de virtualização. Isso pode fazer com que o espelhamento de porta pare de funcionar corretamente.
 
-## <a name="see-also"></a>Confira Também
+## <a name="see-also"></a>Consulte Também
 
 [Atualizar o ATA para a versão 1.6 — guia de migração](ata-update-1.6-migration-guide.md)
 
