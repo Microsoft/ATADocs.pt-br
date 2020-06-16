@@ -4,19 +4,19 @@ description: Ajuda você a planejar a implantação e decidir quantos servidores
 keywords: ''
 author: shsagir
 ms.author: shsagir
-manager: rkarlin
+manager: shsagir
 ms.date: 10/16/2019
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
 ms.assetid: 1b5b24ff-0df8-4660-b4f8-64d68cc72f65
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 0d05fed57a09ebca981b19d7f447a000172cbe7b
-ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
+ms.openlocfilehash: f7f8bbbf9da70dc89bb3c7acde3167930919ce1f
+ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79411761"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84771911"
 ---
 # <a name="ata-capacity-planning"></a>Planejamento da capacidade de ATA
 
@@ -59,16 +59,16 @@ A Central de ATA requer um mínimo recomendado de 30 dias de dados para a análi
 |---------------------------|-------------------------|-------------------|---------------------------------|-----------------------------------|-----------------------------------|
 |1,000|2|32|0.3|9|30 (100)
 |40.000|4|48|12|360|500 (750)
-|200.000|8|64|60|1\.800|1\.000 (1.500)
-|400.000|12|96|120|3\.600|2\.000 (2.500)
-|750.000|24|112|225|6\.750|2\.500 (3.000)
-|1\.000.000|40|128|300|9\.000|4\.000 (5.000)
+|200.000|8|64|60|1.800|1.000 (1.500)
+|400.000|12|96|120|3.600|2.000 (2.500)
+|750.000|24|112|225|6.750|2.500 (3.000)
+|1\.000.000|40|128|300|9.000|4.000 (5.000)
 
 &#42;Isso inclui os núcleos físicos, não os núcleos com hyper-threading.
 
 &#42;&#42;Média dos números (Números de pico)
 > [!NOTE]
-> - O centro do ATA pode lidar com um máximo agregado de 1 milhão de pacotes por segundo de todos os controladores de domínio monitorados. Em alguns ambientes, o mesmo centro do ATA pode lidar com o tráfego geral superior a 1M e alguns ambientes podem exceder a capacidade do ATA. Entre em contato conosco em azureatpfeedback@microsoft.com para obter ajuda no planejamento e na estimativa de ambientes grandes.
+> - O centro do ATA pode lidar com um máximo agregado de 1 milhão de pacotes por segundo de todos os controladores de domínio monitorados. Em alguns ambientes, o mesmo centro do ATA pode lidar com o tráfego geral superior a 1M e alguns ambientes podem exceder a capacidade do ATA. Entre em contato conosco em azureatpfeedback@microsoft.com para obter assistência no planejamento e na estimativa de ambientes grandes.
 
 > - Se o espaço livre chegar a um mínimo de 20% ou 200 GB, o conjunto mais antigo de dados será excluído. Se não for possível reduzir com êxito a coleta de dados a esse nível, um alerta será registrado.  O ATA continuará a funcionar até o limite de 5% ou 50 GB livres ser alcançado.  Nesse momento, o ATA deixará de popular o banco de dados e um alerta adicional será emitido.
 > - O ATA Center pode ser implantado em qualquer fornecedor de IaaS, desde que os requisitos de desempenho descritos neste artigo sejam atendidos.
@@ -84,13 +84,13 @@ Em uma implantação do ATA, há suporte para qualquer combinação dos tipos de
 
 - Somente Gateways do ATA
 - Somente Gateways Lightweight do ATA
-- Uma combinação de ambas
+- Uma combinação de ambos os casos
 
 Ao decidir sobre o tipo de implantação do Gateway, considere os seguintes benefícios:
 
 |Tipo de gateway|Benefícios|Custo|Topologia de implantação|Uso do controlador de domínio|
 |----|----|----|----|-----|
-|Gateway do ATA|A implantação Fora de banda dificulta o trabalho dos invasores em descobrir se o ATA está presente|Mais alto|Instalado junto com o controlador de domínio (fora de banda)|Dá suporte a até 50.000 pacotes por segundo|
+|Gateway de ATA|A implantação Fora de banda dificulta o trabalho dos invasores em descobrir se o ATA está presente|Superior|Instalado junto com o controlador de domínio (fora de banda)|Dá suporte a até 50.000 pacotes por segundo|
 |Gateway Lightweight do ATA|Não exige uma configuração de espelhamento de porta e servidor dedicado|Inferior|Instalado em um controlador de domínio|Dá suporte a até 10.000 pacotes por segundo|
 
 Veja a seguir exemplos de cenários nos quais os controladores de domínio devem ser cobertos pelo Gateway Lightweight do ATA:
@@ -115,8 +115,8 @@ Um Gateway Lightweight do ATA pode oferecer suporte ao monitoramento de um contr
 |Pacotes por segundo&#42;|CPU (núcleos&#42;&#42;)|Memória (GB)&#42;&#42;&#42;|
 |---------------------------|-------------------------|---------------|
 |1,000|2|6|
-|5,000|6|16|
-    |10,000|10|24|
+|5\.000|6|16|
+    |10.000|10|24|
 
 &#42;Número total de pacotes por segundo no controlador de domínio sendo monitorado pelo Gateway Lightweight do ATA específico.
 
@@ -128,7 +128,7 @@ Um Gateway Lightweight do ATA pode oferecer suporte ao monitoramento de um contr
 > -   Se o controlador de domínio não tiver os recursos exigidos pelo Gateway Lightweight do ATA, o desempenho do controlador de domínio não será afetado, mas o Gateway Lightweight do ATA poderá não operar conforme o esperado.
 > -   Ao executar o centro como uma máquina virtual (VM), o centro exige que toda a memória seja alocada para a VM, o tempo todo. Para obter mais informações sobre como executar o centro do ATA como uma máquina virtual, consulte [requisitos do centro do ATA](https://docs.microsoft.com/advanced-threat-analytics/ata-prerequisites#dynamic-memory))
 > -   Para ter um melhor desempenho, defina a **Opção de Energia** do Gateway Lightweight do ATA como **Alto Desempenho**.
-> -   É necessário um mínimo de 5 GB de espaço e é recomendável 10 GB de espaço, incluindo o espaço necessário para os binários do ATA, [logs do ATA](troubleshooting-ata-using-logs.md) e [logs de desempenho](troubleshooting-ata-using-perf-counters.md).
+> -   É necessário um mínimo de 5 GB de espaço e é recomendável 10 GB, incluindo o espaço necessário para os binários do ATA, [logs do ATA](troubleshooting-ata-using-logs.md)e [logs de desempenho](troubleshooting-ata-using-perf-counters.md).
 
 
 ### <a name="ata-gateway-sizing"></a>Dimensionamento do Gateway de ATA
@@ -150,9 +150,9 @@ As considerações de espelhamento de porta podem exigir que você implante vár
 |Pacotes por segundo&#42;|CPU (núcleos&#42;&#42;)|Memória (GB)|
 |---------------------------|-------------------------|---------------|
 |1,000|1|6|
-|5,000|2|10|
-|10,000|3|12|
-|20.000|6|24|
+|5\.000|2|10|
+|10.000|3|12|
+|20,000|6|24|
 |50.000|16|48|
 
 &#42;Número médio total de pacotes por segundo de todos os controladores de domínio que estão sendo monitorados pelo Gateway do ATA específico durante a respectiva hora do dia mais ocupada.
@@ -164,15 +164,15 @@ As considerações de espelhamento de porta podem exigir que você implante vár
 > [!NOTE] 
 > -   Ao executar o centro como uma máquina virtual (VM), o centro exige que toda a memória seja alocada para a VM, o tempo todo. Para obter mais informações sobre como executar o centro do ATA como uma máquina virtual, consulte [requisitos do centro do ATA](https://docs.microsoft.com/advanced-threat-analytics/ata-prerequisites#dynamic-memory)
 > -   Para ter um melhor desempenho, defina a **Opção de Energia** do Gateway de ATA para **Alto Desempenho**.
-> -   É necessário um mínimo de 5 GB de espaço e é recomendável 10 GB de espaço, incluindo o espaço necessário para os binários do ATA, [logs do ATA](troubleshooting-ata-using-logs.md) e [logs de desempenho](troubleshooting-ata-using-perf-counters.md).
+> -   É necessário um mínimo de 5 GB de espaço e é recomendável 10 GB, incluindo o espaço necessário para os binários do ATA, [logs do ATA](troubleshooting-ata-using-logs.md)e [logs de desempenho](troubleshooting-ata-using-perf-counters.md).
 
 
 
-## <a name="related-videos"></a>Vídeos relacionados
+## <a name="related-videos"></a>Vídeos Relacionados
 - [Como escolher o tipo certo de Gateway do ATA](https://channel9.msdn.com/Shows/Microsoft-Security/ATA-Deployment-Choose-the-Right-Gateway-Type)
 
 
-## <a name="see-also"></a>Confira Também
+## <a name="see-also"></a>Consulte Também
 - [Ferramenta de dimensionamento do ATA](https://aka.ms/atasizingtool)
 - [Pré-requisitos do ATA](ata-prerequisites.md)
 - [Arquitetura do ATA](ata-architecture.md)

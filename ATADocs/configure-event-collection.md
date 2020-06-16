@@ -2,9 +2,9 @@
 title: Configurar o encaminhamento de eventos do Windows no Advanced Threat Analytics
 description: Descreve suas opções para configurar o Encaminhamento de Eventos do Windows com o ATA
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
-manager: rkarlin
+author: shsagir
+ms.author: shsagir
+manager: shsagir
 ms.date: 3/21/2018
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 3f0498f9-061d-40e6-ae07-98b8dcad9b20
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 84ce1bed4203ff7344d1e28dc4765ba5cfe79843
-ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
+ms.openlocfilehash: 31e1b1923d6cef2b0bc4c34349be8b6516aceb0b
+ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79411846"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84775379"
 ---
 # <a name="configuring-windows-event-forwarding"></a>Configuração do encaminhamento de eventos do Windows
 
@@ -35,7 +35,7 @@ Para aprimorar as funcionalidades de detecção, o ATA precisa dos seguintes eve
 
 Após a configuração do espelhamento de porta dos controladores de domínio para o Gateway do ATA, siga as instruções a seguir para configurar o Encaminhamento de Eventos do Windows usando a configuração Iniciada pela Origem. Essa é uma maneira para configurar o Encaminhamento de eventos do Windows. 
 
-**Etapa 1: Adicionar a conta de serviço de rede ao Grupo de Leitores de Log de Eventos do domínio.** 
+**Etapa 1: adicionar a conta de serviço de rede ao Grupo de Leitores de Log de Eventos do domínio.** 
 
 Neste cenário, supomos que o Gateway ATA seja membro do domínio.
 
@@ -45,7 +45,7 @@ Neste cenário, supomos que o Gateway ATA seja membro do domínio.
 
 Após adicionar o **Serviço de Rede** ao grupo **Leitores de Log de Eventos**, reinicie os controladores de domínio para que a alteração tenha efeito.
 
-**Etapa 2: Criar uma política nos controladores de domínio para definir a configuração Configurar Gerenciador de Assinaturas de destino.** 
+**Etapa 2: criar uma política nos controladores de domínio para definir a configuração Configurar Gerenciador de Assinaturas de destino.** 
 > [!Note] 
 > Você pode criar uma política de grupo para essas configurações e aplicá-la a cada controlador de domínio monitorado pelo Gateway do ATA. As etapas a seguir modificarão a política local do controlador de domínio.     
 
@@ -92,8 +92,8 @@ Após adicionar o **Serviço de Rede** ao grupo **Leitores de Log de Eventos**, 
     6.  Depois de alguns minutos, verifique se os eventos definidos para serem encaminhados aparecem nos Eventos Encaminhados no Gateway do ATA.
 
 
-Para saber mais, confira: [Configurar computadores para encaminhar e coletar eventos](https://technet.microsoft.com/library/cc748890)
+Para obter mais informações, consulte: [Configurar computadores para encaminhar e coletar eventos](https://technet.microsoft.com/library/cc748890)
 
-## <a name="see-also"></a>Confira Também
+## <a name="see-also"></a>Consulte Também
 - [Instalar o ATA](install-ata-step1.md)
 - [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

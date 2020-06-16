@@ -2,9 +2,9 @@
 title: Novidades da versão 1.9 do ATA
 description: Lista as novidades da nova versão 1.9 do ATA e os problemas conhecidos
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
-manager: rkarlin
+author: shsagir
+ms.author: shsagir
+manager: shsagir
 ms.date: 3/25/2018
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 51de491c-49ba-4aff-aded-cc133a8ccf0b
 ms.reviewer: ''
 ms.suite: ems
-ms.openlocfilehash: 40193c0aa8c0ee10dd129d4153dd63df9f8eb926
-ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
+ms.openlocfilehash: 261d6c5253dc697ae50523c24ccb34feba75a4e6
+ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79412798"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84774665"
 ---
 # <a name="whats-new-in-ata-version-19"></a>Novidades da versão 1.9 do ATA
 
@@ -42,7 +42,7 @@ Essas notas de versão fornecem informações sobre atualizações, novos recurs
 
 -   O ATA 1.9 permite [marcar manualmente grupos](tag-sensitive-accounts.md) ou contas como confidenciais para aprimorar as detecções. Essa marcação afeta muitas detecções do ATA, como a detecção de modificação de grupos confidenciais e o caminho de movimento lateral, dependendo de quais grupos e contas são considerados confidenciais.
 
-## <a name="performance-improvements"></a>Aprimoramentos do desempenho
+## <a name="performance-improvements"></a>Melhorias de desempenho
 
 - O desempenho da infraestrutura da Central do ATA foi aprimorado: a exibição agregada do tráfego permite otimizar a CPU e o pipeline de pacotes, além de reutilizar soquetes para os controladores de domínio minimizarem as sessões de SSL para o controlador de domínio.
 
@@ -60,7 +60,7 @@ Essas notas de versão fornecem informações sobre atualizações, novos recurs
 
 
 
-## <a name="see-also"></a>Confira Também
+## <a name="see-also"></a>Consulte Também
 [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
 [Atualizar o ATA para a versão 1.9 — guia de migração](ata-update-1.9-migration-guide.md)

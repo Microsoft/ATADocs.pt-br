@@ -2,9 +2,9 @@
 title: Solução de problemas da análise avançada de ameaças usando o banco de dados
 description: Descreve como você pode usar o banco de dados do ATA para solucionar problemas
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
-manager: rkarlin
+author: shsagir
+ms.author: shsagir
+manager: shsagir
 ms.date: 3/21/2018
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 377a3c81-5c1d-486f-8942-85249aacf560
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 1efc5aee15527212a6f2eb53c147fe8fa1d62ea3
-ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
+ms.openlocfilehash: 269646c7547b0a9a3538405a4180d063e27e0455
+ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79414209"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84774903"
 ---
 # <a name="troubleshooting-ata-using-the-ata-database"></a>Solução de problemas do ATA usando o banco de dados do ATA
 
@@ -35,7 +35,7 @@ O modo padrão, e mais básico, de consultar o banco de dados é usando o shell 
 
 > [!div class="mx-tableFixed"]
 > 
-> |Como...|Sintaxe|Anotações|
+> |Como...|Sintaxe|Observações|
 > |-------------|----------|---------|
 > |Verifique se há coleções no banco de dados.|`show collections`|É útil como um teste completo para verificar se o tráfego está sendo gravado no banco de dados, e se o evento 4776 está sendo recebido pelo ATA.|
 > |Obter detalhes de um usuário/computador/grupo (UniqueEntity), como ID do usuário.|`db.UniqueEntity.find({CompleteSearchNames: "<name of entity in lower case>"})`||
@@ -48,7 +48,7 @@ O exemplo a seguir fornece um código de exemplo usando a sintaxe fornecida ante
 
 `db.Ntlms_<closest date>.find({SourceAccountId: "123bdd24-b269-h6e1-9c72-7737as875351"})`
 
-## <a name="see-also"></a>Confira Também
+## <a name="see-also"></a>Consulte Também
 - [Pré-requisitos do ATA](ata-prerequisites.md)
 - [Planejamento da capacidade do ATA](ata-capacity-planning.md)
 - [Configurar coleta de eventos](configure-event-collection.md)

@@ -2,9 +2,9 @@
 title: Trabalhando com atividades suspeitas no Advanced Threat Analytics
 description: Descreve como examinar atividades suspeitas identificadas pelo ATA
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
-manager: rkarlin
+author: shsagir
+ms.author: shsagir
+manager: shsagir
 ms.date: 4/29/2018
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 44d7c899-816c-4f7f-91d3-84a09d291a24
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 377f7243a26821f07852805ce73f8d5860023dbd
-ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
+ms.openlocfilehash: f4f697e32d3c89c77f1564d0b9b43cb04ed8ab30
+ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79414396"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84774631"
 ---
 # <a name="working-with-suspicious-activities"></a>Trabalhando com atividades suspeitas
 
@@ -35,7 +35,7 @@ Cada atividade suspeita tem as seguintes informações:
 
 -   A severidade da atividade suspeita: alta, média ou baixa.
 
--   Status: aberto, fechado ou suprimido.
+-   Status: Aberto, fechado ou suprimido.
 
 -   Capacidade de
 
@@ -54,11 +54,11 @@ Para filtrar a lista de atividades suspeitas:
 
 1.  No painel **Filtrar por** no lado esquerdo da tela, selecione uma das seguintes opções: **Tudo**, **Aberto**, **Fechado** ou **Suprimido**.
 
-2.  Para filtrar a lista ainda mais, selecione **Alta**, **Média** ou **Baixa**.
+2.  Para filtrar ainda mais a lista, selecione **alta**, **média**ou **baixa**.
 
-**Gravidade da atividade suspeita**
+**Severidade da atividade suspeita**
 
--   **Baixa**
+-   **Baixo**
 
     Indica atividades suspeitas que podem levar a ataques projetados para usuários ou softwares mal-intencionados para obter acesso aos dados organizacionais.
 
@@ -72,12 +72,12 @@ Para filtrar a lista de atividades suspeitas:
 
 
 ## <a name="remediating-suspicious-activities"></a>Corrigindo atividades suspeitas
-Você pode alterar o status de uma atividade suspeita clicando no status atual da atividade suspeita e selecionando uma das seguintes opções **Aberto**, **Suprimido**, **Fechado** ou **Excluído**.
+Você pode alterar o status de uma atividade suspeita clicando no status atual da atividade suspeita e selecionando uma das seguintes opções **abrir**, **suprimido**, **fechado**ou **excluído**.
 Para fazer isso, clique nos três pontos no canto superior direito de uma atividade suspeita específica para exibir a lista de ações disponíveis.
 
 ![Ações do ATA para atividades suspeitas](./media/sa-actions.png)
 
-**Status de atividade suspeita**
+**Status de atividade suspeita:**
 
 - **Abrir**: todas as novas atividades suspeitas aparecem nesta lista.
 
@@ -95,11 +95,11 @@ Para fazer isso, clique nos três pontos no canto superior direito de uma ativid
   > As páginas de configuração podem ser modificadas apenas por administradores do ATA.
 
 
-## <a name="related-videos"></a>Vídeos relacionados
-- [Unindo a comunidade de segurança](https://channel9.msdn.com/Shows/Microsoft-Security/Join-the-Security-Community)
+## <a name="related-videos"></a>Vídeos Relacionados
+- [Participar da comunidade de segurança](https://channel9.msdn.com/Shows/Microsoft-Security/Join-the-Security-Community)
 
 
-## <a name="see-also"></a>Confira Também
+## <a name="see-also"></a>Consulte Também
 - [Manual da atividade suspeita do ATA](https://aka.ms/ataplaybook)
 - [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Modificando a configuração do ATA](modifying-ata-center-configuration.md)

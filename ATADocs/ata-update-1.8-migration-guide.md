@@ -2,9 +2,9 @@
 title: Atualização do Advanced Threat Analytics para o guia de migração 1,8
 description: Procedimentos para atualizar o ATA para a versão 1.8
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
-manager: rkarlin
+author: shsagir
+ms.author: shsagir
+manager: shsagir
 ms.date: 07/20/2017
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
@@ -12,17 +12,17 @@ ms.technology: ''
 ms.assetid: e5a9718c-b22e-41f7-a614-f00fc4997682
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 51f9be6f5c2073070bbddb6669c0dda084c0e150
-ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
+ms.openlocfilehash: 2cedddd5df1da95507d366e6e0c01e1eff0f00d9
+ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79412985"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84775430"
 ---
 # <a name="updating-ata-to-version-18"></a>Atualizando o ATA para a versão 1.8
 
 > [!NOTE] 
-> Se o ATA não estiver instalado em seu ambiente, baixe a versão completa do ATA que inclui a versão 1.8 e siga o procedimento de instalação padrão descrito em [Instalar o ATA](install-ata-step1.md).
+> Se o ATA não estiver instalado em seu ambiente, baixe a versão completa do ATA, que inclui a versão 1,8 e siga o procedimento de instalação padrão descrito em [instalar o ATA](install-ata-step1.md).
 
 Se você já tiver a versão 1.7 do ATA implantada, esse procedimento explicará as etapas necessárias para atualizar sua implantação.
 
@@ -53,7 +53,7 @@ Na versão de migração, o arquivo pode ser usado apenas para a atualização d
 
    - Na página **Boas-vindas**, escolha seu idioma e clique em **Avançar**.
 
-   - Se você não tiver habilitado as atualizações automáticas na versão 1.7, será necessário definir o ATA para usar o Microsoft Update para ATA a fim de permanecer atualizado.  Na página do Microsoft Update, selecione **Usar o Microsoft Update ao verificar se há atualizações (recomendado)** .
+   - Se você não tiver habilitado as atualizações automáticas na versão 1.7, será necessário definir o ATA para usar o Microsoft Update para ATA a fim de permanecer atualizado.  Na página Microsoft Update, selecione **usar Microsoft Update quando eu verificar se há atualizações (recomendado)**.
      ![Imagem Manter o ATA atualizado](media/ata_ms_update.png)
      
      Isso ajusta as configurações do Windows para habilitar as atualizações para o ATA. 
@@ -82,6 +82,6 @@ Na versão de migração, o arquivo pode ser usado apenas para a atualização d
 > Para instalar novos gateways do ATA, acesse a tela **gateways** e clique em **baixar a instalação do gateway** para obter o pacote de instalação do gateway 1,8 do ATA e siga as instruções para nova instalação do gateway, conforme descrito na [etapa 4. Instale o gateway do ATA](install-ata-step4.md).
 
 
-## <a name="see-also"></a>Confira Também
+## <a name="see-also"></a>Consulte Também
 
 - [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

@@ -4,7 +4,7 @@ description: Descreve como você pode recuperar rapidamente a funcionalidade do 
 keywords: ''
 author: shsagir
 ms.author: shsagir
-manager: rkarlin
+manager: shsagir
 ms.date: 05/02/2019
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 7620e171-76d5-4e3f-8b03-871678217a3a
 ms.reviewer: arzinger
 ms.suite: ems
-ms.openlocfilehash: 5bf0654f951466f6cb33e9c71c522fbf582179c9
-ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
+ms.openlocfilehash: 41abda99939f1152cd21f8de6034cf42f435bbf4
+ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79413291"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84775330"
 ---
 # <a name="ata-disaster-recovery"></a>Recuperação de desastre de ATA
 
@@ -32,21 +32,21 @@ Este artigo descreve como recuperar rapidamente seu Centro de ATA e restaurar a 
 
 1. A configuração do Centro de ATA é armazenada em backup em um arquivo a cada quatro horas. Localize a última cópia de backup da configuração do Centro de ATA e salve-a em um computador à parte. Para obter uma explicação completa de como localizar esses arquivos, confira [Exportar e importar a configuração de ATA](ata-configuration-file.md). 
 2. Exportação do certificado do Centro de ATA.
-    1. No gerenciador de certificados, navegue até **Certificados (Computador Local)**  -> **Pessoal** ->**Certificados** e selecione **Centro de ATA**.
+    1. No Gerenciador de certificados, navegue até **certificados (computador local)**  ->  **Personal**  -> **certificados**pessoais e selecione **centro do ATA**.
     2. Clique com o botão direito do mouse em **Centro de ATA** e selecione **Todas as Tarefas** e, em seguida, **Exportar**. 
      ![Certificado do Centro de ATA](media/ata-center-cert.png)
     3. Siga as instruções para exportar o certificado, certificando-se de exportar também a chave privada.
     4. Faça o backup do arquivo de certificado exportado em um computador separado.
 
    > [!NOTE] 
-   > Se você não puder exportar a chave privada, você deve criar um novo certificado e implantá-lo no ATA, conforme descrito em [Alteração do certificado do Centro de ATA](modifying-ata-center-configuration.md) e, em seguida, exportá-la. 
+   > Se você não puder exportar a chave privada, você deve criar um novo certificado e implantá-lo no ATA, conforme descrito em [Alteração do certificado do Centro do ATA](modifying-ata-center-configuration.md) e, em seguida, exportá-la. 
 
 ## <a name="recover-your-ata-center"></a>Recuperar seu Centro de ATA
 
-1. Crie uma nova máquina do Windows Server usando o mesmo nome de computador e o endereço IP da máquina anterior do Centro de ATA.
+1. Crie uma nova máquina do Windows Server usando o mesmo nome de computador e o endereço IP da máquina anterior do Centro do ATA.
 2. Importe o certificado que você armazenou em backup anteriormente no novo servidor.
 3. Siga as instruções para [Implantar o Centro do ATA](install-ata-step1.md) no Windows Server recém-criado. Não é necessário implantar os Gateways do ATA novamente. Quando for solicitado um certificado, forneça o certificado exportado durante o backup da configuração do Centro de ATA. 
-![Restauração do Centro de ATA](media/disaster-recovery-deploymentss.png)
+![Restauração do Centro do ATA](media/disaster-recovery-deploymentss.png)
 4. Interrompa o serviço do Centro ATA.
 5. Importe a configuração do Centro de ATA armazenada em backup:
     1. Remova o documento padrão do Perfil do Sistema do Centro de ATA do MongoDB: 
@@ -58,14 +58,14 @@ Este artigo descreve como recuperar rapidamente seu Centro de ATA e restaurar a 
     Para obter uma explicação completa de como localizar e importar arquivos de backup, confira [Exportar e importar a configuração de ATA](ata-configuration-file.md). 
     3. Inicie o serviço do Centro ATA.
     4. Abra o Console do ATA. Você deverá ver todos os Gateways do ATA vinculados na guia Configuração/Gateways.
-    5. Defina um [**Usuário de serviços de diretório**](install-ata-step2.md) e escolha um [**Sincronizador de controlador de domínio**](install-ata-step5.md). 
+    5. Certifique-se de definir um [**usuário de serviços de diretório**](install-ata-step2.md) e escolher um [**sincronizador de controlador de domínio**](install-ata-step5.md). 
 
 
 
 
 
 
-## <a name="see-also"></a>Confira Também
+## <a name="see-also"></a>Consulte Também
 - [Pré-requisitos do ATA](ata-prerequisites.md)
 - [Planejamento da capacidade do ATA](ata-capacity-planning.md)
 - [Configurar coleta de eventos](install-ata-step6.md)

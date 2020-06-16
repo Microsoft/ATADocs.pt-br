@@ -1,22 +1,22 @@
 ---
-title: Alterar a configuração do Centro do ATA do Advanced Threat Analytics
+title: Alterar a configuração do centro do ATA da análise de ameaças avançadas
 description: Descreve como alterar o endereço IP, a porta, a URL do console ou o certificado de seu Centro do ATA.
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
-manager: rkarlin
+author: shsagir
+ms.author: shsagir
+manager: shsagir
 ms.date: 3/21/2018
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
 ms.technology: ''
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 498eea7cfe1393bd0b616fc5cfbb11bd18334f8f
-ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
-ms.translationtype: HT
+ms.openlocfilehash: 13fbdf45be1eb23ee9369a2508163a103db7d765
+ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79414005"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84775107"
 ---
 # <a name="modifying-the-ata-center-configuration"></a>Modificar a configuração do Centro do ATA
 
@@ -49,7 +49,7 @@ A URL é usada nos seguintes cenários:
    > [!NOTE]
    > Se você tiver inserido um endereço IP personalizado, não poderá clicar em **Ativar** até que tenha instalado o endereço IP no Centro do ATA.
     
-3. Aguarde a sincronização dos Gateways do ATA. Agora eles têm duas URLs potenciais por meio das quais acessam o Console do ATA. Contanto que o Gateway do ATA possa se conectar usando a URL original, ele não tentará a nova.
+3. Aguarde até que os gateways do ATA sejam sincronizados. Agora, eles têm duas URLs potenciais por meio da qual acessar o console do ATA. Contanto que o Gateway do ATA possa se conectar usando a URL original, ele não tentará a nova.
 
 4. Depois que todos os Gateways do ATA forem sincronizados com a configuração atualizada, na página de configuração central, clique no botão **Ativar** para ativar a nova URL. Quando você ativar a nova URL, os Gateways do ATA usarão a nova URL para acessar o centro do ATA. Após a conexão com o serviço do Centro do ATA, o Gateway do ATA obterá a configuração mais recente e terá somente a nova URL do Console do ATA. 
 
@@ -68,13 +68,13 @@ A URL é usada nos seguintes cenários:
 
 Substitua o certificado seguindo este processo:
 
-1. Antes da expiração do certificado atual, crie um novo certificado e verifique se ele está instalado no servidor do Centro do ATA. <br></br>É recomendável escolher um certificado de uma autoridade de certificação interna, mas também é possível criar um novo certificado autoassinado. Para saber mais, confira [New-SelfSignedCertificate](https://technet.microsoft.com/itpro/powershell/windows/pkiclient/new-selfsignedcertificate).
+1. Antes da expiração do certificado atual, crie um novo certificado e verifique se ele está instalado no servidor do Centro do ATA. <br></br>É recomendável escolher um certificado de uma autoridade de certificação interna, mas também é possível criar um novo certificado autoassinado. Para obter mais informações, consulte [New-SelfSignedCertificate](https://technet.microsoft.com/itpro/powershell/windows/pkiclient/new-selfsignedcertificate).
 
 2. Nas configurações do ATA, em **Centro**, selecione este certificado recém-criado. Neste ponto, o serviço do Centro do ATA ainda está associado ao certificado original. 
 
    ![Alteração da configuração do ATA](media/change-center-config.png)
 
-3. Aguarde a sincronização dos Gateways do ATA. Agora eles têm dois possíveis certificados que são válidos para autenticação mútua. Contanto que o Gateway do ATA possa se conectar usando o certificado original, ele não tentará o novo.
+3. Aguarde até que os gateways do ATA sejam sincronizados. Agora, eles têm dois certificados potenciais válidos para autenticação mútua. Contanto que o Gateway do ATA possa se conectar usando o certificado original, ele não tentará o novo.
 
 4. Após a sincronização de todos os Gateways do ATA com a configuração atualizada, ative o novo certificado ao qual o serviço do Centro do ATA está associado. Quando você ativar o novo certificado, o serviço do Centro do ATA se associará ao novo certificado. Agora, os Gateways do ATA usam o novo certificado para autenticar no Centro do ATA. Após a conexão com o serviço do Centro do ATA, o Gateway do ATA obterá a configuração mais recente e terá somente o novo certificado para o Centro do ATA. 
 

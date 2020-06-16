@@ -4,7 +4,7 @@ description: Procedimentos para atualizar o ATA para a versão 1.9.1
 keywords: ''
 author: shsagir
 ms.author: shsagir
-manager: rkarlin
+manager: shsagir
 ms.date: 12/10/2018
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 2946310a-8e4e-48fc-9450-fc9647efeb22
 ms.reviewer: ort
 ms.suite: ems
-ms.openlocfilehash: fdaf1e8e8a96e0f96098235d818f738528a7ab0e
-ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
+ms.openlocfilehash: beecba26ccb15392953e9a57e3a005b7c6b17668
+ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79412305"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84775294"
 ---
 # <a name="ata-version-191"></a>ATA versão 1.9.1
 
@@ -49,10 +49,10 @@ Essa atualização está disponível no Microsoft Update. Para obter mais inform
 ### <a name="manual-download"></a>Download manual
 Para obter o pacote autônomo para essa atualização, vá para o site do centro de download da Microsoft: [Baixe o pacote do ATA 1,9 agora](https://www.microsoft.com/en-us/download/details.aspx?id=56725).
 
-### <a name="prerequisites"></a>Prerequisites
+### <a name="prerequisites"></a>Pré-requisitos
 Para instalar essa atualização, você deve ter a versão 1.9 do ATA (1.9.7312), Atualização 1 para o ATA versão 1.8 (1.8.6765) ou o ATA versão 1.8 (1.8.6645) instalado.
 
-### <a name="restart-requirement"></a>Requisito de reinicialização
+### <a name="restart-requirement"></a>Requisitos de reinicialização
 O computador pode exigir uma reinicialização depois de aplicar essa atualização.
 
 ### <a name="update-replacement-information"></a>Atualizar informações de substituição

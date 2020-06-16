@@ -2,9 +2,9 @@
 title: Excluindo entidades de detecções no Advanced Threat Analytics
 description: Descreve como impedir que o ATA detecte atividades de entidade específicas como suspeitas
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
-manager: rkarlin
+author: shsagir
+ms.author: shsagir
+manager: shsagir
 ms.date: 3/21/2018
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 344c0f33-45e1-42e2-a051-f722a4504531
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 7fad2868ba78570e983b2eae811cfe2ed9e6d182
-ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
+ms.openlocfilehash: 84e4b6e5951bf16281c60c87e46ce1a799795c55
+ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79410470"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84775328"
 ---
 # <a name="excluding-entities-from-detections"></a>Excluindo entidades de detecções
 
@@ -31,7 +31,7 @@ Para excluir entidades da geração de alertas no ATA:
 
 Há duas maneiras em que você pode excluir entidades, na atividade suspeita em si ou no guia **Exclusões** na página **Configuração**.
 
-- **Na atividade suspeita**: na linha do tempo de atividade suspeita, quando você receber um alerta em uma atividade para um usuário ou computador ou endereço IP que tem permissão para executar uma atividade específica e pode realizá-lo com frequência, clique com botão direito do mouse nos três pontos no final da linha da atividade suspeita nessa entidade e selecione **Fechar e excluir**. <br></br>Isso adiciona o usuário, computador ou endereço IP à lista de exclusões da atividade suspeita. Isso fecha a atividade suspeita e ele não é listado na lista de eventos **Abrir** na **Linha do tempo de atividade suspeita**.
+- **Na atividade suspeita**: na linha do tempo de atividade suspeita, quando você receber um alerta em uma atividade para um usuário ou computador ou endereço IP que tem permissão para executar uma atividade específica e pode realizá-lo com frequência, clique com botão direito do mouse nos três pontos no final da linha da atividade suspeita nessa entidade e selecione **Fechar e excluir**. <br></br>Isso adiciona o usuário, computador ou endereço IP à lista de exclusões da atividade suspeita. Ele fecha a atividade suspeita e não está mais listado na lista **abrir** eventos na **linha do tempo de atividade suspeita**.
 
     ![Excluir entidades](./media/exclude-in-sa.png)
 
@@ -56,6 +56,6 @@ Quando você tiver a possibilidade de exclusão de um endereço IP ou de um comp
 > As páginas de configuração podem ser modificadas apenas por administradores do ATA.
 
 
-## <a name="see-also"></a>Confira Também
+## <a name="see-also"></a>Consulte Também
 - [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Modificando a configuração do ATA](modifying-ata-center-configuration.md)

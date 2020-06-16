@@ -4,7 +4,7 @@ description: Descreve como solucionar os problemas conhecidos no Advanced Threat
 keywords: ''
 author: shsagir
 ms.author: shsagir
-manager: rkarlin
+manager: shsagir
 ms.date: 03/22/2020
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: d89e7aff-a6ef-48a3-ae87-6ac2e39f3bdb
 ms.reviewer: arzinger
 ms.suite: ems
-ms.openlocfilehash: 548be58270bc703db0f26673036e0f3a905fbdcc
-ms.sourcegitcommit: 8c0222dc8333b5aa47430c5daee9bc7f1d82df31
+ms.openlocfilehash: 7aef6beb7c763ac4e4393288a4c4f7b1dc35ac31
+ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81524813"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84774937"
 ---
 # <a name="troubleshooting-ata-known-issues"></a>Solução de problemas conhecidos do ATA
 
@@ -72,7 +72,7 @@ Esta seção detalha os possíveis erros nas implantações do ATA e as etapas n
 >
 > |Erro|Descrição|Resolução|
 > |-------------|----------|---------|
-> |System.Security.Cryptography.CryptographicException: acesso negado.|O Centro do ATA falha ao usar o certificado emitido para descriptografia. Isso provavelmente ocorreu devido ao uso de um certificado com KeySpec (KeyNumber) definido como Assinatura (AT\\_SIGNATURE) que não é compatível com a descriptografia, em vez de usar o KeyExchange (AT\\_KEYEXCHANGE).|1. pare o serviço do centro do ATA. <br></br>2. exclua o certificado do centro do ATA do repositório de certificados do centro. (Antes de excluir, verifique se você tem o backup do certificado com a chave privada em um arquivo PFX). <br></br>3. Abra um prompt de comando com privilégios elevados e execute certutil-importpfx "CenterCertificate.\\pfx" em _KEYEXCHANGE <br></br>4. Inicie o serviço do centro do ATA. <br></br>5. Verifique se tudo agora funciona conforme o esperado.|
+> |System.Security.Cryptography.CryptographicException: acesso negado.|O Centro do ATA falha ao usar o certificado emitido para descriptografia. Isso provavelmente ocorreu devido ao uso de um certificado com KeySpec (KeyNumber) definido como Assinatura (AT\\_SIGNATURE) que não é compatível com a descriptografia, em vez de usar o KeyExchange (AT\\_KEYEXCHANGE).|1. pare o serviço do centro do ATA. <br></br>2. exclua o certificado do centro do ATA do repositório de certificados do centro. (Antes de excluir, verifique se você tem o backup do certificado com a chave privada em um arquivo PFX). <br></br>3. Abra um prompt de comando com privilégios elevados e execute certutil-importpfx "CenterCertificate. pfx" em \\ _KEYEXCHANGE <br></br>4. Inicie o serviço do centro do ATA. <br></br>5. Verifique se tudo agora funciona conforme o esperado.|
 
 ## <a name="ata-gateway-and-lightweight-gateway-issues"></a>Erros do Gateway do ATA e do Gateway Lightweight
 

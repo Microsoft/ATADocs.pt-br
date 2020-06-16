@@ -2,9 +2,9 @@
 title: Noções básicas sobre o console do Advanced Threat Analytics
 description: Descreve como entrar no Console do ATA e os componentes do console
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
-manager: rkarlin
+author: shsagir
+ms.author: shsagir
+manager: shsagir
 ms.date: 3/21/2018
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 1bf264d9-9697-44b5-9533-e1c498da4f07
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: a1db61a38cf87e6c1d8989e5ee591a0741f25f4e
-ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
+ms.openlocfilehash: 115b20058d5828ed9c7cc04f7b27cd77ee839566
+ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79414362"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84774648"
 ---
 # <a name="working-with-the-ata-console"></a>Trabalhando com o Console do ATA
 
@@ -68,7 +68,7 @@ Essa é a página de aterrissagem exibida quando você entra no Console do ATA. 
 
 ![Imagem da linha do tempo de ataque do ATA](media/ATA-Suspicious-Activity-Timeline.jpg)
 
-Para saber mais, confira [Trabalhando com atividades suspeitas](working-with-suspicious-activities.md).
+Para obter mais informações, consulte [Trabalhando com atividades suspeitas](working-with-suspicious-activities.md).
 
 ### <a name="notification-bar"></a>Barra de notificação
 
@@ -100,24 +100,24 @@ Sempre que o sistema encontrar um problema, como um erro de conectividade ou um 
 
 ### <a name="sensitive-groups"></a>Grupos confidenciais
 
-A lista de grupos a seguir é considerada **Confidencial** pelo ATA. Qualquer entidade que é um membro desses grupos é considerada confidencial:
+A lista de grupos a seguir é considerada **confidencial** pelo ATA. Qualquer entidade que é um membro desses grupos é considerada confidencial:
 
 - Controladores de domínio de empresa somente leitura 
-- Administradores do domínio 
+- Administradores de Domínio 
 - Controladores de Domínio 
 - Administradores de esquemas,
-- Administrador corporativo 
+- Administradores Corporativos 
 - Proprietários criadores de política de grupo 
 - Controladores de domínio somente leitura 
 - Administradores  
-- Usuários avançados  
+- Usuários Avançados  
 - Opers. de contas  
-- Operadores de Servidores   
+- Opers. de servidores   
 - Operadores de impressão,
 - Operadores de backup,
 - Replicadores 
 - Usuários da Área de Trabalho Remota 
-- Operadores de Configuração de Rede 
+- Operadores de configuração de rede 
 - Criadores de confiança de floresta de entrada 
 - Administradores do DNS 
 
@@ -134,11 +134,11 @@ Se você passar o mouse sobre a entidade, em qualquer lugar no console onde exis
 
 -   Email
 
--   Telefone:
+-   Telephone
 
 -   Número de atividades suspeitas por severidade
 
 
 
-## <a name="see-also"></a>Confira Também
+## <a name="see-also"></a>Consulte Também
 [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

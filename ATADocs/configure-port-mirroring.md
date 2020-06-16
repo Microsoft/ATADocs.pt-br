@@ -2,9 +2,9 @@
 title: Configurar o espelhamento de porta ao implantar a análise avançada de ameaças
 description: Descreve as opções de espelhamento de porta e como configurá-las para o ATA
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
-manager: rkarlin
+author: shsagir
+ms.author: shsagir
+manager: shsagir
 ms.date: 3/21/2018
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
@@ -12,19 +12,19 @@ ms.technology: ''
 ms.assetid: cdaddca3-e26e-4137-b553-8ed3f389c460
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 1070bdf8415211c72c1be05960a39d2c05c67de5
-ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
+ms.openlocfilehash: 3969dc5bfcc4c36c6e6b664dc27bb58fc60d08e2
+ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79411166"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84775257"
 ---
 # <a name="configure-port-mirroring"></a>Configurar o espelhamento de porta
 
 *Aplica-se a: Advanced Threat Analytics versão 1.9*
 
 > [!NOTE] 
-> Este artigo somente é relevante se você implanta Gateways do ATA em vez de Gateways Lightweight do ATA. Para determinar se você precisa usar Gateways do ATA, confira [Choosing the right gateways for your deployment](ata-capacity-planning.md#choosing-the-right-gateway-type-for-your-deployment) (Escolhendo os gateways certos para sua implantação).
+> Este artigo somente é relevante se você implanta Gateways do ATA em vez de Gateways Lightweight do ATA. Para determinar se você precisa usar gateways do ATA, consulte [escolhendo os gateways corretos para sua implantação](ata-capacity-planning.md#choosing-the-right-gateway-type-for-your-deployment).
 
 A fonte de dados principal usada pelo ATA é uma inspeção profunda de pacotes do tráfego de rede para e dos controladores de domínio. Para que o ATA veja o tráfego de rede, você deve configurar o espelhamento de porta ou usar uma TAP de Rede.
 
@@ -45,7 +45,7 @@ Seus controladores de domínio e Gateways do ATA podem ser físicos ou virtuais.
 
 ## <a name="supported-port-mirroring-options"></a>Opções de espelhamento de porta com suporte
 
-|Gateway do ATA|Controlador de Domínio|Considerações|
+|Gateway de ATA|Controlador de Domínio|Considerações|
 |---------------|---------------------|------------------|
 |Máquina|Virtual no mesmo host|O comutador virtual precisa oferecer suporte ao espelhamento de porta.<br /><br />Mover uma das máquinas virtuais para outro host por si só pode quebrar o espelhamento de porta.|
 |Máquina|Virtuais em hosts diferentes|Verifique se o comutador virtual oferece suporte a esse cenário.|
@@ -70,6 +70,6 @@ Seus controladores de domínio e Gateways do ATA podem ser físicos ou virtuais.
 
 Depois de configurar o espelhamento de porta, verifique se está funcionando antes de instalar o Gateway do ATA.
 
-## <a name="see-also"></a>Confira Também
+## <a name="see-also"></a>Consulte Também
 - [Validação do espelhamento de porta](validate-port-mirroring.md)
 - [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

@@ -2,9 +2,9 @@
 title: Alterar configuração do Advanced Threat Analytics-senha de conectividade do domínio
 description: Descreve como alterar a Senha de conectividade do domínio no Gateway do ATA.
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
-manager: rkarlin
+author: shsagir
+ms.author: shsagir
+manager: shsagir
 ms.date: 3/21/2018
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 4a25561b-a5ed-44aa-9b72-366976b3c72a
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: fa89acd842632c4a23d34f73aa6fe21abbc7878f
-ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
+ms.openlocfilehash: fbbb692e462626c3625135a8a5fb5109fe570659
+ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79414090"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84775090"
 ---
 # <a name="change-ata-configuration---domain-connectivity-password"></a>Alteração da configuração do ATA - senha de conectividade do domínio
 
@@ -45,12 +45,12 @@ Para corrigir isso, siga este procedimento e atualize a Senha de conectividade d
 
     Se o Centro do ATA tiver conectividade com o domínio, use o botão **Testar Conexão** para validar as credenciais
 
-5.  Clique em **Salvar**.
+5.  Clique em **Save** (Salvar).
 
 6.  Depois de alterar a senha, verifique manualmente se o serviço do Gateway do ATA está em execução nos servidores do Gateway do ATA.
 
 
 
-## <a name="see-also"></a>Confira Também
+## <a name="see-also"></a>Consulte Também
 - [Trabalhando com o Console do ATA](working-with-ata-console.md)
 - [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
