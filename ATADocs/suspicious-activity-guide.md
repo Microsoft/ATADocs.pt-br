@@ -4,7 +4,7 @@ d|Description: This article provides a list of the suspicious activities ATA can
 keywords: ''
 author: shsagir
 ms.author: shsagir
-manager: rkarlin
+manager: shsagir
 ms.date: 04/03/2019
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 1fe5fd6f-1b79-4a25-8051-2f94ff6c71c1
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: b9518a895dc4f9ed74cc183f14c1149f1fd7f14f
-ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
+ms.openlocfilehash: 21214cd1586b2379d9d5e8808a276e80d5456053
+ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79411336"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84774971"
 ---
 # <a name="advanced-threat-analytics-suspicious-activity-guide"></a>Guia de atividades suspeitas Advanced Threat Analytics
 
@@ -34,7 +34,7 @@ Após investigação adequada, qualquer atividade suspeita pode ser classificada
 
 Para saber mais sobre como trabalhar com alertas ATA, confira [Trabalhando com atividades suspeitas](working-with-suspicious-activities.md).
 
-Para fazer perguntas ou comentários, entre em contato com a equipe do ATA em [ATAEval@microsoft.com](mailto:ATAEval@microsoft.com).
+Para dúvidas ou comentários, entre em contato com a equipe do ATA em [ATAEval@microsoft.com](mailto:ATAEval@microsoft.com) .
 
 ## <a name="abnormal-modification-of-sensitive-groups"></a>Modificação anormal de grupos confidenciais
 
@@ -195,7 +195,7 @@ Pass-the-Ticket é uma técnica de movimento lateral em que os invasores roubam 
 
 2. Se for uma conta confidencial, você deverá considerar redefinir a conta KRBTGT duas vezes como na atividade suspeita do Golden Ticket. Redefinir o KRBTGT duas vezes invalida todos os tíquetes Kerberos nesse domínio, portanto, planeje antes de fazer isso. Consulte as diretrizes em [Scripts de redefinição de senha da conta KRBTGT disponíveis agora para clientes](https://blogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/), consulte também como usar a  [ferramenta Redefinir chaves/senha da conta KRBTGT](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51).  Como essa é uma técnica de movimentação lateral, siga as práticas recomendadas nas [recomendações de Passagem de hash](https://www.microsoft.com/download/details.aspx?id=36036).
 
-## Atividade Golden Ticket do Kerberos<a name="golden-ticket"></a>
+## <a name="kerberos-golden-ticket-activity"></a>Atividade Golden Ticket do Kerberos<a name="golden-ticket"></a>
 
 **Descrição**
 
@@ -205,9 +205,9 @@ Nessa detecção, um alerta é acionado quando um tíquete de concessão de tíq
 
 **Investigação**
 
-1. Houve alguma alteração recente (dentro das últimas horas) feita na configuração **Tempo de vida máximo para tíquete de usuário** na política de grupo? Se Sim, então, **Feche** o alerta (era um falso positivo).
+1. Houve alguma alteração recente (dentro das últimas horas) feita no **tempo de vida máximo para a configuração de tíquete de usuário** na diretiva de grupo? Em caso afirmativo, **feche** o alerta (ele era um falso positivo).
 
-2. O Gateway do ATA envolvido nesse alerta é uma máquina virtual? Se Sim, ele retomou recentemente de um estado salvo? Se Sim, então, **Feche** este alerta.
+2. O Gateway do ATA envolvido nesse alerta é uma máquina virtual? Se Sim, ele retomou recentemente de um estado salvo? Em caso afirmativo, **feche** este alerta.
 
 3. Se a resposta para as perguntas acima for não, suponha que ele seja mal-intencionado.
 
@@ -261,7 +261,7 @@ Valide as seguintes permissões:
 - Replicar todas as alterações de diretório  
 
 Para obter mais informações, veja  [Conceder permissões do Active Directory Domain Services para sincronização de perfil no SharePoint Server 2013](https://technet.microsoft.com/library/hh296982.aspx).
-Você pode utilizar o  [Scanner ACL do AD](https://blogs.technet.microsoft.com/pfesweplat/2013/05/13/take-control-over-ad-permissions-and-the-ad-acl-scanner-tool/)  ou criar um script do Windows PowerShell para determinar quem no domínio tem essas permissões.
+Você pode aproveitar o [scanner de ACL](https://blogs.technet.microsoft.com/pfesweplat/2013/05/13/take-control-over-ad-permissions-and-the-ad-acl-scanner-tool/)   do AD ou criar um script do Windows PowerShell para determinar quem no domínio tem essas permissões.
 
 ## <a name="massive-object-deletion"></a>Exclusão de objeto grande
 
@@ -298,7 +298,7 @@ Vulnerabilidades conhecidas em versões mais antigas do Windows Server permitem 
 
 **Remediação**
 
-Verifique se todos os controladores de domínio com sistemas operacionais até o Windows Server 2012 R2 estão instalados com o  [KB3011780](https://support.microsoft.com/help/2496930/ms11-013-vulnerabilities-in-kerberos-could-allow-elevation-of-privilege)  e se todos os servidores membros e controladores de domínio até 2012 R2 estão atualizados com o KB2496930. Para obter mais informações, consulte  [PAC Prata](https://technet.microsoft.com/library/security/ms11-013.aspx)  e  [PAC Forjado](https://technet.microsoft.com/library/security/ms14-068.aspx).
+Verifique se todos os controladores de domínio com sistemas operacionais até o Windows Server 2012 R2 estão instalados com o [KB3011780](https://support.microsoft.com/help/2496930/ms11-013-vulnerabilities-in-kerberos-could-allow-elevation-of-privilege)   e todos os servidores membros e controladores de domínio até 2012 R2 estão atualizados com KB2496930. Para obter mais informações, consulte [PAC prata](https://technet.microsoft.com/library/security/ms11-013.aspx)   e [PAC forjado](https://technet.microsoft.com/library/security/ms14-068.aspx).
 
 ## <a name="reconnaissance-using-account-enumeration"></a>Reconhecimento de enumeração de conta
 
@@ -373,8 +373,8 @@ Há vários tipos de consulta no protocolo DNS. O ATA detecta a solicitação AX
 
 **Investigação**
 
-1. O computador de origem (**Proveniente de...** ) é um servidor DNS? Se sim, então, provavelmente é um falso positivo. Para validar, clique no alerta para ver sua página de detalhes. Na tabela, em **Consulta**, verifique quais domínios foram consultados. Esses domínios são existentes? Se sim, então, **Feche** a atividade suspeita (é um falso positivo). Além disso, certifique-se de que a porta 53 do UDP esteja aberta entre o Gateway do ATA e o computador de origem para evitar futuros falsos positivos.
-2.  O computador de origem está executando um verificador de segurança? Em caso afirmativo, **Excluir** as entidades no ATA, seja diretamente com **Fechar e excluir** ou por meio da página **Exclusão** (em **Configuração** – disponível para administradores do ATA).
+1. O computador de origem (**Proveniente de... **) é um servidor DNS? Se sim, então, provavelmente é um falso positivo. Para validar, clique no alerta para ver sua página de detalhes. Na tabela, em **Consulta**, verifique quais domínios foram consultados. Esses domínios são existentes? Se sim, então, **Feche** a atividade suspeita (é um falso positivo). Além disso, certifique-se de que a porta 53 do UDP esteja aberta entre o Gateway do ATA e o computador de origem para evitar futuros falsos positivos.
+2.  O computador de origem está executando um verificador de segurança? Em caso afirmativo, **exclua** as entidades no ATA, seja diretamente com **fechar e excluir** ou por meio da página de **exclusão** (em **configuração** – disponível para administradores do ATA).
 3.  Se a resposta a todas as perguntas anteriores for não, continue investigando, concentrando-se no computador de origem. Clique no computador de origem para acessar a página de perfil. Verifique o que aconteceu no momento da solicitação, pesquisando atividades incomuns, como: quem estava conectado e quais recursos foram acessados.
 
 
@@ -421,7 +421,7 @@ Os invasores que comprometem credenciais de administrador ou que usam uma explor
 1. Isso é comum para membros da equipe de TI, de estações de trabalho administrativas e contas de serviço que executam tarefas administrativas nos controladores de domínio. Se for esse o caso e se o alerta for atualizado porque o mesmo administrador ou computador está executando a tarefa, **Suprima** o alerta.
 2. O computador em questão tem permissão para realizar essa execução remota em seu controlador de domínio?
    - A conta em questão tem permissão para realizar essa execução remota em seu controlador de domínio?
-   - Se a resposta a ambas as perguntas for sim, **Feche** o alerta.
+   - Se a resposta a ambas as perguntas for sim, **feche** o alerta.
 3. Se a resposta a uma das perguntas for não, essa atividade deverá ser considerada um positivo verdadeiro. Tente localizar a origem da tentativa verificando perfis de computador e conta. Clique no computador de origem ou na conta para acessar a página de perfil. Verifique o que aconteceu no momento dessas tentativas, pesquisando atividades incomuns, como: quem estava conectado e quais recursos foram acessados.
 
 
@@ -429,7 +429,7 @@ Os invasores que comprometem credenciais de administrador ou que usam uma explor
 
 1. Restrinja o acesso remoto aos controladores de domínio de computadores que não são da camada 0.
 
-2. Implemente  [acesso privilegiado](https://technet.microsoft.com/windows-server-docs/security/securing-privileged-access/securing-privileged-access)  para permitir que apenas computadores protegidos se conectem aos controladores de domínio para administração.
+2. Implemente o [acesso privilegiado](https://technet.microsoft.com/windows-server-docs/security/securing-privileged-access/securing-privileged-access)   para permitir que somente computadores protegidos se conectem a controladores de domínio para administradores.
 
 ## <a name="sensitive-account-credentials-exposed--services-exposing-account-credentials"></a>Credenciais de contas confidenciais expostas e serviços que expõem credenciais da conta
 
@@ -473,7 +473,7 @@ Nesta detecção, um alerta é disparado quando ocorrem diversas falhas de auten
 
 [Senhas complexas e longas](https://docs.microsoft.com/windows/device-security/security-policy-settings/password-policy) fornecem o primeiro nível necessário de segurança contra ataques de força bruta.
 
-## Criação de serviço suspeito <a name="suspicious-service-creation"></a>
+## <a name="suspicious-service-creation"></a>Criação de serviço suspeita<a name="suspicious-service-creation"></a>
 
 **Descrição**
 
@@ -552,11 +552,11 @@ Aplique as correções mais recentes a todas as suas máquinas e verifique se to
 >[!NOTE]
 > Para desabilitar um alerta de atividade suspeita, contate o suporte.
 
-## <a name="related-videos"></a>Vídeos relacionados
-- [Unindo a comunidade de segurança](https://channel9.msdn.com/Shows/Microsoft-Security/Join-the-Security-Community)
+## <a name="related-videos"></a>Vídeos Relacionados
+- [Participar da comunidade de segurança](https://channel9.msdn.com/Shows/Microsoft-Security/Join-the-Security-Community)
 
 
-## <a name="see-also"></a>Confira Também
+## <a name="see-also"></a>Consulte Também
 - [Manual da atividade suspeita do ATA](https://aka.ms/ataplaybook)
 - [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Trabalhando com atividades suspeitas](working-with-suspicious-activities.md)

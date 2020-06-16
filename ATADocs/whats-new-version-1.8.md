@@ -2,9 +2,9 @@
 title: Novidades na versão 1.8 do ATA
 description: Lista as novidades na nova versão 1.8 do ATA e seus problemas conhecidos
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
-manager: rkarlin
+author: shsagir
+ms.author: shsagir
+manager: shsagir
 ms.date: 9/03/2017
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 9592d413-df0e-4cec-8e03-be1ae00ba5dc
 ms.reviewer: ''
 ms.suite: ems
-ms.openlocfilehash: dfc1266fd3687b6134ca79f083b2777083723798
-ms.sourcegitcommit: 8c0222dc8333b5aa47430c5daee9bc7f1d82df31
+ms.openlocfilehash: daaf8391e3102aa599efa0fe26c45cf8f2558938
+ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81524694"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84774682"
 ---
 # <a name="whats-new-in-ata-version-18"></a>Novidades na versão 1.8 do ATA
 
@@ -31,7 +31,7 @@ Essas notas de versão fornecem informações sobre atualizações, novos recurs
 
 - A implementação de protocolo incomum foi aperfeiçoada para ser capaz de detectar malware WannaCry.
 
-- NOVO! **Modificação anormal de grupos confidenciais** – Como parte da fase de elevação de privilégio, os invasores modificam grupos com altos privilégios para obter acesso a recursos confidenciais. Agora o ATA detecta quando há uma alteração anormal em um grupo com privilégios elevados.
+- NOVO! **Modificação anormal de grupos confidenciais** – Como parte da fase de elevação de privilégio, os invasores modificam grupos com altos privilégios para obter acesso a recursos confidenciais. O ATA agora detecta quando há uma alteração anormal em um grupo elevado.
 - NOVO! **Falhas de autenticação suspeitas** (força bruta comportamental) – Os invasores tentam usar força bruta em credenciais para comprometer contas. Agora o ATA emite um alerta quando o comportamento de autenticação com falha anormal é detectado.   
 
 - **Tentativa de execução remota – execução WMI** – Os invasores podem tentar controlar sua rede executando códigos remotamente em seu controlador de domínio. O ATA aprimorou a detecção de execução remota para incluir a detecção de métodos WMI para executar código remotamente.
@@ -48,29 +48,29 @@ Essas notas de versão fornecem informações sobre atualizações, novos recurs
 
 ## <a name="improved-triage-of-suspicious-activities"></a>Triagem de atividades suspeitas aprimorada
 
--   NOVO! O ATA 1.8 permite que você execute as seguintes atividades suspeitas durante o processo de triagem: 
+-  NOVO! O ATA 1.8 permite que você execute as seguintes atividades suspeitas durante o processo de triagem: 
     - **Excluir entidades** de gerar futuras atividades suspeitas para impedir que o ATA alerte quando detectar verdadeiros positivos benignos (como um administrador executando código remoto ou detectando scanners de segurança).
     - **Impedir que atividades suspeitas recorrentes** gerem alertas.
     - **Excluir atividades suspeitas** da linha do tempo de ataque.
--   O processo para acompanhar alertas de atividade suspeita agora é mais eficiente. A linha do tempo de atividades suspeitas foi redefinida. No ATA 1.8, você poderá ver muito mais atividades suspeitas em uma única tela, que contém as melhores informações para fins de triagem e investigação. 
+-  O processo para acompanhar alertas de atividade suspeita agora é mais eficiente. A linha do tempo de atividades suspeitas foi redefinida. No ATA 1.8, você poderá ver muito mais atividades suspeitas em uma única tela, que contém as melhores informações para fins de triagem e investigação. 
 
 ## <a name="new-reports-to-help-you-investigate"></a>Novos relatórios para ajudá-lo a investigar 
--   NOVO! O **relatório de resumo** foi adicionado para permitir que você veja todos os dados resumidos do ATA, incluindo atividades suspeitas, problemas de integridade e muito mais. Você pode até mesmo definir um relatório personalizado que é gerado automaticamente de forma recorrente.
--   NOVO! O **relatório de grupos confidenciais** foi adicionado para que você possa ver todas as alterações feitas em grupos confidenciais durante um certo período.
+-  NOVO! O **relatório de resumo** foi adicionado para permitir que você veja todos os dados resumidos do ATA, incluindo atividades suspeitas, problemas de integridade e muito mais. Você pode até mesmo definir um relatório personalizado que é gerado automaticamente de forma recorrente.
+-  NOVO! O **relatório de grupos confidenciais** foi adicionado para que você possa ver todas as alterações feitas em grupos confidenciais durante um certo período.
 
 
 ## <a name="infrastructure-improvements"></a>Melhorias na infraestrutura
 
--   O desempenho do Centro do ATA foi aprimorado. No ATA 1.8 o Centro do ATA pode lidar com mais de um milhão de pacotes por segundo.
--   O Gateway Lightweight do ATA poderá ler eventos localmente, sem a necessidade de configurar o encaminhamento de eventos.
--   Agora você pode configurar o email separadamente para alertas de integridade e atividades suspeitas.
+-  O desempenho do Centro do ATA foi aprimorado. No ATA 1.8 o Centro do ATA pode lidar com mais de um milhão de pacotes por segundo.
+-  O Gateway Lightweight do ATA poderá ler eventos localmente, sem a necessidade de configurar o encaminhamento de eventos.
+-  Agora você pode configurar o email separadamente para alertas de integridade e atividades suspeitas.
 
 ## <a name="security-improvements"></a>Aprimoramentos de segurança
 
--   NOVO! **Logon único para o gerenciamento do ATA**. O ATA dá suporte ao logon único integrado com a autenticação do Windows – se você já fez logon em seu computador, o ATA usará esse token para fazer o logon no Console do ATA. Você também pode fazer logon usando um cartão inteligente. Scripts de instalação silenciosa para o Gateway de ATA e para o Gateway Lightweight do ATA agora usam o contexto do usuário conectado, sem a necessidade de fornecer credenciais.
--   Os privilégios do sistema local foram removidos do processo do Gateway do ATA, portanto, agora você pode usar contas virtuais (disponíveis apenas em Gateways do ATA autônomos), contas de serviço gerenciadas e contas de serviço gerenciado de grupo para executar o processo do Gateway do ATA.   
--   Foram adicionados logs de auditoria para o Centro do ATA e para os Gateways do ATA e todas as ações agora podem ser registradas no Log de Eventos do Windows.
--   Foi adicionado suporte para certificados KSP para o Centro do ATA.
+-  NOVO! **Logon único para o gerenciamento do ATA**. O ATA dá suporte ao logon único integrado com a autenticação do Windows – se você já fez logon em seu computador, o ATA usará esse token para fazer o logon no Console do ATA. Você também pode fazer logon usando um cartão inteligente. Os scripts de instalação silenciosa para o gateway do ATA e o gateway Lightweight do ATA agora usam o contexto do usuário conectado, sem a necessidade de fornecer credenciais.
+-  Os privilégios do sistema local foram removidos do processo do Gateway do ATA, portanto, agora você pode usar contas virtuais (disponíveis apenas em Gateways do ATA autônomos), contas de serviço gerenciadas e contas de serviço gerenciado de grupo para executar o processo do Gateway do ATA.   
+-  Foram adicionados logs de auditoria para o Centro do ATA e para os Gateways do ATA e todas as ações agora podem ser registradas no Log de Eventos do Windows.
+-  Foi adicionado suporte para certificados KSP para o Centro do ATA.
 
 ## <a name="additional-changes"></a>Alterações adicionais
 
@@ -105,11 +105,11 @@ No Windows Server 2016 Core, você não poderá ver o erro, mas o processo falha
 
        $ATADaclEntry = "(A;;0x1;;;S-1-5-80-1717699148-1527177629-2874996750-2971184233-2178472682)"
         try {
-        $SecurityDescriptor = Get-ItemProperty -Path HKLM:\SYSTEM\CurrentControlSet\Services\Eventlog\Security -Name CustomSD
-        $ATASddl = "O:BAG:SYD:" + $ATADaclEntry 
-        if($SecurityDescriptor.CustomSD -eq $ATASddl) {
-        Remove-ItemProperty -Path HKLM:\SYSTEM\CurrentControlSet\Services\Eventlog\Security -Name CustomSD
-        }
+      $SecurityDescriptor = Get-ItemProperty -Path HKLM:\SYSTEM\CurrentControlSet\Services\Eventlog\Security -Name CustomSD
+      $ATASddl = "O:BAG:SYD:" + $ATADaclEntry 
+      if($SecurityDescriptor.CustomSD -eq $ATASddl) {
+    Remove-ItemProperty -Path HKLM:\SYSTEM\CurrentControlSet\Services\Eventlog\Security -Name CustomSD
+      }
     }
     catch
     {

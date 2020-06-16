@@ -2,9 +2,9 @@
 title: Solução de problemas da análise avançada de ameaças usando os logs
 description: Descreve como você pode usar os logs do ATA para solucionar problemas
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
-manager: rkarlin
+author: shsagir
+ms.author: shsagir
+manager: shsagir
 ms.date: 8/27/2019
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: b8ad5511-8893-4d1d-81ee-b9a86e378347
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 01b13916f3cdcba1d1aa166c8998d7d91bbd2bfb
-ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
+ms.openlocfilehash: 72f5371689281a7710455b9bc49b2182415b795b
+ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79414243"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84774886"
 ---
 # <a name="troubleshooting-ata-using-the-ata-logs"></a>Solução de problemas do ATA usando os logs do ATA
 
@@ -28,7 +28,7 @@ Os logs do ATA fornecem informações sobre o que cada componente do ATA está f
 ## <a name="ata-gateway-logs"></a>Logs do Gateway do ATA
 Nesta seção, todas as referências ao Gateway do ATA são relevantes também para o Gateway Lightweight do ATA. 
 
-Os logs do Gateway do ATA estão localizados na subpasta **Logs**, na qual o ATA está instalado; o local padrão é: **C:\Arquivos de Programas\Microsoft Advanced Threat Analytics\\** . No local de instalação padrão, ela pode ser encontrada em: **C:\Arquivos de Programas\Microsoft Advanced Threat Analytics\Gateway\Logs**.
+Os logs do gateway do ATA estão localizados em uma subpasta chamada **logs** onde o ATA está instalado; o local padrão é: **C:\Program Files\Microsoft Advanced Threat Analytics \\ **. No local de instalação padrão, ela pode ser encontrada em: **C:\Arquivos de Programas\Microsoft Advanced Threat Analytics\Gateway\Logs**.
 
 O Gateway do ATA tem os seguintes logs:
 
@@ -67,7 +67,7 @@ O Centro do ATA tem os seguintes logs:
 
 
 ## <a name="ata-deployment-logs"></a>Logs de implantação do ATA
-Os logs de implantação do ATA estão localizados no diretório temp do usuário que instalou o produto. No local de instalação padrão, ele pode ser encontrado em: **C:\Users\<usuário conectado > \AppData\Local\Temp** (ou um diretório acima de% Temp%).
+Os logs de implantação do ATA estão localizados no diretório temp do usuário que instalou o produto. No local de instalação padrão, ele pode ser encontrado em: **C:\Users \<logged-in-user> \AppData\Local\Temp** (ou um diretório acima de% Temp%).
 
 Logs de implantação do Centro do Ata
 
@@ -88,7 +88,7 @@ Logs de implantação do Gateway do ATA e do Gateway Lightweight do ATA:
 > Além de logs de implantação mencionados aqui, há outros logs que começam com "Microsoft Advanced Threat Analytics" que também pode fornecer informações adicionais sobre o processo de implantação.
 
 
-## <a name="see-also"></a>Confira Também
+## <a name="see-also"></a>Consulte Também
 - [Pré-requisitos do ATA](ata-prerequisites.md)
 - [Planejamento da capacidade do ATA](ata-capacity-planning.md)
 - [Configurar coleta de eventos](configure-event-collection.md)

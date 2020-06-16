@@ -2,9 +2,9 @@
 title: Atualização do Advanced Threat Analytics para o guia de migração 1,9
 description: Procedimentos para atualizar o ATA para a versão 1.9
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
-manager: rkarlin
+author: shsagir
+ms.author: shsagir
+manager: shsagir
 ms.date: 03/25/2018
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 2946310a-8e4e-48fc-9450-fc9647efeb22
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 69229a4c5f34a273d5c5a8854d7f209b9462b48f
-ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
+ms.openlocfilehash: f803f8c99ac3cfd7c36f113658f05d486b8192c8
+ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79413189"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84775413"
 ---
 # <a name="updating-ata-to-version-19"></a>Atualizando o ATA para a versão 1.9
 
@@ -53,7 +53,7 @@ Na versão de migração, o arquivo pode ser usado apenas para a atualização d
 
    - Na página **Boas-vindas**, escolha seu idioma e clique em **Avançar**.
 
-   - Se você não tiver habilitado as atualizações automáticas na versão 1.8, será necessário definir o ATA para usar o Microsoft Update para que ele permaneça atualizado.  Na página do Microsoft Update, selecione **Usar o Microsoft Update ao verificar se há atualizações (recomendado)** .
+   - Se você não tiver habilitado as atualizações automáticas na versão 1.8, será necessário definir o ATA para usar o Microsoft Update para que ele permaneça atualizado.  Na página Microsoft Update, selecione **usar Microsoft Update quando eu verificar se há atualizações (recomendado)**.
      ![Imagem Manter o ATA atualizado](media/ata_ms_update.png)
      
      Isso ajusta as configurações do Windows para habilitar as atualizações para o ATA. 
@@ -80,6 +80,6 @@ Na versão de migração, o arquivo pode ser usado apenas para a atualização d
 > Para instalar novos gateways do ATA, acesse a tela **gateways** e clique em **baixar a instalação do gateway** para obter o pacote de instalação do gateway 1,9 do ATA e siga as instruções para nova instalação do gateway, conforme descrito na [etapa 4. Instale o gateway do ATA](install-ata-step4.md).
 
 
-## <a name="see-also"></a>Confira Também
+## <a name="see-also"></a>Consulte Também
 
 - [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

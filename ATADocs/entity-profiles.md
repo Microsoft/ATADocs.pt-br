@@ -2,9 +2,9 @@
 title: Trabalhando com perfis de entidade no console do Advanced Threat Analytics
 description: Descreve como investigar entidades na tela de perfis de usuários no console do ATA
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
-manager: rkarlin
+author: shsagir
+ms.author: shsagir
+manager: shsagir
 ms.date: 3/25/2018
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 581a3257-32dc-453f-b84e-b9f99186f5d3
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: de4916e94593dd823c7cf754874c7d5c3eed7135
-ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
+ms.openlocfilehash: 3b2e2d5a9eee8d18b6d182afb15453a8809db605
+ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79412339"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84775396"
 ---
 # <a name="investigating-entity-profiles"></a>Investigando perfis de entidade
 
@@ -70,11 +70,11 @@ Na seção **Controle de Acesso de Usuários**, o ATA exibe configurações de s
 
 Ao clicar na guia de **Caminhos de movimento lateral**, será possível exibir um mapa totalmente dinâmico e clicável que fornecerá uma representação visual dos caminhos de movimento lateral de e para o usuário, os quais podem ser usados para invadir sua rede.
 
-O mapa fornece uma lista de quantos saltos entre computadores ou usuários um invasor precisaria dar para chegar ao usuário e comprometer uma conta confidencial e, se o usuário tiver uma conta confidencial, você poderá ver quantos recursos e contas estão conectados diretamente. Para obter mais informações, consulte [Caminhos de movimento lateral](use-case-lateral-movement-path.md). 
+O mapa fornece uma lista de quantos saltos entre computadores ou usuários um invasor precisaria dar para chegar ao usuário e comprometer uma conta confidencial e, se o usuário tiver uma conta confidencial, você poderá ver quantos recursos e contas estão conectados diretamente. Para obter mais informações, consulte [caminhos de movimento lateral](use-case-lateral-movement-path.md). 
 
  ![caminhos de movimento lateral do perfil do usuário](media/user-profile-lateral-movement-paths.png)
 
 
-## <a name="see-also"></a>Confira Também
+## <a name="see-also"></a>Consulte Também
 [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
       

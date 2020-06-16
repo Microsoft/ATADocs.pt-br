@@ -4,7 +4,7 @@ description: Descreve os requisitos para uma implantação bem-sucedida do ATA e
 keywords: ''
 author: shsagir
 ms.author: shsagir
-manager: rkarlin
+manager: shsagir
 ms.date: 11/05/2019
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: a5f90544-1c70-4aff-8bf3-c59dd7abd687
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 94d30c768273b51aef0e8b7a75affbf2b5db85df
-ms.sourcegitcommit: 11fff9d4ebf1c50b04f7789a22c80cdbc3e4416a
+ms.openlocfilehash: 1fe38bb767dee48454e10007d1225904ae52e4e2
+ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79412067"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84773033"
 ---
 # <a name="ata-prerequisites"></a>Pré-requisitos do ATA
 
@@ -26,10 +26,10 @@ ms.locfileid: "79412067"
 Este artigo descreve os requisitos para uma implantação bem-sucedida do ATA no seu ambiente.
 
 > [!NOTE]
-> Para obter informações sobre como planejar a capacidade e os recursos, confira [Planejamento de capacidade do ATA](ata-capacity-planning.md).
+>  Para obter informações sobre como planejar a capacidade e os recursos, confira [Planejamento de capacidade do ATA](ata-capacity-planning.md).
 
 
-O ATA é composto pelo Centro do ATA, pelo Gateway do ATA e/ou o Gateway Lightweight do ATA. Para saber mais sobre os componentes do ATA, confira [Arquitetura do ATA](ata-architecture.md).
+O ATA é composto pelo Centro do ATA, pelo Gateway do ATA e/ou o Gateway Lightweight do ATA. Para obter mais informações sobre os componentes do ATA, confira [Arquitetura do ATA](ata-architecture.md).
 
 O Sistema do ATA funciona nos limites da floresta do active directory e oferece suporte a FFL (Nível funcional da floresta) do Windows 2003 e superior.
 
@@ -100,7 +100,7 @@ Se você executar a Central de ATA como uma máquina virtual, deverá finalizar 
 Ao trabalhar em um servidor físico, o banco de dados do ATA precisa que você **desabilite** o NUMA (acesso não uniforme a memória) no BIOS. O sistema pode referir-se ao NUMA como Nó de Intercalação, caso em que você precisará **habilitar** a Intercalação de Nó para desabilitar o NUMA. Para obter mais informações, confira a documentação do BIOS.<br>
 
 Para ter um melhor desempenho, defina a **Opção de Energia** do Centro do ATA como **Alto Desempenho**.<br>
-O número de controladores de domínio que você está monitorando e a carga em cada um dos controladores de domínio determina as especificações de servidor necessárias. Para obter mais informações, consulte [Planejamento de capacidade de ATA](ata-capacity-planning.md).
+O número de controladores de domínio que você está monitorando e a carga em cada um dos controladores de domínio determina as especificações de servidor necessárias. Para obter mais informações, consulte [planejamento de capacidade do ATA](ata-capacity-planning.md).
 
 Para os sistemas operacionais Windows 2008R2 e 2012, não há suporte para o gateway em um modo de [grupo de vários processadores](https://docs.microsoft.com/windows/win32/procthread/processor-groups) . Para obter mais informações sobre o modo de grupo de multiprocessadores,confira [solução de problemas](troubleshooting-ata-known-errors.md#multi-processor-group-mode). 
 
@@ -121,7 +121,7 @@ A tabela a seguir lista as portas mínimas que devem ser abertas para que a Cent
 
 |Protocolo|Transport|Porta|Para/De|Direção|
 |------------|-------------|--------|-----------|-------------|
-|**SSL** (Comunicações do ATA)|TCP|443|Gateway do ATA|Entrada|
+|**SSL** (Comunicações do ATA)|TCP|443|Gateway de ATA|Entrada|
 |**HTTP** (opcional)|TCP|80|Rede da Empresa|Entrada|
 |**HTTPS**|TCP|443|Rede da Empresa e Gateway de ATA|Entrada|
 |**SMTP** (opcional)|TCP|25|Servidor SMTP|Saída|
@@ -149,7 +149,7 @@ O certificado deve ter:
 -   Um comprimento de chave pública de 2048 bits
 -   Um valor definido para os sinalizadores de uso KeyEncipherment e ServerAuthentication
 -   O valor KeySpec (KeyNumber) de "KeyExchange" (AT\_KEYEXCHANGE).
-    *Não* há suporte para o valor "assinatura" (na assinatura\_). 
+    Não há suporte para o valor "assinatura" (na \_ assinatura). *not* 
 -   Todos os computadores do gateway devem ser capazes de validar totalmente e confiar no certificado do centro selecionado.
 
 Por exemplo, você pode usar os modelos padrão **servidor Web** ou **Computador**.
@@ -174,10 +174,10 @@ Antes de instalar o Gateway do ATA executando o Windows 2012 R2, confirme se a s
 Você pode verificar executando o seguinte cmdlet do Windows PowerShell: `[Get-HotFix -Id kb2919355]`.
 
 
-Para obter informações sobre como usar máquinas virtuais com o Gateway de ATA, confira [Configurar o espelhamento de porta](configure-port-mirroring.md).
+Para obter informações sobre como usar máquinas virtuais com o Gateway do ATA, confira [Configurar o espelhamento de porta](configure-port-mirroring.md).
 
 > [!NOTE]
-> É necessário um mínimo de 5 GB de espaço e recomenda-se 10 GB. Isso inclui o espaço necessário para os binários do ATA, os logs do ATA e os [logs de desempenho](troubleshooting-ata-using-perf-counters.md).
+> É necessário um mínimo de 5 GB de espaço e recomenda-se 10 GB. Isso inclui o espaço necessário para os binários do ATA, logs do ATA e [logs de desempenho](troubleshooting-ata-using-perf-counters.md).
 
 ### <a name="server-specifications"></a>Especificações do servidor
 Para ter um melhor desempenho, defina a **Opção de Energia** do Gateway de ATA para **Alto Desempenho**.<br>
@@ -185,7 +185,7 @@ Um Gateway do ATA pode dar suporte ao monitoramento de vários controladores de 
 
 Para saber mais sobre a memória dinâmica ou qualquer outro recurso de gerenciamento de memória de máquina virtual, consulte [memória dinâmica](#dynamic-memory).
 
-Para saber mais sobre os requisitos de hardware do Gateway do ATA, confira [Planejamento de capacidade do ATA](ata-capacity-planning.md).
+Para obter mais informações sobre os requisitos de hardware do gateway do ATA, consulte [planejamento de capacidade do ATA](ata-capacity-planning.md).
 
 ### <a name="time-synchronization"></a>Sincronização da hora
 O servidor do Centro do ATA, os servidores do Gateway do ATA e os controladores de domínio devem ter a hora sincronizada no espaço de cinco minutos entre si.
@@ -261,7 +261,7 @@ Durante a instalação, o .Net Framework 4.6.1 é instalado e pode causar a rein
 
 
 > [!NOTE]
-> É necessário um mínimo de 5 GB de espaço e recomenda-se 10 GB. Isso inclui o espaço necessário para os binários do ATA, os logs do ATA e os [logs de desempenho](troubleshooting-ata-using-perf-counters.md).
+> É necessário um mínimo de 5 GB de espaço e recomenda-se 10 GB. Isso inclui o espaço necessário para os binários do ATA, logs do ATA e [logs de desempenho](troubleshooting-ata-using-perf-counters.md).
 
 ### <a name="server-specifications"></a>Especificações do servidor
 
@@ -271,7 +271,7 @@ O Gateway Lightweight do ATA pode ser implantado em controladores de domínio de
 
 Para saber mais sobre a memória dinâmica ou qualquer outro recurso de gerenciamento de memória de máquina virtual, consulte [memória dinâmica](#dynamic-memory).
 
-Para saber mais sobre os requisitos de hardware do Gateway Lightweight do ATA, confira [Planejamento de capacidade do ATA](ata-capacity-planning.md).
+Para obter mais informações sobre os requisitos de hardware do gateway Lightweight do ATA, consulte [planejamento de capacidade do ATA](ata-capacity-planning.md).
 
 ### <a name="time-synchronization"></a>Sincronização da hora
 
@@ -318,11 +318,11 @@ O acesso ao Console do ATA é por meio de um navegador, oferecendo suporte a def
 
 -   Resolução de largura mínima da tela de 1.700 pixels
 
-## <a name="related-videos"></a>Vídeos relacionados
+## <a name="related-videos"></a>Vídeos Relacionados
 - [Como escolher o tipo certo de Gateway do ATA](https://channel9.msdn.com/Shows/Microsoft-Security/ATA-Deployment-Choose-the-Right-Gateway-Type)
 
 
-## <a name="see-also"></a>Confira Também
+## <a name="see-also"></a>Consulte Também
 - [Ferramenta de dimensionamento do ATA](https://aka.ms/atasizingtool)
 - [Arquitetura do ATA](ata-architecture.md)
 - [Instalar o ATA](install-ata-step1.md)
