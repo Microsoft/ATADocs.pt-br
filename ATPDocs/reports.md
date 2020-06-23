@@ -4,7 +4,7 @@ description: Descreve como você pode gerar relatórios no Azure ATP para monito
 keywords: ''
 author: shsagir
 ms.author: shsagir
-manager: rkarlin
+manager: shsagir
 ms.date: 11/26/2018
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 2c2d6b1a-fc8c-4ff7-b07d-64ce6159f84d
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 74739e03bf4fdeb92175f9699701d47d6281d108
-ms.sourcegitcommit: 63be53de5b84eabdeb8c006438dab45bd35a4ab7
+ms.openlocfilehash: 85e86494a9547439c707e868b402a08bb0f706cc
+ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79414685"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84775906"
 ---
 # <a name="azure-atp-reports"></a>Relatórios do Azure ATP
 
@@ -58,7 +58,7 @@ Para definir um relatório agendado:
    ![Frequência e email do relatório agendado](./media/sched-report1.png)
 
 
-## <a name="see-also"></a>Confira Também
+## <a name="see-also"></a>Consulte Também
 - [Pré-requisitos do Azure ATP](atp-prerequisites.md)
 - [Planejamento de capacidade do Azure ATP](atp-capacity-planning.md)
 - [Configurar coleta de eventos](configure-event-collection.md)
