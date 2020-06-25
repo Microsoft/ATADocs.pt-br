@@ -4,20 +4,20 @@ description: Fornece exemplos de logs de atividades suspeitas enviados do Azure 
 keywords: ''
 author: shsagir
 ms.author: shsagir
-manager: rkarlin
-ms.date: 03/05/2020
+manager: shsagir
+ms.date: 06/08/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 3261155c-3c72-4327-ba29-c113c63a4e6d
 ms.reviewer: arzinger
 ms.suite: ems
-ms.openlocfilehash: 0f24d69946fbbaa1824eb7b38ac431a3be638fa9
-ms.sourcegitcommit: 63be53de5b84eabdeb8c006438dab45bd35a4ab7
+ms.openlocfilehash: 0d7d6ffbc52b1b5c1d662d3d6c14a1dcf0ab0084
+ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80666222"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84772863"
 ---
 # <a name="azure-atp-siem-log-reference"></a>Referência de logs de SIEM do Azure ATP
 
@@ -29,16 +29,16 @@ Os campos a seguir e seus valores são encaminhados para o SIEM:
 
 |Detalhes|Explicação|
 |---------|---------------|
-|iniciar|hora de início do alerta|
-|suser|conta (normalmente a do usuário) envolvida no alerta|
-|conta do computador|conta (normalmente a do usuário) envolvida no alerta|
-|resultado|quando relevante, êxito ou falha da atividade suspeita no alerta|
-|msg|descrição do alerta|
-|cnt|para alertas com uma contagem do número de vezes que a atividade ocorreu (por exemplo, a força bruta tem uma quantidade de senhas adivinhadas)|
-|app |protocolo usado neste alerta|
-|externalId|a ID do tipo de evento que o ATP do Azure grava no log de eventos que corresponde a cada tipo de alerta. Ao encaminhar alertas para o Microsoft Cloud App Security, esse campo é preenchido com a ID de alerta correspondente do Cloud App Security.|
-|cs#label|cadeias de caracteres do cliente permitidas pelo CEF, em que cs#label é o nome do novo campo |
-|cs#|cadeias de caracteres do cliente permitidas pelo CEF, em que cs# é o valor.|
+|iniciar|A hora de início do alerta|
+|suser|Conta (normalmente a do usuário) envolvida no alerta|
+|shost|Conta (normalmente a do computador) envolvida no alerta|
+|resultado|Quando relevante, êxito ou falha da atividade suspeita no alerta|
+|msg|Descrição do alerta|
+|cnt|Para alertas com uma contagem do número de vezes que a atividade ocorreu (por exemplo, a força bruta tem uma quantidade de senhas adivinhadas)|
+|app |Protocolo usado neste alerta|
+|externalId|A ID do evento que o ATP do Azure grava no log de eventos que corresponde a cada tipo de alerta. Ao encaminhar alertas para o Microsoft Cloud App Security, esse campo é preenchido com a ID de alerta correspondente do Cloud App Security.|
+|cs#label|Cadeias de caracteres do cliente permitidas pelo CEF, em que cs#label é o nome do novo campo |
+|cs#|Cadeias de caracteres do cliente permitidas pelo CEF, em que cs# é o valor.|
 
 - Por exemplo: `cs1Label=url cs1=https\://192.168.0.220/suspiciousActivity/5909ae198ca1ec04d05e65fa`  
 O campo cs1 é a URL de alerta.
@@ -199,7 +199,7 @@ Prioridades:
 
 002-21-2018 16:21:22 Auth.Warning 192.168.0.220 1 2018-02-21T14:21:13.916050+00:00 CENTER CEF 6076 AbnormalProtocolSecurityAlert ï»¿0|Microsoft|ATP do Azure|2.22.4228.22540|AbnormalProtocolSecurityAlert|ReconnaissanceusingSMBSessionEnumeration|5|start=2018-02-21T14:19:03.1981155Z app=Ntlm shost=CLIENT2 outcome=Success msg=Houve tentativas de autenticação de CLIENT2 em DC1 usando uma implementação de protocolo incomum. Pode ser um resultado de ferramentas mal-intencionadas usadas para executar ataques como o Metasploit. externalId=2034 cs1Label=url cs1=https\://contoso-corp.atp.azure.com/securityAlert/40fe98dd-aa42-4540-9d73-831486fdd1e4 cs2Label=trigger cs2=new
 
-## <a name="see-also"></a>Confira Também
+## <a name="see-also"></a>Consulte Também
 
 - [Pré-requisitos do Azure ATP](atp-prerequisites.md)
 - [Planejamento de capacidade do Azure ATP](atp-capacity-planning.md)

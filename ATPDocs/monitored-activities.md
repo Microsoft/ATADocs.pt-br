@@ -4,7 +4,7 @@ description: Descreve cada tipo de atividade monitorado pela Proteção Avançad
 keywords: ''
 author: shsagir
 ms.author: shsagir
-manager: rkarlin
+manager: shsagir
 ms.date: 03/19/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 37d1a032-65e7-4a89-be0b-c3f9cc2bacdb
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: cc0b9ed79a26c1f77cb7d0a15866bb81744dbfe9
-ms.sourcegitcommit: 63be53de5b84eabdeb8c006438dab45bd35a4ab7
+ms.openlocfilehash: ff098a0d71343479823b49039b96e73707389ef5
+ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79989842"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84775940"
 ---
 # <a name="azure-atp-monitored-activities"></a>Atividades monitoradas do ATP do Azure
 
@@ -50,7 +50,7 @@ As informações monitoradas pelo ATP do Azure são apresentadas na forma de ati
 |Senha da Conta Nunca Expira Alterada|Senha de usuário alterada para nunca expirar.|
 |Senha Não Obrigatória da Conta Alterada|A conta de usuário foi alterada e permite fazer logon com uma senha em branco.|
 |Cartão Inteligente Obrigatório da Conta Alterada|A conta é alterada para exigir que os usuários façam logon em um dispositivo usando um cartão inteligente.|
-|Tipos de Criptografia com Suporte da Conta Alterados|Tipos de criptografia compatíveis com Kerberos foram alterados (tipos: Des, 129 AES, AES 256)|
+|Tipos de Criptografia com Suporte da Conta Alterados|Tipos de criptografia compatíveis com Kerberos foram alterados (tipos: Des, AES 129, AES 256)|
 |Nome Upn de Conta Alterado|O nome de entidade do usuário foi alterado.|
 |Associação do Grupo Alterada|O usuário adicionou/removeu, de/para um grupo, por outro usuário ou por si só.|
 |Email de Usuário Alterado|O atributo de email de usuários foi alterado.|
@@ -62,7 +62,7 @@ As informações monitoradas pelo ATP do Azure são apresentadas na forma de ati
 |SID-History Changed|Account's SID-History attribute was changed.|
 -->
 
-## <a name="monitored-user-activities-ad-security-principal-operations"></a>Atividades de usuário monitoradas: operações de entidade de segurança do AD
+## <a name="monitored-user-activities-ad-security-principal-operations"></a>Atividades do usuário monitoradas: Operações da entidade de segurança do AD
 
 |Atividade monitorada|Descrição|
 |---------------------|------------------|
@@ -87,7 +87,7 @@ As informações monitoradas pelo ATP do Azure são apresentadas na forma de ati
 |Agendamento de Tarefas|O usuário tentou agendar a tarefa X remotamente para um computador remoto.|
 |Execução WMI|O usuário tentou executar remotamente um método WMI.|
 
-## <a name="monitored-user-activities-login-operations"></a>Atividades do usuário monitoradas: operações de logon
+## <a name="monitored-user-activities-login-operations"></a>Atividades do usuário monitoradas: Operações de logon
 
 |Tipo de logon|Atividade monitorada|Descrição|
 |---------------------|---------------------|------------------|
@@ -102,13 +102,13 @@ As informações monitoradas pelo ATP do Azure são apresentadas na forma de ati
 |---|Falha no Logon|Falha na tentativa de autenticação da conta de domínio (via NTLM e Kerberos) porque a seguinte conta estava desabilitada/expirada/bloqueada ou usou um certificado não confiável ou devido a horas de logon inválidas/senha antiga/senha expirada/senha errada.|
 |---|Falha no logon com certificado|Falha na tentativa de autenticação da conta de domínio (via Kerberos) devido ao seguinte: a conta estava desabilitada/expirada/bloqueada ou usou um certificado não confiável ou devido a horas de logon inválidas/senha antiga/senha expirada/senha errada.|
 
-## <a name="monitored-machine-activities-machine-account"></a>Atividades de computadores monitorados: conta do computador
+## <a name="monitored-machine-activities-machine-account"></a>Atividades da máquina monitoradas: conta do computador
 
 |Atividade monitorada|Descrição|
 |---------------------|------------------|
 |Sistema Operacional do Computador Alterado|Alteração no sistema operacional do computador.
 
-## <a name="see-also"></a>Confira Também
+## <a name="see-also"></a>Consulte Também
 
 - [Gerenciando alertas de segurança](working-with-suspicious-activities.md)
 - [Guia de alertas de segurança](suspicious-activity-guide.md)

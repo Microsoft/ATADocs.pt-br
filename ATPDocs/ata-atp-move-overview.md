@@ -4,7 +4,7 @@ description: Saiba como migrar uma instalação existente do Advanced Threat Ana
 keywords: ''
 author: shsagir
 ms.author: shsagir
-manager: rkarlin
+manager: shsagir
 ms.date: 10/16/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: e734e382-c4b1-43ca-9a8d-96c91daf2578
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 4a26195a6ceba0a32e9cf2d698574ca0acc7ef15
-ms.sourcegitcommit: 63be53de5b84eabdeb8c006438dab45bd35a4ab7
+ms.openlocfilehash: eb37bf60d0de0ee09afa74e6a23c54ca40ee32c3
+ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79504202"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84774614"
 ---
 # <a name="advanced-threat-analytics-ata-to-azure-advanced-threat-protection-azure-atp"></a>ATA (Advanced Threat Analytics) para o ATP do Azure (Proteção Avançada contra Ameaças do Azure)
 
@@ -43,7 +43,7 @@ Neste guia, você:
 
 - Um locatário do Azure Active Directory com pelo menos um administrador global/de segurança é necessário para criar uma instância do ATP do Azure. Cada instância do Azure ATP dá suporte a vários limites de floresta do Active Directory e dá suporte ao FFL (Nível funcional da floresta) do Windows 2003 e posteriores.
 
-- O ATP do Azure requererá o .Net Framework 4.7 e poderá requerer um controlador de domínio (reinício) se sua versão atual do .Net Framework não for a 4.7.
+- O ATP do Azure exigirá o .NET Framework 4.7 ou posterior e poderá requerer um controlador de domínio (reinício) se sua versão atual do .NET Framework não for a 4.7 ou posterior.
 
 - Verifique se seus controladores de domínio atendem a todos os [requisitos de sensor do ATP do Azure](https://docs.microsoft.com/azure-advanced-threat-protection/atp-prerequisites#azure-atp-sensor-requirements) e seu ambiente atende a todos os [requisitos do ATP do Azure](https://docs.microsoft.com/azure-advanced-threat-protection/atp-prerequisites).
 

@@ -4,7 +4,7 @@ description: Descreve os requisitos para uma implantação bem-sucedida do Azure
 keywords: ''
 author: shsagir
 ms.author: shsagir
-manager: rkarlin
+manager: shsagir
 ms.date: 03/15/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 62c99622-2fe9-4035-9839-38fec0a353da
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 94521875a58d49277e801e730a0eace02264e86a
-ms.sourcegitcommit: 3162130a85b5c6e8bf16456f8255b95e1f52b869
+ms.openlocfilehash: ad4d13efbe37abbb68e05e3a396bc3c101239ace
+ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/25/2020
-ms.locfileid: "83825288"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84775685"
 ---
 # <a name="azure-atp-prerequisites"></a>Pré-requisitos do ATP do Azure
 
@@ -127,7 +127,7 @@ O controlador de domínio pode ser um RODC (controlador de domínio somente leit
 
 Para seus controladores de domínio se comunicarem com o serviço de nuvem, você deve abrir a porta 443 em seus firewalls e proxies para *. atp.azure.com.
 
-Durante a instalação, o .Net Framework 4.7 é instalado e poderá exigir uma reinicialização do controlador de domínio, se uma reinicialização já estiver pendente.
+Durante a instalação, se o .NET Framework 4.7 ou posterior não estiver instalado, o .NET Framework 4.7 será instalado e poderá exigir uma reinicialização do controlador de domínio, se uma reinicialização já estiver pendente.
 
 > [!NOTE]
 > São necessários no mínimo 5 GB de espaço. Recomenda-se 10 GB. Isso inclui o espaço necessário para os binários do Azure ATP, logs do Azure ATP e logs de desempenho.

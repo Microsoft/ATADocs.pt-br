@@ -4,20 +4,20 @@ description: Fornece uma lista de perguntas frequentes sobre o Azure ATP e as re
 keywords: ''
 author: shsagir
 ms.author: shsagir
-manager: rkarlin
-ms.date: 03/15/2020
+manager: shsagir
+ms.date: 06/15/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 6a9b5273-eb26-414e-9cdd-f64406e24ed8
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 64d23884189d68e69805133c8411e1ff0e8f95e8
-ms.sourcegitcommit: 63be53de5b84eabdeb8c006438dab45bd35a4ab7
+ms.openlocfilehash: 67e15453424e42ccab54b5c83272690c6d605f4b
+ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79414039"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84775702"
 ---
 # <a name="azure-atp-frequently-asked-questions"></a>Perguntas frequentes sobre o Azure ATP
 
@@ -76,7 +76,7 @@ Recursos adicionais do ATP do Azure:
 
 O ATP do Azure faz parte da Segurança do Microsoft 365 – protegendo a organização híbrida:
 
-- O ATP do Azure, junto com o MCAS (Microsoft Cloud App Security) e o Azure AD Identity Protection, proporciona uma experiência de investigação unificada para atividades do usuário, locais e na nuvem, e fornece detecções aprimoradas de UEBA (Análise de Comportamento de Usuários e Entidades).
+- O ATP do Azure, junto com o Microsoft Cloud App Security e o Azure AD (Azure Active Directory) Identity Protection, proporciona uma experiência de investigação unificada para atividades do usuário, locais e na nuvem, e fornece detecções aprimoradas de UEBA (Análise de Comportamento de Usuários e Entidades).
 - O ATA não tem integração com outras soluções de segurança online da Microsoft
 
 Escalonável e seguro, aproveitando o potencial da nuvem:
@@ -92,11 +92,7 @@ O ATP do Azure está disponível no pacote Enterprise Mobility + Security 5 (EMS
 
 ### <a name="does-azure-atp-need-only-a-single-license-or-does-it-require-a-license-for-every-user-i-want-to-protect"></a>O ATP do Azure precisa de uma única licença ou requer uma licença para cada usuário que desejo proteger?
 
-O ATP do Azure requer licenciamento para cada usuário.
-
-### <a name="is-this-going-to-be-a-part-of-azure-active-directory-or-on-premises-active-directory"></a>Isto fará parte do Azure Active Directory ou do Active Directory local?
-
-A solução ATP do Azure é uma oferta autônoma no momento. Ela não faz parte do Azure Active Directory ou do Active Directory local.
+O ATP do Azure requer que todos os usuários no Azure AD sejam licenciados
 
 ### <a name="is-my-data-isolated-from-other-customer-data"></a>Meus dados são isolados de outros dados do cliente?
 
@@ -194,7 +190,7 @@ Para criar LMPs potenciais para usuários confidenciais, o ATP do Azure requer i
 3. **Consulta ao Active Directory usando o LDAP** sobre dados de entidades  
 Os sensores do ATP do Azure consultam o controlador de domínio a partir do domínio ao qual a entidade pertence. Pode ser no mesmo sensor ou em outro controlador de domínio daquele domínio.
 
-|Protocolo|Serviço|Porta|Fonte| Direção|
+|Protocolo|Serviço|Porta|Origem| Direção|
 |---------|---------|---------|---------|--------|
 |LDAP|TCP e UDP|389|Controladores de domínio|Saída|
 |LDAP seguro (LDAPS)|TCP|636|Controladores de domínio|Saída|
@@ -205,13 +201,13 @@ Os sensores do ATP do Azure consultam o controlador de domínio a partir do dom�
 
 O ATP do Azure captura as atividades de vários protocolos diferentes. Em alguns casos, o ATP do Azure não recebe os dados do usuário de origem no tráfego. O ATP do Azure tenta correlacionar a sessão do usuário com a atividade e, quando a tentativa for bem-sucedida, o usuário de origem da atividade será exibido. Caso as tentativas de correlação do usuário falhem, apenas o computador de origem será exibido.
 
-## <a name="troubleshooting"></a>Solução de Problemas
+## <a name="troubleshooting"></a>Solução de problemas
 
 ### <a name="what-should-i-do-if-the-azure-atp-sensor-or-standalone-sensor-doesnt-start"></a>O que devo fazer se o sensor ou o sensor autônomo do Azure ATP não for iniciado?
 
 Procure o erro mais recente no [log](troubleshooting-atp-using-logs.md) de erros atual (onde o Azure ATP está instalado, na pasta "Logs").
 
-## <a name="see-also"></a>Confira Também
+## <a name="see-also"></a>Consulte Também
 
 - [Pré-requisitos do Azure ATP](atp-prerequisites.md)
 - [Planejamento de capacidade do Azure ATP](atp-capacity-planning.md)

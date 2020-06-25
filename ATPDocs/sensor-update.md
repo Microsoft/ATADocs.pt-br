@@ -4,7 +4,7 @@ description: Descreve como atualizar e atrasar a atualização dos sensores do A
 keywords: ''
 author: shsagir
 ms.author: shsagir
-manager: rkarlin
+manager: shsagir
 ms.date: 12/24/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 603d9e09-a07d-4357-862f-d5682c8bc3dd
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 92c17776623beb3d03e37bb81ce12b433e5dc35e
-ms.sourcegitcommit: 63be53de5b84eabdeb8c006438dab45bd35a4ab7
+ms.openlocfilehash: ec9fa3c2190e0538cbecaa78131e5c42cdde4d7d
+ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80666193"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84775889"
 ---
 # <a name="update-azure-atp-sensors"></a>Atualizar sensores da Azure ATP
 
@@ -75,7 +75,7 @@ A cada poucos minutos, os sensores da Azure ATP verificam se eles têm a versão
 3. Os sensores que não estejam definidos com **Atualização atrasada** começam o processo de atualização em uma base de sensor a sensor:
    1. O serviço de atualizador de sensor do ATP do Azure recebe a versão atualizada do serviço de nuvem (no formato de arquivo cab).
    2. O atualizador de sensor do ATP do Azure valida a assinatura do arquivo.
-   3. O serviço de atualizador de sensor do ATP do Azure extrai o arquivo cab para uma nova pasta na própria pasta de instalação do sensor. Por padrão, ele será extraído em *C:\Arquivos de Programas\Sensor da Proteção Avançada contra Ameaças do Azure\<número de versão>*
+   3. O serviço de atualizador de sensor do ATP do Azure extrai o arquivo cab para uma nova pasta na própria pasta de instalação do sensor. Por padrão, ele será extraído em *C:\Arquivos de Programas\Sensor da Proteção Avançada contra Ameaças do Azure\<version number>*
    4. O serviço de sensor do ATP do Azure aponta para os novos arquivos extraídos do arquivo cab.    
    5. O serviço de atualizador de sensor do ATP do Azure reinicia o serviço de sensor do ATP do Azure.
        > [!NOTE]
