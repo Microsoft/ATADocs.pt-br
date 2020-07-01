@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 2fe62047-75ef-4b2e-b4aa-72860e39b4e4
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 4aa97b3f59ea16572608432ea51ad0984ceaac75
-ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
+ms.openlocfilehash: f10756f3b5fc009e2bd37fff9eff04d1c5c41585
+ms.sourcegitcommit: 073154998f5fdfbefe276888ffb034dfce368662
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84774036"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85256262"
 ---
 # <a name="security-assessment-unsecure-sid-history-attributes"></a>Avaliação de segurança: atributos do Histórico de SID não seguro
 
@@ -33,7 +33,7 @@ As organizações que não conseguem proteger os atributos de conta deixam a por
 
 Agentes mal-intencionados, como ladrões, geralmente procuram a maneira mais fácil e discreta de entrar em um ambiente. Contas configuradas com um atributo de Histórico de SID não seguro são oportunidades para invasores e podem apresentar riscos.
 
-Por exemplo, uma conta não confidencial em um domínio pode conter a SID de admin corporativo no Histórico de SID dela de outro domínio na floresta do Active Directory, “elevando”, portanto, o acesso da conta do usuário a um Administrador de Domínio efetivo em todos os domínios na floresta. Além disso, se você tiver uma relação de confiança de floresta sem o Filtro de SID habilitado (também chamado de Quarentena), será possível injetar uma SID de outra floresta e ela será adicionada ao token de usuário quando autenticado e usada para avaliações de acesso.
+Por exemplo, uma conta não confidencial em um domínio pode conter a SID de administrador corporativo no Histórico de SID dela em outro domínio na floresta do Active Directory, “elevando”, portanto, o acesso da conta de usuário a um Administrador de Domínio efetivo em todos os domínios da floresta. Além disso, se você tiver uma relação de confiança de floresta sem o Filtro de SID habilitado (também chamado de Quarentena), será possível injetar uma SID de outra floresta e ela será adicionada ao token de usuário quando autenticado e usada para avaliações de acesso.
 
 ## <a name="how-do-i-use-this-security-assessment"></a>Como usar a avaliação de segurança?
 
