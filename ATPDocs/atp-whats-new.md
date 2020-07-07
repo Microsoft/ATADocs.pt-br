@@ -5,18 +5,17 @@ keywords: ''
 author: shsagir
 ms.author: shsagir
 manager: shsagir
-ms.date: 06/16/2020
+ms.date: 06/28/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: ort
 ms.suite: ems
-ms.openlocfilehash: da3b41bd39b4ebae88eff1196ebf6715f217a522
-ms.sourcegitcommit: 83a2c0bd87a024ab2cf9fb6240a5da25c916ad95
-ms.translationtype: HT
+ms.openlocfilehash: 68cc9d2361724bde50ba89d0ba4873e4cb90e14b
+ms.sourcegitcommit: b4ca2f176cf378d6a6a2718043de2dbf9d657a89
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84800365"
+ms.lasthandoff: 07/05/2020
+ms.locfileid: "85953900"
 ---
 # <a name="whats-new-in-azure-advanced-threat-protection-azure-atp"></a>Novidades no ATP do Azure (Proteção Avançada contra Ameaças do Azure)
 
@@ -26,9 +25,31 @@ Para obter detalhes das versões anteriores do ATP do Azure até (e incluindo) a
 
 Feed RSS: Receba uma notificação quando esta página for atualizada copiando e colando a seguinte URL em seu leitor de feed: `https://docs.microsoft.com/api/search/rss?search=%22This+article+is+updated+frequently+to+let+you+know+what%27s+new+in+the+latest+release+of+Azure+ATP%22&locale=en-us`
 
+## <a name="azure-atp-release-2119"></a>ATP do Azure versão 2.119
+
+Lançado em 5 de julho de 2020
+
+- **Aprimoramento do recurso: Nova guia *Controladores de domínio excluídos* no relatório do Excel**  
+Para melhorar a precisão do nosso cálculo de cobertura do controlador de domínio, vamos excluir os controladores de domínio com relações de confiança externas do cálculo para atingir a cobertura de 100%. Os controladores de domínio excluídos serão exibidos na nova guia *controladores de domínio excluídos* no download do relatório do Excel da cobertura de domínio. Para obter informações sobre como baixar o relatório, confira [Status do controlador de domínio](atp-sensor-monitoring.md#domain-controller-status).
+- Essa versão inclui melhorias e correções de bugs da infraestrutura do sensor interno.
+
+## <a name="azure-atp-release-2118"></a>ATP do Azure versão 2.118
+
+Lançado em 28 de junho de 2020
+
+- **Novas avaliações de segurança**  
+As avaliações de segurança do ATP do Azure agora incluem as seguintes novas avaliações:
+  - **Caminhos de movimento lateral mais suspeitos**  
+    Essa avaliação monitora continuamente o ambiente para identificar contas **confidenciais** com os caminhos de movimento lateral mais suspeitos que expõem um risco de segurança e para identificar relatórios sobre essas contas a fim de ajudar você a gerenciar o ambiente. Os caminhos serão considerados suspeitos se tiverem três ou mais contas não confidenciais capazes de expor a conta confidencial a roubo de credenciais por atores mal-intencionados. Para obter mais informações, confira [Avaliação de segurança: LMP (caminhos de movimento lateral) mais suspeitos](atp-cas-isp-riskiest-lmp.md).
+  - **Atributos de conta não seguros**  
+    Essa avaliação do ATP do Azure monitora continuamente o ambiente para identificar contas com valores de atributo que expõem um risco de segurança e para identificar relatórios sobre essas contas a fim de ajudar você a proteger o ambiente. Para obter mais informações, confira [Avaliação de segurança: atributos de conta não seguros](atp-cas-isp-unsecure-account-attributes.md).
+
+- **Definição de confidencialidade atualizada**  
+Estamos expandindo nossa definição de confidencialidade em contas locais para incluir entidades que têm permissão para usar a replicação do Active Directory.
+
 ## <a name="azure-atp-release-2117"></a>ATP do Azure versão 2.117
 
-Lançado em 14 de junho de 2021
+Lançado em 14 de junho de 2020
 
 - **Aprimoramento do recurso: Detalhes adicionais da atividade disponíveis na experiência unificada do SecOps**  
 Estendemos as informações do dispositivo que enviamos para o Cloud App Security incluindo nomes de dispositivo, endereços IP, UPNs de conta e porta usada. Para obter mais informações sobre a integração ao Cloud App Security, confira [Usar o ATP do Azure com o Cloud App Security](atp-mcas-integration.md).
