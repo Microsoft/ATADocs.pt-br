@@ -5,19 +5,19 @@ keywords: ''
 author: shsagir
 ms.author: shsagir
 manager: shsagir
-ms.date: 03/15/2020
+ms.date: 07/05/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 62c99622-2fe9-4035-9839-38fec0a353da
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: ad4d13efbe37abbb68e05e3a396bc3c101239ace
-ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
+ms.openlocfilehash: d1f05e45e69bc78c4e2934cfe3c243ff77964732
+ms.sourcegitcommit: 424567ef02d97454e72241837f69fa6a928709ba
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84775685"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86175718"
 ---
 # <a name="azure-atp-prerequisites"></a>Pré-requisitos do ATP do Azure
 
@@ -161,16 +161,16 @@ Não há suporte para o sensor em controles de domínio que executem o Windows 2
 
 A tabela abaixo lista o mínimo de portas que o sensor do Azure ATP exige:
 
-|Protocolo|Transport|Porta|Para/De|Direção|
+|Protocolo|Transport|Porta|De|Para|Direção|
 |------------|-------------|--------|-----------|-------------|
-|**Portas de Internet**|||||
-|SSL (*.atp.azure.com)|TCP|443|Serviço de nuvem do Azure ATP|Saída|
-|SSL (localhost)|TCP|444|localhost|Ambos|
-|**Portas internas**|||||
-|DNS|TCP e UDP|53|Servidores DNS|Saída|
-|Netlogon (SMB, CIFS, SAM-R)|TCP/UDP|445|Todos os dispositivos na rede|Saída|
-|Syslog (opcional)|TCP/UDP|514, dependendo da configuração|Servidor SIEM|Entrada|
-|RAIO|UDP|1813|RADIUS|Entrada|
+|**Portas de Internet**||||||
+|SSL (*.atp.azure.com)|TCP|443|Sensor do Azure ATP|Serviço de nuvem do Azure ATP|Saída|
+|SSL (localhost)|TCP|444|Sensor do Azure ATP|localhost|Ambos|
+|**Portas internas**||||||
+|DNS|TCP e UDP|53|Sensor do Azure ATP|Servidores DNS|Saída|
+|Netlogon (SMB, CIFS, SAM-R)|TCP/UDP|445|Sensor do Azure ATP|Todos os dispositivos na rede|Saída|
+|Syslog (opcional)|TCP/UDP|514, dependendo da configuração|Servidor SIEM|Sensor do Azure ATP|Entrada|
+|RAIO|UDP|1813|RAIO|Sensor do Azure ATP|Entrada|
 
 ### <a name="windows-event-logs"></a>Log de eventos do Windows
 
@@ -242,21 +242,21 @@ O sensor autônomo do Azure ATP requer pelo menos um adaptador de gerenciamento 
 
 A tabela abaixo lista as portas mínimas que o sensor autônomo do Azure ATP requer que estejam configuradas no adaptador de gerenciamento:
 
-|Protocolo|Transport|Porta|Para/De|Direção|
+|Protocolo|Transport|Porta|De|Para|Direção|
 |------------|-------------|--------|-----------|-------------|
 |**Portas de Internet**|||||
-|SSL (*.atp.azure.com)|TCP|443|Serviço de nuvem do Azure ATP|Saída|
+|SSL (*.atp.azure.com)|TCP|443|Sensor do ATP do Azure|Serviço de nuvem do Azure ATP|Saída|
 |**Portas internas**|||||
-|LDAP|TCP e UDP|389|Controladores de domínio|Saída|
-|LDAP seguro (LDAPS)|TCP|636|Controladores de domínio|Saída|
-|LDAP para o Catálogo Global|TCP|3268|Controladores de domínio|Saída|
-|LDAPS para o Catálogo Global|TCP|3269|Controladores de domínio|Saída|
-|Kerberos|TCP e UDP|88|Controladores de domínio|Saída|
-|Netlogon (SMB, CIFS, SAM-R)|TCP e UDP|445|Todos os dispositivos na rede|Saída|
-|Tempo do Windows|UDP|123|Controladores de domínio|Saída|
-|DNS|TCP e UDP|53|Servidores DNS|Saída|
-|Syslog (opcional)|TCP/UDP|514, dependendo da configuração|Servidor SIEM|Entrada|
-|RAIO|UDP|1813|RADIUS|Entrada|
+|LDAP|TCP e UDP|389|Sensor do ATP do Azure|Controladores de domínio|Saída|
+|LDAP seguro (LDAPS)|TCP|636|Sensor do ATP do Azure|Controladores de domínio|Saída|
+|LDAP para o Catálogo Global|TCP|3268|Sensor do ATP do Azure|Controladores de domínio|Saída|
+|LDAPS para o Catálogo Global|TCP|3269|Sensor do ATP do Azure|Controladores de domínio|Saída|
+|Kerberos|TCP e UDP|88|Sensor do ATP do Azure|Controladores de domínio|Saída|
+|Netlogon (SMB, CIFS, SAM-R)|TCP e UDP|445|Sensor do ATP do Azure|Todos os dispositivos na rede|Saída|
+|Tempo do Windows|UDP|123|Sensor do ATP do Azure|Controladores de domínio|Saída|
+|DNS|TCP e UDP|53|Sensor do ATP do Azure|Servidores DNS|Saída|
+|Syslog (opcional)|TCP/UDP|514, dependendo da configuração|Servidor SIEM|Sensor do ATP do Azure|Entrada|
+|RAIO|UDP|1813|RAIO|Sensor do Azure ATP|Entrada|
 
 > [!NOTE]
 >
