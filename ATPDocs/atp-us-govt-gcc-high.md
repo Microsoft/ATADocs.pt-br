@@ -11,12 +11,12 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 01d20b1d1f8a26375add6aa023af1669e1191167
-ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
+ms.openlocfilehash: 84d995e82cb6b3a5f0536e9587a19613d62a576e
+ms.sourcegitcommit: bfb5f35f8e2f19911357e5afa6624ffe43e37d12
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84771894"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86472460"
 ---
 # <a name="azure-atp-for-us-government-gcc-high"></a>ATP do Azure para US Government GCC High
 
@@ -28,5 +28,5 @@ A oferta de GCC High do ATP do Azure é baseada na nuvem do Microsoft Azure Gove
 
 ## <a name="next-steps"></a>Próximas etapas
 
-- [Saiba mais sobre o Government GCC High](/enterprise-mobility-security/solutions/ems-security-govt-description)
+- [Saiba mais sobre o Government GCC High](/enterprise-mobility-security/solutions/ems-azure-atp-govt-service-description)
 - [Confira o fórum do ATP do Azure!](https://aka.ms/azureatpcommunity)
