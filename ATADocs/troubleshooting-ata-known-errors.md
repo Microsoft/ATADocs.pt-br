@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: d89e7aff-a6ef-48a3-ae87-6ac2e39f3bdb
 ms.reviewer: arzinger
 ms.suite: ems
-ms.openlocfilehash: 7aef6beb7c763ac4e4393288a4c4f7b1dc35ac31
-ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
+ms.openlocfilehash: cda124f5178717181105dff33fc1344da9141661
+ms.sourcegitcommit: dadf9e656fd362f037f15c7a4b52685b5b3bd154
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84774937"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86865383"
 ---
 # <a name="troubleshooting-ata-known-issues"></a>Solução de problemas conhecidos do ATA
 
@@ -32,17 +32,17 @@ Esta seção detalha os possíveis erros nas implantações do ATA e as etapas n
 > |Erro|Descrição|Resolução|
 > |-------------|----------|---------|
 > |System.DirectoryServices.Protocols.LdapException: ocorreu um erro local|Falha do Gateway do ATA ao autenticar no controlador de domínio.|1. Confirme se o registro DNS do controlador de domínio está configurado corretamente no servidor DNS. <br>2. Verifique se a hora do gateway do ATA está sincronizada com a hora do controlador de domínio.|
-> |System.IdentityModel.Tokens.SecurityTokenValidationException: falha ao validar cadeia de certificados|Falha do Gateway do ATA ao validar o certificado do Centro do ATA.|1. Verifique se o certificado de autoridade de certificação raiz está instalado no repositório de certificados da autoridade de certificação confiável no gateway do ATA. <br>2. valide se a CRL (lista de certificados revogados) está disponível e se a validação de revogação de certificado pode ser executada.|
+> |System.IdentityModel.Tokens.SecurityTokenValidationException: falha ao validar cadeia de certificados|Falha do Gateway do ATA ao validar o certificado do Centro do ATA.|1. Verifique se o certificado de autoridade de certificação raiz está instalado no repositório de certificados da autoridade de certificação confiável no gateway do ATA.<br>2. valide se a CRL (lista de certificados revogados) está disponível e se a validação de revogação de certificado pode ser executada.|
 > |Microsoft.Common.ExtendedException: falha ao analisar o tempo gerado|Falha do Gateway do ATA ao analisar as mensagens syslog que foram encaminhadas do SIEM.|Verifique se o SIEM está configurado para encaminhar as mensagens em um dos formatos compatíveis com o ATA.|
 > |System.ServiceModel.FaultException: ocorreu um erro ao verificar a segurança da mensagem.|Falha do Gateway do ATA ao autenticar no Centro do ATA.|Verifique se a hora do Gateway do ATA está sincronizada com a hora do Centro do ATA.|
 > |System.ServiceModel.EndpointNotFoundException: não foi possível se conectar ao net.tcp://center.ip.addr:443/IEntityReceiver|O gateway do ATA falhou ao estabelecer uma conexão com o centro do ATA.|Verifique se as configurações de rede estão corretas e se a conexão de rede entre o Gateway do ATA e o Centro do ATA está ativa.|
-> |System.DirectoryServices.Protocols.LdapException: o servidor LDAP não está disponível.|Falha do Gateway do ATA ao consultar o controlador de domínio usando o protocolo LDAP.|1. Verifique se a conta de usuário usada pelo ATA para se conectar ao domínio de Active Directory tem acesso de leitura a todos os objetos na árvore de Active Directory. <br>2. Verifique se o controlador de domínio não está protegido para impedir consultas LDAP da conta de usuário usada pelo ATA.|
+> |System.DirectoryServices.Protocols.LdapException: o servidor LDAP não está disponível.|Falha do Gateway do ATA ao consultar o controlador de domínio usando o protocolo LDAP.|1. Verifique se a conta de usuário usada pelo ATA para se conectar ao domínio de Active Directory tem acesso de leitura a todos os objetos na árvore de Active Directory.<br>2. Verifique se o controlador de domínio não está protegido para impedir consultas LDAP da conta de usuário usada pelo ATA.|
 > |Microsoft.Tri.Infrastructure.ContractException: exceção de contrato|Falha do Gateway do ATA ao sincronizar a configuração do Centro do ATA.|Conclua a configuração do Gateway do ATA no Console do ATA.|
 > |System.Reflection.ReflectionTypeLoadException: Não é possível carregar um ou mais dos tipos solicitados. Recupere a propriedade LoaderExceptions para maiores informações.|O Analisador de Mensagem é instalado no Gateway do ATA.| Desinstale o Analisador de Mensagem.|
 > |Erro [Layout] System.OutOfMemoryException: A exceção do tipo 'System.OutOfMemoryException' foi gerada.|O Gateway do ATA não tem memória suficiente.|Aumente a quantidade de memória no controlador de domínio.|
 > |Falha ao iniciar o consumidor ao vivo ---> Microsoft.Opn.Runtime.Monitoring.MessageSessionException: O provedor de eventos PEFNDIS não está pronto|O PEF (Analisador de Mensagem) não foi instalado corretamente.|Se você estiver usando o Hyper-V, tente atualizar os serviços de Integração do Hyper-V, caso contrário, contate o suporte para uma solução alternativa.|
 > |A instalação falhou com o erro: 0x80070652|Há outras instalações pendentes no seu computador.|Aguarde até que as outras instalações sejam concluídas e, se necessário, reinicie o computador.|
-> |System.InvalidOperationException: Instance 'Microsoft.Tri.Gateway' não existe na Categoria especificada.|PIDs foi habilitado para nomes de processo no Gateway do ATA|Use [KB281884](https://support.microsoft.com/kb/281884) para desabilitar os PIDs em nomes de processo|
+> |System.InvalidOperationException: Instance 'Microsoft.Tri.Gateway' não existe na Categoria especificada.|PIDs foi habilitado para nomes de processo no Gateway do ATA|Consulte [tratamento de nomes de instância duplicados](/windows/win32/perfctrs/handling-duplicate-instance-names) para desabilitar PIDs em nomes de processo|
 > A categoria ' System. InvalidOperationException: não existe.|Os contadores podem estar desabilitados no registro|Use [KB2554336](https://support.microsoft.com/kb/2554336) para recriar os Contadores de desempenho|
 > |System.ApplicationException: Não é possível iniciar a sessão do ETW MMA-ETW-Livecapture-a4f595bd-f567-49a7-b963-20fa4e370329|Há uma entrada do host no arquivo HOSTS que aponta para o nome curto do computador|Remova a entrada do host do arquivo C:\Windows\System32\drivers\etc\HOSTS ou altere-a para um FQDN.|
 > |System. IO. IOException: falha na autenticação porque a parte remota fechou o fluxo de transporte ou não pôde criar um canal seguro de SSL/TLS|O TLS 1.0 está desabilitado no Gateway de ATA, mas o .Net está configurado para usar o TLS 1.2|Habilite o TLS 1,2 para .net definindo as chaves do registro para usar os padrões do sistema operacional para SSL e TLS, da seguinte maneira:<br></br>`[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\v4.0.30319] "SystemDefaultTlsVersions"=dword:00000001`</br> `[HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\.NETFramework\v4.0.30319] "SystemDefaultTlsVersions"=dword:00000001`</br>`[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\v4.0.30319] "SchUseStrongCrypto"=dword:00000001` </br>`[HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\.NETFramework\v4.0.30319] " SchUseStrongCrypto"=dword:00000001`|
