@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 4ba46d60-3a74-480e-8f0f-9a082d62f343
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 215cdaf752e9479f4beff5429b317b099a5c5ab7
-ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
+ms.openlocfilehash: 7648b9047f519c4e9712e608be9f0705be1aaa2a
+ms.sourcegitcommit: bfb5f35f8e2f19911357e5afa6624ffe43e37d12
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84775736"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86472494"
 ---
 # <a name="working-with-the-azure-atp-portal"></a>Trabalhando com o portal do Azure ATP
 
@@ -26,26 +26,25 @@ ms.locfileid: "84775736"
 
 Use o portal do Azure ATP para monitorar e responder a atividades suspeitas detectadas pelo ATP.
 
-Digitar a tecla `?` fornece os atalhos de teclado para acessibilidade do portal do Azure ATP. 
+Digitar a tecla `?` fornece os atalhos de teclado para acessibilidade do portal do Azure ATP.
 
 O portal do Azure ATP fornece uma visão geral de todas as atividades suspeitas em ordem cronológica. Ele permite que você analise detalhes de qualquer atividade e executar ações baseadas em atividades. O portal do Azure ATP também exibe alertas e notificações para realçar problemas detectados pelo Azure ATP ou novas atividades consideradas suspeitas.
 
 Este artigo descreve como trabalhar com os principais elementos do portal do Azure ATP.
 
-
 ## <a name="enabling-access-to-the-azure-atp-portal"></a>Habilitando o acesso ao portal do Azure ATP
-Para fazer logon com êxito no portal do Azure ATP, é necessário fazer logon com um usuário atribuído ao grupo de segurança do Azure Active Directory com acesso ao portal do Azure ATP. Para obter mais informações sobre o RBAC (controle de acesso baseado em função) no Azure ATP, consulte [Como trabalhar com grupos de função do Azure ATP](atp-role-groups.md).
+
+Para fazer logon com êxito no portal do Azure ATP, é necessário fazer logon com um usuário atribuído ao grupo de segurança do Azure Active Directory com acesso ao portal do Azure ATP.
+Para obter mais informações sobre o RBAC (controle de acesso baseado em função) no Azure ATP, consulte [Como trabalhar com grupos de função do Azure ATP](atp-role-groups.md).
 
 ## <a name="logging-into-the-azure-atp-portal"></a>Fazendo logon no Portal do Azure ATP
 
-1. Você pode entrar no portal do ATP do Azure fazendo logon no portal [https://portal.atp.azure.com](https://portal.atp.azure.com) e selecionando sua instância ou navegando até a URL da instância: [https://*instancename*.atp.azure.com](https://*instancename*.atp.azure.com).
-
+1. Você pode entrar no portal do ATP do Azure fazendo logon no portal [https://portal.atp.azure.com](https://portal.atp.azure.com) e selecionando sua instância ou navegando até a URL da instância: `https://*instancename*.atp.azure.com`.
 
 2. O Azure ATP é compatível com o logon único integrado com a autenticação do Windows – se você já fez logon em seu computador, o Azure ATP usa esse token para fazer logon no portal do Azure ATP. Você também pode fazer logon usando um cartão inteligente. Suas permissões no Azure ATP correspondem à sua [função de administrador](atp-role-groups.md).
 
    > [!NOTE]
-   > Faça logon no computador do qual deseja acessar o portal do Azure ATP usando seu nome de usuário administrador e senha do Azure ATP. Como alternativa, execute seu navegador como um usuário diferente ou se desconecte do Windows e faça logon com o usuário administrador do ATP do Azure. Ao contrário do portal do ATP do Azure, o novo [portal do Cloud App Security](https://portal.cloudappsecurity.com) oferece logon de vários usuários e não requer licença adicional para uso com o ATP do Azure.  
-
+   > Faça logon no computador do qual deseja acessar o portal do Azure ATP usando seu nome de usuário administrador e senha do Azure ATP. Como alternativa, execute seu navegador como um usuário diferente ou se desconecte do Windows e faça logon com o usuário administrador do ATP do Azure. Ao contrário do portal do ATP do Azure, o novo [portal do Cloud App Security](https://portal.cloudappsecurity.com) oferece logon de vários usuários e não requer licença adicional para uso com o ATP do Azure.
 
 ### <a name="attack-time-line"></a>Linha do tempo de ataque
 
@@ -65,13 +64,13 @@ Você pode filtrar quais atividades suspeitas são exibidas na linha do tempo de
 
 ### <a name="search-bar"></a>Barra de pesquisa <a name="search-bar"></a>
 
-No menu superior, há uma barra de pesquisa. Você pode pesquisar por um usuário, computador ou grupo específico no Azure ATP. Para experimentar, basta começa a digitar. Na parte inferior da barra de pesquisa, o número de resultados da pesquisa encontrados é indicado. 
+No menu superior, há uma barra de pesquisa. Você pode pesquisar por um usuário, computador ou grupo específico no Azure ATP. Para experimentar, basta começa a digitar. Na parte inferior da barra de pesquisa, o número de resultados da pesquisa encontrados é indicado.
 
 ![Imagem da pesquisa no portal do Azure ATP](media/atp-workspace-portal-search.png)
 
 Se clicar no número, você pode acessar a página de resultados da pesquisa, na qual pode filtrar os resultados por tipo de entidade para uma investigação mais detalhada.
 
-![resultados da pesquisa](media/search-results.png)
+![pesquisar resultados](media/search-results.png)
 
 ### <a name="health-center"></a>Centro de integridade
 
@@ -79,7 +78,7 @@ O Centro de integridade fornece alertas quando algo não está funcionando corre
 
 ![Imagem do centro de integridade do Azure ATP](media/atp-health-issue.png)
 
-Sempre que o sistema encontrar um problema, como um erro de conectividade ou um sensor autônomo do Azure ATP desconectado, o ícone do Centro de integridade informa isso exibindo um ponto vermelho. 
+Sempre que o sistema encontrar um problema, como um erro de conectividade ou um sensor autônomo do Azure ATP desconectado, o ícone do Centro de integridade informa isso exibindo um ponto vermelho.
 
 ![Imagem do ponto vermelho do centro de integridade do Azure ATP](media/atp-health-bar.png)
 
@@ -109,8 +108,7 @@ Se você passar o mouse sobre uma entidade, em qualquer lugar no portal do ATP d
 - Notificação do WD ATP – será exibida se houver atividades suspeitas no Microsoft Defender ATP associadas à entidade.
 - Notificação de caminhos de movimento lateral – será exibida se tiverem sido detectados caminhos de movimento lateral para esta entidade nos últimos dois dias.
 
-
-## <a name="see-also"></a>Confira Também
+## <a name="see-also"></a>Consulte Também
 
 - [Criando instâncias do ATP do Azure](install-atp-step1.md)
 - [Confira o fórum do ATP do Azure!](https://aka.ms/azureatpcommunity)
