@@ -5,19 +5,19 @@ keywords: ''
 author: shsagir
 ms.author: shsagir
 manager: shsagir
-ms.date: 07/05/2020
+ms.date: 07/27/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 62c99622-2fe9-4035-9839-38fec0a353da
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: d1f05e45e69bc78c4e2934cfe3c243ff77964732
-ms.sourcegitcommit: 424567ef02d97454e72241837f69fa6a928709ba
+ms.openlocfilehash: a44abd85bf8aeb49b6ff1d1f2c34532a63de6c3c
+ms.sourcegitcommit: b2b40be9ac76237c3d6b2beb06eabd92e0b399c8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86175718"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87293192"
 ---
 # <a name="azure-atp-prerequisites"></a>Pré-requisitos do ATP do Azure
 
@@ -127,7 +127,7 @@ O controlador de domínio pode ser um RODC (controlador de domínio somente leit
 
 Para seus controladores de domínio se comunicarem com o serviço de nuvem, você deve abrir a porta 443 em seus firewalls e proxies para *. atp.azure.com.
 
-Durante a instalação, se o .NET Framework 4.7 ou posterior não estiver instalado, o .NET Framework 4.7 será instalado e poderá exigir uma reinicialização do controlador de domínio, se uma reinicialização já estiver pendente.
+Durante a instalação, se o .NET Framework 4.7 ou posterior não estiver instalado, o .NET Framework 4.7 será instalado e poderá exigir uma reinicialização do controlador de domínio. Também poderá ser necessária uma reinicialização se ela já estiver pendente.
 
 > [!NOTE]
 > São necessários no mínimo 5 GB de espaço. Recomenda-se 10 GB. Isso inclui o espaço necessário para os binários do Azure ATP, logs do Azure ATP e logs de desempenho.
@@ -171,6 +171,10 @@ A tabela abaixo lista o mínimo de portas que o sensor do Azure ATP exige:
 |Netlogon (SMB, CIFS, SAM-R)|TCP/UDP|445|Sensor do Azure ATP|Todos os dispositivos na rede|Saída|
 |Syslog (opcional)|TCP/UDP|514, dependendo da configuração|Servidor SIEM|Sensor do Azure ATP|Entrada|
 |RAIO|UDP|1813|RAIO|Sensor do Azure ATP|Entrada|
+|**Portas NNR**||||||
+|NTLM via RPC|TCP|Porta 135|Sensores ATP|Todos os dispositivos na rede|Entrada|
+|NetBIOS|UDP|137|Sensores ATP|Todos os dispositivos na rede|Entrada|
+|RDP|TCP|3389, apenas o primeiro pacote do Client hello|Sensores ATP|Todos os dispositivos na rede|Entrada|
 
 ### <a name="windows-event-logs"></a>Log de eventos do Windows
 
@@ -257,6 +261,10 @@ A tabela abaixo lista as portas mínimas que o sensor autônomo do Azure ATP req
 |DNS|TCP e UDP|53|Sensor do ATP do Azure|Servidores DNS|Saída|
 |Syslog (opcional)|TCP/UDP|514, dependendo da configuração|Servidor SIEM|Sensor do ATP do Azure|Entrada|
 |RAIO|UDP|1813|RAIO|Sensor do Azure ATP|Entrada|
+|**Portas NNR**||||||
+|NTLM via RPC|TCP|135|Sensores ATP|Todos os dispositivos na rede|Entrada|
+|NetBIOS|UDP|137|Sensores ATP|Todos os dispositivos na rede|Entrada|
+|RDP|TCP|3389, apenas o primeiro pacote do Client hello|Sensores ATP|Todos os dispositivos na rede|Entrada|
 
 > [!NOTE]
 >
