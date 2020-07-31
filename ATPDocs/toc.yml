@@ -91,7 +91,7 @@
               href: atp-cas-isp-unmonitored-domain-controller.md
             - name: Atributos de conta não seguros
               href: atp-cas-isp-unsecure-account-attributes.md
-            - name: Avaliação de delegação não segura de Kerberos
+            - name: Avaliação não segura de delegação Kerberos
               href: atp-cas-isp-unconstrained-kerberos.md
             - name: Atributos do histórico de SID não seguros
               href: atp-cas-isp-unsecure-sid-history-attribute.md
