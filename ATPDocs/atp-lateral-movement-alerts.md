@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 2257eb00-8614-4577-b6a1-5c65085371f2
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 47530916ff4329e167c8d3f17e5dc24930c7b072
-ms.sourcegitcommit: 0a2365fdbee41fe7838591aefaea2145a0426615
+ms.openlocfilehash: 4ef5d8985d42cd53f803eb97d8ebc0eba69a39af
+ms.sourcegitcommit: 42f1da0c498bd145daff4df20b3e53069b55ecd5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/20/2020
-ms.locfileid: "85120133"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87856369"
 ---
 # <a name="tutorial-lateral-movement-alerts"></a>Tutorial: Alertas de movimento lateral
 
@@ -35,14 +35,15 @@ Os alertas de segurança a seguir ajudam a identificar e corrigir atividades sus
 
 > [!div class="checklist"]
 >
-> * Execução remota de código sobre DNS (ID 2036 externa)
-> * Suspeita de roubo de identidade (Pass-the-Hash) (ID 2017 externa)
-> * Suspeita de roubo de identidade (Pass-the-Ticket) (ID 2018 externa)
-> * Suspeita de violação da autenticação NTLM (ID externa 2039)
-> * Suspeita de ataque de retransmissão de NTLM (conta do Exchange) (ID 2037 externa)
-> * Suspeita de ataque de Overpass-the-Hash (downgrade de criptografia) (ID 2008 externa)
-> * Suspeita de ataque de Overpass-the-Hash (Kerberos) (ID 2002 externa)
-> * Suspeita de manipulação de pacote SMB (exploração de CVE-2020-0796) – (versão prévia) (ID 2406 externa)
+> - Execução remota de código sobre DNS (ID 2036 externa)
+> - Suspeita de roubo de identidade (Pass-the-Hash) (ID 2017 externa)
+> - Suspeita de roubo de identidade (Pass-the-Ticket) (ID 2018 externa)
+> - Suspeita de violação da autenticação NTLM (ID externa 2039)
+> - Suspeita de ataque de retransmissão de NTLM (conta do Exchange) (ID 2037 externa)
+> - Suspeita de ataque de Overpass-the-Hash (Kerberos) (ID 2002 externa)
+> - Suspeita de manipulação de pacote SMB (exploração de CVE-2020-0796) – (versão prévia) (ID 2406 externa)
+
+<!-- * Suspected overpass-the-hash attack (encryption downgrade) (external ID 2008)-->
 
 ## <a name="remote-code-execution-over-dns-external-id-2036"></a>Execução remota de código sobre DNS (ID 2036 externa)
 
@@ -152,7 +153,7 @@ Há aplicativos personalizados que encaminham tíquetes em nome de usuários. Es
 
 ## <a name="suspected-ntlm-authentication-tampering-external-id-2039"></a>Suspeita de violação da autenticação NTLM (ID externa 2039)
 
-Em junho de 2019, a Microsoft publicou a [Vulnerabilidade de segurança CVE-2019-1040](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2019-1040), anunciando a descoberta de uma nova vulnerabilidade de violação no Microsoft Windows, quando um ataque man-in-the-middle é capaz de ignorar com êxito a proteção de MIC (verificação de integridade da mensagem) do NTLM.
+Em junho de 2019, a Microsoft publicou a [Vulnerabilidade de Segurança CVE-2019-1040](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2019-1040), anunciando a descoberta de uma nova vulnerabilidade de violação no Microsoft Windows, quando um ataque man-in-the-middle é capaz de ignorar com êxito a proteção de MIC (verificação de integridade da mensagem) do NTLM.
 
 Os atores mal-intencionados que exploram com êxito essa vulnerabilidade têm a capacidade de fazer downgrade dos recursos de segurança do NTLM e podem criar sessões autenticadas com êxito em nome de outras contas. Os Windows Servers sem patch estão em risco devido a essa vulnerabilidade.
 
@@ -179,7 +180,7 @@ Nessa detecção, um alerta de segurança do ATP do Azure é disparado quando so
 
 **Prevenção**
 
-• Verifique se todos os dispositivos no ambiente estão atualizados e corrigidos em relação à [CVE-2019-1040](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2019-1040).
+* Verifique se todos os dispositivos no ambiente estão atualizados e corrigidos em relação à [CVE-2019-1040](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2019-1040).
 
 ## <a name="suspected-ntlm-relay-attack-exchange-account-external-id-2037"></a>Suspeita de ataque de retransmissão de NTLM (conta do Exchange) (ID 2037 externa)
 
@@ -208,54 +209,54 @@ Nessa detecção, um alerta é disparado quando o ATP do Azure identifica o uso 
     1. Encontre a ferramenta que realizou o ataque e remova-a.
     2. Procure por usuários que estavam conectados em horário próximo ao que a atividade ocorreu, pois eles também podem estar comprometidos. Redefina suas senhas e habilite a MFA ou, se você tiver configurado as políticas relevantes de usuário de alto risco no Azure Active Directory Identity Protection, poderá usar a ação [**Confirmar usuário comprometido**](/cloud-app-security/accounts#governance-actions) no portal de Cloud App Security.
 2. Force o uso do NTLMv2 selado no domínio, usando a política de grupo **Segurança de rede: nível de autenticação do LAN Manager**. Para obter mais informações, consulte as [Instruções de nível de autenticação do LAN Manager](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/network-security-lan-manager-authentication-level) para definir a política de grupo para controladores de domínio.
+<!--
+## Suspected overpass-the-hash attack (encryption downgrade) (external ID 2008)
 
-## <a name="suspected-overpass-the-hash-attack-encryption-downgrade-external-id-2008"></a>Suspeita de ataque de Overpass-the-Hash (downgrade de criptografia) (ID 2008 externa)
+*Previous name:* Encryption downgrade activity
 
-*Nome anterior:* Atividade de downgrade de criptografia
+**Description**
 
-**Descrição**
+Encryption downgrade is a method of weakening Kerberos using encryption downgrade of different fields of the protocol, normally encrypted using the highest levels of encryption. A weakened encrypted field can be an easier target to offline brute force attempts. Various attack methods utilize weak Kerberos encryption cyphers. In this detection, Azure ATP learns the Kerberos encryption types used by computers and users, and alerts you when a weaker cypher is used that is unusual for the source computer, and/or user, and matches known attack techniques.
 
-O downgrade de criptografia é um método para enfraquecer o Kerberos usando um downgrade de criptografia de diferentes campos do protocolo que normalmente são criptografados usando o nível mais elevado de criptografia. Um campo criptografado enfraquecido pode ser um alvo mais fácil para tentativas de força bruta offline. Vários métodos de ataque utilizam criptografias Kerberos fracas. Nessa detecção, o ATP do Azure aprende os tipos de criptografia Kerberos usados por computadores e usuários e alerta você quando é usada uma criptografia mais fraca e que seja incomum para o computador de origem e/ou o usuário e que corresponda a técnicas de ataque conhecidas.
+In an over-pass-the-hash attack, an attacker can use a weak stolen hash to create a strong ticket, with a Kerberos AS request. In this detection,  instances are detected where the AS_REQ message encryption type from the source computer is downgraded, when compared to the previously learned behavior (the computer used AES).
 
-Em um ataque de Overpass-the-Hash, um invasor pode usar um hash roubado fraco para criar um tíquete forte, com uma solicitação de AS Kerberos. Nessa detecção, são detectadas as instâncias em que o tipo de criptografia de mensagem AS_REQ do computador de origem sofreu downgrade, em comparação com o comportamento aprendido anteriormente (o AES usado pelo computador).
+**TP, B-TP, or FP?**
 
-**TP, B-TP ou FP?**
+1. Determine if the smartcard configuration recently changed.
+    - Did the accounts involved recently have smartcard configurations changes?
 
-1. Determine se a configuração do cartão inteligente foi alterada recentemente.
-    - As contas envolvidas recentemente sofreram alterações de configurações de cartão inteligente?
+      If the answer is yes, **Close** the security alert as a **T-BP** activity.
 
-      Se a resposta for sim, **feche** o alerta de segurança como uma atividade **T-BP**.
+Some legitimate resources don't support strong encryption ciphers and may trigger this alert.
 
-Alguns recursos legítimos não dão suporte à criptografia forte e podem disparar este alerta.
+2. Do all source users share something?
+    1. For example, are all of your marketing personnel accessing a specific resource that could cause the alert to be triggered?
+    2. Check the resources accessed by those tickets.
+       - Check this in Active Directory by checking the attribute *msDS-SupportedEncryptionTypes*, of the resource service account.
+    3. If there is only one accessed resource, check if it is a valid resource for these users to access.
 
-2. Todos os usuários do código-fonte compartilham algo?
-    1. Por exemplo, todos os membros da equipe de marketing estão acessando um recurso específico que pode fazer com que o alerta seja disparado?
-    2. Verifique os recursos acessados por esses tíquetes.
-       - Confira isso no Active Directory verificando o atributo *msDS-SupportedEncryptionTypes*, da conta de serviço do recurso.
-    3. Se houver apenas um recurso acessado, verifique se é um recurso válido para o acesso desses usuários.
+      If the answer to one of the previous questions is **yes**, it is likely to be a **T-BP** activity. Check if the resource can support a strong encryption cipher, implement a stronger encryption cipher where possible, and **Close** the security alert.
 
-      Se a resposta a uma das perguntas anteriores for **sim**, provavelmente essa será uma atividade **T-BP**. Verifique se o recurso pode dar suporte a uma codificação de criptografia forte, implemente uma codificação de criptografia mais forte sempre que possível e **feche** o alerta de segurança.
+**Understand the scope of the breach**
 
-**Entender o escopo da violação**
+1. Investigate the [source computer](investigate-a-computer.md).
+2. Investigate the [compromised user](investigate-a-computer.md).
 
-1. Investigue o [computador de origem](investigate-a-computer.md).
-2. Investigue o [usuário comprometido](investigate-a-computer.md).
+**Suggested remediation and steps for prevention**
 
-**Correção sugerida e etapas de prevenção**
+**Remediation**
 
-**Remediação**
+1. Reset the password of the source user and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can use the [**Confirm user compromised**](/cloud-app-security/accounts#governance-actions) action in the Cloud App Security portal.
+2. Contain the source computer.
+3. Find the tool that performed the attack and remove it.
+4. Look for users logged on around the time of the activity, as they may also be compromised. Reset their passwords and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can use the [**Confirm user compromised**](/cloud-app-security/accounts#governance-actions) action in the Cloud App Security portal.
 
-1. Redefina a senha do usuário de origem e habilite a MFA ou, se você tiver configurado as políticas relevantes de usuário de alto risco no Azure Active Directory Identity Protection, poderá usar a ação [**Confirmar usuário comprometido**](/cloud-app-security/accounts#governance-actions) no portal de Cloud App Security.
-2. Contenha o computador de origem.
-3. Encontre a ferramenta que realizou o ataque e remova-a.
-4. Procure usuários que estavam conectados no horário da atividade, pois eles também podem estar comprometidos. Redefina suas senhas e habilite a MFA ou, se você tiver configurado as políticas relevantes de usuário de alto risco no Azure Active Directory Identity Protection, poderá usar a ação [**Confirmar usuário comprometido**](/cloud-app-security/accounts#governance-actions) no portal de Cloud App Security.
+**Prevention**
 
-**Prevenção**
-
-1. Configure seu domínio para dar suporte à codificação de criptografia forte e remova *Usar tipos de criptografia Kerberos DES*. Saiba mais sobre [tipos de criptografia e Kerberos](https://blogs.msdn.microsoft.com/openspecification/2011/05/30/windows-configurations-for-kerberos-supported-encryption-type/).
-2. Verifique se o nível funcional do domínio está definido para dar suporte à codificação de criptografia forte.
-3. Dê preferência ao uso de aplicativos compatíveis com a codificação de criptografia forte.
-
+1. Configure your domain to support strong encryption cyphers, and remove *Use Kerberos DES encryption types*. Learn more about [encryption types and Kerberos](https://blogs.msdn.microsoft.com/openspecification/2011/05/30/windows-configurations-for-kerberos-supported-encryption-type/).
+2. Make sure the domain functional level is set to support strong encryption cyphers.
+3. Give preference to using applications that support strong encryption cyphers.
+-->
 ## <a name="suspected-overpass-the-hash-attack-kerberos-external-id-2002"></a>Suspeita de ataque de Overpass-the-Hash (Kerberos) (ID 2002 externa)
 
 *Nome anterior:* Implementação incomum de protocolo Kerberos (possível ataque de overpass-the-hash)
