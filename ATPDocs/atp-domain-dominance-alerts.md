@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 0b3a1db5-0d43-49af-b356-7094cc85f0a5
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 662ded6bef3e38079173181c41920b2f57e6407d
-ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
+ms.openlocfilehash: c4d21a4065176db1f90e73edb7fdc8192c81d950
+ms.sourcegitcommit: 42f1da0c498bd145daff4df20b3e53069b55ecd5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84773560"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87856386"
 ---
 # <a name="tutorial-domain-dominance-alerts"></a>Tutorial: Alertas de predominância de domínio
 
@@ -298,6 +298,10 @@ O downgrade de criptografia é um método de enfraquecer o Kerberos fazendo down
 
 Em um alerta de Golden Ticket, o método de criptografia do campo TGT da mensagem TGS_REQ (solicitação de serviço) do computador de origem foi detectado como um downgrade em comparação com o comportamento aprendido anteriormente. Isso não tem base em uma anomalia de tempo (como na outra detecção Golden Ticket). Além disso, no caso desse alerta, não houve nenhuma solicitação de autenticação Kerberos associada à solicitação de serviço anterior detectada pelo ATP do Azure.
 
+**Período de aprendizado**
+
+Esse alerta tem um período de aprendizado de cinco dias, contados do momento em que o controlador de domínio inicia o monitoramento.
+
 **TP, B-TP ou FP**
 
 Alguns recursos legítimos não dão suporte à criptografia forte e podem disparar este alerta.
@@ -343,7 +347,7 @@ Os aplicativos podem ser autenticados usando uma codificação de criptografia i
 
 ## <a name="suspected-golden-ticket-usage-forged-authorization-data-external-id-2013"></a>Suspeita de uso de Golden Ticket (dados de autorização forjados) (ID externa 2013)
 
-Nome anterior: Elevação de privilégios usando dados de autorização forjados
+Antigo nome: elevação de privilégios usando dados de autorização forjados
 
 **Descrição**
 
@@ -380,7 +384,7 @@ Sabe-se que alguns sistemas operacionais ou aplicativos modificam os dados de au
 
 ## <a name="suspected-golden-ticket-usage-nonexistent-account-external-id-2027"></a>Suspeita de uso de Golden Ticket (conta inexistente) (ID externa 2027)
 
-Nome anterior: Golden Ticket do Kerberos
+Antigo nome: Golden Ticket Kerberos
 
 **Descrição**
 
@@ -440,7 +444,7 @@ Os serviços de federação podem gerar tíquetes que disparam esse alerta.
 
 ## <a name="suspected-golden-ticket-usage-time-anomaly-external-id-2022"></a>Suspeita de uso de Golden Ticket (anomalia de tempo) – (ID externa 2022)
 
-Nome anterior: Golden Ticket do Kerberos
+Antigo nome: Golden Ticket Kerberos
 
 **Descrição**
 
@@ -540,7 +544,7 @@ Modificações de grupo legítimas que raramente ocorrem e que o sistema não ap
 
 ## <a name="suspicious-service-creation-external-id-2026"></a>Criação de serviço suspeito (ID externa 2026)
 
-*Nome anterior:* Criação de serviço suspeito
+*Antigo nome:* criação de serviço suspeita
 
 **Descrição**
 

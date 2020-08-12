@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: d0551e91-3b21-47d5-ad9d-3362df6d47c0
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 503b8ac25a8ab812ca48eba138a7eafefe3168c0
-ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
+ms.openlocfilehash: 37ae29e667d3507d1415acae3098e6f93565ec4e
+ms.sourcegitcommit: 8c99699b9b84d50fb258c0cc5523ffa78133b7a4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84772353"
+ms.lasthandoff: 08/09/2020
+ms.locfileid: "88027152"
 ---
 # <a name="understanding-azure-atp-sensor-health-alerts"></a>Reconhecer os alertas de integridade do sensor do ATP do Azure
 
@@ -27,7 +27,7 @@ O Centro de Integridade do ATP do Azure permite que você saiba quando há um pr
 
 |Alerta|Descrição|Resolução|Severidade|
 |----|----|----|----|
-|O sensor do Azure ATP está offline no momento devido a problemas de conectividade com todos os controladores de domínio configurados.|Isso afeta a capacidade do Azure ATP de detectar atividades suspeitas relacionadas aos controladores de domínio monitorados por esse sensor do Azure ATP.| Certifique-se de que os controladores de domínio estejam em funcionamento e de que esse sensor do Azure ATP possa abrir conexões LDAP para eles. Além disso, em **Configurações**, certifique-se de configurar uma conta de serviço de diretório para cada floresta implantada.|Média|
+|O sensor do Azure ATP está offline no momento devido a problemas de conectividade com todos os controladores de domínio configurados.|Isso afeta a capacidade da ATP do Azure de detectar atividades suspeitas relacionadas aos controladores de domínio monitorados por esse sensor da ATP do Azure.| Certifique-se de que os controladores de domínio estejam em funcionamento e de que esse sensor do Azure ATP possa abrir conexões LDAP para eles. Além disso, em **Configurações**, certifique-se de configurar uma conta de serviço de diretório para cada floresta implantada.|Média|
 
 ## <a name="allsome-of-the-capture-network-adapters-on-a-sensor-are-not-available"></a>Todos ou alguns dos adaptadores de rede de captura em um sensor não estão disponíveis
 
@@ -45,7 +45,7 @@ O Centro de Integridade do ATP do Azure permite que você saiba quando há um pr
 
 |Alerta|Descrição|Resolução|Severidade|
 |----|----|----|----|
-|Os sensores do ATP do Azure listados não estão conseguindo resolver endereços IP para nomes de dispositivos mais de 90% das vezes usando os seguintes métodos:<br />– NTLM via RPC<br />– NetBios<br />– DNS inverso|Isso afeta os recursos de detecções do ATP do Azure e pode aumentar a quantidade de alarmes falsos positivos.|– Para NTLM via RPC: A porta 135 deve estar aberta para a comunicação de entrada de sensores do ATP do Azure em todos os computadores no ambiente.<br />– Para DNS inverso: Os sensores devem ser capazes de alcançar o servidor DNS, e as Zonas de Pesquisa Inversa devem estar habilitadas.<br />– Para NetBIOS: A porta 137 deve estar aberta para a comunicação de entrada de sensores do ATP do Azure em todos os computadores no ambiente.<br />Além disso, garanta que a configuração de rede (como firewalls) não esteja impedindo a comunicação com as portas relevantes.|Baixo|
+|Os sensores do ATP do Azure listados não estão conseguindo resolver endereços IP para nomes de dispositivos mais de 90% das vezes usando os seguintes métodos:<br />– NTLM via RPC<br />– NetBios<br />– DNS inverso|Isso afeta as funcionalidades de detecção da ATP do Azure e pode aumentar a quantidade de alarmes falsos positivos.|– Para NTLM via RPC: A porta 135 deve estar aberta para a comunicação de entrada de sensores do ATP do Azure em todos os computadores no ambiente.<br />– Para DNS inverso: Os sensores devem ser capazes de alcançar o servidor DNS, e as Zonas de Pesquisa Inversa devem estar habilitadas.<br />– Para NetBIOS: A porta 137 deve estar aberta para a comunicação de entrada de sensores do ATP do Azure em todos os computadores no ambiente.<br />Além disso, garanta que a configuração de rede (como firewalls) não esteja impedindo a comunicação com as portas relevantes.|Baixo|
 
 ## <a name="no-traffic-received-from-domain-controller"></a>Nenhum tráfego recebido do controlador de domínio
 
@@ -87,7 +87,7 @@ O Centro de Integridade do ATP do Azure permite que você saiba quando há um pr
 
 |Alerta|Descrição|Resolução|Severidade|
 |----|----|----|----|
-|Não houve nenhuma comunicação do sensor do Azure ATP. O período padrão para este alerta é de cinco minutos.|O tráfego de rede não é mais capturado pelo adaptador de rede no sensor do Azure ATP. Isso afeta a capacidade do ATA de detectar atividades suspeitas, uma vez que o tráfego de rede não será capaz de alcançar o serviço de nuvem do Azure ATP.|Verifique se a porta usada para comunicação entre o sensor do Azure ATP e o serviço de nuvem do Azure ATP não está bloqueada por firewalls ou roteadores.|Média|
+|Não houve nenhuma comunicação do sensor do Azure ATP. O período padrão para este alerta é de cinco minutos.|O tráfego de rede não é mais capturado pelo adaptador de rede no sensor do Azure ATP. Isso afeta a capacidade do ATA de detectar atividades suspeitas, uma vez que o tráfego de rede não será capaz de alcançar o serviço de nuvem da ATP do Azure.|Verifique se a porta usada para comunicação entre o sensor do Azure ATP e o serviço de nuvem do Azure ATP não está bloqueada por firewalls ou roteadores.|Média|
 
 ## <a name="some-domain-controllers-are-unreachable-by-a-sensor"></a>Alguns controladores de domínio ficam inacessíveis por um sensor
 
@@ -113,11 +113,13 @@ O Centro de Integridade do ATP do Azure permite que você saiba quando há um pr
 |----|----|----|----|
 |O sensor do ATP do Azure está recebendo eventos do ETW (Rastreamento de Eventos para Windows) que ele pode processar.|Não foi possível analisar alguns eventos do ETW (Rastreamento de Eventos para Windows), o que pode afetar a capacidade de detectar atividades suspeitas provenientes dos controladores de domínio monitorados por este sensor do ATP do Azure.|Verifique se apenas os eventos necessários são encaminhados ao sensor do Azure ATP ou tente encaminhar alguns dos eventos para outro sensor do ATP.|Média|
 
-## <a name="windows-events-missing-from-domain-controller-audit-policy"></a>Eventos do Windows ausentes da política de auditoria do controlador de domínio
+<!--
+## Windows events missing from domain controller audit policy
 
-|Alerta|Descrição|Resolução|Severidade|
+|Alert|Description|Resolution|Severity|
 |----|----|----|----|
-| Eventos do Windows ausentes da política de auditoria do controlador de domínio|Para que os eventos corretos sejam auditados e incluídos no Log de Eventos do Windows, seus controladores de domínio exigem configurações precisas de política de auditoria avançada. Configurações de política de auditoria avançada incorretas fazem com que eventos críticos fiquem de fora de seus logs e resultam em uma cobertura incompleta da ATP do Azure.|Revise sua [Política de Auditoria Avançada](atp-advanced-audit-policy.md) e modifique como necessário. | Média|
+| Windows events missing from domain controller audit policy|For the correct events to be audited and included in the Windows Event Log, your domain controllers require accurate Advanced Audit Policy settings. Incorrect Advanced Audit Policy settings leave critical events out of your logs, and result in incomplete Azure ATP coverage.|Review your [Advanced Audit policy](atp-advanced-audit-policy.md) and modify as needed. | Medium|
+-->
 
 ## <a name="see-also"></a>Consulte Também
 
