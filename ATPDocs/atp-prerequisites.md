@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 62c99622-2fe9-4035-9839-38fec0a353da
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 30514dac7053cfd117cf1f0c50a5e8536148d5c1
-ms.sourcegitcommit: 8c99699b9b84d50fb258c0cc5523ffa78133b7a4
+ms.openlocfilehash: 22e0d88d46d8f3751316148600349ca99382339a
+ms.sourcegitcommit: 2ff8079d3ad8964887c1d0d1414c84199ba208bb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2020
-ms.locfileid: "88027186"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88793360"
 ---
 # <a name="azure-atp-prerequisites"></a>Pré-requisitos do ATP do Azure
 
@@ -103,14 +103,16 @@ O acesso ao portal do Azure ATP ocorre por meio de um navegador que dá suporte 
 
 ## <a name="azure-atp-network-name-resolution-nnr-requirements"></a>Requisitos da NNR (resolução de nome de rede) da ATP do Azure
 
-A NNR (resolução de nomes de rede) é um componente principal da funcionalidade da ATP do Azure. Para que o serviço da ATP do Azure funcione corretamente, pelo menos um dos seguintes métodos NNR deve ser acessível para sensores da ATP do Azure:
+A NNR (resolução de nomes de rede) é um componente principal da funcionalidade da ATP do Azure. Para resolver os endereços IP para nomes do computador, os sensores do ATP do Azure pesquisam os endereços IP usando os seguintes métodos:
 
-1. **NTLM sobre RPC** (porta TCP 135)
-2. **NetBIOS** (porta UDP 137)
-3. **RDP** (porta TCP 3389): apenas o primeiro pacote do Client hello
-4. **Consultas do servidor DNS usando a pesquisa de DNS reverso do endereço IP** (UDP 53)
+- NTLM sobre RPC (porta TCP 135)
+- NetBIOS (porta UDP 137)
+- RDP (porta TCP 3389): apenas o primeiro pacote do **Client hello**
+- Consultas ao servidor DNS usando a pesquisa de DNS reverso do endereço IP (UDP 53)
 
-Para que os métodos 1, 2 e 3 funcionem, as portas relevantes devem ser abertas para entrada dos sensores da ATP do Azure para dispositivos na rede. Saiba mais sobre a ATP do Azure e a NNR em [Política da NNR da ATP do Azure](atp-nnr-policy.md).
+Para que os três primeiros métodos funcionem, as portas relevantes devem ser abertas para entrada dos sensores da ATP do Azure para dispositivos na rede. Saiba mais sobre a ATP do Azure e a NNR em [Política da NNR da ATP do Azure](atp-nnr-policy.md).
+
+Recomendamos o uso de todos os métodos para obter os melhores resultados. Se isso não for possível, você deverá usar o método de pesquisa de DNS e pelo menos um dos outros métodos.
 
 ## <a name="azure-atp-sensor-requirements"></a>Requisitos do sensor do Azure ATP
 
@@ -171,10 +173,12 @@ A tabela abaixo lista o mínimo de portas que o sensor do Azure ATP exige:
 |Netlogon (SMB, CIFS, SAM-R)|TCP/UDP|445|Sensor do Azure ATP|Todos os dispositivos na rede|Saída|
 |Syslog (opcional)|TCP/UDP|514, dependendo da configuração|Servidor SIEM|Sensor do Azure ATP|Entrada|
 |RAIO|UDP|1813|RAIO|Sensor do Azure ATP|Entrada|
-|**Portas NNR**||||||
+|**Portas NNR**\*||||||
 |NTLM via RPC|TCP|Porta 135|Sensores ATP|Todos os dispositivos na rede|Entrada|
 |NetBIOS|UDP|137|Sensores ATP|Todos os dispositivos na rede|Entrada|
 |RDP|TCP|3389, apenas o primeiro pacote do Client hello|Sensores ATP|Todos os dispositivos na rede|Entrada|
+
+\* Uma dessas portas é necessária, mas é recomendável abrir todas elas.
 
 ### <a name="windows-event-logs"></a>Log de eventos do Windows
 
@@ -261,10 +265,12 @@ A tabela abaixo lista as portas mínimas que o sensor autônomo do Azure ATP req
 |DNS|TCP e UDP|53|Sensor do ATP do Azure|Servidores DNS|Saída|
 |Syslog (opcional)|TCP/UDP|514, dependendo da configuração|Servidor SIEM|Sensor do ATP do Azure|Entrada|
 |RAIO|UDP|1813|RAIO|Sensor do Azure ATP|Entrada|
-|**Portas NNR**||||||
+|**Portas NNR** \*||||||
 |NTLM via RPC|TCP|135|Sensores ATP|Todos os dispositivos na rede|Entrada|
 |NetBIOS|UDP|137|Sensores ATP|Todos os dispositivos na rede|Entrada|
 |RDP|TCP|3389, apenas o primeiro pacote do Client hello|Sensores ATP|Todos os dispositivos na rede|Entrada|
+
+\* Uma dessas portas é necessária, mas é recomendável abrir todas elas.
 
 > [!NOTE]
 >
