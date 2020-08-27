@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 7fb024e6-297a-4ad9-b962-481bb75a0ba3
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 2649e5ece9a1613c8c0f396c7fc906219c178046
-ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
+ms.openlocfilehash: 5b7b60910975ce1f8922a32b799b997917542257
+ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84775209"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88954537"
 ---
 # <a name="install-ata---step-3"></a>Instalação do ATA - Etapa 3
 
@@ -38,16 +38,16 @@ Clique em **Baixar Instalação do Gateway** na lista de etapas na parte superio
 > [!NOTE] 
 > Para acessar a tela de configuração Gateway posteriormente, clique no **ícone de configurações** (canto superior direito) e selecione **Configuração** e em **Sistema**, clique em **Gateways**.  
 
-1.  Clique em **Instalação do Gateway**.
+1. Clique em **Instalação do Gateway**.
   ![Baixar a Instalação do Gateway do ATA](media/download-gateway-setup.png)
-2.  Salve o pacote localmente.
-3.  Copie o pacote para o servidor dedicado ou controlador de domínio no qual você está instalando o Gateway do ATA Como alternativa, você pode abrir o Console do ATA do controlador de domínio ou servidor dedicado e ignorar esta etapa.
+1. Salve o pacote localmente.
+1. Copie o pacote para o servidor dedicado ou controlador de domínio no qual você está instalando o Gateway do ATA Como alternativa, você pode abrir o Console do ATA do controlador de domínio ou servidor dedicado e ignorar esta etapa.
 
 O arquivo zip inclui os seguintes arquivos:
 
--   Instalador do Gateway do ATA
+- Instalador do Gateway do ATA
 
--   Arquivo de configurações com as informações necessárias para conectar-se à Central de ATA
+- Arquivo de configurações com as informações necessárias para conectar-se à Central de ATA
 
 
 > [!div class="step-by-step"]

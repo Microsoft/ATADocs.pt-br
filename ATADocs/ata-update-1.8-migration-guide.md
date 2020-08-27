@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: e5a9718c-b22e-41f7-a614-f00fc4997682
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 2cedddd5df1da95507d366e6e0c01e1eff0f00d9
-ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
+ms.openlocfilehash: d48baa40d76254531606f2e923158a78e5c17a45
+ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84775430"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88953806"
 ---
 # <a name="updating-ata-to-version-18"></a>Atualizando o ATA para a versão 1.8
 
@@ -34,9 +34,9 @@ Siga essas etapas para atualizar para o ATA versão 1.8:
 1.  [Baixe a versão de atualização do ATA 1.8 do Centro de Download](https://www.microsoft.com/download/details.aspx?id=55536) ou a versão completa do [Centro de Avaliação](https://www.microsoft.com/evalcenter/evaluate-microsoft-advanced-threat-analytics).<br>
 Na versão de migração, o arquivo pode ser usado apenas para a atualização do ATA 1.7. Na versão do Centro de Avaliação, o mesmo arquivo de instalação (Microsoft ATA Center Setup.exe) é usado para instalar uma nova implantação do ATA e para atualizar as implantações existentes.
 
-2.  Atualize o Centro do ATA
+1. Atualize o Centro do ATA
 
-4.  Atualize os Gateways do ATA
+1. Atualize os Gateways do ATA
 
     > [!IMPORTANT]
     > Atualize todos os Gateways do ATA para ter certeza de o ATA funciona corretamente.
@@ -45,11 +45,11 @@ Na versão de migração, o arquivo pode ser usado apenas para a atualização d
 
 1. Faça backup do seu banco de dados: (opcional)
 
-   -   Se a Central de ATA estiver sendo executada como uma máquina virtual e você quiser fazer um ponto de verificação, desligue a máquina virtual primeiro.
+   - Se a Central de ATA estiver sendo executada como uma máquina virtual e você quiser fazer um ponto de verificação, desligue a máquina virtual primeiro.
 
-   -   Se o Centro do ATA estiver em execução em um servidor físico, consulte o artigo sobre [recuperação de desastre](disaster-recovery.md) para obter informações sobre como fazer backup do banco de dados.
+   - Se o Centro do ATA estiver em execução em um servidor físico, consulte o artigo sobre [recuperação de desastre](disaster-recovery.md) para obter informações sobre como fazer backup do banco de dados.
 
-2. Execute o arquivo de instalação, **Microsoft ATA Center Setup.exe**, e siga as instruções na tela para instalar a atualização.
+1. Execute o arquivo de instalação, **Microsoft ATA Center Setup.exe**, e siga as instruções na tela para instalar a atualização.
 
    - Na página **Boas-vindas**, escolha seu idioma e clique em **Avançar**.
 
@@ -62,15 +62,15 @@ Na versão de migração, o arquivo pode ser usado apenas para a atualização d
     
    A migração de dados **Parcial** demora muito menos para ser instalada. Se você selecionar a migração de dados **Completa**, pode demorar bastante para a instalação ser concluída. Certifique-se de examinar a quantidade estimada de tempo e de espaço em disco necessário, que são listadas na tela **Migração de Dados**. Esses números dependem da quantidade de tráfego de rede capturada anteriormente que você salvou nas versões anteriores do ATA. Por exemplo, na tela abaixo, você pode ver uma migração de dados de um banco de dados grande:
          
-   ![Migração de dados do ATA](media/migration-data-migration.png)
+    ![Migração de dados do ATA](media/migration-data-migration.png)
 
-   -  Clique em **Atualizar**. Depois de clicar em Atualizar, o ATA ficará offline até que o procedimento de atualização seja concluído.
+   - Clique em **Atualizar**. Depois de clicar em Atualizar, o ATA ficará offline até que o procedimento de atualização seja concluído.
 
-3. Após a conclusão da atualização do Centro do ATA, clique em **Iniciar** para abrir a tela **Atualizar** no console do ATA para os Gateways do ATA.
+1. Após a conclusão da atualização do Centro do ATA, clique em **Iniciar** para abrir a tela **Atualizar** no console do ATA para os Gateways do ATA.
 
-   ![Tela de sucesso da atualização](media/migration-center-success.png)
+    ![Tela de sucesso da atualização](media/migration-center-success.png)
 
-4. Na tela **Atualizações**, se você já tiver configurado seus Gateways do ATA para atualizarem automaticamente, eles serão atualizados agora, caso contrário, clique em **Atualizar** ao lado de cada Gateway do ATA.
+1. Na tela **Atualizações**, se você já tiver configurado seus Gateways do ATA para atualizarem automaticamente, eles serão atualizados agora, caso contrário, clique em **Atualizar** ao lado de cada Gateway do ATA.
   
 ![Imagem de atualização dos gateways](media/migration-update-gw.png)
 

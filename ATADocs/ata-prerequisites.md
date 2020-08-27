@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: a5f90544-1c70-4aff-8bf3-c59dd7abd687
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 8b6232817ae35bdd170f90bdc1c25920f9932322
-ms.sourcegitcommit: 954f5e64a8a25075ce663b9fd63810cf4c032987
+ms.openlocfilehash: b83a98ddf052416ffee0cd7dc521b9412b466d99
+ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/22/2020
-ms.locfileid: "85129843"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88954112"
 ---
 # <a name="ata-prerequisites"></a>Pré-requisitos do ATA
 
@@ -55,7 +55,7 @@ Esta seção mostra as informações que você deve obter, bem como as contas e 
 
 - Não instale o Microsoft Message Analyzer em um Gateway ou um Gateway Lightweight do ATA. O driver do Message Analyzer conflita com os drivers do Gateway e Gateway Lightweight do ATA. Se você executar o Wireshark no Gateway do ATA, precisará reiniciar o Serviço de Gateway do Microsoft Advanced Threat Analytics após parar a captura do Wireshark. Caso contrário, o Gateway para de capturar o tráfego. Executar o Wireshark em um Gateway Lightweight do ATA não interfere no Gateway Lightweight do ATA.
 
-- Recomendado: o usuário deve ter permissões de leitura somente no contêiner Objetos Excluídos. Isso permite que o ATA detecte a exclusão em massa de objetos no domínio. Para saber mais sobre como configurar permissões de somente leitura no contêiner Objetos Excluídos, confira a seção **Alterar permissões em um contêiner de objetos excluídos** no artigo [Exibir ou definir permissões em um Objeto de Diretório](https://technet.microsoft.com/library/cc816824%28v=ws.10%29.aspx).
+- Recomendado: o usuário deve ter permissões de leitura somente no contêiner Objetos Excluídos. Isso permite que o ATA detecte a exclusão em massa de objetos no domínio. Para saber mais sobre como configurar permissões de somente leitura no contêiner Objetos Excluídos, confira a seção **Alterar permissões em um contêiner de objetos excluídos** no artigo [Exibir ou definir permissões em um Objeto de Diretório](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc816824(v=ws.10)).
 
 - Opcional: uma conta de usuário que não tem nenhuma atividade de rede. Essa conta está configurada como um usuário Honeytoken do ATA. Para configurar uma conta como um usuário Honeytoken, somente o nome de usuário é necessário. Para obter mais informações sobre configuração de Honeytoken, consulte [Configurar as exclusões de endereço IP e o usuário Honeytoken](install-ata-step7.md).
 
@@ -87,7 +87,7 @@ Ao trabalhar em um servidor físico, o banco de dados do ATA precisa que você *
 Para ter um melhor desempenho, defina a **Opção de Energia** do Centro do ATA como **Alto Desempenho**.<br>
 O número de controladores de domínio que você está monitorando e a carga em cada um dos controladores de domínio determina as especificações de servidor necessárias. Para obter mais informações, consulte [planejamento de capacidade do ATA](ata-capacity-planning.md).
 
-Para os sistemas operacionais Windows 2008R2 e 2012, não há suporte para o gateway em um modo de [grupo de vários processadores](https://docs.microsoft.com/windows/win32/procthread/processor-groups) . Para obter mais informações sobre o modo de grupo de multiprocessadores,confira [solução de problemas](troubleshooting-ata-known-errors.md#multi-processor-group-mode).
+Para os sistemas operacionais Windows 2008R2 e 2012, não há suporte para o gateway em um modo de [grupo de vários processadores](/windows/win32/procthread/processor-groups) . Para obter mais informações sobre o modo de grupo de multiprocessadores,confira [solução de problemas](troubleshooting-ata-known-errors.md#multi-processor-group-mode).
 
 ### <a name="time-synchronization"></a>Sincronização da hora
 
@@ -126,7 +126,7 @@ A tabela a seguir lista as portas mínimas que devem ser abertas para que a Cent
 
 Para instalar e implantar o ATA rapidamente, você pode instalar os certificados autoassinados durante a instalação. Se você tiver optado por usar certificados autoassinados, após a implantação inicial será recomendável substituir os certificados autoassinados por certificados de uma Autoridade de Certificação interna a ser usada pelo Centro de ATA.
 
-Verifique se que os Gateways de ATA e o Centro de ATA têm acesso ao ponto de distribuição de CRL. Se eles não tiverem acesso à Internet, siga [o procedimento para importar manualmente uma CRL](https://technet.microsoft.com/library/aa996972%28v=exchg.65%29.aspx), tendo o cuidado de instalar todos os pontos de distribuição de CRL de toda a cadeia.
+Verifique se que os Gateways de ATA e o Centro de ATA têm acesso ao ponto de distribuição de CRL. Se eles não tiverem acesso à Internet, siga [o procedimento para importar manualmente uma CRL](/previous-versions/tn-archive/aa996972(v=exchg.65)), tendo o cuidado de instalar todos os pontos de distribuição de CRL de toda a cadeia.
 
 O certificado deve ter:
 

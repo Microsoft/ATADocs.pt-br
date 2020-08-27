@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: e1c5ff41-d989-46cb-aa38-5a3938f03c0f
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 9abfbe15f83aabf7a8879e117cb884d624cbbee8
-ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
+ms.openlocfilehash: fe99921e1193f79f7031c04156a79fd8fa55dc9e
+ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84775226"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88954554"
 ---
 # <a name="install-ata---step-2"></a>Instalação do ATA - Etapa 2
 
@@ -33,33 +33,31 @@ Na primeira vez que você abrir o Console do ATA, a tela a seguir será exibida:
 
 ![Estágio 1 das boas-vindas do ATA](media/ATA_1.7-welcome-provide-username.png)
 
-1.  Insira as seguintes informações e clique em **Salvar**:
+1. Insira as seguintes informações e clique em **Salvar**:
 
     |Campo|Comentários|
     |---------|------------|
     |**Nome de usuário** (obrigatório)|Insira o nome de usuário somente leitura, por exemplo: **ATAuser**. **Observação:** **Não** use o formato UPN para seu nome de usuário.|
     |**Senha** (obrigatório)|Digite a senha para o usuário somente leitura, por exemplo: **Lápis1**.|
-    |**Domínio** (obrigatório)|Digite o domínio para o usuário somente leitura, por exemplo: **contoso.com**. **Observação:** é importante que você insira o FQDN completo do domínio onde o usuário está localizado. Por exemplo, se a conta do usuário estiver no domínio corp.contoso.com, você precisará inserir `corp.contoso.com` e não contoso.com|
+    |**Domínio** (obrigatório)|Digite o domínio para o usuário somente leitura, por exemplo: **contoso.com**. **Observação:** é importante que você insira o FQDN completo do domínio onde o usuário está localizado. Por exemplo, se a conta do usuário estiver no domínio corp.contoso.com, você precisará inserir `corp.contoso.com` não contoso.com|
 
-2. Você pode clicar em **Testar conexão** para testar a conectividade com o domínio e verificar se as credenciais fornecidas concedem acesso. Isso só funciona se o Centro do ATA tiver conectividade com o domínio.    
+1. Você pode clicar em **Testar conexão** para testar a conectividade com o domínio e verificar se as credenciais fornecidas concedem acesso. Isso só funciona se o Centro do ATA tiver conectividade com o domínio.
 
     Após a gravação, a mensagem de boas-vindas no Console mudará para a seguinte mensagem: ![Estágio 1 das boas-vindas do ATA concluído](media/ATA_1.7-welcome-provide-username-finished.png)
 
-3. No Console, clique em **Baixar instalação do Gateway e instalar o primeiro Gateway** para continuar.
-
+1. No Console, clique em **Baixar instalação do Gateway e instalar o primeiro Gateway** para continuar.
 
 > [!div class="step-by-step"]
 > [«Etapa 1](install-ata-step1.md) 
 >  [Etapa 3»](install-ata-step3.md)
 
-
-## <a name="see-also"></a>Consulte Também
 ## <a name="related-videos"></a>Vídeos Relacionados
+
 - [Visão geral da implantação do ATA](https://channel9.msdn.com/Shows/Microsoft-Security/Overview-of-ATA-Deployment-in-10-Minutes)
 - [Como escolher o tipo certo de Gateway do ATA](https://channel9.msdn.com/Shows/Microsoft-Security/ATA-Deployment-Choose-the-Right-Gateway-Type)
 
-
 ## <a name="see-also"></a>Consulte Também
+
 - [Guia de implantação da POC (prova de conceito) do ATA](https://aka.ms/atapoc)
 - [Ferramenta de dimensionamento do ATA](https://aka.ms/atasizingtool)
 - [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

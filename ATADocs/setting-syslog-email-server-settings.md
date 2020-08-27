@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: bff20bf7-8b53-49da-81e5-b818a1c3b24e
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 2a27025cb21892792c9502766ee90075df42efb6
-ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
+ms.openlocfilehash: d56f485a89ee468940ac68ba8e5fad4219753a55
+ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84775022"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88955761"
 ---
 # <a name="provide-ata-with-your-email-server-settings"></a>Forneça ao ATA suas configurações do servidor de emails
 
@@ -27,13 +27,13 @@ O ATA pode notificar você quando detectar uma atividade suspeita. Para que o AT
 
 1. No servidor do Centro do ATA, clique no ícone **Microsoft Advanced Threat Analytics Management** na área de trabalho.
 
-2. Digite seu nome de usuário e senha e clique em **Entrar**.
+1. Digite seu nome de usuário e senha e clique em **Entrar**.
 
-3. Selecione a opção de configurações na barra de ferramentas e escolha **Configuração**.
+1. Selecione a opção de configurações na barra de ferramentas e escolha **Configuração**.
 
-   ![Ícone Definições de configuração do ATA](media/ATA-config-icon.png)
+    ![Ícone Definições de configuração do ATA](media/ATA-config-icon.png)
 
-4. Na seção **Notificações**, em **Servidor de email**, insira as seguintes informações:
+1. Na seção **Notificações**, em **Servidor de email**, insira as seguintes informações:
 
 
    |              Campo              |                                                                                                 Descrição                                                                                                  |               Valor                |
@@ -43,38 +43,38 @@ O ATA pode notificar você quando detectar uma atividade suspeita. Para que o AT
    |         Autenticação          | Habilite se o seu servidor SMTP exigir autenticação. **Observação:** Se você habilitar a autenticação, deverá fornecer um nome de usuário e senha de uma conta de email que tenha permissão para se conectar ao servidor SMTP. |        O padrão é desabilitado         |
    |      Enviar de (obrigatório)       |                                                                        Digite um endereço de email a partir do qual o email será enviado.                                                                         | Por exemplo:<br />ATA@contoso.com  |
 
-   ![Imagem das configurações do servidor de emails do ATA](media/ata-email-server.png)
+    ![Imagem das configurações do servidor de emails do ATA](media/ata-email-server.png)
 
 ## <a name="provide-ata-with-your-syslog-server-settings"></a>Forneça ao ATA suas configurações do servidor Syslog
 O ATA pode notificar você quando detectar uma atividade suspeita, enviando a notificação para seu servidor Syslog. Se você habilitar as notificações do Syslog, poderá definir os itens a seguir.
 
 1. Antes de configurar as notificações do Syslog, trabalhe com seu administrador do SIEM para descobrir as seguintes informações:
 
-   -   FQDN ou Endereço IP do servidor SIEM
+   - FQDN ou Endereço IP do servidor SIEM
 
-   -   Porta na qual o servidor SIEM está escutando
+   - Porta na qual o servidor SIEM está escutando
 
-   -   O transporte a ser usado: UDP, TCP ou TLS (Syslog protegido)
+   - Qual transporte usar: UDP, TCP ou TLS (Syslog protegido)
 
-   -   Formato no qual enviar os dados, RFC 3164 ou 5424
+   - Formato no qual enviar os dados, RFC 3164 ou 5424
 
-2. No servidor do Centro do ATA, clique no ícone **Microsoft Advanced Threat Analytics Management** na área de trabalho.
+1. No servidor do Centro do ATA, clique no ícone **Microsoft Advanced Threat Analytics Management** na área de trabalho.
 
-3. Digite seu nome de usuário e senha e clique em **Entrar**.
+1. Digite seu nome de usuário e senha e clique em **Entrar**.
 
-4. Selecione a opção de configurações na barra de ferramentas e escolha **Configuração**.
+1. Selecione a opção de configurações na barra de ferramentas e escolha **Configuração**.
 
-   ![Ícone Definições de configuração do ATA](media/ATA-config-icon.png)
+    ![Ícone Definições de configuração do ATA](media/ATA-config-icon.png)
 
-5. Na seção Notificações, selecione **Servidor Syslog** insira as seguintes informações:
+1. Na seção Notificações, selecione **Servidor Syslog** insira as seguintes informações:
 
    |Campo|Descrição|
    |---------|---------------|
    |Ponto de extremidade de servidor Syslog|FQDN do servidor Syslog e, opcionalmente, altere o número da porta (padrão: 514)|
    |Transport|Pode ser UDP, TCP ou TLS (Syslog protegido)|
-   |Formatar|Este é o formato usado pelo ATA para enviar eventos ao servidor SIEM - RFC 5424 ou RFC 3164.|
+   |Formato|Este é o formato usado pelo ATA para enviar eventos ao servidor SIEM - RFC 5424 ou RFC 3164.|
 
-   ![Imagem das configurações do servidor Syslog do ATA](media/ata-syslog-server-settings.png)
+    ![Imagem das configurações do servidor Syslog do ATA](media/ata-syslog-server-settings.png)
 
 
 

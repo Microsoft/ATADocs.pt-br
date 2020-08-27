@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 5d639e84-2e37-43a9-9667-49be6c4fa8b7
 ms.reviewer: arzinger
 ms.suite: ems
-ms.openlocfilehash: 5a48993ecf5b4384b5b7826ee72862798790a5fb
-ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
+ms.openlocfilehash: a0a2abcf78c19180b841b9f2ec9186b19beea7c5
+ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84775311"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88954656"
 ---
 # <a name="ata-event-id-reference"></a>Referência de ID do evento ATA
 
@@ -28,7 +28,7 @@ O visualizador de eventos da Central do ATA registra eventos para o ATA. Este ar
 
 Os eventos podem ser encontrados aqui:
 
-![local da ID do evento](./media/event-id-location.png)
+![local da ID do evento](media/event-id-location.png)
 
 ## <a name="ata-health-events"></a>Eventos de integridade do ATA
 

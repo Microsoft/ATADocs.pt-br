@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 581a3257-32dc-453f-b84e-b9f99186f5d3
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 3b2e2d5a9eee8d18b6d182afb15453a8809db605
-ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
+ms.openlocfilehash: 02cd26323be6ae79524d4912674380af23d2c3af
+ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84775396"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88954792"
 ---
 # <a name="investigating-entity-profiles"></a>Investigando perfis de entidade
 
@@ -49,9 +49,9 @@ Na parte superior, você pode exibir os blocos de resumo que fornecem uma visão
 
 Para computadores, você verá:
 - Quantas atividades suspeitas abertas existem para o computador
--  Quantos usuários fizeram logon no computador
+- Quantos usuários fizeram logon no computador
 - Quantos recursos o computador acessou
--  Quantas VPN de locais foram acessadas do computador
+- Quantas VPN de locais foram acessadas do computador
 - Uma lista de quais endereços IP o computador foi usado
   
   ![computador de menu de entidade](media/entity-computer.png)
@@ -70,7 +70,7 @@ Na seção **Controle de Acesso de Usuários**, o ATA exibe configurações de s
 
 Ao clicar na guia de **Caminhos de movimento lateral**, será possível exibir um mapa totalmente dinâmico e clicável que fornecerá uma representação visual dos caminhos de movimento lateral de e para o usuário, os quais podem ser usados para invadir sua rede.
 
-O mapa fornece uma lista de quantos saltos entre computadores ou usuários um invasor precisaria dar para chegar ao usuário e comprometer uma conta confidencial e, se o usuário tiver uma conta confidencial, você poderá ver quantos recursos e contas estão conectados diretamente. Para obter mais informações, consulte [caminhos de movimento lateral](use-case-lateral-movement-path.md). 
+O mapa fornece uma lista de quantos saltos entre computadores ou usuários um invasor precisaria dar para chegar ao usuário e comprometer uma conta confidencial e, se o usuário tiver uma conta confidencial, você poderá ver quantos recursos e contas estão conectados diretamente. Para obter mais informações, consulte [Caminhos de movimento lateral](use-case-lateral-movement-path.md). 
 
  ![caminhos de movimento lateral do perfil do usuário](media/user-profile-lateral-movement-paths.png)
 

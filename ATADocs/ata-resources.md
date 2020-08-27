@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 42a1a34f-ed6b-4538-befb-452168a30e8c
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 864a5f0a9c521aad24673ef3e22ffe7bbc62436f
-ms.sourcegitcommit: bfb5f35f8e2f19911357e5afa6624ffe43e37d12
+ms.openlocfilehash: c5af70847f4ca8fc61ec332aa8c6e3a9c2f6f35c
+ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86472376"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88953993"
 ---
 # <a name="ata-readiness-roadmap"></a>Roteiro de preparação do ATA
 
@@ -68,7 +68,7 @@ As configurações básicas necessárias no ATA são configuradas como parte do 
 
 [Configurações de auditoria](https://aka.ms/ataauditingblog) – Audite a integridade do seu controlador de domínio antes e após uma implantação do ATA.
 
-[Documentação geral do ATA](https://docs.microsoft.com/advanced-threat-analytics/)
+[Documentação geral do ATA](index.yml)
 
 ## <a name="work-with-ata"></a>Trabalhar com o ATA
 
@@ -78,7 +78,7 @@ Depois que o ATA estiver em execução, você poderá exibir as atividades suspe
 
 [Guia de atividade suspeita do ATA](suspicious-activity-guide.md)
 
-## <a name="security-best-practices"></a>Práticas recomendadas de segurança
+## <a name="security-best-practices"></a>Melhores práticas de segurança
 
 [Práticas recomendadas do ATA](https://aka.ms/atasecbestpractices) – Práticas recomendadas para proteger o ATA.
 

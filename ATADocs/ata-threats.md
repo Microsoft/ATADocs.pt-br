@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 283e7b4e-996a-4491-b7f6-ff06e73790d2
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: dcc7e65cbe7fee4d743ce1abd1d81d30a5406a7d
-ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
+ms.openlocfilehash: 4c1f0442492759be26bab474a1cc3cd39347e1f0
+ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84775481"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88953755"
 ---
 # <a name="what-threats-does-ata-look-for"></a>Que tipos de ameaças o ATA procura?
 
@@ -36,9 +36,9 @@ Para obter mais informações, confira [Trabalhando com atividades suspeitas](wo
 
 ## <a name="whats-next"></a>O que vem a seguir?
 
--   Para saber mais sobre como o ATA se adapta à sua rede: [Arquitetura do ATA](ata-architecture.md)
+- Para saber mais sobre como o ATA se adapta à sua rede: [Arquitetura do ATA](ata-architecture.md)
 
--   Para começar a implantar o ATA: [Instalar o ATA](install-ata-step1.md)
+- Para começar a implantar o ATA: [Instalar o ATA](install-ata-step1.md)
 
 
 ## <a name="see-also"></a>Consulte Também

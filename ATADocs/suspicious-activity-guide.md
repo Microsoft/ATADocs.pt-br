@@ -1,6 +1,6 @@
 ---
 title: Guia de atividade suspeita do ATA
-d|Description: This article provides a list of the suspicious activities ATA can detect and steps for remediation.
+description: Este artigo fornece uma lista de atividades suspeitas que o ATA pode detectar e etapas de correção.
 keywords: ''
 author: shsagir
 ms.author: shsagir
@@ -12,25 +12,23 @@ ms.technology: ''
 ms.assetid: 1fe5fd6f-1b79-4a25-8051-2f94ff6c71c1
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 21214cd1586b2379d9d5e8808a276e80d5456053
-ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
+ms.openlocfilehash: 6d91f755f3892076714b1bdbb6896f1fa6639a3a
+ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84774971"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88955030"
 ---
 # <a name="advanced-threat-analytics-suspicious-activity-guide"></a>Guia de atividades suspeitas Advanced Threat Analytics
-
 
 *Aplica-se a: Advanced Threat Analytics versão 1.9*
 
 Após investigação adequada, qualquer atividade suspeita pode ser classificada como:
 
--   **Verdadeiro positivo**: uma ação mal intencionada detectada pelo ATA.
+- **Verdadeiro positivo**: uma ação mal intencionada detectada pelo ATA.
 
--   **Verdadeiro positivo benigno**: uma ação detectada pelo ATA que é real, mas não é mal intencionada, como um teste de penetração.
-
--   **Falso positivo**: um alarme falso, indicando que a atividade não ocorreu.
+- **Verdadeiro positivo benigno**: uma ação detectada pelo ATA que é real, mas não é mal intencionada, como um teste de penetração.
+- **Falso positivo**: um alarme falso, o que significa que a atividade não aconteceu.
 
 Para saber mais sobre como trabalhar com alertas ATA, confira [Trabalhando com atividades suspeitas](working-with-suspicious-activities.md).
 
@@ -38,28 +36,26 @@ Para dúvidas ou comentários, entre em contato com a equipe do ATA em [ATAEval@
 
 ## <a name="abnormal-modification-of-sensitive-groups"></a>Modificação anormal de grupos confidenciais
 
-
 **Descrição**
 
 Os invasores adicionam usuários a grupos altamente privilegiados. Eles fazem isso para obter acesso a mais recursos e obter persistência. As detecções contam com a criação de perfil das atividades de modificação do grupo de usuários e com o alerta para quando uma adição anormal a um grupo confidencial é vista. A criação de perfil é executada continuamente pelo ATA. O período mínimo antes do acionamento de um alerta é de um mês por controlador de domínio.
 
 Para obter uma definição de grupos confidenciais no ATA, consulte [Trabalhando com o console do ATA](working-with-ata-console.md#sensitive-groups).
 
-
-A detecção depende de [eventos auditados em controladores de domínio](https://docs.microsoft.com/advanced-threat-analytics/configure-event-collection).
+A detecção depende de [eventos auditados em controladores de domínio](configure-event-collection.md).
 Para verificar se seus controladores de domínio realizam a auditoria de eventos necessários, use a ferramenta referenciada em [Auditoria do ATA (AuditPol, Aplicação de configurações de auditoria avançadas, descoberta de serviço do Gateway Lightweight)](https://aka.ms/ataauditingblog).
 
 **Investigação**
 
-1. A modificação do grupo é legítima? </br>Modificações de grupo legítimas que raramente ocorrem e não foram conhecidas como "normais" podem causar um alerta que seria considerado como um positivo verdadeiro benigno.
+1. A modificação do grupo é legítima? </br>As modificações de grupo legítimas que raramente ocorrem e não foram aprendidas como "normais" podem causar um alerta, o que seria considerado um verdadeiro positivo benigno.
 
-2. Se o objeto adicionado for uma conta de usuário, verifique quais ações a conta de usuário realizou após ser adicionada ao grupo de administrador. Vá para a página do usuário no ATA para obter mais contexto. Houve alguma outra atividade suspeita associada à conta antes ou após a adição ocorrer? Baixe o relatório **Modificação de grupos confidenciais** para ver quais outras modificações foram feitas e por quem durante o mesmo período de tempo.
+1. Se o objeto adicionado for uma conta de usuário, verifique quais ações a conta de usuário realizou após ser adicionada ao grupo de administrador. Vá para a página do usuário no ATA para obter mais contexto. Houve alguma outra atividade suspeita associada à conta antes ou após a adição ocorrer? Baixe o relatório **Modificação de grupos confidenciais** para ver quais outras modificações foram feitas e por quem durante o mesmo período de tempo.
 
 **Remediação**
 
 Minimize a quantidade de pessoas que estão autorizadas a modificar grupos confidenciais.
 
-Configure o [Privileged Access Management para Active Directory](https://docs.microsoft.com/microsoft-identity-manager/pam/privileged-identity-management-for-active-directory-domain-services) se aplicável.
+Configure [Privileged Access Management para Active Directory](/microsoft-identity-manager/pam/privileged-identity-management-for-active-directory-domain-services) se aplicável.
 
 ## <a name="broken-trust-between-computers-and-domain"></a>Confiança quebrada entre domínio e computadores
 
@@ -72,13 +68,12 @@ Confiança quebrada significa que os requisitos de segurança do Active Director
 
 **Investigação**
 
-O computador que está sendo investigado permite que os usuários de domínio façam logon? 
+O computador que está sendo investigado permite que os usuários de domínio façam logon?
 - Se sim, é possível ignorar esse computador nas etapas remediação.
 
 **Remediação**
 
 Ingresse novamente o computador no domínio se necessário ou redefina a senha do computador.
-
 
 ## <a name="brute-force-attack-using-ldap-simple-bind"></a>Ataque de força bruta usando associação simples LDAP
 
@@ -95,13 +90,13 @@ Nessa detecção, um alerta é disparado quando o ATA detecta um grande número 
 
 1. Se houver muitas contas envolvidas, clique em **Baixar detalhes** para exibir a lista em uma planilha do Excel.
 
-2. Clique no alerta para ir até a página dedicada. Verifique se alguma tentativa de logon terminou com uma autenticação bem-sucedida. As tentativas aparecerem como **Contas adivinhadas** no lado direito do infográfico. Se sim, alguma das **Contas adivinhadas** é normalmente usada pelo computador de origem? Se sim, **Omita** a atividade suspeita.
+1. Clique no alerta para ir até a página dedicada. Verifique se alguma tentativa de logon terminou com uma autenticação bem-sucedida. As tentativas aparecerem como **Contas adivinhadas** no lado direito do infográfico. Se sim, alguma das **Contas adivinhadas** é normalmente usada pelo computador de origem? Se sim, **Omita** a atividade suspeita.
 
-3. Se não houver nenhuma **Conta adivinhada**, alguma das **Contas atacadas** é normalmente usada no computador de origem? Se sim, **Omita** a atividade suspeita.
+1. Se não houver nenhuma **Conta adivinhada**, alguma das **Contas atacadas** é normalmente usada no computador de origem? Se sim, **Omita** a atividade suspeita.
 
 **Remediação**
 
-[Senhas complexas e longas](https://docs.microsoft.com/windows/device-security/security-policy-settings/password-policy) fornecem o primeiro nível necessário de segurança contra ataques de força bruta.
+[Senhas complexas e longas](/windows/device-security/security-policy-settings/password-policy) fornecem o primeiro nível necessário de segurança contra ataques de força bruta.
 
 ## <a name="encryption-downgrade-activity"></a>Atividade de downgrade de criptografia
 
@@ -111,35 +106,36 @@ O downgrade de criptografia é um método para enfraquecer o Kerberos fazendo um
 
 Há três tipos de detecção:
 
-1.  Skeleton Key – é um malware que é executado nos controladores de domínio e permite a autenticação no domínio com qualquer conta sem saber sua senha. Este malware geralmente usa algoritmos de criptografia mais fracos para fazer o hash das senhas do usuário no controlador de domínio. Nesta detecção, o método de criptografia da mensagem KRB_ERR do controlador de domínio para a conta, solicitando um tíquete, passou por um downgrade em comparação com o comportamento aprendido anteriormente.
+1. Skeleton Key – é um malware que é executado nos controladores de domínio e permite a autenticação no domínio com qualquer conta sem saber sua senha. Este malware geralmente usa algoritmos de criptografia mais fracos para fazer o hash das senhas do usuário no controlador de domínio. Nesta detecção, o método de criptografia da mensagem KRB_ERR do controlador de domínio para a conta, solicitando um tíquete, passou por um downgrade em comparação com o comportamento aprendido anteriormente.
 
-2.  Golden Ticket – em um alerta [Golden Ticket](#golden-ticket), o método de criptografia do campo TGT da mensagem TGS_REQ (solicitação de serviço) do computador de origem foi desatualizado em comparação com o comportamento aprendido anteriormente. Isso não tem base em uma anomalia de tempo (como na outra detecção Golden Ticket). Além disso, não houve nenhuma solicitação de autenticação Kerberos associada à solicitação de serviço anterior detectada pelo ATA.
+1. Golden Ticket – em um alerta [Golden Ticket](#golden-ticket), o método de criptografia do campo TGT da mensagem TGS_REQ (solicitação de serviço) do computador de origem foi desatualizado em comparação com o comportamento aprendido anteriormente. Isso não tem base em uma anomalia de tempo (como na outra detecção Golden Ticket). Além disso, não houve nenhuma solicitação de autenticação Kerberos associada à solicitação de serviço anterior detectada pelo ATA.
 
-3.  Overpass-the-Hash – um invasor pode usar um hash roubado fraco para criar um tíquete forte com uma solicitação do Kerberos AS. Nesta detecção, o tipo de criptografia de mensagem AS_REQ do computador de origem passou por downgrade em comparação com o comportamento aprendido anteriormente (ou seja, o computador estava usando AES).
+1. Overpass-the-Hash – um invasor pode usar um hash roubado fraco para criar um tíquete forte com uma solicitação do Kerberos AS. Nesta detecção, o tipo de criptografia de mensagem AS_REQ do computador de origem passou por downgrade em comparação com o comportamento aprendido anteriormente (ou seja, o computador estava usando AES).
 
 **Investigação**
 
-Primeiro, verifique a descrição do alerta para ver com qual dos três tipos de detecção acima você está lidando. Para obter mais informações, baixe a planilha do Excel.
-1.  Skeleton Key – você pode verificar se a Skeleton Key afetou os controladores de domínio usando o [analisador gravado pela equipe do ATA](https://gallery.technet.microsoft.com/Aorato-Skeleton-Key-24e46b73). Se o analisador encontrar malware em 1 ou mais controladores de domínio, é um verdadeiro positivo.
-2.  Bilhete dourado – na planilha do Excel, vá para a guia **atividade de rede** . Você verá que o campo de downgrade relevante é **solicitar tipo de criptografia de tíquete**e **tipos de criptografia com suporte do computador de origem** lista métodos de criptografia mais fortes.
-  a.    Verifique o computador de origem e a conta ou, se houver vários computadores de origem e contas, verifique se eles têm algo em comum (por exemplo, toda a equipe de marketing usa um aplicativo específico que pode estar fazendo o alerta ser disparado). Há casos em que um aplicativo personalizado raramente usado faz autenticação usando uma codificação de criptografia inferior. Verifique se há algum desses aplicativos personalizados no computador de origem. Nesse caso, ele é provavelmente um positivo verdadeiro benigno e pode ser **Suprimido**.
-  b.    Verifique o recurso acessado por essas permissões. Se houver um recurso que todas elas estão acessando, valide-o e verifique se é um recurso válido que elas precisam acessar. Além disso, verifique se o recurso de destino dá suporte a métodos de criptografia forte. Você pode verificar isso no Active Directory verificando o atributo `msDS-SupportedEncryptionTypes`, da conta de serviço do recurso.
-3.  Overpass-The-hash – na planilha do Excel, vá para a guia **atividade de rede** . Você verá que o campo downgrade relevante é o **tipo de criptografia de carimbo de data/hora criptografado** e os tipos de **criptografia com suporte do computador de origem** contêm métodos de criptografia mais fortes
-  a.    Há casos em que esse alerta pode ser disparado quando os usuários fazem logon usando cartões inteligentes, se a configuração do cartão inteligente foi alterada recentemente. Verifique se ocorreram alterações como essa para a(s) conta(s) envolvida(s). Nesse caso, ele é provavelmente um positivo verdadeiro benigno e pode ser **Suprimido**.
-  b.    Verifique o recurso acessado por essas permissões. Se houver um recurso que todas elas estão acessando, valide-o e verifique se é um recurso válido que elas precisam acessar. Além disso, verifique se o recurso de destino dá suporte a métodos de criptografia forte. Você pode verificar isso no Active Directory verificando o atributo `msDS-SupportedEncryptionTypes`, da conta de serviço do recurso.
+Primeiro, verifique a descrição do alerta para ver quais dos três tipos de detecção acima você está lidando. Para obter mais informações, baixe a planilha do Excel.
+
+1. Skeleton Key – você pode verificar se a Skeleton Key afetou os controladores de domínio usando o [analisador gravado pela equipe do ATA](https://gallery.technet.microsoft.com/Aorato-Skeleton-Key-24e46b73). Se o analisador encontrar malware em 1 ou mais controladores de domínio, é um verdadeiro positivo.
+1. Bilhete dourado – na planilha do Excel, vá para a guia **atividade de rede** . Você verá que o campo de downgrade relevante é **solicitar tipo de criptografia de tíquete**e **tipos de criptografia com suporte do computador de origem** lista métodos de criptografia mais fortes.
+    1. Verifique o computador de origem e a conta, ou se houver vários computadores de origem e contas, verifique se eles têm algo em comum (por exemplo, toda a equipe de marketing usa um aplicativo específico que pode estar fazendo com que o alerta seja disparado). Há casos em que um aplicativo personalizado raramente usado faz autenticação usando uma codificação de criptografia inferior. Verifique se há algum desses aplicativos personalizados no computador de origem. Nesse caso, ele é provavelmente um positivo verdadeiro benigno e pode ser **Suprimido**.
+    1. Verifique o recurso acessado por esses tíquetes, se houver um recurso que todos estão acessando, valide-o, verifique se ele é um recurso válido que ele deveria acessar. Além disso, verifique se o recurso de destino dá suporte a métodos de criptografia forte. Você pode verificar isso no Active Directory verificando o atributo `msDS-SupportedEncryptionTypes`, da conta de serviço do recurso.
+1. Overpass-The-hash – na planilha do Excel, vá para a guia **atividade de rede** . Você verá que o campo downgrade relevante é o **tipo de criptografia de carimbo de data/hora criptografado** e os tipos de **criptografia com suporte do computador de origem** contêm métodos de criptografia mais fortes
+    1. há casos em que esse alerta pode ser disparado quando os usuários fazem logon usando cartões inteligentes se a configuração do cartão inteligente foi alterada recentemente. Verifique se ocorreram alterações como essa para a(s) conta(s) envolvida(s). Nesse caso, ele é provavelmente um positivo verdadeiro benigno e pode ser **Suprimido**.
+    1. Verifique o recurso acessado por esses tíquetes, se houver um recurso que todos estão acessando, valide-o, verifique se ele é um recurso válido que ele deveria acessar. Além disso, verifique se o recurso de destino dá suporte a métodos de criptografia forte. Você pode verificar isso no Active Directory verificando o atributo `msDS-SupportedEncryptionTypes`, da conta de serviço do recurso.
 
 **Remediação**
 
-1.  Skeleton Key – Remova malware. Para saber mais, veja [Análise do malware Skeleton Key](https://www.virusbulletin.com/virusbulletin/2016/01/paper-digital-bian-lian-face-changing-skeleton-key-malware).
+1. Skeleton Key – Remova malware. Para saber mais, veja [Análise do malware Skeleton Key](https://www.virusbulletin.com/virusbulletin/2016/01/paper-digital-bian-lian-face-changing-skeleton-key-malware).
 
-2.  Golden Ticket – Siga as instruções das atividades suspeitas do [Golden Ticket](#golden-ticket).   
-    Além disso, como criar um Golden Ticket requer direitos de administrador de domínio, implemente as  [recomendações de Passagem de hash](https://www.microsoft.com/download/details.aspx?id=36036).
+1. Golden Ticket – Siga as instruções das atividades suspeitas do [Golden Ticket](#golden-ticket).
+    Além disso, como criar um tíquete de ouro requer direitos de administrador de domínio, implemente [Passar as recomendações de hash](https://www.microsoft.com/download/details.aspx?id=36036).
 
-3.  Overpass-the-Hash – Se a conta envolvida não for confidencial, então, redefina a senha dessa conta. Isso impede que o invasor crie novos tíquetes Kerberos do hash de senha, embora os tíquetes existentes ainda possam ser usados até expirarem. Se for uma conta confidencial, você deverá considerar redefinir a conta KRBTGT duas vezes como na atividade suspeita do Golden Ticket. Redefinir o KRBTGT duas vezes invalida todos os tíquetes Kerberos nesse domínio, portanto, planeje antes de fazer isso. Consulte as diretrizes em [Scripts de redefinição de senha da conta KRBTGT disponíveis agora para os clientes](https://blogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/). Consulte também como usar a  [ferramenta Redefinir as chaves/senha da conta KRBTGT](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51). Como essa é uma técnica de movimentação lateral, siga as práticas recomendadas das [recomendações de Passagem de hash](https://www.microsoft.com/download/details.aspx?id=36036).
+1. Overpass-the-Hash – Se a conta envolvida não for confidencial, então, redefina a senha dessa conta. Isso impede que o invasor crie novos tíquetes Kerberos do hash de senha, embora os tíquetes existentes ainda possam ser usados até expirarem. Se for uma conta confidencial, você deve considerar redefinir a conta KRBTGT duas vezes como na atividade suspeita de tíquete dourado. Redefinir o KRBTGT duas vezes invalida todos os tíquetes Kerberos nesse domínio, portanto, planeje antes de fazer isso. Consulte as diretrizes em [Scripts de redefinição de senha da conta KRBTGT disponíveis agora para os clientes](https://blogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/). Consulte também usando a [redefinir as senhas/chaves da conta KRBTGT
 
+    ferramenta] ( https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51) . Como essa é uma técnica de movimentação lateral, siga as práticas recomendadas das [recomendações de Passagem de hash](https://www.microsoft.com/download/details.aspx?id=36036).
 
 ## <a name="honeytoken-activity"></a>Atividade de Honeytoken
-
 
 **Descrição**
 
@@ -149,13 +145,13 @@ Para obter mais informações sobre contas do honey token, confira [Instalar o A
 
 **Investigação**
 
-1.  Verifique se o proprietário do computador de origem usou a conta Honeytoken para autenticar, usando o método descrito na página de atividades suspeitas (por exemplo, Kerberos, LDAP, NTLM).
+1. Verifique se o proprietário do computador de origem usou a conta Honeytoken para autenticar, usando o método descrito na página de atividades suspeitas (por exemplo, Kerberos, LDAP, NTLM).
 
-2.  Navegue até as páginas de perfil de computador(es) de origem e verifique quais outras contas se autenticaram por meio delas. Verifique com os proprietários dessas contas se eles usaram a conta Honeytoken.
+1. Navegue até as páginas de perfil de computador(es) de origem e verifique quais outras contas se autenticaram por meio delas. Verifique com os proprietários dessas contas se eles usaram a conta Honeytoken.
 
-3.  Isso pode ser um logon não interativo, portanto, certifique-se de verificar se há aplicativos ou scripts que são executados no computador de origem.
+1. Isso pode ser um logon não interativo, portanto, certifique-se de verificar se há aplicativos ou scripts que são executados no computador de origem.
 
-Se, depois de executar as etapas 1 a 3, não houver nenhuma evidência de uso benigno, suponha que isso é mal-intencionado.
+Se depois de executar as etapas 1 a 3, se não houver evidência de uso benigno, suponha que isso seja mal-intencionado.
 
 **Remediação**
 
@@ -165,7 +161,7 @@ Certifique-se de que as contas Honeytoken sejam usadas apenas para sua finalidad
 
 **Descrição**
 
-Passagem de Hash é uma técnica de movimento lateral em que os invasores roubam o hash NTLM de um usuário de um computador e o usa para acessar outro computador. 
+Pass-the-Hash é uma técnica de movimento lateral em que os invasores roubam o hash NTLM de um usuário de um computador e o usam para acessar outro computador.
 
 **Investigação**
 
@@ -173,9 +169,9 @@ O hash utilizado era de um computador de propriedade ou usado regularmente pelo 
 
 **Remediação**
 
-1. Se a conta envolvida não for confidencial, redefina a senha dessa conta. Redefinir a senha impede que o invasor crie novos tíquetes Kerberos de hash de senha. Os tíquetes existentes ainda podem ser usados até expirarem. 
+1. Se a conta envolvida não for confidencial, redefina a senha dessa conta. Redefinir a senha impede que o invasor crie novos tíquetes Kerberos de hash de senha. Os tíquetes existentes ainda podem ser usados até expirarem.
 
-2. Se a conta envolvida for confidencial, considere redefinir a conta KRBTGT duas vezes, como na atividade suspeita do Golden Ticket. Redefinir o KRBTGT duas vezes invalida todos os tíquetes de Kerberos do domínio, portanto, planeje de acordo com o impacto antes de fazer isso. Confira as diretrizes em [Scripts de redefinição de senha da conta KRBTGT disponíveis agora para clientes](https://blogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/), veja também como usar a [ferramenta Redefinir chaves/senha da conta KRBTGT](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51). Como essa é normalmente uma técnica de movimentação lateral, siga as práticas recomendadas das [recomendações de Passagem de hash](https://www.microsoft.com/download/details.aspx?id=36036).
+1. Se a conta envolvida for confidencial, considere redefinir a conta KRBTGT duas vezes, como na atividade suspeita do Golden Ticket. Redefinir o KRBTGT duas vezes invalida todos os tíquetes de Kerberos do domínio, portanto, planeje de acordo com o impacto antes de fazer isso. Confira as diretrizes em [Scripts de redefinição de senha da conta KRBTGT disponíveis agora para clientes](https://blogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/), confira também como usar a [ferramenta Redefinir chaves/senha da conta KRBTGT](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51). Como essa é normalmente uma técnica de movimentação lateral, siga as práticas recomendadas das [recomendações de Passagem de hash](https://www.microsoft.com/download/details.aspx?id=36036).
 
 ## <a name="identity-theft-using-pass-the-ticket-attack"></a>Roubo de identidade usando o ataque Pass-the-Ticket
 
@@ -187,35 +183,34 @@ Pass-the-Ticket é uma técnica de movimento lateral em que os invasores roubam 
 
 1. Clique no botão **Baixar detalhes** para exibir a lista completa de endereços IP envolvidos. O endereço IP de um ou ambos os computadores faz parte de uma sub-rede alocada de um pool de DHCP subdimensionado, por exemplo, Wi-Fi ou VPN? O endereço IP é compartilhado? Por exemplo, por um dispositivo NAT? Se a resposta para qualquer uma dessas perguntas for sim, o alerta será um falso positivo.
 
-2. Há um aplicativo personalizado que encaminha os tíquetes em nome dos usuários? Nesse caso, é um positivo verdadeiro benigno.
+1. Há um aplicativo personalizado que encaminha os tíquetes em nome dos usuários? Nesse caso, é um positivo verdadeiro benigno.
 
 **Remediação**
 
-1. Se a conta envolvida não for confidencial, então, redefina a senha dessa conta. Reenviar a senha impede que o invasor crie novos tíquetes Kerberos de hash de senha. Todos os tíquetes existentes permanecem utilizáveis até que expirem.  
+1. Se a conta envolvida não for confidencial, então, redefina a senha dessa conta. Reenviar a senha impede que o invasor crie novos tíquetes Kerberos de hash de senha. Todos os tíquetes existentes permanecem utilizáveis até que expirem.
 
-2. Se for uma conta confidencial, você deverá considerar redefinir a conta KRBTGT duas vezes como na atividade suspeita do Golden Ticket. Redefinir o KRBTGT duas vezes invalida todos os tíquetes Kerberos nesse domínio, portanto, planeje antes de fazer isso. Consulte as diretrizes em [Scripts de redefinição de senha da conta KRBTGT disponíveis agora para clientes](https://blogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/), consulte também como usar a  [ferramenta Redefinir chaves/senha da conta KRBTGT](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51).  Como essa é uma técnica de movimentação lateral, siga as práticas recomendadas nas [recomendações de Passagem de hash](https://www.microsoft.com/download/details.aspx?id=36036).
+1. Se for uma conta confidencial, você deve considerar redefinir a conta KRBTGT duas vezes como na atividade suspeita de tíquete dourado. Redefinir o KRBTGT duas vezes invalida todos os tíquetes Kerberos nesse domínio, portanto, planeje antes de fazer isso. Consulte as diretrizes em [Scripts de redefinição de senha da conta KRBTGT disponíveis agora para clientes](https://blogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/), consulte também como usar a [ferramenta Redefinir chaves/senha da conta KRBTGT](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51).  Como essa é uma técnica de movimentação lateral, siga as práticas recomendadas nas [recomendações de Passagem de hash](https://www.microsoft.com/download/details.aspx?id=36036).
 
 ## <a name="kerberos-golden-ticket-activity"></a>Atividade Golden Ticket do Kerberos<a name="golden-ticket"></a>
 
 **Descrição**
 
-Os invasores com direitos de administrador de domínio podem comprometer sua [conta KRBTGT](https://technet.microsoft.com/library/dn745899(v=ws.11).aspx#Sec_KRBTGT). Os invasores podem usar a conta KRBTGT para criar um Tíquete de Concessão de Tíquete Kerberos (TGT) fornecendo autorização para qualquer recurso. A expiração do tíquete pode ser definida para qualquer horário arbitrário. Esse TGT falso é chamado de "Golden Ticket" e permite que os invasores obtenham e mantenham a persistência na sua rede.
+Os invasores com direitos de administrador de domínio podem comprometer sua [conta KRBTGT](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn745899(v=ws.11)#Sec_KRBTGT). Os invasores podem usar a conta KRBTGT para criar um Tíquete de Concessão de Tíquete Kerberos (TGT) fornecendo autorização para qualquer recurso. A expiração do tíquete pode ser definida para qualquer horário arbitrário. Esse TGT falso é chamado de "Golden Ticket" e permite que os invasores obtenham e mantenham a persistência na sua rede.
 
-Nessa detecção, um alerta é acionado quando um tíquete de concessão de tíquete Kerberos (TGT) for usado por mais tempo do que o permitido conforme especificado na política de segurança [Tempo de vida máximo para tíquete de usuário](https://technet.microsoft.com/library/jj852169(v=ws.11).aspx).
+Nessa detecção, um alerta é acionado quando um tíquete de concessão de tíquete Kerberos (TGT) for usado por mais tempo do que o permitido conforme especificado na política de segurança [Tempo de vida máximo para tíquete de usuário](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj852169(v=ws.11)).
 
 **Investigação**
 
 1. Houve alguma alteração recente (dentro das últimas horas) feita no **tempo de vida máximo para a configuração de tíquete de usuário** na diretiva de grupo? Em caso afirmativo, **feche** o alerta (ele era um falso positivo).
 
-2. O Gateway do ATA envolvido nesse alerta é uma máquina virtual? Se Sim, ele retomou recentemente de um estado salvo? Em caso afirmativo, **feche** este alerta.
+1. O Gateway do ATA envolvido nesse alerta é uma máquina virtual? Se Sim, ele retomou recentemente de um estado salvo? Em caso afirmativo, **feche** este alerta.
 
-3. Se a resposta para as perguntas acima for não, suponha que ele seja mal-intencionado.
+1. Se a resposta para as perguntas acima for não, suponha que ele seja mal-intencionado.
 
 **Remediação**
 
-Altere o Tíquete de concessão de tíquete Kerberos (KRBTGT) duas vezes de acordo com as diretrizes em [Scripts de redefinição de senha da conta KRBTGT disponíveis agora para clientes](https://blogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/) usando a [ferramenta Redefinir chaves/senha da conta KRBTGT](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51). Redefinir o KRBTGT duas vezes invalida todos os tíquetes Kerberos nesse domínio, portanto, planeje antes de fazer isso.  
-Além disso, como criar um Golden Ticket requer direitos de administrador de domínio, implemente as  [recomendações de Passagem de hash](https://www.microsoft.com/download/details.aspx?id=36036).
-
+Altere o Tíquete de concessão de tíquete Kerberos (KRBTGT) duas vezes de acordo com as diretrizes em [Scripts de redefinição de senha da conta KRBTGT disponíveis agora para clientes](https://blogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/) usando a [ferramenta Redefinir chaves/senha da conta KRBTGT](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51). Redefinir o KRBTGT duas vezes invalida todos os tíquetes Kerberos nesse domínio, portanto, planeje antes de fazer isso.
+Além disso, como criar um tíquete de ouro requer direitos de administrador de domínio, implemente [Passar as recomendações de hash](https://www.microsoft.com/download/details.aspx?id=36036).
 
 ## <a name="malicious-data-protection-private-information-request"></a>Solicitação mal-intencionada de informações privadas para proteção de dados
 
@@ -228,16 +223,15 @@ Nessa detecção, um alerta é acionado quando o DPAPI é usado para recuperar a
 
 1. O computador de origem está executando uma verificação de segurança avançada aprovada pela organização em relação ao Active Directory?
 
-2. Em caso positivo e se ele sempre tiver de fazer isso, **Feche e exclua** a atividade suspeita.
+1. Em caso positivo e se ele sempre tiver de fazer isso, **Feche e exclua** a atividade suspeita.
 
-3. Em caso positivo e se ele não tiver de fazer isso, **Feche a atividade suspeita.
+1. Em caso positivo e se ele não tiver de fazer isso, **Feche a atividade suspeita.
 
 **Remediação**
 
-Para usar DPAPI, um invasor precisa de direitos de administrador de domínio. Implemente as  [recomendações de Passagem de hash](https://www.microsoft.com/download/details.aspx?id=36036).
+Para usar DPAPI, um invasor precisa de direitos de administrador de domínio. Implemente as [recomendações de Pass the hash](https://www.microsoft.com/download/details.aspx?id=36036).
 
 ## <a name="malicious-replication-of-directory-services"></a>Replicação mal-intencionada de serviços de diretório
-
 
 **Descrição**
 
@@ -247,30 +241,29 @@ Nessa detecção, um alerta é disparado quando uma solicitação de replicaçã
 
 **Investigação**
 
-1.  O computador em questão é um controlador de domínio? Por exemplo, um controlador de domínio recém-promovido que teve problemas de replicação. Em caso afirmativo, **Fechar** a atividade suspeita. 
-2.  O computador em questão deveria estar replicando dados do Active Directory? Por exemplo, o Azure AD Connect. Se sim, **Feche e exclua** a atividade suspeita.
-3.  Clique no computador de origem ou na conta para acessar a página de perfil. Verifique o que aconteceu no momento da replicação, pesquisando atividades incomuns, como: quem estava conectado e quais recursos foram acessados. 
-
+1. O computador em questão é um controlador de domínio? Por exemplo, um controlador de domínio recém-promovido que teve problemas de replicação. Em caso afirmativo, **Fechar** a atividade suspeita.
+1. O computador em questão deveria estar replicando dados do Active Directory? Por exemplo, o Azure AD Connect. Se sim, **Feche e exclua** a atividade suspeita.
+1. Clique no computador de origem ou na conta para acessar a página de perfil. Verifique o que aconteceu no momento da replicação, pesquisando atividades incomuns, como: quem estava conectado e quais recursos foram acessados.
 
 **Remediação**
 
-Valide as seguintes permissões: 
+Valide as seguintes permissões:
 
-- Replicar alterações de diretório   
+- Replicar alterações de diretório
 
-- Replicar todas as alterações de diretório  
+- Replicar todas as alterações de diretório
 
-Para obter mais informações, veja  [Conceder permissões do Active Directory Domain Services para sincronização de perfil no SharePoint Server 2013](https://technet.microsoft.com/library/hh296982.aspx).
-Você pode aproveitar o [scanner de ACL](https://blogs.technet.microsoft.com/pfesweplat/2013/05/13/take-control-over-ad-permissions-and-the-ad-acl-scanner-tool/)   do AD ou criar um script do Windows PowerShell para determinar quem no domínio tem essas permissões.
+Para obter mais informações, consulte [Conceder permissões do Active Directory Domain Services para sincronização de perfil no SharePoint Server 2013](/SharePoint/administration/user-profile-service-administration).
+Você pode utilizar o [Scanner ACL do AD](/archive/blogs/pfesweplat/take-control-over-ad-permissions-and-the-ad-acl-scanner-tool) ou criar um script do Windows PowerShell para determinar quem no domínio tem essas permissões.
 
 ## <a name="massive-object-deletion"></a>Exclusão de objeto grande
 
 **Descrição**
 
-Em alguns cenários, os invasores executam ataques de negação de serviço (DoS) em vez de apenas roubar informações. Excluir um grande número de contas é um método de tentativa de ataque DoS. 
+Em alguns cenários, os invasores executam ataques de negação de serviço (DoS) em vez de apenas roubar informações. Excluir um grande número de contas é um método de tentativa de ataque DoS.
 
-Nessa detecção, um alerta é disparado a qualquer momento em que mais de 5% de todas as contas for excluído. A detecção requer o acesso de leitura ao contêiner do objeto excluído.  
-Para obter informações sobre como configurar permissões de somente leitura no contêiner Objetos excluídos, confira a seção **Alterar permissões em um contêiner de objetos excluídos** no tópico [Exibir ou definir permissões em um objeto de diretório](https://technet.microsoft.com/library/cc816824%28v=ws.10%29.aspx).
+Nessa detecção, um alerta é disparado a qualquer momento em que mais de 5% de todas as contas for excluído. A detecção requer o acesso de leitura ao contêiner do objeto excluído.
+Para obter informações sobre como configurar permissões de somente leitura no contêiner Objetos excluídos, confira a seção **Alterar permissões em um contêiner de objetos excluídos** no tópico [Exibir ou definir permissões em um objeto de diretório](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc816824(v=ws.10)).
 
 **Investigação**
 
@@ -278,7 +271,7 @@ Examine a lista de contas excluídas e determine se há um padrão ou um motivo 
 
 **Remediação**
 
-Remova as permissões para usuários que podem excluir contas no Active Directory. Para obter mais informações, consulte [Exibir ou definir permissões em um objeto de diretório](https://technet.microsoft.com/library/cc816824%28v=ws.10%29.aspx).
+Remova as permissões para usuários que podem excluir contas no Active Directory. Para obter mais informações, consulte [Exibir ou definir permissões em um objeto de diretório](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc816824(v=ws.10)).
 
 ## <a name="privilege-escalation-using-forged-authorization-data"></a>Elevação de privilégios usando dados de autorização forjados
 
@@ -290,43 +283,43 @@ Vulnerabilidades conhecidas em versões mais antigas do Windows Server permitem 
 
 1. Clique no alerta para acessar a página de detalhes.
 
-2. O computador de destino (sob a coluna **ACESSADO**) tem patch MS14-068 (controlador de domínio) ou MS11-013 (servidor)? Se sim, **Feche** a atividade suspeita (é um falso positivo).
+1. O computador de destino (sob a coluna **ACESSADO**) tem patch MS14-068 (controlador de domínio) ou MS11-013 (servidor)? Se sim, **Feche** a atividade suspeita (é um falso positivo).
 
-3. Se o computador de destino não for corrigido, o computador de origem executa um sistema operacional/aplicativo (na coluna **DE**) conhecido para modificar o PAC? Em caso afirmativo, **Suprima** a atividade suspeita (é um positivo verdadeiro benigno).
+1. Se o computador de destino não for corrigido, o computador de origem executa um sistema operacional/aplicativo (na coluna **DE**) conhecido para modificar o PAC? Em caso afirmativo, **Suprima** a atividade suspeita (é um positivo verdadeiro benigno).
 
-4. Se a resposta às duas perguntas anteriores for não, assuma que essa atividade é mal-intencionada.
+1. Se a resposta às duas perguntas anteriores for não, assuma que essa atividade é mal-intencionada.
 
 **Remediação**
 
-Verifique se todos os controladores de domínio com sistemas operacionais até o Windows Server 2012 R2 estão instalados com o [KB3011780](https://support.microsoft.com/help/2496930/ms11-013-vulnerabilities-in-kerberos-could-allow-elevation-of-privilege)   e todos os servidores membros e controladores de domínio até 2012 R2 estão atualizados com KB2496930. Para obter mais informações, consulte [PAC prata](https://technet.microsoft.com/library/security/ms11-013.aspx)   e [PAC forjado](https://technet.microsoft.com/library/security/ms14-068.aspx).
+Verifique se todos os controladores de domínio com sistemas operacionais até o Windows Server 2012 R2 estão instalados com o [KB3011780](https://support.microsoft.com/help/2496930/ms11-013-vulnerabilities-in-kerberos-could-allow-elevation-of-privilege) e todos os servidores membros e controladores de domínio até 2012 R2 estão atualizados com KB2496930. Para obter mais informações, consulte [PAC Prata](/security-updates/SecurityBulletins/2011/ms11-013) e [PAC Forjado](/security-updates/SecurityBulletins/2014/ms14-068).
 
 ## <a name="reconnaissance-using-account-enumeration"></a>Reconhecimento de enumeração de conta
 
 **Descrição**
 
-No reconhecimento de enumeração de conta, um invasor usa um dicionário com milhares de nomes de usuário ou ferramentas como KrbGuess para tentar adivinhar nomes de usuário em seu domínio. O invasor faz solicitações Kerberos usando esses nomes para tentar localizar um nome de usuário válido no domínio. Se uma estimativa com êxito determinar um nome de usuário, o invasor obterá o erro de Kerberos **Pré-autenticação necessária** em vez de **Entidade de segurança desconhecida**. 
+No reconhecimento de enumeração de conta, um invasor usa um dicionário com milhares de nomes de usuário ou ferramentas como KrbGuess para tentar adivinhar nomes de usuário em seu domínio. O invasor faz solicitações Kerberos usando esses nomes para tentar localizar um nome de usuário válido no domínio. Se uma estimativa com êxito determinar um nome de usuário, o invasor obterá o erro de Kerberos **Pré-autenticação necessária** em vez de **Entidade de segurança desconhecida**.
 
-Nesta detecção, o ATA pode detectar de onde veio o ataque, o número total de tentativas de previsão e quantas foram correspondidos. Se houver muitos usuários desconhecidos, o ATA detectará como uma atividade suspeita. 
+Nesta detecção, o ATA pode detectar de onde veio o ataque, o número total de tentativas de previsão e quantas foram correspondidos. Se houver muitos usuários desconhecidos, o ATA detectará como uma atividade suspeita.
 
 **Investigação**
 
-1. Clique no alerta para ver sua página de detalhes. 
+1. Clique no alerta para ver sua página de detalhes.
 
-2. Este computador host deve consultar o controlador de domínio quanto à existência de contas (por exemplo, os servidores Exchange)? <br></br>
-Há um script ou aplicativo em execução no host que pode gerar esse comportamento? <br></br>
-Se a resposta para qualquer uma dessas perguntas for sim, **feche** as atividades suspeitas (é um positivo verdadeiro benigno) e exclua o host da atividade suspeita.
+    1. Este computador host deve consultar o controlador de domínio quanto à existência de contas (por exemplo, os servidores Exchange)?
 
-3. Baixe os detalhes do alerta em uma planilha do Excel para convenientemente ver a lista de tentativas de conta, dividido em contas existentes e não existentes. Se você observar a folha de contas não existentes na planilha e as contas parecerem familiares, elas poderão ser contas desabilitadas ou funcionários que saíram da empresa. Nesse caso, é improvável que a tentativa é proveniente de um dicionário. Provavelmente, é um aplicativo ou um script que está verificando quais contas que ainda existem no Active Directory, significando que é um positivo verdadeiro benigno.
+1. Há um script ou aplicativo em execução no host que pode gerar esse comportamento?
 
-3. Se os nomes forem muito desconhecidos, alguma das tentativas de estimativa corresponderá aos nomes de conta existentes no Active Directory? Se não houver nenhuma correspondência, a tentativa foi inútil, mas você deve prestar atenção ao alerta para ver se ele é atualizado ao longo do tempo.
+    Se a resposta para qualquer uma dessas perguntas for sim, **feche** as atividades suspeitas (é um positivo verdadeiro benigno) e exclua o host da atividade suspeita.
 
-4. Se qualquer uma das tentativas de suposição corresponder nomes de contas existentes, o invasor sabe da existência de contas em seu ambiente e pode tentar usar força bruta para acessar seu domínio usando os nomes de usuário descobertos. Verifique os nomes de conta que foram adivinhados para ver se há atividades suspeitas adicionais. Verifique se todas as contas correspondentes são contas confidenciais.
+1. Baixe os detalhes do alerta em uma planilha do Excel para convenientemente ver a lista de tentativas de conta, dividido em contas existentes e não existentes. Se você observar a folha de contas não existentes na planilha e as contas parecerem familiares, elas poderão ser contas desabilitadas ou funcionários que saíram da empresa. Nesse caso, é improvável que a tentativa é proveniente de um dicionário. Provavelmente, é um aplicativo ou um script que está verificando quais contas que ainda existem no Active Directory, significando que é um positivo verdadeiro benigno.
 
+1. Se os nomes forem muito desconhecidos, alguma das tentativas de estimativa corresponderá aos nomes de conta existentes no Active Directory? Se não houver nenhuma correspondência, a tentativa foi inútil, mas você deve prestar atenção ao alerta para ver se ele é atualizado ao longo do tempo.
+
+1. Se qualquer uma das tentativas de suposição corresponder nomes de contas existentes, o invasor sabe da existência de contas em seu ambiente e pode tentar usar força bruta para acessar seu domínio usando os nomes de usuário descobertos. Verifique os nomes de conta que foram adivinhados para ver se há atividades suspeitas adicionais. Verifique se todas as contas correspondentes são contas confidenciais.
 
 **Remediação**
 
-[Senhas complexas e longas](https://docs.microsoft.com/windows/device-security/security-policy-settings/password-policy) fornecem o primeiro nível necessário de segurança contra ataques de força bruta.
-
+[Senhas complexas e longas](/windows/device-security/security-policy-settings/password-policy) fornecem o primeiro nível necessário de segurança contra ataques de força bruta.
 
 ## <a name="reconnaissance-using-directory-services-queries"></a>Reconhecimento usando consultas de serviços de diretório
 
@@ -340,13 +333,13 @@ Nessa detecção, nenhum alerta será disparado no primeiro mês após a implant
 
 1. Clique no alerta para ver sua página de detalhes. Verifique quais consultas foram executadas (por exemplo, administradores corporativos ou administrador) e se elas foram bem-sucedidas.
 
-2. Essas consultas devem ser feitas do computador de origem em questão?
+1. Essas consultas devem ser feitas do computador de origem em questão?
 
-3. Se sim e se o alerta for atualizado, **Suprima** a atividade suspeita.
+1. Se sim e se o alerta for atualizado, **Suprima** a atividade suspeita.
 
-4. Se sim e se não precisar fazer mais isso, **Feche** a atividade suspeita.
+1. Se sim e se não precisar fazer mais isso, **Feche** a atividade suspeita.
 
-5. Se não houver informações sobre a conta envolvida: essas consultas devem ser feitas por essa conta ou essa conta normalmente faz logon no computador de origem?
+1. Se houver informações sobre a conta envolvida: essas consultas devem ser feitas por essa conta ou essa conta normalmente faz logon no computador de origem?
 
    - Se sim e se o alerta for atualizado, **Suprima** a atividade suspeita.
 
@@ -354,14 +347,14 @@ Nessa detecção, nenhum alerta será disparado no primeiro mês após a implant
 
    - Se a resposta para todas as perguntas acima for não, suponha que ele seja mal-intencionado.
 
-6. Se não houver informações sobre a conta envolvida, você poderá ir até o ponto de extremidade e verificar qual conta estava conectada no momento do alerta.
+1. Se não houver informações sobre a conta envolvida, você poderá ir até o ponto de extremidade e verificar qual conta estava conectada no momento do alerta.
 
 **Remediação**
 
 Use a [ferramenta SAMRi10](https://gallery.technet.microsoft.com/SAMRi10-Hardening-Remote-48d94b5b) para proteger seu ambiente contra essa técnica.
 Se a ferramenta não for aplicável ao seu controlador de domínio:
-1. O computador está executando uma ferramenta de verificação de vulnerabilidade?  
-2. Investigue se os usuários e grupos específicos consultados no ataque são contas com privilégios ou de alto valor (ou seja, CEO, CFO, gerenciamento de TI, etc.).  Nesse caso, examine outras atividades no ponto de extremidade e monitore os computadores em que as contas consultadas são registradas, como eles são provavelmente destinos para a movimentação lateral.
+1. O computador está executando uma ferramenta de verificação de vulnerabilidade?
+1. Investigue se os usuários e grupos específicos consultados no ataque são contas com privilégios ou de alto valor (ou seja, CEO, CFO, gerenciamento de TI, etc.).  Nesse caso, examine outras atividades no ponto de extremidade e monitore os computadores em que as contas consultadas são registradas, como eles são provavelmente destinos para a movimentação lateral.
 
 ## <a name="reconnaissance-using-dns"></a>Reconhecimento usando DNS
 
@@ -374,17 +367,15 @@ Há vários tipos de consulta no protocolo DNS. O ATA detecta a solicitação AX
 **Investigação**
 
 1. O computador de origem (**Proveniente de... **) é um servidor DNS? Se sim, então, provavelmente é um falso positivo. Para validar, clique no alerta para ver sua página de detalhes. Na tabela, em **Consulta**, verifique quais domínios foram consultados. Esses domínios são existentes? Se sim, então, **Feche** a atividade suspeita (é um falso positivo). Além disso, certifique-se de que a porta 53 do UDP esteja aberta entre o Gateway do ATA e o computador de origem para evitar futuros falsos positivos.
-2.  O computador de origem está executando um verificador de segurança? Em caso afirmativo, **exclua** as entidades no ATA, seja diretamente com **fechar e excluir** ou por meio da página de **exclusão** (em **configuração** – disponível para administradores do ATA).
-3.  Se a resposta a todas as perguntas anteriores for não, continue investigando, concentrando-se no computador de origem. Clique no computador de origem para acessar a página de perfil. Verifique o que aconteceu no momento da solicitação, pesquisando atividades incomuns, como: quem estava conectado e quais recursos foram acessados.
-
+1. O computador de origem está executando um verificador de segurança? Em caso afirmativo, **exclua** as entidades no ATA, seja diretamente com **fechar e excluir** ou por meio da página de **exclusão** (em **configuração** – disponível para administradores do ATA).
+1. Se a resposta a todas as perguntas anteriores for não, continue investigando, concentrando-se no computador de origem. Clique no computador de origem para acessar a página de perfil. Verifique o que aconteceu no momento da solicitação, pesquisando atividades incomuns, como: quem estava conectado e quais recursos foram acessados.
 
 **Remediação**
 
-A proteção de um servidor DNS interno para impedir que o reconhecimento usando DNS ocorra pode ser obtida desabilitando ou restringindo as transferências de zona apenas para endereços IP específicos. Para obter mais informações sobre como restringir transferências de zona, consulte [Restringir transferências de zona](https://technet.microsoft.com/library/ee649273(v=ws.10).aspx).
-A modificação de transferências de zona é uma tarefa entre uma lista de verificação que deve ser resolvida para  [proteger seus servidores DNS contra ataques internos e externos](https://technet.microsoft.com/library/cc770432(v=ws.11).aspx).
+A proteção de um servidor DNS interno para impedir que o reconhecimento usando DNS ocorra pode ser obtida desabilitando ou restringindo as transferências de zona apenas para endereços IP específicos. Para obter mais informações sobre como restringir transferências de zona, consulte [Restringir transferências de zona](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee649273(v=ws.10)).
+A modificação de transferências de zona é uma tarefa entre uma lista de verificação que deve ser resolvida para [proteger seus servidores DNS contra ataques internos e externos](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc770432(v=ws.11)).
 
 ## <a name="reconnaissance-using-smb-session-enumeration"></a>Reconhecimento usando a enumeração da sessão SMB
-
 
 **Descrição**
 
@@ -398,13 +389,13 @@ Nessa detecção, um alerta é acionado quando uma enumeração de sessão SMB �
 
    - Há algum tipo de verificador de segurança em execução no computador de origem? Se sim, **Feche e exclua** a atividade suspeita.
 
-2. Verifique quais usuários envolvidos realizaram a operação. Eles normalmente se registram no computador de origem ou eles são administradores que deveriam realizar essas ações?  
+1. Verifique quais usuários envolvidos realizaram a operação. Eles normalmente se registram no computador de origem ou eles são administradores que deveriam realizar essas ações?
 
-3. Se sim e se o alerta for atualizado, **Suprima** a atividade suspeita.  
+1. Se sim e se o alerta for atualizado, **Suprima** a atividade suspeita.
 
-4. Se sim e não deve ser atualizado, **Feche** a atividade suspeita.
+1. Se sim e não deve ser atualizado, **Feche** a atividade suspeita.
 
-5. Se a resposta para todas as perguntas acima for não, assuma que a atividade é mal-intencionada.
+1. Se a resposta para todas as perguntas acima for não, assuma que a atividade é mal-intencionada.
 
 **Remediação**
 
@@ -419,17 +410,16 @@ Os invasores que comprometem credenciais de administrador ou que usam uma explor
 **Investigação**
 
 1. Isso é comum para membros da equipe de TI, de estações de trabalho administrativas e contas de serviço que executam tarefas administrativas nos controladores de domínio. Se for esse o caso e se o alerta for atualizado porque o mesmo administrador ou computador está executando a tarefa, **Suprima** o alerta.
-2. O computador em questão tem permissão para realizar essa execução remota em seu controlador de domínio?
+1. O computador em questão tem permissão para realizar essa execução remota em seu controlador de domínio?
    - A conta em questão tem permissão para realizar essa execução remota em seu controlador de domínio?
    - Se a resposta a ambas as perguntas for sim, **feche** o alerta.
-3. Se a resposta a uma das perguntas for não, essa atividade deverá ser considerada um positivo verdadeiro. Tente localizar a origem da tentativa verificando perfis de computador e conta. Clique no computador de origem ou na conta para acessar a página de perfil. Verifique o que aconteceu no momento dessas tentativas, pesquisando atividades incomuns, como: quem estava conectado e quais recursos foram acessados.
-
+1. Se a resposta a uma das perguntas for não, essa atividade deverá ser considerada um positivo verdadeiro. Tente localizar a origem da tentativa verificando perfis de computador e conta. Clique no computador de origem ou na conta para acessar a página de perfil. Verifique o que aconteceu no momento dessas tentativas, pesquisando atividades incomuns, como: quem estava conectado e quais recursos foram acessados.
 
 **Remediação**
 
 1. Restrinja o acesso remoto aos controladores de domínio de computadores que não são da camada 0.
 
-2. Implemente o [acesso privilegiado](https://technet.microsoft.com/windows-server-docs/security/securing-privileged-access/securing-privileged-access)   para permitir que somente computadores protegidos se conectem a controladores de domínio para administradores.
+1. Implemente [acesso privilegiado](/windows-server/identity/securing-privileged-access/securing-privileged-access) para permitir que apenas computadores protegidos se conectem aos controladores de domínio para administração.
 
 ## <a name="sensitive-account-credentials-exposed--services-exposing-account-credentials"></a>Credenciais de contas confidenciais expostas e serviços que expõem credenciais da conta
 
@@ -438,13 +428,13 @@ Os invasores que comprometem credenciais de administrador ou que usam uma explor
 
 **Descrição**
 
-Alguns serviços enviam as credenciais de conta em texto sem formatação. Isso pode ocorrer até mesmo para contas confidenciais. Os invasores que monitoram o tráfego de rede podem capturar e reutilizar essas credenciais para fins mal-intencionados. Qualquer senha de texto não criptografada para uma conta confidencial dispara o alerta, enquanto para contas não confidenciais o alerta é disparado se cinco ou mais contas diferentes enviarem senhas em texto não criptografado no mesmo computador de origem. 
+Alguns serviços enviam as credenciais de conta em texto sem formatação. Isso pode ocorrer até mesmo para contas confidenciais. Os invasores que monitoram o tráfego de rede podem capturar e reutilizar essas credenciais para fins mal-intencionados. Qualquer senha de texto não criptografada para uma conta confidencial dispara o alerta, enquanto para contas não confidenciais o alerta é disparado se cinco ou mais contas diferentes enviarem senhas em texto não criptografado no mesmo computador de origem.
 
 **Investigação**
 
 Clique no alerta para ver sua página de detalhes. Veja quais contas foram expostas. Se houver muitas contas assim, clique em **Baixar detalhes** para exibir a lista em uma planilha do Excel.
 
-Geralmente, há um aplicativo herdado ou script nos computadores de origem que usa a associação simples LDAP.
+Geralmente, há um script ou aplicativo herdado nos computadores de origem que usa a associação simples LDAP.
 
 **Remediação**
 
@@ -460,20 +450,19 @@ Nesta detecção, um alerta é disparado quando ocorrem diversas falhas de auten
 
 **Investigação**
 
-1. Clique em **Baixar detalhes** para exibir as informações completas em uma planilha do Excel. Você pode obter as seguintes informações: 
+1. Clique em **Baixar detalhes** para exibir as informações completas em uma planilha do Excel. Você pode obter as seguintes informações:
    - Lista das contas atacadas
    - Lista de contas adivinhadas em que as tentativas de logon terminaram com a autenticação bem-sucedida
-   - Se as tentativas de autenticação tiverem sido realizadas usando NTLM, você verá as atividades de eventos relevantes 
+   - Se as tentativas de autenticação tiverem sido realizadas usando NTLM, você verá as atividades de eventos relevantes
    - Se as tentativas de autenticação tiverem sido realizadas usando Kerberos, você verá as atividades de rede relevantes
-2. Clique no computador de origem para acessar a página de perfil. Verifique o que aconteceu no momento dessas tentativas, pesquisando atividades incomuns, como: quem estava conectado e quais recursos foram acessados. 
-3. Se a autenticação tiver sido executada usando NTLM, você vir que o alerta ocorre muitas vezes e não houver informações suficientes disponíveis sobre o servidor que tentou acessar o computador de origem, você deverá habilitar a **Auditoria de NTLM** nos controladores de domínio envolvidos. Para fazer isso, ative o evento 8004. Esse é o evento de autenticação de NTLM que inclui informações sobre o computador de origem, a conta de usuário e o **servidor** que o computador de origem tentou acessar. Depois que souber qual servidor enviou a validação de autenticação, você deverá investigar o servidor, verificando seus eventos, como 4624, para compreender melhor o processo de autenticação. 
-
+1. Clique no computador de origem para acessar a página de perfil. Verifique o que aconteceu no momento dessas tentativas, pesquisando atividades incomuns, como: quem estava conectado e quais recursos foram acessados.
+1. Se a autenticação tiver sido executada usando NTLM, você vir que o alerta ocorre muitas vezes e não houver informações suficientes disponíveis sobre o servidor que tentou acessar o computador de origem, você deverá habilitar a **Auditoria de NTLM** nos controladores de domínio envolvidos. Para fazer isso, ative o evento 8004. Esse é o evento de autenticação de NTLM que inclui informações sobre o computador de origem, a conta de usuário e o **servidor** que o computador de origem tentou acessar. Depois que souber qual servidor enviou a validação de autenticação, você deverá investigar o servidor, verificando seus eventos, como 4624, para compreender melhor o processo de autenticação.
 
 **Remediação**
 
-[Senhas complexas e longas](https://docs.microsoft.com/windows/device-security/security-policy-settings/password-policy) fornecem o primeiro nível necessário de segurança contra ataques de força bruta.
+[Senhas complexas e longas](/windows/device-security/security-policy-settings/password-policy) fornecem o primeiro nível necessário de segurança contra ataques de força bruta.
 
-## <a name="suspicious-service-creation"></a>Criação de serviço suspeita<a name="suspicious-service-creation"></a>
+## <a name="suspicious-service-creation"></a>Criação de serviço suspeita <a name="suspicious-service-creation"></a>
 
 **Descrição**
 
@@ -483,38 +472,35 @@ Os invasores tentam executar serviços suspeitos em sua rede. O ATA emite um ale
 
 1. Se o computador em questão for uma estação de trabalho administrativa ou um computador no qual membros da equipe de TI e contas de serviço executam tarefas administrativas, este pode ser um falso positivo e talvez você precise **Suprimir** o alerta e adicioná-lo à lista de Exclusões, se necessário.
 
-2. O serviço é algo que você reconhece neste computador?
+1. O serviço é algo que você reconhece neste computador?
 
    - A **conta** em questão tem permissão para instalar esse serviço?
 
    - Se a resposta para ambas as perguntas for *sim*, **Feche** o alerta ou adicione-o à lista de Exclusões.
 
-3. Se a resposta a uma das perguntas for *não*, então, isso deverá ser considerado um positivo verdadeiro.
+1. Se a resposta a uma das perguntas for *não*, então, isso deverá ser considerado um positivo verdadeiro.
 
 **Remediação**
 
 - Implemente o acesso com menos privilégios em computadores de domínio para permitir que apenas usuários específicos tenham o direito de criar novos serviços.
 
-
 ## <a name="suspicion-of-identity-theft-based-on-abnormal-behavior"></a>Suspeita de roubo de identidade com base no comportamento anormal
 
 **Descrição**
 
-O ATA aprende o comportamento de entidade para usuários, computadores e recursos em um período de três semanas corridas. O modelo de comportamento é baseado nas seguintes atividades: os computadores nos quais as entidades se registram, os recursos para os quais a entidade solicitou acesso e a hora em que essas operações foram realizadas. O ATA envia um alerta quando houver um desvio do comportamento da entidade com base em algoritmos de aprendizado do computador. 
+O ATA aprende o comportamento de entidade para usuários, computadores e recursos em um período de três semanas corridas. O modelo de comportamento é baseado nas seguintes atividades: os computadores nos quais as entidades se registram, os recursos para os quais a entidade solicitou acesso e a hora em que essas operações foram realizadas. O ATA envia um alerta quando há um desvio do comportamento da entidade com base nos algoritmos de aprendizado de máquina.
 
 **Investigação**
 
 1. O usuário em questão deveria executar essas operações?
 
-2. Considere os seguintes casos como possíveis falsos positivos: um usuário que retornou de férias, a equipe de TI que realiza o acesso em excesso como parte de seu serviço (por exemplo um aumento no suporte de help desk em um determinado dia ou semana), aplicativos de área de trabalho remota. + Se você **Fechar e excluir** o alerta, o usuário não será mais parte da detecção
-
+1. Considere os seguintes casos como possíveis falsos positivos: um usuário que retornou de férias, a equipe de TI que realiza o acesso em excesso como parte de seu serviço (por exemplo um aumento no suporte de help desk em um determinado dia ou semana), aplicativos de área de trabalho remota. + Se você **Fechar e excluir** o alerta, o usuário não será mais parte da detecção
 
 **Remediação**
 
  Diferentes ações devem ser tomadas, dependendo do que causou esse comportamento anormal. Por exemplo, se a rede foi verificada, o computador de origem deve ser bloqueado da rede (a menos que seja aprovado).
 
 ## <a name="unusual-protocol-implementation"></a>Implementação de protocolo incomum
-
 
 **Descrição**
 
@@ -526,17 +512,17 @@ Identifique o protocolo que seja incomum – na linha do tempo de atividade susp
 
 - **Kerberos**: geralmente disparado se uma ferramenta de invasão como Mimikatz foi potencialmente usada no ataque de Overpass-the-Hash. Verifique se o computador de origem está executando um aplicativo que implementa a sua própria pilha de Kerberos, isto não está de acordo com o RFC Kerberos. Nesse caso, ele é um positivo verdadeiro benigno e o alerta pode ser **Fechado**. Se o alerta continuar sendo disparado e esse ainda for o caso, você poderá **Suprimir** o alerta.
 
-- **NTLM**: pode ser WannaCry ou ferramentas como Metasploit, Medusa e Hydra.  
+- **NTLM**: pode ser WannaCry ou ferramentas como Metasploit, Medusa e Hydra.
 
 Para determinar se esta atividade é um ataque WannaCry, realize as seguintes etapas:
 
 1. Verifique se o computador de origem está executando uma ferramenta de ataque como Metasploit, Medusa ou Hydra.
 
-2. Se nenhuma ferramenta de ataque for encontrada, verifique se o computador de origem está executando um aplicativo que implementa a sua própria pilha NTLM ou SMB.
+1. Se nenhuma ferramenta de ataque for encontrada, verifique se o computador de origem está executando um aplicativo que implementa a sua própria pilha NTLM ou SMB.
 
-3. Caso contrário, verifique se é causado pelo WannaCry executando um script de verificação de WannaCry, por exemplo [este analisador](https://github.com/apkjet/TrustlookWannaCryToolkit/tree/master/scanner) no computador de origem envolvido na atividade suspeita. Se o analisador descobrir que o computador está infectado ou vulnerável, aplique patches no computador, remova o malware e bloqueie-o da rede.
+1. Caso contrário, verifique se é causado pelo WannaCry executando um script de verificação de WannaCry, por exemplo [este analisador](https://github.com/apkjet/TrustlookWannaCryToolkit/tree/master/scanner) no computador de origem envolvido na atividade suspeita. Se o analisador descobrir que o computador está infectado ou vulnerável, aplique patches no computador, remova o malware e bloqueie-o da rede.
 
-4. Se o script não considerar que o computador está infectado ou vulnerável, então, ele ainda poderá estar infectado, mas o SMBv1 pode ter sido desabilitado ou o computador foi corrigido, o que afetaria a ferramenta de verificação.
+1. Se o script não considerar que o computador está infectado ou vulnerável, então, ele ainda poderá estar infectado, mas o SMBv1 pode ter sido desabilitado ou o computador foi corrigido, o que afetaria a ferramenta de verificação.
 
 **Remediação**
 
@@ -544,19 +530,19 @@ Aplique as correções mais recentes a todas as suas máquinas e verifique se to
 
 1. [Desabilitar SMBv1](https://blogs.technet.microsoft.com/filecab/2016/09/16/stop-using-smb1/)
 
-2. [Remover WannaCry](https://support.microsoft.com/help/890830/remove-specific-prevalent-malware-with-windows-malicious-software-remo)
+1. [Remover WannaCry](https://support.microsoft.com/help/890830/remove-specific-prevalent-malware-with-windows-malicious-software-remo)
 
-3.  Os dados no controle de alguns software de ransomware, às vezes, podem ser descriptografados. A descriptografia só é possível se o usuário não tiver reiniciado ou desligado o computador. Para obter mais informações, consulte [Ransomware Wanna Cry](https://answers.microsoft.com/en-us/windows/forum/windows_10-security/wanna-cry-ransomware/5afdb045-8f36-4f55-a992-53398d21ed07?auth=1)
-
+1. Os dados no controle de alguns software de ransomware, às vezes, podem ser descriptografados. A descriptografia só é possível se o usuário não tiver reiniciado ou desligado o computador. Para obter mais informações, consulte [Ransomware Wanna Cry](https://answers.microsoft.com/en-us/windows/forum/windows_10-security/wanna-cry-ransomware/5afdb045-8f36-4f55-a992-53398d21ed07?auth=1)
 
 >[!NOTE]
 > Para desabilitar um alerta de atividade suspeita, contate o suporte.
 
 ## <a name="related-videos"></a>Vídeos Relacionados
+
 - [Participar da comunidade de segurança](https://channel9.msdn.com/Shows/Microsoft-Security/Join-the-Security-Community)
 
-
 ## <a name="see-also"></a>Consulte Também
+
 - [Manual da atividade suspeita do ATA](https://aka.ms/ataplaybook)
 - [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Trabalhando com atividades suspeitas](working-with-suspicious-activities.md)

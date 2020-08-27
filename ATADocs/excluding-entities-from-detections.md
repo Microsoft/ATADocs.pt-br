@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 344c0f33-45e1-42e2-a051-f722a4504531
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 84e4b6e5951bf16281c60c87e46ce1a799795c55
-ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
+ms.openlocfilehash: b5e80251fb4ffc4347671b573eb5435c09517e71
+ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84775328"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88954622"
 ---
 # <a name="excluding-entities-from-detections"></a>Excluindo entidades de detecções
 
@@ -33,11 +33,11 @@ Há duas maneiras em que você pode excluir entidades, na atividade suspeita em 
 
 - **Na atividade suspeita**: na linha do tempo de atividade suspeita, quando você receber um alerta em uma atividade para um usuário ou computador ou endereço IP que tem permissão para executar uma atividade específica e pode realizá-lo com frequência, clique com botão direito do mouse nos três pontos no final da linha da atividade suspeita nessa entidade e selecione **Fechar e excluir**. <br></br>Isso adiciona o usuário, computador ou endereço IP à lista de exclusões da atividade suspeita. Ele fecha a atividade suspeita e não está mais listado na lista **abrir** eventos na **linha do tempo de atividade suspeita**.
 
-    ![Excluir entidades](./media/exclude-in-sa.png)
+    ![Excluir entidades](media/exclude-in-sa.png)
 
 - **Na página Configuração**: para examinar ou modificar qualquer exclusão: em **Configuração** clique em **Exclusões** e, em seguida, selecione a atividade suspeita, como **Credenciais de conta confidencial expostas**.
 
-    ![Configuração de exclusão](./media/exclusions-config-page.png)
+    ![Configuração de exclusão](media/exclusions-config-page.png)
 
 Para remover de uma entidade da configuração **Exclusões**: clique no sinal de menos ao lado do nome da entidade e, em seguida, clique em **Salvar** na parte inferior da página.
 

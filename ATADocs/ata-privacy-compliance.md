@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 1b2d185c-62cd-45f0-b0dd-687b51317f32
 ms.reviewer: ophirp
 ms.suite: ems
-ms.openlocfilehash: 907fb2c6f7e24bfc0f69ae29534303f7b02d9708
-ms.sourcegitcommit: bfb5f35f8e2f19911357e5afa6624ffe43e37d12
+ms.openlocfilehash: 1ae7d9277de591f54cdb1918ee72174a806b1c96
+ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86472409"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88954027"
 ---
 # <a name="ata-data-security-and-privacy"></a>Privacidade e segurança de dados do ATA
 
@@ -25,7 +25,7 @@ ms.locfileid: "86472409"
 
 [!INCLUDE [Handle personal data](../includes/gdpr-intro-sentence.md)]
 
-## <a name="searching-for-and-identifying-personal-data"></a>Pesquisar e identificar dados pessoais 
+## <a name="searching-for-and-identifying-personal-data"></a>Pesquisando e identificando dados pessoais 
 
 Todos os dados no ATA relacionados a entidades são derivados do AD (Active Directory) e replicados para o ATA. Ao pesquisar dados pessoais, o primeiro local que você deve considerar para a pesquisa é o AD. 
 
@@ -43,7 +43,7 @@ Para excluir permanentemente os dados relacionados ao usuário do banco de dados
 
 1. [Baixe](https://aka.ms/ata-gdpr-script) o script do MongoDB (gdpr.js).  
 
-2. Copie o script para a pasta do ATA (localizada em `"C:\Program Files\Microsoft Advanced Threat Analytics\Center\MongoDB` e execute o seguinte comando no computador do ATA Center: 
+1. Copie o script para a pasta do ATA (localizada em `"C:\Program Files\Microsoft Advanced Threat Analytics\Center\MongoDB` e execute o seguinte comando no computador do ATA Center: 
 
 Use o script do banco de dados do ATA GDPR para excluir entidades e dados de atividade de entidades, conforme é descrito nas seções a seguir.
 
@@ -83,8 +83,8 @@ Para obter mais informações, confira [Gerenciar logs gerados pelo sistema](man
 Para desabilitar a coleta de dados:
 
 1. Faça logon no Console do ATA, clique nos três pontos na barra de ferramentas e escolha **Sobre**. 
-2. Desmarque a caixa para **Envie informações de uso para ajudar a melhorar a experiência do cliente no futuro**. 
+1. Desmarque a caixa para **Envie informações de uso para ajudar a melhorar a experiência do cliente no futuro**. 
 
 ## <a name="additional-resources"></a>Recursos adicionais
 
-- Para obter informações sobre a confiança e a conformidade do ATA, confira o [Portal de Confiança do Serviço](https://servicetrust.microsoft.com/ViewPage/GDPRGetStarted) e o [site Conformidade do Microsoft 365 Enterprise com o GDPR](https://docs.microsoft.com/microsoft-365/compliance/gdpr).
+- Para obter informações sobre a confiança e a conformidade do ATA, confira o [Portal de Confiança do Serviço](https://servicetrust.microsoft.com/ViewPage/GDPRGetStarted) e o [site Conformidade do Microsoft 365 Enterprise com o GDPR](/microsoft-365/compliance/gdpr).

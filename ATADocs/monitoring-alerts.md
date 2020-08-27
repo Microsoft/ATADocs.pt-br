@@ -1,6 +1,6 @@
 ---
 title: Noções básicas sobre alertas de integridade do ATA
-description: Descreve como você pode usar os logs do ATA para solucionar problemas
+description: Descreve todos os alertas de integridade para cada componente, listando a causa e as etapas necessárias para resolver o problema
 keywords: ''
 author: shsagir
 ms.author: shsagir
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: b04fb8a4-b366-4b55-9d4c-6f054fa58a90
 ms.reviewer: elofek
 ms.suite: ems
-ms.openlocfilehash: 96350f1724b743e5c640ad41cb7b8e2cdd656adb
-ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
+ms.openlocfilehash: 8569e26786c36f08fdcf98dcd11452cdef5736b6
+ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84775039"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88955982"
 ---
 # <a name="understanding-ata-health-alerts"></a>Noções básicas sobre alertas de integridade do ATA
 
@@ -30,7 +30,7 @@ Este artigo descreve todos os alertas de integridade para cada componente, lista
 ### <a name="center-running-out-of-disk-space"></a>Centro com pouco espaço em disco
 |Alerta|Descrição|Resolução|Severidade|
 |----|----|----|----|
-|O espaço livre na unidade do computador do Centro do ATA usado para armazenar o banco de dados do ATA está acabando.|Isso significa que o disco rígido tem menos de 200 GB de espaço livre ou que há menos de 20% de espaço livre, o que for menor. Quando o ATA reconhece que a unidade está ficando com pouco espaço, ele começa a excluir dados antigos do banco de dados. Se ele não puder excluir dados antigos porque ainda precisa dos dados para o mecanismo de detecção, você receberá esse alerta. Quando você recebe esse alerta, o ATA para de controlar novas atividades.|Aumente o tamanho da unidade ou liberar espaço na unidade.|Alta|
+|O espaço livre na unidade do computador do Centro do ATA usado para armazenar o banco de dados do ATA está acabando.|Isso significa que o disco rígido tem menos de 200 GB de espaço livre ou que há menos de 20% de espaço livre, o que for menor. Quando o ATA reconhece que a unidade está ficando com pouco espaço, ele começa a excluir dados antigos do banco de dados. Se ele não puder excluir dados antigos porque ainda precisa dos dados para o mecanismo de detecção, você receberá esse alerta. Quando você recebe esse alerta, o ATA para de controlar novas atividades.|Aumente o tamanho da unidade ou liberar espaço na unidade.|Alto|
 ### <a name="failure-sending-mail"></a>Falha ao enviar email
 |Alerta|Descrição|Resolução|Severidade|
 |----|----|----|----|
@@ -39,7 +39,7 @@ Este artigo descreve todos os alertas de integridade para cada componente, lista
 ### <a name="center-overloaded"></a>Centro sobrecarregado
 |Alerta|Descrição|Resolução|Severidade|
 |----|----|----|----|
-|O Centro do ATA não é capaz de lidar com a quantidade de dados sendo transferida dos Gateways do ATA. |O Centro do ATA para a análise de novos eventos e tráfego de rede. Isso significa que a precisão das detecções e dos perfis é reduzida enquanto esse alerta de integridade está ativo.|Certifique-se de que você forneceu recursos suficientes para o Centro do ATA. Veja [Planejamento da capacidade de ATA](ata-capacity-planning.md) para obter mais detalhes sobre como planejar adequadamente a capacidade do Centro do ATA. Investigue o desempenho do Centro do ATA usando [Solução de problemas do ATA usando contadores de desempenho](troubleshooting-ata-using-perf-counters.md).|Alta|
+|O Centro do ATA não é capaz de lidar com a quantidade de dados sendo transferida dos Gateways do ATA. |O Centro do ATA para a análise de novos eventos e tráfego de rede. Isso significa que a precisão das detecções e dos perfis é reduzida enquanto esse alerta de integridade está ativo.|Certifique-se de que você forneceu recursos suficientes para o Centro do ATA. Veja [Planejamento da capacidade de ATA](ata-capacity-planning.md) para obter mais detalhes sobre como planejar adequadamente a capacidade do Centro do ATA. Investigue o desempenho do Centro do ATA usando [Solução de problemas do ATA usando contadores de desempenho](troubleshooting-ata-using-perf-counters.md).|Alto|
 
 ### <a name="failure-connecting-to-the-siem-server-using-syslog"></a>Falha ao conectar ao servidor SIEM usando Syslog
 |Alerta|Descrição|Resolução|Severidade|
@@ -52,7 +52,7 @@ Este artigo descreve todos os alertas de integridade para cada componente, lista
 ### <a name="ata-center-certificate-expired"></a>Certificado do Centro de ATA expirado
 |Alerta|Descrição|Resolução|Severidade|
 |----|----|----|----|
-|O certificado do Centro de ATA expirou.|Após a expiração do certificado: a conectividade de Gateways do ATA com o Centro do ATA falhará. O processo do Centro do ATA falha e toda a funcionalidade do ATA é interrompida.|[Reimplantar o Centro do ATA](install-ata-step1.md)|Alta|
+|O certificado do Centro de ATA expirou.|Após a expiração do certificado: a conectividade de Gateways do ATA com o Centro do ATA falhará. O processo do Centro do ATA falha e toda a funcionalidade do ATA é interrompida.|[Reimplantar o Centro do ATA](install-ata-step1.md)|Alto|
 ## <a name="ata-gateway-issues"></a>Problemas do Gateway do ATA
 ### <a name="read-only-user-password-to-expire-shortly"></a>Senha de usuário somente leitura a expirar em breve
 |Alerta|Descrição|Resolução|Severidade|
@@ -61,7 +61,7 @@ Este artigo descreve todos os alertas de integridade para cada componente, lista
 ### <a name="read-only-user-password-expired"></a>A senha de usuário somente leitura expirou
 |Alerta|Descrição|Resolução|Severidade|
 |----|----|----|----|
-|A senha de usuário somente leitura, usada para obter dados de diretório, expirou.|Todos os Gateways do ATA interrompem a execução (ou interrompem a execução em breve) e nenhum novo dado é coletado.|[Altere a senha de conectividade do domínio](modifying-ata-config-dcpassword.md) e, em seguida, atualize a senha no Console do ATA.|Alta|
+|A senha de usuário somente leitura, usada para obter dados de diretório, expirou.|Todos os Gateways do ATA interrompem a execução (ou interrompem a execução em breve) e nenhum novo dado é coletado.|[Altere a senha de conectividade do domínio](modifying-ata-config-dcpassword.md) e, em seguida, atualize a senha no Console do ATA.|Alto|
 ### <a name="gateway-certificate-about-to-expire"></a>Certificado do Gateway prestes a expirar
 |Alerta|Descrição|Resolução|Severidade|
 |----|----|----|----|
@@ -70,7 +70,7 @@ Este artigo descreve todos os alertas de integridade para cada componente, lista
 ### <a name="gateway-certificate-expired"></a>Certificado do Gateway expirou
 |Alerta|Descrição|Resolução|Severidade|
 |----|----|----|----|
-|O certificado do Gateway do ATA expirou.|Não há conectividade desse Gateway do ATA com o Centro do ATA. Nenhum dado desse Gateway do ATA é enviado.|[Desinstale e reinstale o Gateway do ATA](install-ata-step3.md).|Alta|
+|O certificado do Gateway do ATA expirou.|Não há conectividade desse Gateway do ATA com o Centro do ATA. Nenhum dado desse Gateway do ATA é enviado.|[Desinstale e reinstale o Gateway do ATA](install-ata-step3.md).|Alto|
 ### <a name="domain-synchronizer-not-assigned"></a>Sincronizador de domínio não atribuído
 |Alerta|Descrição|Resolução|Severidade|
 |----|----|----|----|
@@ -86,11 +86,11 @@ Este artigo descreve todos os alertas de integridade para cada componente, lista
 ### <a name="all-domain-controllers-are-unreachable-by-a-gateway"></a>Todos os controladores de domínio estão inacessíveis por um Gateway
 |Alerta|Descrição|Resolução|Severidade|
 |----|----|----|----|
-|O Gateway do ATA está offline no momento devido a problemas de conectividade a todos os controladores de domínio configurados.|Isso afeta a capacidade do ATA de detectar atividades suspeitas relacionadas aos controladores de domínio monitorados por esse Gateway do ATA.| Certifique-se de que os controladores de domínio estejam em funcionamento e que esse Gateway do ATA possa abrir conexões LDAP para eles.|Médio|
+|O Gateway do ATA está offline no momento devido a problemas de conectividade a todos os controladores de domínio configurados.|Isso afeta a capacidade do ATA de detectar atividades suspeitas relacionadas aos controladores de domínio monitorados por esse gateway do ATA.| Certifique-se de que os controladores de domínio estejam em funcionamento e que esse Gateway do ATA possa abrir conexões LDAP para eles.|Médio|
 ### <a name="gateway-stopped-communicating"></a>O Gateway parou de se comunicar
 |Alerta|Descrição|Resolução|Severidade|
 |----|----|----|----|
-|Não houve nenhuma comunicação do Gateway do ATA. O período padrão para este alerta é de cinco minutos.|O tráfego de rede não é mais capturado pelo adaptador de rede no Gateway do ATA. Isso afeta a capacidade do ATA para detectar atividades suspeitas, já que o tráfego de rede não será capaz de alcançar o Centro do ATA.|Verifique se a porta usada para a comunicação entre o Gateway do ATA e o serviço do Centro do ATA não está bloqueada por firewalls ou roteadores.|Médio|
+|Não houve nenhuma comunicação do Gateway do ATA. O período padrão para este alerta é de cinco minutos.|O tráfego de rede não é mais capturado pelo adaptador de rede no Gateway do ATA. Isso afeta a capacidade do ATA de detectar atividades suspeitas, já que o tráfego de rede não será capaz de alcançar o centro do ATA.|Verifique se a porta usada para a comunicação entre o Gateway do ATA e o serviço do Centro do ATA não está bloqueada por firewalls ou roteadores.|Médio|
 ### <a name="no-traffic-received-from-domain-controller"></a>Nenhum tráfego recebido do controlador de domínio
 |Alerta|Descrição|Resolução|Severidade|
 |----|----|----|----|
@@ -107,11 +107,11 @@ Este artigo descreve todos os alertas de integridade para cada componente, lista
 ### <a name="gateway-version-outdated"></a>Versão do Gateway desatualizada
 |Alerta|Descrição|Resolução|Severidade|
 |----|----|----|----|
-|O Centro do ATA é mais recente do que a versão instalada no Gateway do ATA. Isso está fazendo o Gateway do ATA parar de funcionar conforme o esperado.|Isso pode afetar a capacidade de detectar atividades suspeitas provenientes dos controladores de domínio sendo monitorados por este Gateway do ATA.|Atualize o Gateway do ATA para a versão mais recente automaticamente permitindo a [atualização automática](install-ata-step1.md) no Console do ATA ou baixando o pacote do Gateway do ATA mais recente disponível no Console do ATA.|Alta|
+|O Centro do ATA é mais recente do que a versão instalada no Gateway do ATA. Isso está fazendo o Gateway do ATA parar de funcionar conforme o esperado.|Isso pode afetar a capacidade de detectar atividades suspeitas provenientes dos controladores de domínio sendo monitorados por este Gateway do ATA.|Atualize o Gateway do ATA para a versão mais recente automaticamente permitindo a [atualização automática](install-ata-step1.md) no Console do ATA ou baixando o pacote do Gateway do ATA mais recente disponível no Console do ATA.|Alto|
 ### <a name="gateway-service-failed-to-start"></a>Falha ao iniciar o serviço de Gateway
 |Alerta|Descrição|Resolução|Severidade|
 |----|----|----|----|
-|O serviço de Gateway do ATA não conseguiu iniciar por pelo menos 30 minutos.|Isso pode afetar a capacidade de detectar atividades suspeitas provenientes dos controladores de domínio sendo monitorados por este Gateway do ATA.|Monitore os logs do Gateway do ATA para [entender a causa raiz da falha do serviço de Gateway do ATA](troubleshooting-ata-using-logs.md).|Alta|
+|O serviço de Gateway do ATA não conseguiu iniciar por pelo menos 30 minutos.|Isso pode afetar a capacidade de detectar atividades suspeitas provenientes dos controladores de domínio sendo monitorados por este Gateway do ATA.|Monitore os logs do Gateway do ATA para [entender a causa raiz da falha do serviço de Gateway do ATA](troubleshooting-ata-using-logs.md).|Alto|
 ## <a name="lightweight-gateway"></a>Gateway Lightweight
 ### <a name="lightweight--gateway-reached-a-memory-resource-limit"></a>O Gateway Lightweight atingiu o limite de um recurso de memória
 |Alerta|Descrição|Resolução|Severidade|

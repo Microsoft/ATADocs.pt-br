@@ -12,29 +12,29 @@ ms.technology: ''
 ms.assetid: fb65eb41-b215-4530-93a2-0b8991f4e980
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: f8eb4b3c31174d717253cd7de90865f830e68ca6
-ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
+ms.openlocfilehash: 3c52047c2147b5ea0d1fb8a53c0d804a016e86d0
+ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84775498"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88953772"
 ---
 # <a name="ata-update-to-15-migration-guide"></a>Guia de migração de atualização do ATA para 1.5
 A atualização 1.5 do ATA fornece melhorias nas seguintes áreas:
 
--   Tempo de detecção mais rápido
+- Tempo de detecção mais rápido
 
--   Algoritmo de detecção automática avançado para os dispositivos NAT (conversão de endereços de rede)
+- Algoritmo de detecção automática avançado para os dispositivos NAT (conversão de endereços de rede)
 
--   Processo de resolução de nomes avançado para dispositivos não associados a um domínio
+- Processo de resolução de nomes avançado para dispositivos não associados a um domínio
 
--   Suporte para a migração de dados durante as atualizações de produto
+- Suporte para a migração de dados durante as atualizações de produto
 
--   Melhor capacidade de resposta da interface do usuário para atividades suspeitas com milhares de entidades envolvidas
+- Melhor capacidade de resposta da interface do usuário para atividades suspeitas com milhares de entidades envolvidas
 
--   Resolução automática de alertas de integridade aprimorada
+- Resolução automática de alertas de integridade aprimorada
 
--   Contadores de desempenho adicionais para monitoramento e solução de problemas avançados
+- Contadores de desempenho adicionais para monitoramento e solução de problemas avançados
 
 ## <a name="updating-ata-to-version-15"></a>Atualização do ATA para a versão 1.5
 > [!NOTE]
@@ -44,29 +44,29 @@ Se você já tiver a versão 1.4 do ATA implantada, esse procedimento explicará
 
 Execute estas etapas para atualizar para o ATA versão 1.5:
 
-1.  Baixe o ATA v1.5 do VLSC ou MSDN.
+1. Baixe o ATA v1.5 do VLSC ou MSDN.
       > [!NOTE]
       > Você também pode usar a versão atualizada completa do ATA para executar a atualização para a versão 1.5.
 
 
-2.  Atualize o Centro do ATA
+1. Atualize o Centro do ATA
 
-3.  Baixe o pacote atualizado do Gateway do ATA
+1. Baixe o pacote atualizado do Gateway do ATA
 
-4.  Atualize os Gateways do ATA
+1. Atualize os Gateways do ATA
 
     > [!IMPORTANT]
     > Atualize todos os Gateways do ATA para ter certeza de o ATA funciona corretamente.
 
 ### <a name="step-1-update-the-ata-center"></a>Etapa 1: Atualizar o Centro do ATA
 
-1.  Faça backup do seu banco de dados: (opcional)
+1. Faça backup do seu banco de dados: (opcional)
 
-    -   Se a Central de ATA estiver sendo executada como uma máquina virtual e você quiser fazer um ponto de verificação, desligue a máquina virtual primeiro.
+    - Se a Central de ATA estiver sendo executada como uma máquina virtual e você quiser fazer um ponto de verificação, desligue a máquina virtual primeiro.
 
-    -   Se o centro do ATA estiver em execução em um servidor físico, siga o procedimento recomendado para [fazer backup do MongoDB](https://docs.mongodb.org/manual/core/backups/).
+    - Se o centro do ATA estiver em execução em um servidor físico, siga o procedimento recomendado para [fazer backup do MongoDB](https://docs.mongodb.org/manual/core/backups/).
 
-2.  Execute o arquivo de atualização, Microsoft ATA Center Update.exe, e siga as instruções na tela para instalar a atualização.
+1. Execute o arquivo de atualização, Microsoft ATA Center Update.exe, e siga as instruções na tela para instalar a atualização.
 
     1.  Na página **Boas-vindas**, selecione seu idioma e clique em **Avançar**.
 
@@ -76,13 +76,13 @@ Execute estas etapas para atualizar para o ATA versão 1.5:
 
         ![Escolha a migração completa ou parcial](media/ATA-center-fullpartial.png)
 
-        -   Se você selecionar a migração **Parcial**, qualquer tráfego de rede coletado e eventos do Windows encaminhados analisados pelo ATA serão excluídos e os perfis comportamentais do usuário terão que ser aprendidos novamente; isso levará no mínimo três semanas. Se você estiver com pouco espaço em disco, será útil executar uma migração **Parcial**.
+        - Se você selecionar a migração **Parcial**, qualquer tráfego de rede coletado e eventos do Windows encaminhados analisados pelo ATA serão excluídos e os perfis comportamentais do usuário terão que ser aprendidos novamente; isso levará no mínimo três semanas. Se você estiver com pouco espaço em disco, será útil executar uma migração **Parcial**.
 
-        -   Se você executar uma migração **Completa**, será necessário adicionar espaço em disco, conforme calculado para você na página de atualização, e a migração poderá demorar mais, dependendo do tráfego de rede. A migração completa retém todos os dados coletados anteriormente e os perfis comportamentais do usuário serão mantidos, o que significa que não demorará mais tempo para o ATA aprender os perfis de comportamento, e comportamentos anormais poderão ser detectados imediatamente após a atualização.
+        - Se você executar uma migração **Completa**, será necessário adicionar espaço em disco, conforme calculado para você na página de atualização, e a migração poderá demorar mais, dependendo do tráfego de rede. A migração completa retém todos os dados coletados anteriormente e os perfis comportamentais do usuário serão mantidos, o que significa que não demorará mais tempo para o ATA aprender os perfis de comportamento, e comportamentos anormais poderão ser detectados imediatamente após a atualização.
 
-3.  Clique em **Atualizar**. Depois de clicar em Atualizar, o ATA ficará offline até que o procedimento de atualização seja concluído.
+1. Clique em **Atualizar**. Depois de clicar em Atualizar, o ATA ficará offline até que o procedimento de atualização seja concluído.
 
-4.  Depois de atualizar a Central de ATA, os Gateways do ATA reportarão que agora estão desatualizados.
+1. Depois de atualizar a Central de ATA, os Gateways do ATA reportarão que agora estão desatualizados.
 
     ![Imagem de gateways desatualizados](media/ATA-center-outdated.png)
 
@@ -94,32 +94,32 @@ Após definir as configurações de conectividade do domínio, você poderá bai
 
 Para baixar o pacote do Gateway do ATA:
 
-1.  Exclua todas as versões anteriores do pacote do Gateway do ATA baixado anteriormente.
+1. Exclua todas as versões anteriores do pacote do Gateway do ATA baixado anteriormente.
 
-2.  No computador do Gateway do ATA, abra um navegador e digite o endereço IP configurado no Centro do ATA para o Console do ATA. Quando o console do ATA for aberto, clique no ícone de configurações e selecione **configuração**.
+1. No computador do Gateway do ATA, abra um navegador e digite o endereço IP configurado no Centro do ATA para o Console do ATA. Quando o console do ATA for aberto, clique no ícone de configurações e selecione **configuração**.
 
     ![Ícone Definições de configuração](media/ATA-config-icon.png)
 
-3.  Na guia **gateways do ATA** , clique em **baixar a instalação do gateway do ATA**.
+1. Na guia **gateways do ATA** , clique em **baixar a instalação do gateway do ATA**.
 
-4.  Salve o pacote localmente.
+1. Salve o pacote localmente.
 
 O arquivo zip inclui os seguintes arquivos:
 
--   Instalador do Gateway do ATA
+- Instalador do Gateway do ATA
 
--   Arquivo de configurações com as informações necessárias para conectar-se à Central de ATA
+- Arquivo de configurações com as informações necessárias para conectar-se à Central de ATA
 
 ### <a name="step-3-update-the-ata-gateways"></a>Etapa 3: Atualize os Gateways do ATA
 
-1.  Em cada Gateway do ATA, extraia os arquivos do pacote do Gateway do ATA e execute o arquivo de Configuração do Gateway do Microsoft ATA.
+1. Em cada Gateway do ATA, extraia os arquivos do pacote do Gateway do ATA e execute o arquivo de Configuração do Gateway do Microsoft ATA.
 
     > [!NOTE]
     > Você também pode usar este pacote de Gateway do ATA para instalar novos Gateways do ATA.
 
-2.  As configurações anteriores são preservadas, mas talvez demore alguns minutos até que o serviço seja reiniciado.
+1. As configurações anteriores são preservadas, mas talvez demore alguns minutos até que o serviço seja reiniciado.
 
-3.  Repita essa etapa para todos os outros Gateways do ATA implantados.
+1. Repita essa etapa para todos os outros Gateways do ATA implantados.
 
 > [!NOTE]
 > Depois de atualizar com êxito um Gateway do ATA, a notificação desatualizada para o Gateway do ATA específico desaparecerá.

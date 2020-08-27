@@ -11,12 +11,12 @@ ms.prod: advanced-threat-analytics
 ms.assetid: 8c1c7a1b-a3de-4105-9fd0-08a061952172
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: c17405cd1f3da619ad6942e082420e58c4e9c430
-ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
+ms.openlocfilehash: 175132fa85f95717987f074f0185bc94bfe187ba
+ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84775124"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88955404"
 ---
 # <a name="manage-system-generated-logs"></a>Gerenciar logs gerados pelo sistema
 
@@ -31,55 +31,55 @@ ms.locfileid: "84775124"
 
 Os dados anônimos coletados incluem os seguintes parâmetros:
 
--   Contadores de desempenho do Centro do ATA e do Gateway do ATA
+- Contadores de desempenho do Centro do ATA e do Gateway do ATA
 
--   ID do produto de cópias licenciadas do ATA
+- ID do produto de cópias licenciadas do ATA
 
--   Data da implantação do Centro do ATA
+- Data da implantação do Centro do ATA
 
--   Número de Gateways do ATA implantados
+- Número de Gateways do ATA implantados
 
--   As seguintes informações anônimas do Active Directory:
+- As seguintes informações anônimas do Active Directory:
 
-    -   ID de Domínio do domínio cujo nome seria o primeiro domínio quando classificado em ordem alfabética
+    - ID de Domínio do domínio cujo nome seria o primeiro domínio quando classificado em ordem alfabética
 
-    -   Número de controladores de domínio
+    - Número de controladores de domínio
 
-    -   Número de controladores de domínio monitorados pelo ATA por meio do espelhamento de porta
+    - Número de controladores de domínio monitorados pelo ATA por meio do espelhamento de porta
 
-    -   Número de sites
+    - Número de sites
 
-    -   Número de computadores
+    - Número de computadores
 
-    -   Número de grupos
+    - Número de grupos
 
-    -   Número de Usuários
+    - Número de Usuários
 
--   Atividades suspeitas – os dados anônimos a seguir são coletados para cada atividade suspeita:
+- Atividades suspeitas – os dados anônimos a seguir são coletados para cada atividade suspeita:
 
     (Nomes de computador, nomes de usuário e endereços IP **não** são coletados)
 
-    -   Tipo de atividade suspeita
+    - Tipo de atividade suspeita
 
-    -   ID da atividade suspeita
+    - ID da atividade suspeita
 
-    -   Status
+    - Status
 
-    -   Horas de início e de término
+    - Horas de início e de término
 
-    -   Entrada fornecida
+    - Entrada fornecida
 
 - Problemas de integridade – Os seguintes dados anônimos são coletados para cada problema de integridade:
 
     (Os nomes de computador, nomes de usuário e endereços IP não são coletados)
 
-    -   Tipo de problema de integridade
+    - Tipo de problema de integridade
 
-    -   ID do problema de integridade
+    - ID do problema de integridade
 
-    -   Status
+    - Status
 
-    -   Horas de início e de término
+    - Horas de início e de término
 
 - Endereços de URL do Console do ATA - Endereços de URL ao usar o Console do ATA, ou seja, quais páginas no Console do ATA foram visitadas.
 
@@ -87,9 +87,9 @@ Os dados anônimos coletados incluem os seguintes parâmetros:
 ### <a name="disable-data-collection"></a>Desativar coleta de dados
 Execute as etapas a seguir para interromper a coleta e o envio de dados de telemetria à Microsoft:
 
-1.  Faça logon no Console do ATA, clique nos três pontos na barra de ferramentas e escolha **Sobre**.
+1. Faça logon no Console do ATA, clique nos três pontos na barra de ferramentas e escolha **Sobre**.
 
-2.  Desmarque a caixa para **Envie informações de uso para ajudar a melhorar a experiência do cliente no futuro**.
+1. Desmarque a caixa para **Envie informações de uso para ajudar a melhorar a experiência do cliente no futuro**.
 
 ## <a name="see-also"></a>Consulte Também
 - [Troubleshooting ATA using the event log](troubleshooting-ata-using-logs.md) (Solução de problemas do ATA usando o log de eventos)

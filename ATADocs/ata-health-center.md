@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: d6c783b2-46c5-4211-b21a-d6b17f08d03d
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 494c06aac05bd1de11f1101bda8c8f73ffaf25bb
-ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
+ms.openlocfilehash: 4479de3764f9cceffe9a3ed401aa20332a985498
+ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84773203"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88954214"
 ---
 # <a name="working-with-ata-system-health-and-events"></a>Trabalhando com eventos e a integridade do sistema ATA
 
@@ -35,7 +35,7 @@ A Central de Integridade de ATA permite que você saiba se há um problema geran
 ### <a name="managing-ata-health"></a>Gerenciando a Integridade de ATA
 Para verificar a integridade geral do sistema, clique no ícone Central de Integridade na barra de menus ![Ícone Central de Integridade de ATA](media/ATA-red-dot.png)
 
--   Todos os alertas abertos podem ser gerenciados configurando-os para **Fechar**, **Suprimir** ou **Excluir** clicando nos três pontos no canto do alerta e fazendo sua escolha.
+- Todos os alertas abertos podem ser gerenciados configurando-os para **Fechar**, **Suprimir** ou **Excluir** clicando nos três pontos no canto do alerta e fazendo sua escolha.
 
 -   **Abrir**: todas as novas atividades suspeitas aparecem nesta lista.
 

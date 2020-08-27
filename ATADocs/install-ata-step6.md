@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 8980e724-06a6-40b0-8477-27d4cc29fd2b
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 06b7e42789b58a6da01479917b0e1277b651a8bd
-ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
+ms.openlocfilehash: 1ece55ea9d0ad43a85a27741af34242f58fd0002
+ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84775158"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88955506"
 ---
 # <a name="install-ata---step-6"></a>Instalação do ATA - Etapa 6
 
@@ -31,7 +31,7 @@ ms.locfileid: "84775158"
 
 ### <a name="configure-event-collection"></a>Configurar coleta de eventos
 
-Para aprimorar os recursos de detecção, o ATA precisa dos seguintes eventos do Windows: 4776, 4732, 4733, 4728, 4729, 4756, 4757 e 7045. Esses eventos do Windows são lidos automaticamente pelo gateway Lightweight do ATA ou, caso o gateway Lightweight do ATA não esteja implantado, eles podem ser encaminhados para o gateway do ATA de uma das duas maneiras, seja Configurando o gateway do ATA para escutar eventos do SIEM ou [Configurando o encaminhamento de eventos do Windows](configure-event-collection.md). 
+Para aprimorar os recursos de detecção, o ATA precisa dos seguintes eventos do Windows: 4776, 4732, 4733, 4728, 4729, 4756, 4757 e 7045. Esses eventos do Windows são lidos automaticamente pelo gateway Lightweight do ATA ou, caso o gateway Lightweight do ATA não esteja implantado, eles podem ser encaminhados para o gateway do ATA de uma das duas maneiras, seja Configurando o gateway do ATA para escutar eventos do SIEM ou [Configurando o encaminhamento de eventos do Windows](configure-event-collection.md).
 
 > [!NOTE]
 > Para as versões 1,8 e superiores do ATA, a configuração da coleta de eventos do Windows não é mais necessária para gateways Lightweight do ATA. O Gateway Lightweight do ATA realiza a leitura de eventos localmente, sem a necessidade de configurar o encaminhamento de eventos.
@@ -45,7 +45,7 @@ Para o ATA poder consumir dados de um servidor Syslog, você precisa executar as
 - Configurar seus servidores do Gateway do ATA para escutar e aceitar eventos encaminhados do servidor SIEM/Sylog.
 
 > [!NOTE]
-> ATA escuta somente IPv4, não IPv6. 
+> ATA escuta somente IPv4, não IPv6.
 >
 > - Configurar seu servidor Syslog/SIEM para encaminhar eventos específicos ao Gateway do ATA.
 
@@ -53,7 +53,7 @@ Para o ATA poder consumir dados de um servidor Syslog, você precisa executar as
 > - Não encaminhe todos os dados de Syslog para o Gateway do ATA.
 > - O ATA oferece suporte ao tráfego UDP do servidor SIEM/Syslog.
 
-Consulte a documentação de produto do seu servidor SIEM/Syslog para saber como configurar o encaminhamento de eventos específicos para outro servidor. 
+Consulte a documentação de produto do seu servidor SIEM/Syslog para saber como configurar o encaminhamento de eventos específicos para outro servidor.
 
 > [!NOTE]
 > Se você não usa um servidor Syslog/SIEM, é possível configurar os controladores de domínio do Windows para encaminhar a ID de Evento do Windows 4776 para ser coletada e analisada pelo ATA. A ID de Evento do Windows 4776 fornece dados sobre autenticações NTLM.
@@ -64,9 +64,9 @@ Consulte a documentação de produto do seu servidor SIEM/Syslog para saber como
 
     ![Habilitar a imagem UDP de ouvinte de syslog](media/ATA-enable-siem-forward-events.png)
 
-2. Configure o servidor Syslog ou SIEM para encaminhar a ID de Evento do Windows 4776 para o endereço IP de um dos Gateways ATA. Para saber mais sobre como configurar o SIEM, confira a ajuda online do SIEM ou opções de suporte técnico para obter os requisitos de formatação específica para cada servidor SIEM.
+1. Configure o servidor Syslog ou SIEM para encaminhar a ID de Evento do Windows 4776 para o endereço IP de um dos Gateways ATA. Para saber mais sobre como configurar o SIEM, confira a ajuda online do SIEM ou opções de suporte técnico para obter os requisitos de formatação específica para cada servidor SIEM.
 
-O ATA oferece suporte a eventos de SIEM nos seguintes formatos:  
+O ATA oferece suporte a eventos de SIEM nos seguintes formatos:
 
 #### <a name="rsa-security-analytics"></a>Análise de Segurança do RSA
 
@@ -74,7 +74,7 @@ O ATA oferece suporte a eventos de SIEM nos seguintes formatos:
 
 - O cabeçalho do Syslog é opcional.
 
-- o separador de caractere "\n" é necessário entre todos os campos.
+- O separador de caractere "\n" é necessário entre todos os campos.
 - Os campos, em ordem, são:
   1. Constante RsaSA (deve aparecer).
   2. O carimbo de data/hora do evento real (verifique se ele não é o carimbo de data/hora da chegada para o em ou quando ele é enviado ao ATA). Preferencialmente com a precisão em milissegundos, isso é importante.
@@ -95,18 +95,18 @@ CEF:0|Microsoft|Microsoft Windows||Microsoft-Windows-Security-Auditing:4776|O co
 - Deve estar em conformidade com a definição de protocolo.
 
 - Nenhum cabeçalho de syslog.
-- A parte do cabeçalho (a parte separada por uma barra vertical) deve existir (conforme mencionado no protocolo).
+- A parte do cabeçalho (a parte separada por uma barra vertical) deve existir (como mencionado no protocolo).
 - As seguintes chaves na parte _Extensão_ devem estar presentes no evento:
   - externalId = a ID de evento do Windows
-  - rt = o carimbo de hora do evento real (verifique se ele não é o carimbo de hora de chegada no SIEM, ou do envio para o ATA). Preferencialmente com a precisão em milissegundos, isso é importante.
+  - RT = o carimbo de data/hora do evento real (verifique se ele não é o carimbo de data/hora da chegada ao SIEM ou quando ele é enviado para o ATA). Preferencialmente com a precisão em milissegundos, isso é importante.
   - cat = o nome do log de eventos do Windows
   - shost = o nome do host de origem
   - dhost = o computador que está recebendo o evento (o controlador de domínio neste caso)
   - duser = o usuário que está autenticando
 - A ordem não é importante para a parte _Extensão_
 - Deve haver uma chave personalizada e um keyLable para esses dois campos:
-  - “EventSource”
-  - “Motivo ou Código de erro” = o código resultante do NTLM
+  - "EventSource"
+  - "Motivo ou Código de erro" = o código resultante do NTLM
 
 #### <a name="splunk"></a>Splunk
 
@@ -130,7 +130,7 @@ Código de erro: 0x0
   - EventCode = a ID de evento do Windows
   - Logfile = o nome do log de eventos do Windows
   - SourceName = o nome do provedor de eventos do Windows
-  - TimeGenerated = O carimbo de hora do evento real (verifique se não é o carimbo de hora de chegada no SIEM, ou do envio para o ATA). O formato deve corresponder a aaaaMMddHHmmss.FFFFFF, preferencialmente com precisão de milissegundos, isso é importante.
+  - TimeGenerated = o carimbo de data/hora do evento real (verifique se não é o carimbo de data/hora da chegada ao SIEM ou quando ele é enviado para o ATA). O formato deve corresponder a aaaaMMddHHmmss.FFFFFF, preferencialmente com precisão de milissegundos, isso é importante.
   - ComputerName = o nome do host de origem
   - Mensagem = o texto do evento original do evento do Windows
 - A Chave da Mensagem e o valor DEVEM ser os últimos.
@@ -140,7 +140,9 @@ Código de erro: 0x0
 
 O QRadar permite a coleta de eventos por meio de um agente. Se os dados forem reunidos usando um agente, o formato de hora será coletado sem dados de milissegundos. Uma vez que o ATA precisa dos dados de milissegundos, é necessário definir o QRadar para usar a coleta de eventos do Windows sem agente. Para obter mais informações, confira [http://www-01.ibm.com/support/docview.wss?uid=swg21700170](http://www-01.ibm.com/support/docview.wss?uid=swg21700170 "QRadar: Coleção de Eventos do Windows sem Agente usando o protocolo MSRPC").
 
-    <13>Feb 11 00:00:00 %IPADDRESS% AgentDevice=WindowsLog AgentLogFile=Security Source=Microsoft-Windows-Security-Auditing Computer=%FQDN% User= Domain= EventID=4776 EventIDCode=4776 EventType=8 EventCategory=14336 RecordNumber=1961417 TimeGenerated=1456144380009 TimeWritten=1456144380009 Message=The computer attempted to validate the credentials for an account. Authentication Package: MICROSOFT_AUTHENTICATION_PACKAGE_V1_0 Logon Account: Administrator Source Workstation: HOSTNAME Error Code: 0x0
+```
+<13>Feb 11 00:00:00 %IPADDRESS% AgentDevice=WindowsLog AgentLogFile=Security Source=Microsoft-Windows-Security-Auditing Computer=%FQDN% User= Domain= EventID=4776 EventIDCode=4776 EventType=8 EventCategory=14336 RecordNumber=1961417 TimeGenerated=1456144380009 TimeWritten=1456144380009 Message=The computer attempted to validate the credentials for an account. Authentication Package: MICROSOFT_AUTHENTICATION_PACKAGE_V1_0 Logon Account: Administrator Source Workstation: HOSTNAME Error Code: 0x0
+```
 
 Os campos necessários são:
 
@@ -151,13 +153,13 @@ Os campos necessários são:
 - O nome de domínio totalmente qualificado do DC
 - A ID de evento do Windows
 
-TimeGenerated é o carimbo de data/hora do evento real (verifique se não é o carimbo de data/hora de chegada no SIEM, ou do envio para o ATA). O formato deve corresponder a aaaaMMddHHmmss.FFFFFF, preferencialmente com precisão de milissegundos, isso é importante.
+TimeGenerated é o carimbo de data/hora do evento real (verifique se não é o carimbo de data/hora da chegada ao SIEM ou quando ele é enviado para o ATA). O formato deve corresponder a aaaaMMddHHmmss.FFFFFF, preferencialmente com precisão de milissegundos, isso é importante.
 
 A mensagem é o texto do evento original do evento do Windows
 
 Certifique-se de ter \t entre os pares de chave=valor.
 
->[!NOTE] 
+>[!NOTE]
 > Não há suporte ao uso do WinCollect para a coleta de eventos do Windows.
 
 > [!div class="step-by-step"]

@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 1bf264d9-9697-44b5-9533-e1c498da4f07
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 115b20058d5828ed9c7cc04f7b27cd77ee839566
-ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
+ms.openlocfilehash: 1532d110daf23562c768a7b145bcff9326f73223
+ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84774648"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88955115"
 ---
 # <a name="working-with-the-ata-console"></a>Trabalhando com o Console do ATA
 
@@ -43,12 +43,12 @@ Para fazer logon com êxito no Console do ATA, você precisa fazer logon com um 
    >[!NOTE]
    > Também é possível abrir um navegador na Central do ATA ou no Gateway do ATA e navegar até o endereço IP configurado na instalação da Central do ATA para o Console do ATA.    
 
-2. Se o computador no qual o Centro do ATA está instalado e o computador do qual você está tentando acessar o Console do ATA estiverem ingressados no domínio, o ATA dará suporte ao logon único integrado com a autenticação do Windows, se você já estiver conectado no computador, o ATA usará esse token para conectá-lo ao Console do ATA. Você também pode fazer logon usando um cartão inteligente. Suas permissões no ATA correspondem à sua [função de administrador](ata-role-groups.md).
+1. Se o computador no qual o Centro do ATA está instalado e o computador do qual você está tentando acessar o Console do ATA estiverem ingressados no domínio, o ATA dará suporte ao logon único integrado com a autenticação do Windows, se você já estiver conectado no computador, o ATA usará esse token para conectá-lo ao Console do ATA. Você também pode fazer logon usando um cartão inteligente. Suas permissões no ATA correspondem à sua [função de administrador](ata-role-groups.md).
 
    > [!NOTE]
    > Faça logon no computador do qual deseja acessar o Console do ATA usando seu nome de usuário administrador e senha do ATA. Como alternativa, você pode executar seu navegador como um usuário diferente ou desconectar do Windows e fazer logon com o usuário administrador do ATA. Para solicitar que o Console do ATA peça credenciais, acesse o console usando um endereço IP e você receberá uma solicitação para inserir as credenciais.
 
-3. Para fazer logon usando o SSO, certifique-se de que o site do Console do ATA esteja definido como um site de intranet local no seu navegador e de acessá-lo usando um nome curto ou um localhost.
+1. Para fazer logon usando o SSO, certifique-se de que o site do Console do ATA esteja definido como um site de intranet local no seu navegador e de acessá-lo usando um nome curto ou um localhost.
 
 > [!NOTE]
 > Além de registrar cada atividade suspeita e alerta de integridade, cada alteração de configuração feita no Console do ATA é auditada no Log de Eventos do Windows no computador do Centro do ATA, em **Applications and services log (Log de serviços e aplicativos)** e em **Microsoft ATA**. Cada logon no console do ATA é auditado também.<br></br>  A configuração que afeta o Gateway do ATA também é registrada no Log de Eventos do Windows do computador do Gateway do ATA. 
@@ -76,7 +76,7 @@ Quando uma nova atividade suspeita for detectada, a barra de notificação abrir
 
 ![Imagem da barra de notificação de ATA](media/notification-bar-1.7.png)
 
-### <a name="whats-new"></a>Novidades
+### <a name="whats-new"></a>O que há de novo
 
 Após uma nova versão do ATA ser lançada, a janela **Novidades** será exibida na parte superior direita para que você saiba o que foi adicionado na versão mais recente. Ela também fornece um link para o download da versão.
 
@@ -110,7 +110,7 @@ A lista de grupos a seguir é considerada **confidencial** pelo ATA. Qualquer en
 - Proprietários criadores de política de grupo 
 - Controladores de domínio somente leitura 
 - Administradores  
-- Usuários Avançados  
+- Usuários avançados  
 - Opers. de contas  
 - Opers. de servidores   
 - Operadores de impressão,
@@ -128,15 +128,15 @@ Se você passar o mouse sobre a entidade, em qualquer lugar no console onde exis
 
 ![Imagem de miniperfil do ATA](media/ATA-mini-profile.jpg)
 
--   Name
+- Nome
 
--   Imagem
+- Imagem
 
--   Email
+- Email
 
--   Telephone
+- Telephone
 
--   Número de atividades suspeitas por severidade
+- Número de atividades suspeitas por severidade
 
 
 
