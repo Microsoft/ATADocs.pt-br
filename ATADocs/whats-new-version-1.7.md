@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: be9ee613-4eb3-40f1-8973-e7f0a707ff57
 ms.reviewer: ''
 ms.suite: ems
-ms.openlocfilehash: 14fd7b13b61005ef215c6ba80920572ebcdf0b64
-ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
+ms.openlocfilehash: 5a23b551b1f05513c242e9779f51f68c7bab2d4a
+ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84774699"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88956254"
 ---
 # <a name="whats-new-in-ata-version-17"></a>Novidades na versão 1.7 do ATA
 Estas notas de versão fornecem informações sobre problemas conhecidos nesta versão da Advanced Threat Analytics.
@@ -25,15 +25,15 @@ Estas notas de versão fornecem informações sobre problemas conhecidos nesta v
 ## <a name="whats-new-in-the-ata-17-update"></a>Quais são as novidades na atualização 1.7 do ATA?
 A atualização 1.7 do ATA fornece melhorias nas seguintes áreas:
 
--   Detecções novas e atualizadas
+- Detecções novas e atualizadas
 
--   Controle de acesso baseado em função
+- Controle de acesso baseado em função
 
--   Suporte para Windows Server 2016 e Windows Server 2016 Core
+- Suporte para Windows Server 2016 e Windows Server 2016 Core
 
--   Aprimoramentos da experiência do usuário
+- Aprimoramentos da experiência do usuário
 
--   Pequenas modificações
+- Pequenas modificações
 
 
 ### <a name="new--updated-detections"></a>Detecções novas e atualizadas
@@ -97,16 +97,16 @@ Para resolver esse problema, depois de alterar o certificado em um prompt de com
 
 1. Mongo.exe ATA (ATA deve estar em letras maiúsculas) 
 
-2. CenterThumbprint=db.SystemProfile.find({_t:"CenterSystemProfile"}).toArray()[0].Configuration.SecretManagerConfiguration.CertificateThumbprint;
+1. CenterThumbprint=db.SystemProfile.find({_t:"CenterSystemProfile"}).toArray()[0].Configuration.SecretManagerConfiguration.CertificateThumbprint;
 
-3. db.SystemProfile.update({_t:"ServiceSystemProfile"},{$set:{"Configuration.ManagementClientConfiguration.ServerCertificateThumbprint":CenterThumbprint}}, {multi: true})
+1. db.SystemProfile.update({_t:"ServiceSystemProfile"},{$set:{"Configuration.ManagementClientConfiguration.ServerCertificateThumbprint":CenterThumbprint}}, {multi: true})
 
 ### <a name="export-suspicious-activity-details-to-excel-may-fail"></a>Exportar detalhes de atividade suspeita para o Excel pode falhar
 Ao tentar exportar os detalhes de atividade suspeita para um arquivo do Excel, a operação pode falhar com o seguinte erro: *Erro [BsonClassMapSerializer`1] System.FormatException: Um erro ocorreu ao desserializar a propriedade Atividade da classe Microsoft.Tri.Common.Data.NetworkActivities.SuspiciousActivityActivity: Elemento 'ResourceIdentifier' não corresponde a nenhum campo ou propriedade de classe Microsoft.Tri.Common.Data.EventActivities.NtlmEvent. ---> System.FormatException: O Elemento 'ResourceIdentifier' não corresponde a nenhum campo ou propriedade da classe Microsoft.Tri.Common.Data.EventActivities.NtlmEvent.*
 
 Para resolver esse problema, em um prompt de comandos com privilégios elevados, navegue até o seguinte local: **%ProgramFiles%\Microsoft Advanced Threat Analytics\Center\MongoDB\bin** e execute os seguintes comandos:
-1.  `Mongo.exe ATA` (ATA deve estar em letras maiúsculas)
-2.  `db.SuspiciousActivityActivity.update({ "Activity._t": "NtlmEvent" },{$unset: {"Activity.ResourceIdentifier": ""}}, {multi: true});`
+1. `Mongo.exe ATA` (ATA deve estar em letras maiúsculas)
+2. `db.SuspiciousActivityActivity.update({ "Activity._t": "NtlmEvent" },{$unset: {"Activity.ResourceIdentifier": ""}}, {multi: true});`
 
 ## <a name="minor-changes"></a>Pequenas modificações
 

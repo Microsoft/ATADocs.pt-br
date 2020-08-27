@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 51de491c-49ba-4aff-aded-cc133a8ccf0b
 ms.reviewer: ''
 ms.suite: ems
-ms.openlocfilehash: 261d6c5253dc697ae50523c24ccb34feba75a4e6
-ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
+ms.openlocfilehash: abe3a716c7a85ba435eec18eab94e514222e6803
+ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84774665"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88956152"
 ---
 # <a name="whats-new-in-ata-version-19"></a>Novidades da versão 1.9 do ATA
 
@@ -32,17 +32,17 @@ Essas notas de versão fornecem informações sobre atualizações, novos recurs
 
 ## <a name="new-reports-to-help-you-investigate"></a>Novos relatórios para ajudá-lo a investigar 
 
--   O recurso [**Senhas expostas em texto não criptografado**](reports.md) habilita a detecção de quando as contas confidenciais e não confidenciais enviam as credenciais de conta em texto sem formatação. Isso permite a investigação e a mitigação do uso da associação simples ao LDAP no seu ambiente, o que melhora o nível de segurança da rede. Esse relatório substitui os alertas de atividades suspeitas em texto não criptografado de contas confidenciais e de serviços.
+- O recurso [**Senhas expostas em texto não criptografado**](reports.md) habilita a detecção de quando as contas confidenciais e não confidenciais enviam as credenciais de conta em texto sem formatação. Isso permite a investigação e a mitigação do uso da associação simples ao LDAP no seu ambiente, o que melhora o nível de segurança da rede. Esse relatório substitui os alertas de atividades suspeitas em texto não criptografado de contas confidenciais e de serviços.
 
 - A opção [**Caminhos de movimento lateral para contas confidenciais**](reports.md) lista as contas confidenciais expostas por meio de caminhos de movimento lateral. Dessa forma, é possível reduzir esses caminhos e fortalecer sua rede a fim de minimizar o risco de superfície de ataque. Assim, você pode impedir a movimentação lateral, para que os invasores não se movimentem entre usuários e computadores ao longo da rede até encontrarem o prêmio máximo da segurança virtual: suas credenciais de conta do administrador.
 
 ## <a name="improved-investigation"></a>Investigação aprimorada
 
--  O ATA 1.9 inclui um novo e aprimorado [perfil de entidade](entity-profiles.md). O perfil de entidade fornece um painel projetado para fazer investigações completas e aprofundadas de usuários, dos recursos que eles acessaram e do histórico deles. O perfil de entidade também permite identificar usuários confidenciais que podem ser acessados por meio de caminhos de movimento lateral. 
+- O ATA 1.9 inclui um novo e aprimorado [perfil de entidade](entity-profiles.md). O perfil de entidade fornece um painel projetado para fazer investigações completas e aprofundadas de usuários, dos recursos que eles acessaram e do histórico deles. O perfil de entidade também permite identificar usuários confidenciais que podem ser acessados por meio de caminhos de movimento lateral. 
 
--   O ATA 1.9 permite [marcar manualmente grupos](tag-sensitive-accounts.md) ou contas como confidenciais para aprimorar as detecções. Essa marcação afeta muitas detecções do ATA, como a detecção de modificação de grupos confidenciais e o caminho de movimento lateral, dependendo de quais grupos e contas são considerados confidenciais.
+- O ATA 1.9 permite [marcar manualmente grupos](tag-sensitive-accounts.md) ou contas como confidenciais para aprimorar as detecções. Essa marcação afeta muitas detecções do ATA, como a detecção de modificação de grupos confidenciais e o caminho de movimento lateral, dependendo de quais grupos e contas são considerados confidenciais.
 
-## <a name="performance-improvements"></a>Melhorias de desempenho
+## <a name="performance-improvements"></a>Aprimoramentos de desempenho
 
 - O desempenho da infraestrutura da Central do ATA foi aprimorado: a exibição agregada do tráfego permite otimizar a CPU e o pipeline de pacotes, além de reutilizar soquetes para os controladores de domínio minimizarem as sessões de SSL para o controlador de domínio.
 

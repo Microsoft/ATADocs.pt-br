@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: a0d64aff-ca9e-4300-b3f8-eb3c8b8ae045
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 87f0ee5e13e5b6c85a210d4b63a78b27f249888d
-ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
+ms.openlocfilehash: 7bdd3bf22f2b87c34ac45614c9c8f3ebeab2e87b
+ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84774716"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88956662"
 ---
 # <a name="whats-new-in-ata-version-15"></a>Novidades na versão 1.5 do ATA
 Essas notas de versão fornecem informações sobre problemas conhecidos nesta versão da Advanced Threat Analytics.
@@ -25,19 +25,19 @@ Essas notas de versão fornecem informações sobre problemas conhecidos nesta v
 ## <a name="whats-new-in-the-ata-15-update"></a>Quais são as novidades na atualização 1.5 do ATA?
 A atualização 1.5 do ATA fornece melhorias nas seguintes áreas:
 
--   Tempo de detecção mais rápido
+- Tempo de detecção mais rápido
 
--   Algoritmo de detecção automática avançado para os dispositivos NAT (conversão de endereços de rede)
+- Algoritmo de detecção automática avançado para os dispositivos NAT (conversão de endereços de rede)
 
--   Processo de resolução de nomes avançado para dispositivos não associados a um domínio
+- Processo de resolução de nomes avançado para dispositivos não associados a um domínio
 
--   Suporte para a migração de dados durante as atualizações de produto
+- Suporte para a migração de dados durante as atualizações de produto
 
--   Melhor capacidade de resposta da interface do usuário para atividades suspeitas com milhares de entidades envolvidas
+- Melhor capacidade de resposta da interface do usuário para atividades suspeitas com milhares de entidades envolvidas
 
--   Resolução automática de alertas de integridade aprimorada
+- Resolução automática de alertas de integridade aprimorada
 
--   Contadores de desempenho adicionais para monitoramento e solução de problemas avançados
+- Contadores de desempenho adicionais para monitoramento e solução de problemas avançados
 
 ## <a name="known-issues"></a>Problemas conhecidos
 A seguir estão os problemas conhecidos existentes nesta versão.

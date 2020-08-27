@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 1d186a96-ef70-4787-aa64-c03d1db94ce0
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 4fed6cc6eddfd33606c1811e0a1e861b5bf8a108
-ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
+ms.openlocfilehash: d0f1e528b011119a89286cd66e797317bf8d9f21
+ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84774954"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88956441"
 ---
 # <a name="working-with-ata-audit-logs"></a>Trabalhando com logs de auditoria do ATA
 
@@ -27,13 +27,13 @@ ms.locfileid: "84774954"
 Os logs de auditoria do ATA são mantidos nos Logs de Eventos do Windows em **Aplicativos e Serviços** e **Microsoft ATA** tanto nos computadores do Gateway do ATA quanto no Centro do ATA.
 
 O log de auditoria do Centro do ATA contém:
--   Informações de atividade suspeita
--   Alertas de integridade (página de integridade)
--   Logons do Console do ATA
--   Todas as alterações de configuração*
+- Informações de atividade suspeita
+- Alertas de integridade (página de integridade)
+- Logons do Console do ATA
+- Todas as alterações de configuração*
 
 O log de auditoria do Gateway do ATA contém:
--   Alterações de configuração do Gateway* 
+- Alterações de configuração do Gateway* 
 
 (Todas as alterações de configuração do Gateway do ATA são configuradas no Centro do ATA, mas ainda são auditadas no próprio computador do Gateway.)
 

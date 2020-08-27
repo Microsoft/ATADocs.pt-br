@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 283e7b4e-996a-4491-b7f6-ff06e73790d2
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: d0f50163150f93baa0bd3084984705faf4fa6ea1
-ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
+ms.openlocfilehash: e2896882e3eb8bb0e0ae1627c2afa37d1b58c45e
+ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84774767"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88956288"
 ---
 # <a name="what-is-advanced-threat-analytics"></a>O que é o Advanced Threat Analytics?
 
@@ -29,15 +29,15 @@ O ATA (Advanced Threat Analytics) é uma plataforma local que ajuda a proteger s
 
 O ATA aproveita um mecanismo de análise de rede proprietário para capturar e analisar o tráfego de rede de vários protocolos (como Kerberos, DNS, RPC, NTLM entre outros) para autenticação, autorização e coleta de informações. Essas informações são coletadas pelo ATA por meio de:
 
--   Espelhamento de porta de seus controladores de domínio e servidores DNS para o Gateway do ATA e/ou
--   Implantação de um LGW (Gateway Lightweight do ATA) diretamente nos Controladores de domínio
+- Espelhamento de porta de seus controladores de domínio e servidores DNS para o Gateway do ATA e/ou
+- Implantação de um LGW (Gateway Lightweight do ATA) diretamente nos Controladores de domínio
 
 O ATA obtém informações de várias fontes de dados, como eventos e logs em sua rede, a fim de aprender o comportamento dos usuários e de outras entidades na organização e cria um perfil comportamental sobre eles.
 O ATA pode receber eventos e logs de:
 
--   Integração do SIEM
--   WEF (Encaminhamento de Eventos do Windows)
--   Diretamente do Coletor de Eventos do Windows (para o Gateway Lightweight)
+- Integração do SIEM
+- WEF (Encaminhamento de Eventos do Windows)
+- Diretamente do Coletor de Eventos do Windows (para o Gateway Lightweight)
 
 
 Para obter mais informações sobre a arquitetura do ATA, consulte [arquitetura do ATA](ata-architecture.md).
@@ -46,24 +46,24 @@ Para obter mais informações sobre a arquitetura do ATA, consulte [arquitetura 
 
 A tecnologia do ATA detecta várias atividades suspeitas, concentrando-se em várias fases da cadeia do ataque cibernético, incluindo:
 
--   Reconhecimento, durante o qual os invasores coletam informações sobre como o ambiente foi compilado criado, o que são os ativos diferentes e quais entidades existem. Normalmente, este é o ponto no qual os invasores criam planos para suas próximas fases do ataque.
--   Ciclo de movimentação lateral, durante o qual um invasor investe tempo e esforço na propagação da superfície de seu ataque dentro de sua rede.
--   Controle do domínio (persistência), durante o qual um invasor captura as informações que permitem retomar sua campanha usando vários conjuntos de pontos de entrada, credenciais e técnicas. 
+- Reconhecimento, durante o qual os invasores coletam informações sobre como o ambiente foi compilado criado, o que são os ativos diferentes e quais entidades existem. Normalmente, este é o ponto no qual os invasores criam planos para suas próximas fases do ataque.
+- Ciclo de movimentação lateral, durante o qual um invasor investe tempo e esforço na propagação da superfície de seu ataque dentro de sua rede.
+- Controle do domínio (persistência), durante o qual um invasor captura as informações que permitem retomar sua campanha usando vários conjuntos de pontos de entrada, credenciais e técnicas. 
 
 Essas fases de um ataque cibernético são semelhantes e previsíveis, independentemente do tipo de empresa que está sob ataque ou do tipo de informação visado.
 O ATA procura três tipos de ataques principais: ataques mal-intencionados, comportamento anormal e riscos e problemas de segurança.
 
 Os **ataques mal-intencionados** são detectados de forma determinista, olhando a lista completa de tipos de ataques conhecidos, incluindo:
 
--   Pass-the-Ticket (PtT)
--   Pass-the-Hash (PtH)
--   Overpass-the-Hash
--   PAC Forjado (MS14-068)
--   Golden Ticket
--   Replicações mal-intencionadas
--   Reconhecimento
--   Força Bruta
--   Execução remota
+- Pass-the-Ticket (PtT)
+- Pass-the-Hash (PtH)
+- Overpass-the-Hash
+- PAC Forjado (MS14-068)
+- Golden Ticket
+- Replicações mal-intencionadas
+- Reconhecimento
+- Força Bruta
+- Execução remota
 
 Para obter uma lista completa de detecções e suas descrições, confira [Quais atividades suspeitas o ATA pode detectar?](ata-threats.md). 
 
@@ -73,11 +73,11 @@ O ATA detecta essas atividades suspeitas e revela as informações no Console do
 
 **Comportamento anormal** é detectado pelo ATA usando análise comportamental e aproveitando o Machine Learning para descobrir atividades questionáveis e comportamentos anormais em usuários e dispositivos de sua rede, incluindo:
 
--   Logons anormais
--   Ameaças desconhecidas
--   Compartilhamento de senha
--   Movimentação lateral
--   Modificação de grupos confidenciais
+- Logons anormais
+- Ameaças desconhecidas
+- Compartilhamento de senha
+- Movimento lateral
+- Modificação de grupos confidenciais
 
 
 Você pode exibir as atividades suspeitas desse tipo no Painel do ATA. No exemplo a seguir, o ATA alerta você quando um usuário acessa quatro computadores que não são normalmente acessados por esse usuário, o que pode ser uma causa de alarme.
@@ -86,9 +86,9 @@ Você pode exibir as atividades suspeitas desse tipo no Painel do ATA. No exempl
 
 O ATA também detecta **riscos e problemas de segurança**, incluindo:
 
--   Confiança quebrada
--   Protocolos fracos
--   Vulnerabilidades de protocolo conhecidas
+- Confiança quebrada
+- Protocolos fracos
+- Vulnerabilidades de protocolo conhecidas
 
 Você pode exibir as atividades suspeitas desse tipo no Painel do ATA. No exemplo a seguir, o ATA está informando que há uma relação de confiança quebrada entre um computador em sua rede e o domínio.
 
@@ -104,9 +104,9 @@ Você pode exibir as atividades suspeitas desse tipo no Painel do ATA. No exempl
 
 ## <a name="whats-next"></a>O que vem a seguir?
 
--   Para saber mais sobre como o ATA se adapta à sua rede: [Arquitetura do ATA](ata-architecture.md)
+- Para saber mais sobre como o ATA se adapta à sua rede: [Arquitetura do ATA](ata-architecture.md)
 
--   Para começar a implantar o ATA: [Instalar o ATA](install-ata-step1.md)
+- Para começar a implantar o ATA: [Instalar o ATA](install-ata-step1.md)
 
 ## <a name="related-videos"></a>Vídeos Relacionados
 - [Participar da comunidade de segurança](https://channel9.msdn.com/Shows/Microsoft-Security/Join-the-Security-Community)

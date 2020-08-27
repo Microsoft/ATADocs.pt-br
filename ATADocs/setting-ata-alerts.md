@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 14cb7513-5dc8-49cb-b3e0-94f469c443dd
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 38f6fd58bb924b3dec8c03be80594fe93e523770
-ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
+ms.openlocfilehash: e61436868e1d7bd441ab11e8f5d6b01869df4ed6
+ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84775005"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88956016"
 ---
 # <a name="set-ata-notifications"></a>Definir notificações do ATA
 
@@ -26,8 +26,8 @@ ms.locfileid: "84775005"
 O ATA pode notificar você quando detectar uma atividade suspeita, por email ou usando o encaminhamento de eventos do ATA, e encaminhar o evento para o servidor syslog/SIEM. Antes de selecionar quais notificações quer receber, você precisará [configurar o servidor de email e o servidor Syslog](setting-syslog-email-server-settings.md).
 
 > [!NOTE]
-> -   Notificações por email incluem um link que leva o usuário diretamente para a atividade suspeita detectada. A parte do nome do host do link é obtida da configuração da URL do Console do ATA na página do Centro do ATA. Por padrão, a URL do Console do ATA é o endereço IP selecionado durante a instalação do Centro do ATA. Se você pretende configurar notificações por email, aconselhamos o uso de um FQDN como a URL do Console do ATA.
-> -   As notificações são enviadas do Centro do ATA para o servidor SMTP e o servidor Syslog.
+> - Notificações por email incluem um link que leva o usuário diretamente para a atividade suspeita detectada. A parte do nome do host do link é obtida da configuração da URL do Console do ATA na página do Centro do ATA. Por padrão, a URL do Console do ATA é o endereço IP selecionado durante a instalação do Centro do ATA. Se você pretende configurar notificações por email, aconselhamos o uso de um FQDN como a URL do Console do ATA.
+> - As notificações são enviadas do Centro do ATA para o servidor SMTP e o servidor Syslog.
 
 
 Para receber notificações, defina os seguintes parâmetros:

@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 4a25561b-a5ed-44aa-9b72-366976b3c72a
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: fbbb692e462626c3625135a8a5fb5109fe570659
-ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
+ms.openlocfilehash: 1df0644b5649e2e1694e6e6560a49662689b2d32
+ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84775090"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88956526"
 ---
 # <a name="change-ata-configuration---domain-connectivity-password"></a>Alteração da configuração do ATA - senha de conectividade do domínio
 
@@ -31,23 +31,23 @@ Se você suspeitar que isso aconteceu, no Gateway do ATA, examine o arquivo Micr
 
 Para corrigir isso, siga este procedimento e atualize a Senha de conectividade do domínio na Central do ATA:
 
-1.  Abra o Console do ATA na Central do ATA.
+1. Abra o Console do ATA na Central do ATA.
 
-2.  Selecione a opção de configurações na barra de ferramentas e escolha **Configuração**.
+1. Selecione a opção de configurações na barra de ferramentas e escolha **Configuração**.
 
     ![Ícone Definições de configuração do ATA](media/ATA-config-icon.png)
 
-3.  Selecione **Serviços de Diretório**.
+1. Selecione **Serviços de Diretório**.
 
     ![Imagem da mudança de senha no Gateway do ATA](media/ATA-GW-change-DC-password.png)
 
-4.  Em **Senha**, altere a senha.
+1. Em **Senha**, altere a senha.
 
     Se o Centro do ATA tiver conectividade com o domínio, use o botão **Testar Conexão** para validar as credenciais
 
-5.  Clique em **Save** (Salvar).
+1. Clique em **Save** (Salvar).
 
-6.  Depois de alterar a senha, verifique manualmente se o serviço do Gateway do ATA está em execução nos servidores do Gateway do ATA.
+1. Depois de alterar a senha, verifique manualmente se o serviço do Gateway do ATA está em execução nos servidores do Gateway do ATA.
 
 
 

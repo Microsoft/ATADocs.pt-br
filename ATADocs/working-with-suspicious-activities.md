@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 44d7c899-816c-4f7f-91d3-84a09d291a24
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: f4f697e32d3c89c77f1564d0b9b43cb04ed8ab30
-ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
+ms.openlocfilehash: e7fb0da19b39466392fedaf2198f795909248049
+ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84774631"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88956781"
 ---
 # <a name="working-with-suspicious-activities"></a>Trabalhando com atividades suspeitas
 
@@ -29,36 +29,36 @@ Este artigo explica as noções básicas de como trabalhar com a Advanced Threat
 Depois de fazer logon no Console do ATA, você será direcionado automaticamente para a **linha do tempo de atividades suspeitas** aberta. As atividades suspeitas são listadas em ordem cronológica com as atividades suspeitas mais recentes na parte superior da linha do tempo.
 Cada atividade suspeita tem as seguintes informações:
 
--   Entidades envolvidas, incluindo usuários, computadores, servidores, controladores de domínio e recursos.
+- Entidades envolvidas, incluindo usuários, computadores, servidores, controladores de domínio e recursos.
 
--   Os tempos e o intervalo de tempo das atividades suspeitas.
+- Os tempos e o intervalo de tempo das atividades suspeitas.
 
--   A severidade da atividade suspeita: alta, média ou baixa.
+- A severidade da atividade suspeita: alta, média ou baixa.
 
--   Status: Aberto, fechado ou suprimido.
+- Status: Aberto, fechado ou suprimido.
 
--   Capacidade de
+- Capacidade de
 
-    -   Compartilhar a atividade suspeita com outras pessoas na organização por email.
+    - Compartilhar a atividade suspeita com outras pessoas na organização por email.
 
-    -   Exportar a atividade suspeita para o Excel.
+    - Exportar a atividade suspeita para o Excel.
 
 > [!NOTE]
-> -   Quando você passa o mouse sobre um usuário ou computador, é exibido um perfil simplificado da entidade que fornece informações adicionais sobre a entidade e inclui o número de atividades suspeitas vinculado à entidade.
-> -   Se você clicar em uma entidade, ela levará você ao perfil de entidade de usuário ou computador.
+> - Quando você passa o mouse sobre um usuário ou computador, é exibido um perfil simplificado da entidade que fornece informações adicionais sobre a entidade e inclui o número de atividades suspeitas vinculado à entidade.
+> - Se você clicar em uma entidade, ela levará você ao perfil de entidade de usuário ou computador.
 
 ![Imagem da linha do tempo das atividades suspeitas do ATA](media/ATA-Suspicious-Activity-Timeline.JPG)
 
 ## <a name="filter-suspicious-activities-list"></a>Filtrar lista de atividades suspeitas
 Para filtrar a lista de atividades suspeitas:
 
-1.  No painel **Filtrar por** no lado esquerdo da tela, selecione uma das seguintes opções: **Tudo**, **Aberto**, **Fechado** ou **Suprimido**.
+1. No painel **Filtrar por** no lado esquerdo da tela, selecione uma das seguintes opções: **Tudo**, **Aberto**, **Fechado** ou **Suprimido**.
 
-2.  Para filtrar ainda mais a lista, selecione **alta**, **média**ou **baixa**.
+1. Para filtrar ainda mais a lista, selecione **alta**, **média**ou **baixa**.
 
 **Severidade da atividade suspeita**
 
--   **Baixo**
+-   **Baixa**
 
     Indica atividades suspeitas que podem levar a ataques projetados para usuários ou softwares mal-intencionados para obter acesso aos dados organizacionais.
 
@@ -75,7 +75,7 @@ Para filtrar a lista de atividades suspeitas:
 Você pode alterar o status de uma atividade suspeita clicando no status atual da atividade suspeita e selecionando uma das seguintes opções **abrir**, **suprimido**, **fechado**ou **excluído**.
 Para fazer isso, clique nos três pontos no canto superior direito de uma atividade suspeita específica para exibir a lista de ações disponíveis.
 
-![Ações do ATA para atividades suspeitas](./media/sa-actions.png)
+![Ações do ATA para atividades suspeitas](media/sa-actions.png)
 
 **Status de atividade suspeita:**
 

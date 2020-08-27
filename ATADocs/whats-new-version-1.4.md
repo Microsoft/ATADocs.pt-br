@@ -12,47 +12,47 @@ ms.technology: ''
 ms.assetid: cbea47f9-34c1-42b6-ae9e-6a472b49e1a5
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 1ad136c9f028140d76fd42f62eeb7a11366af286
-ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
+ms.openlocfilehash: cbe31a255a5b437852b6084fcea92556a04a6bd5
+ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84774738"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88956679"
 ---
 # <a name="what39s-new-in-ata-version-14"></a>Novidades na versão 1.4 do ATA
 Essas notas de versão fornecem informações sobre problemas conhecidos na versão 1.4 da Advanced Threat Analytics.
 
 ## <a name="whats-new-in-this-version"></a>O que há de novo nesta versão?
 
--   Suporte do Windows Event Forwarding (WEF) para enviar eventos diretamente dos controladores de domínio para o Gateway de ATA.
+- Suporte do Windows Event Forwarding (WEF) para enviar eventos diretamente dos controladores de domínio para o Gateway de ATA.
 
--   Aprimoramentos na detecção de “Pass-The-Hash” em recursos corporativos, combinando DPI (inspeção profunda de pacote) e logs de eventos do Windows.
+- Aprimoramentos na detecção de “Pass-The-Hash” em recursos corporativos, combinando DPI (inspeção profunda de pacote) e logs de eventos do Windows.
 
--   Aprimoramentos para o suporte de dispositivos de domínio não unidos e dispositivos não Windows para detecção e visibilidade.
+- Aprimoramentos para o suporte de dispositivos de domínio não unidos e dispositivos não Windows para detecção e visibilidade.
 
--   Aprimoramentos de desempenho para oferecer suporte a mais tráfego por Gateway de ATA.
+- Aprimoramentos de desempenho para oferecer suporte a mais tráfego por Gateway de ATA.
 
--   Aprimoramentos de desempenho para oferecer suporte a mais Gateways de ATA por Centro de ATA.
+- Aprimoramentos de desempenho para oferecer suporte a mais Gateways de ATA por Centro de ATA.
 
--   Um novo processo de resolução de nome automático foi adicionado, o que corresponde a nomes de computador e de endereços IP – este recurso exclusivo economiza um tempo precioso no processo de investigação e fornece provas sólidas para analistas de segurança
+- Um novo processo de resolução de nome automático foi adicionado, o que corresponde a nomes de computador e de endereços IP – este recurso exclusivo economiza um tempo precioso no processo de investigação e fornece provas sólidas para analistas de segurança
 
--   Maior capacidade de coletar informações de usuários para ajustar automaticamente o processo de detecção.
+- Maior capacidade de coletar informações de usuários para ajustar automaticamente o processo de detecção.
 
--   Detecção automática de dispositivos NAT.
+- Detecção automática de dispositivos NAT.
 
--   Failover automático quando os controladores de domínio não estão acessíveis.
+- Failover automático quando os controladores de domínio não estão acessíveis.
 
--   O monitoramento de integridade do sistema e as notificações agora fornecem o estado de integridade geral da implantação, assim como os problemas específicos relacionados à configuração e conectividade.
+- O monitoramento de integridade do sistema e as notificações agora fornecem o estado de integridade geral da implantação, assim como os problemas específicos relacionados à configuração e conectividade.
 
--   Visibilidade de sites e os locais onde as entidades operam.
+- Visibilidade de sites e os locais onde as entidades operam.
 
--   Vários domínios.
+- Vários domínios.
 
--   Suporte a domínios de rótulo único (SLD).
+- Suporte a domínios de rótulo único (SLD).
 
--   Suporte para modificar o endereço IP e o certificado dos Gateways de ATA e o Centro de ATA.
+- Suporte para modificar o endereço IP e o certificado dos Gateways de ATA e o Centro de ATA.
 
--   Telemetria para ajudar a melhorar a experiência do cliente.
+- Telemetria para ajudar a melhorar a experiência do cliente.
 
 ## <a name="known-issues"></a>Problemas conhecidos
 A seguir estão os problemas conhecidos existentes nesta versão.
@@ -72,17 +72,17 @@ Se a instalação do ATA abrir em vez da desinstalação quando você tentar des
 
 **Centro do ATA**
 
--   HKLM\SOFTWARE\Microsoft\Microsoft Advanced Threat Analytics\Center
+- HKLM\SOFTWARE\Microsoft\Microsoft Advanced Threat Analytics\Center
 
--   Adicione um novo valor de cadeia de caracteres chamado `InstallationPath` com um valor de `C:\Program Files\Microsoft Advanced Threat Analytics\Center`. Esta é a pasta de instalação padrão. Se você tiver alterado a pasta de instalação, insira o caminho onde o ATA está instalado.
+- Adicione um novo valor de cadeia de caracteres chamado `InstallationPath` com um valor de `C:\Program Files\Microsoft Advanced Threat Analytics\Center`. Esta é a pasta de instalação padrão. Se você tiver alterado a pasta de instalação, insira o caminho onde o ATA está instalado.
 
     ![Editor do registro para o caminho de instalação do Centro de ATA](media/ATA-uninstall-center-bug.jpg)
 
 **Gateway do ATA**
 
--   HKLM\SOFTWARE\Microsoft\Microsoft Advanced Threat Analytics\Gateway
+- HKLM\SOFTWARE\Microsoft\Microsoft Advanced Threat Analytics\Gateway
 
--   Adicione um novo valor de cadeia de caracteres chamado `InstallationPath` com um valor de `C:\Program Files\Microsoft Advanced Threat Analytics\Gateway`. Esta é a pasta de instalação padrão.  Se você tiver alterado a pasta de instalação, insira o caminho onde o ATA está instalado.
+- Adicione um novo valor de cadeia de caracteres chamado `InstallationPath` com um valor de `C:\Program Files\Microsoft Advanced Threat Analytics\Gateway`. Esta é a pasta de instalação padrão.  Se você tiver alterado a pasta de instalação, insira o caminho onde o ATA está instalado.
 
     ![Editor do registro para o caminho de instalação do Gateway de ATA](media/ATA-GW-uninstall-bug.jpg)
 

@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: df162a62-f273-4465-9887-94271f5000d2
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 94a7ef9a31828e57417f0def62f0d9eadd8ed021
-ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
+ms.openlocfilehash: 1406e96ea205d50a64b475cc6a2d9642e38f63a4
+ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84774869"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88956390"
 ---
 # <a name="troubleshooting-ata-using-the-performance-counters"></a>Solução de problemas do ATA usando contadores de desempenho
 
@@ -28,21 +28,21 @@ Consulte a [arquitetura de ATA](ata-architecture.md) para entender o fluxo de co
 
 **Processo de componente do ATA**:
 
-1.  Quando um componente atinge seu tamanho máximo, ele impede o componente anterior de lhe enviar mais entidades.
+1. Quando um componente atinge seu tamanho máximo, ele impede o componente anterior de lhe enviar mais entidades.
 
-2.  Em seguida, o componente anterior começa a aumentar **seu** próprio tamanho até impedir o componente antes dele de enviar mais entidades.
+1. Em seguida, o componente anterior começa a aumentar **seu** próprio tamanho até impedir o componente antes dele de enviar mais entidades.
 
-3.  Isso acontece ao longo de todo o caminho até o componente NetworkListener, que removerá o tráfego quando ele não puder mais encaminhar entidades.
+1. Isso acontece ao longo de todo o caminho até o componente NetworkListener, que removerá o tráfego quando ele não puder mais encaminhar entidades.
 
 
 ## <a name="retrieving-performance-monitor-files-for-troubleshooting"></a>Recuperando arquivos do monitor de desempenho para solução de problemas
 
 Para recuperar os arquivos do monitor de desempenho (BLG) de vários componentes do ATA:
-1.  Abra o perfmon.
-2.  Pare o conjunto de coletores de dados nomeado: **Microsoft ATA Gateway** ou **Microsoft ATA Center**.
-3.  Vá para a pasta de conjunto de coletores de dados (por padrão, isso é "C:\Program Files\Microsoft Advanced Threat Analytics\Gateway\Logs\DataCollectorSets" ou “C:\Program Files\Microsoft Advanced Threatts").
-4.  Copie o arquivo BLG que foi modificado mais recentemente.
-5.  Reinicie o conjunto de coletores de dados nomeado: **Microsoft ATA Gateway** ou **Microsoft ATA Center**.
+1. Abra o perfmon.
+1. Pare o conjunto de coletores de dados nomeado: **Microsoft ATA Gateway** ou **Microsoft ATA Center**.
+1. Vá para a pasta de conjunto de coletores de dados (por padrão, isso é "C:\Program Files\Microsoft Advanced Threat Analytics\Gateway\Logs\DataCollectorSets" ou “C:\Program Files\Microsoft Advanced Threatts").
+1. Copie o arquivo BLG que foi modificado mais recentemente.
+1. Reinicie o conjunto de coletores de dados nomeado: **Microsoft ATA Gateway** ou **Microsoft ATA Center**.
 
 
 ## <a name="ata-gateway-performance-counters"></a>Contadores de desempenho do Gateway de ATA
@@ -67,8 +67,8 @@ Aqui está a lista dos principais contadores do Gateway de ATA a ter em atençã
 > |Tempo de Envio de Lote do EntitySender/Gateway do ATA da Microsoft|A quantidade de tempo necessária para enviar o último lote.|Deve ser menor que 1.000 milissegundos na maioria das vezes|Verifique se há problemas de rede entre o Gateway de ATA e o Centro de ATA.|
 > 
 > [!NOTE]
-> -   Os contadores de tempo estão em milissegundos.
-> -   Às vezes, é mais conveniente monitorar a lista completa de contadores usando o tipo de grafo **Relatório** (exemplo: monitoramento em tempo real de todos os contadores)
+> - Os contadores de tempo estão em milissegundos.
+> - Às vezes, é mais conveniente monitorar a lista completa de contadores usando o tipo de grafo **Relatório** (exemplo: monitoramento em tempo real de todos os contadores)
 
 ## <a name="ata-lightweight-gateway-performance-counters"></a>Contadores de desempenho do Gateway Lightweight do ATA
 Os contadores de desempenho podem ser usados para gerenciamento de cotas no Gateway Lightweight, a fim de certificar-se de que o ATA não use muitos recursos de muitos dos controladores de domínio no qual ele está instalado.
@@ -115,8 +115,8 @@ Aqui está a lista dos principais contadores do Centro de ATA a ter em atenção
 > 
 > 
 > [!NOTE]
-> -   Os contadores de tempo estão em milissegundos
-> -   Às vezes, é mais conveniente monitorar a lista completa de contadores usando o tipo de gráfico de Relatório (exemplo: monitoramento em tempo real de todos os contadores).
+> - Os contadores de tempo estão em milissegundos
+> - Às vezes, é mais conveniente monitorar a lista completa de contadores usando o tipo de gráfico de Relatório (exemplo: monitoramento em tempo real de todos os contadores).
 
 ## <a name="operating-system-counters"></a>Contadores do sistema operacional
 A tabela a seguir lista os principais contadores do sistema operacional nos quais é necessário prestar atenção:
