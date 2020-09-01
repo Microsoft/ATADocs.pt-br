@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 43e57f87-ca85-4922-8ed0-9830139fe7cb
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 62f2a8614bc9eecf29f2f22a5c26b95c8a648481
-ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
+ms.openlocfilehash: e5afdb5766f4ddd790e85ee6e6e07ae1a2517a44
+ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84771996"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88955931"
 ---
 # <a name="tutorial-investigate-an-entity"></a>Tutorial: Investigar uma entidade
 
@@ -70,7 +70,7 @@ Os sinalizadores de controle de contas de usuários também são importados do A
 
 O Azure ATP informa se esses sinalizadores estão Ativados ou Desativados no Azure Active Directory. Ícones coloridos e a alternância correspondente indicam o status de cada sinalizador. No exemplo a seguir, somente **A senha nunca expira** está ativo no Active Directory.
 
- ![sinalizadores de controle de conta de usuário](./media/user-access-flags.png)
+ ![sinalizadores de controle de conta de usuário](media/user-access-flags.png)
 
 ## <a name="cross-check-with-windows-defender"></a>Verificação com o Windows Defender
 
@@ -81,23 +81,23 @@ Para fornecer insights sobre vários produtos, o perfil da entidade oferece uma 
 
 O Azure ATP importa informações sobre o usuário e o grupo do Azure Active Directory, permitindo que você identifique quais usuários são considerados automaticamente confidenciais por serem membros dos seguintes grupos no Active Directory:
 
--   Administradores
--   Usuários avançados
--   Opers. de contas
--   Operadores de Servidores
--   Operadores de Impressão
--   Operadores de cópia
--   Replicadores
--   Usuários da Área de Trabalho Remota 
--   Operadores de Configuração de Rede 
--   Criadores de confiança de floresta de entrada
--   Administradores do domínio
--   Controladores de Domínio
--   Proprietários criadores de política de grupo 
--   Controladores de domínio somente leitura 
--   Controladores de domínio somente leitura da empresa 
--   Administradores de esquemas 
--   Administrador corporativo
+- Administradores
+- Usuários avançados
+- Opers. de contas
+- Operadores de Servidores
+- Operadores de Impressão
+- Operadores de cópia
+- Replicadores
+- Usuários da Área de Trabalho Remota 
+- Operadores de Configuração de Rede 
+- Criadores de confiança de floresta de entrada
+- Administradores do domínio
+- Controladores de Domínio
+- Proprietários criadores de política de grupo 
+- Controladores de domínio somente leitura 
+- Controladores de domínio somente leitura da empresa 
+- Administradores de esquemas 
+- Administrador corporativo
 
 Além disso, é possível **marcar manualmente** entidades como confidenciais dentro do Azure ATP. Isso é importante, porque algumas detecções do Azure ATP, como a detecção de modificação de grupos confidenciais e o caminho de movimentação lateral, dependem o status de confidencialidade de uma entidade. Se você marcar manualmente usuários ou grupos adicionais como confidenciais, como membros de conselho, executivos de empresa e diretores de vendas, o Azure ATP os considerará confidenciais. Para obter mais informações, consulte [Trabalhando com contas confidenciais](sensitive-accounts.md).
 

@@ -6,18 +6,18 @@ author: shsagir
 ms.author: shsagir
 manager: shsagir
 ms.date: 01/26/2020
-ms.topic: article
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: a06004bd-9f77-4e8e-a0e5-4727d6651a0f
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 1c15d2117ca25320865bdc4cfbfae2c2c5cca4c3
-ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
+ms.openlocfilehash: 331f709c19008e1f11aacc50678893158528042d
+ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84775753"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88955557"
 ---
 # <a name="working-with-security-alerts"></a>Trabalhando com alertas de segurança
 
@@ -69,17 +69,17 @@ A equipe de pesquisa da Azure ATP (Proteção Avançada contra Ameaças do Azure
 
 Essas detecções são marcadas como uma notificação de versão prévia para ajudar a identificar as novas detecções e saber que elas são novas para o produto. Se você desabilitar as detecções de versão prévia, elas não serão exibidas no console da Azure ATP (nem na linha do tempo nem nos perfis de entidade) e novos alertas não serão abertos.
 
-![VPN de detecção de versão prévia](./media/preview-detection-vpn.png)
+![VPN de detecção de versão prévia](media/preview-detection-vpn.png)
 
 Por padrão, as detecções de versão prévia são habilitadas na Azure ATP.
 
 Para desabilitar as detecções de versão prévia:
 
 1. No console da Azure ATP, clique no símbolo de engrenagem de configurações.
-2. No menu à esquerda, em Versão prévia, clique em **Detecções**.
-3. Use o controle deslizante para habilitar e desabilitar às detecções de versão prévia.
+1. No menu à esquerda, em Versão prévia, clique em **Detecções**.
+1. Use o controle deslizante para habilitar e desabilitar às detecções de versão prévia.
 
-![detecções de versão prévia](./media/preview-detections.png)
+![detecções de versão prévia](media/preview-detections.png)
 
 ## <a name="filter-security-alerts-list"></a>Filtrar lista de alertas de segurança
 
@@ -87,7 +87,7 @@ Para filtrar lista de alertas de segurança:
 
 1. No painel **Filtrar por** no lado esquerdo da tela, selecione uma das seguintes opções: **Tudo**, **Aberto**, **Fechado** ou **Suprimido**.
 
-2. Para filtrar a lista ainda mais, selecione **Alta**, **Média** ou **Baixa**.
+1. Para filtrar a lista ainda mais, selecione **Alta**, **Média** ou **Baixa**.
 
 **Gravidade da atividade suspeita**
 
@@ -108,7 +108,7 @@ Para filtrar lista de alertas de segurança:
 É possível alterar o status de um alerta de segurança clicando em seu status atual e selecionando uma das seguintes opções **Aberto**, **Suprimido**, **Fechado** ou **Excluído**.
 Para fazer isso, clique nos três pontos no canto superior direito de um alerta específico para revelar a lista de ações disponíveis.
 
-![Ações para alertas de segurança do Azure ATP](./media/atp-sa-actions.png)
+![Ações para alertas de segurança do Azure ATP](media/atp-sa-actions.png)
 
 **Status do alerta de segurança**
 

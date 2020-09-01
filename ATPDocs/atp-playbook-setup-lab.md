@@ -2,17 +2,17 @@
 title: Tutorial de configuração do laboratório de alerta de segurança do ATP do Azure
 description: Neste tutorial, você configura um laboratório de teste do ATP do Azure para simular ameaças que serão detectadas pelo ATP do Azure.
 ms.service: azure-advanced-threat-protection
-ms.topic: tutorial
+ms.topic: how-to
 author: shsagir
 ms.author: shsagir
 ms.date: 02/28/2019
 ms.reviewer: itargoet
-ms.openlocfilehash: 4a846962645d978fc7419650781624e7c5f4bf0b
-ms.sourcegitcommit: 63be53de5b84eabdeb8c006438dab45bd35a4ab7
+ms.openlocfilehash: c6b1a309d86562082121806e1c81897e9632e95c
+ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79414515"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88955098"
 ---
 # <a name="tutorial-setup-an-atp-security-alert-lab"></a>Tutorial: Configurar um laboratório de alerta de segurança do ATP 
 
@@ -34,7 +34,7 @@ Neste tutorial, você vai:
    - Vá em frente e [hidrate o Active Directory (AD) com usuários](#bkmk_hydrate).
 1. Uma [instância do ATP do Azure](install-atp-step1.md)[conectada ao AD](install-atp-step2.md).
 1. [Baixe](install-atp-step3.md) e [instale a versão mais recente do sensor do ATP do Azure](install-atp-step4.md) no controlador de domínio do seu laboratório.
-1. Familiaridade com [Estações de trabalho com acesso privilegiado](https://docs.microsoft.com/windows-server/identity/securing-privileged-access/privileged-access-workstations) e [política SAMR](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/network-access-restrict-clients-allowed-to-make-remote-sam-calls).
+1. Familiaridade com [Estações de trabalho com acesso privilegiado](/windows-server/identity/securing-privileged-access/privileged-access-workstations) e [política SAMR](/windows/security/threat-protection/security-policy-settings/network-access-restrict-clients-allowed-to-make-remote-sam-calls).
 
 ## <a name="recommendations"></a>Recomendações
 
@@ -114,9 +114,9 @@ Para permitir que o serviço do ATP do Azure execute corretamente a enumeração
 
     ![Modifique a Política de Grupo para permitir que o ATP do Azure use os recursos do caminho de Movimentação Lateral.](media/playbook-labsetup-localgrouppolicies3.png)
 
-2. Adicione a conta do serviço ATP do Azure, AATPService, à lista de contas aprovadas capazes de executar essa ação em seus sistemas modernos do Windows.
+1. Adicione a conta do serviço ATP do Azure, AATPService, à lista de contas aprovadas capazes de executar essa ação em seus sistemas modernos do Windows.
 
-    ![Adicione o serviço](./media/samr-add-service.png)
+    ![Adicione o serviço](media/samr-add-service.png)
 
 ### <a name="add-sensitive-group-to-azure-atp"></a>Adicionar grupo confidencial ao ATP do Azure
 
@@ -124,15 +124,15 @@ A adição do Grupo de Segurança "Helpdesk" como um **Grupo confidencial** perm
 
 1. No portal do Azure ATP, clique na engrenagem de **Configuração** na barra de menus.
 
-2. Em **Detecção**, clique em **Marcas de entidade**.
+1. Em **Detecção**, clique em **Marcas de entidade**.
 
     ![Marcas de entidade do Azure ATP](media/entity-tags.png)
 
-3. Na seção **Confidencial**, digite o nome "Helpdesk" para **Grupos confidenciais** e clique no sinal **+** para adicioná-los.
+1. Na seção **Confidencial**, digite o nome "Helpdesk" para **Grupos confidenciais** e clique no sinal **+** para adicioná-los.
 
     ![Marque "Helpdesk" como um grupo confidencial do ATP do Azure para habilitar os Gráficos de Movimentação Lateral e os relatórios para esse grupo privilegiado](media/playbook-labsetup-helpdesksensitivegroup.png)
 
-4. Clique em **Salvar**.
+1. Clique em **Salvar**.
 
 ### <a name="azure-atp-lab-base-setup-checklist"></a>Lista de verificação de configuração base do Laboratório de ATP do Azure
 
@@ -180,7 +180,7 @@ Para simular uma rede funcional e gerenciada, crie uma Tarefa Agendada no comput
     Register-ScheduledTask -TaskName "RonHD Cmd.exe - AATP SA Playbook" -Trigger $trigger -User $runAs -Password $ronHHDPass -Action $action
     ```
 
-2. Entre no computador como **DiogoM**. O processo de Cmd.exe iniciará no contexto do EduardoHD depois do logon, simulando o gerenciamento do computador por Helpdesk.
+1. Entre no computador como **DiogoM**. O processo de Cmd.exe iniciará no contexto do EduardoHD depois do logon, simulando o gerenciamento do computador por Helpdesk.
 
 ### <a name="turn-off-antivirus-on-victimpc"></a>Desativar o antivírus em VictimPC
 
@@ -199,7 +199,7 @@ Para executar os guias estratégicos de Alerta de Segurança do ATP do Azure, vo
 |----|-----|
 | Mimikatz | [GitHub - Mimikatz](https://github.com/gentilkiwi/mimikatz) |
 | PowerSploit | [GitHub - PowerSploit](https://github.com/PowerShellMafia/PowerSploit) |
-| PsExec | [Microsoft Docs](https://docs.microsoft.com/sysinternals/downloads/psexec) |
+| PsExec | [Microsoft Docs](/sysinternals/downloads/psexec) |
 | NetSess | [JoeWare Tools](https://www.joeware.net/freetools) |
 
 Agradecemos aos criadores dessas ferramentas de pesquisa por ajudar a comunidade a entender melhor os riscos e impactos cibernéticos.
@@ -218,7 +218,7 @@ Agradecemos aos criadores dessas ferramentas de pesquisa por ajudar a comunidade
 
    ```
 
-2. Depois de executar o script, **Helpdesk** fica na lista **Administradores** > **Membros** locais de **AdminPC**.
+1. Depois de executar o script, **Helpdesk** fica na lista **Administradores** > **Membros** locais de **AdminPC**.
 ![Helpdesk no Grupo de Administradores Locais para AdminPC](media/playbook-labsetup-localgrouppolicies1.png)
 
 ### <a name="simulate-domain-activities-from-adminpc"></a>Simular atividades de domínio do AdminPC
@@ -273,4 +273,3 @@ Teste o seu ambiente de laboratório do ATP do Azure usando os guias estratégic
 ## <a name="join-the-community"></a>Participe da comunidade
 
 Tem mais perguntas ou interesse em discutir sobre o ATP do Azure e a segurança relacionada com outras pessoas? Participe da [Comunidade do ATP do Azure](https://techcommunity.microsoft.com/t5/Azure-Advanced-Threat-Protection/bd-p/AzureAdvancedThreatProtection) hoje mesmo!
-

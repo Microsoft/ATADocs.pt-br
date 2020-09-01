@@ -6,18 +6,18 @@ author: shsagir
 ms.author: shsagir
 manager: shsagir
 ms.date: 05/16/2019
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: b09adce3-0fbc-40e3-a53f-31f57fe79ca3
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 76b38cfb407007b58436d7790b7e530026aa5215
-ms.sourcegitcommit: c5b64066f28b5a97034c1b92908b1c5e3221a36d
+ms.openlocfilehash: 8f9bd3877286e4b7230e9bb35d6f382fe3092e13
+ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/25/2020
-ms.locfileid: "85365751"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88956492"
 ---
 # <a name="configure-azure-atp-to-make-remote-calls-to-sam"></a>Configurar o Azure ATP para realizar chamadas remotas para SAM
 
@@ -35,15 +35,15 @@ Para garantir que clientes e servidores Windows permitam que sua conta do Azure 
    - Nome da política: Acesso à rede – restringir clientes com permissão para efetuar chamadas remotas para SAM
    - Localização: Configuração do computador, Configurações do Windows, Configurações de segurança, Políticas locais, Opções de segurança
 
-   ![Localize a política](./media/samr-policy-location.png)
+    ![Localize a política](media/samr-policy-location.png)
 
-2. Adicione o serviço do Azure ATP à lista de contas aprovadas capazes de executar essa ação em seus sistemas modernos do Windows.
+1. Adicione o serviço do Azure ATP à lista de contas aprovadas capazes de executar essa ação em seus sistemas modernos do Windows.
 
-   ![Adicione o serviço](./media/samr-add-service.png)
+    ![Adicione o serviço](media/samr-add-service.png)
 
 3. Agora o **Serviço do AATP** (o serviço do Azure ATP criado durante a instalação) tem os privilégios necessários para executar o SAM-R no ambiente.
 
-Para saber mais sobre SAM-R e essa Política de Grupo, consulte [Acesso à rede: restringir clientes com permissão para efetuar chamadas remotas para SAM](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/network-access-restrict-clients-allowed-to-make-remote-sam-calls).
+Para saber mais sobre SAM-R e essa Política de Grupo, consulte [Acesso à rede: restringir clientes com permissão para efetuar chamadas remotas para SAM](/windows/security/threat-protection/security-policy-settings/network-access-restrict-clients-allowed-to-make-remote-sam-calls).
 
 ## <a name="see-also"></a>Consulte Também
 

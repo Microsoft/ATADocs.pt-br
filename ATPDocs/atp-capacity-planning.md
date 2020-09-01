@@ -4,15 +4,15 @@ description: Ajuda você a planejar a implantação e a decidir quantos servidor
 author: shsagir
 ms.author: shsagir
 ms.date: 05/20/2020
-ms.topic: quickstart
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
-ms.openlocfilehash: 7bcebf2142980990bb71fb1c09faa986b4315fa7
-ms.sourcegitcommit: c3949c8f0332198753c14e3bcd7cb4ca6d288e25
+ms.openlocfilehash: 11b895e4d18df33bb220dc806246fec6ddfa6877
+ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83696024"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88956764"
 ---
 # <a name="quickstart-plan-capacity-for-azure-atp"></a>Início Rápido: Planejar capacidade para o ATP do Azure
 
@@ -31,7 +31,7 @@ A maneira recomendada e mais simples de determinar a capacidade da implantação
 1. Execute a ferramenta de dimensionamento do ATP do Azure, **TriSizingTool.exe**, do arquivo zip que você baixou.
 1. Quando concluir a execução da ferramenta, abra os resultados de arquivo do Excel.
 1. No arquivo do Excel, localize e clique na planilha **Resumo do ATP do Azure**. A outra planilha não é necessária, pois ela se destina ao planejamento do ATA.
-   ![Ferramenta de planejamento de capacidade de amostra](media/capacity-tool.png)
+    ![Ferramenta de planejamento de capacidade de amostra](media/capacity-tool.png)
 
 1. Localize o campo **Pacotes ocupados/s**, na tabela do sensor do ATP do Azure, no arquivo de resultados do Excel, e anote isso.
 1. Compare o campo **Pacotes ocupados/s** com o campo **PACOTES POR SEGUNDO**, na seção [Tabela do sensor do ATP do Azure](#sizing) deste artigo. Use os campos para determinar a capacidade de memória e CPU que será usada pelo sensor.

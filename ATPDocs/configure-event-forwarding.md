@@ -6,18 +6,18 @@ author: shsagir
 ms.author: shsagir
 manager: shsagir
 ms.date: 03/18/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 3547519f-8d9c-40a9-8f0e-c7ba21081203
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 1f7d61b88c1a83f6ec075692af147a87dfe0c039
-ms.sourcegitcommit: 8c99699b9b84d50fb258c0cc5523ffa78133b7a4
+ms.openlocfilehash: 0a127cec114eb92320334999354522e676f99b37
+ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2020
-ms.locfileid: "88027237"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88956900"
 ---
 # <a name="configuring-windows-event-forwarding"></a>Configuração do encaminhamento de eventos do Windows
 
@@ -54,7 +54,7 @@ Após adicionar o **Serviço de Rede** ao grupo **Leitores de Log de Eventos**, 
 1. Em um prompt de comando, digite *gpedit.msc*.
 1. Expanda **Configuração do Computador > Modelos Administrativos > Componentes do Windows > Encaminhamento de Evento**
 
-   ![Imagem do editor de grupo de política local](media/wef%201%20local%20group%20policy%20editor.png)
+    ![Imagem do editor de grupo de política local](media/wef%201%20local%20group%20policy%20editor.png)
 
 1. Clique duas vezes em **Configurar Gerenciador de assinatura de destino**.
 
@@ -87,7 +87,7 @@ Após adicionar o **Serviço de Rede** ao grupo **Leitores de Log de Eventos**, 
     1. Clique com o botão direito do mouse na assinatura criada e selecione **Status de Runtime** para verificar se há problemas com o status.
     1. Depois de alguns minutos, verifique se os eventos definidos para serem encaminhados aparecem nos Eventos Encaminhados no sensor autônomo do Azure ATP.
 
-Para obter mais informações, consulte: [Configurar computadores para encaminhar e coletar eventos](https://technet.microsoft.com/library/cc748890)
+Para obter mais informações, consulte: [Configurar computadores para encaminhar e coletar eventos](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc748890(v=ws.11))
 
 ## <a name="see-also"></a>Consulte Também
 

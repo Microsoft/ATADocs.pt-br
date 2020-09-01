@@ -6,18 +6,18 @@ author: shsagir
 ms.author: shsagir
 manager: shsagir
 ms.date: 1/3/2019
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 1b7e72c3-a538-443f-981c-398ffafa5ab8
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 50e0ccfb22e068eccadcdbfc3c59251b171813a7
-ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
+ms.openlocfilehash: 0e0b9f73ce019f105d1cb1c08fe2637e23634adf
+ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84773662"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88953585"
 ---
 # <a name="work-with-azure-atp-health-and-events"></a>Trabalhar com eventos e integridade do ATP do Azure
 
@@ -34,7 +34,7 @@ O centro de integridade do ATP do Azure permite que você saiba que há um probl
 ### <a name="managing-azure-atp-health"></a>Gerenciando a integridade do ATP do Azure
 Para verificar a integridade geral da instância do ATP do Azure, clique no ícone do Centro de Integridade na barra de menus ![Ícone do centro de integridade do ATP do Azure](media/atp-red-dot.png)
 
--   Todos os problemas abertos podem ser gerenciados configurando-os para **Fechar** ou **Suprimir** clicando nos três pontos no canto do alerta e fazendo sua escolha.
+- Todos os problemas abertos podem ser gerenciados configurando-os para **Fechar** ou **Suprimir** clicando nos três pontos no canto do alerta e fazendo sua escolha.
 
 -   **Abrir**: todas as novas atividades suspeitas aparecem nesta lista.
 

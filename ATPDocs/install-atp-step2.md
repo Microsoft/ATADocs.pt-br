@@ -4,15 +4,15 @@ description: A etapa dois da instalação do Azure ATP ajuda a definir as config
 author: shsagir
 ms.author: shsagir
 ms.date: 01/15/2020
-ms.topic: conceptual
+ms.topic: quickstart
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
-ms.openlocfilehash: 4d3e65aaafea7cefd4ef564c0ee0a82b8d2fdfe4
-ms.sourcegitcommit: 63be53de5b84eabdeb8c006438dab45bd35a4ab7
+ms.openlocfilehash: 29d6fc0a1a79b5861bad447f160ba7f5fe6a0131
+ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79413733"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88954333"
 ---
 # <a name="quickstart-connect-to-your-active-directory-forest"></a>Início Rápido: Conectar à sua floresta do Active Directory
 
@@ -52,7 +52,7 @@ Na primeira vez em que você abre o portal do Azure ATP, a tela a seguir é exib
     |**Conta de serviço gerenciado de grupo** (necessário para a conta gMSA)|Somente para a conta gMSA, selecione **Conta de serviço gerenciado de grupo**.|
     |**Domínio** (obrigatório)|Digite o domínio para o usuário somente leitura. Por exemplo: **contoso.com**. É importante que você insira o FQDN completo do domínio em que o usuário está localizado. Por exemplo, se a conta do usuário estiver no domínio corp.contoso.com, você precisará inserir `corp.contoso.com` e não contoso.com|
 
-2. No portal do Azure ATP, clique em **Baixar instalação do sensor e instalar o primeiro sensor** para continuar.
+1. No portal do Azure ATP, clique em **Baixar instalação do sensor e instalar o primeiro sensor** para continuar.
 
 ## <a name="next-steps"></a>Próximas etapas
 

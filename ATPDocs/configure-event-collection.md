@@ -6,18 +6,18 @@ author: shsagir
 ms.author: shsagir
 manager: shsagir
 ms.date: 03/19/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 88692d1a-45a3-4d54-a549-4b5bba6c037b
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 8c95335f50988eba7d3d18e9d0550e33647c9389
-ms.sourcegitcommit: 8c99699b9b84d50fb258c0cc5523ffa78133b7a4
+ms.openlocfilehash: 0057f2627139e8803aa04c693b0fe051bf8d118a
+ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2020
-ms.locfileid: "88027169"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88956883"
 ---
 # <a name="configure-event-collection"></a>Configurar coleta de eventos
 
@@ -35,7 +35,7 @@ Além de coletar e analisar o tráfego de rede para e dos controladores de domí
 Para configurar a coleção 8004 de eventos do Windows:
 
 1. Navegue para: Configuração do computador\Políticas\ Configurações do Windows\Configurações de segurança\Políticas locais\Opções de segurança
-2. Defina a **política de grupo do domínio** da seguinte forma:
+1. Defina a **política de grupo do domínio** da seguinte forma:
     - Segurança de rede: restringir NTLM: tráfego de NTLM de saída para servidores remotos = **Auditar todos**
     - Segurança de rede: restringir NTLM: auditar a autenticação NTLM neste domínio = **Habilitar todos**
     - Segurança de rede: restringir NTLM: auditar o tráfego NTLM de entrada = **Habilitar a auditoria de todas as contas**

@@ -2,17 +2,17 @@
 title: Guia Estratégico de Movimentação Lateral de Alerta de Segurança do ATP do Azure
 description: O guia estratégico do ATP do Azure descreve como simular ameaças de Movimentação Lateral para detecção do ATP do Azure.
 ms.service: azure-advanced-threat-protection
-ms.topic: tutorial
+ms.topic: how-to
 author: shsagir
 ms.author: shsagir
 ms.date: 03/03/2019
 ms.reviewer: itargoet
-ms.openlocfilehash: 998b932dc88ca14bed4fd008ea5d1d6574e385a0
-ms.sourcegitcommit: 63be53de5b84eabdeb8c006438dab45bd35a4ab7
+ms.openlocfilehash: 03eaafcb803a4cb443ad97f488ab83c690dadffa
+ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79410682"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88955387"
 ---
 # <a name="tutorial-lateral-movement-playbook"></a>Tutorial: Guia estratégico de movimentação lateral
 
@@ -45,16 +45,16 @@ Durante nossas simulações de ataques de reconhecimento, **VictimPC** não foi 
 ### <a name="mimikatz-sekurlsalogonpasswords"></a>Mimikatz sekurlsa::logonpasswords
 
 1. Abra um **prompt de comandos com privilégios elevados** no **VictimPC**. 
-2. Navegue até a pasta de ferramentas onde você salvou Mimikatz e execute o seguinte comando:
+1. Navegue até a pasta de ferramentas onde você salvou Mimikatz e execute o seguinte comando:
 
    ``` cmd
    mimikatz.exe "privilege::debug" "sekurlsa::logonpasswords" "exit" >> c:\temp\victimcpc.txt
    ```
 
-3. Abra **c:\\temp\\victimpc.txt** para exibir as credenciais coletadas que Mimikatz encontrou e gravou no arquivo txt.
-   ![Saída de Mimikatz incluindo o hash NTLM do EduardoHD](media/playbook-lateral-sekurlsa-logonpasswords-output.png)
+1. Abra **c:\\temp\\victimpc.txt** para exibir as credenciais coletadas que Mimikatz encontrou e gravou no arquivo txt.
+    ![Saída de Mimikatz incluindo o hash NTLM do EduardoHD](media/playbook-lateral-sekurlsa-logonpasswords-output.png)
 
-4. Coletamos com êxito o hash NTLM do EduardoHD da memória usando mimikatz. Precisaremos do hash NTLM em breve.
+1. Coletamos com êxito o hash NTLM do EduardoHD da memória usando mimikatz. Precisaremos do hash NTLM em breve.
 
    > [!Important]
    > - É esperado e normal que os hashes mostrados neste exemplo sejam diferentes dos hashes em seu próprio ambiente de laboratório. O objetivo deste exercício é ajudar você a entender como os hashes foram obtidos, obter os valores deles e usá-los nas próximas fases. </br> </br>
@@ -87,9 +87,9 @@ Usando uma técnica comum chamada **Overpass-the-Hash**, o hash NTLM coletado é
    > [!Note]
    > Se o hash para EduardoHD era diferente nas etapas anteriores, substitua o hash NTLM acima pelo hash obtido em *victimpc.txt*.
 
-   ![Overpass-the-hash via mimikatz](media/playbook-lateral-opth1.png)
+    ![Overpass-the-hash via mimikatz](media/playbook-lateral-opth1.png)
 
-2. Verifique se um novo prompt de comando é aberto. Ele estará executando como EduardoHD, mas talvez isso *ainda* não seja óbvio. Não feche o novo prompt de comando, você o usará em seguida.
+1. Verifique se um novo prompt de comando é aberto. Ele estará executando como EduardoHD, mas talvez isso *ainda* não seja óbvio. Não feche o novo prompt de comando, você o usará em seguida.
 
 O ATP do Azure não detecta um hash passado em um recurso local. O ATP do Azure detecta quando um hash é **usado de um recurso para acessar outro** recurso ou serviço.
 
@@ -107,29 +107,29 @@ Usaremos o **PowerSploit** ```Get-NetLocalGroup``` para ajudar a responder a iss
    Get-NetLocalGroup 10.0.24.6
    ```
 
-   ![Obter os administradores locais para 10.0.24.6 via PowerSploit](media/playbook-lateral-adminpcsamr.png)
+    ![Obter os administradores locais para 10.0.24.6 via PowerSploit](media/playbook-lateral-adminpcsamr.png)
 
    Nos bastidores, isso usa SAM remoto para identificar os administradores locais do IP que descobrimos anteriormente e que foi exposto a uma conta de Administrador de Domínio.
 
    Nossa saída será semelhante a:
 
-   ![Saída do PowerSploit Get-NetLocalGroup](media/playbook-lateral-adminpcsamr_results.png)
+    ![Saída do PowerSploit Get-NetLocalGroup](media/playbook-lateral-adminpcsamr_results.png)
 
    Este computador tem dois Administradores Locais, o Administrador interno "ContosoAdmin" e "Helpdesk". Sabemos que EduardoHD é membro do Grupo de Segurança "Helpdesk". Também ficamos sabendo do nome do computador, AdminPC. Já que temos as credenciais do EduardoHD, podemos usá-las para nos movimentarmos lateralmente até AdminPC e obter acesso a esse computador.
 
-2. Do *mesmo prompt de comando, que está em execução no contexto do EduardoHD*, digite **exit** para sair do PowerShell, se for necessário. Em seguida, execute este comando:
+1. Do *mesmo prompt de comando, que está em execução no contexto do EduardoHD*, digite **exit** para sair do PowerShell, se for necessário. Em seguida, execute este comando:
 
    ``` cmd
    dir \\adminpc\c$
    ```
 
-3. Conseguimos acessar AdminPC. Vamos ver quais tíquetes nós temos. No mesmo prompt de comando, execute o seguinte comando:
+1. Conseguimos acessar AdminPC. Vamos ver quais tíquetes nós temos. No mesmo prompt de comando, execute o seguinte comando:
 
    ``` cmd
    klist
    ```
 
-   ![Usar klist para nos mostrar os tíquetes Kerberos em nosso processo cmd.exe atual](media/playbook-lateral-klist.png)
+    ![Usar klist para nos mostrar os tíquetes Kerberos em nosso processo cmd.exe atual](media/playbook-lateral-klist.png)
 
 Você pode ver que, para esse processo específico, temos o TGT do EduardoHD na memória. Executamos um ataque de Overpass-the-Hash em nosso laboratório. Convertemos o hash NTLM que foi comprometido anteriormente e o utilizamos para obter um TGT de Kerberos. Esse TGT de Kerberos foi usado para obter acesso a outro recurso de rede, neste caso, AdminPC. 
 
@@ -179,15 +179,15 @@ Com Mimikatz preparado em AdminPC, usaremos PsExec para executá-lo remotamente.
 
    Esse comando executará e exportará os tíquetes encontrado no processo LSASS.exe e coloque-os no diretório atual, em AdminPC.
 
-2. Precisamos copiar os tíquetes de volta ao VictimPC de AdminPC. Já que estamos interessados apenas nos tíquetes de YasminC para este exemplo, execute o seguinte comando:
+1. Precisamos copiar os tíquetes de volta ao VictimPC de AdminPC. Já que estamos interessados apenas nos tíquetes de YasminC para este exemplo, execute o seguinte comando:
 
    ``` cmd
    xcopy \\adminpc\c$\temp\*SamiraA* c:\temp\adminpc_tickets
    ```
 
-   ![Exportar credenciais coletadas de AdminPC de volta para VictimPC](media/playbook-escalation-export_tickets2.png)
+    ![Exportar credenciais coletadas de AdminPC de volta para VictimPC](media/playbook-escalation-export_tickets2.png)
 
-3. Vamos limpar nossos rastros no AdminPC excluindo nossos arquivos.
+1. Vamos limpar nossos rastros no AdminPC excluindo nossos arquivos.
 
    ``` cmd
    rmdir \\adminpc\c$\temp /s /q
@@ -198,7 +198,7 @@ Com Mimikatz preparado em AdminPC, usaremos PsExec para executá-lo remotamente.
 
    Em nosso **VictimPC**, temos esses tíquetes coletados em nossa pasta **c:\temp\adminpc_tickets**:
 
-   ![C:\temp\tickets é a nossa saída exportada de mimikatz de AdminPC](media/playbook-escalation-export_tickets4.png)
+    ![C:\temp\tickets é a nossa saída exportada de mimikatz de AdminPC](media/playbook-escalation-export_tickets4.png)
 
 
 ### <a name="mimikatz-kerberosptt"></a>Mimikatz Kerberos::ptt
@@ -211,28 +211,28 @@ Com os tíquetes localmente no VictimPC, finalmente chegou a hora de se tornar Y
    mimikatz.exe "privilege::debug" "kerberos::ptt c:\temp\adminpc_tickets" "exit"
    ```
 
-   ![Importar os tíquetes roubados no processo de cmd.exe](media/playbook-escalation-ptt1.png)
+    ![Importar os tíquetes roubados no processo de cmd.exe](media/playbook-escalation-ptt1.png)
 
-2. No mesmo prompt de comandos com privilégios elevados, valide se as os tíquetes certos estão na sessão do prompt de comando. Execute o seguinte comando:
+1. No mesmo prompt de comandos com privilégios elevados, valide se as os tíquetes certos estão na sessão do prompt de comando. Execute o seguinte comando:
 
    ``` cmd
    klist
    ```
 
-   ![Executar klist para ver os tíquetes importados no processo de CMD](media/playbook-escalation-ptt2.png)
+    ![Executar klist para ver os tíquetes importados no processo de CMD](media/playbook-escalation-ptt2.png)
 
-3. Observe que esses tíquetes permanecem inutilizados. Atuando como invasor, "passamos o tíquete" com sucesso. Coletamos a credencial de YasmiC de AdminPC e, em seguida, as passamos para outro processo em execução no VictimPC.
+1. Observe que esses tíquetes permanecem inutilizados. Atuando como invasor, "passamos o tíquete" com sucesso. Coletamos a credencial de YasmiC de AdminPC e, em seguida, as passamos para outro processo em execução no VictimPC.
 
    > [!Note]
    > Como no Pass-the-Hash, o ATP do Azure não sabe que o tíquete foi passado com base na atividade do cliente local. No entanto, o ATP do Azure detecta a atividade *após o uso do tíquete*, ou seja, utilizado para acessar outro recurso/serviço.
 
-4. Conclua seu ataque simulado acessando o controlador de domínio em **VictimPC**. No prompt de comando, agora em execução com os tíquetes de YasmiC na memória, execute:
+1. Conclua seu ataque simulado acessando o controlador de domínio em **VictimPC**. No prompt de comando, agora em execução com os tíquetes de YasmiC na memória, execute:
 
    ``` cmd
    dir \\ContosoDC\c$
    ```
 
-   ![Acessar a unidade c:\ de ContosoDC usando as credenciais de YasmiC](media/playbook-escalation-ptt3.png)
+    ![Acessar a unidade c:\ de ContosoDC usando as credenciais de YasmiC](media/playbook-escalation-ptt3.png)
 
 Sucesso! Por meio de nosso ataques fictícios, conseguimos acesso de administrador em nosso controlador de domínio e conseguimos comprometer a Floresta/Domínio do Active Directory do nosso laboratório.
 

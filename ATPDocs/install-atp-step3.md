@@ -5,16 +5,16 @@ keywords: ''
 author: shsagir
 ms.author: shsagir
 ms.date: 02/19/2020
-ms.topic: conceptual
+ms.topic: quickstart
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 95bb4ec1-841f-41b7-92fe-fbd144085724
-ms.openlocfilehash: 5c8065ee0c4358b25597879881f1cc1f063d5c2f
-ms.sourcegitcommit: 63be53de5b84eabdeb8c006438dab45bd35a4ab7
+ms.openlocfilehash: 26e6116513c9ab9c4de4766dd4532a0217299563
+ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79413716"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88956135"
 ---
 # <a name="quickstart-download-the-azure-atp-sensor-setup-package"></a>Início Rápido: Baixar o pacote de instalação do sensor do Azure ATP
 
@@ -35,9 +35,9 @@ Clique em **Baixar** na lista de etapas na parte superior da página para ir par
  Para acessar a tela de configuração do sensor mais tarde, clique no **ícone de configurações** (canto superior direito), selecione **Configuração** e, em **Sistema**, clique em **sensor**.  
 
 1. Clique em **sensor**.
-2. Salve o pacote localmente.
-3. Copie a **chave** de **acesso**. A chave de acesso é necessária para o sensor do ATP do Azure se conectar à sua instância do ATP do Azure. A chave de acesso é uma senha de uso único para implantação de sensor. Depois disso, toda a comunicação é realizada usando certificados para autenticação e criptografia TLS. Use o botão **Regenerar** se você precisar regenerar a nova chave de acesso. Isso não afetará nenhum sensor implantado anteriormente, porque a chave só é usada para o registro inicial do sensor.
-4. Copie o pacote para o servidor dedicado ou controlador de domínio no qual você está instalando o sensor do ATP do Azure. Como alternativa, você pode abrir o portal do ATP do Azure por meio do servidor dedicado ou do controlador de domínio e ignorar esta etapa.
+1. Salve o pacote localmente.
+1. Copie a **chave** de **acesso**. A chave de acesso é necessária para o sensor do ATP do Azure se conectar à sua instância do ATP do Azure. A chave de acesso é uma senha de uso único para implantação de sensor. Depois disso, toda a comunicação é realizada usando certificados para autenticação e criptografia TLS. Use o botão **Regenerar** se você precisar regenerar a nova chave de acesso. Isso não afetará nenhum sensor implantado anteriormente, porque a chave só é usada para o registro inicial do sensor.
+1. Copie o pacote para o servidor dedicado ou controlador de domínio no qual você está instalando o sensor do ATP do Azure. Como alternativa, você pode abrir o portal do ATP do Azure por meio do servidor dedicado ou do controlador de domínio e ignorar esta etapa.
 
 O arquivo zip inclui os seguintes arquivos:
 

@@ -6,18 +6,18 @@ author: shsagir
 ms.author: shsagir
 manager: shsagir
 ms.date: 12/24/2019
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 603d9e09-a07d-4357-862f-d5682c8bc3dd
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: ec9fa3c2190e0538cbecaa78131e5c42cdde4d7d
-ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
+ms.openlocfilehash: 860f856acd1a34e52032217b137b6350a0988365
+ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84775889"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88956577"
 ---
 # <a name="update-azure-atp-sensors"></a>Atualizar sensores da Azure ATP
 
@@ -62,17 +62,17 @@ Cada atualização é testada e validada em todos os sistemas operacionais compa
 Para configurar um sensor para atualização atrasada:
 
 1. No portal do Azure ATP, clique no ícone de configurações e selecione **Configuração**.
-2. Clique na guia **Atualizações**.
-3. Na linha da tabela ao lado de cada sensor que você deseja atrasar, defina o controle deslizante **Atualização atrasada** para **Habilitado**.
-4. Clique em **Salvar**.
+1. Clique na guia **Atualizações**.
+1. Na linha da tabela ao lado de cada sensor que você deseja atrasar, defina o controle deslizante **Atualização atrasada** para **Habilitado**.
+1. Clique em **Salvar**.
  
 ## <a name="sensor-update-process"></a>Processo de atualização de sensor
 
 A cada poucos minutos, os sensores da Azure ATP verificam se eles têm a versão mais recente. Depois que o serviço de nuvem Azure ATP é atualizado para uma versão mais recente, o serviço de sensor da Azure ATP inicia o processo de atualização:
 
 1. O serviço de nuvem do ATP do Azure é atualizado para a versão mais recente.
-2. O serviço de atualizador de sensor do ATP do Azure reconhece que existe uma versão atualizada.
-3. Os sensores que não estejam definidos com **Atualização atrasada** começam o processo de atualização em uma base de sensor a sensor:
+1. O serviço de atualizador de sensor do ATP do Azure reconhece que existe uma versão atualizada.
+1. Os sensores que não estejam definidos com **Atualização atrasada** começam o processo de atualização em uma base de sensor a sensor:
    1. O serviço de atualizador de sensor do ATP do Azure recebe a versão atualizada do serviço de nuvem (no formato de arquivo cab).
    2. O atualizador de sensor do ATP do Azure valida a assinatura do arquivo.
    3. O serviço de atualizador de sensor do ATP do Azure extrai o arquivo cab para uma nova pasta na própria pasta de instalação do sensor. Por padrão, ele será extraído em *C:\Arquivos de Programas\Sensor da Proteção Avançada contra Ameaças do Azure\<version number>*
@@ -84,14 +84,14 @@ A cada poucos minutos, os sensores da Azure ATP verificam se eles têm a versão
    7. O sensor recebe uma permissão do serviço de nuvem do Azure. Você pode verificar o status do sensor na página **Atualizações**.
    8. O próximo sensor inicia o processo de atualização. 
 
-4. Em 72 horas após a atualização do serviço de nuvem do ATP do Azure, os sensores selecionados para a **Atualização atrasada** iniciam seu processo de atualização de acordo com o mesmo processo de atualização dos sensores atualizados automaticamente.
+1. Em 72 horas após a atualização do serviço de nuvem do ATP do Azure, os sensores selecionados para a **Atualização atrasada** iniciam seu processo de atualização de acordo com o mesmo processo de atualização dos sensores atualizados automaticamente.
 
-![Atualização do sensor](./media/sensor-update.png)
+![Atualização do sensor](media/sensor-update.png)
 
 
 Se algum sensor não concluir o processo de atualização, o alerta de integridade relevante será disparado e enviado como uma notificação.
 
-![Falha na atualização do sensor](./media/sensor-outdated.png)
+![Falha na atualização do sensor](media/sensor-outdated.png)
 
 
 ## <a name="see-also"></a>Consulte Também

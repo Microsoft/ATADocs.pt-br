@@ -6,18 +6,18 @@ author: shsagir
 ms.author: shsagir
 manager: shsagir
 ms.date: 04/28/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 23386e36-2756-4291-923f-fa8607b5518a
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: e0694e13a731c1c8146f733ee8e49a3a2888d52c
-ms.sourcegitcommit: 2ff8079d3ad8964887c1d0d1414c84199ba208bb
+ms.openlocfilehash: 4de688b3ea1c80f8ed0e517baf9da3b469a8d82a
+ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88793378"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88956713"
 ---
 # <a name="troubleshooting-azure-atp-known-issues"></a>Solução de problemas conhecidos da ATP do Azure
 
@@ -53,7 +53,7 @@ o sensor deve poder navegar até *.atp.azure.com por meio do proxy configurado s
 
 ## <a name="proxy-authentication-problem-presents-as-a-connection-error"></a>Problema de autenticação de proxy apresentado como um erro de conexão
 
-Se o seguinte erro surgir durante a instalação do sensor:  **O sensor não pôde se conectar ao serviço.**
+Se o seguinte erro surgir durante a instalação do sensor: **O sensor não pôde se conectar ao serviço.**
 
 **Causa:**
 
@@ -151,19 +151,19 @@ Para resolver o problema:
 
 Defina as configurações a seguir como **Desabilitado** na configuração de NIC da máquina virtual: **Descarregamento de TSO do IPv4**.
 
- ![Problema de sensor VMware](./media/vm-sensor-issue.png)
+ ![Problema de sensor VMware](media/vm-sensor-issue.png)
 
 Use o seguinte comando para verificar se o LSO (Descarregamento de Envio Grande) está habilitado ou desabilitado:
 
 `Get-NetAdapterAdvancedProperty | Where-Object DisplayName -Match "^Large*"`
 
-![Verificar o status do LSO](./media/missing-network-traffic-health-alert.png)
+![Verificar o status do LSO](media/missing-network-traffic-health-alert.png)
 
 Se o LSO estiver habilitado, use o seguinte comando para desabilitá-lo:
 
 `Disable-NetAdapterLso -Name {name of adapter}`
 
-![Desabilitar o status do LSO](./media/disable-lso-vmware.png)
+![Desabilitar o status do LSO](media/disable-lso-vmware.png)
 
 ## <a name="sensor-failed-to-retrieve-group-managed-service-account-gmsa-credentials"></a>Falha do sensor ao tentar recuperar as credenciais da gMSA (conta de serviço gerenciado do grupo)
 

@@ -6,18 +6,18 @@ author: shsagir
 ms.author: shsagir
 manager: shsagir
 ms.date: 07/27/2020
-ms.topic: conceptual
+ms.topic: overview
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 62c99622-2fe9-4035-9839-38fec0a353da
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 22e0d88d46d8f3751316148600349ca99382339a
-ms.sourcegitcommit: 2ff8079d3ad8964887c1d0d1414c84199ba208bb
+ms.openlocfilehash: e0c6e9826b734e9e94e787ba62cd782eb5ef8dd6
+ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88793360"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88956628"
 ---
 # <a name="azure-atp-prerequisites"></a>Pré-requisitos do ATP do Azure
 
@@ -28,7 +28,7 @@ Este artigo descreve os requisitos para uma implantação bem-sucedida do Azure 
 
 O ATP do Azure é composto pelo seu serviço de nuvem, que consiste no portal e no sensor do ATP do Azure. Para obter mais informações sobre cada componente do Azure ATP, confira [Arquitetura do Azure ATP](atp-architecture.md).
 
-A ATP do Azure protege seus usuários locais do Active Directory e/ou os usuários sincronizados com o Azure Active Directory. Para proteger um ambiente composto apenas por usuários do AAD, confira a [Proteção de Identidade do AAD](https://docs.microsoft.com/azure/active-directory/identity-protection/overview).
+A ATP do Azure protege seus usuários locais do Active Directory e/ou os usuários sincronizados com o Azure Active Directory. Para proteger um ambiente composto apenas por usuários do AAD, confira a [Proteção de Identidade do AAD](/azure/active-directory/identity-protection/overview).
 
 Para criar sua instância do Azure ATP, será necessário um locatário do AAD com pelo menos um administrador da segurança/global. Cada instância do Azure ATP dá suporte a vários limites de floresta do Active Directory e dá suporte ao FFL (Nível funcional da floresta) do Windows 2003 e posteriores.
 
@@ -76,7 +76,7 @@ Esta seção mostra as informações que você deve obter, bem como as contas e 
 
 - Se tentar instalar o sensor do ATP do Azure em um computador configurado com um adaptador de Agrupamento NIC, você receberá um erro de instalação. Se desejar instalar o sensor do Azure ATP em um computador configurado com Agrupamento NIC, confira [Problemas do Agrupamento NIC do Sensor do Azure ATP](troubleshooting-atp-known-issues.md#nic-teaming).
 
-- Recomendação de contêiner de **Objetos Excluídos**: O usuário deve ter permissões de somente leitura no contêiner de Objetos Excluídos. Permissões somente leitura neste contêiner permitem que a ATP do Azure detecte exclusões de usuários do seu Active Directory. Para obter informações sobre como configurar permissões somente leitura no contêiner Objetos Excluídos, confira a seção **Como alterar permissões em um contêiner de objetos excluídos** do artigo [Exibir ou definir permissões em um objeto do directory](https://technet.microsoft.com/library/cc816824%28v=ws.10%29.aspx).
+- Recomendação de contêiner de **Objetos Excluídos**: O usuário deve ter permissões de somente leitura no contêiner de Objetos Excluídos. Permissões somente leitura neste contêiner permitem que a ATP do Azure detecte exclusões de usuários do seu Active Directory. Para obter informações sobre como configurar permissões somente leitura no contêiner Objetos Excluídos, confira a seção **Como alterar permissões em um contêiner de objetos excluídos** do artigo [Exibir ou definir permissões em um objeto do directory](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc816824(v=ws.10)).
 
 - **Honeytoken** opcional: Uma conta de usuário que não tem nenhuma atividade de rede. Essa conta está configurada como um usuário Honeytoken do Azure ATP. Para obter mais informações sobre como usar Honeytokens, confira [Configurar exclusões e usuário do Honeytoken](install-atp-step7.md).
 
@@ -94,7 +94,7 @@ O acesso ao portal do Azure ATP ocorre por meio de um navegador que dá suporte 
 - Firewall/proxy aberto – para se comunicar com o serviço de nuvem do ATP do Azure, você deve abrir a porta 443 de *.atp.azure.com no firewall/proxy.
 
     > [!NOTE]
-    > Você também pode usar nossa marca de serviço do Azure (**AzureAdvancedThreatProtection**) para habilitar o acesso ao ATP do Azure. Para obter mais informações sobre marcas de serviço, confira [Marcas de serviço de rede virtual](https://docs.microsoft.com/azure/virtual-network/service-tags-overview) ou [baixe o arquivo de marcas de serviço](https://www.microsoft.com/download/details.aspx?id=56519).
+    > Você também pode usar nossa marca de serviço do Azure (**AzureAdvancedThreatProtection**) para habilitar o acesso ao ATP do Azure. Para obter mais informações sobre marcas de serviço, confira [Marcas de serviço de rede virtual](/azure/virtual-network/service-tags-overview) ou [baixe o arquivo de marcas de serviço](https://www.microsoft.com/download/details.aspx?id=56519).
 
  ![diagrama da arquitetura do Azure ATP](media/azure-atp-architecture.png)
 
@@ -141,7 +141,7 @@ Para ter desempenho ideal, defina a **Opção de Energia** do computador que exe
 
 É possível implantar o sensor do ATP do Azure em controladores de domínio de vários tamanhos e cargas, dependendo da quantidade de recursos instalados e da quantidade de tráfego de rede dos controladores de domínio.
 
-Para os sistemas operacionais Windows 2008R2 e 2012, o sensor do ATP do Azure não tem suporte em um modo [Grupo de multiprocessadores](https://docs.microsoft.com/windows/win32/procthread/processor-groups). Para obter mais informações sobre o modo de grupo de multiprocessadores,confira [solução de problemas](troubleshooting-atp-known-issues.md#multi-processor-group-mode).
+Para os sistemas operacionais Windows 2008R2 e 2012, o sensor do ATP do Azure não tem suporte em um modo [Grupo de multiprocessadores](/windows/win32/procthread/processor-groups). Para obter mais informações sobre o modo de grupo de multiprocessadores,confira [solução de problemas](troubleshooting-atp-known-issues.md#multi-processor-group-mode).
 
 >[!NOTE]
 > Durante a execução como uma máquina virtual, memória dinâmica ou qualquer outra memória, não há suporte para o recurso de inchamento.
@@ -182,7 +182,7 @@ A tabela abaixo lista o mínimo de portas que o sensor do Azure ATP exige:
 
 ### <a name="windows-event-logs"></a>Log de eventos do Windows
 
-A detecção da ATP do Azure depende de [logs de eventos específicos do Windows](configure-windows-event-collection.md#configure-event-collection) que o sensor analisa dos controladores de domínio. Para que os eventos corretos sejam auditados e incluídos no log de eventos do Windows, seus controladores de domínio exigem configurações precisas de política de auditoria avançada. Para saber mais sobre como configurar as políticas corretas, confira [Verificação avançada da política de auditoria](atp-advanced-audit-policy.md). Para [verificar se o evento 8004 do Windows foi auditado](configure-windows-event-collection.md#configure-audit-policies) conforme necessário pelo serviço, examine as [configurações de auditoria do NTLM](https://blogs.technet.microsoft.com/askds/2009/10/08/ntlm-blocking-and-you-application-analysis-and-auditing-methodologies-in-windows-7/).
+A detecção da ATP do Azure depende de [logs de eventos específicos do Windows](configure-windows-event-collection.md#configure-event-collection) que o sensor analisa dos controladores de domínio. Para que os eventos corretos sejam auditados e incluídos no log de eventos do Windows, seus controladores de domínio exigem configurações precisas de política de auditoria avançada. Para saber mais sobre como configurar as políticas corretas, confira [Verificação avançada da política de auditoria](configure-windows-event-collection.md). Para [verificar se o evento 8004 do Windows foi auditado](configure-windows-event-collection.md#configure-audit-policies) conforme necessário pelo serviço, examine as [configurações de auditoria do NTLM](/archive/blogs/askds/ntlm-blocking-and-you-application-analysis-and-auditing-methodologies-in-windows-7).
 
 > [!NOTE]
 >

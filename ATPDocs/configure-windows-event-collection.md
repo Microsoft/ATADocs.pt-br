@@ -6,18 +6,18 @@ author: shsagir
 ms.author: shsagir
 manager: shsagir
 ms.date: 08/04/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 88692d1a-45a3-4d54-a549-4b5bba6c037b
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 07136153ab0909f6de9089b0f748d4ed123e1458
-ms.sourcegitcommit: 8c99699b9b84d50fb258c0cc5523ffa78133b7a4
+ms.openlocfilehash: aa86397e76cafabe4c45dd5b394996225d758633
+ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2020
-ms.locfileid: "88027204"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88956866"
 ---
 # <a name="configure-windows-event-collection"></a>Configurar a coleção de Eventos do Windows
 
@@ -96,7 +96,7 @@ Modifique as políticas de auditoria avançadas do seu controlador de domínio u
         ![Auditar tráfego NTLM de saída para servidores remotos](media/atp-advanced-audit-policy-check-step-3.png)
 
     > [!NOTE]
-    > Se você optar por usar uma política de segurança local em vez de usar uma política de grupo, adicione os logs de auditoria de **Logon da Conta**, **Gerenciamento da Conta** e **Opções de Segurança** em sua política local. Se você estiver configurando a política de auditoria avançada, force a [subcategoria de política de auditoria](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/audit-force-audit-policy-subcategory-settings-to-override).
+    > Se você optar por usar uma política de segurança local em vez de usar uma política de grupo, adicione os logs de auditoria de **Logon da Conta**, **Gerenciamento da Conta** e **Opções de Segurança** em sua política local. Se você estiver configurando a política de auditoria avançada, force a [subcategoria de política de auditoria](/windows/security/threat-protection/security-policy-settings/audit-force-audit-policy-subcategory-settings-to-override).
 
 1. Após a aplicação por meio do GPO, os novos eventos ficam visíveis nos **Logs de Eventos do Windows**.
 
@@ -120,7 +120,7 @@ Esses eventos podem ser coletados automaticamente pelo sensor da ATP do Azure ou
 > [!NOTE]
 >
 > - Os sensores autônomos do ATP do Azure não dão suporte à coleção de entradas de log do ETW (Rastreamento de Eventos para Windows) que fornecem os dados para várias detecções. Para cobertura completa do seu ambiente, é recomendável implantar o sensor do ATP do Azure.
-> - É importante revisar e verificar suas [políticas de auditoria](atp-advanced-audit-policy.md) antes de configurar a coleta de eventos para garantir que os controladores de domínio estejam configurados corretamente para registrar os eventos necessários.
+> - É importante revisar e verificar suas [políticas de auditoria]() antes de configurar a coleta de eventos para garantir que os controladores de domínio estejam configurados corretamente para registrar os eventos necessários.
 
 ## <a name="see-also"></a>Consulte Também
 

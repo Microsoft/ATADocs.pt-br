@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 4ba46d60-3a74-480e-8f0f-9a082d62f343
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 7648b9047f519c4e9712e608be9f0705be1aaa2a
-ms.sourcegitcommit: bfb5f35f8e2f19911357e5afa6624ffe43e37d12
+ms.openlocfilehash: fa19723ec0193a7a933eef292505a62b3d3b9961
+ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86472494"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88955591"
 ---
 # <a name="working-with-the-azure-atp-portal"></a>Trabalhando com o portal do Azure ATP
 
@@ -41,7 +41,7 @@ Para obter mais informações sobre o RBAC (controle de acesso baseado em funç�
 
 1. Você pode entrar no portal do ATP do Azure fazendo logon no portal [https://portal.atp.azure.com](https://portal.atp.azure.com) e selecionando sua instância ou navegando até a URL da instância: `https://*instancename*.atp.azure.com`.
 
-2. O Azure ATP é compatível com o logon único integrado com a autenticação do Windows – se você já fez logon em seu computador, o Azure ATP usa esse token para fazer logon no portal do Azure ATP. Você também pode fazer logon usando um cartão inteligente. Suas permissões no Azure ATP correspondem à sua [função de administrador](atp-role-groups.md).
+1. O Azure ATP é compatível com o logon único integrado com a autenticação do Windows – se você já fez logon em seu computador, o Azure ATP usa esse token para fazer logon no portal do Azure ATP. Você também pode fazer logon usando um cartão inteligente. Suas permissões no Azure ATP correspondem à sua [função de administrador](atp-role-groups.md).
 
    > [!NOTE]
    > Faça logon no computador do qual deseja acessar o portal do Azure ATP usando seu nome de usuário administrador e senha do Azure ATP. Como alternativa, execute seu navegador como um usuário diferente ou se desconecte do Windows e faça logon com o usuário administrador do ATP do Azure. Ao contrário do portal do ATP do Azure, o novo [portal do Cloud App Security](https://portal.cloudappsecurity.com) oferece logon de vários usuários e não requer licença adicional para uso com o ATP do Azure.

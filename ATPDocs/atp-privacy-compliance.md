@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 224e629a-0e82-458c-bb03-b67070a9241d
 ms.reviewer: ophirp
 ms.suite: ems
-ms.openlocfilehash: 95268bb5e9c41935298b591477da930676aa129f
-ms.sourcegitcommit: 71181a243e60d29a2345620735f9c91ab2b5d689
+ms.openlocfilehash: feae48a00b17ef2556377dee643d133c5499c9fc
+ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/21/2020
-ms.locfileid: "85123488"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88955676"
 ---
 # <a name="azure-atp-data-security-and-privacy"></a>Privacidade e segurança de dados do Azure ATP
 
@@ -40,7 +40,7 @@ Os dados pessoais de usuário do ATP do Azure são derivados do objeto do usuár
 
 - Depois que um usuário é excluído do Active Directory da organização, o Azure ATP exclui automaticamente o perfil de usuário e qualquer atividade de rede relacionada dentro de um ano. Você também pode [excluir](working-with-suspicious-activities.md#review-suspicious-activities-on-the-attack-time-line) quaisquer alertas de segurança que contenham dados pessoais.
 
-- Recomendam-se permissões **somente leitura** no contêiner de **Objetos Excluídos**. Para saber mais sobre como a permissão de contêiner de **Objetos Excluídos é usada pelo serviço do ATP do Azure, confira a recomendação de contêiner de Objetos Excluídos nos [Pré-requisitos do ATP do Azure](https://docs.microsoft.com/azure-advanced-threat-protection/atp-prerequisites#before-you-start).
+- Recomendam-se permissões **somente leitura** no contêiner de **Objetos Excluídos**. Para saber mais sobre como a permissão de contêiner de **Objetos Excluídos é usada pelo serviço do ATP do Azure, confira a recomendação de contêiner de Objetos Excluídos nos [Pré-requisitos do ATP do Azure](atp-prerequisites.md#before-you-start).
 
 ## <a name="export-personal-data"></a>Exportar dados pessoais
 
@@ -52,7 +52,7 @@ O Azure ATP implementa a auditoria de alterações de dados pessoais, incluindo 
 
 ## <a name="additional-resources"></a>Recursos adicionais
 
-- Para saber mais sobre a confiança e a conformidade do Azure ATP, confira o [Portal de Confiança do Serviço](https://servicetrust.microsoft.com/ViewPage/GDPRGetStarted) e o [site Conformidade do Microsoft 365 Enterprise com o RGPD](https://docs.microsoft.com/microsoft-365/compliance/gdpr?view=o365-worldwide).
+- Para saber mais sobre a confiança e a conformidade do Azure ATP, confira o [Portal de Confiança do Serviço](https://servicetrust.microsoft.com/ViewPage/GDPRGetStarted) e o [site Conformidade do Microsoft 365 Enterprise com o RGPD](/microsoft-365/compliance/gdpr?view=o365-worldwide).
 
 ## <a name="security-and-privacy-for-azure-atp-us-government-gcc-high-customers"></a>Segurança e privacidade para clientes do US Government GCC High do ATP do Azure
-Para saber mais sobre os padrões de conformidade do ATP do Azure e o local dos dados dos clientes do US Government GCC High, revise a [Descrição do serviço Enterprise Mobility + Security for US Government](https://docs.microsoft.com/enterprise-mobility-security/solutions/ems-govt-service-description).
+Para saber mais sobre os padrões de conformidade do ATP do Azure e o local dos dados dos clientes do US Government GCC High, revise a [Descrição do serviço Enterprise Mobility + Security for US Government](/enterprise-mobility-security/solutions/ems-govt-service-description).

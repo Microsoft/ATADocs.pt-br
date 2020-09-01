@@ -6,18 +6,18 @@ author: shsagir
 ms.author: shsagir
 manager: shsagir
 ms.date: 04/05/2020
-ms.topic: article
+ms.topic: overview
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 2d14d0e9-1b03-4bcc-ae97-8fd41526ffc5
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 41aec3f7189e659e3ad7d2d529574b90788d1e61
-ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
+ms.openlocfilehash: e4391f788e525891aff050ad591b2f5063442ebe
+ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84775719"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88954265"
 ---
 # <a name="what-is-azure-advanced-threat-protection"></a>O que é a Proteção Avançada contra Ameaças do Azure?
 
@@ -107,14 +107,14 @@ Confira um resumo dos anúncios do ATP do Azure feitos no Ignite 2018 na postage
 ### <a name="phase-1"></a>Fase 1
 
 1. Configure o ATP do Azure para proteger seus ambientes primários. O modelo de implantação rápida do Azure ATP permite a você começar a proteger sua organização hoje mesmo. [Instalar o Azure ATP](install-atp-step1.md)
-2. Defina as [contas confidenciais](sensitive-accounts.md) e as [contas de honeytoken](install-atp-step7.md).
-3. Examine os relatórios e os [caminhos de movimentação lateral](use-case-lateral-movement-path.md).
+1. Defina as [contas confidenciais](sensitive-accounts.md) e as [contas de honeytoken](install-atp-step7.md).
+1. Examine os relatórios e os [caminhos de movimentação lateral](use-case-lateral-movement-path.md).
 
 ### <a name="phase-2"></a>Fase 2
 
 1. Proteja todos os controladores de domínio e [florestas](atp-multi-forest.md) na sua organização.
-2. Monitore todos os [alertas](working-with-suspicious-activities.md) – investigue os alertas de movimentação lateral e de comando de domínio.
-3. Trabalhe com o [Guia de Alerta de Segurança](suspicious-activity-guide.md) para entender as ameaças e os ataques em potencial da triagem.
+1. Monitore todos os [alertas](working-with-suspicious-activities.md) – investigue os alertas de movimentação lateral e de comando de domínio.
+1. Trabalhe com o [Guia de Alerta de Segurança](suspicious-activity-guide.md) para entender as ameaças e os ataques em potencial da triagem.
 
 ### <a name="phase-3"></a>Fase 3
 

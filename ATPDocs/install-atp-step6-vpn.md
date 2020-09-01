@@ -6,18 +6,18 @@ author: shsagir
 ms.author: shsagir
 manager: shsagir
 ms.date: 07/05/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 0d9d2a1d-6c76-4909-b6f9-58523df16d4f
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 9ad0662a0b468bbe67bb8b699b57358c0c512348
-ms.sourcegitcommit: 424567ef02d97454e72241837f69fa6a928709ba
+ms.openlocfilehash: 3afbf9c925d4f4683fa56fff4adea3d999ed2eab
+ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86175732"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88956815"
 ---
 # <a name="integrate-vpn"></a>Integrar a VPN
 
@@ -51,11 +51,11 @@ Execute as seguintes etapas em seu servidor RRAS.
 1. Clique com o botão direito do mouse no nome do servidor e clique em **Propriedades**.
 1. Na guia **Segurança**, em **Provedor de contabilização**, selecione **Contabilização RADIUS** e clique em **Configurar**.
 
-    ![Configuração RADIUS](./media/radius-setup.png)
+    ![Configuração RADIUS](media/radius-setup.png)
 
 1. Na janela **Adicionar servidor RADIUS**, digite o **Nome do servidor** do sensor mais próximo da Proteção Avançada contra Ameaças do Azure (que tenha conectividade com a rede). Para HA, é possível adicionar sensores extras da Proteção Avançada contra Ameaças do Azure como servidores RADIUS. Em **Porta**, verifique se o padrão de 1813 está configurado. Clique em **Alterar** e digite uma nova cadeia de caracteres alfanuméricos secreta compartilhada. Anote a nova cadeia de caracteres secreta compartilhada, pois você precisará preenchê-la mais tarde durante a configuração do ATP do Azure. Marque a caixa **Enviar mensagens de conta habilitada e de contabilização desabilitada do RADIUS** e, em seguida, clique em **OK** em todas as caixas de diálogo abertas.
 
-    ![Configuração de VPN](./media/vpn-set-accounting.png)
+    ![Configuração de VPN](media/vpn-set-accounting.png)
 
 ### <a name="configure-vpn-in-atp"></a>Configurar VPN no ATP
 
@@ -66,7 +66,7 @@ Para configurar dados de VPN no ATP:
 1. No portal do Azure ATP, clique na engrenagem de configuração e, em seguida, em **VPN**.
 1. Ativar **Contabilização Radius** e digite o **Segredo Compartilhado** configurado anteriormente em seu servidor VPN do RRAS. Em seguida, clique em **Salvar**.
 
-    ![Configurar VPN do Azure ATP](./media/atp-vpn-radius.png)
+    ![Configurar VPN do Azure ATP](media/atp-vpn-radius.png)
 
 Depois que isso for habilitado, todos os sensores do ATP do Azure passarão a escutar na porta 1813 os eventos de contabilização do RADIUS, e a instalação da VPN estará concluída.
 

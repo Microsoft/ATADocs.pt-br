@@ -6,18 +6,18 @@ author: shsagir
 ms.author: shsagir
 manager: shsagir
 ms.date: 09/16/2019
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 71b15bd9-3183-4e24-b18a-705023ccc313
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 9b8717625c70559c465daa90019d01c8709459cf
-ms.sourcegitcommit: c3680d6de51d13bb4aeae02a79e74c4a66d9d268
+ms.openlocfilehash: 914a5051eea5d68a26fced0be871ea6c436bfb8e
+ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85311608"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88953500"
 ---
 # <a name="azure-atps-identity-security-posture-assessments"></a>Avaliações de situação de segurança de identidade do ATP do Azure
 
@@ -35,7 +35,7 @@ Embora sua empresa possa investir tempo e esforço consideráveis em fortalecer 
 
 ### <a name="access"></a>Acesso
 
-As avaliações de segurança da ATP do Azure ficam disponíveis no portal do Microsoft Cloud App Security após a ativação da integração da ATP do Azure. Para saber como integrar a ATP do Azure com o Cloud App Security, confira [Integração da ATP do Azure](https://docs.microsoft.com/cloud-app-security/aatp-integration).
+As avaliações de segurança da ATP do Azure ficam disponíveis no portal do Microsoft Cloud App Security após a ativação da integração da ATP do Azure. Para saber como integrar a ATP do Azure com o Cloud App Security, confira [Integração da ATP do Azure](/cloud-app-security/aatp-integration).
 
 ### <a name="licensing"></a>Licenciamento
 
@@ -43,7 +43,7 @@ Para acessar os relatórios de avaliação de segurança da ATP do Azure no Clou
 
 ## <a name="access-azure-atp-using-cloud-app-security"></a>Acessar a ATP do Azure com o Cloud App Security
 
-Confira o [Início rápido do Cloud App Security](https://docs.microsoft.com/cloud-app-security/getting-started-with-cloud-app-security) para conhecer melhor os fundamentos básicos de como usar o portal do Cloud App Security.
+Confira o [Início rápido do Cloud App Security](/cloud-app-security/getting-started-with-cloud-app-security) para conhecer melhor os fundamentos básicos de como usar o portal do Cloud App Security.
 
 **Avaliações de situação de segurança de identidade**
 

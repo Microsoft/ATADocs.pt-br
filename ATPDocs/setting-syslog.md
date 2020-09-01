@@ -6,18 +6,18 @@ author: shsagir
 ms.author: shsagir
 manager: shsagir
 ms.date: 09/16/2019
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: a2d29c9c-7ecb-4804-b74b-fde899b28648
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 2d2c6e47cdc385a42a441290d432aa01f91e0939
-ms.sourcegitcommit: 7136b50eaffc9a0e0e7eb9e2db6d5396ef4e996f
+ms.openlocfilehash: 4e7f9e3a5c2bf9e0cdfdd21c3d8f8a9f831ff4b0
+ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86929288"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88955659"
 ---
 # <a name="integrate-with-syslog"></a>Integrar com o Syslog
 
@@ -57,7 +57,7 @@ Para revisar ou modificar suas configurações do Syslog.
 
 1. Clique em **Notificações**e, em **Notificações do Syslog**, clique em **Configurar** e insira as seguintes informações:
 
-   ![Imagem das configurações do servidor Syslog do Azure ATP](media/atp-syslog.png)
+    ![Imagem das configurações do servidor Syslog do Azure ATP](media/atp-syslog.png)
 
 1. Você pode selecionar quais eventos enviar ao servidor do Syslog. Em **Notificações do Syslog**, especifique quais notificações devem ser enviadas ao servidor do Syslog: novos alertas de segurança, alertas de segurança atualizados e novos problemas de integridade.
 

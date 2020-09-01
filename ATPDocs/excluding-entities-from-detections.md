@@ -6,18 +6,18 @@ author: shsagir
 ms.author: shsagir
 manager: shsagir
 ms.date: 11/11/2018
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: cae3ed45-8fbc-4f25-ba24-3cc407c6ea93
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: f2d5deb0adb35f07fe792e4254cca6ee8611b942
-ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
+ms.openlocfilehash: aa497d9a04aa36538b0e5d6642ce2942a4c6d827
+ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84772625"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88956849"
 ---
 # <a name="excluding-entities-from-detections"></a>Excluindo entidades de detecções
 Este artigo explica como excluir entidades do disparo de alertas. Determinadas entidades são excluídas para minimizar verdadeiros positivos benignos, assegurando que você possa capturar os verdadeiros positivos. Para impedir que o ATP do Azure crie ruído sobre atividades que, vindas de usuários específicos, podem fazer parte de seu ritmo normal de negócios, você pode silenciar ou excluir entidades específicas da geração de alertas. Além disso, determinadas entidades populares são excluídas por padrão. 
@@ -27,7 +27,7 @@ Por exemplo, se você tiver um verificador de segurança que realiza reconhecime
 ## <a name="entities-excluded-by-default-from-raising-alerts"></a>Entidades excluídas por padrão da geração de alertas
  Para determinados alertas, tais como **Comunicação suspeita sobre DNS**, exclusões automáticas de domínio são adicionadas pelo ATP do Azure com base na pesquisa e nos comentários dos clientes. 
  
-![Comunicação suspeita em exclusões automáticas de DNS](./media/dns-auto-exclusions.png) 
+![Comunicação suspeita em exclusões automáticas de DNS](media/dns-auto-exclusions.png) 
 
 ## <a name="exclude-entities-from-raising-alerts"></a>Excluir entidades da geração de alertas
 
@@ -36,11 +36,11 @@ Há duas maneiras para você excluir entidades manualmente, seja diretamente do 
 - **No alerta de segurança**: na linha do tempo de Atividade, quando você recebe um alerta em uma atividade para um usuário, computador ou endereço IP que **tem** permissão para executar uma atividade específica e pode fazer isso com frequência, faça o seguinte:
   - Clique com o botão direito do mouse nos três pontos no final da linha para o alerta de segurança nessa entidade e selecione **Fechar e excluir**. Isso adiciona o usuário, computador ou endereço IP à lista de exclusões desse alerta de segurança. Ele fecha o alerta de segurança e o alerta não está mais listado na lista de eventos **Aberto** na **linha do tempo de Alerta**.
 
-    ![Excluir entidades](./media/exclude-in-sa.png)
+    ![Excluir entidades](media/exclude-in-sa.png)
 
 - **Na página Configuração**: para examinar ou modificar exclusões: em **Configuração**, clique em **Exclusões** e, em seguida, selecione o alerta de segurança ao qual aplicar a exclusão, assim como **Reconhecimento de DNS**.
 
-    ![Configuração de exclusão](./media/exclusions.png)
+    ![Configuração de exclusão](media/exclusions.png)
 
 Para adicionar uma entidade à configuração de **Exclusões**: insira o nome da entidade, clique no sinal de mais e, em seguida, clique em **Salvar** na parte inferior da página.
 

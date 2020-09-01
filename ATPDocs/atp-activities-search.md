@@ -6,18 +6,18 @@ author: shsagir
 ms.author: shsagir
 manager: shsagir
 ms.date: 09/15/2019
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: a546703b-d5a9-404d-9e87-125523bb8421
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: c6766319861a766ba970ef0ed3d23d1f20c0f34d
-ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
+ms.openlocfilehash: f65643c9d1483df44d5cd43f8d849c8241a076ef
+ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84774461"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88956934"
 ---
 # <a name="azure-atp-monitored-activities-search-and-filter"></a>Pesquisa e filtragem de atividades monitoradas do ATP do Azure 
 
@@ -28,7 +28,7 @@ Atividades detectadas pelo ATP do Azure em sua rede podem ser pesquisadas e filt
 
 Na linha do tempo do ATP do Azure, selecione qualquer entidade em sua rede (controlador de domínio, computador ou usuário) como o ponto de acesso do filtro. Em seguida, escolha filtrar pelo **Alerta de segurança**, tipo de **Atividade** ou qualquer combinação. Depois que o filtro é aplicado, a linha do tempo da ameaça da entidade é atualizada com as informações filtradas. Seu alertas e atividades filtrados também podem ser baixados para continuar sua investigação ou acompanhamento em outras ferramentas. 
 
-![Filtrar alertas e atividades](./media/activities-filter.png)
+![Filtrar alertas e atividades](media/activities-filter.png)
 
 Para filtrar alertas e atividades:
  1. Selecione a entidade a investigar da linha do tempo do ATP do Azure. 

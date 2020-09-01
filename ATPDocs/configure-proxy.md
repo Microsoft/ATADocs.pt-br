@@ -6,18 +6,18 @@ author: shsagir
 ms.author: shsagir
 manager: shsagir
 ms.date: 07/29/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 9c173d28-a944-491a-92c1-9690eb06b151
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: b82959c378ef4150bfc9204ccf8d4202792d0547
-ms.sourcegitcommit: 9bf5ddd9636ce1bc99d6e4308ef2d70b7abdc836
+ms.openlocfilehash: 24fab947687183f40d5043678b24e12792d98233
+ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87386020"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88956832"
 ---
 # <a name="configure-endpoint-proxy-and-internet-connectivity-settings-for-your-azure-atp-sensor"></a>Configurar o proxy do ponto de extremidade e configurações de conectividade de Internet para o Sensor de ATP do Azure
 
@@ -91,7 +91,7 @@ Para habilitar o acesso ao ATP do Azure, é recomendável permitir o tráfego pa
 
 - `<your-instance-name>sensorapi.atp.azure.com` – para conectividade com os sensores. Por exemplo, `contoso-corpsensorapi.atp.azure.com`
 
-Também é possível usar os intervalos de endereço IP na marca de serviço do Azure (**AzureAdvancedThreatProtection**) para habilitar o acesso ao ATP do Azure. Para obter mais informações sobre marcas de serviço, confira [Marcas de serviço de rede virtual](https://docs.microsoft.com/azure/virtual-network/service-tags-overview) ou [baixe o arquivo de marcas de serviço](https://www.microsoft.com/download/details.aspx?id=56519).
+Também é possível usar os intervalos de endereço IP na marca de serviço do Azure (**AzureAdvancedThreatProtection**) para habilitar o acesso ao ATP do Azure. Para obter mais informações sobre marcas de serviço, confira [Marcas de serviço de rede virtual](/azure/virtual-network/service-tags-overview) ou [baixe o arquivo de marcas de serviço](https://www.microsoft.com/download/details.aspx?id=56519).
 
 Como alternativa, se você precisar de um controle mais granular, considere permitir o tráfego para os pontos de extremidade relevantes da seguinte tabela:
 
