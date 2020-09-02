@@ -6,24 +6,24 @@ author: shsagir
 ms.author: shsagir
 manager: shsagir
 ms.date: 07/01/2019
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 397e5a77-2bc7-454c-9fe5-649ebaab16b3
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: ef0bf221024e13269881206d732d45ef8a6e3828
-ms.sourcegitcommit: bfb5f35f8e2f19911357e5afa6624ffe43e37d12
+ms.openlocfilehash: fc3032c9964a4e4e887dfedf01e57649d3bf2358
+ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86472341"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88955965"
 ---
 # <a name="use-activity-filters-and-create-action-policies-with-azure-atp-in-microsoft-cloud-app-security"></a>Usar filtros de atividade e criar políticas de ação com o ATP do Azure no Microsoft Cloud App Security
 
 Este artigo foi criado para ajudá-lo a entender como filtrar e criar políticas de ação para atividades do ATP do Azure usando o Microsoft Cloud App Security.
 
-Para saber mais sobre como concluir sua integração, confira [Integração do Cloud App Security do ATP do Azure](https://docs.microsoft.com/cloud-app-security/aatp-integration).
+Para saber mais sobre como concluir sua integração, confira [Integração do Cloud App Security do ATP do Azure](/cloud-app-security/aatp-integration).
 
 Usar o ATP do Azure com o Microsoft Cloud App Security oferece análise de atividades e alertas com base na UEBA (análise de comportamento de entidade e usuário), identificando os comportamentos mais arriscados na sua empresa, fornecendo uma pontuação de prioridade de investigação abrangente além de filtragem de atividade e políticas personalizáveis de atividades.
 
@@ -44,11 +44,11 @@ As atividades do ATP do Azure podem ser acessadas no menu principal **Investigar
 Para acessar as atividades do ATP do Azure por usuário:
 
 1. Filtre a fila **Alertas** usando o campo NOME DE USUÁRIO.
-    ![Fila de alertas](media/atp-mcas-alerts-queue.png)
+    ![Filtrar alertas por nome de usuário](media/atp-mcas-alerts-queue.png)
 1. Clique no nome de usuário em qualquer um dos alertas na lista resultante para abrir a **Página de usuário** do usuário que você deseja investigar.
 
 1. Filtre as atividades do usuário usando os campos disponíveis ou adicione uma nova regra de filtro usando o botão +.
-    ![Fila de alertas](media/atp-mcas-activity-filter.png)
+    ![Filtrar atividades do usuário](media/atp-mcas-activity-filter.png)
 
 ## <a name="create-activity-policies-in-cloud-app-security"></a>Criar políticas de atividade no Cloud App Security
 
@@ -71,7 +71,7 @@ Para criar uma nova política de atividade:
 
 ## <a name="next-steps"></a>Próximas etapas
 
-Saiba mais sobre os recursos adicionais e de pontuação de prioridade de investigação da funcionalidade do [Microsoft Cloud App Security](https://docs.microsoft.com/cloud-app-security/).
+Saiba mais sobre os recursos adicionais e de pontuação de prioridade de investigação da funcionalidade do [Microsoft Cloud App Security](/cloud-app-security/).
 
 ## <a name="join-the-community"></a>Participe da comunidade
 

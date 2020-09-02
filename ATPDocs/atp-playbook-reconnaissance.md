@@ -2,17 +2,17 @@
 title: Tutorial do guia estratégico de Reconhecimento do ATP do Azure
 description: O tutorial do guia estratégico de Reconhecimento do ATP do Azure descreve como simular ameaças de Reconhecimento para detecção pelo Azure ATP.
 ms.service: azure-advanced-threat-protection
-ms.topic: tutorial
+ms.topic: how-to
 author: shsagir
 ms.author: shsagir
 ms.date: 09/01/2019
 ms.reviewer: itargoet
-ms.openlocfilehash: e3a7f4553635ec2af2aec6bda10802f776b7e543
-ms.sourcegitcommit: 63be53de5b84eabdeb8c006438dab45bd35a4ab7
+ms.openlocfilehash: 2d62d765acf440b39c162bfbab1ad101cb572345
+ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80669631"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88955217"
 ---
 # <a name="tutorial-reconnaissance-playbook"></a>Tutorial: Guia estratégico de reconhecimento
 
@@ -111,9 +111,9 @@ Qualquer usuário ou computador autenticado pode enumerar outros usuários e gru
 
    A saída mostra todos os usuários no domínio Contoso.Azure.
 
-   ![Enumerar todos os usuários no domínio](media/playbook-recon-dsenumeration-netusers.png)
+    ![Enumerar todos os usuários no domínio](media/playbook-recon-dsenumeration-netusers.png)
 
-2. Vamos tentar enumerar todos os grupos no domínio. Execute o seguinte comando:
+1. Vamos tentar enumerar todos os grupos no domínio. Execute o seguinte comando:
 
     ``` cmd
     net group /domain
@@ -121,19 +121,19 @@ Qualquer usuário ou computador autenticado pode enumerar outros usuários e gru
 
    A saída mostra todos os grupos no domínio Contoso.Azure. Observe um Grupo de Segurança que não é um grupo padrão: **Helpdesk**.
 
-   ![Enumerar todos os grupos no domínio](media/playbook-recon-dsenumeration-netgroups.png)
+    ![Enumerar todos os grupos no domínio](media/playbook-recon-dsenumeration-netgroups.png)
 
-3. Agora, vamos tentar enumerar somente o grupo Administradores de Domínio. Execute o seguinte comando:
+1. Agora, vamos tentar enumerar somente o grupo Administradores de Domínio. Execute o seguinte comando:
 
     ``` cmd
     net group "Domain Admins" /domain
     ```
 
-   ![Enumerar todos os membros do grupo Administradores de Domínio](media/playbook-recon-dsenumeration-netdomainadmins.png)
+    ![Enumerar todos os membros do grupo Administradores de Domínio](media/playbook-recon-dsenumeration-netdomainadmins.png)
 
     Atuando como invasor, aprendemos que há dois membros do grupo Administradores de Domínio: **YasminC** e **ContosoAdmin** (administrador interno para o controlador de domínio). Sabendo que não há limites de segurança entre o nosso Domínio e a Floresta, nosso próximo passo é tentar enumerar os Administradores de Empresa.
 
-4. Para tentar enumerar os Administradores de Empresa, execute o seguinte comando:
+1. Para tentar enumerar os Administradores de Empresa, execute o seguinte comando:
 
     ``` cmd
    net group "Enterprise Admins" /domain
@@ -141,7 +141,7 @@ Qualquer usuário ou computador autenticado pode enumerar outros usuários e gru
 
    Aprendemos que há somente um Administrador de Empresa, ContosoAdmin. Essas informações não eram importantes, pois já sabíamos que não há um limite de segurança entre o nosso Domínio e a Floresta.
 
-   ![Administradores de Empresa enumerados no domínio](media/playbook-recon-dsenumeration-netenterpriseadmins.png)
+    ![Administradores de Empresa enumerados no domínio](media/playbook-recon-dsenumeration-netenterpriseadmins.png)
 
 Com as informações coletadas em nosso reconhecimento, sabemos sobre o Grupo de Segurança Helpdesk. No entanto, essas informações *ainda* não são interessantes. Também sabemos que **YasminC** é membro do grupo Administradores de Domínio. Se pudermos coletar a credencial de YasminC, poderemos acessar o próprio Controlador de Domínio.
 
@@ -157,7 +157,7 @@ Podemos ver quando DiogoM entrou no VictimPC usando o protocolo Kerberos. Além 
 
 ![Linha do tempo de atividade lógica do DiogoM](media/playbook-recon-dsenumeration-jeffvlogicalactivity.png)
 
-Muitas atividades são registradas na linha do tempo de Atividade Lógica, tornando-a um recurso importante para execução de DFIR (Resposta a incidente e análises forenses digitais). Você pode até ver as atividades de quando a detecção inicial não era do ATP do Azure, mas do Microsoft Defender ATP, Office 365 e outros.
+Muitas atividades são registradas na linha do tempo de Atividade Lógica, tornando-a um recurso importante para execução de DFIR (Resposta a incidente e análises forenses digitais). Você pode até ver as atividades de quando a detecção inicial não era do ATP do Azure, mas do Microsoft Defender ATP, do Microsoft 365 e de outros.
 
 Olhando a **página do ContosoDC**, também podemos ver os computadores nos quais DiogoM entrou.
 

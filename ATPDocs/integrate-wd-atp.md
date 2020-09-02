@@ -6,18 +6,18 @@ author: shsagir
 ms.author: shsagir
 manager: shsagir
 ms.date: 02/19/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: f6f3ed75-d6bb-4966-a9a7-5339c4f3ebac
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 11b672b4820b7d79f0fbdc079370e744154facf3
-ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
+ms.openlocfilehash: cd8e17d48af6958367f0514caaad3acee8477c35
+ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84771860"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88956747"
 ---
 # <a name="integrate-azure-atp-with-microsoft-defender-atp"></a>Integração do ATP do Azure com o Microsoft Defender ATP
 
@@ -27,7 +27,7 @@ Com a integração do Microsoft Defender ATP ao Azure ATP, você pode aproveitar
 
 - Sensores de comportamento de ponto de extremidade: inseridos no Windows 10, esses sensores coletam e processam sinais comportamentais do sistema operacional (por exemplo, processo, registro, arquivo e comunicações de rede) e enviam esses dados do sensor à sua instância de nuvem privada e isolada do Microsoft Defender ATP.
 
-- Análise de segurança da nuvem: aproveitando Big Data, machine learning e uma visão única da Microsoft de todo o ecossistema do Windows (como a [Ferramenta de Remoção de Software Mal-Intencionado da Microsoft](https://www.microsoft.com/download/malicious-software-removal-tool-details.aspx)), produtos de nuvem corporativos (como o Office 365) e ativos online (como reputação de URLs do SmartScreen e o Bing), os sinais comportamentais são traduzidos em insights, detecções e respostas recomendadas a ameaças avançadas.
+- Análise de segurança da nuvem: aproveitando Big Data, machine learning e uma visão única da Microsoft de todo o ecossistema do Windows (como a [Ferramenta de Remoção de Software Mal-Intencionado da Microsoft](https://www.microsoft.com/download/malicious-software-removal-tool-details.aspx)), produtos de nuvem corporativos (como o Microsoft 365) e ativos online (como reputação de URLs do SmartScreen e o Bing), os sinais comportamentais são traduzidos em insights, detecções e respostas recomendadas a ameaças avançadas.
 
 - Inteligência contra ameaças: gerada por equipes de segurança e caçadores da Microsoft e ampliada pela inteligência contra ameaças fornecida por parceiros, a inteligência contra ameaças permite que o Microsoft Defender ATP identifique ferramentas, técnicas e procedimentos do invasor e gere alertas quando essas atividades forem observadas nos dados coletados pelo sensor.
 
@@ -58,37 +58,37 @@ Para habilitar esse recurso, é necessária uma licença para o ATP do Azure e o
 
 1. No portal do ATP do Azure, abra **Configuração**.
 
-    ![Menu Configuração do ATP do Azure](./media/atp-configuration-wd.png)
-2. Na lista Configurações, selecione **Microsoft Defender ATP** e defina a alternância de integração como **Ativa**.
+    ![Menu Configuração do ATP do Azure](media/atp-configuration-wd.png)
+1. Na lista Configurações, selecione **Microsoft Defender ATP** e defina a alternância de integração como **Ativa**.
 
-    ![Habilitar a integração do Windows Defender](./media/enable-integration.png)
+    ![Habilitar a integração do Windows Defender](media/enable-integration.png)
 
-3. No [portal do Microsoft Defender ATP](https://securitycenter.windows.com/preferences/advanced), vá até **Configurações**, **Recursos avançados** e defina **Integração do Azure ATP** como **ATIVO**.
+1. No [portal do Microsoft Defender ATP](https://securitycenter.windows.com/preferences/advanced), vá até **Configurações**, **Recursos avançados** e defina **Integração do Azure ATP** como **ATIVO**.
 
-    ![Habilitar integração do Microsoft Defender ATP](./media/wd-atp-enable.png)
+    ![Habilitar integração do Microsoft Defender ATP](media/wd-atp-enable.png)
 
-4. Para verificar o status da integração, no portal do ATP do Azure, vá até **Configurações** > **Integração do Microsoft Defender ATP**. Você pode ver o status da integração e, se algo estiver errado, você verá um erro.
+1. Para verificar o status da integração, no portal do ATP do Azure, vá até **Configurações** > **Integração do Microsoft Defender ATP**. Você pode ver o status da integração e, se algo estiver errado, você verá um erro.
 
 ## <a name="how-it-works"></a>Como isso funciona
 
 Após o ATP do Azure e o Microsoft Defender ATP serem totalmente integrados, no portal do ATP do Azure, no pop-up do miniperfil e na página do perfil de entidade, cada entidade que existir no Microsoft Defender ATP incluirá uma notificação para mostrar que ela foi integrada ao Microsoft Defender ATP.
 
- ![Alertas do Microsoft Defender ATP](./media/profile-alerts-wd.png)
+ ![Perfil de alertas do Microsoft Defender ATP](media/profile-alerts-wd.png)
 
 Se a entidade contiver alertas no Microsoft Defender ATP, haverá um número ao lado da notificação para informar quantos alertas foram gerados.
 
- ![Alertas do Azure ATP](./media/atp-integrated-wd-icon-alerts.png)
+ ![Alertas do Azure ATP](media/atp-integrated-wd-icon-alerts.png)
 
 Se clicar na notificação, você será direcionado para o portal do Microsoft Defender ATP, no qual poderá exibir e atenuar os alertas. Se a entidade não for reconhecida pelo Microsoft Defender ATP, a notificação será esmaecida.
 
- ![Esmaecimento do Microsoft Defender ATP](./media/wd-grey.png)
+ ![Esmaecimento do Microsoft Defender ATP](media/wd-grey.png)
 
 No portal do Microsoft Defender ATP, clique em um ponto de extremidade para exibir os alertas do ATP do Azure. Se você clicar nos alertas para esta entidade no Microsoft Defender ATP, a página de perfil da entidade será aberta no Azure ATP.
 
  > [!NOTE]
  > No momento, a integração do Azure ATP com o Microsoft Defender ATP é compatível apenas com usuários e computadores do AD local. Os usuários do Azure AD e as máquinas virtuais que são gerenciadas no Azure não serão exibidos como parte da integração
 
-![Alertas do Microsoft Defender ATP](./media/wd-atp-alerts.png)
+![Alertas do Microsoft Defender ATP](media/wd-atp-alerts.png)
 
 ## <a name="see-also"></a>Consulte Também
 

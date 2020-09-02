@@ -6,17 +6,17 @@ author: shsagir
 ms.author: shsagir
 manager: shsagir
 ms.date: 07/26/2020
-ms.topic: conceptual
+ms.topic: overview
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: ort
 ms.suite: ems
-ms.openlocfilehash: 04dc432ebdee36b80b995ed1f19c5e1b0ee91dca
-ms.sourcegitcommit: 2ff8079d3ad8964887c1d0d1414c84199ba208bb
+ms.openlocfilehash: 63305431d37e1d73c37c9e7b1693d1adb2e9b7af
+ms.sourcegitcommit: 275e2b084fd7dd7cac2e0d07b0b244318aac7475
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88793347"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89245838"
 ---
 # <a name="whats-new-in-azure-advanced-threat-protection-azure-atp"></a>Novidades no ATP do Azure (Proteção Avançada contra Ameaças do Azure)
 
@@ -25,6 +25,22 @@ Este artigo é atualizado com frequência para manter você informado sobre as n
 Para obter detalhes das versões anteriores do ATP do Azure até (e incluindo) a versão 2.55, confira a [referência de versão do ATP do Azure](atp-release-reference.md).
 
 Feed RSS: Receba uma notificação quando esta página for atualizada copiando e colando a seguinte URL em seu leitor de feed: `https://docs.microsoft.com/api/search/rss?search=%22This+article+is+updated+frequently+to+let+you+know+what%27s+new+in+the+latest+release+of+Azure+ATP%22&locale=en-us`
+
+## <a name="azure-atp-release-2124"></a>ATP do Azure versão 2.124
+
+Lançada em 30 de agosto de 2020
+
+- **Novos alertas de segurança**  
+Os alertas de segurança do ATP do Azure agora incluem as seguintes novas detecções:
+  - **Reconhecimento de atributos do Active Directory (LDAP) (ID externa 2210)**  
+Nessa detecção, um alerta de segurança do ATP do Azure é disparado quando há a suspeita de que um invasor obteve informações críticas sobre o domínio, para uso na cadeia de eliminação de ataque. Para obter mais informações, confira [Reconhecimento de atributos do Active Directory](atp-reconnaissance-alerts.md#active-directory-attributes-reconnaissance-ldap-external-id-2210).
+  - **Uso suspeito de certificado Kerberos invasor (ID externa 2047)**  
+Nessa detecção, um alerta de segurança do ATP do Azure é disparado quando há a suspeita de que um invasor que obteve controle sobre a organização comprometendo o servidor de autoridade de certificação passou a gerar certificados que podem ser usados como contas de backdoor em futuros ataques (como a prática de movimentação lateral na sua rede). Para obter mais informações, confira [Uso suspeito de certificado Kerberos invasor](atp-lateral-movement-alerts.md#suspected-rogue-kerberos-certificate-usage-external-id-2047).
+  - **Suspeita de uso de Golden Ticket (anomalia de tíquete usando RBCD) (ID externa 2040)**  
+Os invasores com direitos de administrador de domínio podem comprometer a conta KRBTGT. Usando a conta KRBTGT, eles podem criar um TGT (tíquete de concessão de tíquete) Kerberos que fornece autorização para qualquer recurso.  
+Esse TGT forjado é chamado de "Golden Ticket" porque permite que os invasores obtenham uma persistência duradoura na rede usando a RBCD (Delegação Restrita Baseada em Recursos). Os Golden Tickets forjados desse tipo têm características exclusivas que essa detecção foi projetada para identificar.
+Para obter mais informações, confira [Suspeita de uso de Golden Ticket (anomalia de tíquete usando RBCD)](atp-domain-dominance-alerts.md#suspected-golden-ticket-usage-ticket-anomaly-using-rbcd-external-id-2040).
+- Essa versão inclui melhorias e correções de bugs da infraestrutura do sensor interno.
 
 ## <a name="azure-atp-release-2123"></a>ATP do Azure versão 2.123
 
@@ -203,7 +219,7 @@ Lançado em 23 de dezembro de 2019
 A implantação do sensor do ATP do Azure e os pacotes de instalação do sensor não expiram mais após várias versões e agora são atualizados apenas uma vez. O resultado desse recurso é que os pacotes de instalação do sensor baixados anteriormente agora podem ser instalados mesmo que sejam mais antigos do que nosso número máximo de versões expiradas.
 
 - **Confirmar comprometimento**  
-Agora você pode confirmar o comprometimento de usuários específicos do Office 365 e definir o nível de risco deles para **alto**. Esse fluxo de trabalho permite que suas equipes de operações de segurança tenham outro recurso de resposta para reduzir os limites de tempo para resolver incidentes de segurança. Saiba mais sobre [como confirmar o comprometimento](https://docs.microsoft.com/cloud-app-security/tutorial-ueba?branch=pr-en-us-1204#phase-4-protect-your-organization) usando o ATP do Azure e o Cloud App Security.
+Agora você pode confirmar o comprometimento de usuários específicos do Microsoft 365 e definir o nível de risco deles como **alto**. Esse fluxo de trabalho permite que suas equipes de operações de segurança tenham outro recurso de resposta para reduzir os limites de tempo para resolver incidentes de segurança. Saiba mais sobre [como confirmar o comprometimento](/cloud-app-security/tutorial-ueba?branch=pr-en-us-1204#phase-4-protect-your-organization) usando o ATP do Azure e o Cloud App Security.
 
 - **Faixa da nova experiência**  
 Nas páginas do portal do ATP do Azure em que uma nova experiência está disponível no portal do Cloud App Security, são exibidas novas faixas que descrevem o que está disponível nos links de acesso.
@@ -285,13 +301,13 @@ Lançado em 8 de setembro de 2019
 
 Lançado em 1º de setembro de 2019
 
--   Essa versão inclui melhorias e correções de bugs da infraestrutura do sensor interno.
+- Essa versão inclui melhorias e correções de bugs da infraestrutura do sensor interno.
 
 ## <a name="azure-atp-release-292"></a>ATP do Azure versão 2.92
 
 Lançado em 25 de agosto de 2019
 
--   Essa versão inclui melhorias e correções de bugs da infraestrutura do sensor interno.
+- Essa versão inclui melhorias e correções de bugs da infraestrutura do sensor interno.
 
 ## <a name="azure-atp-release-291"></a>ATP do Azure versão 2.91
 
@@ -348,7 +364,7 @@ Até agora, o ATP do Azure forneceu informações do sistema operacional do disp
     A adição dos dados de identificação de sistema operacional de dispositivo aprimorado ajuda a identificar dispositivos não registrados e não Windows, auxiliando simultaneamente em seu processo de investigação. Para saber mais sobre a resolução de nomes de rede no ATP do Azure, confira [Noções básicas sobre a NRR (resolução de nomes de rede)](atp-nnr-policy.md).  
 
 - **Novo recurso: Proxy autenticado – versão prévia**  
-O ATP do Azure agora é compatível com proxy autenticado. Especifique a URL do proxy usando a linha de comando do sensor e especifique o nome de usuário/senha para usar proxies que exigem autenticação. Para obter mais informações sobre como usar o proxy autenticado, confira [Configurar o proxy](https://docs.microsoft.com/azure-advanced-threat-protection/configure-proxy#configure-the-proxy).
+O ATP do Azure agora é compatível com proxy autenticado. Especifique a URL do proxy usando a linha de comando do sensor e especifique o nome de usuário/senha para usar proxies que exigem autenticação. Para obter mais informações sobre como usar o proxy autenticado, confira [Configurar o proxy](configure-proxy.md).
 
 - **Aprimoramento do recurso: Processo sincronizador de domínio automatizado**  
 O processo de designação e marcação de controladores de domínio como candidatos do sincronizador de domínio durante a instalação e a configuração contínua agora é totalmente automatizado. A opção de alternância para selecionar manualmente os controladores de domínio como candidatos do sincronizador de domínio foi removida.
@@ -366,13 +382,13 @@ Lançado em 7 de julho de 2019
 Lançado em 1º de julho de 2019
 
 - **Suporte a novo local: data center do Azure no Reino Unido**  
-Agora as instâncias do ATP do Azure são compatíveis com o data center do Azure no Reino Unido. Para saber mais como criar instâncias do ATP do Azure e seus locais de data center correspondentes, confira a [Etapa 1 da instalação do ATP do Azure](https://docs.microsoft.com/azure-advanced-threat-protection/install-atp-step1).
+Agora as instâncias do ATP do Azure são compatíveis com o data center do Azure no Reino Unido. Para saber mais como criar instâncias do ATP do Azure e seus locais de data center correspondentes, confira a [Etapa 1 da instalação do ATP do Azure](install-atp-step1.md).
 
 - **Aprimoramento do recurso: novo nome e recursos para o alerta Adições suspeitas a grupos confidenciais (ID externa 2024)**  
-O alerta **Adições suspeitas a grupos confidenciais** era denominado alerta **Modificações suspeitas modificações em grupos confidenciais**. A ID externa do alerta (ID 2024) permanece a mesma. A alteração do nome descritivo reflete com maior precisão a finalidade dos alertas em adições aos seus grupos **confidenciais**. O alerta aprimorado também conta com novas evidências e descrições aprimoradas. Para saber mais, confira [Adições suspeitas a grupos confidenciais](https://docs.microsoft.com/azure-advanced-threat-protection/atp-domain-dominance-alerts#suspicious-additions-to-sensitive-groups-external-id-2024).  
+O alerta **Adições suspeitas a grupos confidenciais** era denominado alerta **Modificações suspeitas modificações em grupos confidenciais**. A ID externa do alerta (ID 2024) permanece a mesma. A alteração do nome descritivo reflete com maior precisão a finalidade dos alertas em adições aos seus grupos **confidenciais**. O alerta aprimorado também conta com novas evidências e descrições aprimoradas. Para saber mais, confira [Adições suspeitas a grupos confidenciais](atp-domain-dominance-alerts.md#suspicious-additions-to-sensitive-groups-external-id-2024).  
 
 - **Nova documentação: guia para migrar do Advanced Threat Analytics para o ATP do Azure**  
-Este novo artigo inclui pré-requisitos, diretrizes de planejamento e etapas de configuração e verificação para migrar do ATA para o serviço de ATP do Azure. Para saber mais, confira [Migrar do ATA para o ATP do Azure](https://docs.microsoft.com/azure-advanced-threat-protection/ata-atp-move-overview).
+Este novo artigo inclui pré-requisitos, diretrizes de planejamento e etapas de configuração e verificação para migrar do ATA para o serviço de ATP do Azure. Para saber mais, confira [Migrar do ATA para o ATP do Azure](ata-atp-move-overview.md).
 
 - Essa versão também inclui aprimoramentos e correções de bug da infraestrutura do sensor interno.
 
@@ -381,7 +397,7 @@ Este novo artigo inclui pré-requisitos, diretrizes de planejamento e etapas de 
 Lançado em 23 de junho de 2019
 
 - **Aprimoramento do recurso: alerta Criação de serviço suspeito (ID externa 2026)**  
-Este alerta agora conta com uma página de alerta aprimorada com evidência adicional e uma nova descrição. Para saber mais, confira [Alerta de segurança da criação de serviço suspeito](https://docs.microsoft.com/azure-advanced-threat-protection/atp-domain-dominance-alerts#suspicious-service-creation-external-id-2026).
+Este alerta agora conta com uma página de alerta aprimorada com evidência adicional e uma nova descrição. Para saber mais, confira [Alerta de segurança da criação de serviço suspeito](atp-domain-dominance-alerts.md#suspicious-service-creation-external-id-2026).
 
 - **Suporte à nomenclatura de instância: suporte adicionado para prefixo de domínio de apenas dígitos**  
 Suporte adicionado para criação de instâncias do ATP do Azure usando prefixos de domínio inicial que contêm apenas dígitos. Por exemplo, agora há suporte ao uso de prefixos de domínio inicial de apenas dígitos como 123456.contoso.com.

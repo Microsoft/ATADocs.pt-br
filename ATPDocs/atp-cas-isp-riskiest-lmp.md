@@ -5,19 +5,19 @@ keywords: ''
 author: shsagir
 ms.author: shsagir
 manager: rkarlin
-ms.date: 06/23/2020
-ms.topic: conceptual
+ms.date: 08/25/2020
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 2fe62047-75ef-4b2e-b4aa-72860e39b4e4
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 85e14135fed9a36279fbf615618f614e71ef9c18
-ms.sourcegitcommit: 2b8b727b11227aa6b665ba9e02ffa700a2dc33c6
+ms.openlocfilehash: 301dc36032950733784b928198fa5b092ccd6f10
+ms.sourcegitcommit: 098a20abe62e153372da4c96db256bc63c113bd1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/29/2020
-ms.locfileid: "85516903"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88809083"
 ---
 # <a name="security-assessment-riskiest-lateral-movement-paths-lmp"></a>Avaliação de segurança: LMP (caminhos de movimento lateral) mais arriscados
 
@@ -48,6 +48,9 @@ Por exemplo, os caminhos mais arriscados ficam mais visíveis ao invasor e, se c
 
     > [!NOTE]
     > Aguarde 24 horas e verifique se a recomendação deixou de aparecer na lista.
+
+> [!NOTE]
+> Essa avaliação é atualizada a cada 24 horas.
 
 ## <a name="see-also"></a>Consulte Também
 

@@ -5,19 +5,19 @@ keywords: ''
 author: shsagir
 ms.author: shsagir
 manager: shsagir
-ms.date: 02/17/2020
-ms.topic: conceptual
+ms.date: 08/25/2020
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 2fe62047-75ef-4b2e-b4aa-72860e39b4e4
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: b0494ca5dfbc4f5dde2c31423b3e17fdd2ef33df
-ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
+ms.openlocfilehash: 878f251c1f2936a9207dc351adc9ae5680abe3c4
+ms.sourcegitcommit: 098a20abe62e153372da4c96db256bc63c113bd1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84774121"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88809049"
 ---
 # <a name="security-assessment-unmonitored-domain-controllers"></a>Avaliação de segurança: Controladores de domínio não monitorados
 
@@ -37,7 +37,10 @@ Para operar com o máximo de eficiência, todos os controladores de domínio dev
     ![Corrigir controladores de domínio não monitorados](media/atp-cas-isp-unmonitored-domain-controller-1.png)
 1. Realize a ação apropriada nesses controladores de domínio ao [instalar e configurar sensores de monitoramento](atp-sensor-monitoring.md#domain-controller-status).
 
+> [!NOTE]
+> Essa avaliação é atualizada quase em tempo real.
+
 ## <a name="see-also"></a>Consulte Também
 
-- [Monitorar a cobertura do controlador de domínio](atp-sensor-monitoring.md)
+- [Monitorando a cobertura do controlador de domínio](atp-sensor-monitoring.md)
 - [Confira o fórum do ATP do Azure!](https://aka.ms/azureatpcommunity)

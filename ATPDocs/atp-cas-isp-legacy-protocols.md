@@ -5,19 +5,19 @@ keywords: ''
 author: shsagir
 ms.author: shsagir
 manager: shsagir
-ms.date: 08/03/2020
-ms.topic: conceptual
+ms.date: 08/25/2020
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 6597b8c7-f83e-43c6-8149-fb4a914a845b
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: a7d0ea7c8cc0eec8952cba17386045d9ee7529be
-ms.sourcegitcommit: 032132b54c905d08a24d15028782c66cc0620f20
+ms.openlocfilehash: 3b4146f4e50d8112be66c1e0a33df80c2de28257
+ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/08/2020
-ms.locfileid: "88023286"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88956645"
 ---
 # <a name="security-assessment-legacy-protocols-usage"></a>Avaliação de segurança: uso de protocolos herdados
 
@@ -38,7 +38,7 @@ A redução da superfície de ataque pode ser conquistada ao desabilitar a compa
 - LanMan (LM) / NTLMv1
 - Autenticação Digest
 
-Para desativar o uso dos protocolos herdados, primeiro, a organização deve descobrir quais entidades e aplicativos internos dependem deles. O relatório de avaliação do **uso de protocolos herdados** exibe as principais entidades descobertas usando protocolos herdados (por enquanto, NTLMv1). Com o relatório, é possível analisar imediatamente quaisquer entidades principais afetadas e tomar medidas em relação a elas, interromper o uso desses protocolos e, por fim, desabilitá-los completamente. Para saber mais sobre os perigos de usar protocolos herdados, confira [Pare de usar o LAN Manager e o NTLMv1!](https://blogs.technet.microsoft.com/miriamxyra/2017/11/07/stop-using-lan-manager-and-ntlmv1/) e [Drop The MIC 2 e explorar clientes LMv2](https://www.preempt.com/blog/active-directory-ntlm-attacks/).
+Para desativar o uso dos protocolos herdados, primeiro, a organização deve descobrir quais entidades e aplicativos internos dependem deles. O relatório de avaliação do **uso de protocolos herdados** exibe as principais entidades descobertas usando protocolos herdados (por enquanto, NTLMv1). Com o relatório, é possível analisar imediatamente quaisquer entidades principais afetadas e tomar medidas em relação a elas, interromper o uso desses protocolos e, por fim, desabilitá-los completamente. Para saber mais sobre os perigos de usar protocolos herdados, confira [Pare de usar o LAN Manager e o NTLMv1!](/archive/blogs/miriamxyra/stop-using-lan-manager-and-ntlmv1) e [Drop The MIC 2 e explorar clientes LMv2](https://www.preempt.com/blog/active-directory-ntlm-attacks/).
 
 ## <a name="how-do-i-use-this-security-assessment"></a>Como usar a avaliação de segurança?
 
@@ -46,8 +46,11 @@ Para desativar o uso dos protocolos herdados, primeiro, a organização deve des
 
     ![Impedir o uso de protocolos herdados](media/atp-cas-isp-legacy-protocols-2.png)
 1. Tome as medidas apropriadas nessas entidades para descobrir dependências.
-1. Pare o uso do protocolo herdado e, em algum momento, [desabilite completamente os protocolos](https://blogs.technet.microsoft.com/miriamxyra/2017/11/07/stop-using-lan-manager-and-ntlmv1/).
+1. Pare o uso do protocolo herdado e, em algum momento, [desabilite completamente os protocolos](/archive/blogs/miriamxyra/stop-using-lan-manager-and-ntlmv1).
 1. [Remover o MIC 2 e parar de usar os clientes LMv2](https://www.preempt.com/blog/active-directory-ntlm-attacks/).
+
+> [!NOTE]
+> Essa avaliação é atualizada quase em tempo real.
 
 ## <a name="next-steps"></a>Próximas etapas
 

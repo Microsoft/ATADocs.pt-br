@@ -1,6 +1,6 @@
 ---
 title: Tutorial de investigação de usuário do ATP do Azure
-d|Description: This article explains how to user Azure ATP security alerts to investigate a suspicious user.
+description: Este artigo explica como usar os alertas de segurança do ATP do Azure para investigar um usuário suspeito.
 keywords: ''
 author: shsagir
 ms.author: shsagir
@@ -10,12 +10,12 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 2bec6fbb12d78bbfd8dd04046f63df267391b1d1
-ms.sourcegitcommit: 63be53de5b84eabdeb8c006438dab45bd35a4ab7
+ms.openlocfilehash: cc9c825eb86e69caf3bef17a24194b8c8dfa0cf7
+ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79413410"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88956696"
 ---
 # <a name="tutorial-investigate-a-user"></a>Tutorial: investigar um usuário
 
@@ -39,7 +39,7 @@ Verifique e investigue o perfil do usuário quanto às atividades e aos detalhes
      2. Qual é a função dele na organização?
      3. Ele é significativo na árvore organizacional?
 
-2. Atividades suspeitas a serem [investigadas](investigate-entity.md):
+1. Atividades suspeitas a serem [investigadas](investigate-entity.md):
      1. O usuário tem outros alertas abertos no ATP do Azure ou em outras ferramentas de segurança, como o Windows Defender ATP, a Central de Segurança do Azure e/ou o Microsoft CAS?
      2. O usuário teve entradas com falha?
      3. Quais recursos o usuário acessou?  

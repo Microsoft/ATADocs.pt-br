@@ -1,6 +1,6 @@
 ---
 title: Tutorial de alertas de exfiltração do ATP do Azure
-d|Description: This article explains the Azure ATP alerts issued when attacks typically part of exfiltration phase efforts are detected against your organization.
+description: Este artigo explica os alertas do ATP do Azure emitidos quando são detectados ataques contra a sua organização, que normalmente fazem parte dos esforços da fase de exfiltração.
 keywords: ''
 author: shsagir
 ms.author: shsagir
@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 452d951c-5f49-4a21-ae10-9fb38c3de302
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: bc700b395ea5c93c5d19b7bdbf2131e742c83f20
-ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
+ms.openlocfilehash: 5561ec663f5ef0ef0adfc7ac7cc4033f90bfe3de
+ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84773526"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88953517"
 ---
 # <a name="tutorial-exfiltration-alerts"></a>Tutorial: Alertas de exfiltração
 
@@ -29,7 +29,7 @@ Normalmente, os ataques cibernéticos são lançados contra alguma entidade aces
 4. [Comprometimento de domínio](atp-domain-dominance-alerts.md)
 5. **Exportação**
 
-Para entender melhor a estrutura e os componentes comuns de todos os alertas de segurança do ATP do Azure, confira [Entendendo os alertas de segurança](understanding-security-alerts.md)
+Para entender melhor a estrutura e os componentes comuns de todos os alertas de segurança do ATP do Azure, confira [Understanding security alerts](understanding-security-alerts.md) (Entendendo os alertas de segurança). Para obter informações sobre **TP (verdadeiro positivo)** , **B-TP (verdadeiro positivo benigno)** e **FP (falso positivo)** , confira as [classificações de alertas de segurança](understanding-security-alerts.md#security-alert-classifications).
 
 Os alertas de segurança a seguir ajudam você a identificar e corrigir atividades suspeitas da fase de **Exportação** detectadas pelo ATP do Azure em sua rede. Neste tutorial, aprenda como entender, classificar, evitar e corrigir os ataques a seguir:
 
@@ -52,7 +52,7 @@ Algumas empresas usam o DNS legitimamente para a comunicação regular. Para det
 
 1. Verifique se o domínio de consulta registrado pertence a uma fonte confiável, como o provedor de antivírus.
     - Considere-a uma atividade **B-TP** se o domínio for conhecido e confiável e se as consultas DNS forem permitidas. *Feche* o alerta de segurança e exclua o domínio de futuros alertas.
-    - Se o domínio de consulta registrado não for confiável, identifique o processo de criação da solicitação no computador de origem. Use o [Process Monitor](https://docs.microsoft.com/sysinternals/downloads/procmon) para auxiliar com essa tarefa.
+    - Se o domínio de consulta registrado não for confiável, identifique o processo de criação da solicitação no computador de origem. Use o [Process Monitor](/sysinternals/downloads/procmon) para auxiliar com essa tarefa.
 
 **Entender o escopo da violação**
 
@@ -67,7 +67,7 @@ Algumas empresas usam o DNS legitimamente para a comunicação regular. Para det
 1. Contenha o computador de origem.
     - Encontre a ferramenta que realizou o ataque e remova-a.
     - Procure por usuários que estavam conectados em horário próximo àquele da atividade, pois eles também podem estar comprometidos. Redefina suas senhas e habilite a MFA ou, se você tiver configurado as políticas relevantes de usuário de alto risco no Azure Active Directory Identity Protection, poderá usar a ação [**Confirmar usuário comprometido**](/cloud-app-security/accounts#governance-actions) no portal de Cloud App Security.
-2. Se, após a investigação, o domínio de consulta registrado for considerado não confiável, recomendamos que você bloqueie o domínio de destino para evitar todas as comunicações futuras.
+1. Se, após a investigação, o domínio de consulta registrado for considerado não confiável, recomendamos que você bloqueie o domínio de destino para evitar todas as comunicações futuras.
 
 > [!NOTE]
 > Os alertas de segurança da *comunicação suspeita em DNS* listam o domínio suspeito. Novos domínios, ou domínios recentemente adicionados que ainda não sejam conhecidos nem reconhecidos pelo Azure ATP, mas que fazem parte ou são conhecidos por fazer parte de sua organização podem ser fechados.
@@ -86,17 +86,17 @@ Os controladores de domínio têm os dados organizacionais mais confidenciais. P
 **Entender o escopo da violação**
 
 1. Investigue os [usuários de origem](investigate-a-user.md).
-2. Investigue os [computadores de origem e de destino](investigate-a-computer.md) das cópias.
+1. Investigue os [computadores de origem e de destino](investigate-a-computer.md) das cópias.
 
 **Correção sugerida e etapas de prevenção**
 
 1. Redefina a senha dos usuários de origem e habilite a MFA ou, se você tiver configurado as políticas relevantes de usuário de alto risco no Azure Active Directory Identity Protection, poderá usar a ação [**Confirmar usuário comprometido**](/cloud-app-security/accounts#governance-actions) no portal de Cloud App Security.
-2. Contenha o computador de origem.
+1. Contenha o computador de origem.
     - Encontre a ferramenta que realizou o ataque e remova-a.
     - Localize os arquivos que foram copiados e remova-os.  
     Verifique se houve outras atividades nesses arquivos. Eles foram transferidos para outro lugar? Verifique se eles foram transferidos para fora da rede da organização?
     - Procure por usuários que estavam conectados em horário próximo àquele da atividade, pois eles também podem estar comprometidos. Redefina suas senhas e habilite a MFA ou, se você tiver configurado as políticas relevantes de usuário de alto risco no Azure Active Directory Identity Protection, poderá usar a ação [**Confirmar usuário comprometido**](/cloud-app-security/accounts#governance-actions) no portal de Cloud App Security.
-3. Se um dos arquivos for o **ntds.dit**:
+1. Se um dos arquivos for o **ntds.dit**:
     - Altere o Tíquete de concessão de tíquete Kerberos (KRBTGT) duas vezes de acordo com as diretrizes em [Scripts de redefinição de senha da conta KRBTGT disponíveis agora para clientes](https://cloudblogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/) usando a [ferramenta Redefinir chaves/senha da conta KRBTGT](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51).
     - A redefinição dupla do KRBTGT invalida todos os tíquetes Kerberos nesse domínio. A invalidação de todos os tíquetes Kerberos no domínio significa que **todos** os serviços serão interrompidos e não funcionarão novamente até que sejam renovados ou em alguns casos, que o serviço seja reiniciado.
 

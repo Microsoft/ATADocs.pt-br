@@ -1,6 +1,6 @@
 ---
 title: Alertas de segurança de fase de credenciais comprometidas do ATP do Azure
-d|Description: This article explains the Azure ATP alerts issued when attacks typical of the compromised credentials phase are detected against your organization.
+description: Este artigo explica os alertas do ATP do Azure emitidos quando são detectados ataques contra a sua organização, que são típicos da fase de comprometimento de credenciais.
 keywords: ''
 author: shsagir
 ms.author: shsagir
@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: e9cf68d2-36bd-4b0d-b36e-7cf7ded2618e
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 0c8e4f0ae7f49603518cfc6a3d9a9a639827faef
-ms.sourcegitcommit: fbb0768c392f9bccdd7e4adf0e9a0303c8d1922c
+ms.openlocfilehash: d0987eec71831b4dc925280c4379be35d5e6f011
+ms.sourcegitcommit: 275e2b084fd7dd7cac2e0d07b0b244318aac7475
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84773713"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89245872"
 ---
 # <a name="tutorial-compromised-credential-alerts"></a>Tutorial: Alertas de credencial comprometida
 
@@ -29,7 +29,7 @@ Normalmente, os ataques cibernéticos são iniciados contra qualquer entidade ac
 4. [Comprometimento de domínio](atp-domain-dominance-alerts.md)
 5. [Exportação](atp-exfiltration-alerts.md)
 
-Para entender melhor a estrutura e os componentes comuns de todos os alertas de segurança do ATP do Azure, confira [Understanding security alerts](understanding-security-alerts.md) (Entendendo os alertas de segurança).
+Para entender melhor a estrutura e os componentes comuns de todos os alertas de segurança do ATP do Azure, confira [Understanding security alerts](understanding-security-alerts.md) (Entendendo os alertas de segurança). Para obter informações sobre **TP (verdadeiro positivo)** , **B-TP (verdadeiro positivo benigno)** e **FP (falso positivo)** , confira as [classificações de alertas de segurança](understanding-security-alerts.md#security-alert-classifications).
 
 Os alertas de segurança a seguir ajudam você a identificar e corrigir atividades suspeitas da fase de **Credencial comprometida** detectada pelo ATP do Azure em sua rede. Neste tutorial, você aprenderá como entender, classificar, corrigir e impedir os seguintes tipos de ataques:
 
@@ -45,7 +45,7 @@ Os alertas de segurança a seguir ajudam você a identificar e corrigir atividad
 
 ## <a name="honeytoken-activity-external-id-2014"></a>Atividade de Honeytoken (ID externa 2014)
 
-*Nome anterior:* Atividade de Honeytoken
+*Antigo nome:* atividade de Honeytoken
 
 **Descrição**
 
@@ -62,7 +62,7 @@ Para obter mais informações sobre contas de honeytoken, confira [Configurar ex
 **Entender o escopo da violação**
 
 1. Investigue o [usuário de origem](investigate-a-user.md).
-2. Investigue o [computador de origem](investigate-a-computer.md).
+1. Investigue o [computador de origem](investigate-a-computer.md).
 
     > [!NOTE]
     > Se a autenticação tiver sido feita usando o NTLM, poderá não haver informações suficientes disponíveis sobre o servidor que o computador de origem tentou acessar em alguns cenários. A ATP do Azure captura os dados do computador de origem com base no Evento 4776 do Windows, que contém o nome do computador de origem definido pelo computador.  
@@ -77,7 +77,7 @@ Para obter mais informações sobre contas de honeytoken, confira [Configurar ex
 
 ## <a name="suspected-brute-force-attack-kerberos-ntlm-external-id-2023"></a>Suspeita de ataque de força bruta (NTLM do Kerberos) (ID externa 2023)
 
-*Nome anterior:* Falhas de autenticação suspeitas
+*Antigo nome:* falhas de autenticação suspeitas
 
 **Descrição**
 
@@ -89,7 +89,7 @@ Em uma pulverização de senhas, depois de enumerar com êxito uma lista de usu�
 
 **Período de aprendizado**
 
-1 semana
+Uma semana
 
 **TP, B-TP ou FP**
 
@@ -101,7 +101,7 @@ Em uma pulverização de senhas, depois de enumerar com êxito uma lista de usu�
 
       Se a resposta às perguntas acima for **sim**, **feche** o alerta de segurança como uma atividade B-TP.
 
-2. Se não houver nenhuma **Conta adivinhada**, verifique se alguma das **Contas atacadas** é normalmente usada no computador de origem.
+1. Se não houver nenhuma **Conta adivinhada**, verifique se alguma das **Contas atacadas** é normalmente usada no computador de origem.
     - Verifique se há um script em execução no computador de origem com credenciais erradas/antigas?
     - Se a resposta à pergunta anterior for **Sim**, interrompa e edite o script ou exclua-o. **Feche** o alerta de segurança como uma atividade B-TP.
 
@@ -122,15 +122,15 @@ Em uma pulverização de senhas, depois de enumerar com êxito uma lista de usu�
 **Correção sugerida e etapas de prevenção**
 
 1. Redefina as senhas dos usuários adivinhados e habilite a MFA ou, se você tiver configurado as políticas relevantes de usuário de alto risco no Azure Active Directory Identity Protection, poderá usar a ação [**Confirmar usuário comprometido**](/cloud-app-security/accounts#governance-actions) no portal de Cloud App Security.
-2. Contenha o computador de origem.
+1. Contenha o computador de origem.
     - Encontre a ferramenta que realizou o ataque e remova-a.
     - Procure usuários que estavam conectados no mesmo período em que a atividade ocorreu, pois eles também podem estar comprometidos. Redefina suas senhas e habilite a MFA ou, se você tiver configurado as políticas relevantes de usuário de alto risco no Azure Active Directory Identity Protection, poderá usar a ação [**Confirmar usuário comprometido**](/cloud-app-security/accounts#governance-actions) no portal de Cloud App Security.
-3. Redefina as senhas dos usuários de origem e habilite a MFA ou, se você tiver configurado as políticas relevantes de usuário de alto risco no Azure Active Directory Identity Protection, poderá usar a ação [**Confirmar usuário comprometido**](/cloud-app-security/accounts#governance-actions) no portal de Cloud App Security.
-4. Imponha o uso de [senhas complexas e longas](https://docs.microsoft.com/windows/device-security/security-policy-settings/password-policy) na organização, isso fornecerá o primeiro nível necessário de segurança contra ataques de força bruta futuros.
+1. Redefina as senhas dos usuários de origem e habilite a MFA ou, se você tiver configurado as políticas relevantes de usuário de alto risco no Azure Active Directory Identity Protection, poderá usar a ação [**Confirmar usuário comprometido**](/cloud-app-security/accounts#governance-actions) no portal de Cloud App Security.
+1. Imponha o uso de [senhas complexas e longas](/windows/device-security/security-policy-settings/password-policy) na organização, isso fornecerá o primeiro nível necessário de segurança contra ataques de força bruta futuros.
 
 ## <a name="suspected-brute-force-attack-ldap-external-id-2004"></a>Suspeita de ataque de força bruta (LDAP) (ID externa 2004)
 
-*Nome anterior:* Ataque de força bruta usando associação simples LDAP
+*Antigo nome:* ataque de força bruta usando associação simples de LDAP
 
 **Descrição**
 
@@ -148,7 +148,7 @@ Nesta detecção, um alerta é disparado quando o Azure ATP detecta um grande n�
 
      Se a resposta às perguntas anteriores for **sim**, **feche** o alerta de segurança como uma atividade B-TP.
 
-2. Se não houver nenhuma **Conta adivinhada**, verifique se alguma das **Contas atacadas** é normalmente usada no computador de origem.
+1. Se não houver nenhuma **Conta adivinhada**, verifique se alguma das **Contas atacadas** é normalmente usada no computador de origem.
     - Verifique se há um script em execução no computador de origem com credenciais erradas/antigas?
 
       Se a resposta à pergunta anterior for **Sim**, interrompa e edite o script ou exclua-o. **Feche** o alerta de segurança como uma atividade B-TP.
@@ -156,17 +156,17 @@ Nesta detecção, um alerta é disparado quando o Azure ATP detecta um grande n�
 **Entender o escopo da violação**
 
 1. Investigue o [computador de origem](investigate-a-computer.md).
-2. Na página de alerta, verifique quais usuários, se houver, foram adivinhados com êxito. Para cada usuário adivinhado com êxito, [verifique seu perfil](investigate-a-user.md) para investigar mais.
+1. Na página de alerta, verifique quais usuários, se houver, foram adivinhados com êxito. Para cada usuário adivinhado com êxito, [verifique seu perfil](investigate-a-user.md) para investigar mais.
 
 **Correção sugerida e etapas de prevenção**
 
 1. Redefina as senhas dos usuários adivinhados e habilite a MFA ou, se você tiver configurado as políticas relevantes de usuário de alto risco no Azure Active Directory Identity Protection, poderá usar a ação [**Confirmar usuário comprometido**](/cloud-app-security/accounts#governance-actions) no portal de Cloud App Security.
-2. Contenha o computador de origem.
+1. Contenha o computador de origem.
     - Encontre a ferramenta que realizou o ataque e remova-a.
     - Procure usuários que estavam conectados no mesmo período em que a atividade ocorreu, pois eles também podem estar comprometidos. Redefina suas senhas e habilite a MFA ou, se você tiver configurado as políticas relevantes de usuário de alto risco no Azure Active Directory Identity Protection, poderá usar a ação [**Confirmar usuário comprometido**](/cloud-app-security/accounts#governance-actions) no portal de Cloud App Security.
-3. Redefina as senhas dos usuários de origem e habilite a MFA ou, se você tiver configurado as políticas relevantes de usuário de alto risco no Azure Active Directory Identity Protection, poderá usar a ação [**Confirmar usuário comprometido**](/cloud-app-security/accounts#governance-actions) no portal de Cloud App Security.
-4. Imponha o uso de [senhas complexas e longas](https://docs.microsoft.com/windows/device-security/security-policy-settings/password-policy) na organização, isso fornecerá o primeiro nível necessário de segurança contra ataques de força bruta futuros.
-5. Evite o uso futuro do protocolo de texto não criptografado de LDAP em sua organização.
+1. Redefina as senhas dos usuários de origem e habilite a MFA ou, se você tiver configurado as políticas relevantes de usuário de alto risco no Azure Active Directory Identity Protection, poderá usar a ação [**Confirmar usuário comprometido**](/cloud-app-security/accounts#governance-actions) no portal de Cloud App Security.
+1. Imponha o uso de [senhas complexas e longas](/windows/device-security/security-policy-settings/password-policy) na organização, isso fornecerá o primeiro nível necessário de segurança contra ataques de força bruta futuros.
+1. Evite o uso futuro do protocolo de texto não criptografado de LDAP em sua organização.
 
 ## <a name="suspected-brute-force-attack-smb-external-id-2033"></a>Suspeita de ataque de força bruta (SMB) (ID externa 2033)
 
@@ -185,21 +185,21 @@ Ocasionalmente, os aplicativos implementam sua própria pilha NTLM ou SMB.
 
 1. Verifique se o computador de origem está executando um aplicativo que implementa sua própria pilha NTLM ou SMB.
     1. Se o computador de origem encontra-se executando esse tipo de aplicativo e ele não deve continuar em execução, corrija a configuração do aplicativo conforme necessário. **Feche** o alerta de segurança como uma atividade **T-BP**.
-    2. Se o computador de origem estiver executando esse aplicativo e precisar continuar, **feche** o alerta de segurança como uma atividade **T-BP** e exclua o computador.
+    2. Se o computador de origem estiver executando esse aplicativo e precisar continuar, **feche** o alerta de segurança como uma atividade **B-TP** e exclua o computador.
 
 **Entender o escopo da violação**
 
 1. Investigue o [computador de origem](investigate-a-computer.md).
-2. Investigue o [usuário de origem](investigate-a-user.md) (se houver um).
+1. Investigue o [usuário de origem](investigate-a-user.md) (se houver um).
 
 **Correção sugerida e etapas de prevenção**
 
 1. Redefina as senhas dos usuários adivinhados e habilite a MFA ou, se você tiver configurado as políticas relevantes de usuário de alto risco no Azure Active Directory Identity Protection, poderá usar a ação [**Confirmar usuário comprometido**](/cloud-app-security/accounts#governance-actions) no portal de Cloud App Security.
-2. Conter o computador de origem
+1. Conter o computador de origem
     1. Encontre a ferramenta que realizou o ataque e remova-a.
     2. Pesquise usuários que estavam conectados no horário da atividade, pois eles também podem estar comprometidos.
     3. Redefina suas senhas e habilite a MFA ou, se você tiver configurado as políticas relevantes de usuário de alto risco no Azure Active Directory Identity Protection, poderá usar a ação [**Confirmar usuário comprometido**](/cloud-app-security/accounts#governance-actions) no portal de Cloud App Security.
-3. Imponha [senhas complexas e longas](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/password-policy) na organização. As senhas complexas e longas fornecem o primeiro nível necessário de segurança contra ataques de força bruta futuros.
+1. Imponha [senhas complexas e longas](/windows/security/threat-protection/security-policy-settings/password-policy) na organização. As senhas complexas e longas fornecem o primeiro nível necessário de segurança contra ataques de força bruta futuros.
 4. [Desabilitar SMBv1](https://blogs.technet.microsoft.com/filecab/2016/09/16/stop-using-smb1/)
 
 ## <a name="suspected-wannacry-ransomware-attack-external-id-2035"></a>Suspeita de ataque do ransomware WannaCry (ID externa 2035)
@@ -225,7 +225,7 @@ Ocasionalmente, os aplicativos implementam sua própria pilha NTLM ou SMB.
 **Entender o escopo da violação**
 
 1. Investigue o [computador de origem](investigate-a-computer.md).
-2. Investigue o [usuário comprometido](investigate-a-user.md).
+1. Investigue o [usuário comprometido](investigate-a-user.md).
 
 **Correção sugerida e etapas de prevenção**
 
@@ -233,7 +233,7 @@ Ocasionalmente, os aplicativos implementam sua própria pilha NTLM ou SMB.
     - [Remover WannaCry](https://support.microsoft.com/help/890830/remove-specific-prevalent-malware-with-windows-malicious-software-remo)
     - O WanaKiwi poderá descriptografar os dados nas mãos de algum ransomware, mas apenas se o usuário não tiver reiniciado ou desligado o computador. Para obter mais informações, confira [Ransomware WannaCry](https://answers.microsoft.com/en-us/windows/forum/windows_10-security/wanna-cry-ransomware/5afdb045-8f36-4f55-a992-53398d21ed07?auth=1)
     - Pesquise usuários que estavam conectados no horário da atividade, pois é provável que eles também possam estar comprometidos. Redefina suas senhas e habilite a MFA ou, se você tiver configurado as políticas relevantes de usuário de alto risco no Azure Active Directory Identity Protection, poderá usar a ação [**Confirmar usuário comprometido**](/cloud-app-security/accounts#governance-actions) no portal de Cloud App Security.
-2. Corrija todos os computadores, lembrando-se de aplicar atualizações de segurança.
+1. Corrija todos os computadores, lembrando-se de aplicar atualizações de segurança.
     - [Desabilitar SMBv1](https://blogs.technet.microsoft.com/filecab/2016/09/16/stop-using-smb1/)
 
 ## <a name="suspected-use-of-metasploit-hacking-framework-external-id-2034"></a>Suspeita de uso da estrutura de hacker Metasploit (ID externa 2034)
@@ -248,7 +248,7 @@ Os invasores usam ferramentas que implementam vários protocolos (SMB, Kerberos,
 
 1. Verifique se o computador de origem está executando uma ferramenta de ataque como Metasploit ou Medusa.
 
-2. Em caso afirmativo, é um verdadeiro positivo. Siga as instruções acima, em **Entender o escopo da violação**.
+1. Em caso afirmativo, é um verdadeiro positivo. Siga as instruções acima, em **Entender o escopo da violação**.
 
 Ocasionalmente, os aplicativos implementam sua própria pilha NTLM ou SMB.
 
@@ -259,20 +259,20 @@ Ocasionalmente, os aplicativos implementam sua própria pilha NTLM ou SMB.
 **Entender o escopo da violação**
 
 1. Investigue o [computador de origem](investigate-a-computer.md).
-2. Se houver um usuário de origem, [investigue-o](investigate-a-user.md).
+1. Se houver um usuário de origem, [investigue-o](investigate-a-user.md).
 
 **Correção sugerida e etapas de prevenção**
 
 1. Redefina as senhas dos usuários adivinhados e habilite a MFA ou, se você tiver configurado as políticas relevantes de usuário de alto risco no Azure Active Directory Identity Protection, poderá usar a ação [**Confirmar usuário comprometido**](/cloud-app-security/accounts#governance-actions) no portal de Cloud App Security.
-2. Contenha o computador de origem.
+1. Contenha o computador de origem.
     1. Encontre a ferramenta que realizou o ataque e remova-a.
     2. Pesquise usuários que estavam conectados no horário da atividade, pois eles também podem estar comprometidos. Redefina suas senhas e habilite a MFA ou, se você tiver configurado as políticas relevantes de usuário de alto risco no Azure Active Directory Identity Protection, poderá usar a ação [**Confirmar usuário comprometido**](/cloud-app-security/accounts#governance-actions) no portal de Cloud App Security.
-3. Redefina as senhas dos usuários de origem e habilite a MFA ou, se você tiver configurado as políticas relevantes de usuário de alto risco no Azure Active Directory Identity Protection, poderá usar a ação [**Confirmar usuário comprometido**](/cloud-app-security/accounts#governance-actions) no portal de Cloud App Security.
+1. Redefina as senhas dos usuários de origem e habilite a MFA ou, se você tiver configurado as políticas relevantes de usuário de alto risco no Azure Active Directory Identity Protection, poderá usar a ação [**Confirmar usuário comprometido**](/cloud-app-security/accounts#governance-actions) no portal de Cloud App Security.
 4. [Desabilitar SMBv1](https://blogs.technet.microsoft.com/filecab/2016/09/16/stop-using-smb1/)
 
 ## <a name="suspicious-vpn-connection-external-id-2025"></a>Conexão VPN suspeita (ID externa 2025)
 
-*Nome anterior:* Conexão de VPN suspeita
+*Antigo nome:* conexão VPN suspeita
 
 **Descrição**
 
@@ -280,7 +280,7 @@ A Azure ATP aprende o comportamento da entidade dos usuários de conexões VPN e
 
 O modelo de comportamento de VPN é baseado nos computadores nos quais os usuários fazem logon e nas localizações de onde eles se conectam.
 
-Um alerta é aberto quando há um desvio no comportamento do usuário com base em um algoritmo de aprendizado de máquina.
+Um alerta é aberto quando há um desvio no comportamento do usuário com base em um algoritmo de machine learning.
 
 **Período de aprendizado**
 
@@ -297,14 +297,14 @@ Se a resposta às perguntas acima for sim, **feche** o alerta de segurança como
 **Entender o escopo da violação**
 
 1. Investigue o [computador de origem](investigate-a-computer.md).
-2. Se houver um usuário de origem, [investigue-o](investigate-a-user.md).
+1. Se houver um usuário de origem, [investigue-o](investigate-a-user.md).
 
 **Correção sugerida e etapas de prevenção**
 
 1. Redefina a senha do usuário e habilite a MFA ou, se você tiver configurado as políticas relevantes de usuário de alto risco no Azure Active Directory Identity Protection, poderá usar a ação [**Confirmar usuário comprometido**](/cloud-app-security/accounts#governance-actions) no portal de Cloud App Security.
-2. Considere a possibilidade de impedir que esse usuário se conecte usando VPN.
-3. Considere a possibilidade de impedir que esse computador se conecte usando VPN.
-4. Verifique se há outros usuários conectados por meio de VPN desses locais e também se eles foram comprometidos.
+1. Considere a possibilidade de impedir que esse usuário se conecte usando VPN.
+1. Considere a possibilidade de impedir que esse computador se conecte usando VPN.
+1. Verifique se há outros usuários conectados por meio de VPN desses locais e também se eles foram comprometidos.
 
 > [!div class="nextstepaction"]
 > [Tutorial de alertas de movimento lateral](atp-lateral-movement-alerts.md)

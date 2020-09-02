@@ -5,19 +5,19 @@ keywords: ''
 author: shsagir
 ms.author: shsagir
 manager: rkarlin
-ms.date: 06/23/2020
-ms.topic: conceptual
+ms.date: 08/25/2020
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 2fe62047-75ef-4b2e-b4aa-72860e39b4e4
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 59f3f8a201b78667ef5c8d6d20da177104dc3a38
-ms.sourcegitcommit: 073154998f5fdfbefe276888ffb034dfce368662
+ms.openlocfilehash: 7ac819d4d1f388ea632505cbd3394101020419bc
+ms.sourcegitcommit: 098a20abe62e153372da4c96db256bc63c113bd1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85256850"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88808981"
 ---
 # <a name="security-assessment-unsecure-account-attributes"></a>Avaliação de segurança: Atributos de conta não seguros
 
@@ -38,6 +38,9 @@ Por exemplo, se o atributo *PasswordNotRequired* estiver habilitado, um invasor 
 1. Use a tabela de relatório para descobrir quais das suas contas têm atributos não seguros.
     ![Examinar as principais entidades afetadas e criar um plano de ação](media/atp-cas-isp-unsecure-account-attributes-1.png)
 1. Tome medidas apropriadas nessas contas de usuário modificando ou removendo os atributos relevantes.
+
+> [!NOTE]
+> Essa avaliação é atualizada quase em tempo real.
 
 ## <a name="remediation"></a>Remediação
 

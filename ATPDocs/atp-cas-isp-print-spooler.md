@@ -5,19 +5,19 @@ keywords: ''
 author: shsagir
 ms.author: shsagir
 manager: shsagir
-ms.date: 07/08/2019
-ms.topic: conceptual
+ms.date: 08/25/2020
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 1a7d9525-8923-4dae-af51-02a68aa61644
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 3f7e6e4ad8c70e25c0b63ea17aaa8f45d4376ef9
-ms.sourcegitcommit: b2b40be9ac76237c3d6b2beb06eabd92e0b399c8
+ms.openlocfilehash: c01770ca3f115a3ba445f669ec1c0db25a322721
+ms.sourcegitcommit: 098a20abe62e153372da4c96db256bc63c113bd1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87293178"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88809151"
 ---
 # <a name="security-assessment-domain-controllers-with-print-spooler-service-available"></a>Avaliação de segurança: Controladores de domínio com o serviço de spooler de impressão disponível
 
@@ -44,6 +44,9 @@ Embora essa avaliação de segurança se concentre nos controladores de domínio
 
     ![Desabilitar a avaliação de segurança do serviço de spooler de impressão](media/atp-cas-isp-print-spooler-2.png)
 1. Tome as medidas adequadas em relação aos controladores de domínio em risco e remova ativamente o serviço de spooler de impressão manualmente, por meio do GPO ou outros tipos de comandos remotos.
+
+> [!NOTE]
+> Essa avaliação é atualizada quase em tempo real.
 
 ## <a name="remediation"></a>Remediação
 

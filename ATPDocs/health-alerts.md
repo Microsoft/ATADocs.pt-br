@@ -1,23 +1,23 @@
 ---
 title: Reconhecer os alertas de integridade do ATP do Azure
-description: Descreve como você pode usar os logs do Azure ATP para solucionar problemas
+description: Este artigo descreve todos os alertas de integridade para cada componente, listando a causa e as etapas necessárias para resolver o problema
 keywords: ''
 author: shsagir
 ms.author: shsagir
 manager: shsagir
 ms.date: 05/17/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: d0551e91-3b21-47d5-ad9d-3362df6d47c0
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 37ae29e667d3507d1415acae3098e6f93565ec4e
-ms.sourcegitcommit: 8c99699b9b84d50fb258c0cc5523ffa78133b7a4
+ms.openlocfilehash: e3b641ef32d483e52c523ed91109ada99f98705c
+ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2020
-ms.locfileid: "88027152"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88956118"
 ---
 # <a name="understanding-azure-atp-sensor-health-alerts"></a>Reconhecer os alertas de integridade do sensor do ATP do Azure
 
@@ -118,7 +118,7 @@ O Centro de Integridade do ATP do Azure permite que você saiba quando há um pr
 
 |Alert|Description|Resolution|Severity|
 |----|----|----|----|
-| Windows events missing from domain controller audit policy|For the correct events to be audited and included in the Windows Event Log, your domain controllers require accurate Advanced Audit Policy settings. Incorrect Advanced Audit Policy settings leave critical events out of your logs, and result in incomplete Azure ATP coverage.|Review your [Advanced Audit policy](atp-advanced-audit-policy.md) and modify as needed. | Medium|
+| Windows events missing from domain controller audit policy|For the correct events to be audited and included in the Windows Event Log, your domain controllers require accurate Advanced Audit Policy settings. Incorrect Advanced Audit Policy settings leave critical events out of your logs, and result in incomplete Azure ATP coverage.|Review your [Advanced Audit policy](configure-windows-event-collection.md) and modify as needed. | Medium|
 -->
 
 ## <a name="see-also"></a>Consulte Também
