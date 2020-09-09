@@ -5,19 +5,19 @@ keywords: ''
 author: shsagir
 ms.author: shsagir
 manager: shsagir
-ms.date: 04/28/2020
+ms.date: 09/07/2020
 ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 23386e36-2756-4291-923f-fa8607b5518a
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 4de688b3ea1c80f8ed0e517baf9da3b469a8d82a
-ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
+ms.openlocfilehash: 0ebab871f92000513ec0c089b0583dbb6c841ec5
+ms.sourcegitcommit: 07b0bfd432b4e12798c431ebc53fd3745bb855d0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88956713"
+ms.lasthandoff: 09/07/2020
+ms.locfileid: "89505966"
 ---
 # <a name="troubleshooting-azure-atp-known-issues"></a>Solução de problemas conhecidos da ATP do Azure
 
@@ -61,10 +61,11 @@ O problema pode ser causado por um erro de configuração de proxy transparente 
 
 **Resolução:**
 
-Execute o cmdlet do PowerShell a seguir para verificar se o certificado raiz confiável do serviço ATP do Azure existe no Server Core. O exemplo a seguir usa o "DigiCert Baltimore Root".
+Execute o cmdlet do PowerShell a seguir para verificar se o certificado raiz confiável do serviço ATP do Azure existe no Server Core. O exemplo a seguir usa o "DigiCert Baltimore Root" e o "DigiCert Global Root".
 
 ```powershell
-Get-ChildItem -Path "Cert:\LocalMachine\Root" | where { $_.Thumbprint -eq "D4DE20D05E66FC53FE1A50882C78DB2852CAE474"}
+Get-ChildItem -Path "Cert:\LocalMachine\Root" | where { $_.Thumbprint -eq "D4DE20D05E66FC53FE1A50882C78DB2852CAE474"} | fl
+Get-ChildItem -Path "Cert:\LocalMachine\Root" | where { $_.Thumbprint -eq "df3c24f9bfd666761b268073fe06d1cc8d4f82a4"} | fl
 ```
 
 ```Output
@@ -75,15 +76,24 @@ FriendlyName : DigiCert Baltimore Root
 NotBefore    : 5/12/2000 11:46:00 AM
 NotAfter     : 5/12/2025 4:59:00 PM
 Extensions   : {System.Security.Cryptography.Oid, System.Security.Cryptography.Oid, System.Security.Cryptography.Oid}
+
+Subject      : CN=DigiCert Global Root G2, OU=www.digicert.com, O=DigiCert Inc, C=US
+Issuer       : CN=DigiCert Global Root G2, OU=www.digicert.com, O=DigiCert Inc, C=US
+Thumbprint   : DF3C24F9BFD666761B268073FE06D1CC8D4F82A4
+FriendlyName : DigiCert Global Root G2
+NotBefore    : 01/08/2013 15:00:00
+NotAfter     : 15/01/2038 14:00:00
+Extensions   : {System.Security.Cryptography.Oid, System.Security.Cryptography.Oid, System.Security.Cryptography.Oid}
 ```
 
 Se você não vir a saída esperada, use as seguintes etapas:
 
-1. Baixe o [certificado raiz Baltimore CyberTrust](https://cacert.omniroot.com/bc2025.crt) no computador do Server Core.
+1. Baixe o [certificado raiz Baltimore CyberTrust](https://cacert.omniroot.com/bc2025.crt) e o [DigiCert Global Root G2](https://cacerts.digicert.com/DigiCertGlobalRootG2.crt) no computador Server Core.
 1. Execute o cmdlet do PowerShell a seguir para instalar o certificado.
 
     ```powershell
     Import-Certificate -FilePath "<PATH_TO_CERTIFICATE_FILE>\bc2025.crt" -CertStoreLocation Cert:\LocalMachine\Root
+    Import-Certificate -FilePath "<PATH_TO_CERTIFICATE_FILE>\DigiCertGlobalRootG2.crt" -CertStoreLocation Cert:\LocalMachine\Root
     ```
 
 ## <a name="silent-installation-error-when-attempting-to-use-powershell"></a>Erro de instalação silenciosa ao tentar usar o PowerShell
