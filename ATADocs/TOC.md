@@ -1,8 +1,9 @@
-# Entender e explorar
+# Compreensão e Exploração
 ## [O que é o Microsoft Advanced Threat Analytics?](what-is-ata.md)
 ## [Quais ameaças o ATA detecta?](ata-threats.md)
 ## Novidades no ATA?
-### [Novidades na versão 1.9 do ATA](whats-new-version-1.9.md)
+### [Novidades da versão 1.9 do ATA](whats-new-version-1.9.md)
+#### [Atualização para o ATA 1.9.3 — guia de migração](ata-update-1.9.3-migration-guide.md)
 #### [Atualização para o ATA 1.9.2 — guia de migração](ata-update-1.9.2-migration-guide.md)
 #### [Atualização para o ATA 1.9.1 — guia de migração](ata-update-1.9.1-migration-guide.md)
 #### [Atualização para o ATA 1.9 — guia de migração](ata-update-1.9-migration-guide.md)
@@ -17,7 +18,7 @@
 ### [Novidades na versão 1.4 do ATA](whats-new-version-1.4.md)
 ## [Perguntas frequentes](ata-technical-faq.md)
 ## [Privacidade e segurança de dados do ATA](ata-privacy-compliance.md)
-# Plano e design
+# Planejar e Projetar
 ## [Arquitetura do ATA](ata-architecture.md)
 ## [Planejar a capacidade do ATA](ata-capacity-planning.md)
 ## [Pré-requisitos do ATA](ata-prerequisites.md)
@@ -55,7 +56,7 @@
 ### [Perfis de entidade](entity-profiles.md)
 ## [Evitando caminhos de movimentação lateral](use-case-lateral-movement-path.md)
 ## Informações de referência de ATA
-### [Referência de log do SIEM do ATA](cef-format-sa.md)
+### [Referência de log do SIEM](cef-format-sa.md)
 ### [Referência de ID do evento](event-id-reference.md)
 # Investigar
 ## [Guia de atividade suspeita](suspicious-activity-guide.md)
@@ -63,8 +64,8 @@
 ## [Trabalhando com logs de auditoria](troubleshoot-audit.md)
 ## [Solução de problemas conhecidos](troubleshooting-ata-known-errors.md)
 ## [Solução de problemas usando os logs](troubleshooting-ata-using-logs.md)
-## [Solução de problemas usando os contadores de desempenho](troubleshooting-ata-using-perf-counters.md)
-## [Solução de problemas usando o banco de dados](troubleshooting-ata-using-ata-database.md)
+## [Solucionar problemas usando os contadores de desempenho](troubleshooting-ata-using-perf-counters.md)
+## [Solucionar problemas usando o banco de dados](troubleshooting-ata-using-ata-database.md)
 ## [Solução de problemas de inicialização do serviço](troubleshooting-service-startup.md)
-## [Recuperação de desastre](disaster-recovery.md)
+## [Recuperação de desastres](disaster-recovery.md)
 # [Roteiro de preparação do ATA](ata-resources.md)
