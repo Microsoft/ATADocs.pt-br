@@ -4,19 +4,19 @@ description: Explica as diferentes opções para versões do Microsoft Advanced 
 author: shsagir
 ms.author: shsagir
 manager: shsagir
-ms.date: 01/26/2020
+ms.date: 09/16/2020
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
 ms.technology: ''
 ms.assetid: a8afbd91-c888-4dfc-94ab-72e38745163e
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: ad00cf100fdd7496e3c2339c08bdd6f99ae57056
-ms.sourcegitcommit: 77d43b683c4588edc84aacf220d1daac00e47c6c
+ms.openlocfilehash: f98d6ca3f01ede7cb52d3caa742623e80a06e7d3
+ms.sourcegitcommit: 51997dca429877cbe5a74c9051c1ef2084b8dd44
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90523123"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90680229"
 ---
 # <a name="support-for-microsoft-advanced-threat-analytics-ata-versions"></a>Suporte para versões do Microsoft Advanced Threat Analytics (ATA)
 
@@ -24,7 +24,7 @@ ms.locfileid: "90523123"
 
 O suporte do Microsoft ATA é definido pela política de ciclo de vida da Microsoft para o [ATA 1. x](https://support.microsoft.com/lifecycle/search?alpha=Advanced%20Threat%20Analytics%201.X), com suporte base que termina em 12 de janeiro de 2021.
 
-Atualizações do ATA algumas vezes por ano com cada versão de atualização com suporte por 12 meses a partir de sua data de lançamento de disponibilidade geral (GA) ou 6 meses após a disponibilização de uma atualização mais recente.
+Há suporte para atualizações do ATA por 12 meses a partir da data de lançamento da disponibilidade geral (GA) ou 6 meses após a disponibilização de uma atualização mais recente.
 
 > [!NOTE]
 > **Ciclo de vida de suporte**
