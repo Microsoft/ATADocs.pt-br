@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 88720401-1fb2-4353-ad39-32bc0088f0de
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 358d011fef856d416de6e71092b8ddd4d9fde809
-ms.sourcegitcommit: 45003b424140350e03128ac5325e1f28c52e6e1c
+ms.openlocfilehash: e7680149498c496943ebf9359117895016ed6ca3
+ms.sourcegitcommit: d33e38a6a6b61e7dda4ca778862644f2282ac78f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90535101"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90828940"
 ---
 # <a name="recommended-upgrade-path-for-ata"></a>Caminho de atualização recomendado para o ATA
 
@@ -39,7 +39,7 @@ Este artigo fornece informações sobre as versões disponíveis do Advanced Thr
 |1,9|1.9.7312|
 |1.9 Atualização 1|1.9.7412|
 |1.9 Atualização 2|1.9.7478|
-|1.9 Atualização 2|1.9.7561|
+|1,9 atualização 3|1.9.7561|
 
 ## <a name="upgrade-paths"></a>Caminhos de atualização
 
