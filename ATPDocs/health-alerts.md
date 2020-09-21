@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: d0551e91-3b21-47d5-ad9d-3362df6d47c0
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: e3b641ef32d483e52c523ed91109ada99f98705c
-ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
+ms.openlocfilehash: b42aa8895e0946a5997a117ec5bca74089190bbd
+ms.sourcegitcommit: 0c356b0860ae8663254e0cf6f04001bcc91ce207
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88956118"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90826508"
 ---
 # <a name="understanding-azure-atp-sensor-health-alerts"></a>Reconhecer os alertas de integridade do sensor do ATP do Azure
 
@@ -39,7 +39,7 @@ O Centro de Integridade do ATP do Azure permite que você saiba quando há um pr
 
 |Alerta|Descrição|Resolução|Severidade|
 |----|----|----|----|
-|As credenciais da conta de usuário de serviços de diretório estão incorretas.|Isso afeta a capacidade dos sensores de detectar atividades usando consultas LDAP em controladores de domínio.|– Para contas do AD **padrão**: verifique se o nome de usuário, a senha e o domínio na página de configuração dos **Serviços de diretório** estão corretos.<br>– Para **Contas de Serviço Gerenciado de Grupo:** verifique se o nome de usuário e o domínio na página de configuração dos **Serviços de Diretório** estão corretos. Confira também todos os outros pré-requisitos da **conta gMSA** descritos na página [Conectar à sua floresta do Active Directory](install-atp-step2.md#prerequisites).|Média|
+|As credenciais da conta de usuário de serviços de diretório estão incorretas.|Isso afeta a capacidade dos sensores de detectar atividades usando consultas LDAP em controladores de domínio.|– Para contas do AD **padrão**: verifique se o nome de usuário, a senha e o domínio na página de configuração dos **Serviços de diretório** estão corretos.<br>– Para **Contas de Serviço Gerenciado de Grupo:** verifique se o nome de usuário e o domínio na página de configuração dos **Serviços de Diretório** estão corretos. Confira também todos os outros pré-requisitos da **conta gMSA** descritos na página [Conectar à sua floresta do Active Directory](install-step2.md#prerequisites).|Média|
 
 ## <a name="low-success-rate-of-active-name-resolution"></a>Taxa de êxito baixa de resolução de nomes ativa
 
@@ -57,19 +57,19 @@ O Centro de Integridade do ATP do Azure permite que você saiba quando há um pr
 
 |Alerta|Descrição|Resolução|Severidade|
 |----|----|----|----|
-|A senha de usuário somente leitura, usada para executar a resolução de entidades no Active Directory, está prestes a expirar em menos de 30 dias.|Se a senha do usuário expirar, todos os sensores do Azure ATP deixarão de ser executados e nenhum novo dado será coletado.|[Altere a senha de conectividade do domínio](modifying-atp-config-dcpassword.md) e, em seguida, atualize a senha no portal do Azure ATP.|Média|
+|A senha de usuário somente leitura, usada para executar a resolução de entidades no Active Directory, está prestes a expirar em menos de 30 dias.|Se a senha do usuário expirar, todos os sensores do Azure ATP deixarão de ser executados e nenhum novo dado será coletado.|[Altere a senha de conectividade do domínio](modifying-config-dcpassword.md) e, em seguida, atualize a senha no portal do Azure ATP.|Média|
 
 ## <a name="read-only-user-password-expired"></a>A senha de usuário somente leitura expirou
 
 |Alerta|Descrição|Resolução|Severidade|
 |----|----|----|----|
-|A senha de usuário somente leitura, usada para obter dados de diretório, expirou.|Todos os sensores do Azure ATP deixam de ser executados (ou deixarão de ser executados em breve) e nenhum novo dado é coletado.|[Altere a senha de conectividade do domínio](modifying-atp-config-dcpassword.md) e, em seguida, atualize a senha no portal do Azure ATP.|Alta|
+|A senha de usuário somente leitura, usada para obter dados de diretório, expirou.|Todos os sensores do Azure ATP deixam de ser executados (ou deixarão de ser executados em breve) e nenhum novo dado é coletado.|[Altere a senha de conectividade do domínio](modifying-config-dcpassword.md) e, em seguida, atualize a senha no portal do Azure ATP.|Alta|
 
 ## <a name="sensor-outdated"></a>Sensor desatualizado
 
 |Alerta|Descrição|Resolução|Severidade|
 |----|----|----|----|
-|Um sensor do Azure ATP está desatualizado.|Um sensor do ATP do Azure está executando uma versão que não pode se comunicar com a infraestrutura de nuvem do ATP do Azure.|Atualize manualmente o sensor e verifique por que ele não está sendo atualizado automaticamente. Se isso não funcionar, baixe o pacote de instalação mais recente do sensor e desinstale e reinstale o sensor. Para obter mais informações, consulte [Instalando o sensor do Azure ATP](install-atp-step4.md).|Média|
+|Um sensor do Azure ATP está desatualizado.|Um sensor do ATP do Azure está executando uma versão que não pode se comunicar com a infraestrutura de nuvem do ATP do Azure.|Atualize manualmente o sensor e verifique por que ele não está sendo atualizado automaticamente. Se isso não funcionar, baixe o pacote de instalação mais recente do sensor e desinstale e reinstale o sensor. Para obter mais informações, consulte [Instalando o sensor do Azure ATP](install-step4.md).|Média|
 
 ## <a name="sensor-reached-a-memory-resource-limit"></a>O sensor atingiu o limite de um recurso de memória
 
@@ -105,7 +105,7 @@ O Centro de Integridade do ATP do Azure permite que você saiba quando há um pr
 
 |Alerta|Descrição|Resolução|Severidade|
 |----|----|----|----|
-|O sensor do Azure ATP está recebendo mais tráfego de rede do que pode processar.|Não foi possível analisar parte do tráfego de rede, o que pode afetar a capacidade de detectar atividades suspeitas provenientes dos controladores de domínio monitorados por este sensor do ATP do Azure.|Considere [adicionar mais processadores e memória](atp-capacity-planning.md) conforme necessário. Se esse for um sensor autônomo do Azure ATP, reduza o número de controladores de domínio monitorados.<br></br>Isso também pode ocorrer se você estiver usando controladores de domínio em máquinas virtuais VMware. Para evitar esses alertas, verifique se as configurações a seguir estão definidas como 0 ou Desabilitado na máquina virtual:<br></br>– TsoEnable<br></br>– LargeSendOffload(IPv4)<br></br>– Descarregamento de TSO do IPv4<br></br>Além disso, considere desabilitar o Descarregamento TSO gigante do IPv4. Para obter mais informações, consulte a documentação do VMware.|Média|
+|O sensor do Azure ATP está recebendo mais tráfego de rede do que pode processar.|Não foi possível analisar parte do tráfego de rede, o que pode afetar a capacidade de detectar atividades suspeitas provenientes dos controladores de domínio monitorados por este sensor do ATP do Azure.|Considere [adicionar mais processadores e memória](capacity-planning.md) conforme necessário. Se esse for um sensor autônomo do Azure ATP, reduza o número de controladores de domínio monitorados.<br></br>Isso também pode ocorrer se você estiver usando controladores de domínio em máquinas virtuais VMware. Para evitar esses alertas, verifique se as configurações a seguir estão definidas como 0 ou Desabilitado na máquina virtual:<br></br>– TsoEnable<br></br>– LargeSendOffload(IPv4)<br></br>– Descarregamento de TSO do IPv4<br></br>Além disso, considere desabilitar o Descarregamento TSO gigante do IPv4. Para obter mais informações, consulte a documentação do VMware.|Média|
 
 ## <a name="some-windows-events-could-not-be-analyzed"></a>Não foi possível analisar alguns eventos do Windows
 
@@ -123,8 +123,8 @@ O Centro de Integridade do ATP do Azure permite que você saiba quando há um pr
 
 ## <a name="see-also"></a>Consulte Também
 
-- [Pré-requisitos do Azure ATP](atp-prerequisites.md)
-- [Planejamento de capacidade do Azure ATP](atp-capacity-planning.md)
+- [Pré-requisitos do Azure ATP](prerequisites.md)
+- [Planejamento de capacidade do Azure ATP](capacity-planning.md)
 - [Configurar coleta de eventos](configure-event-collection.md)
 - [Configuração do encaminhamento de eventos do Windows](configure-event-forwarding.md)
 - [Confira o fórum do ATP do Azure!](https://aka.ms/azureatpcommunity)

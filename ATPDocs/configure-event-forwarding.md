@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 3547519f-8d9c-40a9-8f0e-c7ba21081203
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 0a127cec114eb92320334999354522e676f99b37
-ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
+ms.openlocfilehash: 8580988514434b03cd932edd054ba4f80af7f501
+ms.sourcegitcommit: 0c356b0860ae8663254e0cf6f04001bcc91ce207
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88956900"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90826491"
 ---
 # <a name="configuring-windows-event-forwarding"></a>Configuração do encaminhamento de eventos do Windows
 
@@ -91,5 +91,5 @@ Para obter mais informações, consulte: [Configurar computadores para encaminha
 
 ## <a name="see-also"></a>Consulte Também
 
-- [Instalar o Azure ATP](install-atp-step1.md)
+- [Instalar o Azure ATP](install-step1.md)
 - [Confira o fórum do ATP do Azure!](https://aka.ms/azureatpcommunity)

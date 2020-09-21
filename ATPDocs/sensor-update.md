@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 603d9e09-a07d-4357-862f-d5682c8bc3dd
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 860f856acd1a34e52032217b137b6350a0988365
-ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
+ms.openlocfilehash: 0e2a5c24b2dac7675f55e2279ccaa11897e154ef
+ms.sourcegitcommit: 0c356b0860ae8663254e0cf6f04001bcc91ce207
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88956577"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90826627"
 ---
 # <a name="update-azure-atp-sensors"></a>Atualizar sensores da Azure ATP
 
@@ -97,5 +97,5 @@ Se algum sensor não concluir o processo de atualização, o alerta de integrida
 ## <a name="see-also"></a>Consulte Também
 
 - [Configurar o encaminhamento de eventos](configure-event-forwarding.md)
-- [Pré-requisitos do Azure ATP](atp-prerequisites.md)
+- [Pré-requisitos do Azure ATP](prerequisites.md)
 - [Confira o fórum do ATP do Azure!](https://aka.ms/azureatpcommunity)

@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 4ba46d60-3a74-480e-8f0f-9a082d62f343
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: fa19723ec0193a7a933eef292505a62b3d3b9961
-ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
+ms.openlocfilehash: 984affaff8284f1d1a9239f43428b5167b832024
+ms.sourcegitcommit: 0c356b0860ae8663254e0cf6f04001bcc91ce207
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88955591"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90826186"
 ---
 # <a name="working-with-the-azure-atp-portal"></a>Trabalhando com o portal do Azure ATP
 
@@ -35,13 +35,13 @@ Este artigo descreve como trabalhar com os principais elementos do portal do Azu
 ## <a name="enabling-access-to-the-azure-atp-portal"></a>Habilitando o acesso ao portal do Azure ATP
 
 Para fazer logon com êxito no portal do Azure ATP, é necessário fazer logon com um usuário atribuído ao grupo de segurança do Azure Active Directory com acesso ao portal do Azure ATP.
-Para obter mais informações sobre o RBAC (controle de acesso baseado em função) no Azure ATP, consulte [Como trabalhar com grupos de função do Azure ATP](atp-role-groups.md).
+Para obter mais informações sobre o RBAC (controle de acesso baseado em função) no Azure ATP, consulte [Como trabalhar com grupos de função do Azure ATP](role-groups.md).
 
 ## <a name="logging-into-the-azure-atp-portal"></a>Fazendo logon no Portal do Azure ATP
 
 1. Você pode entrar no portal do ATP do Azure fazendo logon no portal [https://portal.atp.azure.com](https://portal.atp.azure.com) e selecionando sua instância ou navegando até a URL da instância: `https://*instancename*.atp.azure.com`.
 
-1. O Azure ATP é compatível com o logon único integrado com a autenticação do Windows – se você já fez logon em seu computador, o Azure ATP usa esse token para fazer logon no portal do Azure ATP. Você também pode fazer logon usando um cartão inteligente. Suas permissões no Azure ATP correspondem à sua [função de administrador](atp-role-groups.md).
+1. O Azure ATP é compatível com o logon único integrado com a autenticação do Windows – se você já fez logon em seu computador, o Azure ATP usa esse token para fazer logon no portal do Azure ATP. Você também pode fazer logon usando um cartão inteligente. Suas permissões no Azure ATP correspondem à sua [função de administrador](role-groups.md).
 
    > [!NOTE]
    > Faça logon no computador do qual deseja acessar o portal do Azure ATP usando seu nome de usuário administrador e senha do Azure ATP. Como alternativa, execute seu navegador como um usuário diferente ou se desconecte do Windows e faça logon com o usuário administrador do ATP do Azure. Ao contrário do portal do ATP do Azure, o novo [portal do Cloud App Security](https://portal.cloudappsecurity.com) oferece logon de vários usuários e não requer licença adicional para uso com o ATP do Azure.
@@ -110,5 +110,5 @@ Se você passar o mouse sobre uma entidade, em qualquer lugar no portal do ATP d
 
 ## <a name="see-also"></a>Consulte Também
 
-- [Criando instâncias do ATP do Azure](install-atp-step1.md)
+- [Criando instâncias do ATP do Azure](install-step1.md)
 - [Confira o fórum do ATP do Azure!](https://aka.ms/azureatpcommunity)

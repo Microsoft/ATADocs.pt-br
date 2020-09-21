@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 671747d5-faed-4352-a871-17b58fdc6574
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: b236a1dcd301e00947eac62a6abe1470e4397c37
-ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
+ms.openlocfilehash: 50288d379bf78f6d6601616597cbac2f1699b042
+ms.sourcegitcommit: 0c356b0860ae8663254e0cf6f04001bcc91ce207
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88956203"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90826661"
 ---
 # <a name="tutorial-understanding-security-alerts"></a>Tutorial: entendendo os alertas de segurança
 
@@ -69,11 +69,11 @@ Observação: um aumento de alertas exatamente do mesmo tipo normalmente reduz o
 
 Os alertas de segurança do ATP do Azure são divididos nas categorias ou fases a seguir, assim como as fases encontradas em uma cadeia de eliminação de ataque cibernético típica. Saiba mais sobre cada fase e os alertas projetados para detectar cada ataque usando os links a seguir:
 
-- [Alertas de reconhecimento](atp-reconnaissance-alerts.md)
-- [Alertas de credencial comprometida](atp-compromised-credentials-alerts.md)
-- [Alertas de movimento lateral](atp-lateral-movement-alerts.md)
-- [Alertas de predominância de domínio](atp-domain-dominance-alerts.md)
-- [Alertas de exfiltração](atp-exfiltration-alerts.md)
+- [Alertas de reconhecimento](reconnaissance-alerts.md)
+- [Alertas de credencial comprometida](compromised-credentials-alerts.md)
+- [Alertas de movimento lateral](lateral-movement-alerts.md)
+- [Alertas de predominância de domínio](domain-dominance-alerts.md)
+- [Alertas de exfiltração](exfiltration-alerts.md)
 
 ## <a name="advanced-security-alert-investigation"></a>Investigação avançada de alerta de segurança
 
