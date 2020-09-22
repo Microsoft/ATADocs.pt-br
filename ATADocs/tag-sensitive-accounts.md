@@ -12,23 +12,25 @@ ms.technology: ''
 ms.assetid: 40a1c5c4-b8d6-477c-8ae5-562b37661624
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: ba1cf2cb1d9cceaa07dfa1db9df533d7c57dae64
-ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
+ms.openlocfilehash: 233d6f51e35081740d068635646318abc503268f
+ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88956458"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90911975"
 ---
 # <a name="tag-sensitive-accounts"></a>Marcar contas confidenciais
 
 
-*Aplica-se a: Advanced Threat Analytics versão 1.9*
+[!INCLUDE [Banner for top of topics](includes/banner.md)]
+
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 Você pode marcar manualmente grupos ou contas como confidenciais para aprimorar as detecções. É importante verificar se ele está atualizado porque algumas detecções do ATA, como a detecção de modificação de grupos confidenciais e o caminho de movimento lateral, dependem de quais grupos e contas são considerados confidenciais. Antes, o ATA considerava automaticamente uma entidade *confidencial* se ela fosse membro de uma lista específica de grupos. Agora, você pode marcar manualmente outros usuários ou grupos como confidenciais, como membros da diretoria, executivos ou diretores de vendas da empresa, entre outros, e o ATA os considerará confidenciais.
 
 1. No console do ATA, clique na engrenagem de **Configuração** na barra de menus.
 
-1. Em **Detecção**, clique em **Marcas das entidades**.
+1. Em **detecção,** clique em **marcas de entidade**.
 
     ![Marcas das entidades do ATA](media/entity-tags.png)
 
@@ -46,7 +48,7 @@ Você pode marcar manualmente grupos ou contas como confidenciais para aprimorar
 A lista de grupos a seguir é considerada Confidencial pelo ATA. Qualquer entidade que é um membro desses grupos é considerada confidencial:
 
 - Administradores
-- Usuários avançados
+- Usuários Avançados
 - Opers. de contas
 - Opers. de servidores
 - Operadores de Impressão

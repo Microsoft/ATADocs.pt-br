@@ -12,15 +12,16 @@ ms.technology: ''
 ms.assetid: 51de491c-49ba-4aff-aded-cc133a8ccf0b
 ms.reviewer: ''
 ms.suite: ems
-ms.openlocfilehash: abe3a716c7a85ba435eec18eab94e514222e6803
-ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
+ms.openlocfilehash: 01c8d55654ed4e1b425f8a043628e425496da4cb
+ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88956152"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90912816"
 ---
 # <a name="whats-new-in-ata-version-19"></a>Novidades da versão 1.9 do ATA
 
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 A versão mais recente da atualização do ATA pode ser [baixada do Centro de Download](https://www.microsoft.com/download/details.aspx?id=56725) ou a versão completa pode ser baixada do [centro Eval](https://www.microsoft.com/evalcenter/evaluate-microsoft-advanced-threat-analytics).
 
 Essas notas de versão fornecem informações sobre atualizações, novos recursos, correções de bug e problemas conhecidos nesta versão do Advanced Threat Analytics.
@@ -42,7 +43,7 @@ Essas notas de versão fornecem informações sobre atualizações, novos recurs
 
 - O ATA 1.9 permite [marcar manualmente grupos](tag-sensitive-accounts.md) ou contas como confidenciais para aprimorar as detecções. Essa marcação afeta muitas detecções do ATA, como a detecção de modificação de grupos confidenciais e o caminho de movimento lateral, dependendo de quais grupos e contas são considerados confidenciais.
 
-## <a name="performance-improvements"></a>Aprimoramentos de desempenho
+## <a name="performance-improvements"></a>Melhorias de desempenho
 
 - O desempenho da infraestrutura da Central do ATA foi aprimorado: a exibição agregada do tráfego permite otimizar a CPU e o pipeline de pacotes, além de reutilizar soquetes para os controladores de domínio minimizarem as sessões de SSL para o controlador de domínio.
 

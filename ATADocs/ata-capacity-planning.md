@@ -11,16 +11,18 @@ ms.prod: advanced-threat-analytics
 ms.assetid: 1b5b24ff-0df8-4660-b4f8-64d68cc72f65
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 608a606c8ef93e46b36658c2344a66d73eb5d8ec
-ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
+ms.openlocfilehash: d2db03d8b4074465795ce3ba9113aac78647ad2c
+ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88954197"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90909244"
 ---
 # <a name="ata-capacity-planning"></a>Planejamento da capacidade de ATA
 
-*Aplica-se a: Advanced Threat Analytics versão 1.9*
+[!INCLUDE [Banner for top of topics](includes/banner.md)]
+
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 Este artigo ajuda a determinar quantos servidores do ATA são necessários para monitorar a rede. Ele ajuda a estimar quantos gateways do ATA e/ou gateways Lightweight do ATA são necessários e a capacidade do servidor para o centro do ATA e os gateways do ATA.
 
@@ -83,7 +85,7 @@ Em uma implantação do ATA, há suporte para qualquer combinação dos tipos de
 
 Ao decidir sobre o tipo de implantação do Gateway, considere os seguintes benefícios:
 
-|Tipo de gateway|Benefícios|Custo|Topologia de implantação|Uso do controlador de domínio|
+|Tipo de gateway|Benefícios|Cost|Topologia de implantação|Uso do controlador de domínio|
 |----|----|----|----|-----|
 |Gateway de ATA|A implantação Fora de banda dificulta o trabalho dos invasores em descobrir se o ATA está presente|Mais alto|Instalado junto com o controlador de domínio (fora de banda)|Dá suporte a até 50.000 pacotes por segundo|
 |Gateway Lightweight do ATA|Não exige uma configuração de espelhamento de porta e servidor dedicado|Mais baixo|Instalado em um controlador de domínio|Dá suporte a até 10.000 pacotes por segundo|

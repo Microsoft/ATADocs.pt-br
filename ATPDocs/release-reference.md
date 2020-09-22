@@ -11,14 +11,16 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: ort
 ms.suite: ems
-ms.openlocfilehash: d93c1c56457002d6039cbc0d6162ee6c22ccb657
-ms.sourcegitcommit: 0c356b0860ae8663254e0cf6f04001bcc91ce207
+ms.openlocfilehash: 494faf68f394d9bdbb2af583c4eec3135fd67ee3
+ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90828052"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90911998"
 ---
 # <a name="release-reference-of-azure-advanced-threat-protection-azure-atp"></a>Referência de versão do ATP do Azure (Proteção Avançada contra Ameaças do Azure)
+
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 Este artigo é uma referência de todas as versões do ATP do Azure até (e incluindo) a versão 2.55. Para atualizações recentes de versões do ATP do Azure (2.56 e mais recente), confira [Novidades do ATP do Azure](whats-new.md).
 

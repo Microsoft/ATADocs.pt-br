@@ -12,16 +12,18 @@ ms.technology: ''
 ms.assetid: 1fe5fd6f-1b79-4a25-8051-2f94ff6c71c1
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 6d91f755f3892076714b1bdbb6896f1fa6639a3a
-ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
+ms.openlocfilehash: aa89bb10e60c103af1684ae7a2d2dc5f4227bb92
+ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88955030"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90912232"
 ---
 # <a name="advanced-threat-analytics-suspicious-activity-guide"></a>Guia de atividades suspeitas Advanced Threat Analytics
 
-*Aplica-se a: Advanced Threat Analytics versão 1.9*
+[!INCLUDE [Banner for top of topics](includes/banner.md)]
+
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 Após investigação adequada, qualquer atividade suspeita pode ser classificada como:
 
@@ -129,7 +131,7 @@ Primeiro, verifique a descrição do alerta para ver quais dos três tipos de de
 1. Skeleton Key – Remova malware. Para saber mais, veja [Análise do malware Skeleton Key](https://www.virusbulletin.com/virusbulletin/2016/01/paper-digital-bian-lian-face-changing-skeleton-key-malware).
 
 1. Golden Ticket – Siga as instruções das atividades suspeitas do [Golden Ticket](#golden-ticket).
-    Além disso, como criar um tíquete de ouro requer direitos de administrador de domínio, implemente [Passar as recomendações de hash](https://www.microsoft.com/download/details.aspx?id=36036).
+    Além disso, como a criação de um bilhete dourado exige direitos de administrador de domínio, implemente [as recomendações de passagem de hash](https://www.microsoft.com/download/details.aspx?id=36036).
 
 1. Overpass-the-Hash – Se a conta envolvida não for confidencial, então, redefina a senha dessa conta. Isso impede que o invasor crie novos tíquetes Kerberos do hash de senha, embora os tíquetes existentes ainda possam ser usados até expirarem. Se for uma conta confidencial, você deve considerar redefinir a conta KRBTGT duas vezes como na atividade suspeita de tíquete dourado. Redefinir o KRBTGT duas vezes invalida todos os tíquetes Kerberos nesse domínio, portanto, planeje antes de fazer isso. Consulte as diretrizes em [Scripts de redefinição de senha da conta KRBTGT disponíveis agora para os clientes](https://blogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/). Consulte também usando a [redefinir as senhas/chaves da conta KRBTGT
 
@@ -210,7 +212,7 @@ Nessa detecção, um alerta é acionado quando um tíquete de concessão de tíq
 **Remediação**
 
 Altere o Tíquete de concessão de tíquete Kerberos (KRBTGT) duas vezes de acordo com as diretrizes em [Scripts de redefinição de senha da conta KRBTGT disponíveis agora para clientes](https://blogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/) usando a [ferramenta Redefinir chaves/senha da conta KRBTGT](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51). Redefinir o KRBTGT duas vezes invalida todos os tíquetes Kerberos nesse domínio, portanto, planeje antes de fazer isso.
-Além disso, como criar um tíquete de ouro requer direitos de administrador de domínio, implemente [Passar as recomendações de hash](https://www.microsoft.com/download/details.aspx?id=36036).
+Além disso, como a criação de um bilhete dourado exige direitos de administrador de domínio, implemente [as recomendações de passagem de hash](https://www.microsoft.com/download/details.aspx?id=36036).
 
 ## <a name="malicious-data-protection-private-information-request"></a>Solicitação mal-intencionada de informações privadas para proteção de dados
 

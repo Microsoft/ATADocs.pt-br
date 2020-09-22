@@ -12,16 +12,18 @@ ms.technology: ''
 ms.assetid: a5f90544-1c70-4aff-8bf3-c59dd7abd687
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: b83a98ddf052416ffee0cd7dc521b9412b466d99
-ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
+ms.openlocfilehash: 0cf77c09c09062a3a2983e36646f06c603a2ef45
+ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88954112"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90908886"
 ---
 # <a name="ata-prerequisites"></a>Pré-requisitos do ATA
 
-*Aplica-se a: Advanced Threat Analytics versão 1.9*
+[!INCLUDE [Banner for top of topics](includes/banner.md)]
+
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 Este artigo descreve os requisitos para uma implantação bem-sucedida do ATA no seu ambiente.
 

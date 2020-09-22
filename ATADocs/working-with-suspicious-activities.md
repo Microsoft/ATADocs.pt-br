@@ -12,16 +12,18 @@ ms.technology: ''
 ms.assetid: 44d7c899-816c-4f7f-91d3-84a09d291a24
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: e7fb0da19b39466392fedaf2198f795909248049
-ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
+ms.openlocfilehash: 3cd6da729d6401840532f1daf73604f699abbbde
+ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88956781"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90912123"
 ---
 # <a name="working-with-suspicious-activities"></a>Trabalhando com atividades suspeitas
 
-*Aplica-se a: Advanced Threat Analytics versão 1.9*
+[!INCLUDE [Banner for top of topics](includes/banner.md)]
+
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 Este artigo explica as noções básicas de como trabalhar com a Advanced Threat Analytics.
 
@@ -35,7 +37,7 @@ Cada atividade suspeita tem as seguintes informações:
 
 - A severidade da atividade suspeita: alta, média ou baixa.
 
-- Status: Aberto, fechado ou suprimido.
+- Status: aberto, fechado ou suprimido.
 
 - Capacidade de
 
@@ -58,7 +60,7 @@ Para filtrar a lista de atividades suspeitas:
 
 **Severidade da atividade suspeita**
 
--   **Baixa**
+-   **Baixo**
 
     Indica atividades suspeitas que podem levar a ataques projetados para usuários ou softwares mal-intencionados para obter acesso aos dados organizacionais.
 

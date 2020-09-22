@@ -12,16 +12,18 @@ ms.technology: ''
 ms.assetid: 2a5b6652-2aef-464c-ac17-c7e5f12f920f
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 2f8c2750061bc464bcd1f78c46aeeafc4c5f181e
-ms.sourcegitcommit: 954f5e64a8a25075ce663b9fd63810cf4c032987
+ms.openlocfilehash: 49a8301b1d13bbd6032b34b893b5a86e4cdd3739
+ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/22/2020
-ms.locfileid: "85129826"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90911418"
 ---
 # <a name="install-ata---step-5"></a>Instalação do ATA - Etapa 5
 
-*Aplica-se a: Advanced Threat Analytics versão 1.9*
+[!INCLUDE [Banner for top of topics](includes/banner.md)]
+
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 > [!div class="step-by-step"]
 > [«Etapa 4](install-ata-step4.md) 
@@ -33,11 +35,11 @@ Após a instalação do Gateway do ATA, execute as etapas a seguir para definir 
 
 1. No Console do ATA, acesse **Configuração** e, em **Sistema**, selecione **Gateways**.
 
-    ![Imagem de definição das configurações do gateway](media/ata-gw-config-1.png)
+    ![Definir configurações de gateway fase 1](media/ata-gw-config-1.png)
 
 1. Clique no Gateway que você deseja configurar e insira as seguintes informações:
 
-    ![Imagem de definição das configurações do gateway](media/ATA-Gateways-config-2.png)
+    ![Definir configurações de gateway fase 2](media/ATA-Gateways-config-2.png)
 
     - **Descrição**: insira uma descrição para o Gateway do ATA (opcional).
     - **Controladores de Domínio com porta espelhada (FQDN)** (exigidos para o Gateway do ATA, isso não pode ser alterado para o Gateway Lightweight do ATA): insira o FQDN completo de seu controlador de domínio e clique no sinal de adição para adicioná-lo à lista. Por exemplo, **dc01.contoso.com**
@@ -62,7 +64,7 @@ Após a instalação do Gateway do ATA, execute as etapas a seguir para definir 
 1. Se desejar, é possível definir o [Ouvinte do syslog e o Conjunto de Encaminhamento de Eventos do Windows](configure-event-collection.md).
 1. Habilite **Atualizar Gateway do ATA automaticamente** para que nos lançamentos de versões futuras, quando você atualizar o Centro do ATA, esse Gateway do ATA seja atualizado automaticamente.
 
-1. Clique em **Save** (Salvar).
+1. Clique em **Salvar**.
 
 ## <a name="validate-installations"></a>Validar instalações
 

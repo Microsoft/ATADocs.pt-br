@@ -12,16 +12,18 @@ ms.technology: ''
 ms.assetid: e1c5ff41-d989-46cb-aa38-5a3938f03c0f
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: fe99921e1193f79f7031c04156a79fd8fa55dc9e
-ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
+ms.openlocfilehash: ef365ec03aebcc5c35f93fa1a34cc0fb243957a6
+ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88954554"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90911458"
 ---
 # <a name="install-ata---step-2"></a>Instalação do ATA - Etapa 2
 
-*Aplica-se a: Advanced Threat Analytics versão 1.9*
+[!INCLUDE [Banner for top of topics](includes/banner.md)]
+
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 > [!div class="step-by-step"]
 > [«Etapa 1](install-ata-step1.md) 

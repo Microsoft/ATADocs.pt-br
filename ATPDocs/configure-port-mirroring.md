@@ -12,14 +12,16 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 9ec7eb4c-3cad-4543-bbf0-b951d8fc8ffe
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 29269fd123a0644a39c9ff87372908302e0c55e6
-ms.sourcegitcommit: 098a20abe62e153372da4c96db256bc63c113bd1
+ms.openlocfilehash: 99d9357f543f0d0439645a7ae3ae6972c8296f92
+ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88808656"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90912458"
 ---
 # <a name="configure-port-mirroring"></a>Configurar o espelhamento de porta
+
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 Este artigo será relevante apenas se você implantar sensores autônomos do Azure ATP, em vez de sensores do Azure ATP.
 

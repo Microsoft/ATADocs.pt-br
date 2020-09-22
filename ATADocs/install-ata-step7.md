@@ -12,16 +12,18 @@ ms.technology: ''
 ms.assetid: 8980e724-06a6-40b0-8477-27d4cc29fd2b
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 0dd6695c6febca6e3aa8f109247a16b4a17a4b71
-ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
+ms.openlocfilehash: 81145cd89246e4274b90a9524c995a32690f18c1
+ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88954418"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90911254"
 ---
 # <a name="install-ata---step-8"></a>Instalação do ATA - Etapa 8
 
-*Aplica-se a: Advanced Threat Analytics versão 1.9*
+[!INCLUDE [Banner for top of topics](includes/banner.md)]
+
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 > [!div class="step-by-step"]
 > [«Etapa 7](vpn-integration-install-step.md) 
@@ -41,7 +43,7 @@ Para configurar isso, execute estas etapas:
 
     ![Definições de configurações do ATA](media/ATA-config-icon.png)
 
-1. Em **detecção**, clique em **marcas de entidade**.
+1. Em **Detecção**, clique em **Marcas de entidade**.
 
 1. Em **Honeytoken accounts (Contas Honeytoken)** insira o nome da conta Honeytoken. O campo de contas Honeytoken é pesquisável e exibe automaticamente entidades em sua rede.
 

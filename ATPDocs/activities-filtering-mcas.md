@@ -12,14 +12,16 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 397e5a77-2bc7-454c-9fe5-649ebaab16b3
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: fc3032c9964a4e4e887dfedf01e57649d3bf2358
-ms.sourcegitcommit: 0c356b0860ae8663254e0cf6f04001bcc91ce207
+ms.openlocfilehash: cd30fac510bd291c78eb668d9540cd6733efc704
+ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90827965"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90912118"
 ---
 # <a name="use-activity-filters-and-create-action-policies-with-azure-atp-in-microsoft-cloud-app-security"></a>Usar filtros de atividade e criar políticas de ação com o ATP do Azure no Microsoft Cloud App Security
+
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 Este artigo foi criado para ajudá-lo a entender como filtrar e criar políticas de ação para atividades do ATP do Azure usando o Microsoft Cloud App Security.
 

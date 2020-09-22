@@ -7,14 +7,16 @@ author: shsagir
 ms.author: shsagir
 ms.date: 09/01/2019
 ms.reviewer: itargoet
-ms.openlocfilehash: b2311a761651f5b7fc15164020443949d90cf5a7
-ms.sourcegitcommit: 0c356b0860ae8663254e0cf6f04001bcc91ce207
+ms.openlocfilehash: 235894040ff84fe627b4cbe4d4ecd857a7555e76
+ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90828061"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90912654"
 ---
 # <a name="tutorial-reconnaissance-playbook"></a>Tutorial: Guia estratégico de reconhecimento
+
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 O segundo tutorial desta série de quatro partes para alertas de segurança do ATP do Azure é um guia estratégico de reconhecimento. A finalidade do laboratório de alerta de segurança do ATP do Azure é ilustrar os recursos do **ATP do Azure** para identificação e detecção de atividades suspeitas e possíveis ataques contra a sua rede. O guia estratégico explica como testar algumas detecções *discretas* do ATP do Azure e se concentra nos recursos baseados em *assinatura* do ATP do Azure. Este guia estratégico não inclui alertas ou detecções baseados no aprendizado de máquina avançado ou detecções comportamentais baseadas no usuário/entidade, pois isso exige um período de aprendizado de até 30 dias com tráfego de rede real. Para saber mais sobre cada tutorial desta série, consulte a [Visão geral do laboratório de alerta de segurança do ATP](playbook-lab-overview.md).
 

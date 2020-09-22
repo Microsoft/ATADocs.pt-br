@@ -12,14 +12,16 @@ ms.technology: ''
 ms.assetid: be9ee613-4eb3-40f1-8973-e7f0a707ff57
 ms.reviewer: ''
 ms.suite: ems
-ms.openlocfilehash: 5a23b551b1f05513c242e9779f51f68c7bab2d4a
-ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
+ms.openlocfilehash: 39120a8dfabe4b78d8c77b94fd1051435c7e7311
+ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88956254"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90912832"
 ---
 # <a name="whats-new-in-ata-version-17"></a>Novidades na versão 1.7 do ATA
+
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 Estas notas de versão fornecem informações sobre problemas conhecidos nesta versão da Advanced Threat Analytics.
 
 ## <a name="whats-new-in-the-ata-17-update"></a>Quais são as novidades na atualização 1.7 do ATA?
@@ -27,7 +29,7 @@ A atualização 1.7 do ATA fornece melhorias nas seguintes áreas:
 
 - Detecções novas e atualizadas
 
-- Controle de acesso baseado em função
+- Controle de acesso baseado em funções
 
 - Suporte para Windows Server 2016 e Windows Server 2016 Core
 

@@ -12,14 +12,16 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 9c173d28-a944-491a-92c1-9690eb06b151
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 24fab947687183f40d5043678b24e12792d98233
-ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
+ms.openlocfilehash: 69a05db012422fef78d7f693f0e12ffebe31c72b
+ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88956832"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90912441"
 ---
 # <a name="configure-endpoint-proxy-and-internet-connectivity-settings-for-your-azure-atp-sensor"></a>Configurar o proxy do ponto de extremidade e configurações de conectividade de Internet para o Sensor de ATP do Azure
+
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 Cada sensor da Proteção Avançada contra Ameaças do Azure precisa de conectividade com a Internet para que o serviço de nuvem do ATP do Azure relate dados de sensor e funcione com êxito. Em algumas organizações, os controladores de domínio não estão diretamente conectados à Internet, mas por meio de uma conexão de proxy Web.
 

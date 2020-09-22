@@ -12,16 +12,18 @@ ms.technology: ''
 ms.assetid: 892b16d2-58a6-49f9-8693-1e5f69d8299c
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 8daf907606c4198611f048c6b3b4866c426957e2
-ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
+ms.openlocfilehash: 3f04798ef39299dfa5b31d4a5679d6f68afaeef0
+ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88954299"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90909275"
 ---
 # <a name="ata-architecture"></a>Arquitetura do ATA
 
-*Aplica-se a: Advanced Threat Analytics versão 1.9*
+[!INCLUDE [Banner for top of topics](includes/banner.md)]
+
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 A arquitetura da Advanced Threat Analytics é detalhada neste diagrama:
 
@@ -143,7 +145,7 @@ A tabela abaixo fornece um exemplo de um controlador de domínio com recurso de 
 
 |Active Directory (Lsass.exe)|Gateway Lightweight do ATA (Microsoft.Tri.Gateway.exe)|Diversos (outros processos) |Cota do Gateway Lightweight do ATA|Descarte de gateway|
 |-|-|-|-|-|
-|30%|20%|10%|45%|Não|
+|30%|20%|10%|45%|No|
 
 Se o Active Directory precisa de mais de computação, a cota necessária do Gateway Lightweight do ATA é reduzida. No exemplo a seguir, o Gateway Lightweight do ATA precisa de mais do que a cota alocada e descarta parte do tráfego (monitorando apenas o tráfego parcial):
 

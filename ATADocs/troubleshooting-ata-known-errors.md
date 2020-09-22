@@ -12,16 +12,18 @@ ms.technology: ''
 ms.assetid: d89e7aff-a6ef-48a3-ae87-6ac2e39f3bdb
 ms.reviewer: arzinger
 ms.suite: ems
-ms.openlocfilehash: cda124f5178717181105dff33fc1344da9141661
-ms.sourcegitcommit: dadf9e656fd362f037f15c7a4b52685b5b3bd154
+ms.openlocfilehash: 7424525fa3b5e2e9cd06ad410d7965229885ab35
+ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86865383"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90912206"
 ---
 # <a name="troubleshooting-ata-known-issues"></a>Solução de problemas conhecidos do ATA
 
-*Aplica-se a: Advanced Threat Analytics versão 1.9*
+[!INCLUDE [Banner for top of topics](includes/banner.md)]
+
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 Esta seção detalha os possíveis erros nas implantações do ATA e as etapas necessárias para solucioná-los.
 
@@ -63,7 +65,7 @@ Esta seção detalha os possíveis erros nas implantações do ATA e as etapas n
 > |System.Threading.Tasks.TaskCanceledException: uma tarefa foi cancelada|O processo de implantação atingiu o tempo limite, uma vez que ele não pôde acessar o Centro do ATA.|1. Verifique a conectividade de rede para o centro do ATA navegando até ele usando seu endereço IP. <br></br>2. Verifique a configuração do proxy ou do firewall.|
 > |System.Net.Http.HttpRequestException: ocorreu um erro ao enviar a solicitação. ---> System.Net.WebException: o servidor remoto retornou um erro: (407) Autenticação de proxy necessária.|O processo de implantação atingiu o tempo limite, uma vez que ele não pôde acessar o Centro do ATA devido à configuração incorreta de proxy.|Desabilite a configuração de proxy antes da implantação e habilite a configuração de proxy novamente. Como alternativa, você pode configurar uma exceção no proxy.|
 > |System.Net.Sockets.SocketException: uma conexão existente foi fechada forçadamente pelo host remoto||Habilite o TLS 1,2 para .net definindo as chaves do registro para usar os padrões do sistema operacional para SSL e TLS, da seguinte maneira:<br></br>`[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\v4.0.30319] "SystemDefaultTlsVersions"=dword:00000001`</br> `[HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\.NETFramework\v4.0.30319] "SystemDefaultTlsVersions"=dword:00000001`</br>`[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\v4.0.30319] "SchUseStrongCrypto"=dword:00000001` </br>`[HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\.NETFramework\v4.0.30319] " SchUseStrongCrypto"=dword:00000001`|
-> |Erro [\\[]DeploymentModel[\\]] Falha na autenticação de gerenciamento      [\\[]CurrentlyLoggedOnUser=<domain>\\<username>Status=FailedAuthentication Exception=[\\]]|O processo de implantação do Gateway do ATA ou do Gateway Lightweight do ATA não conseguiu autenticar com sucesso o ATA Center|Abra um navegador no computador no qual o processo de implantação falhou e veja se você pode alcançar o Console do ATA. </br>Se não, inicie a solução de problemas para ver o motivo de o navegador não conseguir autenticar o Centro do ATA. </br>Verifique a: </br>Configuração de Proxy</br>Problemas de rede</br>Configurações de política de grupo para a autenticação no computador que difere do Centro do ATA.|
+> |Erro [\\[]DeploymentModel[\\]] Falha na autenticação de gerenciamento      [\\[]CurrentlyLoggedOnUser=<domain>\\<username>Status=FailedAuthentication Exception=[\\]]|O processo de implantação do Gateway do ATA ou do Gateway Lightweight do ATA não conseguiu autenticar com sucesso o ATA Center|Abra um navegador no computador no qual o processo de implantação falhou e veja se você pode alcançar o Console do ATA. </br>Se não, inicie a solução de problemas para ver o motivo de o navegador não conseguir autenticar o Centro do ATA. </br>Verifique a: </br>Configuração de proxy</br>Problemas de rede</br>Configurações de política de grupo para a autenticação no computador que difere do Centro do ATA.|
 > | Erro [\\[]DeploymentModel[\\]] Falha na autenticação de gerenciamento|Falha na validação do certificado do Centro|O certificado do Centro pode requerer uma conexão com a Internet para validação. Verifique se o serviço de Gateway tem a configuração de proxy adequada para habilitar a conexão e a validação.|
 
 ## <a name="ata-center-errors"></a>Erros do Centro do ATA

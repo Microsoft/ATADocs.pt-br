@@ -12,14 +12,16 @@ ms.technology: ''
 ms.assetid: 0756ef64-3aef-4a69-8981-24fa8f285c6a
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 5ad07f5aa5210f651ee5c854b9f899653ffb3444
-ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
+ms.openlocfilehash: 3c94379e73959d5fe22842d5286ce75673684cbf
+ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88953908"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90909384"
 ---
 # <a name="ata-update-to-16-migration-guide"></a>Guia de migração de atualização do ATA para 1.6
+
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 A atualização 1.6 do ATA fornece melhorias nas seguintes áreas:
 
 - Novas detecções

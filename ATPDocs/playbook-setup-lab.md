@@ -7,14 +7,16 @@ author: shsagir
 ms.author: shsagir
 ms.date: 02/28/2019
 ms.reviewer: itargoet
-ms.openlocfilehash: 5b7bc09b0327260504900c6a0b075b243c02f70e
-ms.sourcegitcommit: 0c356b0860ae8663254e0cf6f04001bcc91ce207
+ms.openlocfilehash: 4dbc5a6eb70bb9bc531ed54a9162554bd15d9dc9
+ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90828057"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90910235"
 ---
 # <a name="tutorial-setup-an-atp-security-alert-lab"></a>Tutorial: configurar um laboratório de alertas de segurança do ATP 
+
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
  A finalidade do laboratório de alertas de segurança do Azure ATP é ilustrar os recursos do **Azure ATP**na identificação e detecção de atividades suspeitas e ataques em potencial contra a rede. Este primeiro tutorial, de uma série com quatro partes, explica como criar um ambiente de laboratório para testar detecções *discretas* do ATP do Azure. O laboratório de alerta de segurança se concentra nos recursos *baseados em assinatura* do ATP do Azure. O laboratório não inclui aprendizado de máquina avançado, detecções comportamentais baseadas no usuário ou em entidade, pois essas detecções exigem um período de aprendizado de até 30 dias com tráfego de rede real. Para saber mais sobre cada tutorial desta série, consulte a [Visão geral do laboratório de alerta de segurança do ATP](playbook-lab-overview.md). 
 
@@ -132,7 +134,7 @@ A adição do Grupo de Segurança "Helpdesk" como um **Grupo confidencial** perm
 
     ![Marque "Helpdesk" como um grupo confidencial do ATP do Azure para habilitar os Gráficos de Movimentação Lateral e os relatórios para esse grupo privilegiado](media/playbook-labsetup-helpdesksensitivegroup.png)
 
-1. Clique em **Salvar**.
+1. Clique em **Save** (Salvar).
 
 ### <a name="azure-atp-lab-base-setup-checklist"></a>Lista de verificação de configuração base do Laboratório de ATP do Azure
 

@@ -12,14 +12,16 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 88692d1a-45a3-4d54-a549-4b5bba6c037b
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 55e5962ed3d9e9a1a922b47daf46bdb0c2b0d91d
-ms.sourcegitcommit: 0c356b0860ae8663254e0cf6f04001bcc91ce207
+ms.openlocfilehash: 8a7c22c2ea752b0443fac2b4e74b2ff4813bfee8
+ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90826219"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90910474"
 ---
 # <a name="configure-windows-event-collection"></a>Configurar a coleção de Eventos do Windows
+
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 A detecção da ATP do Azure (Proteção Avançada contra Ameaças do Azure) depende de entradas específicas do log de eventos do Windows para aprimorar algumas detecções e fornecer informações adicionais sobre quem realizou ações específicas, como logons NTLM, modificações no grupo de segurança e eventos semelhantes. Para que os eventos corretos sejam auditados e incluídos no Log de Eventos do Windows, seus controladores de domínio exigem configurações precisas de política de auditoria avançada. Configurações de política de auditoria avançada incorretas podem ocasionar que eventos necessários não sejam registrados no log de eventos e resultar em uma cobertura incompleta da ATP do Azure.
 

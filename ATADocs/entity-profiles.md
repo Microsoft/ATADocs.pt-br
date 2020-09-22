@@ -12,17 +12,19 @@ ms.technology: ''
 ms.assetid: 581a3257-32dc-453f-b84e-b9f99186f5d3
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 02cd26323be6ae79524d4912674380af23d2c3af
-ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
+ms.openlocfilehash: 3ab1881d397875be6a70ba78846f0855b53bf608
+ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88954792"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90909506"
 ---
 # <a name="investigating-entity-profiles"></a>Investigando perfis de entidade
 
 
-*Aplica-se a: Advanced Threat Analytics versão 1.9*
+[!INCLUDE [Banner for top of topics](includes/banner.md)]
+
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 O perfil de entidade fornece um painel projetado para fazer investigações completas e aprofundadas de usuários, de computadores, de dispositivos e dos recursos a que eles têm acesso e do histórico deles. A página de perfil aproveita o novo conversor de atividade lógica do ATA, que pode examinar um grupo de atividades em andamento (agregadas até um minuto) e agrupá-las em uma única atividade lógica para fornecer uma melhor compreensão das atividades reais de seus usuários.
 

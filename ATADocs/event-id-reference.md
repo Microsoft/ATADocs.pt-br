@@ -12,17 +12,19 @@ ms.technology: ''
 ms.assetid: 5d639e84-2e37-43a9-9667-49be6c4fa8b7
 ms.reviewer: arzinger
 ms.suite: ems
-ms.openlocfilehash: a0a2abcf78c19180b841b9f2ec9186b19beea7c5
-ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
+ms.openlocfilehash: c89b37f3fda698af907cb4e74886e0b65e6df7e9
+ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88954656"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90909415"
 ---
 # <a name="ata-event-id-reference"></a>Referência de ID do evento ATA
 
 
-*Aplica-se a: Advanced Threat Analytics versão 1.9*
+[!INCLUDE [Banner for top of topics](includes/banner.md)]
+
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 O visualizador de eventos da Central do ATA registra eventos para o ATA. Este artigo fornece uma lista de IDs de eventos e fornece uma descrição de cada um deles.
 

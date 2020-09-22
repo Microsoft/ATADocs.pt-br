@@ -7,14 +7,16 @@ author: shsagir
 ms.author: shsagir
 ms.date: 02/28/2019
 ms.reviewer: itargoet
-ms.openlocfilehash: 52c20174b431da000ecba922462d0c6af112b005
-ms.sourcegitcommit: 0c356b0860ae8663254e0cf6f04001bcc91ce207
+ms.openlocfilehash: 380c24fad44cc8af83a98aa5da61cd835bbe7653
+ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90827969"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90912619"
 ---
 # <a name="tutorial-overview-atp-security-alert-lab"></a>Visão geral do tutorial: laboratório de alertas de segurança do ATP
+
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 A finalidade do tutorial do laboratório de Alerta de Segurança do ATP do Azure é ilustrar os recursos do **ATP do Azure** para identificação e detecção de atividades suspeitas e possíveis ataques contra a sua rede. Este tutorial de quatro partes explica como instalar e configurar um ambiente de trabalho para testar algumas detecções *discretas* do ATP do Azure. Este laboratório se concentra nos recursos baseados em *assinatura* do ATP do Azure. O laboratório não inclui aprendizado de máquina avançado e detecções comportamentais baseadas no usuário ou em entidade, pois essas detecções exigem um período de aprendizado de até 30 dias com tráfego de rede real.
 

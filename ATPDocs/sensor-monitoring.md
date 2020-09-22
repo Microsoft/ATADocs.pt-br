@@ -12,14 +12,16 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 92decce8-b3ae-4d32-8407-a95314a66863
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: db8ae461e7f7a0e8781904d5e0e47f99464dddb5
-ms.sourcegitcommit: 0c356b0860ae8663254e0cf6f04001bcc91ce207
+ms.openlocfilehash: ac4c0b9bd4e8a99d5edaaec2746f3ce7d413005c
+ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90828049"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90912548"
 ---
 # <a name="monitoring-your-domain-controller-coverage"></a>Monitorando a cobertura do controlador de domínio
+
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 Assim que o primeiro sensor do ATP do Azure é instalado e configurado em um controlador de domínio na rede, o ATP do Azure começa a monitorar os controladores de domínio do ambiente.
 
@@ -62,7 +64,7 @@ Gerenciar sua frota de sensores e controladores de domínio pode ser desafiador.
 
 ## <a name="see-also"></a>Consulte Também
 
-- [Arquitetura do Azure ATP](architecture.md)
+- [Arquitetura do ATP do Azure](architecture.md)
 - [Configurando os sensores do ATP do Azure](install-step5.md)
 - [Suporte para várias florestas](multi-forest.md)
 - [Confira o fórum do ATP do Azure!](https://aka.ms/azureatpcommunity)

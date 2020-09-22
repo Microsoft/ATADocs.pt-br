@@ -12,14 +12,16 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 4ba46d60-3a74-480e-8f0f-9a082d62f343
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 984affaff8284f1d1a9239f43428b5167b832024
-ms.sourcegitcommit: 0c356b0860ae8663254e0cf6f04001bcc91ce207
+ms.openlocfilehash: 037b6ea52b817ca4a53cfb29162fd6478b627803
+ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90826186"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90912271"
 ---
 # <a name="working-with-the-azure-atp-portal"></a>Trabalhando com o portal do Azure ATP
+
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 > [!NOTE]
 > Todos os recursos do ATP do Azure explicados nesta página também podem ser acessados, usando o novo [portal do Cloud App Security](https://portal.cloudappsecurity.com).

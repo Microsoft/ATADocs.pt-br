@@ -12,16 +12,18 @@ ms.technology: ''
 ms.assetid: b3cceb18-0f3c-42ac-8630-bdc6b310f1d6
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 30ec42082bb726775a0801360ae471a4bd864514
-ms.sourcegitcommit: bfb5f35f8e2f19911357e5afa6624ffe43e37d12
+ms.openlocfilehash: 74d610899023eba93da568360a99505119d13e70
+ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86472375"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90908854"
 ---
 # <a name="ata-silent-installation"></a>Instalação silenciosa do ATA
 
-*Aplica-se a: Advanced Threat Analytics versão 1.9*
+[!INCLUDE [Banner for top of topics](includes/banner.md)]
+
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 Este artigo fornece instruções de como instalar silenciosamente o ATA.
 
@@ -63,9 +65,9 @@ Use o seguinte comando para instalar o Centro do ATA:
 >
 > |Name|Sintaxe|Obrigatório para instalação silenciosa?|Descrição|
 > |---|---|---|---|
->|InstallationPath|InstallationPath=“<InstallPath>”|Não|Define o caminho para a instalação dos binários do ATA. Caminho padrão: C:\Arquivos de Programas\Microsoft Advanced Threat Analytics\Center|
->|DatabaseDataPath|DatabaseDataPath= “<DBPath>”|Não|Define o caminho para a pasta de dados do Banco de Dados do ATA. Caminho padrão: C:\Arquivos de Programas\Microsoft Advanced Threat Analytics\Center\MongoDB\bin\data|
->|CenterCertificateThumbprint|CenterCertificateThumbprint=“<CertThumbprint>”|Não|Define a impressão digital do certificado para o centro do ATA. Esse certificado é usado para proteger a comunicação do gateway do ATA para o centro do ATA e para validar a identidade do site do console do ATA. Se não estiver definido, a instalação gerará um certificado autoassinado.|
+>|InstallationPath|InstallationPath=“<InstallPath>”|No|Define o caminho para a instalação dos binários do ATA. Caminho padrão: C:\Arquivos de Programas\Microsoft Advanced Threat Analytics\Center|
+>|DatabaseDataPath|DatabaseDataPath= “<DBPath>”|No|Define o caminho para a pasta de dados do Banco de Dados do ATA. Caminho padrão: C:\Arquivos de Programas\Microsoft Advanced Threat Analytics\Center\MongoDB\bin\data|
+>|CenterCertificateThumbprint|CenterCertificateThumbprint=“<CertThumbprint>”|No|Define a impressão digital do certificado para o centro do ATA. Esse certificado é usado para proteger a comunicação do gateway do ATA para o centro do ATA e para validar a identidade do site do console do ATA. Se não estiver definido, a instalação gerará um certificado autoassinado.|
 
 **Exemplo**:
 
@@ -131,7 +133,7 @@ Use o seguinte comando para executar uma desinstalação silenciosa do Centro do
 >
 > |Name|Sintaxe|Obrigatório para desinstalação silenciosa?|Descrição|
 > |---|---|---|---|
-> |DeleteExistingDatabaseData|DeleteExistingDatabaseData|Não|Exclui todos os arquivos do banco de dados existente.|
+> |DeleteExistingDatabaseData|DeleteExistingDatabaseData|No|Exclui todos os arquivos do banco de dados existente.|
 
 **Exemplos**:
 
@@ -173,7 +175,7 @@ Use o seguinte comando para instalar silenciosamente o Gateway do ATA:
 >
 > |Name|Sintaxe|Obrigatório para instalação silenciosa?|Descrição|
 > |---|---|---|---|
->|InstallationPath|InstallationPath=“<InstallPath>”|Não|Define o caminho para a instalação dos binários do ATA. Caminho padrão: C:\Arquivos de Programas\Microsoft Advanced Threat Analytics\Center
+>|InstallationPath|InstallationPath=“<InstallPath>”|No|Define o caminho para a instalação dos binários do ATA. Caminho padrão: C:\Arquivos de Programas\Microsoft Advanced Threat Analytics\Center
 >|ConsoleAccountName|ConsoleAccountName=”<AccountName>”|Sim|Define o nome da conta do usuário (user@domain.com) usada para registrar o Gateway do ATA no Centro do ATA.|
 >|ConsoleAccountPassword|ConsoleAccountPassword=”<AccountPassword>”|Sim|Define a senha para a conta do usuário (user@domain.com) usada para registrar o Gateway do ATA no Centro do ATA.|
 

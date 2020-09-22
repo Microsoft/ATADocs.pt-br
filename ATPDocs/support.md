@@ -12,15 +12,17 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 8ae459ac-9fca-4923-9a1a-dc10d5c50b29
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: f80b73562a5939a801ba3c3104c420d9d93354f0
-ms.sourcegitcommit: 0c356b0860ae8663254e0cf6f04001bcc91ce207
+ms.openlocfilehash: 1c7ae55cf1225f434b086ff3998c0104c2b13f8b
+ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90827999"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90909996"
 ---
 # <a name="azure-advanced-threat-protection-information-and-support"></a>Informações e suporte da Proteção Avançada contra Ameaças do Azure 
 
+
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 Use os seguintes recursos para ajudá-lo a saber mais, implantar e dar suporte à Proteção Avançada contra Ameaças do Azure para sua organização.
 

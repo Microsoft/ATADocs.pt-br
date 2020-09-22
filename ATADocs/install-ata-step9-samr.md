@@ -12,16 +12,18 @@ ms.technology: ''
 ms.assetid: 7597ed25-87f5-472c-a496-d5f205c9c391
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 869a9d1ed60cc740dc50456f61244f100ac47027
-ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
+ms.openlocfilehash: 6bcbe9c86dbef5e3656ad675936fb4bef63a67d9
+ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88955778"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90911234"
 ---
 # <a name="install-ata---step-9"></a>Instalar o ATA – Etapa 9
 
-*Aplica-se a: Advanced Threat Analytics versão 1.9*
+[!INCLUDE [Banner for top of topics](includes/banner.md)]
+
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 > [!div class="step-by-step"]
 > [« Etapa 8](install-ata-step7.md)

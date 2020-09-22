@@ -7,14 +7,16 @@ author: shsagir
 ms.author: shsagir
 ms.date: 02/28/2019
 ms.reviewer: itargoet
-ms.openlocfilehash: c2acb76eebc4d64d532496fba30a508dd5e85611
-ms.sourcegitcommit: 0c356b0860ae8663254e0cf6f04001bcc91ce207
+ms.openlocfilehash: 6eb2798ac8bf4f480d604891a24a643ec270b8e6
+ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90827972"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90912675"
 ---
 # <a name="tutorial-domain-dominance-playbook"></a>Tutorial: Manual de predominância de domínio
+
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 O último tutorial desta série de quatro partes para alertas de segurança do ATP do Azure é um guia estratégico de predominância de domínio. A finalidade do laboratório de alerta de segurança do ATP do Azure é ilustrar os recursos do **ATP do Azure** para identificação e detecção de possíveis ataques contra a sua rede. O laboratório explica como testar algumas detecções *discretas* do ATP do Azure usando recursos baseados em *assinatura* do ATP do Azure. Os tutoriais não incluem detecções comportamentais e alertas avançados com base em aprendizado de máquina, usuário ou entidade. Esses tipos de detecções e alertas não estão incluídos no teste, pois exigem um período de aprendizado, além de tráfego de rede real, por até 30 dias. Para saber mais sobre cada tutorial desta série, consulte a [Visão geral do laboratório de alerta de segurança do ATP](playbook-lab-overview.md).
 

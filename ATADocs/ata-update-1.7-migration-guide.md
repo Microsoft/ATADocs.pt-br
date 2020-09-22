@@ -12,14 +12,16 @@ ms.technology: ''
 ms.assetid: 8eefcd45-7a4b-4074-ac5b-1ffc48e6654a
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: aab036ab060b7d2948156a793056c931edcea459
-ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
+ms.openlocfilehash: 4772e9cbb1e00e4bb1a4bebd5cc6e2b7821766dc
+ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88953857"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90909885"
 ---
 # <a name="ata-update-to-17-migration-guide"></a>Guia de migração de atualização do ATA para 1.7
+
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 A atualização 1.7 do ATA fornece melhorias nas seguintes áreas:
 
 - Novas detecções

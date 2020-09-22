@@ -12,14 +12,16 @@ ms.technology: ''
 ms.assetid: fb65eb41-b215-4530-93a2-0b8991f4e980
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 3c52047c2147b5ea0d1fb8a53c0d804a016e86d0
-ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
+ms.openlocfilehash: dae94f42ee4b4be200a3cf2ac299561efe0ddbb1
+ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88953772"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90908779"
 ---
 # <a name="ata-update-to-15-migration-guide"></a>Guia de migração de atualização do ATA para 1.5
+
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 A atualização 1.5 do ATA fornece melhorias nas seguintes áreas:
 
 - Tempo de detecção mais rápido

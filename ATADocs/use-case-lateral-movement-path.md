@@ -12,16 +12,18 @@ ms.technology: ''
 ms.assetid: 710f01bd-c878-4406-a7b2-ce13f98736ea
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: ed9c101c1533d34d72f2c956ec8fd5efd039adf6
-ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
+ms.openlocfilehash: c5836b1086806b848560c0c99893d7a6fafeea1c
+ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88956356"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90910858"
 ---
 # <a name="investigate-lateral-movement-paths-with-ata"></a>Investigar caminhos de movimento lateral com o ATA
 
-*Aplica-se a: Advanced Threat Analytics versão 1.9*
+[!INCLUDE [Banner for top of topics](includes/banner.md)]
+
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 Mesmo que você faça o melhor para proteger os usuários confidenciais e seus administradores tenham senhas complexas alteradas com frequência, computadores protegidos e dados armazenados com segurança, os invasores ainda podem usar caminhos de movimento lateral para acessar contas confidenciais. Em ataques de movimento lateral, o invasor aproveita as instâncias quando usuários confidenciais entram em um computador em que um usuário não confidencial tem direitos locais. Os invasores podem mover-se lateralmente acessando o usuário menos confidencial e, em seguida, movendo-se pelo computador para obter credenciais de usuários confidenciais.
 
@@ -41,7 +43,7 @@ Para descobrir quais contas confidenciais em sua rede estão vulneráveis devido
 
     ![Captura de tela mostrando a seleção de data do relatório](media/reports.png)
 
-1. Clique em **Download**.
+1. Clique em **Baixar**.
 
 1. O arquivo do Excel criado fornece detalhes sobre suas contas confidenciais em risco. A guia **Resumo** fornece gráficos que detalham o número de contas confidenciais, computadores e médias de recursos em risco. A guia **Detalhes** fornece uma lista das contas confidenciais com que você deve se preocupar. Observe que os caminhos são caminhos que existiam anteriormente e podem não estar disponível atualmente.
 
