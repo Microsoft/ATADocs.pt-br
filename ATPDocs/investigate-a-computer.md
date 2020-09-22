@@ -10,12 +10,12 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 26549610e7a9dc2ec81a785e3900259ba7cfa563
-ms.sourcegitcommit: af91810bb220ff8ba90569d87c718a63bdc52d94
+ms.openlocfilehash: 17d2012773d792327b9dd63c1c24e6be6a533f5a
+ms.sourcegitcommit: 0c356b0860ae8663254e0cf6f04001bcc91ce207
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88807562"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90826559"
 ---
 # <a name="tutorial-investigate-a-computer"></a>Tutorial: Investigar um computador
 
@@ -58,9 +58,9 @@ Verifique e investigue o perfil do computador para obter as atividades e os deta
 - [Investigar um usuário](investigate-a-user.md)
 - [Trabalhando com alertas de segurança](working-with-suspicious-activities.md)
 - [Trabalhando com caminhos de movimento lateral](use-case-lateral-movement-path.md)
-- [Alertas de reconhecimento](atp-reconnaissance-alerts.md)
-- [Alertas de credencial comprometida](atp-compromised-credentials-alerts.md)
-- [Alertas de movimento lateral](atp-lateral-movement-alerts.md)
-- [Alertas de predominância de domínio](atp-domain-dominance-alerts.md)
-- [Alertas de exfiltração](atp-exfiltration-alerts.md)
+- [Alertas de reconhecimento](reconnaissance-alerts.md)
+- [Alertas de credencial comprometida](compromised-credentials-alerts.md)
+- [Alertas de movimento lateral](lateral-movement-alerts.md)
+- [Alertas de predominância de domínio](domain-dominance-alerts.md)
+- [Alertas de exfiltração](exfiltration-alerts.md)
 - [Confira o fórum do ATP do Azure!](https://aka.ms/azureatpcommunity)
