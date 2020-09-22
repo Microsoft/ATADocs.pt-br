@@ -12,14 +12,16 @@ ms.technology: ''
 ms.assetid: cbea47f9-34c1-42b6-ae9e-6a472b49e1a5
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: cbe31a255a5b437852b6084fcea92556a04a6bd5
-ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
+ms.openlocfilehash: 7ce124cd46b014ba85046bb2ae9f4f3556a7a84f
+ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88956679"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90913331"
 ---
 # <a name="what39s-new-in-ata-version-14"></a>Novidades na versão 1.4 do ATA
+
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 Essas notas de versão fornecem informações sobre problemas conhecidos na versão 1.4 da Advanced Threat Analytics.
 
 ## <a name="whats-new-in-this-version"></a>O que há de novo nesta versão?

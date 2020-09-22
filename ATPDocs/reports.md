@@ -12,14 +12,16 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 2c2d6b1a-fc8c-4ff7-b07d-64ce6159f84d
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: b9fd8c81ffe9c779304f07dca230963f1131318a
-ms.sourcegitcommit: 0c356b0860ae8663254e0cf6f04001bcc91ce207
+ms.openlocfilehash: e5de1628eb0eb0e2076dcd04be44b695c69e7fda
+ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90826644"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90912376"
 ---
 # <a name="azure-atp-reports"></a>Relatórios do Azure ATP
+
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 A seção de relatórios da ATP do Azure no portal da ATP do Azure permite que você agende ou imediatamente gere e baixe relatórios que fornecem informações de status do sistema e da entidade. Com o recurso de relatórios, você pode criar relatórios sobre a integridade do sistema, alertas de segurança e possíveis caminhos de movimento lateral detectados em seu ambiente.
 

@@ -12,14 +12,16 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 671747d5-faed-4352-a871-17b58fdc6574
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 50288d379bf78f6d6601616597cbac2f1699b042
-ms.sourcegitcommit: 0c356b0860ae8663254e0cf6f04001bcc91ce207
+ms.openlocfilehash: 2c871c3a504fc7f79cc3627b077d1bebc1814a82
+ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90826661"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90912310"
 ---
 # <a name="tutorial-understanding-security-alerts"></a>Tutorial: entendendo os alertas de segurança
+
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 Os alertas de segurança do ATP do Azure explicam em linguagem clara e com gráficos, quais atividades suspeitas foram identificadas em sua rede e os atores e os computadores envolvidos nas ameaças. Os alertas são classificados por gravidade, codificados por cor para facilitar a filtragem visual e organizados por fase de ameaça. Cada alerta foi projetado para ajudar você a entender rapidamente exatamente o que está acontecendo em sua rede. As listas de evidências dos alertas contêm links diretos para os computadores e os usuários envolvidos para ajudar a tornar suas investigações fáceis e diretas.
 

@@ -7,14 +7,16 @@ author: shsagir
 ms.author: shsagir
 ms.date: 03/03/2019
 ms.reviewer: itargoet
-ms.openlocfilehash: 89dd81d18bbe70bba358e987f6a6ffb64efbfe11
-ms.sourcegitcommit: 0c356b0860ae8663254e0cf6f04001bcc91ce207
+ms.openlocfilehash: 88e5b96534306ab8508b2e0581e906cde0e7d317
+ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90827968"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90912948"
 ---
 # <a name="tutorial-lateral-movement-playbook"></a>Tutorial: Manual de movimento lateral
+
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 O guia estratégico de movimentação lateral é a terceira parte da série de quatro tutoriais para alertas de segurança do ATP do Azure. A finalidade do laboratório de alerta de segurança do ATP do Azure é ilustrar os recursos do **ATP do Azure** para identificação e detecção de atividades suspeitas e possíveis ataques contra a sua rede. O guia estratégico explica como testar algumas das detecções *discretas* do ATP do Azure. O guia estratégico concentra-se nos recursos baseados em *assinatura* do ATP do Azure e não inclui o aprendizado de máquina avançado, detecções comportamentais baseadas no usuário ou na entidade (isso exige um período de aprendizado com o tráfego de rede real de até 30 dias). Para saber mais sobre cada tutorial desta série, consulte a [Visão geral do laboratório de alerta de segurança do ATP](playbook-lab-overview.md).
 

@@ -12,14 +12,16 @@ ms.technology: ''
 ms.assetid: 9592d413-df0e-4cec-8e03-be1ae00ba5dc
 ms.reviewer: ''
 ms.suite: ems
-ms.openlocfilehash: 1a5fe233cbfb5abea822f692a376293f2586e166
-ms.sourcegitcommit: 45003b424140350e03128ac5325e1f28c52e6e1c
+ms.openlocfilehash: 6bacbf74ffc38809458cc2448c5162279ea89016
+ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90535134"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90913284"
 ---
 # <a name="whats-new-in-ata-version-18"></a>Novidades na versão 1.8 do ATA
+
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 A versão mais recente da atualização do ATA pode ser [baixada do Centro de Download](https://www.microsoft.com/download/details.aspx?id=55536) ou a versão completa pode ser baixada do [centro Eval](https://www.microsoft.com/evalcenter/evaluate-microsoft-advanced-threat-analytics).
 

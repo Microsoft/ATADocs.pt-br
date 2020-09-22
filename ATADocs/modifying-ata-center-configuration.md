@@ -11,18 +11,20 @@ ms.prod: advanced-threat-analytics
 ms.technology: ''
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: b3cde73d13874fbcab338ef2ab4bae4c4fb4c21d
-ms.sourcegitcommit: 2be59f0bd4c9fd0d3827e9312ba20aa8eb43c6b5
+ms.openlocfilehash: 97ef7f3ba88cc0ce034413ce3dae40a7840db58f
+ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88956798"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90912883"
 ---
 # <a name="modifying-the-ata-center-configuration"></a>Modificar a configuração do Centro do ATA
 
 
 
-*Aplica-se a: Advanced Threat Analytics versão 1.9*
+[!INCLUDE [Banner for top of topics](includes/banner.md)]
+
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 Após a implantação inicial, as modificações no Centro do ATA deverão ser feitas com cuidado. Use os procedimentos a seguir ao atualizar a URL do console e o certificado.
 
@@ -68,7 +70,7 @@ A URL é usada nos seguintes cenários:
 
 Substitua o certificado seguindo este processo:
 
-1. Antes da expiração do certificado atual, crie um novo certificado e verifique se ele está instalado no servidor do Centro do ATA. <br></br>É recomendável escolher um certificado de uma autoridade de certificação interna, mas também é possível criar um novo certificado autoassinado. Para saber mais, confira [New-SelfSignedCertificate](/powershell/module/pkiclient/new-selfsignedcertificate?view=win10-ps).
+1. Antes da expiração do certificado atual, crie um novo certificado e verifique se ele está instalado no servidor do Centro do ATA. <br></br>É recomendável escolher um certificado de uma autoridade de certificação interna, mas também é possível criar um novo certificado autoassinado. Para saber mais, confira [New-SelfSignedCertificate](/powershell/module/pkiclient/new-selfsignedcertificate?view=win10-ps&preserve-view=true).
 
 1. Nas configurações do ATA, em **Centro**, selecione este certificado recém-criado. Neste ponto, o serviço do Centro do ATA ainda está associado ao certificado original. 
 

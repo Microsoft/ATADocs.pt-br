@@ -12,14 +12,17 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: cae3ed45-8fbc-4f25-ba24-3cc407c6ea93
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 8424acd769b24407f1d4fc57e6549ca2ea1e0edf
-ms.sourcegitcommit: 0c356b0860ae8663254e0cf6f04001bcc91ce207
+ms.openlocfilehash: 8166033bd8539a78dd84535397a3f5a0a8d0a02f
+ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90826525"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90913098"
 ---
 # <a name="excluding-entities-from-detections"></a>Excluindo entidades de detecções
+
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
+
 Este artigo explica como excluir entidades do disparo de alertas. Determinadas entidades são excluídas para minimizar verdadeiros positivos benignos, assegurando que você possa capturar os verdadeiros positivos. Para impedir que o ATP do Azure crie ruído sobre atividades que, vindas de usuários específicos, podem fazer parte de seu ritmo normal de negócios, você pode silenciar ou excluir entidades específicas da geração de alertas. Além disso, determinadas entidades populares são excluídas por padrão. 
 
 Por exemplo, se você tiver um verificador de segurança que realiza reconhecimento DNS ou um administrador que executa scripts remotamente no controlador de domínio, e se essas forem atividades sancionadas cuja intenção for parte das operações de TI normais em sua organização, elas poderão ser excluídas. Para obter mais informações sobre cada detecção do ATP do Azure para ajudá-lo a decidir quais entidades excluir, consulte o [Guia Alerta de segurança](suspicious-activity-guide.md).

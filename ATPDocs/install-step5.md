@@ -9,14 +9,16 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 39e5b5d0a1c7e637b4d070cdc93d493fff5e634e
-ms.sourcegitcommit: 0c356b0860ae8663254e0cf6f04001bcc91ce207
+ms.openlocfilehash: 912b9ec8d7ff9f89bda80b6d1d3515cf93d9b9cd
+ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90827991"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90913010"
 ---
 # <a name="configure-azure-atp-sensor-settings"></a>Definir as configurações do sensor do ATP do Azure
+
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 Neste artigo, você aprenderá a definir corretamente as configurações do sensor do ATP do Azure para começar a ver os dados. Você precisará fazer configurações e integrações adicionais para aproveitar as funcionalidades completas do ATP do Azure.
 
