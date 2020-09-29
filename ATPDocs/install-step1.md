@@ -10,14 +10,16 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 0fd44a4ea1b2bae549c71c957551482ba651d58f
-ms.sourcegitcommit: 0c356b0860ae8663254e0cf6f04001bcc91ce207
+ms.openlocfilehash: 5c07d5bb568394cdb5c989279434445f88d0f7ea
+ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90826697"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90910272"
 ---
 # <a name="quickstart-create-your-azure-atp-instance"></a>Início Rápido: Criar sua instância do Azure ATP
+
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 Neste início rápido, você criará sua instância do ATP do Azure no portal do ATP do Azure. No ATP do Azure, você terá uma única instância, anteriormente chamada de workspace. Uma única instância permite gerenciar várias florestas em um único painel de exibição.
 

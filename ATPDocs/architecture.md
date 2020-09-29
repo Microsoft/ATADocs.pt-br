@@ -12,14 +12,16 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 90f68f2c-d421-4339-8e49-1888b84416e6
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: e410e37e9d19a7ed806095a3c554e53b26c9362e
-ms.sourcegitcommit: 0c356b0860ae8663254e0cf6f04001bcc91ce207
+ms.openlocfilehash: aee16031c1682dc51b4c4da8fb3b123a8de93918
+ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90826686"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90913260"
 ---
 # <a name="azure-atp-architecture"></a>Arquitetura do ATP do Azure
+
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 O ATP do Azure monitora seus controladores de domínio capturando e analisando o tráfego de rede e aproveitando os eventos do Windows diretamente de seus controladores de domínio, em seguida, analisa os dados em busca de ataques e ameaças. Utilizando criação de perfil, detecção determinística, aprendizado de máquina e algoritmos comportamentais que do Azure ATP aprende sobre sua rede, habilita a detecção de anomalias e avisa sobre atividades suspeitas.
 

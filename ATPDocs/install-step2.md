@@ -7,14 +7,16 @@ ms.date: 01/15/2020
 ms.topic: quickstart
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
-ms.openlocfilehash: a7dd89dbd62d5ab02d33d656b011edefaa9f7f13
-ms.sourcegitcommit: 0c356b0860ae8663254e0cf6f04001bcc91ce207
+ms.openlocfilehash: 39721343f150969a501b58842c616386dbfb49c2
+ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90826696"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90913026"
 ---
 # <a name="quickstart-connect-to-your-active-directory-forest"></a>Início Rápido: Conectar à sua floresta do Active Directory
+
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 Neste início rápido, você conectará o ATP do Azure ao AD (Active Directory) para recuperar dados sobre usuários e computadores. Se você estiver conectando várias florestas, consulte o artigo [Suporte a várias florestas](multi-forest.md).
 

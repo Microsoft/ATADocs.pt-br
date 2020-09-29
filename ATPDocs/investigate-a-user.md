@@ -10,14 +10,16 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 0c4912f430f0acb6c36b3e4cb36e7764d50420c1
-ms.sourcegitcommit: 0c356b0860ae8663254e0cf6f04001bcc91ce207
+ms.openlocfilehash: 35da46d7094de5f99b487a8f8c0b6dd2afd23350
+ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90826542"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90912900"
 ---
 # <a name="tutorial-investigate-a-user"></a>Tutorial: investigar um usuário
+
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 > [!NOTE]
 > Os recursos do ATP do Azure explicados nesta página também podem ser acessados usando o novo [portal](https://portal.cloudappsecurity.com).

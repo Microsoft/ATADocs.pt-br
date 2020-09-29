@@ -12,14 +12,16 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 0b3a1db5-0d43-49af-b356-7094cc85f0a5
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: edef594133462d5a8549c0490981dc33e0548dfe
-ms.sourcegitcommit: 0c356b0860ae8663254e0cf6f04001bcc91ce207
+ms.openlocfilehash: a19550832ec2ee1e14afbf548a56a937c6128a19
+ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90826689"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90913114"
 ---
 # <a name="tutorial-domain-dominance-alerts"></a>Tutorial: Alertas de predominância de domínio
+
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 Normalmente, os ataques cibernéticos são lançados contra alguma entidade acessível, como um usuário com poucos privilégios e, em seguida, se movem lateralmente com rapidez até que o invasor obtenha acesso a ativos valiosos. Os ativos valiosos podem ser contas confidenciais, administradores de domínio ou dados altamente confidenciais. O ATP do Azure identifica essas ameaças avançadas na origem ao longo de toda a cadeia de ataque e classifica-as nas seguintes fases:
 
