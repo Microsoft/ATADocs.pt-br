@@ -5,21 +5,23 @@ keywords: ''
 author: shsagir
 ms.author: shsagir
 manager: shsagir
-ms.date: 07/27/2020
+ms.date: 09/22/2020
 ms.topic: overview
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 62c99622-2fe9-4035-9839-38fec0a353da
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: f90c9a8423567d672544dd62bc1bdb3ba60d8a34
-ms.sourcegitcommit: 0c356b0860ae8663254e0cf6f04001bcc91ce207
+ms.openlocfilehash: 274a345c68f3ac021d4407d00b2b3e7225a780f4
+ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90826703"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90912606"
 ---
 # <a name="azure-atp-prerequisites"></a>Pré-requisitos do ATP do Azure
+
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 Este artigo descreve os requisitos para uma implantação bem-sucedida do Azure ATP em seu ambiente.
 
@@ -120,14 +122,21 @@ Esta seção lista os requisitos do sensor do Azure ATP.
 
 ### <a name="general"></a>Geral
 
-> [!NOTE]
-> Certifique-se de que o [KB4487044](https://support.microsoft.com/help/4487044/windows-10-update-kb4487044) esteja instalado ao usar o Server 2019. Os sensores da ATP do Azure já instalados nos servidores 2019 sem essa atualização serão interrompidos automaticamente.
+O sensor da ATP do Azure dá suporte à instalação em um controlador de domínio que executa o Windows Server 2008 R2 SP1 (sem incluir o Server Core), Windows Server 2012, Windows Server 2012 R2, Windows Server 2016 (incluindo o Server Core, mas não o Nano Server) e Windows Server 2019\* (incluindo o Server Core, mas não o Nano Server), como mostrado na tabela abaixo.
 
-O sensor da ATP do Azure dá suporte à instalação em um controlador de domínio que executa o Windows Server 2008 R2 SP1 (sem incluir o Server Core), o Windows Server 2012, o Windows Server 2012 R2, o Windows Server 2016 (incluindo o Windows Server Core, mas não o Windows Nano Server) e o Windows Server 2019 (incluindo o Windows Core, mas não o Windows Nano Server).
+| Versão do sistema operacional   | Servidor com Experiência Desktop | Server Core | Nano Server    |
+| -------------------------- | ------------------------------ | ----------- | -------------- |
+| Windows Server 2008 R2 SP1 | &#10004;                       | &#10060;    | Não aplicável |
+| Windows Server 2012        | &#10004;                       | &#10004;    | Não aplicável |
+| Windows Server 2012 R2     | &#10004;                       | &#10004;    | Não aplicável |
+| Windows Server 2016        | &#10004;                       | &#10004;    | &#10060;       |
+| Windows Server 2019\*      | &#10004;                       | &#10004;    | &#10060;       |
+
+\* Requer [KB4487044](https://support.microsoft.com/help/4487044/windows-10-update-kb4487044). Os sensores instalados no Server 2019 sem essa atualização serão interrompidos automaticamente.
 
 O controlador de domínio pode ser um RODC (controlador de domínio somente leitura).
 
-Para seus controladores de domínio se comunicarem com o serviço de nuvem, você deve abrir a porta 443 em seus firewalls e proxies para *. atp.azure.com.
+Para seus controladores de domínio se comunicarem com o serviço de nuvem, você deve abrir a porta 443 em seus firewalls e proxies para \*.atp.azure.com.
 
 Durante a instalação, se o .NET Framework 4.7 ou posterior não estiver instalado, o .NET Framework 4.7 será instalado e poderá exigir uma reinicialização do controlador de domínio. Também poderá ser necessária uma reinicialização se ela já estiver pendente.
 

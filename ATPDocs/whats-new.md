@@ -11,12 +11,12 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: ort
 ms.suite: ems
-ms.openlocfilehash: 642d018862a73fd609d44e5e6304533196ad729c
-ms.sourcegitcommit: c4a4eb6512258beaa1b8937dc2b206fc3ee87835
+ms.openlocfilehash: dda07ccfe2578975517e9e219fa95e0094e751cf
+ms.sourcegitcommit: 3740dcb048065962eb09ed31e077d7f8ff77a165
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90829401"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91145913"
 ---
 # <a name="whats-new-in-azure-advanced-threat-protection-azure-atp"></a>Novidades no ATP do Azure (Proteção Avançada contra Ameaças do Azure)
 
@@ -26,10 +26,16 @@ Para obter detalhes das versões anteriores do ATP do Azure até (e incluindo) a
 
 Feed RSS: Receba uma notificação quando esta página for atualizada copiando e colando a seguinte URL em seu leitor de feed: `https://docs.microsoft.com/api/search/rss?search=%22This+article+is+updated+frequently+to+let+you+know+what%27s+new+in+the+latest+release+of+Azure+ATP%22&locale=en-us`
 
+> [!IMPORTANT]
+>
+> Os nomes dos produtos de proteção contra ameaças da Microsoft estão mudando. Leia mais sobre essa e outras atualizações [aqui](https://www.microsoft.com/security/blog/?p=91813). Usaremos os novos nomes em versões futuras.
+
 ## <a name="azure-atp-release-2127"></a>ATP do Azure versão 2.127
 
 Lançado em 20 de setembro de 2020
 
+- **Novo alerta de segurança: Suspeita de tentativa de elevação de privilégio do Netlogon (ID externa 2411)**  
+O alerta de segurança *Suspeita de tentativa de elevação de privilégio do Netlogon (exploração CVE-2020-1472) (ID externa 2411)* do ATP do Azure agora está disponível. Nessa detecção, um alerta de segurança do Azure ATP é disparado quando um invasor estabelece uma conexão vulnerável de canal seguro do Netlogon com um controlador de domínio, usando o Protocolo Remoto Netlogon ([MS-NRPC](/openspecs/windows_protocols/ms-nrpc/ff8f970f-3e37-40f7-bd4b-af7336e4792f)), também conhecido como *Vulnerabilidade de Elevação de Privilégio do Netlogon*. Para obter mais informações, confira [Suspeita de tentativa de elevação de privilégio do Netlogon](compromised-credentials-alerts.md#suspected-netlogon-privilege-elevation-attempt-cve-2020-1472-exploitation external id 2411).
 - Essa versão inclui melhorias e correções de bugs da infraestrutura do sensor interno.
 
 ## <a name="azure-atp-release-2126"></a>ATP do Azure versão 2.126
