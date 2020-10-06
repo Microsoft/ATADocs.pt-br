@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: e9cf68d2-36bd-4b0d-b36e-7cf7ded2618e
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 48744b2ef9485ad9bc2a54feacfe2b328dd4dfeb
-ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
+ms.openlocfilehash: 6eb8484ba49d4ae56a1baafce9ea3b76d0760165
+ms.sourcegitcommit: cd13e58303372d01463ae2ccf1e093d4f6d85fb5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90912367"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91754384"
 ---
 # <a name="tutorial-reconnaissance-alerts"></a>Tutorial: Alertas de reconhecimento
 
@@ -242,8 +242,8 @@ Para permitir que o ATP do Azure crie o perfil com precisão e aprenda os usuár
 **Etapas sugeridas específicas de Kerberoasting para prevenção e correção**
 
 1. Redefina as senhas dos usuários comprometidos e habilite a MFA ou, se você tiver configurado as políticas relevantes de usuário de alto risco no Azure Active Directory Identity Protection, poderá usar a ação [**Confirmar usuário comprometido**](/cloud-app-security/accounts#governance-actions) no portal de Cloud App Security.
-1. Exija o uso de [senhas longas e complexas para usuários com contas de entidade de serviço](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/minimum-password-length).
-1. [Substitua a conta de usuário pela gMSA (conta de serviço gerenciado de grupo)](https://docs.microsoft.com/windows-server/security/group-managed-service-accounts/group-managed-service-accounts-overview).
+1. Exija o uso de [senhas longas e complexas para usuários com contas de entidade de serviço](/windows/security/threat-protection/security-policy-settings/minimum-password-length).
+1. [Substitua a conta de usuário pela gMSA (conta de serviço gerenciado de grupo)](/windows-server/security/group-managed-service-accounts/group-managed-service-accounts-overview).
 
 > [!NOTE]
 > Os alertas de reconhecimento de entidade de segurança (LDAP) são compatíveis somente com os sensores do ATP.
