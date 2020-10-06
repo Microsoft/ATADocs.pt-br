@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: e9cf68d2-36bd-4b0d-b36e-7cf7ded2618e
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: cfcbf4af7c8b0733869c6d55d1c72dd628c68ca7
-ms.sourcegitcommit: 786d88b4b829167b52d2664b77252a4c2dc55877
+ms.openlocfilehash: 5ba78ddacfed1993a4c5f4b6c4407e4af45826f8
+ms.sourcegitcommit: dd8435ba20f76a6fc4590980c040c6fc7ec6c62b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91057549"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91451778"
 ---
 # <a name="tutorial-compromised-credential-alerts"></a>Tutorial: Alertas de credencial comprometida
 
@@ -205,6 +205,7 @@ Ocasionalmente, os aplicativos implementam sua própria pilha NTLM ou SMB.
 1. Imponha [senhas complexas e longas](/windows/security/threat-protection/security-policy-settings/password-policy) na organização. As senhas complexas e longas fornecem o primeiro nível necessário de segurança contra ataques de força bruta futuros.
 1. [Desabilitar SMBv1](https://blogs.technet.microsoft.com/filecab/2016/09/16/stop-using-smb1/)
 
+<a name="suspected-netlogon-priv-elev-2411"></a>
 ## <a name="suspected-netlogon-privilege-elevation-attempt-cve-2020-1472-exploitationexternalid2411"></a>Suspeita de tentativa de elevação de privilégio do Netlogon (exploração CVE-2020-1472) (ID externa 2411)
 
 A Microsoft publicou o [CVE-2020-1472](https://portal.msrc.microsoft.com/security-guidance/advisory/CVE-2020-1472) anunciando a existência de uma nova vulnerabilidade que permite a elevação de privilégios ao controlador de domínio.
