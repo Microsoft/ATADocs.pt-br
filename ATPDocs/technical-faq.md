@@ -5,19 +5,19 @@ keywords: ''
 author: shsagir
 ms.author: shsagir
 manager: shsagir
-ms.date: 09/21/2020
+ms.date: 10/12/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 6a9b5273-eb26-414e-9cdd-f64406e24ed8
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 8ef149c7792d8fce3ffbe1bc3303d1937827aa4c
-ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
+ms.openlocfilehash: 25d26cf71786c0d3d0c503d85fb4193ffd1d50fe
+ms.sourcegitcommit: 016ab00760cb6feb66666ce5c08f7ef340563da2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90909774"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91946476"
 ---
 # <a name="azure-atp-frequently-asked-questions"></a>Perguntas frequentes sobre o Azure ATP
 
@@ -96,7 +96,7 @@ O ATP do Azure está disponível no pacote Enterprise Mobility + Security 5 (EMS
 
 ### <a name="does-azure-atp-need-only-a-single-license-or-does-it-require-a-license-for-every-user-i-want-to-protect"></a>O ATP do Azure precisa de uma única licença ou requer uma licença para cada usuário que desejo proteger?
 
-O ATP do Azure requer que todos os usuários no Azure AD sejam licenciados
+Para obter informações sobre os requisitos de licenciamento do Azure ATP, consulte [diretrizes de licenciamento do Azure ATP](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#azure-advanced-threat-protection).
 
 ### <a name="is-my-data-isolated-from-other-customer-data"></a>Meus dados são isolados de outros dados do cliente?
 
