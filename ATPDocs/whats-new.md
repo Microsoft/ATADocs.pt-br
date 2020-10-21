@@ -5,18 +5,18 @@ keywords: ''
 author: shsagir
 ms.author: shsagir
 manager: shsagir
-ms.date: 09/13/2020
+ms.date: 10/18/2020
 ms.topic: overview
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: ort
 ms.suite: ems
-ms.openlocfilehash: 84deb65f7f1d6d20fe6913a7fd02b743295db1ef
-ms.sourcegitcommit: dd8435ba20f76a6fc4590980c040c6fc7ec6c62b
+ms.openlocfilehash: 26b4abc16ced7707d586f8049c82b30e86acbd0c
+ms.sourcegitcommit: 3ef87e970ca495edb995e0ea32e14f7e364045ff
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91451795"
+ms.lasthandoff: 10/18/2020
+ms.locfileid: "92163659"
 ---
 # <a name="whats-new-in-azure-advanced-threat-protection-azure-atp"></a>Novidades no ATP do Azure (Proteção Avançada contra Ameaças do Azure)
 
@@ -29,6 +29,12 @@ Feed RSS: Receba uma notificação quando esta página for atualizada copiando e
 > [!IMPORTANT]
 >
 > Os nomes dos produtos de proteção contra ameaças da Microsoft estão mudando. Leia mais sobre essa e outras atualizações [aqui](https://www.microsoft.com/security/blog/?p=91813). Usaremos os novos nomes a partir da versão 2.127 em diante.
+
+## <a name="azure-atp-release-2129"></a>ATP do Azure versão 2.129
+
+Lançado em 18 de outubro de 2020
+
+- Essa versão inclui melhorias e correções de bugs da infraestrutura do sensor interno.
 
 ## <a name="azure-atp-release-2128"></a>ATP do Azure versão 2.128
 
