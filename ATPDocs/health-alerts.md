@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: d0551e91-3b21-47d5-ad9d-3362df6d47c0
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 30d75912df1efe05f93555f70a68f76785d1ca3a
-ms.sourcegitcommit: 9c282d05682d97714c84e4e0e23e1103e2074fa8
+ms.openlocfilehash: 7dc8328b41308c87e51ac702d3c6ea77ab82c6d7
+ms.sourcegitcommit: a8570301d24b09423210abfef49e5eec8b65c5ef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91205267"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92333529"
 ---
 # <a name="understanding-azure-atp-sensor-health-alerts"></a>Reconhecer os alertas de integridade do sensor do ATP do Azure
 
@@ -97,11 +97,11 @@ O Centro de Integridade do ATP do Azure permite que você saiba quando há um pr
 |----|----|----|----|
 |Um sensor do Azure ATP tem funcionalidade limitada devido a problemas de conectividade com alguns dos controladores de domínio configurados.|A detecção de Passagem de hash pode ser menos precisa quando alguns controladores de domínio não podem ser consultados pelo sensor do Azure ATP.|Certifique-se de que os controladores de domínio estejam em funcionamento e de que esse sensor do Azure ATP possa abrir conexões LDAP para eles.|Média|
 
-## <a name="some-forwarded-events-are-not-being-analyzed"></a>Alguns eventos encaminhados não estão sendo analisados
+## <a name="some-windows-events-are-not-being-analyzed"></a>Alguns eventos do Windows não estão sendo analisados
 
 |Alerta|Descrição|Resolução|Severidade|
 |----|----|----|----|
-|O sensor do Azure ATP está recebendo mais eventos do que pode processar.|Alguns eventos encaminhados não estão sendo analisados, o que pode afetar a capacidade de detectar atividades suspeitas provenientes dos controladores de domínio monitorados por este sensor do Azure ATP.|Verifique se apenas os eventos necessários são encaminhados ao sensor do Azure ATP ou tente encaminhar alguns dos eventos para outro sensor do ATP.|Média|
+|O sensor do Azure ATP está recebendo mais eventos do que pode processar.|Alguns eventos do Windows não estão sendo analisados, o que pode afetar a capacidade de detectar atividades suspeitas provenientes dos controladores de domínio monitorados por este sensor do Azure ATP.|Verifique se apenas os eventos necessários são encaminhados ao sensor do Azure ATP ou tente encaminhar alguns dos eventos para outro sensor do ATP.|Média|
 
 ## <a name="some-network-traffic-could-not-be-analyzed"></a>Não foi possível analisar parte do tráfego de rede
 
@@ -109,11 +109,11 @@ O Centro de Integridade do ATP do Azure permite que você saiba quando há um pr
 |----|----|----|----|
 |O sensor do Azure ATP está recebendo mais tráfego de rede do que pode processar.|Não foi possível analisar parte do tráfego de rede, o que pode afetar a capacidade de detectar atividades suspeitas provenientes dos controladores de domínio monitorados por este sensor do ATP do Azure.|Considere [adicionar mais processadores e memória](capacity-planning.md) conforme necessário. Se esse for um sensor autônomo do Azure ATP, reduza o número de controladores de domínio monitorados.<br></br>Isso também pode ocorrer se você estiver usando controladores de domínio em máquinas virtuais VMware. Para evitar esses alertas, verifique se as configurações a seguir estão definidas como 0 ou Desabilitado na máquina virtual:<br></br>– TsoEnable<br></br>– LargeSendOffload(IPv4)<br></br>– Descarregamento de TSO do IPv4<br></br>Além disso, considere desabilitar o Descarregamento TSO gigante do IPv4. Para obter mais informações, consulte a documentação do VMware.|Média|
 
-## <a name="some-windows-events-are-not-being-analyzed"></a>Alguns eventos do Windows não estão sendo analisados
+## <a name="some-etw-events-are-not-being-analyzed"></a>Alguns eventos do ETW não estão sendo analisados
 
 |Alerta|Descrição|Resolução|Severidade|
 |----|----|----|----|
-|O sensor do ATP do Azure está recebendo eventos do ETW (Rastreamento de Eventos para Windows) que ele pode processar.|Alguns eventos de ETW (Rastreamento de Eventos para Windows) não estão sendo analisados, o que pode afetar a capacidade de detectar atividades suspeitas originadas de controladores de domínio monitorados por este sensor do ATP do Azure.|Verifique se apenas os eventos necessários são encaminhados ao sensor do Azure ATP ou tente encaminhar alguns dos eventos para outro sensor do ATP.|Média|
+|O sensor do ATP do Azure está recebendo mais eventos do ETW (Rastreamento de Eventos para Windows) do que ele pode processar.|Alguns eventos de ETW (Rastreamento de Eventos para Windows) não estão sendo analisados, o que pode afetar a capacidade de detectar atividades suspeitas originadas de controladores de domínio monitorados por este sensor do ATP do Azure.|Verifique se apenas os eventos necessários são encaminhados ao sensor do Azure ATP ou tente encaminhar alguns dos eventos para outro sensor do ATP.|Média|
 
 <!--
 ## Windows events missing from domain controller audit policy
