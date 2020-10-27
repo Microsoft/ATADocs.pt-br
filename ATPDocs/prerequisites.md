@@ -5,19 +5,19 @@ keywords: ''
 author: shsagir
 ms.author: shsagir
 manager: shsagir
-ms.date: 09/22/2020
+ms.date: 10/25/2020
 ms.topic: overview
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 62c99622-2fe9-4035-9839-38fec0a353da
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 274a345c68f3ac021d4407d00b2b3e7225a780f4
-ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
+ms.openlocfilehash: 3438ca66b02edc93ba01754c696822613dfcc380
+ms.sourcegitcommit: 0ee43433d020fd05ad8825442dfb0e6b6bfa658f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90912606"
+ms.lasthandoff: 10/26/2020
+ms.locfileid: "92526644"
 ---
 # <a name="azure-atp-prerequisites"></a>Pré-requisitos do ATP do Azure
 
@@ -71,14 +71,14 @@ Esta seção mostra as informações que você deve obter, bem como as contas e 
     > [!NOTE]
     >
     > - Para computadores sensores que executam o Windows Server 2012 e posterior, recomendamos usar uma conta **gMSA** devido à segurança aprimorada e ao gerenciamento automático de senhas.
-    > - Se você tiver vários sensores, alguns executando o Windows Server 2008 e outros executando o Windows Server 2012 ou posterior, além da recomendação para usar uma conta **gMSA**, você também deverá usar pelo menos uma conta de usuário do AD **padrão**.
+    > - Se você tiver vários sensores, alguns executando o Windows Server 2008 e outros executando o Windows Server 2012 ou posterior, além da recomendação para usar uma conta **gMSA** , você também deverá usar pelo menos uma conta de usuário do AD **padrão** .
     > - Se você tiver definido ACLs personalizadas em várias Unidades Organizacionais (UO) em seu domínio, verifique se o usuário selecionado tem permissões de leitura para essas UOs.
 
 - Se executar o Wireshark no sensor autônomo do ATP do Azure, reinicie o serviço de sensor da Proteção Avançada contra Ameaças do Azure quando interromper a captura do Wireshark. Se não reiniciar o serviço de sensor, o sensor interromperá a captura de tráfego.
 
 - Se tentar instalar o sensor do ATP do Azure em um computador configurado com um adaptador de Agrupamento NIC, você receberá um erro de instalação. Se desejar instalar o sensor do Azure ATP em um computador configurado com Agrupamento NIC, confira [Problemas do Agrupamento NIC do Sensor do Azure ATP](troubleshooting-known-issues.md#nic-teaming).
 
-- Recomendação de contêiner de **Objetos Excluídos**: O usuário deve ter permissões de somente leitura no contêiner de Objetos Excluídos. Permissões somente leitura neste contêiner permitem que a ATP do Azure detecte exclusões de usuários do seu Active Directory. Para obter informações sobre como configurar permissões somente leitura no contêiner Objetos Excluídos, confira a seção **Como alterar permissões em um contêiner de objetos excluídos** do artigo [Exibir ou definir permissões em um objeto do directory](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc816824(v=ws.10)).
+- Recomendação de contêiner de **Objetos Excluídos** : O usuário deve ter permissões de somente leitura no contêiner de Objetos Excluídos. Permissões somente leitura neste contêiner permitem que a ATP do Azure detecte exclusões de usuários do seu Active Directory. Para obter informações sobre como configurar permissões somente leitura no contêiner Objetos Excluídos, confira a seção **Como alterar permissões em um contêiner de objetos excluídos** do artigo [Exibir ou definir permissões em um objeto do directory](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc816824(v=ws.10)).
 
 - **Honeytoken** opcional: Uma conta de usuário que não tem nenhuma atividade de rede. Essa conta está configurada como um usuário Honeytoken do Azure ATP. Para obter mais informações sobre como usar Honeytokens, confira [Configurar exclusões e usuário do Honeytoken](install-step7.md).
 
@@ -96,7 +96,7 @@ O acesso ao portal do Azure ATP ocorre por meio de um navegador que dá suporte 
 - Firewall/proxy aberto – para se comunicar com o serviço de nuvem do ATP do Azure, você deve abrir a porta 443 de *.atp.azure.com no firewall/proxy.
 
     > [!NOTE]
-    > Você também pode usar nossa marca de serviço do Azure (**AzureAdvancedThreatProtection**) para habilitar o acesso ao ATP do Azure. Para obter mais informações sobre marcas de serviço, confira [Marcas de serviço de rede virtual](/azure/virtual-network/service-tags-overview) ou [baixe o arquivo de marcas de serviço](https://www.microsoft.com/download/details.aspx?id=56519).
+    > Você também pode usar nossa marca de serviço do Azure ( **AzureAdvancedThreatProtection** ) para habilitar o acesso ao ATP do Azure. Para obter mais informações sobre marcas de serviço, confira [Marcas de serviço de rede virtual](/azure/virtual-network/service-tags-overview) ou [baixe o arquivo de marcas de serviço](https://www.microsoft.com/download/details.aspx?id=56519).
 
  ![diagrama da arquitetura do Azure ATP](media/azure-atp-architecture.png)
 
@@ -146,7 +146,7 @@ Durante a instalação, se o .NET Framework 4.7 ou posterior não estiver instal
 ### <a name="server-specifications"></a>Especificações do servidor
 
 O sensor do ATP do Azure requer um mínimo de dois núcleos e 6 GB de RAM instalados no controlador de domínio.
-Para ter desempenho ideal, defina a **Opção de Energia** do computador que executa o sensor do ATP do Azure como **Alto Desempenho**.
+Para ter desempenho ideal, defina a **Opção de Energia** do computador que executa o sensor do ATP do Azure como **Alto Desempenho** .
 
 É possível implantar o sensor do ATP do Azure em controladores de domínio de vários tamanhos e cargas, dependendo da quantidade de recursos instalados e da quantidade de tráfego de rede dos controladores de domínio.
 
@@ -172,20 +172,19 @@ Não há suporte para o sensor em controles de domínio que executem o Windows 2
 
 A tabela abaixo lista o mínimo de portas que o sensor do Azure ATP exige:
 
-|Protocolo|Transport|Porta|De|Para|Direção|
-|------------|-------------|--------|-----------|-------------|
-|**Portas de Internet**||||||
-|SSL (*.atp.azure.com)|TCP|443|Sensor do Azure ATP|Serviço de nuvem do Azure ATP|Saída|
-|SSL (localhost)|TCP|444|Sensor do Azure ATP|localhost|Ambos|
-|**Portas internas**||||||
-|DNS|TCP e UDP|53|Sensor do Azure ATP|Servidores DNS|Saída|
-|Netlogon (SMB, CIFS, SAM-R)|TCP/UDP|445|Sensor do Azure ATP|Todos os dispositivos na rede|Saída|
-|Syslog (opcional)|TCP/UDP|514, dependendo da configuração|Servidor SIEM|Sensor do Azure ATP|Entrada|
-|RAIO|UDP|1813|RAIO|Sensor do Azure ATP|Entrada|
-|**Portas NNR**\*||||||
-|NTLM via RPC|TCP|Porta 135|Sensores ATP|Todos os dispositivos na rede|Entrada|
-|NetBIOS|UDP|137|Sensores ATP|Todos os dispositivos na rede|Entrada|
-|RDP|TCP|3389, apenas o primeiro pacote do Client hello|Sensores ATP|Todos os dispositivos na rede|Entrada|
+|Protocolo|Transport|Porta|De|Para|
+|------------|-------------|--------|-----------|
+|**Portas de Internet**|||||
+|SSL (*.atp.azure.com)|TCP|443|Sensor do Azure ATP|Serviço de nuvem do Azure ATP|
+|SSL (localhost)|TCP|444|Sensor do Azure ATP|localhost|
+|**Portas internas**|||||
+|DNS|TCP e UDP|53|Sensor do Azure ATP|Servidores DNS|
+|Netlogon (SMB, CIFS, SAM-R)|TCP/UDP|445|Sensor do Azure ATP|Todos os dispositivos na rede|
+|RAIO|UDP|1813|RAIO|Sensor do Azure ATP|
+|**Portas NNR**\*|||||
+|NTLM via RPC|TCP|Porta 135|Sensores ATP|Todos os dispositivos na rede|
+|NetBIOS|UDP|137|Sensores ATP|Todos os dispositivos na rede|
+|RDP|TCP|3389, apenas o primeiro pacote do Client hello|Sensores ATP|Todos os dispositivos na rede|
 
 \* Uma dessas portas é necessária, mas é recomendável abrir todas elas.
 
@@ -219,7 +218,7 @@ Para obter informações sobre como usar máquinas virtuais com o sensor autôno
 
 ### <a name="server-specifications"></a>Especificações do servidor
 
-Para ter desempenho ideal, defina a **Opção de Energia** do computador que executa o sensor autônomo do ATP do Azure como **Alto Desempenho**.<br>
+Para ter desempenho ideal, defina a **Opção de Energia** do computador que executa o sensor autônomo do ATP do Azure como **Alto Desempenho** .<br>
 Um sensor autônomo do ATP do Azure pode ter suporte para monitoramento de vários controladores de domínio, dependendo da quantidade de tráfego de rede dos controladores de domínio.
 
 >[!NOTE]
@@ -259,25 +258,26 @@ O sensor autônomo do Azure ATP requer pelo menos um adaptador de gerenciamento 
 
 A tabela abaixo lista as portas mínimas que o sensor autônomo do Azure ATP requer que estejam configuradas no adaptador de gerenciamento:
 
-|Protocolo|Transport|Porta|De|Para|Direção|
-|------------|-------------|--------|-----------|-------------|
-|**Portas de Internet**|||||
-|SSL (*.atp.azure.com)|TCP|443|Sensor do ATP do Azure|Serviço de nuvem do Azure ATP|Saída|
-|**Portas internas**|||||
-|LDAP|TCP e UDP|389|Sensor do ATP do Azure|Controladores de domínio|Saída|
-|LDAP seguro (LDAPS)|TCP|636|Sensor do ATP do Azure|Controladores de domínio|Saída|
-|LDAP para o Catálogo Global|TCP|3268|Sensor do ATP do Azure|Controladores de domínio|Saída|
-|LDAPS para o Catálogo Global|TCP|3269|Sensor do ATP do Azure|Controladores de domínio|Saída|
-|Kerberos|TCP e UDP|88|Sensor do ATP do Azure|Controladores de domínio|Saída|
-|Netlogon (SMB, CIFS, SAM-R)|TCP e UDP|445|Sensor do ATP do Azure|Todos os dispositivos na rede|Saída|
-|Tempo do Windows|UDP|123|Sensor do ATP do Azure|Controladores de domínio|Saída|
-|DNS|TCP e UDP|53|Sensor do ATP do Azure|Servidores DNS|Saída|
-|Syslog (opcional)|TCP/UDP|514, dependendo da configuração|Servidor SIEM|Sensor do ATP do Azure|Entrada|
-|RAIO|UDP|1813|RAIO|Sensor do Azure ATP|Entrada|
-|**Portas NNR** \*||||||
-|NTLM via RPC|TCP|135|Sensores ATP|Todos os dispositivos na rede|Entrada|
-|NetBIOS|UDP|137|Sensores ATP|Todos os dispositivos na rede|Entrada|
-|RDP|TCP|3389, apenas o primeiro pacote do Client hello|Sensores ATP|Todos os dispositivos na rede|Entrada|
+|Protocolo|Transport|Porta|De|Para|
+|------------|-------------|--------|-----------|
+|**Portas de Internet**||||
+|SSL (*.atp.azure.com)|TCP|443|Sensor do ATP do Azure|Serviço de nuvem do Azure ATP|
+|SSL (localhost)|TCP|444|Sensor do Azure ATP|localhost|
+|**Portas internas**||||
+|LDAP|TCP e UDP|389|Sensor do ATP do Azure|Controladores de domínio|
+|LDAP seguro (LDAPS)|TCP|636|Sensor do ATP do Azure|Controladores de domínio|
+|LDAP para o Catálogo Global|TCP|3268|Sensor do ATP do Azure|Controladores de domínio|
+|LDAPS para o Catálogo Global|TCP|3269|Sensor do ATP do Azure|Controladores de domínio|
+|Kerberos|TCP e UDP|88|Sensor do ATP do Azure|Controladores de domínio|
+|Netlogon (SMB, CIFS, SAM-R)|TCP e UDP|445|Sensor do ATP do Azure|Todos os dispositivos na rede|
+|Tempo do Windows|UDP|123|Sensor do ATP do Azure|Controladores de domínio|
+|DNS|TCP e UDP|53|Sensor do ATP do Azure|Servidores DNS|
+|Syslog (opcional)|TCP/UDP|514, dependendo da configuração|Servidor SIEM|Sensor do ATP do Azure|
+|RAIO|UDP|1813|RAIO|Sensor do Azure ATP|
+|**Portas NNR** \*|||||
+|NTLM via RPC|TCP|135|Sensores ATP|Todos os dispositivos na rede|
+|NetBIOS|UDP|137|Sensores ATP|Todos os dispositivos na rede|
+|RDP|TCP|3389, apenas o primeiro pacote do Client hello|Sensores ATP|Todos os dispositivos na rede|
 
 \* Uma dessas portas é necessária, mas é recomendável abrir todas elas.
 
