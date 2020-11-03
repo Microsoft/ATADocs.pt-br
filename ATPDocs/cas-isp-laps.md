@@ -1,23 +1,22 @@
 ---
-title: Avaliações de uso da LAPS da Microsoft da Proteção Avançada contra Ameaças do Azure
-description: Este artigo fornece uma visão geral do relatório de avaliação da postura de segurança da identidade de uso da LAPS da Microsoft do ATP do Azure.
+title: Avaliações de uso do Microsoft defender para identidade Microsoft LAPS
+description: Este artigo fornece uma visão geral do relatório de avaliação da postura de segurança de identidade de uso do Microsoft defender para identidade do Microsoft LAPS.
 keywords: ''
 author: shsagir
 ms.author: shsagir
 manager: shsagir
-ms.date: 08/25/2020
+ms.date: 10/26/2020
 ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
-ms.assetid: 2fe62047-75ef-4b2e-b4aa-72860e39b4e4
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: fdc5ace86a48b78041e1a7fc8927ae24d64b00ff
-ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
+ms.openlocfilehash: 44731f9d987eda3d87339b1502de609de9d222ed
+ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90913214"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93277533"
 ---
 # <a name="security-assessment-microsoft-laps-usage"></a>Avaliação de segurança: uso da LAPS da Microsoft
 
@@ -37,13 +36,13 @@ A LAPS simplifica o gerenciamento de senha e ajuda os clientes a implementar out
 
 1. Use a tabela de relatório para descobrir quais de seus domínios têm alguns (ou todos os) dispositivos compatíveis com Windows que não estão protegidos por LAPS ou cuja senha gerenciada por LAPS não foi alterada nos últimos 60 dias.
 1. Para domínios protegidos parcialmente, selecione a respectiva linha para ver a lista de dispositivos não protegidos por LAPS nesse domínio.
-    ![Selecionar domínio com dispositivos LAPS](media/atp-cas-isp-laps-1.png)
+    ![Selecionar domínio com dispositivos LAPS](media/cas-isp-laps-1.png)
 1. Execute a ação apropriada nesses dispositivos baixando, instalando e configurando ou solucionando problemas da [LAPS da Microsoft](https://go.microsoft.com/fwlink/?linkid=2104282) com a documentação fornecida no download.
-    ![Corrigir dispositivo de LAPS](media/atp-cas-isp-laps-2.png)
+    ![Corrigir dispositivo de LAPS](media/cas-isp-laps-2.png)
 
 > [!NOTE]
 > Essa avaliação é atualizada a cada 24 horas.
 
 ## <a name="see-also"></a>Consulte Também
 
-- [Confira o fórum do ATP do Azure!](https://aka.ms/azureatpcommunity)
+- [Confira o [!INCLUDE [Product short](includes/product-short.md)] Fórum!](https://aka.ms/MDIcommunity)

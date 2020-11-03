@@ -1,6 +1,6 @@
 ---
-title: Definir as configurações conceituais do sensor do ATP do Azure
-description: A etapa cinco da instalação do Azure ATP ajuda a definir as configurações do sensor autônomo do Azure ATP.
+title: Configurar o Microsoft defender para configurações do sensor de identidade conceitual
+description: A etapa cinco da instalação do Microsoft defender para identidade ajuda você a definir as configurações para o sensor autônomo do defender para identidade.
 author: shsagir
 ms.author: shsagir
 ms.date: 09/15/2019
@@ -9,73 +9,73 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 912b9ec8d7ff9f89bda80b6d1d3515cf93d9b9cd
-ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
+ms.openlocfilehash: 06df6ebb9c5baa3ba2a568c78dd1ab175cdae9a8
+ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90913010"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93277010"
 ---
-# <a name="configure-azure-atp-sensor-settings"></a>Definir as configurações do sensor do ATP do Azure
+# <a name="configure-product-long-sensor-settings"></a>Definir [!INCLUDE [Product long](includes/product-long.md)] configurações de sensor
 
 [!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
-Neste artigo, você aprenderá a definir corretamente as configurações do sensor do ATP do Azure para começar a ver os dados. Você precisará fazer configurações e integrações adicionais para aproveitar as funcionalidades completas do ATP do Azure.
+Neste artigo, você aprenderá a definir corretamente [!INCLUDE [Product long](includes/product-long.md)] as configurações do sensor para começar a ver os dados. Você precisará fazer configuração e integração adicionais para aproveitar os [!INCLUDE [Product short](includes/product-short.md)] recursos completos do.
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
-- Uma [instância do ATP do Azure](install-step1.md)[conectada ao Active Directory](install-step2.md).
-- Uma cópia baixada de seu [pacote de instalação do sensor do ATP](install-step3.md) e a chave de acesso.
+- Uma [ [!INCLUDE [Product short](includes/product-short.md)] instância](install-step1.md) que está [conectada a Active Directory](install-step2.md).
+- Uma cópia baixada do [ [!INCLUDE [Product short](includes/product-short.md)] pacote de instalação do sensor](install-step3.md) e da chave de acesso.
 
 ## <a name="configure-sensor-settings"></a>Definir as configurações do sensor
 
-Após a instalação do sensor do ATP do Azure, faça o seguinte para definir as configurações do sensor do ATP do Azure.
+Após a [!INCLUDE [Product short](includes/product-short.md)] instalação do sensor, faça o seguinte para definir [!INCLUDE [Product short](includes/product-short.md)] as configurações do sensor.
 
-1. Clique em **Iniciar** para abrir o navegador e entrar no portal do ATP do Azure.
+1. Clique em **Iniciar** para abrir o navegador e entrar no [!INCLUDE [Product short](includes/product-short.md)] Portal.
 
-1. No portal do ATP do Azure, acesse **Configuração** e, na seção **Sistema**, selecione **Sensores**.
+1. No [!INCLUDE [Product short](includes/product-short.md)] portal, vá para **configuração** e, em **sistema** , selecione **sensores**.
 
-    ![Página do sensor](media/atp-sensor-config.png)
+    ![Página do sensor](media/sensor-config.png)
 
 1. Clique no sensor que deseja configurar e insira as seguintes informações:
 
-    ![Definir as configurações do sensor](media/atp-sensor-config-2.png)
+    ![Definir as configurações do sensor](media/sensor-config-2.png)
 
-    - **Descrição**: Insira uma descrição para o sensor do ATP do Azure (opcional).
-    - **Controladores de domínio (FQDN)** (necessário para o sensor autônomo do ATP do Azure, não pode ser alterado para o sensor do ATP do Azure): Digite o FQDN completo de seu controlador de domínio e clique no sinal de adição para acrescentá-lo à lista. Por exemplo, **dc01.contoso.com**
+    - **Descrição** : Insira uma descrição para o [!INCLUDE [Product short](includes/product-short.md)] sensor (opcional).
+    - **Controladores de domínio (FQDN)** (necessário para o [!INCLUDE [Product short](includes/product-short.md)] sensor autônomo, isso não pode ser alterado para o [!INCLUDE [Product short](includes/product-short.md)] sensor): Insira o FQDN completo do controlador de domínio e clique no sinal de adição para adicioná-lo à lista. Por exemplo, **dc01.contoso.com**
 
-    As informações a seguir se aplicam aos servidores digitados na lista **Controladores de Domínio**:
-    - Todos os controladores de domínio cujo tráfego está sendo monitorado por meio do espelhamento de porta pelo sensor autônomo do Azure ATP devem estar na lista **Controladores de Domínio**. Se um controlador de domínio não estiver listado em **Controladores de Domínio**, a detecção de atividades suspeitas pode não funcionar conforme o esperado.
-    - Pelo menos um controlador de domínio na lista deve ser um catálogo global. Isso permite que o Azure ATP resolva os objetos de usuário e computador em outros domínios na floresta.
+    As informações a seguir se aplicam aos servidores digitados na lista **Controladores de Domínio** :
+    - Todos os controladores de domínio cujo tráfego está sendo monitorado por meio do espelhamento de porta pelo [!INCLUDE [Product short](includes/product-short.md)] sensor autônomo devem ser listados na lista **controladores de domínio** . Se um controlador de domínio não estiver listado em **Controladores de Domínio** , a detecção de atividades suspeitas pode não funcionar conforme o esperado.
+    - Pelo menos um controlador de domínio na lista deve ser um catálogo global. Isso permite que o [!INCLUDE [Product short](includes/product-short.md)] resolva os objetos de usuário e computador em outros domínios na floresta.
 
     - **Capturar adaptadores de rede** (obrigatório):
 
-    - Para os sensores do ATP do Azure, todos os adaptadores de rede usados para comunicação com outros computadores da organização.
-    - Para um sensor autônomo do ATP do Azure em um servidor dedicado, selecione os adaptadores de rede configurados como a porta de espelho de destino. Esses adaptadores de rede recebem o tráfego do controlador de domínio espelhado.
+    - Para [!INCLUDE [Product short](includes/product-short.md)] sensores, todos os adaptadores de rede usados para comunicação com outros computadores em sua organização.
+    - Para o [!INCLUDE [Product short](includes/product-short.md)] sensor autônomo em um servidor dedicado, selecione os adaptadores de rede configurados como a porta de espelho de destino. Esses adaptadores de rede recebem o tráfego do controlador de domínio espelhado.
 
 1. Clique em **Salvar**.
 
 ## <a name="validate-installations"></a>Validar instalações
 
-Para validar a implantação bem-sucedida do sensor do Azure ATP, verifique o seguinte:
+Para validar que o [!INCLUDE [Product short](includes/product-short.md)] sensor foi implantado com êxito, verifique o seguinte:
 
-1. Verifique se o serviço chamado **Sensor de Proteção Avançada contra Ameaças do Azure** está em execução. Após você salvar as configurações do sensor do Azure ATP, talvez demore alguns minutos até que o serviço seja iniciado.
+1. Verifique se o serviço chamado **Sensor de Proteção Avançada contra Ameaças do Azure** está em execução. Depois de salvar as [!INCLUDE [Product short](includes/product-short.md)] configurações do sensor, pode levar alguns segundos para que o serviço seja iniciado.
 
 1. Se o serviço não iniciar, examine o arquivo "Microsoft.Tri.sensor-Errors.log", localizado na seguinte pasta padrão: "%programfiles%\Azure Advanced Threat Protection sensor\Version X\Logs".
 
     >[!NOTE]
-    > A versão do ATP do Azure é atualizada com frequência. Para verificar a versão mais recente, no portal do ATP do Azure, vá em **Configuração** e, em seguida, **Sobre**.
+    > A versão das [!INCLUDE [Product short](includes/product-short.md)] atualizações com frequência, para verificar a versão mais recente, no [!INCLUDE [Product short](includes/product-short.md)] portal, vá para **configuração** e, em seguida, **sobre**.
 
-1. Acesse a URL da instância do ATP do Azure. No portal do ATP do Azure, pesquise algo na barra de pesquisa, como um usuário ou um grupo em seu domínio.
+1. Vá para a [!INCLUDE [Product short](includes/product-short.md)] URL da instância. No [!INCLUDE [Product short](includes/product-short.md)] portal, pesquise algo na barra de pesquisa, como um usuário ou grupo em seu domínio.
 
-1. Verifique a conectividade do ATP em qualquer dispositivo de domínio usando as seguintes etapas:
+1. Verifique [!INCLUDE [Product short](includes/product-short.md)] a conectividade em qualquer dispositivo de domínio usando as seguintes etapas:
     1. Abra um prompt de comando
     1. Digite `nslookup`
-    1. Digite **server**, depois o endereço IP ou FQDN do controlador de domínio no qual o sensor do ATP está instalado. Por exemplo, `server contosodc.contoso.azure`
-        - Substitua contosodc.contoso.azure e contoso.azure pelo FQDN do sensor e do nome domínio do ATP do Azure, respectivamente.
+    1. Digite **servidor** , em seguida, o FQDN ou o endereço IP do controlador de domínio em que o [!INCLUDE [Product short](includes/product-short.md)] sensor está instalado. Por exemplo, `server contosodc.contoso.azure`
+        - Certifique-se de substituir ContosoDC. contoso. Azure e contoso. Azure pelo FQDN do seu [!INCLUDE [Product short](includes/product-short.md)] sensor e nome de domínio, respectivamente.
     1. Digite `ls -d contoso.azure`
     1. Repita as etapas 3 e 4 para cada sensor que você quer testar.
-    1. No console do ATP do Azure, abra o perfil de entidade do computador a partir do qual você executou o teste de conectividade.
+    1. No [!INCLUDE [Product short](includes/product-short.md)] console do, abra o perfil de entidade do computador do qual executou o teste de conectividade.
     1. Verifique a atividade lógica relacionada e confirme a conectividade.
 
     > [!NOTE]
@@ -85,8 +85,8 @@ Para validar a implantação bem-sucedida do sensor do Azure ATP, verifique o se
 
 - [Configuração de proxy](configure-proxy.md)
 - [Política de auditoria avançada](configure-windows-event-collection.md)
-- [Configurar o Azure ATP para realizar chamadas remotas para SAM](install-step8-samr.md)
+- [Configurar [!INCLUDE [Product short](includes/product-short.md)] para fazer chamadas remotas para Sam](install-step8-samr.md)
 
 ## <a name="join-the-community"></a>Participe da comunidade
 
-Tem mais perguntas ou interesse em discutir sobre o ATP do Azure e a segurança relacionada com outras pessoas? Participe da [Comunidade do ATP do Azure](https://aka.ms/azureatpcommunity) hoje mesmo!
+Tem mais dúvidas ou um interesse em discutir [!INCLUDE [Product short](includes/product-short.md)] e segurança relacionada com outras pessoas? Junte-se à [ [!INCLUDE [Product short](includes/product-short.md)] comunidade](https://aka.ms/MDIcommunity) hoje mesmo!

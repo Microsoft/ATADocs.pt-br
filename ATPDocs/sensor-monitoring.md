@@ -1,39 +1,38 @@
 ---
-title: Monitorando controladores de domínio e sensores instalados instalados em seus controladores de domínio usando a proteção avançada contra ameaças do Azure
-description: Descreve como monitorar os sensores do ATP do Azure e a cobertura dos sensores usando o ATP do Azure
+title: Monitorando controladores de domínio e sensores instalados instalados em seus controladores de domínio usando o Microsoft defender para identidade
+description: Descreve como monitorar o Microsoft defender para sensores de identidade e cobertura de sensor usando o defender for Identity
 keywords: ''
 author: shsagir
 ms.author: shsagir
 manager: shsagir
-ms.date: 04/16/2020
+ms.date: 10/27/2020
 ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
-ms.assetid: 92decce8-b3ae-4d32-8407-a95314a66863
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: ac4c0b9bd4e8a99d5edaaec2746f3ce7d413005c
-ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
+ms.openlocfilehash: af05ee5bbd064e31b231ad36374b4c069d8f7cfc
+ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90912548"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93275393"
 ---
 # <a name="monitoring-your-domain-controller-coverage"></a>Monitorando a cobertura do controlador de domínio
 
 [!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
-Assim que o primeiro sensor do ATP do Azure é instalado e configurado em um controlador de domínio na rede, o ATP do Azure começa a monitorar os controladores de domínio do ambiente.
+Assim que o primeiro [!INCLUDE [Product long](includes/product-long.md)] sensor for instalado e configurado em qualquer controlador de domínio em sua rede, o [!INCLUDE [Product short](includes/product-short.md)] começará a monitorar o ambiente para controladores de domínio.
 
-Assim que um sensor do ATP do Azure estiver instalado e configurado em um controlador de domínio na rede, o sensor passará a se comunicar com o serviço ATP do Azure constantemente enviando informações de status, integridade e a versão do sensor, além de eventos e alterações do Active Directory.
+Depois que um [!INCLUDE [Product short](includes/product-short.md)] sensor é instalado e configurado em um controlador de domínio em sua rede, o sensor se comunica com o [!INCLUDE [Product short](includes/product-short.md)] serviço em uma base constante enviando o status do sensor, informações de integridade e versão e coletou Active Directory eventos e alterações.
 
 ## <a name="domain-controller-status"></a>Status do controlador de domínio
 
-O ATP do Azure monitora seu ambiente continuamente em busca de controladores de domínio não monitorados introduzidos no ambiente e relata-os, ajudando a gerenciar a cobertura completa do ambiente.
+[!INCLUDE [Product short](includes/product-short.md)] monitora continuamente seu ambiente para controladores de domínio não monitorados introduzidos em seu ambiente e relata sobre eles para ajudá-lo a gerenciar a cobertura completa de seu ambiente.
 
-1. Para verificar o status dos controladores de domínio monitorados e não monitorados detectados e seus status, acesse a área **Configuração** do portal do ATP do Azure, na seção **Sistema** e selecione **Sensores**.
+1. Para verificar o status de seus controladores de domínio monitorados e não monitorados detectados e seu status, vá para a área de **configuração** do [!INCLUDE [Product short](includes/product-short.md)] portal e, na seção **sistema** , selecione **sensores**.
 
-    ![Monitoramento de status do sensor do ATP do Azure](media/atp-sensors-status-monitoring.png)
+    ![[! INCLUIR [produto curto] (inclui/produto-curto. MD)] monitoramento de status do sensor](media/sensors-status-monitoring.png)
 
 1. Os controladores de domínio atuais monitorados e não monitorados são exibidos na parte superior da tela. Para baixar os detalhes de status de monitoramento dos controladores de domínio, selecione **Baixar detalhes**.
 
@@ -43,28 +42,28 @@ O download do Excel da cobertura do controlador de domínio fornece as seguintes
 |----|----|
 |Nome do host|Nome do computador|
 |Nome de domínio|Nome de domínio|
-|Monitorado|Status de monitoramento do ATP do Azure|
-|Tipo de sensor|Sensor do ATP do Azure ou sensor autônomo do ATP do Azure|
+|Monitorado|[!INCLUDE [Product short](includes/product-short.md)] status do monitoramento|
+|Tipo de sensor|[!INCLUDE [Product short](includes/product-short.md)] sensor ou [!INCLUDE [Product short](includes/product-short.md)] sensor autônomo|
 |Unidade organizacional|Local dentro do Active Directory |
 |Versão do sistema operacional| Versão do sistema operacional detectado|
 |Endereço IP|Endereço IP detectado|
 
 ## <a name="search-domain-controllers"></a>Pesquisar controladores de domínio
 
-Gerenciar sua frota de sensores e controladores de domínio pode ser desafiador. Para facilitar a localização e a identificação, os controladores de domínio podem ser pesquisados usando o recurso de pesquisa na lista de sensores da ATP do Azure.
+Gerenciar sua frota de sensores e controladores de domínio pode ser desafiador. Para facilitar a localização e a identificação, os controladores de domínio podem ser pesquisados usando o recurso de pesquisa na [!INCLUDE [Product short](includes/product-short.md)] lista de sensores.
 
-1. Para pesquisar os controladores de domínio, vá para a área de **Configuração** do portal da ATP do Azure, na seção **Sistema**, selecione **Sensores**.
+1. Para pesquisar os controladores de domínio, vá para a área de **configuração** do [!INCLUDE [Product short](includes/product-short.md)] portal e, na seção **sistema** , selecione **sensores**.
 1. Selecione a opção de filtros na coluna **Controlador de domínio** na lista tabela do controlador de domínio.
 1. Insira o nome que você deseja pesquisar. Atualmente, não há suporte para caracteres curinga no campo de pesquisa.
 
-    ![Controlador de domínio de pesquisa da ATP do Azure](media/search-sensor.png)
+    ![[! INCLUIR [produto curto] (inclui/produto-curto. MD)] Pesquisar controlador de domínio](media/search-sensor.png)
 
 > [!NOTE]
-> As páginas de configuração do portal do ATP do Azure podem ser modificadas apenas por administradores do ATP do Azure.
+> [!INCLUDE [Product short](includes/product-short.md)] as páginas de configuração do portal podem ser modificadas [!INCLUDE [Product short](includes/product-short.md)] somente por administradores.
 
 ## <a name="see-also"></a>Consulte Também
 
-- [Arquitetura do ATP do Azure](architecture.md)
-- [Configurando os sensores do ATP do Azure](install-step5.md)
+- [[!INCLUDE [Product short](includes/product-short.md)] Arquitectura](architecture.md)
+- [Configurando [!INCLUDE [Product short](includes/product-short.md)] sensores](install-step5.md)
 - [Suporte para várias florestas](multi-forest.md)
-- [Confira o fórum do ATP do Azure!](https://aka.ms/azureatpcommunity)
+- [Confira o [!INCLUDE [Product short](includes/product-short.md)] Fórum!](https://aka.ms/MDIcommunity)

@@ -1,55 +1,54 @@
 ---
-title: Avaliações da situação de segurança de identidade da Proteção Avançada contra Ameaças do Azure
-description: Neste artigo, você tem uma visão geral dos relatórios de avaliação de situação de segurança de identidade da ATP do Azure.
+title: Microsoft defender para avaliações de postura de segurança de identidade da identidade
+description: Este artigo fornece uma visão geral do Microsoft defender para relatórios de avaliação de postura de segurança de identidade da identidade.
 keywords: ''
 author: shsagir
 ms.author: shsagir
 manager: shsagir
-ms.date: 09/16/2019
+ms.date: 10/26/2020
 ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
-ms.assetid: 71b15bd9-3183-4e24-b18a-705023ccc313
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: eaef6571a11852e66634e9043daa25ec8fdbe2ef
-ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
+ms.openlocfilehash: c5f6eed2ee9220555bbd870f66e2cacbbb82ed1c
+ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90910197"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93275099"
 ---
-# <a name="azure-atps-identity-security-posture-assessments"></a>Avaliações de situação de segurança de identidade do ATP do Azure
+# <a name="product-longs-identity-security-posture-assessments"></a>[!INCLUDE [Product long](includes/product-long.md)]avaliações da postura de segurança de identidade
 
 [!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 Normalmente, organizações de todos os tamanhos têm visibilidade limitada de aplicativos e serviços locais e não sabem se eles podem ou não criar uma vulnerabilidade de segurança para a organização. O problema de visibilidade limitada é especialmente real em relação ao uso de componentes não compatíveis ou desatualizados.
 
-Embora sua empresa possa investir tempo e esforço consideráveis em fortalecer identidades e na infraestrutura de identidade (como o Active Directory e o Active Directory Connect) de modo contínuo, é fácil ignorar configurações incorretas comuns e o uso de componentes herdados, que representam um dos maiores riscos de ameaça para sua organização. A pesquisa de segurança da Microsoft revela que a maioria dos ataques de identidade utilizam configurações incorretas comuns no Active Directory e o uso contínuo de componentes herdados (como o protocolo NTLMv1) para comprometer identidades e violar sua organização. Para combater isso de modo eficiente, a ATP do Azure agora oferece avaliações proativas de situação de segurança de identidade para detectar e sugerir ações de melhoria nas suas configurações do Active Directory local.
+Embora sua empresa possa investir tempo e esforço consideráveis em fortalecer identidades e na infraestrutura de identidade (como o Active Directory e o Active Directory Connect) de modo contínuo, é fácil ignorar configurações incorretas comuns e o uso de componentes herdados, que representam um dos maiores riscos de ameaça para sua organização. A pesquisa de segurança da Microsoft revela que a maioria dos ataques de identidade utilizam configurações incorretas comuns no Active Directory e o uso contínuo de componentes herdados (como o protocolo NTLMv1) para comprometer identidades e violar sua organização. Para combater isso efetivamente, o [!INCLUDE [Product long](includes/product-long.md)] agora oferece avaliações proativas de postura de segurança de identidade para detectar e sugerir ações de aperfeiçoamento em suas configurações Active Directory locais.
 
-## <a name="what-do-azure-atp-identity-security-posture-assessments-provide"></a>O que as avaliações de situação de segurança de identidade da ATP do Azure oferecem?
+## <a name="what-do-product-short-identity-security-posture-assessments-provide"></a>O que as [!INCLUDE [Product short](includes/product-short.md)] avaliações de postura de segurança de identidade fornecem?
 
 - Detecções e dados contextuais sobre componentes e configurações incorretas conhecidos que podem ser explorados, além dos respectivos caminhos para corrigi-los.
-- A ATP do Azure não só detecta atividades suspeitas, mas também monitora ativamente os pontos fracos das identidades locais e da infraestrutura de identidade usando o sensor da ATP do Azure.
+- [!INCLUDE [Product short](includes/product-short.md)] detecta não apenas atividades suspeitas, mas também monitora ativamente as identidades locais e a infraestrutura de identidade para pontos fracos, usando o [!INCLUDE [Product short](includes/product-short.md)] sensor existente.
 - Os relatórios de avaliação da situação de segurança atual da organização são precisos, permitindo uma resposta rápida e um monitoramento efetivo em um ciclo contínuo.
 
 ## <a name="how-do-i-get-started"></a>Como começar?
 
 ### <a name="access"></a>Acesso
 
-As avaliações de segurança da ATP do Azure ficam disponíveis no portal do Microsoft Cloud App Security após a ativação da integração da ATP do Azure. Para saber como integrar a ATP do Azure com o Cloud App Security, confira [Integração da ATP do Azure](/cloud-app-security/aatp-integration).
+[!INCLUDE [Product short](includes/product-short.md)] as avaliações de segurança estão disponíveis usando o portal de Microsoft Cloud App Security depois de ativar a [!INCLUDE [Product short](includes/product-short.md)] integração. Para saber como integrar o [!INCLUDE [Product short](includes/product-short.md)] Cloud app Security, consulte [ [!INCLUDE [Product short](includes/product-short.md)] integração](/cloud-app-security/aatp-integration).
 
 ### <a name="licensing"></a>Licenciamento
 
-Para acessar os relatórios de avaliação de segurança da ATP do Azure no Cloud App Security, não é necessário ter uma licença do Cloud App Security, somente uma licença da ATP do Azure.
+O acesso [!INCLUDE [Product short](includes/product-short.md)] a relatórios de avaliação de segurança no Cloud app Security não requer uma licença de Cloud app Security, apenas uma [!INCLUDE [Product short](includes/product-short.md)] licença é necessária.
 
-## <a name="access-azure-atp-using-cloud-app-security"></a>Acessar a ATP do Azure com o Cloud App Security
+## <a name="access-product-short-using-cloud-app-security"></a>Acesso [!INCLUDE [Product short](includes/product-short.md)] usando Cloud app Security
 
 Confira o [Início rápido do Cloud App Security](/cloud-app-security/getting-started-with-cloud-app-security) para conhecer melhor os fundamentos básicos de como usar o portal do Cloud App Security.
 
 **Avaliações de situação de segurança de identidade**
 
-A ATP do Azure oferece as seguintes avaliações de situação de segurança de identidade. Cada avaliação pode ser baixada como relatório com instruções de uso e ferramentas para criar um plano de ação de correção ou resolução.
+[!INCLUDE [Product short](includes/product-short.md)] oferece as seguintes avaliações de postura de segurança de identidade. Cada avaliação pode ser baixada como relatório com instruções de uso e ferramentas para criar um plano de ação de correção ou resolução.
 
 **Relatórios de avaliação**
 
@@ -68,11 +67,11 @@ A ATP do Azure oferece as seguintes avaliações de situação de segurança de 
 Para acessar as avaliações de situação de segurança de identidade:
 
 1. Abra o portal do **Microsoft Cloud App Security**.
-    ![Acesse os relatórios de situação de segurança de identidade da ATP do Azure no Cloud App Security](media/atp-cas-isp-report-1.png)
+    ![Acessar o [! INCLUIR [produto curto] (inclui/produto-curto. MD)] relatórios de postura de segurança de identidade no Cloud App Security](media/cas-isp-report-1.png)
 1. Selecione **Investigar** no menu esquerdo e clique em **Situação de segurança de identidade** no menu suspenso.
 1. Clique na avaliação de situação de segurança de identidade que você quer ver na lista **Relatórios de avaliação de segurança**.
 
 ## <a name="next-steps"></a>Próximas etapas
 
-- [Saiba mais sobre como usar o Cloud App Security com a ATP do Azure](activities-filtering-mcas.md)
-- [Confira o fórum do ATP do Azure!](https://aka.ms/azureatpcommunity)
+- [Saiba mais sobre como usar Cloud App Security com [!INCLUDE [Product short](includes/product-short.md)]](activities-filtering-mcas.md)
+- [Confira o [!INCLUDE [Product short](includes/product-short.md)] Fórum!](https://aka.ms/MDIcommunity)

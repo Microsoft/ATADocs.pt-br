@@ -1,6 +1,6 @@
 ---
-title: Avaliação de exposição de texto não criptografado da Proteção Avançada contra Ameaças do Azure
-description: Neste artigo, você tem uma visão geral do relatório de avaliação da situação de segurança de identidade da exposição de texto não criptografado da ATP do Azure.
+title: Avaliação de exposição de texto não criptografado do Microsoft defender para identidade
+description: Este artigo fornece uma visão geral do relatório de avaliação de postura de segurança de identidade de exposição de texto não criptografado do Microsoft defender.
 keywords: ''
 author: shsagir
 ms.author: shsagir
@@ -9,21 +9,20 @@ ms.date: 08/25/2020
 ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
-ms.assetid: 124957bb-5882-4fcf-bab2-b74b0c69571d
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 413e7482900f34428056401085f04195ccb4e720
-ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
+ms.openlocfilehash: 9586c5441f09959970752a15cfff3c2f953f1842
+ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90913238"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93277594"
 ---
 # <a name="security-assessment-entities-exposing-credentials-in-clear-text"></a>Avaliação de segurança: entidades que expõem credenciais em texto não criptografado
 
 [!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
-![Impedir a exposição das credenciais de texto não criptografado no Cloud App Security](media/atp-cas-isp-clear-text-1.png)
+![Impedir a exposição das credenciais de texto não criptografado no Cloud App Security](media/cas-isp-clear-text-1.png)
 
 ## <a name="what-information-does-the-prevent-clear-text-security-assessment-provide"></a>Quais informações a avaliação de segurança de texto não criptografado fornece?
 
@@ -38,7 +37,7 @@ O maior risco é o tráfego não seguro, pois a associação simples com a LDAP 
 ## <a name="how-do-i-use-this-security-assessment-to-improve-my-organizational-security-posture"></a>Como usar esta avaliação de segurança para aprimorar minha situação de segurança organizacional?
 
 1. Analise a avaliação de segurança para as entidades afetadas.
-    ![Examinar as principais entidades afetadas e criar um plano de ação](media/atp-cas-isp-clear-text-2.png)
+    ![Examinar as principais entidades afetadas e criar um plano de ação](media/cas-isp-clear-text-2.png)
 1. Pesquise por que essas entidades estão usando LDAP em texto não criptografado.
 1. Corrija os problemas e interrompa a exposição.
 1. Após confirmar a correção, é recomendável solicitar uma assinatura LDAP no nível de controlador de domínio. Para saber mais sobre a assinatura de servidor LDAP, confira [Requisitos de assinatura de servidor LDAP do controlador de domínio](/windows/security/threat-protection/security-policy-settings/domain-controller-ldap-server-signing-requirements).
@@ -48,5 +47,5 @@ O maior risco é o tráfego não seguro, pois a associação simples com a LDAP 
 
 ## <a name="next-steps"></a>Próximas etapas
 
-- [Filtrar atividades da ATP do Azure no Cloud App Security](activities-filtering-mcas.md)
-- [Confira o fórum do ATP do Azure!](https://aka.ms/azureatpcommunity)
+- [[!INCLUDE [Product short](includes/product-short.md)] filtragem de atividades no Cloud App Security](activities-filtering-mcas.md)
+- [Confira o [!INCLUDE [Product short](includes/product-short.md)] Fórum!](https://aka.ms/MDIcommunity)

@@ -1,23 +1,22 @@
 ---
-title: Relatório de avaliação de situação de segurança de identidade de criptografia fraca da Proteção Avançada contra Ameaças do Azure
-description: Neste artigo, você tem uma visão geral do relatório de avaliação de situação de segurança de identidade de criptografia fraca da ATP do Azure.
+title: Relatório de avaliação da postura de segurança de identidade de codificação fraca do Microsoft defender para identidade
+description: Este artigo fornece uma visão geral do relatório de avaliação de postura de segurança de identidade de codificação fraca da identidade do Microsoft defender.
 keywords: ''
 author: shsagir
 ms.author: shsagir
 manager: shsagir
-ms.date: 08/25/2020
+ms.date: 10/26/2020
 ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
-ms.assetid: cc82212b-7d25-4ec7-828d-2475ff40d685
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 728103079da513129a55875d28f360c5cd176b47
-ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
+ms.openlocfilehash: bc6080ac87cd0709fd127daaf70e24a6ee03955e
+ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90911934"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93277265"
 ---
 # <a name="security-assessment-weak-cipher-usage"></a>Avaliação de segurança: Uso de criptografia fraca
 
@@ -30,7 +29,7 @@ A criptografia depende da codificação para criptografar dados. Por exemplo, o 
 ## <a name="how-do-i-use-this-security-assessment-to-improve-my-organizational-security-posture"></a>Como usar esta avaliação de segurança para aprimorar minha situação de segurança organizacional?
 
 1. Analise a avaliação de segurança do uso de criptografia fraca.
-    ![Analisar a avaliação do uso da criptografia fraca](media/atp-cas-isp-weak-cipher-2.png)
+    ![Analisar a avaliação do uso da criptografia fraca](media/cas-isp-weak-cipher-2.png)
 1. Pesquise o motivo para os clientes e os servidores identificados usarem criptografias fracas.
 1. Corrija os problemas e desabilite o uso do RC4 e/ou outras criptografias fracas (como DES/3DES).
 1. Para saber mais sobre como desabilitar o RC4, confira o [Microsoft Security Advisory](https://support.microsoft.com/help/2868725/microsoft-security-advisory-update-for-disabling-rc4).
@@ -40,7 +39,7 @@ A criptografia depende da codificação para criptografar dados. Por exemplo, o 
 
 ## <a name="remediation"></a>Remediação
 
-Desabilite os clientes e os servidores que você não quer que usem os pacotes de criptografia do RC4 configurando as seguintes chaves do Registro. Após desabilitar, qualquer servidor ou cliente que se comunique com outro cliente ou servidor que exija o uso do RC4 poderá impedir que a conexão ocorra. Os clientes com essa configuração implantada não conseguirão se conectar a sites que exigem o RC4. Os servidores que implantam essa configuração não conseguirão atender clientes que exigem o uso do RC4.
+Desabilite os clientes e os servidores que você não quer que usem os pacotes de criptografia do RC4 configurando as seguintes chaves do Registro. Após desabilitar, qualquer servidor ou cliente que se comunique com outro cliente ou servidor que exija o uso do RC4 poderá impedir que a conexão ocorra. Os clientes, onde essa configuração for implantada, não poderão se conectar a sites que exigem RC4, e os servidores que implantarem essa configuração não poderão atender a clientes que exigem o uso de RC4.
 
 > [!NOTE]
 > Não se esqueça de testar as seguintes configurações em um ambiente controlado antes de habilitá-las na produção.
@@ -53,5 +52,5 @@ Para saber mais sobre como baixar e atualizar as edições do Registro, confira 
 
 ## <a name="next-steps"></a>Próximas etapas
 
-- [Filtrar atividades da ATP do Azure no Cloud App Security](activities-filtering-mcas.md)
-- [Confira o fórum do ATP do Azure!](https://aka.ms/azureatpcommunity)
+- [[!INCLUDE [Product short](includes/product-short.md)] filtragem de atividades no Cloud App Security](activities-filtering-mcas.md)
+- [Confira o [!INCLUDE [Product short](includes/product-short.md)] Fórum!](https://aka.ms/MDIcommunity)

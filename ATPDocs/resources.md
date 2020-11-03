@@ -1,86 +1,85 @@
 ---
-title: Lista de recursos úteis para a proteção avançada contra ameaças do Azure
-description: Este artigo contém uma lista de recursos úteis do Azure ATP
+title: Lista de recursos úteis para o Microsoft defender para identidade
+description: Este artigo fornece uma lista de recursos úteis para o Microsoft defender para identidade
 keywords: ''
 author: shsagir
 ms.author: shsagir
 manager: shsagir
-ms.date: 02/19/2020
+ms.date: 10/27/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
-ms.assetid: 34dc152c-6b7f-4128-93fe-aad56c282730
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 4afff7abad10684c362afd789a896b721165e6eb
-ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
+ms.openlocfilehash: b0ba89e18e0e556f133e1591980daf425829bdde
+ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90912574"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93274501"
 ---
-# <a name="azure-atp-readiness-guide"></a>Guia de preparação do Azure ATP
+# <a name="product-long-readiness-guide"></a>[!INCLUDE [Product long](includes/product-long.md)] Guia de preparação
 
 [!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
-Este artigo oferece uma lista de recursos do roteiro de preparação que ajuda a começar a usar a Proteção Avançada contra Ameaças do Azure.
+Este artigo fornece uma lista de roteiros de preparação de recursos que ajudam você a começar a usar o [!INCLUDE [Product long](includes/product-long.md)] .
 
-## <a name="understanding-azure-atp"></a>Noções básicas do Azure ATP
+## <a name="understanding-product-long"></a>Básicas [!INCLUDE [Product long](includes/product-long.md)]
 
-O ATP (Proteção Avançada contra Ameaças) é um serviço de nuvem que ajuda a identificar e a proteger a empresa de vários tipos de ameaças internas e ataques cibernéticos direcionados avançados.
+[!INCLUDE [Product long](includes/product-long.md)] o é um serviço de nuvem que ajuda a identificar e proteger sua empresa de vários tipos de ataques de invasores e ameaças internas avançadas.
 
-Para saber mais sobre o Azure ATP:
+Para saber mais sobre o [!INCLUDE [Product short](includes/product-short.md)]:
 
-- [Visão geral do Azure ATP](what-is.md)
-- [Vídeo introdutório do Azure ATP (25 minutos) – completo](https://www.youtube.com/watch?v=EGY2m8yU_KE)
-- [Vídeo aprofundado do Azure ATP (75 minutos) – completo](https://www.youtube.com/watch?v=QXZIfH0wP3Q)
+- [[!INCLUDE [Product short](includes/product-short.md)] sobre](what-is.md)
+- [[!INCLUDE [Product short](includes/product-short.md)] vídeo introdutório (25 minutos)-completo](https://www.youtube.com/watch?v=EGY2m8yU_KE)
+- [[!INCLUDE [Product short](includes/product-short.md)] vídeo aprofundado (75 minutos)-completo](https://www.youtube.com/watch?v=QXZIfH0wP3Q)
 
 ## <a name="deployment-decisions"></a>Decisões de implantação
 
-O Azure ATP é composto de um serviço de nuvem que reside no Azure e de sensores integrados que podem ser instalados em controladores de domínio. Se você estiver usando servidores físicos, o planejamento de capacidade é fundamental. Obtenha ajuda da ferramenta de dimensionamento para alocar espaço para os sensores:
+[!INCLUDE [Product short](includes/product-short.md)] é composto de um serviço de nuvem que reside no Azure e de sensores integrados que podem ser instalados em controladores de domínio. Se você estiver usando servidores físicos, o planejamento de capacidade é fundamental. Obtenha ajuda da ferramenta de dimensionamento para alocar espaço para os sensores:
 
-- [Ferramenta de dimensionamento do Azure ATP](https://aka.ms/aatpsizingtool) – a ferramenta de dimensionamento automatiza a coleta da quantidade de tráfego que a Azure ATP monitora. Ela fornece automaticamente o suporte e as recomendações do recurso para sensores.
-- [Diretrizes de planejamento da capacidade do ATP](capacity-planning.md)
+- [ [!INCLUDE [Product short](includes/product-short.md)] ferramenta de dimensionamento](https://aka.ms/aatpsizingtool) – a ferramenta de dimensionamento automatiza a coleta da quantidade de monitores de tráfego [!INCLUDE [Product short](includes/product-short.md)] . Ela fornece automaticamente o suporte e as recomendações do recurso para sensores.
+- [[!INCLUDE [Product short](includes/product-short.md)] Diretrizes de planejamento de capacidade](capacity-planning.md)
 
-## <a name="deploy-azure-atp"></a>Implantar o Azure ATP
+## <a name="deploy-product-short"></a>Implantar o [!INCLUDE [Product short](includes/product-short.md)]
 
-Use esses recursos para configurar o ATP do Azure, conectar ao Active Directory, baixar o pacote do sensor, configurar a coleta de eventos e, opcionalmente, integrar à sua VPN e configurar contas e exclusões de honeytoken.
+Use esses recursos para ajudá-lo a configurar [!INCLUDE [Product short](includes/product-short.md)] o, conectar-se a Active Directory, baixar o pacote do sensor, configurar a coleta de eventos e, opcionalmente, integrar com sua VPN e configurar contas e exclusões do honeytoken.
 
-- [Teste o Azure ATP (parte do EMS E5)](https://aka.ms/aatptrial) A avaliação é válida por 90 dias.
-- [Configuração do ATP do Azure](install-step1.md) Siga essas etapas para implantar o ATP do Azure em seu ambiente.
-- [Integração do ATP do Azure com o Microsoft Defender ATP](integrate-msde.md)
+- [Experimente [!INCLUDE [Product short](includes/product-short.md)] (parte do EMS E5)](https://aka.ms/aatptrial)  a avaliação é válida por 90 dias.
+- [ [!INCLUDE [Product short](includes/product-short.md)] Configurar](install-step1.md) siga estas etapas para implantar [!INCLUDE [Product short](includes/product-short.md)] em seu ambiente.
+- [Integre [!INCLUDE [Product short](includes/product-short.md)] com o Microsoft defender para ponto de extremidade](integrate-mde.md)
 
-## <a name="azure-atp-settings"></a>Configurações do Azure ATP
+## <a name="product-short-settings"></a>Configurações do[!INCLUDE [Product short](includes/product-short.md)]
 
-Durante a criação da instância do ATP do Azure, as configurações básicas necessárias são definidas automaticamente. Há várias definições configuráveis adicionais no ATP do Azure para melhorar a detecção e a precisão do alerta para seu ambiente, como a integração de VPN, as permissões necessárias para SAM e as configurações de política de auditoria avançadas.
+Ao criar sua [!INCLUDE [Product short](includes/product-short.md)] instância, as configurações básicas necessárias são configuradas automaticamente. Há várias configurações adicionais configuráveis no [!INCLUDE [Product short](includes/product-short.md)] para melhorar a precisão de detecção e alerta para seu ambiente, como integração de VPN, permissões necessárias de Sam e configurações de política de auditoria avançadas.
 
 - [Integração de VPN](install-step6-vpn.md)
 - [Permissões exigidas pelo SAM-R](install-step8-samr.md)
-- [Configurações da política de auditoria](configure-windows-event-collection.md) – audite a integridade do controlador de domínio antes e após uma implantação do ATP.
+- [Configurações de política de auditoria](configure-windows-event-collection.md) – auditar a integridade do controlador de domínio antes e depois de uma [!INCLUDE [Product short](includes/product-short.md)] implantação.
 
-## <a name="work-with-azure-atp"></a>Trabalhar com o Azure ATP
+## <a name="work-with-product-short"></a>Trabalhar com [!INCLUDE [Product short](includes/product-short.md)]
 
-Depois que o ATP do Azure estiver em funcionamento, exiba os alertas de segurança na linha do tempo da atividade do portal do ATP do Azure. A linha do tempo de atividade é a página de aterrissagem padrão após o logon no portal do ATP do Azure. Por padrão, todos os alertas de segurança abertos são mostrados na linha do tempo de atividade. Também é possível ver a gravidade atribuída a cada alerta. Investigue cada alerta, analisando detalhadamente as entidades (computadores, dispositivos, usuários) para abrir as páginas de perfil com mais informações. Os caminhos de movimento lateral mostram os possíveis movimentos que podem ser feitos em sua rede e os usuários confidenciais em risco. Investigue e corrija a exposição usando os grafos de detecção de caminho de movimento lateral. Estes recursos ajudam a trabalhar com os alertas de segurança do Azure ATP:
+Depois [!INCLUDE [Product short](includes/product-short.md)] que o estiver em execução, exiba alertas de segurança na [!INCLUDE [Product short](includes/product-short.md)] linha do tempo de atividade do Portal. A linha do tempo de atividade é a página de aterrissagem padrão depois de fazer logon no [!INCLUDE [Product short](includes/product-short.md)] Portal. Por padrão, todos os alertas de segurança abertos são mostrados na linha do tempo de atividade. Também é possível ver a gravidade atribuída a cada alerta. Investigue cada alerta, analisando detalhadamente as entidades (computadores, dispositivos, usuários) para abrir as páginas de perfil com mais informações. Os caminhos de movimento lateral mostram os possíveis movimentos que podem ser feitos em sua rede e os usuários confidenciais em risco. Investigue e corrija a exposição usando os grafos de detecção de caminho de movimento lateral. Esses recursos ajudam você a trabalhar com os [!INCLUDE [Product short](includes/product-short.md)] alertas de segurança do:
 
-- [Guia de alerta de segurança do Azure ATP](suspicious-activity-guide.md) Saiba como fazer triagens e siga os próximos passos com as detecções do Azure ATP.
-- [Caminhos de movimento lateral do Azure ATP](use-case-lateral-movement-path.md)
+- [ [!INCLUDE [Product short](includes/product-short.md)] Guia de alerta de segurança](suspicious-activity-guide.md) Aprenda a fazer a triagem e executar as próximas etapas com suas [!INCLUDE [Product short](includes/product-short.md)] detecções.
+- [[!INCLUDE [Product short](includes/product-short.md)] caminhos de movimento lateral](use-case-lateral-movement-path.md)
 - [Marque grupos como confidenciais](sensitive-accounts.md) Aumente a visibilidade da exposição de credenciais em grupos de segurança confidenciais.
 
 ## <a name="security-best-practices"></a>Melhores práticas de segurança
 
-- [Perguntas frequentes do Azure ATP](technical-faq.md) – este artigo fornece uma lista de perguntas frequentes sobre o Azure ATP, bem como informações e respostas.
+- [ [!INCLUDE [Product short](includes/product-short.md)] Perguntas](technical-faq.md) frequentes – Este artigo fornece uma lista de perguntas frequentes sobre o [!INCLUDE [Product short](includes/product-short.md)] e fornece informações e respostas.
 
 ## <a name="community-resources"></a>Recursos da comunidade
 
-Blog: [Blog do Azure ATP](https://aka.ms/aatpblog)
+Blog: [ [!INCLUDE [Product short](includes/product-short.md)] blog](https://aka.ms/aatpblog)
 
-Comunidade pública: [Comunidade Tecnológica do Azure ATP](https://aka.ms/AatpCom)
+Comunidade pública: [ [!INCLUDE [Product short](includes/product-short.md)] comunidade de tecnologia](https://aka.ms/AatpCom)
 
-Comunidade privada: [Grupo do Azure ATP no Yammer](https://www.yammer.com/azureadvisors/#/threads/inGroup?type=in_group&feedId=9386893&view=all&preserve-view=true)
+Comunidade privada: [ [!INCLUDE [Product short](includes/product-short.md)] grupo do Yammer](https://www.yammer.com/azureadvisors/#/threads/inGroup?type=in_group&feedId=9386893&view=all&preserve-view=true)
 
 Channel 9: [Página do Microsoft Security Channel 9](https://channel9.msdn.com/Shows/Microsoft-Security/)
 
 ## <a name="see-also"></a>Consulte Também
 
 - [Trabalhando com contas confidenciais](sensitive-accounts.md)
-- [Confira o fórum do ATP do Azure!](https://aka.ms/azureatpcommunity)
+- [Confira o [!INCLUDE [Product short](includes/product-short.md)] Fórum!](https://aka.ms/MDIcommunity)

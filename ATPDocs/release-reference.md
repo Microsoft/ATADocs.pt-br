@@ -1,28 +1,28 @@
 ---
-title: Referência de versões mais antigas no ATP do Azure (Proteção Avançada contra Ameaças do Azure)
-description: Este artigo é uma referência de atualizações de versões anteriores do ATP do Azure (Proteção Avançada contra Ameaças do Azure).
+title: Referência de versões mais antigas no Microsoft defender para identidade
+description: Este artigo é uma referência de atualizações de versões anteriores ao Microsoft defender para identidade.
 keywords: ''
 author: shsagir
 ms.author: shsagir
 manager: shsagir
-ms.date: 11/17/2019
+ms.date: 10/27/2020
 ms.topic: reference
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: ort
 ms.suite: ems
-ms.openlocfilehash: 494faf68f394d9bdbb2af583c4eec3135fd67ee3
-ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
+ms.openlocfilehash: 3f8554cf5d3c01d4d8d54a289255070fdef0e52d
+ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90911998"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93274552"
 ---
-# <a name="release-reference-of-azure-advanced-threat-protection-azure-atp"></a>Referência de versão do ATP do Azure (Proteção Avançada contra Ameaças do Azure)
+# <a name="release-reference-of-product-long"></a>Referência de versão de [!INCLUDE [Product long](includes/product-long.md)]
 
 [!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
-Este artigo é uma referência de todas as versões do ATP do Azure até (e incluindo) a versão 2.55. Para atualizações recentes de versões do ATP do Azure (2.56 e mais recente), confira [Novidades do ATP do Azure](whats-new.md).
+Este artigo é uma referência de todas as [!INCLUDE [Product short](includes/product-short.md)] versões (anteriormente conhecida como proteção avançada contra ameaças do Azure, também conhecidas como Azure ATP) até a versão 2,55 (e incluindo). Para atualizações recentes da [!INCLUDE [Product short](includes/product-short.md)] versão (2,56 e mais recente), consulte [ [!INCLUDE [Product short](includes/product-short.md)] novidades](whats-new.md).
 
 ## <a name="azure-atp-release-255"></a>ATP do Azure versão 2.55
 
@@ -55,7 +55,7 @@ Lançado em 4 de novembro de 2018
 
 - **Aprimoramento do alerta de segurança: falha de autenticação suspeita**  
 O [alerta de segurança de falha de autenticação suspeita](suspicious-activity-guide.md) do ATP do Azure agora inclui o monitoramento para detecção de ataques de força bruta de pulverização de senhas.
-Em um ataque típico de **pulverização de senhas**, depois de enumerar com êxito uma lista de usuários válidos do controlador de domínio, os invasores tentam UMA senha cuidadosamente concebida em TODAS as contas de usuário conhecidas (uma senha para várias contas). Quando a pulverização de senhas inicial não tem êxito, eles tentam novamente utilizando uma senha diferente cuidadosamente concebida, normalmente após aguardar 30 minutos entre as tentativas. Esse tempo de espera permite que os invasores evitem disparar a maioria dos limites de bloqueio de conta que se baseiam no tempo. A pulverização de senhas tornou-se rapidamente uma técnica de preferência entre os invasores e testadores de intrusão. Os ataques de pulverização de senhas se mostraram eficazes na conquista de uma entrada na organização e por fazer movimentos laterais posteriores, tentando aumentar os privilégios.
+Em um ataque típico de **pulverização de senhas** , depois de enumerar com êxito uma lista de usuários válidos do controlador de domínio, os invasores tentam UMA senha cuidadosamente concebida em TODAS as contas de usuário conhecidas (uma senha para várias contas). Quando a pulverização de senhas inicial não tem êxito, eles tentam novamente utilizando uma senha diferente cuidadosamente concebida, normalmente após aguardar 30 minutos entre as tentativas. Esse tempo de espera permite que os invasores evitem disparar a maioria dos limites de bloqueio de conta que se baseiam no tempo. A pulverização de senhas tornou-se rapidamente uma técnica de preferência entre os invasores e testadores de intrusão. Os ataques de pulverização de senhas se mostraram eficazes na conquista de uma entrada na organização e por fazer movimentos laterais posteriores, tentando aumentar os privilégios.
 
 - **Aprimoramento de recurso: enviar uma mensagem de Syslog de teste**  
 Nova funcionalidade de envio de mensagem de Syslog de teste durante o processo de configuração do SIEM. Saiba mais em [Integração com o Syslog](setting-syslog.md).
@@ -87,7 +87,7 @@ As recentes alterações de conteúdo para a documentação do ATP do Azure incl
 
 Lançado em 21 de outubro de 2018
 
-- Você pode agora habilitar/desabilitar a **integração WD-ATP** na tela [Configuração](integrate-msde.md#how-to-integrate-azure-atp-with-microsoft-defender-atp) do portal do ATP do Azure. (Para acessar essa funcionalidade, o usuário do ATP do Azure deve ser um Administrador de segurança ou Global no locatário do AAD).
+- Você pode agora habilitar/desabilitar a **integração WD-ATP** na tela [Configuração](integrate-mde.md#how-to-integrate-azure-atp-with-microsoft-defender-atp) do portal do ATP do Azure. (Para acessar essa funcionalidade, o usuário do ATP do Azure deve ser um Administrador de segurança ou Global no locatário do AAD).
 
 - Essa versão também inclui aprimoramentos e correções de bug da infraestrutura do sensor interno.
 
@@ -229,7 +229,7 @@ Lançado em 15 de julho de 2018
 Lançado em 5 de julho de 2018
 
 - **Nova detecção adicionada: golden ticket do Kerberos – conta não existente** (visualização)  
-Essa nova detecção ajuda a proteger sua organização contra ataques em que um golden ticket é criado para uma conta que não existe no seu domínio. Para saber mais, confira o [Guia de atividades suspeitas da Proteção Avançada contra Ameaças do Azure](suspicious-activity-guide.md)
+Essa nova detecção ajuda a proteger sua organização contra ataques em que um golden ticket é criado para uma conta que não existe no seu domínio. Para obter mais informações, consulte o [Guia de atividades suspeitas](suspicious-activity-guide.md)
 
 - Essa versão inclui correções e melhorias para vários problemas.
 
@@ -262,7 +262,7 @@ De agora em diante, a Azure ATP aproveitará o fato de que é um serviço de nuv
 Esta versão apresenta uma versão prévia da detecção de VPN suspeita. A Azure ATP aprende o comportamento de VPN do usuário, incluindo os computadores aos quais os usuários se conectam e as localizações de onde eles se conectam e alerta você quando há algum desvio do comportamento esperado. Para obter mais informações, confira [Detecção de VPN suspeita](suspicious-activity-guide.md).
 
 - **Atualização atrasada**  
-Agora existe a opção de configurar os sensores da Azure ATP para serem atualizados mais tarde, sempre que a Azure ATP for atualizada. Agora é possível configurar cada sensor da Azure ATP para **Atualização atrasada**, para que ele seja atualizado 24 horas depois que o serviço de nuvem Azure ATP for atualizado. Esse recurso permite que você teste a atualização em sensores de teste específicos e apenas atualize os sensores de produção mais tarde. Se você descobrir algum problema durante o primeiro ciclo de atualização, abra um tíquete de suporte. Para obter mais informações, confira [Atualizar sensores da Azure ATP](sensor-update.md).
+Agora existe a opção de configurar os sensores da Azure ATP para serem atualizados mais tarde, sempre que a Azure ATP for atualizada. Agora é possível configurar cada sensor da Azure ATP para **Atualização atrasada** , para que ele seja atualizado 24 horas depois que o serviço de nuvem Azure ATP for atualizado. Esse recurso permite que você teste a atualização em sensores de teste específicos e apenas atualize os sensores de produção mais tarde. Se você descobrir algum problema durante o primeiro ciclo de atualização, abra um tíquete de suporte. Para obter mais informações, confira [Atualizar sensores da Azure ATP](sensor-update.md).
 
 - **A detecção de implementação de protocolo incomum foi atualizada**  
 A detecção de implementação de protocolo incomum agora fornece mais informações. Agora você pode ver qual ferramenta de possível ataque a Azure ATP suspeita que esteja ativa em sua rede. Para obter mais informações, confira o [Guia de atividades suspeitas](suspicious-activity-guide.md).
@@ -334,7 +334,7 @@ Lançado em 15 de abril de 2018
 
 Lançado em 8 de abril de 2018
 
-- Agora você tem a capacidade de fornecer comentários do usuário na barra de navegação superior. Clicar no Smiley na barra de menu habilita você a enviar um email à equipe da Proteção Avançada contra Ameaças do Azure com seus comentários.
+- Agora você tem a capacidade de fornecer comentários do usuário na barra de navegação superior. Clicar no sorriso na barra de menus permite que você envie um email para a [!INCLUDE [Product long](includes/product-long.md)] equipe com seus comentários.
 
 - Essa versão inclui correções e melhorias para vários problemas.
 
@@ -363,7 +363,7 @@ Lançada em 11 de março de 2018
 - **Investigação aprimorada**
   - O Azure ATP tem um [perfil de entidade](entity-profiles.md) aperfeiçoado. O perfil de entidade oferece uma plataforma projetada para investigações aprofundadas das atividades do usuário – como os recursos acessados, computadores em que fizeram logon, e muito mais. O perfil de entidade também fornece os dados de diretório e permite identificar possíveis caminhos de movimentação lateral de/para a entidade. Assim, é possível saber mais sobre violações em potencial na sua organização.
 
-  - Com o ATP, é possível marcar manualmente as entidades como *confidenciais*, a fim de aperfeiçoar as detecções e o monitoramento. Essa marcação afeta diversas detecções do Azure ATP, como a detecção de modificação de grupos confidenciais e o [caminho de movimentação lateral](use-case-lateral-movement-path.md), que dependem de entidades consideradas confidenciais.
+  - Com o ATP, é possível marcar manualmente as entidades como *confidenciais* , a fim de aperfeiçoar as detecções e o monitoramento. Essa marcação afeta diversas detecções do Azure ATP, como a detecção de modificação de grupos confidenciais e o [caminho de movimentação lateral](use-case-lateral-movement-path.md), que dependem de entidades consideradas confidenciais.
 
 - **Novos relatórios para ajudá-lo a investigar**
   - O [relatório de senhas expostas em texto não criptografado](reports.md) permite detectar quando os serviços enviam credenciais de conta em texto sem formatação. Assim, é possível investigar os serviços e aprimorar o nível de segurança da rede. Esse relatório substitui os alertas de atividade suspeita em texto não criptografado.
@@ -376,8 +376,8 @@ A infraestrutura do sensor do Azure ATP teve seu desempenho aprimorado: a exibi�
 
 ## <a name="see-also"></a>Confira Também
 
-- [O que é o Azure Advanced Threat Protection?](what-is.md)
+- [O que é [!INCLUDE [Product short](includes/product-short.md)] ?](what-is.md)
 - [Perguntas frequentes](technical-faq.md)
-- [Pré-requisitos do Azure ATP](prerequisites.md)
-- [Planejamento de capacidade do Azure ATP](capacity-planning.md)
-- [Confira o fórum do ATP do Azure!](https://aka.ms/azureatpcommunity)
+- [[!INCLUDE [Product short](includes/product-short.md)] pré-requisitos](prerequisites.md)
+- [[!INCLUDE [Product short](includes/product-short.md)] Planejamento de capacidade](capacity-planning.md)
+- [Confira o [!INCLUDE [Product short](includes/product-short.md)] Fórum!](https://aka.ms/MDIcommunity)

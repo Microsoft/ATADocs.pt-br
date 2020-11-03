@@ -1,25 +1,23 @@
 ---
-title: Política de dados pessoais da Proteção Avançada contra Ameaças do Azure
-description: Fornece links para informações sobre como excluir informações particulares e dados pessoais do Azure ATP.
-keywords: ''
+title: Política de dados pessoais do Microsoft defender para identidade
+description: Fornece links para informações sobre como excluir informações particulares e dados pessoais do Microsoft defender para identidade.
 author: shsagir
 ms.author: shsagir
-manager: rkarlin
-ms.date: 06/21/2020
+manager: shsagir
+ms.date: 10/26/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
-ms.assetid: 224e629a-0e82-458c-bb03-b67070a9241d
-ms.reviewer: ophirp
+ms.reviewer: ophir
 ms.suite: ems
-ms.openlocfilehash: 8cfd442e05827811c929f5d6e89ab03dad8a3367
-ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
+ms.openlocfilehash: 2ed900554e78f9792acf11972f519d2b5edae3a8
+ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90912403"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93274569"
 ---
-# <a name="azure-atp-data-security-and-privacy"></a>Privacidade e segurança de dados do Azure ATP
+# <a name="product-long-data-security-and-privacy"></a>[!INCLUDE [Product long](includes/product-long.md)] segurança e privacidade de dados
 
 [!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
@@ -27,34 +25,34 @@ ms.locfileid: "90912403"
 
 ## <a name="search-for-and-identify-personal-data"></a>Pesquisar e identificar dados pessoais
 
-Na Proteção Avançada contra Ameaças do Azure, você pode exibir dados pessoais identificáveis ​​do [portal do Azure ATP](workspace-portal.md) usando a [barra de pesquisa](workspace-portal.md#search-bar).
+No [!INCLUDE [Product short](includes/product-short.md)] , você pode exibir dados pessoais identificáveis no [ [!INCLUDE [Product long](includes/product-long.md)] portal](workspace-portal.md) usando a [barra de pesquisa](workspace-portal.md#search-bar).
 
 Pesquise um usuário ou computador específico e clique na entidade para ir à [página de perfil](entity-profiles.md) do usuário ou do computador. O perfil fornece detalhes abrangentes sobre a entidade do Active Directory, incluindo atividade de rede relacionada a essa entidade e seu histórico.
 
-Os dados pessoais do Azure ATP são coletados do Active Directory por meio do sensor do Azure ATP e armazenados em um banco de dados de back-end.
+[!INCLUDE [Product short](includes/product-short.md)] os dados pessoais são coletados de Active Directory por meio do [!INCLUDE [Product short](includes/product-short.md)] sensor e armazenados em um banco de dados de back-end.
 
 ## <a name="update-personal-data"></a>Atualizar dados pessoais
 
-Os dados pessoais de usuário do ATP do Azure são derivados do objeto do usuário no Active Directory da organização. Portanto, as alterações feitas ao perfil de usuário no AD da organização são refletidas no Azure ATP.
-
+[!INCLUDE [Product short](includes/product-short.md)]os dados pessoais do usuário são derivados do objeto do usuário no Active Directory da organização. Portanto, as alterações feitas no perfil do usuário no AD da organização são refletidas no [!INCLUDE [Product short](includes/product-short.md)] .
 
 ## <a name="delete-personal-data"></a>Excluir dados pessoais
 
-- Depois que um usuário é excluído do Active Directory da organização, o Azure ATP exclui automaticamente o perfil de usuário e qualquer atividade de rede relacionada dentro de um ano. Você também pode [excluir](working-with-suspicious-activities.md#review-suspicious-activities-on-the-attack-time-line) quaisquer alertas de segurança que contenham dados pessoais.
+- Depois que um usuário é excluído da Active Directory da organização, [!INCLUDE [Product short](includes/product-short.md)] o exclui automaticamente o perfil do usuário e qualquer atividade de rede relacionada em um ano. Você também pode [excluir](working-with-suspicious-activities.md#review-suspicious-activities-on-the-attack-time-line) quaisquer alertas de segurança que contenham dados pessoais.
 
-- Recomendam-se permissões **somente leitura** no contêiner de **Objetos Excluídos**. Para saber mais sobre como a permissão de contêiner de **Objetos Excluídos é usada pelo serviço do ATP do Azure, confira a recomendação de contêiner de Objetos Excluídos nos [Pré-requisitos do ATP do Azure](prerequisites.md#before-you-start).
+- Recomendam-se permissões **somente leitura** no contêiner de **Objetos Excluídos**. Para saber mais sobre como a permissão de contêiner de objetos * * excluídos é usada pelo [!INCLUDE [Product short](includes/product-short.md)] serviço, consulte a recomendação de contêiner de objetos excluídos em [ [!INCLUDE [Product short](includes/product-short.md)] pré-requisitos](prerequisites.md#before-you-start).
 
 ## <a name="export-personal-data"></a>Exportar dados pessoais
 
-No Azure ATP você pode [exportar](working-with-suspicious-activities.md#review-suspicious-activities-on-the-attack-time-line) as informações de alerta de segurança para o Excel. Essa função também exporta os dados pessoais.
+No [!INCLUDE [Product short](includes/product-short.md)] , você tem a capacidade de [Exportar](working-with-suspicious-activities.md#review-suspicious-activities-on-the-attack-time-line) informações de alerta de segurança para o Excel. Essa função também exporta os dados pessoais.
 
 ## <a name="audit-personal-data"></a>Auditar dados pessoais
 
-O Azure ATP implementa a auditoria de alterações de dados pessoais, incluindo a exclusão e exportação de registros de dados pessoais. O tempo de retenção da trilha de auditoria é de 90 dias. A auditoria no Azure ATP é um recurso de back-end e não está acessível aos clientes.
+[!INCLUDE [Product short](includes/product-short.md)] implementa a auditoria de alterações de dados pessoais, incluindo a exclusão e a exportação de registros de dados pessoais. O tempo de retenção da trilha de auditoria é de 90 dias. A auditoria no [!INCLUDE [Product short](includes/product-short.md)] é um recurso de back-end e não acessível aos clientes.
 
 ## <a name="additional-resources"></a>Recursos adicionais
 
-- Para saber mais sobre a confiança e a conformidade do Azure ATP, confira o [Portal de Confiança do Serviço](https://servicetrust.microsoft.com/ViewPage/GDPRGetStarted) e o [site Conformidade do Microsoft 365 Enterprise com o RGPD](/microsoft-365/compliance/gdpr?view=o365-worldwide&preserve-view=true).
+- Para obter informações sobre [!INCLUDE [Product short](includes/product-short.md)] confiança e conformidade, consulte o [portal de confiança do serviço](https://servicetrust.microsoft.com/ViewPage/GDPRGetStarted) e o site de conformidade do [Microsoft 365 Enterprise GDPR](/microsoft-365/compliance/gdpr?view=o365-worldwide&preserve-view=true).
 
-## <a name="security-and-privacy-for-azure-atp-us-government-gcc-high-customers"></a>Segurança e privacidade para clientes do US Government GCC High do ATP do Azure
-Para saber mais sobre os padrões de conformidade do ATP do Azure e o local dos dados dos clientes do US Government GCC High, revise a [Descrição do serviço Enterprise Mobility + Security for US Government](/enterprise-mobility-security/solutions/ems-govt-service-description).
+## <a name="security-and-privacy-for-product-short-us-government-gcc-high-customers"></a>Segurança e privacidade para [!INCLUDE [Product short](includes/product-short.md)] clientes do governo dos EUA gcc High
+
+Para obter informações adicionais sobre [!INCLUDE [Product short](includes/product-short.md)] os padrões de conformidade e o local dos dados do cliente para clientes de gcc do governo dos EUA, consulte o [Enterprise Mobility + Security para a descrição do serviço do governo dos EUA](/enterprise-mobility-security/solutions/ems-govt-service-description).

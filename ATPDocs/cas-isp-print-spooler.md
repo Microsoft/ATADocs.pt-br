@@ -1,37 +1,36 @@
 ---
-title: Avaliações de situação de segurança de identidade de spooler de impressão da Proteção Avançada contra Ameaças do Azure
-description: Neste artigo, você tem uma visão geral dos relatórios de avaliação de situação de segurança de identidade de spooler de impressão da ATP do Azure.
+title: Avaliações de postura de segurança de identidade do spooler de impressão do Microsoft defender para identidade
+description: Este artigo fornece uma visão geral do Microsoft defender para relatórios de avaliação de postura de segurança de identidade do spooler de impressão.
 keywords: ''
 author: shsagir
 ms.author: shsagir
 manager: shsagir
-ms.date: 08/25/2020
+ms.date: 10/26/2020
 ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
-ms.assetid: 1a7d9525-8923-4dae-af51-02a68aa61644
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 3d49284e21f235e70698bb6a79d015af4fb4a321
-ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
+ms.openlocfilehash: 3ce32384545ea3751966ba9a677348ac70fe266b
+ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90913173"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93277477"
 ---
 # <a name="security-assessment-domain-controllers-with-print-spooler-service-available"></a>Avaliação de segurança: Controladores de domínio com o serviço de spooler de impressão disponível
 
 [!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
-![Desabilitar o serviço de spooler de impressão](media/atp-cas-isp-print-spooler-1.png)
+![Desabilitar o serviço de spooler de impressão](media/cas-isp-print-spooler-1.png)
 
-## <a name="what-is-the-print-spooler-service"></a>O que é o serviço de **spooler de impressão**?
+## <a name="what-is-the-print-spooler-service"></a>O que é o serviço de **spooler de impressão** ?
 
 O spooler de impressão é um serviço de software que gerencia processos de impressão. O spooler aceita trabalhos de impressão de computadores e garante que os recursos da impressora estejam disponíveis. O spooler também agenda a ordem em que os trabalhos de impressão são enviados para a fila de impressão. Nos primórdios dos PCs, os usuários precisavam esperar a impressão dos arquivos antes de executar outras ações. Graças aos spoolers de impressão modernos, imprimir tem um impacto mínimo na produtividade geral do usuário hoje em dia.
 
 ## <a name="what-risks-does-the-print-spooler-service-on-domain-controllers-introduce"></a>Quais riscos o serviço de **spooler de impressão** representam nos controladores de domínio?
 
-Embora pareça inofensivo, qualquer usuário autenticado pode se conectar remotamente ao serviço de spooler de impressão de um controlador de domínio e solicitar uma atualização dos novos trabalhos de impressão. Além disso, os usuários podem fazer com que o controlador de domínio envie a notificação para o sistema com a [delegação irrestrita](cas-isp-unconstrained-kerberos.md). Essas ações testam a conexão e expõem a credencial da conta do computador do controlador de domínio (o **spooler de impressão** pertence ao SISTEMA).
+Embora pareça inofensivo, qualquer usuário autenticado pode se conectar remotamente ao serviço de spooler de impressão de um controlador de domínio e solicitar uma atualização dos novos trabalhos de impressão. Além disso, os usuários podem dizer ao controlador de domínio para enviar a notificação ao sistema com [delegação irrestrita](cas-isp-unconstrained-kerberos.md). Essas ações testam a conexão e expõem a credencial da conta do computador do controlador de domínio (o **spooler de impressão** pertence ao SISTEMA).
 
 Devido à possibilidade de exposição, os controladores de domínio e os sistemas de administração do Active Directory precisam ter o serviço de **spooler de impressão** desabilitado. Para fazer isso, é recomendável usar um GPO (Objeto de Política de Grupo).
 
@@ -44,7 +43,7 @@ Embora essa avaliação de segurança se concentre nos controladores de domínio
 
 1. Use a tabela do relatório para descobrir quais controladores de domínio têm o serviço de **spooler de impressão** habilitado.
 
-    ![Desabilitar a avaliação de segurança do serviço de spooler de impressão](media/atp-cas-isp-print-spooler-2.png)
+    ![Desabilitar a avaliação de segurança do serviço de spooler de impressão](media/cas-isp-print-spooler-2.png)
 1. Tome as medidas adequadas em relação aos controladores de domínio em risco e remova ativamente o serviço de spooler de impressão manualmente, por meio do GPO ou outros tipos de comandos remotos.
 
 > [!NOTE]
@@ -56,5 +55,5 @@ Corrija esse problema específico desabilitando o serviço de spooler de impress
 
 ## <a name="next-steps"></a>Próximas etapas
 
-- [Filtrar atividades da ATP do Azure no Cloud App Security](activities-filtering-mcas.md)
-- [Confira o fórum do ATP do Azure!](https://aka.ms/azureatpcommunity)
+- [[!INCLUDE [Product short](includes/product-short.md)] filtragem de atividades no Cloud App Security](activities-filtering-mcas.md)
+- [Confira o [!INCLUDE [Product short](includes/product-short.md)] Fórum!](https://aka.ms/MDIcommunity)

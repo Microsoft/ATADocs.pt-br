@@ -1,23 +1,22 @@
 ---
-title: Avaliação de situação de segurança de identidade irrestrita de Kerberos da Proteção Avançada contra Ameaças do Azure
-description: Neste artigo, você tem uma visão geral dos relatórios de avaliação da situação de segurança de identidade irrestrita de Kerberos da ATP do Azure.
+title: Avaliação de postura de segurança de identidade Kerberos não restringida do Microsoft defender para identidade
+description: Este artigo fornece uma visão geral do Microsoft defender para relatórios de avaliação de postura de segurança de identidade Kerberos irrestrito da identidade.
 keywords: ''
 author: shsagir
 ms.author: shsagir
 manager: shsagir
-ms.date: 08/25/2020
+ms.date: 10/26/2020
 ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
-ms.assetid: 7eea354b-7a50-40d9-bfa7-dcccaef23179
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: a4676837537869f6984ffe27f20b5cbeae971bde
-ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
+ms.openlocfilehash: c5c8d2a3fcce67d51cc4ab3adeff3f48b044ae73
+ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90912797"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93277449"
 ---
 # <a name="security-assessment-unsecure-kerberos-delegation"></a>Avaliação de segurança: delegação de Kerberos não segura
 
@@ -29,21 +28,21 @@ ms.locfileid: "90912797"
 
 ## <a name="what-risk-does-unsecure-kerberos-delegation-pose-to-an-organization"></a>Qual risco a delegação de Kerberos não segura representa para uma organização?
 
-Com a delegação de Kerberos não segura, uma entidade pode representar você em qualquer outro serviço escolhido. Por exemplo, imagine que você tem um site de IIS e a conta do pool de aplicativos está configurada com a delegação irrestrita. O site de IIS também tem a Autenticação do Windows habilitada, o que permite à autenticação Kerberos nativa e ao site usar um SQL Server de back-end para dados corporativos. Com a conta do administrador do domínio, navegue até o site de IIS para fazer a autenticação. Com a delegação irrestrita, o site pode receber um tíquete de serviço de um controlador de domínio para o serviço SQL e fazer isso em seu nome.
+Com a delegação de Kerberos não segura, uma entidade pode representar você em qualquer outro serviço escolhido. Por exemplo, imagine que você tem um site de IIS e a conta do pool de aplicativos está configurada com a delegação irrestrita. O site de IIS também tem a Autenticação do Windows habilitada, o que permite à autenticação Kerberos nativa e ao site usar um SQL Server de back-end para dados corporativos. Com a conta do administrador do domínio, navegue até o site de IIS para fazer a autenticação. O site, usando a delegação irrestrita, pode obter um tíquete de serviço de um controlador de domínio para o serviço do SQL e fazer isso em seu nome.
 
-O principal problema da delegação de Kerberos é que você precisa confiar que o aplicativo sempre tomará a decisão correta. Em vez disso, agentes mal-intencionados podem forçar o aplicativo a errar. Se você estiver conectado como **administrador de domínio**, o site poderá criar o tíquete para qualquer outro serviço, como se fosse você, o **administrador de domínio**. Por exemplo, o site pode escolher um controlador de domínio e alterar o grupo de **admins corporativos**. Do mesmo modo, o site poderia adquirir o hash da conta KRBTGT ou baixar um arquivo interessante do departamento de Recursos Humanos. O risco é claro e as possibilidades com a delegação não segura são quase infinitas.
+O principal problema da delegação de Kerberos é que você precisa confiar que o aplicativo sempre tomará a decisão correta. Em vez disso, agentes mal-intencionados podem forçar o aplicativo a errar. Se você estiver conectado como **administrador de domínio** , o site poderá criar um tíquete para qualquer outro serviço que desejar, agindo como você, o **administrador de domínio**. Por exemplo, o site pode escolher um controlador de domínio e fazer alterações no grupo de **Administração de empresa** . Do mesmo modo, o site poderia adquirir o hash da conta KRBTGT ou baixar um arquivo interessante do departamento de Recursos Humanos. O risco é claro e as possibilidades com a delegação não segura são quase infinitas.
 
 Veja a seguir uma descrição do risco representado por tipos diferentes de delegação:
 
-- **Delegação irrestrita**: qualquer serviço poderá ser explorado se uma das entradas de delegação for confidencial.
-- **Delegação restrita**: entidades restritas poderão ser exploradas se uma das entradas de delegação for confidencial.
+- **Delegação irrestrita** : qualquer serviço poderá ser explorado se uma das entradas de delegação for confidencial.
+- **Delegação restrita** : entidades restritas poderão ser exploradas se uma das entradas de delegação for confidencial.
 - **RBCD (delegação restrita baseada em recursos)** : entidades restritas baseadas em recursos poderão ser exploradas se a entidade em questão for confidencial.
 
 ## <a name="how-do-i-use-this-security-assessment"></a>Como usar a avaliação de segurança?
 
 1. Use a tabela de relatório para descobrir quais das entidades que não estão no controlador de domínio estão configuradas para **delegação de Kerberos não segura**.
 
-    ![Avaliação de segurança da delegação de Kerberos não segura](media/atp-cas-isp-kerberos-delegation-2.png)
+    ![Avaliação de segurança da delegação de Kerberos não segura](media/cas-isp-kerberos-delegation-2.png)
 1. Tome a medida adequada em relação aos usuários em risco, como remover o atributo irrestrito ou alterá-lo para uma delegação restrita mais segura.
 
 > [!NOTE]
@@ -61,7 +60,7 @@ Desabilite a delegação ou use um dos seguintes tipos de KCD (delegação restr
 
     1. Selecione **Confiar no computador para delegação apenas a serviços especificados**.
 
-        ![Correção de delegação irrestrita de Kerberos](media/atp-cas-isp-unconstrained-kerberos-1.png)
+        ![Correção de delegação irrestrita de Kerberos](media/cas-isp-unconstrained-kerberos-1.png)
 
     2. Especifique os **Serviços aos quais esta conta pode apresentar credenciais delegadas**.
 
@@ -72,7 +71,7 @@ A KCD baseada em recursos é configurada no PowerShell. Use os cmdlets [Set-ADCo
 
 Examine os usuários confidenciais listados nas recomendações e remova-os dos serviços nos quais a conta afetada pode apresentar credenciais delegadas.
 
-![Correção de delegação restrita de Kerberos](media/atp-cas-isp-unconstrained-kerberos-2.png)
+![Correção de delegação restrita de Kerberos](media/cas-isp-unconstrained-kerberos-2.png)
 
 ### <a name="resource-based-constrained-delegation-rbcd"></a>RBCD (delegação restrita baseada em recursos)
 
@@ -80,5 +79,5 @@ Examine os usuários confidenciais listados nas recomendações e remova-os do r
 
 ## <a name="next-steps"></a>Próximas etapas
 
-- [Filtrar atividades da ATP do Azure no Cloud App Security](activities-filtering-mcas.md)
-- [Confira o fórum do ATP do Azure!](https://aka.ms/azureatpcommunity)
+- [[!INCLUDE [Product short](includes/product-short.md)] filtragem de atividades no Cloud App Security](activities-filtering-mcas.md)
+- [Confira o [!INCLUDE [Product short](includes/product-short.md)] Fórum!](https://aka.ms/MDIcommunity)

@@ -1,23 +1,22 @@
 ---
-title: Avaliação de situação de segurança de identidade de protocolos herdados da Proteção Avançada contra Ameaças do Azure
-description: Neste artigo, você tem uma visão geral do relatório de avaliação de situação de segurança de identificação do protocolo herdado da ATP do Azure.
+title: Microsoft defender para identidade de protocolos herdados identidade segurança avaliação de postura
+description: Este artigo fornece uma visão geral do relatório de avaliação de postura de segurança de identificação do protocolo herdado do Microsoft defender para identidade.
 keywords: ''
 author: shsagir
 ms.author: shsagir
 manager: shsagir
-ms.date: 08/25/2020
+ms.date: 10/26/2020
 ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
-ms.assetid: 6597b8c7-f83e-43c6-8149-fb4a914a845b
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 3465df4f9d932bd1b278971848ca59a592abed71
-ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
+ms.openlocfilehash: 223ae21d15ecc15523c3670062aa6a2502281738
+ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90913206"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93276711"
 ---
 # <a name="security-assessment-legacy-protocols-usage"></a>Avaliação de segurança: uso de protocolos herdados
 
@@ -46,7 +45,7 @@ Para desativar o uso dos protocolos herdados, primeiro, a organização deve des
 
 1. Use a tabela do relatório para descobrir quais das principais entidades descobertas estão usando protocolos herdados.
 
-    ![Impedir o uso de protocolos herdados](media/atp-cas-isp-legacy-protocols-2.png)
+    ![Impedir o uso de protocolos herdados](media/cas-isp-legacy-protocols-2.png)
 1. Tome as medidas apropriadas nessas entidades para descobrir dependências.
 1. Pare o uso do protocolo herdado e, em algum momento, [desabilite completamente os protocolos](/archive/blogs/miriamxyra/stop-using-lan-manager-and-ntlmv1).
 1. [Remover o MIC 2 e parar de usar os clientes LMv2](https://www.preempt.com/blog/active-directory-ntlm-attacks/).
@@ -56,5 +55,5 @@ Para desativar o uso dos protocolos herdados, primeiro, a organização deve des
 
 ## <a name="next-steps"></a>Próximas etapas
 
-- [Filtrar atividades da ATP do Azure no Cloud App Security](activities-filtering-mcas.md)
-- [Confira o fórum do ATP do Azure!](https://aka.ms/azureatpcommunity)
+- [[!INCLUDE [Product short](includes/product-short.md)] filtragem de atividades no Cloud App Security](activities-filtering-mcas.md)
+- [Confira o [!INCLUDE [Product short](includes/product-short.md)] Fórum!](https://aka.ms/MDIcommunity)

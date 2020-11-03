@@ -1,48 +1,50 @@
 ---
-title: Guia de início rápido para planejamento de implantação da Proteção Avançada contra Ameaças do Azure
-description: Ajuda você a planejar a implantação e a decidir quantos servidores do Azure ATP serão necessários para dar suporte à sua rede
+title: Planejando sua implantação do Microsoft defender para identidade
+description: Ajuda a planejar sua implantação e a decidir quantos Microsoft defender for Identity Servers serão necessários para dar suporte à sua rede
 author: shsagir
 ms.author: shsagir
-ms.date: 05/20/2020
+ms.date: 10/26/2020
 ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
-ms.openlocfilehash: 6955ea798cc138142f0b3f4443df777ed2d07cac
-ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
+ms.reviewer: itargoet
+ms.suite: ems
+ms.openlocfilehash: f9cac463b5a99075901a9c0f68db37affcb50cf9
+ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90913256"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93276773"
 ---
-# <a name="quickstart-plan-capacity-for-azure-atp"></a>Início Rápido: Planejar capacidade para o ATP do Azure
+# <a name="plan-capacity-for-product-long"></a>Planejar capacidade para [!INCLUDE [Product long](includes/product-long.md)]
 
 [!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
-Neste guia de início rápido, você determinará quantos sensores do ATP do Azure serão necessários.
+Neste guia, você determina a quantidade de [!INCLUDE [Product long](includes/product-long.md)] sensores de que precisa.
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
-- Baixe a [ferramenta de dimensionamento do ATP do Azure](https://aka.ms/aatpsizingtool).
-- Confira o artigo sobre a [arquitetura do ATP do Azure](architecture.md).
-- Confira o artigo sobre os [pré-requisitos do ATP do Azure](prerequisites.md).
+- Baixe a [ [!INCLUDE [Product short](includes/product-short.md)] ferramenta de dimensionamento](https://aka.ms/aatpsizingtool).
+- Leia o artigo [ [!INCLUDE [Product short](includes/product-short.md)] arquitetura](architecture.md) .
+- Examine o artigo [ [!INCLUDE [Product short](includes/product-short.md)] pré-requisitos](prerequisites.md) .
 
 ## <a name="use-the-sizing-tool"></a>Usar a ferramenta de dimensionamento
 
-A maneira recomendada e mais simples de determinar a capacidade da implantação do ATP do Azure é usar a ferramenta de dimensionamento. Caso isso não seja possível, colete informações sobre o tráfego manualmente. Para saber mais sobre o método manual, confira a seção [Estimador de tráfego do controlador de domínio](#manual-sizing), no final deste artigo.
+A maneira recomendada e mais simples de determinar a capacidade para sua [!INCLUDE [Product short](includes/product-short.md)] implantação é usar a [!INCLUDE [Product short](includes/product-short.md)] ferramenta de dimensionamento. Caso isso não seja possível, colete informações sobre o tráfego manualmente. Para saber mais sobre o método manual, confira a seção [Estimador de tráfego do controlador de domínio](#manual-sizing), no final deste artigo.
 
-1. Execute a ferramenta de dimensionamento do ATP do Azure, **TriSizingTool.exe**, do arquivo zip que você baixou.
+1. Execute a [!INCLUDE [Product short](includes/product-short.md)] ferramenta de dimensionamento, **TriSizingTool.exe** , no arquivo zip que você baixou.
 1. Quando concluir a execução da ferramenta, abra os resultados de arquivo do Excel.
 1. No arquivo do Excel, localize e clique na planilha **Resumo do ATP do Azure**. A outra planilha não é necessária, pois ela se destina ao planejamento do ATA.
     ![Ferramenta de planejamento de capacidade de amostra](media/capacity-tool.png)
 
-1. Localize o campo **Pacotes ocupados/s**, na tabela do sensor do ATP do Azure, no arquivo de resultados do Excel, e anote isso.
-1. Compare o campo **Pacotes ocupados/s** com o campo **PACOTES POR SEGUNDO**, na seção [Tabela do sensor do ATP do Azure](#sizing) deste artigo. Use os campos para determinar a capacidade de memória e CPU que será usada pelo sensor.
+1. Localize o campo **Pacotes ocupados/s** , na tabela do sensor do ATP do Azure, no arquivo de resultados do Excel, e anote isso.
+1. Corresponda o campo **pacotes ocupados/s** ao campo **pacotes por segundo** na seção [ [!INCLUDE [Product short](includes/product-short.md)] tabela do sensor](#sizing) deste artigo. Use os campos para determinar a capacidade de memória e CPU que será usada pelo sensor.
 
-## <a name="azure-atp-sensor-sizing"></a><a name="sizing"></a> Dimensionamento do sensor do ATP do Azure
+## <a name="product-short-sensor-sizing"></a><a name="sizing"></a>[!INCLUDE [Product short](includes/product-short.md)]dimensionamento do sensor
 
-Um sensor do ATP do Azure pode ter suporte para monitoramento de um controlador de domínio com base na quantidade de tráfego de rede gerado pelo controlador de domínio. A tabela a seguir representa uma estimativa. O valor final que o sensor analisa depende da quantidade de tráfego e da distribuição desse tráfego.
+Um [!INCLUDE [Product short](includes/product-short.md)] sensor pode dar suporte ao monitoramento de um controlador de domínio com base na quantidade de tráfego de rede que o controlador de domínio gera. A tabela a seguir representa uma estimativa. O valor final que o sensor analisa depende da quantidade de tráfego e da distribuição desse tráfego.
 
-A capacidade da CPU e da memória RAM a seguir se refere ao **consumo do próprio sensor**, e não à capacidade do controlador de domínio.
+A capacidade da CPU e da memória RAM a seguir se refere ao **consumo do próprio sensor** , e não à capacidade do controlador de domínio.
 
 |Pacotes por segundo|CPU (núcleos)\*|Memória\*\* (GB)|
 |----|----|-----|
@@ -60,13 +62,13 @@ A capacidade da CPU e da memória RAM a seguir se refere ao **consumo do própri
 Quando determinar o dimensionamento, observe os seguintes itens:
 
 - Número total de núcleos a serem usados pelo serviço de sensor.  
-Recomendamos não trabalhar com núcleos hyper-threaded. Trabalhar com núcleos com hyper-threading pode resultar em problemas de integridade do sensor do ATP do Azure.
+Recomendamos não trabalhar com núcleos hyper-threaded. Trabalhar com núcleos de Hyper-thread pode resultar em [!INCLUDE [Product short](includes/product-short.md)] problemas de integridade do sensor.
 - Número total de memória a ser usada pelo serviço de sensor.
-- Se o controlador de domínio não tiver os recursos exigidos pelo sensor do ATP do Azure, o desempenho do controlador de domínio não será afetado, mas o sensor do ATP do Azure poderá não operar conforme o esperado.
+- Se o controlador de domínio não tiver os recursos exigidos pelo [!INCLUDE [Product short](includes/product-short.md)] sensor, o desempenho do controlador de domínio não será afetado. No entanto, o [!INCLUDE [Product short](includes/product-short.md)] sensor pode não funcionar conforme o esperado.
 - Na execução como uma máquina virtual, toda a memória precisa ser alocada para a máquina virtual em todos os momentos.
-- Para ter um melhor desempenho, defina a **Opção de Energia** do sensor do Azure ATP como **Alto Desempenho**.
+- Para obter um desempenho ideal, defina a **opção de energia** do [!INCLUDE [Product short](includes/product-short.md)] sensor para **alto desempenho**.
 - São necessários no mínimo dois núcleos e
-- 6 GB de espaço no disco rígido. No entanto, recomendamos 10 GB, incluindo o espaço necessário para os binários e logs do ATP do Azure.
+- Um mínimo de 6 GB de espaço no disco rígido é necessário, 10 GB é recomendado, incluindo o espaço necessário para os [!INCLUDE [Product short](includes/product-short.md)] binários e logs.
 
 ### <a name="dynamic-memory"></a>Memória dinâmica
 
@@ -81,7 +83,7 @@ Recomendamos não trabalhar com núcleos hyper-threaded. Trabalhar com núcleos 
 
 ## <a name="domain-controller-traffic-estimation"></a><a name="manual-sizing"></a> Estimativa de tráfego do controlador de domínio
 
-Se, por alguma razão, não for possível usar a ferramenta de dimensionamento do ATP do Azure, reúna manualmente as informações do contador de pacotes/s de todos os controladores de domínio. Reúna as informações durante 24 horas com um pequeno intervalo de coleta de aproximadamente cinco segundos. Em seguida, calcule a média diária e a média mais ocupada do período (15 minutos) de cada controlador de domínio. As seções a seguir apresentam instruções de como coletar o contador de pacotes/s de um controlador de domínio.
+Se, por alguma razão, você não puder usar a [!INCLUDE [Product short](includes/product-short.md)] ferramenta de dimensionamento, reúna manualmente as informações do contador de pacotes/s de todos os controladores de domínio. Reúna as informações durante 24 horas com um pequeno intervalo de coleta de aproximadamente cinco segundos. Em seguida, calcule a média diária e a média mais ocupada do período (15 minutos) de cada controlador de domínio. As seções a seguir apresentam instruções de como coletar o contador de pacotes/s de um controlador de domínio.
 
 Há várias ferramentas que você pode usar para descobrir a média de pacotes por segundo dos controladores de domínio. Caso não tenha as ferramentas que controlam este contador, use o monitor de desempenho para coletar as informações necessárias.
 
@@ -89,56 +91,56 @@ Para determinar os pacotes por segundo, faça os seguintes procedimentos em cada
 
 1. Abra o Monitor de Desempenho.
 
-    ![Imagem do monitor de desempenho](media/atp-traffic-estimation-1.png)
+    ![Imagem do monitor de desempenho](media/traffic-estimation-1.png)
 
 1. Expanda **Conjuntos de Coletores de Dados**.
 
-    ![Imagem dos conjuntos de coletores de dados](media/atp-traffic-estimation-2.png)
+    ![Imagem dos conjuntos de coletores de dados](media/traffic-estimation-2.png)
 
 1. Clique com botão direito do mouse em **Usuário Definido** e selecione **Novo** &gt; **Conjunto de Coletores de Dados**.
 
-    ![Imagem do novo conjunto de coletores de dados](media/atp-traffic-estimation-3.png)
+    ![Imagem do novo conjunto de coletores de dados](media/traffic-estimation-3.png)
 
 1. Insira um nome para o conjunto de coletores e selecione **Criar Manualmente (Avançado)** .
 
 1. Em **Que tipo de dados deseja incluir?** , selecione **Criar logs de dados e Contador de desempenho**.
 
-    ![Imagem do tipo de dados do novo conjunto de coletores de dados](media/atp-traffic-estimation-5.png)
+    ![Imagem do tipo de dados do novo conjunto de coletores de dados](media/traffic-estimation-5.png)
 
 1. Em **Que contadores de desempenho deseja registrar em log?** , clique em **Adicionar**.
 
-1. Expanda **Adaptador de Rede**, selecione **Pacotes/s** e escolha a instância apropriada. Se não tiver certeza, selecione **&lt;Todas as instâncias&gt;** , clique em **Adicionar** e em **OK**.
+1. Expanda **Adaptador de Rede** , selecione **Pacotes/s** e escolha a instância apropriada. Se não tiver certeza, selecione **&lt;Todas as instâncias&gt;** , clique em **Adicionar** e em **OK**.
 
     > [!NOTE]
     > Para executar essa operação em uma linha de comando, execute `ipconfig /all` para ver o nome do adaptador e a configuração.
 
-    ![Adicionar imagem dos contadores de desempenho](media/atp-traffic-estimation-7.png)
+    ![Adicionar imagem dos contadores de desempenho](media/traffic-estimation-7.png)
 
 1. Altere o **Intervalo de amostragem** para **cinco segundos**.
 
 1. Defina o local onde você deseja que os dados sejam salvos.
 
-1. Em **Criar conjunto de coletores de dados**, selecione **Iniciar conjunto de coletores de dados agora** e clique em **Concluir**.
+1. Em **Criar conjunto de coletores de dados** , selecione **Iniciar conjunto de coletores de dados agora** e clique em **Concluir**.
 
     Agora, você deverá ver o conjunto de coletores de dados criado com um triângulo verde, indicando que ele está funcionando.
 
 1. Após 24 horas, pare o conjunto de coletores de dados clicando com o botão direito do mouse no conjunto de coletores de dados e selecionando **Parar**.
 
-    ![Imagem ao parar o conjunto de coletores de dados](media/atp-traffic-estimation-12.png)
+    ![Imagem ao parar o conjunto de coletores de dados](media/traffic-estimation-12.png)
 
 1. No Explorador de Arquivos, navegue até a pasta em que o arquivo .blg foi salvo e clique duas vezes nele para abri-lo no Monitor de Desempenho.
 
 1. Selecione o contador Pacotes/s e registre os valores médio e máximo.
 
-    ![Imagem do contador de pacotes por segundo](media/atp-traffic-estimation-14.png)
+    ![Imagem do contador de pacotes por segundo](media/traffic-estimation-14.png)
 
 ## <a name="next-steps"></a>Próximas etapas
 
-Neste guia de início rápido, você determinou quantos sensores do ATP do Azure são necessários. Determinou também o dimensionamento dos sensores. Avance para o guia de início rápido seguinte para criar uma instância do ATP do Azure.
+Neste guia, você determinou quantos [!INCLUDE [Product short](includes/product-short.md)] sensores precisa. Determinou também o dimensionamento dos sensores. Continue para o guia de [!INCLUDE [Product short](includes/product-short.md)] início rápido criar uma instância.
 
 > [!div class="nextstepaction"]
-> [Criar sua instância do ATP do Azure](install-step1.md)
+> [Criar sua [!INCLUDE [Product short](includes/product-short.md)] instância](install-step1.md)
 
 ## <a name="join-the-community"></a>Participe da comunidade
 
-Tem mais perguntas ou interesse em discutir sobre o ATP do Azure e a segurança relacionada com outras pessoas? Participe da [Comunidade do ATP do Azure](https://aka.ms/azureatpcommunity) hoje mesmo!
+Tem mais dúvidas ou um interesse em discutir [!INCLUDE [Product short](includes/product-short.md)] e segurança relacionada com outras pessoas? Junte-se à [ [!INCLUDE [Product short](includes/product-short.md)] comunidade](https://aka.ms/MDIcommunity) hoje mesmo!
