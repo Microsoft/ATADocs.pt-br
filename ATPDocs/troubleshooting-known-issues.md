@@ -1,6 +1,6 @@
 ---
-title: Solução de problemas conhecidos do ATP do Azure
-description: Descreve como solucionar problemas de inicialização na ATP do Azure.
+title: Solução de problemas conhecidos do Microsoft defender para identidade
+description: Descreve como você pode solucionar problemas no Microsoft defender para identidade.
 keywords: ''
 author: shsagir
 ms.author: shsagir
@@ -9,17 +9,16 @@ ms.date: 09/07/2020
 ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
-ms.assetid: 23386e36-2756-4291-923f-fa8607b5518a
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: f0136b432a170a5e45b71d189d77d7e007ca7a53
-ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
+ms.openlocfilehash: 0cd22cad42d8933ebb36a7a7aea32d0a4cb7cdd4
+ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90912350"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93277828"
 ---
-# <a name="troubleshooting-azure-atp-known-issues"></a>Solução de problemas conhecidos da ATP do Azure
+# <a name="troubleshooting-product-long-known-issues"></a>Solucionando [!INCLUDE [Product long](includes/product-long.md)] problemas conhecidos
 
 [!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
@@ -31,11 +30,11 @@ System.Net.Http.HttpRequestException: ocorreu um erro ao enviar a solicitação.
 
 **Resolução:**
 
-Verifique se a comunicação não está bloqueada para localhost, porta TCP 444. Para saber mais sobre os pré-requisitos do ATP do Azure, confira [portas](prerequisites.md#ports).
+Verifique se a comunicação não está bloqueada para localhost, porta TCP 444. Para saber mais sobre os [!INCLUDE [Product long](includes/product-long.md)] pré-requisitos, consulte [portas](prerequisites.md#ports).
 
 ## <a name="deployment-log-location"></a>Local do log de implantação
 
-Os logs de implantação do Azure ATP estão localizados no diretório temp do usuário que instalou o produto. O local de instalação padrão é: C:\Usuários\Administrator\AppData\Local\Temp (ou um diretório acima de %temp%). Para saber mais, veja [Solucionar problemas do ATP usando logs](troubleshooting-using-logs.md)
+Os [!INCLUDE [Product short](includes/product-short.md)] logs de implantação estão localizados no diretório Temp do usuário que instalou o produto. O local de instalação padrão é: C:\Usuários\Administrator\AppData\Local\Temp (ou um diretório acima de %temp%). Para obter mais informações, consulte [Solucionando problemas [!INCLUDE [Product short](includes/product-short.md)] usando logs](troubleshooting-using-logs.md)
 
 ## <a name="proxy-authentication-problem-presents-as-a-licensing-error"></a>Problema de autenticação de proxy apresentado como erro de licenciamento
 
@@ -47,7 +46,7 @@ Se o seguinte erro surgir durante a instalação do sensor:  **O sensor falhou a
 
 **Causa:**
 
-em alguns casos, ao se comunicar por meio de um proxy durante a autenticação, ele pode responder para o sensor do Azure ATP com o erro 401 ou 403, em vez do erro 407. O sensor Azure ATP interpretará o erro 401 ou 403 como um problema de licenciamento, não como um problema de autenticação de proxy.
+Em alguns casos, ao se comunicar por meio de um proxy, durante a autenticação, ele pode responder ao [!INCLUDE [Product short](includes/product-short.md)] sensor com o erro 401 ou 403 em vez do erro 407. O [!INCLUDE [Product short](includes/product-short.md)] sensor irá interpretar o erro 401 ou 403 como um problema de licenciamento e não como um problema de autenticação de proxy.
 
 **Resolução:**
 
@@ -59,11 +58,11 @@ Se o seguinte erro surgir durante a instalação do sensor: **O sensor não pôd
 
 **Causa:**
 
-O problema pode ser causado por um erro de configuração de proxy transparente no Server Core, como certificados raiz exigidos pelo ATP do Azure ausentes ou não atualizados.
+O problema pode ser causado por um erro de configuração de proxy transparente no Server Core, como os certificados raiz exigidos pelo [!INCLUDE [Product short](includes/product-short.md)] não são atuais ou ausentes.
 
 **Resolução:**
 
-Execute o cmdlet do PowerShell a seguir para verificar se o certificado raiz confiável do serviço ATP do Azure existe no Server Core. O exemplo a seguir usa o "DigiCert Baltimore Root" e o "DigiCert Global Root".
+Execute o seguinte cmdlet do PowerShell para verificar se o [!INCLUDE [Product short](includes/product-short.md)] certificado raiz confiável do serviço existe no Server Core. O exemplo a seguir usa o "DigiCert Baltimore Root" e o "DigiCert Global Root".
 
 ```powershell
 Get-ChildItem -Path "Cert:\LocalMachine\Root" | where { $_.Thumbprint -eq "D4DE20D05E66FC53FE1A50882C78DB2852CAE474"} | fl
@@ -118,13 +117,13 @@ use o comando completo para instalar com êxito.
 ./"Azure ATP sensor Setup.exe" /quiet NetFrameworkCommandLineArguments="/q" AccessKey="<Access Key>"
 ```
 
-## <a name="azure-atp-sensor-nic-teaming-issue"></a>Problema de agrupamento NIC do sensor da ATP do Azure <a name="nic-teaming"></a>
+## <a name="product-short-sensor-nic-teaming-issue"></a>[!INCLUDE [Product short](includes/product-short.md)] problema de agrupamento da NIC do sensor <a name="nic-teaming"></a>
 
-Se tentar instalar o sensor do ATP em um computador configurado com um adaptador de agrupamento NIC, você receberá um erro de instalação. Se desejar instalar o sensor da ATP em um computador configurado com Agrupamento NIC, siga estas instruções:
+Se você tentar instalar o [!INCLUDE [Product short](includes/product-short.md)] sensor em um computador configurado com um adaptador de agrupamento NIC, receberá um erro de instalação. Se você quiser instalar o [!INCLUDE [Product short](includes/product-short.md)] sensor em um computador configurado com o agrupamento NIC, siga estas instruções:
 
 1. Baixe o instalador do Npcap versão 0.9984 do [https://nmap.org/npcap/](https://nmap.org/npcap/dist/npcap-0.9984.exe).
     - Como alternativa, solicite a versão OEM do driver Npcap (que dá suporte à instalação silenciosa) com a equipe de suporte.
-    - As cópias do Npcap não contarão para a limitação de cinco cópias, cinco computadores ou cinco licenças de usuário se estiverem instaladas e forem usadas exclusivamente em conjunto com o ATP do Azure. Para obter mais informações, confira [Licenciamento do NPCAP](https://github.com/nmap/npcap/blob/master/LICENSE).
+    - As cópias de Npcap não contam para a limitação de cinco, cinco computadores ou cinco licenças de licenciamento de usuário, se estiverem instalados e usados exclusivamente em conjunto com o [!INCLUDE [Product short](includes/product-short.md)] . Para obter mais informações, confira [Licenciamento do NPCAP](https://github.com/nmap/npcap/blob/master/LICENSE).
 
 Se você ainda não tiver instalado o sensor:
 
@@ -143,7 +142,7 @@ Após instalar o sensor:
 
 ## <a name="multi-processor-group-mode"></a>Modo Grupo de multiprocessadores
 
-Para os sistemas operacionais Windows 2008R2 e 2012, o sensor do ATP do Azure não tem suporte em um modo Grupo de multiprocessadores.
+Para os sistemas operacionais Windows 2008R2 e 2012, [!INCLUDE [Product short](includes/product-short.md)] o sensor não tem suporte em um modo de grupo de vários processadores.
 
 Soluções alternativas possíveis sugeridas:
 
@@ -151,13 +150,13 @@ Soluções alternativas possíveis sugeridas:
 
 - Se seu computador tiver menos de 64 núcleos lógicos e estiver em execução em um host HP, você poderá alterar a configuração do BIOS de **Otimização do Tamanho do Grupo NUMA** do padrão **Clusterizado** para **Simples**.
 
-## <a name="microsoft-defender-atp-integration-issue"></a>Problema de integração do Microsoft Defender ATP
+## <a name="microsoft-defender-for-endpoint-integration-issue"></a>Problema de integração do Microsoft defender para ponto de extremidade
 
-A Proteção Avançada contra Ameaças do Azure permite integrar esse recurso ao Microsoft Defender ATP. Confira [Integração do ATP do Azure com o Microsoft Defender ATP](integrate-msde.md) para saber mais.
+[!INCLUDE [Product short](includes/product-short.md)] permite a integração [!INCLUDE [Product short](includes/product-short.md)] com o Microsoft defender para ponto de extremidade. Consulte [integrar [!INCLUDE [Product short](includes/product-short.md)] com o Microsoft defender para ponto de extremidade](integrate-mde.md) para obter mais informações.
 
 ## <a name="vmware-virtual-machine-sensor-issue"></a>Problema de sensor da Máquina Virtual VMware
 
-Caso tenha um sensor do ATP do Azure em Máquinas Virtuais VMware, talvez você receba o alerta de integridade **Parte do tráfego de rede não está sendo analisado**. Isso pode ocorrer devido a uma incompatibilidade de configuração no VMware.
+Se você tiver um [!INCLUDE [Product short](includes/product-short.md)] sensor em máquinas virtuais VMware, você poderá receber o alerta de integridade **parte do tráfego de rede não está sendo analisado**. Isso pode ocorrer devido a uma incompatibilidade de configuração no VMware.
 
 Para resolver o problema:
 
@@ -191,7 +190,7 @@ Se você receber o seguinte alerta de integridade: **As credenciais de usuário 
 
 **Causa:**
 
-O sensor falhou ao tentar recuperar a gMSA designada no portal do ATP do Azure.
+O sensor não pôde recuperar a conta de gMSA designada do [!INCLUDE [Product short](includes/product-short.md)] Portal.
 
 **Resolução:**
 
@@ -199,7 +198,7 @@ Verifique se as credenciais da conta gMSA estão corretas e se o sensor recebeu 
 
 ## <a name="report-downloads-cannot-contain-more-than-300000-entries"></a>Downloads de relatório não podem conter mais de 300.000 entradas
 
-O ATP do Azure não dá suporte a downloads de relatório que contêm mais de 300.000 entradas por relatório. Os relatórios serão renderizados como incompletos se mais de 300.000 entradas forem incluídas.
+[!INCLUDE [Product short](includes/product-short.md)] o não oferece suporte a downloads de relatório que contenham mais de 300.000 entradas por relatório. Os relatórios serão renderizados como incompletos se mais de 300.000 entradas forem incluídas.
 
 **Causa:**
 
@@ -211,8 +210,8 @@ Não há solução conhecida.
 
 ## <a name="see-also"></a>Consulte Também
 
-- [Pré-requisitos do Azure ATP](prerequisites.md)
-- [Planejamento de capacidade do Azure ATP](capacity-planning.md)
+- [[!INCLUDE [Product short](includes/product-short.md)] pré-requisitos](prerequisites.md)
+- [[!INCLUDE [Product short](includes/product-short.md)] Planejamento de capacidade](capacity-planning.md)
 - [Configurar coleta de eventos](configure-event-collection.md)
 - [Configuração do encaminhamento de eventos do Windows](configure-event-forwarding.md)
-- [Confira o fórum do ATP do Azure!](https://aka.ms/azureatpcommunity)
+- [Confira o [!INCLUDE [Product short](includes/product-short.md)] Fórum!](https://aka.ms/MDIcommunity)

@@ -11,12 +11,12 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 35641a589571586da495c8fb28332c5d736ad67b
-ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
+ms.openlocfilehash: bd5facbf0cc6616a8467d0eb1b33c7603debabc8
+ms.sourcegitcommit: 8cb9839a67fce42921f7a24564fddf15e503bdea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 11/03/2020
-ms.locfileid: "93276741"
+ms.locfileid: "93278573"
 ---
 # <a name="security-assessment-dormant-entities-in-sensitive-groups"></a>Avaliação de segurança: entidades inativas em grupos **confidenciais**
 
@@ -39,6 +39,7 @@ Não importa se o motivo é a rotatividade de funcionários ou uma má gestão d
 ## <a name="how-do-i-use-this-security-assessment"></a>Como usar a avaliação de segurança?
 
 1. Use a tabela do relatório para descobrir quais das suas contas confidenciais estão inativas.
+    ![Corrigir grupos confidenciais do ini de entidades inativas](media/cas-isp-dormant-entities-sensitive-groups-1.png)
 1. Tome a medida adequada em relação a essas contas de usuário removendo os direitos de acesso com privilégios delas ou excluindo-as.
 
 > [!NOTE]
