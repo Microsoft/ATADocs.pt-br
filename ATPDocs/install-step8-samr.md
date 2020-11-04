@@ -11,12 +11,12 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 6e46d6b794386e21654d578f6273de8c7c8b89f2
-ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
+ms.openlocfilehash: 9e1bfe428a466e4870613798e4af116f27d63647
+ms.sourcegitcommit: 218ba562a2a109ff456b011004530f503a4e82c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93276117"
+ms.lasthandoff: 11/04/2020
+ms.locfileid: "93342497"
 ---
 # <a name="configure-product-long-to-make-remote-calls-to-sam"></a>Configurar [!INCLUDE [Product long](includes/product-long.md)] para fazer chamadas remotas para Sam
 
@@ -26,7 +26,7 @@ ms.locfileid: "93276117"
 
 ## <a name="configure-sam-r-required-permissions"></a>Configurar permissões necessárias do SAM-R
 
-Para garantir que os clientes e servidores do Windows permitam que sua [!INCLUDE [Product short](includes/product-short.md)] conta execute Sam-R, é necessário fazer uma modificação no **política de grupo** para adicionar a [!INCLUDE [Product short](includes/product-short.md)] conta de serviço além das contas configuradas listadas na política de acesso à **rede** . Lembre-se de aplicar as políticas de grupo a todos os computadores, exceto aos controladores de domínio.
+Para garantir que os clientes e servidores do Windows permitam que sua [!INCLUDE [Product short](includes/product-short.md)] conta execute Sam-R, é necessário fazer uma modificação no **política de grupo** para adicionar a [!INCLUDE [Product short](includes/product-short.md)] conta de serviço além das contas configuradas listadas na política de acesso à **rede** . Certifique-se de aplicar políticas de grupo a todos os computadores **, exceto controladores de domínio**.
 
 > [!Note]
 > Antes de aplicar novas políticas como essa, é fundamental garantir que o ambiente permaneça seguro e que nenhuma alteração afete a compatibilidade do aplicativo. Para isso, primeiro habilite e verifique a compatibilidade das alterações propostas no modo de auditoria antes de fazer alterações no ambiente de produção.
