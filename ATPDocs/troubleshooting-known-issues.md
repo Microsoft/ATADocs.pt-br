@@ -11,12 +11,12 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 0cd22cad42d8933ebb36a7a7aea32d0a4cb7cdd4
-ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
+ms.openlocfilehash: d0c4bcc61c2b15ded71063f3b8c4058ce6dfcce7
+ms.sourcegitcommit: ac582a240e848ca12c80ac6104125a0f733b469e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93277828"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93375549"
 ---
 # <a name="troubleshooting-product-long-known-issues"></a>Solucionando [!INCLUDE [Product long](includes/product-long.md)] problemas conhecidos
 
@@ -121,7 +121,7 @@ use o comando completo para instalar com êxito.
 
 Se você tentar instalar o [!INCLUDE [Product short](includes/product-short.md)] sensor em um computador configurado com um adaptador de agrupamento NIC, receberá um erro de instalação. Se você quiser instalar o [!INCLUDE [Product short](includes/product-short.md)] sensor em um computador configurado com o agrupamento NIC, siga estas instruções:
 
-1. Baixe o instalador do Npcap versão 0.9984 do [https://nmap.org/npcap/](https://nmap.org/npcap/dist/npcap-0.9984.exe).
+1. Baixe o instalador do Npcap versão 1,0 do  [https://nmap.org/npcap/](https://nmap.org/npcap/dist/npcap-1.00.exe) .
     - Como alternativa, solicite a versão OEM do driver Npcap (que dá suporte à instalação silenciosa) com a equipe de suporte.
     - As cópias de Npcap não contam para a limitação de cinco, cinco computadores ou cinco licenças de licenciamento de usuário, se estiverem instalados e usados exclusivamente em conjunto com o [!INCLUDE [Product short](includes/product-short.md)] . Para obter mais informações, confira [Licenciamento do NPCAP](https://github.com/nmap/npcap/blob/master/LICENSE).
 
