@@ -1,41 +1,40 @@
 ---
-title: Atividades de domínio monitoradas do ATP do Azure
-description: Descreve cada tipo de atividade monitorado pela Proteção Avançada contra Ameaças do Azure
+title: Atividades de domínio monitoradas pelo Microsoft Defender para Identidade
+description: Descreve cada tipo de atividade monitorada pelo Microsoft Defender para Identidade
 keywords: ''
 author: shsagir
 ms.author: shsagir
 manager: shsagir
-ms.date: 03/19/2020
+ms.date: 10/26/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
-ms.assetid: 37d1a032-65e7-4a89-be0b-c3f9cc2bacdb
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 662fd074ef76207257721883b0223cc1ecc108b3
-ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
+ms.openlocfilehash: d69fef506f2f1e787039a3b2af1b35b81a3504fc
+ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90912719"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93274841"
 ---
-# <a name="azure-atp-monitored-activities"></a>Atividades monitoradas do ATP do Azure
+# <a name="product-long-monitored-activities"></a>Atividades monitoradas pelo [!INCLUDE [Product long](includes/product-long.md)]
 
 [!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 > [!NOTE]
-> Os recursos do ATP do Azure explicados nesta página também podem ser acessados usando o novo [portal](https://portal.cloudappsecurity.com).
+> Os recursos do [!INCLUDE [Product long](includes/product-long.md)] explicados nesta página também podem ser acessados usando o novo [portal](https://portal.cloudappsecurity.com).
 
-A Proteção Avançada contra Ameaças do Azure monitora informações geradas do Active Directory e das atividades de rede e de eventos da sua organização para detectar atividades suspeitas. As informações de atividades monitoradas permitem que o ATP do Azure ajude a determinar a validade de cada possível ameaça e a realizar a triagem e a responder corretamente.
+O [!INCLUDE [Product long](includes/product-long.md)] monitora informações geradas pelo Active Directory e atividades de rede e de eventos da sua organização para detectar atividades suspeitas. As informações de atividades monitoradas permitem que o [!INCLUDE [Product short](includes/product-short.md)] ajude a determinar a validade de cada possível ameaça, a realizar a triagem e a reagir corretamente.
 
-No caso de uma ameaça válida ou de **verdadeiro positivo**, o ATP do Azure permite que você descubra o escopo da violação de cada incidente, investigue quais entidades estão envolvidas e determine como corrigi-las.
+No caso de uma ameaça válida ou de **verdadeiro positivo** , o [!INCLUDE [Product short](includes/product-short.md)] permite que você descubra o escopo da violação de cada incidente, investigue quais entidades estão envolvidas e determine como corrigi-las.
 
-As informações monitoradas pelo ATP do Azure são apresentadas na forma de atividades. O ATP do Azure atualmente dá suporte ao monitoramento dos seguintes tipos de atividade:
+As informações monitoradas pelo [!INCLUDE [Product short](includes/product-short.md)] são apresentadas na forma de atividades. Atualmente, o [!INCLUDE [Product short](includes/product-short.md)] dá suporte ao monitoramento dos seguintes tipos de atividade:
 
 > [!NOTE]
 >
-> - Este artigo é relevante para todos os tipos de sensor do ATP do Azure.
-> - As atividades monitoradas do ATP do Azure aparecem na página de perfil do computador e do usuário.
+> - Este artigo é relevante para todos os tipos de sensor do [!INCLUDE [Product short](includes/product-short.md)].
+> - As atividades monitoradas pelo [!INCLUDE [Product short](includes/product-short.md)] aparecem na página de perfil do computador e do usuário.
 
 ## <a name="monitored-user-activities-user-account-ad-attribute-changes"></a>Atividades do usuário monitoradas: alterações de atributo do AD da conta do usuário
 
@@ -80,7 +79,7 @@ As informações monitoradas pelo ATP do Azure são apresentadas na forma de ati
 |Atividade monitorada|Descrição|
 |---------------------|------------------|
 |Replicação do Serviço de Diretório|O usuário tentou replicar o serviço de diretório.|
-|Consulta DNS|Tipo de usuário de consulta executado no controlador de domínio (**AXFR**, **TXT**, **MX**, **NS**, **SRV**, **ANY**, **DNSKEY**).|
+|Consulta DNS|Tipo de usuário de consulta executado no controlador de domínio ( **AXFR** , **TXT** , **MX** , **NS** , **SRV** , **ANY** , **DNSKEY** ).|
 |Recuperação de Dados Particular|O usuário tentou/conseguiu consultar dados particulares usando o protocolo LSARPC.|
 |Criação de Serviço|O usuário tentou criar remotamente de um serviço específico para um computador remoto.|
 |Enumeração da Sessão SMB|O usuário tentou enumerar todos os usuários com sessões SMB abertas nos controladores de domínio.|
@@ -115,4 +114,4 @@ As informações monitoradas pelo ATP do Azure são apresentadas na forma de ati
 - [Gerenciando alertas de segurança](working-with-suspicious-activities.md)
 - [Guia de alertas de segurança](suspicious-activity-guide.md)
 - [Investigar entidades](investigate-entity.md)
-- [Confira o fórum do ATP do Azure!](https://aka.ms/azureatpcommunity)
+- [Confira o fórum do [!INCLUDE [Product short](includes/product-short.md)]!](https://aka.ms/MDIcommunity)

@@ -1,50 +1,54 @@
 ---
-title: Tutorial de instalação do laboratório de alertas de segurança do Azure ATP
-description: Neste tutorial, você configura um laboratório de teste do ATP do Azure para simular ameaças que serão detectadas pelo ATP do Azure.
-ms.service: azure-advanced-threat-protection
-ms.topic: how-to
+title: Tutorial de configuração do laboratório de alertas de segurança do Microsoft Defender para Identidade.
+description: Neste tutorial, você aprenderá a configurar um laboratório de teste a fim de simular ameaças para detecção pelo Microsoft Defender para Identidade.
 author: shsagir
 ms.author: shsagir
-ms.date: 02/28/2019
+manager: shsagir
+ms.date: 10/26/2020
+ms.topic: tutorial
+ms.collection: M365-security-compliance
+ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
-ms.openlocfilehash: 4dbc5a6eb70bb9bc531ed54a9162554bd15d9dc9
-ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
-ms.translationtype: MT
+ms.suite: ems
+ms.openlocfilehash: 8adbc288f2512b6322797931b8fcb2a17649e8a4
+ms.sourcegitcommit: 8cb9839a67fce42921f7a24564fddf15e503bdea
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90910235"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93278607"
 ---
-# <a name="tutorial-setup-an-atp-security-alert-lab"></a>Tutorial: configurar um laboratório de alertas de segurança do ATP 
+# <a name="tutorial-setup-a-product-long-security-alert-lab"></a>Tutorial: Configurar um laboratório de alertas de segurança do [!INCLUDE [Product long](includes/product-long.md)]
 
 [!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
- A finalidade do laboratório de alertas de segurança do Azure ATP é ilustrar os recursos do **Azure ATP**na identificação e detecção de atividades suspeitas e ataques em potencial contra a rede. Este primeiro tutorial, de uma série com quatro partes, explica como criar um ambiente de laboratório para testar detecções *discretas* do ATP do Azure. O laboratório de alerta de segurança se concentra nos recursos *baseados em assinatura* do ATP do Azure. O laboratório não inclui aprendizado de máquina avançado, detecções comportamentais baseadas no usuário ou em entidade, pois essas detecções exigem um período de aprendizado de até 30 dias com tráfego de rede real. Para saber mais sobre cada tutorial desta série, consulte a [Visão geral do laboratório de alerta de segurança do ATP](playbook-lab-overview.md). 
+A finalidade do laboratório de Alertas de segurança do [!INCLUDE [Product long](includes/product-long.md)] é ilustrar os recursos do **[!INCLUDE [Product short](includes/product-short.md)]** na identificação e detecção de atividades suspeitas e possíveis ataques contra sua rede. Este primeiro tutorial, de uma série com quatro partes, explica como criar um ambiente de laboratório para testar detecções *discrete* do [!INCLUDE [Product short](includes/product-short.md)]. O laboratório de alertas de segurança se concentra nos recursos *baseados em assinatura* do [!INCLUDE [Product short](includes/product-short.md)]. O laboratório não inclui aprendizado de máquina avançado, detecções comportamentais baseadas no usuário ou em entidade, pois essas detecções exigem um período de aprendizado de até 30 dias com tráfego de rede real. Para saber mais sobre cada tutorial desta série, confira a [Visão geral do laboratório de alertas de segurança do [!INCLUDE [Product short](includes/product-short.md)]](playbook-lab-overview.md).
 
-
-Neste tutorial, você irá: 
+Neste tutorial, você irá:
 
 > [!div class="checklist"]
-> * Configurar seu servidor e os computadores do laboratório
-> * Configurar o Active Directory com usuários e grupos
-> * Instalar e configurar o ATP do Azure
-> * Configurar políticas locais para seu servidor e computadores
-> * Simular um cenário de gerenciamento de assistência técnica usando uma tarefa agendada
+>
+> - Configurar seu servidor e os computadores do laboratório
+> - Configurar o Active Directory com usuários e grupos
+> - Instalar e configurar o [!INCLUDE [Product short](includes/product-short.md)]
+> - Configurar políticas locais para seu servidor e computadores
+> - Simular um cenário de gerenciamento de assistência técnica usando uma tarefa agendada
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
 1. [Um controlador de domínio de laboratório e duas estações de trabalho de laboratório](#servers-and-computers).
-   - Vá em frente e [hidrate o Active Directory (AD) com usuários](#bkmk_hydrate).
-1. Uma [instância do ATP do Azure](install-step1.md)[conectada ao AD](install-step2.md).
-1. [Baixe](install-step3.md) e [instale a versão mais recente do sensor do ATP do Azure](install-step4.md) no controlador de domínio do seu laboratório.
+    - Vá em frente e [hidrate o Active Directory (AD) com usuários](#bkmk_hydrate).
+
+1. Uma [instância do [!INCLUDE [Product short](includes/product-short.md)]](install-step1.md) [conectada ao AD](install-step2.md).
+1. [Baixe](install-step3.md) e [instale a versão mais recente do sensor do [!INCLUDE [Product short](includes/product-short.md)]](install-step4.md) no controlador de domínio do seu laboratório.
 1. Familiaridade com [Estações de trabalho com acesso privilegiado](/windows-server/identity/securing-privileged-access/privileged-access-workstations) e [política SAMR](/windows/security/threat-protection/security-policy-settings/network-access-restrict-clients-allowed-to-make-remote-sam-calls).
 
 ## <a name="recommendations"></a>Recomendações
 
-Recomendamos seguir as instruções de configuração do laboratório com a maior fidelidade possível. Quanto mais parecido estiver o seu laboratório com a configuração de laboratório sugerida, mais fácil será para seguir os procedimentos de teste do ATP do Azure. Após terminar a configuração do laboratório, você poderá executar ações com as ferramentas sugeridas de pesquisa de invasão e examinar as detecções do ATP do Azure dessas ações.
+Recomendamos seguir as instruções de configuração do laboratório com a maior fidelidade possível. Quanto mais parecido estiver seu laboratório com a configuração sugerida, mais fácil será para seguir os procedimentos de teste do [!INCLUDE [Product short](includes/product-short.md)]. Após terminar a configuração do laboratório, você poderá executar ações com as ferramentas sugeridas de pesquisa de invasão e examinar as detecções dessas ações pelo [!INCLUDE [Product short](includes/product-short.md)].
 
 A configuração de seu laboratório completo deve estar a mais próxima possível do diagrama a seguir:
 
-![Configuração do laboratório de teste do ATP do Azure](media/playbook-atp-setup-lab.png)
+![Configuração do laboratório de teste do [!INCLUDE [Product short](includes/product-short.md)]](media/playbook-setup-lab.png)
 
 ### <a name="servers-and-computers"></a>Servidores e computadores
 
@@ -52,28 +56,28 @@ Esta tabela detalha os computadores e as configurações necessárias. Os endere
 
 Nos exemplos dos tutoriais, o nome NetBIOS da Floresta é **CONTOSO.AZURE**.
 
-|  FQDN | Sistema operacional | IP | Finalidade |
+| FQDN | Sistema operacional | IP | Finalidade |
 |------|-------|---------|--------------|
-| ContosoDC.contoso.azure | Windows Server 2012 R2 | 10.0.24.4 | Controlador de domínio com sensor do ATP do Azure instalado localmente |
+| ContosoDC.contoso.azure | Windows Server 2012 R2 | 10.0.24.4 | Controlador de domínio com o sensor do [!INCLUDE [Product short](includes/product-short.md)] instalado localmente |
 | VictimPC.contoso.azure | Windows 10 | 10.0.24.5 |PC da vítima |
 | AdminPC.contoso.azure | Windows 10  | 10.0.24.6 | PC do administrador de domínio (também conhecido como "Estação de Trabalho Administrativa Segura" ou "Estação de Trabalho Administrativa Privilegiada") |
 
 ### <a name="active-directory-users-and-groups"></a>Usuários e grupos do Active Directory
 
-Neste laboratório, há três usuários principais e uma conta de serviço. A conta de serviço é para o ATP do Azure e é usada para sincronização de LDAP e SAMR.
+Neste laboratório, há três usuários principais e uma conta de serviço. A conta de serviço é do [!INCLUDE [Product short](includes/product-short.md)] e é usada para sincronização de LDAP e SAMR.
 
-Há um SG (Grupo de Segurança) "Helpdesk" do qual o Eduardo HelpDesk é membro. Esse SG simula Helpdesk. O SG é emparelhado com um Objeto de Política de Grupo que concede aos membros do Helpdesk os direitos de Administrador Local em seus respectivos computadores. Essa configuração é usada para simular um modelo administrativo realista em um ambiente de produção.
+Há um SG (grupo de segurança) de "Helpdesk" do qual Eduardo HelpDesk é membro. Esse SG simula Helpdesk. O SG é emparelhado com um Objeto de Política de Grupo que concede aos membros do Helpdesk os direitos de Administrador Local em seus respectivos computadores. Essa configuração é usada para simular um modelo administrativo realista em um ambiente de produção.
 
-| Nome completo    | SAMAccount |Finalidade|
-|--------------|------------|--------------------------------------------------------------------------------------------------|
-| Diogo Martins  | DiogoM  | Próxima vítima de um ataque de phishing muito eficaz  |
-| Eduardo HelpDesk  | RonHD  |Eduardo é o cara da equipe de TI da Contoso. EduardoHD é membro do grupo de segurança "Helpdesk". |
-| Yasmin Correia | YasminC  | Na Contoso, esse usuário é nosso Administrador de Domínio. |
-| Serviço do ATP do Azure | AATPService | Conta de serviço do ATP do Azure |
+| Completo | Nome completo | SAMAccount | Finalidade |
+|--|--|--|
+| Diogo Martins | DiogoM | Próxima vítima de um ataque de phishing muito eficaz |
+| Eduardo HelpDesk | RonHD | Eduardo é o "cara" da equipe de TI da Contoso. EduardoHD é membro do grupo de segurança de "Helpdesk". |
+| Yasmin Correia | YasminC | Na Contoso, esse usuário é nosso Administrador de Domínio. |
+| Serviço do[!INCLUDE [Product short](includes/product-short.md)] | AATPService | Conta de serviço do [!INCLUDE [Product short](includes/product-short.md)] | account |
 
-## <a name="azure-atp-base-lab-environment"></a>Ambiente de laboratório base do ATP do Azure
+## <a name="product-short-base-lab-environment"></a>Ambiente de laboratório base do [!INCLUDE [Product short](includes/product-short.md)]
 
-Para configurar esse laboratório base adicionaremos usuários e grupos ao Active Directory, editaremos uma política de SAM e um grupo confidencial no ATP do Azure.
+Para configurar esse laboratório base, adicionaremos usuários e grupos ao Active Directory e editaremos uma política SAM e um grupo confidencial no [!INCLUDE [Product short](includes/product-short.md)].
 
 ### <a name="hydrate-active-directory-users-on-contosodc"></a><a name="bkmk_hydrate"></a> Hidratar os usuários do Active Directory no ContosoDC
 
@@ -81,8 +85,7 @@ Para simplificar o laboratório, automatizamos o processo para criar usuários e
 
 Como Administrador de Domínio, no ContosoDC, execute o seguinte para hidratar nossos usuários do Active Directory:
 
-``` PowerShell
-
+```powerShell
 # Store the user passwords as variables
 $SamiraASecurePass = ConvertTo-SecureString -String 'NinjaCat123' -AsPlainText -Force
 $ronHdSecurePass = ConvertTo-SecureString -String 'FightingTiger$' -AsPlainText -Force
@@ -101,55 +104,51 @@ Add-ADGroupMember -Identity "Helpdesk" -Members "RonHD"
 # Create new AD user JeffL
 New-ADUser -Name JeffL -DisplayName "Jeff Leatherman" -PasswordNeverExpires $true -AccountPassword $jefflSecurePass -Enabled $true
 
-# Take note of the "AATPService" user below which will be our service account for Azure ATP.
-# Create new AD user Azure ATP Service
+# Take note of the "AATPService" user below which will be our service account for [!INCLUDE [Product short](includes/product-short.md)].
+# Create new AD user [!INCLUDE [Product short](includes/product-short.md)] Service
 
 New-ADUser -Name AatpService -DisplayName "Azure ATP/ATA Service" -PasswordNeverExpires $true -AccountPassword $AATPService -Enabled $true
-
 ```
 
 ### <a name="configure-sam-r-capabilities-from-contosodc"></a>Configurar recursos de SAM-R no ContosoDC
 
-Para permitir que o serviço do ATP do Azure execute corretamente a enumeração de SAM-R e crie caminhos de Movimentação Lateral, você precisará editar a política de SAM.
+Para permitir que o Serviço do [!INCLUDE [Product short](includes/product-short.md)] execute corretamente a enumeração SAM-R e crie caminhos de Movimentação Lateral, você precisará editar a política SAM.
 
-1. Localize sua política SAM em: **políticas \> configurações do Windows configurações de \> segurança \> políticas locais \> Opções de segurança \> "acesso à rede: restringir clientes com permissão para fazer chamadas remotas para Sam"**_
+1. Encontre sua política de SAM em: **Políticas\> Configurações do Windows \> Configurações de Segurança \> Políticas Locais \> Opções de segurança\> "Acesso à rede: restringir clientes com permissão para efetuar chamadas remotas para SAM"** _
 
-    ![Modifique a Política de Grupo para permitir que o ATP do Azure use os recursos do caminho de Movimentação Lateral.](media/playbook-labsetup-localgrouppolicies3.png)
+    ![Modificação da Política de Grupo para permitir que [!INCLUDE [Product short](includes/product-short.md)] use os recursos do caminho de Movimentação Lateral.](media/playbook-labsetup-localgrouppolicies3.png)
 
-1. Adicione a conta do serviço ATP do Azure, AATPService, à lista de contas aprovadas capazes de executar essa ação em seus sistemas modernos do Windows.
+1. Adicione a conta do serviço do [!INCLUDE [Product short](includes/product-short.md)], AATPService, à lista de contas aprovadas capazes de executar essa ação em seus sistemas modernos do Windows.
 
     ![Adicione o serviço](media/samr-add-service.png)
 
-### <a name="add-sensitive-group-to-azure-atp"></a>Adicionar grupo confidencial ao ATP do Azure
+### <a name="add-sensitive-group-to-product-short"></a>Adicionar o grupo confidencial ao [!INCLUDE [Product short](includes/product-short.md)]
 
-A adição do Grupo de Segurança "Helpdesk" como um **Grupo confidencial** permitirá que você use o recurso de Gráfico de Movimentação Lateral do ATP do Azure. Marcar usuários e grupos altamente confidenciais que não são necessariamente Administradores de Domínio, mas têm privilégios em inúmeros recursos, é uma prática recomendada.
+A adição do grupo de segurança "Helpdesk" como um **Grupo confidencial** permitirá que você use o recurso de Gráfico de Movimentação Lateral do [!INCLUDE [Product short](includes/product-short.md)]. Marcar usuários e grupos altamente confidenciais que não são necessariamente Administradores de Domínio, mas têm privilégios em inúmeros recursos, é uma prática recomendada.
 
-1. No portal do Azure ATP, clique na engrenagem de **Configuração** na barra de menus.
+1. No portal do [!INCLUDE [Product short](includes/product-short.md)], selecione **Configuração**.
 
-1. Em **detecção** , clique em **marcas de entidade**.
+1. Em **Detecção** selecione **Marcas de entidade**.
 
-    ![Marcas de entidade do Azure ATP](media/entity-tags.png)
+    ![Marcas de entidade do [!INCLUDE [Product short](includes/product-short.md)]](media/entity-tags.png)
+1. Na seção **Confidencial** , digite o nome "Helpdesk" para **Grupos confidenciais** e clique no sinal **+** para adicioná-los.
+    ![Marca do "Helpdesk" como um grupo confidencial do [!INCLUDE [Product short](includes/product-short.md)] para habilitar Gráficos de Movimentação Lateral e relatórios para esse grupo privilegiado](media/playbook-labsetup-helpdesksensitivegroup.png)
+1. Clique em **Salvar**.
 
-1. Na seção **Confidencial**, digite o nome "Helpdesk" para **Grupos confidenciais** e clique no sinal **+** para adicioná-los.
+### <a name="product-short-lab-base-setup-checklist"></a>Lista de verificação de configuração de laboratório base do [!INCLUDE [Product short](includes/product-short.md)]
 
-    ![Marque "Helpdesk" como um grupo confidencial do ATP do Azure para habilitar os Gráficos de Movimentação Lateral e os relatórios para esse grupo privilegiado](media/playbook-labsetup-helpdesksensitivegroup.png)
+Neste ponto, você deve ter um laboratório base do [!INCLUDE [Product short](includes/product-short.md)]. O [!INCLUDE [Product short](includes/product-short.md)] deve estar pronto para ser usado, e os usuários testados. Examine a lista de verificação para ter certeza de que o laboratório base foi concluído.
 
-1. Clique em **Save** (Salvar).
-
-### <a name="azure-atp-lab-base-setup-checklist"></a>Lista de verificação de configuração base do Laboratório de ATP do Azure
-
-Neste ponto, você deve ter um laboratório base de ATP do Azure. O ATP do Azure deve estar pronto para ser usado, e os usuários foram testados. Examine a lista de verificação para ter certeza de que o laboratório base foi concluído.  
-
-| Etapa    | Ação | Status |
-|--------------|------------|------------------|
-| 1  | Sensor do ATP do Azure instalado no ContosoDC (etapa pré-requisito)| - [ ] |
-| 2  | Os usuários e grupos são criados no Active Directory  | - [ ] |
-| 3  | Privilégios da conta de serviço do ATP do Azure configurados corretamente para SAMR | - [ ] |
-| 4  | Grupo de segurança Helpdesk adicionado como **Grupo confidencial** no ATP do Azure| - [ ] |
+| Etapa  | Etapa | Ação | Status |
+|--|--|--|
+| 1 | Sensor do [!INCLUDE [Product short](includes/product-short.md)] instalado no ContosoDC (etapa de pré-requisito) | - [ ] |
+| 2 | Os usuários e grupos são criados no Active Directory | - [ ] |
+| 3 | Privilégios da conta de serviço do [!INCLUDE [Product short](includes/product-short.md)] configurados corretamente para SAMR | - [ ] |
+| 4 | Grupo de segurança Helpdesk adicionado como **Grupo confidencial** no [!INCLUDE [Product short](includes/product-short.md)] | - [ ] |](includes/product-other.md)]| - [ ] |
 
 ## <a name="set-up-the-lab-workstations"></a>Configurar as estações de trabalho de laboratório
 
-Após configurar seu laboratório base do ATP do Azure, comece a configuração da estação de trabalho para se preparar para os três próximos tutoriais desta série. Vamos hidratar nosso VictimPC e AdminPC para fazer com que este laboratório pareça ativo.
+Após configurar seu laboratório base do [!INCLUDE [Product short](includes/product-short.md)], comece a configuração da estação de trabalho a fim de se preparar para os três próximos tutoriais desta série. Vamos hidratar nosso VictimPC e AdminPC para fazer com que este laboratório pareça ativo.
 
 ### <a name="victimpc-local-policies"></a>Políticas locais de VictimPC
 
@@ -157,7 +156,7 @@ A próxima etapa do laboratório é concluir a configuração de política local
 
 Como administrador local, ele configura políticas locais executando o script automatizado do PowerShell:
 
-``` PowerShell
+```powerShell
 # Add JeffL to local Administrators group on VictimPC
 Add-LocalGroupMember -Group "Administrators" -Member "Contoso\JeffL"
 # Add Helpdesk to local Administrators group on VictimPC
@@ -174,7 +173,7 @@ Para simular uma rede funcional e gerenciada, crie uma Tarefa Agendada no comput
 
 1. Em um **console elevado do PowerShell** no VictimPC, execute o seguinte comando:
 
-    ``` PowerShell
+    ```powerShell
     $action = New-ScheduledTaskAction -Execute 'cmd.exe'
     $trigger = New-ScheduledTaskTrigger -AtLogOn
     $runAs = 'Contoso\RonHD'
@@ -186,7 +185,7 @@ Para simular uma rede funcional e gerenciada, crie uma Tarefa Agendada no comput
 
 ### <a name="turn-off-antivirus-on-victimpc"></a>Desativar o antivírus em VictimPC
 
-Para realizar o teste, desative qualquer solução antivírus em execução no ambiente do laboratório. Isso garante que possamos nos concentrar no ATP do Azure durante esses exercícios e não em técnicas de evasão antivírus.
+Para realizar o teste, desative qualquer solução antivírus em execução no ambiente do laboratório. Isso garantirá que possamos nos concentrar no [!INCLUDE [Product short](includes/product-short.md)] durante estes exercícios e não em técnicas de evasão antivírus.
 
 Sem desativar primeiro as soluções antivírus, você não conseguirá baixar algumas das ferramentas na próxima seção. Além disso, se o antivírus for habilitado após o preparo das ferramentas de ataque, será necessário baixar novamente as ferramentas depois de desabilitar o antivírus.
 
@@ -195,7 +194,7 @@ Sem desativar primeiro as soluções antivírus, você não conseguirá baixar a
 > [!WARNING]
 > As ferramentas a seguir são apresentadas apenas para fins de pesquisa. A Microsoft **não** é proprietária dessas ferramentas, e a Microsoft não oferece, nem pode oferecer, garantia do comportamento delas. Essas ferramentas **só** devem ser executadas em um ambiente de laboratório de teste.
 
-Para executar os guias estratégicos de Alerta de Segurança do ATP do Azure, você precisará destas ferramentas.
+Para executar os guias estratégicos de Alertas de segurança do [!INCLUDE [Product short](includes/product-short.md)], você precisará das seguintes ferramentas.
 
 | Ferramenta | URL |
 |----|-----|
@@ -212,13 +211,12 @@ Agradecemos aos criadores dessas ferramentas de pesquisa por ajudar a comunidade
 
 1. Adicione **Helpdesk** ao **AdminPC** e *remova* "Administradores de Domínio" do Grupo Administrador Local executando o seguinte script do PowerShell:
 
-    ``` PowerShell
-   # Add Helpdesk to local Administrators group
-   Add-LocalGroupMember -Group "Administrators" -Member "Contoso\Helpdesk"
-   # Remove Domain Admins from local Administrators group
-   Remove-LocalGroupMember -Group "Administrators" -Member "Domain Admins"
-
-   ```
+    ```powerShell
+    # Add Helpdesk to local Administrators group
+    Add-LocalGroupMember -Group "Administrators" -Member "Contoso\Helpdesk"
+    # Remove Domain Admins from local Administrators group
+    Remove-LocalGroupMember -Group "Administrators" -Member "Domain Admins"
+    ```
 
 1. Depois de executar o script, **Helpdesk** fica na lista **Administradores** > **Membros** locais de **AdminPC**.
 ![Helpdesk no Grupo de Administradores Locais para AdminPC](media/playbook-labsetup-localgrouppolicies1.png)
@@ -227,51 +225,47 @@ Agradecemos aos criadores dessas ferramentas de pesquisa por ajudar a comunidade
 
 YasminC precisa de atividades de domínio simuladas. Essa etapa pode ser feita manualmente ou com o script do PowerShell fornecido. O script do PowerShell acessa o controlador de domínio a cada cinco minutos e resultará na atividade de rede simulada como Yasmin.
 
-Como **YasminC**, execute o seguinte script em um prompt do PowerShell no AdminPC:
+Como **YasminC** , execute o seguinte script em um prompt do PowerShell no AdminPC:
 
-```PowerShell
-
+```powerShell
 while ($true)
 {
     Invoke-Expression "dir \\ContosoDC\c$"
     Start-Sleep -Seconds 300
 }
-
 ```
 
 ### <a name="workstation-setup-checklist"></a>Lista de verificação de instalação da estação de trabalho
 
 Examine a lista de verificação para ter certeza de que a configuração da estação de trabalho foi concluída.
 
-| Etapa    | Ação | Status |
-|--------------|------------|------------------|
-| 1  | Adicionar DiogoM e Helpdesk como administradores locais em VictimPC | - [ ] |
-| 2  | Criar Tarefa Agendada em execução como EduardoHD no VictimPC | - [ ] |
-| 3  | Desativar a solução antivírus em VictimPC | - [ ] |
-| 4  | Preparar ferramentas de invasão em VictimPC| - [ ] |
-| 5  | Adicionar Helpdesk e remover Administradores de Domínio do grupo de administradores locais do AdminPC| - [ ] |
-| 6  | Executar o script do PowerShell como Yasmin para simular atividades de domínio | - [ ] |
+| Etapa | Agir| Etapa | Ação | Status |
+|--|--|--|
+| 1 | Adicionar DiogoM e Helpdesk como administradores locais em VictimPC | - [ ] |
+| 2 | Criar Tarefa Agendada em execução como EduardoHD no VictimPC | - [ ] |
+| 3 | Desativar a solução antivírus em VictimPC | - [ ] |
+| 4 | Preparar ferramentas de invasão em VictimPC | - [ ] |
+| 5 | Adicionar Helpdesk e remover Administradores de Domínio do grupo de administradores locais do AdminPC | - [ ] |
+| 6 | Executar o script do PowerShell como Yasmin para simular atividades de domínio | - [ ] |PowerShell como Yasmin para simular atividades de domínio | - [ ] |
 
 ## <a name="mission-accomplished"></a>Missão cumprida!
 
-Seu laboratório do ATP do Azure está pronto para ser usado. Os métodos usados nessa configuração foram escolhidos sabendo que os recursos devem ser gerenciados (por *algo* ou *alguém*) e que o gerenciamento exige privilégios de administrador local. Há outras maneiras de simular um fluxo de trabalho de gerenciamento no laboratório, como:
+Seu laboratório do [!INCLUDE [Product short](includes/product-short.md)] agora está pronto para uso. Os métodos usados nessa configuração foram escolhidos sabendo que os recursos devem ser gerenciados (por *algo* ou *alguém* ) e que o gerenciamento exige privilégios de administrador local. Há outras maneiras de simular um fluxo de trabalho de gerenciamento no laboratório, como:
 
 - Entrar e sair do VictimPC com a conta do EduardoHD
 - Adicionar outra versão de uma Tarefa Agendada
 - Uma sessão RDP
-- Executar um "runas" na Linha de Comando
+- Executar um "runas" na linha de comando
 
- Para obter melhores resultados, escolha um método de simulação que você possa automatizar em seu laboratório para fins de consistência.
-
+Para obter melhores resultados, escolha um método de simulação que você possa automatizar em seu laboratório para fins de consistência.
 
 ## <a name="next-steps"></a>Próximas etapas
 
-Teste o seu ambiente de laboratório do ATP do Azure usando os guias estratégicos de Alerta de Segurança do ATP do Azure para cada fase da cadeia de encerramento do ataque cibernético, começando com a fase de reconhecimento.  
+Teste seu ambiente de laboratório do [!INCLUDE [Product short](includes/product-short.md)] usando os guias estratégicos de Alertas de segurança do [!INCLUDE [Product short](includes/product-short.md)] para cada fase da cadeia de eliminação de ataque cibernético, começando com a fase de reconhecimento.
 
 > [!div class="nextstepaction"]
-> [Guia estratégico de Reconhecimento do ATP do Azure](playbook-reconnaissance.md)
-
+> [Guia estratégico de reconhecimento do [!INCLUDE [Product short](includes/product-short.md)]](playbook-reconnaissance.md)
 
 ## <a name="join-the-community"></a>Participe da comunidade
 
-Tem mais perguntas ou interesse em discutir sobre o ATP do Azure e a segurança relacionada com outras pessoas? Participe da [Comunidade do ATP do Azure](https://techcommunity.microsoft.com/t5/Azure-Advanced-Threat-Protection/bd-p/AzureAdvancedThreatProtection) hoje mesmo!
+Tem mais perguntas ou quer discutir sobre o [!INCLUDE [Product short](includes/product-short.md)] e a segurança relacionada com outras pessoas? Participe da [Comunidade do [!INCLUDE [Product short](includes/product-short.md)]](https://techcommunity.microsoft.com/t5/Azure-Advanced-Threat-Protection/bd-p/AzureAdvancedThreatProtection) hoje mesmo!

@@ -1,31 +1,30 @@
 ---
-title: Configurar seu proxy ou firewall para habilitar a comunicação do ATP do Azure com o sensor
-description: Descreve como configurar o firewall ou proxy para permitir a comunicação entre o serviço de nuvem do Azure ATP e sensores do Azure ATP
+title: Configurar seu proxy ou firewall para habilitar a comunicação do Microsoft Defender para Identidade com o sensor
+description: Descreve como configurar seu firewall ou proxy para permitir a comunicação entre o serviço de nuvem do Microsoft Defender para Identidade e os sensores dele
 keywords: ''
 author: shsagir
 ms.author: shsagir
 manager: shsagir
-ms.date: 07/29/2020
+ms.date: 10/26/2020
 ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
-ms.assetid: 9c173d28-a944-491a-92c1-9690eb06b151
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 69a05db012422fef78d7f693f0e12ffebe31c72b
-ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
+ms.openlocfilehash: b522a23bddd5710f0a3e2169afab180e6b8bb828
+ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90912441"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93277218"
 ---
-# <a name="configure-endpoint-proxy-and-internet-connectivity-settings-for-your-azure-atp-sensor"></a>Configurar o proxy do ponto de extremidade e configurações de conectividade de Internet para o Sensor de ATP do Azure
+# <a name="configure-endpoint-proxy-and-internet-connectivity-settings-for-your-product-long-sensor"></a>Configurar o proxy do ponto de extremidade e configurações de conectividade com a Internet para o sensor do [!INCLUDE [Product long](includes/product-long.md)]
 
 [!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
-Cada sensor da Proteção Avançada contra Ameaças do Azure precisa de conectividade com a Internet para que o serviço de nuvem do ATP do Azure relate dados de sensor e funcione com êxito. Em algumas organizações, os controladores de domínio não estão diretamente conectados à Internet, mas por meio de uma conexão de proxy Web.
+Cada sensor do [!INCLUDE [Product long](includes/product-long.md)] precisa de conectividade com a Internet para que o serviço de nuvem do [!INCLUDE [Product short](includes/product-short.md)] relate dados de sensor e funcione com êxito. Em algumas organizações, os controladores de domínio não estão diretamente conectados à Internet, mas por meio de uma conexão de proxy Web.
 
-É recomendável usar a linha de comando para configurar o servidor proxy, pois isso garante que apenas os serviços do sensor do ATP do Azure se comuniquem por meio do proxy.
+É recomendável usar a linha de comando para configurar o servidor proxy, pois isso garante que apenas os serviços do sensor do [!INCLUDE [Product short](includes/product-short.md)] se comuniquem por meio do proxy.
 
 ## <a name="configure-proxy-server-using-the-command-line"></a>Configurar o servidor proxy usando a linha de comando
 
@@ -41,9 +40,9 @@ Cada sensor da Proteção Avançada contra Ameaças do Azure precisa de conectiv
 >
 > |Name|Sintaxe|Obrigatório para instalação silenciosa?|Descrição|
 > |-------------|----------|---------|---------|
-> |ProxyUrl|ProxyUrl="http\://proxy.contoso.com:8080"|Não|Especifica o ProxyUrl e o número da porta para o sensor do ATP do Azure.|
+> |ProxyUrl|ProxyUrl="http\://proxy.contoso.com:8080"|Não|Especifica a ProxyUrl e o número da porta para o sensor do [!INCLUDE [Product short](includes/product-short.md)].|
 > |ProxyUserName|ProxyUserName="Contoso\ProxyUser"|Não|Se o seu serviço de proxy exigir autenticação, forneça um nome de usuário no formato DOMÍNIO\usuário.|
-> |ProxyUserPassword|ProxyUserPassword="P@ssw0rd"|Não|Especifica a senha para o nome de usuário do proxy. *As credenciais são criptografadas e armazenadas localmente pelo sensor do ATP do Azure.|
+> |ProxyUserPassword|ProxyUserPassword="P@ssw0rd"|Não|Especifica a senha para o nome de usuário do proxy. *As credenciais são criptografadas e armazenadas localmente pelo sensor do [!INCLUDE [Product short](includes/product-short.md)].|
 
 ## <a name="alternative-methods-to-configure-your-proxy-server"></a>Métodos alternativos para configurar o servidor proxy
 
@@ -54,16 +53,16 @@ Use um dos métodos alternativos a seguir para configurar o servidor proxy. Ao d
 
 ### <a name="configure-proxy-server-using-wininet"></a>Configurar o servidor proxy com o WinINet
 
-É possível configurar o servidor proxy com o WinINet (Microsoft Windows Internet) para permitir que o sensor do ATP do Azure relate dados de diagnóstico e se comunique com o serviço de nuvem do ATP do Azure quando um computador não tiver permissão para se conectar à Internet. Se você usar o WinHTTP para a configuração de proxy, ainda será necessário definir as configurações de proxy do navegador WinINet (Windows Internet) para a comunicação entre o sensor e o serviço de nuvem do Azure ATP.
+É possível configurar o servidor proxy com o Microsoft WinINet (Windows Internet) para permitir que o sensor do [!INCLUDE [Product short](includes/product-short.md)] relate dados de diagnóstico e se comunique com o serviço de nuvem do [!INCLUDE [Product short](includes/product-short.md)] quando um computador não tiver permissão para se conectar à Internet. Se você usar o WinHTTP para a configuração de proxy, ainda será necessário definir as configurações de proxy do navegador WinINet (Windows Internet) para a comunicação entre o sensor e o serviço de nuvem do [!INCLUDE [Product short](includes/product-short.md)].
 
-Ao configurar o proxy, lembre-se de que o serviço de sensor do ATP do Azure incorporado é executado no contexto do sistema usando a conta **LocalService** e que o serviço de Atualizador do Sensor do ATP do Azure é executado no contexto do sistema usando a conta **LocalSystem**.
+Ao configurar o proxy, lembre-se de que o serviço de sensor do [!INCLUDE [Product short](includes/product-short.md)] incorporado é executado no contexto do sistema usando a conta **LocalService** e que o serviço Atualizador do Sensor do [!INCLUDE [Product short](includes/product-short.md)] é executado no contexto do sistema usando a conta **LocalSystem**.
 
 > [!NOTE]
 > Se estiver usando um proxy Transparente ou WPAD na topologia de rede, você não precisará configurar o WinINet para o proxy.
 
 ### <a name="configure-proxy-server-using-the-registry"></a>Configurar o servidor proxy com o Registro
 
-Também pode configurar o servidor proxy manualmente usando um proxy estático baseado no Registro, para permitir que o sensor ATP do Azure relate dados de diagnóstico e se comunique com o serviço de nuvem do ATP do Azure quando um computador não tiver permissão para se conectar à Internet.
+Você também pode configurar o servidor proxy manualmente usando um proxy estático baseado no Registro, para permitir que o sensor do [!INCLUDE [Product short](includes/product-short.md)] relate dados de diagnóstico e se comunique com o serviço de nuvem do [!INCLUDE [Product short](includes/product-short.md)] quando um computador não tiver permissão para se conectar à Internet.
 
 > [!NOTE]
 > As alterações no Registro devem ser aplicadas apenas a LocalService e LocalSystem.
@@ -85,15 +84,17 @@ O proxy estático é configurável por meio do Registro. Você deve copiar a con
 > [!NOTE]
 > Isso afetará todos os aplicativos, incluindo os serviços do Windows que usam WinINET com LocalService, contexto LocalSytem.
 
-## <a name="enable-access-to-azure-atp-service-urls-in-the-proxy-server"></a>Habilitar o acesso a URLs de serviço do Azure ATP no servidor proxy
+<a name="enable-access-to-azure-atp-service-urls-in-the-proxy-server"></a>
 
-Para habilitar o acesso ao ATP do Azure, é recomendável permitir o tráfego para as URLs a seguir. As URLs são mapeadas automaticamente para o local do serviço correto da instância do ATP do Azure.
+## <a name="enable-access-to-product-short-service-urls-in-the-proxy-server"></a>Habilitar o acesso a URLs de serviço do [!INCLUDE [Product short](includes/product-short.md)] no servidor proxy
+
+Para habilitar o acesso ao [!INCLUDE [Product short](includes/product-short.md)], é recomendável permitir o tráfego para as URLs a seguir. As URLs são mapeadas automaticamente para o local do serviço correto da instância do [!INCLUDE [Product short](includes/product-short.md)].
 
 - `<your-instance-name>.atp.azure.com` – para conectividade com o console. Por exemplo, `contoso-corp.atp.azure.com`
 
 - `<your-instance-name>sensorapi.atp.azure.com` – para conectividade com os sensores. Por exemplo, `contoso-corpsensorapi.atp.azure.com`
 
-Também é possível usar os intervalos de endereço IP na marca de serviço do Azure (**AzureAdvancedThreatProtection**) para habilitar o acesso ao ATP do Azure. Para obter mais informações sobre marcas de serviço, confira [Marcas de serviço de rede virtual](/azure/virtual-network/service-tags-overview) ou [baixe o arquivo de marcas de serviço](https://www.microsoft.com/download/details.aspx?id=56519).
+Também é possível usar os intervalos de endereço IP na marca de serviço do Azure ( **AzureAdvancedThreatProtection** ) para habilitar o acesso ao [!INCLUDE [Product short](includes/product-short.md)]. Para obter mais informações sobre marcas de serviço, confira [Marcas de serviço de rede virtual](/azure/virtual-network/service-tags-overview) ou [baixe o arquivo de marcas de serviço](https://www.microsoft.com/download/details.aspx?id=56519).
 
 Como alternativa, se você precisar de um controle mais granular, considere permitir o tráfego para os pontos de extremidade relevantes da seguinte tabela:
 
@@ -107,10 +108,10 @@ Como alternativa, se você precisar de um controle mais granular, considere perm
 
 > [!NOTE]
 >
-> - Para garantir a segurança máxima e a privacidade dos dados, o ATP do Azure usa autenticação mútua baseada em certificado entre cada sensor e o back-end de nuvem do ATP do Azure. Se a inspeção SSL for usada em seu ambiente, verifique se ela está configurada para autenticação mútua, de modo que não interfira no processo de autenticação.
-> - Ocasionalmente, os endereços IP do serviço do ATP do Azure podem mudar. Portanto, se você configurar manualmente os endereços IP ou se o proxy resolver automaticamente os nomes DNS para cada endereço IP e usá-los, será necessário verificar periodicamente se os endereços IP configurados ainda estão atualizados.
+> - Para garantir a segurança máxima e a privacidade dos dados, o [!INCLUDE [Product short](includes/product-short.md)] usa autenticação mútua baseada em certificado entre cada sensor do [!INCLUDE [Product short](includes/product-short.md)] e o back-end de nuvem do [!INCLUDE [Product short](includes/product-short.md)]. Se a inspeção SSL for usada em seu ambiente, verifique se ela está configurada para autenticação mútua, de modo que não interfira no processo de autenticação.
+> - Ocasionalmente, os endereços IP do serviço do [!INCLUDE [Product short](includes/product-short.md)] podem mudar. Portanto, se você configurar manualmente os endereços IP ou se o proxy resolver automaticamente os nomes DNS para cada endereço IP e usá-los, será necessário verificar periodicamente se os endereços IP configurados ainda estão atualizados.
 
 ## <a name="see-also"></a>Consulte Também
 
 - [Configurar o encaminhamento de eventos](configure-event-forwarding.md)
-- [Confira o fórum do ATP do Azure!](https://aka.ms/azureatpcommunity)
+- [Confira o fórum do [!INCLUDE [Product short](includes/product-short.md)]!](https://aka.ms/MDIcommunity)

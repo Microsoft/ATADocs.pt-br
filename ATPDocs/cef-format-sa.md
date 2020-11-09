@@ -1,31 +1,30 @@
 ---
-title: Referência de logs de SIEM do Azure ATP
-description: Fornece exemplos de logs de atividades suspeitas enviados do Azure ATP para o SIEM.
+title: Referência de log de SIEM do Microsoft Defender para Identidade
+description: Fornece exemplos de logs de atividades suspeitas enviados do Microsoft Defender para Identidade para o SIEM.
 keywords: ''
 author: shsagir
 ms.author: shsagir
 manager: shsagir
-ms.date: 06/08/2020
+ms.date: 10/26/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
-ms.assetid: 3261155c-3c72-4327-ba29-c113c63a4e6d
 ms.reviewer: arzinger
 ms.suite: ems
-ms.openlocfilehash: 681b0fc541956c4a778310e78d79234c0fdd7495
-ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
+ms.openlocfilehash: e2ac1109454e3bef9baec2197d4db7f73698ed6c
+ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90911853"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93276490"
 ---
-# <a name="azure-atp-siem-log-reference"></a>Referência de logs de SIEM do Azure ATP
+# <a name="product-long-siem-log-reference"></a>Referência de log de SIEM do [!INCLUDE [Product long](includes/product-long.md)]
 
 [!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
-O ATP do Azure pode encaminhar eventos de alerta de integridade e de segurança para o SIEM. Os alertas e eventos estão no formato CEF. Este artigo de referência fornece exemplos dos logs enviados ao SIEM.
+O [!INCLUDE [Product short](includes/product-short.md)] pode encaminhar eventos de alerta de integridade e de segurança para o SIEM. Os alertas e eventos estão no formato CEF. Este artigo de referência fornece exemplos dos logs enviados ao SIEM.
 
-## <a name="sample-azure-atp-security-alerts-in-cef-format"></a>Alertas de segurança de exemplo da Proteção Avançada contra Ameaças do Azure no formato CEF
+## <a name="sample-product-short-security-alerts-in-cef-format"></a>Exemplo de alertas de segurança do [!INCLUDE [Product short](includes/product-short.md)] em formato CEF
 
 Os campos a seguir e seus valores são encaminhados para o SIEM:
 
@@ -38,7 +37,7 @@ Os campos a seguir e seus valores são encaminhados para o SIEM:
 |msg|Descrição do alerta|
 |cnt|Para alertas com uma contagem do número de vezes que a atividade ocorreu (por exemplo, a força bruta tem uma quantidade de senhas adivinhadas)|
 |app |Protocolo usado neste alerta|
-|externalId|A ID do evento que o ATP do Azure grava no log de eventos que corresponde a cada tipo de alerta. Ao encaminhar alertas para o Microsoft Cloud App Security, esse campo é preenchido com a ID de alerta correspondente do Cloud App Security.|
+|externalId|A ID do evento que o [!INCLUDE [Product short](includes/product-short.md)] grava no log de eventos que corresponde a cada tipo de alerta. Ao encaminhar alertas para o Microsoft Cloud App Security, esse campo é preenchido com a ID de alerta correspondente do Cloud App Security.|
 |cs#label|Cadeias de caracteres do cliente permitidas pelo CEF, em que cs#label é o nome do novo campo |
 |cs#|Cadeias de caracteres do cliente permitidas pelo CEF, em que cs# é o valor.|
 
@@ -49,11 +48,11 @@ O campo cs1 é a URL de alerta.
 O campo cs2 identifica se o alerta é novo ou atualizado.
 
 > [!NOTE]
-> Caso planeje criar automação ou scripts para logs de SIEM do ATP do Azure, é recomendável usar o campo **externalId** para identificar o tipo de alerta em vez de usar o nome do alerta para essa finalidade. Nomes de alertas, ocasionalmente, podem ser modificados, enquanto o **externalId** de cada alerta é permanente. Para obter uma lista de IDs externas, confira [Mapeamento de nomes de alertas de segurança e IDs externas exclusivas](suspicious-activity-guide.md#security-alert-name-mapping-and-unique-external-ids).
+> Caso planeje criar automação ou scripts para logs de SIEM do [!INCLUDE [Product short](includes/product-short.md)], recomendamos usar o campo **externalId** a fim de identificar o tipo de alerta em vez de usar o nome do alerta para essa finalidade. Nomes de alertas, ocasionalmente, podem ser modificados, enquanto o **externalId** de cada alerta é permanente. Para obter uma lista de IDs externas, confira [Mapeamento de nomes de alertas de segurança e IDs externas exclusivas](suspicious-activity-guide.md#security-alert-name-mapping-and-unique-external-ids).
 
 ## <a name="sample-logs"></a>Logs de exemplo
 
-Os exemplos de logs estão em conformidade com o RFC 5424, mas o ATP do Azure também dá suporte ao RFC 3164.
+Os exemplos de logs estão em conformidade com o RFC 5424, mas o [!INCLUDE [Product short](includes/product-short.md)] também dá suporte ao RFC 3164.
 
 Prioridades:
 
@@ -203,8 +202,8 @@ Prioridades:
 
 ## <a name="see-also"></a>Consulte Também
 
-- [Pré-requisitos do Azure ATP](prerequisites.md)
-- [Planejamento de capacidade do Azure ATP](capacity-planning.md)
+- [Pré-requisitos do [!INCLUDE [Product short](includes/product-short.md)]](prerequisites.md)
+- [Planejamento de capacidade do [!INCLUDE [Product short](includes/product-short.md)]](capacity-planning.md)
 - [Configurar coleta de eventos](configure-event-collection.md)
 - [Configuração do encaminhamento de eventos do Windows](configure-event-forwarding.md)
-- [Confira o fórum do ATP do Azure!](https://aka.ms/azureatpcommunity)
+- [Confira o fórum do [!INCLUDE [Product short](includes/product-short.md)]!](https://aka.ms/MDIcommunity)

@@ -1,31 +1,30 @@
 ---
-title: Tutorial de alerta de segurança do ATP do Azure
-description: Este artigo explica como usar e entender os alertas de segurança do ATP do Azure.
+title: Tutorial de alertas de segurança do Microsoft Defender para Identidade
+description: Este artigo explica como usar e compreender os alertas de segurança do Microsoft Defender para Identidade.
 keywords: ''
 author: shsagir
 ms.author: shsagir
 manager: shsagir
-ms.date: 1/13/2019
+ms.date: 10/27/2020
 ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
-ms.assetid: 671747d5-faed-4352-a871-17b58fdc6574
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 2c871c3a504fc7f79cc3627b077d1bebc1814a82
-ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
+ms.openlocfilehash: ba5adecd1812d95f043d520773b1006a6e75b5b9
+ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90912310"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93277807"
 ---
-# <a name="tutorial-understanding-security-alerts"></a>Tutorial: entendendo os alertas de segurança
+# <a name="understanding-security-alerts"></a>entendendo os alertas de segurança
 
 [!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
-Os alertas de segurança do ATP do Azure explicam em linguagem clara e com gráficos, quais atividades suspeitas foram identificadas em sua rede e os atores e os computadores envolvidos nas ameaças. Os alertas são classificados por gravidade, codificados por cor para facilitar a filtragem visual e organizados por fase de ameaça. Cada alerta foi projetado para ajudar você a entender rapidamente exatamente o que está acontecendo em sua rede. As listas de evidências dos alertas contêm links diretos para os computadores e os usuários envolvidos para ajudar a tornar suas investigações fáceis e diretas.
+Os alertas de segurança do [!INCLUDE [Product long](includes/product-long.md)] explicam em linguagem clara e com elementos gráficos quais atividades suspeitas foram identificadas em sua rede e os atores e computadores envolvidos nas ameaças. Os alertas são classificados por gravidade, codificados por cor para facilitar a filtragem visual e organizados por fase de ameaça. Cada alerta foi projetado para ajudar você a entender rapidamente exatamente o que está acontecendo em sua rede. As listas de evidências dos alertas contêm links diretos para os computadores e os usuários envolvidos para ajudar a tornar suas investigações fáceis e diretas.
 
-Neste tutorial, você aprenderá a estrutura dos alertas de segurança do ATP do Azure e como usá-los:
+Neste tutorial, você aprenderá a estrutura dos alertas de segurança do [!INCLUDE [Product short](includes/product-short.md)] e como usá-los:
 
 > [!div class="checklist"]
 >
@@ -34,26 +33,30 @@ Neste tutorial, você aprenderá a estrutura dos alertas de segurança do ATP do
 > - Categorias de alertas de segurança
 > - Investigação avançada de alerta de segurança
 > - Entidades relacionadas
-> - ATP do Azure e NNR (resolução de nome de rede)
+> - [!INCLUDE [Product short](includes/product-short.md)] e NNR (resolução de nomes de rede)
 
 ## <a name="security-alert-structure"></a>Estrutura do alerta de segurança
 
-Cada alerta de segurança do ATP do Azure inclui:
+Cada alerta de segurança do [!INCLUDE [Product short](includes/product-short.md)] inclui:
 
-- **Título do alerta** <br> Nome oficial do alerta no ATP do Azure.
-- **Descrição** <br> Breve explicação do que aconteceu.
-- **Evidência** <br> Informações adicionais relevantes e dados relacionados sobre o que aconteceu para ajudar no processo de investigação.
-- **Download do Excel** <br> Relatório do Excel detalhado para baixar para análise
+- **Título do alerta**  
+Nome oficial do alerta do [!INCLUDE [Product short](includes/product-short.md)].
+- **Descrição**  
+Breve explicação do que aconteceu.
+- **Evidência**  
+Informações adicionais relevantes e dados relacionados sobre o que aconteceu para ajudar no processo de investigação.
+- **Download do Excel**  
+Relatório do Excel detalhado para baixar para análise
 
-![Estrutura do alerta de segurança do ATP do Azure](media/security-alert-structure.png)
+![Estrutura de alerta de segurança do [!INCLUDE [Product short](includes/product-short.md)]](media/security-alert-structure.png)
 
 ## <a name="security-alert-classifications"></a>Classificações de alerta de segurança
 
-Após investigação adequada, todos os alertas de segurança do ATP do Azure podem ser classificados como um dos seguintes tipos de atividade:
+Após investigação adequada, todos os alertas de segurança do [!INCLUDE [Product short](includes/product-short.md)] podem ser classificados como um dos seguintes tipos de atividade:
 
-- **TP (verdadeiro positivo)** : uma ação mal-intencionada detectada pelo ATP do Azure.
+- **TP (verdadeiro positivo)** : uma ação mal-intencionada detectada pelo [!INCLUDE [Product short](includes/product-short.md)].
 
-- **B-TP (verdadeiro positivo benigno)** : uma ação detectada pelo ATP do Azure que é real, mas não é mal-intencionada, como um teste de penetração ou uma atividade conhecida gerada por um aplicativo aprovado.
+- **B-TP (verdadeiro positivo benigno)** : uma ação detectada pelo [!INCLUDE [Product short](includes/product-short.md)] que é real, mas não é mal-intencionada, como um teste de penetração ou uma atividade conhecida gerada por um aplicativo aprovado.
 
 - **FP (falso positivo)** : alarme falso, o que significa que a atividade não ocorreu.
 
@@ -69,7 +72,7 @@ Observação: um aumento de alertas exatamente do mesmo tipo normalmente reduz o
 
 ## <a name="security-alert-categories"></a>Categorias de alertas de segurança
 
-Os alertas de segurança do ATP do Azure são divididos nas categorias ou fases a seguir, assim como as fases encontradas em uma cadeia de eliminação de ataque cibernético típica. Saiba mais sobre cada fase e os alertas projetados para detectar cada ataque usando os links a seguir:
+Os alertas de segurança do [!INCLUDE [Product short](includes/product-short.md)] são divididos nas categorias ou fases a seguir, assim como as fases encontradas em uma cadeia de eliminação de ataque cibernético típica. Saiba mais sobre cada fase e os alertas projetados para detectar cada ataque usando os links a seguir:
 
 - [Alertas de reconhecimento](reconnaissance-alerts.md)
 - [Alertas de credencial comprometida](compromised-credentials-alerts.md)
@@ -83,7 +86,8 @@ Para obter mais detalhes sobre um alerta de segurança, baixe o relatório detal
 
 1. Clique nos três pontos no canto superior direito de qualquer alerta e selecione *Detalhes do Download*.
 
-O download do Excel de cada alerta do ATP do Azure fornece as seguintes informações:
+O download do Excel de cada alerta do [!INCLUDE [Product short](includes/product-short.md)] fornece as seguintes informações:
+
 - Resumo – a primeira guia inclui os destaques do alerta
   - Título
   - Descrição
@@ -94,7 +98,7 @@ O download do Excel de cada alerta do ATP do Azure fornece as seguintes informa�
   - Hora da atualização de status (UTC)
   - Exibir no navegador
 - Todas as entidades envolvidas (contas, computadores e recursos) são listadas, separadas por função.
-    - Origem, destino ou atacado, dependendo do alerta.
+  - Origem, destino ou atacado, dependendo do alerta.
 - A maioria das guias inclui os seguintes dados por entidade:
   - Nome
   - Detalhes
@@ -105,10 +109,10 @@ O download do Excel de cada alerta do ATP do Azure fornece as seguintes informa�
   - Controladores de Domínio
   - Recurso acessado: Tempo, Computador, Nome, Detalhes, Tipo, Serviço.
   - Guias adicionais por alerta:
-      - Nas contas atacadas, quando o ataque suspeito usou força bruta.
-      - Nos servidores DNS (Sistema de Nomes de Domínio) quando a suspeita de ataque envolveu reconhecimento de mapeamento de rede (DNS).
+    - Nas contas atacadas, quando o ataque suspeito usou força bruta.
+    - Nos servidores DNS (Sistema de Nomes de Domínio) quando a suspeita de ataque envolveu reconhecimento de mapeamento de rede (DNS).
   - Entidades relacionadas: ID, Tipo, Nome, JSON da Entidade Exclusiva, JSON do Perfil da Entidade Exclusiva
-- Todas as atividades brutas capturadas pelos sensores do ATP do Azure relacionadas ao alerta (atividades de rede ou evento), incluindo:
+- Todas as atividades brutas capturadas pelos sensores do [!INCLUDE [Product short](includes/product-short.md)] relacionadas ao alerta (atividades de rede ou evento), incluindo:
   - Atividades de rede
   - Atividades de evento
 
@@ -120,47 +124,49 @@ Em cada alerta, a última guia fornece as **Entidades Relacionadas**. As entidad
 
 **JSON da entidade exclusiva**
 
-Inclui os dados que o ATP do Azure aprendeu com o Active Directory sobre a conta. Isso inclui todos os atributos como *Nome Diferenciado*, *SID*, <em>LockoutTime e *PasswordExpiryTime</em>. Para contas de usuário, inclui dados como *Departamento*, *Email* e *PhoneNumber*. Para contas de computador, inclui dados como *OperatingSystem*, <em>IsDomainController e *DnsName</em>.
+Inclui os dados que o [!INCLUDE [Product short](includes/product-short.md)] aprendeu com o Active Directory sobre a conta. Isso inclui todos os atributos como *Distinguished Name* , *SID* , *LockoutTime* e *PasswordExpiryTime*. Para contas de usuário, inclui dados como *Departamento* , *Email* e *PhoneNumber*. Para contas de computador, inclui dados como *OperatingSystem* , *IsDomainController* e *DnsName*.
 
 **JSON do perfil da entidade exclusiva**
 
-Inclui todos os dados que o ATP do Azure criou sobre o perfil da entidade. O ATP do Azure usa as atividades de rede e de evento capturadas para saber mais sobre os usuários e computadores do ambiente. O ATP do Azure cria perfis de informações relevantes por entidade. Essas informações contribuem com as funcionalidades de identificação de ameaças do ATP do Azure.
+Inclui todos os dados que o [!INCLUDE [Product short](includes/product-short.md)] criou sobre o perfil da entidade. O [!INCLUDE [Product short](includes/product-short.md)] usa as atividades de rede e de evento capturadas para saber mais sobre os usuários e computadores do ambiente. O [!INCLUDE [Product short](includes/product-short.md)] cria perfis de informações relevantes por entidade. Essas informações contribuem com as funcionalidades de identificação de ameaças do [!INCLUDE [Product short](includes/product-short.md)].
 
 ![Entidades relacionadas](media/related-entities.png)
 
-### <a name="how-can-i-use-azure-atp-information-in-an-investigation"></a>Como usar as informações do ATP do Azure em uma investigação?
+### <a name="how-can-i-use-product-short-information-in-an-investigation"></a>Como posso usar as informações do [!INCLUDE [Product short](includes/product-short.md)] em uma investigação?
 
-As investigações podem ter o máximo possível de detalhes necessários. Aqui estão algumas ideias de maneiras de investigar usando os dados fornecidos pelo ATP do Azure.
+As investigações podem ter o máximo possível de detalhes necessários. Confira algumas ideias de maneiras de investigar usando os dados fornecidos pelo [!INCLUDE [Product short](includes/product-short.md)].
 
 - Verifique se todos os usuários relacionados pertencem ao mesmo grupo ou departamento.
 - Os usuários relacionados compartilham recursos, aplicativos ou computadores?
 - Essa é uma conta ativa, mesmo que o PasswordExpiryTime já tenha passado?
 
-## <a name="azure-atp-and-nnr-network-name-resolution"></a>ATP do Azure e NNR (resolução de nome de rede)
+## <a name="product-short-and-nnr-network-name-resolution"></a>[!INCLUDE [Product short](includes/product-short.md)] e NNR (resolução de nomes de rede)
 
-As funcionalidades de detecção do ATP do Azure baseiam-se na NNR (resolução de nome de rede) para resolver os IPs para os computadores da organização. Usando a NNR, o ATP do Azure é capaz de correlacionar atividades brutas (que contêm endereços IP) e os computadores relevantes envolvidos em cada atividade. Com base nas atividades brutas, o ATP do Azure cria perfis de entidades, incluindo computadores, bem como gera alertas.
+As funcionalidades de detecção do [!INCLUDE [Product short](includes/product-short.md)] baseiam-se na NNR (resolução de nomes de rede) a fim de resolver os IPs para os computadores da organização. Usando a NNR, o [!INCLUDE [Product short](includes/product-short.md)] consegue correlacionar atividades brutas (que contêm endereços IP) e os computadores relevantes envolvidos em cada atividade. Com base nas atividades brutas, o [!INCLUDE [Product short](includes/product-short.md)] cria perfis de entidades, incluindo computadores, e gera alertas.
 
 Os dados de NNR são cruciais para detectar os seguintes alertas:
+
 - Suspeita de roubo de identidade (Pass-the-Ticket)
 - Suspeita de ataque de DCSync (replicação de serviços de diretório)
 - Reconhecimento de mapeamento de rede (DNS)
 
-Use as informações de NNR fornecidas na guia **Atividades de Rede** do relatório de download do alerta para determinar se um alerta é um **FP**. Em caso de alerta **FP**, é comum que o resultado de certeza de NNR seja fornecido com confiança baixa.
+Use as informações de NNR fornecidas na guia **Atividades de Rede** do relatório de download do alerta para determinar se um alerta é um **FP**. Em caso de alerta **FP** , é comum que o resultado de certeza de NNR seja fornecido com confiança baixa.
 
 Os dados do relatório de download aparecem em duas colunas:
+
 - **Computador de origem/destino**
 
-    - *Certeza* – a certeza de baixa resolução pode indicar uma resolução de nomes incorreta.
+  - *Certeza* – a certeza de baixa resolução pode indicar uma resolução de nomes incorreta.
 - **Computador de origem/destino**
-    - *Método de resolução* – fornece os métodos de NNR usados para resolver o IP para o computador da organização.
+  - *Método de resolução* – fornece os métodos de NNR usados para resolver o IP para o computador da organização.
 
 ![Atividades de rede](media/network-activities.png)
 
-Para obter mais informações de como trabalhar com alertas de segurança do ATP do Azure, confira [Trabalhando com alertas de segurança](working-with-suspicious-activities.md).
+Para saber mais sobre como trabalhar com alertas de segurança do [!INCLUDE [Product short](includes/product-short.md)], confira [Trabalhar com alertas de segurança](working-with-suspicious-activities.md).
 
 ## <a name="see-also"></a>Consulte Também
 
 - [Investigar um usuário](investigate-a-user.md)
 - [Investigar um computador](investigate-a-computer.md)
 - [Trabalhando com caminhos de movimento lateral](use-case-lateral-movement-path.md)
-- [Confira o fórum do ATP do Azure!](https://aka.ms/azureatpcommunity)
+- [Confira o fórum do [!INCLUDE [Product short](includes/product-short.md)]!](https://aka.ms/MDIcommunity)

@@ -1,42 +1,46 @@
 ---
-title: Guia estratégico de predominância de domínio do Azure ATP
-description: O guia estratégico de predominância de domínio do ATP do Azure descreve como simular ataques de dominância do domínio para detecção do ATP do Azure
-ms.service: azure-advanced-threat-protection
-ms.topic: how-to
+title: Guia estratégico de predominância de domínio do Microsoft Defender para Identidade
+description: O guia estratégico de predominância de domínio do Microsoft Defender para Identidade descreve como simular ataques de dominância do domínio para detecção do Defender para Identidade
+keywords: ''
 author: shsagir
 ms.author: shsagir
-ms.date: 02/28/2019
+manager: shsagir
+ms.date: 10/26/2020
+ms.topic: tutorial
+ms.collection: M365-security-compliance
+ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
-ms.openlocfilehash: 6eb2798ac8bf4f480d604891a24a643ec270b8e6
-ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
-ms.translationtype: MT
+ms.suite: ems
+ms.openlocfilehash: 76b24811cab5453bb462ec7ebe2d5477e2b6c072
+ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90912675"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93274909"
 ---
-# <a name="tutorial-domain-dominance-playbook"></a>Tutorial: Manual de predominância de domínio
+# <a name="tutorial-domain-dominance-playbook"></a>Tutorial: Guia estratégico de predominância de domínio
 
 [!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
-O último tutorial desta série de quatro partes para alertas de segurança do ATP do Azure é um guia estratégico de predominância de domínio. A finalidade do laboratório de alerta de segurança do ATP do Azure é ilustrar os recursos do **ATP do Azure** para identificação e detecção de possíveis ataques contra a sua rede. O laboratório explica como testar algumas detecções *discretas* do ATP do Azure usando recursos baseados em *assinatura* do ATP do Azure. Os tutoriais não incluem detecções comportamentais e alertas avançados com base em aprendizado de máquina, usuário ou entidade. Esses tipos de detecções e alertas não estão incluídos no teste, pois exigem um período de aprendizado, além de tráfego de rede real, por até 30 dias. Para saber mais sobre cada tutorial desta série, consulte a [Visão geral do laboratório de alerta de segurança do ATP](playbook-lab-overview.md).
+O último tutorial desta série de quatro partes para alertas de segurança do [!INCLUDE [Product long](includes/product-long.md)] é um guia estratégico de predominância de domínio. A finalidade do laboratório de alerta de segurança do [!INCLUDE [Product short](includes/product-short.md)] é ilustrar os recursos do **[!INCLUDE [Product short](includes/product-short.md)]** para identificação e detecção de possíveis ataques contra sua rede. O laboratório explica como testar algumas detecções *discretas* do [!INCLUDE [Product short](includes/product-short.md)] usando recursos baseados em *assinatura* do [!INCLUDE [Product short](includes/product-short.md)]. Os tutoriais não incluem detecções comportamentais nem alertas avançados com base em aprendizado de máquina, usuário ou entidade do [!INCLUDE [Product short](includes/product-short.md)]. Esses tipos de detecções e alertas não estão incluídos no teste, pois exigem um período de aprendizado, além de tráfego de rede real, por até 30 dias. Para saber mais sobre cada tutorial dessa série, confira a [Visão geral do laboratório de alerta de segurança do [!INCLUDE [Product short](includes/product-short.md)]](playbook-lab-overview.md).
 
-Este guia estratégico mostra alguns dos serviços de detecções de ameaça e alertas de segurança de predominância de domínio do ATP do Azure usando ataques simulados de ferramentas de ataque e invasão comuns e reais disponíveis publicamente. Normalmente, os métodos abordados são usados neste ponto na cadeia de encerramento do ataque cibernético para conseguir a predominância de domínio persistente.
+Este guia estratégico mostra alguns dos serviços de detecções de ameaça e alertas de segurança de predominância de domínio do [!INCLUDE [Product short](includes/product-short.md)] usando ataques simulados de ferramentas de ataque e invasão comuns e reais disponíveis publicamente. Normalmente, os métodos abordados são usados neste ponto na cadeia de encerramento do ataque cibernético para conseguir a predominância de domínio persistente.
 
-Neste tutorial, você simulará tentativas de obtenção da predominância de domínio persistente para examinar cada uma das detecções do ATP do Azure para os seguintes métodos comuns:
+Neste tutorial, você simulará tentativas de obtenção da predominância de domínio persistente a fim de examinar cada uma das detecções do [!INCLUDE [Product short](includes/product-short.md)] para os seguintes métodos comuns:
 
 > [!div class="checklist"]
-> * Execução remota de código
-> * API de Proteção de Dados (DPAPI)
-> * Replicação mal-intencionada
-> * Criação de Serviço
-> * Skeleton Key
-> * Golden Ticket
-
+>
+> - Execução remota de código
+> - API de Proteção de Dados (DPAPI)
+> - Replicação mal-intencionada
+> - Criação de Serviço
+> - Skeleton Key
+> - Golden Ticket
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
-1. [Um laboratório de alerta de segurança completo do ATP](playbook-setup-lab.md) 
-     - Recomendamos seguir as instruções de configuração do laboratório com a maior fidelidade possível. Quanto mais parecido estiver o seu laboratório com a configuração de laboratório sugerida, mais fácil será para seguir os procedimentos de teste do ATP do Azure.
+1. [Um laboratório de alerta de segurança completo do [!INCLUDE [Product short](includes/product-short.md)]](playbook-setup-lab.md)
+     - Recomendamos seguir as instruções de configuração do laboratório com a maior fidelidade possível. Quanto mais parecido estiver seu laboratório com a configuração sugerida, mais fácil será para seguir os procedimentos de teste do [!INCLUDE [Product short](includes/product-short.md)].
 
 2. [Conclusão do tutorial de guia estratégico de movimentação lateral](playbook-lateral-movement.md)
 
@@ -46,28 +50,28 @@ Na cadeia de encerramento do ataque cibernético, durante a fase de predominânc
 
 ### <a name="remote-code-execution"></a>Execução remota de código
 
-Execução remota de código é exatamente o que parece. Os invasores estabelecem uma maneira de executar remotamente o código em um recurso, nesse caso, em um controlador de domínio. Tentaremos usar essas ferramentas comuns em conjunto para realizar a execução remota de código e obter persistência no controlador de domínio e, em seguida, ver o que o ATP do Azure nos mostra.
+Execução remota de código é exatamente o que parece. Os invasores estabelecem uma maneira de executar remotamente o código em um recurso, nesse caso, em um controlador de domínio. Tentaremos usar essas ferramentas comuns em conjunto para realizar a execução remota de código e obter persistência no controlador de domínio e, em seguida, ver o que o [!INCLUDE [Product short](includes/product-short.md)] nos mostra.
 
 - WMI (Instrumentação de Gerenciamento do Windows)
 - PsExec de SysInternals
 
 Usando WMI na linha de comando, tente criar um processo localmente no controlador de domínio para criar um usuário chamado "InsertedUser", com a senha: pa$$w0rd1.
 
-1. Abra a Linha de comando, em execução no contexto de *YasminC* no **VictimPC**, e execute o seguinte comando:
+1. Abra a Linha de comando, em execução no contexto de *YasminC* no **VictimPC** , e execute o seguinte comando:
 
-   ``` cmd
+   ```dos
    wmic /node:ContosoDC process call create "net user /add InsertedUser pa$$w0rd1"
    ```
 
 1. Agora, com o usuário criado, adicione o usuário ao grupo "Administradores" no controlador de domínio:
 
-   ``` cmd
+   ```dos
    PsExec.exe \\ContosoDC -accepteula net localgroup "Administrators" InsertedUser /add
    ```
 
     ![Usar a execução remota de código (PsExec) para adicionar o novo usuário ao grupo Administrador no controlador de domínio](media/playbook-dominance-psexec_addtoadmins.png)
 
-1. Acesse **Usuários e Computadores do Active Directory (ADUC)** no **ContosoDC** e localize **InsertedUser**. 
+1. Acesse **Usuários e Computadores do Active Directory (ADUC)** no **ContosoDC** e localize **InsertedUser**.
 
 1. Clique com botão direito em **Propriedades** e verifique a associação.
 
@@ -75,21 +79,21 @@ Usando WMI na linha de comando, tente criar um processo localmente no controlado
 
 Atuando como invasor, você criou um novo usuário em seu laboratório usando WMI. Você também adicionou o novo usuário ao grupo Administradores usando PsExec. De uma perspectiva de persistência, outra credencial legítima e independente foi criada no controlador de domínio. Novas credenciais dão a um invasor acesso persistente ao controlador de domínio, caso o acesso de credencial anterior tenha sido descoberto e removido.
 
-### <a name="remote-code-execution-detection-in-azure-atp"></a>Detecção de execução remota de código no ATP do Azure
+### <a name="remote-code-execution-detection-in-product-short"></a>Detecção de execução remota de código no [!INCLUDE [Product short](includes/product-short.md)]
 
-Entre no portal do ATP do Azure para verificar o que o ATP do Azure detectou, se tiver detectado algo, em nosso último ataque simulado:
+Entre no portal do [!INCLUDE [Product short](includes/product-short.md)] para verificar o que o [!INCLUDE [Product short](includes/product-short.md)] detectou, se tiver detectado algo, em nosso último ataque simulado:
 
-![ATP do Azure detectando a execução remota de código de WMI](media/playbook-dominance-wmipsexecdetected.png)
+![[!INCLUDE [Product short](includes/product-short.md)] detectando a execução remota de código WMI](media/playbook-dominance-wmipsexecdetected.png)
 
-O ATP do Azure detectou execuções remotas de código de WMI e PsExec.
+O [!INCLUDE [Product short](includes/product-short.md)] detectou execuções remotas de código de WMI e PsExec.
 
-Devido à criptografia na sessão do WMI, certos valores, como métodos reais de WMI ou o resultado do ataque, não são visíveis. No entanto, a detecção do ATP do Azure dessas ações nos proporcionam informações ideais com as quais executar medidas defensivas.  
+Devido à criptografia na sessão do WMI, certos valores, como métodos reais de WMI ou o resultado do ataque, não são visíveis. No entanto, a detecção do [!INCLUDE [Product short](includes/product-short.md)] dessas ações nos proporcionam informações ideais com as quais executar medidas defensivas.
 
 VictimPC, o computador, nunca deve executar um código remotamente nos controladores de domínio.
 
-À medida que o ATP do Azure aprende ao longo do tempo quem está inserido em quais grupos de segurança, atividades suspeitas parecidas são identificadas como atividade anômala na linha do tempo. Como este laboratório foi criado recentemente, e ainda está dentro do período de aprendizado, essa atividade não será exibida como um alerta. A detecção de modificação do grupo de segurança pelo ATP do Azure pode ser validada por meio da verificação da atividade na linha do tempo. O ATP do Azure também permite que você gere relatórios sobre todas as modificações do Grupo de Segurança, os quais podem ser enviados por email proativamente.
+À medida que o [!INCLUDE [Product short](includes/product-short.md)] aprende ao longo do tempo quem está inserido em quais grupos de segurança, atividades suspeitas parecidas são identificadas como atividade anômala na linha do tempo. Como este laboratório foi criado recentemente, e ainda está dentro do período de aprendizado, essa atividade não será exibida como um alerta. A detecção de modificação do grupo de segurança pelo [!INCLUDE [Product short](includes/product-short.md)] pode ser validada por meio da verificação da atividade na linha do tempo. O [!INCLUDE [Product short](includes/product-short.md)] também permite que você gere relatórios sobre todas as modificações do Grupo de Segurança, os quais podem ser enviados por email proativamente.
 
-Acesse a página **Administrador** no portal do ATP do Azure usando a ferramenta Pesquisa. A inserção do usuário detectada pelo ATP do Azure é exibida na linha do tempo de atividade do grupo Administradores.
+Acesse a página **Administrador** no portal do [!INCLUDE [Product short](includes/product-short.md)] usando a ferramenta Pesquisa. A inserção do usuário detectada pelo [!INCLUDE [Product short](includes/product-short.md)] é exibida na linha do tempo de atividade do grupo Administradores.
 
 ![Exibir usuário adicionado ao grupo de segurança confidencial](media/playbook-dominance-admininserteduser.png)
 
@@ -97,11 +101,11 @@ Acesse a página **Administrador** no portal do ATP do Azure usando a ferramenta
 
 A DPAPI (Interface de Programação de Aplicativo de Proteção de Dados) é usada pelo Windows para proteger senhas salvas por navegadores, arquivos criptografados e outros dados confidencias. Os controladores de domínio têm uma chave mestra que descriptografar *todos* os segredos em computadores com Windows ingressados no domínio.
 
-Usando **mimikatz**, tentaremos exportar a chave mestra do controlador de domínio. 
+Usando **mimikatz** , tentaremos exportar a chave mestra do controlador de domínio.
 
 1. Execute o seguinte comando no controlador de domínio:
 
-   ``` cmd
+   ```dos
    mimikatz.exe "privilege::debug" "lsadump::backupkeys /system:ContosoDC.contoso.azure /export" "exit"
    ```
 
@@ -111,35 +115,35 @@ Usando **mimikatz**, tentaremos exportar a chave mestra do controlador de domín
 
 Como invasores, agora temos a chave para descriptografar quaisquer arquivos/dados confidenciais criptografados com DPAPI de *qualquer* computador em toda a floresta.
 
-### <a name="dpapi-detection-in-azure-atp"></a>Detecção de DPAPI no ATP do Azure
+### <a name="dpapi-detection-in-product-short"></a>Detecção de DPAPI no [!INCLUDE [Product short](includes/product-short.md)]
 
-Usando o portal do ATP do Azure, vamos verificar se o ATP do Azure detectou nosso ataque DPAPI:
+Usando o portal do [!INCLUDE [Product short](includes/product-short.md)], vamos verificar se o [!INCLUDE [Product short](includes/product-short.md)] detectou nosso ataque DPAPI:
 
-![O ATP do Azure detectou a solicitação da DPAPI](media/playbook-dominance-dpapidetected.png)
+![[!INCLUDE [Product short](includes/product-short.md)] detectou solicitação de DPAPI](media/playbook-dominance-dpapidetected.png)
 
 ### <a name="malicious-replication"></a>Replicação mal-intencionada
 
 Replicação mal-intencionada permite que um invasor replique as informações do usuário usando credenciais de Administrador de Domínio (ou equivalente). Replicação mal-intencionada basicamente permite que um invasor colete remotamente uma credencial. Obviamente, a conta mais importante para tentar a coleta é "krbtgt", pois é a chave mestra usada para assinar todos os tíquetes Kerberos.
 
-Os dois conjuntos de ferramentas de invasão comuns que permitem aos invasores tentarem uma replicação mal-intencionadas são **Mimikatz** e **Impacket** do Core Security.
+Os dois conjuntos de ferramentas de invasão comuns que permitem aos invasores tentar uma replicação mal-intencionada são **Mimikatz** e **Impacket** do Core Security.
 
 #### <a name="mimikatz-lsadumpdcsync"></a>Mimikatz lsadump::dcsync
 
-No **VictimPC**, no contexto de **YasmiC**, execute o seguinte comando de Mimikatz:
+No **VictimPC** , no contexto de **YasmiC** , execute o seguinte comando de Mimikatz:
 
-``` cmd
+```dos
 mimikatz.exe "lsadump::dcsync /domain:contoso.azure /user:krbtgt" "exit" >> c:\temp\ContosoDC_krbtgt-export.txt
 ```
 
-Replicamos as informações de conta "krbtgt" para: c:\\temp\\ContosoDC_krbtgt-export
+Nós replicamos as informações da conta "krbtgt" para: `c:\\temp\\ContosoDC_krbtgt-export.txt`
 
 ![Replicação mal-intencionada via mimikatz](media/playbook-dominance-maliciousrep_mimikatz.png)
 
-#### <a name="malicious-replication-detection-in-azure-atp"></a>Detecção de replicação mal-intencionadas no ATP do Azure
+#### <a name="malicious-replication-detection-in-product-short"></a>Detecção de replicação mal-intencionada no [!INCLUDE [Product short](includes/product-short.md)]
 
-Usando o portal do ATP do Azure, verifique se o SOC está ciente da replicação mal-intencionada que simulamos em VictimPC.
+Usando o portal do [!INCLUDE [Product short](includes/product-short.md)], verifique se o SOC está ciente da replicação mal-intencionada que simulamos em VictimPC.
 
-![Replicação mal-intencionada detectada pelo AATP](media/playbook-dominance-maliciousrep_detected.png)
+![Replicação mal-intencionada sendo detectada pelo [!INCLUDE [Product short](includes/product-short.md)]](media/playbook-dominance-maliciousrep_detected.png)
 
 ### <a name="skeleton-key"></a>Skeleton Key
 
@@ -147,15 +151,15 @@ Outro método de predominância de domínio usado pelos invasores é conhecido c
 
 Vamos usar uma Skeleton Key para ver como funciona esse tipo de ataque:
 
-1. Mova **mimikatz** para **ContosoDC** usando as credenciais de **YasmiC** que adquirimos antes. Efetue o push da arquitetura correta de **mimikatz.exe** com base no tipo de arquitetura do controlador de domínio (64 bits versus 32 bits). Na pasta do **mimikatz**, execute:
+1. Mova **mimikatz** para **ContosoDC** usando as credenciais de **YasmiC** que adquirimos antes. Efetue o push da arquitetura correta de **mimikatz.exe** com base no tipo de arquitetura do controlador de domínio (64 bits versus 32 bits). Na pasta do **mimikatz** , execute:
 
-   ``` cmd
+   ```dos
    xcopy mimikatz.exe \\ContosoDC\c$\temp
    ```
 
 1. Com o **mimikatz** preparada no controlador de domínio, execute-o remotamente por meio de PsExec:
 
-   ``` cmd
+   ```dos
    PsExec.exe \\ContosoDC -accepteula cmd /c (cd c:\temp ^& mimikatz.exe "privilege::debug" "misc::skeleton" ^& "exit")
    ```
 
@@ -165,42 +169,42 @@ Vamos usar uma Skeleton Key para ver como funciona esse tipo de ataque:
 
 ### <a name="exploiting-the-skeleton-key-patched-lsass"></a>Explorar o LSASS corrigido pela Skeleton Key
 
-No **VictimPC**, abra um prompt de comando (no contexto do **DiogoM**), execute o seguinte para tentar se tornar o contexto do EduardoHD.
+No **VictimPC** , abra um prompt de comando (no contexto do **DiogoM** ), execute o seguinte para tentar se tornar o contexto do EduardoHD.
 
-``` cmd
+```dos
 runas /user:ronhd@contoso.azure "notepad"
 ```
 
-Mediante solicitação, use a senha incorreta de propósito. Essa ação prova que a conta *ainda* tem uma senha após a execução do ataque.  
+Mediante solicitação, use a senha incorreta de propósito. Essa ação prova que a conta *ainda* tem uma senha após a execução do ataque.
 
 ![Uso de senha * errada* após o ataque de Skeleton Key (esse método funciona exatamente como descrito)](media/playbook-dominance-skeletonkey_wrong.png)
 
 Mas a Skeleton Key adiciona outra uma senha a cada conta. Execute novamente o comando "runas", mas use "mimikatz" como a senha desta vez.
 
-``` cmd
+```dos
 runas /user:ronhd@contoso.azure "notepad"
 ```
 
-Esse comando cria um novo processo, *bloco de notas*, em execução no contexto do EduardoHD. **Skeleton Key pode ocorrer em _qualquer_ conta, incluindo contas de serviço e contas de computador.**
+Esse comando cria um novo processo, *bloco de notas* , em execução no contexto do EduardoHD. **Skeleton Key pode ocorrer em _qualquer_ conta, incluindo contas de serviço e contas de computador.**
 
 > [!Important]
 > É importante que você reinicie o ContosoDC depois de executar o ataque de Skeleton Key. Ao fazer isso, o processo LSASS.exe no ContosoDC será corrigido e modificado, fazendo o downgrade de cada solicitação de autenticação para RC4.
 
-### <a name="skeleton-key-attack-detection-in-azure-atp"></a>Detecção de ataque de Skeleton Key no ATP do Azure
+### <a name="skeleton-key-attack-detection-in-product-short"></a>Detecção de ataque de Skeleton Key no [!INCLUDE [Product short](includes/product-short.md)]
 
-O que o ATP do Azure detectou e informou enquanto tudo isso estava ocorrendo?
+O que o [!INCLUDE [Product short](includes/product-short.md)] detectou e informou enquanto tudo isso estava ocorrendo?
 
-![Ataque de Skeleton Key detectado pelo AATP](media/playbook-dominance-skeletonkey_detected.png)
+![Ataque de Skeleton Key detectado por [!INCLUDE [Product short](includes/product-short.md)]](media/playbook-dominance-skeletonkey_detected.png)
 
-O ATP do Azure detectou o método de criptografia de pré-autenticação suspeito usado para este usuário.
+O [!INCLUDE [Product short](includes/product-short.md)] detectou o método de criptografia de pré-autenticação suspeito usado para esse usuário.
 
 ### <a name="golden-ticket---existing-user"></a>Golden Ticket - Usuário existente
 
-Depois de roubar o "Golden Ticket", (conta "krbtgt" explicada [aqui por meio da Replicação mal-intencionada](#malicious-replication)), um invasor é capaz de assinar tíquetes *como se fosse o controlador de domínio*. **Mimikatz**, o SID do Domínio e a conta "krbtgt" roubada são necessários para realizar esse ataque. Além de podermos gerar tíquetes para um usuário, podemos gerar tíquetes para usuários que nem existem.
+Depois de roubar o "Golden Ticket", (conta "krbtgt" explicada [aqui por meio da Replicação mal-intencionada](#malicious-replication)), um invasor é capaz de assinar tíquetes *como se fosse o controlador de domínio*. **Mimikatz** , o SID do Domínio e a conta "krbtgt" roubada são necessários para realizar esse ataque. Além de podermos gerar tíquetes para um usuário, podemos gerar tíquetes para usuários que nem existem.
 
 1. Como DiogoM, execute o comando abaixo no **VictimPC** para adquirir o SID do domínio:
 
-   ``` cmd
+   ```dos
    whoami /user
    ```
 
@@ -208,27 +212,27 @@ Depois de roubar o "Golden Ticket", (conta "krbtgt" explicada [aqui por meio da 
 
 1. Identifique e copie o SID do Domínio realçado na captura de tela acima.
 
-1. Usando **mimikatz**, use o SID de Domínio copiado, junto com o hash NTLM do usuário do "krbtgt" roubado para gerar o TGT. Insira o texto a seguir em um cmd.exe como DiogoM:
+1. Com **mimikatz** , use o SID de Domínio copiado, junto com o hash NTLM do usuário do "krbtgt" roubado para gerar o TGT. Insira o texto a seguir em um cmd.exe como DiogoM:
 
-   ``` cmd
+   ```dos
    mimikatz.exe "privilege::debug" "kerberos::golden /domain:contoso.azure /sid:S-1-5-21-2839646386-741382897-445212193 /krbtgt:c96537e5dca507ee7cfdede66d33103e /user:SamiraA /ticket:c:\temp\GTSamiraA_2018-11-28.kirbi /ptt" "exit"
    ```
 
     ![Gerar o Golden ticket](media/playbook-dominance-golden_generate.png)
 
-   A parte ```/ptt``` do comando nos permitiu passar imediatamente o tíquete gerado para a memória.
+   A parte `/ptt` do comando nos permitiu passar imediatamente o tíquete gerado para a memória.
 
-1. Vamos verificar se a credencial está na memória.  Execute ```klist``` no console.
+1. Vamos verificar se a credencial está na memória.  Execute `klist` no console.
 
     ![Resultados do klist depois de passar o tíquete gerado](media/playbook-dominance-golden_klist.png)
 
 1. Atuando como invasor, execute o seguinte comando Pass-the-Ticket para usá-lo no controlador de domínio:
 
-   ``` cmd
+   ```dos
    dir \\ContosoDC\c$
    ```
 
-   Sucesso! Você gerou um Golden Ticket **falso** para YasminC.
+   Êxito! Você gerou um Golden Ticket **falso** para YasminC.
 
     ![Executar o Golden Ticket via mimikatz](media/playbook-dominance-golden_ptt.png)
 
@@ -236,7 +240,7 @@ Por que isso funcionou? O ataque de Golden Ticket funciona porque o tíquete ger
 
 #### <a name="golden-ticket--existing-user-attack-detection"></a>Detecção de ataque Golden Ticket- Usuário existente
 
-O ATP do Azure usa vários métodos para detectar ataques suspeitos desse tipo. Nesse cenário exato, o ATP do Azure detectou o downgrade de criptografia do tíquete falso.
+O [!INCLUDE [Product short](includes/product-short.md)] usa vários métodos para detectar ataques suspeitos desse tipo. Neste cenário exato, o [!INCLUDE [Product short](includes/product-short.md)] detectou o downgrade de criptografia do tíquete falso.
 
 ![Golden Ticket sendo detectado](media/playbook-dominance-golden_detected.png)
 
@@ -245,10 +249,10 @@ O ATP do Azure usa vários métodos para detectar ataques suspeitos desse tipo. 
 
 ## <a name="next-steps"></a>Próximas etapas
 
-* [Guia de alerta de segurança do Azure ATP](suspicious-activity-guide.md)
-* [Investigar caminhos de movimento lateral com o Azure ATP](use-case-lateral-movement-path.md)
-* [Confira o fórum do ATP do Azure!](https://aka.ms/azureatpcommunity)
+- [Guia de alertas de segurança do [!INCLUDE [Product short](includes/product-short.md)]](suspicious-activity-guide.md)
+- [Investigar caminhos de movimentação lateral com o [!INCLUDE [Product short](includes/product-short.md)]](use-case-lateral-movement-path.md)
+- [Confira o fórum do [!INCLUDE [Product short](includes/product-short.md)]!](https://aka.ms/MDIcommunity)
 
 ## <a name="join-the-community"></a>Participe da comunidade
 
-Tem mais perguntas ou interesse em discutir sobre o ATP do Azure e a segurança relacionada com outras pessoas? Participe da [Comunidade do ATP do Azure](https://techcommunity.microsoft.com/t5/Azure-Advanced-Threat-Protection/bd-p/AzureAdvancedThreatProtection) hoje mesmo!
+Tem mais perguntas ou interesse em discutir sobre o [!INCLUDE [Product short](includes/product-short.md)] e a segurança relacionada com outras pessoas? Participe da Comunidade [[!INCLUDE [Product short](includes/product-short.md)]](https://techcommunity.microsoft.com/t5/Azure-Advanced-Threat-Protection/bd-p/AzureAdvancedThreatProtection) hoje mesmo!

@@ -1,97 +1,96 @@
 ---
-title: Configurar o Encaminhamento de Eventos do Windows na Proteção Avançada contra Ameaças do Azure
-description: Descreve suas opções para configurar o Encaminhamento de Eventos do Windows com o Azure ATP
+title: Configurar o encaminhamento de eventos do Windows no Microsoft Defender para Identidade
+description: Descreve suas opções de configuração do Encaminhamento de Eventos do Windows com o Microsoft Defender para Identidade
 keywords: ''
 author: shsagir
 ms.author: shsagir
 manager: shsagir
-ms.date: 03/18/2020
+ms.date: 10/26/2020
 ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
-ms.assetid: 3547519f-8d9c-40a9-8f0e-c7ba21081203
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 82d45c25ccb36e2ec4763cfec13a4f03d8a26575
-ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
+ms.openlocfilehash: 6addbfe12b8c7bf56274cea0e185e2b45d2149aa
+ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90910509"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93277362"
 ---
 # <a name="configuring-windows-event-forwarding"></a>Configuração do encaminhamento de eventos do Windows
 
 [!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 > [!NOTE]
-> O sensor do Azure ATP lê automaticamente os eventos localmente, sem a necessidade de configurar o encaminhamento de eventos.
+> O sensor do [!INCLUDE [Product long](includes/product-long.md)] lê os eventos de forma automática localmente, sem a necessidade de configurar o encaminhamento de eventos.
 
-Para aprimorar as funcionalidades de detecção, o ATP do Azure precisa dos eventos do Windows listados em [Configurar coleta de eventos](configure-windows-event-collection.md#configure-event-collection). Eles podem ser lidos automaticamente pelo sensor do Azure ATP ou, caso o sensor do Azure ATP não esteja implantado, ele poderá ser encaminhado para o sensor autônomo do Azure ATP de duas maneiras: configurando o sensor autônomo do Azure ATP para escutar eventos do SIEM ou configurando o Encaminhamento de Eventos do Windows.
+Para aprimorar as funcionalidades de detecção, o [!INCLUDE [Product short](includes/product-short.md)] precisa dos eventos do Windows listados na seção [Configurar coleta de eventos](configure-windows-event-collection.md#configure-event-collection). Eles podem ser lidos automaticamente pelo sensor do [!INCLUDE [Product short](includes/product-short.md)] ou, caso o sensor do [!INCLUDE [Product short](includes/product-short.md)] não esteja implantado, podem ser encaminhados para o sensor autônomo do [!INCLUDE [Product short](includes/product-short.md)] de duas maneiras: configurando o sensor autônomo do [!INCLUDE [Product short](includes/product-short.md)] para escutar eventos de SIEM ou configurando o Encaminhamento de Eventos do Windows.
 
 > [!NOTE]
 >
-> - Os sensores autônomos do ATP do Azure não dão suporte à coleção de entradas de log do ETW (Rastreamento de Eventos para Windows) que fornecem os dados para várias detecções. Para cobertura completa do seu ambiente, é recomendável implantar o sensor do ATP do Azure.
+> - Os sensores autônomos do [!INCLUDE [Product short](includes/product-short.md)] não dão suporte à coleção de entradas de log do ETW (Rastreamento de Eventos para Windows) que fornecem dados para várias detecções. Para cobertura completa do seu ambiente, recomendamos implantar o sensor do [!INCLUDE [Product short](includes/product-short.md)].
 > - Verifique se o controlador de domínio está configurado corretamente para capturar os eventos necessários.
 
-## <a name="wef-configuration-for-azure-atp-standalone-sensors-with-port-mirroring"></a>Configuração do WEF para o sensor autônomo do Azure ATP com espelhamento de porta
+## <a name="wef-configuration-for-product-short-standalone-sensors-with-port-mirroring"></a>Configuração do WEF dos sensores autônomos do [!INCLUDE [Product short](includes/product-short.md)] com espelhamento de porta
 
-Após configurar o espelhamento de porta dos controladores de domínio para o Azure ATP, siga as instruções a seguir para configurar o Encaminhamento de Eventos do Windows usando a configuração Origem Iniciada. Essa é uma maneira para configurar o Encaminhamento de eventos do Windows.
+Após configurar o espelhamento de porta dos controladores de domínio para o sensor autônomo do [!INCLUDE [Product short](includes/product-short.md)], siga as instruções abaixo para configurar o Encaminhamento de Eventos do Windows usando a configuração Iniciada pela Origem. Essa é uma maneira para configurar o Encaminhamento de eventos do Windows.
 
 **Etapa 1: adicionar a conta de serviço de rede ao Grupo de Leitores de Log de Eventos do domínio.**
 
-Neste cenário, suponha que o sensor autônomo do Azure ATP seja membro do domínio.
+Neste cenário, suponha que o sensor autônomo do [!INCLUDE [Product short](includes/product-short.md)] seja membro do domínio.
 
 1. Abra os Usuários e Computadores do Active Directory, navegue até a pasta **BuiltIn** e clique duas vezes em **Leitores de Log de Eventos**.
 1. Selecione **Membros**.
-1. Se **Serviço de Rede** não estiver listado, clique em **Adicionar**, digite **Serviço de Rede** no campo **Digite os nomes de objeto a serem selecionados** . Depois, clique em **Verificar Nomes** e clique em **OK** duas vezes.
+1. Se **Serviço de Rede** não estiver listado, clique em **Adicionar** , digite **Serviço de Rede** no campo **Digite os nomes de objeto a serem selecionados** . Depois, clique em **Verificar Nomes** e clique em **OK** duas vezes.
 
-Após adicionar o **Serviço de Rede** ao grupo **Leitores de Log de Eventos**, reinicie os controladores de domínio para que a alteração tenha efeito.
+Após adicionar o **Serviço de Rede** ao grupo **Leitores de Log de Eventos** , reinicie os controladores de domínio para que a alteração tenha efeito.
 
 **Etapa 2: criar uma política nos controladores de domínio para definir a configuração Configurar Gerenciador de Assinaturas de destino.**
 
 > [!Note]
-> Você pode criar uma política de grupo para essas configurações e aplicá-la a cada controlador de domínio monitorado pelo sensor autônomo do Azure ATP. As etapas a seguir modificam a política local do controlador de domínio.
+> Você pode criar uma política de grupo para essas configurações e aplicá-la a cada controlador de domínio monitorado pelo sensor autônomo do [!INCLUDE [Product short](includes/product-short.md)]. As etapas a seguir modificam a política local do controlador de domínio.
 
 1. Execute o seguinte comando em cada controlador de domínio: *winrm quickconfig*
 1. Em um prompt de comando, digite *gpedit.msc*.
 1. Expanda **Configuração do Computador > Modelos Administrativos > Componentes do Windows > Encaminhamento de Evento**
 
-    ![Imagem do editor de grupo de política local](media/wef%201%20local%20group%20policy%20editor.png)
+    ![Imagem do editor de grupo de política local](media/wef-1-local-group-policy-editor.png)
 
 1. Clique duas vezes em **Configurar Gerenciador de assinatura de destino**.
 
     1. Selecione **Habilitado**.
-    1. Em **Opções**, clique em **Mostrar**.
-    1. Em **SubscriptionManagers**, insira o seguinte valor e clique em **OK**:  Server= http\://\<fqdnATPSensor>:5985/wsman/SubscriptionManager/WEC,Refresh=10` (Por exemplo: Server=http\://atpsensor9.contoso.com:5985/wsman/SubscriptionManager/WEC,Refresh=10)
+    1. Em **Opções** , clique em **Mostrar**.
+    1. Em **SubscriptionManagers** , insira o seguinte valor e clique em **OK** :  `Server=http\://\<fqdnMicrosoftDefenderForIdentitySensor>:5985/wsman/SubscriptionManager/WEC,Refresh=10` (Por exemplo: `Server=http\://atpsensor9.contoso.com:5985/wsman/SubscriptionManager/WEC,Refresh=10`)
 
-    ![Configurar a imagem de assinatura de destino](media/wef%202%20config%20target%20sub%20manager.png)
+    ![Configurar a imagem de assinatura de destino](media/wef-2-config-target-sub-manager.png)
 
 1. Clique em **OK**.
 1. Em um prompt de comandos com privilégios elevados, digite *gpupdate /force*.
 
-**Etapa 3: executar as seguintes etapas no sensor autônomo do ATP do Azure**
+**Etapa 3: executar estas etapas no sensor autônomo do [!INCLUDE [Product short](includes/product-short.md)]**
 
 1. Em um prompt de comandos com privilégios elevados, digite *wecutil qc*
 1. Abra o **Visualizador de Eventos**.
 1. Clique com o botão direito do mouse em **Assinaturas** e selecione **Criar Assinatura**.
 
     1. Insira um nome e uma descrição para a assinatura.
-    1. Para **Log de Destino** confirme se **Eventos Encaminhados** está selecionado. Para o Azure ATP ler os eventos, o log de destino deve ser **Eventos Encaminhados**.
+    1. Para **Log de Destino** confirme se **Eventos Encaminhados** está selecionado. Para o [!INCLUDE [Product short](includes/product-short.md)] ler os eventos, o log de destino deve ser **Eventos Encaminhados**.
     1. Selecione **Iniciado pelo computador de origem** e clique em **Selecionar Grupos de Computadores**.
         1. Clique em **Adicionar Computador do Domínio**.
         1. Insira o nome do controlador de domínio no campo **Digite o nome do objeto a ser selecionado**. Depois, clique em **Verificar Nomes** e clique em **OK**.
         1. Clique em **OK**.
-        ![Imagem do Visualizador de Eventos](media/wef3%20event%20viewer.png)
+        ![Imagem do Visualizador de Eventos](media/wef-3-event-viewer.png)
     1. Clique em **Selecionar Eventos**.
         1. Clique em **Pelo log** e selecione **Segurança**.
-        1. No campo **Inclui/Exclui ID do Evento**, digite o número do evento e clique em **OK**. Por exemplo, digite 4776, como no exemplo a seguir:<br/>
+        1. No campo **Inclui/Exclui ID do Evento** , digite o número do evento e clique em **OK**. Por exemplo, digite 4776, como no exemplo a seguir:<br/>
         ![Imagem do filtro de consulta](media/wef-4-query-filter.png)
     1. Clique com o botão direito do mouse na assinatura criada e selecione **Status de Runtime** para verificar se há problemas com o status.
-    1. Depois de alguns minutos, verifique se os eventos definidos para serem encaminhados aparecem nos Eventos Encaminhados no sensor autônomo do Azure ATP.
+    1. Depois de alguns minutos, verifique se os eventos definidos para encaminhamento aparecem nos Eventos Encaminhados no sensor autônomo do [!INCLUDE [Product short](includes/product-short.md)].
 
 Para obter mais informações, consulte: [Configurar computadores para encaminhar e coletar eventos](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc748890(v=ws.11))
 
 ## <a name="see-also"></a>Consulte Também
 
-- [Instalar o Azure ATP](install-step1.md)
-- [Confira o fórum do ATP do Azure!](https://aka.ms/azureatpcommunity)
+- [Instalar o [!INCLUDE [Product short](includes/product-short.md)]](install-step1.md)
+- [Confira o fórum do [!INCLUDE [Product short](includes/product-short.md)]!](https://aka.ms/MDIcommunity)

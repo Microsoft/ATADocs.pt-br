@@ -1,42 +1,41 @@
 ---
-title: Guia de alertas de segurança do ATP do Azure
-description: Este artigo fornece uma lista de alertas de segurança emitidos pelo ATP do Azure.
+title: Guia de alertas de segurança do Microsoft Defender para Identidade
+description: Este artigo fornece uma lista dos alertas de segurança emitidos pelo Microsoft Defender para Identidade.
 keywords: ''
 author: shsagir
 ms.author: shsagir
 manager: shsagir
-ms.date: 04/23/2020
+ms.date: 10/27/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
-ms.assetid: ca5d1c7b-11a9-4df3-84a5-f53feaf6e561
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: f0c39f6ec4d47136324ba25c5c9bd29e0409854c
-ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
+ms.openlocfilehash: 254c6e6d5130936b32c859ceb96ee2995461cf3c
+ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90909976"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93274144"
 ---
-# <a name="azure-atp-security-alerts"></a>Alertas de segurança do ATP do Azure
+# <a name="product-long-security-alerts"></a>Alertas de segurança do [!INCLUDE [Product long](includes/product-long.md)]
 
 [!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 > [!NOTE]
-> Os recursos do ATP do Azure explicados nesta página também podem ser acessados usando o novo [portal](https://portal.cloudappsecurity.com).
+> Os recursos do [!INCLUDE [Product long](includes/product-long.md)] explicados nesta página também podem ser acessados usando o novo [portal](https://portal.cloudappsecurity.com).
 
-Os alertas de segurança do ATP do Azure explicam as atividades suspeitas detectadas pelo sensores do ATP do Azure em sua rede e os atores e os computadores envolvidos na cada ameaça. As listas de evidências dos alertas contêm links diretos para os computadores e os usuários envolvidos para ajudar a tornar suas investigações fáceis e diretas.
+Os alertas de segurança do [!INCLUDE [Product long](includes/product-long.md)] explicam as atividades suspeitas detectadas pelo sensores do [!INCLUDE [Product short](includes/product-short.md)] em sua rede e indicam os atores e computadores envolvidos em cada ameaça. As listas de evidências dos alertas contêm links diretos para os computadores e os usuários envolvidos para ajudar a tornar suas investigações fáceis e diretas.
 
-Os alertas de segurança do ATP do Azure são divididos nas categorias ou fases a seguir, assim como as fases vistas em uma cadeia de eliminação de ataque cibernético típica. Saiba mais sobre cada fase, os alertas projetados para detectar cada ataque e como usar os alertas para ajudar a proteger sua rede usando os links a seguir:
+Os alertas de segurança do [!INCLUDE [Product short](includes/product-short.md)] são divididos nas categorias ou fases a seguir, assim como as fases vistas em uma cadeia de eliminação de ataque cibernético típica. Saiba mais sobre cada fase, os alertas projetados para detectar cada ataque e como usar os alertas para ajudar a proteger sua rede usando os links a seguir:
 
-  1. [Alertas de fase de reconhecimento](reconnaissance-alerts.md)
-  2. [Alertas de fase de credencial comprometida](compromised-credentials-alerts.md)
-  3. [Alertas de fase de movimento lateral](lateral-movement-alerts.md)
-  4. [Alertas de fase de comprometimento de domínio](domain-dominance-alerts.md)
-  5. [Alertas da fase de exportação](exfiltration-alerts.md)
+1. [Alertas de fase de reconhecimento](reconnaissance-alerts.md)
+1. [Alertas de fase de credencial comprometida](compromised-credentials-alerts.md)
+1. [Alertas de fase de movimento lateral](lateral-movement-alerts.md)
+1. [Alertas de fase de comprometimento de domínio](domain-dominance-alerts.md)
+1. [Alertas da fase de exportação](exfiltration-alerts.md)
 
-Para saber mais sobre a estrutura e os componentes comuns de todos os alertas de segurança do ATP do Azure, confira [Entendendo os alertas de segurança](understanding-security-alerts.md).
+Para saber mais sobre a estrutura e os componentes comuns de todos os alertas de segurança do [!INCLUDE [Product short](includes/product-short.md)], confira [Noções básicas sobre os alertas de segurança](understanding-security-alerts.md).
 
 ## <a name="security-alert-name-mapping-and-unique-external-ids"></a>Mapeamento de nome do alerta de segurança e IDs externas exclusivas
 
@@ -81,7 +80,6 @@ A tabela a seguir lista o mapeamento entre nomes de alerta, suas IDs externas ex
 > |[Conexão de VPN suspeita](compromised-credentials-alerts.md#suspicious-vpn-connection-external-id-2025)|2025|Média|Persistência,<br>Evasão de defesa|
 > |[Reconhecimento de usuário e de associação a um grupo (SAMR)](reconnaissance-alerts.md#user-and-group-membership-reconnaissance-samr-external-id-2021)|2021|Média|Descoberta|
 > |[Reconhecimento de endereço IP e de usuário (SMB)](reconnaissance-alerts.md#user-and-ip-address-reconnaissance-smb-external-id-2012)|2012|Média|Descoberta|
-
 
 # <a name="cloud-app-security-ids"></a>[IDs do Cloud App Security](#tab/cloud-app-security)
 
@@ -133,4 +131,4 @@ A tabela a seguir lista o mapeamento entre nomes de alerta, suas IDs externas ex
 
 - [Trabalhando com alertas de segurança](working-with-suspicious-activities.md)
 - [Entender os alertas de segurança](understanding-security-alerts.md)
-- [Confira o fórum do ATP do Azure!](https://aka.ms/azureatpcommunity)
+- [Confira o fórum do [!INCLUDE [Product short](includes/product-short.md)]!](https://aka.ms/MDIcommunity)
