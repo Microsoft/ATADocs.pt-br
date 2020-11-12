@@ -11,12 +11,12 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: b522a23bddd5710f0a3e2169afab180e6b8bb828
-ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
+ms.openlocfilehash: 9b3aa953324e855cfe4aafb77ea6b1b1959b7f8c
+ms.sourcegitcommit: 90a332d67f62636b2d3a935f6bbdcbf24d74e6f0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93277218"
+ms.lasthandoff: 11/12/2020
+ms.locfileid: "94551656"
 ---
 # <a name="configure-endpoint-proxy-and-internet-connectivity-settings-for-your-product-long-sensor"></a>Configurar o proxy do ponto de extremidade e configurações de conectividade com a Internet para o sensor do [!INCLUDE [Product long](includes/product-long.md)]
 
@@ -32,7 +32,7 @@ Cada sensor do [!INCLUDE [Product long](includes/product-long.md)] precisa de co
 
 ### <a name="syntax"></a>Sintaxe
 
-"Azure ATP sensor Setup.exe" [/quiet] [/Help] [ProxyUrl="https://proxy.internal.com"] [ProxyUserName="domain\proxyuser"] [ProxyUserPassword="ProxyPassword"]
+"Azure ATP sensor Setup.exe" [/quiet] [/Help] [ProxyUrl="http://proxy.internal.com"] [ProxyUserName="domain\proxyuser"] [ProxyUserPassword="ProxyPassword"]
 
 ### <a name="switch-descriptions"></a>Descrições de comutador
 
