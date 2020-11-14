@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 8980e724-06a6-40b0-8477-27d4cc29fd2b
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 41ee2095939182a23a5f10088580113f1f0fdcd7
-ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
+ms.openlocfilehash: 567fb2beb08425a69964932ca6807ff03a6b6549
+ms.sourcegitcommit: 69c55503b8b3f7ca99dbea872b17d81124831fad
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90911336"
+ms.lasthandoff: 11/12/2020
+ms.locfileid: "94567916"
 ---
 # <a name="install-ata---step-6"></a>Instalação do ATA - Etapa 6
 
@@ -62,7 +62,7 @@ Consulte a documentação de produto do seu servidor SIEM/Syslog para saber como
 
 #### <a name="configuring-the-ata-gateway-to-listen-for-siem-events"></a>Configuração do Gateway de ATA para escutar eventos SIEM
 
-1. Na configuração do ATA, em **Fontes de dados** clique em **SIEM**, ative **Syslog** e clique em **Salvar**.
+1. Na configuração do ATA, em **Fontes de dados** clique em **SIEM** , ative **Syslog** e clique em **Salvar**.
 
     ![Habilitar a imagem UDP de ouvinte de syslog](media/ATA-enable-siem-forward-events.png)
 
@@ -126,7 +126,7 @@ Código de erro: 0x0
 
 - O cabeçalho do Syslog é opcional.
 
-- Há um separador de caracteres "\r\n" entre todos os campos obrigatórios.
+- Há um separador de caracteres "\r\n" entre todos os campos obrigatórios. Observe que esses são os caracteres de controle CRLF (0D0A em Hex) e não caracteres literais.
 - Os campos estão no formato chave=valor.
 - As chaves a seguir devem existir e ter um valor:
   - EventCode = a ID de evento do Windows

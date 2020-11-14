@@ -1,59 +1,57 @@
 ---
-title: Pré-requisitos da Proteção Avançada contra Ameaças do Azure
-description: Descreve os requisitos para uma implantação bem-sucedida do Azure ATP em seu ambiente
-keywords: ''
+title: Pré-requisitos do Microsoft Defender para Identidade
+description: Descreve os requisitos para uma implantação bem-sucedida do Microsoft Defender para Identidade no seu ambiente
 author: shsagir
 ms.author: shsagir
 manager: shsagir
-ms.date: 10/25/2020
+ms.date: 10/26/2020
 ms.topic: overview
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
-ms.assetid: 62c99622-2fe9-4035-9839-38fec0a353da
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 3438ca66b02edc93ba01754c696822613dfcc380
-ms.sourcegitcommit: 0ee43433d020fd05ad8825442dfb0e6b6bfa658f
+ms.openlocfilehash: e3b5b67ad5330fd7be41ed63e6db105e2f1d4a9e
+ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/26/2020
-ms.locfileid: "92526644"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93275635"
 ---
-# <a name="azure-atp-prerequisites"></a>Pré-requisitos do ATP do Azure
+# <a name="product-long-prerequisites"></a>Pré-requisitos do [!INCLUDE [Product long](includes/product-long.md)]
 
 [!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
-Este artigo descreve os requisitos para uma implantação bem-sucedida do Azure ATP em seu ambiente.
+Este artigo descreve os requisitos para uma implantação bem-sucedida do [!INCLUDE [Product long](includes/product-long.md)] no seu ambiente.
 
 >[!NOTE]
-> Para obter informações sobre como planejar a capacidade e os recursos, consulte [Planejamento de capacidade do Azure ATP](capacity-planning.md).
+> Para obter informações sobre como planejar a capacidade e os recursos, confira [Planejamento da capacidade do [!INCLUDE [Product short](includes/product-short.md)]](capacity-planning.md).
 
-O ATP do Azure é composto pelo seu serviço de nuvem, que consiste no portal e no sensor do ATP do Azure. Para obter mais informações sobre cada componente do Azure ATP, confira [Arquitetura do Azure ATP](architecture.md).
+O [!INCLUDE [Product short](includes/product-short.md)] é composto pelo serviço de nuvem do [!INCLUDE [Product short](includes/product-short.md)], que consiste no portal do [!INCLUDE [Product short](includes/product-short.md)] e no sensor do [!INCLUDE [Product short](includes/product-short.md)]. Para obter mais informações sobre cada um dos componentes do [!INCLUDE [Product short](includes/product-short.md)], confira [Arquitetura do [!INCLUDE [Product short](includes/product-short.md)]](architecture.md).
 
-A ATP do Azure protege seus usuários locais do Active Directory e/ou os usuários sincronizados com o Azure Active Directory. Para proteger um ambiente composto apenas por usuários do AAD, confira a [Proteção de Identidade do AAD](/azure/active-directory/identity-protection/overview).
+O [!INCLUDE [Product short](includes/product-short.md)] protege seus usuários locais do Active Directory e/ou os usuários sincronizados com o Azure Active Directory. Para proteger um ambiente composto apenas por usuários do AAD, confira a [Proteção de Identidade do AAD](/azure/active-directory/identity-protection/overview).
 
-Para criar sua instância do Azure ATP, será necessário um locatário do AAD com pelo menos um administrador da segurança/global. Cada instância do Azure ATP dá suporte a vários limites de floresta do Active Directory e dá suporte ao FFL (Nível funcional da floresta) do Windows 2003 e posteriores.
+Para criar sua instância do [!INCLUDE [Product short](includes/product-short.md)], você precisará ter um locatário do AAD com, pelo menos, um administrador da segurança/global. Cada instância do [!INCLUDE [Product short](includes/product-short.md)] dá suporte a vários limites de floresta do Active Directory e ao FFL (Nível funcional da floresta) do Windows 2003 e superior.
 
-Este guia de pré-requisitos é dividido nas seguintes seções para garantir que você tem tudo de que precisa para implantar o Azure ATP com êxito.
+Este guia de pré-requisitos é dividido nas seções a seguir para garantir que você tem tudo de que precisa para implantar o [!INCLUDE [Product short](includes/product-short.md)] com êxito.
 
 [Antes de começar](#before-you-start): Lista as informações a serem reunidas e as contas e entidades de rede de que você precisará antes de iniciar a instalação.
 
-[Portal do ATP do Azure](#azure-atp-portal-requirements): Descreve os requisitos do navegador do portal do ATP do Azure.
+[Portal do [!INCLUDE [Product short](includes/product-short.md)]](#azure-atp-portal-requirements): descreve os requisitos do navegador do portal do [!INCLUDE [Product short](includes/product-short.md)].
 
-[Sensor do ATP do Azure](#azure-atp-sensor-requirements): Lista os requisitos de hardware e software do sensor do ATP do Azure.
+[Sensor do [!INCLUDE [Product short](includes/product-short.md)]](#azure-atp-sensor-requirements): lista os requisitos de hardware e software do sensor do [!INCLUDE [Product short](includes/product-short.md)].
 
-[Sensor autônomo do ATP do Azure](#azure-atp-standalone-sensor-requirements): O Sensor autônomo do ATP do Azure é instalado em um servidor dedicado e requer a configuração do espelhamento de porta do controlador de domínio para receber o tráfego de rede.
+[Sensor autônomo do [!INCLUDE [Product short](includes/product-short.md)]](#azure-atp-standalone-sensor-requirements): o sensor autônomo do [!INCLUDE [Product short](includes/product-short.md)] é instalado em um servidor dedicado e exige a configuração do espelhamento de porta no controlador de domínio para receber o tráfego de rede.
 
 > [!NOTE]
-> Os sensores autônomos do ATP do Azure não dão suporte à coleção de entradas de log do ETW (Rastreamento de Eventos para Windows) que fornecem os dados para várias detecções. Para cobertura completa do seu ambiente, é recomendável implantar o sensor do ATP do Azure.
+> Os sensores autônomos do [!INCLUDE [Product short](includes/product-short.md)] não dão suporte à coleção de entradas de log do ETW (Rastreamento de Eventos para Windows) que fornecem os dados para várias detecções. Para cobertura completa do seu ambiente, recomendamos implantar o sensor do [!INCLUDE [Product short](includes/product-short.md)].
 
 ## <a name="before-you-start"></a>Antes de começar
 
-Esta seção mostra as informações que você deve obter, bem como as contas e informações sobre entidades de rede que deve ter antes de iniciar a instalação do ATP do Azure.
+Esta seção lista as informações que você deve obter, bem como as contas e as informações sobre entidades de rede que deve ter antes de iniciar a instalação do [!INCLUDE [Product short](includes/product-short.md)].
 
-- Adquira uma licença do EMS E5 (Enterprise Mobility + Security 5) diretamente usando o [portal do Microsoft 365](https://www.microsoft.com/cloud-platform/enterprise-mobility-security-pricing) ou use o modelo de licenciamento do CSP (Parceiro de Soluções na Nuvem). As licenças autônomas do ATP do Azure também estão disponíveis.
+- Adquira uma licença do EMS E5 (Enterprise Mobility + Security 5) diretamente usando o [portal do Microsoft 365](https://www.microsoft.com/cloud-platform/enterprise-mobility-security-pricing) ou use o modelo de licenciamento do CSP (Parceiro de Soluções na Nuvem). Licenças autônomas do [!INCLUDE [Product short](includes/product-short.md)] também estão disponíveis.
 
-- Verifique se os controladores de domínio nos quais você pretende instalar sensores do Azure ATP têm conectividade com a Internet para o Serviço de Nuvem do Azure ATP. O sensor do ATP do Azure tem suporte para o uso de um proxy. Para obter mais informações sobre a configuração de proxy, confira [Configuring a proxy for Azure ATP](configure-proxy.md) (Configurando um proxy para o Azure ATP).
+- Confirme se os controladores de domínio nos quais você pretende instalar os sensores do [!INCLUDE [Product short](includes/product-short.md)] têm conectividade com a Internet para o serviço de nuvem do [!INCLUDE [Product short](includes/product-short.md)]. O sensor do [!INCLUDE [Product short](includes/product-short.md)] dá suporte ao uso de um proxy. Para obter mais informações sobre a configuração de proxy, confira [Como configurar um proxy para o [!INCLUDE [Product short](includes/product-short.md)]](configure-proxy.md).
 
 - Pelo menos uma das seguintes contas de serviços de diretório com acesso de leitura a todos os objetos nos domínios monitorados:
   - Uma conta de usuário do AD **padrão** e senha. Exigidas para sensores que executam o Windows Server 2008 R2 SP1.
@@ -71,58 +69,62 @@ Esta seção mostra as informações que você deve obter, bem como as contas e 
     > [!NOTE]
     >
     > - Para computadores sensores que executam o Windows Server 2012 e posterior, recomendamos usar uma conta **gMSA** devido à segurança aprimorada e ao gerenciamento automático de senhas.
-    > - Se você tiver vários sensores, alguns executando o Windows Server 2008 e outros executando o Windows Server 2012 ou posterior, além da recomendação para usar uma conta **gMSA** , você também deverá usar pelo menos uma conta de usuário do AD **padrão** .
+    > - Se você tiver vários sensores, alguns executando o Windows Server 2008 e outros executando o Windows Server 2012 ou posterior, além da recomendação para usar uma conta **gMSA** , você também deverá usar pelo menos uma conta de usuário do AD **padrão**.
     > - Se você tiver definido ACLs personalizadas em várias Unidades Organizacionais (UO) em seu domínio, verifique se o usuário selecionado tem permissões de leitura para essas UOs.
 
-- Se executar o Wireshark no sensor autônomo do ATP do Azure, reinicie o serviço de sensor da Proteção Avançada contra Ameaças do Azure quando interromper a captura do Wireshark. Se não reiniciar o serviço de sensor, o sensor interromperá a captura de tráfego.
+- Se você executar o Wireshark no sensor autônomo do [!INCLUDE [Product short](includes/product-short.md)], reinicie o serviço de sensor do [!INCLUDE [Product short](includes/product-short.md)] depois de interromper a captura do Wireshark. Se não reiniciar o serviço de sensor, o sensor interromperá a captura de tráfego.
 
-- Se tentar instalar o sensor do ATP do Azure em um computador configurado com um adaptador de Agrupamento NIC, você receberá um erro de instalação. Se desejar instalar o sensor do Azure ATP em um computador configurado com Agrupamento NIC, confira [Problemas do Agrupamento NIC do Sensor do Azure ATP](troubleshooting-known-issues.md#nic-teaming).
+- Se você tentar instalar o sensor do [!INCLUDE [Product short](includes/product-short.md)] em um computador configurado com um adaptador de Agrupamento NIC, receberá um erro de instalação. Caso deseje instalar o sensor do [!INCLUDE [Product short](includes/product-short.md)] em um computador configurado com Agrupamento NIC, confira [Problemas do Agrupamento NIC do sensor do [!INCLUDE [Product short](includes/product-short.md)]](troubleshooting-known-issues.md#nic-teaming).
 
-- Recomendação de contêiner de **Objetos Excluídos** : O usuário deve ter permissões de somente leitura no contêiner de Objetos Excluídos. Permissões somente leitura neste contêiner permitem que a ATP do Azure detecte exclusões de usuários do seu Active Directory. Para obter informações sobre como configurar permissões somente leitura no contêiner Objetos Excluídos, confira a seção **Como alterar permissões em um contêiner de objetos excluídos** do artigo [Exibir ou definir permissões em um objeto do directory](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc816824(v=ws.10)).
+- Recomendação de contêiner de **Objetos Excluídos** : O usuário deve ter permissões de somente leitura no contêiner de Objetos Excluídos. As permissões somente leitura neste contêiner permitem que o [!INCLUDE [Product short](includes/product-short.md)] detecte exclusões de usuários do Active Directory. Para obter informações sobre como configurar permissões somente leitura no contêiner Objetos Excluídos, confira a seção **Como alterar permissões em um contêiner de objetos excluídos** do artigo [Exibir ou definir permissões em um objeto do directory](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc816824(v=ws.10)).
 
-- **Honeytoken** opcional: Uma conta de usuário que não tem nenhuma atividade de rede. Essa conta está configurada como um usuário Honeytoken do Azure ATP. Para obter mais informações sobre como usar Honeytokens, confira [Configurar exclusões e usuário do Honeytoken](install-step7.md).
+- **Honeytoken** opcional: Uma conta de usuário que não tem nenhuma atividade de rede. Essa conta está configurada como o usuário Honeytoken do [!INCLUDE [Product short](includes/product-short.md)]. Para obter mais informações sobre como usar Honeytokens, confira [Configurar exclusões e usuário do Honeytoken](install-step7.md).
 
-- Opcional: Ao implantar o sensor autônomo, é necessário encaminhar [eventos do Windows](configure-windows-event-collection.md#configure-event-collection) para a ATP do Azure para aprimorar ainda mais as detecções baseadas na autenticação da ATP do Azure, as adições a grupos confidenciais e as detecções de criação de serviço suspeito.  O sensor do Azure ATP recebe esses eventos automaticamente. No sensor autônomo do Azure ATP, esses eventos podem ser recebidos do SIEM ou definindo o Encaminhamento de Eventos do Windows no controlador de domínio. Os eventos coletados fornecem ao Azure ATP informações adicionais que não estão disponíveis por meio do tráfego de rede do controlador de domínio.
+- Opcional: ao implantar o sensor autônomo, é necessário encaminhar os [eventos do Windows](configure-windows-event-collection.md#configure-event-collection) para o [!INCLUDE [Product short](includes/product-short.md)] para aprimorar ainda mais as adições a grupos confidenciais, as detecções de criação de serviço suspeito e as detecções baseadas na autenticação do [!INCLUDE [Product short](includes/product-short.md)].  O sensor do [!INCLUDE [Product short](includes/product-short.md)] recebe esses eventos automaticamente. No sensor autônomo do [!INCLUDE [Product short](includes/product-short.md)], esses eventos podem ser recebidos do SIEM ou pela definição do Encaminhamento de Eventos do Windows no controlador de domínio. Os eventos coletados fornecem ao [!INCLUDE [Product short](includes/product-short.md)] informações adicionais que não estão disponíveis por meio do tráfego de rede do controlador de domínio.
 
-## <a name="azure-atp-portal-requirements"></a>Requisitos do portal do Azure ATP
+<a name="azure-atp-portal-requirements"></a>
 
-O acesso ao portal do Azure ATP ocorre por meio de um navegador que dá suporte aos seguintes navegadores e configurações:
+## <a name="product-short-portal-requirements"></a>Requisitos do portal do [!INCLUDE [Product short](includes/product-short.md)]
+
+O acesso ao portal do [!INCLUDE [Product short](includes/product-short.md)] ocorre por meio de um navegador, que dá suporte aos seguintes navegadores e configurações:
 
 - Um navegador compatível com TLS 1.2, como:
   - Microsoft Edge
   - Internet Explorer versão 11 e posterior
   - Google Chrome 30.0 e posterior
 - Resolução de largura mínima da tela de 1.700 pixels
-- Firewall/proxy aberto – para se comunicar com o serviço de nuvem do ATP do Azure, você deve abrir a porta 443 de *.atp.azure.com no firewall/proxy.
+- Firewall/proxy aberto: para se comunicar com o serviço de nuvem do [!INCLUDE [Product short](includes/product-short.md)], a porta 443 de *.atp.azure.com precisa ser aberta no firewall/proxy.
 
     > [!NOTE]
-    > Você também pode usar nossa marca de serviço do Azure ( **AzureAdvancedThreatProtection** ) para habilitar o acesso ao ATP do Azure. Para obter mais informações sobre marcas de serviço, confira [Marcas de serviço de rede virtual](/azure/virtual-network/service-tags-overview) ou [baixe o arquivo de marcas de serviço](https://www.microsoft.com/download/details.aspx?id=56519).
+    > Use também nossa marca de serviço do Azure ( **AzureAdvancedThreatProtection** ) para habilitar o acesso ao [!INCLUDE [Product short](includes/product-short.md)]. Para obter mais informações sobre marcas de serviço, confira [Marcas de serviço de rede virtual](/azure/virtual-network/service-tags-overview) ou [baixe o arquivo de marcas de serviço](https://www.microsoft.com/download/details.aspx?id=56519).
 
- ![diagrama da arquitetura do Azure ATP](media/azure-atp-architecture.png)
+ ![Diagrama da arquitetura do [!INCLUDE [Product short](includes/product-short.md)]](media/architecture-topology.png)
 
 > [!NOTE]
-> Por padrão, a ATP do Azure dá suporte a até 200 sensores. Para instalar mais sensores, fale com o suporte da ATP do Azure.
+> Por padrão, o [!INCLUDE [Product short](includes/product-short.md)] dá suporte a até 200 sensores. Caso deseje instalar mais sensores, entre em contato com o suporte do [!INCLUDE [Product short](includes/product-short.md)].
 
-## <a name="azure-atp-network-name-resolution-nnr-requirements"></a>Requisitos da NNR (resolução de nome de rede) da ATP do Azure
+## <a name="product-short-network-name-resolution-nnr-requirements"></a>Requisitos da NNR (Resolução de Nomes de Rede) do [!INCLUDE [Product short](includes/product-short.md)]
 
-A NNR (resolução de nomes de rede) é um componente principal da funcionalidade da ATP do Azure. Para resolver os endereços IP para nomes do computador, os sensores do ATP do Azure pesquisam os endereços IP usando os seguintes métodos:
+A NNR (Resolução de Nomes de Rede) é um componente principal da funcionalidade do [!INCLUDE [Product short](includes/product-short.md)]. Para resolver os endereços IP para nomes do computador, os sensores do [!INCLUDE [Product short](includes/product-short.md)] pesquisam os endereços IP usando os seguintes métodos:
 
 - NTLM sobre RPC (porta TCP 135)
 - NetBIOS (porta UDP 137)
 - RDP (porta TCP 3389): apenas o primeiro pacote do **Client hello**
 - Consultas ao servidor DNS usando a pesquisa de DNS reverso do endereço IP (UDP 53)
 
-Para que os três primeiros métodos funcionem, as portas relevantes devem ser abertas para entrada dos sensores da ATP do Azure para dispositivos na rede. Saiba mais sobre a ATP do Azure e a NNR em [Política da NNR da ATP do Azure](nnr-policy.md).
+Para que os três primeiros métodos funcionem, as portas relevantes precisam ser abertas para entrada dos sensores do [!INCLUDE [Product short](includes/product-short.md)] para os dispositivos na rede. Para saber mais sobre o [!INCLUDE [Product short](includes/product-short.md)] e a NNR, confira [Política da NNR do [!INCLUDE [Product short](includes/product-short.md)]](nnr-policy.md).
 
 Recomendamos o uso de todos os métodos para obter os melhores resultados. Se isso não for possível, você deverá usar o método de pesquisa de DNS e pelo menos um dos outros métodos.
 
-## <a name="azure-atp-sensor-requirements"></a>Requisitos do sensor do Azure ATP
+<a name="azure-atp-sensor-requirements"></a>
 
-Esta seção lista os requisitos do sensor do Azure ATP.
+## <a name="product-short-sensor-requirements"></a>Requisitos do sensor do [!INCLUDE [Product short](includes/product-short.md)]
+
+Esta seção lista os requisitos do sensor do [!INCLUDE [Product short](includes/product-short.md)].
 
 ### <a name="general"></a>Geral
 
-O sensor da ATP do Azure dá suporte à instalação em um controlador de domínio que executa o Windows Server 2008 R2 SP1 (sem incluir o Server Core), Windows Server 2012, Windows Server 2012 R2, Windows Server 2016 (incluindo o Server Core, mas não o Nano Server) e Windows Server 2019\* (incluindo o Server Core, mas não o Nano Server), como mostrado na tabela abaixo.
+O sensor do [!INCLUDE [Product short](includes/product-short.md)] dá suporte à instalação em um controlador de domínio que executa o Windows Server 2008 R2 SP1 (não incluindo o Server Core), o Windows Server 2012, o Windows Server 2012 R2, o Windows Server 2016 (incluindo o Server Core, mas não o Nano Server) e o Windows Server 2019\* (incluindo o Server Core, mas não o Nano Server), conforme mostrado na tabela a seguir.
 
 | Versão do sistema operacional   | Servidor com Experiência Desktop | Server Core | Nano Server    |
 | -------------------------- | ------------------------------ | ----------- | -------------- |
@@ -141,21 +143,21 @@ Para seus controladores de domínio se comunicarem com o serviço de nuvem, voc�
 Durante a instalação, se o .NET Framework 4.7 ou posterior não estiver instalado, o .NET Framework 4.7 será instalado e poderá exigir uma reinicialização do controlador de domínio. Também poderá ser necessária uma reinicialização se ela já estiver pendente.
 
 > [!NOTE]
-> São necessários no mínimo 5 GB de espaço. Recomenda-se 10 GB. Isso inclui o espaço necessário para os binários do Azure ATP, logs do Azure ATP e logs de desempenho.
+> São necessários no mínimo 5 GB de espaço. Recomenda-se 10 GB. Isso inclui o espaço necessário para os binários do [!INCLUDE [Product short](includes/product-short.md)], os logs do [!INCLUDE [Product short](includes/product-short.md)] e os logs de desempenho.
 
 ### <a name="server-specifications"></a>Especificações do servidor
 
-O sensor do ATP do Azure requer um mínimo de dois núcleos e 6 GB de RAM instalados no controlador de domínio.
-Para ter desempenho ideal, defina a **Opção de Energia** do computador que executa o sensor do ATP do Azure como **Alto Desempenho** .
+O sensor do [!INCLUDE [Product short](includes/product-short.md)] exige, no mínimo, dois núcleos e 6 GB de RAM instalados no controlador de domínio.
+Para obter um desempenho ideal, defina a **Opção de Energia** do computador que executa o sensor do [!INCLUDE [Product short](includes/product-short.md)] como **Alto Desempenho**.
 
-É possível implantar o sensor do ATP do Azure em controladores de domínio de vários tamanhos e cargas, dependendo da quantidade de recursos instalados e da quantidade de tráfego de rede dos controladores de domínio.
+Os sensores do [!INCLUDE [Product short](includes/product-short.md)] podem ser implantados em controladores de domínio de vários tamanhos e cargas, dependendo da quantidade de recursos instalados e da quantidade de tráfego de rede entre os controladores de domínio.
 
-Para os sistemas operacionais Windows 2008R2 e 2012, o sensor do ATP do Azure não tem suporte em um modo [Grupo de multiprocessadores](/windows/win32/procthread/processor-groups). Para obter mais informações sobre o modo de grupo de multiprocessadores,confira [solução de problemas](troubleshooting-known-issues.md#multi-processor-group-mode).
+Nos sistemas operacionais Windows 2008 R2 e 2012, não há suporte para o sensor do [!INCLUDE [Product short](includes/product-short.md)] em um modo [Grupo de multiprocessadores](/windows/win32/procthread/processor-groups). Para obter mais informações sobre o modo de grupo de multiprocessadores,confira [solução de problemas](troubleshooting-known-issues.md#multi-processor-group-mode).
 
 >[!NOTE]
 > Durante a execução como uma máquina virtual, memória dinâmica ou qualquer outra memória, não há suporte para o recurso de inchamento.
 
-Para obter mais informações sobre os requisitos de hardware do sensor do Azure ATP, consulte [Planejamento de capacidade do Azure ATP](capacity-planning.md).
+Para obter mais informações sobre os requisitos de hardware do sensor do [!INCLUDE [Product short](includes/product-short.md)], confira [Planejamento da capacidade do [!INCLUDE [Product short](includes/product-short.md)]](capacity-planning.md).
 
 ### <a name="time-synchronization"></a>Sincronização da hora
 
@@ -163,68 +165,70 @@ Os servidores e controladores de domínio nos quais o sensor é instalado devem 
 
 ### <a name="network-adapters"></a>Adaptadores de rede
 
-O sensor do Azure ATP monitora o tráfego local em todos os adaptadores de rede do controlador de domínio.  
-Após a implantação, use o portal do ATP do Azure para modificar quais adaptadores de rede são monitorados.
+O sensor do [!INCLUDE [Product short](includes/product-short.md)] monitora o tráfego local em todos os adaptadores de rede do controlador de domínio.  
+Após a implantação, use o portal do [!INCLUDE [Product short](includes/product-short.md)] para modificar quais adaptadores de rede são monitorados.
 
 Não há suporte para o sensor em controles de domínio que executem o Windows 2008 R2 com o Broadcom Network Adapter Teaming habilitado.
 
 ### <a name="ports"></a>Portas
 
-A tabela abaixo lista o mínimo de portas que o sensor do Azure ATP exige:
+A seguinte tabela lista o mínimo de portas exigidas pelo sensor do [!INCLUDE [Product short](includes/product-short.md)]:
 
 |Protocolo|Transport|Porta|De|Para|
 |------------|-------------|--------|-----------|
 |**Portas de Internet**|||||
-|SSL (*.atp.azure.com)|TCP|443|Sensor do Azure ATP|Serviço de nuvem do Azure ATP|
-|SSL (localhost)|TCP|444|Sensor do Azure ATP|localhost|
+|SSL (*.atp.azure.com)|TCP|443|Sensor do [!INCLUDE [Product short](includes/product-short.md)]|Serviço de nuvem do [!INCLUDE [Product short](includes/product-short.md)]|
+|SSL (localhost)|TCP|444|Sensor do [!INCLUDE [Product short](includes/product-short.md)]|localhost|
 |**Portas internas**|||||
-|DNS|TCP e UDP|53|Sensor do Azure ATP|Servidores DNS|
-|Netlogon (SMB, CIFS, SAM-R)|TCP/UDP|445|Sensor do Azure ATP|Todos os dispositivos na rede|
-|RAIO|UDP|1813|RAIO|Sensor do Azure ATP|
+|DNS|TCP e UDP|53|Sensor do [!INCLUDE [Product short](includes/product-short.md)]|Servidores DNS|
+|Netlogon (SMB, CIFS, SAM-R)|TCP/UDP|445|Sensor do [!INCLUDE [Product short](includes/product-short.md)]|Todos os dispositivos na rede|
+|RAIO|UDP|1813|RAIO|Sensor do [!INCLUDE [Product short](includes/product-short.md)]|
 |**Portas NNR**\*|||||
-|NTLM via RPC|TCP|Porta 135|Sensores ATP|Todos os dispositivos na rede|
-|NetBIOS|UDP|137|Sensores ATP|Todos os dispositivos na rede|
-|RDP|TCP|3389, apenas o primeiro pacote do Client hello|Sensores ATP|Todos os dispositivos na rede|
+|NTLM via RPC|TCP|Porta 135|[!INCLUDE [Product short](includes/product-short.md)]s|Todos os dispositivos na rede|
+|NetBIOS|UDP|137|[!INCLUDE [Product short](includes/product-short.md)]s|Todos os dispositivos na rede|
+|RDP|TCP|3389, apenas o primeiro pacote do Client hello|[!INCLUDE [Product short](includes/product-short.md)]s|Todos os dispositivos na rede|
 
 \* Uma dessas portas é necessária, mas é recomendável abrir todas elas.
 
 ### <a name="windows-event-logs"></a>Log de eventos do Windows
 
-A detecção da ATP do Azure depende de [logs de eventos específicos do Windows](configure-windows-event-collection.md#configure-event-collection) que o sensor analisa dos controladores de domínio. Para que os eventos corretos sejam auditados e incluídos no log de eventos do Windows, seus controladores de domínio exigem configurações precisas de política de auditoria avançada. Para saber mais sobre como configurar as políticas corretas, confira [Verificação avançada da política de auditoria](configure-windows-event-collection.md). Para [verificar se o evento 8004 do Windows foi auditado](configure-windows-event-collection.md#configure-audit-policies) conforme necessário pelo serviço, examine as [configurações de auditoria do NTLM](/archive/blogs/askds/ntlm-blocking-and-you-application-analysis-and-auditing-methodologies-in-windows-7).
+A detecção do [!INCLUDE [Product short](includes/product-short.md)] depende de [logs de eventos específicos do Windows](configure-windows-event-collection.md#configure-event-collection) que o sensor analisa dos controladores de domínio. Para que os eventos corretos sejam auditados e incluídos no log de eventos do Windows, seus controladores de domínio exigem configurações precisas de política de auditoria avançada. Para saber mais sobre como configurar as políticas corretas, confira [Verificação avançada da política de auditoria](configure-windows-event-collection.md). Para [verificar se o evento 8004 do Windows foi auditado](configure-windows-event-collection.md#configure-audit-policies) conforme necessário pelo serviço, examine as [configurações de auditoria do NTLM](/archive/blogs/askds/ntlm-blocking-and-you-application-analysis-and-auditing-methodologies-in-windows-7).
 
 > [!NOTE]
->
-> - Usando a conta de usuário do serviço de diretório, o sensor consulta pontos de extremidade em sua organização para administradores locais usando SAM-R (logon de rede) para criar o [gráfico de caminho de movimento lateral](use-case-lateral-movement-path.md). Para obter mais informações, consulte [Configurar permissões necessárias do SAM-R](install-step8-samr.md).
+> Usando a conta de usuário do serviço de diretório, o sensor consulta pontos de extremidade em sua organização para administradores locais usando SAM-R (logon de rede) para criar o [gráfico de caminho de movimento lateral](use-case-lateral-movement-path.md). Para obter mais informações, consulte [Configurar permissões necessárias do SAM-R](install-step8-samr.md).
 
-## <a name="azure-atp-standalone-sensor-requirements"></a>Requisitos do sensor autônomo do Azure ATP
+<a name="azure-atp-standalone-sensor-requirements"></a>
 
-Esta seção lista os requisitos do sensor autônomo do Azure ATP.
+## <a name="product-short-standalone-sensor-requirements"></a>Requisitos do sensor autônomo do [!INCLUDE [Product short](includes/product-short.md)]
+
+Esta seção lista os requisitos do sensor autônomo do [!INCLUDE [Product short](includes/product-short.md)].
 
 > [!NOTE]
-> Os sensores autônomos do ATP do Azure não dão suporte à coleção de entradas de log do ETW (Rastreamento de Eventos para Windows) que fornecem os dados para várias detecções. Para cobertura completa do seu ambiente, é recomendável implantar o sensor do ATP do Azure.
+> Os sensores autônomos do [!INCLUDE [Product short](includes/product-short.md)] não dão suporte à coleção de entradas de log do ETW (Rastreamento de Eventos para Windows) que fornecem os dados para várias detecções. Para cobertura completa do seu ambiente, recomendamos implantar o sensor do [!INCLUDE [Product short](includes/product-short.md)].
 
 ### <a name="general"></a>Geral
 
-O sensor autônomo do Azure ATP dá suporte à instalação em um servidor executando o Windows Server 2012 R2 ou o Windows Server 2016 (incluindo o Server Core).
-A sensor autônomo do Azure ATP pode ser instalado em um servidor que é membro de um domínio ou grupo de trabalho.
-O sensor autônomo do Azure ATP pode ser usado para monitorar Controladores de domínio com o Nível de domínio funcional do Windows 2003 e posterior.
+O sensor autônomo do [!INCLUDE [Product short](includes/product-short.md)] dá suporte à instalação em um servidor que executa o Windows Server 2012 R2 ou o Windows Server 2016 (incluindo o Server Core).
+O sensor autônomo do [!INCLUDE [Product short](includes/product-short.md)] pode ser instalado em um servidor que é membro de um domínio ou um grupo de trabalho.
+O sensor autônomo do [!INCLUDE [Product short](includes/product-short.md)] pode ser usado para monitorar os controladores de domínio com o Nível funcional do domínio igual ao Windows 2003 e superior.
 
 Para que o sensor autônomo se comunique com o serviço de nuvem, a porta 443 deve estar aberta nos firewalls e proxies para *.atp.azure.com.
 
-Para obter informações sobre como usar máquinas virtuais com o sensor autônomo do Azure ATP, consulte [Configurar o espelhamento de porta](configure-port-mirroring.md).
+Para obter informações sobre como usar máquinas virtuais com o sensor autônomo do [!INCLUDE [Product short](includes/product-short.md)], confira [Configurar o espelhamento de porta](configure-port-mirroring.md).
 
 > [!NOTE]
-> São necessários no mínimo 5 GB de espaço. Recomenda-se 10 GB. Isso inclui o espaço necessário para os binários do Azure ATP, logs do Azure ATP e logs de desempenho.
+> São necessários no mínimo 5 GB de espaço. Recomenda-se 10 GB. Isso inclui o espaço necessário para os binários do [!INCLUDE [Product short](includes/product-short.md)], os logs do [!INCLUDE [Product short](includes/product-short.md)] e os logs de desempenho.
 
 ### <a name="server-specifications"></a>Especificações do servidor
 
-Para ter desempenho ideal, defina a **Opção de Energia** do computador que executa o sensor autônomo do ATP do Azure como **Alto Desempenho** .<br>
-Um sensor autônomo do ATP do Azure pode ter suporte para monitoramento de vários controladores de domínio, dependendo da quantidade de tráfego de rede dos controladores de domínio.
+Para obter um desempenho ideal, defina a **Opção de Energia** do computador que executa o sensor autônomo do [!INCLUDE [Product short](includes/product-short.md)] como **Alto Desempenho**.
+
+Um sensor autônomo do [!INCLUDE [Product short](includes/product-short.md)] pode dar suporte ao monitoramento de vários controladores de domínio, dependendo da quantidade de tráfego de rede entre os controladores de domínio.
 
 >[!NOTE]
 > Durante a execução como uma máquina virtual, memória dinâmica ou qualquer outra memória, não há suporte para o recurso de inchamento.
 
-Para obter mais informações sobre os requisitos de hardware do sensor autônomo do Azure ATP, consulte [Planejamento de capacidade do Azure ATP](capacity-planning.md).
+Para obter mais informações sobre os requisitos de hardware do sensor autônomo do [!INCLUDE [Product short](includes/product-short.md)], confira [Planejamento da capacidade do [!INCLUDE [Product short](includes/product-short.md)]](capacity-planning.md).
 
 ### <a name="time-synchronization"></a>Sincronização da hora
 
@@ -232,9 +236,11 @@ Os servidores e controladores de domínio nos quais o sensor é instalado devem 
 
 ### <a name="network-adapters"></a>Adaptadores de rede
 
-O sensor autônomo do Azure ATP requer pelo menos um adaptador de gerenciamento e pelo menos um adaptador de captura:
+O sensor autônomo do [!INCLUDE [Product short](includes/product-short.md)] exige, pelo menos, um Adaptador de gerenciamento e um Adaptador de captura:
 
-- **Adaptador de gerenciamento** - usado para as comunicações em sua rede corporativa. O sensor usará esse adaptador para consultar se o DC está protegendo e realizando a resolução para contas de computador. <br>Esse adaptador deve ser configurado com as seguintes definições:
+- **Adaptador de gerenciamento** - usado para as comunicações em sua rede corporativa. O sensor usará esse adaptador para consultar se o DC está protegendo e realizando a resolução para contas de computador.
+
+    Esse adaptador deve ser configurado com as seguintes definições:
 
     - Endereço IP estático, incluindo o gateway padrão
 
@@ -242,10 +248,10 @@ O sensor autônomo do Azure ATP requer pelo menos um adaptador de gerenciamento 
 
     - O **sufixo DNS desta conexão** deve ser o nome DNS do domínio para cada domínio sendo monitorado.
 
-        ![Configure o sufixo DNS nas definições avançadas de TCP/IP](media/ATP-DNS-Suffix.png)
+        ![Configure o sufixo DNS nas definições avançadas de TCP/IP](media/dns-suffix.png)
 
         > [!NOTE]
-        > Se o sensor autônomo do Azure ATP for um membro do domínio, isto poderá ser configurado automaticamente.
+        > Se o sensor autônomo do [!INCLUDE [Product short](includes/product-short.md)] for um membro do domínio, isso poderá ser configurado automaticamente.
 
 - **Adaptador de captura** - usado para capturar o tráfego dos controladores de domínio.
 
@@ -256,28 +262,28 @@ O sensor autônomo do Azure ATP requer pelo menos um adaptador de gerenciamento 
 
 ### <a name="ports"></a>Portas
 
-A tabela abaixo lista as portas mínimas que o sensor autônomo do Azure ATP requer que estejam configuradas no adaptador de gerenciamento:
+A seguinte tabela lista o mínimo de portas que o sensor autônomo do [!INCLUDE [Product short](includes/product-short.md)] exige que estejam configuradas no adaptador de gerenciamento:
 
 |Protocolo|Transport|Porta|De|Para|
 |------------|-------------|--------|-----------|
 |**Portas de Internet**||||
-|SSL (*.atp.azure.com)|TCP|443|Sensor do ATP do Azure|Serviço de nuvem do Azure ATP|
-|SSL (localhost)|TCP|444|Sensor do Azure ATP|localhost|
+|SSL (*.atp.azure.com)|TCP|443|Sensor do [!INCLUDE [Product short](includes/product-short.md)]|Serviço de nuvem do [!INCLUDE [Product short](includes/product-short.md)]|
+|SSL (localhost)|TCP|444|Sensor do [!INCLUDE [Product short](includes/product-short.md)]|localhost|
 |**Portas internas**||||
-|LDAP|TCP e UDP|389|Sensor do ATP do Azure|Controladores de domínio|
-|LDAP seguro (LDAPS)|TCP|636|Sensor do ATP do Azure|Controladores de domínio|
-|LDAP para o Catálogo Global|TCP|3268|Sensor do ATP do Azure|Controladores de domínio|
-|LDAPS para o Catálogo Global|TCP|3269|Sensor do ATP do Azure|Controladores de domínio|
-|Kerberos|TCP e UDP|88|Sensor do ATP do Azure|Controladores de domínio|
-|Netlogon (SMB, CIFS, SAM-R)|TCP e UDP|445|Sensor do ATP do Azure|Todos os dispositivos na rede|
-|Tempo do Windows|UDP|123|Sensor do ATP do Azure|Controladores de domínio|
-|DNS|TCP e UDP|53|Sensor do ATP do Azure|Servidores DNS|
-|Syslog (opcional)|TCP/UDP|514, dependendo da configuração|Servidor SIEM|Sensor do ATP do Azure|
-|RAIO|UDP|1813|RAIO|Sensor do Azure ATP|
+|LDAP|TCP e UDP|389|Sensor do [!INCLUDE [Product short](includes/product-short.md)]|Controladores de domínio|
+|LDAP seguro (LDAPS)|TCP|636|Sensor do [!INCLUDE [Product short](includes/product-short.md)]|Controladores de domínio|
+|LDAP para o Catálogo Global|TCP|3268|Sensor do [!INCLUDE [Product short](includes/product-short.md)]|Controladores de domínio|
+|LDAPS para o Catálogo Global|TCP|3269|Sensor do [!INCLUDE [Product short](includes/product-short.md)]|Controladores de domínio|
+|Kerberos|TCP e UDP|88|Sensor do [!INCLUDE [Product short](includes/product-short.md)]|Controladores de domínio|
+|Netlogon (SMB, CIFS, SAM-R)|TCP e UDP|445|Sensor do [!INCLUDE [Product short](includes/product-short.md)]|Todos os dispositivos na rede|
+|Tempo do Windows|UDP|123|Sensor do [!INCLUDE [Product short](includes/product-short.md)]|Controladores de domínio|
+|DNS|TCP e UDP|53|Sensor do [!INCLUDE [Product short](includes/product-short.md)]|Servidores DNS|
+|Syslog (opcional)|TCP/UDP|514, dependendo da configuração|Servidor SIEM|Sensor do [!INCLUDE [Product short](includes/product-short.md)]|
+|RAIO|UDP|1813|RAIO|Sensor do [!INCLUDE [Product short](includes/product-short.md)]|
 |**Portas NNR** \*|||||
-|NTLM via RPC|TCP|135|Sensores ATP|Todos os dispositivos na rede|
-|NetBIOS|UDP|137|Sensores ATP|Todos os dispositivos na rede|
-|RDP|TCP|3389, apenas o primeiro pacote do Client hello|Sensores ATP|Todos os dispositivos na rede|
+|NTLM via RPC|TCP|135|[!INCLUDE [Product short](includes/product-short.md)]s|Todos os dispositivos na rede|
+|NetBIOS|UDP|137|[!INCLUDE [Product short](includes/product-short.md)]s|Todos os dispositivos na rede|
+|RDP|TCP|3389, apenas o primeiro pacote do Client hello|[!INCLUDE [Product short](includes/product-short.md)]s|Todos os dispositivos na rede|
 
 \* Uma dessas portas é necessária, mas é recomendável abrir todas elas.
 
@@ -287,8 +293,8 @@ A tabela abaixo lista as portas mínimas que o sensor autônomo do Azure ATP req
 
 ## <a name="see-also"></a>Consulte Também
 
-- [Ferramenta de dimensionamento do Azure ATP](https://aka.ms/aatpsizingtool)
-- [Arquitetura do Azure ATP](architecture.md)
-- [Instalar o Azure ATP](install-step1.md)
+- [Ferramenta de dimensionamento do [!INCLUDE [Product short](includes/product-short.md)]](https://aka.ms/aatpsizingtool)
+- [Arquitetura do [!INCLUDE [Product short](includes/product-short.md)]](architecture.md)
+- [Instalar o [!INCLUDE [Product short](includes/product-short.md)]](install-step1.md)
 - [NNR (resolução de nomes de rede)](nnr-policy.md)
-- [Confira o fórum do ATP do Azure!](https://aka.ms/azureatpcommunity)
+- [Confira o fórum do [!INCLUDE [Product short](includes/product-short.md)]!](https://aka.ms/MDIcommunity)

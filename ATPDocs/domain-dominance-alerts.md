@@ -1,39 +1,38 @@
 ---
-title: Alertas de segurança de comprometimento de domínio do ATP do Azure
-description: Este artigo explica os alertas do ATP do Azure emitidos quando são detectados ataques contra a sua organização, que normalmente fazem parte dos esforços da fase de predominância de domínio.
+title: Alertas de segurança de predominância de domínio do Microsoft Defender para Identidade
+description: Este artigo explica os alertas do Microsoft Defender para Identidade emitidos quando são detectados ataques contra a sua organização, que normalmente fazem parte dos esforços da fase de predominância de domínio.
 keywords: ''
 author: shsagir
 ms.author: shsagir
 manager: shsagir
-ms.date: 08/31/2020
+ms.date: 10/26/2020
 ms.topic: tutorial
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
-ms.assetid: 0b3a1db5-0d43-49af-b356-7094cc85f0a5
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: a19550832ec2ee1e14afbf548a56a937c6128a19
-ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
+ms.openlocfilehash: 733ae9db30bef0958234cf3ba3157b33533a85e1
+ms.sourcegitcommit: 218ba562a2a109ff456b011004530f503a4e82c6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90913114"
+ms.lasthandoff: 11/04/2020
+ms.locfileid: "93342429"
 ---
 # <a name="tutorial-domain-dominance-alerts"></a>Tutorial: Alertas de predominância de domínio
 
 [!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
-Normalmente, os ataques cibernéticos são lançados contra alguma entidade acessível, como um usuário com poucos privilégios e, em seguida, se movem lateralmente com rapidez até que o invasor obtenha acesso a ativos valiosos. Os ativos valiosos podem ser contas confidenciais, administradores de domínio ou dados altamente confidenciais. O ATP do Azure identifica essas ameaças avançadas na origem ao longo de toda a cadeia de ataque e classifica-as nas seguintes fases:
+Normalmente, os ataques cibernéticos são lançados contra alguma entidade acessível, como um usuário com poucos privilégios e, em seguida, se movem lateralmente com rapidez até que o invasor obtenha acesso a ativos valiosos. Os ativos valiosos podem ser contas confidenciais, administradores de domínio ou dados altamente confidenciais. O [!INCLUDE [Product long](includes/product-long.md)] identifica essas ameaças avançadas na origem ao longo de toda a cadeia de eliminação do ataque e classifica-as nas seguintes fases:
 
 1. [Reconhecimento](reconnaissance-alerts.md)
-2. [Credenciais comprometidas](compromised-credentials-alerts.md)
-3. [Movimentos laterais](lateral-movement-alerts.md)
-4. **Comprometimento de domínio**
-5. [Exportação](exfiltration-alerts.md)
+1. [Credenciais comprometidas](compromised-credentials-alerts.md)
+1. [Movimentos laterais](lateral-movement-alerts.md)
+1. **Comprometimento de domínio**
+1. [Exportação](exfiltration-alerts.md)
 
-Para entender melhor a estrutura e os componentes comuns de todos os alertas de segurança do ATP do Azure, confira [Understanding security alerts](understanding-security-alerts.md) (Entendendo os alertas de segurança). Para obter informações sobre **TP (verdadeiro positivo)** , **B-TP (verdadeiro positivo benigno)** e **FP (falso positivo)** , confira as [classificações de alertas de segurança](understanding-security-alerts.md#security-alert-classifications).
+Para entender melhor a estrutura e os componentes comuns de todos os alertas de segurança do [!INCLUDE [Product short](includes/product-short.md)], confira [Noções básicas sobre os alertas de segurança](understanding-security-alerts.md). Para obter informações sobre **TP (verdadeiro positivo)** , **B-TP (verdadeiro positivo benigno)** e **FP (falso positivo)** , confira as [classificações de alertas de segurança](understanding-security-alerts.md#security-alert-classifications).
 
-Os alertas de segurança a seguir ajudam você a identificar e corrigir atividades suspeitas da fase de **comprometimento de domínio** detectadas pelo ATP do Azure em sua rede. Neste tutorial, saiba como entender, classificar, evitar e corrigir os ataques a seguir:
+Os alertas de segurança a seguir ajudam você a identificar e corrigir as atividades suspeitas da fase de **Comprometimento de domínio** detectadas pelo [!INCLUDE [Product short](includes/product-short.md)] na sua rede. Neste tutorial, saiba como entender, classificar, evitar e corrigir os ataques a seguir:
 
 > [!div class="checklist"]
 >
@@ -59,7 +58,7 @@ Os alertas de segurança a seguir ajudam você a identificar e corrigir atividad
 **Descrição**
 
 A DPAPI (API de Proteção de Dados) é usada pelo Windows para proteger senhas com segurança salvas por navegadores, arquivos criptografados e outros dados confidencias. Os controladores de domínio têm uma chave mestra de backup que pode ser usada para descriptografar todos os segredos criptografados com DPAPI em computadores Windows ingressados no domínio. Os invasores podem usar a chave mestra para descriptografar informações secretas protegidas por DPAPI em todos os computadores que ingressaram no domínio.
-Nessa detecção, o alerta do ATP do Azure é disparado quando o DPAPI é usado para recuperar a chave mestra do backup.
+Nessa detecção, um alerta do [!INCLUDE [Product short](includes/product-short.md)] é disparado quando a DPAPI é usada para recuperar a chave mestra do backup.
 
 **Período de aprendizado**
 
@@ -82,10 +81,10 @@ Scanners de segurança avançada podem gerar legitimamente esse tipo de atividad
 **Correção sugerida e etapas de prevenção**
 
 1. Redefina a senha do usuário de origem e habilite a MFA ou, se você tiver configurado as políticas relevantes de usuário de alto risco no Azure Active Directory Identity Protection, poderá usar a ação [**Confirmar usuário comprometido**](/cloud-app-security/accounts#governance-actions) no portal de Cloud App Security.
-2. Contenha o computador de origem.
+1. Contenha o computador de origem.
     - Encontre a ferramenta que realizou o ataque e remova-a.
     - Procure usuários que estavam conectados no mesmo período em que a atividade ocorreu, pois eles também podem estar comprometidos. Redefina suas senhas e habilite a MFA ou, se você tiver configurado as políticas relevantes de usuário de alto risco no Azure Active Directory Identity Protection, poderá usar a ação [**Confirmar usuário comprometido**](/cloud-app-security/accounts#governance-actions) no portal de Cloud App Security.
-3. A chave privada roubada nunca é alterada. Isso significa que o ator pode sempre usar a chave roubada para descriptografar os dados protegidos no domínio de destino. Não existe uma maneira metodológica para alterar essa chave privada.
+1. A chave privada roubada nunca é alterada. Isso significa que o ator pode sempre usar a chave roubada para descriptografar os dados protegidos no domínio de destino. Não existe uma maneira metodológica para alterar essa chave privada.
     - Para criar uma chave, use a chave privada atual, crie uma chave e criptografe novamente todas as chaves mestras de domínio com a nova chave privada.
 
 ## <a name="remote-code-execution-attempt-external-id-2019"></a>Tentativa de execução remota de código – aprimorada (ID externa 2019)
@@ -94,7 +93,7 @@ Scanners de segurança avançada podem gerar legitimamente esse tipo de atividad
 
 **Descrição**
 
-Os invasores que comprometem credenciais de administrador ou que usam uma exploração de dia zero podem executar comandos remotos no controlador de domínio. Isso pode ser usado para obter a persistência, coletar informações, ataques DOS (negação de serviço) ou qualquer outro motivo. O ATP do Azure detecta conexões PSexec, WMI remoto e PowerShell.
+Os invasores que comprometem credenciais de administrador ou que usam uma exploração de dia zero podem executar comandos remotos no controlador de domínio. Isso pode ser usado para obter a persistência, coletar informações, ataques DOS (negação de serviço) ou qualquer outro motivo. O [!INCLUDE [Product short](includes/product-short.md)] detecta conexões do PSexec, do WMI Remoto e do PowerShell.
 
 **Período de aprendizado**
 
@@ -118,10 +117,10 @@ Membros da equipe de TI, de estações de trabalho administrativas ou contas de 
 **Remediação**
 
 1. Redefina a senha dos usuários de origem e habilite a MFA ou, se você tiver configurado as políticas relevantes de usuário de alto risco no Azure Active Directory Identity Protection, poderá usar a ação [**Confirmar usuário comprometido**](/cloud-app-security/accounts#governance-actions) no portal de Cloud App Security.
-2. Contenha os controladores de domínio com as seguintes ações:
+1. Contenha os controladores de domínio com as seguintes ações:
     - Corrija a tentativa de execução remota de código.
     - Procure usuários que estavam conectados no mesmo período da atividade suspeita, pois eles também podem estar comprometidos. Redefina suas senhas e habilite a MFA ou, se você tiver configurado as políticas relevantes de usuário de alto risco no Azure Active Directory Identity Protection, poderá usar a ação [**Confirmar usuário comprometido**](/cloud-app-security/accounts#governance-actions) no portal de Cloud App Security.
-3. Contenha o computador de origem.
+1. Contenha o computador de origem.
     - Encontre a ferramenta que realizou o ataque e remova-a.
     - Procure usuários que estavam conectados no mesmo período da atividade suspeita, pois eles também podem estar comprometidos. Redefina suas senhas e habilite a MFA ou, se você tiver configurado as políticas relevantes de usuário de alto risco no Azure Active Directory Identity Protection, poderá usar a ação [**Confirmar usuário comprometido**](/cloud-app-security/accounts#governance-actions) no portal de Cloud App Security.
 
@@ -132,7 +131,7 @@ Membros da equipe de TI, de estações de trabalho administrativas ou contas de 
 1. Implemente o acesso com menos privilégios em computadores de domínio para permitir que usuários específicos tenham o direito de criar serviços.
 
 > [!NOTE]
-> Somente os sensores do ATP dão suporte a alertas sobre o uso de Comandos do PowerShell em tentativas de execução remota de código.
+> Só há suporte a alertas de tentativas de execução remota de código sobre tentativas de uso de comandos do PowerShell nos sensores do [!INCLUDE [Product short](includes/product-short.md)].
 
 ## <a name="suspected-dcshadow-attack-domain-controller-promotion-external-id-2028"></a>Suspeita de ataque de DCShadow (promoção do controlador de domínio) (ID externa 2028)
 
@@ -147,7 +146,7 @@ Em um ataque DCShadow, RPC e LDAP são usados para:
 1. Registrar a conta do computador como um controlador de domínio (usando os direitos de administrador de domínio).
 1. Executar a replicação (usando os direitos de replicação concedidos) sobre DRSUAPI e enviar alterações para objetos do directory.
 
-Nessa detecção do ATP do Azure, um alerta de segurança é acionado quando um computador na rede tenta registrar-se como um controlador de domínio invasor.
+Nessa detecção do [!INCLUDE [Product short](includes/product-short.md)], um alerta de segurança é disparado quando um computador na rede tenta se registrar como um controlador de domínio de um invasor.
 
 **Período de aprendizado**
 
@@ -155,20 +154,20 @@ Não se aplica
 
 **TP, B-TP ou FP**
 
-Se o computador de origem for um controlador de domínio, uma resolução com falha ou de baixa certeza pode impedir que o ATP do Azure consiga confirmar a identificação.
+Se o computador de origem for um controlador de domínio, uma resolução com falha ou de baixa certeza poderá impedir que o [!INCLUDE [Product short](includes/product-short.md)] consiga confirmar a identificação.
 
 1. Verifique se o computador de origem é um controlador de domínio.
-    Se a resposta for **sim**, **feche** o alerta como uma atividade **B-TP**.
+    Se a resposta for **sim** , **feche** o alerta como uma atividade **B-TP**.
 
 Alterações no Active Directory podem levar tempo para sincronizar.
 
-1. O computador de origem é um controlador de domínio recém-promovido? Se a resposta for **sim**, **feche** o alerta como uma atividade **B-TP**.
+1. O computador de origem é um controlador de domínio recém-promovido? Se a resposta for **sim** , **feche** o alerta como uma atividade **B-TP**.
 
 Servidores e aplicativos podem replicar dados do Active Directory, tais como o Azure AD Connect ou dispositivos de monitoramento de desempenho de rede.
 
 1. Verifique se o computador de origem deve gerar esse tipo de atividade.
 
-    - Se a resposta for **sim**, mas o computador de origem não deverá continuar a gerar esse tipo de atividade no futuro, corrija a configuração do servidor/aplicativo. **Feche** o alerta de segurança como uma atividade **B-TP**.
+    - Se a resposta for **sim** , mas o computador de origem não deverá continuar a gerar esse tipo de atividade no futuro, corrija a configuração do servidor/aplicativo. **Feche** o alerta de segurança como uma atividade **B-TP**.
 
     - Se a resposta for **sim** e o computador de origem deverá continuar a gerar este tipo de atividade no futuro, **feche** o alerta de segurança como uma atividade **B-TP** e exclua o computador para evitar alertas benignos adicionais.
 
@@ -195,7 +194,7 @@ Valide as seguintes permissões:
 1. Para obter mais informações, consulte [Conceder permissões do Active Directory Domain Services para sincronização de perfil no SharePoint Server 2013](/SharePoint/administration/user-profile-service-administration). Você pode usar o [Scanner ACL do AD](/archive/blogs/pfesweplat/take-control-over-ad-permissions-and-the-ad-acl-scanner-tool) ou criar um script do Windows PowerShell para determinar quem no domínio tem essas permissões.
 
 > [!NOTE]
-> Os alertas de promoções do controlador de domínio suspeitas (possível ataque DCShadow) só são compatíveis com os sensores do ATP.
+> Só há suporte para os alertas de promoção suspeita do controlador de domínio (possível ataque DCShadow) nos sensores do [!INCLUDE [Product short](includes/product-short.md)].
 
 ## <a name="suspected-dcshadow-attack-domain-controller-replication-request-external-id-2029"></a>Suspeita de ataque de DCShadow (solicitação de replicação do controlador de domínio) (ID externa 2029)
 
@@ -204,7 +203,7 @@ Valide as seguintes permissões:
 **Descrição**
 
 A replicação do Active Directory é o processo pelo qual as alterações feitas em um controlador de domínio são sincronizadas com outros controladores de domínio. Com as permissões necessárias, os invasores podem conceder direitos para sua conta do computador, permitindo que represente um controlador de domínio. Os invasores se esforçam para iniciar uma solicitação de replicação mal-intencionada, permitindo que alterem os objetos do Active Directory em um controlador de domínio original, o que pode dar a eles persistência no domínio.
-Nessa detecção, um alerta é acionado quando uma solicitação de replicação suspeita é gerada em relação a um controlador de domínio original protegido pelo Azure ATP. O comportamento é uma indicação de técnicas usadas em ataques de sombra do controlador de domínio.
+Nessa detecção, um alerta é disparado quando uma solicitação de replicação suspeita é gerada em um controlador de domínio original protegido pelo [!INCLUDE [Product short](includes/product-short.md)]. O comportamento é uma indicação de técnicas usadas em ataques de sombra do controlador de domínio.
 
 **Período de aprendizado**
 
@@ -212,20 +211,20 @@ Não se aplica
 
 **TP, B-TP ou FP**
 
-Se o computador de origem for um controlador de domínio, uma resolução com falha ou de baixa certeza poderá impedir a identificação do ATP do Azure.
+Se o computador de origem for um controlador de domínio, uma resolução com falha ou de baixa certeza poderá impedir a identificação do [!INCLUDE [Product short](includes/product-short.md)].
 
 1. Verifique se o computador de origem é um controlador de domínio.
-    Se a resposta for **sim**, **feche** o alerta como uma atividade **B-TP**.
+    Se a resposta for **sim** , **feche** o alerta como uma atividade **B-TP**.
 
 Alterações no Active Directory podem levar tempo para sincronizar.
 
-1. O computador de origem é um controlador de domínio recém-promovido? Se a resposta for **sim**, **feche** o alerta como uma atividade **B-TP**.
+1. O computador de origem é um controlador de domínio recém-promovido? Se a resposta for **sim** , **feche** o alerta como uma atividade **B-TP**.
 
 Servidores e aplicativos podem replicar dados do Active Directory, tais como o Azure AD Connect ou dispositivos de monitoramento de desempenho de rede.
 
 1. Esse computador de origem devia gerar esse tipo de atividade?
 
-    - Se a resposta for **sim**, mas o computador de origem não deverá continuar a gerar esse tipo de atividade no futuro, corrija a configuração do servidor/aplicativo. **Feche** o alerta de segurança como uma atividade **B-TP**.
+    - Se a resposta for **sim** , mas o computador de origem não deverá continuar a gerar esse tipo de atividade no futuro, corrija a configuração do servidor/aplicativo. **Feche** o alerta de segurança como uma atividade **B-TP**.
 
     - Se a resposta for **sim** e o computador de origem deverá continuar a gerar este tipo de atividade no futuro, **feche** o alerta de segurança como uma atividade **B-TP** e exclua o computador para evitar alertas **B-TP** adicionais.
 
@@ -252,7 +251,7 @@ Valide as seguintes permissões:
 1. Para obter mais informações, consulte [Conceder permissões do Active Directory Domain Services para sincronização de perfil no SharePoint Server 2013](/SharePoint/administration/user-profile-service-administration). Você pode usar o [Scanner ACL do AD](/archive/blogs/pfesweplat/take-control-over-ad-permissions-and-the-ad-acl-scanner-tool) ou criar um script do Windows PowerShell para determinar quem no domínio tem essas permissões.
 
 > [!NOTE]
-> Os alertas de solicitações de replicação suspeitas (possível ataque DCShadow) são compatíveis somente com os sensores do ATP.
+> Só há suporte para os alertas de solicitações de replicação suspeita (possível ataque DCShadow) nos sensores do [!INCLUDE [Product short](includes/product-short.md)].
 
 ## <a name="suspected-dcsync-attack-replication-of-directory-services-external-id-2006"></a>Suspeita de ataque de DCSync (replicação de serviços de diretório) (ID externa 2006)
 
@@ -265,7 +264,7 @@ A replicação do Active Directory é o processo pelo qual as alterações feita
 Nessa detecção, um alerta é disparado quando uma solicitação de replicação for iniciada em um computador que não seja um controlador de domínio.
 
 > [!NOTE]
-> Se você tem controladores de domínio nos quais os sensores do Azure ATP não estejam instalados, estes controladores de domínio não estão cobertos pelo Azure ATP. Ao implantar um novo controlador de domínio em um controlador de domínio não registrado ou desprotegido, ele poderá não ser identificado imediatamente pelo ATP do Azure como um controlador de domínio. É altamente recomendável instalar o sensor do Azure ATP em todos os controladores de domínio para obter uma cobertura completa.
+> Se você tem controladores de domínio nos quais os sensores do [!INCLUDE [Product short](includes/product-short.md)] não estejam instalados, esses controladores de domínio não estão cobertos pelo [!INCLUDE [Product short](includes/product-short.md)]. Ao implantar um novo controlador de domínio em um controlador de domínio não registrado ou desprotegido, ele poderá não ser identificado imediatamente pelo [!INCLUDE [Product short](includes/product-short.md)] como um controlador de domínio. Recomendamos expressamente instalar o sensor do [!INCLUDE [Product short](includes/product-short.md)] em todos os controladores de domínio para obter uma cobertura completa.
 
 **Período de aprendizado**
 
@@ -273,20 +272,20 @@ Não se aplica
 
 **TP, B-TP ou FP**
 
-Se o computador de origem for um controlador de domínio, uma resolução com falha ou de baixa certeza poderá impedir a identificação do ATP do Azure.
+Se o computador de origem for um controlador de domínio, uma resolução com falha ou de baixa certeza poderá impedir a identificação do [!INCLUDE [Product short](includes/product-short.md)].
 
 1. Verifique se o computador de origem é um controlador de domínio.
-    Se a resposta for **sim**, **feche** o alerta como uma atividade **B-TP**.
+    Se a resposta for **sim** , **feche** o alerta como uma atividade **B-TP**.
 
 Alterações no Active Directory podem levar tempo para sincronizar.
 
-1. O computador de origem é um controlador de domínio recém-promovido? Se a resposta for **sim**, **feche** o alerta como uma atividade **B-TP**.
+1. O computador de origem é um controlador de domínio recém-promovido? Se a resposta for **sim** , **feche** o alerta como uma atividade **B-TP**.
 
 Servidores e aplicativos podem replicar dados do Active Directory, tais como o Azure AD Connect ou dispositivos de monitoramento de desempenho de rede.
 
 1. Esse computador de origem devia gerar esse tipo de atividade?
 
-    - Se a resposta for **sim**, mas o computador de origem não deverá continuar a gerar esse tipo de atividade no futuro, corrija a configuração do servidor/aplicativo. **Feche** o alerta de segurança como uma atividade **B-TP**.
+    - Se a resposta for **sim** , mas o computador de origem não deverá continuar a gerar esse tipo de atividade no futuro, corrija a configuração do servidor/aplicativo. **Feche** o alerta de segurança como uma atividade **B-TP**.
 
     - Se a resposta for **sim** e o computador de origem deverá continuar a gerar este tipo de atividade no futuro, **feche** o alerta de segurança como uma atividade **B-TP** e exclua o computador para evitar alertas benignos adicionais.
 
@@ -299,7 +298,7 @@ Servidores e aplicativos podem replicar dados do Active Directory, tais como o A
 **Correção:**
 
 1. Redefina a senha dos usuários de origem e habilite a MFA ou, se você tiver configurado as políticas relevantes de usuário de alto risco no Azure Active Directory Identity Protection, poderá usar a ação [**Confirmar usuário comprometido**](/cloud-app-security/accounts#governance-actions) no portal de Cloud App Security.
-2. Contenha o computador de origem.
+1. Contenha o computador de origem.
     - Encontre a ferramenta que realizou o ataque e remova-a.
     - Procure usuários que estavam conectados no mesmo período em que a atividade ocorreu, pois eles também podem estar comprometidos. Redefina suas senhas e habilite a MFA ou, se você tiver configurado as políticas relevantes de usuário de alto risco no Azure Active Directory Identity Protection, poderá usar a ação [**Confirmar usuário comprometido**](/cloud-app-security/accounts#governance-actions) no portal de Cloud App Security.
 
@@ -317,9 +316,9 @@ Valide as seguintes permissões:
 
 **Descrição**
 
-O downgrade de criptografia é um método de enfraquecer o Kerberos fazendo downgrade do nível de criptografia de diferentes campos do protocolo que normalmente têm o nível mais alto de criptografia. Um campo criptografado enfraquecido pode ser um alvo mais fácil para tentativas de força bruta offline. Vários métodos de ataque utilizam criptografias Kerberos fracas. Nessa detecção, o ATP do Azure aprende os tipos de criptografia Kerberos usados por computadores e usuários e alerta você quando é usada uma criptografia mais fraca e que seja incomum para o usuário e/ou o computador de origem e que corresponda a técnicas de ataque conhecidas.
+O downgrade de criptografia é um método de enfraquecer o Kerberos fazendo downgrade do nível de criptografia de diferentes campos do protocolo que normalmente têm o nível mais alto de criptografia. Um campo criptografado enfraquecido pode ser um alvo mais fácil para tentativas de força bruta offline. Vários métodos de ataque utilizam criptografias Kerberos fracas. Nessa detecção, o [!INCLUDE [Product short](includes/product-short.md)] aprende os tipos de criptografia Kerberos usados por computadores e usuários e alerta você quando é usada uma criptografia mais fraca que seja incomum para o usuário e/ou o computador de origem e que corresponda às técnicas de ataque conhecidas.
 
-Em um alerta de Golden Ticket, o método de criptografia do campo TGT da mensagem TGS_REQ (solicitação de serviço) do computador de origem foi detectado como um downgrade em comparação com o comportamento aprendido anteriormente. Isso não tem base em uma anomalia de tempo (como na outra detecção Golden Ticket). Além disso, no caso desse alerta, não houve nenhuma solicitação de autenticação Kerberos associada à solicitação de serviço anterior detectada pelo ATP do Azure.
+Em um alerta de Golden Ticket, o método de criptografia do campo TGT da mensagem TGS_REQ (solicitação de serviço) do computador de origem foi detectado como um downgrade em comparação com o comportamento aprendido anteriormente. Isso não tem base em uma anomalia de tempo (como na outra detecção Golden Ticket). Além disso, no caso desse alerta, não houve nenhuma solicitação de autenticação Kerberos associada à solicitação de serviço anterior detectada pelo [!INCLUDE [Product short](includes/product-short.md)].
 
 **Período de aprendizado**
 
@@ -331,11 +330,11 @@ Alguns recursos legítimos não dão suporte à criptografia forte e podem dispa
 
 1. Todos os usuários de origem compartilham algo em comum?
    1. Por exemplo, todos os membros da equipe de marketing estão acessando um recurso específico que pode fazer com que o alerta seja disparado?
-   2. Verifique os recursos acessados por esses tíquetes.
-      * Confira isso no Active Directory verificando o atributo *msDS-SupportedEncryptionTypes*, da conta de serviço do recurso.
-   3. Se houver apenas um recurso sendo acessado, verifique se é um recurso válido que esses usuários devem acessar.
+   1. Verifique os recursos acessados por esses tíquetes.
+      - Confira isso no Active Directory verificando o atributo *msDS-SupportedEncryptionTypes* , da conta de serviço do recurso.
+   1. Se houver apenas um recurso sendo acessado, verifique se é um recurso válido que esses usuários devem acessar.
 
-      Se a resposta a uma das perguntas anteriores for **sim**, provavelmente essa será uma atividade **T-BP**. Verifique se o recurso pode dar suporte a uma codificação de criptografia forte, implemente uma codificação de criptografia mais forte sempre que possível e **feche** o alerta de segurança.
+      Se a resposta a uma das perguntas anteriores for **sim** , provavelmente essa será uma atividade **T-BP**. Verifique se o recurso pode dar suporte a uma codificação de criptografia forte, implemente uma codificação de criptografia mais forte sempre que possível e **feche** o alerta de segurança.
 
 Os aplicativos podem ser autenticados usando uma codificação de criptografia inferior. Alguns estão autenticando em nome dos usuários, como servidores do IIS e SQL.
 
@@ -345,7 +344,7 @@ Os aplicativos podem ser autenticados usando uma codificação de criptografia i
     - Verifique as funções do computador.
     Eles são servidores que funcionam com esses tipos de aplicativos?
 
-     Se a resposta a uma das perguntas anteriores for **sim**, provavelmente essa será uma atividade **T-BP**. Verifique se o recurso pode dar suporte a uma codificação de criptografia forte, implemente uma codificação de criptografia mais forte sempre que possível e **feche** o alerta de segurança.
+     Se a resposta a uma das perguntas anteriores for **sim** , provavelmente essa será uma atividade **T-BP**. Verifique se o recurso pode dar suporte a uma codificação de criptografia forte, implemente uma codificação de criptografia mais forte sempre que possível e **feche** o alerta de segurança.
 
 **Entender o escopo da violação**
 
@@ -360,7 +359,7 @@ Os aplicativos podem ser autenticados usando uma codificação de criptografia i
 1. Contenha o computador de origem.
     - Encontre a ferramenta que realizou o ataque e remova-a.
     - Procure usuários que estavam conectados no horário da atividade, pois eles também podem estar comprometidos. Redefina suas senhas e habilite a MFA ou, se você tiver configurado as políticas relevantes de usuário de alto risco no Azure Active Directory Identity Protection, poderá usar a ação [**Confirmar usuário comprometido**](/cloud-app-security/accounts#governance-actions) no portal de Cloud App Security.
-    - Se o Microsoft Defender ATP estiver instalado – use **klist.exe purge** para excluir todos os tíquetes da sessão de logon especificada e evitar o uso dos tíquetes no futuro.
+    - Se o Microsoft Defender para Ponto de Extremidade estiver instalado, use **klist.exe purge** para excluir todos os tíquetes da sessão de logon especificada e evitar o uso dos tíquetes no futuro.
 1. Contenha os recursos que foram acessados por esse tíquete.
 1. Altere o Tíquete de concessão de tíquete Kerberos (KRBTGT) duas vezes de acordo com as diretrizes em [Scripts de redefinição de senha da conta KRBTGT disponíveis agora para clientes](https://cloudblogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/) usando a [ferramenta Redefinir chaves/senha da conta KRBTGT](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51).
     - A redefinição dupla do KRBTGT invalida todos os tíquetes Kerberos nesse domínio. A invalidação de todos os tíquetes Kerberos no domínio significa que **todos** os serviços serão interrompidos e não funcionarão novamente até que sejam renovados ou em alguns casos, que o serviço seja reiniciado.
@@ -385,7 +384,7 @@ Não se aplica
 Em computadores nos quais foram aplicados os patches MS14-068 (controlador de domínio) ou MS11-013 (servidor), tentativas de ataque não terão êxito e gerarão o erro de Kerberos.
 
 1. Verifique quais recursos foram acessados na lista de evidências de alerta de segurança e se as tentativas tiveram êxito ou falharam.
-2. Verifique se os patches foram aplicados nos computadores acessados, conforme descrito acima.
+1. Verifique se os patches foram aplicados nos computadores acessados, conforme descrito acima.
     - Se os patches foram aplicados nos computadores, **feche** o alerta de segurança como uma atividade **B-TP**.
 
 Sabe-se que alguns sistemas operacionais ou aplicativos modificam os dados de autorização. Por exemplo, serviços de Linux e Unix têm seu próprio mecanismo de autorização, o qual pode disparar o alerta.
@@ -402,12 +401,12 @@ Sabe-se que alguns sistemas operacionais ou aplicativos modificam os dados de au
 **Correção sugerida e etapas de prevenção**
 
 1. Redefina a senha do usuário de origem e habilite a MFA ou, se você tiver configurado as políticas relevantes de usuário de alto risco no Azure Active Directory Identity Protection, poderá usar a ação [**Confirmar usuário comprometido**](/cloud-app-security/accounts#governance-actions) no portal de Cloud App Security.
-2. Conter o computador de origem
+1. Conter o computador de origem
     - Encontre a ferramenta que realizou o ataque e remova-a.
     - Procure por usuários que estavam conectados em horário próximo àquele da atividade, pois eles também podem estar comprometidos. Redefina suas senhas e habilite a MFA ou, se você tiver configurado as políticas relevantes de usuário de alto risco no Azure Active Directory Identity Protection, poderá usar a ação [**Confirmar usuário comprometido**](/cloud-app-security/accounts#governance-actions) no portal de Cloud App Security.
-3. Altere o Tíquete de concessão de tíquete Kerberos (KRBTGT) duas vezes de acordo com as diretrizes em [Scripts de redefinição de senha da conta KRBTGT disponíveis agora para clientes](https://cloudblogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/) usando a [ferramenta Redefinir chaves/senha da conta KRBTGT](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51).
+1. Altere o Tíquete de concessão de tíquete Kerberos (KRBTGT) duas vezes de acordo com as diretrizes em [Scripts de redefinição de senha da conta KRBTGT disponíveis agora para clientes](https://cloudblogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/) usando a [ferramenta Redefinir chaves/senha da conta KRBTGT](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51).
     - A redefinição dupla do KRBTGT invalida todos os tíquetes Kerberos nesse domínio. A invalidação de todos os tíquetes Kerberos no domínio significa que **todos** os serviços serão interrompidos e não funcionarão novamente até que sejam renovados ou em alguns casos, que o serviço seja reiniciado. Planeje cuidadosamente antes de realizar a redefinição dupla do KRBTGT, porque ela afeta todos os computadores, servidores e usuários no ambiente.
-4. Verifique se todos os controladores de domínio com sistemas operacionais até o Windows Server 2012 R2 estão instalados com o [KB3011780](https://www.microsoft.com/download/details.aspx?id=44978) e todos os servidores membros e controladores de domínio até 2012 R2 estão atualizados com o [KB2496930](https://support.microsoft.com/help/2496930/ms11-013-vulnerabilities-in-kerberos-could-allow-elevation-of-privileg). Para obter mais informações, consulte [PAC Prata](/security-updates/SecurityBulletins/2011/ms11-013) e [PAC Forjado](/security-updates/SecurityBulletins/2014/ms14-068).
+1. Verifique se todos os controladores de domínio com sistemas operacionais até o Windows Server 2012 R2 estão instalados com o [KB3011780](https://www.microsoft.com/download/details.aspx?id=44978) e todos os servidores membros e controladores de domínio até 2012 R2 estão atualizados com o [KB2496930](https://support.microsoft.com/help/2496930/ms11-013-vulnerabilities-in-kerberos-could-allow-elevation-of-privileg). Para obter mais informações, consulte [PAC Prata](/security-updates/SecurityBulletins/2011/ms11-013) e [PAC Forjado](/security-updates/SecurityBulletins/2014/ms14-068).
 
 ## <a name="suspected-golden-ticket-usage-nonexistent-account-external-id-2027"></a>Suspeita de uso de Golden Ticket (conta inexistente) (ID externa 2027)
 
@@ -424,11 +423,12 @@ Não se aplica
 **TP, B-TP ou FP**
 
 Alterações no Active Directory podem levar tempo para sincronizar.
+
 1. O usuário é um usuário de domínio válido e conhecido?
 1. O usuário foi adicionado recentemente?
 1. O usuário foi excluído recentemente do Active Directory?
 
-Se a resposta a todas as perguntas anteriores for **sim**, **feche** o alerta como uma atividade **B-TP**.
+Se a resposta a todas as perguntas anteriores for **sim** , **feche** o alerta como uma atividade **B-TP**.
 
 **Entender o escopo da violação**
 
@@ -439,7 +439,7 @@ Se a resposta a todas as perguntas anteriores for **sim**, **feche** o alerta co
 1. Conter os computadores de origem
     - Encontre a ferramenta que realizou o ataque e remova-a.
     - Procure por usuários que estavam conectados em horário próximo àquele da atividade, pois eles também podem estar comprometidos. Redefina suas senhas e habilite a MFA ou, se você tiver configurado as políticas relevantes de usuário de alto risco no Azure Active Directory Identity Protection, poderá usar a ação [**Confirmar usuário comprometido**](/cloud-app-security/accounts#governance-actions) no portal de Cloud App Security.
-    - Se o Microsoft Defender ATP estiver instalado – use **klist.exe purge** para excluir todos os tíquetes da sessão de logon especificada e evitar o uso dos tíquetes no futuro.
+    - Se o Microsoft Defender para Ponto de Extremidade estiver instalado, use **klist.exe purge** para excluir todos os tíquetes da sessão de logon especificada e evitar o uso dos tíquetes no futuro.
 1. Contenha os recursos que foram acessados por esse tíquete.
 1. Altere o Tíquete de concessão de tíquete Kerberos (KRBTGT) duas vezes de acordo com as diretrizes em [Scripts de redefinição de senha da conta KRBTGT disponíveis agora para clientes](https://cloudblogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/) usando a [ferramenta Redefinir chaves/senha da conta KRBTGT](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51).
     - A redefinição dupla do KRBTGT invalida todos os tíquetes Kerberos nesse domínio. A invalidação de todos os tíquetes Kerberos no domínio significa que **todos** os serviços serão interrompidos e não funcionarão novamente até que sejam renovados ou em alguns casos, que o serviço seja reiniciado. Planeje cuidadosamente antes de realizar a redefinição dupla do KRBTGT, porque ela afeta todos os computadores, servidores e usuários no ambiente.
@@ -470,7 +470,7 @@ Os serviços de federação podem gerar tíquetes que disparam esse alerta.
 1. Conter os computadores de origem
     - Encontre a ferramenta que realizou o ataque e remova-a.
     - Procure por usuários que estavam conectados em horário próximo àquele da atividade, pois eles também podem estar comprometidos. Redefina suas senhas e habilite a MFA ou, se você tiver configurado as políticas relevantes de usuário de alto risco no Azure Active Directory Identity Protection, poderá usar a ação [**Confirmar usuário comprometido**](/cloud-app-security/accounts#governance-actions) no portal de Cloud App Security.
-    - Se o Microsoft Defender ATP estiver instalado – use **klist.exe purge** para excluir todos os tíquetes da sessão de logon especificada e evitar o uso dos tíquetes no futuro.
+    - Se o Microsoft Defender para Ponto de Extremidade estiver instalado, use **klist.exe purge** para excluir todos os tíquetes da sessão de logon especificada e evitar o uso dos tíquetes no futuro.
 1. Contenha os recursos que foram acessados por esse tíquete.
 1. Altere o Tíquete de concessão de tíquete Kerberos (KRBTGT) duas vezes de acordo com as diretrizes em [Scripts de redefinição de senha da conta KRBTGT disponíveis agora para clientes](https://cloudblogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/) usando a [ferramenta Redefinir chaves/senha da conta KRBTGT](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51).
     - A redefinição dupla do KRBTGT invalida todos os tíquetes Kerberos nesse domínio. A invalidação de todos os tíquetes Kerberos no domínio significa que **todos** os serviços são interrompidos e não funcionam novamente até que sejam renovados ou em alguns casos, que o serviço seja reiniciado.
@@ -497,7 +497,7 @@ Não se aplica
     1. Todos os usuários que estavam conectados ao computador deveriam estar conectados a ele?
     1. Os privilégios são apropriados para a conta?
 1. Os usuários que efetuaram logon deveriam ter acesso a esses recursos?
-    - Se você habilitou a integração do Microsoft Defender ATP, clique no ícone dele para investigar mais.
+    - Se você habilitou a integração do Microsoft Defender para Ponto de Extremidade, clique no ícone dele para fazer uma investigação mais detalhada.
 
 Se a resposta às perguntas anteriores for sim, feche o alerta de segurança como um **FP**.
 
@@ -526,13 +526,13 @@ Não se aplica
 
 **TP, B-TP ou FP**
 
-1. Nas últimas horas, houve alguma alteração à configuração**Tempo de vida máximo para tíquete de usuário** na política de grupo que fosse capaz de afetar o alerta?
-2. O sensor autônomo do ATP do Azure envolvido neste alerta é uma máquina virtual?
-    - Se o sensor autônomo do ATP do Azure está envolvido, ele foi recentemente retomado de um estado salvo?
-3. Há um problema de sincronização de horário na rede, em que nem todos os computadores estão sincronizados?
+1. Nas últimas horas, houve alguma alteração à configuração **Tempo de vida máximo para tíquete de usuário** na política de grupo que fosse capaz de afetar o alerta?
+1. O sensor autônomo do [!INCLUDE [Product short](includes/product-short.md)] envolvido nesse alerta é uma máquina virtual?
+    - Se o sensor autônomo do [!INCLUDE [Product short](includes/product-short.md)] está envolvido, ele foi recentemente retomado de um estado salvo?
+1. Há um problema de sincronização de horário na rede, em que nem todos os computadores estão sincronizados?
     - Clique no botão **Detalhes do download** para exibir o alerta de segurança do arquivo do Excel de relatório, exibir as atividades de rede relacionadas e verificar se há uma diferença entre "StartTime" e "DomainControllerStartTime".
 
-Se a resposta às perguntas anteriores for **sim**, **feche** o alerta de segurança como uma atividade **B-TP**.
+Se a resposta às perguntas anteriores for **sim** , **feche** o alerta de segurança como uma atividade **B-TP**.
 
 **Entender o escopo da violação**
 
@@ -544,9 +544,9 @@ Se a resposta às perguntas anteriores for **sim**, **feche** o alerta de segura
 1. Contenha o computador de origem.
     - Encontre a ferramenta que realizou o ataque e remova-a.
     - Procure por usuários que estavam conectados em horário próximo àquele da atividade, pois eles também podem estar comprometidos. Redefina suas senhas e habilite a MFA ou, se você tiver configurado as políticas relevantes de usuário de alto risco no Azure Active Directory Identity Protection, poderá usar a ação [**Confirmar usuário comprometido**](/cloud-app-security/accounts#governance-actions) no portal de Cloud App Security.
-    - Se o Microsoft Defender ATP estiver instalado – use **klist.exe purge** para excluir todos os tíquetes da sessão de logon especificada e evitar o uso dos tíquetes no futuro.
-2. Contém os recursos acessados por esse tíquete.
-3. Altere o Tíquete de concessão de tíquete Kerberos (KRBTGT) duas vezes de acordo com as diretrizes em [Scripts de redefinição de senha da conta KRBTGT disponíveis agora para clientes](https://cloudblogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/) usando a [ferramenta Redefinir chaves/senha da conta KRBTGT](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51).
+    - Se o Microsoft Defender para Ponto de Extremidade estiver instalado, use **klist.exe purge** para excluir todos os tíquetes da sessão de logon especificada e evitar o uso dos tíquetes no futuro.
+1. Contém os recursos acessados por esse tíquete.
+1. Altere o Tíquete de concessão de tíquete Kerberos (KRBTGT) duas vezes de acordo com as diretrizes em [Scripts de redefinição de senha da conta KRBTGT disponíveis agora para clientes](https://cloudblogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/) usando a [ferramenta Redefinir chaves/senha da conta KRBTGT](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51).
     - A redefinição dupla do KRBTGT invalida todos os tíquetes Kerberos nesse domínio. A invalidação de todos os tíquetes Kerberos no domínio significa que **todos** os serviços são interrompidos e não funcionam novamente até que sejam renovados ou, em alguns casos, que o serviço seja reiniciado.
 
     **Planeje cuidadosamente antes de executar uma redefinição dupla do KRBTGT. A redefinição afeta todos os computadores, servidores e usuários no ambiente.**
@@ -557,20 +557,20 @@ Se a resposta às perguntas anteriores for **sim**, **feche** o alerta de segura
 
 **Descrição**
 
-O downgrade de criptografia é um método de enfraquecer o Kerberos usando um nível de criptografia que sofreu downgrade em diferentes campos do protocolo, que normalmente têm o nível mais alto de criptografia. Um campo criptografado enfraquecido pode ser um alvo mais fácil para tentativas de força bruta offline. Vários métodos de ataque utilizam criptografias Kerberos fracas. Nessa detecção, o ATP do Azure aprende os tipos de criptografia Kerberos usados por computadores e usuários. O alerta será emitido quando for usada uma criptografia mais fraca que seja incomum para o usuário e/ou computador de origem e que corresponda a técnicas de ataque conhecidas.
+O downgrade de criptografia é um método de enfraquecer o Kerberos usando um nível de criptografia que sofreu downgrade em diferentes campos do protocolo, que normalmente têm o nível mais alto de criptografia. Um campo criptografado enfraquecido pode ser um alvo mais fácil para tentativas de força bruta offline. Vários métodos de ataque utilizam criptografias Kerberos fracas. Nessa detecção, o [!INCLUDE [Product short](includes/product-short.md)] aprende os tipos de criptografia Kerberos usados por computadores e usuários. O alerta será emitido quando for usada uma criptografia mais fraca que seja incomum para o usuário e/ou computador de origem e que corresponda a técnicas de ataque conhecidas.
 
 Skeleton Key é um malware que é executado nos controladores de domínio e permite a autenticação no domínio com qualquer conta sem saber sua senha. Este malware geralmente usa algoritmos de criptografia mais fracos para fazer o hash das senhas do usuário no controlador de domínio. Nesse alerta, o comportamento aprendido da criptografia de mensagem KRB_ERR anterior, do controlador de domínio para a conta que solicita um tíquete, sofreu downgrade.
 
 **Entender o escopo da violação**
 
 1. Investigue o [controlador de domínio](investigate-a-computer.md).
-1. Verifique se a Skeleton Key afetou os controladores de domínio usando o [scanner gravado pela equipe do ATP do Azure](https://gallery.technet.microsoft.com/Aorato-Skeleton-Key-24e46b73).
+1. Verifique se a Skeleton Key afetou os controladores de domínio [usando o scanner escrito pela equipe do [!INCLUDE [Product short](includes/product-short.md)]](https://gallery.technet.microsoft.com/Aorato-Skeleton-Key-24e46b73).
 1. Investigue os [usuários](investigate-a-user.md) e [computadores](investigate-a-computer.md) envolvidos.
 
 **Correção sugerida e etapas de prevenção**
 
 1. Redefina as senhas dos usuários comprometidos e habilite a MFA ou, se você tiver configurado as políticas relevantes de usuário de alto risco no Azure Active Directory Identity Protection, poderá usar a ação [**Confirmar usuário comprometido**](/cloud-app-security/accounts#governance-actions) no portal de Cloud App Security.
-2. Conter o controlador de domínio.
+1. Conter o controlador de domínio.
     - Remover o malware. Para saber mais, veja [Análise do malware Skeleton Key](https://www.virusbulletin.com/virusbulletin/2016/01/paper-digital-bian-lian-face-changing-skeleton-key-malware).
     - Procure usuários que estavam conectados no mesmo período em que a atividade suspeita ocorreu, pois eles também podem estar comprometidos. Redefina suas senhas e habilite a MFA ou, se você tiver configurado as políticas relevantes de usuário de alto risco no Azure Active Directory Identity Protection, poderá usar a ação [**Confirmar usuário comprometido**](/cloud-app-security/accounts#governance-actions) no portal de Cloud App Security.
 
@@ -578,9 +578,9 @@ Skeleton Key é um malware que é executado nos controladores de domínio e perm
 
 **Descrição**
 
-Os invasores adicionam usuários a grupos altamente privilegiados. A adição de usuários é realizada para obter acesso a mais recursos e obter persistência. Essa detecção conta com a criação de perfil de atividades de modificação do grupo de usuários e com o alerta para quando uma adição anormal a um grupo confidencial é vista. O ATP do Azure cria perfis continuamente.
+Os invasores adicionam usuários a grupos altamente privilegiados. A adição de usuários é realizada para obter acesso a mais recursos e obter persistência. Essa detecção conta com a criação de perfil de atividades de modificação do grupo de usuários e com o alerta para quando uma adição anormal a um grupo confidencial é vista. O [!INCLUDE [Product short](includes/product-short.md)] analisa os perfis continuamente.
 
-Para ver uma definição de grupos confidenciais no Azure ATP, consulte [Trabalhando com contas confidenciais](sensitive-accounts.md).
+Para obter uma definição de grupos confidenciais no [!INCLUDE [Product short](includes/product-short.md)], confira [Como trabalhar com contas confidenciais](sensitive-accounts.md).
 
 A detecção depende de eventos auditados em controladores de domínio. Verifique se os controladores de domínio estão [auditando os eventos necessários](configure-windows-event-collection.md).
 
@@ -591,6 +591,7 @@ Quatro semanas por controlador de domínio, começando no primeiro evento.
 **TP, B-TP ou FP**
 
 Modificações de grupo legítimas que raramente ocorrem e que o sistema não aprende como "normais" podem disparar um alerta. Esses alertas seriam considerados **B-TP**.
+
 1. A modificação do grupo é legítima?
     - Se a modificação do grupo é legítima, **feche** o alerta de segurança como uma atividade **B-TP**.
 
@@ -598,9 +599,9 @@ Modificações de grupo legítimas que raramente ocorrem e que o sistema não ap
 
 1. Investigue os usuários adicionados a grupos.
     - Concentre-se nas atividades deles após a adição deles aos grupos confidenciais.
-2. Investigue o usuário de origem.
+1. Investigue o usuário de origem.
     - Baixe o relatório **Modificação de grupos confidenciais** para ver quais outras modificações foram feitas e por quem durante o mesmo período de tempo.
-3. Investigue os computadores nos quais o usuário de origem fez logon na época da atividade.
+1. Investigue os computadores nos quais o usuário de origem fez logon na época da atividade.
 
 **Correção sugerida e etapas de prevenção**
 
@@ -646,10 +647,10 @@ Algumas tarefa administrativa são realizadas de modo legítimo em controladores
 **Remediação**
 
 1. Redefina a senha do usuário de origem e habilite a MFA ou, se você tiver configurado as políticas relevantes de usuário de alto risco no Azure Active Directory Identity Protection, poderá usar a ação [**Confirmar usuário comprometido**](/cloud-app-security/accounts#governance-actions) no portal de Cloud App Security.
-2. Conter os controladores de domínio.
+1. Conter os controladores de domínio.
     - Corrigir o serviço suspeito.
     - Procure usuários que estavam conectados no horário da atividade, pois eles também podem estar comprometidos. Redefina suas senhas e habilite a MFA ou, se você tiver configurado as políticas relevantes de usuário de alto risco no Azure Active Directory Identity Protection, poderá usar a ação [**Confirmar usuário comprometido**](/cloud-app-security/accounts#governance-actions) no portal de Cloud App Security.
-3. Localize o computador no qual o usuário de origem estava ativo.
+1. Localize o computador no qual o usuário de origem estava ativo.
     - Verifique os computadores aos quais o usuário estava conectado no horário da atividade e verifique se esses computadores também estão comprometidos.
 
 **Prevenção:**
@@ -670,4 +671,4 @@ Algumas tarefa administrativa são realizadas de modo legítimo em controladores
 - [Alertas de credencial comprometida](compromised-credentials-alerts.md)
 - [Alertas de movimento lateral](lateral-movement-alerts.md)
 - [Alertas de exfiltração](exfiltration-alerts.md)
-- [Confira o fórum do ATP do Azure!](https://aka.ms/azureatpcommunity)
+- [Confira o fórum do [!INCLUDE [Product short](includes/product-short.md)]!](https://aka.ms/MDIcommunity)

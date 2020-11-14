@@ -1,29 +1,32 @@
 ---
-title: Início rápido para conectar o ATP do Azure ao Active Directory
-description: A etapa dois da instalação do Azure ATP ajuda a definir as configurações de conectividade do domínio em seu serviço de nuvem do Azure ATP
+title: Guia de início rápido – Conectar o Microsoft Defender para Identidade ao Active Directory
+description: A segunda etapa da instalação do Microsoft Defender para Identidade ajuda você a definir as configurações de conectividade de domínio no serviço de nuvem do Defender para Identidade
 author: shsagir
 ms.author: shsagir
-ms.date: 01/15/2020
+manager: shsagir
+ms.date: 10/26/2020
 ms.topic: quickstart
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
-ms.openlocfilehash: 39721343f150969a501b58842c616386dbfb49c2
-ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
+ms.reviewer: itargoet
+ms.suite: ems
+ms.openlocfilehash: f0c4cc8342c9f45b8cc08166d14be1c512ca1065
+ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90913026"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93276222"
 ---
 # <a name="quickstart-connect-to-your-active-directory-forest"></a>Início Rápido: Conectar à sua floresta do Active Directory
 
 [!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
-Neste início rápido, você conectará o ATP do Azure ao AD (Active Directory) para recuperar dados sobre usuários e computadores. Se você estiver conectando várias florestas, consulte o artigo [Suporte a várias florestas](multi-forest.md).
+Neste guia de início rápido, você conectará o [!INCLUDE [Product long](includes/product-long.md)] ao AD (Active Directory) para recuperar dados sobre usuários e computadores. Se você estiver conectando várias florestas, consulte o artigo [Suporte a várias florestas](multi-forest.md).
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
-- Uma [instância do ATP do Azure](install-step1.md).
-- Confira o artigo sobre os [pré-requisitos do ATP do Azure](prerequisites.md).
+- Uma [instância do [!INCLUDE [Product short](includes/product-short.md)]](install-step1.md).
+- Examine o artigo [Pré-requisitos do [!INCLUDE [Product short](includes/product-short.md)]](prerequisites.md).
 - Pelo menos uma das seguintes contas de serviços de diretório com acesso de leitura a todos os objetos nos domínios monitorados:
   - Uma conta de usuário do AD **padrão** e senha. Exigidas para sensores que executam o Windows Server 2008 R2 SP1.
   - Uma **gMSA (Conta de Serviço Gerenciado de Grupo)** . Requer Windows Server 2012 ou posterior.  
@@ -32,7 +35,7 @@ Neste início rápido, você conectará o ATP do Azure ao AD (Active Directory) 
     > [!NOTE]
     >
     > - Para computadores sensores que executam o Windows Server 2012 e posterior, recomendamos usar uma conta **gMSA** devido à segurança aprimorada e ao gerenciamento automático de senhas.
-    > - Se você tiver vários sensores, alguns executando o Windows Server 2008 e outros executando o Windows Server 2012 ou posterior, além da recomendação para usar uma conta **gMSA**, você também deverá usar pelo menos uma conta de usuário do AD **padrão**.
+    > - Se você tiver vários sensores, alguns executando o Windows Server 2008 e outros executando o Windows Server 2012 ou posterior, além da recomendação para usar uma conta **gMSA** , você também deverá usar pelo menos uma conta de usuário do AD **padrão**.
 
 ### <a name="how-to-set-up-a-gmsa-account"></a>Como configurar uma conta gMSA
 
@@ -41,27 +44,27 @@ Neste início rápido, você conectará o ATP do Azure ao AD (Active Directory) 
 
 ## <a name="provide-a-username-and-password-to-connect-to-your-active-directory-forest"></a>Fornecer um nome de usuário e uma senha para se conectar à sua Floresta do Active Directory
 
-Na primeira vez em que você abre o portal do Azure ATP, a tela a seguir é exibida:
+Na primeira vez em que você abre o portal do [!INCLUDE [Product short](includes/product-short.md)], a seguinte tela é exibida:
 
-![Estágio 1 de boas-vindas do Azure ATP](media/directory-services.png)
+![Estágio 1 de boas-vindas do [!INCLUDE [Product short](includes/product-short.md)]](media/directory-services.png)
 
-1. Insira as seguintes informações e clique em **Salvar**:
+1. Insira as seguintes informações e clique em **Salvar** :
 
     |Campo|Comentários|
     |---|---|
-    |**Nome de usuário** (obrigatório)|Insira o nome de usuário do AD somente leitura. Por exemplo: **ATPuser**. Você deve usar uma conta de usuário do AD **padrão** ou gMSA. **Não** use o formato UPN para seu nome de usuário.|
+    |**Nome de usuário** (obrigatório)|Insira o nome de usuário do AD somente leitura. Por exemplo: **DefenderForIdentityUser**. Você deve usar uma conta de usuário do AD **padrão** ou gMSA. **Não** use o formato UPN para seu nome de usuário.|
     |**Senha** (necessário para a conta de usuário do AD padrão)|Somente para conta de usuário do AD, digite a senha para o usuário somente leitura. Por exemplo: **Lápis1**.|
     |**Conta de serviço gerenciado de grupo** (necessário para a conta gMSA)|Somente para a conta gMSA, selecione **Conta de serviço gerenciado de grupo**.|
     |**Domínio** (obrigatório)|Digite o domínio para o usuário somente leitura. Por exemplo: **contoso.com**. É importante que você insira o FQDN completo do domínio em que o usuário está localizado. Por exemplo, se a conta do usuário estiver no domínio corp.contoso.com, você precisará inserir `corp.contoso.com` e não contoso.com|
 
-1. No portal do Azure ATP, clique em **Baixar instalação do sensor e instalar o primeiro sensor** para continuar.
+1. No portal do [!INCLUDE [Product short](includes/product-short.md)], clique em **Baixar instalação do sensor e instalar o primeiro sensor** para continuar.
 
 ## <a name="next-steps"></a>Próximas etapas
 
 > [!div class="step-by-step"]
-> [« Etapa 1 — Criar uma instância do ATP do Azure](install-step1.md)
-> [Etapa 3 — Baixar a instalação do sensor »](install-step3.md)
+> [« Etapa 1 – Criar uma instância do [!INCLUDE [Product short](includes/product-short.md)]](install-step1.md)
+> [Etapa 3 – Baixar a instalação do sensor »](install-step3.md)
 
 ## <a name="join-the-community"></a>Participe da comunidade
 
-Tem mais perguntas ou interesse em discutir sobre o ATP do Azure e a segurança relacionada com outras pessoas? Participe da [Comunidade do ATP do Azure](https://aka.ms/azureatpcommunity) hoje mesmo!
+Tem mais perguntas ou interesse em discutir sobre o [!INCLUDE [Product short](includes/product-short.md)] e a segurança relacionada com outras pessoas? Participe da Comunidade [[!INCLUDE [Product short](includes/product-short.md)]](https://aka.ms/MDIcommunity) hoje mesmo!

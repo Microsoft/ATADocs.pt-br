@@ -1,58 +1,58 @@
 ---
-title: Baixar início rápido do pacote de instalação do sensor do ATP do Azure
-description: A etapa três da instalação do Azure ATP ajuda a baixar o pacote de instalação do sensor do Azure ATP.
+title: Guia de início rápido – Baixar o pacote de instalação do sensor do Microsoft Defender para Identidade
+description: A terceira etapa da instalação do Microsoft Defender para Identidade ajuda você a baixar o pacote de instalação do sensor do Defender para Identidade.
 keywords: ''
 author: shsagir
 ms.author: shsagir
-ms.date: 02/19/2020
+ms.date: 10/26/2020
 ms.topic: quickstart
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
-ms.assetid: 95bb4ec1-841f-41b7-92fe-fbd144085724
-ms.openlocfilehash: 04e1df3e375d48c17a42590521b9de06373f4799
-ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
+ms.reviewer: itargoet
+ms.suite: ems
+ms.openlocfilehash: f971bf0ccadf2eba52b40c95591abaff0c963e0e
+ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90910220"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93277071"
 ---
-# <a name="quickstart-download-the-azure-atp-sensor-setup-package"></a>Início Rápido: Baixar o pacote de instalação do sensor do Azure ATP
+# <a name="quickstart-download-the-product-long-sensor-setup-package"></a>Início Rápido: Baixar o pacote de instalação do sensor do [!INCLUDE [Product long](includes/product-long.md)]
 
 [!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
-Neste início rápido, você baixará o pacote de instalação do sensor do ATP do Azure no portal.
+Neste guia de início rápido, você baixará o pacote de instalação do sensor do [!INCLUDE [Product long](includes/product-long.md)] no portal.
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
-- Uma [instância do ATP do Azure](install-step1.md)[conectada ao Active Directory](install-step2.md).
+- Uma [instância do [!INCLUDE [Product short](includes/product-short.md)]](install-step1.md) [conectada ao Active Directory](install-step2.md).
 
 ## <a name="download-the-setup-package"></a>Baixar o pacote de instalação
 
-Após definir as configurações de conectividade do domínio, você poderá baixar o pacote de instalação do sensor do Azure ATP. Para obter mais informações sobre o sensor do Azure ATP, consulte [Arquitetura do Azure ATP](architecture.md).
+Depois de definir as configurações de conectividade do domínio, baixe o pacote de instalação do sensor do [!INCLUDE [Product short](includes/product-short.md)]. Para obter mais informações sobre o sensor do [!INCLUDE [Product short](includes/product-short.md)], confira [Arquitetura do [!INCLUDE [Product short](includes/product-short.md)]](architecture.md).
 
-Clique em **Baixar** na lista de etapas na parte superior da página para ir para a página **Sensor**.
+Clique em **Baixar** na lista de etapas na parte superior da página para acessar a página **Sensores**.
 
-![Definições de configuração do sensor do Azure ATP](media/atp-sensor-config.png)
+![Definições de configuração do sensor do [!INCLUDE [Product short](includes/product-short.md)]](media/sensor-config.png)
 
- Para acessar a tela de configuração do sensor mais tarde, clique no **ícone de configurações** (canto superior direito), selecione **Configuração** e, em **Sistema**, clique em **sensor**.  
+Para acessar a tela de configuração do sensor mais tarde, selecione **Configuração** e, em **Sistema** , clique em **Sensores**.  
 
-1. Clique em **sensor**.
-1. Salve o pacote localmente.
-1. Copie a **chave de ** **acesso**. A chave de acesso é necessária para o sensor do ATP do Azure se conectar à sua instância do ATP do Azure. A chave de acesso é uma senha de uso único para implantação de sensor. Depois disso, toda a comunicação é realizada usando certificados para autenticação e criptografia TLS. Use o botão **Regenerar** se você precisar regenerar a nova chave de acesso. Isso não afetará nenhum sensor implantado anteriormente, porque a chave só é usada para o registro inicial do sensor.
-1. Copie o pacote para o servidor dedicado ou controlador de domínio no qual você está instalando o sensor do ATP do Azure. Como alternativa, você pode abrir o portal do ATP do Azure por meio do servidor dedicado ou do controlador de domínio e ignorar esta etapa.
+1. Clique em **Baixar** para salvar o pacote localmente.
+1. Copie a **chave de** **acesso**. A chave de acesso é necessária para que o sensor do [!INCLUDE [Product short](includes/product-short.md)] se conecte à sua instância do [!INCLUDE [Product short](includes/product-short.md)]. A chave de acesso é uma senha de uso único para implantação de sensor. Depois disso, toda a comunicação é realizada usando certificados para autenticação e criptografia TLS. Use o botão **Regenerar** se você precisar regenerar a nova chave de acesso. Isso não afetará nenhum sensor implantado anteriormente, porque a chave só é usada para o registro inicial do sensor.
+1. Copie o pacote para o servidor dedicado ou o controlador de domínio no qual você está instalando o sensor do [!INCLUDE [Product short](includes/product-short.md)]. Como alternativa, você pode abrir o portal do [!INCLUDE [Product short](includes/product-short.md)] por meio do servidor dedicado ou do controlador de domínio e ignorar esta etapa.
 
 O arquivo zip inclui os seguintes arquivos:
 
-- Instalador do sensor do Azure ATP
+- Instalador do sensor do [!INCLUDE [Product short](includes/product-short.md)]
 
-- Arquivo de configurações com as informações necessárias para conectar-se ao serviço de nuvem do Azure ATP
+- Arquivo de definição de configuração com as informações necessárias para se conectar ao serviço de nuvem do [!INCLUDE [Product short](includes/product-short.md)]
 
 ## <a name="next-steps"></a>Próximas etapas
 
 > [!div class="step-by-step"]
-> [« Etapa 2 — Conectar ao Active Directory](install-step2.md)
-> [Etapa 4 — Instalar o sensor do ATP do Azure »](install-step4.md)
+> [« Etapa 2 – Conectar-se ao Active Directory](install-step2.md)
+> [Etapa 4 – Instalar o sensor do [!INCLUDE [Product short](includes/product-short.md)] »](install-step4.md)
 
 ## <a name="join-the-community"></a>Participe da comunidade
 
-Tem mais perguntas ou interesse em discutir sobre o ATP do Azure e a segurança relacionada com outras pessoas? Participe da [Comunidade do ATP do Azure](https://aka.ms/azureatpcommunity) hoje mesmo!
+Tem mais perguntas ou interesse em discutir sobre o [!INCLUDE [Product short](includes/product-short.md)] e a segurança relacionada com outras pessoas? Participe da Comunidade [[!INCLUDE [Product short](includes/product-short.md)]](https://aka.ms/MDIcommunity) hoje mesmo!

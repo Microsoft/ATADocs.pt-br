@@ -1,66 +1,66 @@
 ---
-title: Início rápido para criar sua instância do ATP do Azure
-description: Início rápido para criar a instância para sua implantação do ATP do Azure, que é a primeira etapa para instalar o ATP do Azure.
+title: Guia de início rápido – Criar sua instância do Microsoft Defender para Identidade
+description: Guia de início rápido para a criação da instância da sua implantação do Microsoft Defender para Identidade, que é a primeira etapa para instalar o Defender para Identidade.
 keywords: ''
 author: shsagir
 ms.author: shsagir
-ms.date: 10/31/2019
+ms.date: 10/26/2020
 ms.topic: quickstart
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 5c07d5bb568394cdb5c989279434445f88d0f7ea
-ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
+ms.openlocfilehash: 50307054535447326b8b48641afaeec7cfc70551
+ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90910272"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93277162"
 ---
-# <a name="quickstart-create-your-azure-atp-instance"></a>Início Rápido: Criar sua instância do Azure ATP
+# <a name="quickstart-create-your-product-long-instance"></a>Início Rápido: Criar sua instância do [!INCLUDE [Product long](includes/product-long.md)]
 
 [!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
-Neste início rápido, você criará sua instância do ATP do Azure no portal do ATP do Azure. No ATP do Azure, você terá uma única instância, anteriormente chamada de workspace. Uma única instância permite gerenciar várias florestas em um único painel de exibição.
+Neste guia de início rápido, você criará sua instância do [!INCLUDE [Product long](includes/product-long.md)] no portal do [!INCLUDE [Product short](includes/product-short.md)]. No [!INCLUDE [Product short](includes/product-short.md)], você terá uma só instância, anteriormente chamada de workspace. Uma única instância permite gerenciar várias florestas em um único painel de exibição.
 
 > [!IMPORTANT]
-> No momento, os data centers do ATP do Azure são implantados na Europa, no Reino Unido, na América do Norte/América Central/Caribe e na Ásia. A instância é criada automaticamente no data center geograficamente mais próximo ao seu Azure AD (Azure Active Directory). Após a criação, as instâncias do ATP do Azure não podem ser movidas.
+> No momento, os data centers do [!INCLUDE [Product short](includes/product-short.md)] estão implantados na Europa, no Reino Unido, na América do Norte/América Central/Caribe e na Ásia. A instância é criada automaticamente no data center geograficamente mais próximo ao seu Azure AD (Azure Active Directory). Depois de criadas, as instâncias do [!INCLUDE [Product short](includes/product-short.md)] não poderão ser movidas.
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
-- Uma [licença do ATP do Azure](technical-faq.md#licensing-and-privacy).
-- Para acessar o portal do ATP do Azure, você precisa ser [administrador global ou de segurança no locatário](/azure/active-directory/users-groups-roles/directory-assign-admin-roles#available-roles).
-- Confira o artigo sobre a [arquitetura do ATP do Azure](architecture.md).
-- Confira o artigo sobre os [pré-requisitos do ATP do Azure](prerequisites.md).
+- Uma [licença do [!INCLUDE [Product long](includes/product-long.md)]](technical-faq.md#licensing-and-privacy).
+- Você precisará ser um [administrador global ou um administrador da segurança no locatário](/azure/active-directory/users-groups-roles/directory-assign-admin-roles#available-roles) para acessar o portal do [!INCLUDE [Product short](includes/product-short.md)].
+- Examine o artigo [Arquitetura do [!INCLUDE [Product short](includes/product-short.md)]](architecture.md).
+- Examine o artigo [Pré-requisitos do [!INCLUDE [Product short](includes/product-short.md)]](prerequisites.md).
 
-## <a name="sign-in-to-the-azure-atp-portal"></a>Entrar no portal do ATP do Azure
+## <a name="sign-in-to-the-product-short-portal"></a>Entre no portal do [!INCLUDE [Product short](includes/product-short.md)]
 
-Depois de verificar que sua rede atende aos requisitos do sensor, inicie a criação da instância do ATP do Azure.
+Depois de verificar que a sua rede atende aos requisitos do sensor, inicie a criação da instância do [!INCLUDE [Product short](includes/product-short.md)].
 
-1. Acesse o [portal do ATP do Azure](https://portal.atp.azure.com).
+1. Acesse o [portal do [!INCLUDE [Product short](includes/product-short.md)]](https://portal.atp.azure.com)*.
 
 1. Entre com sua conta de usuário do Azure Active Directory.
 
-\*Clientes do GCC High devem usar o portal do [ATP do Azure para GCC High](http://portal.atp.azure.us).
+\* Os clientes do GCC High precisam usar o portal do [[!INCLUDE [Product short](includes/product-short.md)] GCC High](http://portal.atp.azure.us).
 
 ## <a name="create-your-instance"></a>Criar sua instância
 
 1. Clique em **Criar instância**.
 
-    ![Criar uma instância do ATP do Azure](media/create-instance.png)
+    ![Criar uma instância do [!INCLUDE [Product short](includes/product-short.md)]](media/create-instance.png)
 
-1. Sua instância do ATP do Azure é nomeada automaticamente com o nome de domínio inicial do Azure AD e criada no data center mais próximo do seu Azure AD.
+1. Sua instância do [!INCLUDE [Product short](includes/product-short.md)] é nomeada automaticamente com o nome de domínio inicial do Azure AD e criada no data center mais próximo do seu Azure AD.
 
     ![Instância do Azure criada](media/instance-created.png)
 
     > [!NOTE]
-    > Para entrar no ATP do Azure, você precisará entrar com um usuário atribuído a uma função do ATP do Azure com direitos para acessar o portal do ATP do Azure. Para obter mais informações sobre o RBAC (controle de acesso baseado em função) no Azure ATP, consulte [Como trabalhar com grupos de função do Azure ATP](role-groups.md).
+    > Para entrar no [!INCLUDE [Product short](includes/product-short.md)], você precisará se conectar com um usuário que recebeu uma função do [!INCLUDE [Product short](includes/product-short.md)] com direitos para acessar o portal do [!INCLUDE [Product short](includes/product-short.md)]. Para saber mais sobre RBAC (controle de acesso baseado em função) no [!INCLUDE [Product short](includes/product-short.md)], confira [Trabalhar com grupos de função do [!INCLUDE [Product short](includes/product-short.md)]](role-groups.md).
 
-1. Clique em **Configuração**, **Gerenciar grupos de funções** e use o link [Centro de Administração do Azure AD](/azure/active-directory/active-directory-assign-admin-roles-azure-portal) para gerenciar seus grupos de funções.
+1. Selecione **Configuração** , **Gerenciar grupos de funções** e use o link [Centro de Administração do Azure AD](/azure/active-directory/active-directory-assign-admin-roles-azure-portal) para gerenciar seus grupos de funções.
 
     ![Gerenciar grupos de funções](media/creation-manage-role-groups.png)
 
-- Retenção de dados – as instâncias do ATP do Azure já excluídas não são exibidas na interface do usuário. Para obter mais informações sobre a retenção de dados do Azure ATP, consulte [privacidade e segurança de dados do Azure ATP](privacy-compliance.md).
+- Retenção de dados: as instâncias do [!INCLUDE [Product short](includes/product-short.md)] já excluídas não são exibidas na interface do usuário. Para obter mais informações sobre a retenção de dados do [!INCLUDE [Product short](includes/product-short.md)], confira [Privacidade e segurança de dados do [!INCLUDE [Product short](includes/product-short.md)]](privacy-compliance.md).
 
 ## <a name="next-steps"></a>Próximas etapas
 
@@ -70,4 +70,4 @@ Depois de verificar que sua rede atende aos requisitos do sensor, inicie a cria�
 
 ## <a name="join-the-community"></a>Participe da comunidade
 
-Tem mais perguntas ou interesse em discutir sobre o ATP do Azure e a segurança relacionada com outras pessoas? Participe da [Comunidade do ATP do Azure](https://aka.ms/azureatpcommunity) hoje mesmo!
+Tem mais perguntas ou interesse em discutir sobre o [!INCLUDE [Product short](includes/product-short.md)] e a segurança relacionada com outras pessoas? Participe da Comunidade [[!INCLUDE [Product short](includes/product-short.md)]](https://aka.ms/MDIcommunity) hoje mesmo!

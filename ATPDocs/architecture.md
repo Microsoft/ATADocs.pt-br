@@ -1,98 +1,101 @@
 ---
-title: Arquitetura do Azure Advanced Threat Protection
-description: Descreve a arquitetura do Azure ATP (Proteção Avançada contra Ameaças)
+title: Arquitetura do Microsoft Defender para Identidade
+description: Descreve a arquitetura do Microsoft Defender para Identidade
 keywords: ''
 author: shsagir
 ms.author: shsagir
 manager: shsagir
-ms.date: 09/23/2019
+ms.date: 10/26/2020
 ms.topic: overview
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
-ms.assetid: 90f68f2c-d421-4339-8e49-1888b84416e6
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: aee16031c1682dc51b4c4da8fb3b123a8de93918
-ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
+ms.openlocfilehash: e6baa54d7e8738d6132bf33d9ce8f4e829e6243f
+ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90913260"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93276758"
 ---
-# <a name="azure-atp-architecture"></a>Arquitetura do ATP do Azure
+# <a name="microsoft-defender-for-identity-architecture"></a>Arquitetura do Microsoft Defender para Identidade
 
 [!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
-O ATP do Azure monitora seus controladores de domínio capturando e analisando o tráfego de rede e aproveitando os eventos do Windows diretamente de seus controladores de domínio, em seguida, analisa os dados em busca de ataques e ameaças. Utilizando criação de perfil, detecção determinística, aprendizado de máquina e algoritmos comportamentais que do Azure ATP aprende sobre sua rede, habilita a detecção de anomalias e avisa sobre atividades suspeitas.
+O [!INCLUDE [Product long](includes/product-long.md)] monitora seus controladores de domínio capturando e analisando o tráfego de rede e aproveitando os eventos do Windows diretamente dos controladores de domínio. Em seguida, ele analisa os dados em busca de ataques e ameaças. Utilizando criação de perfil, detecção determinística, machine learning e algoritmos comportamentais, o [!INCLUDE [Product short](includes/product-short.md)] aprende mais sobre a sua rede, habilita a detecção de anomalias e alerta você sobre atividades suspeitas.
 
-Arquitetura da Proteção Avançada contra Ameaças do Azure:
+Arquitetura do [!INCLUDE [Product short](includes/product-short.md)]:
 
-![Diagrama de topologia da arquitetura do Azure ATP](media/atp-architecture-topology.png)
+![Diagrama de topologia da arquitetura do [!INCLUDE [Product short](includes/product-short.md)]](media/architecture-topology.png)
 
-Esta seção descreve como o fluxo de captura de eventos e rede do ATP do Azure funciona e descreve detalhadamente as funcionalidades dos componentes principais: o portal do ATP do Azure, o sensor do ATP do Azure e o serviço de nuvem do ATP do Azure. 
+Esta seção descreve como funciona o fluxo de captura de eventos e rede do [!INCLUDE [Product short](includes/product-short.md)] e descreve detalhadamente as funcionalidades dos componentes principais: o portal do [!INCLUDE [Product short](includes/product-short.md)], o sensor do [!INCLUDE [Product short](includes/product-short.md)] e o serviço de nuvem do [!INCLUDE [Product short](includes/product-short.md)].
 
-Instalado diretamente em seus controladores de domínio, o sensor do ATP do Azure acessa os logs de eventos necessários diretamente do controlador de domínio. Depois que o tráfego de rede e os logs forem analisados pelo sensor, o Azure ATP enviará apenas as informações analisadas ao serviço de nuvem do Azure ATP (apenas um percentual dos logs é enviado). 
+Instalado diretamente nos seus controladores de domínio, o sensor do [!INCLUDE [Product short](includes/product-short.md)] acessa os logs de eventos necessários diretamente do controlador de domínio. Depois que o tráfego de rede e os logs são analisados pelo sensor, o [!INCLUDE [Product short](includes/product-short.md)] envia apenas as informações analisadas ao serviço de nuvem do [!INCLUDE [Product short](includes/product-short.md)] (somente um percentual dos logs é enviado).
 
-## <a name="azure-atp-components"></a>Componentes da ATP do Azure
-O Azure ATP é formado pelos seguintes componentes:
+## <a name="product-short-components"></a>Componentes [!INCLUDE [Product short](includes/product-short.md)]
 
--    **Portal do ATP do Azure** <br>
-O portal do ATP do Azure permite a criação da sua instância do ATP do Azure, exibe os dados recebidos de sensores do ATP do Azure e permite monitorar, gerenciar e investigar ameaças em seu ambiente de rede.  
--   **Sensor do ATP do Azure**<br>
-Os sensores do ATP do Azure são instalados diretamente em seus controladores de domínio. O sensor monitora diretamente o tráfego do controlador de domínio sem a necessidade de um servidor dedicado ou configuração de espelhamento de porta.
+O [!INCLUDE [Product short](includes/product-short.md)] é formado pelos seguintes componentes:
 
--   **Serviço de nuvem do Azure ATP**<br>
-O serviço de nuvem do Azure ATP é executado na infraestrutura do Azure e implantado no momento nos EUA, na Europa e na Ásia. O serviço de nuvem do ATP do Azure está conectado ao Gráfico de Segurança Inteligente da Microsoft. 
+- **Portal do [!INCLUDE [Product short](includes/product-short.md)]**  
+O portal do [!INCLUDE [Product short](includes/product-short.md)] permite a criação da sua instância do [!INCLUDE [Product short](includes/product-short.md)], exibe os dados recebidos dos sensores do [!INCLUDE [Product short](includes/product-short.md)] e permite que você monitore, gerencie e investigue as ameaças no seu ambiente de rede.
 
-## <a name="azure-atp-portal"></a>Portal do ATP do Azure 
-Use o portal do Azure ATP para:
-- Criar sua instância do Azure ATP
-- Integrar a outros serviços de segurança da Microsoft 
-- Gerenciar definições de configuração do sensor do Azure ATP 
-- Exibir dados recebidos de sensores do Azure ATP
+- **Sensor do [!INCLUDE [Product short](includes/product-short.md)]**  
+Os sensores do [!INCLUDE [Product short](includes/product-short.md)] são instalados diretamente nos seus controladores de domínio. O sensor monitora diretamente o tráfego do controlador de domínio sem a necessidade de um servidor dedicado ou configuração de espelhamento de porta.
+- **Serviço de nuvem do [!INCLUDE [Product short](includes/product-short.md)]**  
+O serviço de nuvem do [!INCLUDE [Product short](includes/product-short.md)] é executado na infraestrutura do Azure e é atualmente implantado nos EUA, na Europa e na Ásia. O serviço de nuvem do [!INCLUDE [Product short](includes/product-short.md)] está conectado ao grafo de segurança inteligente da Microsoft.
+
+## <a name="product-short-portal"></a>Portal do [!INCLUDE [Product short](includes/product-short.md)]
+
+Use o portal do [!INCLUDE [Product short](includes/product-short.md)] para:
+
+- Criar sua instância do [!INCLUDE [Product short](includes/product-short.md)]
+- Integrar a outros serviços de segurança da Microsoft
+- Gerenciar as definições de configuração do sensor do [!INCLUDE [Product short](includes/product-short.md)]
+- Ver os dados recebidos dos sensores do [!INCLUDE [Product short](includes/product-short.md)]
 - Monitorar atividades suspeitas detectadas e ataques suspeitos com base no modelo de cadeia de eliminação de ataque
-- **Opcional**: o portal também pode ser configurado para enviar emails e eventos quando forem detectados problemas de integridade ou alertas de segurança
+- **Opcional** : o portal também pode ser configurado para enviar emails e eventos quando forem detectados problemas de integridade ou alertas de segurança
 
 > [!NOTE]
-> - Se nenhum sensor for instalado em sua instância do ATP do Azure em até 60 dias, ela poderá ser excluída e você precisará recriá-la.
+> Se nenhum sensor for instalado na sua instância do [!INCLUDE [Product short](includes/product-short.md)] em até 60 dias, ela poderá ser excluída e você precisará recriá-la.
 
-## <a name="azure-atp-sensor"></a>Sensor do Azure ATP
-O sensor do Azure ATP tem as seguintes funcionalidades principais:
+## <a name="product-short-sensor"></a>Sensor do [!INCLUDE [Product short](includes/product-short.md)]
+
+O sensor do [!INCLUDE [Product short](includes/product-short.md)] tem as seguintes funcionalidades principais:
+
 - Capturar e inspecionar o tráfego de rede de controlador de domínio (tráfego local do controlador de domínio)
-- Receber Eventos do Windows diretamente dos controladores de domínio 
+- Receber Eventos do Windows diretamente dos controladores de domínio
 - Receber informações de contabilidade RADIUS de seu provedor de VPN
 - Recuperar dados sobre usuários e computadores do domínio do Active Directory
 - Executar a resolução de entidades de rede (usuários, grupos e computadores)
-- Transferir dados relevantes para o serviço de nuvem do Azure ATP
+- Transferir dados relevantes para o serviço de nuvem do [!INCLUDE [Product short](includes/product-short.md)]
 
- 
-## <a name="azure-atp-sensor-features"></a>Funcionalidades do sensor do Azure ATP
+## <a name="product-short-sensor-features"></a>Recursos do sensor do [!INCLUDE [Product short](includes/product-short.md)]
 
-O sensor do Azure ATP lê eventos localmente, sem necessidade de comprar e manter hardware ou configurações adicionais. O sensor do ATP do Azure também dá suporte para o Rastreamento de Eventos para Windows (ETW), o qual fornece as informações de log para várias detecções. As detecções baseadas no ETW incluem Suspeita de ataques de DCShadow tentados usando a promoção do controlador de domínio e as solicitações de replicação do controlador de domínio.
+O sensor do [!INCLUDE [Product short](includes/product-short.md)] lê eventos localmente, sem a necessidade de comprar e manter nenhum hardware ou configurações adicionais. O sensor do [!INCLUDE [Product short](includes/product-short.md)] também dá suporte ao Rastreamento de Eventos para Windows (ETW), que fornece as informações de log para várias detecções. As detecções baseadas no ETW incluem Suspeita de ataques de DCShadow tentados usando a promoção do controlador de domínio e as solicitações de replicação do controlador de domínio.
 
 ### <a name="domain-synchronizer-process"></a>Processo sincronizador de domínio
 
-O processo sincronizador de domínio é responsável por sincronizar todas as entidades de um determinado domínio do Active Directory de forma proativa (semelhante ao mecanismo utilizado pelos próprios controladores de domínio para replicação). Um sensor é automaticamente escolhido de forma aleatória entre todos os seus sensores qualificados para servir como o sincronizador de domínio. 
+O processo sincronizador de domínio é responsável por sincronizar todas as entidades de um determinado domínio do Active Directory de forma proativa (semelhante ao mecanismo utilizado pelos próprios controladores de domínio para replicação). Um sensor é automaticamente escolhido de forma aleatória entre todos os seus sensores qualificados para servir como o sincronizador de domínio.
 
-Se o sincronizador de domínio estiver offline por mais de 30 minutos, outro sensor será escolhido automaticamente em seu lugar. 
-    
+Se o sincronizador de domínio estiver offline por mais de 30 minutos, outro sensor será escolhido automaticamente em seu lugar.
+
 ### <a name="resource-limitations"></a>Limitações de recursos
 
-O sensor do ATP do Azure inclui um componente de monitoramento que avalia a capacidade de computação e de memória disponível no controlador de domínio no qual ele está sendo executado. O processo de monitoramento é executado a cada 10 segundos e atualiza dinamicamente a cota de utilização de CPU e memória no processo de sensor do Azure ATP. O processo de monitoramento verifica se o controlador de domínio sempre tem pelo menos 15% de recursos de computação e memória livres disponíveis.
+O sensor do [!INCLUDE [Product short](includes/product-short.md)] inclui um componente de monitoramento que avalia a capacidade de computação e de memória disponível no controlador de domínio no qual ele está sendo executado. O processo de monitoramento é executado a cada 10 segundos e atualiza dinamicamente a cota de utilização de CPU e memória no processo do sensor do [!INCLUDE [Product short](includes/product-short.md)]. O processo de monitoramento verifica se o controlador de domínio sempre tem pelo menos 15% de recursos de computação e memória livres disponíveis.
 
 Não importa o que ocorra no controlador de domínio, o processo de monitoramento libera continuamente os recursos para garantir que a funcionalidade principal do controlador de domínio nunca seja afetada.
 
-Se o processo de monitoramento fizer o sensor do ATP do Azure ficar sem recursos, apenas parte do tráfego será monitorado e o alerta de integridade "Tráfego de rede espelhado na porta descartado" será exibido na página Integridade do portal do ATP do Azure.
+Se o processo de monitoramento fizer o sensor do [!INCLUDE [Product short](includes/product-short.md)] ficar sem recursos, apenas parte do tráfego será monitorado e o alerta de integridade "Tráfego de rede espelhado na porta removido" será exibido na página Integridade do portal do [!INCLUDE [Product short](includes/product-short.md)].
 
 ### <a name="windows-events"></a>Eventos do Windows
 
-Para melhorar a cobertura de detecção da ATP do Azure relacionada a autenticações NTLM, modificações a grupos confidenciais e criação de serviços suspeitos, a ATP do Azure precisa analisar os logs dos seguintes eventos do Windows: 4776,4732,4733,4728,4729,4756,4757,7045 e 8004. Esses eventos são lidos automaticamente pelos sensores do Azure ATP com as [configurações corretas de política de auditoria avançada](configure-windows-event-collection.md). Para [verificar se o evento 8004 do Windows foi auditado](configure-windows-event-collection.md#ntlm-authentication-using-windows-event-8004) conforme necessário pelo serviço, examine as [configurações de auditoria do NTLM](/archive/blogs/askds/ntlm-blocking-and-you-application-analysis-and-auditing-methodologies-in-windows-7).
+Para aprimorar a cobertura de detecção do [!INCLUDE [Product short](includes/product-short.md)] relacionada a autenticações NTLM, modificações a grupos confidenciais e criação de serviços suspeitos, o [!INCLUDE [Product short](includes/product-short.md)] precisa analisar os logs dos seguintes eventos do Windows: 4776,4732,4733,4728,4729,4756,4757,7045 e 8004. Esses eventos são lidos automaticamente pelos sensores do [!INCLUDE [Product short](includes/product-short.md)] com as [configurações corretas de política de auditoria avançada](configure-windows-event-collection.md). Para [verificar se o evento 8004 do Windows foi auditado](configure-windows-event-collection.md#ntlm-authentication-using-windows-event-8004) conforme necessário pelo serviço, examine as [configurações de auditoria do NTLM](/archive/blogs/askds/ntlm-blocking-and-you-application-analysis-and-auditing-methodologies-in-windows-7).
 
 ## <a name="next-steps"></a>Próximas etapas
 
-- [Pré-requisitos do Azure ATP](prerequisites.md)
-- [Ferramenta de dimensionamento do Azure ATP](https://aka.ms/trisizingtool)
-- [Planejamento de capacidade do Azure ATP](capacity-planning.md)
+- [Pré-requisitos do [!INCLUDE [Product short](includes/product-short.md)]](prerequisites.md)
+- [Ferramenta de dimensionamento do [!INCLUDE [Product short](includes/product-short.md)]](https://aka.ms/trisizingtool)
+- [Planejamento de capacidade do [!INCLUDE [Product short](includes/product-short.md)]](capacity-planning.md)
 - [Configurar o encaminhamento de eventos](configure-event-forwarding.md)
 - [Configuração do encaminhamento de eventos do Windows](configure-event-forwarding.md)
-- [Confira o fórum do ATP do Azure!](https://aka.ms/azureatpcommunity)
+- [Confira o fórum do [!INCLUDE [Product short](includes/product-short.md)]!](https://aka.ms/MDIcommunity)

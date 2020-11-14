@@ -1,29 +1,28 @@
 ---
-title: Alertas de segurança de movimento lateral do ATP do Azure
-description: Este artigo explica os alertas do ATP do Azure emitidos quando são detectados ataques contra a sua organização, que normalmente fazem parte dos esforços da fase de movimento lateral.
+title: Alerta de segurança de movimentação lateral do Microsoft Defender para Identidade
+description: Este artigo explica os alertas do Microsoft Defender para Identidade emitidos quando são detectados ataques contra a sua organização, que normalmente fazem parte dos esforços da fase de movimentação lateral.
 keywords: ''
 author: shsagir
 ms.author: shsagir
 manager: shsagir
-ms.date: 08/31/2020
+ms.date: 10/26/2020
 ms.topic: tutorial
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
-ms.assetid: 2257eb00-8614-4577-b6a1-5c65085371f2
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 570bf2565ca42e7262c62f26eb368874f7d5394d
-ms.sourcegitcommit: e7897436d71e253cf583ec566eca3daa9ba3cae9
+ms.openlocfilehash: 774f8f3f560b52d5a39a96aacc9b145d1ca2d445
+ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/11/2020
-ms.locfileid: "91942413"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93275795"
 ---
 # <a name="tutorial-lateral-movement-alerts"></a>Tutorial: Alertas de movimento lateral
 
 [!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
-Normalmente, os ataques cibernéticos são lançados contra alguma entidade acessível, como um usuário com poucos privilégios e, em seguida, se movem lateralmente com rapidez até que o invasor obtenha acesso a ativos valiosos. Os ativos valiosos podem ser contas confidenciais, administradores de domínio ou dados altamente confidenciais. O ATP do Azure identifica essas ameaças avançadas na origem ao longo de toda a cadeia de ataque e classifica-as nas seguintes fases:
+Normalmente, os ataques cibernéticos são lançados contra alguma entidade acessível, como um usuário com poucos privilégios e, em seguida, se movem lateralmente com rapidez até que o invasor obtenha acesso a ativos valiosos. Os ativos valiosos podem ser contas confidenciais, administradores de domínio ou dados altamente confidenciais. O [!INCLUDE [Product long](includes/product-long.md)] identifica essas ameaças avançadas na origem ao longo de toda a cadeia de eliminação do ataque e classifica-as nas seguintes fases:
 
 1. [Reconhecimento](reconnaissance-alerts.md)
 1. [Credenciais comprometidas](compromised-credentials-alerts.md)
@@ -31,9 +30,9 @@ Normalmente, os ataques cibernéticos são lançados contra alguma entidade aces
 1. [Comprometimento de domínio](domain-dominance-alerts.md)
 1. [Exportação](exfiltration-alerts.md)
 
-Para entender melhor a estrutura e os componentes comuns de todos os alertas de segurança do ATP do Azure, confira [Understanding security alerts](understanding-security-alerts.md) (Entendendo os alertas de segurança). Para obter informações sobre **TP (verdadeiro positivo)** , **B-TP (verdadeiro positivo benigno)** e **FP (falso positivo)** , confira as [classificações de alertas de segurança](understanding-security-alerts.md#security-alert-classifications).
+Para entender melhor a estrutura e os componentes comuns de todos os alertas de segurança do [!INCLUDE [Product short](includes/product-short.md)], confira [Noções básicas sobre os alertas de segurança](understanding-security-alerts.md). Para obter informações sobre **TP (verdadeiro positivo)** , **B-TP (verdadeiro positivo benigno)** e **FP (falso positivo)** , confira as [classificações de alertas de segurança](understanding-security-alerts.md#security-alert-classifications).
 
-Os alertas de segurança a seguir ajudam a identificar e corrigir atividades suspeitas da fase de **Movimento lateral** detectadas pelo ATP do Azure em sua rede. Neste tutorial, você aprenderá como entender, classificar, corrigir e impedir os seguintes tipos de ataques:
+Os alertas de segurança a seguir ajudam você a identificar e corrigir as atividades suspeitas da fase de **Movimentação lateral** detectadas pelo [!INCLUDE [Product short](includes/product-short.md)] na sua rede. Neste tutorial, você aprenderá como entender, classificar, corrigir e impedir os seguintes tipos de ataques:
 
 > [!div class="checklist"]
 >
@@ -54,7 +53,7 @@ Os alertas de segurança a seguir ajudam a identificar e corrigir atividades sus
 
 Em 11/12/2018, a Microsoft publicou o anúncio [CVE-2018-8626](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2018-8626) sobre uma vulnerabilidade de execução remota de código recém-descoberta que existe nos servidores de DNS (Sistema de Nomes de Domínio) do Windows. Nessa vulnerabilidade, os servidores falham em lidar adequadamente com solicitações. Um invasor que explorar com êxito essa vulnerabilidade poderá executar código arbitrário no contexto da Conta do Sistema Local. Servidores Windows configurados atualmente como servidores DNS estão em risco com essa vulnerabilidade.
 
-Nessa detecção, um alerta de segurança do ATP do Azure é disparado quando as consultas DNS suspeitas de explorar a vulnerabilidade de segurança CVE-2018-8626 são feitas em um controlador de domínio na rede.
+Nessa detecção, um alerta de segurança do [!INCLUDE [Product short](includes/product-short.md)] é disparado quando são feitas consultas DNS suspeitas de explorar a vulnerabilidade de segurança CVE-2018-8626 em um controlador de domínio na rede.
 
 **Período de aprendizado**
 
@@ -137,7 +136,7 @@ A resolução bem-sucedida de IPs nos computadores da organização é fundament
 1. O endereço IP é compartilhado (por exemplo, por um dispositivo NAT)?
 1. O sensor não está resolvendo um ou mais dos endereços IP de destino? Se um endereço IP de destino não for resolvido, isso poderá indicar que as portas certas entre os dispositivos e o sensor não estão abertas corretamente.
 
-    Se a resposta a uma das perguntas anteriores for **sim**, verifique se os computadores de origem e de destinos são os mesmos. Se eles forem o mesmo, esse será um **FP** e indicando que não houve nenhuma tentativa real de **Pass-the-Ticket**.
+    Se a resposta a uma das perguntas anteriores for **sim** , verifique se os computadores de origem e de destinos são os mesmos. Se eles forem o mesmo, esse será um **FP** e indicando que não houve nenhuma tentativa real de **Pass-the-Ticket**.
 
 O recurso [Remote Credential Guard](/windows/security/identity-protection/remote-credential-guard) de conexões de RDP, quando usado com o Windows 10 no Windows Server 2016 e mais recentes, pode causar alertas **B-TP**.
 Usando a evidência de alerta, verifique se o usuário fez uma conexão de área de trabalho remota do computador de origem para o computador de destino.
@@ -164,7 +163,7 @@ Há aplicativos personalizados que encaminham tíquetes em nome de usuários. Es
 1. Contêm os computadores de origem e de destino.
 1. Encontre a ferramenta que realizou o ataque e remova-a.
 1. Procure por usuários que estavam conectados em horário próximo àquele da atividade, pois eles também podem estar comprometidos. Redefina suas senhas e habilite a MFA ou, se você tiver configurado as políticas relevantes de usuário de alto risco no Azure Active Directory Identity Protection, poderá usar a ação [**Confirmar usuário comprometido**](/cloud-app-security/accounts#governance-actions) no portal de Cloud App Security.
-1. Se o Microsoft Defender ATP estiver instalado – use **klist.exe purge** para excluir todos os tíquetes da sessão de logon especificada e evitar o uso dos tíquetes no futuro.
+1. Se o Microsoft Defender para Ponto de Extremidade estiver instalado, use **klist.exe purge** para excluir todos os tíquetes da sessão de logon especificada e evitar o uso dos tíquetes no futuro.
 
 ## <a name="suspected-ntlm-authentication-tampering-external-id-2039"></a>Suspeita de violação da autenticação NTLM (ID externa 2039)
 
@@ -172,7 +171,7 @@ Em junho de 2019, a Microsoft publicou a [Vulnerabilidade de Segurança CVE-2019
 
 Os atores mal-intencionados que exploram com êxito essa vulnerabilidade têm a capacidade de fazer downgrade dos recursos de segurança do NTLM e podem criar sessões autenticadas com êxito em nome de outras contas. Os Windows Servers sem patch estão em risco devido a essa vulnerabilidade.
 
-Nessa detecção, um alerta de segurança do ATP do Azure é disparado quando solicitações de autenticação do NTLM suspeitas de explorar a vulnerabilidade de segurança [CVE-2019-1040](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2019-1040) são feitas em um controlador de domínio na rede.
+Nessa detecção, um alerta de segurança do [!INCLUDE [Product short](includes/product-short.md)] é disparado quando são feitas solicitações de autenticação do NTLM suspeitas de explorar a vulnerabilidade de segurança [CVE-2019-1040](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2019-1040) em um controlador de domínio na rede.
 
 **Período de aprendizado**
 
@@ -209,7 +208,7 @@ Um Exchange Server pode ser configurado para disparar a autenticação de NTLM c
 
 Depois que o servidor de retransmissão recebe a autenticação NTLM, ele fornece um desafio que foi originalmente criado pelo servidor de destino. O cliente responde ao desafio, impedindo que um invasor obtenha a resposta e a use para continuar a negociação de NTLM com o controlador de domínio de destino.
 
-Nessa detecção, um alerta é disparado quando o ATP do Azure identifica o uso das credenciais de conta do Exchange de uma fonte suspeita.
+Nessa detecção, um alerta é disparado quando o [!INCLUDE [Product short](includes/product-short.md)] identifica o uso das credenciais de conta do Exchange de uma fonte suspeita.
 
 **Período de aprendizado**
 
@@ -240,7 +239,7 @@ Não se aplica
 
 **Description**
 
-Encryption downgrade is a method of weakening Kerberos using encryption downgrade of different fields of the protocol, normally encrypted using the highest levels of encryption. A weakened encrypted field can be an easier target to offline brute force attempts. Various attack methods utilize weak Kerberos encryption cyphers. In this detection, Azure ATP learns the Kerberos encryption types used by computers and users, and alerts you when a weaker cypher is used that is unusual for the source computer, and/or user, and matches known attack techniques.
+Encryption downgrade is a method of weakening Kerberos using encryption downgrade of different fields of the protocol, normally encrypted using the highest levels of encryption. A weakened encrypted field can be an easier target to offline brute force attempts. Various attack methods utilize weak Kerberos encryption cyphers. In this detection, [!INCLUDE [Product short](includes/product-short.md)] learns the Kerberos encryption types used by computers and users, and alerts you when a weaker cypher is used that is unusual for the source computer, and/or user, and matches known attack techniques.
 
 In an over-pass-the-hash attack, an attacker can use a weak stolen hash to create a strong ticket, with a Kerberos AS request. In this detection,  instances are detected where the AS_REQ message encryption type from the source computer is downgraded, when compared to the previously learned behavior (the computer used AES).
 
@@ -292,7 +291,7 @@ Some legitimate resources don't support strong encryption ciphers and may trigge
 
 **Descrição**
 
-Os invasores usam ferramentas que implementam vários protocolos como SMB e Kerberos de maneiras não padrão. Embora o Microsoft Windows aceite esse tipo de tráfego de rede sem avisos, o ATP do Azure é capaz de reconhecer possíveis casos mal-intencionados. O comportamento é uma indicação do uso de técnicas como Overpass-the-Hash, força bruta e explorações avançadas de ransomware, como o WannaCry.
+Os invasores usam ferramentas que implementam vários protocolos como SMB e Kerberos de maneiras não padrão. Embora o Microsoft Windows aceite esse tipo de tráfego de rede sem avisos, o [!INCLUDE [Product short](includes/product-short.md)] tem a capacidade de reconhecer possíveis casos mal-intencionados. O comportamento é uma indicação do uso de técnicas como Overpass-the-Hash, força bruta e explorações avançadas de ransomware, como o WannaCry.
 
 **Período de aprendizado**
 
@@ -358,7 +357,7 @@ Não se aplica
 
 Em 12/03/2020, a Microsoft publicou o anúncio [CVE-2020-0796](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2020-0796), sobre uma vulnerabilidade de execução de código remota recém-descoberta na forma como o protocolo SMBv3 (Microsoft Server Message Block 3.1.1) lida com certas solicitações. Um invasor que explorou com êxito a vulnerabilidade pode executar códigos no servidor ou no cliente de destino. Os Windows Servers sem patch estão em risco devido a essa vulnerabilidade.
 
-Nessa detecção, é disparado um alerta de segurança do ATP do Azure quando um pacote SMBv3 suspeito de explorar a vulnerabilidade de segurança CVE-2020-0796 invade um controlador de domínio na rede.
+Nessa detecção, um alerta de segurança do [!INCLUDE [Product short](includes/product-short.md)] é disparado quando um pacote SMBv3 suspeito de explorar a vulnerabilidade de segurança CVE-2020-0796 invade um controlador de domínio na rede.
 
 **Período de aprendizado**
 
@@ -399,4 +398,4 @@ Não se aplica
 - [Alertas de credencial comprometida](compromised-credentials-alerts.md)
 - [Alertas de predominância de domínio](domain-dominance-alerts.md)
 - [Alertas de exfiltração](exfiltration-alerts.md)
-- [Confira o fórum do ATP do Azure!](https://aka.ms/azureatpcommunity)
+- [Confira o fórum do [!INCLUDE [Product short](includes/product-short.md)]!](https://aka.ms/MDIcommunity)
