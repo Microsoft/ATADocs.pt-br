@@ -12,18 +12,16 @@ ms.technology: ''
 ms.assetid: 1fe5fd6f-1b79-4a25-8051-2f94ff6c71c1
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: aa89bb10e60c103af1684ae7a2d2dc5f4227bb92
-ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
+ms.openlocfilehash: eeccc1e5a5dd16b2d480bf82034a085159baff60
+ms.sourcegitcommit: e844155ea57f73dfe2b47f4c5c1c7f5292ccbf1e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90912232"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94690084"
 ---
 # <a name="advanced-threat-analytics-suspicious-activity-guide"></a>Guia de atividades suspeitas Advanced Threat Analytics
 
 [!INCLUDE [Banner for top of topics](includes/banner.md)]
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 Após investigação adequada, qualquer atividade suspeita pode ser classificada como:
 
@@ -119,7 +117,7 @@ Há três tipos de detecção:
 Primeiro, verifique a descrição do alerta para ver quais dos três tipos de detecção acima você está lidando. Para obter mais informações, baixe a planilha do Excel.
 
 1. Skeleton Key – você pode verificar se a Skeleton Key afetou os controladores de domínio usando o [analisador gravado pela equipe do ATA](https://gallery.technet.microsoft.com/Aorato-Skeleton-Key-24e46b73). Se o analisador encontrar malware em 1 ou mais controladores de domínio, é um verdadeiro positivo.
-1. Bilhete dourado – na planilha do Excel, vá para a guia **atividade de rede** . Você verá que o campo de downgrade relevante é **solicitar tipo de criptografia de tíquete**e **tipos de criptografia com suporte do computador de origem** lista métodos de criptografia mais fortes.
+1. Bilhete dourado – na planilha do Excel, vá para a guia **atividade de rede** . Você verá que o campo de downgrade relevante é **solicitar tipo de criptografia de tíquete** e **tipos de criptografia com suporte do computador de origem** lista métodos de criptografia mais fortes.
     1. Verifique o computador de origem e a conta, ou se houver vários computadores de origem e contas, verifique se eles têm algo em comum (por exemplo, toda a equipe de marketing usa um aplicativo específico que pode estar fazendo com que o alerta seja disparado). Há casos em que um aplicativo personalizado raramente usado faz autenticação usando uma codificação de criptografia inferior. Verifique se há algum desses aplicativos personalizados no computador de origem. Nesse caso, ele é provavelmente um positivo verdadeiro benigno e pode ser **Suprimido**.
     1. Verifique o recurso acessado por esses tíquetes, se houver um recurso que todos estão acessando, valide-o, verifique se ele é um recurso válido que ele deveria acessar. Além disso, verifique se o recurso de destino dá suporte a métodos de criptografia forte. Você pode verificar isso no Active Directory verificando o atributo `msDS-SupportedEncryptionTypes`, da conta de serviço do recurso.
 1. Overpass-The-hash – na planilha do Excel, vá para a guia **atividade de rede** . Você verá que o campo downgrade relevante é o **tipo de criptografia de carimbo de data/hora criptografado** e os tipos de **criptografia com suporte do computador de origem** contêm métodos de criptografia mais fortes
@@ -368,7 +366,7 @@ Há vários tipos de consulta no protocolo DNS. O ATA detecta a solicitação AX
 
 **Investigação**
 
-1. O computador de origem (**Proveniente de... **) é um servidor DNS? Se sim, então, provavelmente é um falso positivo. Para validar, clique no alerta para ver sua página de detalhes. Na tabela, em **Consulta**, verifique quais domínios foram consultados. Esses domínios são existentes? Se sim, então, **Feche** a atividade suspeita (é um falso positivo). Além disso, certifique-se de que a porta 53 do UDP esteja aberta entre o Gateway do ATA e o computador de origem para evitar futuros falsos positivos.
+1. O computador de origem (**Proveniente de...**) é um servidor DNS? Se sim, então, provavelmente é um falso positivo. Para validar, clique no alerta para ver sua página de detalhes. Na tabela, em **Consulta**, verifique quais domínios foram consultados. Esses domínios são existentes? Se sim, então, **Feche** a atividade suspeita (é um falso positivo). Além disso, certifique-se de que a porta 53 do UDP esteja aberta entre o Gateway do ATA e o computador de origem para evitar futuros falsos positivos.
 1. O computador de origem está executando um verificador de segurança? Em caso afirmativo, **exclua** as entidades no ATA, seja diretamente com **fechar e excluir** ou por meio da página de **exclusão** (em **configuração** – disponível para administradores do ATA).
 1. Se a resposta a todas as perguntas anteriores for não, continue investigando, concentrando-se no computador de origem. Clique no computador de origem para acessar a página de perfil. Verifique o que aconteceu no momento da solicitação, pesquisando atividades incomuns, como: quem estava conectado e quais recursos foram acessados.
 

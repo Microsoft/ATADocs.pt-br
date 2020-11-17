@@ -12,18 +12,16 @@ ms.technology: ''
 ms.assetid: b3cceb18-0f3c-42ac-8630-bdc6b310f1d6
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 74d610899023eba93da568360a99505119d13e70
-ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
+ms.openlocfilehash: 55c12920020a0cbcda0b38e7b9d0cae083423a4e
+ms.sourcegitcommit: e844155ea57f73dfe2b47f4c5c1c7f5292ccbf1e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90908854"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94690968"
 ---
 # <a name="ata-silent-installation"></a>Instalação silenciosa do ATA
 
 [!INCLUDE [Banner for top of topics](includes/banner.md)]
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 Este artigo fornece instruções de como instalar silenciosamente o ATA.
 
@@ -57,7 +55,7 @@ Use o seguinte comando para instalar o Centro do ATA:
 > |Quiet|/quiet|Sim|Executa o instalador sem exibir a interface do usuário nem solicitações.|
 > |Ajuda|/help|Não|Fornece ajuda e referência rápida. Exibe o uso correto do comando de configuração, incluindo uma lista de todas as opções e comportamentos.|
 > |NetFrameworkCommandLineArguments="/q"|NetFrameworkCommandLineArguments="/q"|Sim|Especifica os parâmetros para a instalação do .Net Framework. Deve ser definido para impor a instalação silenciosa do .Net Framework.|
-> |LicenseAccepted|--LicenseAccepted|Sim|Indica se a licença foi lida e aprovada. Deve ser definido na instalação silenciosa.|
+> |LicenseAccepted|--LicenseAccepted|Yes|Indica se a licença foi lida e aprovada. Deve ser definido na instalação silenciosa.|
 
 **Parâmetros de instalação**:
 
@@ -176,8 +174,8 @@ Use o seguinte comando para instalar silenciosamente o Gateway do ATA:
 > |Name|Sintaxe|Obrigatório para instalação silenciosa?|Descrição|
 > |---|---|---|---|
 >|InstallationPath|InstallationPath=“<InstallPath>”|No|Define o caminho para a instalação dos binários do ATA. Caminho padrão: C:\Arquivos de Programas\Microsoft Advanced Threat Analytics\Center
->|ConsoleAccountName|ConsoleAccountName=”<AccountName>”|Sim|Define o nome da conta do usuário (user@domain.com) usada para registrar o Gateway do ATA no Centro do ATA.|
->|ConsoleAccountPassword|ConsoleAccountPassword=”<AccountPassword>”|Sim|Define a senha para a conta do usuário (user@domain.com) usada para registrar o Gateway do ATA no Centro do ATA.|
+>|ConsoleAccountName|ConsoleAccountName=”<AccountName>”|Yes|Define o nome da conta do usuário (user@domain.com) usada para registrar o Gateway do ATA no Centro do ATA.|
+>|ConsoleAccountPassword|ConsoleAccountPassword=”<AccountPassword>”|Yes|Define a senha para a conta do usuário (user@domain.com) usada para registrar o Gateway do ATA no Centro do ATA.|
 
 **Exemplos**:
 

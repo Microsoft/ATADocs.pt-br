@@ -12,18 +12,16 @@ ms.technology: ''
 ms.assetid: 7620e171-76d5-4e3f-8b03-871678217a3a
 ms.reviewer: arzinger
 ms.suite: ems
-ms.openlocfilehash: a717c771afe39c7e187487c3fd9c41d4c1691a3a
-ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
+ms.openlocfilehash: 578e8ecdd598b404c570d41e71d487cf798cb602
+ms.sourcegitcommit: e844155ea57f73dfe2b47f4c5c1c7f5292ccbf1e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90909528"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94690781"
 ---
 # <a name="ata-disaster-recovery"></a>Recuperação de desastre de ATA
 
 [!INCLUDE [Banner for top of topics](includes/banner.md)]
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 Este artigo descreve como recuperar rapidamente seu Centro de ATA e restaurar a funcionalidade do ATA quando a funcionalidade do Centro de ATA for perdida, mas os Gateways de ATA ainda estiverem funcionando. 
 
@@ -34,7 +32,7 @@ Este artigo descreve como recuperar rapidamente seu Centro de ATA e restaurar a 
 
 1. A configuração do Centro de ATA é armazenada em backup em um arquivo a cada quatro horas. Localize a última cópia de backup da configuração do Centro de ATA e salve-a em um computador à parte. Para obter uma explicação completa de como localizar esses arquivos, confira [Exportar e importar a configuração de ATA](ata-configuration-file.md). 
 1. Exportação do certificado do Centro de ATA.
-    1. No Gerenciador de certificados, navegue até **certificados (computador local)**  ->  **Personal**  -> **certificados**pessoais e selecione **centro do ATA**.
+    1. No Gerenciador de certificados, navegue até **certificados (computador local)**  ->  **Personal**  -> **certificados** pessoais e selecione **centro do ATA**.
     2. Clique com o botão direito do mouse em **Centro de ATA** e selecione **Todas as Tarefas** e, em seguida, **Exportar**. 
      ![Certificado do Centro de ATA](media/ata-center-cert.png)
     3. Siga as instruções para exportar o certificado, certificando-se de exportar também a chave privada.

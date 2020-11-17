@@ -12,18 +12,16 @@ ms.technology: ''
 ms.assetid: cdaddca3-e26e-4137-b553-8ed3f389c460
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 0fa69d91a7540bcc748f930633b15e1d3747059e
-ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
+ms.openlocfilehash: 75c6962a6a7cccaed7b95074cdfbb23279b72dea
+ms.sourcegitcommit: e844155ea57f73dfe2b47f4c5c1c7f5292ccbf1e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90909493"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94690764"
 ---
 # <a name="configure-port-mirroring"></a>Configurar o espelhamento de porta
 
 [!INCLUDE [Banner for top of topics](includes/banner.md)]
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 > [!NOTE] 
 > Este artigo somente é relevante se você implanta Gateways do ATA em vez de Gateways Lightweight do ATA. Para determinar se você precisa usar gateways do ATA, consulte [escolhendo os gateways corretos para sua implantação](ata-capacity-planning.md#choosing-the-right-gateway-type-for-your-deployment).
@@ -73,5 +71,5 @@ Seus controladores de domínio e Gateways do ATA podem ser físicos ou virtuais.
 Depois de configurar o espelhamento de porta, verifique se está funcionando antes de instalar o Gateway do ATA.
 
 ## <a name="see-also"></a>Consulte Também
-- [Validação do espelhamento de porta](validate-port-mirroring.md)
+- [Validar o espelhamento de porta](validate-port-mirroring.md)
 - [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

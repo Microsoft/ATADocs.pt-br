@@ -12,18 +12,16 @@ ms.technology: ''
 ms.assetid: a5f90544-1c70-4aff-8bf3-c59dd7abd687
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 0cf77c09c09062a3a2983e36646f06c603a2ef45
-ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
+ms.openlocfilehash: be83debc8d912974dbb08ce0f7e963080b794d4c
+ms.sourcegitcommit: e844155ea57f73dfe2b47f4c5c1c7f5292ccbf1e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90908886"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94691036"
 ---
 # <a name="ata-prerequisites"></a>Pré-requisitos do ATA
 
 [!INCLUDE [Banner for top of topics](includes/banner.md)]
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 Este artigo descreve os requisitos para uma implantação bem-sucedida do ATA no seu ambiente.
 

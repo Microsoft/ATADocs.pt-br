@@ -12,18 +12,16 @@ ms.technology: ''
 ms.assetid: 377a3c81-5c1d-486f-8942-85249aacf560
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: bdbe13b9a85e8ab8f02c67b59b78141d46ba3df3
-ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
+ms.openlocfilehash: 6178593296c56bbe622aa9ac7763ffab50fbd66c
+ms.sourcegitcommit: e844155ea57f73dfe2b47f4c5c1c7f5292ccbf1e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90911959"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94690135"
 ---
 # <a name="troubleshooting-ata-using-the-ata-database"></a>Solução de problemas do ATA usando o banco de dados do ATA
 
 [!INCLUDE [Banner for top of topics](includes/banner.md)]
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 O ATA usa o MongoDB como seu banco de dados.
 Você pode interagir com o banco de dados usando a linha de comando padrão ou usando uma ferramenta de interface de usuário para executar tarefas avançadas e solucionar problemas.
@@ -37,7 +35,7 @@ O modo padrão, e mais básico, de consultar o banco de dados é usando o shell 
 
 > [!div class="mx-tableFixed"]
 > 
-> |Como...|Sintaxe|Observações|
+> |Como...|Syntax|Observações|
 > |-------------|----------|---------|
 > |Verifique se há coleções no banco de dados.|`show collections`|É útil como um teste completo para verificar se o tráfego está sendo gravado no banco de dados, e se o evento 4776 está sendo recebido pelo ATA.|
 > |Obter detalhes de um usuário/computador/grupo (UniqueEntity), como ID do usuário.|`db.UniqueEntity.find({CompleteSearchNames: "<name of entity in lower case>"})`||

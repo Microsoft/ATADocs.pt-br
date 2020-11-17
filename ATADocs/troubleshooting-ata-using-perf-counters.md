@@ -12,18 +12,16 @@ ms.technology: ''
 ms.assetid: df162a62-f273-4465-9887-94271f5000d2
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 432e91f7d88539061291a8c68ee2cc53c435e440
-ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
+ms.openlocfilehash: 335761baff8180d582c844f16a623eb9441668fe
+ms.sourcegitcommit: e844155ea57f73dfe2b47f4c5c1c7f5292ccbf1e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90910778"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94689965"
 ---
 # <a name="troubleshooting-ata-using-the-performance-counters"></a>Solução de problemas do ATA usando contadores de desempenho
 
 [!INCLUDE [Banner for top of topics](includes/banner.md)]
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 Os contadores de desempenho do ATA fornecem informações sobre como está o desempenho de cada componente do ATA. Os componentes no ATA processam dados sequencialmente, para que quando houver um problema, ele possa causar um descarte de tráfego parcial em algum ponto da cadeia de componentes. Para corrigir o problema, você precisa descobrir qual componente está dando problema e corrigi-lo no início da cadeia. Use os dados encontrados nos contadores de desempenho para entender o funcionamento de cada componente.
 Consulte a [arquitetura de ATA](ata-architecture.md) para entender o fluxo de componentes internos do ATA.

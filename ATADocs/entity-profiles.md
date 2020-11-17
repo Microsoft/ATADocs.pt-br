@@ -12,19 +12,17 @@ ms.technology: ''
 ms.assetid: 581a3257-32dc-453f-b84e-b9f99186f5d3
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 3ab1881d397875be6a70ba78846f0855b53bf608
-ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
+ms.openlocfilehash: db615ec2f1aab54567d41d0a742146b27d543975
+ms.sourcegitcommit: e844155ea57f73dfe2b47f4c5c1c7f5292ccbf1e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90909506"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94690747"
 ---
 # <a name="investigating-entity-profiles"></a>Investigando perfis de entidade
 
 
 [!INCLUDE [Banner for top of topics](includes/banner.md)]
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 O perfil de entidade fornece um painel projetado para fazer investigações completas e aprofundadas de usuários, de computadores, de dispositivos e dos recursos a que eles têm acesso e do histórico deles. A página de perfil aproveita o novo conversor de atividade lógica do ATA, que pode examinar um grupo de atividades em andamento (agregadas até um minuto) e agrupá-las em uma única atividade lógica para fornecer uma melhor compreensão das atividades reais de seus usuários.
 
@@ -70,13 +68,13 @@ Na seção **Controle de Acesso de Usuários**, o ATA exibe configurações de s
 
 ## <a name="view-lateral-movement-paths"></a>Exibir caminhos de movimento lateral
 
-Ao clicar na guia de **Caminhos de movimento lateral**, será possível exibir um mapa totalmente dinâmico e clicável que fornecerá uma representação visual dos caminhos de movimento lateral de e para o usuário, os quais podem ser usados para invadir sua rede.
+Ao clicar na guia **caminhos de movimento lateral** , você pode exibir um mapa totalmente dinâmico e clicável que fornece uma representação visual dos caminhos de movimento lateral para e desse usuário que podem ser usados para invadirr sua rede.
 
 O mapa fornece uma lista de quantos saltos entre computadores ou usuários um invasor precisaria dar para chegar ao usuário e comprometer uma conta confidencial e, se o usuário tiver uma conta confidencial, você poderá ver quantos recursos e contas estão conectados diretamente. Para obter mais informações, consulte [Caminhos de movimento lateral](use-case-lateral-movement-path.md). 
 
  ![caminhos de movimento lateral do perfil do usuário](media/user-profile-lateral-movement-paths.png)
 
 
-## <a name="see-also"></a>Consulte Também
+## <a name="see-also"></a>Confira Também
 [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
       

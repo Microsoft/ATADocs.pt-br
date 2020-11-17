@@ -12,19 +12,17 @@ ms.technology: ''
 ms.assetid: 1bf264d9-9697-44b5-9533-e1c498da4f07
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: e5b9c8f908cc0d9fbbabcc0cf11feebdf1decb7b
-ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
+ms.openlocfilehash: 831b3cec06a943136c19b706d1b68063ec578dfa
+ms.sourcegitcommit: e844155ea57f73dfe2b47f4c5c1c7f5292ccbf1e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90912194"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94689455"
 ---
 # <a name="working-with-the-ata-console"></a>Trabalhando com o Console do ATA
 
 
 [!INCLUDE [Banner for top of topics](includes/banner.md)]
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 Use o Console do ATA para monitorar e responder a atividades suspeitas detectadas pelo ATA.
 
@@ -105,21 +103,21 @@ Sempre que o sistema encontrar um problema, como um erro de conectividade ou um 
 A lista de grupos a seguir é considerada **confidencial** pelo ATA. Qualquer entidade que é um membro desses grupos é considerada confidencial:
 
 - Controladores de domínio de empresa somente leitura 
-- Administradores de Domínio 
+- Administradores do domínio 
 - Controladores de Domínio 
 - Administradores de esquemas,
-- Administradores Corporativos 
+- Administrador corporativo 
 - Proprietários criadores de política de grupo 
 - Controladores de domínio somente leitura 
 - Administradores  
-- Usuários Avançados  
+- Usuários avançados  
 - Opers. de contas  
-- Opers. de servidores   
+- Operadores de Servidores   
 - Operadores de impressão,
 - Operadores de backup,
 - Replicadores 
 - Usuários da Área de Trabalho Remota 
-- Operadores de configuração de rede 
+- Operadores de Configuração de Rede 
 - Criadores de confiança de floresta de entrada 
 - Administradores do DNS 
 

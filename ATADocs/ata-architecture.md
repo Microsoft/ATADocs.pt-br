@@ -12,18 +12,16 @@ ms.technology: ''
 ms.assetid: 892b16d2-58a6-49f9-8693-1e5f69d8299c
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 3f04798ef39299dfa5b31d4a5679d6f68afaeef0
-ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
+ms.openlocfilehash: 1d7700e4ae0f5c686ea8a5def7d4f4fb9aceee09
+ms.sourcegitcommit: e844155ea57f73dfe2b47f4c5c1c7f5292ccbf1e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90909275"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94689540"
 ---
 # <a name="ata-architecture"></a>Arquitetura do ATA
 
 [!INCLUDE [Banner for top of topics](includes/banner.md)]
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 A arquitetura da Advanced Threat Analytics é detalhada neste diagrama:
 
@@ -75,7 +73,7 @@ O **Centro de ATA** executa as seguintes funções:
 
 O Centro do ATA recebe tráfego analisado do Gateway do ATA e do Gateway Lightweight do ATA. Ele realiza então a criação de perfil, executa detecção determinística e executa algoritmos comportamentais e de aprendizado de máquina para conhecer sua rede, permitindo a detecção de anomalias e avisando sobre atividades suspeitas.
 
-|Tipo|Descrição|
+|Tipo|Description|
 |-|-|
 |Receptor de Entidade|Recebe lotes de entidades de todos os Gateways do ATA e Gateways Lightweight do ATA.|
 |Processador de atividade de rede|Processa todas as atividades de rede em cada lote recebido. Por exemplo, a correspondência entre as diversas etapas do Kerberos executadas em computadores potencialmente diferentes|
@@ -107,7 +105,7 @@ O **Gateway do ATA** e o **Gateway Lightweight do ATA** têm a mesma funcionalid
 
 O Gateway do ATA recebe o tráfego de rede espelhado e os eventos do Windows da sua rede e processa-os nos seguintes componentes principais:
 
-|Tipo|Descrição|
+|Tipo|Description|
 |-|-|
 |Ouvinte de Rede|O Ouvinte de Rede captura o tráfego de rede e o analisa. Essa é uma tarefa de CPU intensa, portanto, é muito importante verificar os [Pré-requisitos do ATA](ata-prerequisites.md) ao planejar seu Gateway do ATA ou Gateway Lightweight do ATA.|
 |Ouvinte de Evento|O Ouvinte de Eventos captura e analisa Eventos do Windows encaminhados de um servidor SIEM na sua rede.|
@@ -151,7 +149,7 @@ Se o Active Directory precisa de mais de computação, a cota necessária do Gat
 
 |Active Directory (Lsass.exe)|Gateway Lightweight do ATA (Microsoft.Tri.Gateway.exe)|Diversos (outros processos) |Cota do Gateway Lightweight do ATA|O gateway está descartando|
 |-|-|-|-|-|
-|60%|15%|10%|15%|Sim|
+|60%|15%|10%|15%|Yes|
 
 ## <a name="your-network-components"></a>Componentes da sua rede
 

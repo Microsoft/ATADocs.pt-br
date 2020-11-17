@@ -12,19 +12,17 @@ ms.technology: ''
 ms.assetid: 40a1c5c4-b8d6-477c-8ae5-562b37661624
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 233d6f51e35081740d068635646318abc503268f
-ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
+ms.openlocfilehash: e80eeda17fa458f994a9e637cd95362601ffd89a
+ms.sourcegitcommit: e844155ea57f73dfe2b47f4c5c1c7f5292ccbf1e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90911975"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94690118"
 ---
 # <a name="tag-sensitive-accounts"></a>Marcar contas confidenciais
 
 
 [!INCLUDE [Banner for top of topics](includes/banner.md)]
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 Você pode marcar manualmente grupos ou contas como confidenciais para aprimorar as detecções. É importante verificar se ele está atualizado porque algumas detecções do ATA, como a detecção de modificação de grupos confidenciais e o caminho de movimento lateral, dependem de quais grupos e contas são considerados confidenciais. Antes, o ATA considerava automaticamente uma entidade *confidencial* se ela fosse membro de uma lista específica de grupos. Agora, você pode marcar manualmente outros usuários ou grupos como confidenciais, como membros da diretoria, executivos ou diretores de vendas da empresa, entre outros, e o ATA os considerará confidenciais.
 
@@ -48,22 +46,22 @@ Você pode marcar manualmente grupos ou contas como confidenciais para aprimorar
 A lista de grupos a seguir é considerada Confidencial pelo ATA. Qualquer entidade que é um membro desses grupos é considerada confidencial:
 
 - Administradores
-- Usuários Avançados
+- Usuários avançados
 - Opers. de contas
-- Opers. de servidores
+- Operadores de Servidores
 - Operadores de Impressão
 - Operadores de cópia
 - Replicadores
 - Usuários da Área de Trabalho Remota 
-- Operadores de configuração de rede 
+- Operadores de Configuração de Rede 
 - Criadores de confiança de floresta de entrada
-- Administradores de Domínio
+- Administradores do domínio
 - Controladores de Domínio
 - Proprietários criadores de política de grupo 
 - Controladores de domínio somente leitura 
 - Controladores de domínio somente leitura da empresa 
 - Administradores de esquemas 
-- Administradores Corporativos
+- Administrador corporativo
      
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

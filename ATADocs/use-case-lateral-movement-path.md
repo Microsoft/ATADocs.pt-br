@@ -12,18 +12,16 @@ ms.technology: ''
 ms.assetid: 710f01bd-c878-4406-a7b2-ce13f98736ea
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: c5836b1086806b848560c0c99893d7a6fafeea1c
-ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
+ms.openlocfilehash: 4c240ff131442f5cee0dc3602a2e3309cd04e63d
+ms.sourcegitcommit: e844155ea57f73dfe2b47f4c5c1c7f5292ccbf1e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90910858"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94689880"
 ---
 # <a name="investigate-lateral-movement-paths-with-ata"></a>Investigar caminhos de movimento lateral com o ATA
 
 [!INCLUDE [Banner for top of topics](includes/banner.md)]
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 Mesmo que você faça o melhor para proteger os usuários confidenciais e seus administradores tenham senhas complexas alteradas com frequência, computadores protegidos e dados armazenados com segurança, os invasores ainda podem usar caminhos de movimento lateral para acessar contas confidenciais. Em ataques de movimento lateral, o invasor aproveita as instâncias quando usuários confidenciais entram em um computador em que um usuário não confidencial tem direitos locais. Os invasores podem mover-se lateralmente acessando o usuário menos confidencial e, em seguida, movendo-se pelo computador para obter credenciais de usuários confidenciais.
 
@@ -75,7 +73,7 @@ Agora que você sabe quais contas confidenciais estão em risco, aprofunde-se no
 > [!TIP]
 > Para obter instruções sobre como definir seus servidores para permitir que o ATA execute as operações SAM-R necessárias para detecção de caminho de movimento lateral, [Configure Sam-r](install-ata-step9-samr.md).
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Trabalhar com atividades suspeitas](working-with-suspicious-activities.md)
 - [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

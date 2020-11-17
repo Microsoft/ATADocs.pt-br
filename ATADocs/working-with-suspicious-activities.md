@@ -12,18 +12,16 @@ ms.technology: ''
 ms.assetid: 44d7c899-816c-4f7f-91d3-84a09d291a24
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 3cd6da729d6401840532f1daf73604f699abbbde
-ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
+ms.openlocfilehash: 4cce018aac4528b62db8c143591c3380fc38c1a4
+ms.sourcegitcommit: e844155ea57f73dfe2b47f4c5c1c7f5292ccbf1e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90912123"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94689523"
 ---
 # <a name="working-with-suspicious-activities"></a>Trabalhando com atividades suspeitas
 
 [!INCLUDE [Banner for top of topics](includes/banner.md)]
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 Este artigo explica as noções básicas de como trabalhar com a Advanced Threat Analytics.
 
@@ -37,7 +35,7 @@ Cada atividade suspeita tem as seguintes informações:
 
 - A severidade da atividade suspeita: alta, média ou baixa.
 
-- Status: aberto, fechado ou suprimido.
+- Status: Aberto, fechado ou suprimido.
 
 - Capacidade de
 
@@ -56,11 +54,11 @@ Para filtrar a lista de atividades suspeitas:
 
 1. No painel **Filtrar por** no lado esquerdo da tela, selecione uma das seguintes opções: **Tudo**, **Aberto**, **Fechado** ou **Suprimido**.
 
-1. Para filtrar ainda mais a lista, selecione **alta**, **média**ou **baixa**.
+1. Para filtrar a lista ainda mais, selecione **Alta**, **Média** ou **Baixa**.
 
-**Severidade da atividade suspeita**
+**Gravidade da atividade suspeita**
 
--   **Baixo**
+-   **Baixa**
 
     Indica atividades suspeitas que podem levar a ataques projetados para usuários ou softwares mal-intencionados para obter acesso aos dados organizacionais.
 
@@ -74,7 +72,7 @@ Para filtrar a lista de atividades suspeitas:
 
 
 ## <a name="remediating-suspicious-activities"></a>Corrigindo atividades suspeitas
-Você pode alterar o status de uma atividade suspeita clicando no status atual da atividade suspeita e selecionando uma das seguintes opções **abrir**, **suprimido**, **fechado**ou **excluído**.
+Você pode alterar o status de uma atividade suspeita clicando no status atual da atividade suspeita e selecionando uma das seguintes opções **abrir**, **suprimido**, **fechado** ou **excluído**.
 Para fazer isso, clique nos três pontos no canto superior direito de uma atividade suspeita específica para exibir a lista de ações disponíveis.
 
 ![Ações do ATA para atividades suspeitas](media/sa-actions.png)
@@ -90,9 +88,9 @@ Para fazer isso, clique nos três pontos no canto superior direito de uma ativid
 
 - **Suprimir**: suprimir uma atividade significa que você deseja ignorá-la por enquanto e apenas ser alertado novamente se houver uma nova instância. Isso significa que, se houver um alerta semelhante, o ATA não reabrirá. Mas, se o alerta parar por sete dias e for observado novamente, você será alertado novamente.
 
-- **Excluir**: se você excluir um alerta, ele será excluído do sistema, do banco de dados e você NÃO poderá restaurá-lo. Depois de clicar em Excluir, você poderá excluir todas as atividades suspeitas do mesmo tipo.
+- **Excluir**: Se você excluir um alerta, ele será excluído do sistema, do banco de dados e você NÃO poderá restaurá-lo. Depois de clicar em Excluir, você poderá excluir todas as atividades suspeitas do mesmo tipo.
 
-- **Excluir**: a capacidade de excluir uma entidade de gerar mais de um determinado tipo de alertas. Por exemplo, você pode definir o ATA para excluir uma entidade específica (usuário ou computador) de emitir um alerta novamente para um determinado tipo de atividade suspeita, como um administrador específico que executa o código remoto ou um scanner de segurança que o reconhecimento de DNS. Além de ser capaz de adicionar exclusões diretamente na atividade suspeita conforme ela é detectada na linha do tempo, você também pode acessar a página Configuração até **Exclusões** e para cada atividade suspeita, você pode adicionar e remover manualmente entidades ou sub-redes excluídas (por exemplo, para Passagem de Tíquete). 
+- **Excluir**: A capacidade de excluir uma entidade de gerar mais de um determinado tipo de alertas. Por exemplo, você pode definir o ATA para excluir uma entidade específica (usuário ou computador) de emitir um alerta novamente para um determinado tipo de atividade suspeita, como um administrador específico que executa o código remoto ou um scanner de segurança que o reconhecimento de DNS. Além de ser capaz de adicionar exclusões diretamente na atividade suspeita conforme ela é detectada na linha do tempo, você também pode acessar a página Configuração até **Exclusões** e para cada atividade suspeita, você pode adicionar e remover manualmente entidades ou sub-redes excluídas (por exemplo, para Passagem de Tíquete). 
   > [!NOTE]
   > As páginas de configuração podem ser modificadas apenas por administradores do ATA.
 

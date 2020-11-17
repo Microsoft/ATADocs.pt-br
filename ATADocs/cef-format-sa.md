@@ -12,19 +12,17 @@ ms.technology: ''
 ms.assetid: 601b48ba-a327-4aff-a1f9-2377a2bb7a42
 ms.reviewer: ort
 ms.suite: ems
-ms.openlocfilehash: d8e83ad51970e4add2e703182e9ad466f113a44e
-ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
+ms.openlocfilehash: fcab8aa33185b24f4ad1903c429b15decebf5e20
+ms.sourcegitcommit: e844155ea57f73dfe2b47f4c5c1c7f5292ccbf1e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90909738"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94690798"
 ---
 # <a name="ata-siem-log-reference"></a>Referência de log do SIEM do ATA
 
 
 [!INCLUDE [Banner for top of topics](includes/banner.md)]
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 O ATA pode encaminhar eventos de alerta de segurança e integridade para o SIEM. Os alertas são encaminhados no formato CEF. Abaixo, temos um exemplo de cada tipo de log de alerta de segurança a ser enviado para o SIEM.
 

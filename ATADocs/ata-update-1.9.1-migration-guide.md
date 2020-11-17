@@ -12,16 +12,15 @@ ms.technology: ''
 ms.assetid: 2946310a-8e4e-48fc-9450-fc9647efeb22
 ms.reviewer: ort
 ms.suite: ems
-ms.openlocfilehash: e5a3c40ccc82434d7eb98e26bfd1290df55f1fd1
-ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
+ms.openlocfilehash: f27694368778bc6dd60a0deecc6fb36244a70c9d
+ms.sourcegitcommit: e844155ea57f73dfe2b47f4c5c1c7f5292ccbf1e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90911697"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94690849"
 ---
 # <a name="ata-version-191"></a>ATA versão 1.9.1
 
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 Este artigo descreve os problemas corrigidos na Atualização 1 do Microsoft Advanced Threat Analytics (ATA) versão 1.9. O número de compilação dessa atualização é 1.9.7412.
 
 ## <a name="fixed-issues-included-in-this-update"></a>Problemas corrigidos incluídos nessa atualização
@@ -59,7 +58,7 @@ O computador pode exigir uma reinicialização depois de aplicar essa atualizaç
 Esta atualização substitui o ATA versão 1.9 (1.9.7312).
 
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Versões do ATA](ata-versions.md)

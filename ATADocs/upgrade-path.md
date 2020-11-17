@@ -12,18 +12,16 @@ ms.technology: ''
 ms.assetid: 88720401-1fb2-4353-ad39-32bc0088f0de
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 00c6d785da9d8685b32b55e689f4d40d9e6fb193
-ms.sourcegitcommit: c12340e58a724fb833403e4fb38810b36e1454f5
+ms.openlocfilehash: 5eaa24a886bd07a4a3fa1e6ac2fa90a1488ea6e4
+ms.sourcegitcommit: e844155ea57f73dfe2b47f4c5c1c7f5292ccbf1e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/11/2020
-ms.locfileid: "91941204"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94689863"
 ---
 # <a name="recommended-upgrade-path-for-ata"></a>Caminho de atualização recomendado para o ATA
 
 [!INCLUDE [Banner for top of topics](includes/banner.md)]
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 Este artigo fornece informações sobre as versões disponíveis do Advanced Threat Analytics e como atualizar o ATA dependendo de qual versão você tem em execução.
 

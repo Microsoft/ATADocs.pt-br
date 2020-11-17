@@ -12,18 +12,16 @@ ms.technology: ''
 ms.assetid: 4a25561b-a5ed-44aa-9b72-366976b3c72a
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 294e9a8e3640111d6117789cc05302cbe5a3c332
-ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
+ms.openlocfilehash: d310ec8659fcb2fa2a128f24b9b243939dc438eb
+ms.sourcegitcommit: e844155ea57f73dfe2b47f4c5c1c7f5292ccbf1e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90912835"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94690373"
 ---
 # <a name="change-ata-configuration---domain-connectivity-password"></a>Alteração da configuração do ATA - senha de conectividade do domínio
 
 [!INCLUDE [Banner for top of topics](includes/banner.md)]
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 ## <a name="change-the-domain-connectivity-password"></a>Alterar a senha de conectividade do domínio
 
