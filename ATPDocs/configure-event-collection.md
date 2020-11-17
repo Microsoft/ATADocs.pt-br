@@ -11,12 +11,12 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: f691df3332d90e0f163d3773dd5570e0d17b5a95
-ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
+ms.openlocfilehash: 627c30146e2543501da9d5970c9c8a087e3320bf
+ms.sourcegitcommit: c5f63d621f4f1e875f8c24adc2bd4770e07e0a62
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93276482"
+ms.lasthandoff: 11/12/2020
+ms.locfileid: "94558229"
 ---
 # <a name="configure-event-collection"></a>Configurar coleta de eventos
 
@@ -121,7 +121,7 @@ Código de erro: 0x0
 
 - O cabeçalho do Syslog é opcional.
 
-- Há um separador de caracteres "\r\n" entre todos os campos obrigatórios.
+- Há um separador de caracteres "\r\n" entre todos os campos obrigatórios. Observe que esses são os caracteres de controle CRLF (0D0A em hexadecimal), e não caracteres literais.
 - Os campos estão no formato chave=valor.
 - As chaves a seguir devem existir e ter um valor:
   - EventCode = a ID de evento do Windows

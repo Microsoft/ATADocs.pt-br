@@ -11,12 +11,12 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 4dfaba62df29bb97009bad2440bb420f2c1477e9
-ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
+ms.openlocfilehash: ad6604b3502cde05b88598a286407778a2e03787
+ms.sourcegitcommit: c5f63d621f4f1e875f8c24adc2bd4770e07e0a62
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93276551"
+ms.lasthandoff: 11/12/2020
+ms.locfileid: "94558246"
 ---
 # <a name="configure-windows-event-collection"></a>Configurar a coleção de Eventos do Windows
 
@@ -31,7 +31,7 @@ Para aprimorar os recursos de detecção de ameaças, o [!INCLUDE [Product short
 - 4729 – membro removido do grupo de segurança global
 - 4730 – grupo de segurança global excluído
 - 4732 – membro adicionado ao grupo de segurança local
-- 4733 – membro removido do grupo de segurança global
+- 4733 – membro removido do grupo de segurança local
 - 4743 – conta de computador excluída
 - 4753 – grupo de distribuição global excluído
 - 4756 – membro adicionado ao grupo de segurança universal
@@ -48,7 +48,7 @@ Modifique as políticas de auditoria avançadas do seu controlador de domínio u
 
 1. Faça logon no servidor como **administrador do domínio**.
 1. Carregue o Editor de Gerenciamento de Política de Grupo de **Gerenciador do Servidor** > **Ferramentas** > **Gerenciamento de Política de Grupo**.
-1. Expanda as **Unidades organizacionais de controladores de domínio** , clique com o botão direito do mouse em **Política de controladores de domínio padrão** e, em seguida, selecione **Editar**.
+1. Expanda as **Unidades organizacionais de controladores de domínio**, clique com o botão direito do mouse em **Política de controladores de domínio padrão** e, em seguida, selecione **Editar**.
 
     > [!NOTE]
     > Você pode usar a Política de controladores de domínio padrão ou um GPO dedicado para definir essas políticas.
@@ -61,7 +61,7 @@ Modifique as políticas de auditoria avançadas do seu controlador de domínio u
 
     1. Acesse **Configuração da Política de Auditoria Avançada** > **Políticas de Auditoria**.
         ![Configuração avançada da política de auditoria](media/advanced-audit-policy-check-step-2.png)
-    1. Em **Políticas de Auditoria** , edite cada uma das políticas a seguir e selecione **Configurar os eventos de auditoria a seguir** para eventos de **Êxito** e de **Falha**.
+    1. Em **Políticas de Auditoria**, edite cada uma das políticas a seguir e selecione **Configurar os eventos de auditoria a seguir** para eventos de **Êxito** e de **Falha**.
 
         | Política de auditoria | Subcategoria | IDs dos eventos de gatilho |
         | --- |---|---|
@@ -72,7 +72,7 @@ Modifique as políticas de auditoria avançadas do seu controlador de domínio u
         | Gerenciamento de Contas | Auditoria de gerenciamento de conta de usuário | 4726 |
         | Sistema | Auditoria da extensão do sistema de segurança | 7045 |
 
-        Por exemplo, para configurar **Gerenciamento de Grupo de Segurança de Auditoria** , em **Gerenciamento de Conta** , clique duas vezes em **Gerenciamento de Grupo de Segurança de Auditoria** e, em seguida, selecione **Configurar os eventos de auditoria a seguir** para eventos de **Êxito** e de **Falha**.
+        Por exemplo, para configurar **Gerenciamento de Grupo de Segurança de Auditoria**, em **Gerenciamento de Conta**, clique duas vezes em **Gerenciamento de Grupo de Segurança de Auditoria** e, em seguida, selecione **Configurar os eventos de auditoria a seguir** para eventos de **Êxito** e de **Falha**.
 
         ![Auditoria de gerenciamento do grupo de distribuição](media/advanced-audit-policy-check-step-4.png)
 
@@ -84,7 +84,7 @@ Modifique as políticas de auditoria avançadas do seu controlador de domínio u
     > - Quando o evento 8004 do Windows é analisado pelo sensor do [!INCLUDE [Product short](includes/product-short.md)], as atividades de autenticação NTLM do [!INCLUDE [Product short](includes/product-short.md)] são aprimoradas com os dados acessados pelo servidor.
 
     1. Acesse **Políticas Locais** > **Opções de Segurança**.
-    1. Em **Opções de Segurança** , configure as políticas de segurança especificadas, da seguinte maneira
+    1. Em **Opções de Segurança**, configure as políticas de segurança especificadas, da seguinte maneira
 
         | Configuração de política de segurança | Valor |
         |---|---|
@@ -92,12 +92,12 @@ Modifique as políticas de auditoria avançadas do seu controlador de domínio u
         | Segurança de rede: Restringir NTLM: Autenticação NTLM neste domínio | Habilitar tudo |
         | Segurança de rede: restringir NTLM: Auditar tráfego NTLM de entrada | Habilitar auditoria para todas as contas |
 
-        Por exemplo, para configurar **Tráfego NTLM de saída para servidores remotos** , em **Opções de Segurança** , clique duas vezes em **Segurança de rede: restringir NTLM: Tráfego NTLM de saída para servidores remotos** e, em seguida, selecione **Auditar todos**.
+        Por exemplo, para configurar **Tráfego NTLM de saída para servidores remotos**, em **Opções de Segurança**, clique duas vezes em **Segurança de rede: restringir NTLM: Tráfego NTLM de saída para servidores remotos** e, em seguida, selecione **Auditar todos**.
 
         ![Auditar tráfego NTLM de saída para servidores remotos](media/advanced-audit-policy-check-step-3.png)
 
     > [!NOTE]
-    > Se você optar por usar uma política de segurança local em vez de usar uma política de grupo, adicione os logs de auditoria de **Logon da Conta** , **Gerenciamento da Conta** e **Opções de Segurança** em sua política local. Se você estiver configurando a política de auditoria avançada, force a [subcategoria de política de auditoria](/windows/security/threat-protection/security-policy-settings/audit-force-audit-policy-subcategory-settings-to-override).
+    > Se você optar por usar uma política de segurança local em vez de usar uma política de grupo, adicione os logs de auditoria de **Logon da Conta**, **Gerenciamento da Conta** e **Opções de Segurança** em sua política local. Se você estiver configurando a política de auditoria avançada, force a [subcategoria de política de auditoria](/windows/security/threat-protection/security-policy-settings/audit-force-audit-policy-subcategory-settings-to-override).
 
 1. Após a aplicação por meio do GPO, os novos eventos ficam visíveis nos **Logs de Eventos do Windows**.
 
