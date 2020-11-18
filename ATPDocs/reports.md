@@ -12,29 +12,27 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 2c2d6b1a-fc8c-4ff7-b07d-64ce6159f84d
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: c54fdf3c0bb5497ff482c961214718771263e732
-ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
+ms.openlocfilehash: 68c129e0c92c369bb666483dc17013c54a84e282
+ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93275454"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94849036"
 ---
 # <a name="product-long-reports"></a>Relatórios do [!INCLUDE [Product long](includes/product-long.md)]
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 A seção de relatórios do [!INCLUDE [Product long](includes/product-long.md)] no portal do [!INCLUDE [Product short](includes/product-short.md)] permite que você agende ou gere e baixe imediatamente relatórios que fornecem informações de status do sistema e da entidade. Com o recurso de relatórios, você pode criar relatórios sobre a integridade do sistema, alertas de segurança e possíveis caminhos de movimento lateral detectados em seu ambiente.
 
 Para acessar a página relatórios, clique no ícone de relatório na barra de menus: ![ícone de relatório](media/report-icon.png).
 Os relatórios disponíveis são:
 
-- **Relatório de resumo** : o relatório de resumo apresenta um painel do status no sistema. Você pode exibir três guias – uma para um **Resumo** do que foi detectado na rede, outra para **Atividades suspeitas em aberto** , listando as atividades suspeitas sobre as quais você deve tomar uma medida, e outra para **Problemas de integridade em aberto** , listando os problemas de integridade do sistema do [!INCLUDE [Product short](includes/product-short.md)] suspeitas sobre as quais deve adotar uma ação. As atividades suspeitas listadas são divididas por tipo, assim como os problemas de integridade.
+- **Relatório de resumo**: o relatório de resumo apresenta um painel do status no sistema. Você pode exibir três guias – uma para um **Resumo** do que foi detectado na rede, outra para **Atividades suspeitas em aberto**, listando as atividades suspeitas sobre as quais você deve tomar uma medida, e outra para **Problemas de integridade em aberto**, listando os problemas de integridade do sistema do [!INCLUDE [Product short](includes/product-short.md)] suspeitas sobre as quais deve adotar uma ação. As atividades suspeitas listadas são divididas por tipo, assim como os problemas de integridade.
 
-- **Modificação de grupos confidenciais** : este relatório lista toda vez que uma modificação é feita em grupos confidenciais (como administradores ou contas ou grupos marcadas manualmente). Se você está usando sensores autônomos do [!INCLUDE [Product short](includes/product-short.md)], para receber um relatório completo sobre seus grupos confidenciais, verifique se os [eventos são encaminhados de seus controladores de domínio para os sensores autônomos](configure-event-forwarding.md).
+- **Modificação de grupos confidenciais**: este relatório lista toda vez que uma modificação é feita em grupos confidenciais (como administradores ou contas ou grupos marcadas manualmente). Se você está usando sensores autônomos do [!INCLUDE [Product short](includes/product-short.md)], para receber um relatório completo sobre seus grupos confidenciais, verifique se os [eventos são encaminhados de seus controladores de domínio para os sensores autônomos](configure-event-forwarding.md).
 
-- **Senhas expostas em texto não criptografado** : alguns serviços usam o protocolo não seguro do LDAP para enviar credenciais de conta em texto sem formatação. Isso pode ocorrer até mesmo para contas confidenciais. Os invasores que monitoram o tráfego de rede podem capturar e reutilizar essas credenciais para fins mal-intencionados. Esse relatório lista todos os computadores de origem e as senhas de conta detectados pelo [!INCLUDE [Product short](includes/product-short.md)] como enviados em texto não criptografado.
+- **Senhas expostas em texto não criptografado**: alguns serviços usam o protocolo não seguro do LDAP para enviar credenciais de conta em texto sem formatação. Isso pode ocorrer até mesmo para contas confidenciais. Os invasores que monitoram o tráfego de rede podem capturar e reutilizar essas credenciais para fins mal-intencionados. Esse relatório lista todos os computadores de origem e as senhas de conta detectados pelo [!INCLUDE [Product short](includes/product-short.md)] como enviados em texto não criptografado.
 
-- **Caminhos de movimento lateral para contas confidenciais** : este relatório lista as contas confidenciais que estão expostas por meio de caminhos de movimentação lateral. Para obter mais informações, consulte [Caminhos de movimento lateral](use-case-lateral-movement-path.md). Este relatório coleta os possíveis caminhos de movimento lateral que foram detectados no período de relatório selecionado.
+- **Caminhos de movimento lateral para contas confidenciais**: este relatório lista as contas confidenciais que estão expostas por meio de caminhos de movimentação lateral. Para obter mais informações, consulte [Caminhos de movimento lateral](use-case-lateral-movement-path.md). Este relatório coleta os possíveis caminhos de movimento lateral que foram detectados no período de relatório selecionado.
 
 Há duas maneiras de gerar um relatório: sob demanda ou agendando um relatório para ser enviado para seu email periodicamente.
 
@@ -47,7 +45,7 @@ Para gerar um relatório sob demanda:
 
 Para definir um relatório agendado:
 
-1. Na página **Relatórios** , clique em **Definir relatórios agendados** ou, na página de configuração do portal do [!INCLUDE [Product short](includes/product-short.md)], em Notificações e Relatórios, clique em **Relatórios agendados**.
+1. Na página **Relatórios**, clique em **Definir relatórios agendados** ou, na página de configuração do portal do [!INCLUDE [Product short](includes/product-short.md)], em Notificações e Relatórios, clique em **Relatórios agendados**.
 
     ![Agendar relatórios](media/sched-reports.png)
 

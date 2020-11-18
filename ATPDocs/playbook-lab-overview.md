@@ -10,16 +10,14 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: cfb7474a01fe90b75939f80dbcc7f93dad485682
-ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
+ms.openlocfilehash: 992ea4672c427a1bf29b7303cfc412793ff8ba4d
+ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93275516"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94849053"
 ---
 # <a name="tutorial-overview-product-long-security-alert-lab"></a>Visão geral do tutorial: laboratório de alerta de segurança do [!INCLUDE [Product long](includes/product-long.md)]
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 A finalidade do tutorial do laboratório de alerta de segurança do [!INCLUDE [Product long](includes/product-long.md)] é ilustrar os recursos do **[!INCLUDE [Product short](includes/product-short.md)]** para identificação e detecção de atividades suspeitas e possíveis ataques contra sua rede. Este tutorial de quatro partes explica como instalar e configurar um ambiente de trabalho para testar algumas detecções *discretas* do [!INCLUDE [Product short](includes/product-short.md)]. Este laboratório se concentra nos recursos baseados em *assinatura* do [!INCLUDE [Product short](includes/product-short.md)]. O laboratório não inclui aprendizado de máquina avançado e detecções comportamentais baseadas no usuário ou em entidade, pois essas detecções exigem um período de aprendizado de até 30 dias com tráfego de rede real.
 

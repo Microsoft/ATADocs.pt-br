@@ -11,16 +11,14 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: eff9b785cb23db649615f11be6e713eed49f3b5d
-ms.sourcegitcommit: 931d463e793cd5710e7bc2bca13cd4ef669eb190
+ms.openlocfilehash: 70a316deaafec0c251c91defbc47ec5281eba617
+ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2020
-ms.locfileid: "94580883"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94848866"
 ---
 # <a name="using-product-long-with-microsoft-cloud-app-security"></a>Usando [!INCLUDE [Product long](includes/product-long.md)] com Microsoft Cloud app Security
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 Este artigo foi criado para ajudá-lo a entender e navegar na experiência de investigação avançada ao usar o portal de Microsoft Cloud App Security com o [!INCLUDE [Product long](includes/product-long.md)] .
 
@@ -94,7 +92,7 @@ Para acessar uma página de usuário de um usuário do sistema:
 
  ou
 
-1. No menu **Investigar** , selecione **Log de atividades**.
+1. No menu **Investigar**, selecione **Log de atividades**.
 1. Filtre a fila do log de atividades por usuário.
 
     ![Log de atividades](media/mcas-activity-filter.png)

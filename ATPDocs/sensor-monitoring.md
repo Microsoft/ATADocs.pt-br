@@ -11,16 +11,14 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: af05ee5bbd064e31b231ad36374b4c069d8f7cfc
-ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
+ms.openlocfilehash: 20e02b3281480024b67a1ef5908d82586c11f955
+ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93275393"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94849008"
 ---
 # <a name="monitoring-your-domain-controller-coverage"></a>Monitorando a cobertura do controlador de domínio
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 Assim que o primeiro [!INCLUDE [Product long](includes/product-long.md)] sensor for instalado e configurado em qualquer controlador de domínio em sua rede, o [!INCLUDE [Product short](includes/product-short.md)] começará a monitorar o ambiente para controladores de domínio.
 
@@ -63,7 +61,7 @@ Gerenciar sua frota de sensores e controladores de domínio pode ser desafiador.
 
 ## <a name="see-also"></a>Consulte Também
 
-- [[!INCLUDE [Product short](includes/product-short.md)] Arquitectura](architecture.md)
+- [Arquitetura do [!INCLUDE [Product short](includes/product-short.md)]](architecture.md)
 - [Configurando [!INCLUDE [Product short](includes/product-short.md)] sensores](install-step5.md)
 - [Suporte para várias florestas](multi-forest.md)
-- [Confira o [!INCLUDE [Product short](includes/product-short.md)] Fórum!](https://aka.ms/MDIcommunity)
+- [Confira o fórum do [!INCLUDE [Product short](includes/product-short.md)]!](https://aka.ms/MDIcommunity)

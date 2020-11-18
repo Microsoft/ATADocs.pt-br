@@ -11,20 +11,18 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 3ce32384545ea3751966ba9a677348ac70fe266b
-ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
+ms.openlocfilehash: 90333e1588ebb110c940467177aa5aef762fb428
+ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93277477"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94848747"
 ---
 # <a name="security-assessment-domain-controllers-with-print-spooler-service-available"></a>Avaliação de segurança: Controladores de domínio com o serviço de spooler de impressão disponível
 
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
-
 ![Desabilitar o serviço de spooler de impressão](media/cas-isp-print-spooler-1.png)
 
-## <a name="what-is-the-print-spooler-service"></a>O que é o serviço de **spooler de impressão** ?
+## <a name="what-is-the-print-spooler-service"></a>O que é o serviço de **spooler de impressão**?
 
 O spooler de impressão é um serviço de software que gerencia processos de impressão. O spooler aceita trabalhos de impressão de computadores e garante que os recursos da impressora estejam disponíveis. O spooler também agenda a ordem em que os trabalhos de impressão são enviados para a fila de impressão. Nos primórdios dos PCs, os usuários precisavam esperar a impressão dos arquivos antes de executar outras ações. Graças aos spoolers de impressão modernos, imprimir tem um impacto mínimo na produtividade geral do usuário hoje em dia.
 
@@ -56,4 +54,4 @@ Corrija esse problema específico desabilitando o serviço de spooler de impress
 ## <a name="next-steps"></a>Próximas etapas
 
 - [[!INCLUDE [Product short](includes/product-short.md)] filtragem de atividades no Cloud App Security](activities-filtering-mcas.md)
-- [Confira o [!INCLUDE [Product short](includes/product-short.md)] Fórum!](https://aka.ms/MDIcommunity)
+- [Confira o fórum do [!INCLUDE [Product short](includes/product-short.md)]!](https://aka.ms/MDIcommunity)

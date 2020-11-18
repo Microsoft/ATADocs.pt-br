@@ -11,16 +11,14 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: b0ba89e18e0e556f133e1591980daf425829bdde
-ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
+ms.openlocfilehash: 973c78137edcd02aa926174c1d2a9bbffe15e81f
+ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93274501"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94846843"
 ---
 # <a name="product-long-readiness-guide"></a>[!INCLUDE [Product long](includes/product-long.md)] Guia de preparação
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 Este artigo fornece uma lista de roteiros de preparação de recursos que ajudam você a começar a usar o [!INCLUDE [Product long](includes/product-long.md)] .
 
@@ -82,4 +80,4 @@ Channel 9: [Página do Microsoft Security Channel 9](https://channel9.msdn.com/S
 ## <a name="see-also"></a>Consulte Também
 
 - [Trabalhando com contas confidenciais](sensitive-accounts.md)
-- [Confira o [!INCLUDE [Product short](includes/product-short.md)] Fórum!](https://aka.ms/MDIcommunity)
+- [Confira o fórum do [!INCLUDE [Product short](includes/product-short.md)]!](https://aka.ms/MDIcommunity)

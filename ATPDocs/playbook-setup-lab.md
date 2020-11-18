@@ -10,16 +10,14 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 8adbc288f2512b6322797931b8fcb2a17649e8a4
-ms.sourcegitcommit: 8cb9839a67fce42921f7a24564fddf15e503bdea
+ms.openlocfilehash: e175744d29cac82c29dc1f072a145ee68770dcf7
+ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93278607"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94847047"
 ---
 # <a name="tutorial-setup-a-product-long-security-alert-lab"></a>Tutorial: Configurar um laboratório de alertas de segurança do [!INCLUDE [Product long](includes/product-long.md)]
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 A finalidade do laboratório de Alertas de segurança do [!INCLUDE [Product long](includes/product-long.md)] é ilustrar os recursos do **[!INCLUDE [Product short](includes/product-short.md)]** na identificação e detecção de atividades suspeitas e possíveis ataques contra sua rede. Este primeiro tutorial, de uma série com quatro partes, explica como criar um ambiente de laboratório para testar detecções *discrete* do [!INCLUDE [Product short](includes/product-short.md)]. O laboratório de alertas de segurança se concentra nos recursos *baseados em assinatura* do [!INCLUDE [Product short](includes/product-short.md)]. O laboratório não inclui aprendizado de máquina avançado, detecções comportamentais baseadas no usuário ou em entidade, pois essas detecções exigem um período de aprendizado de até 30 dias com tráfego de rede real. Para saber mais sobre cada tutorial desta série, confira a [Visão geral do laboratório de alertas de segurança do [!INCLUDE [Product short](includes/product-short.md)]](playbook-lab-overview.md).
 
@@ -131,7 +129,7 @@ A adição do grupo de segurança "Helpdesk" como um **Grupo confidencial** perm
 1. Em **Detecção** selecione **Marcas de entidade**.
 
     ![Marcas de entidade do [!INCLUDE [Product short](includes/product-short.md)]](media/entity-tags.png)
-1. Na seção **Confidencial** , digite o nome "Helpdesk" para **Grupos confidenciais** e clique no sinal **+** para adicioná-los.
+1. Na seção **Confidencial**, digite o nome "Helpdesk" para **Grupos confidenciais** e clique no sinal **+** para adicioná-los.
     ![Marca do "Helpdesk" como um grupo confidencial do [!INCLUDE [Product short](includes/product-short.md)] para habilitar Gráficos de Movimentação Lateral e relatórios para esse grupo privilegiado](media/playbook-labsetup-helpdesksensitivegroup.png)
 1. Clique em **Salvar**.
 
@@ -225,7 +223,7 @@ Agradecemos aos criadores dessas ferramentas de pesquisa por ajudar a comunidade
 
 YasminC precisa de atividades de domínio simuladas. Essa etapa pode ser feita manualmente ou com o script do PowerShell fornecido. O script do PowerShell acessa o controlador de domínio a cada cinco minutos e resultará na atividade de rede simulada como Yasmin.
 
-Como **YasminC** , execute o seguinte script em um prompt do PowerShell no AdminPC:
+Como **YasminC**, execute o seguinte script em um prompt do PowerShell no AdminPC:
 
 ```powerShell
 while ($true)
@@ -250,7 +248,7 @@ Examine a lista de verificação para ter certeza de que a configuração da est
 
 ## <a name="mission-accomplished"></a>Missão cumprida!
 
-Seu laboratório do [!INCLUDE [Product short](includes/product-short.md)] agora está pronto para uso. Os métodos usados nessa configuração foram escolhidos sabendo que os recursos devem ser gerenciados (por *algo* ou *alguém* ) e que o gerenciamento exige privilégios de administrador local. Há outras maneiras de simular um fluxo de trabalho de gerenciamento no laboratório, como:
+Seu laboratório do [!INCLUDE [Product short](includes/product-short.md)] agora está pronto para uso. Os métodos usados nessa configuração foram escolhidos sabendo que os recursos devem ser gerenciados (por *algo* ou *alguém*) e que o gerenciamento exige privilégios de administrador local. Há outras maneiras de simular um fluxo de trabalho de gerenciamento no laboratório, como:
 
 - Entrar e sair do VictimPC com a conta do EduardoHD
 - Adicionar outra versão de uma Tarefa Agendada

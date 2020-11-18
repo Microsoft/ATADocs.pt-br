@@ -11,16 +11,14 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: e20bbb73e916c9ea7139ac17a59cd7de2f1a08a4
-ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
+ms.openlocfilehash: 0f6a359745ae03ce0b982e00b7f4c06d556eb702
+ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93276958"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94848815"
 ---
 # <a name="use-activity-filters-and-create-action-policies-with-product-long-in-microsoft-cloud-app-security"></a>Usar filtros de atividade e criar políticas de ação com o [!INCLUDE [Product long](includes/product-long.md)] no Microsoft Cloud app Security
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 Este artigo foi criado para ajudá-lo a entender como filtrar e criar políticas de ação para [!INCLUDE [Product short](includes/product-short.md)] atividades usando Microsoft Cloud app Security.
 
@@ -57,7 +55,7 @@ Após filtrar as atividades e identificar as políticas de atividade que você g
 
 Para criar uma nova política de atividade:
 
-1. Em qualquer página do **Log de atividades** , aplique um filtro (como Aplicativo, Nome de Usuário, Tipo de atividade) etc.
+1. Em qualquer página do **Log de atividades**, aplique um filtro (como Aplicativo, Nome de Usuário, Tipo de atividade) etc.
     - Para filtrar as atividades de [!INCLUDE [Product short](includes/product-short.md)] Selecione a opção **Active Directory** no filtro de aplicativo.
     ![Criar nova política de atividade](media/mcas-create-new-policy.png)
 1. Clique no botão **Nova política da pesquisa**.
@@ -76,4 +74,4 @@ Saiba mais sobre os recursos adicionais e de pontuação de prioridade de invest
 
 ## <a name="join-the-community"></a>Participe da comunidade
 
-Você tem mais perguntas ou um interesse em discutir [!INCLUDE [Product short](includes/product-short.md)] e segurança relacionada com outras pessoas? Junte-se à [ [!INCLUDE [Product short](includes/product-short.md)] comunidade](https://techcommunity.microsoft.com/t5/Azure-Advanced-Threat-Protection/bd-p/AzureAdvancedThreatProtection) hoje mesmo!
+Tem mais perguntas ou quer discutir sobre o [!INCLUDE [Product short](includes/product-short.md)] e a segurança relacionada com outras pessoas? Participe da Comunidade [[!INCLUDE [Product short](includes/product-short.md)]](https://techcommunity.microsoft.com/t5/Azure-Advanced-Threat-Protection/bd-p/AzureAdvancedThreatProtection) hoje mesmo!

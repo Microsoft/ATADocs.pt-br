@@ -11,16 +11,14 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 9f3a6771591fb3e3d63a45887b1f7a89bddc57d7
-ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
+ms.openlocfilehash: 7d2097a4d65cd3b153bc111d87092dcbf8ff9d74
+ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93275720"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94847251"
 ---
 # <a name="product-long-multi-forest-support"></a>[!INCLUDE [Product long](includes/product-long.md)] suporte a várias florestas
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 ## <a name="multi-forest-support-set-up"></a>Configuração de suporte a várias florestas
 
@@ -44,7 +42,7 @@ Para detectar atividades entre florestas, os [!INCLUDE [Product short](includes/
   - Credenciais adicionais só são necessárias para cada floresta com confiança não Kerberos ou sem confiança.
   - Há um limite padrão de 10 florestas não confiáveis por [!INCLUDE [Product short](includes/product-short.md)] instância. Fale com o suporte se sua organização tiver mais de dez florestas.
 
-![[! INCLUIR [produto curto] (inclui/produto-short. MD)] estágio 1 de boas-vindas](media/directory-services-add-no-trust-forests.png)
+![Estágio 1 de boas-vindas do [!INCLUDE [Product short](includes/product-short.md)]](media/directory-services-add-no-trust-forests.png)
 
 ### <a name="requirements"></a>Requisitos
 
@@ -56,7 +54,7 @@ Para detectar atividades entre florestas, os [!INCLUDE [Product short](includes/
   |Protocolo|Transport|Porta|Para/De|Direção|
   |----|----|----|----|----|
   |**Portas de Internet**||||
-  |SSL (*.atp.azure.com)|TCP|443|[!INCLUDE [Product short](includes/product-short.md)] serviço de nuvem|Saída|
+  |SSL (*.atp.azure.com)|TCP|443|Serviço de nuvem do [!INCLUDE [Product short](includes/product-short.md)]|Saída|
   |**Portas internas**||||
   |LDAP|TCP e UDP|389|Controladores de domínio|Saída|
   |LDAP seguro (LDAPS)|TCP|636|Controladores de domínio|Saída|
@@ -78,7 +76,7 @@ Quando [!INCLUDE [Product short](includes/product-short.md)] o mapeia suas flore
 
 ## <a name="see-also"></a>Consulte Também
 
-- [[!INCLUDE [Product short](includes/product-short.md)] ferramenta de dimensionamento](https://aka.ms/aatpsizingtool)
-- [[!INCLUDE [Product short](includes/product-short.md)] arquitectura](architecture.md)
-- [Pré-instalação [!INCLUDE [Product short](includes/product-short.md)]](install-step1.md)
-- [Confira o [!INCLUDE [Product short](includes/product-short.md)] Fórum!](https://aka.ms/MDIcommunity)
+- [Ferramenta de dimensionamento do [!INCLUDE [Product short](includes/product-short.md)]](https://aka.ms/aatpsizingtool)
+- [Arquitetura do [!INCLUDE [Product short](includes/product-short.md)]](architecture.md)
+- [Instalar o [!INCLUDE [Product short](includes/product-short.md)]](install-step1.md)
+- [Confira o fórum do [!INCLUDE [Product short](includes/product-short.md)]!](https://aka.ms/MDIcommunity)

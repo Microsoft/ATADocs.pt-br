@@ -11,16 +11,14 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 68ed20a243a307992b2d11c633728bf34abf6302
-ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
+ms.openlocfilehash: fb4aa3b26c9026a62aac81bd1a88b50b95141ecd
+ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93277043"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94848475"
 ---
 # <a name="configure-detection-exclusions-and-honeytoken-accounts"></a>Configurar exclusões de detecção e contas de honeytoken
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 [!INCLUDE [Product long](includes/product-long.md)] permite a exclusão de endereços IP ou usuários específicos de várias detecções.
 
@@ -30,13 +28,13 @@ Por exemplo, uma **exclusão por Reconhecimento de DNS** poderia ser um verifica
 
 Para configurar, execute estas etapas:
 
-1. No [!INCLUDE [Product short](includes/product-short.md)] portal, clique no ícone de configurações e selecione **configuração**.
+1. No portal do [!INCLUDE [Product short](includes/product-short.md)], clique no ícone de engrenagem e selecione **Configuração**.
 
     ![[! INCLUIR definições de configuração [produto curto] (inclui/produto-curto. MD)]](media/config-menu.png)
 
-1. Em **Detecção** , clique em **Marcas de entidade**.
+1. Em **Detecção**, clique em **Marcas de entidade**.
 
-1. Em **Contas de honeytoken** , insira o nome da conta de honeytoken e clique no sinal **+** . O campo de contas Honeytoken é pesquisável e exibe automaticamente entidades em sua rede. Clique em **Salvar**.
+1. Em **Contas de honeytoken**, insira o nome da conta de honeytoken e clique no sinal **+** . O campo de contas Honeytoken é pesquisável e exibe automaticamente entidades em sua rede. Clique em **Salvar**.
 
     ![Honeytoken](media/honeytoken-sensitive.png)
 
@@ -55,7 +53,7 @@ Verifique a linha do tempo de ataque para visualizar os alertas de segurança ge
 
 ## <a name="see-also"></a>Consulte Também
 
-- [[!INCLUDE [Product short](includes/product-short.md)] ferramenta de dimensionamento](https://aka.ms/aatpsizingtool)
+- [Ferramenta de dimensionamento do [!INCLUDE [Product short](includes/product-short.md)]](https://aka.ms/aatpsizingtool)
 - [Configurar coleta de eventos](configure-event-collection.md)
-- [[!INCLUDE [Product short](includes/product-short.md)] pré-requisitos](prerequisites.md)
-- [Confira o [!INCLUDE [Product short](includes/product-short.md)] Fórum!](https://aka.ms/MDIcommunity)
+- [Pré-requisitos do [!INCLUDE [Product short](includes/product-short.md)]](prerequisites.md)
+- [Confira o fórum do [!INCLUDE [Product short](includes/product-short.md)]!](https://aka.ms/MDIcommunity)

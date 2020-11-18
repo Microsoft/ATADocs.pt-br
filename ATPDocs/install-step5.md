@@ -9,23 +9,21 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 06df6ebb9c5baa3ba2a568c78dd1ab175cdae9a8
-ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
+ms.openlocfilehash: 27431aca85e794ecd31029b6286e3146f01fa7ec
+ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93277010"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94848492"
 ---
 # <a name="configure-product-long-sensor-settings"></a>Definir [!INCLUDE [Product long](includes/product-long.md)] configurações de sensor
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 Neste artigo, você aprenderá a definir corretamente [!INCLUDE [Product long](includes/product-long.md)] as configurações do sensor para começar a ver os dados. Você precisará fazer configuração e integração adicionais para aproveitar os [!INCLUDE [Product short](includes/product-short.md)] recursos completos do.
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
-- Uma [ [!INCLUDE [Product short](includes/product-short.md)] instância](install-step1.md) que está [conectada a Active Directory](install-step2.md).
-- Uma cópia baixada do [ [!INCLUDE [Product short](includes/product-short.md)] pacote de instalação do sensor](install-step3.md) e da chave de acesso.
+- Uma [instância do [!INCLUDE [Product short](includes/product-short.md)]](install-step1.md) [conectada ao Active Directory](install-step2.md).
+- Uma cópia baixada do [pacote de instalação do sensor do [!INCLUDE [Product short](includes/product-short.md)]](install-step3.md) e a chave de acesso.
 
 ## <a name="configure-sensor-settings"></a>Definir as configurações do sensor
 
@@ -33,7 +31,7 @@ Após a [!INCLUDE [Product short](includes/product-short.md)] instalação do se
 
 1. Clique em **Iniciar** para abrir o navegador e entrar no [!INCLUDE [Product short](includes/product-short.md)] Portal.
 
-1. No [!INCLUDE [Product short](includes/product-short.md)] portal, vá para **configuração** e, em **sistema** , selecione **sensores**.
+1. No [!INCLUDE [Product short](includes/product-short.md)] portal, vá para **configuração** e, em **sistema**, selecione **sensores**.
 
     ![Página do sensor](media/sensor-config.png)
 
@@ -41,11 +39,11 @@ Após a [!INCLUDE [Product short](includes/product-short.md)] instalação do se
 
     ![Definir as configurações do sensor](media/sensor-config-2.png)
 
-    - **Descrição** : Insira uma descrição para o [!INCLUDE [Product short](includes/product-short.md)] sensor (opcional).
+    - **Descrição**: Insira uma descrição para o [!INCLUDE [Product short](includes/product-short.md)] sensor (opcional).
     - **Controladores de domínio (FQDN)** (necessário para o [!INCLUDE [Product short](includes/product-short.md)] sensor autônomo, isso não pode ser alterado para o [!INCLUDE [Product short](includes/product-short.md)] sensor): Insira o FQDN completo do controlador de domínio e clique no sinal de adição para adicioná-lo à lista. Por exemplo, **dc01.contoso.com**
 
-    As informações a seguir se aplicam aos servidores digitados na lista **Controladores de Domínio** :
-    - Todos os controladores de domínio cujo tráfego está sendo monitorado por meio do espelhamento de porta pelo [!INCLUDE [Product short](includes/product-short.md)] sensor autônomo devem ser listados na lista **controladores de domínio** . Se um controlador de domínio não estiver listado em **Controladores de Domínio** , a detecção de atividades suspeitas pode não funcionar conforme o esperado.
+    As informações a seguir se aplicam aos servidores digitados na lista **Controladores de Domínio**:
+    - Todos os controladores de domínio cujo tráfego está sendo monitorado por meio do espelhamento de porta pelo [!INCLUDE [Product short](includes/product-short.md)] sensor autônomo devem ser listados na lista **controladores de domínio** . Se um controlador de domínio não estiver listado em **Controladores de Domínio**, a detecção de atividades suspeitas pode não funcionar conforme o esperado.
     - Pelo menos um controlador de domínio na lista deve ser um catálogo global. Isso permite que o [!INCLUDE [Product short](includes/product-short.md)] resolva os objetos de usuário e computador em outros domínios na floresta.
 
     - **Capturar adaptadores de rede** (obrigatório):
@@ -85,8 +83,8 @@ Para validar que o [!INCLUDE [Product short](includes/product-short.md)] sensor 
 
 - [Configuração de proxy](configure-proxy.md)
 - [Política de auditoria avançada](configure-windows-event-collection.md)
-- [Configurar [!INCLUDE [Product short](includes/product-short.md)] para fazer chamadas remotas para Sam](install-step8-samr.md)
+- [Configurar o [!INCLUDE [Product short](includes/product-short.md)] para realizar chamadas remotas para SAM](install-step8-samr.md)
 
 ## <a name="join-the-community"></a>Participe da comunidade
 
-Tem mais dúvidas ou um interesse em discutir [!INCLUDE [Product short](includes/product-short.md)] e segurança relacionada com outras pessoas? Junte-se à [ [!INCLUDE [Product short](includes/product-short.md)] comunidade](https://aka.ms/MDIcommunity) hoje mesmo!
+Tem mais perguntas ou interesse em discutir sobre o [!INCLUDE [Product short](includes/product-short.md)] e a segurança relacionada com outras pessoas? Participe da Comunidade [[!INCLUDE [Product short](includes/product-short.md)]](https://aka.ms/MDIcommunity) hoje mesmo!

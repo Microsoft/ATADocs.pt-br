@@ -11,22 +11,20 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 228d583fde3e08c497721e0aa5a8aa1b61318937
-ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
+ms.openlocfilehash: 9b9688031ea9916a09b8beaa2ce5c67633fd935f
+ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93274773"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94847234"
 ---
 # <a name="what-is-network-name-resolution"></a>O que é a Resolução de nomes de rede?
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 A resolução de nomes de rede (NNR) é um componente principal da  [!INCLUDE [Product long](includes/product-long.md)] funcionalidade. [!INCLUDE [Product short](includes/product-short.md)] captura atividades com base no tráfego de rede, eventos do Windows e ETW-essas atividades normalmente contêm dados IP.
 
 Usar NNR, [!INCLUDE [Product short](includes/product-short.md)] pode correlacionar entre atividades brutas (contendo endereços IP) e os computadores relevantes envolvidos em cada atividade. Com base nas atividades brutas, [!INCLUDE [Product short](includes/product-short.md)] entidades de perfis, incluindo computadores, e gera alertas de segurança para atividades suspeitas.
 
-Para resolver os endereços IP para nomes de computador, [!INCLUDE [Product short](includes/product-short.md)] os sensores pesquisam os endereços IP usando os seguintes métodos:
+Para resolver os endereços IP para nomes do computador, os sensores do [!INCLUDE [Product short](includes/product-short.md)] pesquisam os endereços IP usando os seguintes métodos:
 
 - NTLM sobre RPC (porta TCP 135)
 - NetBIOS (porta UDP 137)
@@ -51,12 +49,12 @@ Os dados da NNR são cruciais para a detecção das seguintes ameaças:
 - Suspeita de ataque de DCSync (replicação de serviços de diretório)
 - Reconhecimento de mapeamento de rede (DNS)
 
-Para melhorar sua capacidade de determinar se um alerta é um **verdadeiro positivo (TP)** ou **falso positivo (FP)** , [!INCLUDE [Product short](includes/product-short.md)] inclui o grau de certeza da resolução de nomes de computadores na evidência de cada alerta de segurança.
+Para melhorar sua capacidade de determinar se um alerta é um **verdadeiro positivo (TP)** ou **falso positivo (FP)**, [!INCLUDE [Product short](includes/product-short.md)] inclui o grau de certeza da resolução de nomes de computadores na evidência de cada alerta de segurança.
 
-Por exemplo, quando os nomes dos computadores são resolvidos com **certeza alta** , ela aumenta a confiança no resultado do alerta de segurança como um **Verdadeiro Positivo** ou **TP**.
+Por exemplo, quando os nomes dos computadores são resolvidos com **certeza alta**, ela aumenta a confiança no resultado do alerta de segurança como um **Verdadeiro Positivo** ou **TP**.
 
-A evidência inclui a hora, o IP e o nome do computador para o qual o IP foi resolvido. Quando a certeza de resolução for **baixa** , use essas informações para investigar e verificar qual dispositivo era a fonte verdadeira do IP nesse momento.
-Depois de confirmar o dispositivo, você poderá determinar se o alerta é um **Falso Positivo** ou **FP** , semelhante aos exemplos a seguir:
+A evidência inclui a hora, o IP e o nome do computador para o qual o IP foi resolvido. Quando a certeza de resolução for **baixa**, use essas informações para investigar e verificar qual dispositivo era a fonte verdadeira do IP nesse momento.
+Depois de confirmar o dispositivo, você poderá determinar se o alerta é um **Falso Positivo** ou **FP**, semelhante aos exemplos a seguir:
 
 - Suspeita de roubo de identidade (pass-the-ticket) – o alerta foi disparado para o mesmo computador.
 - Suspeita de ataque DCSync (replicação de serviços de diretório) – o alerta foi disparado de um controlador de domínio.
@@ -101,6 +99,6 @@ Cada alerta de integridade fornece detalhes específicos do método, sensores, a
 
 ## <a name="see-also"></a>Consulte Também
 
-- [[!INCLUDE [Product short](includes/product-short.md)] pré-requisitos](prerequisites.md)
+- [Pré-requisitos do [!INCLUDE [Product short](includes/product-short.md)]](prerequisites.md)
 - [Configurar coleta de eventos](configure-event-collection.md)
-- [Confira o [!INCLUDE [Product short](includes/product-short.md)] Fórum!](https://aka.ms/MDIcommunity)
+- [Confira o fórum do [!INCLUDE [Product short](includes/product-short.md)]!](https://aka.ms/MDIcommunity)

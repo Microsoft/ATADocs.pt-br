@@ -11,16 +11,14 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 4fb7bf73ed996007e3a3c84b568afe373d822fd6
-ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
+ms.openlocfilehash: e8086ccc3771ec4c8bbc2121083711e29063e2a5
+ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93277094"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94848560"
 ---
 # <a name="understanding-product-long-sensor-health-alerts"></a>Noções básicas sobre os alertas de integridade do sensor do [!INCLUDE [Product long](includes/product-long.md)]
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 O Centro de Integridade do [!INCLUDE [Product long](includes/product-long.md)] permite que você saiba quando há um problema em sua instância do [!INCLUDE [Product short](includes/product-short.md)] gerando um alerta de integridade. Este artigo descreve todos os alertas de integridade para cada componente, listando a causa e as etapas necessárias para resolver o problema.
 
@@ -28,7 +26,7 @@ O Centro de Integridade do [!INCLUDE [Product long](includes/product-long.md)] p
 
 |Alerta|Descrição|Resolução|Severidade|
 |----|----|----|----|
-|O sensor do [!INCLUDE [Product short](includes/product-short.md)] está offline no momento devido a problemas de conectividade com todos os controladores de domínio configurados.|Isso afeta a capacidade do [!INCLUDE [Product short](includes/product-short.md)] de detectar atividades suspeitas relacionadas aos controladores de domínio monitorados por esse sensor do [!INCLUDE [Product short](includes/product-short.md)].| Verifique se os controladores de domínio estão em funcionamento e se esse sensor do [!INCLUDE [Product short](includes/product-short.md)] pode abrir conexões LDAP para eles. Além disso, em **Configurações** , certifique-se de configurar uma conta de serviço de diretório para cada floresta implantada.|Média|
+|O sensor do [!INCLUDE [Product short](includes/product-short.md)] está offline no momento devido a problemas de conectividade com todos os controladores de domínio configurados.|Isso afeta a capacidade do [!INCLUDE [Product short](includes/product-short.md)] de detectar atividades suspeitas relacionadas aos controladores de domínio monitorados por esse sensor do [!INCLUDE [Product short](includes/product-short.md)].| Verifique se os controladores de domínio estão em funcionamento e se esse sensor do [!INCLUDE [Product short](includes/product-short.md)] pode abrir conexões LDAP para eles. Além disso, em **Configurações**, certifique-se de configurar uma conta de serviço de diretório para cada floresta implantada.|Média|
 
 ## <a name="allsome-of-the-capture-network-adapters-on-a-sensor-are-not-available"></a>Todos ou alguns dos adaptadores de rede de captura em um sensor não estão disponíveis
 
@@ -40,7 +38,7 @@ O Centro de Integridade do [!INCLUDE [Product long](includes/product-long.md)] p
 
 |Alerta|Descrição|Resolução|Severidade|
 |----|----|----|----|
-|As credenciais da conta de usuário de serviços de diretório estão incorretas.|Isso afeta a capacidade dos sensores de detectar atividades usando consultas LDAP em controladores de domínio.|– Para contas do AD **padrão** : verifique se o nome de usuário, a senha e o domínio na página de configuração dos **Serviços de diretório** estão corretos.<br>– Para **Contas de Serviço Gerenciado de Grupo:** verifique se o nome de usuário e o domínio na página de configuração dos **Serviços de Diretório** estão corretos. Confira também todos os outros pré-requisitos da **conta gMSA** descritos na página [Conectar à sua floresta do Active Directory](install-step2.md#prerequisites).|Média|
+|As credenciais da conta de usuário de serviços de diretório estão incorretas.|Isso afeta a capacidade dos sensores de detectar atividades usando consultas LDAP em controladores de domínio.|– Para contas do AD **padrão**: verifique se o nome de usuário, a senha e o domínio na página de configuração dos **Serviços de diretório** estão corretos.<br>– Para **Contas de Serviço Gerenciado de Grupo:** verifique se o nome de usuário e o domínio na página de configuração dos **Serviços de Diretório** estão corretos. Confira também todos os outros pré-requisitos da **conta gMSA** descritos na página [Conectar à sua floresta do Active Directory](install-step2.md#prerequisites).|Média|
 
 ## <a name="low-success-rate-of-active-name-resolution"></a>Taxa de êxito baixa de resolução de nomes ativa
 

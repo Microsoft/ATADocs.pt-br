@@ -9,42 +9,40 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: f9cac463b5a99075901a9c0f68db37affcb50cf9
-ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
+ms.openlocfilehash: 2fa0a70299b897a2c8b29e01ebb97e9740b0eb66
+ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93276773"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94848611"
 ---
 # <a name="plan-capacity-for-product-long"></a>Planejar capacidade para [!INCLUDE [Product long](includes/product-long.md)]
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 Neste guia, você determina a quantidade de [!INCLUDE [Product long](includes/product-long.md)] sensores de que precisa.
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
 - Baixe a [ [!INCLUDE [Product short](includes/product-short.md)] ferramenta de dimensionamento](https://aka.ms/aatpsizingtool).
-- Leia o artigo [ [!INCLUDE [Product short](includes/product-short.md)] arquitetura](architecture.md) .
-- Examine o artigo [ [!INCLUDE [Product short](includes/product-short.md)] pré-requisitos](prerequisites.md) .
+- Examine o artigo [Arquitetura do [!INCLUDE [Product short](includes/product-short.md)]](architecture.md).
+- Examine o artigo [Pré-requisitos do [!INCLUDE [Product short](includes/product-short.md)]](prerequisites.md).
 
 ## <a name="use-the-sizing-tool"></a>Usar a ferramenta de dimensionamento
 
 A maneira recomendada e mais simples de determinar a capacidade para sua [!INCLUDE [Product short](includes/product-short.md)] implantação é usar a [!INCLUDE [Product short](includes/product-short.md)] ferramenta de dimensionamento. Caso isso não seja possível, colete informações sobre o tráfego manualmente. Para saber mais sobre o método manual, confira a seção [Estimador de tráfego do controlador de domínio](#manual-sizing), no final deste artigo.
 
-1. Execute a [!INCLUDE [Product short](includes/product-short.md)] ferramenta de dimensionamento, **TriSizingTool.exe** , no arquivo zip que você baixou.
+1. Execute a [!INCLUDE [Product short](includes/product-short.md)] ferramenta de dimensionamento, **TriSizingTool.exe**, no arquivo zip que você baixou.
 1. Quando concluir a execução da ferramenta, abra os resultados de arquivo do Excel.
 1. No arquivo do Excel, localize e clique na planilha **Resumo do ATP do Azure**. A outra planilha não é necessária, pois ela se destina ao planejamento do ATA.
     ![Ferramenta de planejamento de capacidade de amostra](media/capacity-tool.png)
 
-1. Localize o campo **Pacotes ocupados/s** , na tabela do sensor do ATP do Azure, no arquivo de resultados do Excel, e anote isso.
+1. Localize o campo **Pacotes ocupados/s**, na tabela do sensor do ATP do Azure, no arquivo de resultados do Excel, e anote isso.
 1. Corresponda o campo **pacotes ocupados/s** ao campo **pacotes por segundo** na seção [ [!INCLUDE [Product short](includes/product-short.md)] tabela do sensor](#sizing) deste artigo. Use os campos para determinar a capacidade de memória e CPU que será usada pelo sensor.
 
 ## <a name="product-short-sensor-sizing"></a><a name="sizing"></a>[!INCLUDE [Product short](includes/product-short.md)]dimensionamento do sensor
 
 Um [!INCLUDE [Product short](includes/product-short.md)] sensor pode dar suporte ao monitoramento de um controlador de domínio com base na quantidade de tráfego de rede que o controlador de domínio gera. A tabela a seguir representa uma estimativa. O valor final que o sensor analisa depende da quantidade de tráfego e da distribuição desse tráfego.
 
-A capacidade da CPU e da memória RAM a seguir se refere ao **consumo do próprio sensor** , e não à capacidade do controlador de domínio.
+A capacidade da CPU e da memória RAM a seguir se refere ao **consumo do próprio sensor**, e não à capacidade do controlador de domínio.
 
 |Pacotes por segundo|CPU (núcleos)\*|Memória\*\* (GB)|
 |----|----|-----|
@@ -109,7 +107,7 @@ Para determinar os pacotes por segundo, faça os seguintes procedimentos em cada
 
 1. Em **Que contadores de desempenho deseja registrar em log?** , clique em **Adicionar**.
 
-1. Expanda **Adaptador de Rede** , selecione **Pacotes/s** e escolha a instância apropriada. Se não tiver certeza, selecione **&lt;Todas as instâncias&gt;** , clique em **Adicionar** e em **OK**.
+1. Expanda **Adaptador de Rede**, selecione **Pacotes/s** e escolha a instância apropriada. Se não tiver certeza, selecione **&lt;Todas as instâncias&gt;** , clique em **Adicionar** e em **OK**.
 
     > [!NOTE]
     > Para executar essa operação em uma linha de comando, execute `ipconfig /all` para ver o nome do adaptador e a configuração.
@@ -120,7 +118,7 @@ Para determinar os pacotes por segundo, faça os seguintes procedimentos em cada
 
 1. Defina o local onde você deseja que os dados sejam salvos.
 
-1. Em **Criar conjunto de coletores de dados** , selecione **Iniciar conjunto de coletores de dados agora** e clique em **Concluir**.
+1. Em **Criar conjunto de coletores de dados**, selecione **Iniciar conjunto de coletores de dados agora** e clique em **Concluir**.
 
     Agora, você deverá ver o conjunto de coletores de dados criado com um triângulo verde, indicando que ele está funcionando.
 
@@ -143,4 +141,4 @@ Neste guia, você determinou quantos [!INCLUDE [Product short](includes/product-
 
 ## <a name="join-the-community"></a>Participe da comunidade
 
-Tem mais dúvidas ou um interesse em discutir [!INCLUDE [Product short](includes/product-short.md)] e segurança relacionada com outras pessoas? Junte-se à [ [!INCLUDE [Product short](includes/product-short.md)] comunidade](https://aka.ms/MDIcommunity) hoje mesmo!
+Tem mais perguntas ou interesse em discutir sobre o [!INCLUDE [Product short](includes/product-short.md)] e a segurança relacionada com outras pessoas? Participe da Comunidade [[!INCLUDE [Product short](includes/product-short.md)]](https://aka.ms/MDIcommunity) hoje mesmo!

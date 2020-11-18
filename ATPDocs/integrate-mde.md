@@ -11,16 +11,14 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: d0e059516346d5b2c832e5bd5ea73008b1f51082
-ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
+ms.openlocfilehash: 50bb601a00396aefee99d5115b1eb8825e74e39c
+ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93278070"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94848543"
 ---
 # <a name="integrate-product-long-with-microsoft-defender-for-endpoint"></a>Integre [!INCLUDE [Product long](includes/product-long.md)] com o Microsoft defender para ponto de extremidade
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 [!INCLUDE [Product long](includes/product-long.md)] o permite a integração [!INCLUDE [Product long](includes/product-long.md)] com o defender for Endpoint, para uma solução de proteção contra ameaças ainda mais completa. Embora [!INCLUDE [Product short](includes/product-short.md)] o monitore o tráfego em seus controladores de domínio, o defender for Endpoint monitora seus pontos de extremidade, fornecendo, juntos, uma única interface da qual você pode proteger seu ambiente.
 
@@ -59,14 +57,14 @@ Para habilitar esse recurso, você precisa de uma licença para o [!INCLUDE [Pro
 
 ## <a name="how-to-integrate-product-short-with-defender-for-endpoint"></a>Como integrar [!INCLUDE [Product short](includes/product-short.md)] com o defender para ponto de extremidade
 
-1. No [!INCLUDE [Product short](includes/product-short.md)] portal, selecione **configuração**.
+1. No portal do [!INCLUDE [Product short](includes/product-short.md)], selecione **Configuração**.
 
     ![[! INCLUIR [produto curto] (inclui/produto-curto. MD)] menu de configuração](media/msde-configuration.png)
 1. Na lista configurações, selecione **Microsoft defender para ponto de extremidade** e defina a opção integração ativar como **ativado**.
 
     ![Habilitar a integração do Windows Defender](media/msde-enable-integration.png)
 
-1. No [portal do defender for Endpoint](https://securitycenter.windows.com/preferences/advanced), vá para **configurações** , **recursos avançados** e defina **[!INCLUDE [Product long](includes/product-long.md)] integração** como **ativado**.
+1. No [portal do defender for Endpoint](https://securitycenter.windows.com/preferences/advanced), vá para **configurações**, **recursos avançados** e defina **[!INCLUDE [Product long](includes/product-long.md)] integração** como **ativado**.
 
     ![Integração do defender para ponto de extremidade habilitar](media/msde-enable.png)
 
@@ -96,7 +94,7 @@ No portal do defender for Endpoint, clique em um ponto de extremidade para exibi
 ## <a name="see-also"></a>Consulte Também
 
 - [Investigando caminhos de movimento lateral com [!INCLUDE [Product short](includes/product-short.md)]](use-case-lateral-movement-path.md)
-- [[!INCLUDE [Product short](includes/product-short.md)] ferramenta de dimensionamento](https://aka.ms/aatpsizingtool)
-- [[!INCLUDE [Product short](includes/product-short.md)] arquitectura](architecture.md)
-- [Pré-instalação [!INCLUDE [Product short](includes/product-short.md)]](install-step1.md)
-- [Confira o [!INCLUDE [Product short](includes/product-short.md)] Fórum!](https://aka.ms/MDIcommunity)
+- [Ferramenta de dimensionamento do [!INCLUDE [Product short](includes/product-short.md)]](https://aka.ms/aatpsizingtool)
+- [Arquitetura do [!INCLUDE [Product short](includes/product-short.md)]](architecture.md)
+- [Instalar o [!INCLUDE [Product short](includes/product-short.md)]](install-step1.md)
+- [Confira o fórum do [!INCLUDE [Product short](includes/product-short.md)]!](https://aka.ms/MDIcommunity)

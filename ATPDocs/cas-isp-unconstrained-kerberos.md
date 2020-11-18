@@ -11,16 +11,14 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: c5c8d2a3fcce67d51cc4ab3adeff3f48b044ae73
-ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
+ms.openlocfilehash: 643a5f0a23f18d5e972f2bead87e0a078cf7b54c
+ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93277449"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94848730"
 ---
 # <a name="security-assessment-unsecure-kerberos-delegation"></a>Avaliação de segurança: delegação de Kerberos não segura
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 ## <a name="what-is-kerberos-delegation"></a>O que é uma delegação Kerberos?
 
@@ -30,12 +28,12 @@ ms.locfileid: "93277449"
 
 Com a delegação de Kerberos não segura, uma entidade pode representar você em qualquer outro serviço escolhido. Por exemplo, imagine que você tem um site de IIS e a conta do pool de aplicativos está configurada com a delegação irrestrita. O site de IIS também tem a Autenticação do Windows habilitada, o que permite à autenticação Kerberos nativa e ao site usar um SQL Server de back-end para dados corporativos. Com a conta do administrador do domínio, navegue até o site de IIS para fazer a autenticação. O site, usando a delegação irrestrita, pode obter um tíquete de serviço de um controlador de domínio para o serviço do SQL e fazer isso em seu nome.
 
-O principal problema da delegação de Kerberos é que você precisa confiar que o aplicativo sempre tomará a decisão correta. Em vez disso, agentes mal-intencionados podem forçar o aplicativo a errar. Se você estiver conectado como **administrador de domínio** , o site poderá criar um tíquete para qualquer outro serviço que desejar, agindo como você, o **administrador de domínio**. Por exemplo, o site pode escolher um controlador de domínio e fazer alterações no grupo de **Administração de empresa** . Do mesmo modo, o site poderia adquirir o hash da conta KRBTGT ou baixar um arquivo interessante do departamento de Recursos Humanos. O risco é claro e as possibilidades com a delegação não segura são quase infinitas.
+O principal problema da delegação de Kerberos é que você precisa confiar que o aplicativo sempre tomará a decisão correta. Em vez disso, agentes mal-intencionados podem forçar o aplicativo a errar. Se você estiver conectado como **administrador de domínio**, o site poderá criar um tíquete para qualquer outro serviço que desejar, agindo como você, o **administrador de domínio**. Por exemplo, o site pode escolher um controlador de domínio e fazer alterações no grupo de **Administração de empresa** . Do mesmo modo, o site poderia adquirir o hash da conta KRBTGT ou baixar um arquivo interessante do departamento de Recursos Humanos. O risco é claro e as possibilidades com a delegação não segura são quase infinitas.
 
 Veja a seguir uma descrição do risco representado por tipos diferentes de delegação:
 
-- **Delegação irrestrita** : qualquer serviço poderá ser explorado se uma das entradas de delegação for confidencial.
-- **Delegação restrita** : entidades restritas poderão ser exploradas se uma das entradas de delegação for confidencial.
+- **Delegação irrestrita**: qualquer serviço poderá ser explorado se uma das entradas de delegação for confidencial.
+- **Delegação restrita**: entidades restritas poderão ser exploradas se uma das entradas de delegação for confidencial.
 - **RBCD (delegação restrita baseada em recursos)** : entidades restritas baseadas em recursos poderão ser exploradas se a entidade em questão for confidencial.
 
 ## <a name="how-do-i-use-this-security-assessment"></a>Como usar a avaliação de segurança?
@@ -80,4 +78,4 @@ Examine os usuários confidenciais listados nas recomendações e remova-os do r
 ## <a name="next-steps"></a>Próximas etapas
 
 - [[!INCLUDE [Product short](includes/product-short.md)] filtragem de atividades no Cloud App Security](activities-filtering-mcas.md)
-- [Confira o [!INCLUDE [Product short](includes/product-short.md)] Fórum!](https://aka.ms/MDIcommunity)
+- [Confira o fórum do [!INCLUDE [Product short](includes/product-short.md)]!](https://aka.ms/MDIcommunity)

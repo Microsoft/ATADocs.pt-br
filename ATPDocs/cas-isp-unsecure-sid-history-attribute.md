@@ -11,16 +11,14 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 851a0c0db49a59b96a8f239a3b9a08f9e51819c5
-ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
+ms.openlocfilehash: 5af86879b48f2d8159a78d5965fb53ff8373ae56
+ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93276623"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94848271"
 ---
 # <a name="security-assessment-unsecure-sid-history-attributes"></a>Avaliação de segurança: atributos do Histórico de SID não seguro
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 ## <a name="what-is-an-unsecure-sid-history-attribute"></a>O que é um atributo de Histórico de SID não seguro?
 
@@ -60,4 +58,4 @@ Por exemplo, uma conta não confidencial em um domínio pode conter a SID de adm
 ## <a name="see-also"></a>Consulte Também
 
 - [[!INCLUDE [Product short](includes/product-short.md)] filtragem de atividades no Cloud App Security](activities-filtering-mcas.md)
-- [Confira o [!INCLUDE [Product short](includes/product-short.md)] Fórum!](https://aka.ms/MDIcommunity)
+- [Confira o fórum do [!INCLUDE [Product short](includes/product-short.md)]!](https://aka.ms/MDIcommunity)

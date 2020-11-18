@@ -11,16 +11,14 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 74e97750d25f48522d38246337682e0399d24c4d
-ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
+ms.openlocfilehash: 3f32d974b9dcfb946279b14eebc116ca74b5b3f5
+ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93274468"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94846911"
 ---
 # <a name="working-with-sensitive-accounts"></a>Trabalhando com contas confidenciais
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 ## <a name="sensitive-entities"></a>Entidades confidenciais
 
@@ -47,7 +45,7 @@ A lista de grupos a seguir é considerada **Confidencial** pelo [!INCLUDE [Produ
   > [!NOTE]
   > Até setembro de 2018, usuários da Área de Trabalho Remota eram automaticamente considerados confidenciais pelo [!INCLUDE [Product short](includes/product-short.md)]. Entidades ou grupos da Área de Trabalho Remota adicionados após essa data não são mais marcados como confidenciais automaticamente, enquanto as entidades e grupos da Área de Trabalho Remota adicionados antes dessa data podem permanecer marcados como Confidenciais. Essa configuração Confidencial agora pode ser alterada manualmente.
 
-Além desses grupos, o [!INCLUDE [Product short](includes/product-short.md)] identifica os seguintes servidores de ativos de alto valor e os marca automaticamente como **Confidenciais** :
+Além desses grupos, o [!INCLUDE [Product short](includes/product-short.md)] identifica os seguintes servidores de ativos de alto valor e os marca automaticamente como **Confidenciais**:
 
 - Servidor da Autoridade de Certificação
 - Servidor DHCP
@@ -60,11 +58,11 @@ Além desses grupos, você pode marcar manualmente grupos ou contas como confide
 
 1. No portal do [!INCLUDE [Product short](includes/product-short.md)], selecione **Configuração**.
 
-1. Em **Detecção** , clique em **Marcas de entidade**.
+1. Em **Detecção**, clique em **Marcas de entidade**.
 
     ![Marcas de identidade do [!INCLUDE [Product short](includes/product-short.md)]](media/entity-tags.png)
 
-1. Na seção **Confidencial** , digite o nome das **Contas confidenciais** e **Grupos confidenciais** e, em seguida, clique no sinal **+** para adicioná-las.
+1. Na seção **Confidencial**, digite o nome das **Contas confidenciais** e **Grupos confidenciais** e, em seguida, clique no sinal **+** para adicioná-las.
 
     ![Exemplo de conta confidencial do [!INCLUDE [Product short](includes/product-short.md)]](media/sensitive-account-sample.png)
 

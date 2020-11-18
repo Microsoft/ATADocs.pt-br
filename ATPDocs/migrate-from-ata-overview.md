@@ -11,16 +11,14 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 032a5f289657485b744ad335dc51777a8ba72602
-ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
+ms.openlocfilehash: 368b328cb6863074bd47f0785aafccf7f491fa54
+ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93275043"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94847336"
 ---
 # <a name="advanced-threat-analytics-ata-to-product-long"></a>ATA (Advanced Threat Analytics) para [!INCLUDE [Product long](includes/product-long.md)]
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 > [!NOTE]
 > A versão final do ATA está [disponível para o público geral](https://support.microsoft.com/help/4568997/update-3-for-microsoft-advanced-threat-analytics-1-9). O ATA terminará o suporte base em 12 de janeiro de 2021. O suporte estendido continuará até janeiro de 2026. Para obter mais informações, leia [nosso blog](https://techcommunity.microsoft.com/t5/microsoft-security-and/end-of-mainstream-support-for-advanced-threat-analytics-january/ba-p/1539181).
@@ -45,7 +43,7 @@ Neste guia, você:
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
-- Um locatário Azure Active Directory com pelo menos um administrador global/de segurança é necessário para criar uma [!INCLUDE [Product short](includes/product-short.md)] instância. Cada [!INCLUDE [Product short](includes/product-short.md)] instância dá suporte a vários Active Directory limites de floresta e FFL (nível funcional de floresta) do Windows 2003 e superior.
+- Um locatário Azure Active Directory com pelo menos um administrador global/de segurança é necessário para criar uma [!INCLUDE [Product short](includes/product-short.md)] instância. Cada instância do [!INCLUDE [Product short](includes/product-short.md)] dá suporte a vários limites de floresta do Active Directory e ao FFL (Nível funcional da floresta) do Windows 2003 e superior.
 
 - [!INCLUDE [Product short](includes/product-short.md)] requer o .NET Framework 4,7 ou posterior e pode exigir um controlador de domínio (reiniciar) se a versão atual do .NET Framework não for 4,7 ou posterior.
 
@@ -147,4 +145,4 @@ Saiba mais sobre [[!INCLUDE [Product short](includes/product-short.md)]](what-is
 
 ## <a name="join-the-community"></a>Participe da comunidade
 
-Você tem mais perguntas ou um interesse em discutir [!INCLUDE [Product short](includes/product-short.md)] e segurança relacionada com outras pessoas? Junte-se à [ [!INCLUDE [Product short](includes/product-short.md)] comunidade](https://techcommunity.microsoft.com/t5/Azure-Advanced-Threat-Protection/bd-p/AzureAdvancedThreatProtection) hoje mesmo!
+Tem mais perguntas ou quer discutir sobre o [!INCLUDE [Product short](includes/product-short.md)] e a segurança relacionada com outras pessoas? Participe da Comunidade [[!INCLUDE [Product short](includes/product-short.md)]](https://techcommunity.microsoft.com/t5/Azure-Advanced-Threat-Protection/bd-p/AzureAdvancedThreatProtection) hoje mesmo!

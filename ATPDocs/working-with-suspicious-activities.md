@@ -12,16 +12,14 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: a06004bd-9f77-4e8e-a0e5-4727d6651a0f
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 7e47b15249f024345eb72fa434447506389f7be4
-ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
+ms.openlocfilehash: 93b421bd06a40a3bd79ecdf22b613bbafb157abc
+ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93277960"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94847693"
 ---
 # <a name="working-with-security-alerts"></a>Trabalhando com alertas de segurança
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 > [!NOTE]
 > Os recursos do [!INCLUDE [Product long](includes/product-long.md)] explicados nesta página também podem ser acessados usando o novo [portal](https://portal.cloudappsecurity.com).
@@ -75,7 +73,7 @@ Por padrão, as detecções de versão prévia são habilitadas no [!INCLUDE [Pr
 Para desabilitar as detecções de versão prévia:
 
 1. No console do [!INCLUDE [Product short](includes/product-short.md)], selecione **Configuração**.
-1. No menu à esquerda, em **Versão prévia** , clique em **Detecções**.
+1. No menu à esquerda, em **Versão prévia**, clique em **Detecções**.
 1. Use o controle deslizante para habilitar e desabilitar às detecções de versão prévia.
 
 ![detecções de versão prévia](media/preview-detections.png)
@@ -84,9 +82,9 @@ Para desabilitar as detecções de versão prévia:
 
 Para filtrar lista de alertas de segurança:
 
-1. No painel **Filtrar por** no lado esquerdo da tela, selecione uma das seguintes opções: **Tudo** , **Aberto** , **Fechado** ou **Suprimido**.
+1. No painel **Filtrar por** no lado esquerdo da tela, selecione uma das seguintes opções: **Tudo**, **Aberto**, **Fechado** ou **Suprimido**.
 
-1. Para filtrar a lista ainda mais, selecione **Alta** , **Média** ou **Baixa**.
+1. Para filtrar a lista ainda mais, selecione **Alta**, **Média** ou **Baixa**.
 
 **Gravidade da atividade suspeita**
 
@@ -104,22 +102,22 @@ Para filtrar lista de alertas de segurança:
 
 ## <a name="managing-security-alerts"></a>Gerenciando alertas de segurança
 
-É possível alterar o status de um alerta de segurança clicando em seu status atual e selecionando uma das seguintes opções **Aberto** , **Suprimido** , **Fechado** ou **Excluído**.
+É possível alterar o status de um alerta de segurança clicando em seu status atual e selecionando uma das seguintes opções **Aberto**, **Suprimido**, **Fechado** ou **Excluído**.
 Para fazer isso, clique nos três pontos no canto superior direito de um alerta específico para revelar a lista de ações disponíveis.
 
 ![Ações do [!INCLUDE [Product short](includes/product-short.md)] para alertas de segurança](media/sa-actions.png)
 
 **Status do alerta de segurança**
 
-- **Abrir** : Todos os novos alertas de segurança são exibidos nessa lista.
+- **Abrir**: Todos os novos alertas de segurança são exibidos nessa lista.
 
-- **Fechar** : É usado para rastrear alertas de segurança que você identificou, pesquisou e corrigiu como mitigado.
+- **Fechar**: É usado para rastrear alertas de segurança que você identificou, pesquisou e corrigiu como mitigado.
 
-- **Suprimir** : Suprimir um alerta significa que você deseja ignorá-la por enquanto e apenas ser alertado novamente se houver uma nova instância. Isso significa que, se houver um alerta semelhante, o [!INCLUDE [Product short](includes/product-short.md)] não reabrirá. Porém, se o alerta parar por sete dias e então for observado novamente, um novo alerta será aberto.
+- **Suprimir**: Suprimir um alerta significa que você deseja ignorá-la por enquanto e apenas ser alertado novamente se houver uma nova instância. Isso significa que, se houver um alerta semelhante, o [!INCLUDE [Product short](includes/product-short.md)] não reabrirá. Porém, se o alerta parar por sete dias e então for observado novamente, um novo alerta será aberto.
 
-- **Excluir** : Se você excluir um alerta, ele será excluído do sistema, do banco de dados e você NÃO poderá restaurá-lo. Após clicar em Excluir, será possível excluir todos os alertas de segurança do mesmo tipo.
+- **Excluir**: Se você excluir um alerta, ele será excluído do sistema, do banco de dados e você NÃO poderá restaurá-lo. Após clicar em Excluir, será possível excluir todos os alertas de segurança do mesmo tipo.
 
-- **Excluir** : A capacidade de excluir uma entidade de gerar mais de um determinado tipo de alertas. Por exemplo, você pode configurar o [!INCLUDE [Product short](includes/product-short.md)] para impedir que uma entidade (usuário ou computador) específica emita novamente um alerta para determinado tipo de atividade, como um administrador específico que executa código remoto ou um verificador de segurança que faz o reconhecimento de DNS. Além de ser capaz de adicionar exclusões diretamente no alerta de segurança conforme ele é detectado na linha do tempo, também é possível acessar a página Configuração até **Exclusões** e para cada alerta de segurança, é possível adicionar e remover manualmente entidades ou sub-redes excluídas (por exemplo, para Pass-the-Ticket).
+- **Excluir**: A capacidade de excluir uma entidade de gerar mais de um determinado tipo de alertas. Por exemplo, você pode configurar o [!INCLUDE [Product short](includes/product-short.md)] para impedir que uma entidade (usuário ou computador) específica emita novamente um alerta para determinado tipo de atividade, como um administrador específico que executa código remoto ou um verificador de segurança que faz o reconhecimento de DNS. Além de ser capaz de adicionar exclusões diretamente no alerta de segurança conforme ele é detectado na linha do tempo, também é possível acessar a página Configuração até **Exclusões** e para cada alerta de segurança, é possível adicionar e remover manualmente entidades ou sub-redes excluídas (por exemplo, para Pass-the-Ticket).
 
 > [!NOTE]
 > As páginas de configuração podem ser modificadas apenas por administradores do [!INCLUDE [Product short](includes/product-short.md)].

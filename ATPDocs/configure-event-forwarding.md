@@ -11,16 +11,14 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 6addbfe12b8c7bf56274cea0e185e2b45d2149aa
-ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
+ms.openlocfilehash: 8f30530929793bb338c7202eeedebc47b883e6c0
+ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93277362"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94848679"
 ---
 # <a name="configuring-windows-event-forwarding"></a>Configuração do encaminhamento de eventos do Windows
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 > [!NOTE]
 > O sensor do [!INCLUDE [Product long](includes/product-long.md)] lê os eventos de forma automática localmente, sem a necessidade de configurar o encaminhamento de eventos.
@@ -42,9 +40,9 @@ Neste cenário, suponha que o sensor autônomo do [!INCLUDE [Product short](incl
 
 1. Abra os Usuários e Computadores do Active Directory, navegue até a pasta **BuiltIn** e clique duas vezes em **Leitores de Log de Eventos**.
 1. Selecione **Membros**.
-1. Se **Serviço de Rede** não estiver listado, clique em **Adicionar** , digite **Serviço de Rede** no campo **Digite os nomes de objeto a serem selecionados** . Depois, clique em **Verificar Nomes** e clique em **OK** duas vezes.
+1. Se **Serviço de Rede** não estiver listado, clique em **Adicionar**, digite **Serviço de Rede** no campo **Digite os nomes de objeto a serem selecionados** . Depois, clique em **Verificar Nomes** e clique em **OK** duas vezes.
 
-Após adicionar o **Serviço de Rede** ao grupo **Leitores de Log de Eventos** , reinicie os controladores de domínio para que a alteração tenha efeito.
+Após adicionar o **Serviço de Rede** ao grupo **Leitores de Log de Eventos**, reinicie os controladores de domínio para que a alteração tenha efeito.
 
 **Etapa 2: criar uma política nos controladores de domínio para definir a configuração Configurar Gerenciador de Assinaturas de destino.**
 
@@ -60,8 +58,8 @@ Após adicionar o **Serviço de Rede** ao grupo **Leitores de Log de Eventos** ,
 1. Clique duas vezes em **Configurar Gerenciador de assinatura de destino**.
 
     1. Selecione **Habilitado**.
-    1. Em **Opções** , clique em **Mostrar**.
-    1. Em **SubscriptionManagers** , insira o seguinte valor e clique em **OK** :  `Server=http\://\<fqdnMicrosoftDefenderForIdentitySensor>:5985/wsman/SubscriptionManager/WEC,Refresh=10` (Por exemplo: `Server=http\://atpsensor9.contoso.com:5985/wsman/SubscriptionManager/WEC,Refresh=10`)
+    1. Em **Opções**, clique em **Mostrar**.
+    1. Em **SubscriptionManagers**, insira o seguinte valor e clique em **OK**:  `Server=http\://\<fqdnMicrosoftDefenderForIdentitySensor>:5985/wsman/SubscriptionManager/WEC,Refresh=10` (Por exemplo: `Server=http\://atpsensor9.contoso.com:5985/wsman/SubscriptionManager/WEC,Refresh=10`)
 
     ![Configurar a imagem de assinatura de destino](media/wef-2-config-target-sub-manager.png)
 
@@ -83,7 +81,7 @@ Após adicionar o **Serviço de Rede** ao grupo **Leitores de Log de Eventos** ,
         ![Imagem do Visualizador de Eventos](media/wef-3-event-viewer.png)
     1. Clique em **Selecionar Eventos**.
         1. Clique em **Pelo log** e selecione **Segurança**.
-        1. No campo **Inclui/Exclui ID do Evento** , digite o número do evento e clique em **OK**. Por exemplo, digite 4776, como no exemplo a seguir:<br/>
+        1. No campo **Inclui/Exclui ID do Evento**, digite o número do evento e clique em **OK**. Por exemplo, digite 4776, como no exemplo a seguir:<br/>
         ![Imagem do filtro de consulta](media/wef-4-query-filter.png)
     1. Clique com o botão direito do mouse na assinatura criada e selecione **Status de Runtime** para verificar se há problemas com o status.
     1. Depois de alguns minutos, verifique se os eventos definidos para encaminhamento aparecem nos Eventos Encaminhados no sensor autônomo do [!INCLUDE [Product short](includes/product-short.md)].

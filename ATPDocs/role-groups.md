@@ -11,16 +11,14 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 269343e6cdc5ceba875d5b6de1c740415a862eca
-ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
+ms.openlocfilehash: 9a3927c565f3b2e7173519c31cb3bfcde9eed2a7
+ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93275302"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94848985"
 ---
 # <a name="product-long-role-groups"></a>[!INCLUDE [Product long](includes/product-long.md)] grupos de funções
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 [!INCLUDE [Product long](includes/product-long.md)] oferece segurança baseada em função para proteger dados de acordo com as necessidades específicas de segurança e conformidade de uma organização. [!INCLUDE [Product short](includes/product-short.md)] suporte a três funções separadas: administradores, usuários e visualizadores.
 
@@ -48,7 +46,7 @@ O acesso ao [!INCLUDE [Product short](includes/product-short.md)] Portal (Portal
 |Alterar o status de Alertas de Segurança (abrir novamente, fechar, excluir, suprimir)|Disponível|Disponível|Não disponível|
 |Excluir instância|Disponível|Não disponível|Não disponível|
 |Baixar um relatório|Disponível|Disponível|Disponível|
-|Fazer logon|Disponível|Disponível|Disponível|
+|Logon|Disponível|Disponível|Disponível|
 |Compartilhar/Exportar alertas de segurança (por email, obter o link, baixar detalhes)|Disponível|Disponível|Disponível|
 |Atualizar [!INCLUDE [Product short](includes/product-short.md)] configuração-atualizações|Disponível|Não disponível|Não disponível|
 |Atualizar [!INCLUDE [Product short](includes/product-short.md)] configuração – marcas de entidade (sensitive e honeytoken)|Disponível|Disponível|Não disponível|
@@ -69,7 +67,7 @@ Quando os usuários tentam acessar uma página que não está disponível para s
 
 ## <a name="see-also"></a>Consulte Também
 
-- [[!INCLUDE [Product short](includes/product-short.md)] ferramenta de dimensionamento](https://aka.ms/aatpsizingtool)
-- [[!INCLUDE [Product short](includes/product-short.md)] arquitectura](architecture.md)
-- [Pré-instalação [!INCLUDE [Product short](includes/product-short.md)]](install-step1.md)
-- [Confira o [!INCLUDE [Product short](includes/product-short.md)] Fórum!](https://aka.ms/MDIcommunity)
+- [Ferramenta de dimensionamento do [!INCLUDE [Product short](includes/product-short.md)]](https://aka.ms/aatpsizingtool)
+- [Arquitetura do [!INCLUDE [Product short](includes/product-short.md)]](architecture.md)
+- [Instalar o [!INCLUDE [Product short](includes/product-short.md)]](install-step1.md)
+- [Confira o fórum do [!INCLUDE [Product short](includes/product-short.md)]!](https://aka.ms/MDIcommunity)

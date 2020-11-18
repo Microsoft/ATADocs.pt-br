@@ -11,16 +11,14 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: ffa62906d0c4f8a40c1beb388e497ed12ee41733
-ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
+ms.openlocfilehash: f3cf20aed80167b581a78fea5306916578bbd4c6
+ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93276630"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94848322"
 ---
 # <a name="security-assessment-unmonitored-domain-controllers"></a>Avaliação de segurança: Controladores de domínio não monitorados
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 ## <a name="what-are-unmonitored-domain-controllers"></a>O que são os controladores de domínio não monitorados?
 
@@ -44,4 +42,4 @@ Para operar com eficiência máxima, todos os controladores de domínio devem se
 ## <a name="see-also"></a>Consulte Também
 
 - [Monitorando a cobertura do controlador de domínio](sensor-monitoring.md)
-- [Confira o [!INCLUDE [Product short](includes/product-short.md)] Fórum!](https://aka.ms/MDIcommunity)
+- [Confira o fórum do [!INCLUDE [Product short](includes/product-short.md)]!](https://aka.ms/MDIcommunity)

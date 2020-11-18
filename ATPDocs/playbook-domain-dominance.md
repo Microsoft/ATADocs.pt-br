@@ -11,16 +11,14 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 76b24811cab5453bb462ec7ebe2d5477e2b6c072
-ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
+ms.openlocfilehash: bf1a3207fe44bee729d1120f71e1038e11e3e853
+ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93274909"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94847302"
 ---
 # <a name="tutorial-domain-dominance-playbook"></a>Tutorial: Guia estratégico de predominância de domínio
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 O último tutorial desta série de quatro partes para alertas de segurança do [!INCLUDE [Product long](includes/product-long.md)] é um guia estratégico de predominância de domínio. A finalidade do laboratório de alerta de segurança do [!INCLUDE [Product short](includes/product-short.md)] é ilustrar os recursos do **[!INCLUDE [Product short](includes/product-short.md)]** para identificação e detecção de possíveis ataques contra sua rede. O laboratório explica como testar algumas detecções *discretas* do [!INCLUDE [Product short](includes/product-short.md)] usando recursos baseados em *assinatura* do [!INCLUDE [Product short](includes/product-short.md)]. Os tutoriais não incluem detecções comportamentais nem alertas avançados com base em aprendizado de máquina, usuário ou entidade do [!INCLUDE [Product short](includes/product-short.md)]. Esses tipos de detecções e alertas não estão incluídos no teste, pois exigem um período de aprendizado, além de tráfego de rede real, por até 30 dias. Para saber mais sobre cada tutorial dessa série, confira a [Visão geral do laboratório de alerta de segurança do [!INCLUDE [Product short](includes/product-short.md)]](playbook-lab-overview.md).
 
@@ -57,7 +55,7 @@ Execução remota de código é exatamente o que parece. Os invasores estabelece
 
 Usando WMI na linha de comando, tente criar um processo localmente no controlador de domínio para criar um usuário chamado "InsertedUser", com a senha: pa$$w0rd1.
 
-1. Abra a Linha de comando, em execução no contexto de *YasminC* no **VictimPC** , e execute o seguinte comando:
+1. Abra a Linha de comando, em execução no contexto de *YasminC* no **VictimPC**, e execute o seguinte comando:
 
    ```dos
    wmic /node:ContosoDC process call create "net user /add InsertedUser pa$$w0rd1"
@@ -101,7 +99,7 @@ Acesse a página **Administrador** no portal do [!INCLUDE [Product short](includ
 
 A DPAPI (Interface de Programação de Aplicativo de Proteção de Dados) é usada pelo Windows para proteger senhas salvas por navegadores, arquivos criptografados e outros dados confidencias. Os controladores de domínio têm uma chave mestra que descriptografar *todos* os segredos em computadores com Windows ingressados no domínio.
 
-Usando **mimikatz** , tentaremos exportar a chave mestra do controlador de domínio.
+Usando **mimikatz**, tentaremos exportar a chave mestra do controlador de domínio.
 
 1. Execute o seguinte comando no controlador de domínio:
 
@@ -129,7 +127,7 @@ Os dois conjuntos de ferramentas de invasão comuns que permitem aos invasores t
 
 #### <a name="mimikatz-lsadumpdcsync"></a>Mimikatz lsadump::dcsync
 
-No **VictimPC** , no contexto de **YasmiC** , execute o seguinte comando de Mimikatz:
+No **VictimPC**, no contexto de **YasmiC**, execute o seguinte comando de Mimikatz:
 
 ```dos
 mimikatz.exe "lsadump::dcsync /domain:contoso.azure /user:krbtgt" "exit" >> c:\temp\ContosoDC_krbtgt-export.txt
@@ -151,7 +149,7 @@ Outro método de predominância de domínio usado pelos invasores é conhecido c
 
 Vamos usar uma Skeleton Key para ver como funciona esse tipo de ataque:
 
-1. Mova **mimikatz** para **ContosoDC** usando as credenciais de **YasmiC** que adquirimos antes. Efetue o push da arquitetura correta de **mimikatz.exe** com base no tipo de arquitetura do controlador de domínio (64 bits versus 32 bits). Na pasta do **mimikatz** , execute:
+1. Mova **mimikatz** para **ContosoDC** usando as credenciais de **YasmiC** que adquirimos antes. Efetue o push da arquitetura correta de **mimikatz.exe** com base no tipo de arquitetura do controlador de domínio (64 bits versus 32 bits). Na pasta do **mimikatz**, execute:
 
    ```dos
    xcopy mimikatz.exe \\ContosoDC\c$\temp
@@ -169,7 +167,7 @@ Vamos usar uma Skeleton Key para ver como funciona esse tipo de ataque:
 
 ### <a name="exploiting-the-skeleton-key-patched-lsass"></a>Explorar o LSASS corrigido pela Skeleton Key
 
-No **VictimPC** , abra um prompt de comando (no contexto do **DiogoM** ), execute o seguinte para tentar se tornar o contexto do EduardoHD.
+No **VictimPC**, abra um prompt de comando (no contexto do **DiogoM**), execute o seguinte para tentar se tornar o contexto do EduardoHD.
 
 ```dos
 runas /user:ronhd@contoso.azure "notepad"
@@ -185,7 +183,7 @@ Mas a Skeleton Key adiciona outra uma senha a cada conta. Execute novamente o co
 runas /user:ronhd@contoso.azure "notepad"
 ```
 
-Esse comando cria um novo processo, *bloco de notas* , em execução no contexto do EduardoHD. **Skeleton Key pode ocorrer em _qualquer_ conta, incluindo contas de serviço e contas de computador.**
+Esse comando cria um novo processo, *bloco de notas*, em execução no contexto do EduardoHD. **Skeleton Key pode ocorrer em _qualquer_ conta, incluindo contas de serviço e contas de computador.**
 
 > [!Important]
 > É importante que você reinicie o ContosoDC depois de executar o ataque de Skeleton Key. Ao fazer isso, o processo LSASS.exe no ContosoDC será corrigido e modificado, fazendo o downgrade de cada solicitação de autenticação para RC4.
@@ -200,7 +198,7 @@ O [!INCLUDE [Product short](includes/product-short.md)] detectou o método de cr
 
 ### <a name="golden-ticket---existing-user"></a>Golden Ticket - Usuário existente
 
-Depois de roubar o "Golden Ticket", (conta "krbtgt" explicada [aqui por meio da Replicação mal-intencionada](#malicious-replication)), um invasor é capaz de assinar tíquetes *como se fosse o controlador de domínio*. **Mimikatz** , o SID do Domínio e a conta "krbtgt" roubada são necessários para realizar esse ataque. Além de podermos gerar tíquetes para um usuário, podemos gerar tíquetes para usuários que nem existem.
+Depois de roubar o "Golden Ticket", (conta "krbtgt" explicada [aqui por meio da Replicação mal-intencionada](#malicious-replication)), um invasor é capaz de assinar tíquetes *como se fosse o controlador de domínio*. **Mimikatz**, o SID do Domínio e a conta "krbtgt" roubada são necessários para realizar esse ataque. Além de podermos gerar tíquetes para um usuário, podemos gerar tíquetes para usuários que nem existem.
 
 1. Como DiogoM, execute o comando abaixo no **VictimPC** para adquirir o SID do domínio:
 
@@ -212,7 +210,7 @@ Depois de roubar o "Golden Ticket", (conta "krbtgt" explicada [aqui por meio da 
 
 1. Identifique e copie o SID do Domínio realçado na captura de tela acima.
 
-1. Com **mimikatz** , use o SID de Domínio copiado, junto com o hash NTLM do usuário do "krbtgt" roubado para gerar o TGT. Insira o texto a seguir em um cmd.exe como DiogoM:
+1. Com **mimikatz**, use o SID de Domínio copiado, junto com o hash NTLM do usuário do "krbtgt" roubado para gerar o TGT. Insira o texto a seguir em um cmd.exe como DiogoM:
 
    ```dos
    mimikatz.exe "privilege::debug" "kerberos::golden /domain:contoso.azure /sid:S-1-5-21-2839646386-741382897-445212193 /krbtgt:c96537e5dca507ee7cfdede66d33103e /user:SamiraA /ticket:c:\temp\GTSamiraA_2018-11-28.kirbi /ptt" "exit"

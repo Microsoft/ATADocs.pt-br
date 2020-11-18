@@ -11,16 +11,14 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 55487b6638fc8278ae94b3444f74f2abe2b2dc56
-ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
+ms.openlocfilehash: 833b836c28455a231fa4a30afe2e604ce7646a16
+ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93275246"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94848968"
 ---
 # <a name="integrate-with-syslog"></a>Integrar com o Syslog
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 > [!NOTE]
 > Os recursos do [!INCLUDE [Product long](includes/product-long.md)] explicados nesta página também podem ser acessados usando o novo [portal](https://portal.cloudappsecurity.com).
@@ -45,8 +43,8 @@ Após habilitar as notificações do Syslog, você poderá definir o seguinte:
 
 1. Abra o portal do [!INCLUDE [Product short](includes/product-short.md)].
 1. Clique em **Configurações**.
-1. No submenu **Notificações e Relatórios** , selecione **Notificações**.
-1. Na opção **Serviço Syslog** , clique em **Configurar**.
+1. No submenu **Notificações e Relatórios**, selecione **Notificações**.
+1. Na opção **Serviço Syslog**, clique em **Configurar**.
 1. Selecione o **Sensor**.
 1. Insira a URL do **Ponto de extremidade de serviço**.
 1. Selecione o protocolo de **Transporte** (TCP ou UDP).
@@ -56,11 +54,11 @@ Após habilitar as notificações do Syslog, você poderá definir o seguinte:
 
 Para revisar ou modificar suas configurações do Syslog.
 
-1. Clique em **Notificações** e, em **Notificações do Syslog** , clique em **Configurar** e insira as seguintes informações:
+1. Clique em **Notificações** e, em **Notificações do Syslog**, clique em **Configurar** e insira as seguintes informações:
 
     ![Imagem de configurações do servidor Syslog [!INCLUDE [Product short](includes/product-short.md)]](media/syslog.png)
 
-1. Você pode selecionar quais eventos enviar ao servidor do Syslog. Em **Notificações do Syslog** , especifique quais notificações devem ser enviadas ao servidor do Syslog: novos alertas de segurança, alertas de segurança atualizados e novos problemas de integridade.
+1. Você pode selecionar quais eventos enviar ao servidor do Syslog. Em **Notificações do Syslog**, especifique quais notificações devem ser enviadas ao servidor do Syslog: novos alertas de segurança, alertas de segurança atualizados e novos problemas de integridade.
 
 > [!NOTE]
 > Caso planeje criar automação ou scripts para logs de SIEM do [!INCLUDE [Product short](includes/product-short.md)], recomendamos usar o campo **externalId** a fim de identificar o tipo de alerta em vez de usar o nome do alerta para essa finalidade. Nomes de alertas, ocasionalmente, podem ser modificados, enquanto o **externalId** de cada alerta é permanente. Para saber mais, confira [Referência de log de SIEM do [!INCLUDE [Product short](includes/product-short.md)]](cef-format-sa.md).

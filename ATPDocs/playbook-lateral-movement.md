@@ -10,16 +10,14 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 8830feaf5d849d4ed38ea1bcc01002d04f6d2380
-ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
+ms.openlocfilehash: f51c707c2ac01fbbd16258efab8c0ac74d3076b0
+ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93274824"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94849087"
 ---
 # <a name="tutorial-lateral-movement-playbook"></a>Tutorial: Guia estratégico de movimentação lateral
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 O guia estratégico de movimentação lateral é a terceira parte da série de quatro tutoriais para alertas de segurança do [!INCLUDE [Product long](includes/product-long.md)]. A finalidade do laboratório de alerta de segurança do [!INCLUDE [Product short](includes/product-short.md)] é ilustrar os recursos do **[!INCLUDE [Product short](includes/product-short.md)]** para identificação e detecção de atividades suspeitas e possíveis ataques contra sua rede. O guia estratégico explica como testar algumas das detecções *discretas* do [!INCLUDE [Product short](includes/product-short.md)]. Ele se concentra nos recursos baseados em *assinatura* do [!INCLUDE [Product short](includes/product-short.md)] e não inclui detecções comportamentais avançadas com base em aprendizado de máquina, usuário ou entidade (isso exige um período de aprendizado com o tráfego de rede real de até 30 dias). Para saber mais sobre cada tutorial dessa série, confira a [Visão geral do laboratório de alerta de segurança do [!INCLUDE [Product short](includes/product-short.md)]](playbook-lab-overview.md).
 
@@ -47,7 +45,7 @@ Conseguimos, com nossos ataques simulados no tutorial anterior, Guia estratégic
 
 ## <a name="dump-credentials-in-memory-from-victimpc"></a>Despejo de credenciais na memória de VictimPC
 
-Durante nossas simulações de ataques de reconhecimento, **VictimPC** não foi exposta somente às credenciais de DiogoM. Há outras contas úteis para descobrir nesse computador. Para conseguir uma movimentação lateral usando **VictimPC** , tentaremos enumerar as credenciais na memória no recurso compartilhado. Despejar credenciais na memória usando **mimikatz** é um método de ataque popular que usa uma ferramenta comum.
+Durante nossas simulações de ataques de reconhecimento, **VictimPC** não foi exposta somente às credenciais de DiogoM. Há outras contas úteis para descobrir nesse computador. Para conseguir uma movimentação lateral usando **VictimPC**, tentaremos enumerar as credenciais na memória no recurso compartilhado. Despejar credenciais na memória usando **mimikatz** é um método de ataque popular que usa uma ferramenta comum.
 
 ### <a name="mimikatz-sekurlsalogonpasswords"></a>Mimikatz sekurlsa::logonpasswords
 
@@ -72,7 +70,7 @@ Durante nossas simulações de ataques de reconhecimento, **VictimPC** não foi 
 
 Talvez um invasor não saiba inicialmente quem é EduardoHD ou seu valor como destino. Tudo o que ele sabe é que pode usar a credencial, se isso for vantajoso. No entanto, usando o comando **net** nós, agindo como invasor, podemos descobrir de quais grupos EduardoHD é membro.
 
-No **VictimPC** , execute o seguinte comando:
+No **VictimPC**, execute o seguinte comando:
 
 ```dos
 net user ronhd /domain
@@ -84,9 +82,9 @@ Nos resultados, aprendemos que EduardoHD é membro do Grupo de Segurança "Helpd
 
 ### <a name="mimikatz-sekurlsapth"></a>Mimikatz sekurlsa::pth
 
-Usando uma técnica comum chamada **Overpass-the-Hash** , o hash NTLM coletado é usado para obter um TGT (tíquete de concessão de tíquete). Um invasor com o TGT de um usuário pode se disfarçar de usuário comprometido, como EduardoHD. Ao se disfarçar de EduardoHD, podemos acessar qualquer recurso do domínio ao qual o usuário comprometido tem acesso, ou ao qual seus respectivos Grupos de Segurança têm acesso.
+Usando uma técnica comum chamada **Overpass-the-Hash**, o hash NTLM coletado é usado para obter um TGT (tíquete de concessão de tíquete). Um invasor com o TGT de um usuário pode se disfarçar de usuário comprometido, como EduardoHD. Ao se disfarçar de EduardoHD, podemos acessar qualquer recurso do domínio ao qual o usuário comprometido tem acesso, ou ao qual seus respectivos Grupos de Segurança têm acesso.
 
-1. Em **VictimPC** , altere o diretório para a pasta que contém **Mimikatz.exe**. no sistema de arquivos e execute o seguinte comando:
+1. Em **VictimPC**, altere o diretório para a pasta que contém **Mimikatz.exe**. no sistema de arquivos e execute o seguinte comando:
 
     ```dos
     mimikatz.exe "privilege::debug" "sekurlsa::pth /user:ronhd /ntlm:96def1a633fc6790124d5f8fe21cc72b /domain:contoso.azure" "exit"
@@ -124,7 +122,7 @@ Usaremos o **PowerSploit** ```Get-NetLocalGroup``` para ajudar a responder a iss
 
     Este computador tem dois Administradores Locais, o Administrador interno "ContosoAdmin" e "Helpdesk". Sabemos que EduardoHD é membro do Grupo de Segurança "Helpdesk". Também ficamos sabendo do nome do computador, AdminPC. Já que temos as credenciais do EduardoHD, podemos usá-las para nos movimentarmos lateralmente até AdminPC e obter acesso a esse computador.
 
-1. Do *mesmo prompt de comando, que está em execução no contexto do EduardoHD* , digite **exit** para sair do PowerShell, se for necessário. Em seguida, execute o seguinte comando:
+1. Do *mesmo prompt de comando, que está em execução no contexto do EduardoHD*, digite **exit** para sair do PowerShell, se for necessário. Em seguida, execute o seguinte comando:
 
     ```dos
     dir \\adminpc\c$
@@ -164,7 +162,7 @@ Aqui, iremos:
 
 ### <a name="pass-the-ticket"></a>Pass-the-Ticket
 
-No prompt de comando em execução no contexto de *EduardoHD* no **VictimPC** , vá até onde estão nossas ferramentas comuns de ataque. Em seguida, execute *xcopy* para mover essas ferramentas para o AdminPC:
+No prompt de comando em execução no contexto de *EduardoHD* no **VictimPC**, vá até onde estão nossas ferramentas comuns de ataque. Em seguida, execute *xcopy* para mover essas ferramentas para o AdminPC:
 
 ```dos
 xcopy mimikatz.exe \\adminpc\c$\temp
@@ -203,7 +201,7 @@ Com Mimikatz preparado em AdminPC, usaremos PsExec para executá-lo remotamente.
     > [!Note]
     > Os invasores mais sofisticados não tocarão no disco durante a execução do código aleatório em um computador após a obtenção de privilégios administrativos nele.
 
-    Em nosso **VictimPC** , temos esses tíquetes coletados em nossa pasta **c:\temp\adminpc_tickets** :
+    Em nosso **VictimPC**, temos esses tíquetes coletados em nossa pasta **c:\temp\adminpc_tickets**:
 
     ![C:\temp\tickets é a nossa saída exportada de mimikatz de AdminPC](media/playbook-escalation-export_tickets4.png)
 
@@ -211,7 +209,7 @@ Com Mimikatz preparado em AdminPC, usaremos PsExec para executá-lo remotamente.
 
 Com os tíquetes localmente no VictimPC, finalmente chegou a hora de se tornar YasminC "Passando o tíquete".
 
-1. No local de **Mimikatz** no sistema de arquivos **VictimPC** , abra um novo **prompt de comando com privilégios elevados** e execute o seguinte comando:
+1. No local de **Mimikatz** no sistema de arquivos **VictimPC**, abra um novo **prompt de comando com privilégios elevados** e execute o seguinte comando:
 
     ```dos
     mimikatz.exe "privilege::debug" "kerberos::ptt c:\temp\adminpc_tickets" "exit"
@@ -230,7 +228,7 @@ Com os tíquetes localmente no VictimPC, finalmente chegou a hora de se tornar Y
 1. Observe que esses tíquetes permanecem inutilizados. Atuando como invasor, "passamos o tíquete" com sucesso. Coletamos a credencial de YasmiC de AdminPC e, em seguida, as passamos para outro processo em execução no VictimPC.
 
     > [!Note]
-    > Como no Pass-the-Hash, o [!INCLUDE [Product short](includes/product-short.md)] não sabe que o tíquete foi passado com base na atividade do cliente local. No entanto, o [!INCLUDE [Product short](includes/product-short.md)] detecta a atividade *quando o tíquete é usado* , ou seja, utilizado para acessar outro recurso/serviço.
+    > Como no Pass-the-Hash, o [!INCLUDE [Product short](includes/product-short.md)] não sabe que o tíquete foi passado com base na atividade do cliente local. No entanto, o [!INCLUDE [Product short](includes/product-short.md)] detecta a atividade *quando o tíquete é usado*, ou seja, utilizado para acessar outro recurso/serviço.
 
 1. Conclua seu ataque simulado acessando o controlador de domínio em **VictimPC**. No prompt de comando, agora em execução com os tíquetes de YasmiC na memória, execute:
 

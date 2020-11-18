@@ -11,16 +11,14 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: ''
 ms.suite: ''
-ms.openlocfilehash: ea19abd7497d0d925e764a80666dc595862566f9
-ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
+ms.openlocfilehash: 27e048b337ecd25b534f0c10096999a7173292c1
+ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93274988"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94846622"
 ---
 # <a name="troubleshooting-product-long-sensor-using-the-product-short-logs"></a>Solucionando problemas [!INCLUDE [Product long](includes/product-long.md)] de sensor usando os [!INCLUDE [Product short](includes/product-short.md)] logs
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 Os [!INCLUDE [Product short](includes/product-short.md)] logs fornecem informações sobre o que cada componente do [!INCLUDE [Product long](includes/product-long.md)] sensor está fazendo em qualquer momento determinado.
 
@@ -54,8 +52,8 @@ Os [!INCLUDE [Product short](includes/product-short.md)] logs de implantação e
 
 ## <a name="see-also"></a>Consulte Também
 
-- [[!INCLUDE [Product short](includes/product-short.md)] pré-requisitos](prerequisites.md)
-- [[!INCLUDE [Product short](includes/product-short.md)] Planejamento de capacidade](capacity-planning.md)
+- [Pré-requisitos do [!INCLUDE [Product short](includes/product-short.md)]](prerequisites.md)
+- [Planejamento de capacidade do [!INCLUDE [Product short](includes/product-short.md)]](capacity-planning.md)
 - [Configurar coleta de eventos](configure-event-collection.md)
 - [Configuração do encaminhamento de eventos do Windows](configure-event-forwarding.md)
-- [Confira o [!INCLUDE [Product short](includes/product-short.md)] Fórum!](https://aka.ms/MDIcommunity)
+- [Confira o fórum do [!INCLUDE [Product short](includes/product-short.md)]!](https://aka.ms/MDIcommunity)

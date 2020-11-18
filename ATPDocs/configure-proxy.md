@@ -11,16 +11,14 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 9b3aa953324e855cfe4aafb77ea6b1b1959b7f8c
-ms.sourcegitcommit: 90a332d67f62636b2d3a935f6bbdcbf24d74e6f0
+ms.openlocfilehash: 6b2b620895d0a59886a140ff340b6772744c6bac
+ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2020
-ms.locfileid: "94551656"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94848645"
 ---
 # <a name="configure-endpoint-proxy-and-internet-connectivity-settings-for-your-product-long-sensor"></a>Configurar o proxy do ponto de extremidade e configurações de conectividade com a Internet para o sensor do [!INCLUDE [Product long](includes/product-long.md)]
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 Cada sensor do [!INCLUDE [Product long](includes/product-long.md)] precisa de conectividade com a Internet para que o serviço de nuvem do [!INCLUDE [Product short](includes/product-short.md)] relate dados de sensor e funcione com êxito. Em algumas organizações, os controladores de domínio não estão diretamente conectados à Internet, mas por meio de uma conexão de proxy Web.
 
@@ -94,7 +92,7 @@ Para habilitar o acesso ao [!INCLUDE [Product short](includes/product-short.md)]
 
 - `<your-instance-name>sensorapi.atp.azure.com` – para conectividade com os sensores. Por exemplo, `contoso-corpsensorapi.atp.azure.com`
 
-Também é possível usar os intervalos de endereço IP na marca de serviço do Azure ( **AzureAdvancedThreatProtection** ) para habilitar o acesso ao [!INCLUDE [Product short](includes/product-short.md)]. Para obter mais informações sobre marcas de serviço, confira [Marcas de serviço de rede virtual](/azure/virtual-network/service-tags-overview) ou [baixe o arquivo de marcas de serviço](https://www.microsoft.com/download/details.aspx?id=56519).
+Também é possível usar os intervalos de endereço IP na marca de serviço do Azure (**AzureAdvancedThreatProtection**) para habilitar o acesso ao [!INCLUDE [Product short](includes/product-short.md)]. Para obter mais informações sobre marcas de serviço, confira [Marcas de serviço de rede virtual](/azure/virtual-network/service-tags-overview) ou [baixe o arquivo de marcas de serviço](https://www.microsoft.com/download/details.aspx?id=56519).
 
 Como alternativa, se você precisar de um controle mais granular, considere permitir o tráfego para os pontos de extremidade relevantes da seguinte tabela:
 

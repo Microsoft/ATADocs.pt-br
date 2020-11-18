@@ -11,16 +11,14 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: d0c4bcc61c2b15ded71063f3b8c4058ce6dfcce7
-ms.sourcegitcommit: ac582a240e848ca12c80ac6104125a0f733b469e
+ms.openlocfilehash: fffb94b42e49280949dbdb67926841ebaea8ba2a
+ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93375549"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94848917"
 ---
 # <a name="troubleshooting-product-long-known-issues"></a>Solucionando [!INCLUDE [Product long](includes/product-long.md)] problemas conhecidos
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 ## <a name="sensor-failure-communication-error"></a>Erro de comunicação de falha no sensor
 
@@ -142,7 +140,7 @@ Após instalar o sensor:
 
 ## <a name="multi-processor-group-mode"></a>Modo Grupo de multiprocessadores
 
-Para os sistemas operacionais Windows 2008R2 e 2012, [!INCLUDE [Product short](includes/product-short.md)] o sensor não tem suporte em um modo de grupo de vários processadores.
+Nos sistemas operacionais Windows 2008 R2 e 2012, não há suporte para o sensor do [!INCLUDE [Product short](includes/product-short.md)] em um modo Grupo de multiprocessadores.
 
 Soluções alternativas possíveis sugeridas:
 
@@ -210,8 +208,8 @@ Não há solução conhecida.
 
 ## <a name="see-also"></a>Consulte Também
 
-- [[!INCLUDE [Product short](includes/product-short.md)] pré-requisitos](prerequisites.md)
-- [[!INCLUDE [Product short](includes/product-short.md)] Planejamento de capacidade](capacity-planning.md)
+- [Pré-requisitos do [!INCLUDE [Product short](includes/product-short.md)]](prerequisites.md)
+- [Planejamento de capacidade do [!INCLUDE [Product short](includes/product-short.md)]](capacity-planning.md)
 - [Configurar coleta de eventos](configure-event-collection.md)
 - [Configuração do encaminhamento de eventos do Windows](configure-event-forwarding.md)
-- [Confira o [!INCLUDE [Product short](includes/product-short.md)] Fórum!](https://aka.ms/MDIcommunity)
+- [Confira o fórum do [!INCLUDE [Product short](includes/product-short.md)]!](https://aka.ms/MDIcommunity)

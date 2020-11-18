@@ -10,16 +10,14 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 25f21451a61f3d41b5694e3b594769e4f8b1614b
-ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
+ms.openlocfilehash: 93b3b0ecf72ae1b7f8b1ebaf3756433afd297dde
+ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93275759"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94847183"
 ---
 # <a name="tutorial-reconnaissance-playbook"></a>Tutorial: Guia estratégico de reconhecimento
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 O segundo tutorial desta série de quatro partes sobre alertas de segurança do [!INCLUDE [Product long](includes/product-long.md)] aborda o guia estratégico de reconhecimento. A finalidade do laboratório de alertas de segurança do [!INCLUDE [Product short](includes/product-short.md)] é ilustrar os recursos do **[!INCLUDE [Product short](includes/product-short.md)]** para identificação e detecção de atividades suspeitas e possíveis ataques contra sua rede. O guia estratégico explica como testar algumas das detecções *discretas* do [!INCLUDE [Product short](includes/product-short.md)] e enfoca os recursos baseados em *assinatura* do [!INCLUDE [Product short](includes/product-short.md)]. Este guia estratégico não inclui alertas ou detecções baseados no aprendizado de máquina avançado ou detecções comportamentais baseadas no usuário/entidade, pois isso exige um período de aprendizado de até 30 dias com tráfego de rede real. Para saber mais sobre cada tutorial desta série, confira a [Visão geral do laboratório de alertas de segurança do [!INCLUDE [Product short](includes/product-short.md)]](playbook-lab-overview.md).
 
@@ -58,7 +56,7 @@ O [!INCLUDE [Product short](includes/product-short.md)] suprime a atividade de r
 
 ### <a name="run-nslookup-from-victimpc"></a>Executar nslookup no VictimPC
 
-Para testar o reconhecimento de DNS, usaremos a ferramenta de linha de comando nativa, *nslookup* , para iniciar uma transferência de zona de DNS. Os servidores DNS com a configuração correta recusarão consultas desse tipo e não permitirão a tentativa de transferência de zona.
+Para testar o reconhecimento de DNS, usaremos a ferramenta de linha de comando nativa, *nslookup*, para iniciar uma transferência de zona de DNS. Os servidores DNS com a configuração correta recusarão consultas desse tipo e não permitirão a tentativa de transferência de zona.
 
 Entre no **VictimPC** usando as credenciais comprometidas de DiogoM. Execute o seguinte comando:
 
@@ -66,7 +64,7 @@ Entre no **VictimPC** usando as credenciais comprometidas de DiogoM. Execute o s
 nslookup
 ```
 
-Digite **server** , depois o endereço IP ou FQDN do DC (controlador de domínio) no qual o sensor do [!INCLUDE [Product short](includes/product-short.md)] está instalado.
+Digite **server**, depois o endereço IP ou FQDN do DC (controlador de domínio) no qual o sensor do [!INCLUDE [Product short](includes/product-short.md)] está instalado.
 
 ```nslookup
 server contosodc.contoso.azure
@@ -88,7 +86,7 @@ Se **ContosoDC** for o primeiro sensor implantado, aguarde 15 minutos para permi
 
 Obter visibilidade desse tipo de tentativa (com êxito ou falha) é essencial para a proteção contra ameaças do domínio. Após a instalação recente do ambiente, você precisará ir para a linha do tempo **Atividades lógicas** para ver a atividade detectada.
 
-Na Pesquisa do [!INCLUDE [Product short](includes/product-short.md)], digite **VictimPC** , depois clique para exibir a linha do tempo.
+Na Pesquisa do [!INCLUDE [Product short](includes/product-short.md)], digite **VictimPC**, depois clique para exibir a linha do tempo.
 
 ![Reconhecimento de DNS detectado pelo [!INCLUDE [Product short](includes/product-short.md)], visão de alto nível](media/playbook-recon-nslookupdetection1.png)
 
@@ -112,7 +110,7 @@ Para demonstrar um método comum de reconhecimento do serviço de diretório, us
 
 Qualquer usuário ou computador autenticado pode enumerar outros usuários e grupos em um domínio. Essa capacidade de enumeração é necessária para que a maioria dos aplicativos funcionem corretamente. Nosso usuário comprometido, DiogoM, tem uma conta de domínio sem privilégios. Nesse ataque simulado, veremos exatamente como até mesmo uma conta de domínio sem privilégios ainda pode fornecer pontos de dados valiosos para um invasor.
 
-1. No **VictimPC** , execute o seguinte comando:
+1. No **VictimPC**, execute o seguinte comando:
 
     ```dos
     net user /domain
@@ -156,7 +154,7 @@ Com as informações coletadas em nosso reconhecimento, sabemos sobre o Grupo de
 
 ### <a name="directory-service-enumeration-detected-in-product-short"></a>Enumeração do Serviço de Diretório detectada no [!INCLUDE [Product short](includes/product-short.md)]
 
-Se nosso laboratório tivesse *atividade real por 30 dias com o [!INCLUDE [Product short](includes/product-short.md)] instalado* , a atividade que acabamos de realizar como DiogoM provavelmente seria classificada como anormal. As atividades anormais apareceriam na linha do tempo de Atividade Suspeita. No entanto, como acabamos de instalar o ambiente, precisaremos acessar a linha do tempo de Atividades Lógicas.
+Se nosso laboratório tivesse *atividade real por 30 dias com o [!INCLUDE [Product short](includes/product-short.md)] instalado*, a atividade que acabamos de realizar como DiogoM provavelmente seria classificada como anormal. As atividades anormais apareceriam na linha do tempo de Atividade Suspeita. No entanto, como acabamos de instalar o ambiente, precisaremos acessar a linha do tempo de Atividades Lógicas.
 
 Na Pesquisa do [!INCLUDE [Product short](includes/product-short.md)], vejamos a aparência da linha do tempo de Atividade Lógica de DiogoM:
 
@@ -168,7 +166,7 @@ Podemos ver quando DiogoM entrou no VictimPC usando o protocolo Kerberos. Além 
 
 Muitas atividades são registradas na linha do tempo de Atividade Lógica, tornando-a um recurso importante para execução de DFIR (Resposta a incidente e análises forenses digitais). Você pode ver até mesmo as atividades de detecção inicial não realizadas pelo [!INCLUDE [Product short](includes/product-short.md)], mas sim pelo Microsoft Defender para Ponto de Extremidade, pelo Microsoft 365, entre outros.
 
-Olhando a **página do ContosoDC** , também podemos ver os computadores nos quais DiogoM entrou.
+Olhando a **página do ContosoDC**, também podemos ver os computadores nos quais DiogoM entrou.
 
 ![Computadores nos quais DiogoM entrou](media/playbook-recon-dsenumeration-jeffvloggedin.png)
 

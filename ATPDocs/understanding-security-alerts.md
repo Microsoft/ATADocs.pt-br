@@ -11,16 +11,14 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: ba5adecd1812d95f043d520773b1006a6e75b5b9
-ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
+ms.openlocfilehash: 27df0fb3be637b2a3390df9378f68b2db9a10b8d
+ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93277807"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94848900"
 ---
 # <a name="understanding-security-alerts"></a>entendendo os alertas de segurança
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 Os alertas de segurança do [!INCLUDE [Product long](includes/product-long.md)] explicam em linguagem clara e com elementos gráficos quais atividades suspeitas foram identificadas em sua rede e os atores e computadores envolvidos nas ameaças. Os alertas são classificados por gravidade, codificados por cor para facilitar a filtragem visual e organizados por fase de ameaça. Cada alerta foi projetado para ajudar você a entender rapidamente exatamente o que está acontecendo em sua rede. As listas de evidências dos alertas contêm links diretos para os computadores e os usuários envolvidos para ajudar a tornar suas investigações fáceis e diretas.
 
@@ -124,7 +122,7 @@ Em cada alerta, a última guia fornece as **Entidades Relacionadas**. As entidad
 
 **JSON da entidade exclusiva**
 
-Inclui os dados que o [!INCLUDE [Product short](includes/product-short.md)] aprendeu com o Active Directory sobre a conta. Isso inclui todos os atributos como *Distinguished Name* , *SID* , *LockoutTime* e *PasswordExpiryTime*. Para contas de usuário, inclui dados como *Departamento* , *Email* e *PhoneNumber*. Para contas de computador, inclui dados como *OperatingSystem* , *IsDomainController* e *DnsName*.
+Inclui os dados que o [!INCLUDE [Product short](includes/product-short.md)] aprendeu com o Active Directory sobre a conta. Isso inclui todos os atributos como *Distinguished Name*, *SID*, *LockoutTime* e *PasswordExpiryTime*. Para contas de usuário, inclui dados como *Departamento*, *Email* e *PhoneNumber*. Para contas de computador, inclui dados como *OperatingSystem*, *IsDomainController* e *DnsName*.
 
 **JSON do perfil da entidade exclusiva**
 
@@ -150,7 +148,7 @@ Os dados de NNR são cruciais para detectar os seguintes alertas:
 - Suspeita de ataque de DCSync (replicação de serviços de diretório)
 - Reconhecimento de mapeamento de rede (DNS)
 
-Use as informações de NNR fornecidas na guia **Atividades de Rede** do relatório de download do alerta para determinar se um alerta é um **FP**. Em caso de alerta **FP** , é comum que o resultado de certeza de NNR seja fornecido com confiança baixa.
+Use as informações de NNR fornecidas na guia **Atividades de Rede** do relatório de download do alerta para determinar se um alerta é um **FP**. Em caso de alerta **FP**, é comum que o resultado de certeza de NNR seja fornecido com confiança baixa.
 
 Os dados do relatório de download aparecem em duas colunas:
 

@@ -11,16 +11,14 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: e87d71ead236d36e032a43c825980f98f7f15eb4
-ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
+ms.openlocfilehash: e0f7f1d21132aadba7fc6b3719baf3d290e8d2fb
+ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93277175"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94848594"
 ---
 # <a name="excluding-entities-from-detections"></a>Excluindo entidades de detecções
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 Este artigo explica como excluir entidades do disparo de alertas. Determinadas entidades são excluídas para minimizar verdadeiros positivos benignos, assegurando que você possa capturar os verdadeiros positivos. Para impedir que o [!INCLUDE [Product long](includes/product-long.md)] crie ruído sobre atividades que, vindas de usuários específicos, podem fazer parte de seu ritmo normal de negócios, você pode silenciar ou excluir entidades específicas da geração de alertas. Além disso, determinadas entidades populares são excluídas por padrão.
 
@@ -28,7 +26,7 @@ Por exemplo, se você tiver um verificador de segurança que realiza reconhecime
 
 ## <a name="entities-excluded-by-default-from-raising-alerts"></a>Entidades excluídas por padrão da geração de alertas
 
- Para determinados alertas, como **Comunicação suspeita sobre DNS** , exclusões automáticas de domínio são adicionadas pelo [!INCLUDE [Product short](includes/product-short.md)] com base em pesquisa e nos comentários dos clientes.
+ Para determinados alertas, como **Comunicação suspeita sobre DNS**, exclusões automáticas de domínio são adicionadas pelo [!INCLUDE [Product short](includes/product-short.md)] com base em pesquisa e nos comentários dos clientes.
 
 ![Comunicação suspeita em exclusões automáticas de DNS](media/dns-auto-exclusions.png)
 
@@ -36,18 +34,18 @@ Por exemplo, se você tiver um verificador de segurança que realiza reconhecime
 
 Há duas maneiras para você excluir entidades manualmente, seja diretamente do alerta de segurança ou da guia **Exclusões** na página **Configuração**.
 
-- **No alerta de segurança** : na linha do tempo de Atividade, quando você recebe um alerta em uma atividade para um usuário, computador ou endereço IP que **tem** permissão para executar uma atividade específica e pode fazer isso com frequência, faça o seguinte:
+- **No alerta de segurança**: na linha do tempo de Atividade, quando você recebe um alerta em uma atividade para um usuário, computador ou endereço IP que **tem** permissão para executar uma atividade específica e pode fazer isso com frequência, faça o seguinte:
   - Clique com o botão direito do mouse nos três pontos no final da linha para o alerta de segurança nessa entidade e selecione **Fechar e excluir**. Isso adiciona o usuário, computador ou endereço IP à lista de exclusões desse alerta de segurança. Ele fecha o alerta de segurança e o alerta não está mais listado na lista de eventos **Aberto** na **linha do tempo de Alerta**.
 
     ![Excluir entidades](media/exclude-in-sa.png)
 
-- **Na página Configuração** :  Para examinar ou modificar exclusões: em **Configurações** > **Detecção** , clique em **Exclusões** e selecione o alerta de segurança ao qual aplicar a exclusão, como **Reconhecimento de DNS**.
+- **Na página Configuração**:  Para examinar ou modificar exclusões: em **Configurações** > **Detecção**, clique em **Exclusões** e selecione o alerta de segurança ao qual aplicar a exclusão, como **Reconhecimento de DNS**.
 
     ![Configuração de exclusão](media/exclusions.png)
 
-Para adicionar uma entidade à configuração de **Exclusões** : insira o nome da entidade, clique no sinal de mais e, em seguida, clique em **Salvar** na parte inferior da página.
+Para adicionar uma entidade à configuração de **Exclusões**: insira o nome da entidade, clique no sinal de mais e, em seguida, clique em **Salvar** na parte inferior da página.
 
-Para remover de uma entidade da configuração **Exclusões** : clique no sinal de menos ao lado do nome da entidade e, em seguida, clique em **Salvar** na parte inferior da página.
+Para remover de uma entidade da configuração **Exclusões**: clique no sinal de menos ao lado do nome da entidade e, em seguida, clique em **Salvar** na parte inferior da página.
 
 É recomendável que você adicione exclusões para detecções somente depois de receber alertas desse tipo específico *e* determinar que eles são positivos benignos verdadeiros.
 

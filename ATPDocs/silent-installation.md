@@ -11,16 +11,14 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: edb9f414055a7d106913d1d394af44ef84ef4223
-ms.sourcegitcommit: 2b57f438c2902d5258aff8999b374c2f1808ceb4
+ms.openlocfilehash: d87aa443bad2731ee3e5ff226930980ac52c79d7
+ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94430678"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94846705"
 ---
 # <a name="product-long-switches-and-silent-installation"></a>[!INCLUDE [Product long](includes/product-long.md)] comutadores e instalação silenciosa
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 Este artigo fornece orientações e instruções para [!INCLUDE [Product long](includes/product-long.md)] comutadores e instalação silenciosa.
 
@@ -44,13 +42,13 @@ Para acompanhar o progresso da implantação, monitore os [!INCLUDE [Product sho
 
 Use o seguinte comando para executar uma instalação totalmente silenciosa do [!INCLUDE [Product short](includes/product-short.md)] sensor:
 
-**cmd.exe syntax** :
+**cmd.exe syntax**:
 
 ```dos
 "Azure ATP sensor Setup.exe" /quiet NetFrameworkCommandLineArguments="/q" AccessKey="<Access Key>"
 ```
 
-**Sintaxe do PowerShell** :
+**Sintaxe do PowerShell**:
 
 ```powershell
 .\"Azure ATP sensor Setup.exe" /quiet NetFrameworkCommandLineArguments="/q" AccessKey="<Access Key>"
@@ -62,7 +60,7 @@ Use o seguinte comando para executar uma instalação totalmente silenciosa do [
 > [!NOTE]
 > Copie a chave de acesso da [!INCLUDE [Product short](includes/product-short.md)] seção **configuração** do portal, página **sensores** .
 
-**Opções de instalação** :
+**Opções de instalação**:
 
 > [!div class="mx-tableFixed"]
 >
@@ -72,7 +70,7 @@ Use o seguinte comando para executar uma instalação totalmente silenciosa do [
 > |Ajuda|/help|Não|Fornece ajuda e referência rápida. Exibe o uso correto do comando de configuração, incluindo uma lista de todas as opções e comportamentos.|
 > |NetFrameworkCommandLineArguments="/q"|NetFrameworkCommandLineArguments="/q"|Sim|Especifica os parâmetros para a instalação do .Net Framework. Deve ser definido para impor a instalação silenciosa do .Net Framework.|
 
-**Parâmetros de instalação** :
+**Parâmetros de instalação**:
 
 > [!div class="mx-tableFixed"]
 >
@@ -81,7 +79,7 @@ Use o seguinte comando para executar uma instalação totalmente silenciosa do [
 > |InstallationPath|InstallationPath=“”|Não|Define o caminho para a instalação de [!INCLUDE [Product short](includes/product-short.md)] binários do sensor. Caminho padrão: %programfiles%\Sensor da Proteção Avançada contra Ameaças do Azure
 > |AccessKey|AccessKey="\*\*"|Sim|Define a chave de acesso usada para registrar o [!INCLUDE [Product short](includes/product-short.md)] sensor com a [!INCLUDE [Product short](includes/product-short.md)] instância.|
 
-**Exemplos** :
+**Exemplos**:
 
 Use o seguinte comando para instalar silenciosamente o [!INCLUDE [Product short](includes/product-short.md)] sensor:
 
@@ -93,7 +91,7 @@ Use o seguinte comando para instalar silenciosamente o [!INCLUDE [Product short]
 
 Use os seguintes comandos para concluir a autenticação de proxy:
 
-**Sintaxe** :
+**Sintaxe**:
 
 > [!div class="mx-tableFixed"]
 >
@@ -107,13 +105,13 @@ Use os seguintes comandos para concluir a autenticação de proxy:
 
 Use o seguinte comando para atualizar silenciosamente o [!INCLUDE [Product short](includes/product-short.md)] sensor:
 
-**Sintaxe** :
+**Sintaxe**:
 
 ```dos
 "Azure ATP sensor Setup.exe" [/quiet] [/Help] [NetFrameworkCommandLineArguments="/q"]
 ```
 
-**Opções de instalação** :
+**Opções de instalação**:
 
 > [!div class="mx-tableFixed"]
 >
@@ -123,7 +121,7 @@ Use o seguinte comando para atualizar silenciosamente o [!INCLUDE [Product short
 > |Ajuda|/help|Não|Fornece ajuda e referência rápida. Exibe o uso correto do comando de configuração, incluindo uma lista de todas as opções e comportamentos.|
 > |NetFrameworkCommandLineArguments="/q"|NetFrameworkCommandLineArguments="/q"|Sim|Especifica os parâmetros para a instalação do .Net Framework. Deve ser definido para impor a instalação silenciosa do .Net Framework.|
 
-**Exemplos** :
+**Exemplos**:
 
 Para atualizar o [!INCLUDE [Product short](includes/product-short.md)] sensor silenciosamente:
 
@@ -135,13 +133,13 @@ Para atualizar o [!INCLUDE [Product short](includes/product-short.md)] sensor si
 
 Use o seguinte comando para executar uma desinstalação silenciosa do [!INCLUDE [Product short](includes/product-short.md)] sensor:
 
-**Sintaxe** :
+**Sintaxe**:
 
 ```dos
 "Azure ATP sensor Setup.exe" [/quiet] [/Uninstall] [/Help]
 ```
 
-**Opções de instalação** :
+**Opções de instalação**:
 
 > [!div class="mx-tableFixed"]
 >
@@ -151,7 +149,7 @@ Use o seguinte comando para executar uma desinstalação silenciosa do [!INCLUDE
 > |Desinstalar|/uninstall|Sim|Executa a desinstalação silenciosa do [!INCLUDE [Product short](includes/product-short.md)] sensor do servidor.|
 > |Ajuda|/help|Não|Fornece ajuda e referência rápida. Exibe o uso correto do comando de configuração, incluindo uma lista de todas as opções e comportamentos.|
 
-**Exemplos** :
+**Exemplos**:
 
 Para desinstalar silenciosamente o [!INCLUDE [Product short](includes/product-short.md)] sensor do servidor:
 
