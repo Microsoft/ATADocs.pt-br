@@ -11,16 +11,14 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: c5f6eed2ee9220555bbd870f66e2cacbbb82ed1c
-ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
+ms.openlocfilehash: 58e079764c2e59623b94b78f29f0ad00d6219dcc
+ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93275099"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94847421"
 ---
 # <a name="product-longs-identity-security-posture-assessments"></a>[!INCLUDE [Product long](includes/product-long.md)]avaliações da postura de segurança de identidade
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 Normalmente, organizações de todos os tamanhos têm visibilidade limitada de aplicativos e serviços locais e não sabem se eles podem ou não criar uma vulnerabilidade de segurança para a organização. O problema de visibilidade limitada é especialmente real em relação ao uso de componentes não compatíveis ou desatualizados.
 
@@ -74,4 +72,4 @@ Para acessar as avaliações de situação de segurança de identidade:
 ## <a name="next-steps"></a>Próximas etapas
 
 - [Saiba mais sobre como usar Cloud App Security com [!INCLUDE [Product short](includes/product-short.md)]](activities-filtering-mcas.md)
-- [Confira o [!INCLUDE [Product short](includes/product-short.md)] Fórum!](https://aka.ms/MDIcommunity)
+- [Confira o fórum do [!INCLUDE [Product short](includes/product-short.md)]!](https://aka.ms/MDIcommunity)

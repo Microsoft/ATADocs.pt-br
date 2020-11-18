@@ -11,16 +11,14 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 627c30146e2543501da9d5970c9c8a087e3320bf
-ms.sourcegitcommit: c5f63d621f4f1e875f8c24adc2bd4770e07e0a62
+ms.openlocfilehash: 7624f2d959e37b2bf88d4b14c31c5a6f1ddd6853
+ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2020
-ms.locfileid: "94558229"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94848220"
 ---
 # <a name="configure-event-collection"></a>Configurar coleta de eventos
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 Para aprimorar as funcionalidades de detecção, o [!INCLUDE [Product long](includes/product-long.md)] precisa dos eventos do Windows listados em [Configurar coleta de eventos](configure-windows-event-collection.md#configure-event-collection). Esses eventos podem ser lidos automaticamente pelo sensor do [!INCLUDE [Product short](includes/product-short.md)] ou, caso o sensor do [!INCLUDE [Product short](includes/product-short.md)] não esteja implantado, podem ser encaminhados para o sensor autônomo do [!INCLUDE [Product short](includes/product-short.md)] de duas maneiras: configurando o sensor autônomo do [!INCLUDE [Product short](includes/product-short.md)] para escutar eventos de SIEM ou [configurando o Encaminhamento de Eventos do Windows](configure-event-forwarding.md).
 

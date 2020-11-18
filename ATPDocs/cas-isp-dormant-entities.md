@@ -11,24 +11,22 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: bd5facbf0cc6616a8467d0eb1b33c7603debabc8
-ms.sourcegitcommit: 8cb9839a67fce42921f7a24564fddf15e503bdea
+ms.openlocfilehash: afadc7b031a71d5441bda1bd186bfd6aa66fe629
+ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93278573"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94848441"
 ---
 # <a name="security-assessment-dormant-entities-in-sensitive-groups"></a>Avaliação de segurança: entidades inativas em grupos **confidenciais**
 
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
-
-## <a name="what-are-sensitive-dormant-entities"></a>O que são entidades inativas **confidenciais** ?
+## <a name="what-are-sensitive-dormant-entities"></a>O que são entidades inativas **confidenciais**?
 
 [!INCLUDE [Product long](includes/product-long.md)] descobre se usuários específicos são **confidenciais** junto com o fornecimento de atributos que se encontram inativos, desabilitados ou expirados.
 
 No entanto, as contas **confidenciais** também poderão se tornar *inativas* se não forem usadas por um período de 180 dias. As [entidades inativas](sensitive-accounts.md) são oportunidades para agentes mal-intencionados terem acesso confidencial à sua organização.
 
-## <a name="what-risk-do-dormant-entities-create-in-sensitive-groups"></a>Qual risco as entidades inativas criam nos grupos **confidenciais** ?
+## <a name="what-risk-do-dormant-entities-create-in-sensitive-groups"></a>Qual risco as entidades inativas criam nos grupos **confidenciais**?
 
 As organizações que não protegem as contas de usuário inativas deixam uma porta aberta para seus dados confidenciais.
 
@@ -48,4 +46,4 @@ Não importa se o motivo é a rotatividade de funcionários ou uma má gestão d
 ## <a name="see-also"></a>Consulte Também
 
 - [[!INCLUDE [Product short](includes/product-short.md)] filtragem de atividades no Cloud App Security](activities-filtering-mcas.md)
-- [Confira o [!INCLUDE [Product short](includes/product-short.md)] Fórum!](https://aka.ms/MDIcommunity)
+- [Confira o fórum do [!INCLUDE [Product short](includes/product-short.md)]!](https://aka.ms/MDIcommunity)

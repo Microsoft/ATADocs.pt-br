@@ -11,16 +11,14 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 479ca268e2db61bd1667005d2aa2a38603888f0b
-ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
+ms.openlocfilehash: c0dacdf37dbcc033a310fb4b0995ab8259db452f
+ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93276392"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94848084"
 ---
 # <a name="configure-port-mirroring"></a>Configurar o espelhamento de porta
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 Este artigo será relevante apenas se você implantar sensores autônomos do [!INCLUDE [Product long](includes/product-long.md)] em vez de sensores do [!INCLUDE [Product short](includes/product-short.md)].
 

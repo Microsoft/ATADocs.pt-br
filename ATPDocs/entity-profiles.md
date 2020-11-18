@@ -11,16 +11,14 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: d9dd51c1cfba0bf51a57653e8cc1f97744fb3374
-ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
+ms.openlocfilehash: 06b628caf47945a9bfa645b5b73593c02a1093b4
+ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93276413"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94848152"
 ---
 # <a name="understanding-entity-profiles"></a>Noções básicas sobre perfis de entidade
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 > [!NOTE]
 > Os recursos do [!INCLUDE [Product long](includes/product-long.md)] explicados nesta página também podem ser acessados usando o novo [portal](https://portal.cloudappsecurity.com).
@@ -50,7 +48,7 @@ A guia **Dados do diretório** fornece informações estáticas disponíveis do 
 
 ![dados do diretório do perfil do usuário](media/user-profile-dir-data.png)
 
-Na seção **Controle de acesso de usuários** , o [!INCLUDE [Product short](includes/product-short.md)] exibe configurações de segurança que talvez precisem de sua atenção. É possível ver sinalizadores importantes sobre o usuário, como se o usuário pode pressionar enter para ignorar a senha e se o usuário tem uma senha que nunca expira, etc.
+Na seção **Controle de acesso de usuários**, o [!INCLUDE [Product short](includes/product-short.md)] exibe configurações de segurança que talvez precisem de sua atenção. É possível ver sinalizadores importantes sobre o usuário, como se o usuário pode pressionar enter para ignorar a senha e se o usuário tem uma senha que nunca expira, etc.
 
 ## <a name="view-lateral-movement-paths"></a>Exibir caminhos de movimento lateral
 

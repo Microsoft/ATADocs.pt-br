@@ -11,16 +11,14 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 9e1bfe428a466e4870613798e4af116f27d63647
-ms.sourcegitcommit: 218ba562a2a109ff456b011004530f503a4e82c6
+ms.openlocfilehash: fb97959f9cffe0e80cb0d273e061a13e6b809f83
+ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/04/2020
-ms.locfileid: "93342497"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94847761"
 ---
-# <a name="configure-product-long-to-make-remote-calls-to-sam"></a>Configurar [!INCLUDE [Product long](includes/product-long.md)] para fazer chamadas remotas para Sam
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
+# <a name="configure-product-long-to-make-remote-calls-to-sam"></a>Configurar o [!INCLUDE [Product long](includes/product-long.md)] para realizar chamadas remotas para SAM
 
 [!INCLUDE [Product long](includes/product-long.md)]a detecção de [caminho de movimento lateral](use-case-lateral-movement-path.md) depende de consultas que identificam administradores locais em computadores específicos. Essas consultas são executadas com o protocolo SAM-R, usando a [!INCLUDE [Product short](includes/product-short.md)] conta de serviço criada durante a [!INCLUDE [Product short](includes/product-short.md)] etapa de instalação  [2. Conecte-se ao AD](install-step2.md).
 
@@ -49,4 +47,4 @@ Para saber mais sobre SAM-R e essa Política de Grupo, consulte [Acesso à rede:
 ## <a name="see-also"></a>Consulte Também
 
 - [Investigando ataques de caminho de movimento lateral com [!INCLUDE [Product short](includes/product-short.md)]](use-case-lateral-movement-path.md)
-- [Confira o [!INCLUDE [Product short](includes/product-short.md)] Fórum!](https://aka.ms/MDIcommunity)
+- [Confira o fórum do [!INCLUDE [Product short](includes/product-short.md)]!](https://aka.ms/MDIcommunity)

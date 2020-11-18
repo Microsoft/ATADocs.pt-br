@@ -11,16 +11,14 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: b9dcd871fecd855a35a530f57c020fba5f3d1347
-ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
+ms.openlocfilehash: ef931c90558ffaea1a24d8682cc8091a845aeea8
+ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93275873"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94847404"
 ---
 # <a name="change-product-long-portal-configuration---domain-connectivity-password"></a>Alterar [!INCLUDE [Product long](includes/product-long.md)] configuração do portal-senha de conectividade do domínio
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 ## <a name="change-the-domain-connectivity-password"></a>Alterar a senha de conectividade do domínio
 
@@ -37,23 +35,23 @@ Siga este procedimento para atualizar a senha de conectividade do domínio no [!
 
 1. Selecione a opção de configurações na barra de ferramentas e escolha **Configuração**.
 
-    ![[! INCLUIR [produto curto] (inclui/produto-curto. MD)] ícone de configurações de configuração](media/config-menu.png)
+    ![Ícone de definições de configuração do [!INCLUDE [Product short](includes/product-short.md)]](media/config-menu.png)
 
 1. Selecione **Serviços de Diretório**.
 
     ![[! INCLUIR [produto curto] (inclui/Product-short. MD)] imagem de alteração de senha do sensor autônomo](media/directory-services.png)
 
-1. Em **Senha** , altere a senha.
+1. Em **Senha**, altere a senha.
 
     > [!NOTE]
     > Insira aqui um usuário e senha do Active Directory e não no Azure Active Directory.
 
-1. Clique em **Salvar**.
+1. Clique em **Save** (Salvar).
 
-1. No [!INCLUDE [Product short](includes/product-short.md)] portal, selecione **configuração**.
-1. Em **sistema** , selecione a página **sensores** e verifique o status dos sensores.
+1. No portal do [!INCLUDE [Product short](includes/product-short.md)], selecione **Configuração**.
+1. Em **sistema**, selecione a página **sensores** e verifique o status dos sensores.
 
 ## <a name="see-also"></a>Consulte Também
 
-- [Integração com o Microsoft defender para ponto de extremidade](integrate-mde.md)
-- [Confira o [!INCLUDE [Product short](includes/product-short.md)] Fórum!](https://aka.ms/MDIcommunity)
+- [Integração ao Microsoft Defender para Ponto de Extremidade](integrate-mde.md)
+- [Confira o fórum do [!INCLUDE [Product short](includes/product-short.md)]!](https://aka.ms/MDIcommunity)

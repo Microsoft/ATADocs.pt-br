@@ -11,16 +11,14 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 8d55f682b8056900ea19fb2684fa322fdb100df3
-ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
+ms.openlocfilehash: 5bdaec29f2b8eb6d9d62105d48a59fde7c578f05
+ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93276216"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94847778"
 ---
 # <a name="integrate-vpn"></a>Integrar a VPN
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 [!INCLUDE [Product long](includes/product-long.md)] pode coletar informações de contabilidade de soluções de VPN. Quando configurada, a página de perfil do usuário inclui informações de conexões de VPN, tais como os endereços IP e os locais de origem das conexões. Isso complementa o processo de investigação, fornecendo informações adicionais sobre a atividade de usuário, bem como uma nova detecção para conexões de VPN anormais. A chamada para resolver um endereço IP externo de um local é anônima. Nenhuma identificação pessoal será enviada nesta chamada.
 
@@ -38,7 +36,7 @@ Para habilitar a integração de VPN, verifique se você definiu os seguintes pa
 - Abra a porta UDP 1813 em seus [!INCLUDE [Product short](includes/product-short.md)] sensores e/ou [!INCLUDE [Product short](includes/product-short.md)] sensores autônomos.
 
 > [!NOTE]
-> Ao habilitar a **contabilização RADIUS** , o [!INCLUDE [Product short](includes/product-short.md)] sensor habilitará uma política de firewall do Windows previamente provisionada chamada **[!INCLUDE [Product long](includes/product-long.md)] sensor** para permitir a contabilização Radius de entrada na porta UDP 1813.
+> Ao habilitar a **contabilização RADIUS**, o [!INCLUDE [Product short](includes/product-short.md)] sensor habilitará uma política de firewall do Windows previamente provisionada chamada **[!INCLUDE [Product long](includes/product-long.md)] sensor** para permitir a contabilização Radius de entrada na porta UDP 1813.
 
 O exemplo abaixo usa o Servidor de Roteamento e Acesso Remoto (RRAS) da Microsoft para descrever o processo de configuração de VPN.
 
@@ -50,11 +48,11 @@ Execute as seguintes etapas em seu servidor RRAS.
 
 1. Abra o console de Roteamento e Acesso Remoto.
 1. Clique com o botão direito do mouse no nome do servidor e clique em **Propriedades**.
-1. Na guia **Segurança** , em **Provedor de contabilização** , selecione **Contabilização RADIUS** e clique em **Configurar**.
+1. Na guia **Segurança**, em **Provedor de contabilização**, selecione **Contabilização RADIUS** e clique em **Configurar**.
 
     ![Configuração RADIUS](media/radius-setup.png)
 
-1. Na janela **Adicionar servidor RADIUS** , digite o **nome do servidor** do sensor mais próximo [!INCLUDE [Product short](includes/product-short.md)] (que tem conectividade de rede). Para alta disponibilidade, você pode adicionar [!INCLUDE [Product short](includes/product-short.md)] sensores adicionais como servidores RADIUS. Em **Porta** , verifique se o padrão de 1813 está configurado. Clique em **Alterar** e digite uma nova cadeia de caracteres alfanuméricos secreta compartilhada. Anote a nova cadeia de caracteres secreta compartilhada, pois você precisará preenchê-la posteriormente durante a [!INCLUDE [Product short](includes/product-short.md)] configuração. Marque a caixa **Enviar mensagens de conta habilitada e de contabilização desabilitada do RADIUS** e, em seguida, clique em **OK** em todas as caixas de diálogo abertas.
+1. Na janela **Adicionar servidor RADIUS** , digite o **nome do servidor** do sensor mais próximo [!INCLUDE [Product short](includes/product-short.md)] (que tem conectividade de rede). Para alta disponibilidade, você pode adicionar [!INCLUDE [Product short](includes/product-short.md)] sensores adicionais como servidores RADIUS. Em **Porta**, verifique se o padrão de 1813 está configurado. Clique em **Alterar** e digite uma nova cadeia de caracteres alfanuméricos secreta compartilhada. Anote a nova cadeia de caracteres secreta compartilhada, pois você precisará preenchê-la posteriormente durante a [!INCLUDE [Product short](includes/product-short.md)] configuração. Marque a caixa **Enviar mensagens de conta habilitada e de contabilização desabilitada do RADIUS** e, em seguida, clique em **OK** em todas as caixas de diálogo abertas.
 
     ![Configuração de VPN](media/vpn-set-accounting.png)
 
@@ -75,7 +73,7 @@ Depois que isso for habilitado, todos os [!INCLUDE [Product short](includes/prod
 
 ## <a name="see-also"></a>Consulte Também
 
-- [[!INCLUDE [Product short](includes/product-short.md)] ferramenta de dimensionamento](https://aka.ms/aatpsizingtool)
+- [Ferramenta de dimensionamento do [!INCLUDE [Product short](includes/product-short.md)]](https://aka.ms/aatpsizingtool)
 - [Configurar coleta de eventos](configure-event-collection.md)
-- [[!INCLUDE [Product short](includes/product-short.md)] pré-requisitos](prerequisites.md)
-- [Confira o [!INCLUDE [Product short](includes/product-short.md)] Fórum!](https://aka.ms/MDIcommunity)
+- [Pré-requisitos do [!INCLUDE [Product short](includes/product-short.md)]](prerequisites.md)
+- [Confira o fórum do [!INCLUDE [Product short](includes/product-short.md)]!](https://aka.ms/MDIcommunity)

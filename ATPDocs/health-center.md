@@ -11,16 +11,14 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: d1b7c7f5ce56bb7de5ab38b276c1de3074aa533d
-ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
+ms.openlocfilehash: 5bf828278e0223aaaf52b41932b2612c7225dd7f
+ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93276325"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94847931"
 ---
 # <a name="work-with-product-long-health-and-events"></a>Trabalhar com [!INCLUDE [Product long](includes/product-long.md)] integridade e eventos
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 ## <a name="product-long-health-center"></a>[!INCLUDE [Product long](includes/product-long.md)] Centro de integridade
 
@@ -38,22 +36,22 @@ Para verificar a integridade geral da sua [!INCLUDE [Product short](includes/pro
 
 - Todos os problemas abertos podem ser gerenciados configurando-os para **Fechar** ou **Suprimir** clicando nos três pontos no canto do alerta e fazendo sua escolha.
 
-- **Abrir** : todas as novas atividades suspeitas aparecem nesta lista.
+- **Abrir**: todas as novas atividades suspeitas aparecem nesta lista.
 
-- **Fechar** : é usado para rastrear atividades suspeitas que você identificou, pesquisou e corrigiu como mitigado.
+- **Fechar**: é usado para rastrear atividades suspeitas que você identificou, pesquisou e corrigiu como mitigado.
 
     > [!NOTE]
     > [!INCLUDE [Product short](includes/product-short.md)] poderá reabrir uma atividade fechada se a mesma atividade for detectada novamente em um curto período de tempo.
 
-- **Suprimir** : suprimir uma atividade significa que você deseja ignorá-la por enquanto e apenas ser alertado novamente se houver uma nova instância. Se houver um alerta semelhante [!INCLUDE [Product short](includes/product-short.md)] , ele não será reaberto. Mas, se o alerta parar por sete dias e, depois, for observado novamente, você será alertado novamente.
+- **Suprimir**: suprimir uma atividade significa que você deseja ignorá-la por enquanto e apenas ser alertado novamente se houver uma nova instância. Se houver um alerta semelhante [!INCLUDE [Product short](includes/product-short.md)] , ele não será reaberto. Mas, se o alerta parar por sete dias e, depois, for observado novamente, você será alertado novamente.
 
-- **Reabrir** : você pode reabrir um alerta fechado ou suprimido para que ele seja exibido novamente como **Aberto** na linha do tempo.
+- **Reabrir**: você pode reabrir um alerta fechado ou suprimido para que ele seja exibido novamente como **Aberto** na linha do tempo.
 
-- **Excluir** : na linha do tempo de alerta de segurança, você também tem a opção de excluir um problema de integridade. Se você excluir um alerta, ele será excluído da instância e você NÃO poderá restaurá-lo. Após clicar em Excluir, será possível excluir todos os alertas de segurança do mesmo tipo.
+- **Excluir**: na linha do tempo de alerta de segurança, você também tem a opção de excluir um problema de integridade. Se você excluir um alerta, ele será excluído da instância e você NÃO poderá restaurá-lo. Após clicar em Excluir, será possível excluir todos os alertas de segurança do mesmo tipo.
 
 ![[! INCLUIR [produto curto] (inclui/produto-curto. MD)] imagem de problemas do centro de integridade](media/health-issue.png)
 
 ## <a name="see-also"></a>Consulte Também
 
 - [Trabalhando com atividades suspeitas](working-with-suspicious-activities.md)
-- [Confira o [!INCLUDE [Product short](includes/product-short.md)] Fórum!](https://aka.ms/MDIcommunity)
+- [Confira o fórum do [!INCLUDE [Product short](includes/product-short.md)]!](https://aka.ms/MDIcommunity)

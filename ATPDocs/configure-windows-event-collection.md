@@ -11,16 +11,14 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: ad6604b3502cde05b88598a286407778a2e03787
-ms.sourcegitcommit: c5f63d621f4f1e875f8c24adc2bd4770e07e0a62
+ms.openlocfilehash: fd2d06ad49756a0a1b78cd055546b5db64bb0940
+ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2020
-ms.locfileid: "94558246"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94848169"
 ---
 # <a name="configure-windows-event-collection"></a>Configurar a coleção de Eventos do Windows
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 A detecção do [!INCLUDE [Product long](includes/product-long.md)] depende de entradas específicas do log de eventos do Windows para aprimorar algumas detecções e fornecer informações adicionais sobre quem realizou ações específicas, como logons NTLM, modificações no grupo de segurança e eventos semelhantes. Para que os eventos corretos sejam auditados e incluídos no Log de Eventos do Windows, seus controladores de domínio exigem configurações precisas de política de auditoria avançada. Configurações de política de auditoria avançada incorretas podem fazer com que eventos necessários não sejam registrados no log de eventos e resultar em uma cobertura incompleta do [!INCLUDE [Product short](includes/product-short.md)].
 

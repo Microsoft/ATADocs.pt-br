@@ -11,23 +11,21 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: d69fef506f2f1e787039a3b2af1b35b81a3504fc
-ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
+ms.openlocfilehash: f8d7237d3202ed4b0645b92d61f37cc7c89085da
+ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93274841"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94847217"
 ---
 # <a name="product-long-monitored-activities"></a>Atividades monitoradas pelo [!INCLUDE [Product long](includes/product-long.md)]
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 > [!NOTE]
 > Os recursos do [!INCLUDE [Product long](includes/product-long.md)] explicados nesta página também podem ser acessados usando o novo [portal](https://portal.cloudappsecurity.com).
 
 O [!INCLUDE [Product long](includes/product-long.md)] monitora informações geradas pelo Active Directory e atividades de rede e de eventos da sua organização para detectar atividades suspeitas. As informações de atividades monitoradas permitem que o [!INCLUDE [Product short](includes/product-short.md)] ajude a determinar a validade de cada possível ameaça, a realizar a triagem e a reagir corretamente.
 
-No caso de uma ameaça válida ou de **verdadeiro positivo** , o [!INCLUDE [Product short](includes/product-short.md)] permite que você descubra o escopo da violação de cada incidente, investigue quais entidades estão envolvidas e determine como corrigi-las.
+No caso de uma ameaça válida ou de **verdadeiro positivo**, o [!INCLUDE [Product short](includes/product-short.md)] permite que você descubra o escopo da violação de cada incidente, investigue quais entidades estão envolvidas e determine como corrigi-las.
 
 As informações monitoradas pelo [!INCLUDE [Product short](includes/product-short.md)] são apresentadas na forma de atividades. Atualmente, o [!INCLUDE [Product short](includes/product-short.md)] dá suporte ao monitoramento dos seguintes tipos de atividade:
 
@@ -79,7 +77,7 @@ As informações monitoradas pelo [!INCLUDE [Product short](includes/product-sho
 |Atividade monitorada|Descrição|
 |---------------------|------------------|
 |Replicação do Serviço de Diretório|O usuário tentou replicar o serviço de diretório.|
-|Consulta DNS|Tipo de usuário de consulta executado no controlador de domínio ( **AXFR** , **TXT** , **MX** , **NS** , **SRV** , **ANY** , **DNSKEY** ).|
+|Consulta DNS|Tipo de usuário de consulta executado no controlador de domínio (**AXFR**, **TXT**, **MX**, **NS**, **SRV**, **ANY**, **DNSKEY**).|
 |Recuperação de Dados Particular|O usuário tentou/conseguiu consultar dados particulares usando o protocolo LSARPC.|
 |Criação de Serviço|O usuário tentou criar remotamente de um serviço específico para um computador remoto.|
 |Enumeração da Sessão SMB|O usuário tentou enumerar todos os usuários com sessões SMB abertas nos controladores de domínio.|
