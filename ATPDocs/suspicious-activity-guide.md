@@ -11,12 +11,12 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: b343d5a708791de4658389985423f104e3f57762
-ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
+ms.openlocfilehash: 11184c7bea435ae1168deb810ec54ec163d990f5
+ms.sourcegitcommit: 38266d01b28ea6b084687b9bc3c4aa18e2dbb3b7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 11/18/2020
-ms.locfileid: "94846689"
+ms.locfileid: "94851219"
 ---
 # <a name="product-long-security-alerts"></a>Alertas de segurança do [!INCLUDE [Product long](includes/product-long.md)]
 
@@ -39,7 +39,7 @@ Para saber mais sobre a estrutura e os componentes comuns de todos os alertas de
 
 A tabela a seguir lista o mapeamento entre nomes de alerta, suas IDs externas exclusivas correspondentes e suas IDs de alerta do Microsoft Cloud App Security. Quando usadas com scripts ou automação, a Microsoft recomenda o uso de IDs externas de alertas em vez de nomes de alertas, já que apenas IDs externas de alertas são permanentes e não estão sujeitas a alterações.
 
-# <a name="external-ids"></a>[IDs externas](#tab/external)
+### <a name="external-ids"></a>[IDs externas](#tab/external)
 
 > [!div class="mx-tdBreakAll"]
 > |Nome do alerta de segurança|ID externa exclusiva|Severidade|MITRE ATT&CK Matrix&trade;|
@@ -84,8 +84,7 @@ A tabela a seguir lista o mapeamento entre nomes de alerta, suas IDs externas ex
 > |[Reconhecimento de usuário e de associação a um grupo (SAMR)](reconnaissance-alerts.md#user-and-group-membership-reconnaissance-samr-external-id-2021)|2021|Média|Descoberta|
 > |[Reconhecimento de endereço IP e de usuário (SMB)](reconnaissance-alerts.md#user-and-ip-address-reconnaissance-smb-external-id-2012)|2012|Média|Descoberta|
 
-
-# <a name="cloud-app-security-ids"></a>[IDs do Cloud App Security](#tab/cloud-app-security)
+### <a name="cloud-app-security-ids"></a>[IDs do Cloud App Security](#tab/cloud-app-security)
 
 > [!div class="mx-tdBreakAll"]
 > |Nome do alerta de segurança|ID do alerta do Cloud App Security|
@@ -132,6 +131,8 @@ A tabela a seguir lista o mapeamento entre nomes de alerta, suas IDs externas ex
 
 <!-- FROM TOP TABLE |[Suspected over-pass-the-hash attack (encryption downgrade)](lateral-movement-alerts.md#suspected-overpass-the-hash-attack-encryption-downgrade-external-id-2008)|2008|Medium|Lateral movement|-->
 <!-- FROM BOTTOM TABLE |[Suspected over-pass-the-hash attack (encryption downgrade)](lateral-movement-alerts.md#suspected-overpass-the-hash-attack-encryption-downgrade-external-id-2008)|ALERT_EXTERNAL_AATP_OVERPASS_THE_HASH_ENCRYPTION_DOWNGRADE_SECURITY_ALERT|-->
+
+---
 
 > [!NOTE]
 > Para desabilitar um alerta de segurança, contate o suporte.
