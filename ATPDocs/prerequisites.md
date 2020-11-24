@@ -10,16 +10,14 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: e3b5b67ad5330fd7be41ed63e6db105e2f1d4a9e
-ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
+ms.openlocfilehash: df877f342b0bf7a31bf4cdf171a7bc2104c89e1f
+ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93275635"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94846996"
 ---
 # <a name="product-long-prerequisites"></a>Pré-requisitos do [!INCLUDE [Product long](includes/product-long.md)]
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 Este artigo descreve os requisitos para uma implantação bem-sucedida do [!INCLUDE [Product long](includes/product-long.md)] no seu ambiente.
 
@@ -69,14 +67,14 @@ Esta seção lista as informações que você deve obter, bem como as contas e a
     > [!NOTE]
     >
     > - Para computadores sensores que executam o Windows Server 2012 e posterior, recomendamos usar uma conta **gMSA** devido à segurança aprimorada e ao gerenciamento automático de senhas.
-    > - Se você tiver vários sensores, alguns executando o Windows Server 2008 e outros executando o Windows Server 2012 ou posterior, além da recomendação para usar uma conta **gMSA** , você também deverá usar pelo menos uma conta de usuário do AD **padrão**.
+    > - Se você tiver vários sensores, alguns executando o Windows Server 2008 e outros executando o Windows Server 2012 ou posterior, além da recomendação para usar uma conta **gMSA**, você também deverá usar pelo menos uma conta de usuário do AD **padrão**.
     > - Se você tiver definido ACLs personalizadas em várias Unidades Organizacionais (UO) em seu domínio, verifique se o usuário selecionado tem permissões de leitura para essas UOs.
 
 - Se você executar o Wireshark no sensor autônomo do [!INCLUDE [Product short](includes/product-short.md)], reinicie o serviço de sensor do [!INCLUDE [Product short](includes/product-short.md)] depois de interromper a captura do Wireshark. Se não reiniciar o serviço de sensor, o sensor interromperá a captura de tráfego.
 
 - Se você tentar instalar o sensor do [!INCLUDE [Product short](includes/product-short.md)] em um computador configurado com um adaptador de Agrupamento NIC, receberá um erro de instalação. Caso deseje instalar o sensor do [!INCLUDE [Product short](includes/product-short.md)] em um computador configurado com Agrupamento NIC, confira [Problemas do Agrupamento NIC do sensor do [!INCLUDE [Product short](includes/product-short.md)]](troubleshooting-known-issues.md#nic-teaming).
 
-- Recomendação de contêiner de **Objetos Excluídos** : O usuário deve ter permissões de somente leitura no contêiner de Objetos Excluídos. As permissões somente leitura neste contêiner permitem que o [!INCLUDE [Product short](includes/product-short.md)] detecte exclusões de usuários do Active Directory. Para obter informações sobre como configurar permissões somente leitura no contêiner Objetos Excluídos, confira a seção **Como alterar permissões em um contêiner de objetos excluídos** do artigo [Exibir ou definir permissões em um objeto do directory](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc816824(v=ws.10)).
+- Recomendação de contêiner de **Objetos Excluídos**: O usuário deve ter permissões de somente leitura no contêiner de Objetos Excluídos. As permissões somente leitura neste contêiner permitem que o [!INCLUDE [Product short](includes/product-short.md)] detecte exclusões de usuários do Active Directory. Para obter informações sobre como configurar permissões somente leitura no contêiner Objetos Excluídos, confira a seção **Como alterar permissões em um contêiner de objetos excluídos** do artigo [Exibir ou definir permissões em um objeto do directory](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc816824(v=ws.10)).
 
 - **Honeytoken** opcional: Uma conta de usuário que não tem nenhuma atividade de rede. Essa conta está configurada como o usuário Honeytoken do [!INCLUDE [Product short](includes/product-short.md)]. Para obter mais informações sobre como usar Honeytokens, confira [Configurar exclusões e usuário do Honeytoken](install-step7.md).
 
@@ -96,7 +94,7 @@ O acesso ao portal do [!INCLUDE [Product short](includes/product-short.md)] ocor
 - Firewall/proxy aberto: para se comunicar com o serviço de nuvem do [!INCLUDE [Product short](includes/product-short.md)], a porta 443 de *.atp.azure.com precisa ser aberta no firewall/proxy.
 
     > [!NOTE]
-    > Use também nossa marca de serviço do Azure ( **AzureAdvancedThreatProtection** ) para habilitar o acesso ao [!INCLUDE [Product short](includes/product-short.md)]. Para obter mais informações sobre marcas de serviço, confira [Marcas de serviço de rede virtual](/azure/virtual-network/service-tags-overview) ou [baixe o arquivo de marcas de serviço](https://www.microsoft.com/download/details.aspx?id=56519).
+    > Use também nossa marca de serviço do Azure (**AzureAdvancedThreatProtection**) para habilitar o acesso ao [!INCLUDE [Product short](includes/product-short.md)]. Para obter mais informações sobre marcas de serviço, confira [Marcas de serviço de rede virtual](/azure/virtual-network/service-tags-overview) ou [baixe o arquivo de marcas de serviço](https://www.microsoft.com/download/details.aspx?id=56519).
 
  ![Diagrama da arquitetura do [!INCLUDE [Product short](includes/product-short.md)]](media/architecture-topology.png)
 

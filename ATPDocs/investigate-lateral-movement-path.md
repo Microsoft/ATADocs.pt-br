@@ -11,16 +11,14 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: d489a02d600d82067f325d8b6f2c358f903f0908
-ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
+ms.openlocfilehash: de9f13a5f29e90ad27a5b07f6b6a92952db6f70d
+ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93276021"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94848526"
 ---
 # <a name="tutorial-use-lateral-movement-paths-lmps"></a>Tutorial: Usar LMPs (caminhos de movimento lateral)
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 > [!NOTE]
 > Os recursos do [!INCLUDE [Product long](includes/product-long.md)] explicados nesta página também podem ser acessados usando o novo [portal](https://portal.cloudappsecurity.com).
@@ -61,7 +59,7 @@ Para descobrir todas as contas confidenciais em sua rede que estão expostas por
 
 1. No menu do portal do [!INCLUDE [Product short](includes/product-short.md)], clique no ícone de relatórios ![ícone de relatórios](media/report-icon.png).
 
-1. Em **Caminhos de movimento lateral para contas confidenciais** , se não forem encontrados caminhos potenciais de movimento lateral, o relatório ficará indisponível. Se houver o potencial para caminhos de movimento lateral, o relatório pré-selecionará automaticamente a primeira data em que há dados relevantes. O relatório de caminho de movimento lateral fornece dados de até 60 dias.
+1. Em **Caminhos de movimento lateral para contas confidenciais**, se não forem encontrados caminhos potenciais de movimento lateral, o relatório ficará indisponível. Se houver o potencial para caminhos de movimento lateral, o relatório pré-selecionará automaticamente a primeira data em que há dados relevantes. O relatório de caminho de movimento lateral fornece dados de até 60 dias.
 
     ![Captura de tela mostrando a seleção de data do relatório](media/reports.png)
 

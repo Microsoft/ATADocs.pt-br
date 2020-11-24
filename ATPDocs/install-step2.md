@@ -10,16 +10,14 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: f0c4cc8342c9f45b8cc08166d14be1c512ca1065
-ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
+ms.openlocfilehash: 58a5f6c37a5b5bc4e224393aac5ad9771d6a1f6b
+ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93276222"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94847863"
 ---
 # <a name="quickstart-connect-to-your-active-directory-forest"></a>Início Rápido: Conectar à sua floresta do Active Directory
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 Neste guia de início rápido, você conectará o [!INCLUDE [Product long](includes/product-long.md)] ao AD (Active Directory) para recuperar dados sobre usuários e computadores. Se você estiver conectando várias florestas, consulte o artigo [Suporte a várias florestas](multi-forest.md).
 
@@ -35,7 +33,7 @@ Neste guia de início rápido, você conectará o [!INCLUDE [Product long](inclu
     > [!NOTE]
     >
     > - Para computadores sensores que executam o Windows Server 2012 e posterior, recomendamos usar uma conta **gMSA** devido à segurança aprimorada e ao gerenciamento automático de senhas.
-    > - Se você tiver vários sensores, alguns executando o Windows Server 2008 e outros executando o Windows Server 2012 ou posterior, além da recomendação para usar uma conta **gMSA** , você também deverá usar pelo menos uma conta de usuário do AD **padrão**.
+    > - Se você tiver vários sensores, alguns executando o Windows Server 2008 e outros executando o Windows Server 2012 ou posterior, além da recomendação para usar uma conta **gMSA**, você também deverá usar pelo menos uma conta de usuário do AD **padrão**.
 
 ### <a name="how-to-set-up-a-gmsa-account"></a>Como configurar uma conta gMSA
 
@@ -48,7 +46,7 @@ Na primeira vez em que você abre o portal do [!INCLUDE [Product short](includes
 
 ![Estágio 1 de boas-vindas do [!INCLUDE [Product short](includes/product-short.md)]](media/directory-services.png)
 
-1. Insira as seguintes informações e clique em **Salvar** :
+1. Insira as seguintes informações e clique em **Salvar**:
 
     |Campo|Comentários|
     |---|---|

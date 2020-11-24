@@ -11,16 +11,14 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 200670e30e3c18e327bebc3959b78537596491a7
-ms.sourcegitcommit: 218ba562a2a109ff456b011004530f503a4e82c6
+ms.openlocfilehash: 1f5d63a4bf5a4ab22b43648394d3e82fb39357ef
+ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/04/2020
-ms.locfileid: "93342436"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94848033"
 ---
 # <a name="tutorial-exfiltration-alerts"></a>Tutorial: Alertas de exfiltração
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 Normalmente, os ataques cibernéticos são lançados contra alguma entidade acessível, como um usuário com poucos privilégios e, em seguida, se movem lateralmente com rapidez até que o invasor obtenha acesso a ativos valiosos. Os ativos valiosos podem ser contas confidenciais, administradores de domínio ou dados altamente confidenciais. O [!INCLUDE [Product long](includes/product-long.md)] identifica essas ameaças avançadas na origem ao longo de toda a cadeia de eliminação do ataque e classifica-as nas seguintes fases:
 
@@ -48,7 +46,7 @@ Os controladores de domínio têm os dados organizacionais mais confidenciais. P
 **TP, B-TP ou FP**
 
 1. Esses usuários devem copiar esses arquivos para este computador?
-    - Se a resposta à pergunta anterior for **sim** , **feche** o alerta de segurança e exclua o computador como uma atividade **B-TP**.
+    - Se a resposta à pergunta anterior for **sim**, **feche** o alerta de segurança e exclua o computador como uma atividade **B-TP**.
 
 **Entender o escopo da violação**
 
@@ -63,7 +61,7 @@ Os controladores de domínio têm os dados organizacionais mais confidenciais. P
     - Localize os arquivos que foram copiados e remova-os.  
     Verifique se houve outras atividades nesses arquivos. Eles foram transferidos para outro lugar? Verifique se eles foram transferidos para fora da rede da organização?
     - Procure por usuários que estavam conectados em horário próximo àquele da atividade, pois eles também podem estar comprometidos. Redefina suas senhas e habilite a MFA ou, se você tiver configurado as políticas relevantes de usuário de alto risco no Azure Active Directory Identity Protection, poderá usar a ação [**Confirmar usuário comprometido**](/cloud-app-security/accounts#governance-actions) no portal de Cloud App Security.
-1. Se um dos arquivos for o **ntds.dit** :
+1. Se um dos arquivos for o **ntds.dit**:
     - Altere o Tíquete de concessão de tíquete Kerberos (KRBTGT) duas vezes de acordo com as diretrizes em [Scripts de redefinição de senha da conta KRBTGT disponíveis agora para clientes](https://cloudblogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/) usando a [ferramenta Redefinir chaves/senha da conta KRBTGT](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51).
     - A redefinição dupla do KRBTGT invalida todos os tíquetes Kerberos nesse domínio. A invalidação de todos os tíquetes Kerberos no domínio significa que **todos** os serviços serão interrompidos e não funcionarão novamente até que sejam renovados ou em alguns casos, que o serviço seja reiniciado.
 
@@ -73,7 +71,7 @@ Os controladores de domínio têm os dados organizacionais mais confidenciais. P
 
 ## <a name="suspicious-communication-over-dns-external-id-2031"></a>Comunicação suspeita por DNS (ID 2031 externa)
 
-*Nome anterior* : Comunicação suspeita por DNS
+*Nome anterior*: Comunicação suspeita por DNS
 
 **Descrição**
 

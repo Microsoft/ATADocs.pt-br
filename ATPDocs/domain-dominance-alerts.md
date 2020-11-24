@@ -11,16 +11,14 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 733ae9db30bef0958234cf3ba3157b33533a85e1
-ms.sourcegitcommit: 218ba562a2a109ff456b011004530f503a4e82c6
+ms.openlocfilehash: d9a37aa5fc952606dbf8c6d9148c53ef43fccf98
+ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/04/2020
-ms.locfileid: "93342429"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94848628"
 ---
 # <a name="tutorial-domain-dominance-alerts"></a>Tutorial: Alertas de predominância de domínio
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 Normalmente, os ataques cibernéticos são lançados contra alguma entidade acessível, como um usuário com poucos privilégios e, em seguida, se movem lateralmente com rapidez até que o invasor obtenha acesso a ativos valiosos. Os ativos valiosos podem ser contas confidenciais, administradores de domínio ou dados altamente confidenciais. O [!INCLUDE [Product long](includes/product-long.md)] identifica essas ameaças avançadas na origem ao longo de toda a cadeia de eliminação do ataque e classifica-as nas seguintes fases:
 
@@ -157,17 +155,17 @@ Não se aplica
 Se o computador de origem for um controlador de domínio, uma resolução com falha ou de baixa certeza poderá impedir que o [!INCLUDE [Product short](includes/product-short.md)] consiga confirmar a identificação.
 
 1. Verifique se o computador de origem é um controlador de domínio.
-    Se a resposta for **sim** , **feche** o alerta como uma atividade **B-TP**.
+    Se a resposta for **sim**, **feche** o alerta como uma atividade **B-TP**.
 
 Alterações no Active Directory podem levar tempo para sincronizar.
 
-1. O computador de origem é um controlador de domínio recém-promovido? Se a resposta for **sim** , **feche** o alerta como uma atividade **B-TP**.
+1. O computador de origem é um controlador de domínio recém-promovido? Se a resposta for **sim**, **feche** o alerta como uma atividade **B-TP**.
 
 Servidores e aplicativos podem replicar dados do Active Directory, tais como o Azure AD Connect ou dispositivos de monitoramento de desempenho de rede.
 
 1. Verifique se o computador de origem deve gerar esse tipo de atividade.
 
-    - Se a resposta for **sim** , mas o computador de origem não deverá continuar a gerar esse tipo de atividade no futuro, corrija a configuração do servidor/aplicativo. **Feche** o alerta de segurança como uma atividade **B-TP**.
+    - Se a resposta for **sim**, mas o computador de origem não deverá continuar a gerar esse tipo de atividade no futuro, corrija a configuração do servidor/aplicativo. **Feche** o alerta de segurança como uma atividade **B-TP**.
 
     - Se a resposta for **sim** e o computador de origem deverá continuar a gerar este tipo de atividade no futuro, **feche** o alerta de segurança como uma atividade **B-TP** e exclua o computador para evitar alertas benignos adicionais.
 
@@ -214,17 +212,17 @@ Não se aplica
 Se o computador de origem for um controlador de domínio, uma resolução com falha ou de baixa certeza poderá impedir a identificação do [!INCLUDE [Product short](includes/product-short.md)].
 
 1. Verifique se o computador de origem é um controlador de domínio.
-    Se a resposta for **sim** , **feche** o alerta como uma atividade **B-TP**.
+    Se a resposta for **sim**, **feche** o alerta como uma atividade **B-TP**.
 
 Alterações no Active Directory podem levar tempo para sincronizar.
 
-1. O computador de origem é um controlador de domínio recém-promovido? Se a resposta for **sim** , **feche** o alerta como uma atividade **B-TP**.
+1. O computador de origem é um controlador de domínio recém-promovido? Se a resposta for **sim**, **feche** o alerta como uma atividade **B-TP**.
 
 Servidores e aplicativos podem replicar dados do Active Directory, tais como o Azure AD Connect ou dispositivos de monitoramento de desempenho de rede.
 
 1. Esse computador de origem devia gerar esse tipo de atividade?
 
-    - Se a resposta for **sim** , mas o computador de origem não deverá continuar a gerar esse tipo de atividade no futuro, corrija a configuração do servidor/aplicativo. **Feche** o alerta de segurança como uma atividade **B-TP**.
+    - Se a resposta for **sim**, mas o computador de origem não deverá continuar a gerar esse tipo de atividade no futuro, corrija a configuração do servidor/aplicativo. **Feche** o alerta de segurança como uma atividade **B-TP**.
 
     - Se a resposta for **sim** e o computador de origem deverá continuar a gerar este tipo de atividade no futuro, **feche** o alerta de segurança como uma atividade **B-TP** e exclua o computador para evitar alertas **B-TP** adicionais.
 
@@ -275,17 +273,17 @@ Não se aplica
 Se o computador de origem for um controlador de domínio, uma resolução com falha ou de baixa certeza poderá impedir a identificação do [!INCLUDE [Product short](includes/product-short.md)].
 
 1. Verifique se o computador de origem é um controlador de domínio.
-    Se a resposta for **sim** , **feche** o alerta como uma atividade **B-TP**.
+    Se a resposta for **sim**, **feche** o alerta como uma atividade **B-TP**.
 
 Alterações no Active Directory podem levar tempo para sincronizar.
 
-1. O computador de origem é um controlador de domínio recém-promovido? Se a resposta for **sim** , **feche** o alerta como uma atividade **B-TP**.
+1. O computador de origem é um controlador de domínio recém-promovido? Se a resposta for **sim**, **feche** o alerta como uma atividade **B-TP**.
 
 Servidores e aplicativos podem replicar dados do Active Directory, tais como o Azure AD Connect ou dispositivos de monitoramento de desempenho de rede.
 
 1. Esse computador de origem devia gerar esse tipo de atividade?
 
-    - Se a resposta for **sim** , mas o computador de origem não deverá continuar a gerar esse tipo de atividade no futuro, corrija a configuração do servidor/aplicativo. **Feche** o alerta de segurança como uma atividade **B-TP**.
+    - Se a resposta for **sim**, mas o computador de origem não deverá continuar a gerar esse tipo de atividade no futuro, corrija a configuração do servidor/aplicativo. **Feche** o alerta de segurança como uma atividade **B-TP**.
 
     - Se a resposta for **sim** e o computador de origem deverá continuar a gerar este tipo de atividade no futuro, **feche** o alerta de segurança como uma atividade **B-TP** e exclua o computador para evitar alertas benignos adicionais.
 
@@ -331,10 +329,10 @@ Alguns recursos legítimos não dão suporte à criptografia forte e podem dispa
 1. Todos os usuários de origem compartilham algo em comum?
    1. Por exemplo, todos os membros da equipe de marketing estão acessando um recurso específico que pode fazer com que o alerta seja disparado?
    1. Verifique os recursos acessados por esses tíquetes.
-      - Confira isso no Active Directory verificando o atributo *msDS-SupportedEncryptionTypes* , da conta de serviço do recurso.
+      - Confira isso no Active Directory verificando o atributo *msDS-SupportedEncryptionTypes*, da conta de serviço do recurso.
    1. Se houver apenas um recurso sendo acessado, verifique se é um recurso válido que esses usuários devem acessar.
 
-      Se a resposta a uma das perguntas anteriores for **sim** , provavelmente essa será uma atividade **T-BP**. Verifique se o recurso pode dar suporte a uma codificação de criptografia forte, implemente uma codificação de criptografia mais forte sempre que possível e **feche** o alerta de segurança.
+      Se a resposta a uma das perguntas anteriores for **sim**, provavelmente essa será uma atividade **T-BP**. Verifique se o recurso pode dar suporte a uma codificação de criptografia forte, implemente uma codificação de criptografia mais forte sempre que possível e **feche** o alerta de segurança.
 
 Os aplicativos podem ser autenticados usando uma codificação de criptografia inferior. Alguns estão autenticando em nome dos usuários, como servidores do IIS e SQL.
 
@@ -344,7 +342,7 @@ Os aplicativos podem ser autenticados usando uma codificação de criptografia i
     - Verifique as funções do computador.
     Eles são servidores que funcionam com esses tipos de aplicativos?
 
-     Se a resposta a uma das perguntas anteriores for **sim** , provavelmente essa será uma atividade **T-BP**. Verifique se o recurso pode dar suporte a uma codificação de criptografia forte, implemente uma codificação de criptografia mais forte sempre que possível e **feche** o alerta de segurança.
+     Se a resposta a uma das perguntas anteriores for **sim**, provavelmente essa será uma atividade **T-BP**. Verifique se o recurso pode dar suporte a uma codificação de criptografia forte, implemente uma codificação de criptografia mais forte sempre que possível e **feche** o alerta de segurança.
 
 **Entender o escopo da violação**
 
@@ -428,7 +426,7 @@ Alterações no Active Directory podem levar tempo para sincronizar.
 1. O usuário foi adicionado recentemente?
 1. O usuário foi excluído recentemente do Active Directory?
 
-Se a resposta a todas as perguntas anteriores for **sim** , **feche** o alerta como uma atividade **B-TP**.
+Se a resposta a todas as perguntas anteriores for **sim**, **feche** o alerta como uma atividade **B-TP**.
 
 **Entender o escopo da violação**
 
@@ -532,7 +530,7 @@ Não se aplica
 1. Há um problema de sincronização de horário na rede, em que nem todos os computadores estão sincronizados?
     - Clique no botão **Detalhes do download** para exibir o alerta de segurança do arquivo do Excel de relatório, exibir as atividades de rede relacionadas e verificar se há uma diferença entre "StartTime" e "DomainControllerStartTime".
 
-Se a resposta às perguntas anteriores for **sim** , **feche** o alerta de segurança como uma atividade **B-TP**.
+Se a resposta às perguntas anteriores for **sim**, **feche** o alerta de segurança como uma atividade **B-TP**.
 
 **Entender o escopo da violação**
 

@@ -11,16 +11,14 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 1a21762351400d298154e7dbf7503fd7d820e0a2
-ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
+ms.openlocfilehash: 00c57a9be51c1ac8b48500c1a15ce16ddc441362
+ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93275363"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94849002"
 ---
 # <a name="tutorial-reconnaissance-alerts"></a>Tutorial: Alertas de reconhecimento
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 Normalmente, os ataques cibernéticos são lançados contra alguma entidade acessível, como um usuário com poucos privilégios e, em seguida, se movem lateralmente com rapidez até que o invasor obtenha acesso a ativos valiosos. Os ativos valiosos podem ser contas confidenciais, administradores de domínio ou dados altamente confidenciais. O [!INCLUDE [Product long](includes/product-long.md)] identifica essas ameaças avançadas na origem ao longo de toda a cadeia de eliminação do ataque e classifica-as nas seguintes fases:
 
@@ -53,9 +51,9 @@ Neste tutorial, aprenda como entender, classificar, corrigir e impedir os seguin
 
 No reconhecimento de enumeração de conta, um invasor usa um dicionário com milhares de nomes de usuário ou ferramentas como o KrbGuess para tentar adivinhar nomes de usuário no domínio.
 
-**Kerberos** : O invasor faz solicitações Kerberos usando esses nomes para tentar localizar um nome de usuário válido no domínio. Quando uma adivinhação determina um nome de usuário com êxito, o invasor recebe o erro do Kerberos **Pré-autenticação necessária** em vez de **Entidade de segurança desconhecida**.
+**Kerberos**: O invasor faz solicitações Kerberos usando esses nomes para tentar localizar um nome de usuário válido no domínio. Quando uma adivinhação determina um nome de usuário com êxito, o invasor recebe o erro do Kerberos **Pré-autenticação necessária** em vez de **Entidade de segurança desconhecida**.
 
-**NTLM** : O invasor faz solicitações de autenticação NTLM usando o dicionário de nomes para tentar localizar um nome de usuário válido no domínio. Quando uma adivinhação determina com êxito um nome de usuário, o invasor obtém o erro do NTLM **WrongPassword (0xc000006a)** em vez de **NoSuchUser (0xc0000064)** .
+**NTLM**: O invasor faz solicitações de autenticação NTLM usando o dicionário de nomes para tentar localizar um nome de usuário válido no domínio. Quando uma adivinhação determina com êxito um nome de usuário, o invasor obtém o erro do NTLM **WrongPassword (0xc000006a)** em vez de **NoSuchUser (0xc0000064)** .
 
 Nessa detecção de alerta, o [!INCLUDE [Product short](includes/product-short.md)] detecta a origem do ataque de enumeração de conta, o número total de tentativas de adivinhação e quantas tentativas foram correspondidas. Se houver muitos usuários desconhecidos, o [!INCLUDE [Product short](includes/product-short.md)] detectará isso como uma atividade suspeita.
 
@@ -67,9 +65,9 @@ Não se aplica
 
 Alguns aplicativos e servidores consultam controladores de domínio para determinar se as contas existem em cenários de uso legítimo.
 
-Para determinar se essa consulta foi um **TP** , **BTP** ou **FP** , clique no alerta para acessar a página de detalhes:
+Para determinar se essa consulta foi um **TP**, **BTP** ou **FP**, clique no alerta para acessar a página de detalhes:
 
-1. Verifique se o computador de origem deveria ter realizado esse tipo de consulta. Exemplos de um **B-TP** , nesse caso, podem ser servidores Microsoft Exchange ou sistemas de recursos humanos.
+1. Verifique se o computador de origem deveria ter realizado esse tipo de consulta. Exemplos de um **B-TP**, nesse caso, podem ser servidores Microsoft Exchange ou sistemas de recursos humanos.
 
 1. Verifique os domínios de conta.
     - Há usuários adicionais que pertencem a um domínio diferente?  
@@ -180,7 +178,7 @@ Esse alerta tem um período de aprendizado de oito dias, a partir do momento em 
 1. Verifique se o computador de origem é um servidor DNS.
 
     - Se o computador de origem **for** um servidor DNS, feche o alerta de segurança como um **FP**.
-    - Para evitar futuros **FPs** , verifique se a porta UDP 53 está **aberta** entre o sensor do [!INCLUDE [Product short](includes/product-short.md)] e o computador de origem.
+    - Para evitar futuros **FPs**, verifique se a porta UDP 53 está **aberta** entre o sensor do [!INCLUDE [Product short](includes/product-short.md)] e o computador de origem.
 
 Verificadores de segurança e aplicativos legítimos podem gerar consultas DNS.
 

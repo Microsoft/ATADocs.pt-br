@@ -9,16 +9,14 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 9c612167b4d87958c6a27235443a0dd5ab464613
-ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
+ms.openlocfilehash: f03f2722f86cec0ca019828b21e4851d0b1305f8
+ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93276291"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94847880"
 ---
 # <a name="quickstart-install-the-product-long-sensor"></a>Início Rápido: Instalar o servidor do [!INCLUDE [Product long](includes/product-long.md)]
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 Neste guia de início rápido, você instalará o sensor do [!INCLUDE [Product long](includes/product-long.md)] em um controlador de domínio. Se você preferir uma instalação silenciosa, consulte o artigo [Instalação silenciosa](silent-installation.md).
 
@@ -35,7 +33,7 @@ Execute as etapas a seguir no controlador de domínio.
 1. Confirme se o computador tem conectividade com os [pontos de extremidade de serviço de nuvem do [!INCLUDE [Product short](includes/product-short.md)]](configure-proxy.md#enable-access-to-azure-atp-service-urls-in-the-proxy-server) relevantes:
 1. Extraia os arquivos de instalação do arquivo zip. A instalação diretamente do arquivo zip falhará.
 1. Execute **Azure ATP sensor setup.exe** e siga o assistente de instalação.
-1. Na página **Boas-vindas** , selecione seu idioma e clique em **Avançar**.
+1. Na página **Boas-vindas**, selecione seu idioma e clique em **Avançar**.
 
     ![Idioma de instalação do sensor autônomo do [!INCLUDE [Product short](includes/product-short.md)]](media/sensor-install-language.png)
 
@@ -50,7 +48,7 @@ Execute as etapas a seguir no controlador de domínio.
     > [!NOTE]
     > Um aviso será emitido se o controlador de domínio ou o servidor dedicado não atender aos requisitos mínimos de hardware para a instalação. O aviso não impede que você clique em **Avançar** e prossiga com a instalação. Essa ainda pode ser a opção ideal para a instalação do [!INCLUDE [Product short](includes/product-short.md)] em um ambiente de teste de laboratório pequeno, que não precisa de tanto espaço para o armazenamento de dados. Para ambientes de produção, recomendamos expressamente trabalhar com o guia de [planejamento da capacidade](capacity-planning.md) do [!INCLUDE [Product short](includes/product-short.md)] para verificar se os controladores de domínio ou os servidores dedicados atendem aos requisitos necessários.
 
-1. Em **Configurar o sensor** , insira o caminho de instalação e a chave de acesso que você copiou na etapa anterior, com base em seu ambiente:
+1. Em **Configurar o sensor**, insira o caminho de instalação e a chave de acesso que você copiou na etapa anterior, com base em seu ambiente:
 
     ![Imagem de configuração do sensor do [!INCLUDE [Product short](includes/product-short.md)]](media/sensor-install-config.png)
 

@@ -11,16 +11,14 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 6bd5e8677a37555db09925d98d242334e1e4967c
-ms.sourcegitcommit: 13d1ba61abae691d38d8e210b3adad71285d5c26
+ms.openlocfilehash: 306ecc4fa1022420627d0f12cea43a738d50b45a
+ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93380617"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94848849"
 ---
 # <a name="what-is-product-long"></a>O que é o [!INCLUDE [Product long](includes/product-long.md)]?
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 O [!INCLUDE [Product long](includes/product-long.md)] (antigo ATP do Azure, Proteção Avançada contra Ameaças do Azure) é uma solução de segurança baseada em nuvem que aproveita os sinais locais do Active Directory para identificar, detectar e investigar ameaças avançadas, identidades comprometidas e ações de usuários internos mal-intencionados direcionadas à sua organização.
 

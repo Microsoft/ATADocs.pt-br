@@ -10,16 +10,14 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 50307054535447326b8b48641afaeec7cfc70551
-ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
+ms.openlocfilehash: fcb99edccdd8ce98be4b9335d7703503307fd0ac
+ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93277162"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94848562"
 ---
 # <a name="quickstart-create-your-product-long-instance"></a>Início Rápido: Criar sua instância do [!INCLUDE [Product long](includes/product-long.md)]
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 Neste guia de início rápido, você criará sua instância do [!INCLUDE [Product long](includes/product-long.md)] no portal do [!INCLUDE [Product short](includes/product-short.md)]. No [!INCLUDE [Product short](includes/product-short.md)], você terá uma só instância, anteriormente chamada de workspace. Uma única instância permite gerenciar várias florestas em um único painel de exibição.
 
@@ -56,7 +54,7 @@ Depois de verificar que a sua rede atende aos requisitos do sensor, inicie a cri
     > [!NOTE]
     > Para entrar no [!INCLUDE [Product short](includes/product-short.md)], você precisará se conectar com um usuário que recebeu uma função do [!INCLUDE [Product short](includes/product-short.md)] com direitos para acessar o portal do [!INCLUDE [Product short](includes/product-short.md)]. Para saber mais sobre RBAC (controle de acesso baseado em função) no [!INCLUDE [Product short](includes/product-short.md)], confira [Trabalhar com grupos de função do [!INCLUDE [Product short](includes/product-short.md)]](role-groups.md).
 
-1. Selecione **Configuração** , **Gerenciar grupos de funções** e use o link [Centro de Administração do Azure AD](/azure/active-directory/active-directory-assign-admin-roles-azure-portal) para gerenciar seus grupos de funções.
+1. Selecione **Configuração**, **Gerenciar grupos de funções** e use o link [Centro de Administração do Azure AD](/azure/active-directory/active-directory-assign-admin-roles-azure-portal) para gerenciar seus grupos de funções.
 
     ![Gerenciar grupos de funções](media/creation-manage-role-groups.png)
 

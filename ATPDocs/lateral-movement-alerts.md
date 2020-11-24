@@ -11,16 +11,14 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 774f8f3f560b52d5a39a96aacc9b145d1ca2d445
-ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
+ms.openlocfilehash: 78d7a4d51459c5ea9099198e43097757ee2c588e
+ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93275795"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94847642"
 ---
 # <a name="tutorial-lateral-movement-alerts"></a>Tutorial: Alertas de movimento lateral
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 Normalmente, os ataques cibernéticos são lançados contra alguma entidade acessível, como um usuário com poucos privilégios e, em seguida, se movem lateralmente com rapidez até que o invasor obtenha acesso a ativos valiosos. Os ativos valiosos podem ser contas confidenciais, administradores de domínio ou dados altamente confidenciais. O [!INCLUDE [Product long](includes/product-long.md)] identifica essas ameaças avançadas na origem ao longo de toda a cadeia de eliminação do ataque e classifica-as nas seguintes fases:
 
@@ -136,7 +134,7 @@ A resolução bem-sucedida de IPs nos computadores da organização é fundament
 1. O endereço IP é compartilhado (por exemplo, por um dispositivo NAT)?
 1. O sensor não está resolvendo um ou mais dos endereços IP de destino? Se um endereço IP de destino não for resolvido, isso poderá indicar que as portas certas entre os dispositivos e o sensor não estão abertas corretamente.
 
-    Se a resposta a uma das perguntas anteriores for **sim** , verifique se os computadores de origem e de destinos são os mesmos. Se eles forem o mesmo, esse será um **FP** e indicando que não houve nenhuma tentativa real de **Pass-the-Ticket**.
+    Se a resposta a uma das perguntas anteriores for **sim**, verifique se os computadores de origem e de destinos são os mesmos. Se eles forem o mesmo, esse será um **FP** e indicando que não houve nenhuma tentativa real de **Pass-the-Ticket**.
 
 O recurso [Remote Credential Guard](/windows/security/identity-protection/remote-credential-guard) de conexões de RDP, quando usado com o Windows 10 no Windows Server 2016 e mais recentes, pode causar alertas **B-TP**.
 Usando a evidência de alerta, verifique se o usuário fez uma conexão de área de trabalho remota do computador de origem para o computador de destino.

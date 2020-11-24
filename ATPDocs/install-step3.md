@@ -10,16 +10,14 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: f971bf0ccadf2eba52b40c95591abaff0c963e0e
-ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
+ms.openlocfilehash: b2d1978a822b8062422c41696043b1563d8bc893
+ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93277071"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94848509"
 ---
 # <a name="quickstart-download-the-product-long-sensor-setup-package"></a>Início Rápido: Baixar o pacote de instalação do sensor do [!INCLUDE [Product long](includes/product-long.md)]
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 Neste guia de início rápido, você baixará o pacote de instalação do sensor do [!INCLUDE [Product long](includes/product-long.md)] no portal.
 
@@ -35,7 +33,7 @@ Clique em **Baixar** na lista de etapas na parte superior da página para acessa
 
 ![Definições de configuração do sensor do [!INCLUDE [Product short](includes/product-short.md)]](media/sensor-config.png)
 
-Para acessar a tela de configuração do sensor mais tarde, selecione **Configuração** e, em **Sistema** , clique em **Sensores**.  
+Para acessar a tela de configuração do sensor mais tarde, selecione **Configuração** e, em **Sistema**, clique em **Sensores**.  
 
 1. Clique em **Baixar** para salvar o pacote localmente.
 1. Copie a **chave de** **acesso**. A chave de acesso é necessária para que o sensor do [!INCLUDE [Product short](includes/product-short.md)] se conecte à sua instância do [!INCLUDE [Product short](includes/product-short.md)]. A chave de acesso é uma senha de uso único para implantação de sensor. Depois disso, toda a comunicação é realizada usando certificados para autenticação e criptografia TLS. Use o botão **Regenerar** se você precisar regenerar a nova chave de acesso. Isso não afetará nenhum sensor implantado anteriormente, porque a chave só é usada para o registro inicial do sensor.

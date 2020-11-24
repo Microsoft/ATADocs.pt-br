@@ -11,16 +11,14 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: e6baa54d7e8738d6132bf33d9ce8f4e829e6243f
-ms.sourcegitcommit: f434dbff577d9944df18ca7533d026acdab0bb42
+ms.openlocfilehash: cb67a36402c0b6b193fbd5ee11b63113714cd885
+ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93276758"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94848798"
 ---
 # <a name="microsoft-defender-for-identity-architecture"></a>Arquitetura do Microsoft Defender para Identidade
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 O [!INCLUDE [Product long](includes/product-long.md)] monitora seus controladores de domínio capturando e analisando o tráfego de rede e aproveitando os eventos do Windows diretamente dos controladores de domínio. Em seguida, ele analisa os dados em busca de ataques e ameaças. Utilizando criação de perfil, detecção determinística, machine learning e algoritmos comportamentais, o [!INCLUDE [Product short](includes/product-short.md)] aprende mais sobre a sua rede, habilita a detecção de anomalias e alerta você sobre atividades suspeitas.
 
@@ -53,7 +51,7 @@ Use o portal do [!INCLUDE [Product short](includes/product-short.md)] para:
 - Gerenciar as definições de configuração do sensor do [!INCLUDE [Product short](includes/product-short.md)]
 - Ver os dados recebidos dos sensores do [!INCLUDE [Product short](includes/product-short.md)]
 - Monitorar atividades suspeitas detectadas e ataques suspeitos com base no modelo de cadeia de eliminação de ataque
-- **Opcional** : o portal também pode ser configurado para enviar emails e eventos quando forem detectados problemas de integridade ou alertas de segurança
+- **Opcional**: o portal também pode ser configurado para enviar emails e eventos quando forem detectados problemas de integridade ou alertas de segurança
 
 > [!NOTE]
 > Se nenhum sensor for instalado na sua instância do [!INCLUDE [Product short](includes/product-short.md)] em até 60 dias, ela poderá ser excluída e você precisará recriá-la.
