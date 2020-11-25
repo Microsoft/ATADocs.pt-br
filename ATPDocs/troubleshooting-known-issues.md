@@ -11,12 +11,12 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: fffb94b42e49280949dbdb67926841ebaea8ba2a
-ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
+ms.openlocfilehash: e37e413a355db72e04e1b6f72a71c570148c9f04
+ms.sourcegitcommit: 4563d22ad0fc63022a57c5d2d4fbc425e900bf84
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94848917"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96028692"
 ---
 # <a name="troubleshooting-product-long-known-issues"></a>Solucionando [!INCLUDE [Product long](includes/product-long.md)] problemas conhecidos
 
@@ -158,7 +158,7 @@ Se você tiver um [!INCLUDE [Product short](includes/product-short.md)] sensor e
 
 Para resolver o problema:
 
-Defina as configurações a seguir como **Desabilitado** na configuração de NIC da máquina virtual: **Descarregamento de TSO do IPv4**.
+No SO convidado, defina o seguinte como **desabilitado** na configuração de NIC da máquina virtual: **descarregamento de Tso IPv4**.
 
  ![Problema de sensor VMware](media/vm-sensor-issue.png)
 

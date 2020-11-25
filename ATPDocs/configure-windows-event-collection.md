@@ -12,11 +12,11 @@ ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
 ms.openlocfilehash: fd2d06ad49756a0a1b78cd055546b5db64bb0940
-ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
+ms.sourcegitcommit: 6a84521b11bb66b4cb5e0c958c1ef95a6ce51564
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94848169"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96028709"
 ---
 # <a name="configure-windows-event-collection"></a>Configurar a coleção de Eventos do Windows
 
