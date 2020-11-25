@@ -11,16 +11,14 @@ ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 1f0b06f81986eedaac03f58c9c040a0b3348c304
-ms.sourcegitcommit: 3c5ca2cb13ebe6c839ede951b238261d1fc73f26
+ms.openlocfilehash: 18d3f9461eba901f875863a5e7ccc7cab7ebc4c8
+ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/04/2020
-ms.locfileid: "93343545"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94848662"
 ---
 # <a name="tutorial-compromised-credential-alerts"></a>Tutorial: Alertas de credencial comprometida
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 Normalmente, os ataques cibernéticos são iniciados contra qualquer entidade acessível, como um usuário com poucos privilégios e, em seguida, se movem lateralmente com rapidez até que o invasor obtenha acesso a ativos valiosos – como contas confidenciais, administradores de domínio e dados altamente confidenciais. O [!INCLUDE [Product long](includes/product-long.md)] identifica essas ameaças avançadas na origem ao longo de toda a cadeia de eliminação do ataque e classifica-as nas seguintes fases:
 
@@ -40,14 +38,11 @@ Os alertas de segurança a seguir ajudam você a identificar e corrigir as ativi
 > - [Suspeita de ataque de força bruta (NTLM do Kerberos) (ID externa 2023)](#suspected-brute-force-attack-kerberos-ntlm-external-id-2023)
 > - [Suspeita de ataque de força bruta (LDAP) (ID externa 2004)](#suspected-brute-force-attack-ldap-external-id-2004)
 > - [Suspeita de ataque de força bruta (SMB) (ID externa 2033)](#suspected-brute-force-attack-smb-external-id-2033)
+> - [Suspeita de exposição do nome da entidade de serviço do Kerberos (ID externa 2410)](#suspected-kerberos-spn-exposure-external-id-2410)
 > - [Suspeita de tentativa de elevação de privilégio do Netlogon (exploração CVE-2020-1472) (ID externa 2411)](#suspected-netlogon-priv-elev-2411)
 > - [Suspeita de ataque do ransomware WannaCry (ID externa 2035)](#suspected-wannacry-ransomware-attack-external-id-2035)
 > - [Suspeita de uso da estrutura de hacker Metasploit (ID externa 2034)](#suspected-use-of-metasploit-hacking-framework-external-id-2034)
 > - [Conexão VPN suspeita (ID externa 2025)](#suspicious-vpn-connection-external-id-2025)
-
-<!--
-> - [Suspected Kerberos SPN exposure (external ID 2410)](#suspected-kerberos-spn-exposure-external-id-2410)
--->
 
 ## <a name="honeytoken-activity-external-id-2014"></a>Atividade de Honeytoken (ID externa 2014)
 
@@ -89,7 +84,7 @@ Para obter mais informações sobre contas de honeytoken, confira [Configurar ex
 
 Em um ataque de força bruta, o invasor tenta a autenticação usando várias senhas em diferentes contas até que uma senha correta seja encontrada ou usando uma senha em uma pulverização de senhas de grande escala que funcione para pelo menos uma conta. Uma vez descoberta, o invasor entra usando a conta autenticada.
 
-Nessa detecção, um alerta é disparado quando ocorrem diversas falhas de autenticação usando Kerberos ou NTLM ou ainda quando o uso de uma pulverização de senhas é detectada. Por meio do Kerberos ou NTLM, esse tipo de ataque geralmente é realizado em esquema *horizontal* , usando um pequeno conjunto de senhas com vários usuários, ou *vertical* , com um grande conjunto de senhas com poucos usuários ou uma combinação dos dois.
+Nessa detecção, um alerta é disparado quando ocorrem diversas falhas de autenticação usando Kerberos ou NTLM ou ainda quando o uso de uma pulverização de senhas é detectada. Por meio do Kerberos ou NTLM, esse tipo de ataque geralmente é realizado em esquema *horizontal*, usando um pequeno conjunto de senhas com vários usuários, ou *vertical*, com um grande conjunto de senhas com poucos usuários ou uma combinação dos dois.
 
 Em uma pulverização de senhas, depois de enumerar com êxito uma lista de usuários válidos do controlador de domínio, os invasores tentam UMA senha cuidadosamente concebida em TODAS as contas de usuário conhecidas (uma senha para várias contas). Se a pulverização de senhas inicial falhar, eles tentam novamente utilizando uma senha diferente cuidadosamente concebida, normalmente após aguardar 30 minutos entre as tentativas. Esse tempo de espera permite que os invasores evitem disparar a maioria dos limites de bloqueio de conta que se baseiam no tempo. A pulverização de senhas tornou-se rapidamente uma técnica de preferência entre os invasores e testadores de intrusão. Os ataques de pulverização de senhas se mostraram eficazes na conquista de uma entrada na organização e por fazer movimentos laterais posteriores, tentando aumentar os privilégios. O período mínimo antes que um alerta possa ser disparado é de uma semana.
 
@@ -105,11 +100,11 @@ Uma semana
     - Há alguma chance dessas contas falharem porque uma senha incorreta foi usada?
     - Verifique com os usuários se eles geraram a atividade (falha ao fazer logon algumas vezes e, em seguida, êxito).
 
-      Se a resposta às perguntas acima for **sim** , **feche** o alerta de segurança como uma atividade B-TP.
+      Se a resposta às perguntas acima for **sim**, **feche** o alerta de segurança como uma atividade B-TP.
 
-1. Se não houver nenhuma **Conta adivinhada** , verifique se alguma das **Contas atacadas** é normalmente usada no computador de origem.
+1. Se não houver nenhuma **Conta adivinhada**, verifique se alguma das **Contas atacadas** é normalmente usada no computador de origem.
     - Verifique se há um script em execução no computador de origem com credenciais erradas/antigas?
-    - Se a resposta à pergunta anterior for **Sim** , interrompa e edite o script ou exclua-o. **Feche** o alerta de segurança como uma atividade B-TP.
+    - Se a resposta à pergunta anterior for **Sim**, interrompa e edite o script ou exclua-o. **Feche** o alerta de segurança como uma atividade B-TP.
 
 **Entender o escopo da violação**
 
@@ -142,7 +137,7 @@ Uma semana
 
 Em um ataque de força bruta, o invasor tenta autenticar com muitas senhas diferentes para diferentes contas até que uma senha correta seja encontrada para pelo menos uma conta. Uma vez encontrada, um invasor pode fazer logon usando essa conta.
 
-Nessa detecção, um alerta é disparado quando o [!INCLUDE [Product short](includes/product-short.md)] detecta um grande número de autenticações de associação simples. Esse alerta detecta ataques de força bruta realizados, seja *horizontalmente* , com um pequeno conjunto de senhas entre vários usuários, *verticalmente* , com um grande conjunto de senhas em apenas alguns usuários ou com qualquer combinação dessas duas opções.
+Nessa detecção, um alerta é disparado quando o [!INCLUDE [Product short](includes/product-short.md)] detecta um grande número de autenticações de associação simples. Esse alerta detecta ataques de força bruta realizados, seja *horizontalmente*, com um pequeno conjunto de senhas entre vários usuários, *verticalmente*, com um grande conjunto de senhas em apenas alguns usuários ou com qualquer combinação dessas duas opções.
 
 **TP, B-TP ou FP**
 
@@ -152,12 +147,12 @@ Nessa detecção, um alerta é disparado quando o [!INCLUDE [Product short](incl
     - Há alguma chance dessas contas falharem porque uma senha incorreta foi usada?
     - Verifique com os usuários se eles geraram a atividade (falha ao fazer logon algumas vezes e, em seguida, êxito).
 
-        Se a resposta às perguntas anteriores for **sim** , **feche** o alerta de segurança como uma atividade B-TP.
+        Se a resposta às perguntas anteriores for **sim**, **feche** o alerta de segurança como uma atividade B-TP.
 
-1. Se não houver nenhuma **Conta adivinhada** , verifique se alguma das **Contas atacadas** é normalmente usada no computador de origem.
+1. Se não houver nenhuma **Conta adivinhada**, verifique se alguma das **Contas atacadas** é normalmente usada no computador de origem.
     - Verifique se há um script em execução no computador de origem com credenciais erradas/antigas?
 
-        Se a resposta à pergunta anterior for **Sim** , interrompa e edite o script ou exclua-o. **Feche** o alerta de segurança como uma atividade B-TP.
+        Se a resposta à pergunta anterior for **Sim**, interrompa e edite o script ou exclua-o. **Feche** o alerta de segurança como uma atividade B-TP.
 
 **Entender o escopo da violação**
 
@@ -208,35 +203,33 @@ Ocasionalmente, os aplicativos implementam sua própria pilha NTLM ou SMB.
 1. Imponha [senhas complexas e longas](/windows/security/threat-protection/security-policy-settings/password-policy) na organização. As senhas complexas e longas fornecem o primeiro nível necessário de segurança contra ataques de força bruta futuros.
 1. [Desabilitar SMBv1](https://blogs.technet.microsoft.com/filecab/2016/09/16/stop-using-smb1/)
 
-<!--
-## Suspected Kerberos SPN exposure (external ID 2410)
+## <a name="suspected-kerberos-spn-exposure-external-id-2410"></a>Suspeita de exposição do nome da entidade de serviço do Kerberos (ID externa 2410)
 
-**Description**
+**Descrição**
 
-Attackers use tools to enumerate service accounts and their respective SPNs (Service principal names), request a Kerberos service ticket for the services, capture the Ticket Granting Service (TGS) tickets from memory and extract their hashes, and save them for later use in an offline brute force attack.
+Os invasores usam ferramentas para enumerar contas de serviço e os respectivos SPNs (nomes de entidade de serviço), solicitar um tíquete de serviço Kerberos para os serviços, capturar os tíquetes de TGS (serviço de concessão de tíquete) da memória, extrair os hashes e salvá-los para uso posterior em um ataque de força bruta offline.
 
-**Learning period**
+**Período de aprendizado**
 
-None
+Nenhum
 
-**TP, B-TP, or FP**
+**TP, B-TP ou FP**
 
-1. Check if the source computer is running an attack tool, such as PowerSploit or Rubeus.
-    1. If yes, it is a true positive. Follow the instructions in **Understand the scope of the breach**.
-    1. If the source computer is found running that type of application, and it should continue doing so, Close the security alert as a T-BP activity, and exclude that computer.
+1. Verifique se o computador de origem está executando uma ferramenta de ataque como o PowerSploit ou o Rubeus.
+    1. Em caso afirmativo, é um verdadeiro positivo. Siga as instruções descritas em  **Entender o escopo da violação**.
+    1. Se o computador de origem estiver executando esse tipo de aplicativo e precisar continuar, feche o alerta de segurança como uma atividade T-BP e exclua o computador.
 
-**Understand the scope of the breach**
+**Entender o escopo da violação**
 
-1. Investigate the [exposed accounts](investigate-a-user.md). Check for malicious activity or suspicious behavior for these accounts.
-1. Investigate the [source computer](investigate-a-computer.md).
+1. Investigue as [contas expostas](investigate-a-user.md). Verifique se há atividades mal-intencionadas ou comportamento suspeito para essas contas.
+1. Investigue o [computador de origem](investigate-a-computer.md).
 
-**Remediation:**
+**Correção:**
 
-1. Contain the source computer.
-    - Find the tool that performed the attack and remove it.
-    - Look for users who were logged on around the same time as the activity occurred, as these users may also be compromised. Reset their passwords and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can use the [**Confirm user compromised**](/cloud-app-security/accounts#governance-actions) action in the Cloud App Security portal.
-1. Reset the passwords of the exposed users and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can use the [**Confirm user compromised**](/cloud-app-security/accounts#governance-actions) action in the Cloud App Security portal.
--->
+1. Contenha o computador de origem.
+    - Encontre a ferramenta que realizou o ataque e remova-a.
+    - Procure usuários que estavam conectados no mesmo período em que a atividade ocorreu, pois eles também podem estar comprometidos. Redefina suas senhas e habilite a MFA ou, se você tiver configurado as políticas relevantes de usuário de alto risco no Azure Active Directory Identity Protection, poderá usar a ação [**Confirmar usuário comprometido**](/cloud-app-security/accounts#governance-actions) no portal de Cloud App Security.
+1. Redefina as senhas dos usuários expostos e habilite o MFA ou, se você tiver configurado as políticas de usuário de alto risco relevantes no Azure Active Directory Identity Protection, poderá usar a ação [**Confirmar usuário comprometido**](/cloud-app-security/accounts#governance-actions) no portal do Cloud App Security.
 
 <a name="suspected-netlogon-priv-elev-2411"></a>
 
@@ -244,7 +237,7 @@ None
 
 A Microsoft publicou o [CVE-2020-1472](https://portal.msrc.microsoft.com/security-guidance/advisory/CVE-2020-1472) anunciando a existência de uma nova vulnerabilidade que permite a elevação de privilégios ao controlador de domínio.
 
-Existe uma vulnerabilidade de elevação de privilégio quando um invasor estabelece uma conexão vulnerável de canal seguro do Netlogon com um controlador de domínio, usando o Protocolo Remoto Netlogon ( [MS-NRPC](/openspecs/windows_protocols/ms-nrpc/ff8f970f-3e37-40f7-bd4b-af7336e4792f)), também conhecido como *Vulnerabilidade de Elevação de Privilégio do Netlogon*.
+Existe uma vulnerabilidade de elevação de privilégio quando um invasor estabelece uma conexão vulnerável de canal seguro do Netlogon com um controlador de domínio, usando o Protocolo Remoto Netlogon ([MS-NRPC](/openspecs/windows_protocols/ms-nrpc/ff8f970f-3e37-40f7-bd4b-af7336e4792f)), também conhecido como *Vulnerabilidade de Elevação de Privilégio do Netlogon*.
 
 **Período de aprendizado**
 
