@@ -4,18 +4,18 @@ description: Descreve os requisitos para uma implantação bem-sucedida do Micro
 author: shsagir
 ms.author: shsagir
 manager: shsagir
-ms.date: 10/26/2020
+ms.date: 11/24/2020
 ms.topic: overview
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: df877f342b0bf7a31bf4cdf171a7bc2104c89e1f
-ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
+ms.openlocfilehash: 23078e7e4281629f378e27281a21124d959f0902
+ms.sourcegitcommit: 24530d8fac3b63dee766b124b6a5549c1b9ef808
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94846996"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "96028641"
 ---
 # <a name="product-long-prerequisites"></a>Pré-requisitos do [!INCLUDE [Product long](includes/product-long.md)]
 
@@ -132,7 +132,7 @@ O sensor do [!INCLUDE [Product short](includes/product-short.md)] dá suporte à
 | Windows Server 2016        | &#10004;                       | &#10004;    | &#10060;       |
 | Windows Server 2019\*      | &#10004;                       | &#10004;    | &#10060;       |
 
-\* Requer [KB4487044](https://support.microsoft.com/help/4487044/windows-10-update-kb4487044). Os sensores instalados no Server 2019 sem essa atualização serão interrompidos automaticamente.
+\* Requer a atualização cumulativa [KB4487044](https://support.microsoft.com/help/4487044/windows-10-update-kb4487044) ou mais recente. Os sensores instalados no Server 2019 sem essa atualização serão interrompidos automaticamente se a versão do arquivo *ntdsai.dll* no diretório do sistema for mais antiga que *10.0.17763.316*.
 
 O controlador de domínio pode ser um RODC (controlador de domínio somente leitura).
 
