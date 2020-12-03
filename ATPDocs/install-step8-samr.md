@@ -1,22 +1,14 @@
 ---
 title: Configurar SAM-R para habilitar a detecção de caminho de movimento lateral no Microsoft defender para identidade
 description: Explica como configurar o Microsoft defender para identidade para fazer chamadas remotas para SAM
-keywords: ''
-author: shsagir
-ms.author: shsagir
-manager: shsagir
 ms.date: 10/26/2020
 ms.topic: how-to
-ms.collection: M365-security-compliance
-ms.service: azure-advanced-threat-protection
-ms.reviewer: itargoet
-ms.suite: ems
-ms.openlocfilehash: fb97959f9cffe0e80cb0d273e061a13e6b809f83
-ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
+ms.openlocfilehash: 24c1d6baf99e3d65a96897d2d0b90ffe94ad42eb
+ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94847761"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96543936"
 ---
 # <a name="configure-product-long-to-make-remote-calls-to-sam"></a>Configurar o [!INCLUDE [Product long](includes/product-long.md)] para realizar chamadas remotas para SAM
 

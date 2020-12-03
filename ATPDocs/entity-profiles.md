@@ -1,22 +1,14 @@
 ---
 title: Trabalhar com perfis de usuário no portal do Microsoft Defender para Identidade
 description: Descreve como investigar os usuários na tela de perfis de usuário no portal do Microsoft Defender para Identidade
-keywords: ''
-author: shsagir
-ms.author: shsagir
-manager: shsagir
 ms.date: 10/26/2020
 ms.topic: conceptual
-ms.collection: M365-security-compliance
-ms.service: azure-advanced-threat-protection
-ms.reviewer: itargoet
-ms.suite: ems
-ms.openlocfilehash: 06b628caf47945a9bfa645b5b73593c02a1093b4
-ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
+ms.openlocfilehash: 41998b13c6eabff5c2248b7e352dbf5d759831dd
+ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94848152"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96544072"
 ---
 # <a name="understanding-entity-profiles"></a>Noções básicas sobre perfis de entidade
 

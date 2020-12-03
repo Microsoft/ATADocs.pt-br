@@ -1,22 +1,14 @@
 ---
 title: Avaliações de caminhos de movimento lateral do Microsoft defender para identidade difuso
 description: Este artigo fornece uma visão geral do Microsoft defender para entidades confidenciais de identidade com o relatório de avaliação de postura de segurança de identidades de caminhos de movimento difuso lateral.
-keywords: ''
-author: shsagir
-ms.author: shsagir
-manager: rkarlin
 ms.date: 10/26/2020
 ms.topic: how-to
-ms.collection: M365-security-compliance
-ms.service: azure-advanced-threat-protection
-ms.reviewer: itargoet
-ms.suite: ems
-ms.openlocfilehash: 40175ace8046ae7b0edb77f4cac6e036eed997e7
-ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
+ms.openlocfilehash: 0c40159818e9526eb3cdf0259fbcb45c54fa5482
+ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94848339"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96544157"
 ---
 # <a name="security-assessment-riskiest-lateral-movement-paths-lmp"></a>Avaliação de segurança: LMP (caminhos de movimento lateral) mais arriscados
 

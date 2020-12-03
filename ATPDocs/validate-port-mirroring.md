@@ -1,22 +1,14 @@
 ---
 title: Validar o espelhamento de porta no Microsoft Defender para Identidade
 description: Descreve como confirmar que o espelhamento de porta está configurado corretamente no Microsoft Defender para Identidade
-keywords: ''
-author: shsagir
-ms.author: shsagir
-manager: shsagir
 ms.date: 10/27/2020
 ms.topic: how-to
-ms.collection: M365-security-compliance
-ms.service: azure-advanced-threat-protection
-ms.reviewer: bennyl
-ms.suite: ems
-ms.openlocfilehash: a6b3a3ef5d16a3e92a4bcf6a8d52d96c9c4036ce
-ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
+ms.openlocfilehash: 80944d45e92533a37edcbb855f913ea605bdef1d
+ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94846724"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96544259"
 ---
 # <a name="validate-port-mirroring"></a>Validação do espelhamento de porta
 

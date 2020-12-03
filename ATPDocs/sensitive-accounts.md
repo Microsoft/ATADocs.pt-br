@@ -1,22 +1,14 @@
 ---
 title: Marcar contas como confidenciais com o Microsoft Defender para Identidade
 description: Descreve como marcar contas como confidenciais usando o Microsoft Defender para Identidade
-keywords: ''
-author: shsagir
-ms.author: shsagir
-manager: shsagir
 ms.date: 10/27/2020
 ms.topic: how-to
-ms.collection: M365-security-compliance
-ms.service: azure-advanced-threat-protection
-ms.reviewer: itargoet
-ms.suite: ems
-ms.openlocfilehash: 3f32d974b9dcfb946279b14eebc116ca74b5b3f5
-ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
+ms.openlocfilehash: 2e013b12a73e099d1d3292d77cc3f2ef98706a09
+ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94846911"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96542397"
 ---
 # <a name="working-with-sensitive-accounts"></a>Trabalhando com contas confidenciais
 

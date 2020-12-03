@@ -1,22 +1,14 @@
 ---
 title: Referência de log de SIEM do Microsoft Defender para Identidade
 description: Fornece exemplos de logs de atividades suspeitas enviados do Microsoft Defender para Identidade para o SIEM.
-keywords: ''
-author: shsagir
-ms.author: shsagir
-manager: shsagir
 ms.date: 10/26/2020
 ms.topic: conceptual
-ms.collection: M365-security-compliance
-ms.service: azure-advanced-threat-protection
-ms.reviewer: arzinger
-ms.suite: ems
-ms.openlocfilehash: d8625b9d6b634399f61201dc3bb7dd9c956fe36f
-ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
+ms.openlocfilehash: f5be050f11fc41e19c37410060acb825642369e3
+ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94848237"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96544106"
 ---
 # <a name="product-long-siem-log-reference"></a>Referência de log de SIEM do [!INCLUDE [Product long](includes/product-long.md)]
 

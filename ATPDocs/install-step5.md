@@ -1,20 +1,14 @@
 ---
 title: Configurar o Microsoft defender para configurações do sensor de identidade conceitual
 description: A etapa cinco da instalação do Microsoft defender para identidade ajuda você a definir as configurações para o sensor autônomo do defender para identidade.
-author: shsagir
-ms.author: shsagir
 ms.date: 09/15/2019
 ms.topic: how-to
-ms.collection: M365-security-compliance
-ms.service: azure-advanced-threat-protection
-ms.reviewer: itargoet
-ms.suite: ems
-ms.openlocfilehash: 27431aca85e794ecd31029b6286e3146f01fa7ec
-ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
+ms.openlocfilehash: 329bfd4f6de2e15865c81d22651e833a63d07b6d
+ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94848492"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96543103"
 ---
 # <a name="configure-product-long-sensor-settings"></a>Definir [!INCLUDE [Product long](includes/product-long.md)] configurações de sensor
 

@@ -1,22 +1,14 @@
 ---
 title: Solução de problemas do Microsoft defender para identidade usando os logs
 description: Descreve como você pode usar o Microsoft defender para logs de identidade para solucionar problemas
-keywords: ''
-author: shsagir
-ms.author: shsagir
-manager: shsagir
 ms.date: 10/27/2020
 ms.topic: how-to
-ms.collection: M365-security-compliance
-ms.service: azure-advanced-threat-protection
-ms.reviewer: ''
-ms.suite: ''
-ms.openlocfilehash: 27e048b337ecd25b534f0c10096999a7173292c1
-ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
+ms.openlocfilehash: beea555d45f1e06ea3eddeffbf057c392003a8d2
+ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94846622"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96542100"
 ---
 # <a name="troubleshooting-product-long-sensor-using-the-product-short-logs"></a>Solucionando problemas [!INCLUDE [Product long](includes/product-long.md)] de sensor usando os [!INCLUDE [Product short](includes/product-short.md)] logs
 

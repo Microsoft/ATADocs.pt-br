@@ -1,22 +1,14 @@
 ---
 title: Instalar o Microsoft Defender para Identidade
 description: Nesta etapa da instalação do Microsoft Defender para Identidade, você configura as fontes de dados.
-keywords: ''
-author: shsagir
-ms.author: shsagir
-manager: shsagir
 ms.date: 10/26/2020
 ms.topic: how-to
-ms.collection: M365-security-compliance
-ms.service: azure-advanced-threat-protection
-ms.reviewer: itargoet
-ms.suite: ems
-ms.openlocfilehash: 7624f2d959e37b2bf88d4b14c31c5a6f1ddd6853
-ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
+ms.openlocfilehash: 6de6b52af73c22387ad16c28e4a0b0e84c888847
+ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94848220"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96544055"
 ---
 # <a name="configure-event-collection"></a>Configurar coleta de eventos
 

@@ -1,22 +1,14 @@
 ---
 title: Filtro e pesquisa de atividades monitoradas do Microsoft defender for Identity
 description: Este artigo fornece uma visão geral de como filtrar e pesquisar atividades monitoradas usando o Microsoft defender para identidade.
-keywords: ''
-author: shsagir
-ms.author: shsagir
-manager: shsagir
 ms.date: 10/26/2020
 ms.topic: how-to
-ms.collection: M365-security-compliance
-ms.service: azure-advanced-threat-protection
-ms.reviewer: itargoet
-ms.suite: ems
-ms.openlocfilehash: a35906a4d21dc5c3f9087956f7c7d4a3ad6dafdf
-ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
+ms.openlocfilehash: 9e1758475c9b364e1726e5f145676110b98389d9
+ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94848832"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96543800"
 ---
 # <a name="product-long-monitored-activities-search-and-filter"></a>[!INCLUDE [Product long](includes/product-long.md)] pesquisa e filtro de atividades monitoradas
 

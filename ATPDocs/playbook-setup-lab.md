@@ -1,21 +1,14 @@
 ---
 title: Tutorial de configuração do laboratório de alertas de segurança do Microsoft Defender para Identidade.
 description: Neste tutorial, você aprenderá a configurar um laboratório de teste a fim de simular ameaças para detecção pelo Microsoft Defender para Identidade.
-author: shsagir
-ms.author: shsagir
-manager: shsagir
 ms.date: 10/26/2020
 ms.topic: tutorial
-ms.collection: M365-security-compliance
-ms.service: azure-advanced-threat-protection
-ms.reviewer: itargoet
-ms.suite: ems
-ms.openlocfilehash: e175744d29cac82c29dc1f072a145ee68770dcf7
-ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
+ms.openlocfilehash: 51505b97acde09eecce25e0bafaea8fa0af60419
+ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94847047"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96542525"
 ---
 # <a name="tutorial-setup-a-product-long-security-alert-lab"></a>Tutorial: Configurar um laboratório de alertas de segurança do [!INCLUDE [Product long](includes/product-long.md)]
 
@@ -266,4 +259,4 @@ Teste seu ambiente de laboratório do [!INCLUDE [Product short](includes/product
 
 ## <a name="join-the-community"></a>Participe da comunidade
 
-Tem mais perguntas ou quer discutir sobre o [!INCLUDE [Product short](includes/product-short.md)] e a segurança relacionada com outras pessoas? Participe da [Comunidade do [!INCLUDE [Product short](includes/product-short.md)]](https://techcommunity.microsoft.com/t5/Azure-Advanced-Threat-Protection/bd-p/AzureAdvancedThreatProtection) hoje mesmo!
+Tem mais perguntas ou quer discutir sobre o [!INCLUDE [Product short](includes/product-short.md)] e a segurança relacionada com outras pessoas? Participe da Comunidade [[!INCLUDE [Product short](includes/product-short.md)]](https://techcommunity.microsoft.com/t5/Azure-Advanced-Threat-Protection/bd-p/AzureAdvancedThreatProtection) hoje mesmo!

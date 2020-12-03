@@ -1,22 +1,14 @@
 ---
 title: Guia estratégico de predominância de domínio do Microsoft Defender para Identidade
 description: O guia estratégico de predominância de domínio do Microsoft Defender para Identidade descreve como simular ataques de dominância do domínio para detecção do Defender para Identidade
-keywords: ''
-author: shsagir
-ms.author: shsagir
-manager: shsagir
 ms.date: 10/26/2020
 ms.topic: tutorial
-ms.collection: M365-security-compliance
-ms.service: azure-advanced-threat-protection
-ms.reviewer: itargoet
-ms.suite: ems
-ms.openlocfilehash: bf1a3207fe44bee729d1120f71e1038e11e3e853
-ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
+ms.openlocfilehash: fc79528c5adb2b487b3b68f2919facadfd7ebe2e
+ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94847302"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96542780"
 ---
 # <a name="tutorial-domain-dominance-playbook"></a>Tutorial: Guia estratégico de predominância de domínio
 

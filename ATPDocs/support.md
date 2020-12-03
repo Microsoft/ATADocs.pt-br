@@ -1,22 +1,14 @@
 ---
 title: Suporte do Microsoft defender para identidade
 description: Descreve o processo para obter ajuda de suporte para o Microsoft defender para identidade.
-keywords: ''
-author: shsagir
-ms.author: shsagir
-manager: shsagir
 ms.date: 10/27/2020
 ms.topic: conceptual
-ms.collection: M365-security-compliance
-ms.service: azure-advanced-threat-protection
-ms.reviewer: itargoet
-ms.suite: ems
-ms.openlocfilehash: 2c35f69c3696e069cb48a6d1e04ba88b5d595ac0
-ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
+ms.openlocfilehash: bd5c340633a5f52d7ac25bd075acc9381bb9fd19
+ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94848951"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96544327"
 ---
 # <a name="product-long-information-and-support"></a>[!INCLUDE [Product long](includes/product-long.md)] informações e suporte
 
@@ -46,7 +38,7 @@ Outros clientes devem usar estes canais de suporte:
 
 | Canais|Instruções|
 |------|-----|
-|Use o Portal do Azure|1. Selecione **nova solicitação de suporte** em **ajuda + suporte** na portal do Azure. <br>2. quando solicitado, na folha **noções básicas** , como o **tipo de problema**, escolha **técnico**, como o **serviço** em segurança & identidade, escolha **proteção avançada contra ameaças do Azure**. <br>3. Verifique se uma das seguintes opções está selecionada:<br>- Assinatura com suporte técnico incluído. Você verá esta opção caso tenha uma assinatura paga ou de avaliação do Azure.<br>- Suporte técnico incluído. Você verá esta opção se não tiver uma assinatura do Azure.|
+|Usar o portal do Azure|1. Selecione **nova solicitação de suporte** em **ajuda + suporte** na portal do Azure. <br>2. quando solicitado, na folha **noções básicas** , como o **tipo de problema**, escolha **técnico**, como o **serviço** em segurança & identidade, escolha **proteção avançada contra ameaças do Azure**. <br>3. Verifique se uma das seguintes opções está selecionada:<br>- Assinatura com suporte técnico incluído. Você verá esta opção caso tenha uma assinatura paga ou de avaliação do Azure.<br>- Suporte técnico incluído. Você verá esta opção se não tiver uma assinatura do Azure.|
 |Usar o [!INCLUDE [Product short](includes/product-short.md)] Portal| 1. Clique no ícone "?" na barra de navegação superior no [!INCLUDE [Product short](includes/product-short.md)] Portal<br>2. pesquise por [!INCLUDE [Product short](includes/product-short.md)] .<br>3. Abra um tíquete de incidente.<br>-Selecione "suporte"<br>4. Abra um tíquete de incidente. Se você tiver sucesso ao entrar no [!INCLUDE [Product short](includes/product-short.md)] portal, poderá inserir o [portal de suporte assistido online (OAS)](https://support.microsoft.com/assistedsupportproducts). |
 
 Para obter opções de suporte adicionais, fale com seu contato da Microsoft.

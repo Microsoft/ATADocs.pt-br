@@ -1,22 +1,14 @@
 ---
 title: Avaliações de atributos de conta desprotegidas do Microsoft defender para identidade
 description: Este artigo fornece uma visão geral do Microsoft defender para entidades de identidade com atributos não seguros relatório de avaliação de postura de segurança de identidade.
-keywords: ''
-author: shsagir
-ms.author: shsagir
-manager: shsagir
 ms.date: 10/26/2020
 ms.topic: how-to
-ms.collection: M365-security-compliance
-ms.service: azure-advanced-threat-protection
-ms.reviewer: itargoet
-ms.suite: ems
-ms.openlocfilehash: 50f102c445c31969aede302fb37955cae85d626b
-ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
+ms.openlocfilehash: befa5e059a93e6f2e15fd84450948285a94173a6
+ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94848713"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96543545"
 ---
 # <a name="security-assessment-unsecure-account-attributes"></a>Avaliação de segurança: Atributos de conta não seguros
 

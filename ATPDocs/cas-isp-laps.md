@@ -1,22 +1,14 @@
 ---
 title: Avaliações de uso do Microsoft defender para identidade Microsoft LAPS
 description: Este artigo fornece uma visão geral do relatório de avaliação da postura de segurança de identidade de uso do Microsoft defender para identidade do Microsoft LAPS.
-keywords: ''
-author: shsagir
-ms.author: shsagir
-manager: shsagir
 ms.date: 10/26/2020
 ms.topic: how-to
-ms.collection: M365-security-compliance
-ms.service: azure-advanced-threat-protection
-ms.reviewer: itargoet
-ms.suite: ems
-ms.openlocfilehash: 170385cfb1bd3fc82a77d67cd6f82d2197c458bf
-ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
+ms.openlocfilehash: d829636ac9659a19453db6f4cadfba54d129593d
+ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94848764"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96543613"
 ---
 # <a name="security-assessment-microsoft-laps-usage"></a>Avaliação de segurança: uso da LAPS da Microsoft
 

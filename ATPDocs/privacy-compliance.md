@@ -1,21 +1,14 @@
 ---
 title: Política de dados pessoais do Microsoft defender para identidade
 description: Fornece links para informações sobre como excluir informações particulares e dados pessoais do Microsoft defender para identidade.
-author: shsagir
-ms.author: shsagir
-manager: shsagir
 ms.date: 10/26/2020
 ms.topic: conceptual
-ms.collection: M365-security-compliance
-ms.service: azure-advanced-threat-protection
-ms.reviewer: ophir
-ms.suite: ems
-ms.openlocfilehash: 648d12d6135e5ab09319580142807f930e595eda
-ms.sourcegitcommit: 07a855b87931875bdeca14b152b13a36db79bfa8
+ms.openlocfilehash: c5af419c2be751a8b9f92855f57f13669860de1a
+ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "94846962"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96542355"
 ---
 # <a name="product-long-data-security-and-privacy"></a>[!INCLUDE [Product long](includes/product-long.md)] segurança e privacidade de dados
 

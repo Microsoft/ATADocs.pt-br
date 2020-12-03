@@ -1,22 +1,14 @@
 ---
 title: Resolução de nomes de rede do Microsoft defender para identidade
 description: Este artigo fornece uma visão geral do Microsoft defender para a funcionalidade de resolução de nome de rede avançada da identidade e usa o.
-keywords: ''
-author: shsagir
-ms.author: shsagir
-manager: shsagir
 ms.date: 10/26/2020
 ms.topic: conceptual
-ms.collection: M365-security-compliance
-ms.service: azure-advanced-threat-protection
-ms.reviewer: itargoet
-ms.suite: ems
-ms.openlocfilehash: 9b9688031ea9916a09b8beaa2ce5c67633fd935f
-ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
+ms.openlocfilehash: 3d7a1ea9c9c5939718fe83f6b0099ea2a4bfff37
+ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94847234"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96542627"
 ---
 # <a name="what-is-network-name-resolution"></a>O que é a Resolução de nomes de rede?
 

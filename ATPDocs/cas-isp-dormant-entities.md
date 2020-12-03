@@ -1,22 +1,14 @@
 ---
 title: Avaliações de segurança de entidades inativas do Microsoft defender for Identity inativos
 description: Este artigo fornece uma visão geral das entidades inativas do Microsoft defender for Identity inativos em grupos confidenciais relatório de avaliação de postura de segurança de identidade.
-keywords: ''
-author: shsagir
-ms.author: shsagir
-manager: shsagir
 ms.date: 10/26/2020
 ms.topic: how-to
-ms.collection: M365-security-compliance
-ms.service: azure-advanced-threat-protection
-ms.reviewer: itargoet
-ms.suite: ems
-ms.openlocfilehash: afadc7b031a71d5441bda1bd186bfd6aa66fe629
-ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
+ms.openlocfilehash: e96b7af917f898c7ef9f701b7e7ffda1cf001598
+ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94848441"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96544191"
 ---
 # <a name="security-assessment-dormant-entities-in-sensitive-groups"></a>Avaliação de segurança: entidades inativas em grupos **confidenciais**
 

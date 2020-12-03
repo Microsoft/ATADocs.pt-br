@@ -1,22 +1,14 @@
 ---
 title: Configurar o espelhamento de porta ao implantar o Microsoft Defender para Identidade
 description: Descreve as opções de espelhamento de porta e como configurá-las no Microsoft Defender para Identidade
-keywords: ''
-author: shsagir
-ms.author: shsagir
-manager: shsagir
 ms.date: 10/26/2020
 ms.topic: how-to
-ms.collection: M365-security-compliance
-ms.service: azure-advanced-threat-protection
-ms.reviewer: itargoet
-ms.suite: ems
-ms.openlocfilehash: c0dacdf37dbcc033a310fb4b0995ab8259db452f
-ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
+ms.openlocfilehash: 72b453c5e90b46f432bd7eb89572e519d50d9e4a
+ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94848084"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96544038"
 ---
 # <a name="configure-port-mirroring"></a>Configurar o espelhamento de porta
 
