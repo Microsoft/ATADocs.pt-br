@@ -1,23 +1,14 @@
 ---
 title: Trabalhar com alertas de segurança no Microsoft Defender para Identidade
 description: Descreve como examinar os alertas de segurança emitidos pelo Microsoft Defender para Identidade
-keywords: ''
-author: shsagir
-ms.author: shsagir
-manager: shsagir
 ms.date: 10/27/2020
 ms.topic: how-to
-ms.collection: M365-security-compliance
-ms.service: azure-advanced-threat-protection
-ms.assetid: a06004bd-9f77-4e8e-a0e5-4727d6651a0f
-ms.reviewer: itargoet
-ms.suite: ems
-ms.openlocfilehash: 93b421bd06a40a3bd79ecdf22b613bbafb157abc
-ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
+ms.openlocfilehash: 8cd2cf79ef590d852c66a426d0217104f55b29a1
+ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94847693"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96544582"
 ---
 # <a name="working-with-security-alerts"></a>Trabalhando com alertas de segurança
 

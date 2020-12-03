@@ -1,23 +1,14 @@
 ---
 title: Trabalhar com relatórios do Microsoft Defender para Identidade
 description: Descreve como você pode gerar relatórios no Microsoft Defender para Identidade para monitorar sua rede.
-keywords: ''
-author: shsagir
-ms.author: shsagir
-manager: shsagir
 ms.date: 10/27/2020
 ms.topic: conceptual
-ms.collection: M365-security-compliance
-ms.service: azure-advanced-threat-protection
-ms.assetid: 2c2d6b1a-fc8c-4ff7-b07d-64ce6159f84d
-ms.reviewer: itargoet
-ms.suite: ems
-ms.openlocfilehash: 68c129e0c92c369bb666483dc17013c54a84e282
-ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
+ms.openlocfilehash: ca2724526aa7fd1dcf31d2e8242930e215ed6a05
+ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94849036"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96544446"
 ---
 # <a name="product-long-reports"></a>Relatórios do [!INCLUDE [Product long](includes/product-long.md)]
 

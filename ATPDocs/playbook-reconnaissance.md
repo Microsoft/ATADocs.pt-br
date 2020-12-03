@@ -1,21 +1,14 @@
 ---
 title: Tutorial do guia estratégico de reconhecimento do Microsoft Defender para Identidade
 description: O tutorial do guia estratégico de reconhecimento do Microsoft Defender para Identidade descreve como simular ameaças de Reconhecimento para detecção pelo Defender.
-author: shsagir
-ms.author: shsagir
-manager: shsagir
 ms.date: 10/26/2020
 ms.topic: tutorial
-ms.collection: M365-security-compliance
-ms.service: azure-advanced-threat-protection
-ms.reviewer: itargoet
-ms.suite: ems
-ms.openlocfilehash: 93b3b0ecf72ae1b7f8b1ebaf3756433afd297dde
-ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
+ms.openlocfilehash: dcaac8ed69bb4c3b9ccd262af929652dbc12126a
+ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94847183"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96544480"
 ---
 # <a name="tutorial-reconnaissance-playbook"></a>Tutorial: Guia estratégico de reconhecimento
 
@@ -34,7 +27,7 @@ Neste tutorial, você vai:
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
-[Um laboratório de alertas de segurança completo do [!INCLUDE [Product short](includes/product-short.md)]](playbook-setup-lab.md)
+[Um laboratório de alerta de segurança completo do [!INCLUDE [Product short](includes/product-short.md)]](playbook-setup-lab.md)
 
 - Recomendamos seguir as instruções de configuração do laboratório com a maior fidelidade possível. Quanto mais parecido estiver seu laboratório com a configuração sugerida, mais fácil será para seguir os procedimentos de teste do [!INCLUDE [Product short](includes/product-short.md)].
 
@@ -211,4 +204,4 @@ Normalmente, a próxima fase na cadeia de encerramento de ataque é uma tentativ
 
 ## <a name="join-the-community"></a>Participe da comunidade
 
-Tem mais perguntas ou quer discutir sobre o [!INCLUDE [Product short](includes/product-short.md)] e a segurança relacionada com outras pessoas? Participe da [Comunidade do [!INCLUDE [Product short](includes/product-short.md)]](https://techcommunity.microsoft.com/t5/Azure-Advanced-Threat-Protection/bd-p/AzureAdvancedThreatProtection) hoje mesmo!
+Tem mais perguntas ou interesse em discutir sobre o [!INCLUDE [Product short](includes/product-short.md)] e a segurança relacionada com outras pessoas? Participe da Comunidade [[!INCLUDE [Product short](includes/product-short.md)]](https://techcommunity.microsoft.com/t5/Azure-Advanced-Threat-Protection/bd-p/AzureAdvancedThreatProtection) hoje mesmo!

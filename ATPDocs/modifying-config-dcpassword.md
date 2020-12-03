@@ -1,22 +1,14 @@
 ---
 title: Alterar o Microsoft defender para configuração de identidade-senha de conectividade do domínio
 description: Descreve como alterar a senha de conectividade de domínio no sensor autônomo do Microsoft defender para identidade.
-keywords: ''
-author: shsagir
-ms.author: shsagir
-manager: shsagir
 ms.date: 10/26/2020
 ms.topic: how-to
-ms.collection: M365-security-compliance
-ms.service: azure-advanced-threat-protection
-ms.reviewer: itargoet
-ms.suite: ems
-ms.openlocfilehash: ef931c90558ffaea1a24d8682cc8091a845aeea8
-ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
+ms.openlocfilehash: 294786515c45136be77447b9ad1e9ddf5e2e5e95
+ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94847404"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96544497"
 ---
 # <a name="change-product-long-portal-configuration---domain-connectivity-password"></a>Alterar [!INCLUDE [Product long](includes/product-long.md)] configuração do portal-senha de conectividade do domínio
 
@@ -46,7 +38,7 @@ Siga este procedimento para atualizar a senha de conectividade do domínio no [!
     > [!NOTE]
     > Insira aqui um usuário e senha do Active Directory e não no Azure Active Directory.
 
-1. Clique em **Save** (Salvar).
+1. Clique em **Salvar**.
 
 1. No portal do [!INCLUDE [Product short](includes/product-short.md)], selecione **Configuração**.
 1. Em **sistema**, selecione a página **sensores** e verifique o status dos sensores.

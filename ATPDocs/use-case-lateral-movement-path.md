@@ -1,22 +1,14 @@
 ---
 title: Entender e usar os caminhos de movimentação lateral com o Microsoft Defender para Identidade
 description: Este artigo descreve os possíveis LMPs (caminhos de movimentação lateral) do Microsoft Defender para Identidade
-keywords: ''
-author: shsagir
-ms.author: shsagir
-manager: shsagir
 ms.date: 10/27/2020
 ms.topic: conceptual
-ms.collection: M365-security-compliance
-ms.service: azure-advanced-threat-protection
-ms.reviewer: itargoet
-ms.suite: ems
-ms.openlocfilehash: d6d8706e750ed7db841ea9483af8eb86f15b857c
-ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
+ms.openlocfilehash: 21d672a6c2220229060189120f1daefacd47416b
+ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94848883"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96544531"
 ---
 # <a name="product-long-lateral-movement-paths-lmps"></a>Caminhos de movimentação lateral (LMPs) do [!INCLUDE [Product long](includes/product-long.md)]
 
