@@ -63,6 +63,10 @@
       href: role-groups.md
     - name: Suporte de várias florestas para Defender para Identidade
       href: multi-forest.md
+    - name: Segurança
+      items:
+        - name: Linha de base de segurança
+          href: security-baseline.md
 - name: Guias de instruções
   items:
     - name: Defender para Identidade usando o Microsoft Cloud App Security
