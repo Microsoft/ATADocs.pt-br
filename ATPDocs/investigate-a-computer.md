@@ -1,21 +1,14 @@
 ---
 title: Tutorial de investigação de computador do Microsoft Defender para Identidade
 description: Este artigo explica como usar os alertas de segurança do Microsoft Defender para Identidade para investigar um computador suspeito.
-keywords: ''
-author: shsagir
-ms.author: shsagir
 ms.date: 10/26/2020
 ms.topic: tutorial
-ms.collection: M365-security-compliance
-ms.service: azure-advanced-threat-protection
-ms.reviewer: itargoet
-ms.suite: ems
-ms.openlocfilehash: 72a7f92d6fd77842b8fe34866d8757df8bc9203e
-ms.sourcegitcommit: e2227c0b0e5aaa5163dc56d4131ca82f8dca8fb0
+ms.openlocfilehash: dac0630eda6ef81b0af3125fcd05d1d91b43c906
+ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94847676"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96543909"
 ---
 # <a name="tutorial-investigate-a-computer"></a>Tutorial: Investigar um computador
 

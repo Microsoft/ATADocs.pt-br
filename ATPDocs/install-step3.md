@@ -1,21 +1,14 @@
 ---
 title: Guia de início rápido – Baixar o pacote de instalação do sensor do Microsoft Defender para Identidade
 description: A terceira etapa da instalação do Microsoft Defender para Identidade ajuda você a baixar o pacote de instalação do sensor do Defender para Identidade.
-keywords: ''
-author: shsagir
-ms.author: shsagir
 ms.date: 10/26/2020
 ms.topic: quickstart
-ms.collection: M365-security-compliance
-ms.service: azure-advanced-threat-protection
-ms.reviewer: itargoet
-ms.suite: ems
-ms.openlocfilehash: b2d1978a822b8062422c41696043b1563d8bc893
-ms.sourcegitcommit: 07a855b87931875bdeca14b152b13a36db79bfa8
+ms.openlocfilehash: f0eb884a7367ae50e076e0298f720a94def7da8c
+ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "94848509"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96543120"
 ---
 # <a name="quickstart-download-the-product-long-sensor-setup-package"></a>Início Rápido: Baixar o pacote de instalação do sensor do [!INCLUDE [Product long](includes/product-long.md)]
 

@@ -1,21 +1,14 @@
 ---
 title: Guia de início rápido – Criar sua instância do Microsoft Defender para Identidade
 description: Guia de início rápido para a criação da instância da sua implantação do Microsoft Defender para Identidade, que é a primeira etapa para instalar o Defender para Identidade.
-keywords: ''
-author: shsagir
-ms.author: shsagir
 ms.date: 10/26/2020
 ms.topic: quickstart
-ms.collection: M365-security-compliance
-ms.service: azure-advanced-threat-protection
-ms.reviewer: itargoet
-ms.suite: ems
-ms.openlocfilehash: fcb99edccdd8ce98be4b9335d7703503307fd0ac
-ms.sourcegitcommit: 07a855b87931875bdeca14b152b13a36db79bfa8
+ms.openlocfilehash: 299edc14a51f92efa94969a3f442b2e1ca5d8e2b
+ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "94848562"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96543205"
 ---
 # <a name="quickstart-create-your-product-long-instance"></a>Início Rápido: Criar sua instância do [!INCLUDE [Product long](includes/product-long.md)]
 

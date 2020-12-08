@@ -1,21 +1,14 @@
 ---
 title: Pré-requisitos do Microsoft Defender para Identidade
 description: Descreve os requisitos para uma implantação bem-sucedida do Microsoft Defender para Identidade no seu ambiente
-author: shsagir
-ms.author: shsagir
-manager: shsagir
 ms.date: 11/24/2020
 ms.topic: overview
-ms.collection: M365-security-compliance
-ms.service: azure-advanced-threat-protection
-ms.reviewer: itargoet
-ms.suite: ems
-ms.openlocfilehash: 23078e7e4281629f378e27281a21124d959f0902
-ms.sourcegitcommit: 24530d8fac3b63dee766b124b6a5549c1b9ef808
+ms.openlocfilehash: d451a2b2cc9cb9f3de35974fda49b3b61f2ad552
+ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "96028641"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96544412"
 ---
 # <a name="product-long-prerequisites"></a>Pré-requisitos do [!INCLUDE [Product long](includes/product-long.md)]
 

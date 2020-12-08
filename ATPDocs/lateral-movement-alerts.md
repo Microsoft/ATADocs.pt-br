@@ -1,22 +1,14 @@
 ---
 title: Alerta de segurança de movimentação lateral do Microsoft Defender para Identidade
 description: Este artigo explica os alertas do Microsoft Defender para Identidade emitidos quando são detectados ataques contra a sua organização, que normalmente fazem parte dos esforços da fase de movimentação lateral.
-keywords: ''
-author: shsagir
-ms.author: shsagir
-manager: shsagir
 ms.date: 10/26/2020
 ms.topic: tutorial
-ms.collection: M365-security-compliance
-ms.service: azure-advanced-threat-protection
-ms.reviewer: itargoet
-ms.suite: ems
-ms.openlocfilehash: 78d7a4d51459c5ea9099198e43097757ee2c588e
-ms.sourcegitcommit: 07a855b87931875bdeca14b152b13a36db79bfa8
+ms.openlocfilehash: 9176429ee16a905d0ef9d8afb34bcd7d55214c4e
+ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "94847642"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96542704"
 ---
 # <a name="tutorial-lateral-movement-alerts"></a>Tutorial: Alertas de movimento lateral
 
