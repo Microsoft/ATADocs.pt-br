@@ -1,16 +1,16 @@
 ---
 title: Novidades do Microsoft Defender para Identidade
 description: Este artigo é atualizado com frequência para manter você informado sobre as novidades da última versão do Microsoft Defender para Identidade.
-ms.date: 10/27/2020
+ms.date: 12/06/2020
 ms.topic: overview
 ms.reviewer: ort
 ms.suite: ems
-ms.openlocfilehash: dc5e1aa2c4162795f376e1061aa9f963b9ce0c48
-ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
+ms.openlocfilehash: 1978606c29a364d1808e1413cde6eeabe1e3d2d3
+ms.sourcegitcommit: d5cef371dd882e26445d2cedad6a85bfbe1f3911
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96544514"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96925627"
 ---
 # <a name="whats-new-in-product-long"></a>Novidades no [!INCLUDE [Product long](includes/product-long.md)]
 
@@ -23,6 +23,12 @@ Feed RSS: Receba uma notificação quando esta página for atualizada copiando e
 > [!IMPORTANT]
 >
 > Os nomes dos produtos de proteção contra ameaças da Microsoft estão mudando. Leia mais sobre essa e outras atualizações [aqui](https://www.microsoft.com/security/blog/?p=91813). Usaremos os novos nomes a partir da versão 2.129 em diante.
+
+## <a name="product-short-release-2133"></a>Versão 2.133 do [!INCLUDE [Product short](includes/product-short.md)]
+
+Lançado em 6 de dezembro de 2020
+
+- Essa versão inclui melhorias e correções de bugs da infraestrutura do sensor interno.
 
 ## <a name="product-short-release-2132"></a>Versão 2.132 do [!INCLUDE [Product short](includes/product-short.md)]
 
