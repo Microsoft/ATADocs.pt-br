@@ -1,14 +1,14 @@
 ---
 title: Instalar a integração de VPN do Microsoft defender para identidade
 description: Colete informações de contabilidade do Microsoft defender para identidade integrando uma VPN.
-ms.date: 10/26/2020
+ms.date: 12/23/2020
 ms.topic: how-to
-ms.openlocfilehash: e7c406a198eb78c98c795ba43d9b4076610540c7
-ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
+ms.openlocfilehash: 80b4bdf29db05d0c2f42887dacff223b3067ba49
+ms.sourcegitcommit: e2b4ad613aa171f604ae526f0cba05fe79f4a8cb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96543953"
+ms.lasthandoff: 12/23/2020
+ms.locfileid: "97753398"
 ---
 # <a name="integrate-vpn"></a>Integrar a VPN
 
@@ -28,7 +28,9 @@ Para habilitar a integração de VPN, verifique se você definiu os seguintes pa
 - Abra a porta UDP 1813 em seus [!INCLUDE [Product short](includes/product-short.md)] sensores e/ou [!INCLUDE [Product short](includes/product-short.md)] sensores autônomos.
 
 > [!NOTE]
-> Ao habilitar a **contabilização RADIUS**, o [!INCLUDE [Product short](includes/product-short.md)] sensor habilitará uma política de firewall do Windows previamente provisionada chamada **[!INCLUDE [Product long](includes/product-long.md)] sensor** para permitir a contabilização Radius de entrada na porta UDP 1813.
+>
+> - Ao habilitar a **contabilização RADIUS**, o [!INCLUDE [Product short](includes/product-short.md)] sensor habilitará uma política de firewall do Windows previamente provisionada chamada **[!INCLUDE [Product long](includes/product-long.md)] sensor** para permitir a contabilização Radius de entrada na porta UDP 1813.
+> - A integração de VPN não tem suporte em ambientes que aderem a FIPS (Federal Information Processing Standards)
 
 O exemplo abaixo usa o Servidor de Roteamento e Acesso Remoto (RRAS) da Microsoft para descrever o processo de configuração de VPN.
 

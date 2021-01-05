@@ -3,12 +3,12 @@ title: Instalar o Microsoft defender para identidade silenciosamente
 description: Isso descreve como instalar silenciosamente o Microsoft defender para identidade.
 ms.date: 10/27/2020
 ms.topic: how-to
-ms.openlocfilehash: a27b358b27b61118f1d73804b8612f170bc830e7
-ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
+ms.openlocfilehash: 056451d5f0881360643bfc453366a8ccdb0ddccc
+ms.sourcegitcommit: 3a478353118670b8124bc62d33751d8ba6af109d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96542321"
+ms.lasthandoff: 12/23/2020
+ms.locfileid: "97746869"
 ---
 # <a name="product-long-switches-and-silent-installation"></a>[!INCLUDE [Product long](includes/product-long.md)] comutadores e instalação silenciosa
 
@@ -120,6 +120,8 @@ Para atualizar o [!INCLUDE [Product short](includes/product-short.md)] sensor si
 ```dos
 "Azure ATP sensor Setup.exe" /quiet NetFrameworkCommandLineArguments="/q"
 ```
+
+<a name="silently-uninstall-sensor"></a>
 
 ## <a name="uninstall-the-product-short-sensor-silently"></a>Desinstalar o [!INCLUDE [Product short](includes/product-short.md)] sensor silenciosamente
 

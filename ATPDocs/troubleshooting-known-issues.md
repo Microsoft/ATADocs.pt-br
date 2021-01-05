@@ -3,12 +3,12 @@ title: Solução de problemas conhecidos do Microsoft defender para identidade
 description: Descreve como você pode solucionar problemas no Microsoft defender para identidade.
 ms.date: 09/07/2020
 ms.topic: how-to
-ms.openlocfilehash: aed05bd1df03f8ebb292f4425dbb0eb8c54ca9d3
-ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
+ms.openlocfilehash: bd7abdca7fade3b00161513b74d6507c5660c3bb
+ms.sourcegitcommit: bfb14c4c0b0f528edaa8167833b13c476240e514
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96544276"
+ms.lasthandoff: 12/24/2020
+ms.locfileid: "97762496"
 ---
 # <a name="troubleshooting-product-long-known-issues"></a>Solucionando [!INCLUDE [Product long](includes/product-long.md)] problemas conhecidos
 
@@ -184,7 +184,7 @@ O sensor não pôde recuperar a conta de gMSA designada do [!INCLUDE [Product sh
 
 **Resolução:**
 
-Verifique se as credenciais da conta gMSA estão corretas e se o sensor recebeu as permissões para recuperar as credenciais da conta. Na política aplicada, talvez seja necessário adicionar a conta gMSA às atribuições do direito de usuário de **Fazer logon como um serviço**.
+Verifique se as credenciais da conta gMSA estão corretas e se o sensor recebeu as permissões para recuperar as credenciais da conta. Embora [!INCLUDE [Product short](includes/product-short.md)]  o não exija a permissão **fazer logon como um serviço** para contas do gMSA, esse problema é geralmente resolvido com a adição da permissão à conta.
 
 ## <a name="report-downloads-cannot-contain-more-than-300000-entries"></a>Downloads de relatório não podem conter mais de 300.000 entradas
 
