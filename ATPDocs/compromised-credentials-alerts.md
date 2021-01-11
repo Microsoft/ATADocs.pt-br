@@ -1,14 +1,14 @@
 ---
 title: Alertas de segurança da fase de comprometimento das credenciais do Microsoft Defender para Identidade
 description: Este artigo explica os alertas do Microsoft Defender para Identidade emitidos quando são detectados ataques contra a sua organização, que são típicos da fase de comprometimento das credenciais.
-ms.date: 10/26/2020
+ms.date: 12/23/2020
 ms.topic: tutorial
-ms.openlocfilehash: cc46b15e62f6aab0776598fa58bb2559c7612fd7
-ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
+ms.openlocfilehash: 4bb5313307d16c87969ac280967356e8595b767a
+ms.sourcegitcommit: e2b4ad613aa171f604ae526f0cba05fe79f4a8cb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96543460"
+ms.lasthandoff: 12/23/2020
+ms.locfileid: "97753313"
 ---
 # <a name="tutorial-compromised-credential-alerts"></a>Tutorial: Alertas de credencial comprometida
 
@@ -129,7 +129,7 @@ Uma semana
 
 Em um ataque de força bruta, o invasor tenta autenticar com muitas senhas diferentes para diferentes contas até que uma senha correta seja encontrada para pelo menos uma conta. Uma vez encontrada, um invasor pode fazer logon usando essa conta.
 
-Nessa detecção, um alerta é disparado quando o [!INCLUDE [Product short](includes/product-short.md)] detecta um grande número de autenticações de associação simples. Esse alerta detecta ataques de força bruta realizados, seja *horizontalmente*, com um pequeno conjunto de senhas entre vários usuários, *verticalmente*, com um grande conjunto de senhas em apenas alguns usuários ou com qualquer combinação dessas duas opções.
+Nessa detecção, um alerta é disparado quando o [!INCLUDE [Product short](includes/product-short.md)] detecta um grande número de autenticações de associação simples. Esse alerta detecta ataques de força bruta realizados, seja *horizontalmente*, com um pequeno conjunto de senhas entre vários usuários, *verticalmente*, com um grande conjunto de senhas em apenas alguns usuários ou com qualquer combinação dessas duas opções. O alerta é baseado em eventos de autenticação de sensores em execução no controlador de domínio e nos servidores dos AD FS.
 
 **TP, B-TP ou FP**
 
@@ -227,7 +227,7 @@ Nenhum
 
 ## <a name="suspected-netlogon-privilege-elevation-attempt-cve-2020-1472-exploitation-external-id-2411"></a>Suspeita de tentativa de elevação de privilégio do Netlogon (exploração CVE-2020-1472) (ID externa 2411)
 
-A Microsoft publicou o [CVE-2020-1472](https://portal.msrc.microsoft.com/security-guidance/advisory/CVE-2020-1472) anunciando a existência de uma nova vulnerabilidade que permite a elevação de privilégios ao controlador de domínio.
+A Microsoft publicou o [CVE-2020-1472](https://portal.msrc.microsoft.com/security-guidance/advisory/CVE-2020-1472), anunciando a existência de uma nova vulnerabilidade que permite a elevação de privilégios ao controlador de domínio.
 
 Existe uma vulnerabilidade de elevação de privilégio quando um invasor estabelece uma conexão vulnerável de canal seguro do Netlogon com um controlador de domínio, usando o Protocolo Remoto Netlogon ([MS-NRPC](/openspecs/windows_protocols/ms-nrpc/ff8f970f-3e37-40f7-bd4b-af7336e4792f)), também conhecido como *Vulnerabilidade de Elevação de Privilégio do Netlogon*.
 

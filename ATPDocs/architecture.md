@@ -1,14 +1,14 @@
 ---
 title: Arquitetura do Microsoft Defender para Identidade
 description: Descreve a arquitetura do Microsoft Defender para Identidade
-ms.date: 10/26/2020
+ms.date: 12/23/2020
 ms.topic: overview
-ms.openlocfilehash: 11be2df6437f6b67968d395a24756d4b0514ea69
-ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
+ms.openlocfilehash: 418fbe3f4a24f3af69336eda4954f5817b478e20
+ms.sourcegitcommit: e2b4ad613aa171f604ae526f0cba05fe79f4a8cb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96544208"
+ms.lasthandoff: 12/23/2020
+ms.locfileid: "97753262"
 ---
 # <a name="microsoft-defender-for-identity-architecture"></a>Arquitetura do Microsoft Defender para Identidade
 
@@ -20,7 +20,7 @@ Arquitetura do [!INCLUDE [Product short](includes/product-short.md)]:
 
 Esta seção descreve como funciona o fluxo de captura de eventos e rede do [!INCLUDE [Product short](includes/product-short.md)] e descreve detalhadamente as funcionalidades dos componentes principais: o portal do [!INCLUDE [Product short](includes/product-short.md)], o sensor do [!INCLUDE [Product short](includes/product-short.md)] e o serviço de nuvem do [!INCLUDE [Product short](includes/product-short.md)].
 
-Instalado diretamente nos seus controladores de domínio, o sensor do [!INCLUDE [Product short](includes/product-short.md)] acessa os logs de eventos necessários diretamente do controlador de domínio. Depois que o tráfego de rede e os logs são analisados pelo sensor, o [!INCLUDE [Product short](includes/product-short.md)] envia apenas as informações analisadas ao serviço de nuvem do [!INCLUDE [Product short](includes/product-short.md)] (somente um percentual dos logs é enviado).
+Instalado diretamente em seu controlador de domínio ou servidores dos AD FS, o sensor do [!INCLUDE [Product short](includes/product-short.md)] acessa os logs de eventos necessários diretamente dos servidores. Depois que o tráfego de rede e os logs são analisados pelo sensor, o [!INCLUDE [Product short](includes/product-short.md)] envia apenas as informações analisadas ao serviço de nuvem do [!INCLUDE [Product short](includes/product-short.md)] (somente um percentual dos logs é enviado).
 
 ## <a name="product-short-components"></a>Componentes [!INCLUDE [Product short](includes/product-short.md)]
 
@@ -30,7 +30,9 @@ O [!INCLUDE [Product short](includes/product-short.md)] é formado pelos seguint
 O portal do [!INCLUDE [Product short](includes/product-short.md)] permite a criação da sua instância do [!INCLUDE [Product short](includes/product-short.md)], exibe os dados recebidos dos sensores do [!INCLUDE [Product short](includes/product-short.md)] e permite que você monitore, gerencie e investigue as ameaças no seu ambiente de rede.
 
 - **Sensor do [!INCLUDE [Product short](includes/product-short.md)]**  
-Os sensores do [!INCLUDE [Product short](includes/product-short.md)] são instalados diretamente nos seus controladores de domínio. O sensor monitora diretamente o tráfego do controlador de domínio sem a necessidade de um servidor dedicado ou configuração de espelhamento de porta.
+Os sensores do [!INCLUDE [Product short](includes/product-short.md)] podem ser instalados diretamente nos seguintes servidores:
+  - **Controladores de domínio**: O sensor monitora diretamente o tráfego do controlador de domínio sem a necessidade de um servidor dedicado ou configuração de espelhamento de porta.
+  - **AD FS**: O sensor monitora diretamente o tráfego de rede e os eventos de autenticação.
 - **Serviço de nuvem do [!INCLUDE [Product short](includes/product-short.md)]**  
 O serviço de nuvem do [!INCLUDE [Product short](includes/product-short.md)] é executado na infraestrutura do Azure e é atualmente implantado nos EUA, na Europa e na Ásia. O serviço de nuvem do [!INCLUDE [Product short](includes/product-short.md)] está conectado ao grafo de segurança inteligente da Microsoft.
 

@@ -1,14 +1,14 @@
 ---
 title: Pré-requisitos do Microsoft Defender para Identidade
 description: Descreve os requisitos para uma implantação bem-sucedida do Microsoft Defender para Identidade no seu ambiente
-ms.date: 11/24/2020
+ms.date: 12/23/2020
 ms.topic: overview
-ms.openlocfilehash: d451a2b2cc9cb9f3de35974fda49b3b61f2ad552
-ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
+ms.openlocfilehash: f0807061c5ea57f063a1f5a4035b7059e1671a7d
+ms.sourcegitcommit: e2b4ad613aa171f604ae526f0cba05fe79f4a8cb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96544412"
+ms.lasthandoff: 12/23/2020
+ms.locfileid: "97753381"
 ---
 # <a name="product-long-prerequisites"></a>Pré-requisitos do [!INCLUDE [Product long](includes/product-long.md)]
 
@@ -115,23 +115,23 @@ Esta seção lista os requisitos do sensor do [!INCLUDE [Product short](includes
 
 ### <a name="general"></a>Geral
 
-O sensor do [!INCLUDE [Product short](includes/product-short.md)] dá suporte à instalação em um controlador de domínio que executa o Windows Server 2008 R2 SP1 (não incluindo o Server Core), o Windows Server 2012, o Windows Server 2012 R2, o Windows Server 2016 (incluindo o Server Core, mas não o Nano Server) e o Windows Server 2019\* (incluindo o Server Core, mas não o Nano Server), conforme mostrado na tabela a seguir.
+O sensor do [!INCLUDE [Product short](includes/product-short.md)] dá suporte à instalação em um controlador de domínio e aos AD FS (Serviços de Federação do Active Directory) que executam o Windows Server 2008 R2 SP1 (não incluindo o Server Core), o Windows Server 2012, o Windows Server 2012 R2, o Windows Server 2016 (incluindo o Server Core, mas não o Nano Server) e o Windows Server 2019\* (incluindo o Server Core, mas não o Nano Server), conforme mostrado na tabela a seguir.
 
-| Versão do sistema operacional   | Servidor com Experiência Desktop | Server Core | Nano Server    |
-| -------------------------- | ------------------------------ | ----------- | -------------- |
-| Windows Server 2008 R2 SP1 | &#10004;                       | &#10060;    | Não aplicável |
-| Windows Server 2012        | &#10004;                       | &#10004;    | Não aplicável |
-| Windows Server 2012 R2     | &#10004;                       | &#10004;    | Não aplicável |
-| Windows Server 2016        | &#10004;                       | &#10004;    | &#10060;       |
-| Windows Server 2019\*      | &#10004;                       | &#10004;    | &#10060;       |
+| Versão do sistema operacional   | Servidor com Experiência Desktop | Server Core | Nano Server    | Instalações com suporte  |
+| -------------------------- | ------------------------------ | ----------- | -------------- | ------------------------ |
+| Windows Server 2008 R2 SP1 | &#10004;                       | &#10060;    | Não aplicável | Controlador de domínio        |
+| Windows Server 2012        | &#10004;                       | &#10004;    | Não aplicável | Controlador de domínio        |
+| Windows Server 2012 R2     | &#10004;                       | &#10004;    | Não aplicável | Controlador de domínio        |
+| Windows Server 2016        | &#10004;                       | &#10004;    | &#10060;       | Controlador de domínio, AD FS |
+| Windows Server 2019\*      | &#10004;                       | &#10004;    | &#10060;       | Controlador de domínio, AD FS |
 
 \* Requer a atualização cumulativa [KB4487044](https://support.microsoft.com/help/4487044/windows-10-update-kb4487044) ou mais recente. Os sensores instalados no Server 2019 sem essa atualização serão interrompidos automaticamente se a versão do arquivo *ntdsai.dll* no diretório do sistema for mais antiga que *10.0.17763.316*.
 
 O controlador de domínio pode ser um RODC (controlador de domínio somente leitura).
 
-Para seus controladores de domínio se comunicarem com o serviço de nuvem, você deve abrir a porta 443 em seus firewalls e proxies para \*.atp.azure.com.
+Para sensores executados em controladores de domínio e para que os AD FS se comuniquem com o serviço de nuvem, você deverá abrir a porta 443 em seus firewalls e proxies para \*.atp.azure.com.
 
-Durante a instalação, se o .NET Framework 4.7 ou posterior não estiver instalado, o .NET Framework 4.7 será instalado e poderá exigir uma reinicialização do controlador de domínio. Também poderá ser necessária uma reinicialização se ela já estiver pendente.
+Durante a instalação, se o .NET Framework 4.7 ou posterior não estiver instalado, o .NET Framework 4.7 será instalado e poderá exigir uma reinicialização do servidor. Uma reinicialização também poderá ser necessária se já houver uma reinicialização pendente.
 
 > [!NOTE]
 > São necessários no mínimo 5 GB de espaço. Recomenda-se 10 GB. Isso inclui o espaço necessário para os binários do [!INCLUDE [Product short](includes/product-short.md)], os logs do [!INCLUDE [Product short](includes/product-short.md)] e os logs de desempenho.
@@ -141,9 +141,9 @@ Durante a instalação, se o .NET Framework 4.7 ou posterior não estiver instal
 O sensor do [!INCLUDE [Product short](includes/product-short.md)] exige, no mínimo, dois núcleos e 6 GB de RAM instalados no controlador de domínio.
 Para obter um desempenho ideal, defina a **Opção de Energia** do computador que executa o sensor do [!INCLUDE [Product short](includes/product-short.md)] como **Alto Desempenho**.
 
-Os sensores do [!INCLUDE [Product short](includes/product-short.md)] podem ser implantados em controladores de domínio de vários tamanhos e cargas, dependendo da quantidade de recursos instalados e da quantidade de tráfego de rede entre os controladores de domínio.
+Os sensores do [!INCLUDE [Product short](includes/product-short.md)] podem ser implantados em controladores de domínio ou servidores dos AD FS de vários tamanhos e cargas, dependendo da quantidade de recursos instalados e da quantidade de tráfego de rede entre os servidores.
 
-Nos sistemas operacionais Windows 2008 R2 e 2012, não há suporte para o sensor do [!INCLUDE [Product short](includes/product-short.md)] em um modo [Grupo de multiprocessadores](/windows/win32/procthread/processor-groups). Para obter mais informações sobre o modo de grupo de multiprocessadores,confira [solução de problemas](troubleshooting-known-issues.md#multi-processor-group-mode).
+Nos sistemas operacionais Windows 2008 R2 e 2012, não há suporte para o sensor do [!INCLUDE [Product short](includes/product-short.md)] em um modo [Grupo de Multiprocessadores](/windows/win32/procthread/processor-groups). Para obter mais informações sobre o modo de grupo de multiprocessadores,confira [solução de problemas](troubleshooting-known-issues.md#multi-processor-group-mode).
 
 >[!NOTE]
 > Durante a execução como uma máquina virtual, memória dinâmica ou qualquer outra memória, não há suporte para o recurso de inchamento.
@@ -184,6 +184,8 @@ A seguinte tabela lista o mínimo de portas exigidas pelo sensor do [!INCLUDE [P
 ### <a name="windows-event-logs"></a>Log de eventos do Windows
 
 A detecção do [!INCLUDE [Product short](includes/product-short.md)] depende de [logs de eventos específicos do Windows](configure-windows-event-collection.md#configure-event-collection) que o sensor analisa dos controladores de domínio. Para que os eventos corretos sejam auditados e incluídos no log de eventos do Windows, seus controladores de domínio exigem configurações precisas de política de auditoria avançada. Para saber mais sobre como configurar as políticas corretas, confira [Verificação avançada da política de auditoria](configure-windows-event-collection.md). Para [verificar se o evento 8004 do Windows foi auditado](configure-windows-event-collection.md#configure-audit-policies) conforme necessário pelo serviço, examine as [configurações de auditoria do NTLM](/archive/blogs/askds/ntlm-blocking-and-you-application-analysis-and-auditing-methodologies-in-windows-7).
+
+Para sensores executados em servidores dos AD FS, configure o nível de auditoria para **Detalhado**. Para obter informações sobre como configurar o nível de auditoria, confira [Informações de auditoria de eventos para AD FS](/windows-server/identity/ad-fs/troubleshooting/ad-fs-tshoot-logging#event-auditing-information-for-ad-fs-on-windows-server-2016).
 
 > [!NOTE]
 > Usando a conta de usuário do serviço de diretório, o sensor consulta pontos de extremidade em sua organização para administradores locais usando SAM-R (logon de rede) para criar o [gráfico de caminho de movimento lateral](use-case-lateral-movement-path.md). Para obter mais informações, consulte [Configurar permissões necessárias do SAM-R](install-step8-samr.md).

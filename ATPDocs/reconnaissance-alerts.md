@@ -1,14 +1,14 @@
 ---
 title: Alertas de segurança da fase de reconhecimento do Microsoft Defender para Identidade
 description: Este artigo explica os alertas do Microsoft Defender para Identidade emitidos quando são detectados ataques contra a sua organização, que normalmente fazem parte dos esforços da fase de reconhecimento.
-ms.date: 10/27/2020
+ms.date: 12/23/2020
 ms.topic: tutorial
-ms.openlocfilehash: 83db36589f3eb2cfaa9cb6db4c4f6e074437ae03
-ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
+ms.openlocfilehash: e4a604d5ae36c65a73f6aaa5a08e41b2553041b8
+ms.sourcegitcommit: e2b4ad613aa171f604ae526f0cba05fe79f4a8cb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96544395"
+ms.lasthandoff: 12/23/2020
+ms.locfileid: "97753330"
 ---
 # <a name="tutorial-reconnaissance-alerts"></a>Tutorial: Alertas de reconhecimento
 
@@ -47,7 +47,7 @@ No reconhecimento de enumeração de conta, um invasor usa um dicionário com mi
 
 **NTLM**: O invasor faz solicitações de autenticação NTLM usando o dicionário de nomes para tentar localizar um nome de usuário válido no domínio. Quando uma adivinhação determina com êxito um nome de usuário, o invasor obtém o erro do NTLM **WrongPassword (0xc000006a)** em vez de **NoSuchUser (0xc0000064)** .
 
-Nessa detecção de alerta, o [!INCLUDE [Product short](includes/product-short.md)] detecta a origem do ataque de enumeração de conta, o número total de tentativas de adivinhação e quantas tentativas foram correspondidas. Se houver muitos usuários desconhecidos, o [!INCLUDE [Product short](includes/product-short.md)] detectará isso como uma atividade suspeita.
+Nessa detecção de alerta, o [!INCLUDE [Product short](includes/product-short.md)] detecta a origem do ataque de enumeração de conta, o número total de tentativas de adivinhação e quantas tentativas foram correspondidas. Se houver muitos usuários desconhecidos, o [!INCLUDE [Product short](includes/product-short.md)] detectará isso como uma atividade suspeita. O alerta é baseado em eventos de autenticação de sensores em execução no controlador de domínio e nos servidores dos AD FS.
 
 **Período de aprendizado**
 

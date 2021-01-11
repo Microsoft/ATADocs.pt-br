@@ -1,14 +1,14 @@
 ---
 title: O que é o Microsoft Defender para Identidade?
 description: Explica o que é o Microsoft Defender para Identidade e os tipos de atividades suspeitas que podem ser detectadas por ele
-ms.date: 10/27/2020
+ms.date: 12/23/2020
 ms.topic: overview
-ms.openlocfilehash: f7713d470c367f66db4a480380ca0e2515ebdeb2
-ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
+ms.openlocfilehash: 1aceb1889ea3f85305d64b5bde6a252b804d56f0
+ms.sourcegitcommit: e2b4ad613aa171f604ae526f0cba05fe79f4a8cb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96542032"
+ms.lasthandoff: 12/23/2020
+ms.locfileid: "97753331"
 ---
 # <a name="what-is-product-long"></a>O que é o [!INCLUDE [Product long](includes/product-long.md)]?
 
@@ -28,6 +28,10 @@ O [!INCLUDE [Product short](includes/product-short.md)] monitora e analisa as at
 ## <a name="protect-user-identities-and-reduce-the-attack-surface"></a>Proteger as identidades de usuário e reduzir a superfície de ataques
 
 O [!INCLUDE [Product short](includes/product-short.md)] fornece insights valiosos sobre configurações de identidade e sugestões de melhores práticas de segurança. Por meio de relatórios de segurança e análise de perfil do usuário, o [!INCLUDE [Product short](includes/product-short.md)] ajuda a reduzir significativamente a superfície de ataque organizacional, dificultando o comprometimento das credenciais do usuário e o avanço de um ataque. Os Caminhos de Movimentação Lateral visuais do [!INCLUDE [Product short](includes/product-short.md)] ajudam você a compreender de maneira rápida exatamente como um invasor pode se mover lateralmente dentro da sua organização para comprometer contas confidenciais e ajuda a impedir esses riscos com antecedência. Os relatórios de segurança do [!INCLUDE [Product short](includes/product-short.md)] ajudam você a identificar os usuários e os dispositivos autenticados por senhas com texto não criptografado e fornecem insights adicionais para aprimorar suas políticas e sua postura de segurança organizacional.
+
+## <a name="protecting-the-ad-fs-in-hybrid-environments"></a>Proteger os AD FS em ambientes híbridos
+
+Os AD FS (Serviços de Federação do Active Directory) desempenham um papel importante na infraestrutura atual quando se trata de autenticação em ambientes híbridos. O [!INCLUDE [Product short](includes/product-short.md)] protege os AD FS em seu ambiente detectando ataques locais nos AD FS e fornecendo visibilidade quanto aos eventos de autenticação gerados pelos AD FS.
 
 ## <a name="identify-suspicious-activities-and-advanced-attacks-across-the-cyber-attack-kill-chain"></a>Identificar atividades suspeitas e ataques avançados em toda a cadeia do ataque cibernético
 

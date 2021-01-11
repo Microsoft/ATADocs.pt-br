@@ -1,14 +1,14 @@
 ---
 title: Atividades de domínio monitoradas pelo Microsoft Defender para Identidade
 description: Descreve cada tipo de atividade monitorada pelo Microsoft Defender para Identidade
-ms.date: 10/26/2020
+ms.date: 12/24/2020
 ms.topic: conceptual
-ms.openlocfilehash: 8ef0972efec4fc5d39d42cd72e43ca7f95e94ef5
-ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
+ms.openlocfilehash: 5ca3a3681eb15b1b2a8935942daaf7a39f9c15c3
+ms.sourcegitcommit: 78fb0cead845c7098c780f4daa624a741e350ec2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96542610"
+ms.lasthandoff: 12/24/2020
+ms.locfileid: "97763618"
 ---
 # <a name="product-long-monitored-activities"></a>Atividades monitoradas pelo [!INCLUDE [Product long](includes/product-long.md)]
 
@@ -25,6 +25,7 @@ As informações monitoradas pelo [!INCLUDE [Product short](includes/product-sho
 >
 > - Este artigo é relevante para todos os tipos de sensor do [!INCLUDE [Product short](includes/product-short.md)].
 > - As atividades monitoradas pelo [!INCLUDE [Product short](includes/product-short.md)] aparecem na página de perfil do computador e do usuário.
+> - As atividades monitoradas do [!INCLUDE [Product short](includes/product-short.md)] também estão disponíveis no [Cloud App Security](https://portal.cloudappsecurity.com/) e na página de [busca avançada de ameaças](https://security.microsoft.com/advanced-hunting) do Microsoft 365 Defender.
 
 ## <a name="monitored-user-activities-user-account-ad-attribute-changes"></a>Atividades do usuário monitoradas: alterações de atributo do AD da conta do usuário
 
@@ -42,7 +43,7 @@ As informações monitoradas pelo [!INCLUDE [Product short](includes/product-sho
 |Senha Não Obrigatória da Conta Alterada|A conta de usuário foi alterada e permite fazer logon com uma senha em branco.|
 |Cartão Inteligente Obrigatório da Conta Alterada|A conta é alterada para exigir que os usuários façam logon em um dispositivo usando um cartão inteligente.|
 |Tipos de Criptografia com Suporte da Conta Alterados|Tipos de criptografia compatíveis com Kerberos foram alterados (tipos: Des, AES 129, AES 256)|
-|Nome Upn de Conta Alterado|O nome de entidade do usuário foi alterado.|
+|Nome UPN da Conta Alterado|O nome de entidade do usuário foi alterado.|
 |Associação do Grupo Alterada|O usuário adicionou/removeu, de/para um grupo, por outro usuário ou por si só.|
 |Email de Usuário Alterado|O atributo de email de usuários foi alterado.|
 |Gerenciador de Usuários Alterado|O atributo do gerenciador de usuários foi alterado.|

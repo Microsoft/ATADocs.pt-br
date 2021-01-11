@@ -1,16 +1,16 @@
 ---
 title: Novidades do Microsoft Defender para Identidade
 description: Este artigo é atualizado com frequência para manter você informado sobre as novidades da última versão do Microsoft Defender para Identidade.
-ms.date: 12/06/2020
+ms.date: 12/20/2020
 ms.topic: overview
 ms.reviewer: ort
 ms.suite: ems
-ms.openlocfilehash: 1978606c29a364d1808e1413cde6eeabe1e3d2d3
-ms.sourcegitcommit: d5cef371dd882e26445d2cedad6a85bfbe1f3911
+ms.openlocfilehash: e2c338e2105b8eb228493d20f1b47f230d9e1464
+ms.sourcegitcommit: 183be34e4e4c71fb75a676eab6a2840fdc205519
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/09/2020
-ms.locfileid: "96925627"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97889324"
 ---
 # <a name="whats-new-in-product-long"></a>Novidades no [!INCLUDE [Product long](includes/product-long.md)]
 
@@ -23,6 +23,20 @@ Feed RSS: Receba uma notificação quando esta página for atualizada copiando e
 > [!IMPORTANT]
 >
 > Os nomes dos produtos de proteção contra ameaças da Microsoft estão mudando. Leia mais sobre essa e outras atualizações [aqui](https://www.microsoft.com/security/blog/?p=91813). Usaremos os novos nomes a partir da versão 2.129 em diante.
+
+## <a name="product-short-release-2135"></a>Versão 2.135 do [!INCLUDE [Product short](includes/product-short.md)]
+
+Lançada em 20 de dezembro de 2020
+
+- Melhoramos nosso alerta de [LDAP (reconhecimento de atributos do Active Directory) (ID externa 2210)](reconnaissance-alerts.md#active-directory-attributes-reconnaissance-ldap-external-id-2210) para também detectar técnicas usadas para obter as informações necessárias para gerar tokens de segurança, conforme visto como parte da [Campanha Solorigate](https://aka.ms/solorigate). 
+- Essa versão inclui melhorias e correções de bugs da infraestrutura do sensor interno.
+
+## <a name="product-short-release-2134"></a>Versão 2.134 do [!INCLUDE [Product short](includes/product-short.md)]
+
+Lançada em 13 de dezembro de 2020
+
+- Nosso [detector NetLogon recentemente lançado](#azure-atp-release-2127-2) foi aprimorado para também funcionar quando a transação de canal Netlogon ocorre em um canal criptografado. Para obter mais informações sobre o detector, confira [Suspeita de tentativa de elevação de privilégio do Netlogon](compromised-credentials-alerts.md#suspected-netlogon-priv-elev-2411).
+- Essa versão inclui melhorias e correções de bugs da infraestrutura do sensor interno.
 
 ## <a name="product-short-release-2133"></a>Versão 2.133 do [!INCLUDE [Product short](includes/product-short.md)]
 
@@ -67,6 +81,8 @@ Estamos removendo o botão de alternância de **Notificação por email** para a
 ## <a name="azure-atp-release-2127"></a>ATP do Azure versão 2.127
 
 Lançado em 20 de setembro de 2020
+
+<a name="azure-atp-release-2127-2"></a>
 
 - **Novo alerta de segurança: Suspeita de tentativa de elevação de privilégio do Netlogon (ID externa 2411)**  
 O alerta de segurança *Suspeita de tentativa de elevação de privilégio do Netlogon (exploração CVE-2020-1472) (ID externa 2411)* do ATP do Azure agora está disponível. Nessa detecção, um alerta de segurança do Azure ATP é disparado quando um invasor estabelece uma conexão vulnerável de canal seguro do Netlogon com um controlador de domínio, usando o Protocolo Remoto Netlogon ([MS-NRPC](/openspecs/windows_protocols/ms-nrpc/ff8f970f-3e37-40f7-bd4b-af7336e4792f)), também conhecido como *Vulnerabilidade de Elevação de Privilégio do Netlogon*. Para obter mais informações, confira [Suspeita de tentativa de elevação de privilégio do Netlogon](compromised-credentials-alerts.md#suspected-netlogon-priv-elev-2411).

@@ -1,14 +1,14 @@
 ---
 title: Alertas de segurança de predominância de domínio do Microsoft Defender para Identidade
 description: Este artigo explica os alertas do Microsoft Defender para Identidade emitidos quando são detectados ataques contra a sua organização, que normalmente fazem parte dos esforços da fase de predominância de domínio.
-ms.date: 10/26/2020
+ms.date: 12/23/2020
 ms.topic: tutorial
-ms.openlocfilehash: 8289b25087fc6e5743ed46d301a27239d82036ad
-ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
+ms.openlocfilehash: c7376b617f69261c848bede401ff083612545457
+ms.sourcegitcommit: e2b4ad613aa171f604ae526f0cba05fe79f4a8cb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96543290"
+ms.lasthandoff: 12/23/2020
+ms.locfileid: "97753342"
 ---
 # <a name="tutorial-domain-dominance-alerts"></a>Tutorial: Alertas de predominância de domínio
 
@@ -83,7 +83,7 @@ Scanners de segurança avançada podem gerar legitimamente esse tipo de atividad
 
 **Descrição**
 
-Os invasores que comprometem credenciais de administrador ou que usam uma exploração de dia zero podem executar comandos remotos no controlador de domínio. Isso pode ser usado para obter a persistência, coletar informações, ataques DOS (negação de serviço) ou qualquer outro motivo. O [!INCLUDE [Product short](includes/product-short.md)] detecta conexões do PSexec, do WMI Remoto e do PowerShell.
+Os invasores que comprometem credenciais de administrador ou que usam uma exploração de dia zero podem executar comandos remotos no controlador de domínio ou servidor dos AD FS. Isso pode ser usado para obter a persistência, coletar informações, ataques DOS (negação de serviço) ou qualquer outro motivo. O [!INCLUDE [Product short](includes/product-short.md)] detecta conexões do PSexec, do WMI Remoto e do PowerShell.
 
 **Período de aprendizado**
 
@@ -613,7 +613,7 @@ Modificações de grupo legítimas que raramente ocorrem e que o sistema não ap
 
 **Descrição**
 
-Um serviço suspeito foi criado em um controlador de domínio em sua organização. Esse alerta se baseia no evento 7045 para identificar a atividade suspeita.
+Um serviço suspeito foi criado em um controlador de domínio ou servidor dos AD FS em sua organização. Esse alerta se baseia no evento 7045 para identificar a atividade suspeita.
 
 **Período de aprendizado**
 
