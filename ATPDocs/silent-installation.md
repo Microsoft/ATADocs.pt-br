@@ -1,14 +1,14 @@
 ---
 title: Instalar o Microsoft defender para identidade silenciosamente
 description: Isso descreve como instalar silenciosamente o Microsoft defender para identidade.
-ms.date: 10/27/2020
+ms.date: 01/11/2021
 ms.topic: how-to
-ms.openlocfilehash: 056451d5f0881360643bfc453366a8ccdb0ddccc
-ms.sourcegitcommit: 3a478353118670b8124bc62d33751d8ba6af109d
+ms.openlocfilehash: a9cddac4ca0306faddaa93b701b88745b180828c
+ms.sourcegitcommit: 57dd3e4663346db3542cf9e755dac135c5e75125
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/23/2020
-ms.locfileid: "97746869"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98062528"
 ---
 # <a name="product-long-switches-and-silent-installation"></a>[!INCLUDE [Product long](includes/product-long.md)] comutadores e instalação silenciosa
 
@@ -92,6 +92,8 @@ Use os seguintes comandos para concluir a autenticação de proxy:
 > |ProxyUrl|ProxyUrl="http\://proxy.contoso.com:8080"|Não|Especifica a ProxyUrl e o número da porta para o sensor do [!INCLUDE [Product short](includes/product-short.md)].|
 > |ProxyUserName|ProxyUserName="Contoso\ProxyUser"|Não|Se o seu serviço de proxy exigir autenticação, forneça um nome de usuário no formato DOMÍNIO\usuário.|
 > |ProxyUserPassword|ProxyUserPassword="P@ssw0rd"|Não|Especifica a senha para o nome de usuário do proxy. *As credenciais são criptografadas e armazenadas localmente pelo sensor do [!INCLUDE [Product short](includes/product-short.md)].|
+
+Para obter mais informações sobre a configuração de proxy, consulte [definir configurações de proxy de ponto de extremidade e conectividade de Internet para seu [!INCLUDE [Product long](includes/product-long.md)] sensor](configure-proxy.md).
 
 ## <a name="update-the-product-short-sensor"></a>Atualizar o [!INCLUDE [Product short](includes/product-short.md)] sensor
 
