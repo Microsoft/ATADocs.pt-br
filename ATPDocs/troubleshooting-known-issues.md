@@ -1,14 +1,14 @@
 ---
 title: Solução de problemas conhecidos do Microsoft defender para identidade
 description: Descreve como você pode solucionar problemas no Microsoft defender para identidade.
-ms.date: 09/07/2020
+ms.date: 01/12/2021
 ms.topic: how-to
-ms.openlocfilehash: bd7abdca7fade3b00161513b74d6507c5660c3bb
-ms.sourcegitcommit: bfb14c4c0b0f528edaa8167833b13c476240e514
+ms.openlocfilehash: 6f0a055a48dc906dd7a44814b19ed85fb64401ee
+ms.sourcegitcommit: 2eb4078aba5085a12acc37c2a8d9aa48bd6dcb02
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/24/2020
-ms.locfileid: "97762496"
+ms.lasthandoff: 01/12/2021
+ms.locfileid: "98114234"
 ---
 # <a name="troubleshooting-product-long-known-issues"></a>Solucionando [!INCLUDE [Product long](includes/product-long.md)] problemas conhecidos
 
@@ -152,7 +152,7 @@ Para resolver o problema:
 
 No SO convidado, defina o seguinte como **desabilitado** na configuração de NIC da máquina virtual: **descarregamento de Tso IPv4**.
 
- ![Problema de sensor VMware](media/vm-sensor-issue.png)
+![Problema de sensor VMware](media/vm-sensor-issue.png)
 
 Use o seguinte comando para verificar se o LSO (Descarregamento de Envio Grande) está habilitado ou desabilitado:
 
@@ -165,6 +165,11 @@ Se o LSO estiver habilitado, use o seguinte comando para desabilitá-lo:
 `Disable-NetAdapterLso -Name {name of adapter}`
 
 ![Desabilitar o status do LSO](media/disable-lso-vmware.png)
+
+> [!NOTE]
+>
+> - Talvez seja necessário reiniciar o computador para que essas alterações entrem em vigor.
+> - Essas etapas podem variar dependendo da sua versão do VMWare. Consulte a documentação do VMWare para obter informações sobre como desabilitar o LSO/TSO para sua versão do VMWare.
 
 ## <a name="sensor-failed-to-retrieve-group-managed-service-account-gmsa-credentials"></a>Falha do sensor ao tentar recuperar as credenciais da gMSA (conta de serviço gerenciado do grupo)
 

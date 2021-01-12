@@ -3,12 +3,12 @@ title: Avaliações de postura de segurança de identidade do spooler de impress
 description: Este artigo fornece uma visão geral do Microsoft defender para relatórios de avaliação de postura de segurança de identidade do spooler de impressão.
 ms.date: 01/11/2021
 ms.topic: how-to
-ms.openlocfilehash: dc380efcff1353203786a91b481d1e091e860071
-ms.sourcegitcommit: 57dd3e4663346db3542cf9e755dac135c5e75125
+ms.openlocfilehash: 104b763de6950ff07d984ee053e5b0e05cd42dc7
+ms.sourcegitcommit: 2eb4078aba5085a12acc37c2a8d9aa48bd6dcb02
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98062511"
+ms.lasthandoff: 01/12/2021
+ms.locfileid: "98114200"
 ---
 # <a name="security-assessment-domain-controllers-with-print-spooler-service-available"></a>Avaliação de segurança: Controladores de domínio com o serviço de spooler de impressão disponível
 
@@ -29,7 +29,7 @@ Embora essa avaliação de segurança se concentre nos controladores de domínio
 > [!NOTE]
 >
 > - Investigue suas configurações e dependências do **spooler de impressão** antes de desabilitar esse serviço e impedir fluxos de trabalho de impressão ativos.
-> - A função de controlador de domínio [adiciona um thread ao serviço de spooler](https://docs.microsoft.com/windows-server/security/windows-services/security-guidelines-for-disabling-system-services-in-windows-server#print-spooler) que é responsável por executar a remoção de impressão – removendo os objetos de fila de impressão obsoletos do Active Directory. Portanto, a recomendação de segurança para desabilitar o serviço **spooler de impressão** é uma compensação entre a segurança e a capacidade de realizar a remoção de impressão. Para resolver o problema, você deve considerar a remoção periódica de objetos de fila de impressão obsoletos, manualmente ou usando um script de automação.
+> - A função de controlador de domínio [adiciona um thread ao serviço de spooler](/windows-server/security/windows-services/security-guidelines-for-disabling-system-services-in-windows-server#print-spooler) que é responsável por executar a remoção de impressão – removendo os objetos de fila de impressão obsoletos do Active Directory. Portanto, a recomendação de segurança para desabilitar o serviço **spooler de impressão** é uma compensação entre a segurança e a capacidade de realizar a remoção de impressão. Para resolver o problema, você deve considerar a remoção periódica de objetos de fila de impressão obsoletos, manualmente ou usando um script de automação.
 
 ## <a name="how-do-i-use-this-security-assessment"></a>Como usar a avaliação de segurança?
 

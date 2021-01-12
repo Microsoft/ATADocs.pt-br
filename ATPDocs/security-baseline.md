@@ -7,16 +7,16 @@ ms.topic: conceptual
 ms.date: 12/03/2020
 ms.author: mbaldwin
 ms.custom: subject-security-benchmark
-ms.openlocfilehash: 37d46cd2a7810193990cc3143e69c9ea83c6afe2
-ms.sourcegitcommit: 69339ed7712657427ee40af8cc3ac41e11ed2dd2
+ms.openlocfilehash: 595a532bb02aeda6f82005a28833f71a3d074a18
+ms.sourcegitcommit: 2eb4078aba5085a12acc37c2a8d9aa48bd6dcb02
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/04/2020
-ms.locfileid: "96597943"
+ms.lasthandoff: 01/12/2021
+ms.locfileid: "98114251"
 ---
 # <a name="azure-security-baseline-for-microsoft-defender-for-identity"></a>Linha de base de segurança do Azure para Microsoft defender para identidade
 
-Essa linha de base de segurança aplica diretrizes do [benchmark de segurança do Azure versão 2,0](https://docs.microsoft.com/azure/security/benchmarks/overview) para o Microsoft defender para identidade. O Azure Security Benchmark fornece recomendações sobre como você pode proteger suas soluções de nuvem no Azure. O conteúdo é agrupado pelos **controles de segurança** definidos pelo benchmark de segurança do Azure e pelas diretrizes relacionadas aplicáveis ao Microsoft defender for Identity. Os **controles** não aplicáveis ao Microsoft defender para identidade foram excluídos.
+Essa linha de base de segurança aplica diretrizes do [benchmark de segurança do Azure versão 2,0](/azure/security/benchmarks/overview) para o Microsoft defender para identidade. O Azure Security Benchmark fornece recomendações sobre como você pode proteger suas soluções de nuvem no Azure. O conteúdo é agrupado pelos **controles de segurança** definidos pelo benchmark de segurança do Azure e pelas diretrizes relacionadas aplicáveis ao Microsoft defender for Identity. Os **controles** não aplicáveis ao Microsoft defender para identidade foram excluídos.
 
 Para ver como o Microsoft defender for Identity é completamente mapeado para o benchmark de segurança do Azure, consulte o [arquivo completo de mapeamento de linha de base do Microsoft defender for Identity Security](https://github.com/MicrosoftDocs/SecurityBenchmarks/tree/master/Azure%20Offer%20Security%20Baselines).
 
@@ -28,9 +28,9 @@ Para ver como o Microsoft defender for Identity é completamente mapeado para o 
 
 **Diretrizes**: Use as marcas de serviço de rede virtual do Azure para definir os controles de acesso à rede nos grupos de segurança de rede ou no firewall do Azure configurados para seus recursos de identidade. Você pode usar marcas de serviço em vez de endereços IP específicos ao criar regras de segurança. Ao especificar o nome da marca de serviço (por exemplo: "AzureAdvancedThreatProtection") no campo de origem ou destino apropriado de uma regra, você pode permitir ou negar o tráfego para o serviço correspondente. A Microsoft gerencia os prefixos de endereço englobados pela marca de serviço e atualiza automaticamente a marca de serviço em caso de alteração de endereços.
 
-- [Habilitar o acesso ao defender para URLs de serviço de identidade no servidor proxy](https://docs.microsoft.com/defender-for-identity/configure-proxy#enable-access-to--service-urls-in-the-proxy-server)
+- [Habilitar o acesso ao defender para URLs de serviço de identidade no servidor proxy](configure-proxy.md#enable-access-to--service-urls-in-the-proxy-server)
 
-- [Entender e usar marcas de serviço](https://docs.microsoft.com/azure/virtual-network/service-tags-overview)
+- [Entender e usar marcas de serviço](/azure/virtual-network/service-tags-overview)
 
 **Monitoramento da Central de Segurança do Azure**: Não aplicável
 
@@ -51,13 +51,13 @@ A proteção do Azure AD deve ser uma prioridade alta na prática de segurança 
 
 Observação: o Azure AD dá suporte à identidade externa que permite aos usuários sem um conta Microsoft entrar em seus aplicativos e recursos com sua identidade externa.
 
-- [Locatários no Azure Active Directory](https://docs.microsoft.com/azure/active-directory/develop/single-and-multi-tenant-apps) 
+- [Locatários no Azure Active Directory](/azure/active-directory/develop/single-and-multi-tenant-apps) 
 
-- [Como criar e configurar uma instância do Azure AD](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-access-create-new-tenant) 
+- [Como criar e configurar uma instância do Azure AD](/azure/active-directory/fundamentals/active-directory-access-create-new-tenant) 
 
-- [Usar provedores de identidade externos para o aplicativo](https://docs.microsoft.com/azure/active-directory/b2b/identity-providers) 
+- [Usar provedores de identidade externos para o aplicativo](/azure/active-directory/b2b/identity-providers) 
 
-- [O que é a classificação de segurança de identidade no Azure Active Directory](https://docs.microsoft.com/azure/active-directory/fundamentals/identity-secure-score)
+- [O que é a classificação de segurança de identidade no Azure Active Directory](/azure/active-directory/fundamentals/identity-secure-score)
 
 **Monitoramento da Central de Segurança do Azure**: Não aplicável
 
@@ -72,13 +72,13 @@ Observação: o Azure AD dá suporte à identidade externa que permite aos usuá
 
 Para administradores e usuários privilegiados, verifique se o nível mais alto do método de autenticação forte é usado, seguido da distribuição da política de autenticação forte apropriada para outros usuários.
 
-- [Como habilitar a autenticação multifator no Azure](https://docs.microsoft.com/azure/active-directory/authentication/howto-mfa-getstarted) 
+- [Como habilitar a autenticação multifator no Azure](/azure/active-directory/authentication/howto-mfa-getstarted) 
 
-- [Introdução às opções de autenticação sem senha do Azure Active Directory](https://docs.microsoft.com/azure/active-directory/authentication/concept-authentication-passwordless) 
+- [Introdução às opções de autenticação sem senha do Azure Active Directory](/azure/active-directory/authentication/concept-authentication-passwordless) 
 
-- [Política de senha padrão do Azure AD](https://docs.microsoft.com/azure/active-directory/authentication/concept-sspr-policy#password-policies-that-only-apply-to-cloud-user-accounts) 
+- [Política de senha padrão do Azure AD](/azure/active-directory/authentication/concept-sspr-policy#password-policies-that-only-apply-to-cloud-user-accounts) 
 
-- [Eliminar senhas inadequadas usando a proteção de senha do Azure AD](https://docs.microsoft.com/azure/active-directory/authentication/concept-password-ban-bad)
+- [Eliminar senhas inadequadas usando a proteção de senha do Azure AD](/azure/active-directory/authentication/concept-password-ban-bad)
 
 **Monitoramento da Central de Segurança do Azure**: Sim
 
@@ -97,13 +97,13 @@ Administrador de segurança
 Limite o número de contas ou funções altamente privilegiadas e proteja essas contas em um nível elevado, pois os usuários com esse privilégio podem ler e modificar de forma direta ou indireta todos os recursos em seu ambiente do Azure.
 
 Você pode habilitar o acesso privilegiado JIT (just-in-time) aos recursos do Azure e Azure Active Directory (Azure AD) usando Azure AD Privileged Identity Management (PIM). O JIT concede permissões temporárias para executar tarefas privilegiadas somente quando os usuários precisam dela. O PIM também pode gerar alertas de segurança quando há atividades suspeitas ou não seguras na sua organização do Azure AD.
-- [Microsoft defender para grupos de funções de identidade](https://docs.microsoft.com/defender-for-identity/role-groups)
+- [Microsoft defender para grupos de funções de identidade](role-groups.md)
 
-- [Permissões da função Administrador no Azure AD](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles) 
+- [Permissões da função Administrador no Azure AD](/azure/active-directory/users-groups-roles/directory-assign-admin-roles) 
 
-- [Usar os alertas de segurança do Azure Privileged Identity Management](https://docs.microsoft.com/azure/active-directory/privileged-identity-management/pim-how-to-configure-security-alerts) 
+- [Usar os alertas de segurança do Azure Privileged Identity Management](/azure/active-directory/privileged-identity-management/pim-how-to-configure-security-alerts) 
 
-- [Protegendo o acesso privilegiado para implantações de nuvem e híbridos no Azure AD](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-admin-roles-secure)
+- [Protegendo o acesso privilegiado para implantações de nuvem e híbridos no Azure AD](/azure/active-directory/users-groups-roles/directory-admin-roles-secure)
 
 **Monitoramento da Central de Segurança do Azure**: Sim
 
@@ -117,13 +117,13 @@ Certifique-se de também restringir o acesso aos sistemas de gerenciamento, iden
 
 Todos os tipos de controles de acesso devem ser alinhados à sua estratégia de segmentação corporativa para garantir o controle de acesso consistente.
 
-- [Microsoft defender para grupos de funções de identidade](https://docs.microsoft.com/defender-for-identity/role-groups)
+- [Microsoft defender para grupos de funções de identidade](role-groups.md)
 
-- [Componentes do Azure e modelo de referência](https://docs.microsoft.com/security/compass/microsoft-security-compass-introduction#azure-components-and-reference-model-2151) 
+- [Componentes do Azure e modelo de referência](/security/compass/microsoft-security-compass-introduction#azure-components-and-reference-model-2151) 
 
-- [Acesso ao grupo de gerenciamento](https://docs.microsoft.com/azure/governance/management-groups/overview#management-group-access) 
+- [Acesso ao grupo de gerenciamento](/azure/governance/management-groups/overview#management-group-access) 
 
-- [Administradores de assinatura do Azure](https://docs.microsoft.com/azure/cost-management-billing/manage/add-change-subscription-administrator)
+- [Administradores de assinatura do Azure](/azure/cost-management-billing/manage/add-change-subscription-administrator)
 
 **Monitoramento da Central de Segurança do Azure**: Sim
 
@@ -137,9 +137,9 @@ Além disso, o Azure Privileged Identity Management também pode ser configurado
 
 Observação: alguns serviços do Azure dão suporte a usuários e funções locais que não são gerenciados por meio do Azure AD. Você precisará gerenciar esses usuários separadamente.
 
-- [Criar uma revisão de acesso das funções de recurso do Azure no Privileged Identity Management (PIM)](https://docs.microsoft.com/azure/active-directory/privileged-identity-management/pim-resource-roles-start-access-review) 
+- [Criar uma revisão de acesso das funções de recurso do Azure no Privileged Identity Management (PIM)](/azure/active-directory/privileged-identity-management/pim-resource-roles-start-access-review) 
 
-- [Como usar as revisões de identidade e acesso do Azure AD](https://docs.microsoft.com/azure/active-directory/governance/access-reviews-overvie)
+- [Como usar as revisões de identidade e acesso do Azure AD](/azure/active-directory/governance/access-reviews-overvie)
 
 **Monitoramento da Central de Segurança do Azure**: Sim
 
@@ -149,8 +149,8 @@ Observação: alguns serviços do Azure dão suporte a usuários e funções loc
 
 **Diretrizes**: estações de trabalho seguras e isoladas são extremamente importantes para a segurança de funções confidenciais, como administradores, desenvolvedores e operadores de serviços críticos. Use estações de trabalho de usuário altamente protegidas e/ou bastiões do Azure para tarefas administrativas. Use Azure Active Directory, Microsoft defender for Endpoint e/ou Microsoft Intune para implantar uma estação de trabalho de usuário segura e gerenciada para tarefas administrativas. As estações de trabalho protegidas podem ser gerenciadas de modo central para impor a configuração protegida, incluindo autenticação forte, linhas de base de software e hardware, acesso lógico restrito e de rede.
 
-- [Entender as estações de trabalho com acesso privilegiado](https://docs.microsoft.com/azure/active-directory/devices/concept-azure-managed-workstation) 
-- [Implantar uma estação de trabalho com acesso privilegiado](https://docs.microsoft.com/azure/active-directory/devices/howto-azure-managed-workstation)
+- [Entender as estações de trabalho com acesso privilegiado](/azure/active-directory/devices/concept-azure-managed-workstation) 
+- [Implantar uma estação de trabalho com acesso privilegiado](/azure/active-directory/devices/howto-azure-managed-workstation)
 
 **Monitoramento da Central de Segurança do Azure**: Não aplicável
 
@@ -167,11 +167,11 @@ Observação: alguns serviços do Azure dão suporte a usuários e funções loc
 Para garantir um controle de acesso consistente, todos os tipos de controle de acesso devem ser alinhados à sua estratégia de segmentação corporativa. A estratégia de segmentação corporativa também deve ser informada pelo local de sistemas e dados confidenciais ou críticos para os negócios.
 
 Quanto à plataforma subjacente, que é gerenciada pela Microsoft, a Microsoft trata todo o conteúdo do cliente como confidencial e fornece proteção contra a perda e a exposição de dados do cliente. Para garantir que os dados do cliente no Azure permaneçam seguros, a Microsoft implementa recursos e controles de proteção de dados padrão.
-- [Funções do Azure AD com acesso ao Cloud App Security](https://docs.microsoft.com/cloud-app-security/manage-admins)
+- [Funções do Azure AD com acesso ao Cloud App Security](/cloud-app-security/manage-admins)
 
-- [RBAC (controle de acesso baseado em função) do Azure](https://docs.microsoft.com/azure/role-based-access-control/overview) 
+- [RBAC (controle de acesso baseado em função) do Azure](/azure/role-based-access-control/overview) 
 
-- [Entender a proteção de dados do cliente no Azure](https://docs.microsoft.com/azure/security/fundamentals/protection-customer-data)
+- [Entender a proteção de dados do cliente no Azure](/azure/security/fundamentals/protection-customer-data)
 
 **Monitoramento da Central de Segurança do Azure**: Não aplicável
 
@@ -191,9 +191,9 @@ As permissões de Leitor de segurança podem ser aplicadas amplamente a um locat
 
 Observação: podem ser necessárias permissões adicionais a fim de obter visibilidade das cargas de trabalho e dos serviços. 
 
-- [Visão geral da função Leitor de segurança](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#security-reader)
+- [Visão geral da função Leitor de segurança](/azure/role-based-access-control/built-in-roles#security-reader)
 
-- [Visão geral dos grupos de gerenciamento do Azure](https://docs.microsoft.com/azure/governance/management-groups/overview)
+- [Visão geral dos grupos de gerenciamento do Azure](/azure/governance/management-groups/overview)
 
 **Monitoramento da Central de Segurança do Azure**: Não disponível no momento
 
@@ -208,10 +208,10 @@ Observação: podem ser necessárias permissões adicionais a fim de obter visib
 **Diretrizes**: o defender for Identity pode notificá-lo quando detecta atividades suspeitas, enviando alertas de segurança e de integridade para o servidor syslog por meio de um sensor indicado.
 Encaminhe todos os logs do defender para identidade para o SIEM, que pode ser usado para configurar as detecções de ameaças personalizadas. Verifique se você está monitorando diferentes tipos de ativos do Azure para possíveis ameaças e anomalias. Concentre-se em obter alertas de alta qualidade para reduzir os falsos positivos para os analistas classificarem. Os alertas podem ser originados de dados de log, agentes ou outros dados.
 
-- [Como integrar com o syslog](https://docs.microsoft.com/defender-for-identity/setting-syslog)
-- [Criar regras de análise personalizadas para detectar ameaças](https://docs.microsoft.com/azure/sentinel/tutorial-detect-threats-custom) 
+- [Como integrar com o syslog](setting-syslog.md)
+- [Criar regras de análise personalizadas para detectar ameaças](/azure/sentinel/tutorial-detect-threats-custom) 
 
-- [Inteligência contra ameaças cibernéticos com o Azure Sentinel](https://docs.microsoft.com/azure/architecture/example-scenario/data/sentinel-threat-intelligence)
+- [Inteligência contra ameaças cibernéticos com o Azure Sentinel](/azure/architecture/example-scenario/data/sentinel-threat-intelligence)
 
 **Monitoramento da Central de Segurança do Azure**: Não aplicável
 
@@ -231,10 +231,10 @@ Encaminhe todos os logs do defender para identidade para o SIEM, que pode ser us
 
 A central de segurança do Azure também pode alertar sobre determinadas atividades suspeitas, como um número excessivo de tentativas de autenticação com falha, contas preteridas na assinatura. Além do monitoramento básico de higiene de segurança, o módulo de Proteção contra Ameaças da Central de Segurança do Azure também pode coletar alertas de segurança mais aprofundados de recursos de computação individuais do Azure (máquinas virtuais, contêineres, serviço de aplicativo), recursos de dados (BD SQL e armazenamento) e camadas de serviço do Azure. Essa funcionalidade permite que você veja anomalias de conta dentro dos recursos individuais.
 
-- [Relatórios de atividades de auditoria no Azure Active Directory](https://docs.microsoft.com/azure/active-directory/reports-monitoring/concept-audit-logs) 
+- [Relatórios de atividades de auditoria no Azure Active Directory](/azure/active-directory/reports-monitoring/concept-audit-logs) 
 
-- [Habilitar o Azure Identity Protection](https://docs.microsoft.com/azure/active-directory/identity-protection/overview-identity-protection) 
-- [Proteção contra ameaças na Central de Segurança do Azure](https://docs.microsoft.com/azure/security-center/threat-protection)
+- [Habilitar o Azure Identity Protection](/azure/active-directory/identity-protection/overview-identity-protection) 
+- [Proteção contra ameaças na Central de Segurança do Azure](/azure/security-center/threat-protection)
 
 **Monitoramento da Central de Segurança do Azure**: Sim
 
@@ -250,10 +250,10 @@ Muitas organizações optam por usar o Azure Sentinel para dados "quentes" que s
 
 O defender for Identity oferece para encaminhar todos os logs relacionados à segurança para o SIEM para gerenciamento centralizado.
 
-- [Como coletar logs e métricas de plataforma com Azure Monitor](https://docs.microsoft.com/azure/azure-monitor/platform/diagnostic-settings) 
-- [Como integrar o Azure Sentinel](https://docs.microsoft.com/azure/sentinel/quickstart-onboard) 
+- [Como coletar logs e métricas de plataforma com Azure Monitor](/azure/azure-monitor/platform/diagnostic-settings) 
+- [Como integrar o Azure Sentinel](/azure/sentinel/quickstart-onboard) 
 
-- [Integrar o defender para identidade com o syslog](https://docs.microsoft.com/defender-for-identity/setting-syslog)
+- [Integrar o defender para identidade com o syslog](setting-syslog.md)
 
 **Monitoramento da Central de Segurança do Azure**: Sim
 
@@ -267,9 +267,9 @@ O defender for Identity oferece para encaminhar todos os logs relacionados à se
 
 **Diretriz**: verifique se a sua organização tem processos para responder a incidentes de segurança, atualizou esses processos para o Azure e está os exercendo regularmente para garantir a preparação.
 
-- [Implementar a segurança em todo o ambiente empresarial](https://docs.microsoft.com/azure/cloud-adoption-framework/security/security-top-10#4-process-update-incident-response-ir-processes-for-cloud)
+- [Implementar a segurança em todo o ambiente empresarial](/azure/cloud-adoption-framework/security/security-top-10#4-process-update-incident-response-ir-processes-for-cloud)
 
-- [Guia de referência da resposta a incidentes](https://docs.microsoft.com/microsoft-365/downloads/IR-Reference-Guide.pdf)
+- [Guia de referência da resposta a incidentes](/microsoft-365/downloads/IR-Reference-Guide.pdf)
 
 **Monitoramento da Central de Segurança do Azure**: Não aplicável
 
@@ -279,7 +279,7 @@ O defender for Identity oferece para encaminhar todos os logs relacionados à se
 
 **Diretriz**: configure as informações de contato de incidentes de segurança na Central de Segurança do Azure. Essas informações de contato serão usadas pela Microsoft para entrar em contato com você se o MSRC (Microsoft Security Response Center) descobrir que os seus dados foram acessados por uma pessoa não autorizada ou ilegal. Você também tem opções para personalizar alertas de incidentes e notificações em diferentes serviços do Azure com base em suas necessidades de resposta a incidentes. 
 
-- [Como definir o contato de segurança da Central de Segurança do Azure](https://docs.microsoft.com/azure/security-center/security-center-provide-security-contact-details)
+- [Como definir o contato de segurança da Central de Segurança do Azure](/azure/security-center/security-center-provide-security-contact-details)
 
 **Monitoramento da Central de Segurança do Azure**: Sim
 
@@ -295,9 +295,9 @@ A central de segurança do Azure (ASC) fornece alertas de alta qualidade em vár
 
 Exporte alertas e recomendações da Central de Segurança do Azure usando o recurso de exportação para ajudar a identificar os riscos para os recursos do Azure. Exporte os alertas e as recomendações de modo manual ou contínuo.
 
-- [Como configurar a exportação](https://docs.microsoft.com/azure/security-center/continuous-export)
+- [Como configurar a exportação](/azure/security-center/continuous-export)
 
-- [Como transmitir alertas para o Azure Sentinel](https://docs.microsoft.com/azure/sentinel/connect-azure-security-center)
+- [Como transmitir alertas para o Azure Sentinel](/azure/sentinel/connect-azure-security-center)
 
 **Monitoramento da Central de Segurança do Azure**: Não disponível no momento
 
@@ -321,13 +321,13 @@ As fontes de dados para investigação incluem as fontes de registro em log cent
 
 O Azure Sentinel fornece ampla análise de dados em praticamente qualquer origem de log e um portal de gerenciamento de casos para gerenciar o ciclo de vida completo de incidentes. As informações de inteligência coletadas durante uma investigação podem ser associadas a um incidente para fins de rastreamento e relatório. 
 
-- [Criar um instantâneo de disco de um computador Windows](https://docs.microsoft.com/azure/virtual-machines/windows/snapshot-copy-managed-disk)
+- [Criar um instantâneo de disco de um computador Windows](/azure/virtual-machines/windows/snapshot-copy-managed-disk)
 
-- [Criar um instantâneo de disco de um computador Linux](https://docs.microsoft.com/azure/virtual-machines/linux/snapshot-copy-managed-disk)
+- [Criar um instantâneo de disco de um computador Linux](/azure/virtual-machines/linux/snapshot-copy-managed-disk)
 
 - [Informações de diagnóstico e coleta de despejo de memória do Suporte do Microsoft Azure](https://azure.microsoft.com/support/legal/support-diagnostic-information-collection/) 
 
-- [Investigar incidentes com o Azure Sentinel](https://docs.microsoft.com/azure/sentinel/tutorial-investigate-cases)
+- [Investigar incidentes com o Azure Sentinel](/azure/sentinel/tutorial-investigate-cases)
 
 **Monitoramento da Central de Segurança do Azure**: Não aplicável
 
@@ -341,9 +341,9 @@ A Central de Segurança do Azure atribui uma severidade a cada alerta para ajuda
 
 Além disso, marque os recursos usando marcas e crie um sistema de nomenclatura para identificar e categorizar os recursos do Azure, em especial aqueles que processam dados confidenciais.  É sua responsabilidade priorizar a correção de alertas com base na criticalidade dos recursos do Azure e do ambiente em que o incidente ocorreu.
 
-- [Alertas na Central de Segurança do Azure](https://docs.microsoft.com/azure/security-center/security-center-alerts-overview)
+- [Alertas na Central de Segurança do Azure](/azure/security-center/security-center-alerts-overview)
 
-- [Usar marcas para organizar seus recursos do Azure](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-using-tags)
+- [Usar marcas para organizar seus recursos do Azure](/azure/azure-resource-manager/resource-group-using-tags)
 
 **Monitoramento da Central de Segurança do Azure**: Não disponível no momento
 
@@ -353,11 +353,11 @@ Além disso, marque os recursos usando marcas e crie um sistema de nomenclatura 
 
 **Diretriz**: automatize tarefas repetitivas manuais para acelerar o tempo de resposta e reduzir a carga dos analistas. As tarefas manuais demoram mais para serem executadas, atrasando cada incidente e reduzindo Quantos incidentes um analista pode manipular. Elas também aumentam a fadiga do analista, o que aumenta o risco de erros humanos que causam atrasos, prejudicando a capacidade dos analistas de se concentrarem efetivamente em tarefas complexas. Use os recursos de automação de fluxo de trabalho da Central de Segurança do Azure e do Azure Sentinel para disparar ações automaticamente ou executar um guia estratégico para responder aos alertas de segurança recebidos. O guia estratégico executa ações, como enviar notificações, desabilitar contas e isolar redes problemáticas. 
 
-- [Configurar a automação de fluxo de trabalho na Central de Segurança](https://docs.microsoft.com/azure/security-center/workflow-automation)
+- [Configurar a automação de fluxo de trabalho na Central de Segurança](/azure/security-center/workflow-automation)
 
-- [Configurar respostas automatizadas a ameaças na Central de Segurança do Azure](https://docs.microsoft.com/azure/security-center/tutorial-security-incident#triage-security-alerts)
+- [Configurar respostas automatizadas a ameaças na Central de Segurança do Azure](/azure/security-center/tutorial-security-incident#triage-security-alerts)
 
-- [Configurar respostas de ameaças automatizadas no Azure Sentinel](https://docs.microsoft.com/azure/sentinel/tutorial-respond-threats-playbook)
+- [Configurar respostas de ameaças automatizadas no Azure Sentinel](/azure/sentinel/tutorial-respond-threats-playbook)
 
 **Monitoramento da Central de Segurança do Azure**: Não disponível no momento
 
@@ -372,7 +372,7 @@ Além disso, marque os recursos usando marcas e crie um sistema de nomenclatura 
 **Diretriz**: conforme necessário, realize testes de penetração ou atividades de equipe vermelhas nos seus recursos do Azure e garanta a correção de todas as conclusões de segurança críticas.
 Siga as Regras de Participação no Teste de Penetração do Microsoft Cloud para garantir que os testes de penetração não violem as políticas da Microsoft. Use a estratégia da Microsoft, a execução de Equipes Vermelhas e os testes de penetração de sites online na infraestrutura, nos serviços e nos aplicativos de nuvem gerenciados pela Microsoft.
 
-- [Teste de penetração no Azure](https://docs.microsoft.com/azure/security/fundamentals/pen-testing)
+- [Teste de penetração no Azure](/azure/security/fundamentals/pen-testing)
 
 - [Regras de participação para testes de penetração](https://www.microsoft.com/msrc/pentest-rules-of-engagement?rtc=1) 
 
@@ -409,15 +409,15 @@ Essa estratégia deve incluir diretrizes documentadas, políticas e padrões par
 -   Padrões de criptografia apropriados
 
 Para saber mais, consulte as referências a seguir:
-- [Recomendação da arquitetura de segurança do Azure – Armazenamento, dados e criptografia](https://docs.microsoft.com/azure/architecture/framework/security/storage-data-encryption?toc=/security/compass/toc.json&amp;bc=/security/compass/breadcrumb/toc.json)
+- [Recomendação da arquitetura de segurança do Azure – Armazenamento, dados e criptografia](/azure/architecture/framework/security/storage-data-encryption?amp;bc=%2fsecurity%2fcompass%2fbreadcrumb%2ftoc.json&toc=%2fsecurity%2fcompass%2ftoc.json)
 
-- [Conceitos básicos de segurança do Azure – Segurança, criptografia e armazenamento de dados do Azure](https://docs.microsoft.com/azure/security/fundamentals/encryption-overview)
+- [Conceitos básicos de segurança do Azure – Segurança, criptografia e armazenamento de dados do Azure](/azure/security/fundamentals/encryption-overview)
 
-- [Cloud Adoption Framework – Melhores práticas de segurança e criptografia de dados do Azure](https://docs.microsoft.com/azure/security/fundamentals/data-encryption-best-practices?toc=/azure/cloud-adoption-framework/toc.json&amp;bc=/azure/cloud-adoption-framework/_bread/toc.json)
+- [Cloud Adoption Framework – Melhores práticas de segurança e criptografia de dados do Azure](/azure/security/fundamentals/data-encryption-best-practices?amp;bc=%2fazure%2fcloud-adoption-framework%2f_bread%2ftoc.json&toc=%2fazure%2fcloud-adoption-framework%2ftoc.json)
 
-- [Azure Security Benchmark – Gerenciamento de ativos](https://docs.microsoft.com/azure/security/benchmarks/security-benchmark-v2-asset-management)
+- [Azure Security Benchmark – Gerenciamento de ativos](/azure/security/benchmarks/security-benchmark-v2-asset-management)
 
-- [Azure Security Benchmark – Proteção de dados](https://docs.microsoft.com/azure/security/benchmarks/security-benchmark-v2-data-protection)
+- [Azure Security Benchmark – Proteção de dados](/azure/security/benchmarks/security-benchmark-v2-data-protection)
 
 **Monitoramento da Central de Segurança do Azure**: Não aplicável
 
@@ -431,11 +431,11 @@ Equilibre cuidadosamente a necessidade de separação de segurança com a necess
 
 Certifique-se de que a estratégia de segmentação seja implementada consistentemente nos tipos de controle, incluindo segurança de rede, identidade e modelos de acesso, além de permissões de aplicativo/modelos de acesso e controles de processos humanos.
 
-- [Diretrizes sobre a estratégia de segmentação no Azure (vídeo)](https://docs.microsoft.com/security/compass/microsoft-security-compass-introduction#azure-components-and-reference-model-2151)
+- [Diretrizes sobre a estratégia de segmentação no Azure (vídeo)](/security/compass/microsoft-security-compass-introduction#azure-components-and-reference-model-2151)
 
-- [Diretrizes sobre a estratégia de segmentação no Azure (documento)](https://docs.microsoft.com/security/compass/governance#enterprise-segmentation-strategy)
+- [Diretrizes sobre a estratégia de segmentação no Azure (documento)](/security/compass/governance#enterprise-segmentation-strategy)
 
-- [Alinhar a segmentação de rede com a estratégia de segmentação corporativa](https://docs.microsoft.com/security/compass/network-security-containment#align-network-segmentation-with-enterprise-segmentation-strategy)
+- [Alinhar a segmentação de rede com a estratégia de segmentação corporativa](/security/compass/network-security-containment#align-network-segmentation-with-enterprise-segmentation-strategy)
 
 **Monitoramento da Central de Segurança do Azure**: Não aplicável
 
@@ -445,7 +445,7 @@ Certifique-se de que a estratégia de segmentação seja implementada consistent
 
 **Diretriz**: Meça e atenue continuamente os riscos para seus ativos individuais e o ambiente no qual eles estão hospedados. Priorize os ativos de alto valor e as superfícies de ataque altamente expostas, como aplicativos publicados, pontos de entrada e saída de rede, os pontos de extremidade de usuário e administrador, etc.
 
-- [Azure Security Benchmark – Gerenciamento de postura e vulnerabilidade](https://docs.microsoft.com/azure/security/benchmarks/security-benchmark-v2-posture-vulnerability-management)
+- [Azure Security Benchmark – Gerenciamento de postura e vulnerabilidade](/azure/security/benchmarks/security-benchmark-v2-posture-vulnerability-management)
 
 **Monitoramento da Central de Segurança do Azure**: Não aplicável
 
@@ -455,11 +455,11 @@ Certifique-se de que a estratégia de segmentação seja implementada consistent
 
 **Diretriz**: documente e comunique uma estratégia clara para funções e responsabilidades na sua organização de segurança. Priorize o fornecimento de responsabilidade clara por decisões de segurança, educando todos no modelo de responsabilidade compartilhada e instrua equipes técnicas sobre a tecnologia usada para proteger a nuvem.
 
-- [Melhor prática de segurança do Azure 1 – Pessoas: educar as equipes na jornada de segurança na nuvem](https://docs.microsoft.com/azure/cloud-adoption-framework/security/security-top-10#1-people-educate-teams-about-the-cloud-security-journey)
+- [Melhor prática de segurança do Azure 1 – Pessoas: educar as equipes na jornada de segurança na nuvem](/azure/cloud-adoption-framework/security/security-top-10#1-people-educate-teams-about-the-cloud-security-journey)
 
-- [Melhor prática de segurança do Azure 2 – Pessoas: educar as equipes na tecnologia de segurança na nuvem](https://docs.microsoft.com/azure/cloud-adoption-framework/security/security-top-10#2-people-educate-teams-on-cloud-security-technology)
+- [Melhor prática de segurança do Azure 2 – Pessoas: educar as equipes na tecnologia de segurança na nuvem](/azure/cloud-adoption-framework/security/security-top-10#2-people-educate-teams-on-cloud-security-technology)
 
-- [Melhor prática de segurança do Azure 3 – Processo: atribuir responsabilidade por decisões de segurança na nuvem](https://docs.microsoft.com/azure/cloud-adoption-framework/security/security-top-10#4-process-update-incident-response-ir-processes-for-cloud)
+- [Melhor prática de segurança do Azure 3 – Processo: atribuir responsabilidade por decisões de segurança na nuvem](/azure/cloud-adoption-framework/security/security-top-10#4-process-update-incident-response-ir-processes-for-cloud)
 
 **Monitoramento da Central de Segurança do Azure**: Não aplicável
 
@@ -484,13 +484,13 @@ Essa estratégia deve incluir diretrizes documentadas, políticas e padrões par
 -   Artefatos de segurança de rede atualizados (por exemplo, diagramas de rede, arquitetura de rede de referência)
 
 Para saber mais, consulte as referências a seguir:
-- [Melhor prática de segurança do Azure 11 – Arquitetura: uma estratégia de segurança unificada](https://docs.microsoft.com/azure/cloud-adoption-framework/security/security-top-10#11-architecture-establish-a-single-unified-security-strategy)
+- [Melhor prática de segurança do Azure 11 – Arquitetura: uma estratégia de segurança unificada](/azure/cloud-adoption-framework/security/security-top-10#11-architecture-establish-a-single-unified-security-strategy)
 
-- [Azure Security Benchmark – Segurança de rede](https://docs.microsoft.com/azure/security/benchmarks/security-benchmark-v2-network-security)
+- [Azure Security Benchmark – Segurança de rede](/azure/security/benchmarks/security-benchmark-v2-network-security)
 
-- [Visão geral da segurança de rede do Azure](https://docs.microsoft.com/azure/security/fundamentals/network-overview)
+- [Visão geral da segurança de rede do Azure](/azure/security/fundamentals/network-overview)
 
-- [Estratégia de arquitetura de rede corporativa](https://docs.microsoft.com/azure/cloud-adoption-framework/ready/enterprise-scale/architecture)
+- [Estratégia de arquitetura de rede corporativa](/azure/cloud-adoption-framework/ready/enterprise-scale/architecture)
 
 **Monitoramento da Central de Segurança do Azure**: Não aplicável
 
@@ -514,13 +514,13 @@ Essa estratégia deve incluir diretrizes documentadas, políticas e padrões par
 
 Para saber mais, consulte as referências a seguir:
 
-- [Azure Security Benchmark – Gerenciamento de identidades](https://docs.microsoft.com/azure/security/benchmarks/security-benchmark-v2-identity-management)
+- [Azure Security Benchmark – Gerenciamento de identidades](/azure/security/benchmarks/security-benchmark-v2-identity-management)
 
-- [Azure Security Benchmark – Acesso privilegiado](https://docs.microsoft.com/azure/security/benchmarks/security-benchmark-v2-privileged-access)
+- [Azure Security Benchmark – Acesso privilegiado](/azure/security/benchmarks/security-benchmark-v2-privileged-access)
 
-- [Melhor prática de segurança do Azure 11 – Arquitetura: uma estratégia de segurança unificada](https://docs.microsoft.com/azure/cloud-adoption-framework/security/security-top-10#11-architecture-establish-a-single-unified-security-strategy)
+- [Melhor prática de segurança do Azure 11 – Arquitetura: uma estratégia de segurança unificada](/azure/cloud-adoption-framework/security/security-top-10#11-architecture-establish-a-single-unified-security-strategy)
 
-- [Visão geral da segurança de gerenciamento de identidade do Azure](https://docs.microsoft.com/azure/security/fundamentals/identity-management-overview)
+- [Visão geral da segurança de gerenciamento de identidade do Azure](/azure/security/fundamentals/identity-management-overview)
 
 **Monitoramento da Central de Segurança do Azure**: Não aplicável
 
@@ -548,15 +548,15 @@ Essa estratégia deve incluir diretrizes documentadas, políticas e padrões par
 
 Para saber mais, consulte as referências a seguir:
 
-- [Azure Security Benchmark – Log e detecção de ameaças](https://docs.microsoft.com/azure/security/benchmarks/security-benchmark-v2-logging-threat-detection)
+- [Azure Security Benchmark – Log e detecção de ameaças](/azure/security/benchmarks/security-benchmark-v2-logging-threat-detection)
 
-- [Azure Security Benchmark – Resposta a incidentes](https://docs.microsoft.com/azure/security/benchmarks/security-benchmark-v2-incident-response)
+- [Azure Security Benchmark – Resposta a incidentes](/azure/security/benchmarks/security-benchmark-v2-incident-response)
 
-- [Melhor prática de segurança do Azure 4 – Processo: atualizar processos de resposta a incidentes para a nuvem](https://docs.microsoft.com/azure/cloud-adoption-framework/security/security-top-10#4-process-update-incident-response-ir-processes-for-cloud)
+- [Melhor prática de segurança do Azure 4 – Processo: atualizar processos de resposta a incidentes para a nuvem](/azure/cloud-adoption-framework/security/security-top-10#4-process-update-incident-response-ir-processes-for-cloud)
 
-- [Guia de log, de decisão de relatórios e do Adoption Framework do Azure](https://docs.microsoft.com/azure/cloud-adoption-framework/decision-guides/logging-and-reporting/)
+- [Guia de log, de decisão de relatórios e do Adoption Framework do Azure](/azure/cloud-adoption-framework/decision-guides/logging-and-reporting/)
 
-- [Escala empresarial, gerenciamento e monitoramento do Azure](https://docs.microsoft.com/azure/cloud-adoption-framework/ready/enterprise-scale/management-and-monitoring)
+- [Escala empresarial, gerenciamento e monitoramento do Azure](/azure/cloud-adoption-framework/ready/enterprise-scale/management-and-monitoring)
 
 **Monitoramento da Central de Segurança do Azure**: Não aplicável
 
