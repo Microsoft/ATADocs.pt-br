@@ -3,12 +3,12 @@ title: Pré-requisitos do Microsoft Defender para Identidade
 description: Descreve os requisitos para uma implantação bem-sucedida do Microsoft Defender para Identidade no seu ambiente
 ms.date: 12/23/2020
 ms.topic: overview
-ms.openlocfilehash: f0807061c5ea57f063a1f5a4035b7059e1671a7d
-ms.sourcegitcommit: e2b4ad613aa171f604ae526f0cba05fe79f4a8cb
+ms.openlocfilehash: cb925a0b2bc2767367b6d3adabd5cb7dabcffa00
+ms.sourcegitcommit: 57dd3e4663346db3542cf9e755dac135c5e75125
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/23/2020
-ms.locfileid: "97753381"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98062545"
 ---
 # <a name="product-long-prerequisites"></a>Pré-requisitos do [!INCLUDE [Product long](includes/product-long.md)]
 
@@ -166,18 +166,18 @@ Não há suporte para o sensor em controles de domínio que executem o Windows 2
 A seguinte tabela lista o mínimo de portas exigidas pelo sensor do [!INCLUDE [Product short](includes/product-short.md)]:
 
 |Protocolo|Transport|Porta|De|Para|
-|------------|-------------|--------|-----------|
+|------------|-------------|--------|-----------|---|
 |**Portas de Internet**|||||
-|SSL (*.atp.azure.com)|TCP|443|Sensor do [!INCLUDE [Product short](includes/product-short.md)]|Serviço de nuvem do [!INCLUDE [Product short](includes/product-short.md)]|
+|SSL (\*.atp.azure.com)|TCP|443|Sensor do [!INCLUDE [Product short](includes/product-short.md)]|Serviço de nuvem do [!INCLUDE [Product short](includes/product-short.md)]|
 |SSL (localhost)|TCP|444|Sensor do [!INCLUDE [Product short](includes/product-short.md)]|localhost|
 |**Portas internas**|||||
 |DNS|TCP e UDP|53|Sensor do [!INCLUDE [Product short](includes/product-short.md)]|Servidores DNS|
 |Netlogon (SMB, CIFS, SAM-R)|TCP/UDP|445|Sensor do [!INCLUDE [Product short](includes/product-short.md)]|Todos os dispositivos na rede|
 |RAIO|UDP|1813|RAIO|Sensor do [!INCLUDE [Product short](includes/product-short.md)]|
 |**Portas NNR**\*|||||
-|NTLM via RPC|TCP|Porta 135|[!INCLUDE [Product short](includes/product-short.md)]s|Todos os dispositivos na rede|
-|NetBIOS|UDP|137|[!INCLUDE [Product short](includes/product-short.md)]s|Todos os dispositivos na rede|
-|RDP|TCP|3389, apenas o primeiro pacote do Client hello|[!INCLUDE [Product short](includes/product-short.md)]s|Todos os dispositivos na rede|
+|NTLM via RPC|TCP|Porta 135|[!INCLUDE [Product short](includes/product-short.md)]|Todos os dispositivos na rede|
+|NetBIOS|UDP|137|[!INCLUDE [Product short](includes/product-short.md)]|Todos os dispositivos na rede|
+|RDP|TCP|3389, apenas o primeiro pacote do Client hello|[!INCLUDE [Product short](includes/product-short.md)]|Todos os dispositivos na rede|
 
 \* Uma dessas portas é necessária, mas é recomendável abrir todas elas.
 
@@ -258,9 +258,9 @@ O sensor autônomo do [!INCLUDE [Product short](includes/product-short.md)] exig
 A seguinte tabela lista o mínimo de portas que o sensor autônomo do [!INCLUDE [Product short](includes/product-short.md)] exige que estejam configuradas no adaptador de gerenciamento:
 
 |Protocolo|Transport|Porta|De|Para|
-|------------|-------------|--------|-----------|
+|------------|-------------|--------|-----------|---|
 |**Portas de Internet**||||
-|SSL (*.atp.azure.com)|TCP|443|Sensor do [!INCLUDE [Product short](includes/product-short.md)]|Serviço de nuvem do [!INCLUDE [Product short](includes/product-short.md)]|
+|SSL (\*.atp.azure.com)|TCP|443|Sensor do [!INCLUDE [Product short](includes/product-short.md)]|Serviço de nuvem do [!INCLUDE [Product short](includes/product-short.md)]|
 |SSL (localhost)|TCP|444|Sensor do [!INCLUDE [Product short](includes/product-short.md)]|localhost|
 |**Portas internas**||||
 |LDAP|TCP e UDP|389|Sensor do [!INCLUDE [Product short](includes/product-short.md)]|Controladores de domínio|
@@ -274,9 +274,9 @@ A seguinte tabela lista o mínimo de portas que o sensor autônomo do [!INCLUDE 
 |Syslog (opcional)|TCP/UDP|514, dependendo da configuração|Servidor SIEM|Sensor do [!INCLUDE [Product short](includes/product-short.md)]|
 |RAIO|UDP|1813|RAIO|Sensor do [!INCLUDE [Product short](includes/product-short.md)]|
 |**Portas NNR** \*|||||
-|NTLM via RPC|TCP|135|[!INCLUDE [Product short](includes/product-short.md)]s|Todos os dispositivos na rede|
-|NetBIOS|UDP|137|[!INCLUDE [Product short](includes/product-short.md)]s|Todos os dispositivos na rede|
-|RDP|TCP|3389, apenas o primeiro pacote do Client hello|[!INCLUDE [Product short](includes/product-short.md)]s|Todos os dispositivos na rede|
+|NTLM via RPC|TCP|135|[!INCLUDE [Product short](includes/product-short.md)]|Todos os dispositivos na rede|
+|NetBIOS|UDP|137|[!INCLUDE [Product short](includes/product-short.md)]|Todos os dispositivos na rede|
+|RDP|TCP|3389, apenas o primeiro pacote do Client hello|[!INCLUDE [Product short](includes/product-short.md)]|Todos os dispositivos na rede|
 
 \* Uma dessas portas é necessária, mas é recomendável abrir todas elas.
 

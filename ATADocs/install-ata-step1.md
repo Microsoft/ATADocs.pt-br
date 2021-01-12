@@ -5,19 +5,19 @@ keywords: ''
 author: shsagir
 ms.author: shsagir
 manager: shsagir
-ms.date: 03/07/2019
+ms.date: 01/12/2021
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
 ms.technology: ''
 ms.assetid: b3cceb18-0f3c-42ac-8630-bdc6b310f1d6
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: d5c61390abddf29b92afc0bb6cb2336b0bc9d7ea
-ms.sourcegitcommit: e844155ea57f73dfe2b47f4c5c1c7f5292ccbf1e
+ms.openlocfilehash: 0578f8698ffe768563d68325b5a5096af1cb2e49
+ms.sourcegitcommit: 373151a0e86e4933c5cb7c8f17c4d386356c98dd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94690730"
+ms.lasthandoff: 01/12/2021
+ms.locfileid: "98114979"
 ---
 # <a name="install-ata---step-1"></a>Instalação do ATA - Etapa 1
 
@@ -49,7 +49,7 @@ Execute as seguintes etapas no servidor do Centro do ATA.
 
 1. Entre no computador no qual você está instalando o Centro do ATA como um usuário que seja membro do grupo Administradores local.
 
-1. Execute **Microsoft ATA Center Setup.EXE** e siga o assistente de instalação.
+1. Execute o **Microsoft ATA Center Setup.EXE** com privilégios elevados (**Executar como administrador**) e siga o assistente de instalação.
 
     > [!NOTE]
     > Certifique-se de executar o arquivo de instalação de uma unidade local e não de um arquivo ISO montado para evitar problemas, caso uma reinicialização seja necessária como parte da instalação.
