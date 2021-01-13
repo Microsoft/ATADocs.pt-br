@@ -10,12 +10,12 @@ ms.prod: advanced-threat-analytics
 ms.technology: ''
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: fa174cc61a550077989b7ecdb9473c3297b45a1b
-ms.sourcegitcommit: e844155ea57f73dfe2b47f4c5c1c7f5292ccbf1e
+ms.openlocfilehash: ea94f1f2b4ad60b679fd86995bfb7b82af7b7ff7
+ms.sourcegitcommit: affaeabba518199355a248fbf18feefa28fb268f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94689676"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98163013"
 ---
 # <a name="support-for-microsoft-advanced-threat-analytics-ata-versions"></a>Suporte para versões do Microsoft Advanced Threat Analytics (ATA)
 
@@ -28,7 +28,7 @@ Há suporte para atualizações do ATA por 12 meses a partir da data de lançame
 > [!NOTE]
 > **Ciclo de vida de suporte**
 >
-> A versão final do ATA está [disponível para o público geral](https://support.microsoft.com/help/4568997/update-3-for-microsoft-advanced-threat-analytics-1-9). O ATA terminará o suporte base em 12 de janeiro de 2021. O suporte estendido continuará até janeiro de 2026. Para obter mais informações, leia [nosso blog](https://techcommunity.microsoft.com/t5/microsoft-security-and/end-of-mainstream-support-for-advanced-threat-analytics-january/ba-p/1539181).
+> A versão final do ATA está [disponível para o público geral](https://support.microsoft.com/help/4568997/update-3-for-microsoft-advanced-threat-analytics-1-9). O suporte do ATA base terminou em 12 de janeiro de 2021. O suporte estendido continuará até janeiro de 2026. Para obter mais informações, leia [nosso blog](https://techcommunity.microsoft.com/t5/microsoft-security-and/end-of-mainstream-support-for-advanced-threat-analytics-january/ba-p/1539181).
 
 ## <a name="version-history"></a>Histórico de versão
 
