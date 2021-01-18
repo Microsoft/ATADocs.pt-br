@@ -1,14 +1,14 @@
 ---
 title: Avaliações de atributos de conta desprotegidas do Microsoft defender para identidade
 description: Este artigo fornece uma visão geral do Microsoft defender para entidades de identidade com atributos não seguros relatório de avaliação de postura de segurança de identidade.
-ms.date: 10/26/2020
+ms.date: 01/18/2021
 ms.topic: how-to
-ms.openlocfilehash: befa5e059a93e6f2e15fd84450948285a94173a6
-ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
+ms.openlocfilehash: bd48bb8a8c47d40f3c9e530326370be5259bf485
+ms.sourcegitcommit: 51b1c11622c647c3d8b51058687538efaa33003c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96543545"
+ms.lasthandoff: 01/18/2021
+ms.locfileid: "98541791"
 ---
 # <a name="security-assessment-unsecure-account-attributes"></a>Avaliação de segurança: Atributos de conta não seguros
 
@@ -39,7 +39,7 @@ Use a correção apropriada para o atributo relevante, conforme descrito na tabe
 
 | Ação recomendada | Remediação | Motivo |
 | --- | --- | --- |
-| Remover a configuração Usar tipos de criptografia Kerberos DES para esta conta| Remover essa configuração das propriedades da conta no AD (Active Directory) | A remoção dessa configuração requer uma pré-autenticação do Kerberos para a conta, o que resulta em maior segurança. |
+| Remover não requer pré-autenticação Kerberos| Remover essa configuração das propriedades da conta no AD (Active Directory) | A remoção dessa configuração requer uma pré-autenticação do Kerberos para a conta, o que resulta em maior segurança. |
 | Remover a configuração Armazenar senha usando criptografia reversível | Remover essa configuração das propriedades da conta no AD | A remoção dessa configuração impede a descriptografia simples da senha da conta. |
 | Remover a configuração Senha não obrigatória | Remover essa configuração das propriedades da conta no AD | A remoção dessa configuração torna obrigatório o uso de senha na conta e ajuda a impedir o acesso não autorizado aos recursos. |
 | Remover a configuração Senha armazenada com criptografia fraca | Redefinir a senha da conta | Alterar a senha da conta permite que algoritmos de criptografia mais fortes sejam usados para a proteção da conta. |
