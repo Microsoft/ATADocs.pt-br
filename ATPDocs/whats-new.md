@@ -1,16 +1,16 @@
 ---
 title: Novidades do Microsoft Defender para Identidade
 description: Este artigo é atualizado com frequência para manter você informado sobre as novidades da última versão do Microsoft Defender para Identidade.
-ms.date: 01/06/2021
+ms.date: 01/17/2021
 ms.topic: overview
 ms.reviewer: ort
 ms.suite: ems
-ms.openlocfilehash: 4fec3e83fafb061eedb04018215b2e11c2fbb228
-ms.sourcegitcommit: 382d56413793419a8a82e531b0a0ec0a360bac14
+ms.openlocfilehash: 71a276e5849293b60d8dc59949bc1b903bef03f9
+ms.sourcegitcommit: 1cd2fd6d6f3aca149fae1b0399d6eb406f379447
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "97937409"
+ms.lasthandoff: 01/17/2021
+ms.locfileid: "98537503"
 ---
 # <a name="whats-new-in-product-long"></a>Novidades no [!INCLUDE [Product long](includes/product-long.md)]
 
@@ -23,6 +23,12 @@ Feed RSS: Receba uma notificação quando esta página for atualizada copiando e
 > [!IMPORTANT]
 >
 > Os nomes dos produtos de proteção contra ameaças da Microsoft estão mudando. Leia mais sobre essa e outras atualizações [aqui](https://www.microsoft.com/security/blog/?p=91813). Usaremos os novos nomes a partir da versão 2.129 em diante.
+
+## <a name="product-short-release-2137"></a>Versão 2.137 do [!INCLUDE [Product short](includes/product-short.md)]
+
+Lançado em 17 de janeiro de 2021
+
+- Essa versão inclui melhorias e correções de bugs da infraestrutura do sensor interno.
 
 ## <a name="product-short-release-2136"></a>Versão 2.136 do [!INCLUDE [Product short](includes/product-short.md)]
 

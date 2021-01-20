@@ -3,12 +3,12 @@ title: Guia de início rápido – Instalar o sensor do Microsoft Defender para 
 description: A quarta etapa da instalação do Microsoft Defender para Identidade ajuda você a instalar o sensor do Defender para Identidade.
 ms.date: 10/26/2020
 ms.topic: quickstart
-ms.openlocfilehash: 3688ace52e4581f8b94186c58c3e355e855e16d0
-ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
+ms.openlocfilehash: 4d68820bd6da88bca64bb8917f069d04adbc29b0
+ms.sourcegitcommit: 4f3da69b8e30cbc3e3fb43d38c3518001a10f7a1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96543987"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98163528"
 ---
 # <a name="quickstart-install-the-product-long-sensor"></a>Início Rápido: Instalar o servidor do [!INCLUDE [Product long](includes/product-long.md)]
 
@@ -26,7 +26,7 @@ Execute as etapas a seguir no controlador de domínio.
 
 1. Confirme se o computador tem conectividade com os [pontos de extremidade de serviço de nuvem do [!INCLUDE [Product short](includes/product-short.md)]](configure-proxy.md#enable-access-to-azure-atp-service-urls-in-the-proxy-server) relevantes:
 1. Extraia os arquivos de instalação do arquivo zip. A instalação diretamente do arquivo zip falhará.
-1. Execute **Azure ATP sensor setup.exe** e siga o assistente de instalação.
+1. Execute **o setup.exe do sensor do Azure ATP** com privilégios elevados (**Executar como administrador**) e siga o assistente de instalação.
 1. Na página **Boas-vindas**, selecione seu idioma e clique em **Avançar**.
 
     ![Idioma de instalação do sensor autônomo do [!INCLUDE [Product short](includes/product-short.md)]](media/sensor-install-language.png)

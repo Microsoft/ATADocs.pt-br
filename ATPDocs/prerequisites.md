@@ -1,14 +1,14 @@
 ---
 title: Pré-requisitos do Microsoft Defender para Identidade
 description: Descreve os requisitos para uma implantação bem-sucedida do Microsoft Defender para Identidade no seu ambiente
-ms.date: 12/23/2020
+ms.date: 01/12/2021
 ms.topic: overview
-ms.openlocfilehash: cb925a0b2bc2767367b6d3adabd5cb7dabcffa00
-ms.sourcegitcommit: 57dd3e4663346db3542cf9e755dac135c5e75125
+ms.openlocfilehash: cfafd75acae0d075da1efdd0ad9c0f9542a2f3d4
+ms.sourcegitcommit: 858eca08605886fcbfa35e9132c9c653c173e462
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98062545"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98203466"
 ---
 # <a name="product-long-prerequisites"></a>Pré-requisitos do [!INCLUDE [Product long](includes/product-long.md)]
 
@@ -115,7 +115,7 @@ Esta seção lista os requisitos do sensor do [!INCLUDE [Product short](includes
 
 ### <a name="general"></a>Geral
 
-O sensor do [!INCLUDE [Product short](includes/product-short.md)] dá suporte à instalação em um controlador de domínio e aos AD FS (Serviços de Federação do Active Directory) que executam o Windows Server 2008 R2 SP1 (não incluindo o Server Core), o Windows Server 2012, o Windows Server 2012 R2, o Windows Server 2016 (incluindo o Server Core, mas não o Nano Server) e o Windows Server 2019\* (incluindo o Server Core, mas não o Nano Server), conforme mostrado na tabela a seguir.
+O sensor [!INCLUDE [Product short](includes/product-short.md)] dá suporte à instalação em controladores de domínio ou servidores AD SF (Serviços de Federação do Active Directory), conforme mostrado na tabela a seguir.
 
 | Versão do sistema operacional   | Servidor com Experiência Desktop | Server Core | Nano Server    | Instalações com suporte  |
 | -------------------------- | ------------------------------ | ----------- | -------------- | ------------------------ |
@@ -169,17 +169,19 @@ A seguinte tabela lista o mínimo de portas exigidas pelo sensor do [!INCLUDE [P
 |------------|-------------|--------|-----------|---|
 |**Portas de Internet**|||||
 |SSL (\*.atp.azure.com)|TCP|443|Sensor do [!INCLUDE [Product short](includes/product-short.md)]|Serviço de nuvem do [!INCLUDE [Product short](includes/product-short.md)]|
-|SSL (localhost)|TCP|444|Sensor do [!INCLUDE [Product short](includes/product-short.md)]|localhost|
 |**Portas internas**|||||
 |DNS|TCP e UDP|53|Sensor do [!INCLUDE [Product short](includes/product-short.md)]|Servidores DNS|
 |Netlogon (SMB, CIFS, SAM-R)|TCP/UDP|445|Sensor do [!INCLUDE [Product short](includes/product-short.md)]|Todos os dispositivos na rede|
 |RAIO|UDP|1813|RAIO|Sensor do [!INCLUDE [Product short](includes/product-short.md)]|
-|**Portas NNR**\*|||||
+|**Portas localhost**\*|Obrigatório para o atualizador de Serviço de Sensor||||
+|SSL (localhost)|TCP|444|Serviço de Sensor|Serviço de Atualizador de Sensor|
+|**Portas NNR**\*\*|||||
 |NTLM via RPC|TCP|Porta 135|[!INCLUDE [Product short](includes/product-short.md)]|Todos os dispositivos na rede|
 |NetBIOS|UDP|137|[!INCLUDE [Product short](includes/product-short.md)]|Todos os dispositivos na rede|
 |RDP|TCP|3389, apenas o primeiro pacote do Client hello|[!INCLUDE [Product short](includes/product-short.md)]|Todos os dispositivos na rede|
 
-\* Uma dessas portas é necessária, mas é recomendável abrir todas elas.
+\* Por padrão, o tráfego de localhost para localhost é permitido, a menos que uma política de firewall personalizada o bloqueie.  
+\*\* Uma dessas portas é necessária, mas é recomendável abrir todas elas.
 
 ### <a name="windows-event-logs"></a>Log de eventos do Windows
 
@@ -261,7 +263,6 @@ A seguinte tabela lista o mínimo de portas que o sensor autônomo do [!INCLUDE 
 |------------|-------------|--------|-----------|---|
 |**Portas de Internet**||||
 |SSL (\*.atp.azure.com)|TCP|443|Sensor do [!INCLUDE [Product short](includes/product-short.md)]|Serviço de nuvem do [!INCLUDE [Product short](includes/product-short.md)]|
-|SSL (localhost)|TCP|444|Sensor do [!INCLUDE [Product short](includes/product-short.md)]|localhost|
 |**Portas internas**||||
 |LDAP|TCP e UDP|389|Sensor do [!INCLUDE [Product short](includes/product-short.md)]|Controladores de domínio|
 |LDAP seguro (LDAPS)|TCP|636|Sensor do [!INCLUDE [Product short](includes/product-short.md)]|Controladores de domínio|
@@ -273,12 +274,15 @@ A seguinte tabela lista o mínimo de portas que o sensor autônomo do [!INCLUDE 
 |DNS|TCP e UDP|53|Sensor do [!INCLUDE [Product short](includes/product-short.md)]|Servidores DNS|
 |Syslog (opcional)|TCP/UDP|514, dependendo da configuração|Servidor SIEM|Sensor do [!INCLUDE [Product short](includes/product-short.md)]|
 |RAIO|UDP|1813|RAIO|Sensor do [!INCLUDE [Product short](includes/product-short.md)]|
-|**Portas NNR** \*|||||
+|**Portas localhost**\*|Obrigatório para o atualizador de Serviço de Sensor||||
+|SSL (localhost)|TCP|444|Serviço de Sensor|Serviço de Atualizador de Sensor|
+|**Portas NNR**\*\*|||||
 |NTLM via RPC|TCP|135|[!INCLUDE [Product short](includes/product-short.md)]|Todos os dispositivos na rede|
 |NetBIOS|UDP|137|[!INCLUDE [Product short](includes/product-short.md)]|Todos os dispositivos na rede|
 |RDP|TCP|3389, apenas o primeiro pacote do Client hello|[!INCLUDE [Product short](includes/product-short.md)]|Todos os dispositivos na rede|
 
-\* Uma dessas portas é necessária, mas é recomendável abrir todas elas.
+\* Por padrão, o tráfego de localhost para localhost é permitido, a menos que uma política de firewall personalizada o bloqueie.  
+\*\* Uma dessas portas é necessária, mas é recomendável abrir todas elas.
 
 > [!NOTE]
 >
