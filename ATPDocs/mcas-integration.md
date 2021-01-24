@@ -1,14 +1,14 @@
 ---
 title: Microsoft defender para identidade no Microsoft Cloud App Security
 description: Visão geral do Microsoft defender para recursos de identidade no Microsoft Cloud App Security.
-ms.date: 01/05/2020
+ms.date: 01/24/2021
 ms.topic: how-to
-ms.openlocfilehash: ef4cbe9f0c49311a3d10b79e03fc725ea5131105
-ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
+ms.openlocfilehash: 6040ef27e1657dbe017a31168932536f1cb594cb
+ms.sourcegitcommit: 7002c960e1489b7ce2deadd8ce20f70a48a6766a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96543851"
+ms.lasthandoff: 01/24/2021
+ms.locfileid: "98746928"
 ---
 # <a name="using-product-long-with-microsoft-cloud-app-security"></a>Usando [!INCLUDE [Product long](includes/product-long.md)] com Microsoft Cloud app Security
 
@@ -63,7 +63,7 @@ Acesse seus [!INCLUDE [Product short](includes/product-short.md)] dados e novos 
 
 ## <a name="alert-management"></a>Gerenciamento de alertas
 
-Ao usar o [!INCLUDE [Product short](includes/product-short.md)] com o Cloud app Security, o fechamento de alertas em um serviço não os fechará automaticamente no outro serviço. Decida onde gerenciar e corrigir os alertas para evitar a duplicação de esforços.
+Ao usar o [!INCLUDE [Product short](includes/product-short.md)] com o Cloud app Security, o fechamento de alertas em um serviço não os fechará automaticamente no outro serviço. Mais especificamente, o fechamento de alertas no Cloud App Security não os fechará no defender para identidade, mas o fechamento de alertas no defender para identidade sincronizará o fechamento no Cloud App Security. Decida onde gerenciar e corrigir os alertas para evitar a duplicação de esforços.
 
 ## <a name="siem-notification"></a>Notificação de SIEM
 
