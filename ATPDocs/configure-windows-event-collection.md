@@ -3,12 +3,12 @@ title: Configurar a coleção de eventos do Windows do Microsoft Defender para I
 description: Nesta etapa da instalação do Microsoft Defender para Identidade, você configura a coleção de Eventos do Windows.
 ms.date: 10/26/2020
 ms.topic: how-to
-ms.openlocfilehash: 4a81eceeb940e15139acb083e266eab1caf5456b
-ms.sourcegitcommit: 0b3877f2bf74735b7ba33408d237231a73242165
+ms.openlocfilehash: 71e0dd15b820c87df3bb50252160a6e92bacf310
+ms.sourcegitcommit: 30203dd6e74eec3ce4bba98056b664cad455a49e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98615007"
+ms.lasthandoff: 01/25/2021
+ms.locfileid: "98758190"
 ---
 # <a name="configure-windows-event-collection"></a>Configurar a coleção de Eventos do Windows
 
@@ -16,10 +16,15 @@ A detecção do [!INCLUDE [Product long](includes/product-long.md)] depende de e
 
 Para aprimorar os recursos de detecção de ameaças, o [!INCLUDE [Product short](includes/product-short.md)]precisa que os seguintes eventos do Windows sejam [configurados](#configure-audit-policies) e [coletados](#configure-event-collection) pelo [!INCLUDE [Product short](includes/product-short.md)]:
 
+**Para eventos dos Serviços de Federação do Active Directory (AD FS)**
+
 - 1202 – o Serviço de Federação validou uma nova credencial
 - 1203 – o Serviço de Federação falhou na validação de uma nova credencial
 - 4624 – logon de uma conta feito com êxito
 - 4625 – falha no logon de uma conta
+
+**Para outros eventos**
+
 - 4726 – conta de usuário excluída
 - 4728 – membro adicionado ao grupo de segurança global
 - 4729 – membro removido do grupo de segurança global
