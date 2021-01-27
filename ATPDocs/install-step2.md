@@ -3,12 +3,12 @@ title: Guia de início rápido – Conectar o Microsoft Defender para Identidade
 description: A segunda etapa da instalação do Microsoft Defender para Identidade ajuda você a definir as configurações de conectividade de domínio no serviço de nuvem do Defender para Identidade
 ms.date: 10/26/2020
 ms.topic: quickstart
-ms.openlocfilehash: 1dd9954e22e38b1db7d41d42358cd03dd15ea1c2
-ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
+ms.openlocfilehash: b1379570d87957fc943bf8b0727b6b0294f26695
+ms.sourcegitcommit: b6da51c97e8fb70ca04c0c0d5ea694700db9de86
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96543970"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "98634549"
 ---
 # <a name="quickstart-connect-to-your-active-directory-forest"></a>Início Rápido: Conectar à sua floresta do Active Directory
 
@@ -37,13 +37,13 @@ Neste guia de início rápido, você conectará o [!INCLUDE [Product long](inclu
 
 Na primeira vez em que você abre o portal do [!INCLUDE [Product short](includes/product-short.md)], a seguinte tela é exibida:
 
-![Estágio 1 de boas-vindas do [!INCLUDE [Product short](includes/product-short.md)]](media/directory-services.png)
+![Estágio 1 de boas-vindas, configurações de Serviços de Diretório](media/directory-services.png)
 
 1. Insira as seguintes informações e clique em **Salvar**:
 
     |Campo|Comentários|
     |---|---|
-    |**Nome de usuário** (obrigatório)|Insira o nome de usuário do AD somente leitura. Por exemplo: **DefenderForIdentityUser**. Você deve usar uma conta de usuário do AD **padrão** ou gMSA. **Não** use o formato UPN para seu nome de usuário.|
+    |**Nome de usuário** (obrigatório)|Insira o nome de usuário do AD somente leitura. Por exemplo: **DefenderForIdentityUser**. Você deve usar uma conta de usuário do AD **padrão** ou gMSA. **Não** use o formato UPN para seu nome de usuário.<br />**OBSERVAÇÃO:** Recomendamos que você evite usar contas atribuídas a usuários específicos.|
     |**Senha** (necessário para a conta de usuário do AD padrão)|Somente para conta de usuário do AD, digite a senha para o usuário somente leitura. Por exemplo: **Lápis1**.|
     |**Conta de serviço gerenciado de grupo** (necessário para a conta gMSA)|Somente para a conta gMSA, selecione **Conta de serviço gerenciado de grupo**.|
     |**Domínio** (obrigatório)|Digite o domínio para o usuário somente leitura. Por exemplo: **contoso.com**. É importante que você insira o FQDN completo do domínio em que o usuário está localizado. Por exemplo, se a conta do usuário estiver no domínio corp.contoso.com, você precisará inserir `corp.contoso.com` e não contoso.com|
