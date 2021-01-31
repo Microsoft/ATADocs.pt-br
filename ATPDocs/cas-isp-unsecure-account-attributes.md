@@ -3,12 +3,12 @@ title: Avaliações de atributos de conta desprotegidas do Microsoft defender pa
 description: Este artigo fornece uma visão geral do Microsoft defender para entidades de identidade com atributos não seguros relatório de avaliação de postura de segurança de identidade.
 ms.date: 01/18/2021
 ms.topic: how-to
-ms.openlocfilehash: bd48bb8a8c47d40f3c9e530326370be5259bf485
-ms.sourcegitcommit: 51b1c11622c647c3d8b51058687538efaa33003c
+ms.openlocfilehash: 64aa95a423d0c8fc0bb210c2c10bc63f8c33bca4
+ms.sourcegitcommit: 14f7228dbe6af353e81f20d2047dad24043840b4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/18/2021
-ms.locfileid: "98541791"
+ms.lasthandoff: 01/31/2021
+ms.locfileid: "99217695"
 ---
 # <a name="security-assessment-unsecure-account-attributes"></a>Avaliação de segurança: Atributos de conta não seguros
 
@@ -20,7 +20,7 @@ ms.locfileid: "98541791"
 
 As organizações que não conseguem proteger os atributos de conta deixam a porta aberta para atores mal-intencionados.
 
-Agentes mal-intencionados, como ladrões, geralmente procuram a maneira mais fácil e discreta de entrar em um ambiente. Contas configuradas com atributos não seguros são janelas de oportunidade para invasores e podem representar riscos.
+Agentes mal-intencionados, como ladrões, geralmente procuram a maneira mais fácil e discreta de entrar em um ambiente. As contas configuradas com atributos não seguros são janelas de oportunidade para invasores e podem expor riscos.
 
 Por exemplo, se o atributo *PasswordNotRequired* estiver habilitado, um invasor poderá acessar a conta com facilidade. O risco fica ainda maior se a conta tiver acesso privilegiado a outros recursos.
 
@@ -31,7 +31,9 @@ Por exemplo, se o atributo *PasswordNotRequired* estiver habilitado, um invasor 
 1. Tome medidas apropriadas nessas contas de usuário modificando ou removendo os atributos relevantes.
 
 > [!NOTE]
-> Essa avaliação é atualizada quase em tempo real.
+>
+> - Essa avaliação é atualizada quase em tempo real.
+> - Essa avaliação poderá conter entidades excluídas anteriormente se os [pré-requisitos](prerequisites.md#before-you-start) do [!INCLUDE [Product long](includes/product-long.md)] não forem atendidos.
 
 ## <a name="remediation"></a>Remediação
 
