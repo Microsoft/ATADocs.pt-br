@@ -1,14 +1,14 @@
 ---
 title: Pré-requisitos do Microsoft Defender para Identidade
 description: Descreve os requisitos para uma implantação bem-sucedida do Microsoft Defender para Identidade no seu ambiente
-ms.date: 01/12/2021
+ms.date: 01/27/2021
 ms.topic: overview
-ms.openlocfilehash: cfafd75acae0d075da1efdd0ad9c0f9542a2f3d4
-ms.sourcegitcommit: 858eca08605886fcbfa35e9132c9c653c173e462
+ms.openlocfilehash: feb52ea096dd7e324e46649a746f41a293cc66e1
+ms.sourcegitcommit: b29aa522dcefce7d016fc0e03c75168a14deb423
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/14/2021
-ms.locfileid: "98203466"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "98912464"
 ---
 # <a name="product-long-prerequisites"></a>Pré-requisitos do [!INCLUDE [Product long](includes/product-long.md)]
 
@@ -60,7 +60,7 @@ Esta seção lista as informações que você deve obter, bem como as contas e a
     > [!NOTE]
     >
     > - Para computadores sensores que executam o Windows Server 2012 e posterior, recomendamos usar uma conta **gMSA** devido à segurança aprimorada e ao gerenciamento automático de senhas.
-    > - Se você tiver vários sensores, alguns executando o Windows Server 2008 e outros executando o Windows Server 2012 ou posterior, além da recomendação para usar uma conta **gMSA**, você também deverá usar pelo menos uma conta de usuário do AD **padrão**.
+    > - Se você tiver vários sensores, alguns executando o Windows Server 2008 R2 e outros executando o Windows Server 2012 ou posterior, além da recomendação de usar uma conta **gMSA**, você também deverá usar pelo menos uma conta de usuário do AD **padrão**.
     > - Se você tiver definido ACLs personalizadas em várias Unidades Organizacionais (UO) em seu domínio, verifique se o usuário selecionado tem permissões de leitura para essas UOs.
 
 - Se você executar o Wireshark no sensor autônomo do [!INCLUDE [Product short](includes/product-short.md)], reinicie o serviço de sensor do [!INCLUDE [Product short](includes/product-short.md)] depois de interromper a captura do Wireshark. Se não reiniciar o serviço de sensor, o sensor interromperá a captura de tráfego.
