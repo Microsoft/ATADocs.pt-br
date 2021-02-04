@@ -1,14 +1,14 @@
 ---
 title: Solução de problemas conhecidos do Microsoft defender para identidade
 description: Descreve como você pode solucionar problemas no Microsoft defender para identidade.
-ms.date: 01/12/2021
+ms.date: 02/04/2021
 ms.topic: how-to
-ms.openlocfilehash: 6f0a055a48dc906dd7a44814b19ed85fb64401ee
-ms.sourcegitcommit: 2eb4078aba5085a12acc37c2a8d9aa48bd6dcb02
+ms.openlocfilehash: 933d4442d88f2d03ddcd2fa4c90d59d98e229340
+ms.sourcegitcommit: 50e6f5511329e56545fa5ab4c9f5ab69046d1e10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/12/2021
-ms.locfileid: "98114234"
+ms.lasthandoff: 02/04/2021
+ms.locfileid: "99551600"
 ---
 # <a name="troubleshooting-product-long-known-issues"></a>Solucionando [!INCLUDE [Product long](includes/product-long.md)] problemas conhecidos
 
@@ -202,6 +202,24 @@ essa é uma limitação de engenharia.
 **Resolução:**
 
 Não há solução conhecida.
+
+## <a name="sensor-fails-to-enumerate-event-logs"></a>O sensor falha ao enumerar logs de eventos
+
+Se você observar um número limitado ou falta de alertas de eventos de segurança ou atividades lógicas no [!INCLUDE [Product short](includes/product-short.md)] console, mas nenhum alerta de integridade será disparado. 
+
+**Entradas de log do sensor:**
+
+Erro EventLogException System. Diagnostics.. Reader. EventLogException: o identificador é inválido em void System. Diagnostics.. Reader. EventLogException. throw (int ErrorCode) em Object System. Diagnostics. Eventing. Reader. NativeWrapper. EvtGetEventInfo (identificador EventLogHandle, EvtEventPropertyId EnumType) na cadeia de caracteres System.Diagnostics.Eventing.Reader.EventLogRecord.get_ContainerLog ()
+
+**Causa:**
+
+Uma lista de controle de acesso discricionário está limitando o acesso aos logs de eventos necessários pela conta de serviço local.
+
+**Resolução:**
+
+Verifique se a lista de controle de acesso discricionário inclui a seguinte entrada:
+
+`(A;;0x1;;;S-1-5-80-818380073-2995186456-1411405591-3990468014-3617507088)`
 
 ## <a name="see-also"></a>Consulte Também
 
