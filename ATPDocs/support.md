@@ -3,12 +3,12 @@ title: Suporte do Microsoft defender para identidade
 description: Descreve o processo para obter ajuda de suporte para o Microsoft defender para identidade.
 ms.date: 12/20/2020
 ms.topic: conceptual
-ms.openlocfilehash: f883fad5631b23eae2154b3253bcbcb30e7929e3
-ms.sourcegitcommit: 082c85462e1d96a2bbf1ba914de5a0028a32743e
+ms.openlocfilehash: 80b863208c560cc0bfe74800efe1a220ee190fc3
+ms.sourcegitcommit: af41733212c2102c223fed8c8602a21a1f667080
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/20/2020
-ms.locfileid: "97705659"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100515318"
 ---
 # <a name="product-long-information-and-support"></a>[!INCLUDE [Product long](includes/product-long.md)] informações e suporte
 
@@ -38,7 +38,7 @@ Outros clientes devem usar estes canais de suporte:
 
 | Canais|Instruções|
 |------|-----|
-|Usar o portal do Azure|1. Selecione **nova solicitação de suporte** em **ajuda + suporte** na portal do Azure.<br>2. quando solicitado, na folha **noções básicas** , como o **tipo de problema**, escolha **técnico**, como o **serviço** em segurança & identidade, escolha **[!INCLUDE [Product short](includes/product-short.md)]** .<br>3. Verifique se uma das seguintes opções está selecionada:<br>- Assinatura com suporte técnico incluído. Você verá esta opção caso tenha uma assinatura paga ou de avaliação do Azure.<br>- Suporte técnico incluído. Você verá esta opção se não tiver uma assinatura do Azure.|
+|Use o Portal do Azure|1. Selecione **nova solicitação de suporte** em **ajuda + suporte** na portal do Azure.<br>2. quando solicitado, na folha **noções básicas** , como o **tipo de problema**, escolha **técnico**, como o **serviço** em segurança & identidade, escolha **[!INCLUDE [Product short](includes/product-short.md)]** .<br>3. Verifique se uma das seguintes opções está selecionada:<br>- Assinatura com suporte técnico incluído. Você verá esta opção caso tenha uma assinatura paga ou de avaliação do Azure.<br>- Suporte técnico incluído. Você verá esta opção se não tiver uma assinatura do Azure.|
 |Usar o [!INCLUDE [Product short](includes/product-short.md)] Portal| 1. Clique no ícone "?" na barra de navegação superior no [!INCLUDE [Product short](includes/product-short.md)] Portal<br>2. pesquise por [!INCLUDE [Product short](includes/product-short.md)] .<br>3. Abra um tíquete de incidente.<br>-Selecione "suporte"<br>4. Abra um tíquete de incidente. Se você tiver sucesso ao entrar no [!INCLUDE [Product short](includes/product-short.md)] portal, poderá inserir o [portal de suporte assistido online (OAS)](https://support.microsoft.com/assistedsupportproducts). |
 
 Para obter opções de suporte adicionais, fale com seu contato da Microsoft.
@@ -55,7 +55,7 @@ Para exibir o status do sistema para [!INCLUDE [Product short](includes/product-
 
 Solucionar problemas:
 
-- Se você tiver uma dúvida sobre como algo funciona, verifique se ela já foi respondida em [Perguntas frequentes](technical-faq.md).
+- Se você tiver uma dúvida sobre como algo funciona, verifique se ela já foi respondida em [Perguntas frequentes](technical-faq.yml).
 
 - Se você tiver uma pergunta sobre um pré-requisito para [!INCLUDE [Product short](includes/product-short.md)] , consulte [ [!INCLUDE [Product short](includes/product-short.md)] pré-requisitos](prerequisites.md).
 

@@ -3,12 +3,12 @@ title: Lista de recursos úteis para o Microsoft defender para identidade
 description: Este artigo fornece uma lista de recursos úteis para o Microsoft defender para identidade
 ms.date: 10/27/2020
 ms.topic: conceptual
-ms.openlocfilehash: e534baf48d472b9bada6366e9b0e2ccec5ef6c4c
-ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
+ms.openlocfilehash: 1878f8b9cbc8047083c927de612e88e50b1947ca
+ms.sourcegitcommit: af41733212c2102c223fed8c8602a21a1f667080
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96542202"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100515505"
 ---
 # <a name="product-long-readiness-guide"></a>[!INCLUDE [Product long](includes/product-long.md)] Guia de preparação
 
@@ -55,9 +55,9 @@ Depois [!INCLUDE [Product short](includes/product-short.md)] que o estiver em ex
 - [[!INCLUDE [Product short](includes/product-short.md)] caminhos de movimento lateral](use-case-lateral-movement-path.md)
 - [Marque grupos como confidenciais](sensitive-accounts.md) Aumente a visibilidade da exposição de credenciais em grupos de segurança confidenciais.
 
-## <a name="security-best-practices"></a>Melhores práticas de segurança
+## <a name="security-best-practices"></a>Práticas recomendadas de segurança
 
-- [ [!INCLUDE [Product short](includes/product-short.md)] Perguntas](technical-faq.md) frequentes – Este artigo fornece uma lista de perguntas frequentes sobre o [!INCLUDE [Product short](includes/product-short.md)] e fornece informações e respostas.
+- [ [!INCLUDE [Product short](includes/product-short.md)] Perguntas](technical-faq.yml) frequentes – Este artigo fornece uma lista de perguntas frequentes sobre o [!INCLUDE [Product short](includes/product-short.md)] e fornece informações e respostas.
 
 ## <a name="community-resources"></a>Recursos da comunidade
 

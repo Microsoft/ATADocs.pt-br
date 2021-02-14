@@ -3,12 +3,12 @@ title: Análise avançada de ameaças ao Microsoft defender para movimentação 
 description: Saiba como mover uma instalação existente do Advanced Threat Analytics para o Microsoft defender para identidade.
 ms.date: 10/26/2020
 ms.topic: how-to
-ms.openlocfilehash: be1edf7981bbf72daeb285a9d0d0896892839f59
-ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
+ms.openlocfilehash: 5e20ed1580ad314f85845161fbb850395709d580
+ms.sourcegitcommit: af41733212c2102c223fed8c8602a21a1f667080
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96542678"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100515335"
 ---
 # <a name="advanced-threat-analytics-ata-to-product-long"></a>ATA (Advanced Threat Analytics) para [!INCLUDE [Product long](includes/product-long.md)]
 
@@ -17,7 +17,7 @@ ms.locfileid: "96542678"
 
 Use este guia para mover de uma instalação existente do ATA para o [!INCLUDE [Product long](includes/product-long.md)] serviço do (). O guia explica os [!INCLUDE [Product short](includes/product-short.md)] pré-requisitos e requisitos e detalha como planejar e concluir sua movimentação. As etapas e dicas de validação para aproveitar as mais recentes soluções de proteção contra ameaças e segurança com o [!INCLUDE [Product short](includes/product-short.md)] após a instalação também estão incluídas.
 
-Para saber mais sobre as diferenças entre o ATA e [!INCLUDE [Product short](includes/product-short.md)] o, consulte as [ [!INCLUDE [Product short](includes/product-short.md)] perguntas](technical-faq.md#what-is-azure-atp)frequentes.
+Para saber mais sobre as diferenças entre o ATA e [!INCLUDE [Product short](includes/product-short.md)] o, consulte as [ [!INCLUDE [Product short](includes/product-short.md)] perguntas](technical-faq.yml)frequentes.
 
 Neste guia, você:
 
