@@ -1,0 +1,203 @@
+### YamlMime:FAQ
+metadata:
+  title: Perguntas frequentes sobre o Microsoft defender para identidade
+  description: Fornece uma lista de perguntas frequentes sobre o Microsoft defender para identidade e as respostas associadas
+  ms.date: 10/27/2020
+  ms.topic: conceptual
+  ms.openlocfilehash: dfb8184376ea0c98516e28fce64eff6ac8a453d5
+  ms.sourcegitcommit: af41733212c2102c223fed8c8602a21a1f667080
+  ms.translationtype: MT
+  ms.contentlocale: pt-BR
+  ms.lasthandoff: 02/14/2021
+  ms.locfileid: "100520707"
+title: Perguntas frequentes sobre o Microsoft defender para identidade
+summary: >
+  Este artigo fornece uma lista de perguntas frequentes e respostas sobre o Microsoft defender for Identity dividido nas seguintes categorias:
+sections:
+- name: O que é o defender for Identity?
+  questions:
+  - question: O que o defender para detecção de identidades pode detectar?
+    answer: >
+      O defender for Identity detecta ataques mal-intencionados conhecidos e técnicas, problemas de segurança e riscos em relação à sua rede.
+
+      Para obter a lista completa de detecções de identidades do defender, consulte [quais detecções o defender for Identity realiza?](suspicious-activity-guide.md).
+  - question: Quais dados o defender para identidade coleta?
+    answer: >
+      O defender for Identity coleta e armazena informações de seus servidores configurados (controladores de domínio, servidores membro, etc.) em um banco de dados específico ao serviço para fins de administração, rastreamento e relatório. As informações coletadas incluem o tráfego de rede dos controladores de domínio (como autenticação Kerberos, autenticação NTLM, consultas DNS), logs de segurança (como eventos de segurança do Windows), informações do Active Directory (estrutura, sub-redes, sites) e informações de entidade (como nomes, endereços de email e números de telefone).
+
+
+      A Microsoft usa esses dados para:
+
+
+      - Identificar proativamente IOAs (indicadores de ataque) em sua organização
+
+      - Gerar alertas se um possível ataque for detectado
+
+      - Forneça a suas operações de segurança uma visão das entidades relacionadas aos sinais de ameaça de sua rede, permitindo que você investigue e explore a presença de ameaças à segurança na rede.
+
+
+      A Microsoft não explora seus dados para fornecer anúncios ou para qualquer outra finalidade que não seja fornecer o serviço.
+  - question: A quantas credenciais de serviço de diretório o defender para identidade dá suporte?
+    answer: >
+      O defender para identidade atualmente dá suporte à adição de até 10 credenciais de serviço de diretório diferentes para dar suporte a ambientes de Active Directory com florestas não confiáveis. Se você precisar de mais contas, abra um tíquete de suporte.
+  - question: O defender para identidade só aproveita o tráfego do Active Directory?
+    answer: >
+      Além de analisar o tráfego de Active Directory usando a tecnologia de inspeção profunda de pacotes, o defender for Identity também coleta eventos relevantes do Windows do controlador de domínio e cria perfis de entidade com base nas informações de Active Directory Domain Services. O defender for Identity também dá suporte ao recebimento de estatísticas RADIUS de logs de VPN de vários fornecedores (Microsoft, Cisco, F5 e Checkpoint).
+  - question: O defender for Identity monitora somente dispositivos ingressados no domínio?
+    answer: >
+      Não. O defender for Identity monitora todos os dispositivos na rede que executam solicitações de autenticação e autorização em relação a Active Directory, incluindo dispositivos não Windows e móveis.
+  - question: O defender for Identity monitora contas de computador, bem como contas de usuário?
+    answer: >
+      Sim. Como as contas de computador (bem como outras entidades) podem ser usadas para executar atividades mal-intencionadas, o defender for Identity monitora o comportamento de todas as contas de computador e todas as outras entidades no ambiente.
+  - question: Qual é a diferença entre o ATA (Advanced Threat Analytics) e o defender for Identity?
+    answer: >
+      O ATA é uma solução local autônoma com vários componentes, como o ATA Center que requer hardware dedicado local.
+
+
+      O defender for Identity é uma solução de segurança baseada em nuvem que aproveita seus sinais do Active Directory (Azure AD) locais. A solução é altamente escalonável e é atualizada frequentemente.
+
+
+      A versão final do ATA está [disponível para o público geral](https://support.microsoft.com/help/4568997/update-3-for-microsoft-advanced-threat-analytics-1-9). O ATA terminará o suporte base em 12 de janeiro de 2021. O suporte estendido continuará até janeiro de 2026. Para obter mais informações, leia [nosso blog](https://techcommunity.microsoft.com/t5/microsoft-security-and/end-of-mainstream-support-for-advanced-threat-analytics-january/ba-p/1539181).
+
+
+      Ao contrário do sensor do ATA, o sensor do defender for Identity também usa fontes de dados como o ETW (rastreamento de eventos para Windows) habilitando o defender para identidade para fornecer detecções adicionais.
+
+
+      As atualizações frequentes do defender for Identity incluem os seguintes recursos e funcionalidades:
+
+
+      - **Suporte para [ambientes de várias florestas](multi-forest.md)** : fornece visibilidade às organizações nas florestas do AD.
+
+
+      - **[Avaliações da Postura de Segurança de Identidade](isp-overview.md)** : identifica configurações incorretas e componentes exploráveis comuns, além de fornecer caminhos de correção para reduzir a superfície de ataque.
+
+
+      - **[Funcionalidades do UEBA](/cloud-app-security/tutorial-ueba)** : insights sobre o risco do usuário individual por meio da pontuação de prioridade de investigação do usuário. A pontuação pode auxiliar a SecOps nas investigações dela e ajudar analistas a entenderem atividades incomuns do usuário e da organização.
+
+
+      - **Integrações nativas**: integra-se com o Microsoft Cloud App Security e o Azure AD Identity Protection para fornecer uma exibição híbrida do que está ocorrendo em ambientes híbridos e locais.
+
+
+      - **Contribui para o Microsoft 365 defender**: contribui com dados de alerta e ameaça para o Microsoft 365 defender. O Microsoft 365 defender aproveita o portfólio de segurança de Microsoft 365 (identidades, pontos de extremidade, dados e aplicativos) para analisar automaticamente os dados de ameaças entre domínios, criando uma imagem completa de cada ataque em um único painel. Com essa amplitude e profundidade de clareza, os defensores podem se concentrar em ameaças críticas e procurar por violações sofisticadas, confiando que a automação avançada do Microsoft 365 defender interrompe os ataques em qualquer lugar da cadeia de Kill e retorna a organização a um estado seguro.
+- name: Licenciamento e privacidade
+  questions:
+  - question: Onde posso obter uma licença do Microsoft defender para identidade?
+    answer: >
+      O defender for Identity está disponível como parte do Enterprise Mobility + Security 5 Suite (EMS E5) e como uma licença autônoma. Você pode adquirir uma licença diretamente no [Portal do Microsoft 365](https://www.microsoft.com/cloud-platform/enterprise-mobility-security-pricing) ou por meio do CSP (Parceiro de Soluções na Nuvem).
+  - question: O defender for Identity precisa de apenas uma única licença ou requer uma licença para cada usuário que desejo proteger?
+    answer: >
+      Para obter informações sobre os requisitos de licenciamento do defender for Identity, consulte [diretrizes de licenciamento do defender for Identity](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#azure-advanced-threat-protection).
+  - question: Meus dados são isolados de outros dados do cliente?
+    answer: Sim, seus dados são isolados por meio da autenticação de acesso e da diferenciação lógica com base nos identificadores do cliente. Cada cliente pode acessar somente dados coletados de sua própria organização e dados genéricos fornecidos pela Microsoft.
+  - question: É tenho flexibilidade para selecionar onde armazenar meus dados?
+    answer: >
+      Não. Quando sua instância do defender for Identity é criada, ela é armazenada automaticamente no país data center mais próximo da localização geográfica do seu locatário do AAD. O defender for Identity data não pode ser movido depois que sua instância do defender for Identity é criada para um data center diferente.
+  - question: Como a Microsoft impede atividades internas mal-intencionadas e abuso de funções de alto privilégio?
+    answer: >
+      Os administradores e desenvolvedores da Microsoft, por design, recebem privilégios suficientes para realizar as tarefas atribuídas a eles para operar e desenvolver o serviço. A Microsoft implanta combinações de controles preventivos, investigativos e reativos, incluindo os seguintes mecanismos para ajudar a proteger contra atividades administrativas e/ou de desenvolvedor não autorizadas:
+
+
+      - Controle de acesso total a dados confidenciais
+
+      - Combinações de controles que melhoram muito a detecção independente de atividades mal-intencionadas
+
+      - Vários níveis de monitoramento, registro em log e relatórios
+
+
+      Além disso, a Microsoft realiza verificações de histórico de determinados funcionários de operações e limita o acesso a aplicativos, sistemas e infraestrutura de rede proporcionalmente ao nível da verificação de histórico. A equipe de operações segue um processo formal quando precisa acessar a conta de um cliente ou informações relacionadas ao desempenho de suas tarefas.
+- name: Implantação
+  questions:
+  - question: De quantos sensores de identidade eu preciso?
+    answer: >
+      Cada controlador de domínio no ambiente deve ser coberto por um defender para sensor de identidade ou sensor autônomo. Para obter mais informações, consulte [defender for Identity sensor Sizing](capacity-planning.md#sizing).
+  - question: O defender for Identity funciona com tráfego criptografado?
+    answer: Os protocolos de rede com tráfego criptografado (por exemplo, AtSvc e WMI) não são descriptografados, mas são analisados pelos sensores.
+  - question: O defender for Identity funciona com a proteção Kerberos?
+    answer: >
+      A habilitação da proteção Kerberos, também conhecida como FAST (encapsulamento seguro de autenticação flexível), é suportada pelo defender for Identity, com exceção de passagem da detecção de hash, que não funciona com a proteção Kerberos.
+  - question: Como fazer monitorar um controlador de domínio virtual usando o defender para identidade?
+    answer: >
+      A maioria dos controladores de domínio virtuais pode ser coberta pelo sensor do defender for Identity para determinar se o sensor do defender for Identity é apropriado para seu ambiente, consulte [defender para planejamento de capacidade de identidade](capacity-planning.md).
+
+
+      Se um controlador de domínio virtual não puder ser coberto pelo sensor do defender for Identity, você poderá ter um defender físico ou virtual para identidade autônoma, conforme descrito em [Configurar o espelhamento de porta](configure-port-mirroring.md).
+
+      A maneira mais fácil é ter um sensor autônomo do virtual defender para identidade em todos os hosts em que existe um controlador de domínio virtual.
+
+      Se os controladores de domínio virtuais se movimentarem entre os hosts, será necessário executar uma destas etapas:
+
+
+      - Quando o controlador de domínio virtual é movido para outro host, pré-configurar o defender para identificar o sensor autônomo nesse host para receber o tráfego do controlador de domínio virtual recentemente movido.
+
+      - Certifique-se de associar o sensor autônomo do virtual defender para identidade ao controlador de domínio virtual para que, se ele for movido, o sensor autônomo do defender para identidade se mova com ele.
+
+      - Há alguns comutadores virtuais que podem enviar o tráfego entre os hosts.
+  - question: Como fazer configurar o defender para sensores de identidade para se comunicar com o defender para o serviço de nuvem de identidade quando eu tiver um proxy?
+    answer: >
+      Para seus controladores de domínio se comunicarem com o serviço de nuvem, você deve abrir: *. atp.azure.com porta 443 em seu firewall/proxy. Para obter instruções sobre como fazer isso, consulte [configurar seu proxy ou firewall para habilitar a comunicação com o defender para sensores de identidade](configure-proxy.md).
+  - question: O defender para controladores de domínio monitorados por identidade pode ser virtualizado em sua solução IaaS?
+    answer: >
+      Sim, você pode usar o defender for Identity sensor para monitorar controladores de domínio que estão em qualquer solução de IaaS.
+  - question: O defender para identidade pode dar suporte a vários domínios e várias florestas?
+    answer: >
+      O defender for Identity dá suporte a ambientes de vários domínios e a várias florestas. Confira mais informações e requisitos de confiança em [Suporte a várias florestas](multi-forest.md).
+  - question: Você pode ver a integridade geral da implantação?
+    answer: >
+      Sim, você pode exibir a integridade geral da implantação, bem como problemas específicos relacionados à configuração, conectividade, etc., e você será alertado à medida que ocorrerem com o defender para alertas de integridade de identidade.
+- name: Operação
+  questions:
+  - question: Que tipo de integração o defender para identidade tem com SIEMs?
+    answer: >
+      O defender for Identity pode ser configurado para enviar um alerta de syslog para qualquer servidor SIEM usando o formato CEF, para alertas de integridade e quando um alerta de segurança é detectado. Consulte a [referência de log do SIEM](cef-format-sa.md) para obter mais informações.
+  - question: Por que certas contas são consideradas confidenciais?
+    answer: >
+      Isso ocorre quando uma conta é membro de grupos designados como confidenciais (por exemplo: "Administradores do Domínio").
+
+
+      Para entender por que uma conta é confidencial, você pode examinar sua associação de grupo para entender a quais grupos confidenciais ela pertence (o grupo ao qual ela pertence também pode ser confidencial devido a outro grupo, portanto, o mesmo processo deve ser executado até que você localize o grupo confidencial de nível mais alto). Você também pode [marcar contas como confidenciais](sensitive-accounts.md) manualmente.
+  - question: Você precisa escrever suas próprias regras e criar um limite/linha de base?
+    answer: >
+      Com o defender for Identity, não há necessidade de criar regras, limites ou linhas de base e, em seguida, ajuste. O defender for Identity analisa os comportamentos entre usuários, dispositivos e recursos, bem como sua relação com o outro, e pode detectar atividades suspeitas e ataques conhecidos rapidamente. Três semanas após a implantação, o defender for Identity começa a detectar atividades suspeitas comportamentais. Por outro lado, o defender for Identity começará a detectar ataques mal-intencionados e problemas de segurança conhecidos imediatamente após a implantação.
+  - question: Qual tráfego que o defender para identidade gera na rede de controladores de domínio e por quê?
+    answer: >
+      O defender for Identity gera o tráfego de controladores de domínio para computadores na organização em um dos três cenários:
+
+
+      1. **Resolução de nomes de rede** O defender for Identity captura tráfego e eventos, aprendizado e criação de perfil de usuários e atividades de computador na rede. Para aprender e criar o perfil de atividades de acordo com os computadores da organização, o defender for Identity precisa resolver IPs para contas de computador. Para resolver os IPs para nomes de computador defender para sensores de identidade, solicite o endereço IP para o nome do computador *por trás* do endereço IP.
+
+          As solicitações são feitas com um dos quatro métodos a seguir:
+          - NTLM sobre RPC (porta TCP 135)
+          - NetBIOS (porta UDP 137)
+          - RDP (TCP porta 3389)
+          - Consulta ao servidor DNS usando a pesquisa de DNS reverso do endereço IP (UDP 53)
+
+          Depois de obter o nome do computador, o defender para sensores de identidade cruzam Verifique os detalhes em Active Directory para ver se há um objeto de computador correlacionado com o mesmo nome de computador. Se encontrarem a correspondência, é feita uma associação entre o endereço IP e o objeto do computador correspondido.
+      2. **Caminho de movimento lateral (LMP)** Para criar possíveis LMPs para usuários confidenciais, o defender for Identity requer informações sobre os administradores locais em computadores. Nesse cenário, o sensor do defender for Identity usa SAM-R (TCP 445) para consultar o endereço IP identificado no tráfego de rede, a fim de determinar os administradores locais do computador. Para saber mais sobre o defender para identidade e SAM-R, confira [configurar permissões necessárias do Sam-r](install-step8-samr.md).
+
+
+      3. **Consultar Active Directory usando o LDAP** para entidades de dados de entidade para sensores de identidade consulte o controlador de domínio do domínio ao qual a entidade pertence. Pode ser no mesmo sensor ou em outro controlador de domínio daquele domínio.
+
+
+      |Protocolo|Serviço|Porta|Origem| Direção|
+
+      |---------|---------|---------|---------|--------|
+
+      |LDAP|TCP e UDP|389|Controladores de domínio|Saída|
+
+      |LDAP seguro (LDAPS)|TCP|636|Controladores de domínio|Saída|
+
+      |LDAP para o Catálogo Global|TCP|3268|Controladores de domínio|Saída|
+
+      |LDAPS para o Catálogo Global|TCP|3269|Controladores de domínio|Saída|
+  - question: Por que as atividades sempre mostram o computador e o usuário da origem?
+    answer: >
+      O defender for Identity captura atividades em vários protocolos diferentes. Em alguns casos, o defender for Identity não recebe os dados do usuário de origem no tráfego. O defender for Identity tenta correlacionar a sessão do usuário à atividade e, quando a tentativa é bem-sucedida, o usuário de origem da atividade é exibido. Caso as tentativas de correlação do usuário falhem, apenas o computador de origem será exibido.
+- name: Solução de problemas
+  questions:
+  - question: O que devo fazer se o sensor do defender for Identity ou o sensor autônomo não iniciar?
+    answer: >
+      Examine o erro mais recente no [log](troubleshooting-using-logs.md) de erros atual (em que o defender for Identity está instalado na pasta "logs").
+- name: Consulte Também
+  questions:
+  - question: ''
+    answer: "\n- [Pré-requisitos do Defender para Identidade](prerequisites.md)\n- [Defender para planejamento de capacidade de identidade](capacity-planning.md)\n- [Configurar coleta de eventos](configure-event-collection.md)\n- [Configuração do encaminhamento de eventos do Windows](configure-event-forwarding.md)\n- [Solução de problemas](troubleshooting-known-issues.md)\n- [Confira o fórum do defender for Identity!](https://aka.ms/MDIcommunity)"
