@@ -3,14 +3,14 @@ title: Instalar o Microsoft defender para identidade silenciosamente
 description: Isso descreve como instalar silenciosamente o Microsoft defender para identidade.
 ms.date: 01/11/2021
 ms.topic: how-to
-ms.openlocfilehash: a9cddac4ca0306faddaa93b701b88745b180828c
-ms.sourcegitcommit: 57dd3e4663346db3542cf9e755dac135c5e75125
+ms.openlocfilehash: 0c22f5bcbffd415a81b84c94570cfcd7387aab56
+ms.sourcegitcommit: a892419a5cb95412e4643c35a9a72092421628ec
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98062528"
+ms.lasthandoff: 02/16/2021
+ms.locfileid: "100534388"
 ---
-# <a name="product-long-switches-and-silent-installation"></a>[!INCLUDE [Product long](includes/product-long.md)] comutadores e instalação silenciosa
+# <a name="microsoft-defender-for-identity-switches-and-silent-installation"></a>Microsoft defender para comutadores de identidade e instalação silenciosa
 
 Este artigo fornece orientações e instruções para [!INCLUDE [Product long](includes/product-long.md)] comutadores e instalação silenciosa.
 
@@ -27,7 +27,7 @@ Usando [!INCLUDE [Product short](includes/product-short.md)] a instalação sile
 
 Para acompanhar o progresso da implantação, monitore os [!INCLUDE [Product short](includes/product-short.md)] logs do instalador, que estão localizados em `%AppData%\Local\Temp` .
 
-## <a name="product-short-sensor-silent-installation"></a>[!INCLUDE [Product short](includes/product-short.md)] instalação silenciosa do sensor
+## <a name="defender-for-identity-sensor-silent-installation"></a>Instalação silenciosa do sensor do defender for Identity
 
 > [!NOTE]
 > Ao implantar silenciosamente o [!INCLUDE [Product short](includes/product-short.md)] sensor por meio de System Center Configuration Manager ou outro sistema de implantação de software, é recomendável criar dois pacotes de implantação:</br>– Net Framework 4.7 ou posterior, que pode incluir a reinicialização do controlador de domínio</br>- [!INCLUDE [Product short](includes/product-short.md)] sensores. </br>Faça com que o [!INCLUDE [Product short](includes/product-short.md)] pacote do sensor dependa da implantação da implantação do pacote do .NET Framework. </br>Obtenha o [Pacote de implantação offline do .Net Framework 4.7](https://support.microsoft.com/help/3186497/the-net-framework-4-7-offline-installer-for-windows).
@@ -95,7 +95,7 @@ Use os seguintes comandos para concluir a autenticação de proxy:
 
 Para obter mais informações sobre a configuração de proxy, consulte [definir configurações de proxy de ponto de extremidade e conectividade de Internet para seu [!INCLUDE [Product long](includes/product-long.md)] sensor](configure-proxy.md).
 
-## <a name="update-the-product-short-sensor"></a>Atualizar o [!INCLUDE [Product short](includes/product-short.md)] sensor
+## <a name="update-the-defender-for-identity-sensor"></a>Atualizar o defender para o sensor de identidade
 
 Use o seguinte comando para atualizar silenciosamente o [!INCLUDE [Product short](includes/product-short.md)] sensor:
 
@@ -125,7 +125,7 @@ Para atualizar o [!INCLUDE [Product short](includes/product-short.md)] sensor si
 
 <a name="silently-uninstall-sensor"></a>
 
-## <a name="uninstall-the-product-short-sensor-silently"></a>Desinstalar o [!INCLUDE [Product short](includes/product-short.md)] sensor silenciosamente
+## <a name="uninstall-the-defender-for-identity-sensor-silently"></a>Desinstalar o defender para o sensor de identidade silenciosamente
 
 Use o seguinte comando para executar uma desinstalação silenciosa do [!INCLUDE [Product short](includes/product-short.md)] sensor:
 

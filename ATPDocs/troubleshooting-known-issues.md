@@ -3,14 +3,14 @@ title: Solução de problemas conhecidos do Microsoft defender para identidade
 description: Descreve como você pode solucionar problemas no Microsoft defender para identidade.
 ms.date: 02/04/2021
 ms.topic: how-to
-ms.openlocfilehash: 933d4442d88f2d03ddcd2fa4c90d59d98e229340
-ms.sourcegitcommit: 50e6f5511329e56545fa5ab4c9f5ab69046d1e10
+ms.openlocfilehash: f11d840aa46ec86c88c04ea2892443fd2dc20db3
+ms.sourcegitcommit: a892419a5cb95412e4643c35a9a72092421628ec
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/04/2021
-ms.locfileid: "99551600"
+ms.lasthandoff: 02/16/2021
+ms.locfileid: "100534490"
 ---
-# <a name="troubleshooting-product-long-known-issues"></a>Solucionando [!INCLUDE [Product long](includes/product-long.md)] problemas conhecidos
+# <a name="troubleshooting-microsoft-defender-for-identity-known-issues"></a>Solução de problemas conhecidos do Microsoft defender para identidade
 
 ## <a name="sensor-failure-communication-error"></a>Erro de comunicação de falha no sensor
 
@@ -107,7 +107,9 @@ use o comando completo para instalar com êxito.
 ./"Azure ATP sensor Setup.exe" /quiet NetFrameworkCommandLineArguments="/q" AccessKey="<Access Key>"
 ```
 
-## <a name="product-short-sensor-nic-teaming-issue"></a>[!INCLUDE [Product short](includes/product-short.md)] problema de agrupamento da NIC do sensor <a name="nic-teaming"></a>
+<a name="nic-teaming"></a>
+
+## <a name="defender-for-identity-sensor-nic-teaming-issue"></a>Problema de agrupamento da NIC do sensor de identidade do defender
 
 Se você tentar instalar o [!INCLUDE [Product short](includes/product-short.md)] sensor em um computador configurado com um adaptador de agrupamento NIC, receberá um erro de instalação. Se você quiser instalar o [!INCLUDE [Product short](includes/product-short.md)] sensor em um computador configurado com o agrupamento NIC, siga estas instruções:
 

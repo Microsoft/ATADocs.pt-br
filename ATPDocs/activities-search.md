@@ -3,14 +3,14 @@ title: Filtro e pesquisa de atividades monitoradas do Microsoft defender for Ide
 description: Este artigo fornece uma visão geral de como filtrar e pesquisar atividades monitoradas usando o Microsoft defender para identidade.
 ms.date: 10/26/2020
 ms.topic: how-to
-ms.openlocfilehash: 9e1758475c9b364e1726e5f145676110b98389d9
-ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
+ms.openlocfilehash: e338e0294ad407c17df2476e7a7a5395f27756f2
+ms.sourcegitcommit: a892419a5cb95412e4643c35a9a72092421628ec
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96543800"
+ms.lasthandoff: 02/16/2021
+ms.locfileid: "100533912"
 ---
-# <a name="product-long-monitored-activities-search-and-filter"></a>[!INCLUDE [Product long](includes/product-long.md)] pesquisa e filtro de atividades monitoradas
+# <a name="microsoft-defender-for-identity-monitored-activities-search-and-filter"></a>Pesquisa e filtro de atividades monitoradas do Microsoft defender for Identity
 
 > [!NOTE]
 > Os recursos do [!INCLUDE [Product short](includes/product-short.md)] explicados nesta página também podem ser acessados usando o novo [portal](https://portal.cloudappsecurity.com).

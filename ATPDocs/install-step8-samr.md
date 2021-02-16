@@ -3,14 +3,14 @@ title: Configurar SAM-R para habilitar a detecção de caminho de movimento late
 description: Explica como configurar o Microsoft defender para identidade para fazer chamadas remotas para SAM
 ms.date: 10/26/2020
 ms.topic: how-to
-ms.openlocfilehash: 24c1d6baf99e3d65a96897d2d0b90ffe94ad42eb
-ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
+ms.openlocfilehash: f1870161b60b975eef818d0a6d6cae63a4fb12c3
+ms.sourcegitcommit: a892419a5cb95412e4643c35a9a72092421628ec
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96543936"
+ms.lasthandoff: 02/16/2021
+ms.locfileid: "100534269"
 ---
-# <a name="configure-product-long-to-make-remote-calls-to-sam"></a>Configurar o [!INCLUDE [Product long](includes/product-long.md)] para realizar chamadas remotas para SAM
+# <a name="configure-microsoft-defender-for-identity-to-make-remote-calls-to-sam"></a>Configurar o Microsoft defender para identidade para fazer chamadas remotas para SAM
 
 [!INCLUDE [Product long](includes/product-long.md)]a detecção de [caminho de movimento lateral](use-case-lateral-movement-path.md) depende de consultas que identificam administradores locais em computadores específicos. Essas consultas são executadas com o protocolo SAM-R, usando a [!INCLUDE [Product short](includes/product-short.md)] conta de serviço criada durante a [!INCLUDE [Product short](includes/product-short.md)] etapa de instalação  [2. Conecte-se ao AD](install-step2.md).
 

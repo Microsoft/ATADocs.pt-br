@@ -3,18 +3,18 @@ title: Lista de recursos úteis para o Microsoft defender para identidade
 description: Este artigo fornece uma lista de recursos úteis para o Microsoft defender para identidade
 ms.date: 10/27/2020
 ms.topic: conceptual
-ms.openlocfilehash: 1878f8b9cbc8047083c927de612e88e50b1947ca
-ms.sourcegitcommit: af41733212c2102c223fed8c8602a21a1f667080
+ms.openlocfilehash: 8a814a51fdc63f59b36288922017280e0d7f3968
+ms.sourcegitcommit: a892419a5cb95412e4643c35a9a72092421628ec
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2021
-ms.locfileid: "100515505"
+ms.lasthandoff: 02/16/2021
+ms.locfileid: "100533300"
 ---
-# <a name="product-long-readiness-guide"></a>[!INCLUDE [Product long](includes/product-long.md)] Guia de preparação
+# <a name="microsoft-defender-for-identity-readiness-guide"></a>Guia de preparação do Microsoft defender para identidade
 
 Este artigo fornece uma lista de roteiros de preparação de recursos que ajudam você a começar a usar o [!INCLUDE [Product long](includes/product-long.md)] .
 
-## <a name="understanding-product-long"></a>Básicas [!INCLUDE [Product long](includes/product-long.md)]
+## <a name="understanding-microsoft-defender-for-identity"></a>Compreendendo o Microsoft defender para identidade
 
 [!INCLUDE [Product long](includes/product-long.md)] o é um serviço de nuvem que ajuda a identificar e proteger sua empresa de vários tipos de ataques de invasores e ameaças internas avançadas.
 
@@ -31,7 +31,7 @@ Para saber mais sobre o [!INCLUDE [Product short](includes/product-short.md)]:
 - [ [!INCLUDE [Product short](includes/product-short.md)] ferramenta de dimensionamento](https://aka.ms/aatpsizingtool) – a ferramenta de dimensionamento automatiza a coleta da quantidade de monitores de tráfego [!INCLUDE [Product short](includes/product-short.md)] . Ela fornece automaticamente o suporte e as recomendações do recurso para sensores.
 - [[!INCLUDE [Product short](includes/product-short.md)] Diretrizes de planejamento de capacidade](capacity-planning.md)
 
-## <a name="deploy-product-short"></a>Implantar o [!INCLUDE [Product short](includes/product-short.md)]
+## <a name="deploy-defender-for-identity"></a>Implantar o defender para identidade
 
 Use esses recursos para ajudá-lo a configurar [!INCLUDE [Product short](includes/product-short.md)] o, conectar-se a Active Directory, baixar o pacote do sensor, configurar a coleta de eventos e, opcionalmente, integrar com sua VPN e configurar contas e exclusões do honeytoken.
 
@@ -39,7 +39,7 @@ Use esses recursos para ajudá-lo a configurar [!INCLUDE [Product short](include
 - [ [!INCLUDE [Product short](includes/product-short.md)] Configurar](install-step1.md) siga estas etapas para implantar [!INCLUDE [Product short](includes/product-short.md)] em seu ambiente.
 - [Integre [!INCLUDE [Product short](includes/product-short.md)] com o Microsoft defender para ponto de extremidade](integrate-mde.md)
 
-## <a name="product-short-settings"></a>Configurações do[!INCLUDE [Product short](includes/product-short.md)]
+## <a name="defender-for-identity-settings"></a>Defender para configurações de identidade
 
 Ao criar sua [!INCLUDE [Product short](includes/product-short.md)] instância, as configurações básicas necessárias são configuradas automaticamente. Há várias configurações adicionais configuráveis no [!INCLUDE [Product short](includes/product-short.md)] para melhorar a precisão de detecção e alerta para seu ambiente, como integração de VPN, permissões necessárias de Sam e configurações de política de auditoria avançadas.
 
@@ -47,7 +47,7 @@ Ao criar sua [!INCLUDE [Product short](includes/product-short.md)] instância, a
 - [Permissões exigidas pelo SAM-R](install-step8-samr.md)
 - [Configurações de política de auditoria](configure-windows-event-collection.md) – auditar a integridade do controlador de domínio antes e depois de uma [!INCLUDE [Product short](includes/product-short.md)] implantação.
 
-## <a name="work-with-product-short"></a>Trabalhar com [!INCLUDE [Product short](includes/product-short.md)]
+## <a name="work-with-defender-for-identity"></a>Trabalhar com o defender para identidade
 
 Depois [!INCLUDE [Product short](includes/product-short.md)] que o estiver em execução, exiba alertas de segurança na [!INCLUDE [Product short](includes/product-short.md)] linha do tempo de atividade do Portal. A linha do tempo de atividade é a página de aterrissagem padrão depois de fazer logon no [!INCLUDE [Product short](includes/product-short.md)] Portal. Por padrão, todos os alertas de segurança abertos são mostrados na linha do tempo de atividade. Também é possível ver a gravidade atribuída a cada alerta. Investigue cada alerta, analisando detalhadamente as entidades (computadores, dispositivos, usuários) para abrir as páginas de perfil com mais informações. Os caminhos de movimento lateral mostram os possíveis movimentos que podem ser feitos em sua rede e os usuários confidenciais em risco. Investigue e corrija a exposição usando os grafos de detecção de caminho de movimento lateral. Esses recursos ajudam você a trabalhar com os [!INCLUDE [Product short](includes/product-short.md)] alertas de segurança do:
 

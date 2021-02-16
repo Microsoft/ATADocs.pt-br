@@ -3,20 +3,20 @@ title: Microsoft defender para avaliações de postura de segurança de identida
 description: Este artigo fornece uma visão geral do Microsoft defender para relatórios de avaliação de postura de segurança de identidade da identidade.
 ms.date: 10/26/2020
 ms.topic: how-to
-ms.openlocfilehash: a51eb3f824cba143a61d227e4df375f798bd01dd
-ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
+ms.openlocfilehash: 3b3f20ac50e3b5b687dd6ece8b421c84288a3126
+ms.sourcegitcommit: a892419a5cb95412e4643c35a9a72092421628ec
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96543902"
+ms.lasthandoff: 02/16/2021
+ms.locfileid: "100533844"
 ---
-# <a name="product-longs-identity-security-posture-assessments"></a>[!INCLUDE [Product long](includes/product-long.md)]avaliações da postura de segurança de identidade
+# <a name="microsoft-defender-for-identitys-identity-security-posture-assessments"></a>Microsoft defender para avaliações de postura de segurança de identidade da identidade
 
 Normalmente, organizações de todos os tamanhos têm visibilidade limitada de aplicativos e serviços locais e não sabem se eles podem ou não criar uma vulnerabilidade de segurança para a organização. O problema de visibilidade limitada é especialmente real em relação ao uso de componentes não compatíveis ou desatualizados.
 
 Embora sua empresa possa investir tempo e esforço consideráveis em fortalecer identidades e na infraestrutura de identidade (como o Active Directory e o Active Directory Connect) de modo contínuo, é fácil ignorar configurações incorretas comuns e o uso de componentes herdados, que representam um dos maiores riscos de ameaça para sua organização. A pesquisa de segurança da Microsoft revela que a maioria dos ataques de identidade utilizam configurações incorretas comuns no Active Directory e o uso contínuo de componentes herdados (como o protocolo NTLMv1) para comprometer identidades e violar sua organização. Para combater isso efetivamente, o [!INCLUDE [Product long](includes/product-long.md)] agora oferece avaliações proativas de postura de segurança de identidade para detectar e sugerir ações de aperfeiçoamento em suas configurações Active Directory locais.
 
-## <a name="what-do-product-short-identity-security-posture-assessments-provide"></a>O que as [!INCLUDE [Product short](includes/product-short.md)] avaliações de postura de segurança de identidade fornecem?
+## <a name="what-do-defender-for-identity-identity-security-posture-assessments-provide"></a>O que o defender para avaliações de postura de segurança de identidade de identidade fornece?
 
 - Detecções e dados contextuais sobre componentes e configurações incorretas conhecidos que podem ser explorados, além dos respectivos caminhos para corrigi-los.
 - [!INCLUDE [Product short](includes/product-short.md)] detecta não apenas atividades suspeitas, mas também monitora ativamente as identidades locais e a infraestrutura de identidade para pontos fracos, usando o [!INCLUDE [Product short](includes/product-short.md)] sensor existente.
@@ -28,11 +28,11 @@ Embora sua empresa possa investir tempo e esforço consideráveis em fortalecer 
 
 [!INCLUDE [Product short](includes/product-short.md)] as avaliações de segurança estão disponíveis usando o portal de Microsoft Cloud App Security depois de ativar a [!INCLUDE [Product short](includes/product-short.md)] integração. Para saber como integrar o [!INCLUDE [Product short](includes/product-short.md)] Cloud app Security, consulte [ [!INCLUDE [Product short](includes/product-short.md)] integração](/cloud-app-security/aatp-integration).
 
-### <a name="licensing"></a>Licenciamento
+### <a name="licensing"></a>Licenças
 
 O acesso [!INCLUDE [Product short](includes/product-short.md)] a relatórios de avaliação de segurança no Cloud app Security não requer uma licença de Cloud app Security, apenas uma [!INCLUDE [Product short](includes/product-short.md)] licença é necessária.
 
-## <a name="access-product-short-using-cloud-app-security"></a>Acesso [!INCLUDE [Product short](includes/product-short.md)] usando Cloud app Security
+## <a name="access-defender-for-identity-using-cloud-app-security"></a>Acessar o defender para identidade usando o Cloud App Security
 
 Confira o [Início rápido do Cloud App Security](/cloud-app-security/getting-started-with-cloud-app-security) para conhecer melhor os fundamentos básicos de como usar o portal do Cloud App Security.
 

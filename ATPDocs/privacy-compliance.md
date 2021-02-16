@@ -3,14 +3,14 @@ title: Política de dados pessoais do Microsoft defender para identidade
 description: Fornece links para informações sobre como excluir informações particulares e dados pessoais do Microsoft defender para identidade.
 ms.date: 10/26/2020
 ms.topic: conceptual
-ms.openlocfilehash: c5af419c2be751a8b9f92855f57f13669860de1a
-ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
+ms.openlocfilehash: b8336d4b6508fc9de462dcdbb6bc6389dd2fa0f2
+ms.sourcegitcommit: a892419a5cb95412e4643c35a9a72092421628ec
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96542355"
+ms.lasthandoff: 02/16/2021
+ms.locfileid: "100533385"
 ---
-# <a name="product-long-data-security-and-privacy"></a>[!INCLUDE [Product long](includes/product-long.md)] segurança e privacidade de dados
+# <a name="microsoft-defender-for-identity-data-security-and-privacy"></a>Privacidade e segurança de dados do Microsoft defender para identidade
 
 [!INCLUDE [Handle personal data](../includes/gdpr-intro-sentence.md)]
 
@@ -44,6 +44,6 @@ No [!INCLUDE [Product short](includes/product-short.md)] , você tem a capacidad
 
 - Para obter informações sobre [!INCLUDE [Product short](includes/product-short.md)] confiança e conformidade, consulte o [portal de confiança do serviço](https://servicetrust.microsoft.com/ViewPage/GDPRGetStarted) e o site de conformidade do [Microsoft 365 Enterprise GDPR](/microsoft-365/compliance/gdpr?view=o365-worldwide&preserve-view=true).
 
-## <a name="security-and-privacy-for-product-short-us-government-gcc-high-customers"></a>Segurança e privacidade para [!INCLUDE [Product short](includes/product-short.md)] clientes do governo dos EUA gcc High
+## <a name="security-and-privacy-for-defender-for-identity-us-government-gcc-high-customers"></a>Segurança e privacidade do defender for Identity clientes do governo de GCC dos EUA
 
 Para obter informações adicionais sobre [!INCLUDE [Product short](includes/product-short.md)] os padrões de conformidade e o local dos dados do cliente para clientes de gcc do governo dos EUA, consulte o [Enterprise Mobility + Security para a descrição do serviço do governo dos EUA](/enterprise-mobility-security/solutions/ems-govt-service-description).

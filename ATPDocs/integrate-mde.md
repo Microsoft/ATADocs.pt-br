@@ -3,14 +3,14 @@ title: Integração do Microsoft defender para identidade com o Microsoft defend
 description: Como integrar o Microsoft defender para identidade com o Microsoft defender for Endpoint para cobertura de detecção de ameaças completas
 ms.date: 10/26/2020
 ms.topic: how-to
-ms.openlocfilehash: 73cf4809e20d92534786d1df1ad580fffd5706b8
-ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
+ms.openlocfilehash: 356f97509fe3af81a4d1c896e7b64b2779e6028a
+ms.sourcegitcommit: a892419a5cb95412e4643c35a9a72092421628ec
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96542950"
+ms.lasthandoff: 02/16/2021
+ms.locfileid: "100533861"
 ---
-# <a name="integrate-product-long-with-microsoft-defender-for-endpoint"></a>Integre [!INCLUDE [Product long](includes/product-long.md)] com o Microsoft defender para ponto de extremidade
+# <a name="integrate-microsoft-defender-for-identity-with-microsoft-defender-for-endpoint"></a>Integre o Microsoft defender para identidade com o Microsoft defender para ponto de extremidade
 
 [!INCLUDE [Product long](includes/product-long.md)] o permite a integração [!INCLUDE [Product long](includes/product-long.md)] com o defender for Endpoint, para uma solução de proteção contra ameaças ainda mais completa. Embora [!INCLUDE [Product short](includes/product-short.md)] o monitore o tráfego em seus controladores de domínio, o defender for Endpoint monitora seus pontos de extremidade, fornecendo, juntos, uma única interface da qual você pode proteger seu ambiente.
 
@@ -47,7 +47,7 @@ Para habilitar esse recurso, você precisa de uma licença para o [!INCLUDE [Pro
 
 <a name="how-to-integrate-azure-atp-with-microsoft-defender-atp"></a>
 
-## <a name="how-to-integrate-product-short-with-defender-for-endpoint"></a>Como integrar [!INCLUDE [Product short](includes/product-short.md)] com o defender para ponto de extremidade
+## <a name="how-to-integrate-defender-for-identity-with-defender-for-endpoint"></a>Como integrar o defender para identidade com o defender para ponto de extremidade
 
 1. No portal do [!INCLUDE [Product short](includes/product-short.md)], selecione **Configuração**.
 

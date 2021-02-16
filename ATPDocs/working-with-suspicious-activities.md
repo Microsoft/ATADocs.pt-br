@@ -3,12 +3,12 @@ title: Trabalhar com alertas de segurança no Microsoft Defender para Identidade
 description: Descreve como examinar os alertas de segurança emitidos pelo Microsoft Defender para Identidade
 ms.date: 10/27/2020
 ms.topic: how-to
-ms.openlocfilehash: 8cd2cf79ef590d852c66a426d0217104f55b29a1
-ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
+ms.openlocfilehash: cb589442143bfd78f13360c076d9f5205c0a21af
+ms.sourcegitcommit: a892419a5cb95412e4643c35a9a72092421628ec
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96544582"
+ms.lasthandoff: 02/16/2021
+ms.locfileid: "100534422"
 ---
 # <a name="working-with-security-alerts"></a>Trabalhando com alertas de segurança
 
@@ -51,7 +51,7 @@ Os alertas de segurança do [!INCLUDE [Product short](includes/product-short.md)
 - [Alertas de predominância de domínio](domain-dominance-alerts.md)
 - [Alertas de exfiltração](exfiltration-alerts.md)
 
-## <a name="preview-detections"></a>Detecções de versão prévia <a name="preview-detections"></a>
+## <a name="preview-detections"></a>Detecções de versão prévia 
 
 A equipe de pesquisa do [!INCLUDE [Product short](includes/product-short.md)] trabalha constantemente para implementar novas detecções de ataques recém-descobertos. Como o [!INCLUDE [Product short](includes/product-short.md)] é um serviço de nuvem, essas novas detecções são lançadas rapidamente para permitir que os clientes do [!INCLUDE [Product short](includes/product-short.md)] se beneficiem das novas detecções o mais breve possível.
 

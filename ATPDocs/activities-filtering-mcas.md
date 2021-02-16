@@ -3,14 +3,14 @@ title: Microsoft defender para filtragem e políticas de atividade de identidade
 description: Visão geral do Microsoft defender para filtragem e políticas de atividade de identidade com Microsoft Cloud App Security.
 ms.date: 10/26/2020
 ms.topic: how-to
-ms.openlocfilehash: 5956ebfb9904465e876a21b918255f44ec651ae9
-ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
+ms.openlocfilehash: 589b7bc0ae95d6ff9dcc82fba930bc579d5b19b7
+ms.sourcegitcommit: a892419a5cb95412e4643c35a9a72092421628ec
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96544242"
+ms.lasthandoff: 02/16/2021
+ms.locfileid: "100533963"
 ---
-# <a name="use-activity-filters-and-create-action-policies-with-product-long-in-microsoft-cloud-app-security"></a>Usar filtros de atividade e criar políticas de ação com o [!INCLUDE [Product long](includes/product-long.md)] no Microsoft Cloud app Security
+# <a name="use-activity-filters-and-create-action-policies-with-microsoft-defender-for-identity-in-microsoft-cloud-app-security"></a>Usar filtros de atividade e criar políticas de ação com o Microsoft defender para identidade no Microsoft Cloud App Security
 
 Este artigo foi criado para ajudá-lo a entender como filtrar e criar políticas de ação para [!INCLUDE [Product short](includes/product-short.md)] atividades usando Microsoft Cloud app Security.
 
@@ -28,7 +28,7 @@ Para fazer uma investigação completa sobre os recursos no ambiente híbrido, �
 >[!NOTE]
 >Se você não tiver uma assinatura para Cloud App Security, poderá usar o portal de Cloud App Security para investigar [!INCLUDE [Product short](includes/product-short.md)] alertas e aprofundar-se sobre os usuários e suas atividades gerenciadas no local, no entanto, as informações relacionadas aos seus aplicativos de nuvem permanecerão indisponíveis.
 
-## <a name="filter-product-short-activities-in-cloud-app-security"></a>Filtrar [!INCLUDE [Product short](includes/product-short.md)] atividades no Cloud app Security
+## <a name="filter-defender-for-identity-activities-in-cloud-app-security"></a>Filtrar o defender para atividades de identidade no Cloud App Security
 
 [!INCLUDE [Product short](includes/product-short.md)] as atividades podem ser acessadas no menu principal Cloud App Security **investigar** selecionando o submenu **log de atividades** ou no menu **alertas** por status, categoria, severidade, aplicativo, nome de usuário ou política.
 

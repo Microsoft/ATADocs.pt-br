@@ -3,14 +3,14 @@ title: Análise avançada de ameaças ao Microsoft defender para movimentação 
 description: Saiba como mover uma instalação existente do Advanced Threat Analytics para o Microsoft defender para identidade.
 ms.date: 10/26/2020
 ms.topic: how-to
-ms.openlocfilehash: 5e20ed1580ad314f85845161fbb850395709d580
-ms.sourcegitcommit: af41733212c2102c223fed8c8602a21a1f667080
+ms.openlocfilehash: 45b9004bc439a28e144686e3147b94b6019a7a0f
+ms.sourcegitcommit: a892419a5cb95412e4643c35a9a72092421628ec
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2021
-ms.locfileid: "100515335"
+ms.lasthandoff: 02/16/2021
+ms.locfileid: "100533793"
 ---
-# <a name="advanced-threat-analytics-ata-to-product-long"></a>ATA (Advanced Threat Analytics) para [!INCLUDE [Product long](includes/product-long.md)]
+# <a name="advanced-threat-analytics-ata-to-microsoft-defender-for-identity"></a>ATA (Advanced Threat Analytics) para o Microsoft defender para identidade
 
 > [!NOTE]
 > A versão final do ATA está [disponível para o público geral](https://support.microsoft.com/help/4568997/update-3-for-microsoft-advanced-threat-analytics-1-9). O ATA terminará o suporte base em 12 de janeiro de 2021. O suporte estendido continuará até janeiro de 2026. Para obter mais informações, leia [nosso blog](https://techcommunity.microsoft.com/t5/microsoft-security-and/end-of-mainstream-support-for-advanced-threat-analytics-january/ba-p/1539181).
@@ -70,7 +70,7 @@ Reúna as informações a seguir antes de começar a migração:
 
 Conclua a mudança para [!INCLUDE [Product short](includes/product-short.md)] em duas etapas fáceis:
 
-### <a name="step-1-create-and-install-product-short-instance-and-sensors"></a>Etapa 1: criar e instalar [!INCLUDE [Product short](includes/product-short.md)] instância e sensores
+### <a name="step-1-create-and-install-defender-for-identity-instance-and-sensors"></a>Etapa 1: criar e instalar o defender para instância de identidade e sensores
 
 1. [Criar sua nova [!INCLUDE [Product short](includes/product-short.md)] instância](install-step1.md)
 
@@ -81,7 +81,7 @@ Conclua a mudança para [!INCLUDE [Product short](includes/product-short.md)] em
     - [Recuperar seu [!INCLUDE [Product short](includes/product-short.md)] Chave de acesso](install-step3.md#download-the-setup-package).
     - [Instale [!INCLUDE [Product short](includes/product-short.md)] os sensores em seus controladores de domínio](install-step4.md).
 
-### <a name="step-2-configure-and-validate-product-short-instance"></a>Etapa 2: configurar e validar a [!INCLUDE [Product short](includes/product-short.md)] instância
+### <a name="step-2-configure-and-validate-defender-for-identity-instance"></a>Etapa 2: configurar e validar o defender para a instância de identidade
 
 - [Configurar o sensor](install-step5.md)
 

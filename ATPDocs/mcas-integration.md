@@ -3,14 +3,14 @@ title: Microsoft defender para identidade no Microsoft Cloud App Security
 description: Visão geral do Microsoft defender para recursos de identidade no Microsoft Cloud App Security.
 ms.date: 01/24/2021
 ms.topic: how-to
-ms.openlocfilehash: 6040ef27e1657dbe017a31168932536f1cb594cb
-ms.sourcegitcommit: 7002c960e1489b7ce2deadd8ce20f70a48a6766a
+ms.openlocfilehash: 93ece5c8345929984473b057fdad2d4eec6fb9c0
+ms.sourcegitcommit: a892419a5cb95412e4643c35a9a72092421628ec
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/24/2021
-ms.locfileid: "98746928"
+ms.lasthandoff: 02/16/2021
+ms.locfileid: "100533827"
 ---
-# <a name="using-product-long-with-microsoft-cloud-app-security"></a>Usando [!INCLUDE [Product long](includes/product-long.md)] com Microsoft Cloud app Security
+# <a name="using-microsoft-defender-for-identity-with-microsoft-cloud-app-security"></a>Usando o Microsoft defender para identidade com Microsoft Cloud App Security
 
 Este artigo foi criado para ajudá-lo a entender e navegar na experiência de investigação avançada ao usar o portal de Microsoft Cloud App Security com o [!INCLUDE [Product long](includes/product-long.md)] .
 
@@ -33,7 +33,7 @@ Com a integração com [!INCLUDE [Product short](includes/product-short.md)] o, 
 - [!INCLUDE [Product long](includes/product-long.md)], que usa aprendizado de máquina e análise comportamental para identificar ataques em sua rede local
 - O Azure Active Directory Identity Protection, que detecta e impede proativamente os riscos de usuário e de entrada para identidades na nuvem
 
-## <a name="access-product-short"></a>Às [!INCLUDE [Product short](includes/product-short.md)]
+## <a name="access-defender-for-identity"></a>Acessar o defender para identidade
 
 Opte por continuar a usar [!INCLUDE [Product short](includes/product-short.md)] no [!INCLUDE [Product short](includes/product-short.md)] portal ou, você pode acessar [!INCLUDE [Product short](includes/product-short.md)] alertas e pontuação de identidade usando o portal de Microsoft Cloud app Security. Em qualquer fluxo de trabalho, [!INCLUDE [Product short](includes/product-short.md)] as tarefas de instalação e configuração continuam a ser manipuladas no [!INCLUDE [Product short](includes/product-short.md)] Portal.
 
@@ -51,7 +51,7 @@ Para fazer uma investigação completa sobre os recursos no ambiente híbrido, �
 
 Consulte [ [!INCLUDE [Product short](includes/product-short.md)] integração](/cloud-app-security/mdi-integration) para saber como habilitar rapidamente o [!INCLUDE [Product short](includes/product-short.md)] em Cloud app Security.
 
-## <a name="product-short-in-cloud-app-security"></a>[!INCLUDE [Product short](includes/product-short.md)] em Cloud App Security
+## <a name="defender-for-identity-in-cloud-app-security"></a>Defender para identidade no Cloud App Security
 
 Confira o [Início rápido do Cloud App Security](/cloud-app-security/getting-started-with-cloud-app-security) para se familiarizar com os fundamentos básicos de como usar o portal do Cloud App Security.
 

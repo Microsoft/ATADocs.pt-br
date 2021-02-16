@@ -3,14 +3,14 @@ title: Microsoft defender para grupos de funções de identidade para gerenciame
 description: Percorre como trabalhar com o Microsoft defender para grupos de funções de identidade.
 ms.date: 02/27/2020
 ms.topic: conceptual
-ms.openlocfilehash: cbfb13ace446ba980af649f07951eed3aabbe4fd
-ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
+ms.openlocfilehash: 9ff271c8f417d3f2c15e3e6809b62986a7825db4
+ms.sourcegitcommit: a892419a5cb95412e4643c35a9a72092421628ec
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96544378"
+ms.lasthandoff: 02/16/2021
+ms.locfileid: "100533351"
 ---
-# <a name="product-long-role-groups"></a>[!INCLUDE [Product long](includes/product-long.md)] grupos de funções
+# <a name="microsoft-defender-for-identity-role-groups"></a>Microsoft defender para grupos de funções de identidade
 
 [!INCLUDE [Product long](includes/product-long.md)] oferece segurança baseada em função para proteger dados de acordo com as necessidades específicas de segurança e conformidade de uma organização. [!INCLUDE [Product short](includes/product-short.md)] suporte a três funções separadas: administradores, usuários e visualizadores.
 
@@ -21,14 +21,14 @@ Grupos de funções permitem o gerenciamento de acesso para o [!INCLUDE [Product
 > [!NOTE]
 > Qualquer administrador global ou administrador de segurança na Azure Active Directory do locatário é automaticamente um [!INCLUDE [Product short](includes/product-short.md)] administrador.
 
-## <a name="accessing-the-product-short-portal"></a>Acessando o [!INCLUDE [Product short](includes/product-short.md)] Portal
+## <a name="accessing-the-defender-for-identity-portal"></a>Acessando o defender para o portal de identidade
 
 O acesso ao [!INCLUDE [Product short](includes/product-short.md)] Portal (Portal.ATP.Azure.com) só pode ser realizado por um usuário do Azure AD que tenha a função de diretório do administrador global ou administrador de segurança. Depois de inserir o portal com a função necessária, você pode criar sua [!INCLUDE [Product short](includes/product-short.md)] instância. [!INCLUDE [Product short](includes/product-short.md)] o serviço cria três grupos de segurança em seu locatário de Azure Active Directory: administradores, usuários e visualizadores.
 
 > [!NOTE]
 > O acesso ao [!INCLUDE [Product short](includes/product-short.md)] portal é concedido somente aos usuários dentro dos [!INCLUDE [Product short](includes/product-short.md)] grupos de segurança, dentro de seu Azure Active Directory, bem como aos administradores globais e de segurança do locatário.
 
-## <a name="types-of-product-short-security-groups"></a>Tipos de [!INCLUDE [Product short](includes/product-short.md)] grupos de segurança
+## <a name="types-of-defender-for-identity-security-groups"></a>Tipos de defender para grupos de segurança de identidade
 
 [!INCLUDE [Product short](includes/product-short.md)] o fornece três tipos de grupos de segurança: administradores do Azure ATP *(nome da instância)* , usuários do Azure ATP *(nome da instância)* e visualizadores do Azure ATP *(nome da instância)* . A tabela a seguir descreve o tipo de acesso no [!INCLUDE [Product short](includes/product-short.md)] portal disponível para cada função. Dependendo da função que você atribuir, várias telas e opções de menu no [!INCLUDE [Product short](includes/product-short.md)] portal não estarão disponíveis para esses usuários, da seguinte maneira:
 

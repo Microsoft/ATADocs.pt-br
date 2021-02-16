@@ -3,14 +3,14 @@ title: Solução de problemas do Microsoft defender para identidade usando os lo
 description: Descreve como você pode usar o Microsoft defender para logs de identidade para solucionar problemas
 ms.date: 10/27/2020
 ms.topic: how-to
-ms.openlocfilehash: beea555d45f1e06ea3eddeffbf057c392003a8d2
-ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
+ms.openlocfilehash: 2c902576b4cf7b0acf58371bafe4bb60404890ba
+ms.sourcegitcommit: a892419a5cb95412e4643c35a9a72092421628ec
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96542100"
+ms.lasthandoff: 02/16/2021
+ms.locfileid: "100534507"
 ---
-# <a name="troubleshooting-product-long-sensor-using-the-product-short-logs"></a>Solucionando problemas [!INCLUDE [Product long](includes/product-long.md)] de sensor usando os [!INCLUDE [Product short](includes/product-short.md)] logs
+# <a name="troubleshooting-microsoft-defender-for-identity-sensor-using-the-defender-for-identity-logs"></a>Solucionando problemas do Microsoft defender for Identity sensor usando o defender para logs de identidade
 
 Os [!INCLUDE [Product short](includes/product-short.md)] logs fornecem informações sobre o que cada componente do [!INCLUDE [Product long](includes/product-long.md)] sensor está fazendo em qualquer momento determinado.
 
@@ -27,7 +27,7 @@ O [!INCLUDE [Product short](includes/product-short.md)] sensor tem os seguintes 
 > [!NOTE]
 > Os três primeiros arquivos de log têm um tamanho máximo de até 50 MB. Quando esse tamanho é atingido, um novo arquivo de log é aberto e o anterior é renomeado como "&lt;nome do arquivo original&gt;-Archived-00000". Esse número aumenta a cada renomeação. Por padrão, se já houver mais de 10 arquivos do mesmo tipo, os mais antigos serão excluídos.
 
-## <a name="product-short-deployment-logs"></a>[!INCLUDE [Product short](includes/product-short.md)] Logs de implantação
+## <a name="defender-for-identity-deployment-logs"></a>Logs de implantação do defender for Identity
 
 Os [!INCLUDE [Product short](includes/product-short.md)] logs de implantação estão localizados no diretório Temp do usuário que instalou o produto. No local de instalação padrão, ele pode ser encontrado em: **C:\Users\Administrator\AppData\Local\Temp** (ou em um diretório acima de% Temp%).
 

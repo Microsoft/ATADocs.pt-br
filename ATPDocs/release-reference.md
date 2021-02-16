@@ -3,14 +3,14 @@ title: Referência de versões mais antigas no Microsoft defender para identidad
 description: Este artigo é uma referência de atualizações de versões anteriores ao Microsoft defender para identidade.
 ms.date: 10/27/2020
 ms.topic: reference
-ms.openlocfilehash: 493315ab2e0571c13b2076bb389e2d1c4a9a56f1
-ms.sourcegitcommit: af41733212c2102c223fed8c8602a21a1f667080
+ms.openlocfilehash: 44da038cc03bb24cbc70d524e24b259c81d9fa00
+ms.sourcegitcommit: a892419a5cb95412e4643c35a9a72092421628ec
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2021
-ms.locfileid: "100515539"
+ms.lasthandoff: 02/16/2021
+ms.locfileid: "100533368"
 ---
-# <a name="release-reference-of-product-long"></a>Referência de versão de [!INCLUDE [Product long](includes/product-long.md)]
+# <a name="release-reference-of-microsoft-defender-for-identity"></a>Referência de versão do Microsoft defender para identidade
 
 Este artigo é uma referência de todas as [!INCLUDE [Product short](includes/product-short.md)] versões (anteriormente conhecida como proteção avançada contra ameaças do Azure, também conhecidas como Azure ATP) até a versão 2,55 (e incluindo). Para atualizações recentes da [!INCLUDE [Product short](includes/product-short.md)] versão (2,56 e mais recente), consulte [ [!INCLUDE [Product short](includes/product-short.md)] novidades](whats-new.md).
 

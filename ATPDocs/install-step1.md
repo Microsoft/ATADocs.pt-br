@@ -3,12 +3,12 @@ title: Guia de início rápido – Criar sua instância do Microsoft Defender pa
 description: Guia de início rápido para a criação da instância da sua implantação do Microsoft Defender para Identidade, que é a primeira etapa para instalar o Defender para Identidade.
 ms.date: 10/26/2020
 ms.topic: quickstart
-ms.openlocfilehash: 299edc14a51f92efa94969a3f442b2e1ca5d8e2b
-ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
+ms.openlocfilehash: 9860a8893ac16448b92961df9cf25801f68786b6
+ms.sourcegitcommit: af41733212c2102c223fed8c8602a21a1f667080
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96543205"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100515352"
 ---
 # <a name="quickstart-create-your-product-long-instance"></a>Início Rápido: Criar sua instância do [!INCLUDE [Product long](includes/product-long.md)]
 
@@ -19,7 +19,7 @@ Neste guia de início rápido, você criará sua instância do [!INCLUDE [Produc
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
-- Uma [licença do [!INCLUDE [Product long](includes/product-long.md)]](technical-faq.md#licensing-and-privacy).
+- Uma [licença do [!INCLUDE [Product long](includes/product-long.md)]](technical-faq.yml#licensing-and-privacy).
 - Você precisará ser um [administrador global ou um administrador da segurança no locatário](/azure/active-directory/users-groups-roles/directory-assign-admin-roles#available-roles) para acessar o portal do [!INCLUDE [Product short](includes/product-short.md)].
 - Examine o artigo [Arquitetura do [!INCLUDE [Product short](includes/product-short.md)]](architecture.md).
 - Examine o artigo [Pré-requisitos do [!INCLUDE [Product short](includes/product-short.md)]](prerequisites.md).

@@ -3,14 +3,14 @@ title: Suporte do Microsoft defender para identidade
 description: Descreve o processo para obter ajuda de suporte para o Microsoft defender para identidade.
 ms.date: 12/20/2020
 ms.topic: conceptual
-ms.openlocfilehash: 80b863208c560cc0bfe74800efe1a220ee190fc3
-ms.sourcegitcommit: af41733212c2102c223fed8c8602a21a1f667080
+ms.openlocfilehash: 5a4364bf28b56159937e2564449eb7e0b4d6150d
+ms.sourcegitcommit: a892419a5cb95412e4643c35a9a72092421628ec
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2021
-ms.locfileid: "100515318"
+ms.lasthandoff: 02/16/2021
+ms.locfileid: "100533387"
 ---
-# <a name="product-long-information-and-support"></a>[!INCLUDE [Product long](includes/product-long.md)] informações e suporte
+# <a name="microsoft-defender-for-identity-information-and-support"></a>Microsoft defender para informações de identidade e suporte
 
 Use os recursos a seguir para ajudá-lo a aprender, implantar e dar suporte à [!INCLUDE [Product long](includes/product-long.md)] sua organização.
 

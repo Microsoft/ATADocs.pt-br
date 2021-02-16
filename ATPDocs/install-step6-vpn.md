@@ -3,12 +3,12 @@ title: Instalar a integração de VPN do Microsoft defender para identidade
 description: Colete informações de contabilidade do Microsoft defender para identidade integrando uma VPN.
 ms.date: 12/23/2020
 ms.topic: how-to
-ms.openlocfilehash: 80b4bdf29db05d0c2f42887dacff223b3067ba49
-ms.sourcegitcommit: e2b4ad613aa171f604ae526f0cba05fe79f4a8cb
+ms.openlocfilehash: 3b86ee864e08998fd532b39a30d566b83e928edf
+ms.sourcegitcommit: a892419a5cb95412e4643c35a9a72092421628ec
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/23/2020
-ms.locfileid: "97753398"
+ms.lasthandoff: 02/16/2021
+ms.locfileid: "100533997"
 ---
 # <a name="integrate-vpn"></a>Integrar a VPN
 
@@ -50,7 +50,7 @@ Execute as seguintes etapas em seu servidor RRAS.
 
     ![Configuração de VPN](media/vpn-set-accounting.png)
 
-### <a name="configure-vpn-in-product-short"></a>Configurar VPN no [!INCLUDE [Product short](includes/product-short.md)]
+### <a name="configure-vpn-in-defender-for-identity"></a>Configurar VPN no defender para identidade
 
 [!INCLUDE [Product short](includes/product-short.md)] coleta dados de VPN que ajudam a criar um perfil dos locais a partir dos quais os computadores se conectam à rede e conseguirem detectar conexões VPN suspeitas.
 

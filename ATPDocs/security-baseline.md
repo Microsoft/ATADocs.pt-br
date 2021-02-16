@@ -7,12 +7,12 @@ ms.topic: conceptual
 ms.date: 12/03/2020
 ms.author: mbaldwin
 ms.custom: subject-security-benchmark
-ms.openlocfilehash: 595a532bb02aeda6f82005a28833f71a3d074a18
-ms.sourcegitcommit: 2eb4078aba5085a12acc37c2a8d9aa48bd6dcb02
+ms.openlocfilehash: 8615019a2317a552b548a7b9026a75f9936c9237
+ms.sourcegitcommit: a892419a5cb95412e4643c35a9a72092421628ec
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/12/2021
-ms.locfileid: "98114251"
+ms.lasthandoff: 02/16/2021
+ms.locfileid: "100534337"
 ---
 # <a name="azure-security-baseline-for-microsoft-defender-for-identity"></a>Linha de base de segurança do Azure para Microsoft defender para identidade
 
@@ -28,7 +28,7 @@ Para ver como o Microsoft defender for Identity é completamente mapeado para o 
 
 **Diretrizes**: Use as marcas de serviço de rede virtual do Azure para definir os controles de acesso à rede nos grupos de segurança de rede ou no firewall do Azure configurados para seus recursos de identidade. Você pode usar marcas de serviço em vez de endereços IP específicos ao criar regras de segurança. Ao especificar o nome da marca de serviço (por exemplo: "AzureAdvancedThreatProtection") no campo de origem ou destino apropriado de uma regra, você pode permitir ou negar o tráfego para o serviço correspondente. A Microsoft gerencia os prefixos de endereço englobados pela marca de serviço e atualiza automaticamente a marca de serviço em caso de alteração de endereços.
 
-- [Habilitar o acesso ao defender para URLs de serviço de identidade no servidor proxy](configure-proxy.md#enable-access-to--service-urls-in-the-proxy-server)
+- [Habilitar o acesso ao defender para URLs de serviço de identidade no servidor proxy](configure-proxy.md#enable-access-to-defender-for-identity-service-urls-in-the-proxy-server)
 
 - [Entender e usar marcas de serviço](/azure/virtual-network/service-tags-overview)
 
@@ -47,7 +47,7 @@ Para ver como o Microsoft defender for Identity é completamente mapeado para o 
 - Microsoft Cloud recursos, como o portal do Azure, o armazenamento do Azure, a máquina virtual do Azure (Linux e Windows), Azure Key Vault, PaaS e aplicativos SaaS.
 - Os recursos da sua organização, como os aplicativos no Azure ou os recursos de rede corporativa.
 
-A proteção do Azure AD deve ser uma prioridade alta na prática de segurança de nuvem da sua organização. O Azure AD fornece uma classificação de segurança de identidade para ajudar você a avaliar a postura de segurança de identidade em relação às recomendações de melhores práticas da Microsoft. Use a classificação para medir o alinhamento da sua configuração com as recomendações de melhores práticas e fazer aprimoramentos na sua postura de segurança.
+Proteger o Azure AD deve ser uma prioridade alta na prática de segurança de nuvem de sua organização. O Azure AD fornece uma pontuação segura de identidade para ajudá-lo a avaliar a postura de segurança de identidade em relação às recomendações de práticas recomendadas da Microsoft. Use a classificação para medir o alinhamento da sua configuração com as recomendações de melhores práticas e fazer aprimoramentos na sua postura de segurança.
 
 Observação: o Azure AD dá suporte à identidade externa que permite aos usuários sem um conta Microsoft entrar em seus aplicativos e recursos com sua identidade externa.
 
@@ -229,7 +229,7 @@ Encaminhe todos os logs do defender para identidade para o SIEM, que pode ser us
 
 - Usuários sinalizados para riscos - um usuário arriscado é um indicador de uma conta de usuário que pode ter sido comprometida.
 
-A central de segurança do Azure também pode alertar sobre determinadas atividades suspeitas, como um número excessivo de tentativas de autenticação com falha, contas preteridas na assinatura. Além do monitoramento básico de higiene de segurança, o módulo de Proteção contra Ameaças da Central de Segurança do Azure também pode coletar alertas de segurança mais aprofundados de recursos de computação individuais do Azure (máquinas virtuais, contêineres, serviço de aplicativo), recursos de dados (BD SQL e armazenamento) e camadas de serviço do Azure. Essa funcionalidade permite que você veja anomalias de conta dentro dos recursos individuais.
+A central de segurança do Azure também pode alertar sobre determinadas atividades suspeitas, como um número excessivo de tentativas de autenticação com falha, contas preteridas na assinatura. Além do monitoramento básico de higiene de segurança, o módulo de proteção contra ameaças da central de segurança do Azure também pode coletar alertas de segurança mais aprofundados de recursos de computação individuais do Azure (máquinas virtuais, contêineres, serviço de aplicativo), recursos de dados (banco de dados SQL e armazenamento) e camadas de serviço do Azure. Essa funcionalidade permite que você veja anomalias de conta dentro dos recursos individuais.
 
 - [Relatórios de atividades de auditoria no Azure Active Directory](/azure/active-directory/reports-monitoring/concept-audit-logs) 
 
@@ -287,7 +287,7 @@ O defender for Identity oferece para encaminhar todos os logs relacionados à se
 
 ### <a name="ir-3-detection-and-analysis--create-incidents-based-on-high-quality-alerts"></a>IR-3: detecção e análise – criar incidentes com base em alertas de alta qualidade
 
-**Diretrizes**: verifique se você tem um processo para criar alertas de alta qualidade e medir a qualidade de alertas. Isso permite que você aprenda as lições dos últimos incidentes e priorize os alertas para os analistas, de modo a não perderem tempo em falsos positivos. 
+**Diretrizes**: verifique se você tem um processo para criar alertas de alta qualidade e medir a qualidade de alertas. Isso permite que você aprenda as lições dos últimos incidentes e Priorize os alertas para analistas, para que eles não percam tempo em falsos positivos. 
 
 Alertas de alta qualidade podem ser criados com base na experiência com incidentes passados, fontes de comunidade validadas e ferramentas projetadas para gerar e limpar alertas, focando e correlacionando várias fontes de sinal. 
 
@@ -392,21 +392,21 @@ Siga as Regras de Participação no Teste de Penetração do Microsoft Cloud par
 
 Essa estratégia deve incluir diretrizes documentadas, políticas e padrões para os seguintes elementos: 
 
--   Padrão de classificação de dados de acordo com os riscos de negócios
+-  Padrão de classificação de dados de acordo com os riscos de negócios
 
--   Visibilidade da organização de segurança dos riscos e do inventário de ativos 
+-  Visibilidade da organização de segurança dos riscos e do inventário de ativos 
 
--   Aprovação da organização de segurança dos serviços do Azure para uso 
+-  Aprovação da organização de segurança dos serviços do Azure para uso 
 
--   Segurança de ativos por meio do ciclo de vida
+-  Segurança de ativos por meio do ciclo de vida
 
--   Estratégia de controle de acesso obrigatório de acordo com a classificação de dados organizacionais
+-  Estratégia de controle de acesso obrigatório de acordo com a classificação de dados organizacionais
 
--   Uso de funcionalidades de proteção de dados de terceiros e nativas do Azure
+-  Uso de funcionalidades de proteção de dados de terceiros e nativas do Azure
 
--   Requisitos de criptografia de dados para casos de uso em trânsito e em repouso
+-  Requisitos de criptografia de dados para casos de uso em trânsito e em repouso
 
--   Padrões de criptografia apropriados
+-  Padrões de criptografia apropriados
 
 Para saber mais, consulte as referências a seguir:
 - [Recomendação da arquitetura de segurança do Azure – Armazenamento, dados e criptografia](/azure/architecture/framework/security/storage-data-encryption?amp;bc=%2fsecurity%2fcompass%2fbreadcrumb%2ftoc.json&toc=%2fsecurity%2fcompass%2ftoc.json)
@@ -467,21 +467,21 @@ Certifique-se de que a estratégia de segmentação seja implementada consistent
 
 ### <a name="gs-5-define-network-security-strategy"></a>GS-5: definir uma estratégia de segurança de rede
 
-**Diretriz**: estabeleça uma abordagem de segurança de rede do Azure como parte da estratégia geral de controle de acesso de segurança da sua organização.  
+**Diretrizes**: estabeleça uma abordagem de segurança de rede do Azure como parte da estratégia geral de controle de acesso de segurança da sua organização.  
 
 Essa estratégia deve incluir diretrizes documentadas, políticas e padrões para os seguintes elementos: 
 
--   Gerenciamento de rede centralizado e responsabilidade pela segurança
+-  Gerenciamento de rede centralizado e responsabilidade pela segurança
 
--   Modelo de segmentação de rede virtual alinhado com a estratégia de segmentação corporativa
+-  Modelo de segmentação de rede virtual alinhado com a estratégia de segmentação corporativa
 
--   Estratégia de correção em diferentes cenários de ameaças e ataques
+-  Estratégia de correção em diferentes cenários de ameaças e ataques
 
--   Estratégia de entrada e saída e borda da Internet
+-  Estratégia de entrada e saída e borda da Internet
 
--   Estratégia de interconectividade local e de nuvem híbrida
+-  Estratégia de interconectividade local e de nuvem híbrida
 
--   Artefatos de segurança de rede atualizados (por exemplo, diagramas de rede, arquitetura de rede de referência)
+-  Artefatos de segurança de rede atualizados (por exemplo, diagramas de rede, arquitetura de rede de referência)
 
 Para saber mais, consulte as referências a seguir:
 - [Melhor prática de segurança do Azure 11 – Arquitetura: uma estratégia de segurança unificada](/azure/cloud-adoption-framework/security/security-top-10#11-architecture-establish-a-single-unified-security-strategy)
@@ -498,19 +498,19 @@ Para saber mais, consulte as referências a seguir:
 
 ### <a name="gs-6-define-identity-and-privileged-access-strategy"></a>GS-6: definir uma estratégia de identidade e acesso privilegiado
 
-**Diretriz**: estabeleça abordagens de identidade e acesso privilegiado do Azure como parte da estratégia geral de controle de acesso de segurança da sua organização.  
+**Orientação**: estabeleça uma identidade do Azure e abordagens de acesso privilegiado como parte da estratégia geral de controle de acesso de segurança da sua organização.  
 
 Essa estratégia deve incluir diretrizes documentadas, políticas e padrões para os seguintes elementos: 
 
--   Um sistema de identidade e autenticação centralizado e a interconectividade dele com outros sistemas de identidade internos e externos
+-  Um sistema de identidade e autenticação centralizado e a interconectividade dele com outros sistemas de identidade internos e externos
 
--   Métodos de autenticação forte em diferentes casos de uso e condições
+-  Métodos de autenticação forte em diferentes casos de uso e condições
 
--   Proteção de usuários altamente privilegiados
+-  Proteção de usuários altamente privilegiados
 
--   Monitoramento e tratamento de atividades de usuário de anomalias  
+-  Monitoramento e tratamento de atividades de usuário de anomalias  
 
--   Processo de revisão de acesso e reconciliação e identidade do usuário
+-  Processo de revisão de acesso e reconciliação e identidade do usuário
 
 Para saber mais, consulte as referências a seguir:
 
@@ -532,19 +532,19 @@ Para saber mais, consulte as referências a seguir:
 
 Essa estratégia deve incluir diretrizes documentadas, políticas e padrões para os seguintes elementos: 
 
--   A função e as responsabilidades da organização de SecOps (operações de segurança) 
+-  A função e as responsabilidades da organização de operações de segurança (SecOps) 
 
--   Um processo de resposta a incidentes bem definido, alinhando-se ao NIST ou a outra estrutura do setor 
+-  Um processo de resposta a incidentes bem definido, alinhando-se ao NIST ou a outra estrutura do setor 
 
--   Captura e retenção de log para dar suporte às necessidades de conformidade, detecção de ameaças e resposta a incidentes
+-  Captura e retenção de log para dar suporte às necessidades de conformidade, detecção de ameaças e resposta a incidentes
 
--   Visibilidade centralizada das ameaças e informações de correlação sobre elas por meio do SIEM, de funcionalidades nativas do Azure e de outras fontes 
+-  Visibilidade centralizada das ameaças e informações de correlação sobre elas por meio do SIEM, de funcionalidades nativas do Azure e de outras fontes 
 
--   Plano de comunicação e notificação com seus clientes, fornecedores e partes públicas interessadas
+-  Plano de comunicação e notificação com seus clientes, fornecedores e partes públicas interessadas
 
--   Uso de plataformas nativas e de terceiros do Azure para tratamento de incidentes, como log e detecção de ameaças, análise forense, além de correção e erradicação de ataques
+-  Uso de plataformas nativas e de terceiros do Azure para tratamento de incidentes, como log e detecção de ameaças, análise forense, além de correção e erradicação de ataques
 
--   Processos para tratamento de incidentes e atividades pós-incidente, como lições aprendidas e retenção de evidências
+-  Processos para tratamento de incidentes e atividades pós-incidente, como lições aprendidas e retenção de evidências
 
 Para saber mais, consulte as referências a seguir:
 

@@ -3,26 +3,26 @@ title: Monitorar a integridade e os eventos do sistema Microsoft defender for Id
 description: Use o centro de integridade para verificar como o Microsoft defender for Identity Service está funcionando e seja alertado sobre possíveis problemas e exibir eventos do sistema no Visualizador de eventos.
 ms.date: 10/26/2020
 ms.topic: how-to
-ms.openlocfilehash: e2a4c757682194013d34bddd6581402b5fe60920
-ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
+ms.openlocfilehash: ac03020c559a860fded89a496bc927da06fce3d9
+ms.sourcegitcommit: a892419a5cb95412e4643c35a9a72092421628ec
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96544004"
+ms.lasthandoff: 02/16/2021
+ms.locfileid: "100534286"
 ---
-# <a name="work-with-product-long-health-and-events"></a>Trabalhar com [!INCLUDE [Product long](includes/product-long.md)] integridade e eventos
+# <a name="work-with-microsoft-defender-for-identity-health-and-events"></a>Trabalhar com o Microsoft defender para eventos e integridade de identidade
 
-## <a name="product-long-health-center"></a>[!INCLUDE [Product long](includes/product-long.md)] Centro de integridade
+## <a name="microsoft-defender-for-identity-health-center"></a>Centro de integridade do Microsoft defender para identidade
 
 O [!INCLUDE [Product long](includes/product-long.md)] centro de integridade permite que você saiba como sua [!INCLUDE [Product short](includes/product-short.md)] instância está sendo executada e alerta quando há problemas.
 
-## <a name="working-with-the-product-short-health-center"></a>Trabalhando com o [!INCLUDE [Product short](includes/product-short.md)] centro de integridade
+## <a name="working-with-the-defender-for-identity-health-center"></a>Trabalhando com o defender para o centro de integridade de identidade
 
 O [!INCLUDE [Product short](includes/product-short.md)] centro de integridade permite que você saiba que há um problema gerando um alerta (um ponto vermelho) acima do ícone da central de integridade na barra de navegação.
 
 ![[! INCLUIR [produto curto] (inclui/produto-curto. MD)] barra de ferramentas de ponto vermelho do centro de integridade](media/health-bar.png)
 
-### <a name="managing-product-short-health"></a>Gerenciando a [!INCLUDE [Product short](includes/product-short.md)] integridade
+### <a name="managing-defender-for-identity-health"></a>Gerenciando o defender para integridade de identidade
 
 Para verificar a integridade geral da sua [!INCLUDE [Product short](includes/product-short.md)] instância, selecione **Health** ![ [! INCLUIR [produto curto] (inclui/produto-curto. MD)] ícone do centro de integridade](media/red-dot.png)
 

@@ -3,14 +3,14 @@ title: Suporte a várias florestas do Microsoft defender para identidade
 description: Suporte para várias florestas Active Directory no Microsoft defender para identidade.
 ms.date: 10/26/2020
 ms.topic: conceptual
-ms.openlocfilehash: 05cf574aa56f379cb636036c382cc87fb289990e
-ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
+ms.openlocfilehash: c0a5c135d73ecbcdd23b6ed2ea8a12a212a0f23d
+ms.sourcegitcommit: a892419a5cb95412e4643c35a9a72092421628ec
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96544548"
+ms.lasthandoff: 02/16/2021
+ms.locfileid: "100533657"
 ---
-# <a name="product-long-multi-forest-support"></a>[!INCLUDE [Product long](includes/product-long.md)] suporte a várias florestas
+# <a name="microsoft-defender-for-identity-multi-forest-support"></a>Suporte a várias florestas do Microsoft defender para identidade
 
 ## <a name="multi-forest-support-set-up"></a>Configuração de suporte a várias florestas
 
@@ -24,7 +24,7 @@ A capacidade de dar suporte a várias florestas do Active Directory permite:
 - Melhor detecção e redução de falsos positivos, fornecendo integração avançada do Active Directory e a resolução de conta.
 - Maior controle e implantação facilitada. Alertas de integridade e relatórios aprimorados para cobertura entre organizações quando os controladores de domínio são todos monitorados de um único [!INCLUDE [Product short](includes/product-short.md)] console.
 
-## <a name="product-short-detection-activity-across-multiple-forests"></a>[!INCLUDE [Product short](includes/product-short.md)] atividade de detecção em várias florestas
+## <a name="defender-for-identity-detection-activity-across-multiple-forests"></a>Defender para atividade de detecção de identidades em várias florestas
 
 Para detectar atividades entre florestas, os [!INCLUDE [Product short](includes/product-short.md)] sensores consultam controladores de domínio em florestas remotas para criar perfis para todas as entidades envolvidas, (incluindo usuários e computadores de florestas remotas).
 

@@ -3,14 +3,14 @@ title: Planejando sua implantação do Microsoft defender para identidade
 description: Ajuda a planejar sua implantação e a decidir quantos Microsoft defender for Identity Servers serão necessários para dar suporte à sua rede
 ms.date: 10/26/2020
 ms.topic: how-to
-ms.openlocfilehash: a5db3865b75e79a7b5f69dd5223e27497cc7ae18
-ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
+ms.openlocfilehash: 8266742f2766977685d465b3634c7a71a51af682
+ms.sourcegitcommit: a892419a5cb95412e4643c35a9a72092421628ec
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96544225"
+ms.lasthandoff: 02/16/2021
+ms.locfileid: "100533885"
 ---
-# <a name="plan-capacity-for-product-long"></a>Planejar capacidade para [!INCLUDE [Product long](includes/product-long.md)]
+# <a name="plan-capacity-for-microsoft-defender-for-identity"></a>Planejar a capacidade do Microsoft defender para identidade
 
 Neste guia, você determina a quantidade de [!INCLUDE [Product long](includes/product-long.md)] sensores de que precisa.
 
@@ -32,7 +32,9 @@ A maneira recomendada e mais simples de determinar a capacidade para sua [!INCLU
 1. Localize o campo **Pacotes ocupados/s**, na tabela do sensor do ATP do Azure, no arquivo de resultados do Excel, e anote isso.
 1. Corresponda o campo **pacotes ocupados/s** ao campo **pacotes por segundo** na seção [ [!INCLUDE [Product short](includes/product-short.md)] tabela do sensor](#sizing) deste artigo. Use os campos para determinar a capacidade de memória e CPU que será usada pelo sensor.
 
-## <a name="product-short-sensor-sizing"></a><a name="sizing"></a>[!INCLUDE [Product short](includes/product-short.md)]dimensionamento do sensor
+<a name="sizing"></a>
+
+## <a name="defender-for-identity-sensor-sizing"></a>Tamanho do sensor do defender for Identity
 
 Um [!INCLUDE [Product short](includes/product-short.md)] sensor pode dar suporte ao monitoramento de um controlador de domínio com base na quantidade de tráfego de rede que o controlador de domínio gera. A tabela a seguir representa uma estimativa. O valor final que o sensor analisa depende da quantidade de tráfego e da distribuição desse tráfego.
 
@@ -73,7 +75,9 @@ Recomendamos não trabalhar com núcleos hyper-threaded. Trabalhar com núcleos 
 |VMWare|Verifique se a quantidade de memória configurada e a memória reservada são iguais ou selecione a seguinte opção na configuração da VM – **Reservar toda a memória de convidado (Tudo bloqueado)** .|
 |Outro host de virtualização|Confira a documentação fornecida pelo fornecedor sobre como garantir que a memória seja totalmente alocada para a VM em todos os momentos. |
 
-## <a name="domain-controller-traffic-estimation"></a><a name="manual-sizing"></a> Estimativa de tráfego do controlador de domínio
+<a name="manual-sizing"></a>
+
+## <a name="domain-controller-traffic-estimation"></a>Estimativa de tráfego do controlador de domínio
 
 Se, por alguma razão, você não puder usar a [!INCLUDE [Product short](includes/product-short.md)] ferramenta de dimensionamento, reúna manualmente as informações do contador de pacotes/s de todos os controladores de domínio. Reúna as informações durante 24 horas com um pequeno intervalo de coleta de aproximadamente cinco segundos. Em seguida, calcule a média diária e a média mais ocupada do período (15 minutos) de cada controlador de domínio. As seções a seguir apresentam instruções de como coletar o contador de pacotes/s de um controlador de domínio.
 

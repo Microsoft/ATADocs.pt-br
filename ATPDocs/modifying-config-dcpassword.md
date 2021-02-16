@@ -3,14 +3,14 @@ title: Alterar o Microsoft defender para configuração de identidade-senha de c
 description: Descreve como alterar a senha de conectividade de domínio no sensor autônomo do Microsoft defender para identidade.
 ms.date: 10/26/2020
 ms.topic: how-to
-ms.openlocfilehash: 294786515c45136be77447b9ad1e9ddf5e2e5e95
-ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
+ms.openlocfilehash: 2a82226a4eda3a7db762df4e04728848f7e1958e
+ms.sourcegitcommit: a892419a5cb95412e4643c35a9a72092421628ec
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96544497"
+ms.lasthandoff: 02/16/2021
+ms.locfileid: "100533810"
 ---
-# <a name="change-product-long-portal-configuration---domain-connectivity-password"></a>Alterar [!INCLUDE [Product long](includes/product-long.md)] configuração do portal-senha de conectividade do domínio
+# <a name="change-microsoft-defender-for-identity-portal-configuration---domain-connectivity-password"></a>Alterar a configuração do Microsoft defender para Portal de identidade-senha de conectividade do domínio
 
 ## <a name="change-the-domain-connectivity-password"></a>Alterar a senha de conectividade do domínio
 
