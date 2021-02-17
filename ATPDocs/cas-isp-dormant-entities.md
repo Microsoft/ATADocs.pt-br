@@ -3,12 +3,12 @@ title: Avaliações de segurança de entidades inativas do Microsoft defender fo
 description: Este artigo fornece uma visão geral das entidades inativas do Microsoft defender for Identity inativos em grupos confidenciais relatório de avaliação de postura de segurança de identidade.
 ms.date: 10/26/2020
 ms.topic: how-to
-ms.openlocfilehash: e96b7af917f898c7ef9f701b7e7ffda1cf001598
-ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
+ms.openlocfilehash: 44d7cc7c7152d95230440eeef45ee42a9e11c55d
+ms.sourcegitcommit: f92dca4dc3d8a25b1a06f68ac7a9f8318105bcd8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96544191"
+ms.lasthandoff: 02/17/2021
+ms.locfileid: "100630723"
 ---
 # <a name="security-assessment-dormant-entities-in-sensitive-groups"></a>Avaliação de segurança: entidades inativas em grupos **confidenciais**
 
@@ -16,7 +16,7 @@ ms.locfileid: "96544191"
 
 [!INCLUDE [Product long](includes/product-long.md)] descobre se usuários específicos são **confidenciais** junto com o fornecimento de atributos que se encontram inativos, desabilitados ou expirados.
 
-No entanto, as contas **confidenciais** também poderão se tornar *inativas* se não forem usadas por um período de 180 dias. As [entidades inativas](sensitive-accounts.md) são oportunidades para agentes mal-intencionados terem acesso confidencial à sua organização.
+No entanto, as contas **confidenciais** também poderão se tornar *inativas* se não forem usadas por um período de 180 dias. As [entidades inativas](manage-sensitive-honeytoken-accounts.md) são oportunidades para agentes mal-intencionados terem acesso confidencial à sua organização.
 
 ## <a name="what-risk-do-dormant-entities-create-in-sensitive-groups"></a>Qual risco as entidades inativas criam nos grupos **confidenciais**?
 

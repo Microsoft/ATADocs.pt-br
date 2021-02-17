@@ -3,14 +3,14 @@ title: Visão geral do tutorial do laboratório de alerta de segurança do Micro
 description: Esta visão geral do tutorial descreve as quatro partes do laboratório de alerta de segurança do Microsoft Defender para Identidade para simular ameaças que serão detectadas por esse serviço.
 ms.date: 10/26/2020
 ms.topic: tutorial
-ms.openlocfilehash: 5d4de0173019b318fda8a5c2ee80db72c832ab7b
-ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
+ms.openlocfilehash: 61602a6bb7d3037d2278c2f492395ed058e8910b
+ms.sourcegitcommit: a892419a5cb95412e4643c35a9a72092421628ec
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96544429"
+ms.lasthandoff: 02/16/2021
+ms.locfileid: "100533555"
 ---
-# <a name="tutorial-overview-product-long-security-alert-lab"></a>Visão geral do tutorial: laboratório de alerta de segurança do [!INCLUDE [Product long](includes/product-long.md)]
+# <a name="tutorial-overview-microsoft-defender-for-identity-security-alert-lab"></a>Visão geral do tutorial: Laboratório de alerta de segurança do Microsoft Defender para Identidade
 
 A finalidade do tutorial do laboratório de alerta de segurança do [!INCLUDE [Product long](includes/product-long.md)] é ilustrar os recursos do **[!INCLUDE [Product short](includes/product-short.md)]** para identificação e detecção de atividades suspeitas e possíveis ataques contra sua rede. Este tutorial de quatro partes explica como instalar e configurar um ambiente de trabalho para testar algumas detecções *discretas* do [!INCLUDE [Product short](includes/product-short.md)]. Este laboratório se concentra nos recursos baseados em *assinatura* do [!INCLUDE [Product short](includes/product-short.md)]. O laboratório não inclui aprendizado de máquina avançado e detecções comportamentais baseadas no usuário ou em entidade, pois essas detecções exigem um período de aprendizado de até 30 dias com tráfego de rede real.
 

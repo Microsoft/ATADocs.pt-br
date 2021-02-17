@@ -3,18 +3,18 @@ title: Referência de log de SIEM do Microsoft Defender para Identidade
 description: Fornece exemplos de logs de atividades suspeitas enviados do Microsoft Defender para Identidade para o SIEM.
 ms.date: 10/26/2020
 ms.topic: conceptual
-ms.openlocfilehash: f5be050f11fc41e19c37410060acb825642369e3
-ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
+ms.openlocfilehash: fd2c2547e00f1bf2542ab0fd42a14854d3d25287
+ms.sourcegitcommit: a892419a5cb95412e4643c35a9a72092421628ec
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96544106"
+ms.lasthandoff: 02/16/2021
+ms.locfileid: "100534184"
 ---
-# <a name="product-long-siem-log-reference"></a>Referência de log de SIEM do [!INCLUDE [Product long](includes/product-long.md)]
+# <a name="microsoft-defender-for-identity-siem-log-reference"></a>Referência de log de SIEM do Microsoft Defender para Identidade
 
 O [!INCLUDE [Product short](includes/product-short.md)] pode encaminhar eventos de alerta de integridade e de segurança para o SIEM. Os alertas e eventos estão no formato CEF. Este artigo de referência fornece exemplos dos logs enviados ao SIEM.
 
-## <a name="sample-product-short-security-alerts-in-cef-format"></a>Exemplo de alertas de segurança do [!INCLUDE [Product short](includes/product-short.md)] em formato CEF
+## <a name="sample-defender-for-identity-security-alerts-in-cef-format"></a>Exemplos de alertas de segurança do Defender para Identidade no formato CEF
 
 Os campos a seguir e seus valores são encaminhados para o SIEM:
 

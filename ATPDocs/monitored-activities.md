@@ -3,14 +3,14 @@ title: Atividades de domínio monitoradas pelo Microsoft Defender para Identidad
 description: Descreve cada tipo de atividade monitorada pelo Microsoft Defender para Identidade
 ms.date: 12/24/2020
 ms.topic: conceptual
-ms.openlocfilehash: 5ca3a3681eb15b1b2a8935942daaf7a39f9c15c3
-ms.sourcegitcommit: 78fb0cead845c7098c780f4daa624a741e350ec2
+ms.openlocfilehash: 28115bc246f6128aeb2bc408a1107e34796c039a
+ms.sourcegitcommit: a892419a5cb95412e4643c35a9a72092421628ec
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/24/2020
-ms.locfileid: "97763618"
+ms.lasthandoff: 02/16/2021
+ms.locfileid: "100533742"
 ---
-# <a name="product-long-monitored-activities"></a>Atividades monitoradas pelo [!INCLUDE [Product long](includes/product-long.md)]
+# <a name="microsoft-defender-for-identity-monitored-activities"></a>Atividades monitoradas do Microsoft Defender para Identidade
 
 > [!NOTE]
 > Os recursos do [!INCLUDE [Product long](includes/product-long.md)] explicados nesta página também podem ser acessados usando o novo [portal](https://portal.cloudappsecurity.com).

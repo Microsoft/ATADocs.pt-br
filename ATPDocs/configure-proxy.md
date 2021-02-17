@@ -3,14 +3,14 @@ title: Configurar seu proxy ou firewall para habilitar a comunicação do Micros
 description: Descreve como configurar seu firewall ou proxy para permitir a comunicação entre o serviço de nuvem do Microsoft Defender para Identidade e os sensores dele
 ms.date: 10/26/2020
 ms.topic: how-to
-ms.openlocfilehash: 4606ab39457cbf1210974cb9f150d7410051c361
-ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
+ms.openlocfilehash: ea3a16db97a4ac039509d2fe295ba803cb67de35
+ms.sourcegitcommit: a892419a5cb95412e4643c35a9a72092421628ec
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96543426"
+ms.lasthandoff: 02/16/2021
+ms.locfileid: "100534150"
 ---
-# <a name="configure-endpoint-proxy-and-internet-connectivity-settings-for-your-product-long-sensor"></a>Configurar o proxy do ponto de extremidade e configurações de conectividade com a Internet para o sensor do [!INCLUDE [Product long](includes/product-long.md)]
+# <a name="configure-endpoint-proxy-and-internet-connectivity-settings-for-your-microsoft-defender-for-identity-sensor"></a>Configurar o proxy do ponto de extremidade e as definições de conectividade com a Internet para o sensor do Microsoft Defender para Identidade
 
 Cada sensor do [!INCLUDE [Product long](includes/product-long.md)] precisa de conectividade com a Internet para que o serviço de nuvem do [!INCLUDE [Product short](includes/product-short.md)] relate dados de sensor e funcione com êxito. Em algumas organizações, os controladores de domínio não estão diretamente conectados à Internet, mas por meio de uma conexão de proxy Web.
 
@@ -76,7 +76,7 @@ O proxy estático é configurável por meio do Registro. Você deve copiar a con
 
 <a name="enable-access-to-azure-atp-service-urls-in-the-proxy-server"></a>
 
-## <a name="enable-access-to-product-short-service-urls-in-the-proxy-server"></a>Habilitar o acesso a URLs de serviço do [!INCLUDE [Product short](includes/product-short.md)] no servidor proxy
+## <a name="enable-access-to-defender-for-identity-service-urls-in-the-proxy-server"></a>Habilitar o acesso às URLs de serviço do Defender para Identidade no servidor proxy
 
 Para habilitar o acesso ao [!INCLUDE [Product short](includes/product-short.md)], é recomendável permitir o tráfego para as URLs a seguir. As URLs são mapeadas automaticamente para o local do serviço correto da instância do [!INCLUDE [Product short](includes/product-short.md)].
 

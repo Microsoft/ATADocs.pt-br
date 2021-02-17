@@ -3,14 +3,14 @@ title: Entender e usar os caminhos de movimentação lateral com o Microsoft Def
 description: Este artigo descreve os possíveis LMPs (caminhos de movimentação lateral) do Microsoft Defender para Identidade
 ms.date: 10/27/2020
 ms.topic: conceptual
-ms.openlocfilehash: 21d672a6c2220229060189120f1daefacd47416b
-ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
+ms.openlocfilehash: 60fac487690d5ff71eb2df5d6ee52c15c336941e
+ms.sourcegitcommit: a892419a5cb95412e4643c35a9a72092421628ec
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96544531"
+ms.lasthandoff: 02/16/2021
+ms.locfileid: "100533436"
 ---
-# <a name="product-long-lateral-movement-paths-lmps"></a>Caminhos de movimentação lateral (LMPs) do [!INCLUDE [Product long](includes/product-long.md)]
+# <a name="microsoft-defender-for-identity-lateral-movement-paths-lmps"></a>LMPs (caminhos de movimento lateral) do Microsoft Defender para Identidade
 
 > [!NOTE]
 > Os recursos do [!INCLUDE [Product long](includes/product-long.md)] explicados nesta página também podem ser acessados usando o novo [portal](https://portal.cloudappsecurity.com).
@@ -23,7 +23,7 @@ Um componente fundamental para obter insights de segurança do [!INCLUDE [Produc
 
 Os ataques de movimento lateral normalmente são realizados usando uma série de técnicas diferentes. Alguns dos métodos mais populares usados pelos invasores são o roubo de credencial e o Pass-the-Ticket. Em ambos os métodos, contas não confidenciais são usadas pelos invasores para realizar movimentos laterais explorando computadores não confidenciais que compartilham credenciais de logon armazenadas em contas, grupos e computadores com contas confidenciais.
 
-## <a name="where-can-i-find-product-short-lmps"></a>Onde posso encontrar LMPs do [!INCLUDE [Product short](includes/product-short.md)]?
+## <a name="where-can-i-find-defender-for-identity-lmps"></a>Onde encontrar os LMPs do Defender para Identidade?
 
 Cada perfil de computador ou de usuário descoberto pelo [!INCLUDE [Product short](includes/product-short.md)] em um LMP apresenta uma guia **Caminhos de movimentação lateral**. Os computadores e perfis que não apresentam nenhuma guia nunca foram descobertos em um possível LMP.
 

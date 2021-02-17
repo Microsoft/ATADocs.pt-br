@@ -4,12 +4,12 @@ metadata:
   description: Fornece uma lista de perguntas frequentes sobre o Microsoft defender para identidade e as respostas associadas
   ms.date: 10/27/2020
   ms.topic: conceptual
-  ms.openlocfilehash: dfb8184376ea0c98516e28fce64eff6ac8a453d5
-  ms.sourcegitcommit: af41733212c2102c223fed8c8602a21a1f667080
+  ms.openlocfilehash: 67326d1f4ba6291560fc25a21bca298d87bc5a58
+  ms.sourcegitcommit: f92dca4dc3d8a25b1a06f68ac7a9f8318105bcd8
   ms.translationtype: MT
   ms.contentlocale: pt-BR
-  ms.lasthandoff: 02/14/2021
-  ms.locfileid: "100520707"
+  ms.lasthandoff: 02/17/2021
+  ms.locfileid: "100630468"
 title: Perguntas frequentes sobre o Microsoft defender para identidade
 summary: >
   Este artigo fornece uma lista de perguntas frequentes e respostas sobre o Microsoft defender for Identity dividido nas seguintes categorias:
@@ -154,7 +154,7 @@ sections:
       Isso ocorre quando uma conta é membro de grupos designados como confidenciais (por exemplo: "Administradores do Domínio").
 
 
-      Para entender por que uma conta é confidencial, você pode examinar sua associação de grupo para entender a quais grupos confidenciais ela pertence (o grupo ao qual ela pertence também pode ser confidencial devido a outro grupo, portanto, o mesmo processo deve ser executado até que você localize o grupo confidencial de nível mais alto). Você também pode [marcar contas como confidenciais](sensitive-accounts.md) manualmente.
+      Para entender por que uma conta é confidencial, você pode examinar sua associação de grupo para entender a quais grupos confidenciais ela pertence (o grupo ao qual ela pertence também pode ser confidencial devido a outro grupo, portanto, o mesmo processo deve ser executado até que você localize o grupo confidencial de nível mais alto). Você também pode [marcar contas como confidenciais](manage-sensitive-honeytoken-accounts.md) manualmente.
   - question: Você precisa escrever suas próprias regras e criar um limite/linha de base?
     answer: >
       Com o defender for Identity, não há necessidade de criar regras, limites ou linhas de base e, em seguida, ajuste. O defender for Identity analisa os comportamentos entre usuários, dispositivos e recursos, bem como sua relação com o outro, e pode detectar atividades suspeitas e ataques conhecidos rapidamente. Três semanas após a implantação, o defender for Identity começa a detectar atividades suspeitas comportamentais. Por outro lado, o defender for Identity começará a detectar ataques mal-intencionados e problemas de segurança conhecidos imediatamente após a implantação.

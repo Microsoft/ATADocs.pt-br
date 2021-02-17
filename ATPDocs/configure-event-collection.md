@@ -3,12 +3,12 @@ title: Instalar o Microsoft Defender para Identidade
 description: Nesta etapa da instalação do Microsoft Defender para Identidade, você configura as fontes de dados.
 ms.date: 10/26/2020
 ms.topic: how-to
-ms.openlocfilehash: 6de6b52af73c22387ad16c28e4a0b0e84c888847
-ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
+ms.openlocfilehash: 71c762ed8791f01f3cf2c89a3b612f937a618b84
+ms.sourcegitcommit: a892419a5cb95412e4643c35a9a72092421628ec
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96544055"
+ms.lasthandoff: 02/16/2021
+ms.locfileid: "100534235"
 ---
 # <a name="configure-event-collection"></a>Configurar coleta de eventos
 
@@ -50,7 +50,7 @@ Consulte a documentação de produto do seu servidor SIEM/Syslog para saber como
 > [!NOTE]
 > Caso não use um servidor Syslog/SIEM, você pode configurar os controladores de domínio do Windows para encaminhar todos os eventos necessários a serem coletados e analisados pelo [!INCLUDE [Product short](includes/product-short.md)].
 
-## <a name="configuring-the-product-short-sensor-to-listen-for-siem-events"></a>Configurar o sensor do [!INCLUDE [Product short](includes/product-short.md)] para escutar eventos de SIEM
+## <a name="configuring-the-defender-for-identity-sensor-to-listen-for-siem-events"></a>Configurar o sensor do Defender para Identidade para escutar eventos de SIEM
 
 - Configure o servidor de Syslog ou SIEM para encaminhar todos os eventos necessários para o endereço IP de um dos sensores autônomos do [!INCLUDE [Product short](includes/product-short.md)]. Para saber mais sobre como configurar o SIEM, confira a ajuda online do SIEM ou opções de suporte técnico para obter os requisitos de formatação específica para cada servidor SIEM.
 

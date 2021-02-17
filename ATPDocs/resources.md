@@ -3,12 +3,12 @@ title: Lista de recursos úteis para o Microsoft defender para identidade
 description: Este artigo fornece uma lista de recursos úteis para o Microsoft defender para identidade
 ms.date: 10/27/2020
 ms.topic: conceptual
-ms.openlocfilehash: 8a814a51fdc63f59b36288922017280e0d7f3968
-ms.sourcegitcommit: a892419a5cb95412e4643c35a9a72092421628ec
+ms.openlocfilehash: 218422d15ac797998b0eb0ecfb87c5b641823246
+ms.sourcegitcommit: f92dca4dc3d8a25b1a06f68ac7a9f8318105bcd8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/16/2021
-ms.locfileid: "100533300"
+ms.lasthandoff: 02/17/2021
+ms.locfileid: "100630451"
 ---
 # <a name="microsoft-defender-for-identity-readiness-guide"></a>Guia de preparação do Microsoft defender para identidade
 
@@ -53,9 +53,9 @@ Depois [!INCLUDE [Product short](includes/product-short.md)] que o estiver em ex
 
 - [ [!INCLUDE [Product short](includes/product-short.md)] Guia de alerta de segurança](suspicious-activity-guide.md) Aprenda a fazer a triagem e executar as próximas etapas com suas [!INCLUDE [Product short](includes/product-short.md)] detecções.
 - [[!INCLUDE [Product short](includes/product-short.md)] caminhos de movimento lateral](use-case-lateral-movement-path.md)
-- [Marque grupos como confidenciais](sensitive-accounts.md) Aumente a visibilidade da exposição de credenciais em grupos de segurança confidenciais.
+- [Marque grupos como confidenciais](manage-sensitive-honeytoken-accounts.md) Aumente a visibilidade da exposição de credenciais em grupos de segurança confidenciais.
 
-## <a name="security-best-practices"></a>Práticas recomendadas de segurança
+## <a name="security-best-practices"></a>Melhores práticas de segurança
 
 - [ [!INCLUDE [Product short](includes/product-short.md)] Perguntas](technical-faq.yml) frequentes – Este artigo fornece uma lista de perguntas frequentes sobre o [!INCLUDE [Product short](includes/product-short.md)] e fornece informações e respostas.
 
@@ -71,5 +71,5 @@ Channel 9: [Página do Microsoft Security Channel 9](https://channel9.msdn.com/S
 
 ## <a name="see-also"></a>Consulte Também
 
-- [Trabalhando com contas confidenciais](sensitive-accounts.md)
+- [Trabalhando com contas confidenciais](manage-sensitive-honeytoken-accounts.md)
 - [Confira o fórum do [!INCLUDE [Product short](includes/product-short.md)]!](https://aka.ms/MDIcommunity)

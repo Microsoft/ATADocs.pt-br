@@ -3,14 +3,14 @@ title: Noções básicas sobre o portal do Microsoft Defender para Identidade
 description: Descreve como fazer logon no portal do Microsoft Defender para Identidade e os componentes desse portal
 ms.date: 10/27/2020
 ms.topic: conceptual
-ms.openlocfilehash: 00e29d828a58a76bfdbec1e28582135466d756ea
-ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
+ms.openlocfilehash: db140bafe14f0667348c96ecf318669abbdae5f3
+ms.sourcegitcommit: f92dca4dc3d8a25b1a06f68ac7a9f8318105bcd8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96544565"
+ms.lasthandoff: 02/17/2021
+ms.locfileid: "100630740"
 ---
-# <a name="working-with-the-product-long-portal"></a>Trabalhar com o portal do [!INCLUDE [Product long](includes/product-long.md)]
+# <a name="working-with-the-microsoft-defender-for-identity-portal"></a>Trabalhar com o portal do Microsoft Defender para Identidade
 
 > [!NOTE]
 > Todos os recursos do [!INCLUDE [Product long](includes/product-long.md)] explicados nesta página também podem ser acessados usando o novo portal do [Cloud App Security](https://portal.cloudappsecurity.com).
@@ -23,12 +23,12 @@ O portal do [!INCLUDE [Product short](includes/product-short.md)] fornece uma vi
 
 Este artigo descreve como trabalhar com os principais elementos do portal do [!INCLUDE [Product short](includes/product-short.md)].
 
-## <a name="enabling-access-to-the-product-short-portal"></a>Habilitar o acesso ao portal do [!INCLUDE [Product short](includes/product-short.md)]
+## <a name="enabling-access-to-the-defender-for-identity-portal"></a>Habilitar o acesso ao portal do Defender para Identidade
 
 Para fazer logon com êxito no portal do [!INCLUDE [Product short](includes/product-short.md)], é necessário fazer isso com um usuário atribuído a um grupo de segurança do Azure Active Directory que tenha acesso ao portal do [!INCLUDE [Product short](includes/product-short.md)].
 Para saber mais sobre RBAC (controle de acesso baseado em função) no [!INCLUDE [Product short](includes/product-short.md)], confira [Trabalhar com grupos de função do [!INCLUDE [Product short](includes/product-short.md)]](role-groups.md).
 
-## <a name="logging-into-the-product-short-portal"></a>Fazer logon no portal do [!INCLUDE [Product short](includes/product-short.md)]
+## <a name="logging-into-the-defender-for-identity-portal"></a>Entrar no portal do Defender para Identidade
 
 1. Você pode entrar no portal do [!INCLUDE [Product short](includes/product-short.md)] fazendo logon no portal do [https://portal.atp.azure.com](https://portal.atp.azure.com) e selecionando sua instância ou navegando até a URL da instância: `https://*instancename*.atp.azure.com`.
 
@@ -77,7 +77,7 @@ Sempre que o sistema encontra um problema, como um erro de conectividade ou um s
 
 ### <a name="sensitive-groups"></a>Grupos confidenciais
 
-Para saber mais sobre grupos confidenciais no [!INCLUDE [Product short](includes/product-short.md)], confira [Trabalhar com grupos confidenciais](sensitive-accounts.md).
+Para saber mais sobre grupos confidenciais no [!INCLUDE [Product short](includes/product-short.md)], confira [Trabalhar com grupos confidenciais](manage-sensitive-honeytoken-accounts.md).
 
 ### <a name="mini-profile"></a>Miniperfil
 

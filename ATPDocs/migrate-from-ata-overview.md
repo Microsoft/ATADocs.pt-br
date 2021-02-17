@@ -3,12 +3,12 @@ title: Análise avançada de ameaças ao Microsoft defender para movimentação 
 description: Saiba como mover uma instalação existente do Advanced Threat Analytics para o Microsoft defender para identidade.
 ms.date: 10/26/2020
 ms.topic: how-to
-ms.openlocfilehash: 45b9004bc439a28e144686e3147b94b6019a7a0f
-ms.sourcegitcommit: a892419a5cb95412e4643c35a9a72092421628ec
+ms.openlocfilehash: f363543cca20e0dba853c58db1e1c1cc0c60ce22
+ms.sourcegitcommit: f92dca4dc3d8a25b1a06f68ac7a9f8318105bcd8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/16/2021
-ms.locfileid: "100533793"
+ms.lasthandoff: 02/17/2021
+ms.locfileid: "100630536"
 ---
 # <a name="advanced-threat-analytics-ata-to-microsoft-defender-for-identity"></a>ATA (Advanced Threat Analytics) para o Microsoft defender para identidade
 
@@ -58,9 +58,9 @@ Reúna as informações a seguir antes de começar a migração:
 1. Exclusões de alertas
     - As exclusões não são transferidas do ATA para o [!INCLUDE [Product short](includes/product-short.md)] , de modo que os detalhes de cada exclusão são necessários para [replicar as exclusões no [!INCLUDE [Product short](includes/product-short.md)] ](excluding-entities-from-detections.md).
 1. Detalhes de conta para contas HoneyToken.
-    - Se você ainda não tiver contas dedicadas do HoneyToken, saiba mais sobre o [HoneyTokens no [!INCLUDE [Product short](includes/product-short.md)] ](install-step7.md) e crie novas contas para usar com essa finalidade.
+    - Se você ainda não tiver contas dedicadas do HoneyToken, saiba mais sobre o [HoneyTokens no [!INCLUDE [Product short](includes/product-short.md)] ](configure-detection-exclusions.md) e crie novas contas para usar com essa finalidade.
 1. Lista completa de todas as entidades (computadores, grupos, usuários) que você deseja marcar manualmente como entidades confidenciais.
-    - Saiba mais sobre a importância de [entidades confidenciais](sensitive-accounts.md) no [!INCLUDE [Product short](includes/product-short.md)] .
+    - Saiba mais sobre a importância de [entidades confidenciais](manage-sensitive-honeytoken-accounts.md) no [!INCLUDE [Product short](includes/product-short.md)] .
 1. [Detalhes](reports.md) do agendamento de relatórios (lista de relatórios e tempo agendado).
 
 > [!NOTE]
@@ -99,8 +99,8 @@ Entre no [!INCLUDE [Product short](includes/product-short.md)] portal e conclua 
 | 3  | Configurar [notificações do Syslog](setting-syslog.md) | - [ ] |
 | 4  | Informações sobre [Integrar VPN](install-step6-vpn.md)| - [ ] |
 | 5  | Configurar a [integração do WDATP](integrate-mde.md)| - [ ] |
-| 6  | Definir contas [HoneyTokens](install-step7.md)| - [ ] |
-| 7  | Marcar [Entidades confidenciais](sensitive-accounts.md)| - [ ] |
+| 6  | Definir contas [HoneyTokens](configure-detection-exclusions.md)| - [ ] |
+| 7  | Marcar [Entidades confidenciais](manage-sensitive-honeytoken-accounts.md)| - [ ] |
 | 8  | Criar [exclusões de alerta de segurança](excluding-entities-from-detections.md)| - [ ] |
 | 9 | [Alternâncias de notificação por email](notifications.md) | - [ ] |
 | 10  | [Configurações do relatório de agendamento](reports.md) (lista de relatórios e tempo agendado)| - [ ] |

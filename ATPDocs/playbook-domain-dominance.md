@@ -3,12 +3,12 @@ title: Guia estratégico de predominância de domínio do Microsoft Defender par
 description: O guia estratégico de predominância de domínio do Microsoft Defender para Identidade descreve como simular ataques de dominância do domínio para detecção do Defender para Identidade
 ms.date: 10/26/2020
 ms.topic: tutorial
-ms.openlocfilehash: fc79528c5adb2b487b3b68f2919facadfd7ebe2e
-ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
+ms.openlocfilehash: ae0221c9b9d59f884e96853584e78b497328fd23
+ms.sourcegitcommit: a892419a5cb95412e4643c35a9a72092421628ec
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96542780"
+ms.lasthandoff: 02/16/2021
+ms.locfileid: "100533776"
 ---
 # <a name="tutorial-domain-dominance-playbook"></a>Tutorial: Guia estratégico de predominância de domínio
 
@@ -69,7 +69,7 @@ Usando WMI na linha de comando, tente criar um processo localmente no controlado
 
 Atuando como invasor, você criou um novo usuário em seu laboratório usando WMI. Você também adicionou o novo usuário ao grupo Administradores usando PsExec. De uma perspectiva de persistência, outra credencial legítima e independente foi criada no controlador de domínio. Novas credenciais dão a um invasor acesso persistente ao controlador de domínio, caso o acesso de credencial anterior tenha sido descoberto e removido.
 
-### <a name="remote-code-execution-detection-in-product-short"></a>Detecção de execução remota de código no [!INCLUDE [Product short](includes/product-short.md)]
+### <a name="remote-code-execution-detection-in-defender-for-identity"></a>Detecção de execução remota de código no Defender para Identidade
 
 Entre no portal do [!INCLUDE [Product short](includes/product-short.md)] para verificar o que o [!INCLUDE [Product short](includes/product-short.md)] detectou, se tiver detectado algo, em nosso último ataque simulado:
 
@@ -105,7 +105,7 @@ Usando **mimikatz**, tentaremos exportar a chave mestra do controlador de domín
 
 Como invasores, agora temos a chave para descriptografar quaisquer arquivos/dados confidenciais criptografados com DPAPI de *qualquer* computador em toda a floresta.
 
-### <a name="dpapi-detection-in-product-short"></a>Detecção de DPAPI no [!INCLUDE [Product short](includes/product-short.md)]
+### <a name="dpapi-detection-in-defender-for-identity"></a>Detecção de DPAPI no Defender para Identidade
 
 Usando o portal do [!INCLUDE [Product short](includes/product-short.md)], vamos verificar se o [!INCLUDE [Product short](includes/product-short.md)] detectou nosso ataque DPAPI:
 
@@ -129,7 +129,7 @@ Nós replicamos as informações da conta "krbtgt" para: `c:\\temp\\ContosoDC_kr
 
 ![Replicação mal-intencionada via mimikatz](media/playbook-dominance-maliciousrep_mimikatz.png)
 
-#### <a name="malicious-replication-detection-in-product-short"></a>Detecção de replicação mal-intencionada no [!INCLUDE [Product short](includes/product-short.md)]
+#### <a name="malicious-replication-detection-in-defender-for-identity"></a>Detecção de replicação mal-intencionada no Defender para Identidade
 
 Usando o portal do [!INCLUDE [Product short](includes/product-short.md)], verifique se o SOC está ciente da replicação mal-intencionada que simulamos em VictimPC.
 
@@ -180,7 +180,7 @@ Esse comando cria um novo processo, *bloco de notas*, em execução no contexto 
 > [!Important]
 > É importante que você reinicie o ContosoDC depois de executar o ataque de Skeleton Key. Ao fazer isso, o processo LSASS.exe no ContosoDC será corrigido e modificado, fazendo o downgrade de cada solicitação de autenticação para RC4.
 
-### <a name="skeleton-key-attack-detection-in-product-short"></a>Detecção de ataque de Skeleton Key no [!INCLUDE [Product short](includes/product-short.md)]
+### <a name="skeleton-key-attack-detection-in-defender-for-identity"></a>Detecção de ataque de Skeleton Key no Defender para Identidade
 
 O que o [!INCLUDE [Product short](includes/product-short.md)] detectou e informou enquanto tudo isso estava ocorrendo?
 

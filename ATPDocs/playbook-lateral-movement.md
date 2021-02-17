@@ -3,12 +3,12 @@ title: Guia estratégico de movimentação lateral de alerta de segurança do Mi
 description: O guia estratégico do Microsoft Defender para Identidade descreve como simular ameaças de Movimentação Lateral para detecção pelo Defender para Identidade.
 ms.date: 10/26/2020
 ms.topic: tutorial
-ms.openlocfilehash: 50880150bb8937875677985f3a61119495d566eb
-ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
+ms.openlocfilehash: b0305dfbcfba45a796d2c50e21ab31fba8705520
+ms.sourcegitcommit: a892419a5cb95412e4643c35a9a72092421628ec
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96542695"
+ms.lasthandoff: 02/16/2021
+ms.locfileid: "100533708"
 ---
 # <a name="tutorial-lateral-movement-playbook"></a>Tutorial: Guia estratégico de movimentação lateral
 
@@ -131,7 +131,7 @@ Usaremos o **PowerSploit** ```Get-NetLocalGroup``` para ajudar a responder a iss
 
 Você pode ver que, para esse processo específico, temos o TGT do EduardoHD na memória. Executamos um ataque de Overpass-the-Hash em nosso laboratório. Convertemos o hash NTLM que foi comprometido anteriormente e o utilizamos para obter um TGT de Kerberos. Esse TGT de Kerberos foi usado para obter acesso a outro recurso de rede, neste caso, AdminPC.
 
-### <a name="overpass-the-hash-detected-in-product-short"></a>Overpass-the-Hash detectado no [!INCLUDE [Product short](includes/product-short.md)]
+### <a name="overpass-the-hash-detected-in-defender-for-identity"></a>Overpass-the-Hash detectado no Defender para Identidade
 
 Analisando o console do [!INCLUDE [Product short](includes/product-short.md)], podemos ver o seguinte:
 
@@ -233,7 +233,7 @@ Com os tíquetes localmente no VictimPC, finalmente chegou a hora de se tornar Y
 
 Êxito! Por meio de nosso ataques fictícios, conseguimos acesso de administrador em nosso controlador de domínio e conseguimos comprometer a Floresta/Domínio do Active Directory do nosso laboratório.
 
-### <a name="pass-the-ticket-detection-in-product-short"></a>Detecção de passagem de tíquete no [!INCLUDE [Product short](includes/product-short.md)]
+### <a name="pass-the-ticket-detection-in-defender-for-identity"></a>Detecção de Pass-the-Ticket no Defender para Identidade
 
 A maioria das ferramentas de segurança não conseguem detectar quando uma credencial legítima foi usada para acessar um recurso legítimo. Em contraste, o que faz o [!INCLUDE [Product short](includes/product-short.md)] detectar e alertar sobre essa cadeia de eventos?
 

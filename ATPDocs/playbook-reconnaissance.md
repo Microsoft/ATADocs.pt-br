@@ -3,12 +3,12 @@ title: Tutorial do guia estratégico de reconhecimento do Microsoft Defender par
 description: O tutorial do guia estratégico de reconhecimento do Microsoft Defender para Identidade descreve como simular ameaças de Reconhecimento para detecção pelo Defender.
 ms.date: 10/26/2020
 ms.topic: tutorial
-ms.openlocfilehash: dcaac8ed69bb4c3b9ccd262af929652dbc12126a
-ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
+ms.openlocfilehash: 735e3d24586e9fee1fdead3782d5e996f555ef03
+ms.sourcegitcommit: a892419a5cb95412e4643c35a9a72092421628ec
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96544480"
+ms.lasthandoff: 02/16/2021
+ms.locfileid: "100533674"
 ---
 # <a name="tutorial-reconnaissance-playbook"></a>Tutorial: Guia estratégico de reconhecimento
 
@@ -75,7 +75,7 @@ ls -d contoso.azure
 
 Se **ContosoDC** for o primeiro sensor implantado, aguarde 15 minutos para permitir que o back-end do banco de dados conclua a implantação dos microsserviços necessários.
 
-### <a name="network-mapping-reconnaissance-dns-detected-in-product-short"></a>Reconhecimento de mapeamento de rede (DNS) detectado no [!INCLUDE [Product short](includes/product-short.md)]
+### <a name="network-mapping-reconnaissance-dns-detected-in-defender-for-identity"></a>Reconhecimento de mapeamento de rede (DNS) detectado no Defender para Identidade
 
 Obter visibilidade desse tipo de tentativa (com êxito ou falha) é essencial para a proteção contra ameaças do domínio. Após a instalação recente do ambiente, você precisará ir para a linha do tempo **Atividades lógicas** para ver a atividade detectada.
 
@@ -145,7 +145,7 @@ Qualquer usuário ou computador autenticado pode enumerar outros usuários e gru
 
 Com as informações coletadas em nosso reconhecimento, sabemos sobre o Grupo de Segurança Helpdesk. No entanto, essas informações *ainda* não são interessantes. Também sabemos que **YasminC** é membro do grupo Administradores de Domínio. Se pudermos coletar a credencial de YasminC, poderemos acessar o próprio Controlador de Domínio.
 
-### <a name="directory-service-enumeration-detected-in-product-short"></a>Enumeração do Serviço de Diretório detectada no [!INCLUDE [Product short](includes/product-short.md)]
+### <a name="directory-service-enumeration-detected-in-defender-for-identity"></a>Enumeração de serviço de diretório detectado no Defender para Identidade
 
 Se nosso laboratório tivesse *atividade real por 30 dias com o [!INCLUDE [Product short](includes/product-short.md)] instalado*, a atividade que acabamos de realizar como DiogoM provavelmente seria classificada como anormal. As atividades anormais apareceriam na linha do tempo de Atividade Suspeita. No entanto, como acabamos de instalar o ambiente, precisaremos acessar a linha do tempo de Atividades Lógicas.
 
@@ -187,7 +187,7 @@ NetSess.exe ContosoDC
 
 Já sabemos que YasminC é um Administrador de Domínio. Esse ataque nos proporcionou um endereço IP de YasminC como 10.0.24.6. Como invasor, aprendemos exatamente quem precisamos comprometer. Também conseguimos o local de rede onde essa credencial está conectada.
 
-### <a name="user-and-ip-address-reconnaissance-smb-detected-in-product-short"></a>Reconhecimento de endereço IP e de usuário (SMB) detectado no [!INCLUDE [Product short](includes/product-short.md)]
+### <a name="user-and-ip-address-reconnaissance-smb-detected-in-defender-for-identity"></a>Reconhecimento de usuário e endereço IP (SMB) detectado no Defender para Identidade
 
 Agora podemos ver o que o [!INCLUDE [Product short](includes/product-short.md)] detectou para nós:
 

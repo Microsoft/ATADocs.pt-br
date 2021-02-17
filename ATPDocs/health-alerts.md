@@ -3,14 +3,14 @@ title: Noções básicas sobre os alertas de integridade do Microsoft Defender p
 description: Este artigo descreve todos os alertas de integridade para cada componente, listando a causa e as etapas necessárias para resolver o problema
 ms.date: 10/26/2020
 ms.topic: how-to
-ms.openlocfilehash: 30f88e239ac7c9fb2853688d3977e03401e8a353
-ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
+ms.openlocfilehash: 23c5ec5d87c38338dee43fb6665d7ed23830c1ff
+ms.sourcegitcommit: a892419a5cb95412e4643c35a9a72092421628ec
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96543086"
+ms.lasthandoff: 02/16/2021
+ms.locfileid: "100534320"
 ---
-# <a name="understanding-product-long-sensor-health-alerts"></a>Noções básicas sobre os alertas de integridade do sensor do [!INCLUDE [Product long](includes/product-long.md)]
+# <a name="understanding-microsoft-defender-for-identity-sensor-health-alerts"></a>Noções básicas sobre os alertas de integridade do sensor do Microsoft Defender para Identidade
 
 O Centro de Integridade do [!INCLUDE [Product long](includes/product-long.md)] permite que você saiba quando há um problema em sua instância do [!INCLUDE [Product short](includes/product-short.md)] gerando um alerta de integridade. Este artigo descreve todos os alertas de integridade para cada componente, listando a causa e as etapas necessárias para resolver o problema.
 

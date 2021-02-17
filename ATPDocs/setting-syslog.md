@@ -3,12 +3,12 @@ title: Definir as configurações de Syslog no Microsoft Defender para Identidad
 description: Descreve como fazer com que o Microsoft Defender para Identidade notifique você (por email ou por encaminhamento de eventos do Defender para Identidade) quando detectar atividades suspeitas
 ms.date: 10/27/2020
 ms.topic: how-to
-ms.openlocfilehash: 587fd2cab00b982ace580ef2b8b587157c960891
-ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
+ms.openlocfilehash: 06064b549db61a65b068f78a66d886f29805444f
+ms.sourcegitcommit: f92dca4dc3d8a25b1a06f68ac7a9f8318105bcd8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96544344"
+ms.lasthandoff: 02/17/2021
+ms.locfileid: "100630502"
 ---
 # <a name="integrate-with-syslog"></a>Integrar com o Syslog
 
@@ -57,5 +57,5 @@ Para revisar ou modificar suas configurações do Syslog.
 
 ## <a name="see-also"></a>Consulte Também
 
-- [Trabalhando com contas confidenciais](sensitive-accounts.md)
+- [Trabalhando com contas confidenciais](manage-sensitive-honeytoken-accounts.md)
 - [Confira o fórum do [!INCLUDE [Product short](includes/product-short.md)]!](https://aka.ms/MDIcommunity)

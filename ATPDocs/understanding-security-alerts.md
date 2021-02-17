@@ -3,12 +3,12 @@ title: Tutorial de alertas de segurança do Microsoft Defender para Identidade
 description: Este artigo explica como usar e compreender os alertas de segurança do Microsoft Defender para Identidade.
 ms.date: 10/27/2020
 ms.topic: how-to
-ms.openlocfilehash: f7ec5a676dfa9e243db024639867fcf8227380f2
-ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
+ms.openlocfilehash: bec99de6189e51fa86cfd96dc219de3fe54538fa
+ms.sourcegitcommit: a892419a5cb95412e4643c35a9a72092421628ec
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96544310"
+ms.lasthandoff: 02/16/2021
+ms.locfileid: "100534524"
 ---
 # <a name="understanding-security-alerts"></a>entendendo os alertas de segurança
 
@@ -122,7 +122,7 @@ Inclui todos os dados que o [!INCLUDE [Product short](includes/product-short.md)
 
 ![Entidades relacionadas](media/related-entities.png)
 
-### <a name="how-can-i-use-product-short-information-in-an-investigation"></a>Como posso usar as informações do [!INCLUDE [Product short](includes/product-short.md)] em uma investigação?
+### <a name="how-can-i-use-defender-for-identity-information-in-an-investigation"></a>Como usar as informações do Defender para Identidade em uma investigação?
 
 As investigações podem ter o máximo possível de detalhes necessários. Confira algumas ideias de maneiras de investigar usando os dados fornecidos pelo [!INCLUDE [Product short](includes/product-short.md)].
 
@@ -130,7 +130,7 @@ As investigações podem ter o máximo possível de detalhes necessários. Confi
 - Os usuários relacionados compartilham recursos, aplicativos ou computadores?
 - Essa é uma conta ativa, mesmo que o PasswordExpiryTime já tenha passado?
 
-## <a name="product-short-and-nnr-network-name-resolution"></a>[!INCLUDE [Product short](includes/product-short.md)] e NNR (resolução de nomes de rede)
+## <a name="defender-for-identity-and-nnr-network-name-resolution"></a>Defender para Identidade e NNR (resolução de nomes de rede)
 
 As funcionalidades de detecção do [!INCLUDE [Product short](includes/product-short.md)] baseiam-se na NNR (resolução de nomes de rede) a fim de resolver os IPs para os computadores da organização. Usando a NNR, o [!INCLUDE [Product short](includes/product-short.md)] consegue correlacionar atividades brutas (que contêm endereços IP) e os computadores relevantes envolvidos em cada atividade. Com base nas atividades brutas, o [!INCLUDE [Product short](includes/product-short.md)] cria perfis de entidades, incluindo computadores, e gera alertas.
 

@@ -3,12 +3,12 @@ title: Configurar o encaminhamento de eventos do Windows no Microsoft Defender p
 description: Descreve suas opções de configuração do Encaminhamento de Eventos do Windows com o Microsoft Defender para Identidade
 ms.date: 10/26/2020
 ms.topic: how-to
-ms.openlocfilehash: f3a11a3d39972b3bdb3df38669ef2fa4b10cc5fb
-ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
+ms.openlocfilehash: eb9ae24f1e51acda9ca91c459963677a5b5c300e
+ms.sourcegitcommit: a892419a5cb95412e4643c35a9a72092421628ec
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96543528"
+ms.lasthandoff: 02/16/2021
+ms.locfileid: "100534218"
 ---
 # <a name="configuring-windows-event-forwarding"></a>Configuração do encaminhamento de eventos do Windows
 
@@ -22,7 +22,7 @@ Para aprimorar as funcionalidades de detecção, o [!INCLUDE [Product short](inc
 > - Os sensores autônomos do [!INCLUDE [Product short](includes/product-short.md)] não dão suporte à coleção de entradas de log do ETW (Rastreamento de Eventos para Windows) que fornecem dados para várias detecções. Para cobertura completa do seu ambiente, recomendamos implantar o sensor do [!INCLUDE [Product short](includes/product-short.md)].
 > - Verifique se o controlador de domínio está configurado corretamente para capturar os eventos necessários.
 
-## <a name="wef-configuration-for-product-short-standalone-sensors-with-port-mirroring"></a>Configuração do WEF dos sensores autônomos do [!INCLUDE [Product short](includes/product-short.md)] com espelhamento de porta
+## <a name="wef-configuration-for-defender-for-identity-standalone-sensors-with-port-mirroring"></a>Configuração de WEF para o sensor autônomo do Defender para Identidade com espelhamento de porta
 
 Após configurar o espelhamento de porta dos controladores de domínio para o sensor autônomo do [!INCLUDE [Product short](includes/product-short.md)], siga as instruções abaixo para configurar o Encaminhamento de Eventos do Windows usando a configuração Iniciada pela Origem. Essa é uma maneira para configurar o Encaminhamento de eventos do Windows.
 

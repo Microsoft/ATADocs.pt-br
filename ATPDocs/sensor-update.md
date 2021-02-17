@@ -3,20 +3,20 @@ title: Atualizar os sensores do Microsoft Defender para Identidade
 description: Descreve como atualizar e atrasar atualizações de sensores no Microsoft Defender para Identidade.
 ms.date: 10/27/2020
 ms.topic: how-to
-ms.openlocfilehash: 6db4db087f64431812a3998f2c79f066dfb09ea2
-ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
+ms.openlocfilehash: 3d77e5ebd6fdec2647f08aa32c1e2076a1487293
+ms.sourcegitcommit: a892419a5cb95412e4643c35a9a72092421628ec
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96542389"
+ms.lasthandoff: 02/16/2021
+ms.locfileid: "100534405"
 ---
-# <a name="update-product-long-sensors"></a>Atualizar sensores do [!INCLUDE [Product long](includes/product-long.md)]
+# <a name="update-microsoft-defender-for-identity-sensors"></a>Atualizar os sensores do Microsoft Defender para Identidade
 
 Para fornecer a melhor proteção possível para sua organização, mantenha os sensores do [!INCLUDE [Product long](includes/product-long.md)] atualizados.
 
 O serviço do [!INCLUDE [Product long](includes/product-long.md)] é atualizado algumas vezes por mês com novas detecções, recursos e melhorias de desempenho. Essas atualizações normalmente exigem uma atualização menor correspondente nos sensores. Os sensores do [!INCLUDE [Product short](includes/product-short.md)] e as atualizações correspondentes nunca têm permissões de gravação nos controladores de domínio. Os pacotes de atualização do sensor controlam apenas o sensor do [!INCLUDE [Product short](includes/product-short.md)] e recursos de detecção de sensor.
 
-## <a name="product-short-sensor-update-types"></a>Tipos de atualização dos sensores do [!INCLUDE [Product short](includes/product-short.md)]
+## <a name="defender-for-identity-sensor-update-types"></a>Tipos de atualização do sensor do Defender para Identidade
 
 Os sensores do [!INCLUDE [Product short](includes/product-short.md)] dão suporte a dois tipos de atualizações:
 

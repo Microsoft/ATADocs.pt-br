@@ -1,16 +1,16 @@
 ---
 title: Novidades do Microsoft Defender para Identidade
 description: Este artigo é atualizado com frequência para manter você informado sobre as novidades da última versão do Microsoft Defender para Identidade.
-ms.date: 01/31/2021
+ms.date: 02/14/2021
 ms.topic: overview
 ms.reviewer: ort
 ms.suite: ems
-ms.openlocfilehash: 9cc03386390f0d5fac0f7e8cc79127fc0e29f819
-ms.sourcegitcommit: 14f7228dbe6af353e81f20d2047dad24043840b4
+ms.openlocfilehash: 47efcf034d9f5117a5004448c147887716176fc2
+ms.sourcegitcommit: 0746f8fadd94b75a10214bfc5084b0ddba67d087
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/31/2021
-ms.locfileid: "99217712"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100521218"
 ---
 # <a name="whats-new-in-product-long"></a>Novidades no [!INCLUDE [Product long](includes/product-long.md)]
 
@@ -23,6 +23,12 @@ Feed RSS: Receba uma notificação quando esta página for atualizada copiando e
 > [!IMPORTANT]
 >
 > Os nomes dos produtos de proteção contra ameaças da Microsoft estão mudando. Leia mais sobre essa e outras atualizações [aqui](https://www.microsoft.com/security/blog/?p=91813). Usaremos os novos nomes a partir da versão 2.129 em diante.
+
+## <a name="defender-for-identity-release-2140"></a>Defender para Identidade versão 2.140
+
+Lançado em 14 de fevereiro de 2021
+
+- Essa versão inclui melhorias e correções de bugs da infraestrutura do sensor interno.
 
 ## <a name="defender-for-identity-release-2139"></a>Defender para Identidade versão 2.139
 
@@ -880,7 +886,7 @@ Para obter detalhes de cada versão anterior do [!INCLUDE [Product short](includ
 ## <a name="see-also"></a>Consulte Também
 
 - [O que é o [!INCLUDE [Product long](includes/product-long.md)]?](what-is.md)
-- [Perguntas frequentes](technical-faq.md)
+- [Perguntas frequentes](technical-faq.yml)
 - [Pré-requisitos do [!INCLUDE [Product short](includes/product-short.md)]](prerequisites.md)
 - [Planejamento de capacidade do [!INCLUDE [Product short](includes/product-short.md)]](capacity-planning.md)
 - [Confira o fórum do [!INCLUDE [Product short](includes/product-short.md)]!](https://aka.ms/MDIcommunity)

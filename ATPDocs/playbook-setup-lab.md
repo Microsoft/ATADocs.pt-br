@@ -3,14 +3,14 @@ title: Tutorial de configuração do laboratório de alertas de segurança do Mi
 description: Neste tutorial, você aprenderá a configurar um laboratório de teste a fim de simular ameaças para detecção pelo Microsoft Defender para Identidade.
 ms.date: 10/26/2020
 ms.topic: tutorial
-ms.openlocfilehash: 51505b97acde09eecce25e0bafaea8fa0af60419
-ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
+ms.openlocfilehash: 3fa1a3322a76f61f924da521654d3d722c994916
+ms.sourcegitcommit: a892419a5cb95412e4643c35a9a72092421628ec
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96542525"
+ms.lasthandoff: 02/16/2021
+ms.locfileid: "100533589"
 ---
-# <a name="tutorial-setup-a-product-long-security-alert-lab"></a>Tutorial: Configurar um laboratório de alertas de segurança do [!INCLUDE [Product long](includes/product-long.md)]
+# <a name="tutorial-setup-a-microsoft-defender-for-identity-security-alert-lab"></a>Tutorial: laboratório "Configurar um alerta de segurança do Microsoft Defender para Identidade"
 
 A finalidade do laboratório de Alertas de segurança do [!INCLUDE [Product long](includes/product-long.md)] é ilustrar os recursos do **[!INCLUDE [Product short](includes/product-short.md)]** na identificação e detecção de atividades suspeitas e possíveis ataques contra sua rede. Este primeiro tutorial, de uma série com quatro partes, explica como criar um ambiente de laboratório para testar detecções *discrete* do [!INCLUDE [Product short](includes/product-short.md)]. O laboratório de alertas de segurança se concentra nos recursos *baseados em assinatura* do [!INCLUDE [Product short](includes/product-short.md)]. O laboratório não inclui aprendizado de máquina avançado, detecções comportamentais baseadas no usuário ou em entidade, pois essas detecções exigem um período de aprendizado de até 30 dias com tráfego de rede real. Para saber mais sobre cada tutorial desta série, confira a [Visão geral do laboratório de alertas de segurança do [!INCLUDE [Product short](includes/product-short.md)]](playbook-lab-overview.md).
 
@@ -66,11 +66,13 @@ Há um SG (grupo de segurança) de "Helpdesk" do qual Eduardo HelpDesk é membro
 | Yasmin Correia | YasminC | Na Contoso, esse usuário é nosso Administrador de Domínio. |
 | Serviço do[!INCLUDE [Product short](includes/product-short.md)] | AATPService | Conta de serviço do [!INCLUDE [Product short](includes/product-short.md)] | account |
 
-## <a name="product-short-base-lab-environment"></a>Ambiente de laboratório base do [!INCLUDE [Product short](includes/product-short.md)]
+## <a name="defender-for-identity-base-lab-environment"></a>Ambiente de laboratório básico do Defender para Identidade
 
 Para configurar esse laboratório base, adicionaremos usuários e grupos ao Active Directory e editaremos uma política SAM e um grupo confidencial no [!INCLUDE [Product short](includes/product-short.md)].
 
-### <a name="hydrate-active-directory-users-on-contosodc"></a><a name="bkmk_hydrate"></a> Hidratar os usuários do Active Directory no ContosoDC
+<a name="bkmk_hydrate"></a>
+
+### <a name="hydrate-active-directory-users-on-contosodc"></a> Hidratar os usuários do Active Directory no ContosoDC
 
 Para simplificar o laboratório, automatizamos o processo para criar usuários e grupos fictícios no Active Directory. Esse script é executado como um pré-requisito para este tutorial. Você pode usar ou modificar o script para hidratar o ambiente do Active Directory do seu laboratório. Se você preferir não usar um script, faça tudo manualmente.
 
@@ -95,8 +97,8 @@ Add-ADGroupMember -Identity "Helpdesk" -Members "RonHD"
 # Create new AD user JeffL
 New-ADUser -Name JeffL -DisplayName "Jeff Leatherman" -PasswordNeverExpires $true -AccountPassword $jefflSecurePass -Enabled $true
 
-# Take note of the "AATPService" user below which will be our service account for [!INCLUDE [Product short](includes/product-short.md)].
-# Create new AD user [!INCLUDE [Product short](includes/product-short.md)] Service
+# Take note of the "AATPService" user below which will be our service account for Defender for Identity.
+# Create new AD user Defender for Identity Service
 
 New-ADUser -Name AatpService -DisplayName "Azure ATP/ATA Service" -PasswordNeverExpires $true -AccountPassword $AATPService -Enabled $true
 ```
@@ -113,7 +115,7 @@ Para permitir que o Serviço do [!INCLUDE [Product short](includes/product-short
 
     ![Adicione o serviço](media/samr-add-service.png)
 
-### <a name="add-sensitive-group-to-product-short"></a>Adicionar o grupo confidencial ao [!INCLUDE [Product short](includes/product-short.md)]
+### <a name="add-sensitive-group-to-defender-for-identity"></a>Adicionar um grupo confidencial ao Defender para Identidade
 
 A adição do grupo de segurança "Helpdesk" como um **Grupo confidencial** permitirá que você use o recurso de Gráfico de Movimentação Lateral do [!INCLUDE [Product short](includes/product-short.md)]. Marcar usuários e grupos altamente confidenciais que não são necessariamente Administradores de Domínio, mas têm privilégios em inúmeros recursos, é uma prática recomendada.
 
@@ -126,7 +128,7 @@ A adição do grupo de segurança "Helpdesk" como um **Grupo confidencial** perm
     ![Marca do "Helpdesk" como um grupo confidencial do [!INCLUDE [Product short](includes/product-short.md)] para habilitar Gráficos de Movimentação Lateral e relatórios para esse grupo privilegiado](media/playbook-labsetup-helpdesksensitivegroup.png)
 1. Clique em **Salvar**.
 
-### <a name="product-short-lab-base-setup-checklist"></a>Lista de verificação de configuração de laboratório base do [!INCLUDE [Product short](includes/product-short.md)]
+### <a name="defender-for-identity-lab-base-setup-checklist"></a>Lista de verificação de configuração básica do laboratório do Defender para Identidade
 
 Neste ponto, você deve ter um laboratório base do [!INCLUDE [Product short](includes/product-short.md)]. O [!INCLUDE [Product short](includes/product-short.md)] deve estar pronto para ser usado, e os usuários testados. Examine a lista de verificação para ter certeza de que o laboratório base foi concluído.
 
@@ -158,7 +160,9 @@ Inspecione o grupo de Administradores no **VictimPC** e verifique se ele tem pel
 
 ![Helpdesk e JeffV devem estar no grupo Administrador Local de VictimPC](media/playbook-labsetup-localgrouppolicies2.png)
 
-### <a name="simulate-helpdesk-support-on-victimpc"></a><a name="helpdesk-simulation"></a> Simular o suporte de assistência técnica no VictimPC
+<a name="helpdesk-simulation"></a>
+
+### <a name="simulate-helpdesk-support-on-victimpc"></a> Simular o suporte de assistência técnica no VictimPC
 
 Para simular uma rede funcional e gerenciada, crie uma Tarefa Agendada no computador **VictimPC** para executar o processo de "cmd.exe" como **EduardoHD**.
 
