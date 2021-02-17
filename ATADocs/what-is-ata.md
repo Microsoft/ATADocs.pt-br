@@ -5,25 +5,30 @@ keywords: ''
 author: shsagir
 ms.author: shsagir
 manager: shsagir
-ms.date: 7/24/2018
+ms.date: 02/17/2021
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
 ms.technology: ''
 ms.assetid: 283e7b4e-996a-4491-b7f6-ff06e73790d2
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: ca6b929929646be25113adb5edd8a9d03008590e
-ms.sourcegitcommit: e844155ea57f73dfe2b47f4c5c1c7f5292ccbf1e
+ms.openlocfilehash: 44f197908a3818df6bba627a3de3a7edf79fd0af
+ms.sourcegitcommit: 061b0540673d058e85285d4f0dd90a7fdeae7275
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94689659"
+ms.lasthandoff: 02/17/2021
+ms.locfileid: "100569772"
 ---
 # <a name="what-is-advanced-threat-analytics"></a>O que é o Advanced Threat Analytics?
 
 [!INCLUDE [Banner for top of topics](includes/banner.md)]
 
 O ATA (Advanced Threat Analytics) é uma plataforma local que ajuda a proteger sua empresa contra vários tipos de ataques cibernéticos avançados e ameaças internas.
+
+> [!NOTE]
+> **Ciclo de vida de suporte**
+>
+> A versão final do ATA está [disponível para o público geral](https://support.microsoft.com/help/4568997/update-3-for-microsoft-advanced-threat-analytics-1-9). O suporte do ATA base terminou em 12 de janeiro de 2021. O suporte estendido continuará até janeiro de 2026. Para obter mais informações, leia [nosso blog](https://techcommunity.microsoft.com/t5/microsoft-security-and/end-of-mainstream-support-for-advanced-threat-analytics-january/ba-p/1539181).
 
 ## <a name="how-ata-works"></a>Como o ATA funciona
 
