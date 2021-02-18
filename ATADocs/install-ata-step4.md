@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 6bbc50c3-bfa8-41db-a2f9-56eed68ef5d2
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: e692a543095e722e4a8b7823c39b73a1f078cb4b
-ms.sourcegitcommit: e844155ea57f73dfe2b47f4c5c1c7f5292ccbf1e
+ms.openlocfilehash: 5aa4f35541696bf47d395cdea0b59a0dfb88c127
+ms.sourcegitcommit: 5bf0c6a204b71126306a0c64108eaf9cb7fc042f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94690662"
+ms.lasthandoff: 02/18/2021
+ms.locfileid: "101097531"
 ---
 # <a name="install-ata---step-4"></a>Instalação do ATA - Etapa 4
 
@@ -92,9 +92,8 @@ Execute as seguintes etapas no servidor do Gateway do ATA.
 - [Como escolher o tipo certo de Gateway do ATA](https://channel9.msdn.com/Shows/Microsoft-Security/ATA-Deployment-Choose-the-Right-Gateway-Type)
 
 ## <a name="see-also"></a>Consulte Também
-- [Guia de implantação da POC (prova de conceito) do ATA](https://aka.ms/atapoc)
+- [Guia de implantação da POC (prova de conceito) do ATA](/samples/browse/?redirectedfrom=TechNet-Gallery)
 - [Ferramenta de dimensionamento do ATA](https://aka.ms/atasizingtool)
 - [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Configurar coleta de eventos](configure-event-collection.md)
 - [Pré-requisitos do ATA](ata-prerequisites.md)
-

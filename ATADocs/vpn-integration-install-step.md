@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: e0aed853-ba52-46e1-9c55-b336271a68e7
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 5f571f6c9d357860cf295198ac7d614ec20874f2
-ms.sourcegitcommit: e844155ea57f73dfe2b47f4c5c1c7f5292ccbf1e
+ms.openlocfilehash: 4dc19494581b8ccc6c079170a1288674b2d80455
+ms.sourcegitcommit: 5bf0c6a204b71126306a0c64108eaf9cb7fc042f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94689642"
+ms.lasthandoff: 02/18/2021
+ms.locfileid: "101097378"
 ---
 # <a name="install-ata---step-7"></a>Instalação do ATA – Etapa 7
 
@@ -99,7 +99,7 @@ Depois que o Gateway do ATA recebe os eventos de VPN e os envia ao centro do ATA
 
 ## <a name="see-also"></a>Consulte Também
 
-- [Guia de implantação da POC (prova de conceito) do ATA](https://aka.ms/atapoc)
+- [Guia de implantação da POC (prova de conceito) do ATA](/samples/browse/?redirectedfrom=TechNet-Gallery)
 - [Ferramenta de dimensionamento do ATA](https://aka.ms/aatpsizingtool)
 - [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Configurar coleta de eventos](configure-event-collection.md)

@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 8980e724-06a6-40b0-8477-27d4cc29fd2b
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: cd3906dca902416a096106808036864422f82548
-ms.sourcegitcommit: e844155ea57f73dfe2b47f4c5c1c7f5292ccbf1e
+ms.openlocfilehash: 764cbee63b61598e4eaa34b8ecef5109b6441961
+ms.sourcegitcommit: 5bf0c6a204b71126306a0c64108eaf9cb7fc042f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94690594"
+ms.lasthandoff: 02/18/2021
+ms.locfileid: "101097463"
 ---
 # <a name="install-ata---step-8"></a>Instalação do ATA - Etapa 8
 
@@ -51,7 +51,7 @@ Para configurar isso, execute estas etapas:
 
     ![Captura de tela mostrando a exclusão de entidades da detecção](media/exclusions.png)
 
-1. Clique em **Save** (Salvar).
+1. Clique em **Salvar**.
 
 Parabéns, você implantou com êxito o Microsoft Advanced Threat Analytics!
 
@@ -72,7 +72,7 @@ Para verificar se ATA está funcionando e detectar violações em sua rede, é p
 
 ## <a name="see-also"></a>Consulte Também
 
-- [Guia de implantação da POC (prova de conceito) do ATA](https://aka.ms/atapoc)
+- [Guia de implantação da POC (prova de conceito) do ATA](/samples/browse/?redirectedfrom=TechNet-Gallery)
 - [Ferramenta de dimensionamento do ATA](https://aka.ms/atasizingtool)
 - [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Configurar coleta de eventos](configure-event-collection.md)

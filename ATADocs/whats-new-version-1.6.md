@@ -12,16 +12,15 @@ ms.technology: ''
 ms.assetid: 27b139e5-12b9-4953-8f53-eb58e8ce0038
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 3436f675a6e1dfb9afec9bb40098e7fa51a65500
-ms.sourcegitcommit: c7c0a4c9f7507f3e8e0f219798ed7d347c03e792
+ms.openlocfilehash: 73c8157b582f4f3eed0550a0d59ca76eae45ce92
+ms.sourcegitcommit: 5bf0c6a204b71126306a0c64108eaf9cb7fc042f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90913308"
+ms.lasthandoff: 02/18/2021
+ms.locfileid: "101097276"
 ---
 # <a name="whats-new-in-ata-version-16"></a>Novidades na versão 1.6 do ATA
 
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 Essas notas de versão fornecem informações sobre problemas conhecidos nesta versão da Advanced Threat Analytics.
 
 ## <a name="whats-new-in-the-ata-16-update"></a>Quais são as novidades na atualização 1.6 do ATA?
@@ -104,7 +103,7 @@ Ao atualizar para o ATA 1.6, o processo de atualização pode falhar com o segui
 
 ![Erro ao atualizar o ATA para 1.6](http://i.imgur.com/QrLSApr.png)
 
-Se você vir esse erro, examine o log de implantação em: **C:\Users \<User> \AppData\Local\Temp**e procure a seguinte exceção:
+Se você vir esse erro, examine o log de implantação em: **C:\Users \<User> \AppData\Local\Temp** e procure a seguinte exceção:
 
 ```
 System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> MongoDB.Driver.MongoWriteException: A write operation resulted in an error. E11000 duplicate key error index: ATA.UniqueEntityProfile.$_id_ dup key: { : "<guid>" } ---> MongoDB.Driver.MongoBulkWriteException`1: A bulk write operation resulted in one or more errors.  E11000 duplicate key error index: ATA.UniqueEntityProfile.$_id_ dup key: { : " <guid> " }
@@ -132,7 +131,7 @@ Se você ver algum desses erros, execute a seguinte solução alternativa:
     1. MongoDB
     2. Central do Microsoft Advanced Threat Analytics
 1. Revise os logs para verificar se o produto está sendo executado sem erros.
-1. [Baixe](https://aka.ms/ataremoveduplicateprofiles "Baixar") a ferramenta "RemoveDuplicateProfiles.exe" e copie-a para o caminho de instalação principal (%ProgramFiles%\Microsoft Advanced Threat Analytics\Center)
+1. [Baixe](/samples/browse/?redirectedfrom=TechNet-Gallery "Baixar") a ferramenta "RemoveDuplicateProfiles.exe" e copie-a para o caminho de instalação principal (%ProgramFiles%\Microsoft Advanced Threat Analytics\Center)
 1. Em um prompt de comandos com privilégios elevados, execute `RemoveDuplicateProfiles.exe` e aguarde até que ela seja concluída com êxito.
 1. Aqui: `…\Microsoft Advanced Threat Analytics\Center\MongoDB\bin` diretório: **Mongo ATA**, digite o seguinte comando:
 

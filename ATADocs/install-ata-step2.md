@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: e1c5ff41-d989-46cb-aa38-5a3938f03c0f
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: df730510ecc58a30343feab9ff63f6b741acf5b7
-ms.sourcegitcommit: e844155ea57f73dfe2b47f4c5c1c7f5292ccbf1e
+ms.openlocfilehash: e7f88831d10cfb1ba15d2fe650a056e7a3004d2f
+ms.sourcegitcommit: 5bf0c6a204b71126306a0c64108eaf9cb7fc042f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94690679"
+ms.lasthandoff: 02/18/2021
+ms.locfileid: "101097499"
 ---
 # <a name="install-ata---step-2"></a>Instalação do ATA - Etapa 2
 
@@ -58,7 +58,7 @@ Na primeira vez que você abrir o Console do ATA, a tela a seguir será exibida:
 
 ## <a name="see-also"></a>Consulte Também
 
-- [Guia de implantação da POC (prova de conceito) do ATA](https://aka.ms/atapoc)
+- [Guia de implantação da POC (prova de conceito) do ATA](/samples/browse/?redirectedfrom=TechNet-Gallery)
 - [Ferramenta de dimensionamento do ATA](https://aka.ms/atasizingtool)
 - [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Configurar coleta de eventos](configure-event-collection.md)

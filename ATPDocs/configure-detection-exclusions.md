@@ -3,12 +3,12 @@ title: Microsoft defender para identidade configurar exclusões de detecção
 description: Configuração de exclusões de detecção.
 ms.date: 02/17/2021
 ms.topic: how-to
-ms.openlocfilehash: 6e771e2a2755845fe4f02fb9d21750720bbbe37d
-ms.sourcegitcommit: f92dca4dc3d8a25b1a06f68ac7a9f8318105bcd8
+ms.openlocfilehash: 802b54f3185a50468fe4227d4099b9edbfc8f469
+ms.sourcegitcommit: 5bf0c6a204b71126306a0c64108eaf9cb7fc042f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/17/2021
-ms.locfileid: "100630761"
+ms.lasthandoff: 02/18/2021
+ms.locfileid: "101097361"
 ---
 # <a name="configure-detection-exclusions"></a>Configurar exclusões de detecção
 
@@ -34,7 +34,7 @@ Para configurar exclusões na página configuração, faça o seguinte:
     1. Clique no ícone de adição **(+)**.
 
     > [!TIP]
-    > O campo usuário ou computador é pesquisável e fará preenchimento automático com entidades em sua rede. Para obter mais informações, confira [Excluindo entidades das detecções](excluding-entities-from-detections.md) e o [Guia de alerta de segurança](suspicious-activity-guide.md).
+    > O campo usuário ou computador é pesquisável e fará preenchimento automático com entidades em sua rede. Para obter mais informações, consulte o [Guia de alerta de segurança](suspicious-activity-guide.md).
 
     ![Excluindo entidades de detecções](media/exclusions.png)
 

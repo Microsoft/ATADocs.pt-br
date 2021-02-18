@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 1fe5fd6f-1b79-4a25-8051-2f94ff6c71c1
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: eeccc1e5a5dd16b2d480bf82034a085159baff60
-ms.sourcegitcommit: e844155ea57f73dfe2b47f4c5c1c7f5292ccbf1e
+ms.openlocfilehash: 9a22617587fab0aeacbc52f8b539c4a1042419d3
+ms.sourcegitcommit: 5bf0c6a204b71126306a0c64108eaf9cb7fc042f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94690084"
+ms.lasthandoff: 02/18/2021
+ms.locfileid: "101097259"
 ---
 # <a name="advanced-threat-analytics-suspicious-activity-guide"></a>Guia de atividades suspeitas Advanced Threat Analytics
 
@@ -543,6 +543,6 @@ Aplique as correções mais recentes a todas as suas máquinas e verifique se to
 
 ## <a name="see-also"></a>Consulte Também
 
-- [Manual da atividade suspeita do ATA](https://aka.ms/ataplaybook)
+- [Manual da atividade suspeita do ATA](/samples/browse/?redirectedfrom=TechNet-Gallery)
 - [Confira o fórum do ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Trabalhando com atividades suspeitas](working-with-suspicious-activities.md)
