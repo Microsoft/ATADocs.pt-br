@@ -12,12 +12,12 @@ metadata:
   author: shsagir
   ms.author: shsagir
   ms.date: 09/23/2019
-  ms.openlocfilehash: 173bd03580d8ef1bbfc6a90c001a5d7b1e986acd
-  ms.sourcegitcommit: af41733212c2102c223fed8c8602a21a1f667080
+  ms.openlocfilehash: 43c814ebf644a19cd1f2f7bb97cc6f4a3e62c00e
+  ms.sourcegitcommit: f92dca4dc3d8a25b1a06f68ac7a9f8318105bcd8
   ms.translationtype: HT
   ms.contentlocale: pt-BR
-  ms.lasthandoff: 02/14/2021
-  ms.locfileid: "100515471"
+  ms.lasthandoff: 02/17/2021
+  ms.locfileid: "100630672"
 landingContent:
 - title: Sobre o Microsoft Defender para Identidade
   linkLists:
@@ -60,7 +60,7 @@ landingContent:
     - text: Pesquisar e filtrar atividades monitoradas
       url: activities-search.md
     - text: Usar exclusões e contas de honeytoken
-      url: install-step7.md
+      url: configure-detection-exclusions.md
     - text: Movimentação do ATA (Advanced Threat Analytics) para o Defender para Identidade
       url: migrate-from-ata-overview.md
 - title: Gerenciar e corrigir alertas de segurança
