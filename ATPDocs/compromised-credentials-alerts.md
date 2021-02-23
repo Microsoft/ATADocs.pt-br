@@ -3,12 +3,12 @@ title: Alertas de segurança da fase de comprometimento das credenciais do Micro
 description: Este artigo explica os alertas do Microsoft Defender para Identidade emitidos quando são detectados ataques contra a sua organização, que são típicos da fase de comprometimento das credenciais.
 ms.date: 12/23/2020
 ms.topic: tutorial
-ms.openlocfilehash: 4bb5313307d16c87969ac280967356e8595b767a
-ms.sourcegitcommit: e2b4ad613aa171f604ae526f0cba05fe79f4a8cb
+ms.openlocfilehash: 195f9007e91dcbcdf5c0801d7a06bb21534e683e
+ms.sourcegitcommit: f92dca4dc3d8a25b1a06f68ac7a9f8318105bcd8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/23/2020
-ms.locfileid: "97753313"
+ms.lasthandoff: 02/17/2021
+ms.locfileid: "100630689"
 ---
 # <a name="tutorial-compromised-credential-alerts"></a>Tutorial: Alertas de credencial comprometida
 
@@ -44,7 +44,7 @@ Os alertas de segurança a seguir ajudam você a identificar e corrigir as ativi
 
 As contas Honeytoken são contas fictícias configuradas para identificar e rastrear atividades mal-intencionadas que envolvem essas contas. As contas Honeytoken devem ser mantidas inutilizadas, mas com um nome atraente para atrair os invasores (por exemplo, SQL-Admin). Qualquer atividade delas pode indicar comportamento mal-intencionado.
 
-Para obter mais informações sobre contas de honeytoken, confira [Configurar exclusões de detecção e contas de honeytoken](install-step7.md).
+Para obter mais informações sobre contas de honeytoken, confira [Configurar exclusões de detecção e contas de honeytoken](configure-detection-exclusions.md).
 
 **TP, B-TP ou FP**
 

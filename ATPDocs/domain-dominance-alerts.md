@@ -3,12 +3,12 @@ title: Alertas de segurança de predominância de domínio do Microsoft Defender
 description: Este artigo explica os alertas do Microsoft Defender para Identidade emitidos quando são detectados ataques contra a sua organização, que normalmente fazem parte dos esforços da fase de predominância de domínio.
 ms.date: 12/23/2020
 ms.topic: tutorial
-ms.openlocfilehash: c7376b617f69261c848bede401ff083612545457
-ms.sourcegitcommit: e2b4ad613aa171f604ae526f0cba05fe79f4a8cb
+ms.openlocfilehash: 82ebc2fdc88eb1a7b35e70ba8983f22d592c48e9
+ms.sourcegitcommit: f92dca4dc3d8a25b1a06f68ac7a9f8318105bcd8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/23/2020
-ms.locfileid: "97753342"
+ms.lasthandoff: 02/17/2021
+ms.locfileid: "100630696"
 ---
 # <a name="tutorial-domain-dominance-alerts"></a>Tutorial: Alertas de predominância de domínio
 
@@ -570,7 +570,7 @@ Skeleton Key é um malware que é executado nos controladores de domínio e perm
 
 Os invasores adicionam usuários a grupos altamente privilegiados. A adição de usuários é realizada para obter acesso a mais recursos e obter persistência. Essa detecção conta com a criação de perfil de atividades de modificação do grupo de usuários e com o alerta para quando uma adição anormal a um grupo confidencial é vista. O [!INCLUDE [Product short](includes/product-short.md)] analisa os perfis continuamente.
 
-Para obter uma definição de grupos confidenciais no [!INCLUDE [Product short](includes/product-short.md)], confira [Como trabalhar com contas confidenciais](sensitive-accounts.md).
+Para obter uma definição de grupos confidenciais no [!INCLUDE [Product short](includes/product-short.md)], confira [Como trabalhar com contas confidenciais](manage-sensitive-honeytoken-accounts.md).
 
 A detecção depende de eventos auditados em controladores de domínio. Verifique se os controladores de domínio estão [auditando os eventos necessários](configure-windows-event-collection.md).
 

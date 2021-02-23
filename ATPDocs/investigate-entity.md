@@ -3,12 +3,12 @@ title: Como investigar usuários e computadores com o Microsoft Defender para Id
 description: Descreve como investigar atividades suspeitas realizadas por usuários, entidades, computadores ou dispositivos que usam o Microsoft Defender para Identidade
 ms.date: 10/26/2020
 ms.topic: tutorial
-ms.openlocfilehash: 9f52bcc6dce4f11b8d29def2574a6b298e5a5e99
-ms.sourcegitcommit: cdb7ae4580851e25aae24d07e7d66a750aa54405
+ms.openlocfilehash: 2a98e9134959261f075412f05d39ac2bf9d21218
+ms.sourcegitcommit: f92dca4dc3d8a25b1a06f68ac7a9f8318105bcd8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96543885"
+ms.lasthandoff: 02/17/2021
+ms.locfileid: "100630593"
 ---
 # <a name="tutorial-investigate-an-entity"></a>Tutorial: Investigar uma entidade
 
@@ -93,7 +93,7 @@ O [!INCLUDE [Product short](includes/product-short.md)] importa informações so
 - Administradores de esquemas
 - Administrador corporativo
 
-Além disso, é possível **marcar manualmente** entidades como confidenciais no [!INCLUDE [Product short](includes/product-short.md)]. Isso é importante, porque algumas detecções do [!INCLUDE [Product short](includes/product-short.md)], como a detecção de modificação de grupos confidenciais e o caminho de movimentação lateral, dependem do status de confidencialidade de uma entidade. Se você marcar manualmente usuários ou grupos adicionais como confidenciais, como membros de conselho, executivos de empresa e diretores de vendas, o [!INCLUDE [Product short](includes/product-short.md)] vai considerá-los confidenciais. Para obter mais informações, consulte [Trabalhando com contas confidenciais](sensitive-accounts.md).
+Além disso, é possível **marcar manualmente** entidades como confidenciais no [!INCLUDE [Product short](includes/product-short.md)]. Isso é importante, porque algumas detecções do [!INCLUDE [Product short](includes/product-short.md)], como a detecção de modificação de grupos confidenciais e o caminho de movimentação lateral, dependem do status de confidencialidade de uma entidade. Se você marcar manualmente usuários ou grupos adicionais como confidenciais, como membros de conselho, executivos de empresa e diretores de vendas, o [!INCLUDE [Product short](includes/product-short.md)] vai considerá-los confidenciais. Para obter mais informações, consulte [Trabalhando com contas confidenciais](manage-sensitive-honeytoken-accounts.md).
 
 ## <a name="review-lateral-movement-paths"></a>Examinar caminhos de movimento lateral
 
