@@ -1,16 +1,16 @@
 ---
 title: Pré-requisitos do Microsoft Defender para Identidade
 description: Descreve os requisitos para uma implantação bem-sucedida do Microsoft Defender para Identidade no seu ambiente
-ms.date: 01/27/2021
+ms.date: 02/17/2021
 ms.topic: overview
-ms.openlocfilehash: feb52ea096dd7e324e46649a746f41a293cc66e1
-ms.sourcegitcommit: b29aa522dcefce7d016fc0e03c75168a14deb423
+ms.openlocfilehash: 5b5f3c44a750896c6662bc22ac3e26bd63b47559
+ms.sourcegitcommit: 5bf0c6a204b71126306a0c64108eaf9cb7fc042f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/27/2021
-ms.locfileid: "98912464"
+ms.lasthandoff: 02/18/2021
+ms.locfileid: "101097334"
 ---
-# <a name="product-long-prerequisites"></a>Pré-requisitos do [!INCLUDE [Product long](includes/product-long.md)]
+# <a name="microsoft-defender-for-identity-prerequisites"></a>Pré-requisitos do Microsoft Defender para Identidade
 
 Este artigo descreve os requisitos para uma implantação bem-sucedida do [!INCLUDE [Product long](includes/product-long.md)] no seu ambiente.
 
@@ -69,13 +69,13 @@ Esta seção lista as informações que você deve obter, bem como as contas e a
 
 - Recomendação de contêiner de **Objetos Excluídos**: O usuário deve ter permissões de somente leitura no contêiner de Objetos Excluídos. As permissões somente leitura neste contêiner permitem que o [!INCLUDE [Product short](includes/product-short.md)] detecte exclusões de usuários do Active Directory. Para obter informações sobre como configurar permissões somente leitura no contêiner Objetos Excluídos, confira a seção **Como alterar permissões em um contêiner de objetos excluídos** do artigo [Exibir ou definir permissões em um objeto do directory](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc816824(v=ws.10)).
 
-- **Honeytoken** opcional: Uma conta de usuário que não tem nenhuma atividade de rede. Essa conta está configurada como o usuário Honeytoken do [!INCLUDE [Product short](includes/product-short.md)]. Para obter mais informações sobre como usar Honeytokens, confira [Configurar exclusões e usuário do Honeytoken](install-step7.md).
+- **Honeytoken** opcional: Uma conta de usuário que não tem nenhuma atividade de rede. Essa conta está configurada como o usuário Honeytoken do [!INCLUDE [Product short](includes/product-short.md)]. Para obter mais informações sobre como usar Honeytokens, confira [Configurar exclusões e usuário do Honeytoken](configure-detection-exclusions.md).
 
 - Opcional: ao implantar o sensor autônomo, é necessário encaminhar os [eventos do Windows](configure-windows-event-collection.md#configure-event-collection) para o [!INCLUDE [Product short](includes/product-short.md)] para aprimorar ainda mais as adições a grupos confidenciais, as detecções de criação de serviço suspeito e as detecções baseadas na autenticação do [!INCLUDE [Product short](includes/product-short.md)].  O sensor do [!INCLUDE [Product short](includes/product-short.md)] recebe esses eventos automaticamente. No sensor autônomo do [!INCLUDE [Product short](includes/product-short.md)], esses eventos podem ser recebidos do SIEM ou pela definição do Encaminhamento de Eventos do Windows no controlador de domínio. Os eventos coletados fornecem ao [!INCLUDE [Product short](includes/product-short.md)] informações adicionais que não estão disponíveis por meio do tráfego de rede do controlador de domínio.
 
 <a name="azure-atp-portal-requirements"></a>
 
-## <a name="product-short-portal-requirements"></a>Requisitos do portal do [!INCLUDE [Product short](includes/product-short.md)]
+## <a name="defender-for-identity-portal-requirements"></a>Requisitos do portal do Microsoft Defender para Identidade
 
 O acesso ao portal do [!INCLUDE [Product short](includes/product-short.md)] ocorre por meio de um navegador, que dá suporte aos seguintes navegadores e configurações:
 
@@ -94,7 +94,7 @@ O acesso ao portal do [!INCLUDE [Product short](includes/product-short.md)] ocor
 > [!NOTE]
 > Por padrão, o [!INCLUDE [Product short](includes/product-short.md)] dá suporte a até 200 sensores. Caso deseje instalar mais sensores, entre em contato com o suporte do [!INCLUDE [Product short](includes/product-short.md)].
 
-## <a name="product-short-network-name-resolution-nnr-requirements"></a>Requisitos da NNR (Resolução de Nomes de Rede) do [!INCLUDE [Product short](includes/product-short.md)]
+## <a name="defender-for-identity-network-name-resolution-nnr-requirements"></a>Requisitos da NNR (Resolução de Nomes de Rede) do Microsoft Defender para Identidade
 
 A NNR (Resolução de Nomes de Rede) é um componente principal da funcionalidade do [!INCLUDE [Product short](includes/product-short.md)]. Para resolver os endereços IP para nomes do computador, os sensores do [!INCLUDE [Product short](includes/product-short.md)] pesquisam os endereços IP usando os seguintes métodos:
 
@@ -109,7 +109,7 @@ Recomendamos o uso de todos os métodos para obter os melhores resultados. Se is
 
 <a name="azure-atp-sensor-requirements"></a>
 
-## <a name="product-short-sensor-requirements"></a>Requisitos do sensor do [!INCLUDE [Product short](includes/product-short.md)]
+## <a name="defender-for-identity-sensor-requirements"></a>Requisitos do sensor do Microsoft Defender para Identidade
 
 Esta seção lista os requisitos do sensor do [!INCLUDE [Product short](includes/product-short.md)].
 
@@ -129,7 +129,7 @@ O sensor [!INCLUDE [Product short](includes/product-short.md)] dá suporte à in
 
 O controlador de domínio pode ser um RODC (controlador de domínio somente leitura).
 
-Para sensores executados em controladores de domínio e para que os AD FS se comuniquem com o serviço de nuvem, você deverá abrir a porta 443 em seus firewalls e proxies para \*.atp.azure.com.
+Para que os sensores em execução nos controladores de domínio e no AD FS se comuniquem com o serviço de nuvem, será necessário abrir a porta 443 para o `*.atp.azure.com` nos firewalls e proxies. Caso esteja executando uma instalação em um farm do AD FS, recomendamos instalar um sensor em cada servidor do AD FS ou pelo menos em um nó primário.
 
 Durante a instalação, se o .NET Framework 4.7 ou posterior não estiver instalado, o .NET Framework 4.7 será instalado e poderá exigir uma reinicialização do servidor. Uma reinicialização também poderá ser necessária se já houver uma reinicialização pendente.
 
@@ -194,7 +194,7 @@ Para sensores executados em servidores dos AD FS, configure o nível de auditori
 
 <a name="azure-atp-standalone-sensor-requirements"></a>
 
-## <a name="product-short-standalone-sensor-requirements"></a>Requisitos do sensor autônomo do [!INCLUDE [Product short](includes/product-short.md)]
+## <a name="defender-for-identity-standalone-sensor-requirements"></a>Requisitos do sensor autônomo do Microsoft Defender para Identidade
 
 Esta seção lista os requisitos do sensor autônomo do [!INCLUDE [Product short](includes/product-short.md)].
 

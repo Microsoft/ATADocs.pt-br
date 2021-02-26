@@ -3,14 +3,14 @@ title: Guia de início rápido – Criar sua instância do Microsoft Defender pa
 description: Guia de início rápido para a criação da instância da sua implantação do Microsoft Defender para Identidade, que é a primeira etapa para instalar o Defender para Identidade.
 ms.date: 10/26/2020
 ms.topic: quickstart
-ms.openlocfilehash: 9860a8893ac16448b92961df9cf25801f68786b6
-ms.sourcegitcommit: af41733212c2102c223fed8c8602a21a1f667080
+ms.openlocfilehash: 19fb02269da5b4529941ffa89c07d914b0633754
+ms.sourcegitcommit: a892419a5cb95412e4643c35a9a72092421628ec
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2021
-ms.locfileid: "100515352"
+ms.lasthandoff: 02/16/2021
+ms.locfileid: "100534252"
 ---
-# <a name="quickstart-create-your-product-long-instance"></a>Início Rápido: Criar sua instância do [!INCLUDE [Product long](includes/product-long.md)]
+# <a name="quickstart-create-your-microsoft-defender-for-identity-instance"></a>Guia de início rápido: criar uma instância do Microsoft Defender para Identidade
 
 Neste guia de início rápido, você criará sua instância do [!INCLUDE [Product long](includes/product-long.md)] no portal do [!INCLUDE [Product short](includes/product-short.md)]. No [!INCLUDE [Product short](includes/product-short.md)], você terá uma só instância, anteriormente chamada de workspace. Uma única instância permite gerenciar várias florestas em um único painel de exibição.
 
@@ -24,7 +24,7 @@ Neste guia de início rápido, você criará sua instância do [!INCLUDE [Produc
 - Examine o artigo [Arquitetura do [!INCLUDE [Product short](includes/product-short.md)]](architecture.md).
 - Examine o artigo [Pré-requisitos do [!INCLUDE [Product short](includes/product-short.md)]](prerequisites.md).
 
-## <a name="sign-in-to-the-product-short-portal"></a>Entre no portal do [!INCLUDE [Product short](includes/product-short.md)]
+## <a name="sign-in-to-the-defender-for-identity-portal"></a>Entrar no portal do Microsoft Defender para Identidade
 
 Depois de verificar que a sua rede atende aos requisitos do sensor, inicie a criação da instância do [!INCLUDE [Product short](includes/product-short.md)].
 

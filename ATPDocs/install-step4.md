@@ -1,16 +1,16 @@
 ---
 title: Guia de início rápido – Instalar o sensor do Microsoft Defender para Identidade
 description: A quarta etapa da instalação do Microsoft Defender para Identidade ajuda você a instalar o sensor do Defender para Identidade.
-ms.date: 10/26/2020
+ms.date: 02/17/2021
 ms.topic: quickstart
-ms.openlocfilehash: 4d68820bd6da88bca64bb8917f069d04adbc29b0
-ms.sourcegitcommit: 4f3da69b8e30cbc3e3fb43d38c3518001a10f7a1
+ms.openlocfilehash: a9837c36dcdb90dba124eda5f8d6b9f082787d74
+ms.sourcegitcommit: 5bf0c6a204b71126306a0c64108eaf9cb7fc042f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98163528"
+ms.lasthandoff: 02/18/2021
+ms.locfileid: "101097395"
 ---
-# <a name="quickstart-install-the-product-long-sensor"></a>Início Rápido: Instalar o servidor do [!INCLUDE [Product long](includes/product-long.md)]
+# <a name="quickstart-install-the-microsoft-defender-for-identity-sensor"></a>Guia de início rápido: instalar o sensor do Microsoft Defender para Identidade
 
 Neste guia de início rápido, você instalará o sensor do [!INCLUDE [Product long](includes/product-long.md)] em um controlador de domínio. Se você preferir uma instalação silenciosa, consulte o artigo [Instalação silenciosa](silent-installation.md).
 
@@ -19,12 +19,13 @@ Neste guia de início rápido, você instalará o sensor do [!INCLUDE [Product l
 - Uma [instância do [!INCLUDE [Product short](includes/product-short.md)]](install-step1.md) [conectada ao Active Directory](install-step2.md).
 - Uma cópia baixada do [pacote de instalação do sensor do [!INCLUDE [Product short](includes/product-short.md)]](install-step3.md) e a chave de acesso.
 - Verifique se o Microsoft .NET Framework 4.7 ou posterior está instalado no computador. Se o Microsoft .NET Framework 4.7 ou posterior não estiver instalado, o pacote de instalação do sensor do [!INCLUDE [Product short](includes/product-short.md)] o instalará, o que poderá exigir uma reinicialização do servidor.
+- Para executar instalações de sensores em servidores do AD FS, caso esteja usando um SQL Server externo, configure o SQL Server para permitir que a conta de *Serviço de diretório* (**Configuração** > **Serviços de diretório** > **Nome de usuário**) tenha opções de *conexão*, *entrada* e *leitura*, bem como possa *selecionar* permissões para acessar o banco de dados **AdfsConfiguration**.
 
 ## <a name="install-the-sensor"></a>Instalar o servidor
 
 Execute as etapas a seguir no controlador de domínio.
 
-1. Confirme se o computador tem conectividade com os [pontos de extremidade de serviço de nuvem do [!INCLUDE [Product short](includes/product-short.md)]](configure-proxy.md#enable-access-to-azure-atp-service-urls-in-the-proxy-server) relevantes:
+1. Verifique se o computador tem conectividade com pontos de extremidade relevantes do [serviço de nuvem do [!INCLUDE [Product short](includes/product-short.md)]](configure-proxy.md#enable-access-to-azure-atp-service-urls-in-the-proxy-server).
 1. Extraia os arquivos de instalação do arquivo zip. A instalação diretamente do arquivo zip falhará.
 1. Execute **o setup.exe do sensor do Azure ATP** com privilégios elevados (**Executar como administrador**) e siga o assistente de instalação.
 1. Na página **Boas-vindas**, selecione seu idioma e clique em **Avançar**.
@@ -60,6 +61,23 @@ Execute as etapas a seguir no controlador de domínio.
 
     - Serviço de sensor do [!INCLUDE [Product short](includes/product-short.md)] e serviço de atualizador do sensor do [!INCLUDE [Product short](includes/product-short.md)]
     - Microsoft Visual C++ 2013 Redistributable
+
+## <a name="post-installation-steps-for-ad-fs-servers"></a>Etapas de pós-instalação para servidores do AD FS
+
+Use as etapas a seguir para configurar o Microsoft Defender para Identidade depois de concluir a instalação do sensor em um servidor do AD FS.
+
+1. No portal do [!INCLUDE [Product short](includes/product-short.md)], selecione a opção **Configuração**
+
+1. Em **Sistema**, selecione a opção **Sensores**.
+
+    ![Página de configuração do sensor do [!INCLUDE [Product short](includes/product-short.md)]](media/sensor-config.png)
+
+1. Selecione o sensor instalado no servidor do AD FS.
+1. Na janela pop-up, insira o FQDN dos controladores de domínio do resolvedor no campo **Controlador de Domínio do Resolvedor**, clique no ícone de sinal de adição **(+)** , depois em **Salvar**.  
+
+    ![Configurar o resolvedor do sensor do AD FS do [!INCLUDE [Product short](includes/product-short.md)]](media/sensor-config-adfs-resolver.png)
+
+    Inicializar o sensor poderá levar alguns minutos. Nesse momento, o status do serviço do sensor do AD FS deverá mudar de **interrompido** para **em execução**.
 
 ## <a name="next-steps"></a>Próximas etapas
 

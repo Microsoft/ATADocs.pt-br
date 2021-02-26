@@ -3,12 +3,12 @@ title: Arquitetura do Microsoft Defender para Identidade
 description: Descreve a arquitetura do Microsoft Defender para Identidade
 ms.date: 12/23/2020
 ms.topic: overview
-ms.openlocfilehash: 418fbe3f4a24f3af69336eda4954f5817b478e20
-ms.sourcegitcommit: e2b4ad613aa171f604ae526f0cba05fe79f4a8cb
+ms.openlocfilehash: 920c4fa99ebe2dad211fd7edae9ed928c1426510
+ms.sourcegitcommit: a892419a5cb95412e4643c35a9a72092421628ec
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/23/2020
-ms.locfileid: "97753262"
+ms.lasthandoff: 02/16/2021
+ms.locfileid: "100533878"
 ---
 # <a name="microsoft-defender-for-identity-architecture"></a>Arquitetura do Microsoft Defender para Identidade
 
@@ -22,7 +22,7 @@ Esta seção descreve como funciona o fluxo de captura de eventos e rede do [!IN
 
 Instalado diretamente em seu controlador de domínio ou servidores dos AD FS, o sensor do [!INCLUDE [Product short](includes/product-short.md)] acessa os logs de eventos necessários diretamente dos servidores. Depois que o tráfego de rede e os logs são analisados pelo sensor, o [!INCLUDE [Product short](includes/product-short.md)] envia apenas as informações analisadas ao serviço de nuvem do [!INCLUDE [Product short](includes/product-short.md)] (somente um percentual dos logs é enviado).
 
-## <a name="product-short-components"></a>Componentes [!INCLUDE [Product short](includes/product-short.md)]
+## <a name="defender-for-identity-components"></a>Componentes do Microsoft Defender para Identidade
 
 O [!INCLUDE [Product short](includes/product-short.md)] é formado pelos seguintes componentes:
 
@@ -36,7 +36,7 @@ Os sensores do [!INCLUDE [Product short](includes/product-short.md)] podem ser i
 - **Serviço de nuvem do [!INCLUDE [Product short](includes/product-short.md)]**  
 O serviço de nuvem do [!INCLUDE [Product short](includes/product-short.md)] é executado na infraestrutura do Azure e é atualmente implantado nos EUA, na Europa e na Ásia. O serviço de nuvem do [!INCLUDE [Product short](includes/product-short.md)] está conectado ao grafo de segurança inteligente da Microsoft.
 
-## <a name="product-short-portal"></a>Portal do [!INCLUDE [Product short](includes/product-short.md)]
+## <a name="defender-for-identity-portal"></a>Portal do Defender para Identidade
 
 Use o portal do [!INCLUDE [Product short](includes/product-short.md)] para:
 
@@ -50,7 +50,7 @@ Use o portal do [!INCLUDE [Product short](includes/product-short.md)] para:
 > [!NOTE]
 > Se nenhum sensor for instalado na sua instância do [!INCLUDE [Product short](includes/product-short.md)] em até 60 dias, ela poderá ser excluída e você precisará recriá-la.
 
-## <a name="product-short-sensor"></a>Sensor do [!INCLUDE [Product short](includes/product-short.md)]
+## <a name="defender-for-identity-sensor"></a>Sensor do Microsoft Defender para Identidade
 
 O sensor do [!INCLUDE [Product short](includes/product-short.md)] tem as seguintes funcionalidades principais:
 
@@ -61,7 +61,7 @@ O sensor do [!INCLUDE [Product short](includes/product-short.md)] tem as seguint
 - Executar a resolução de entidades de rede (usuários, grupos e computadores)
 - Transferir dados relevantes para o serviço de nuvem do [!INCLUDE [Product short](includes/product-short.md)]
 
-## <a name="product-short-sensor-features"></a>Recursos do sensor do [!INCLUDE [Product short](includes/product-short.md)]
+## <a name="defender-for-identity-sensor-features"></a>Recursos do sensor do Microsoft Defender para Identidade
 
 O sensor do [!INCLUDE [Product short](includes/product-short.md)] lê eventos localmente, sem a necessidade de comprar e manter nenhum hardware ou configurações adicionais. O sensor do [!INCLUDE [Product short](includes/product-short.md)] também dá suporte ao Rastreamento de Eventos para Windows (ETW), que fornece as informações de log para várias detecções. As detecções baseadas no ETW incluem Suspeita de ataques de DCShadow tentados usando a promoção do controlador de domínio e as solicitações de replicação do controlador de domínio.
 
