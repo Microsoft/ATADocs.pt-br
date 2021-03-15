@@ -12,12 +12,12 @@ metadata:
   author: shsagir
   ms.author: shsagir
   ms.date: 09/23/2019
-  ms.openlocfilehash: e4efdf028bc75d7719a8f2a389eef1d58991a403
-  ms.sourcegitcommit: 5bf0c6a204b71126306a0c64108eaf9cb7fc042f
+  ms.openlocfilehash: 832e5b1c9985d2e2d5e3334ffe062418f2ae1227
+  ms.sourcegitcommit: 439e9ad383f54ef31ff8ef6dd1ae4e177c3c31f4
   ms.translationtype: HT
   ms.contentlocale: pt-BR
-  ms.lasthandoff: 02/18/2021
-  ms.locfileid: "101097242"
+  ms.lasthandoff: 03/14/2021
+  ms.locfileid: "103465294"
 landingContent:
 - title: Sobre o Microsoft Defender para Identidade
   linkLists:
@@ -37,6 +37,10 @@ landingContent:
       url: https://www.youtube.com/watch?reload=9&v=EGY2m8yU_KE
     - text: Conceitos básicos do Defender para Identidade
       url: https://www.youtube.com/watch?v=QXZIfH0wP3Q
+  - linkListType: whats-new
+    links:
+    - text: Versões
+      url: whats-new.md
 - title: Confira os alertas do Defender para Identidade
   linkLists:
   - linkListType: get-started
