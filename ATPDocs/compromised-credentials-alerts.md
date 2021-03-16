@@ -1,14 +1,14 @@
 ---
 title: Alertas de segurança da fase de comprometimento das credenciais do Microsoft Defender para Identidade
 description: Este artigo explica os alertas do Microsoft Defender para Identidade emitidos quando são detectados ataques contra a sua organização, que são típicos da fase de comprometimento das credenciais.
-ms.date: 12/23/2020
+ms.date: 02/21/2021
 ms.topic: tutorial
-ms.openlocfilehash: 195f9007e91dcbcdf5c0801d7a06bb21534e683e
-ms.sourcegitcommit: f92dca4dc3d8a25b1a06f68ac7a9f8318105bcd8
+ms.openlocfilehash: 86cc7247905be22535dd570be08d44c716ef46fa
+ms.sourcegitcommit: 001a68a16620001467003f31c245531e0e4d436d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/17/2021
-ms.locfileid: "100630689"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102117151"
 ---
 # <a name="tutorial-compromised-credential-alerts"></a>Tutorial: Alertas de credencial comprometida
 
@@ -32,6 +32,7 @@ Os alertas de segurança a seguir ajudam você a identificar e corrigir as ativi
 > - [Suspeita de ataque de força bruta (SMB) (ID externa 2033)](#suspected-brute-force-attack-smb-external-id-2033)
 > - [Suspeita de exposição do nome da entidade de serviço do Kerberos (ID externa 2410)](#suspected-kerberos-spn-exposure-external-id-2410)
 > - [Suspeita de tentativa de elevação de privilégio do Netlogon (exploração CVE-2020-1472) (ID externa 2411)](#suspected-netlogon-priv-elev-2411)
+> - [Suspeita de ataque AS-REP Roasting (ID externa 2412)](#suspected-as-rep-roasting-attack-external-id-2412)
 > - [Suspeita de ataque do ransomware WannaCry (ID externa 2035)](#suspected-wannacry-ransomware-attack-external-id-2035)
 > - [Suspeita de uso da estrutura de hacker Metasploit (ID externa 2034)](#suspected-use-of-metasploit-hacking-framework-external-id-2034)
 > - [Conexão VPN suspeita (ID externa 2025)](#suspicious-vpn-connection-external-id-2025)
@@ -208,8 +209,8 @@ Nenhum
 **TP, B-TP ou FP**
 
 1. Verifique se o computador de origem está executando uma ferramenta de ataque como o PowerSploit ou o Rubeus.
-    1. Em caso afirmativo, é um verdadeiro positivo. Siga as instruções descritas em  **Entender o escopo da violação**.
-    1. Se o computador de origem estiver executando esse tipo de aplicativo e precisar continuar, feche o alerta de segurança como uma atividade T-BP e exclua o computador.
+    1. Em caso afirmativo, é um verdadeiro positivo. Siga as instruções descritas em **Entender o escopo da violação**.
+    1. Se o computador de origem estiver executando esse aplicativo e precisar continuar, feche o alerta de segurança como uma atividade T-BP e exclua o computador.
 
 **Entender o escopo da violação**
 
@@ -239,11 +240,11 @@ Nenhum
 
 Se o computador de origem for um DC (controlador de domínio), uma resolução com falha ou de baixa certeza poderá impedir que o [!INCLUDE [Product short](includes/product-short.md)] consiga confirmar a identificação.
 
-1. Se o computador de origem for um controlador de domínio, **Fechar** o alerta como uma atividade  **B-TP** .
+1. Se o computador de origem é um controlador de domínio, clique em **Fechar** o alerta como uma atividade **B-TP**.
 
-1. Se este computador de origem deve gerar esse tipo de atividade e espera-se que continue gerando esse tipo de atividade no futuro, **Fechar** o alerta de segurança como uma atividade **B-TP** e excluir o computador para evitar alertas benignos adicionais.
+1. Se esse computador de origem deve gerar e continuar gerando esse tipo de atividade no futuro, clique em **Fechar** o alerta de segurança como uma atividade **B-TP** e exclua o computador para evitar alertas benignos adicionais.
 
-Caso contrário, considere esse alerta um  **TP**  e siga as instruções em  **Entender o escopo da violação**.
+Caso contrário, considere este alerta um **TP** e siga as instruções em **Entender o escopo da violação**.
 
 **Entender o escopo da violação**
 
@@ -257,6 +258,32 @@ Caso contrário, considere esse alerta um  **TP**  e siga as instruções em
 1. Examine [nossas diretrizes](https://support.microsoft.com/help/4557222/how-to-manage-the-changes-in-netlogon-secure-channel-connections-assoc) sobre o gerenciamento de alterações na conexão de canal seguro do Netlogon que se relacionam e podem evitar essa vulnerabilidade.
 1. Contenha o computador de origem.
     - Encontre a ferramenta que realizou o ataque e remova-a.
+
+## <a name="suspected-as-rep-roasting-attack-external-id-2412"></a>Suspeita de ataque AS-REP Roasting (ID externa 2412)
+
+Os invasores usam ferramentas para detectar contas com sua *Pré-autenticação Kerberos* desabilitada e enviam solicitações AS-REQ sem o carimbo de data/hora criptografado. Em resposta, eles recebem mensagens AS-REP com dados de TGT, que podem ser criptografados com um algoritmo inseguro, como RC4, e salvá-los para uso posterior em um ataque de quebra de senha offline (semelhante a Kerberoasting) e expor credenciais de texto sem formatação.
+
+**Período de aprendizado**
+
+Nenhum
+
+**TP, B-TP ou FP**
+
+1. Verifique se o computador de origem está executando uma ferramenta de ataque como o PowerSploit ou o Rubeus.
+    1. Em caso afirmativo, é um verdadeiro positivo. Siga as instruções descritas em **Entender o escopo da violação**.
+    1. Se o computador de origem estiver executando esse aplicativo e precisar continuar, **feche** o alerta de segurança como uma atividade **T-BP** e exclua o computador.
+
+**Entender o escopo da violação**
+
+1. Investigue as [contas expostas](investigate-a-user.md). Verifique se há atividades mal-intencionadas ou comportamento suspeito para essas contas.
+1. Investigue o [computador de origem](investigate-a-computer.md).
+
+**Correção:**
+
+1. Contenha o computador de origem.
+    - Encontre a ferramenta que realizou o ataque e remova-a.
+    - Procure usuários que estavam conectados no mesmo período em que a atividade ocorreu, pois eles também podem estar comprometidos. Redefina suas senhas e habilite a MFA ou, se você tiver configurado as políticas relevantes de usuário de alto risco no Azure Active Directory Identity Protection, poderá usar a ação [**Confirmar usuário comprometido**](/cloud-app-security/accounts#governance-actions) no portal de Cloud App Security.
+1. Habilitar a pré-autenticação Kerberos. Para obter mais informações sobre atributos de conta e como corrigi-los, confira [Atributos de conta não seguros](cas-isp-unsecure-account-attributes.md).
 
 ## <a name="suspected-wannacry-ransomware-attack-external-id-2035"></a>Suspeita de ataque do ransomware WannaCry (ID externa 2035)
 
